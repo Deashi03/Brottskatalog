@@ -90,6 +90,7 @@ try{
   assert.ok((await page.locator('#results-area').innerText()).includes('Andra lagrum'),'Separate legal reference results');
   await page.locator('[data-provision="Kniv:1"]').first().click();
   assert.ok((await page.locator('[role="dialog"]').innerText()).includes('Knivlagen 1 §'),'Open noncriminal prohibition provision');
+  await page.locator('.sheet-close').click();
   // v0.6: context-specific use of "underlåtenhet" in robbery law.
   await page.goto(url+'#sok',{waitUntil:'networkidle'});
   await page.locator('#crime-search').fill('rån');
