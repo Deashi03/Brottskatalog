@@ -150,6 +150,8 @@
 :root[data-theme="dark"] .source-link{color:#b0cada}
 :root[data-theme="dark"] .app-shell{box-shadow:0 0 0 1px #19232c}
 
+
+.bk03-brand{display:flex;align-items:center;gap:10px;padding:19px 0 14px;color:var(--ink);font-size:19px}.bk03-brand .ic{width:22px;height:22px;color:var(--primary)}.bk03-brand span{margin-left:auto;color:var(--muted);font-size:11px}.bk03-brand+.search-box{margin-top:0}
 </style>
   <title>Brottskatalog · steg 2</title>
 </head>
@@ -551,6 +553,8 @@ D.date='2026-10-12';
 })();
 
 </script>
+  <script src="./catalog-03.js"></script>
+  <script src="./glossary-03.js"></script>
   <script>
 /* Brottskatalog – stage 1. No framework, no network request during use. */
 (() => {
@@ -636,11 +640,11 @@ function lawMarkup(text,current,terms=[]){
  }
  return html+escapeHtml(text.slice(pos));
 }
-const lawText=c=>lawMarkup(c.law,c.statute,c.lawTerms);
+const lawText=c=>lawMarkup(c.law,c.statute,[...new Set([...(c.lawTerms||[]),...Object.keys(glossary).filter(t=>t.length>=5&&c.law&&c.law.toLocaleLowerCase('sv').includes(t))])]);
 function actualTheme(){const h=new Date().getHours();return state.theme==='auto'?(h>=22||h<6?'dark':'light'):state.theme;}
 function applyTheme(){const dark=actualTheme()==='dark';document.documentElement.dataset.theme=dark?'dark':'light';document.querySelector('meta[name="theme-color"]')?.setAttribute('content',dark?'#07090c':'#f7f9fa');document.querySelector('meta[name="color-scheme"]')?.setAttribute('content',dark?'dark':'light');}
-const custodyLabels = {none:'Ej enligt huvudregeln',possible:'Häktning kan vara möjlig',presumption:'Häktningspresumtion'};
-const custodyIcons = {none:'minus-circle',possible:'scale',presumption:'scale'};
+const custodyLabels = {none:'Ej enligt huvudregeln',possible:'Häktning kan vara möjlig',presumption:'Häktningspresumtion',unknown:'Ej kontrollerad'};
+const custodyIcons = {none:'minus-circle',possible:'scale',presumption:'scale',unknown:'info'};
 function sortedCrimes(){
   let list = crimes.filter(c => state.category === 'Alla' || c.category === state.category);
   if (!state.query.trim()) return list;
@@ -662,10 +666,10 @@ function sortedCrimes(){
   return list.map(c=>({c,score:rank(c)})).filter(o=>o.score>=0).sort((a,b)=>b.score-a.score).map(o=>o.c);
 }
 function card(c){
-  const warn = c.prosecution==='conditional';
+  const warn = c.prosecution!=='general';
   return `<button type="button" class="crime-card" data-open="${c.id}" aria-label="Öppna ${escapeHtml(c.title)}">
     <span class="crime-text"><span class="crime-title">${escapeHtml(c.title)}</span><span class="crime-ref">${escapeHtml(c.shortRef)}</span>
-    <span class="crime-meta">${warn?`<span class="mini-alert">${ic('alert-circle','xs')} Åtalsvillkor</span>`:'Allmänt åtal'}<span class="meta-line"></span><span class="${c.custody==='presumption'?'mini-pres':''}">${c.custody==='presumption'?'Presumtion':c.custody==='possible'?'Häktning möjlig':'Särskild regel'}</span></span></span>
+    <span class="crime-meta">${warn?`<span class="mini-alert">${ic('alert-circle','xs')} Åtalsvillkor</span>`:(c.prosecution==='general'?'Allmänt åtal':'Ej kontrollerat')}<span class="meta-line"></span><span class="${c.custody==='presumption'?'mini-pres':''}">${c.custody==='presumption'?'Presumtion':c.custody==='possible'?'Häktning möjlig':c.custody==='unknown'?'Ej kontrollerad':'Särskild regel'}</span></span></span>
     <span class="crime-side"><span class="crime-penalty">${escapeHtml(c.penaltyShort)}</span>${ic('chevron-right','sm')}</span>
   </button>`;
 }
@@ -692,12 +696,14 @@ function resultsFragment(){
 function updateResults(){const el=document.getElementById('results-area');if(el)el.innerHTML=resultsFragment();}
 function renderSearch(){
   app.className='app-shell '+(state.density==='compact'?'compact':'');
-  app.innerHTML=`<main class="page">${brandTop()}${note()}<header class="hero"><div class="kicker">ETT SNABBARE SÄTT ATT HITTA RÄTT</div><h1>Vad vill du slå upp?</h1><p>Sök på brott, handling, lagrum eller vanligt uttryck.</p></header>
+  app.innerHTML=`<main class="page"><div class="bk03-brand">${ic('scale')}<strong>Brottskatalog</strong><span>0.3</span></div>
   <label class="search-box" for="crime-search">${ic('search','lg')}<input id="crime-search" type="search" placeholder="T.ex. ringa stöld, BrB 8:2…" inputmode="search" enterkeyhint="search" autocapitalize="off" autocomplete="off" spellcheck="false" value="${escapeHtml(state.query)}"><button class="search-clear" data-action="clear-search" aria-label="Rensa sökning" style="${state.query?'':'display:none'}">${ic('x','sm')}</button></label>
   <div class="filter-strip" role="group" aria-label="Filtrera brott">${categories.map(cat=>`<button class="filter ${cat===state.category?'active':''}" data-category="${escapeHtml(cat)}" aria-pressed="${cat===state.category}">${escapeHtml(cat)}</button>`).join('')}</div>
   <div id="quick-area" ${state.query?'hidden':''}>${quickRow()}</div>
   <div id="results-area">${resultsFragment()}</div></main>${bottomNav('sok')}`;
   const input=document.getElementById('crime-search');
+  input.addEventListener('keydown',e=>{if(e.key==='Enter'){e.preventDefault();input.blur();}});
+  input.addEventListener('search',()=>input.blur());
   input.addEventListener('input', e=>{
     state.query=e.target.value;
     document.querySelector('.search-clear').style.display=state.query?'':'none';
@@ -746,7 +752,7 @@ function renderDetail(c){
   const elements=(c.elements||[]).map(x=>`<li>${escapeHtml(x)}</li>`).join('');
   const stages=(c.stages||[]).map(x=>`<li>${escapeHtml(x)}</li>`).join('');
   const related=(c.related||[]).map(id=>byId[id]).filter(Boolean).map(x=>`<button class="related" data-open="${x.id}">${escapeHtml(x.title)}${ic('chevron-right','sm')}</button>`).join('');
-  const law = `<div class="law-paper">${lawText(c)}</div><p class="source-label">${escapeHtml(c.lawSource)} ${c.lawMode==='excerpt'?'Utdrag – inte hela bestämmelsen.':'Lagtext i det inbyggda urvalet.'}</p><p class="source-label">Understrukna paragrafer öppnas här, utan internet.</p>`;
+  const law = c.lawMode==='missing'?`<p>Fullständig lagtext är ännu inte kontrollerad och införd för denna sökingång.</p><a class="source-link" href="${escapeHtml(c.sourceURL||'https://data.riksdagen.se/dokument/sfs-1962-700.html')}" target="_blank" rel="noopener noreferrer">Öppna lagtext hos Sveriges riksdag ${ic('external-link','sm')}</a>`:`<div class="law-paper">${lawText(c)}</div><p class="source-label">${escapeHtml(c.lawSource)} ${c.lawMode==='excerpt'?'Utdrag – inte hela bestämmelsen.':'Lagtext i det inbyggda urvalet.'}</p><p class="source-label">Understrukna paragrafer öppnas här, utan internet.</p>`;
   const links=[['Lagtext – Sveriges riksdag', c.category==='Narkotika'?'https://www.riksdagen.se/sv/dokument-och-lagar/dokument/svensk-forfattningssamling/narkotikastrafflag-196864_sfs-1968-64/':'https://www.riksdagen.se/sv/dokument-och-lagar/dokument/svensk-forfattningssamling/brottsbalk-1962700_sfs-1962-700/'],['Häktning – RB 24 kap.', 'https://www.riksdagen.se/sv/dokument-och-lagar/dokument/svensk-forfattningssamling/rattegangsbalk-1942740_sfs-1942-740framtagen/']];
   app.innerHTML=`<main class="page"><div class="detail-header"><button class="back-button" data-action="back" aria-label="Tillbaka">${ic('arrow-left')} Tillbaka</button><div class="header-actions"><button class="icon-button" data-action="copy" data-id="${c.id}" aria-label="Kopiera lagrum" title="Kopiera lagrum">${ic('copy')}</button><button class="icon-button ${saved?'active':''}" data-action="favorite" data-id="${c.id}" aria-label="${saved?'Ta bort från favoriter':'Spara i favoriter'}" aria-pressed="${saved}">${ic(saved?'bookmark-fill':'bookmark','lg')}</button></div></div>
   <div class="detail-kicker">BROTT OCH STRAFF</div><h1 class="detail-title ${c.title.length>21?'long':''}">${escapeHtml(c.title)}</h1><div class="detail-ref">${escapeHtml(c.ref)}</div>
@@ -780,7 +786,7 @@ function showProvision(key){
 }
 
 function showCustody(c){
-  const body = c.custody==='presumption'?
+  const body = c.custody==='unknown'?['Häktningsstatus har ännu inte kvalitetssäkrats för denna nya sökingång. Kontrollera straffskala och 24 kap. RB.']:c.custody==='presumption'?
     ['Straffminimum för det här brottet är minst ett år och sex månader. Det aktualiserar häktningspresumtionen i 24 kap. 1 § andra stycket 1 RB.','Häktningspresumtion betyder inte att en polisman automatiskt ska gripa personen. Misstankegrad, undantag, proportionalitet och förutsättningarna för gripande måste prövas i varje fall.']:
     c.custody==='possible'?
     ['Straffskalan omfattar fängelse i minst ett år. Det kan öppna för häktning enligt 24 kap. 1 § första stycket RB, förutsatt bland annat sannolika skäl, relevant risk och proportionalitet.','Om det kan antas att påföljden stannar vid böter finns hinder mot häktning. Särskilda regler kan också påverka bedömningen.']:
