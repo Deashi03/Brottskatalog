@@ -1,10 +1,19 @@
 name: Brottskatalog UI smoke tests
 on:
   workflow_dispatch:
+  pull_request:
+    paths:
+      - "index.html"
+      - "coercive-07.js"
+      - "field-07.js"
+      - "scripts/ui_smoke.mjs"
+      - ".github/workflows/ui-tests.yml"
   push:
     branches: [main]
     paths:
       - "index.html"
+      - "coercive-07.js"
+      - "field-07.js"
       - "catalog-03.js"
       - "glossary-03.js"
       - "data/provisions-generated.js"
