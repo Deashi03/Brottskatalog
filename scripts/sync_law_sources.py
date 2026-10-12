@@ -74,8 +74,20 @@ def parse_brb(html):
             continue
         m = PARAGRAPH.match(ln) if chapter is not None else None
         if m:
-            flush()
             sec = m.group(1) + m.group(2).lower()
+            if key is not None:
+                previous = key.split(":")[-1]
+                previous_no = int(re.match(r"\\d+", previous).group())
+                current_no = int(m.group(1))
+                # Cross-references sometimes occupy a line by themselves.
+                # A new section cannot go backwards, and an inline citation
+                # cannot interrupt an unfinished sentence in the current section.
+                last = contents[-1].strip() if contents else ""
+                complete_sentence = bool(re.search(r"(?:[.!?]|\\))$", last))
+                if current_no < previous_no or (current_no == previous_no and not m.group(2)) or not complete_sentence:
+                    contents.append(ln)
+                    continue
+            flush()
             key = f"BrB:{chapter}:{sec}"
             contents = [ln]
         elif key:
