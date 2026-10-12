@@ -114,7 +114,8 @@ def main():
             if sid=="BrB":
                 parsed,_=parse_brb(body)
                 if len(parsed)<100:
-                    print("DEBUG SFS text start:", repr(_.splitlines()[:35]), file=sys.stderr)
+                    print("DEBUG sample chapter lines:", repr([x for x in _.splitlines() if "kap." in x][:30]), file=sys.stderr)
+                    print("DEBUG sample sections:", repr([x for x in _.splitlines() if "§" in x][:30]), file=sys.stderr)
                     raise ValueError(f"Too few BrB provisions parsed: {len(parsed)}; no new data published")
                 for key,value in parsed.items():
                     generated[key]={"id":key,"ref":f"BrB {key.split(':')[1]} kap. {key.split(':')[2]} §",
