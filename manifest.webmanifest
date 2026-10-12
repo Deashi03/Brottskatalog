@@ -2,7 +2,7 @@
   "id": "./",
   "name": "Brottskatalog",
   "short_name": "Brottskatalog",
-  "description": "Svenskt juridiskt referensverk. Steg 2 – testversion.",
+  "description": "Svenskt polisiärt juridiskt referensverk – arbetsversion 0.3.",
   "start_url": "./",
   "scope": "./",
   "display": "standalone",
