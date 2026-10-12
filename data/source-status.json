@@ -1,6 +1,6 @@
 {
   "schema": 1,
-  "lastChecked": "2026-10-12T16:39:23+00:00",
+  "lastChecked": "2026-10-12T16:41:57+00:00",
   "sourceChecks": [
     {
       "id": "BrB",
@@ -9,7 +9,7 @@
       "observedVersion": "2026:1656",
       "verifiedVersion": null,
       "digest": "d179d0faef04a70a09da3a781c31df270934a84ee11dd84935405a43d468fe81",
-      "lastChecked": "2026-10-12T16:39:23+00:00",
+      "lastChecked": "2026-10-12T16:41:57+00:00",
       "observedChange": false,
       "requiresReview": true,
       "dependentFields": [
@@ -41,8 +41,8 @@
         "kvalifikationsgrunder"
       ],
       "status": "error",
-      "error": "Too few BrB provisions parsed: 569; no new data published",
-      "lastAttempt": "2026-10-12T16:39:23+00:00"
+      "error": "Too few BrB provisions parsed: 520; no new data published",
+      "lastAttempt": "2026-10-12T16:41:57+00:00"
     },
     {
       "id": "RB",
@@ -51,7 +51,7 @@
       "observedVersion": "2026:1657",
       "verifiedVersion": null,
       "digest": "4e9ba98c02aaea60a9a4680da3d2515f1f77c5540485eb8b55e0eff7a4944ffa",
-      "lastChecked": "2026-10-12T16:39:23+00:00",
+      "lastChecked": "2026-10-12T16:41:57+00:00",
       "observedChange": false,
       "requiresReview": true,
       "dependentFields": [
@@ -71,7 +71,7 @@
       "observedVersion": "2024:797",
       "verifiedVersion": null,
       "digest": "ea3d5ca2deeb7966438e33bca867d01300962cc969d8b5626f882843bd395f56",
-      "lastChecked": "2026-10-12T16:39:23+00:00",
+      "lastChecked": "2026-10-12T16:41:57+00:00",
       "observedChange": false,
       "requiresReview": true,
       "dependentFields": [
@@ -91,7 +91,7 @@
       "observedVersion": "2026:1596",
       "verifiedVersion": null,
       "digest": "0d1874957bfbeced4066106f974c6a797a309125d0465ddc20b68285d3e4560c",
-      "lastChecked": "2026-10-12T16:39:23+00:00",
+      "lastChecked": "2026-10-12T16:41:57+00:00",
       "observedChange": false,
       "requiresReview": true,
       "dependentFields": [
@@ -111,7 +111,7 @@
       "observedVersion": "2024:715",
       "verifiedVersion": null,
       "digest": "103140bff03b104b4e58936adfbb07101a0c44abe9b0184ebbc861b48f9941cb",
-      "lastChecked": "2026-10-12T16:39:23+00:00",
+      "lastChecked": "2026-10-12T16:41:57+00:00",
       "observedChange": false,
       "requiresReview": true,
       "dependentFields": [
@@ -131,7 +131,7 @@
       "observedVersion": "2026:413",
       "verifiedVersion": null,
       "digest": "4815700b9e68a0633ca444361dd3a67141fffa7cdd2cc3937c013be139cc8c3b",
-      "lastChecked": "2026-10-12T16:39:23+00:00",
+      "lastChecked": "2026-10-12T16:41:57+00:00",
       "observedChange": false,
       "requiresReview": true,
       "dependentFields": [
