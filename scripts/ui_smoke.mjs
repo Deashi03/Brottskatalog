@@ -163,6 +163,8 @@ try{
   await page.locator('#crime-search').fill('mord');await wait();
   await page.locator('.crime-card').filter({hasText:'Mord'}).first().click();
   await page.locator('summary').filter({hasText:'Tvångsmedel – översikt'}).click();
+  await page.locator('.coercive-chapter').filter({hasText:'RB 28'}).locator('summary').first().click();
+  await page.locator('.coercive-chapter').filter({hasText:'RB 28'}).locator('.coercive-entry').first().locator('summary').click();
   assert.ok((await page.locator('body').innerText()).includes('Straffskalekrav uppfyllt'),'Major offences should satisfy ordinary scale thresholds');
   await page.goto(url+'#mer',{waitUntil:'networkidle'});
   const settings=await page.locator('body').innerText();
