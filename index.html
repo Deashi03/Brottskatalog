@@ -666,7 +666,12 @@ function sortedCrimes(){
     if (title.includes(q)) return 90;
     return 30;
   };
-  return list.map(c=>({c,score:rank(c)})).filter(o=>o.score>=0).sort((a,b)=>b.score-a.score).map(o=>o.c);
+  const exact=list.map(c=>({c,score:rank(c)})).filter(o=>o.score>=0).sort((a,b)=>b.score-a.score).map(o=>o.c);
+   if(exact.length||q.length<4)return exact;
+   // Typo-tolerant only when ordinary title, synonym and statute matching found nothing.
+   const distance=(a,b)=>{if(Math.abs(a.length-b.length)>2)return 9;let prev=Array.from({length:b.length+1},(_,i)=>i);for(let i=1;i<=a.length;i++){const next=[i];for(let j=1;j<=b.length;j++)next[j]=Math.min(prev[j]+1,next[j-1]+1,prev[j-1]+(a[i-1]===b[j-1]?0:1));prev=next;}return prev[b.length];};
+   const limit=q.length>=9?2:1;
+   return list.map(c=>({c,d:Math.min(...[c.title,...(c.aliases||[])].map(t=>distance(q,normalize(t))))})).filter(x=>x.d<=limit).sort((a,b)=>a.d-b.d).slice(0,18).map(x=>x.c);
 }
 function card(c){
   const warn = c.prosecution!=='general';
