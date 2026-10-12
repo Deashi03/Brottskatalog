@@ -84,7 +84,7 @@ for(const c of base){
  for(const [slug,prefix,word,para] of STAGES){
   const code=slug==='forsok'?'F':slug==='forberedelse'?'P':'S';
   const approved=!!permit?.types.has(code);
-  const negative=!approved&&(c.stageReviewed||brb&&checkedChapters.has(chapter)||explicitNo.has(norm(c.title))||narcUse||gun);
+  const negative=!approved&&(c.stageReviewed||explicitNo.has(norm(c.title))||narcUse||gun);
   // Ogranskade kombinationer görs sökbara vid en uttrycklig sökning, men visas inte i huvudkatalogen.
   const status=approved?'punishable':negative?'not-criminalized':'unverified';
   if(status==='punishable')yes++;else if(status==='not-criminalized')no++;else unknown++;
@@ -100,7 +100,7 @@ for(const c of base){
   const short=status==='punishable'?(hasFine?'B–F ':'F ')+(maxStrict?'< ':'')+maxLabel:status==='not-criminalized'?'Ej straffbart':'Ej verifierat';
   const src=permit?.source|| (brb?(chapterSource[chapter]||'BrB '+chapter+' kap. (särskild kriminalisering ej slutgranskad)'):'Specialstraffrätt – kontroll krävs');
   const restriction=stageScope[key]?.[slug]||'';
-  const why=status==='not-criminalized'?'Det finns inte någon särskild föreskrift om ansvar för '+word+' till just denna rubricering i den kontrollerade kriminaliseringsbestämmelsen. Det utesluter inte att en annan brottsrubricering kan bli aktuell.':status==='unverified'?'Förstadiets straffbarhet har inte verifierats mot all tillämplig speciallagstiftning. Avsaknad av verifiering betyder INTE att gärningen är straffri.':limitNote+(restriction?' Begränsning: '+restriction:'');
+  const why=status==='not-criminalized'?'Det finns inte någon särskild föreskrift om ansvar för '+word+' till just denna rubricering i den kontrollerade kriminaliseringsbestämmelsen. Det utesluter inte att en annan brottsrubricering kan bli aktuell.':status==='unverified'?'Förstadiets straffbarhet har inte granskats tillräckligt för en säker slutsats. Avsaknad av verifiering betyder INTE att gärningen är straffri.':limitNote+(restriction?' Begränsning: '+restriction:'');
   const stageTitle=prefix+' '+c.title.toLocaleLowerCase('sv');
   const baseLaw=(c.law||'').trim();
   const law=status==='punishable' ? ('Straffansvar för '+word+' regleras i '+src+' jämförd med BrB 23:'+para+'. Den fullständiga lydelsen finns via den officiella rättskällan.'):('Ingen egen straffbestämmelse återges för denna kombination. '+why);
