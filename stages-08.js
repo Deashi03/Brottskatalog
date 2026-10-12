@@ -1,0 +1,105 @@
+/* Brottskatalog 0.8 — förstadier. Källor: BrB 23:1–3 och särskilda kriminaliseringsbestämmelser. */
+(()=>{'use strict';
+const D=window.BK_DATA;if(!D?.crimes)return;
+const BRB='https://www.riksdagen.se/sv/dokument-och-lagar/dokument/svensk-forfattningssamling/brottsbalk-1962700_sfs-1962-700/';
+const NARK='https://www.riksdagen.se/sv/dokument-och-lagar/dokument/svensk-forfattningssamling/narkotikastrafflag-196864_sfs-1968-64/';
+const norm=s=>String(s||'').toLocaleLowerCase('sv').trim().normalize('NFD').replace(/[\u0300-\u036f]/g,'').replace(/\s+/g,' ');
+const STAGES=[['forsok','Försök till','försök',1],['forberedelse','Förberedelse till','förberedelse',2],['stampling','Stämpling till','stämpling',2]];
+const permission=new Map(), checkedChapters=new Set([3,7,8,9,11,12,13,14,17,18,19]);
+const add=(ref,types,names)=>{
+ for(const name of names.split('|')){
+  const key=norm(name);const record=permission.get(key)||{types:new Set(),source:ref};
+  for(const t of types)record.types.add(t);
+  if(!record.source)record.source=ref;
+  permission.set(key,record);
+ }
+};
+add('BrB 3:11','FP','Mord|Dråp|Barnadråp|Misshandel|Grov misshandel|Synnerligen grov misshandel');
+add('BrB 3:11','S','Mord|Dråp|Grov misshandel|Synnerligen grov misshandel');
+add('BrB 4:10','FPS','Människorov|Människohandel|Människoexploatering|Grov människoexploatering|Olaga frihetsberövande|Äktenskapstvång|Barnäktenskapsbrott|Grovt olaga tvång|Grovt olaga hot|Grovt hemfridsbrott|Grovt olaga intrång');
+add('BrB 4:10','F','Äktenskapsresebrott|Äktenskapsresebrott mot barn');
+add('BrB 4:10','FP','Dataintrång|Grovt dataintrång');
+add('BrB 7:5','F','Otillbörligt utverkande av samtycke eller tillstånd till adoption av barn|Förvanskande av familjeställning|Grov egenmäktighet med barn');
+add('BrB 8:12','FP','Stöld|Grov stöld|Inbrottsstöld|Rån|Grovt rån|Tillgrepp av fortskaffningsmedel|Grovt tillgrepp av fortskaffningsmedel|Olovlig energiavledning|Grov olovlig energiavledning');
+add('BrB 8:12','S','Grov stöld|Inbrottsstöld|Rån|Grovt rån');
+add('BrB 9:11','FP','Bedrägeri|Grovt bedrägeri|Olovlig befattning med betalningsverktyg|Grov olovlig befattning med betalningsverktyg|Utpressning|Ringa utpressning|Grov utpressning|Ocker|Grovt ocker|Häleri|Grovt häleri|Utförselhäleri|Grovt utförselhäleri');
+add('BrB 9:11','S','Grovt bedrägeri|Grov utpressning|Häleri|Grovt häleri|Utförselhäleri|Grovt utförselhäleri');
+add('BrB 9:11','P','Grovt fordringsbedrägeri');
+add('BrB 11:6','F','Oredlighet mot borgenärer|Grov oredlighet mot borgenärer');
+add('BrB 11:6','PS','Grov oredlighet mot borgenärer');
+add('BrB 11:6','P','Grovt bokföringsbrott');
+add('BrB 12:5','F','Skadegörelse|Grov skadegörelse');
+add('BrB 12:5','P','Grov skadegörelse');
+add('BrB 13:12','FPS','Mordbrand|Grov mordbrand|Allmänfarlig ödeläggelse|Grov allmänfarlig ödeläggelse|Sabotage|Grovt sabotage|Kapning|Sjö- eller luftfartssabotage|Flygplatssabotage|Sabotage mot blåljusverksamhet|Grovt sabotage mot blåljusverksamhet|Spridande av gift eller smitta|Förgöring');
+add('BrB 14:13','FP','Urkundsförfalskning|Grov urkundsförfalskning|Hindrande av urkunds bevisfunktion|Signaturförfalskning|Penningförfalskning|Märkesförfalskning|Förfalskning av fast märke|Brukande av vad som förfalskats');
+add('BrB 14:13','F','Olovlig befattning med falska pengar');
+add('BrB 17:16','FPS','Våld eller hot mot tjänsteman|Grovt våld eller hot mot tjänsteman|Angrepp mot tjänsteman|Grovt angrepp mot tjänsteman|Övergrepp i rättssak|Grovt övergrepp i rättssak|Skyddande av brottsling|Grovt skyddande av brottsling');
+add('BrB 17:16','FP','Främjande av rymning eller flykt|Grovt främjande av rymning eller flykt');
+add('BrB 17:16','F','Rymning|Grov rymning');
+add('BrB 18:7','FPS','Uppror|Väpnat hot mot laglig ordning');
+add('BrB 18:7','F','Brott mot medborgerlig frihet|Svikande av försvarsplikt');
+add('BrB 19:14','FPS','Högförräderi|Trolöshet vid förhandling med främmande makt|Spioneri|Grovt spioneri|Utlandsspioneri|Grovt utlandsspioneri|Grov obehörig befattning med hemlig uppgift|Olovlig underrättelseverksamhet mot främmande makt|Olovlig underrättelseverksamhet mot person');
+add('BrB 19:14','FP','Obehörig befattning med hemlig uppgift');
+// Explicit icke-straffbarhet för de efterfrågade kombinationerna; övriga BrB-kapitel får inte falskt nekande.
+const explicitNo=new Set(['ringa stöld','ringa misshandel','ringa bedrägeri','ringa skadegörelse','åverkan','ofredande','våldsamt motstånd','tjänstefel','olaga hot','hemfridsbrott','olaga intrång','ringa narkotikabrott · bruk','narkotikabrott · bruk']);
+const base=D.crimes.slice(),known=new Set(base.map(c=>norm(c.title)));
+const duration=n=>Number.isInteger(n)?n+' år':Math.round(n*12)<12?Math.round(n*12)+' mån':Math.floor(n)+' år '+Math.round(n%1*12)+' mån';
+const isBrB=c=>/^BrB\s+\d+/i.test(c.shortRef||c.ref||'');
+const ch=c=>{const m=(c.shortRef||c.ref||'').match(/BrB\s+(\d+)/i);return m?+m[1]:0;};
+const parentMin=c=>Number(c.penaltyRange?.min)||0;
+const original=c=>c.penaltyRange&&Number.isFinite(c.penaltyRange.max)?c.penaltyRange:null;
+let yes=0,no=0,unknown=0,unavailable=0;
+for(const c of base){
+ if(c.stageType||!c.title||!original(c)) {unavailable++;continue;}
+ const chapter=ch(c),brb=isBrB(c);
+ if(!brb && !/narkotikabrott/i.test(c.title))continue;
+ const key=norm(c.title.replace(/\s*·.*$/,''));
+ const rule=permission.get(key);
+ const narc=/narkotikabrott/i.test(c.title)&&/narkotikastrafflag/i.test(c.ref||'');
+ const narcUse=narc&&/bruk/i.test(c.title);
+ // 4 § narkotikastrafflagen: försöks- och förberedelseansvar även vid ringa; undantag eget bruk.
+ const permit=narc?{types:new Set(narcUse?[]:(/ringa/i.test(c.title)?['F','P']:['F','P','S'])),source:'Narkotikastrafflagen 4 §'}:rule;
+ for(const [slug,prefix,word,para] of STAGES){
+  const code=slug==='forsok'?'F':slug==='forberedelse'?'P':'S';
+  const approved=!!permit?.types.has(code);
+  const negative=!approved&&(brb&&checkedChapters.has(chapter)||explicitNo.has(norm(c.title))||narcUse);
+  // Ogranskade kombinationer görs sökbara vid en uttrycklig sökning, men visas inte i huvudkatalogen.
+  const status=approved?'punishable':negative?'not-criminalized':'unverified';
+  if(status==='punishable')yes++;else if(status==='not-criminalized')no++;else unknown++;
+  const p=original(c), hasFine=code==='F'?p.min<2:true;
+  const min=0;
+  const max=code==='F'?p.max:(p.max>=6?p.max:Math.min(p.max,2));
+  const maxStrict=code!=='F';
+  const maxLabel=(p.life&&code==='F')?'livstid':duration(max);
+  const minLabel=hasFine?'Böter':'Fängelse';
+  const limit=code==='F'?'Högst samma straff som fullbordat brott.':'Under fullbordat brotts maximistraff; över 2 års fängelse bara om fullbordat brott har maximum minst 6 år.';
+  const limitNote=code==='F'?(p.min>=2?'Böter uteslutna enligt BrB 23:1.':'Böter kan ingå enligt BrB 23:1.'):('BrB 23:2: '+limit);
+  const penalty=status==='punishable'?(code==='F'?minLabel+' – högst '+maxLabel:(maxStrict?'Böter eller fängelse, lägre än '+duration(p.max)+(p.max<6?' och högst 2 år':''):'Böter eller fängelse')):status==='not-criminalized'?'Saknar straffskala – ej kriminaliserat':'Straffbarhet/straffskala ej verifierad';
+  const short=status==='punishable'?(hasFine?'B–F ':'F ')+(maxStrict?'< ':'')+maxLabel:status==='not-criminalized'?'Ej straffbart':'Ej verifierat';
+  const src=permit?.source|| (brb?'BrB '+chapter+' kap. (särskild kriminalisering kontrolleras)':'Specialstraffrätt – kontroll krävs');
+  const why=status==='not-criminalized'?'Det finns inte någon särskild föreskrift om ansvar för '+word+' till just denna rubricering i den kontrollerade kriminaliseringsbestämmelsen. Det utesluter inte att en annan brottsrubricering kan bli aktuell.':status==='unverified'?'Förstadiets straffbarhet har inte verifierats mot all tillämplig speciallagstiftning. Avsaknad av verifiering betyder INTE att gärningen är straffri.':limitNote;
+  const stageTitle=prefix+' '+c.title.toLocaleLowerCase('sv');
+  const baseLaw=(c.law||'').trim();
+  const law=status==='punishable' ? ('Straffansvar för '+word+' regleras i '+src+' jämförd med BrB 23:'+para+'. Den fullständiga lydelsen finns via den officiella rättskällan.'):('Ingen egen straffbestämmelse återges för denna kombination. '+why);
+  const entry={
+   id:'stadium-08-'+slug+'-'+c.id,title:stageTitle,ref:(c.ref||'')+'; '+src+'; BrB 23:'+para,
+   shortRef:(c.shortRef||'')+' · 23:'+para,category:c.category,aliases:[prefix.toLocaleLowerCase('sv')+' '+c.title,slug+' '+c.title],
+   statute:c.statute,sourceURL:narc?NARK:BRB,penalty,penaltyShort:short,
+   penaltyRange:status==='punishable'?{min,max,fines:hasFine,life:code==='F'&&!!p.life}:null,
+   penaltyNote:status==='punishable'?limitNote:why,penaltyChecked:'2026-10-12',
+   stageType:slug,stageStatus:status,stageSource:src,stageParentId:c.id,
+   stageParentMin:p.min,stageParentMax:p.max,stageParentLife:!!p.life,
+   stageExplanation:why,
+   custody:status==='punishable'?(p.min>=4?'presumption':max>=1?'possible':'none'):'none',
+   prosecution:'unknown',prosecutionLabel:status==='punishable'?'Åtalsregler måste kontrolleras':'Ej tillämpligt som egen straffbar rubricering',
+   prosecutionDetails:status==='punishable'?['Kontrollera särskilda åtalsvillkor för det aktuella brottet och förstadiet.']:['Inget straffansvar är verifierat för detta förstadium.'],
+   law,lawSource:src+'; BrB 23:'+para,lawMode:'stage-reference',
+   stageLawNotice:true,reviewStatus:status==='unverified'?'not-reviewed':'stage-statute-reviewed',
+   elements:[],facts:[],stages:[],related:[c.id],variants:[],lawTerms:[]
+  };
+  D.crimes.push(entry);
+ }
+}
+D.categories=['Alla',...new Set(D.crimes.map(c=>c.category))];
+window.BK_STAGES={yes,no,unknown,unavailable,source:'BrB 23 kap. och respektive särskild kriminaliseringsbestämmelse',version:'0.8'};
+})();
