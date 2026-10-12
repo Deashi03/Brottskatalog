@@ -1,43 +1,40 @@
-# Brottskatalog 0.5
+# Brottskatalog 0.6 – juridiskt referensverk
 
-Brottskatalog är ett svenskt juridiskt uppslagsverk för iPhone. **Arbetsversion – inte juridiskt slutgranskad och inte avsedd som ensamt operativt beslutsunderlag.**
+**Öppna i Safari:** https://deashi03.github.io/Brottskatalog/
 
-## Starta appen
+Utvecklingsversion. Materialet är inte fullständigt juridiskt kvalitetssäkrat och får inte användas som enda rättsliga beslutsunderlag vid polisarbete.
 
-**https://deashi03.github.io/Brottskatalog/**
+## Nyheter i 0.6
 
-Öppna webbplatsen i Safari på iPhone och välj **Dela → Lägg till på hemskärmen**. Du behöver inte logga in för att använda den publicerade webbappen. Cachelager kan rensas av iOS; fullständig offlinegaranti kan inte lämnas.
+- 251 sökingångar för brott, plus separata sökbara hänvisningsbestämmelser.
+- 113 juridiska och praktiska ordlistebegrepp.
+- Kontextstyrd begreppsförklaring: underlåtenhet i rån är inte samma sak som underlåtenhetsansvar.
+- Brottskorten har **Utredningsuppslag och beviskällor** med konkreta exempel; de specialiserade åtgärderna för olovlig energiavledning inkluderar hur begäran om mätvärden och kWh-beräkning kan göras.
+- Djupare anteckningar med tydlig skillnad mellan kursmaterial och egen utredningsmetodik.
+- Brottsspecifika kvalifikationsgrunder: bland annat knivlagen, grovt rattfylleri, grov fridskränkning, grovt olaga hot och grovt bokföringsbrott.
+- Alternativa rubriceringar med förklaring av avgörande skillnader.
+- Sökbara Knivlagen 1–3 §§ och RB 24:1, 24:2, 24:6 och 24:7, märkta som *lagrum – inte brott*.
+- Vid kort för frihetsberövande visas rättsregler och möjliga scenarier med uttrycklig skillnad mellan häktning, anhållande och polisens gripande.
+- Straffskala som enbart har ett max presenteras **Fängelse – HÖGST 2 år**, utan påhittat minimum.
+- Symbol på brottskort för kopiering av en felrapport; ingen information om faktiska ärenden ska tas med.
 
-## Nytt i 0.5
+## Datakvalitet och avgränsningar
 
-- **237 sökingångar**, inklusive 45 nya brottsposter från brottsbalken.
-- **99 begrepp i ordlistan** (35 nya).
-- Djupare **kvalifikationsgrunder** och verklighetsnära bedömningsfrågor på 15 brott.
-- **Anteckningar – snabbkoll** på 19 brott, med 28 korta förklaringar från *Straffrätt Lund* och *Brottsutredning*.
-- Ett enhetligt straffskalekort: **LÄGST → HÖGST**, med tydlig skillnad mellan böter, fängelse och livstid. Ingen upprepad straffskaletext.
-- Rättade äldre namn och kontroll av datum-/källberoenden från tidigare versioner.
-- Kompletterad kontrollerad paragraftext för BrB 6:6, 6:10 a, 6:12 samt åtalsregler i 9:12.
-- **data/review-summary-05.json** redovisar omfattning, maskinella kontroller och kvarvarande granskningsbehov.
+Straffskalor är fortsatt under kvalitetssäkring. De senaste nya brottsposterna har straffskaleuppgifter knutna till konsoliderad lagtext, men individuell åtalsprövning återstår på flera. Ingen status ska antas vara godkänd enbart för att ett lagrum finns i databasen. Kvalifikationsgrunder och utredningsuppslag från pedagogiskt material är inte ordagrann lagtext.
 
-## Datakällor och status
+Automatisk SFS-kontroll är en bevakningsfunktion, inte en ersättning för juridisk granskning. Lagtexten kan i vissa maskinimporterade utdrag vara ofullständig och dessa ska inte användas i stället för gällande författningstext.
 
-Lagtexten visas skild från praxis, kursanteckningar och bedömningsstöd. Brottsangivelse, åtalsbegränsning och häktningsmarkering ska granskas mot aktuell författning och omständigheter. Särskilt giltighetsdatum och övergångsregler måste beaktas vid historiska gärningar.
+Officiella källor: [Brottsbalken](https://www.riksdagen.se/sv/dokument-och-lagar/dokument/svensk-forfattningssamling/brottsbalk-1962700_sfs-1962-700/), [Knivlagen](https://www.riksdagen.se/sv/dokument-och-lagar/dokument/svensk-forfattningssamling/lag-1988254-om-forbud-betraffande-knivar-och_sfs-1988-254/) och [Rättegångsbalken](https://www.riksdagen.se/sv/dokument-och-lagar/dokument/svensk-forfattningssamling/rattegangsbalk-1942740_sfs-1942-740framtagen/).
 
-Källa: [Brottsbalken (1962:700), Sveriges riksdag](https://www.riksdagen.se/sv/dokument-och-lagar/dokument/svensk-forfattningssamling/brottsbalk-1962700_sfs-1962-700/).
+## Implementationsfiler
 
-Vissa importerade lagrum är fortfarande ofullständiga; de är uttryckligen märkta. Straffskalor kan vara villkorade eller bero på en annan brottsrubricering. **En automatisk källkontroll innebär inte att rättslig tolkning har godkänts.**
+- `catalog-06.js` – ytterligare brottsposter med flaggade åtalsvillkor.
+- `references-06.js` – sökbara icke-straffrättsliga lagrum och hänvisningar.
+- `context-terms-06.js` – termdefinitioner på rätt lagrum och förbud mot generiska felmatchningar.
+- `investigation-06.js` – utredningsförslag, metodik och källseparation.
+- `details-06.js` – brottsspecifika kvalifikationsgrunder, alternativa brott och ordlista.
+- `index.html` – sökgränssnitt och detaljer.
+- `scripts/ui_smoke.mjs` – automatiska iPhone-simulerade UI-tester.
+- `service-worker.js` – lokal cache och nätbaserad uppdatering av resurser.
 
-## Teknik och uppdateringar
-
-- `index.html` – mobilgränssnitt och ett tidigare urval av brott.
-- `catalog-03.js`, `catalog-05.js` – brottskatalogens sökingångar.
-- `legal-review-04.js`, `legal-validation-05.js` – straffskalor, åtalsvillkor och versionsberoenden.
-- `glossary-03.js`, `glossary-05.js` – ordlista.
-- `commentary-05.js` – juridiska kursanteckningar och kvalifikationsgrunder.
-- `data/provisions-generated.js` – maskinellt importerade preliminära lagtexter.
-- `data/provisions-reviewed-05.js` – manuellt jämförda lagtextsutdrag.
-- `data/legal-review-baseline*.js` – kontrollfingeravtryck som utlöser granskning när källor ändras.
-- `data/review-summary-05.json` – kvalitetsgranskningsstatus.
-- `service-worker.js` – lokal offlinecache där iOS tillåter det.
-
-Under GitHub Actions kan **Legal source synchronization** startas manuellt för att kontrollera officiell författningstext. Automatiska kontroller körs också enligt det schemalagda arbetsflödet. Appens lagtext, straffskala och tolkningsnoter ska inte blandas ihop eller betraktas som likvärdiga källor.
+För offlineanvändning krävs en första lyckad installation och att iOS inte rensar webbläsarens data. Offlinegaranti kan inte lämnas.
