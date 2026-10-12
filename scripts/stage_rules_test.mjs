@@ -9,6 +9,7 @@ const crimes=[
   {id:'vapenbrott',title:'Vapenbrott',ref:'VapenL 18:1',shortRef:'VapenL 18:1',penaltyRange:{min:0,max:5},category:'Vapen'},
   {id:'grovt-vapenbrott',title:'Grovt vapenbrott',ref:'VapenL 18:2',shortRef:'VapenL 18:2',penaltyRange:{min:4,max:7},category:'Vapen'},
   {id:'narkotika-bruk',title:'Ringa narkotikabrott · bruk',ref:'Narkotikastrafflagen 2 §',shortRef:'NSL 2',penaltyRange:{min:0,max:.5,fines:true},category:'Narkotika'},
+  {id:'grovt-narkotikabrott',title:'Grovt narkotikabrott',ref:'NSL 3 §',shortRef:'NSL 3',penaltyRange:{min:2,max:7,fines:false},category:'Narkotika'},
   {id:'narkotika-innehav',title:'Ringa narkotikabrott · innehav',ref:'Narkotikastrafflagen 2 §',shortRef:'NSL 2',penaltyRange:{min:0,max:.5,fines:true},category:'Narkotika'},
   {id:'ofredande',title:'Ofredande',ref:'BrB 4 kap. 7 §',shortRef:'BrB 4:7',penaltyRange:{min:0,max:1,fines:true},category:'Frid'}
 ];
@@ -27,7 +28,9 @@ assert.equal(stage('forsok','grovt-vapenbrott').stageParentMin,4);
 assert.equal(stage('forsok','narkotika-bruk')?.stageStatus,'not-criminalized');
 assert.equal(stage('forsok','narkotika-innehav')?.stageStatus,'punishable');
 assert.equal(stage('stampling','narkotika-innehav')?.stageStatus,'not-criminalized');
+assert.equal(stage('forsok','grovt-narkotikabrott')?.stageStatus,'punishable');
+assert.equal(stage('stampling','grovt-narkotikabrott')?.stageStatus,'punishable');
 assert.equal(stage('forsok','ofredande')?.stageStatus,'not-criminalized');
-assert.equal(window.BK_DATA.crimes.length,8*4);
-assert.equal(window.BK_STAGES.yes+window.BK_STAGES.no+window.BK_STAGES.unknown,8*3);
-console.log('PASS: 8 ground offences, 24 stage statuses and their critical statutory distinctions.');
+assert.equal(window.BK_DATA.crimes.length,9*4);
+assert.equal(window.BK_STAGES.yes+window.BK_STAGES.no+window.BK_STAGES.unknown,9*3);
+console.log('PASS: 9 ground offences, 27 stage statuses and their critical statutory distinctions.');
