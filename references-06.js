@@ -6,6 +6,6 @@ window.BK_REFERENCE_INDEX=window.BK_REFERENCE_INDEX||[];
 for(const [id,ref,text,url] of docs){
  const existing=window.BK_STATUTES[id];
  window.BK_STATUTES[id]={...(existing||{}),id,ref,text,url,complete:true,machine:false,source:'Sveriges riksdag',checked:'2026-10-12'};
- if(id!=='Kniv:4')window.BK_REFERENCE_INDEX.push({id,ref,title:ref,aliases:[ref.toLowerCase().replace(/ §/,'').replace(/kap\. /,'')],text,url});
+ if(id!=='Kniv:4')window.BK_REFERENCE_INDEX.push({id,ref,title:ref,aliases:[ref.toLowerCase().replace(/ §/,'').replace(/kap\. /,''),id.startsWith('Kniv:')?'knivl '+id.split(':')[1]:'rb '+id.split(':')[1]+':'+id.split(':')[2],id.startsWith('Kniv:')?'knivlagen '+id.split(':')[1]:'rättegångsbalken '+id.split(':')[1]+':'+id.split(':')[2]],text,url});
 }
 })();
