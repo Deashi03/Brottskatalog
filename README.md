@@ -7,7 +7,7 @@ Utvecklingsversion. Materialet är inte fullständigt juridiskt kvalitetssäkrat
 ## Nyheter i 0.6
 
 - 251 sökingångar för brott, plus separata sökbara hänvisningsbestämmelser.
-- 113 juridiska och praktiska ordlistebegrepp.
+- 112 juridiska och praktiska ordlistebegrepp.
 - Kontextstyrd begreppsförklaring: underlåtenhet i rån är inte samma sak som underlåtenhetsansvar.
 - Brottskorten har **Utredningsuppslag och beviskällor** med konkreta exempel; de specialiserade åtgärderna för olovlig energiavledning inkluderar hur begäran om mätvärden och kWh-beräkning kan göras.
 - Djupare anteckningar med tydlig skillnad mellan kursmaterial och egen utredningsmetodik.
@@ -38,3 +38,7 @@ Officiella källor: [Brottsbalken](https://www.riksdagen.se/sv/dokument-och-laga
 - `service-worker.js` – lokal cache och nätbaserad uppdatering av resurser.
 
 För offlineanvändning krävs en första lyckad installation och att iOS inte rensar webbläsarens data. Offlinegaranti kan inte lämnas.
+
+## Kvalitetsrapport
+
+Den maskinella datainventeringen för denna version redovisas i [`data/review-summary-06.json`](data/review-summary-06.json). Den innehåller bl.a. antalet sökingångar, separat åtalsgranskning och ofullständiga maskinimporterade lagrum. Rapporten är inte en juridisk certifiering.
