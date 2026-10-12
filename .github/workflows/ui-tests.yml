@@ -7,6 +7,8 @@ on:
       - "coercive-07.js"
       - "field-07.js"
       - "scripts/ui_smoke.mjs"
+      - "scripts/stage_rules_test.mjs"
+      - "stages-08.js"
       - ".github/workflows/ui-tests.yml"
   push:
     branches: [main]
@@ -18,6 +20,8 @@ on:
       - "glossary-03.js"
       - "data/provisions-generated.js"
       - "scripts/ui_smoke.mjs"
+      - "scripts/stage_rules_test.mjs"
+      - "stages-08.js"
       - ".github/workflows/ui-tests.yml"
 permissions:
   contents: read
@@ -29,6 +33,8 @@ jobs:
       - uses: actions/setup-node@v4
         with:
           node-version: "22"
+      - name: Verify offence stages
+        run: node scripts/stage_rules_test.mjs
       - name: Install headless browser
         run: |
           npm install --no-save playwright
