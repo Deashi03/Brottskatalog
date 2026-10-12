@@ -50,6 +50,9 @@ def parse_brb(html):
     soup = BeautifulSoup(html, "html.parser")
     for tag in soup(["script", "style", "nav", "noscript"]):
         tag.decompose()
+    for tag in list(soup.find_all(["a", "span", "em", "strong", "b", "i", "small", "sup", "sub"]))[::-1]:
+        if tag.parent is not None:
+            tag.replace_with(tag.get_text(" ", strip=False))
     raw = soup.get_text("\n").replace("\xa0", " ")
     lines = [re.sub(r"[ \t]+", " ", x).strip() for x in raw.splitlines()]
     out, chapter, key, contents = {}, None, None, []
@@ -113,7 +116,7 @@ def main():
             checks.append(item)
             if sid=="BrB":
                 parsed,_=parse_brb(body)
-                if len(parsed)<100:
+                if len(parsed)<100 or len(parsed.get("BrB:6:6",""))<350 or "BrB:9:12" not in parsed:
                     print("DEBUG sample chapter lines:", repr([x for x in _.splitlines() if "kap." in x][:30]), file=sys.stderr)
                     print("DEBUG sample sections:", repr([x for x in _.splitlines() if "§" in x][:30]), file=sys.stderr)
                     raise ValueError(f"Too few BrB provisions parsed: {len(parsed)}; no new data published")
