@@ -888,7 +888,7 @@ function punishmentBlock(c){
      lower='Ej särskilt angivet';upper=parseWords(jail,true);
    }
  }
- if(!pr?.fines && !pr?.min && (p.toLocaleLowerCase('sv').startsWith('fängelse')||type==='Fängelse')){
+ if(lower==='Ej särskilt angivet' && !pr?.fines && (p.toLocaleLowerCase('sv').startsWith('fängelse')||type==='Fängelse')){
    return '<div class="penalty-kind">Fängelse</div><div class="penalty-only"><span>HÖGST</span><strong>'+escapeHtml(upper)+'</strong></div>';
  }
  const note=/mindre grovt|mindre allvarligt|underliggande|hänvisar|livstid|variant/i.test(c.penaltyNote||'')?'<p class="penalty-context">'+escapeHtml(c.penaltyNote)+'</p>':'';
