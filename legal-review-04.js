@@ -110,6 +110,81 @@ for(const c of D.crimes){
  if(c.id.startsWith('v03-'))continue;
  if(!c.penaltyChecked)c.penaltySource=c.penaltySource||'Befintlig datapost – kompletterande kontroll återstår';
 }
+
+// Further statutory variants and commonly encountered crimes missing from the previous catalog.
+const additions=[
+ ['Grov människoexploatering','4:1b','Frid','F2-10'],
+ ['Sexuellt ofredande mot barn','6:10','Sexualbrott','F2'],
+ ['Grovt sexuellt ofredande','6:10','Sexualbrott','F.5-3'],
+ ['Grovt sexuellt ofredande mot barn','6:10','Sexualbrott','F.5-3'],
+ ['Grovt sexuellt övergrepp mot barn','6:6','Sexualbrott','F1.5-6'],
+ ['Grovt utnyttjande av barn för sexuell posering','6:8','Sexualbrott','F.5-6'],
+ ['Utnyttjande av barn genom köp av sexuell handling','6:9','Sexualbrott','F.5-4'],
+ ['Kontakt för att träffa ett barn i sexuellt syfte','6:10a','Sexualbrott','F2'],
+ ['Ringa tillgrepp av fortskaffningsmedel','8:7','Tillgrepp','BF.5'],
+ ['Ringa utpressning','9:4','Förmögenhet','BF.5'],
+ ['Grovt ocker','9:5','Förmögenhet','F1-6'],
+ ['Utförselhäleri','9:6a','Förmögenhet','F2'],
+ ['Grovt utförselhäleri','9:6a','Förmögenhet','F1-6'],
+ ['Företagskapning','9:3d','Förmögenhet','BF2'],
+ ['Grovt fordringsbedrägeri','9:3a','Förmögenhet','F1-6'],
+ ['Grovt olovligt förfogande','10:4','Förmögenhet','F.5-4'],
+ ['Grovt tagande av muta','10:5c','Förmögenhet','F1.5-6'],
+ ['Grovt givande av muta','10:5c','Förmögenhet','F1.5-6'],
+ ['Vårdslös finansiering av mutbrott','10:5e','Förmögenhet','BF2'],
+ ['Ringa bokföringsbrott','11:5','Förmögenhet','BF.5'],
+ ['Grov allmänfarlig ödeläggelse','13:3','Allmänfarliga','F6-18L'],
+ ['Allmänfarlig vårdslöshet','13:6','Allmänfarliga','BF.5'],
+ ['Grovt allmänfarlig vårdslöshet','13:6','Allmänfarliga','F2'],
+ ['Sabotage mot blåljusverksamhet','13:5c','Allmänfarliga','F4'],
+ ['Grovt sabotage mot blåljusverksamhet','13:5c','Allmänfarliga','F2-18L'],
+ ['Grov falsk angivelse','15:6','Rättsväsende','F.5-4'],
+ ['Ringa falsk angivelse','15:6','Rättsväsende','BF.5'],
+ ['Obefogad angivelse','15:6','Rättsväsende','BF.5'],
+ ['Grov rymning','17:12','Rättsväsende','F.5-4'],
+ ['Rymning','17:12','Rättsväsende','F2'],
+ ['Grovt främjande av rymning eller flykt','17:12a','Rättsväsende','F.5-4'],
+ ['Grovt skyddande av brottsling','17:11','Rättsväsende','F1-6'],
+ ['Grovt gravfridsbrott','16:10','Allmän ordning','F.5-4'],
+ ['Grovt brott mot tystnadsplikt','20:3','Tjänsteman','F1-6'],
+ ['Arbetsmiljöbrott','3:10','Person','REF']
+];
+for(const [title,reference,category,penaltyCode] of additions){
+ if(D.crimes.some(x=>x.title===title))continue;
+ const [chapter,section]=reference.split(':');
+ const statute='BrB:'+chapter+':'+section;
+ const p=window.BK_STATUTES?.[statute];
+ const c={
+  id:'v04-'+title.toLocaleLowerCase('sv').normalize('NFD').replace(/[\u0300-\u036f]/g,'').replace(/[^a-z0-9]+/g,'-'),
+  title,ref:'BrB '+chapter+' kap. '+section+' §',shortRef:'BrB '+reference,category,statute,
+  law:p?.text||'',lawSource:p?.ref||'BrB '+reference,lawMode:p?'machine':'missing',
+  sourceURL:'https://data.riksdagen.se/dokument/sfs-1962-700.html',aliases:[],
+  variants:[],elements:[],facts:[],stages:[],related:[],lawTerms:[],
+  reviewStatus:'needs-review',prosecution:'unknown',prosecutionLabel:'Kontroll krävs',
+  prosecutionDetails:['Särskilda åtalsförutsättningar behöver kontrolleras.']
+ };
+ if(penaltyCode==='REF'){
+  c.penalty='Beror på vilket grundbrott som orsakas';
+  c.penaltyShort='Se 3 kap.';
+  c.penaltyNote='Arbetsmiljöbrott enligt BrB 3:10 hänvisar till straffskalor för 3:7–9. Kontrollera aktuellt grundbrott.';
+  c.custody='unknown';
+ }else setCode(c,penaltyCode);
+ c.prosecution='general';c.prosecutionLabel='Allmänt åtal';
+ c.prosecutionRule='Huvudregel: allmänt åtal';
+ c.prosecutionDetails=['Straffbudet har granskats mot officiell konsoliderad brottsbalk. Kontrollera eventuella undantag beroende på omständigheterna.'];
+ const ch=Number(chapter);
+ if(ch===8){condition(c,'BrB 8:13','Särskild regel vid närstående',['Angivelse ELLER åtal påkallat ur allmän synpunkt när gärningen riktats mot närstående enligt BrB 8:13.']);}
+ if(ch===9 && title!=='Grovt fordringsbedrägeri'){condition(c,'BrB 9:12, 8:13','Särskild regel vid närstående',['Närståendebegränsningen gäller som huvudregel här. Kontrollera BrB 9:12 och 8:13.']);}
+ if(ch===10){
+  if(title.includes('muta')||title==='Vårdslös finansiering av mutbrott') condition(c,'BrB 10:10, 20:5','Åtal ur allmän synpunkt',['Åtal kräver enligt huvudregeln att det är motiverat ur allmän synpunkt, med undantag i 20:5.']);
+  else condition(c,'BrB 10:10, 8:13','Särskild regel vid närstående',['Kontrollera närståendebegränsningen och särskilda åtalsvillkor för kreditköp eller hyra.']);
+ }
+ if(ch===11) condition(c,'BrB 11 kap.','Kontrollera åtalsförutsättningarna',['Kompletterande kontroll av processförutsättningarna krävs.'],'unknown');
+ if(ch===6 && title==='Sexuellt ofredande mot barn')c.prosecution='general';
+ D.crimes.push(c);
+}
+D.categories=['Alla',...new Set(D.crimes.map(x=>x.category))];
+
 // Link reference and variants; no claims that review extends beyond statute text
 D.date='2026-10-12';
 D.release='0.4';
