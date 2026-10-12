@@ -1,0 +1,54 @@
+{
+  "checkedDate": "2026-10-12",
+  "version": "0.5",
+  "totalEntries": 237,
+  "oldEntries": 48,
+  "newEntries": 45,
+  "glossaryCount": 99,
+  "qualificationCrimes": 15,
+  "qualifyingFactors": 34,
+  "crimesWithStudyNotes": 19,
+  "studyNotes": 28,
+  "missingPenalty": [],
+  "varyingPenalty": [
+    "Brukande av falsk urkund",
+    "Arbetsmiljöbrott"
+  ],
+  "prosecutionPending": [
+    "Bokföringsbrott",
+    "Grovt bokföringsbrott",
+    "Oredlighet mot borgenärer",
+    "Vårdslöshet mot borgenärer",
+    "Ringa bokföringsbrott"
+  ],
+  "custodyPending": [
+    "Brukande av falsk urkund",
+    "Arbetsmiljöbrott"
+  ],
+  "noLawText": [],
+  "insufficientStatute": [
+    {
+      "name": "Skadegörelse",
+      "ref": "BrB:12:1",
+      "characters": 128
+    },
+    {
+      "name": "Sexuellt övergrepp mot barn",
+      "ref": "BrB:6:6",
+      "characters": 123
+    },
+    {
+      "name": "Grovt sexuellt övergrepp mot barn",
+      "ref": "BrB:6:6",
+      "characters": 123
+    },
+    {
+      "name": "Kontakt för att träffa ett barn i sexuellt syfte",
+      "ref": "BrB:6:10a",
+      "characters": 120
+    }
+  ],
+  "invalidRanges": [],
+  "duplicateIds": [],
+  "sourceNote": "Maskinimporterade SFS-paragrafer kan vara ofullständiga och är inte certifierade. Kontrollerna nedan är maskinella plus manuell stickprovskontroll; inte fullständig rättslig kvalitetssäkring."
+}
