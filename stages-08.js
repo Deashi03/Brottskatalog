@@ -76,7 +76,7 @@ for(const c of base){
  if(!brb && !/narkotikabrott/i.test(c.title)&&!/VapenL\s+18:/i.test(c.ref||''))continue;
  const key=norm(c.title.replace(/\s*·.*$/,''));
  const rule=permission.get(key);
- const narc=/narkotikabrott/i.test(c.title)&&/narkotikastrafflag/i.test(c.ref||'');
+ const narc=/narkotikabrott/i.test(c.title)&&(/narkotikastrafflag|^NSL\s/i.test(c.ref||'')||/^Nark:/i.test(c.statute||''));
  const narcUse=narc&&/bruk/i.test(c.title);
  const gun=/VapenL\s+18:/i.test(c.ref||'');
  // 4 § narkotikastrafflagen: försöks- och förberedelseansvar även vid ringa; undantag eget bruk.
