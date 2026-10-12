@@ -23,4 +23,5 @@
   seen.add(row.title.toLocaleLowerCase('sv'));
  }
  D.categories=['Alla',...new Set(D.crimes.map(x=>x.category))];
+ D.release='0.5';D.date='2026-10-12';
 })();
