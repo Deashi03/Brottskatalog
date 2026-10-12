@@ -721,7 +721,7 @@ function card(c){
 function brandTop(){
   return `<div class="topline"><div class="brand-wrap"><div class="brand-symbol">${ic('scale')}</div><div><div class="brand-name">Brottskatalog</div><div class="brand-desc">JURIDISKT REFERENSVERK</div></div></div><div class="online"><span class="dot"></span><span id="connection-state">Lokalt läge</span></div></div>`;
 }
-function note(){return `<div class="mode-note">${ic('info','sm')}<span><strong>Version 0.4 · arbetsversion</strong> · ${crimes.length} sökingångar. Nya poster väntar delvis på juridisk granskning.</span></div>`;}
+function note(){return `<div class="mode-note">${ic('info','sm')}<span><strong>Version 0.5 · arbetsversion</strong> · ${crimes.length} sökingångar. Nya poster väntar delvis på juridisk granskning.</span></div>`;}
 function bottomNav(active){
   return `<nav class="bottom-nav" aria-label="Huvudnavigering">
   <button class="nav-item ${active==='sok'?'active':''}" data-tab="sok" ${active==='sok'?'aria-current="page"':''}>${ic('search')}Sök</button>
@@ -741,7 +741,7 @@ function resultsFragment(){
 function updateResults(){const el=document.getElementById('results-area');if(el)el.innerHTML=resultsFragment();}
 function renderSearch(){
   app.className='app-shell '+(state.density==='compact'?'compact':'');
-  app.innerHTML=`<main class="page"><div class="bk03-brand">${ic('scale')}<strong>Brottskatalog</strong><span>0.4</span></div>
+  app.innerHTML=`<main class="page"><div class="bk03-brand">${ic('scale')}<strong>Brottskatalog</strong><span>0.5</span></div>
   <label class="search-box" for="crime-search">${ic('search','lg')}<input id="crime-search" type="search" placeholder="T.ex. ringa stöld, BrB 8:2…" inputmode="search" enterkeyhint="search" autocapitalize="off" autocomplete="off" spellcheck="false" value="${escapeHtml(state.query)}"><button class="search-clear" data-action="clear-search" aria-label="Rensa sökning" style="${state.query?'':'display:none'}">${ic('x','sm')}</button></label>
   <div class="filter-strip" role="group" aria-label="Filtrera brott">${categories.map(cat=>`<button class="filter ${cat===state.category?'active':''}" data-category="${escapeHtml(cat)}" aria-pressed="${cat===state.category}">${escapeHtml(cat)}</button>`).join('')}</div>
   <div id="quick-area" ${state.query?'hidden':''}>${quickRow()}</div>
@@ -780,7 +780,7 @@ function renderMore(){
   <section class="settings-group"><h2 class="settings-h">TEKNISK INFORMATION</h2><div class="settings-card"><div class="setting-row"><div><h3>Utan inloggning eller konto</h3><p>All exempeldata finns i appens filer. Favoriter och inställningar sparas lokalt.</p></div>${ic('shield-check')}</div><div class="setting-row"><div><h3>Offline vid installation</h3><p>Den installerade webbappen använder lokal cache. iOS kan under vissa omständigheter rensa webbdata.</p></div>${ic('wifi-off')}</div></div></section>
   <section class="settings-group"><h2 class="settings-h">KÄLLOR OCH AVGRÄNSNING</h2><div class="settings-text"><p>${crimes.length} sökingångar är inlagda. Nya poster kan sakna juridisk granskning. Detta är ett urval – inte en komplett brottsförteckning. Lydelser, tolkningar och statusfält behöver slutlig juridisk kvalitetskontroll före användning i tjänsten.</p>
   <p>Rättskällor: <a href="https://www.riksdagen.se/sv/dokument-och-lagar/dokument/svensk-forfattningssamling/brottsbalk-1962700_sfs-1962-700/" target="_blank" rel="noopener noreferrer">Brottsbalken</a>, <a href="https://www.riksdagen.se/sv/dokument-och-lagar/dokument/svensk-forfattningssamling/narkotikastrafflag-196864_sfs-1968-64/" target="_blank" rel="noopener noreferrer">narkotikastrafflagen</a> och <a href="https://www.riksdagen.se/sv/dokument-och-lagar/dokument/svensk-forfattningssamling/rattegangsbalk-1942740_sfs-1942-740framtagen/" target="_blank" rel="noopener noreferrer">rättegångsbalken</a>.</p>
-  <p>Kursanteckningar: Brottsutredning, Straffprocessrätt och Straffrätt Lund. Dessa visas uttryckligen som kommentarer, aldrig som lagtext.</p><p><strong>Urval:</strong> Alla brottsbalksbrott ska ingå. Utanför brottsbalken utelämnas brott med endast penningböter i straffskalan; brott med dagsböter eller fängelse ska ingå. Katalogen håller fortfarande på att fyllas.</p><p>Arbetsversion: 0.4 · ${escapeHtml(window.BK_DATA.date)} · Senaste kataloguppdatering för ${Math.max(0,Math.floor((new Date().setHours(0,0,0,0)-new Date(window.BK_DATA.date+'T00:00:00').getTime())/86400000))} dagar sedan. Detta är inte datumet för senaste lagändring.</p></div></section>
+  <p>Kursanteckningar: Brottsutredning, Straffprocessrätt och Straffrätt Lund. Dessa visas uttryckligen som kommentarer, aldrig som lagtext.</p><p><strong>Urval:</strong> Alla brottsbalksbrott ska ingå. Utanför brottsbalken utelämnas brott med endast penningböter i straffskalan; brott med dagsböter eller fängelse ska ingå. Katalogen håller fortfarande på att fyllas.</p><p>Arbetsversion: 0.5 · ${escapeHtml(window.BK_DATA.date)} · Senaste kataloguppdatering för ${Math.max(0,Math.floor((new Date().setHours(0,0,0,0)-new Date(window.BK_DATA.date+'T00:00:00').getTime())/86400000))} dagar sedan. Detta är inte datumet för senaste lagändring.</p></div></section>
   </main>${bottomNav('mer')}`;
   const statusEl=document.getElementById('bk-source-check');
   if(statusEl){
