@@ -82,12 +82,12 @@ for(const c of base){
   const p=original(c), hasFine=code==='F'?p.min<2:true;
   const min=0;
   const max=code==='F'?p.max:(p.max>=6?p.max:Math.min(p.max,2));
-  const maxStrict=code!=='F';
-  const maxLabel=(p.life&&code==='F')?'livstid':duration(max);
+  const maxStrict=code!=='F'&&!p.life;
+  const maxLabel=(p.life&&code==='F')?duration(p.max)+' / livstid':duration(max);
   const minLabel=hasFine?'Böter':'Fängelse';
   const limit=code==='F'?'Högst samma straff som fullbordat brott.':'Under fullbordat brotts maximistraff; över 2 års fängelse bara om fullbordat brott har maximum minst 6 år.';
   const limitNote=code==='F'?(p.min>=2?'Böter uteslutna enligt BrB 23:1.':'Böter kan ingå enligt BrB 23:1.'):('BrB 23:2: '+limit);
-  const penalty=status==='punishable'?(code==='F'?minLabel+' – högst '+maxLabel:(maxStrict?'Böter eller fängelse, lägre än '+duration(p.max)+(p.max<6?' och högst 2 år':''):'Böter eller fängelse')):status==='not-criminalized'?'Saknar straffskala – ej kriminaliserat':'Straffbarhet/straffskala ej verifierad';
+  const penalty=status==='punishable'?(code==='F'?minLabel+' – högst '+maxLabel:(maxStrict?'Böter eller fängelse, lägre än '+duration(p.max)+(p.max<6?' och högst 2 år':''):'Böter eller fängelse högst '+duration(max))):status==='not-criminalized'?'Saknar straffskala – ej kriminaliserat':'Straffbarhet/straffskala ej verifierad';
   const short=status==='punishable'?(hasFine?'B–F ':'F ')+(maxStrict?'< ':'')+maxLabel:status==='not-criminalized'?'Ej straffbart':'Ej verifierat';
   const src=permit?.source|| (brb?(chapterSource[chapter]||'BrB '+chapter+' kap. (särskild kriminalisering ej slutgranskad)'):'Specialstraffrätt – kontroll krävs');
   const why=status==='not-criminalized'?'Det finns inte någon särskild föreskrift om ansvar för '+word+' till just denna rubricering i den kontrollerade kriminaliseringsbestämmelsen. Det utesluter inte att en annan brottsrubricering kan bli aktuell.':status==='unverified'?'Förstadiets straffbarhet har inte verifierats mot all tillämplig speciallagstiftning. Avsaknad av verifiering betyder INTE att gärningen är straffri.':limitNote;
