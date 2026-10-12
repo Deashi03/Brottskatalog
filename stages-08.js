@@ -73,18 +73,18 @@ let yes=0,no=0,unknown=0,unavailable=0;
 for(const c of base){
  if(c.stageType||!c.title||!original(c)) {unavailable++;continue;}
  const chapter=ch(c),brb=isBrB(c);
- if(!brb && !/narkotikabrott/i.test(c.title)&&!/VapenL\s+18:/i.test(c.ref||''))continue;
+ if(!brb && !/narkotikabrott/i.test(c.title)&&!/VapenL\s+18:/i.test(c.ref||'')&&!c.stageReviewed)continue;
  const key=norm(c.title.replace(/\s*·.*$/,''));
  const rule=permission.get(key);
  const narc=/narkotikabrott/i.test(c.title)&&(/narkotikastrafflag|^NSL\s/i.test(c.ref||'')||/^Nark:/i.test(c.statute||''));
  const narcUse=narc&&/bruk/i.test(c.title);
  const gun=/VapenL\s+18:/i.test(c.ref||'');
  // 4 § narkotikastrafflagen: försöks- och förberedelseansvar även vid ringa; undantag eget bruk.
- const permit=narc?{types:new Set(narcUse?[]:(/ringa/i.test(c.title)?['F','P']:['F','P','S'])),source:'Narkotikastrafflagen 4 §'}:gun?{types:new Set(/^(grovt|synnerligen grovt) vapenbrott$/.test(key)?['F','P','S']:[]),source:'VapenL 18:15'}:rule;
+ const permit=c.stageReviewed?{types:new Set(String(c.stagePermissions||'').split('')),source:c.stageSource||'Kontrollerad förstadiebestämmelse'}:narc?{types:new Set(narcUse?[]:(/ringa/i.test(c.title)?['F','P']:['F','P','S'])),source:'Narkotikastrafflagen 4 §'}:gun?{types:new Set(/^(grovt|synnerligen grovt) vapenbrott$/.test(key)?['F','P','S']:[]),source:'VapenL 18:15'}:rule;
  for(const [slug,prefix,word,para] of STAGES){
   const code=slug==='forsok'?'F':slug==='forberedelse'?'P':'S';
   const approved=!!permit?.types.has(code);
-  const negative=!approved&&(brb&&checkedChapters.has(chapter)||explicitNo.has(norm(c.title))||narcUse||gun);
+  const negative=!approved&&(c.stageReviewed||brb&&checkedChapters.has(chapter)||explicitNo.has(norm(c.title))||narcUse||gun);
   // Ogranskade kombinationer görs sökbara vid en uttrycklig sökning, men visas inte i huvudkatalogen.
   const status=approved?'punishable':negative?'not-criminalized':'unverified';
   if(status==='punishable')yes++;else if(status==='not-criminalized')no++;else unknown++;
@@ -107,7 +107,7 @@ for(const c of base){
   const entry={
    id:'stadium-08-'+slug+'-'+c.id,title:stageTitle,ref:(c.ref||'')+'; '+src+'; BrB 23:'+para,
    shortRef:(c.shortRef||'')+' · 23:'+para,category:c.category,aliases:[prefix.toLocaleLowerCase('sv')+' '+c.title,slug+' '+c.title],
-   statute:c.statute,sourceURL:narc?NARK:gun?GUN:BRB,penalty,penaltyShort:short,
+   statute:c.statute,sourceURL:c.stageReviewed?c.sourceURL:narc?NARK:gun?GUN:BRB,penalty,penaltyShort:short,
    penaltyRange:status==='punishable'?{min,max,fines:hasFine,life:code==='F'&&!!p.life}:null,
    penaltyNote:why,penaltyChecked:'2026-10-12',
    stageType:slug,stageStatus:status,stageSource:src,stageParentId:c.id,
