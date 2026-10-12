@@ -27,7 +27,7 @@ assert.equal(stage('forsok','grovt-vapenbrott').stageParentMin,4);
 assert.equal(stage('forsok','narkotika-bruk')?.stageStatus,'not-criminalized');
 assert.equal(stage('forsok','narkotika-innehav')?.stageStatus,'punishable');
 assert.equal(stage('stampling','narkotika-innehav')?.stageStatus,'not-criminalized');
-assert.equal(stage('forsok','ofredande')?.stageStatus,'unverified');
+assert.equal(stage('forsok','ofredande')?.stageStatus,'not-criminalized');
 assert.equal(window.BK_DATA.crimes.length,8*4);
 assert.equal(window.BK_STAGES.yes+window.BK_STAGES.no+window.BK_STAGES.unknown,8*3);
 console.log('PASS: 8 ground offences, 24 stage statuses and their critical statutory distinctions.');
