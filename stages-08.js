@@ -54,6 +54,7 @@ add('BrB 19:14','FPS','Högförräderi|Trolöshet vid förhandling med främmand
 add('BrB 19:14','FP','Obehörig befattning med hemlig uppgift');
 // Explicit icke-straffbarhet för de efterfrågade kombinationerna; övriga BrB-kapitel får inte falskt nekande.
 const explicitNo=new Set(['ringa stöld','ringa misshandel','ringa bedrägeri','ringa skadegörelse','åverkan','ofredande','våldsamt motstånd','tjänstefel','olaga hot','hemfridsbrott','olaga intrång','ringa narkotikabrott · bruk','narkotikabrott · bruk']);
+const chapterSource={3:'BrB 3:11',6:'BrB 6:15',7:'BrB 7:5',8:'BrB 8:12',9:'BrB 9:11',10:'BrB 10:9',11:'BrB 11:6',12:'BrB 12:5',13:'BrB 13:12',14:'BrB 14:13',15:'BrB 15:15',16:'BrB 16:17',17:'BrB 17:16',18:'BrB 18:7',19:'BrB 19:14'};
 const base=D.crimes.slice(),known=new Set(base.map(c=>norm(c.title)));
 const duration=n=>Number.isInteger(n)?n+' år':Math.round(n*12)<12?Math.round(n*12)+' mån':Math.floor(n)+' år '+Math.round(n%1*12)+' mån';
 const isBrB=c=>/^BrB\s+\d+/i.test(c.shortRef||c.ref||'');
@@ -88,7 +89,7 @@ for(const c of base){
   const limitNote=code==='F'?(p.min>=2?'Böter uteslutna enligt BrB 23:1.':'Böter kan ingå enligt BrB 23:1.'):('BrB 23:2: '+limit);
   const penalty=status==='punishable'?(code==='F'?minLabel+' – högst '+maxLabel:(maxStrict?'Böter eller fängelse, lägre än '+duration(p.max)+(p.max<6?' och högst 2 år':''):'Böter eller fängelse')):status==='not-criminalized'?'Saknar straffskala – ej kriminaliserat':'Straffbarhet/straffskala ej verifierad';
   const short=status==='punishable'?(hasFine?'B–F ':'F ')+(maxStrict?'< ':'')+maxLabel:status==='not-criminalized'?'Ej straffbart':'Ej verifierat';
-  const src=permit?.source|| (brb?'BrB '+chapter+' kap. (särskild kriminalisering kontrolleras)':'Specialstraffrätt – kontroll krävs');
+  const src=permit?.source|| (brb?(chapterSource[chapter]||'BrB '+chapter+' kap. (särskild kriminalisering ej slutgranskad)'):'Specialstraffrätt – kontroll krävs');
   const why=status==='not-criminalized'?'Det finns inte någon särskild föreskrift om ansvar för '+word+' till just denna rubricering i den kontrollerade kriminaliseringsbestämmelsen. Det utesluter inte att en annan brottsrubricering kan bli aktuell.':status==='unverified'?'Förstadiets straffbarhet har inte verifierats mot all tillämplig speciallagstiftning. Avsaknad av verifiering betyder INTE att gärningen är straffri.':limitNote;
   const stageTitle=prefix+' '+c.title.toLocaleLowerCase('sv');
   const baseLaw=(c.law||'').trim();
