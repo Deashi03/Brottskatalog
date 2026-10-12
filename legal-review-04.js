@@ -185,6 +185,25 @@ for(const [title,reference,category,penaltyCode] of additions){
 }
 D.categories=['Alla',...new Set(D.crimes.map(x=>x.category))];
 
+// Validate approved metadata against the exact paragraph used during review.
+const fingerprint=s=>{let h=2166136261;for(let i=0;i<s.length;i++){h^=s.charCodeAt(i);h=Math.imul(h,16777619);}return(h>>>0).toString(16).padStart(8,'0')};
+for(const c of D.crimes){
+ if(!c.penaltyChecked || !c.statute?.startsWith('BrB:'))continue;
+ const baseline=window.BK_REVIEW_BASELINE?.[c.statute];
+ const current=window.BK_STATUTES?.[c.statute]?.text;
+ if(!baseline || !current || fingerprint(current)!==baseline){
+   c.penalty='Lagtexten har ändrats – ny kontroll krävs';
+   c.penaltyShort='Ändrad lag';
+   c.penaltyNote='Källans paragraf skiljer sig från den senaste granskade versionen. Kontrollera den aktuella straffskalan och ikraftträdandet.';
+   c.custody='unknown';
+   c.prosecution='unknown';
+   c.prosecutionLabel='Åtalsregel behöver kontrolleras';
+   c.prosecutionDetails=['Författningstexten har ändrats eller saknas sedan föregående kontroll. Åtalsförutsättningarna måste granskas på nytt.'];
+   c.reviewStatus='source-changed';
+ }else{
+   c.reviewStatus='law-and-penalty-reviewed';
+ }
+}
 // Link reference and variants; no claims that review extends beyond statute text
 D.date='2026-10-12';
 D.release='0.4';
