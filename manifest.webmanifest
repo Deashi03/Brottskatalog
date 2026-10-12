@@ -1,0 +1,23 @@
+{
+  "id": "./",
+  "name": "Brottskatalog",
+  "short_name": "Brottskatalog",
+  "description": "Svenskt juridiskt referensverk. Steg 2 – testversion.",
+  "start_url": "./",
+  "scope": "./",
+  "display": "standalone",
+  "display_override": [
+    "standalone"
+  ],
+  "background_color": "#f9fafb",
+  "theme_color": "#f9fafb",
+  "lang": "sv",
+  "icons": [
+    {
+      "src": "./icon.svg",
+      "sizes": "any",
+      "type": "image/svg+xml",
+      "purpose": "any maskable"
+    }
+  ]
+}
