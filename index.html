@@ -230,6 +230,30 @@ html,body{width:100%;max-width:100%;overflow-x:clip;overscroll-behavior-x:none;-
 .custody-facts{display:grid;grid-template-columns:1fr 1fr;gap:7px;margin:10px 0}.custody-facts>div{background:var(--surface-raised,var(--panel,rgba(130,130,130,.09)));border-radius:8px;padding:9px 8px;display:flex;flex-direction:column;gap:4px;min-width:0}.custody-facts small,.custody-requisites>small{font-size:9px;font-weight:800;letter-spacing:.6px;color:var(--muted)}.custody-facts b{font-size:12px;line-height:1.4}.custody-tags{display:flex;flex-wrap:wrap;gap:5px;margin-top:8px}.custody-tags span{padding:5px 7px;border:1px solid var(--line);border-radius:6px;font-size:11px}.custody-requisites p{font-size:12px;line-height:1.5;margin:8px 0}.custody-requisites p b{font-weight:700}.custody-or{text-align:center;font-size:9px;letter-spacing:1px;color:var(--muted);font-weight:800;margin:6px}.custody-note{font-size:11px;color:var(--muted);line-height:1.5;margin:9px 0 0}
 .coercive-chapter{border:1px solid var(--line);border-radius:11px;margin:8px 0;overflow:hidden}.coercive-chapter>summary{display:flex;align-items:center;gap:11px;padding:13px;cursor:pointer;list-style:none}.coercive-chapter>summary strong{font-size:15px;white-space:nowrap}.coercive-chapter>summary span{font-size:12px;flex:1;color:var(--muted)}.coercive-chapter>div{padding:0 11px 10px}.coercive-entry{border-top:1px solid var(--line)}.coercive-entry>summary{padding:11px 1px;display:flex;gap:9px;align-items:center;list-style:none;cursor:pointer}.coercive-ref{font-size:12px;min-width:64px;color:var(--ink)}.coercive-title{font-size:12px;flex:1}.coercive-entry-body{font-size:12px;line-height:1.6;padding:2px 0 11px}.coercive-entry-body p{margin:6px 0}.coercive-entry-body .coercive-status{display:block;margin-bottom:6px}
 
+
+/* Brottskatalog 0.9: läsbar beslutsbehörighet i brottskorten. */
+.coercive-overview{min-width:0}
+.coercive-filter-label{display:flex;align-items:center;gap:9px;font-size:12px;font-weight:750;padding:9px 0 13px;cursor:pointer}
+.coercive-filter{width:17px;height:17px;accent-color:var(--ink)}
+.coercive-overview:has(.coercive-filter:checked) .coercive-entry[data-eligible="false"]{display:none}
+.coercive-overview:has(.coercive-filter:checked) .coercive-chapter:not(:has(.coercive-entry[data-eligible="true"])):not(:has(.related)){display:none}
+.coercive-chapter>summary{min-height:56px;gap:9px;padding:11px 10px}
+.coercive-chapter>summary strong{font-size:14px;white-space:nowrap}
+.coercive-chapter>summary span{font-size:12px}
+.chapter-count{font-size:10px;white-space:nowrap;color:var(--muted)}
+.coercive-entry>summary{min-height:55px;gap:7px}
+.coercive-entry>summary svg:last-child{flex:0 0 15px;color:var(--muted)}
+.measure-icon{width:20px;height:20px;flex:none;display:grid;place-items:center}
+.measure-icon.yes{color:#249b67}.measure-icon.no{color:#d45b62}
+.measure-info{display:flex;min-width:0;flex:1;flex-direction:column;gap:3px}
+.measure-info>.coercive-ref{font-weight:800;font-size:11px;min-width:0;white-space:normal;color:var(--muted)}
+.measure-info>.coercive-title{font-weight:740;font-size:12px;line-height:1.35}
+.measure-decision{min-width:47px;max-width:80px;text-align:right;font-size:11px;font-weight:800;line-height:1.3;white-space:normal}
+.measure-decision.no{color:var(--muted)}
+.coercive-entry-body{padding:4px 4px 12px 28px}
+.coercive-entry-body p{margin:6px 0;font-size:12px;line-height:1.6}
+.coercive-entry-body strong{font-weight:760}
+
 </style>
   <title>Brottskatalog · steg 2</title>
 </head>
@@ -650,7 +674,9 @@ D.date='2026-10-12';
   <script src="./data/legal-review-baseline-06.js"></script>
   <script src="./validation-06.js"></script>
   <script src="./coercive-07.js"></script>
+  <script src="./coercive-09.js"></script>
   <script src="./field-07.js"></script>
+  <script src="./special-09.js"></script>
   <script src="./stages-08.js"></script>
   <script>
 /* Brottskatalog – stage 1. No framework, no network request during use. */
@@ -798,7 +824,7 @@ function card(c){
 function brandTop(){
   return `<div class="topline"><div class="brand-wrap"><div class="brand-symbol">${ic('scale')}</div><div><div class="brand-name">Brottskatalog</div><div class="brand-desc">JURIDISKT REFERENSVERK</div></div></div><div class="online"><span class="dot"></span><span id="connection-state">Lokalt läge</span></div></div>`;
 }
-function note(){return `<div class="mode-note">${ic('info','sm')}<span><strong>Version 0.8 · arbetsversion</strong> · ${crimes.length} sökingångar. Nya poster väntar delvis på juridisk granskning.</span></div>`;}
+function note(){return `<div class="mode-note">${ic('info','sm')}<span><strong>Version 0.9 · arbetsversion</strong> · ${crimes.length} sökingångar. Nya poster väntar delvis på juridisk granskning.</span></div>`;}
 function bottomNav(active){
   return `<nav class="bottom-nav" aria-label="Huvudnavigering">
   <button class="nav-item ${active==='sok'?'active':''}" data-tab="sok" ${active==='sok'?'aria-current="page"':''}>${ic('search')}Sök</button>
@@ -826,7 +852,7 @@ function resultsFragment(){
 function updateResults(){const el=document.getElementById('results-area');if(el)el.innerHTML=resultsFragment();}
 function renderSearch(){
   app.className='app-shell '+(state.density==='compact'?'compact':'');
-  app.innerHTML=`<main class="page"><div class="bk03-brand">${ic('scale')}<strong>Brottskatalog</strong><span>0.8</span></div>
+  app.innerHTML=`<main class="page"><div class="bk03-brand">${ic('scale')}<strong>Brottskatalog</strong><span>0.9</span></div>
   <label class="search-box" for="crime-search">${ic('search','lg')}<input id="crime-search" type="search" placeholder="T.ex. ringa stöld, BrB 8:2…" inputmode="search" enterkeyhint="search" autocapitalize="off" autocomplete="off" spellcheck="false" value="${escapeHtml(state.query)}"><button class="search-clear" data-action="clear-search" aria-label="Rensa sökning" style="${state.query?'':'display:none'}">${ic('x','sm')}</button></label>
   <div class="filter-strip" role="group" aria-label="Filtrera brott">${categories.map(cat=>`<button class="filter ${cat===state.category?'active':''}" data-category="${escapeHtml(cat)}" aria-pressed="${cat===state.category}">${escapeHtml(cat)}</button>`).join('')}</div>
   <div id="quick-area" ${state.query?'hidden':''}>${quickRow()}</div>
@@ -955,21 +981,35 @@ function investigationSection(c){
  return first.map(render).join('')+(later.length?'<details class="coercive-group"><summary>Fortsatt förundersökning</summary>'+later.map((x,i)=>render(x,i+first.length)).join('')+'</details>':'');
 }
 function coerciveSection(c){
- const reg=window.BK_COERCIVE;if(!reg)return '<p>Ingen översikt tillgänglig.</p>';
+ const reg=window.BK_COERCIVE;if(!reg)return '<p>Ingen tvångsmedelsöversikt tillgänglig.</p>';
  const all=reg.entries.filter(x=>x.id!=='hemlig'&&x.id!=='hemligo');
  const chapter=e=>Number(e.ref.match(/RB (\d+):/)?.[1]||0);
  const names={23:'Utredningsåtgärder',24:'Häktning',25:'Reseförbud',26:'Kvarstad',27:'Beslag och säkring',28:'Undersökningsåtgärder'};
  const render=e=>{
-  const v=reg.score(c,e);
-  const ref=e.ref.match(/RB \d+:[\da-z]+(?:[–-][\da-z]+)?/)?.[0]||e.ref;
-  return '<details class="coercive-entry"><summary><strong class="coercive-ref">'+escapeHtml(ref)+'</strong><span class="coercive-title">'+escapeHtml(e.title)+'</span>'+ic('chevron-down','sm')+'</summary><div class="coercive-entry-body"><div class="coercive-status '+escapeHtml(v.tone)+'">'+escapeHtml(v.label)+'</div><div><strong>Beslut:</strong> '+escapeHtml(e.decision)+'</div><p>'+escapeHtml(e.info)+'</p><div class="source-label">'+escapeHtml(e.ref)+'</div></div></details>';
+  const v=reg.score(c,e),eligible=reg.eligible?reg.eligible(c,e):v.tone!=='no';
+  const authority=e.decisionAuthority||e.ref;
+  const officer=reg.officerSummary?reg.officerSummary(e):'Kontrollera';
+  const detail=('<p><strong>Brottsrelaterat villkor:</strong> '+escapeHtml(v.label)+'</p>')+
+   '<p><strong>Polismans beslut:</strong> '+escapeHtml(officer)+(e.decisionCaution?' — '+escapeHtml(e.decisionCaution):'')+'</p>'+
+   '<p><strong>Annan beslutsfattare:</strong> '+escapeHtml(e.otherDecision||e.decision)+'</p>'+
+   '<p>'+escapeHtml(e.info)+'</p><p class="source-label">Beslutsbehörighet: '+escapeHtml(authority)+' · '+escapeHtml(e.ref)+'</p>';
+  return '<details class="coercive-entry" data-eligible="'+String(eligible)+'"><summary>'+
+    '<span class="measure-icon '+(eligible?'yes':'no')+'" aria-label="'+(eligible?'Brottskrav medger prövning':'Brottskrav ej uppfyllt')+'">'+ic(eligible?'check-circle':'x','sm')+'</span>'+
+    '<span class="measure-info"><strong class="coercive-ref">'+escapeHtml(e.ref.split(' jfr ')[0].split(',')[0].replace('RB ','RB '))+'</strong>'+
+    '<span class="coercive-title">'+escapeHtml(e.title)+'</span></span>'+
+    '<span class="measure-decision '+(e.officerMode==='none'?'no':'')+'">'+escapeHtml(officer)+'</span>'+ic('chevron-down','sm')+
+    '</summary><div class="coercive-entry-body">'+detail+'</div></details>';
  };
- return '<p class="coercive-lead">Straffskalevillkor och beslutsbehörighet visas separat. Övriga rekvisit prövas i situationen. FID = fara i dröjsmål.</p>'+
+ const panel='<div class="coercive-overview"><p class="coercive-lead">✓ = brottets straffskala och brottstyp utesluter inte åtgärden. ✕ = villkor ej uppfyllt. Övriga rekvisit måste fortfarande prövas. FID = fara i dröjsmål.</p>'+
+ '<label class="coercive-filter-label"><input class="coercive-filter" type="checkbox"> Visa endast ✓</label>'+
  [23,24,25,26,27,28].map(n=>{
   const list=all.filter(e=>chapter(e)===n);
-  const inside=n===24?'<button class="related" data-action="custody" data-id="'+escapeHtml(c.id)+'">Öppna häktningsöversikt '+ic('chevron-right','sm')+'</button>':list.map(render).join('');
-  return '<details class="coercive-chapter" '+(n===27?'open':'')+'><summary><strong>RB '+n+'</strong><span>'+names[n]+'</span>'+ic('chevron-down','sm')+'</summary><div>'+inside+'</div></details>';
- }).join('');
+  const yesCount=list.filter(e=>reg.eligible?reg.eligible(c,e):reg.score(c,e).tone!=='no').length;
+  const inside=n===24?'<button class="related" data-action="custody" data-id="'+escapeHtml(c.id)+'">Häktning · öppna fyrakortsöversikt '+ic('chevron-right','sm')+'</button>':list.map(render).join('');
+  const status=n===24?'Egen översikt':yesCount+'/'+list.length+' ✓';
+  return '<details class="coercive-chapter" '+(n===27?'open':'')+'><summary><strong>RB '+n+'</strong><span>'+names[n]+'</span><small class="chapter-count">'+status+'</small>'+ic('chevron-down','sm')+'</summary><div>'+inside+'</div></details>';
+ }).join('')+'</div>';
+ return panel;
 }
 function alternativesSection(c){
  return (c.alternativeOffences||[]).map(x=>{
@@ -1028,7 +1068,7 @@ function renderDetail(c){
 
   ${accordion('relaterade','Relaterade brott','list',related||'<p>Inga relaterade exempel ännu.</p>')}
   ${accordion('sources','Rättskällor och källtyper','book-mark',`<p><strong>Lagtext:</strong> återgiven separat och utan omskrivningar. Kontrollera aktuellt rättsläge via källan.</p><p><strong>Tolkningsstöd:</strong> kursanteckningar och praktiska sammanfattningar är inte lagtext.</p>${links.map(([title,url])=>`<a class="source-link" href="${url}" target="_blank" rel="noopener noreferrer">${ic('external-link')} ${escapeHtml(title)}</a>`).join('')}`)}
-  </div></section><p class="detail-footer">Version 0.8 · kontrollera aktuell lagtext vid operativa beslut.</p></main>`;
+  </div></section><p class="detail-footer">Version 0.9 · kontrollera aktuell lagtext vid operativa beslut.</p></main>`;
 }
 function showSheet({kicker,title,body,ref,actionHtml='',fromProvision=false}){
   if(!fromProvision)sheetHistory.length=0;
