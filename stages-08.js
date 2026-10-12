@@ -3,6 +3,7 @@
 const D=window.BK_DATA;if(!D?.crimes)return;
 const BRB='https://www.riksdagen.se/sv/dokument-och-lagar/dokument/svensk-forfattningssamling/brottsbalk-1962700_sfs-1962-700/';
 const NARK='https://www.riksdagen.se/sv/dokument-och-lagar/dokument/svensk-forfattningssamling/narkotikastrafflag-196864_sfs-1968-64/';
+const GUN='https://www.riksdagen.se/sv/dokument-och-lagar/dokument/svensk-forfattningssamling/vapenlag-2026408_sfs-2026-408/';
 const norm=s=>String(s||'').toLocaleLowerCase('sv').trim().normalize('NFD').replace(/[\u0300-\u036f]/g,'').replace(/\s+/g,' ');
 const STAGES=[['forsok','Försök till','försök',1],['forberedelse','Förberedelse till','förberedelse',2],['stampling','Stämpling till','stämpling',2]];
 const permission=new Map(), checkedChapters=new Set([3,6,7,8,9,10,11,12,13,14,15,16,17,18,19]);
@@ -72,17 +73,18 @@ let yes=0,no=0,unknown=0,unavailable=0;
 for(const c of base){
  if(c.stageType||!c.title||!original(c)) {unavailable++;continue;}
  const chapter=ch(c),brb=isBrB(c);
- if(!brb && !/narkotikabrott/i.test(c.title))continue;
+ if(!brb && !/narkotikabrott/i.test(c.title)&&!/VapenL\s+18:/i.test(c.ref||''))continue;
  const key=norm(c.title.replace(/\s*·.*$/,''));
  const rule=permission.get(key);
  const narc=/narkotikabrott/i.test(c.title)&&/narkotikastrafflag/i.test(c.ref||'');
  const narcUse=narc&&/bruk/i.test(c.title);
+ const gun=/VapenL\s+18:/i.test(c.ref||'');
  // 4 § narkotikastrafflagen: försöks- och förberedelseansvar även vid ringa; undantag eget bruk.
- const permit=narc?{types:new Set(narcUse?[]:(/ringa/i.test(c.title)?['F','P']:['F','P','S'])),source:'Narkotikastrafflagen 4 §'}:rule;
+ const permit=narc?{types:new Set(narcUse?[]:(/ringa/i.test(c.title)?['F','P']:['F','P','S'])),source:'Narkotikastrafflagen 4 §'}:gun?{types:new Set(/^(grovt|synnerligen grovt) vapenbrott$/.test(key)?['F','P','S']:[]),source:'VapenL 18:15'}:rule;
  for(const [slug,prefix,word,para] of STAGES){
   const code=slug==='forsok'?'F':slug==='forberedelse'?'P':'S';
   const approved=!!permit?.types.has(code);
-  const negative=!approved&&(brb&&checkedChapters.has(chapter)||explicitNo.has(norm(c.title))||narcUse);
+  const negative=!approved&&(brb&&checkedChapters.has(chapter)||explicitNo.has(norm(c.title))||narcUse||gun);
   // Ogranskade kombinationer görs sökbara vid en uttrycklig sökning, men visas inte i huvudkatalogen.
   const status=approved?'punishable':negative?'not-criminalized':'unverified';
   if(status==='punishable')yes++;else if(status==='not-criminalized')no++;else unknown++;
@@ -105,7 +107,7 @@ for(const c of base){
   const entry={
    id:'stadium-08-'+slug+'-'+c.id,title:stageTitle,ref:(c.ref||'')+'; '+src+'; BrB 23:'+para,
    shortRef:(c.shortRef||'')+' · 23:'+para,category:c.category,aliases:[prefix.toLocaleLowerCase('sv')+' '+c.title,slug+' '+c.title],
-   statute:c.statute,sourceURL:narc?NARK:BRB,penalty,penaltyShort:short,
+   statute:c.statute,sourceURL:narc?NARK:gun?GUN:BRB,penalty,penaltyShort:short,
    penaltyRange:status==='punishable'?{min,max,fines:hasFine,life:code==='F'&&!!p.life}:null,
    penaltyNote:why,penaltyChecked:'2026-10-12',
    stageType:slug,stageStatus:status,stageSource:src,stageParentId:c.id,
