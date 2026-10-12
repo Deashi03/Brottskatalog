@@ -70,7 +70,7 @@ try{
   await page.locator('summary').filter({hasText:'Kvalifikationsgrunder'}).click();
   assert.ok((await page.locator('body').innerText()).includes('Livsfarlig gärning'),'Qualification notes exist');
   await page.locator('summary').filter({hasText:'Anteckningar'}).click();
-  assert.ok((await page.locator('body').innerText()).includes('Brottsutredning'),'Course notes linked');
+  assert.ok((await page.locator('body').innerText()).includes('Samlad förklaring')||(await page.locator('body').innerText()).includes('Kursanteckning'),'Non-redundant course explanation available');
   await page.goto(url+'#sok',{waitUntil:'networkidle'});
   await page.locator('#crime-search').fill('Tvegifte');
   await wait();
@@ -106,14 +106,15 @@ try{
   await wait();
   await page.locator('.crime-card').first().click();
   await page.locator('summary').filter({hasText:'Utredningsuppslag'}).click();
-  assert.ok((await page.locator('body').innerText()).includes('historiska mätserier'),'Energy consumption investigative guidance');
+  assert.ok((await page.locator('body').innerText()).includes('synliga spår'),'Energy field checklist focuses on observable evidence');
   await page.goto(url+'#sok',{waitUntil:'networkidle'});
   await page.locator('#crime-search').fill('ringa stöld');
   await wait();
   await page.locator('.crime-card').first().click();
   await page.locator('[data-action="custody"]').click();
   assert.ok((await page.locator('[role="dialog"]').innerText()).includes('24:2'),'Identification custody/urgent grip scenario');
-  assert.ok((await page.locator('[role="dialog"]').innerText()).includes('24:7'),'Custody separated from police power to arrest');
+  assert.ok((await page.locator('[role="dialog"]').innerText()).includes('24:3 – Utredningshäktning'),'Custody includes investigative detention at end');
+  assert.equal((await page.locator('[role="dialog"]').innerText()).includes('24:7'),false,'No redundant arrest explanation');
   await page.goto(url+'#sok',{waitUntil:'networkidle'});
   await page.locator('#crime-search').fill('grovt brott mot knivlagen');
   await wait();
@@ -121,6 +122,21 @@ try{
   await page.locator('summary').filter({hasText:'Kvalifikationsgrunder'}).click();
   assert.ok((await page.locator('body').innerText()).includes('Annan särskilt farlig art'),'Four knife crime factors explained');
 
+  // v0.7: coercive-measures statuses are per crime, separate from actual case facts.
+  await page.goto(url+'#sok',{waitUntil:'networkidle'});
+  await page.locator('#crime-search').fill('ringa stöld');await wait();
+  await page.locator('.crime-card').first().click();
+  assert.equal(await page.locator('summary').filter({hasText:'Rekvisit att kontrollera'}).count(),0,'Remove duplicated elements menu');
+  await page.locator('summary').filter({hasText:'Tvångsmedel – översikt'}).click();
+  const force=await page.locator('body').innerText();
+  assert.ok(force.includes('Kroppsvisitation')&&force.includes('Kvarhållande av grupp'),'Core coercive measures rendered');
+  assert.ok(force.includes('Inte enligt huvudregel'),'Custody/measure indicators reflect low maximum or minimum penalty');
+  assert.ok(force.includes('Beslut:'),'Decision maker visibly labelled');
+  await page.goto(url+'#sok',{waitUntil:'networkidle'});
+  await page.locator('#crime-search').fill('mord');await wait();
+  await page.locator('.crime-card').filter({hasText:'Mord'}).first().click();
+  await page.locator('summary').filter({hasText:'Tvångsmedel – översikt'}).click();
+  assert.ok((await page.locator('body').innerText()).includes('Straffskalekrav uppfyllt'),'Major offences should satisfy ordinary scale thresholds');
   await page.goto(url+'#mer',{waitUntil:'networkidle'});
   const settings=await page.locator('body').innerText();
   assert.ok(settings.includes('Senaste kataloguppdatering'),'Update age in settings');
