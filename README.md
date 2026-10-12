@@ -16,8 +16,9 @@
   - Skattebrottslag (1971:69).
   - Bidragsbrottslag (2007:612).
   - Lag (2010:1011) om brandfarliga och explosiva varor.
-- Förstadieposterna omfattar försök, förberedelse och stämpling till tillämpliga brott. **Ej straffbart** förutsätter kontrollerad särskild regel eller ett explicit granskat undantag. **Ej verifierat** används annars.
+- Förstadieposterna omfattar försök, förberedelse och stämpling till tillämpliga brott. **Ej straffbart** förutsätter kontrollerad särskild regel eller ett explicit granskat undantag. **Ej verifierat** används annars. Ett fel i normalisering av svenska tecken (t.ex. ä i ringa stöld) upptäcktes och rättades under regressionstestningen.
 - Lagtext först i brottskortet. Sökresultaten är fortsatt avskalade till brottsrubricering, lagrum och straffskala, med röd/grå markering för förstadier som kräver det.
+- De nya brottsfamiljerna och förstadierna får utredningsuppslag efter att databasen är färdigladdad. Fältstödet innehåller särskilda anteckningar för smuggling, penningtvätt, skattebrott, bidragsbrott och explosiva varor.
 - Offline-cachen laddar de nya JS-modulerna vid första uppkopplade besöket.
 
 ## Kontroller
@@ -31,6 +32,7 @@
 
 - **Ny specialstraffrättslig lagtext visas via officiella källänkar, inte som fullständigt offline-inläst lagtext.** Dessa poster har `lawMode: missing`; inga genererade parafraser presenteras som ordagrann lagtext.
 - Äldre katalogposter och vissa förstadieundantag behöver fortfarande individuell lagtext- och åtalsgranskning. Vissa äldre maskinimporterade lagtexter kan vara ofullständiga. Tidigare granskningsrapport finns i `data/review-summary-06.json`.
+- Om ett straffskaleunderlag saknar verifiering visas en neutral informationssymbol i stället för ett missvisande rött kryss.
 - ✓ gäller brottets identifierbara villkor, medan t.ex. syfte, misstankegrad, skyndsamhet och särskilda undantag kräver bedömning av polis/behörig beslutsfattare. `Direkt` betyder inte att polis alltid kan besluta utan övriga rekvisit; till exempel kräver beslag en laglig grundåtgärd.
 - För brott med okänd straffskala eller otydlig lagklassificering bör systemet inte visa ett definitivt ja/nej som kan uppfattas som ett tillstånd.
 - Övergångsbestämmelser och rättsläget vid gärningstillfället kan medföra att dagens straffskala inte kan användas bakåt.
