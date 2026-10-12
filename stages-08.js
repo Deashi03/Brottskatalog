@@ -5,7 +5,7 @@ const BRB='https://www.riksdagen.se/sv/dokument-och-lagar/dokument/svensk-forfat
 const NARK='https://www.riksdagen.se/sv/dokument-och-lagar/dokument/svensk-forfattningssamling/narkotikastrafflag-196864_sfs-1968-64/';
 const norm=s=>String(s||'').toLocaleLowerCase('sv').trim().normalize('NFD').replace(/[\u0300-\u036f]/g,'').replace(/\s+/g,' ');
 const STAGES=[['forsok','Försök till','försök',1],['forberedelse','Förberedelse till','förberedelse',2],['stampling','Stämpling till','stämpling',2]];
-const permission=new Map(), checkedChapters=new Set([3,7,8,9,11,12,13,14,17,18,19]);
+const permission=new Map(), checkedChapters=new Set([3,6,7,8,9,10,11,12,13,14,15,16,17,18,19]);
 const add=(ref,types,names)=>{
  for(const name of names.split('|')){
   const key=norm(name);const record=permission.get(key)||{types:new Set(),source:ref};
@@ -19,6 +19,18 @@ add('BrB 3:11','S','Mord|Dråp|Grov misshandel|Synnerligen grov misshandel');
 add('BrB 4:10','FPS','Människorov|Människohandel|Människoexploatering|Grov människoexploatering|Olaga frihetsberövande|Äktenskapstvång|Barnäktenskapsbrott|Grovt olaga tvång|Grovt olaga hot|Grovt hemfridsbrott|Grovt olaga intrång');
 add('BrB 4:10','F','Äktenskapsresebrott|Äktenskapsresebrott mot barn');
 add('BrB 4:10','FP','Dataintrång|Grovt dataintrång');
+add('BrB 6:15','F','Våldtäkt|Grov våldtäkt|Sexuellt övergrepp|Grovt sexuellt övergrepp|Våldtäkt mot barn|Grov våldtäkt mot barn|Sexuellt utnyttjande av barn|Sexuellt övergrepp mot barn|Grovt sexuellt övergrepp mot barn|Utnyttjande av barn för sexuell posering|Grovt utnyttjande av barn för sexuell posering|Utnyttjande av barn genom köp av sexuell handling|Köp av sexuell handling|Koppleri|Grovt koppleri');
+add('BrB 6:15','P','Koppleri');
+add('BrB 6:15','PS','Våldtäkt|Grov våldtäkt|Våldtäkt mot barn|Grov våldtäkt mot barn|Grovt utnyttjande av barn för sexuell posering|Grovt koppleri');
+add('BrB 10:9','F','Förskingring|Trolöshet mot huvudman|Grov förskingring|Grov trolöshet mot huvudman');
+add('BrB 10:9','PS','Grov förskingring|Grov trolöshet mot huvudman');
+add('BrB 10:9','P','Grovt givande av muta');
+add('BrB 15:15','PS','Mened|Grov mened');
+add('BrB 15:15','F','Bevisförvanskning|Grov bevisförvanskning');
+add('BrB 16:17','PS','Myteri');
+add('BrB 16:17','F','Gravfridsbrott|Grovt gravfridsbrott|Barnpornografibrott|Grovt barnpornografibrott');
+add('BrB 16:17','PS','Grovt gravfridsbrott');
+add('BrB 16:17','P','Grovt barnpornografibrott');
 add('BrB 7:5','F','Otillbörligt utverkande av samtycke eller tillstånd till adoption av barn|Förvanskande av familjeställning|Grov egenmäktighet med barn');
 add('BrB 8:12','FP','Stöld|Grov stöld|Inbrottsstöld|Rån|Grovt rån|Tillgrepp av fortskaffningsmedel|Grovt tillgrepp av fortskaffningsmedel|Olovlig energiavledning|Grov olovlig energiavledning');
 add('BrB 8:12','S','Grov stöld|Inbrottsstöld|Rån|Grovt rån');
