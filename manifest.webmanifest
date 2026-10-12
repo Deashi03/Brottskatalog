@@ -2,7 +2,7 @@
   "id": "./",
   "name": "Brottskatalog",
   "short_name": "Brottskatalog",
-  "description": "Svenskt polisiärt juridiskt referensverk – arbetsversion 0.3.",
+  "description": "Brottskatalog 0.5 – juridiskt uppslagsverk med straffskalor, kvalifikationsgrunder och anteckningar.",
   "start_url": "./",
   "scope": "./",
   "display": "standalone",
