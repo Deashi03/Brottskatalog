@@ -1011,7 +1011,7 @@ function showProvision(key){
 }
 
 function showCustody(c){
- const pr=c.penaltyRange,known=pr&&typeof pr.max==='number',main=known&&pr.max>=1;
+ const pr=window.BK_COERCIVE?.range?.(c)||c.penaltyRange,known=pr&&typeof pr.max==='number',main=known&&pr.max>=1;
  const presum=known&&pr.min>=1.5||['Grov fridskränkning','Grov kvinnofridskränkning','Hedersförtryck'].includes(c.title);
  const row=(heading,desc)=>'<div class="custody-line"><b>'+heading+'</b><span>'+desc+'</span></div>';
  const body=row('24:1 – '+(!known?'Straffskala ej verifierad':main?'Straffskalan medger prövning':'Inte enligt huvudregeln'),
