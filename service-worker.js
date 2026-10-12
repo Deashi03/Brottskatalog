@@ -1,5 +1,5 @@
 /* Brottskatalog offline cache – versioned so an incomplete update never replaces the active cache. */
-const CACHE = 'brottskatalog-v05-20261012-v2';
+const CACHE = 'brottskatalog-v05-20261012-v3';
 const CORE = ["./","./index.html","./manifest.webmanifest","./icon.svg","./catalog-03.js","./glossary-03.js","./data/provisions-generated.js","./data/provisions-reviewed-05.js","./data/legal-review-baseline.js","./legal-review-04.js","./catalog-05.js","./commentary-05.js","./glossary-05.js","./data/legal-review-baseline-05.js","./legal-validation-05.js","./data/source-status.json","./data/review-summary-05.json"];
 self.addEventListener('install', event => {
   event.waitUntil(caches.open(CACHE).then(cache => cache.addAll(CORE)).then(() => self.skipWaiting()));
@@ -18,7 +18,7 @@ self.addEventListener('fetch', event => {
   event.respondWith((async () => {
     const cache = await caches.open(CACHE);
     const cached = await cache.match(event.request, {ignoreSearch:true});
-    if (event.request.mode === 'navigate' || /\/(?:index\.html|catalog-03\.js|glossary-03\.js|provisions-generated\.js|source-status\.json)$/.test(url.pathname)) {
+    if (event.request.mode === 'navigate' || /\.(?:html|js|json|webmanifest)$/i.test(url.pathname)) {
       try {
         const fresh = await fetch(event.request, {cache:'no-store'});
         if (fresh.ok) await cache.put(event.request, fresh.clone());
