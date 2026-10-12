@@ -158,7 +158,25 @@ try{
   const force=await page.locator('body').innerText();
   assert.ok(force.includes('Kroppsvisitation')&&force.includes('Kvarhållande av grupp'),'Core coercive measures by chapter');
   await chapters.filter({hasText:'RB 23'}).locator('.coercive-entry').first().locator('summary').click();
-  assert.ok((await page.locator('body').innerText()).includes('Beslut:'),'Decision maker is accessible per measure');
+  assert.ok((await page.locator('body').innerText()).includes('Polismans beslut:'),'Decision maker is accessible per measure');
+  // v0.9: visible ✓/✕ and officer badges in the chapter list.
+  const items=page.locator('.coercive-entry');
+  assert.ok(await items.count()>15,'Broad non-secret coercive index should render');
+  assert.ok(await page.locator('.coercive-entry[data-eligible="true"] .measure-icon.yes').count()>0,'Eligible measures show check mark');
+  assert.ok(await page.locator('.coercive-entry[data-eligible="false"] .measure-icon.no').count()>0,'Ineligible measures show cross');
+  assert.ok((await page.locator('.coercive-entry').allTextContents()).some(x=>x.includes('FID')),'Police FID badges are visible');
+  const filter=page.locator('.coercive-filter');
+  await filter.check();
+  assert.equal(await page.locator('.coercive-entry[data-eligible="false"]:visible').count(),0,'Only-check filter hides ineligible measures');
+  await filter.uncheck();
+  const mobileWidth=await page.evaluate(()=>({scroll:document.documentElement.scrollWidth,inner:innerWidth}));
+  assert.ok(mobileWidth.scroll<=mobileWidth.inner+1,'No overflow after open coercive list');
+  await page.goto(url+'#sok',{waitUntil:'networkidle'});
+  await page.locator('#crime-search').fill('grov vapensmuggling');await wait();
+  assert.ok((await page.locator('.crime-card').allTextContents()).some(x=>x.includes('Grov vapensmuggling')),'New special offence is searchable');
+  await page.goto(url+'#sok',{waitUntil:'networkidle'});
+  await page.locator('#crime-search').fill('försök till grov vapensmuggling');await wait();
+  assert.ok((await page.locator('.crime-card').allTextContents()).some(x=>x.toLowerCase().includes('försök till grov vapensmuggling')),'New special offence attempt is searchable');
   await page.goto(url+'#sok',{waitUntil:'networkidle'});
   await page.locator('#crime-search').fill('mord');await wait();
   await page.locator('.crime-card').filter({hasText:'Mord'}).first().click();
