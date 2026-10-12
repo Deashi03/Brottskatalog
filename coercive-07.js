@@ -29,8 +29,29 @@ const entries=[
 {id:'hemlig',group:'Hemliga åtgärder',title:'Hemlig avlyssning av elektronisk kommunikation',ref:'RB 27:18 a m.fl.',scale:'twoSpecial',decision:'Rätten; i vissa akuta fall åklagare',info:'Grundspår: minst två års minimistraff. Många uttryckliga katalogbrott, försöksformer och alternativa straffvärderegler: låg straffskala utesluter INTE automatiskt. Alltid särskild prövning.'},
 {id:'hemligo',group:'Hemliga åtgärder',title:'Övriga hemliga tvångsmedel',ref:'RB 27 kap. och särskild lag',scale:'specific',decision:'Rätten eller åklagare enligt respektive regel',info:'Hemlig övervakning, kamera- och rumsavlyssning och hemlig dataavläsning har olika brottskataloger, straffskalor och undantag. Appen ger därför inte automatiskt ja/nej för dessa.'}
 ];
+const legacyRange=(raw)=>{
+ const p=String(raw||'').toLocaleLowerCase('sv').trim();
+ if(/^böter$/.test(p))return {min:0,max:0};
+ if(!p.startsWith('fängelse')&&!p.startsWith('böter'))return null;
+ const number=t=>{
+   const y=t.match(/(\d+)\s*år/),m=t.match(/(\d+)\s*mån/);
+   if(y||m)return Number(y?.[1]||0)+Number(m?.[1]||0)/12;
+   const n=t.match(/\b(\d+)\b/);return n?Number(n[1]):NaN;
+ };
+ const chunks=p.split(/\s*[–-]\s*/);
+ if(chunks.length===2){
+   const minimum=p.startsWith('böter')?0:number(chunks[0]);
+   const maximum=number(chunks[1]);
+   return Number.isFinite(minimum)&&Number.isFinite(maximum)?{min:minimum,max:maximum}:null;
+ }
+ if(/högst/.test(p)){
+   const maximum=number(p.split('högst').pop());
+   return Number.isFinite(maximum)?{min:0,max:maximum}:null;
+ }
+ return null;
+};
 const score=(c,e)=>{
- const pr=c.penaltyRange;
+ const pr=c.penaltyRange||legacyRange(c.penalty);
  const min=Number(pr?.min),max=Number(pr?.max);
  if(!pr||!Number.isFinite(max)||!Number.isFinite(min))return {label:'Straffskala ej verifierad',tone:'unknown'};
  if(e.scale==='any')return {label:'Ingen allmän straffskalegräns',tone:'neutral'};
