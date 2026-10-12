@@ -1,0 +1,30 @@
+name: Brottskatalog UI smoke tests
+on:
+  workflow_dispatch:
+  push:
+    branches: [main]
+    paths:
+      - "index.html"
+      - "catalog-03.js"
+      - "glossary-03.js"
+      - "data/provisions-generated.js"
+      - "scripts/ui_smoke.mjs"
+      - ".github/workflows/ui-tests.yml"
+permissions:
+  contents: read
+jobs:
+  ui:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: "22"
+      - name: Install headless browser
+        run: |
+          npm install --no-save playwright
+          npx playwright install --with-deps chromium
+      - name: Serve test app
+        run: python3 -m http.server 8765 --bind 127.0.0.1 &
+      - name: Test iPhone viewport and interactions
+        run: node scripts/ui_smoke.mjs
