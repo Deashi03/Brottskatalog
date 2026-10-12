@@ -1,37 +1,49 @@
-# Brottskatalog – steg 2 (testversion)
+# Brottskatalog 0.3
 
-Brottskatalog är en mobilanpassad svensk brotts- och lagrumsprototyp. **Detta är ännu inte en fullständig eller juridiskt kvalitetssäkrad brottskatalog och får inte användas som ensamt beslutsunderlag i tjänsten.**
+**Status:** Under utveckling. 158 sökingångar (48 tidigare + 110 nya). Nya katalogposter är inte färdiggranskade juridiska brottskort. De kan sakna verifierad straffskala och åtals-/häktningsinformation. Använd inte appen som ensamt beslutsunderlag i tjänsten.
 
-## Öppna som webbapp
+## Öppna på iPhone eller dator
 
-Efter att GitHub Pages aktiverats under **Settings → Pages → Build and deployment → Deploy from a branch → main → /(root) → Save**:
+https://deashi03.github.io/Brottskatalog/
 
-**https://deashi03.github.io/Brottskatalog/**
+På iPhone: öppna adressen i **Safari** → **Dela** → **Lägg till på hemskärmen**. Ingen Netlify-tjänst eller inloggning krävs för att använda den publicerade webbappen. Ett installerat offline-exemplar kan påverkas av iOS cache-rensning.
 
-Öppna adressen i Safari på iPhone. När den öppnas korrekt: Dela → Lägg till på hemskärmen.
+## Nytt i 0.3
 
-## Prova funktionerna
+- Kompakt söksida utan stor rubrik och informationsbanner över sökfältet.
+- Söktangenten stänger tangentbordet i stället för att lämna det uppe.
+- Fler rubriceringar och gärningsbaserade sökord; enkel tolerans för stavfel.
+- 55 nya källmarkerade begreppsförklaringar från Brottsutredning, Straffprocessrätt, Straffrätt Lund och Juridikens grunder.
+- I brottskortet finns separata menyer för jämförelse och utredningsfrågor.
+- Sparade favoriter kan flyttas upp/ned; senast använda brott visas redan i appen.
+- Under **Mer** finns den diskreta uppgiften om dagar sedan katalogens senaste uppdatering, samt datum för kontroller av officiella SFS-källor.
 
-- Sök på brottsrubricering, lagrum och vardagliga synonymer
-- Läs tydlig straffskala och tryckbara statusrader för häktning och åtal
-- Öppna förklaringar genom understrukna begrepp och laghänvisningar
-- Spara favoriter och ändra visningstäthet
-- Automatiskt mörkt tema 22.00–06.00 enligt telefonens lokala tid, eller välj manuellt
-- Efter första lyckade installation och offlinecache: öppna utan uppkoppling
+## Struktur
 
-## Offline
+- `index.html`: UI och det tidigare urvalet med lokalt lagrade paragrafer.
+- `catalog-03.js`: tillkommande brottsrubriceringar, tydligt märkta som under granskning.
+- `glossary-03.js`: separata tolknings- och begreppsförklaringar med källa.
+- `data/provisions-generated.js`: **maskinimporterat**, inte juridiskt godkänt material från Sveriges riksdag, med separata källmarkeringar.
+- `data/law-sources.json`: konfiguration av de officiella författningskällorna och vilka andra uppgifter som berörs av ändringar.
+- `data/source-status.json`: resultat från de senaste automatiska källkontrollerna.
+- `scripts/sync_law_sources.py`: källkontroll och utkastimport av SFS-texter.
+- `.github/workflows/sync-laws.yml`: kör kontrollen måndagar samt när den startas manuellt.
+- `.github/workflows/ui-tests.yml`: automatiserade gränssnittstester.
+- `service-worker.js`: offlinecache med försök till uppdatering när internet finns.
 
-`service-worker.js` förlagrar `index.html`, `manifest.webmanifest` och `icon.svg`. Appens exempelbrott, lagtexter och sökindex finns i `index.html`. Utan en första lyckad öppning med internet och fullständig installation fungerar inte offlineåtkomsten. Safari/iOS kan rensa webbdata, så permanent offlineåtkomst är inte garanterad.
+## Uppdatera lagtext och bedömningsuppgifter
 
-## Om innehållet
+1. Gå till **Actions → Legal source synchronization → Run workflow** för att kontrollera de officiella SFS-källorna direkt.
+2. Granska eventuella markeringar i `data/source-status.json` och GitHub Actions-loggen.
+3. Uppdatera uppgifterna i brottskatalogens datakällor efter juridisk kontroll. Straffskalor, häktningsregler och åtalsvillkor ska inte gissas eller godkännas automatiskt.
+4. Efter commit bygger GitHub Pages om webbappen. Vid uppkoppling försöker appen hämta uppdaterade datafiler.
 
-Det finns 48 sökingångar för UI-test, inte samtliga svenska brott. Specialstraffrättsliga brott med enbart penningböter ingår inte i det planerade urvalet; brottsbalksbrott ska med oavsett straffskala. Flera uppgifter är från kursanteckningar och ska inte sammanblandas med ordagrann lagtext. Uppgifterna behöver kontrolleras mot gällande rätt och rättspraxis före operativ användning.
+Källkontrollen upptäcker förändringar och kan uppdatera **lagtextutkast** automatiskt. Den uppdaterar däremot inte automatiskt juridiska tolkningar som kan kräva särskild bedömning. Det är en avsiktlig säkerhetsgräns.
 
-## Projektfiler
+## Urval
 
-- `index.html` – hela gränssnittet med lokalt inbäddat exempelmaterial
-- `manifest.webmanifest` – metadata för installering på hemskärm
-- `service-worker.js` – offlinecache
-- `icon.svg` – appikon
+Brottsbalksbrott ska ingå oavsett straffskala. I specialstraffrätten ska brott som **enbart** ger penningböter utelämnas, medan bland annat dagsbötes- och fängelsebrott ska ingå. Databasen är fortfarande under utbyggnad.
 
-Ingen Netlify-tjänst och ingen inloggning behövs för att besöka den publicerade sidan.
+## Juridiska källtyper
+
+**Lagtext** är en separat källtyp och ska återges ordagrant. Maskinimport är inte liktydigt med granskning. **Rättspraxis**, **kursanteckningar** och **praktiskt bedömningsstöd** ska vara tydligt särskilda från själva författningstexten.
