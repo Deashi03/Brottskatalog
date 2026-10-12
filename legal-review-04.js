@@ -49,6 +49,8 @@ for(let i=0;i<rows.length;i++){
    c.ref='BrB 17 kap. 12 a §';
    c.shortRef='BrB 17:12a';
  }
+ const official=window.BK_STATUTES?.[c.statute];
+ if(official?.text){c.law=official.text;c.lawMode='machine';c.lawSource=official.ref;}
  setCode(c,codes[i]);
  if(codes[i]==='REF'){
   c.penalty='Beror på det underliggande förfalskningsbrottet';
