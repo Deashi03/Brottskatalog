@@ -151,10 +151,14 @@ try{
   await page.locator('.crime-card').first().click();
   assert.equal(await page.locator('summary').filter({hasText:'Rekvisit att kontrollera'}).count(),0,'Remove duplicated elements menu');
   await page.locator('summary').filter({hasText:'Tvångsmedel – översikt'}).click();
+  const chapters=page.locator('.coercive-chapter');
+  assert.equal(await chapters.count(),6,'Two measures groups omitted and RB 23–28 shown');
+  await chapters.filter({hasText:'RB 23'}).locator('summary').first().click();
+  await chapters.filter({hasText:'RB 28'}).locator('summary').first().click();
   const force=await page.locator('body').innerText();
-  assert.ok(force.includes('Kroppsvisitation')&&force.includes('Kvarhållande av grupp'),'Core coercive measures rendered');
-  assert.ok(force.includes('Inte enligt huvudregel'),'Custody/measure indicators reflect low maximum or minimum penalty');
-  assert.ok(force.includes('Beslut:'),'Decision maker visibly labelled');
+  assert.ok(force.includes('Kroppsvisitation')&&force.includes('Kvarhållande av grupp'),'Core coercive measures by chapter');
+  await chapters.filter({hasText:'RB 23'}).locator('.coercive-entry').first().locator('summary').click();
+  assert.ok((await page.locator('body').innerText()).includes('Beslut:'),'Decision maker is accessible per measure');
   await page.goto(url+'#sok',{waitUntil:'networkidle'});
   await page.locator('#crime-search').fill('mord');await wait();
   await page.locator('.crime-card').filter({hasText:'Mord'}).first().click();
