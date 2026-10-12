@@ -10,7 +10,7 @@
   const m=row.code.match(/^(BF|F)([\d.]+)(?:-([\d.]+))?(L?)$/);
   if(!m)continue;
   const f=m[1]==='BF',min=m[3]?Number(m[2]):0,max=m[3]?Number(m[3]):Number(m[2]),life=!!m[4];
-  const dur=n=>Number.isInteger(n)?n+' år':Math.floor(n)+' år '+Math.round((n%1)*12)+' månader';
+  const dur=n=>Number.isInteger(n)?n+' år':(Math.floor(n)?Math.floor(n)+' år ':'')+Math.round((n%1)*12)+' månader';
   const pen=f?('Böter eller fängelse högst '+dur(max)):(min?'Fängelse '+dur(min)+' – '+dur(max)+(life?' eller livstid':''):'Fängelse högst '+dur(max));
   let prosecution='general',label='Allmänt åtal',details=['Allmänt åtal enligt huvudregeln. Kontrollera särskilda processregler när sådana aktualiseras.'],rule='Allmänt åtal';
   if(chapter==='7' && paragraph==='4'){prosecution='conditional';label='Åtal ur allmän synpunkt';rule='BrB 7 kap. 6 §';details=['Egenmäktighet med barn får åtalas av åklagare bara om åtal är påkallat ur allmän synpunkt. Angivelse är inte i sig ett rekvisit.'];}
