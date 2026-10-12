@@ -1,0 +1,861 @@
+<!doctype html>
+<html lang="sv">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <meta name="theme-color" content="#f9fafb">
+  <meta name="color-scheme" content="light dark">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="default">
+  <meta name="apple-mobile-web-app-title" content="Brottskatalog">
+  <link rel="manifest" href="./manifest.webmanifest">
+  <link rel="icon" type="image/svg+xml" href="./icon.svg">
+  <link rel="apple-touch-icon" href="./icon.svg">
+  <meta name="description" content="Snabbt juridiskt uppslagsverk. Designprototyp med exempelbrott, offline och utan inloggning.">
+
+
+
+  <script>(function(){try{var t=JSON.parse(localStorage.getItem('brottskatalog.steg1.theme')||'"auto"');var h=new Date().getHours();document.documentElement.dataset.theme=t==='auto'?(h>=22||h<6?'dark':'light'):t;}catch(e){document.documentElement.dataset.theme='light';}})();</script>
+  <style>
+:root{
+  --ink:#192b3b;--ink-soft:#46596b;--muted:#718091;--quiet:#93a0ad;
+  --primary:#244e6d;--primary-deep:#183b55;--accent:#e9f3f8;
+  --line:#e4eaf0;--line-soft:#edf1f4;--surface:#ffffff;--ground:#f7f9fa;--shade:#f3f6f8;
+  --green:#217760;--green-bg:#e8f5f0;--amber:#986013;--amber-bg:#fbf3e5;
+  --shadow:0 9px 28px rgba(25,43,59,.055);--r:20px;
+  font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",system-ui,sans-serif;color:var(--ink);
+  -webkit-font-smoothing:antialiased;text-rendering:optimizeLegibility;
+}
+*{box-sizing:border-box}html{min-height:100%;background:var(--ground);scroll-behavior:smooth}body{margin:0;min-height:100%;background:var(--ground)}button,input{font:inherit}button{cursor:pointer}button:disabled{cursor:not-allowed;opacity:.5}a{color:var(--primary)}button:focus-visible,a:focus-visible,summary:focus-visible,input:focus-visible{outline:3px solid #77a9cf;outline-offset:3px}
+.app-shell{max-width:490px;min-height:100dvh;margin:0 auto;background:var(--ground);position:relative;overflow-x:hidden;padding-bottom:calc(85px + env(safe-area-inset-bottom))}
+.app-shell.detail-mode{padding-bottom:calc(28px + env(safe-area-inset-bottom))}
+.page{padding:0 22px 24px;animation:enter .16s ease-out}
+@keyframes enter{from{opacity:.2;transform:translateY(4px)}to{opacity:1;transform:translateY(0)}}
+@media(min-width:700px){.app-shell{min-height:100vh;box-shadow:0 0 0 1px #dae1e7,0 12px 70px rgba(12,38,58,.12)}}
+@media(max-width:360px){.page{padding-left:16px;padding-right:16px}}
+@media(prefers-reduced-motion:reduce){*,*:before,*:after{animation:none!important;transition:none!important;scroll-behavior:auto!important}}
+/* icon language */
+.ic{width:19px;height:19px;stroke:currentColor;stroke-width:1.85;stroke-linecap:round;stroke-linejoin:round;fill:none;flex-shrink:0;display:inline-block;vertical-align:middle}.ic.sm{width:16px;height:16px}.ic.xs{width:14px;height:14px}.ic.lg{width:23px;height:23px}.ic.xl{width:26px;height:26px}
+.icon-button{display:inline-flex;align-items:center;justify-content:center;min-width:43px;min-height:43px;flex-shrink:0;background:transparent;color:var(--ink-soft);border:0;border-radius:12px}.icon-button:active{background:var(--shade)}.icon-button.active{color:var(--primary)}
+/* chrome */
+.topline{display:flex;align-items:center;justify-content:space-between;padding-top:calc(12px + env(safe-area-inset-top));min-height:64px}
+.brand-wrap{display:flex;align-items:center;gap:11px}
+.brand-symbol{width:36px;height:36px;border-radius:12px;background:var(--ink);color:white;display:flex;align-items:center;justify-content:center;box-shadow:0 3px 7px rgba(10,23,34,.1)}
+.brand-symbol .ic{width:22px;height:22px}
+.brand-name{font-weight:790;letter-spacing:-.55px;font-size:17.5px;line-height:1.15}
+.brand-desc{font-size:10px;letter-spacing:1.8px;font-weight:800;color:var(--muted);margin-top:3px}
+.online{font-size:11px;font-weight:650;color:var(--green);display:flex;align-items:center;gap:5px;white-space:nowrap}.online .dot{width:6px;height:6px;border-radius:50%;background:var(--green)}
+.mode-note{display:flex;gap:10px;align-items:center;margin-top:18px;background:#edf3f7;border:1px solid #e3edf4;border-radius:12px;padding:10px 12px;color:#526c80;font-size:11.5px;line-height:1.45}.mode-note .ic{color:#607f96}
+.kicker{color:var(--muted);font-size:10px;font-weight:800;letter-spacing:1.75px;text-transform:uppercase}
+.hero{padding-top:25px}.hero h1{font-size:32px;line-height:1.13;letter-spacing:-1.45px;font-weight:800;margin:7px 0 9px}.hero p{font-size:13.3px;line-height:1.5;color:var(--ink-soft);margin:0}
+.search-box{height:55px;border-radius:17px;border:1px solid #d8e2ea;background:white;display:flex;align-items:center;gap:11px;padding:0 15px;margin-top:25px;box-shadow:0 4px 18px rgba(23,48,69,.035);transition:border-color .12s,box-shadow .12s}
+.search-box:focus-within{border-color:#84aac4;box-shadow:0 0 0 3px rgba(50,114,152,.1)}.search-box .ic{color:#7890a1}.search-box input{outline:0;border:0;width:100%;height:100%;min-width:0;background:transparent;font-size:14.5px;color:var(--ink)}.search-box input::placeholder{color:#94a2ae}.search-clear{width:27px;height:27px;border:0;background:var(--shade);border-radius:50%;display:flex;align-items:center;justify-content:center;color:var(--muted)}
+.filter-strip{display:flex;gap:7px;margin:17px -22px 0;padding:0 22px;overflow:auto;scrollbar-width:none}.filter-strip::-webkit-scrollbar{display:none}.filter{flex:0 0 auto;border:1px solid var(--line);background:white;color:#526476;border-radius:999px;min-height:34px;padding:0 13px;font-size:12px;font-weight:650;white-space:nowrap}.filter.active{background:var(--ink);border-color:var(--ink);color:#fff}
+.section-heading{display:flex;justify-content:space-between;align-items:baseline;margin-top:28px;margin-bottom:13px}.section-heading h2{font-size:14.5px;letter-spacing:-.18px;margin:0;font-weight:790}.section-heading span{color:var(--muted);font-size:12px}
+.quick-row{display:flex;gap:8px;overflow:auto;margin:0 -22px;padding:0 22px 3px;scrollbar-width:none}.quick-row::-webkit-scrollbar{display:none}.quick-chip{display:flex;align-items:center;gap:8px;background:white;border:1px solid var(--line);border-radius:12px;padding:10px 11px;white-space:nowrap;color:var(--ink-soft);font-weight:650;font-size:12px}.quick-chip .ic{color:var(--primary)}
+.crime-list{display:grid;gap:9px}.crime-card{border:1px solid var(--line);border-radius:17px;padding:15px 13px 14px 16px;background:white;min-height:91px;width:100%;display:flex;text-align:left;align-items:center;justify-content:space-between;gap:11px;box-shadow:0 1px 2px rgba(30,50,70,.022);transition:transform .12s,box-shadow .12s}.crime-card:active{transform:scale(.992);background:#fbfcfd}.crime-text{min-width:0;flex:1}.crime-title{display:block;font-weight:750;font-size:15px;letter-spacing:-.23px;line-height:1.3}.crime-ref{display:block;color:var(--muted);font-size:11.5px;margin-top:5px;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}.crime-meta{display:flex;align-items:center;gap:6px;margin-top:10px;font-size:10.5px;color:#748393}.meta-line{width:3px;height:3px;background:#b6bec7;border-radius:50%}.mini-alert{display:inline-flex;align-items:center;gap:3px;color:var(--amber)}.mini-pres{color:var(--primary)}.crime-side{min-width:96px;text-align:right;display:flex;flex-direction:column;gap:10px;align-items:flex-end;justify-content:center}.crime-penalty{font-size:11.5px;white-space:nowrap;color:#3b5267;font-weight:750;letter-spacing:-.15px}.crime-side .ic{color:#a0acb8}.crime-side .ic.sm{height:14px;width:14px}
+.empty{padding:36px 24px;text-align:center;background:white;border:1px dashed #d9e2ea;border-radius:18px;color:var(--ink-soft)}.empty .ic{color:#9cb0bf}.empty h3{font-size:16px;margin:12px 0 7px}.empty p{font-size:12.5px;line-height:1.5;margin:0}
+/* detail */
+.detail-header{padding-top:calc(9px + env(safe-area-inset-top));display:flex;align-items:center;justify-content:space-between;min-height:58px;margin-bottom:18px}.back-button{display:inline-flex;align-items:center;gap:4px;border:0;background:none;padding:9px 6px 9px 0;color:var(--primary);font-size:13.5px;font-weight:700}.back-button .ic{width:21px;height:21px}.header-actions{display:flex;gap:2px}
+.detail-kicker{font-size:10px;font-weight:780;color:var(--muted);text-transform:uppercase;letter-spacing:1.5px;margin:4px 0 8px}
+.detail-title{font-size:30px;font-weight:825;line-height:1.13;letter-spacing:-1.2px;margin:0 0 9px}.detail-title.long{font-size:27px}.detail-ref{font-size:12.5px;color:var(--ink-soft);display:flex;align-items:center;gap:9px}.ref-dot{width:3px;height:3px;background:#9dabb7;border-radius:50%}
+.penalty-panel{margin-top:26px;border-radius:19px;background:linear-gradient(118deg,#e8f0f5,#f0f5f7 75%);border:1px solid #dde8ef;padding:20px 20px 21px}
+.penalty-label{font-size:10.5px;letter-spacing:1.35px;font-weight:800;color:#5e7789;text-transform:uppercase}.penalty-main{font-size:24px;letter-spacing:-.85px;font-weight:785;line-height:1.15;margin:11px 0 3px}.penalty-secondary{color:#516879;font-size:12px;margin-top:5px}
+.status-block{background:white;border:1px solid var(--line);border-radius:18px;overflow:hidden;margin-top:12px}.status-row{display:flex;align-items:center;width:100%;min-height:62px;text-align:left;background:none;border:0;padding:10px 15px;gap:11px;color:var(--ink)}.status-row+ .status-row{border-top:1px solid var(--line-soft)}.status-icon{width:32px;height:32px;display:flex;align-items:center;justify-content:center;border-radius:10px;background:#eff4f7;color:#557589;flex:0 0 32px}.status-icon.warn{color:#9a681d;background:var(--amber-bg)}.status-icon.good{color:var(--green);background:var(--green-bg)}.status-copy{flex:1;min-width:0}.status-label{font-size:11px;color:var(--muted);font-weight:650;margin-bottom:2px}.status-value{font-size:13.2px;font-weight:740;letter-spacing:-.12px}.status-right{color:#98a9b5;display:flex;align-items:center;gap:4px}
+.detail-body{margin-top:29px}.accordions{border-top:1px solid var(--line)}.accordion{border-bottom:1px solid var(--line)}.accordion summary{list-style:none;display:flex;justify-content:space-between;align-items:center;gap:14px;cursor:pointer;min-height:59px;padding:13px 0;color:var(--ink);font-weight:730;font-size:14px}.accordion summary::-webkit-details-marker{display:none}.summary-left{display:flex;align-items:center;gap:11px}.summary-left .ic{color:#688092}.accordion summary>.ic{color:#9babba;transition:transform .17s}.accordion[open] summary>.ic{transform:rotate(180deg)}.accordion-content{padding:0 2px 19px 31px;color:var(--ink-soft);font-size:13px;line-height:1.65;overflow-wrap:break-word}.accordion-content p{margin:0 0 11px}.accordion-content p:last-child{margin-bottom:0}.accordion-content ul{margin:4px 0 13px;padding-left:17px}.accordion-content li{margin-bottom:6px}.accordion-content .subtle-label{font-size:10px;color:var(--muted);letter-spacing:.9px;font-weight:800;text-transform:uppercase;margin:15px 0 5px}
+.law-paper{font-size:13.5px;line-height:1.75;color:#26394a;white-space:pre-wrap;letter-spacing:.01px}
+.term-link{display:inline;border:0;border-bottom:1.5px dotted #477b9e;padding:0;background:transparent;color:#285b7a;line-height:inherit;font-weight:640;text-align:left;border-radius:0}.term-link:active{color:#142c3c}.source-label{color:var(--muted);font-size:11px;margin:12px 0 0!important}
+.fact-card{border-radius:13px;background:var(--shade);padding:14px;margin-bottom:10px}.fact-card:last-child{margin-bottom:0}.fact-eyebrow{font-size:10px;letter-spacing:.75px;text-transform:uppercase;color:#62788a;font-weight:800}.fact-title{font-size:14.3px;font-weight:780;margin-top:4px;margin-bottom:5px;color:var(--ink)}.fact-body{font-size:12.7px;line-height:1.55}.fact-source{font-size:10.5px;color:var(--muted);margin-top:10px}
+.var-chip-list{display:flex;flex-wrap:wrap;gap:7px}.var-chip{padding:7px 10px;background:var(--shade);color:#456176;border:1px solid #e4eaf0;font-size:11.8px;border-radius:9px;font-weight:650}.related{width:100%;border:1px solid var(--line);border-radius:11px;background:#fff;color:var(--ink);padding:12px;display:flex;align-items:center;justify-content:space-between;margin-bottom:7px;font-size:13px;font-weight:650}.related .ic{color:var(--muted)}
+.source-link{display:flex;gap:7px;align-items:center;color:var(--primary);font-size:12.5px;text-decoration:none;padding:7px 0}.source-link .ic{width:15px;height:15px}
+.detail-footer{font-size:11px;line-height:1.6;color:var(--muted);text-align:center;margin:24px auto 8px;max-width:300px}
+/* fixed bottom navigation */
+.bottom-nav{position:fixed;z-index:10;bottom:0;left:50%;transform:translateX(-50%);display:grid;grid-template-columns:repeat(3,1fr);width:100%;max-width:490px;padding:8px 16px calc(10px + env(safe-area-inset-bottom));background:rgba(255,255,255,.97);border-top:1px solid var(--line);backdrop-filter:blur(18px)}
+.nav-item{min-height:49px;border:0;background:transparent;color:#8392a0;font-size:10.5px;font-weight:650;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:4px;border-radius:12px}.nav-item.active{color:var(--primary);font-weight:800}.nav-item .ic{width:21px;height:21px}
+/* settings */
+.settings-title{font-size:30px;letter-spacing:-.9px;margin:30px 0 6px}.settings-desc{font-size:13px;color:var(--muted);line-height:1.5;margin:0 0 25px}.settings-group{margin-bottom:25px}.settings-h{font-size:11px;letter-spacing:1.2px;color:var(--muted);font-weight:800;text-transform:uppercase;margin:0 0 11px}.settings-card{border:1px solid var(--line);border-radius:16px;background:white;overflow:hidden}.setting-row{padding:15px;display:flex;align-items:center;justify-content:space-between;gap:12px}.setting-row+.setting-row{border-top:1px solid var(--line-soft)}.setting-row h3{font-size:13.5px;margin:0 0 4px}.setting-row p{font-size:11.5px;color:var(--muted);margin:0;line-height:1.45}.choice{display:flex;gap:3px;background:var(--shade);padding:3px;border-radius:10px}.choice button{padding:8px 10px;border:0;background:none;color:var(--muted);font-weight:650;font-size:11.5px;border-radius:8px}.choice button.selected{background:white;color:var(--ink);box-shadow:0 1px 5px rgba(0,0,0,.065)}.settings-text{font-size:12.5px;line-height:1.7;color:var(--ink-soft)}.settings-text p{margin:0 0 10px}.settings-text a{font-weight:650}
+/* compact density */
+.compact .crime-card{min-height:73px;padding:12px 12px 11px}.compact .crime-meta{margin-top:5px}.compact .crime-title{font-size:14.5px}.compact .section-heading{margin-top:20px;margin-bottom:10px}.compact .penalty-panel{padding:15px 18px}.compact .status-row{min-height:55px}.compact .accordion summary{min-height:52px}
+/* overlays */
+.sheet-backdrop{position:fixed;z-index:40;inset:0;background:rgba(10,25,39,.34);animation:fade .15s}
+.sheet{position:fixed;z-index:41;bottom:0;left:50%;transform:translateX(-50%);background:#fff;border-radius:25px 25px 0 0;box-shadow:0 -8px 48px rgba(0,0,0,.17);width:min(100%,490px);max-height:min(80dvh,740px);overflow-y:auto;padding:8px 24px calc(25px + env(safe-area-inset-bottom));animation:sheetUp .18s ease-out;overscroll-behavior:contain}
+@keyframes fade{from{opacity:0}to{opacity:1}}@keyframes sheetUp{from{transform:translate(-50%,23px);opacity:.4}to{transform:translate(-50%,0);opacity:1}}
+.sheet-handle{height:5px;width:36px;border-radius:100px;background:#dce3e8;margin:0 auto 15px}.sheet-top{display:flex;align-items:start;gap:12px;justify-content:space-between}.sheet-kicker{font-size:10px;letter-spacing:1.35px;font-weight:850;color:var(--muted);text-transform:uppercase}.sheet-title{font-size:23px;letter-spacing:-.7px;font-weight:790;margin:7px 0 13px;line-height:1.2}.sheet-close{background:var(--shade);width:33px;min-width:33px;height:33px;min-height:33px;border-radius:50%}.sheet-copy{font-size:13.5px;line-height:1.7;color:#405465}.sheet-copy p{margin:0 0 12px}.sheet-copy strong{color:var(--ink)}.sheet-copy ul{padding-left:19px;margin:6px 0 12px}.sheet-copy li{margin-bottom:7px}.sheet-ref{background:var(--shade);padding:13px 14px;border-radius:12px;font-size:11.7px;line-height:1.5;color:#63798a;margin-top:16px}
+.toast{position:fixed;z-index:55;left:50%;bottom:calc(99px + env(safe-area-inset-bottom));transform:translateX(-50%);background:var(--ink);color:white;padding:11px 17px;border-radius:11px;font-size:12px;font-weight:650;white-space:nowrap;box-shadow:0 7px 25px #1c2c3e20}
+@media(min-width:700px){.bottom-nav,.toast{max-width:490px}}
+
+/* Steg 2: kontrast, tydliga titlar och tidsstyrt diskret nattläge. */
+.crime-card{color:var(--ink)}
+.crime-card .crime-title{color:var(--ink)!important;font-size:16.5px;font-weight:820;line-height:1.27;letter-spacing:-.38px;opacity:1;visibility:visible}
+.crime-card .crime-ref{color:var(--muted)}
+.ref-link{display:inline;appearance:none;border:0;border-bottom:1px dashed var(--primary);border-radius:0;padding:0 1px;background:none;color:var(--primary);font:inherit;font-weight:770;text-decoration:none;line-height:inherit;white-space:normal}
+.ref-link .ic{width:11px;height:11px;margin-left:3px;vertical-align:baseline;opacity:.65}
+.ref-link:active,.term-link:active{opacity:.7}
+.crime-meta{flex-wrap:wrap;line-height:1.3}
+.theme-choice{width:100%;justify-content:space-between}
+.theme-choice button{flex:1;min-height:40px}
+@media(max-width:350px){.crime-side{min-width:87px}.crime-card .crime-title{font-size:15px}.theme-choice button{padding:8px 5px}}
+:root[data-theme="dark"]{
+ color-scheme:dark;
+ --ink:#d2d8df;--ink-soft:#a6b3bf;--muted:#83909b;--quiet:#74818e;
+ --primary:#b0cada;--primary-deep:#a1b9c6;--accent:#161f27;
+ --line:#242c35;--line-soft:#1d242c;--surface:#0f1419;--ground:#07090c;--shade:#141a20;
+ --green:#8ab4a6;--green-bg:#121e1c;--amber:#bf9f66;--amber-bg:#231c11;
+ --shadow:none;
+}
+:root[data-theme="dark"] body,:root[data-theme="dark"] html,:root[data-theme="dark"] .app-shell{background:var(--ground);color:var(--ink)}
+:root[data-theme="dark"] .brand-symbol{background:#1b252d;color:#bed2dc;box-shadow:none}
+:root[data-theme="dark"] .online .dot{background:#758d86}
+:root[data-theme="dark"] .mode-note{background:#111920;color:#92a4b2;border-color:#1e2830}
+:root[data-theme="dark"] .mode-note .ic{color:#8a9eae}
+:root[data-theme="dark"] .search-box,:root[data-theme="dark"] .crime-card,:root[data-theme="dark"] .quick-chip,:root[data-theme="dark"] .filter,:root[data-theme="dark"] .status-block,:root[data-theme="dark"] .related,:root[data-theme="dark"] .settings-card,:root[data-theme="dark"] .empty{background:var(--surface);border-color:var(--line);color:var(--ink);box-shadow:none}
+:root[data-theme="dark"] .search-box input{color:var(--ink);background:transparent}
+:root[data-theme="dark"] .search-box input::placeholder{color:#78848d}
+:root[data-theme="dark"] .filter.active{background:#27343e;border-color:#3a505d;color:#d9e7ef}
+:root[data-theme="dark"] .crime-card:active{background:#182027}
+:root[data-theme="dark"] .crime-card .crime-title{color:#e0e6ec!important}
+:root[data-theme="dark"] .crime-penalty{color:#becbd6}
+:root[data-theme="dark"] .crime-meta{color:#8995a0}
+:root[data-theme="dark"] .mini-pres{color:#acc5d5}
+:root[data-theme="dark"] .crime-side .ic{color:#8392a0}
+:root[data-theme="dark"] .quick-chip .ic{color:#9eb6c5}
+:root[data-theme="dark"] .penalty-panel{background:linear-gradient(135deg,#19222a,#12191f 80%);border-color:#26333d}
+:root[data-theme="dark"] .penalty-label{color:#a3b0ba}
+:root[data-theme="dark"] .penalty-main{color:#e0e7eb}
+:root[data-theme="dark"] .penalty-secondary{color:#8e9fab}
+:root[data-theme="dark"] .status-icon{background:#19232c;color:#a6bbc9}
+:root[data-theme="dark"] .status-icon.good{background:#12221f;color:#92bbaa}
+:root[data-theme="dark"] .status-icon.warn{background:#261f14;color:#cfb17b}
+:root[data-theme="dark"] .accordion-content{color:var(--ink-soft)}
+:root[data-theme="dark"] .law-paper{color:#bdc8d0}
+:root[data-theme="dark"] .term-link{color:#bed2df;border-bottom-color:#9bb2c3}
+:root[data-theme="dark"] .ref-link{color:#d1dce6;border-bottom-color:#8da5b7}
+:root[data-theme="dark"] .fact-card{background:#111920}
+:root[data-theme="dark"] .fact-eyebrow{color:#8ca0b1}
+:root[data-theme="dark"] .var-chip{background:#141e26;border-color:#293540;color:#a5bdcb}
+:root[data-theme="dark"] .bottom-nav{background:rgba(9,12,15,.97);border-top-color:#202930}
+:root[data-theme="dark"] .nav-item{color:#82919f}
+:root[data-theme="dark"] .nav-item.active{color:#cadbe6}
+:root[data-theme="dark"] .choice{background:#151c22}
+:root[data-theme="dark"] .choice button{color:#a6b3be}
+:root[data-theme="dark"] .choice button.selected{background:#2b3741;color:#e0e8ec;box-shadow:none}
+:root[data-theme="dark"] .settings-text{color:var(--ink-soft)}
+:root[data-theme="dark"] .sheet{background:#10151a;border-top:1px solid #273039;box-shadow:0 -6px 40px rgba(0,0,0,.56)}
+:root[data-theme="dark"] .sheet-backdrop{background:rgba(0,0,0,.75)}
+:root[data-theme="dark"] .sheet-handle{background:#43515c}
+:root[data-theme="dark"] .sheet-copy{color:#b0bdc7}
+:root[data-theme="dark"] .sheet-copy strong{color:var(--ink)}
+:root[data-theme="dark"] .sheet-ref{background:#182127;color:#a1b1bd}
+:root[data-theme="dark"] .toast{background:#d6dfe5;color:#111820}
+:root[data-theme="dark"] .source-link{color:#b0cada}
+:root[data-theme="dark"] .app-shell{box-shadow:0 0 0 1px #19232c}
+
+</style>
+  <title>Brottskatalog · steg 2</title>
+</head>
+<body>
+  <div id="app" class="app-shell" aria-live="polite"></div>
+  <div id="sheet-root"></div>
+  <script>
+/* Offline-lagrum för steg 2. Avgränsat urval; ingenting hämtas vid användning. */
+(() => {
+const BRB='https://www.riksdagen.se/sv/dokument-och-lagar/dokument/svensk-forfattningssamling/brottsbalk-1962700_sfs-1962-700-s/';
+const RB='https://data.riksdagen.se/dokument/sfs-1942-740.html';
+const NARK='https://www.riksdagen.se/sv/dokument-och-lagar/dokument/svensk-forfattningssamling/narkotikastrafflag-196864_sfs-1968-64/';
+const VAPEN='https://www.riksdagen.se/sv/dokument-och-lagar/dokument/svensk-forfattningssamling/vapenlag-2026408_sfs-2026-408/';
+const TBL='https://www.riksdagen.se/sv/dokument-och-lagar/dokument/svensk-forfattningssamling/lag-1951649-om-straff-for-vissa-trafikbrott_sfs-1951-649/';
+const KNIV='https://www.riksdagen.se/sv/dokument-och-lagar/dokument/svensk-forfattningssamling/lag-1988254-om-forbud-betraffande-knivar-och_sfs-1988-254/';
+const out={};
+function add(id,ref,text,url,complete=true){out[id]={id,ref,text,url,complete,checked:'2026-10-12'};}
+add('BrB:8:1','BrB 8 kap. 1 §',`Den som olovligen tager vad annan tillhör med uppsåt att tillägna sig det, dömes, om tillgreppet innebär skada, för stöld till fängelse i högst två år.`,BRB);
+add('BrB:8:2','BrB 8 kap. 2 §',`Är brott som avses i 1 § med hänsyn till det tillgripnas värde och övriga omständigheter vid brottet att anse som ringa, döms för ringa stöld till böter eller fängelse i högst sex månader.`,BRB);
+add('BrB:8:4','BrB 8 kap. 4 §',`Är brott som avses i 1 § att anse som grovt, döms för grov stöld till fängelse i lägst ett och högst sex år.
+
+Vid bedömningen av om brottet är grovt ska det särskilt beaktas om det avsett sak som någon bar på sig eller hade i sin omedelbara närhet, om gärningsmannen varit försedd med vapen, sprängämne eller annat dylikt hjälpmedel, om gärningen ingått som ett led i en brottslighet som utövats systematiskt eller om gärningen annars varit av särskilt farlig eller hänsynslös art, avsett betydande värde eller inneburit synnerligen kännbar skada.`,BRB);
+add('BrB:8:4a','BrB 8 kap. 4 a §',`Om brott som avses i 1 § har skett efter intrång i bostad eller annat liknande boende, döms för inbrottsstöld till fängelse i lägst ett och högst sex år.
+
+Är en gärning som avses i första stycket med hänsyn till integritetskränkningen eller omständigheterna i övrigt av mindre allvarlig art, döms dock inte för inbrottsstöld utan för annat brott som gärningen innefattar.`,BRB);
+add('BrB:8:5','BrB 8 kap. 5 §',`Den som med våld på person eller med hot som innebär eller för den hotade framstår som trängande fara,
+1. begår stöld,
+2. tvingar någon till handling eller underlåtenhet som innebär vinning för gärningsmannen och skada för den tvingade eller någon i vars ställe denne är, eller
+3. olovligen tar eller tvingar till sig ett betalningsverktyg med avsikt att använda det för att bereda sig själv eller någon annan vinning,
+
+döms för rån till fängelse i lägst ett år och sex månader och högst sex år.
+
+För rån döms också den som, sedan han eller hon begått stöld eller olovligen tagit ett betalningsverktyg och anträffats på bar gärning, sätter sig till motvärn med sådant våld eller hot som avses i första stycket mot den som vill återta det tillgripna.
+
+Lika med våld anses att försätta någon i vanmakt eller annat sådant tillstånd.
+
+Om en gärning som avses i första-tredje styckena med hänsyn till våldet, hotet eller omständigheterna i övrigt är av mindre allvarlig art, döms dock inte för rån utan för annat brott som gärningen innefattar.`,BRB);
+add('BrB:8:6','BrB 8 kap. 6 §',`Om brott som avses i 5 § är grovt, döms för grovt rån till fängelse i lägst fem och högst tio år.
+
+Vid bedömningen av om brottet är grovt ska det särskilt beaktas
+1. om våldet har varit livsfarligt,
+2. om gärningsmannen har tillfogat svår kroppsskada eller allvarlig sjukdom eller annars har visat synnerlig råhet eller på ett hänsynslöst sätt har utnyttjat den rånades skyddslösa eller utsatta ställning, eller
+3. om gärningen har varit av särskilt farlig art.`,BRB);
+add('BrB:8:13','BrB 8 kap. 13 §',`Har annat i detta kapitel angivet brott än grov stöld, inbrottsstöld, rån eller grovt rån förövats mot
+1. någon som inte endast tillfälligt sammanbodde med gärningsmannen,
+2. make, den som är i rätt upp- eller nedstigande släktskap eller svågerlag, syskon, svåger eller svägerska, eller
+3. någon annan som på liknande sätt är närstående till gärningsmannen,
+får åklagaren väcka åtal endast om målsäganden har angett brottet till åtal eller åtal är påkallat ur allmän synpunkt.
+
+Vid tillämpning av vad nu sagts ska med gärningsman likställas någon annan som medverkat vid brottet och den som gjort sig skyldig till häleri eller häleriförseelse.`,BRB);
+add('BrB:3:5','BrB 3 kap. 5 §',`Den som tillfogar en annan person kroppsskada, sjukdom eller smärta eller försätter honom eller henne i vanmakt eller något annat sådant tillstånd, döms för misshandel till fängelse i högst två år eller, om brottet är ringa, till böter eller fängelse i högst sex månader.`,BRB);
+add('BrB:3:6','BrB 3 kap. 6 §',`Är brott som avses i 5 § att anse som grovt, döms för grov misshandel till fängelse i lägst ett år och sex månader och högst sju år. Vid bedömningen av om brottet är grovt ska det särskilt beaktas om gärningen var livsfarlig eller om gärningsmannen har tillfogat en svår kroppsskada eller allvarlig sjukdom eller annars visat särskild hänsynslöshet eller råhet.
+
+Är brottet att anse som synnerligen grovt, döms för synnerligen grov misshandel till fängelse i lägst sex och högst tolv år. Vid bedömningen av om brottet är synnerligen grovt ska det särskilt beaktas om kroppsskadan är bestående eller om gärningen har orsakat synnerligt lidande eller om gärningsmannen har visat synnerlig hänsynslöshet.`,BRB);
+add('BrB:4:6','BrB 4 kap. 6 §',`Den som olovligen tränger in eller stannar kvar i någon annans bostad eller annat liknande boende döms för hemfridsbrott till böter eller fängelse i högst ett år. För hemfridsbrott döms också den som olovligen tränger in eller stannar kvar i en trädgård, på en gårdsplan eller på en annan liknande plats som tillhör bostaden eller boendet.
+
+Den som i annat fall än som avses i första stycket obehörigen tränger in eller stannar kvar i en byggnad eller ett fartyg, på en gårdsplan eller på en annan liknande plats döms för olaga intrång till böter eller fängelse i högst ett år.
+
+Om ett brott som avses i första eller andra stycket är grovt, döms för grovt hemfridsbrott eller grovt olaga intrång till fängelse i lägst sex månader och högst tre år. Vid bedömningen av om brottet är grovt ska det särskilt beaktas om gärningen
+1. har skett genom inbrott,
+2. har innefattat våld, hot om brottslig gärning, ofredande eller skada på egendom, eller
+3. annars har varit av särskilt hänsynslös eller farlig art.`,BRB);
+add('BrB:4:7','BrB 4 kap. 7 §',`Den som fysiskt antastar någon annan eller utsätter någon annan för störande kontakter eller annat hänsynslöst agerande döms, om gärningen är ägnad att kränka den utsattes frid på ett kännbart sätt, för ofredande till böter eller fängelse i högst ett år.`,BRB);
+add('BrB:4:7b','BrB 4 kap. 7 b §',`Den som upprepat utsätter en annan person för kränkningar i form av beskyllning, nedsättande uttalande, förödmjukande beteende, otillbörligt hot, otillbörligt tvång eller otillbörlig övervakning, döms, om kränkningarna sammantagna varit ägnade att allvarligt skada personens självkänsla, för psykiskt våld till fängelse i högst fyra år.
+
+För psykiskt våld döms också den som utsätter en annan person för otillbörlig övervakning som är varaktig, om gärningen varit ägnad att allvarligt skada personens självkänsla.`,BRB);
+add('BrB:4:11','BrB 4 kap. 11 §',`Hemfridsbrott, olaga intrång, kränkande fotografering eller förberedelse till sådant brott, olovlig identitetsanvändning, olaga integritetsintrång, ofredande som inte förövats på allmän plats, intrång i förvar, olovlig avlyssning som inte förövats på allmän plats eller förberedelse till sådant brott får åtalas av åklagare endast om målsäganden anger brottet till åtal eller om åtal är påkallat från allmän synpunkt. Detsamma gäller olaga tvång genom hot att åtala eller ange annan för brott eller att om annan lämna menligt meddelande samt försök eller förberedelse till sådant brott.`,BRB);
+add('BrB:9:1','BrB 9 kap. 1 §',`Den som medelst vilseledande förmår någon till handling eller underlåtenhet, som innebär vinning för gärningsmannen och skada för den vilseledde eller någon i vars ställe denne är, dömes för bedrägeri till fängelse i högst två år.
+
+För bedrägeri döms också den som genom att lämna oriktig eller ofullständig uppgift, genom att ändra i program eller upptagning eller på annat sätt olovligen påverkar resultatet av en automatisk informationsbehandling eller någon annan liknande automatisk process, så att det innebär vinning för gärningsmannen och skada för någon annan.`,BRB);
+add('BrB:9:2','BrB 9 kap. 2 §',`Är brott som avses i 1 § med hänsyn till skadans omfattning och övriga omständigheter vid brottet att anse som ringa, döms för ringa bedrägeri till böter eller fängelse i högst sex månader.
+
+För ringa bedrägeri döms också den som utan att göra rätt för sig tillgodogör sig husrum, förtäring, transport, tillträde till föreställning eller annat sådant som tillhandahålls under förutsättning av kontant betalning, oavsett om han eller hon vilseleder någon eller inte. Det gäller dock inte om gärningen avser värde som inte är ringa och om den i övrigt är sådan som avses i 1 §.`,BRB);
+add('BrB:9:3','BrB 9 kap. 3 §',`Är brott som avses i 1 § att anse som grovt, döms för grovt bedrägeri till fängelse i lägst ett och högst sex år.
+
+Vid bedömningen av om brottet är grovt ska det särskilt beaktas om
+1. gärningsmannen har missbrukat allmänt förtroende eller använt urkund eller annat vars brukande är straffbart enligt 14 eller 15 kap. eller vilseledande bokföring,
+2. gärningsmannen på ett hänsynslöst sätt har utnyttjat offrets skyddslösa eller utsatta ställning,
+3. gärningen har avsett betydande värde eller inneburit synnerligen kännbar skada,
+4. gärningen har ingått i en brottslighet som utövats i organiserad form eller systematiskt, eller
+5. gärningen annars har varit av särskilt farlig art.`,BRB);
+add('BrB:12:1','BrB 12 kap. 1 §',`Den som förstör eller skadar egendom till men för någon annans rätt till den döms för skadegörelse till fängelse i högst två år.`,BRB);
+add('BrB:12:2','BrB 12 kap. 2 §',`Är brott som avses i 1 § med hänsyn till skadans obetydlighet och övriga omständigheter vid brottet att anse som ringa, döms för ringa skadegörelse till böter eller fängelse i högst sex månader.`,BRB);
+add('BrB:12:3','BrB 12 kap. 3 §',`Om brott som avses i 1 § är att anse som grovt, döms för grov skadegörelse till fängelse i lägst ett och högst sex år.
+
+Vid bedömningen av om brottet är grovt ska det särskilt beaktas om gärningen har medfört betydande fara för någons liv eller hälsa, om skadan drabbat sak av stor kulturell eller ekonomisk betydelse eller annars är synnerligen kännbar eller om gärningen varit av särskilt hänsynslös art.`,BRB);
+add('BrB:12:6','BrB 12 kap. 6 §',`Ringa skadegörelse, åverkan eller tagande av olovlig väg får, om brottet endast kränker enskilds rätt, åtalas av åklagare bara om åtal av särskilda skäl är motiverat från allmän synpunkt.`,BRB);
+add('BrB:17:1','BrB 17 kap. 1 §',`Den som med våld eller hot om brottslig gärning angriper en tjänsteman vid hans eller hennes myndighetsutövning eller för att tvinga fram, hindra eller hämnas för en åtgärd vid myndighetsutövningen döms för våld eller hot mot tjänsteman till böter eller fängelse i högst tre år. Detsamma gäller om någon på detta sätt angriper en tjänsteman som tidigare har utövat myndighet för vad han eller hon har gjort eller inte gjort vid myndighetsutövningen.
+
+Om brottet är grovt döms för grovt våld eller hot mot tjänsteman till fängelse i lägst ett år och sex månader och högst åtta år. Vid bedömningen av om brottet är grovt ska det särskilt beaktas om gärningen
+1. har innefattat våld av allvarligt slag,
+2. har innefattat hot som påtagligt har förstärkts med hjälp av vapen, sprängämne eller vapenattrapp eller genom anspelning på ett våldskapital eller som annars har varit av allvarligt slag, eller
+3. annars har varit av särskilt hänsynslös eller farlig art.`,BRB);
+add('BrB:17:3','BrB 17 kap. 3 §',`Den som angriper en tjänsteman vid hans eller hennes myndighetsutövning eller för att tvinga fram, hindra eller hämnas för en åtgärd vid myndighetsutövningen, genom att rikta beskyllning, nedsättande uttalande eller förödmjukande beteende mot tjänstemannen döms, om gärningen är ägnad att kränka tjänstemannens självkänsla eller värdighet, för förolämpning mot tjänsteman till böter eller fängelse i högst sex månader.`,BRB);
+add('BrB:17:4','BrB 17 kap. 4 §',`Den som, i annat fall än som avses i 1 och 2 §§, genom att sätta sig till motvärn eller annars med våld försöker hindra en tjänsteman vid hans eller hennes myndighetsutövning, döms för våldsamt motstånd till böter eller fängelse i högst sex månader.`,BRB);
+add('Nark:1','Narkotikastrafflagen 1 §',`Den som olovligen
+1. överlåter narkotika,
+2. framställer narkotika som är avsedd för missbruk,
+3. förvärvar narkotika i överlåtelsesyfte,
+4. anskaffar, bearbetar, förpackar, transporterar, förvarar eller tar annan sådan befattning med narkotika som inte är avsedd för eget bruk, eller
+5. innehar, brukar eller tar annan befattning med narkotika
+
+döms för narkotikabrott till fängelse i högst tre år.
+
+Om en gärning som avses i första stycket innebär att gärningsmannen säljer narkotika eller annars befattar sig med narkotika som är avsedd att säljas, döms i stället till fängelse i lägst sex månader och högst tre år.
+
+För narkotikabrott döms även den som olovligen bjuder ut narkotika till försäljning, förvarar eller befordrar vederlag för narkotika, förmedlar kontakter mellan säljare och köpare eller företar någon annan sådan åtgärd, om förfarandet är ägnat att främja narkotikahandel. Straffet är i ett sådant fall fängelse i lägst sex månader och högst tre år.
+
+Bestämmelser om straff för olovlig införsel och utförsel av narkotika och olovlig befattning i vissa fall med narkotika finns i lagen (2000:1225) om straff för smuggling.`,NARK);
+add('Nark:2','Narkotikastrafflagen 2 §',`Är brott som avses i 1 § första stycket med hänsyn till arten och mängden narkotika samt övriga omständigheter att anse som ringa, döms för ringa narkotikabrott till böter eller fängelse i högst sex månader.`,NARK);
+add('Nark:3','Narkotikastrafflagen 3 §',`Är brott som avses i 1 § att anse som grovt, döms för grovt narkotikabrott till fängelse i lägst två och högst sju år. Vid bedömningen av om brottet är grovt ska det särskilt beaktas om brottet har utgjort ett led i en verksamhet som bedrivits i större omfattning eller yrkesmässigt, avsett en särskilt stor mängd narkotika eller annars varit av särskilt farlig eller hänsynslös art.
+
+Är brottet att anse som synnerligen grovt, döms för synnerligen grovt narkotikabrott till fängelse i lägst sex och högst tio år. Vid bedömningen av om brottet är synnerligen grovt ska det särskilt beaktas om brottet har utgjort ett led i en verksamhet som utövats i organiserad form i syfte att i stor omfattning bedriva handel med narkotika, avsett en synnerligen stor mängd narkotika eller annars varit av synnerligen farlig eller hänsynslös art.`,NARK);
+add('Nark:4','Narkotikastrafflagen 4 §',`För försök eller förberedelse till narkotikabrott, ringa narkotikabrott, grovt narkotikabrott eller synnerligen grovt narkotikabrott liksom för stämpling till narkotikabrott, grovt narkotikabrott eller synnerligen grovt narkotikabrott döms det, om gärningen avser annat än bruk av narkotika, till ansvar enligt 23 kap. brottsbalken.
+
+För försök till olovlig befattning med narkotikaprekursorer döms det, om gärningen avser annan befattning än som avses i 3 b § första stycket 2, till ansvar enligt 23 kap. brottsbalken.`,NARK);
+add('Vapen:18:1','Vapenlagen (2026:408) 18 kap. 1 §',`Den som uppsåtligen innehar eller tillverkar ett skjutvapen utan att ha rätt till det eller överlåter, yrkesmässigt förmedlar eller lånar ut ett skjutvapen till någon som inte har rätt att inneha vapnet döms för vapenbrott till fängelse i högst fem år.
+
+Om brottet med hänsyn till risken för att vapnet skulle komma till brottslig eller annan skadlig användning och övriga omständigheter är att anse som mindre allvarligt, döms till böter eller fängelse i högst sex månader.
+
+Till böter eller fängelse i högst sex månader döms också den som har begått gärningen av oaktsamhet.`,VAPEN);
+add('Vapen:18:2','Vapenlagen (2026:408) 18 kap. 2 §',`Om ett brott som avses i 1 § första stycket är grovt, döms för grovt vapenbrott till fängelse i lägst fyra och högst sju år. Vid bedömningen av om brottet är grovt ska det särskilt beaktas om
+1. vapnet har innehafts på allmän plats eller på en annan plats där människor brukar samlas eller har samlats eller i ett fordon på en sådan plats,
+2. vapnet har varit av särskilt farlig beskaffenhet,
+3. innehavet, tillverkningen, överlåtelsen, förmedlingen eller utlåningen har avsett flera vapen,
+4. vapnet har innehafts eller tillverkats i en sådan miljö att det typiskt sett kan befaras komma till brottslig användning, eller
+5. gärningen annars har varit av särskilt farlig art.
+
+Om ett brott som avses i 1 § första stycket är synnerligen grovt, döms för synnerligen grovt vapenbrott till fängelse i lägst sex och högst tio år. Vid bedömningen av om brottet är synnerligen grovt ska det särskilt beaktas om innehavet, tillverkningen, överlåtelsen, förmedlingen eller utlåningen har avsett ett stort antal vapen eller flera vapen av särskilt farlig beskaffenhet.
+
+Vid bedömningen enligt första och andra styckena ska ett enhandsvapen anses vara av särskilt farlig beskaffenhet, om det är kraftfullt eller har en särskilt farlig konstruktion eller utformning.`,VAPEN);
+add('TBL:3','Trafikbrottslagen 3 §',`För någon uppsåtligen körkortspliktigt fordon utan att vara berättigad att föra sådant fordon, dömes för olovlig körning till böter. Har han tidigare innehaft körkort som blivit återkallat eller har brottet skett vanemässigt eller är det eljest att anse som grovt, må dömas till fängelse i högst sex månader.
+
+För någon körkortspliktigt fordon med uppsåtligt eller oaktsamt åsidosättande av föreskrift, som meddelats i fråga om rätten att föra sådant fordon, dömes till böter.
+
+Om någon uppsåtligen eller av oaktsamhet såsom förare av körkortspliktigt fordon anställer och brukar den som inte äger rätt att föra fordonet, eller i annat fall tillåter någon annan att föra sådant fordon utan att denne är berättigad därtill, dömes likaledes till böter.
+
+Första-tredje styckena äger motsvarande tillämpning på förare av traktor, moped klass II, snöskoter, terränghjuling, motorredskap eller spårvagn och på den som anställer eller brukar sådan förare eller eljest tillåter någon att föra sådant fordon.`,TBL);
+add('TBL:4','Trafikbrottslagen 4 §',`Den som för ett motordrivet fordon eller en spårvagn efter att ha intagit alkohol i så stor mängd att alkoholkoncentrationen under eller efter färden uppgår till minst 0,2 promille i blodet eller 0,10 milligram per liter i utandningsluften döms för rattfylleri till böter eller fängelse i högst sex månader.
+
+För rattfylleri enligt första stycket döms också den som för ett motordrivet fordon eller en spårvagn efter att ha intagit narkotika som avses i 8 § narkotikastrafflagen (1968:64) i så stor mängd att det under eller efter färden finns något narkotiskt ämne kvar i blodet. Detta gäller dock inte om narkotikan intagits i enlighet med läkares eller annan behörig receptutfärdares ordination.
+
+För rattfylleri enligt första stycket döms också den som för ett motordrivet fordon eller en spårvagn och då är så påverkad av alkohol att det kan antas att han eller hon inte kan framföra fordonet på ett betryggande sätt. Detsamma gäller om föraren är lika påverkad av något annat medel.
+
+Första och andra styckena gäller inte förare av ett motordrivet fordon, som är avsett att föras av gående.
+
+Första, andra och tredje styckena gäller inte om förandet av fordonet ingår som ett led i en vetenskaplig eller därmed jämförlig undersökning till vilken tillstånd har lämnats av regeringen eller den myndighet som regeringen bestämmer.`,TBL);
+add('TBL:4a','Trafikbrottslagen 4 a §',`Är ett brott som avses i 4 § första, andra eller tredje stycket att anse som grovt, skall föraren dömas för grovt rattfylleri till fängelse i högst två år. Vid bedömande av om brottet är grovt skall särskilt beaktas om
+1. föraren har haft en alkoholkoncentration som uppgått till minst 1,0 promille i blodet eller 0,50 milligram per liter i utandningsluften,
+2. föraren annars har varit avsevärt påverkad av alkohol eller något annat medel, eller
+3. framförandet av fordonet har inneburit en påtaglig fara för trafiksäkerheten.`,TBL);
+add('Kniv:1','Knivlagen 1 §',`Knivar, andra stick- och skärvapen och andra föremål som är ägnade att användas som vapen vid brott mot liv eller hälsa får inte innehas på allmän plats, inom skolområde där grundskole- eller gymnasieundervisning bedrivs, eller i fordon på allmän plats.
+
+Förbudet i första stycket gäller inte, om föremålet enligt särskilda föreskrifter ingår i utrustning för viss tjänst eller visst uppdrag eller om innehavet annars med hänsyn till föremålets art, innehavarens behov och övriga omständigheter är att anse som befogat.
+
+Stickvapen eller knivar som är konstruerade så att klingan eller bladet snabbt kan fällas eller skjutas ut ur sitt skaft (springstiletter eller springknivar) får inte innehas av personer under 21 år.`,KNIV);
+add('Kniv:4','Knivlagen 4 §',`Den som uppsåtligen bryter mot 1 eller 2 § döms till böter eller fängelse i högst ett år.
+
+Om gärningen har begåtts av oaktsamhet, döms till böter eller fängelse i högst sex månader.
+
+Om ett brott som avses i första stycket är grovt, döms till fängelse i lägst sex månader och högst två år. Vid bedömningen av om brottet är grovt ska det särskilt beaktas om
+1. föremålet har innehafts i ett sammanhang där det kan befaras komma till användning vid brottsligt angrepp på någons liv, hälsa eller trygghet till person,
+2. föremålet har varit av särskilt farlig beskaffenhet,
+3. innehavet, överlåtelsen eller saluhållandet har avsett flera föremål, eller
+4. gärningen på annat sätt har varit av särskilt farlig art.
+
+Om det rör sig om ringa fall utgör gärningen dock inte brott.`,KNIV);
+add('RB:24:1','RB 24 kap. 1 §',`Den som på sannolika skäl är misstänkt för ett brott för vilket det är föreskrivet fängelse i ett år eller mer får häktas, om det med hänsyn till brottets beskaffenhet, den misstänktes förhållanden eller någon annan omständighet finns risk för att han eller hon
+1. avviker eller på något annat sätt undandrar sig lagföring eller straff,
+2. genom att undanröja bevis eller på något annat sätt försvårar sakens utredning, eller
+3. fortsätter sin brottsliga verksamhet.
+
+Häktning ska ske om det inte är uppenbart att skäl till häktning saknas och misstanken avser
+1. ett brott för vilket det inte är föreskrivet lindrigare straff än fängelse i ett år och sex månader,
+2. försök, förberedelse eller stämpling till ett brott för vilket det inte är föreskrivet lindrigare straff än fängelse i fyra år, eller
+3. grov fridskränkning, grov kvinnofridskränkning eller hedersförtryck enligt 4 kap. 4 a eller 4 e § brottsbalken.
+
+Häktning får ske endast om skälen för åtgärden uppväger det intrång eller men i övrigt som åtgärden innebär för den misstänkte eller för något annat motstående intresse.
+
+Kan det antas att den misstänkte kommer att dömas endast till böter, får häktning inte ske.`,RB);
+add('RB:24:2','RB 24 kap. 2 §',`Den som på sannolika skäl är misstänkt för brott får häktas oberoende av brottets beskaffenhet,
+1. om han är okänd och vägrar att uppge namn och hemvist eller om hans uppgift om detta kan antas vara osann, eller
+2. om han saknar hemvist inom riket och det finns risk för att han genom att bege sig från riket undandrar sig lagföring eller straff.`,RB);
+window.BK_STATUTES = out;
+})();
+
+</script>
+  <script>
+/* Brottskatalog – UI prototype data. No claim of complete coverage or legal verification. */
+window.BK_DATA = {
+  date: '2026-10-12',
+  categories: ['Alla', 'Tillgrepp', 'Person', 'Frid', 'Narkotika'],
+  glossary: {
+    'tillägna sig': {title:'Tillägnelseuppsåt', text:'Att ha uppsåt att själv, eller för någon annans räkning, tillgodogöra sig det tillgripna som sitt. Ett centralt rekvisit vid stöld. Bedöm uppsåtet vid tillgreppet.', source:'Straffrätt Lund – Stöld II; BrB 8:1.'},
+    'det tillgripnas värde': {title:'Det tillgripnas värde', text:'I butikstillgrepp är 1 500 kr den vägledande gränsen enligt NJA 2025 s. 1024. Även övriga omständigheter måste bedömas; beloppet är inte en lagstadgad beloppsgräns.',source:'NJA 2025 s. 1024; Straffrätt Lund – Ringa stöld.'},
+    'övriga omständigheter': {title:'Övriga omständigheter', text:'Helhetsbedömning. Värdet är inte ensamt avgörande för om tillgreppet är ringa. Tillgreppets tillvägagångssätt och omständigheter kan föranleda en annan rubricering.',source:'BrB 8:2; Brottsutredning – Ringa stöld.'},
+    'kroppsskada': {title:'Kroppsskada', text:'En fysisk förändring eller skada på kroppen. Misshandel omfattar även sjukdom och smärta utan påvisbar kroppsskada.',source:'Straffrätt Lund – Misshandel I.'},
+    'vanmakt': {title:'Vanmakt',text:'Ett tillstånd där personen i praktiken saknar möjlighet att värja sig eller handla för egen del. Bedömningen är beroende av situationen.',source:'Straffrätt Lund – Misshandel och rån.'},
+    'hänsynslöst agerande': {title:'Hänsynslöst agerande',text:'En typ av handlande som kan uppfylla ofredandebestämmelsen när gärningen är ägnad att kränka någons frid på ett kännbart sätt. Det krävs mer än att beteendet enbart uppfattas som otrevligt.',source:'BrB 4:7; Straffrätt Lund – Ofredande.'},
+    'ägnad att kränka': {title:'Ägnad att kränka',text:'Ett objektivt inriktat bedömningsrekvisit: frågan är om gärningen typiskt sett har förmåga att kränka den utsattes frid på det sätt lagen kräver.',source:'BrB 4:7; Straffrätt Lund – Farerekvisit.'},
+    'bostad': {title:'Bostad', text:'Skyddet kan omfatta både permanenta och tillfälliga boenden. Kursmaterialet tar bland annat upp hotellrum, tält och vissa fordon som exempel beroende på deras användning.',source:'Straffrätt Lund – Hemfridsbrott och olaga intrång.'},
+    'olovligen': {title:'Olovligen',text:'Utan laglig rätt eller erforderligt samtycke. Den närmare innebörden varierar med brottets rekvisit och tillämpliga undantag.',source:'Straffrätt Lund – Hemfridsbrott.'},
+    'trängande fara': {title:'Trängande fara',text:'Hotet måste innebära eller för den hotade framstå som en omedelbart allvarlig fara enligt rånbestämmelsen. Bedömningen sker med hänsyn till hela händelseförloppet.',source:'BrB 8:5; Straffrätt Lund – Rån.'},
+    'omedelbara närhet': {title:'Omedelbar närhet',text:'Kursanteckningarna använder ett ungefärligt armlängds avstånd som pedagogisk tumregel. Det är ingen absolut gräns i lag; sammanhanget och skyddsintresset måste bedömas.',source:'Brottsutredning – Grov stöld; BrB 8:4.'},
+    'innehar': {title:'Innehav',text:'Ett sätt att olovligen befatta sig med narkotika. Skilj innehav för eget bruk från exempelvis förvaring och transport av narkotika som inte är avsedd för eget bruk.',source:'Narkotikastrafflagen 1 §.'},
+    'brukar': {title:'Bruk',text:'Eget bruk är en uttrycklig gärningsvariant i narkotikastrafflagen 1 § första stycket 5. Försök/förberedelse till en gärning som avser enbart bruk omfattas inte av ansvaret enligt 4 §.',source:'Narkotikastrafflagen 1 och 4 §§.'}
+  },
+  crimes: [
+    {
+      id:'ringa-stold',title:'Ringa stöld',ref:'BrB 8 kap. 2 §',shortRef:'BrB 8:2',category:'Tillgrepp',aliases:['snatteri','butiksstöld','stjäla','1500','stöld av ringa värde'],
+      penalty:'Böter – fängelse 6 mån',penaltyShort:'B–F 6 mån',penaltyNote:'Böter eller fängelse i högst sex månader.',custody:'none',
+      prosecution:'conditional',prosecutionLabel:'Särskild regel vid närstående',prosecutionRule:'BrB 8 kap. 13 §',
+      prosecutionDetails:['Huvudregel: brottet hör under allmänt åtal.','Om gärningen förövats mot vissa närstående får åklagaren väcka åtal endast om målsäganden har angett brottet till åtal eller om åtal är påkallat ur allmän synpunkt.','Exempel på relationer: den man varaktigt sammanbor med, make/maka, syskon och andra personer som omfattas av 8 kap. 13 §.','Kontrollera relationen och dokumentera målsägandens inställning. Anmälan och formell angivelse är inte alltid samma sak.'],
+      lawMode:'full',law:'Är brott som avses i 1 § med hänsyn till det tillgripnas värde och övriga omständigheter vid brottet att anse som ringa, döms för ringa stöld till böter eller fängelse i högst sex månader.',
+      lawSource:'BrB 8:2. Lag (2017:442).',lawTerms:['det tillgripnas värde','övriga omständigheter'],
+      variants:['Butikstillgrepp','Tillgrepp av egendom av ringa värde'],elements:['Tillgrepp enligt BrB 8:1 måste vara uppfyllt.','Värdet och övriga omständigheter innebär att brottet bedöms som ringa.'],
+      facts:[{title:'Vägledande butiksvärde: 1 500 kr',eyebrow:'Praxis',text:'Värdegränsen för ringa stöld vid butikstillgrepp höjdes till 1 500 kr. En helhetsbedömning krävs fortfarande.',source:'NJA 2025 s. 1024; Straffrätt Lund – Ringa stöld.'},{title:'När är butikstillgreppet fullbordat?',eyebrow:'Kursanteckning',text:'I Brottsutredning framhålls betydelsen av den sista betalningsmöjligheten. Den exakta bedömningen beror på händelseförloppet.',source:'Brottsutredning – Stöld 8:1.'}],
+      stages:['Försök till ringa stöld är inte straffbart enligt 8 kap. 12 § BrB.','Förberedelse och stämpling till ringa stöld är inte särskilt kriminaliserade.'],related:['stold','inbrottsstold','grov-stold'],
+    },
+    {
+      id:'stold',title:'Stöld',ref:'BrB 8 kap. 1 §',shortRef:'BrB 8:1',category:'Tillgrepp',aliases:['stjäla','snatteri','tillgrepp','butiksstöld','stöldbrott'],
+      penalty:'Fängelse högst 2 år',penaltyShort:'F 2 år',penaltyNote:'Fängelse i högst två år.',custody:'possible',
+      prosecution:'conditional',prosecutionLabel:'Särskild regel vid närstående',prosecutionRule:'BrB 8 kap. 13 §',
+      prosecutionDetails:['Huvudregel: allmänt åtal.','Vid brott mot särskilt angivna närstående gäller begränsningen i BrB 8:13: angivelse eller åtal påkallat ur allmän synpunkt.','Undantaget i BrB 8:13 gäller däremot inte grov stöld, inbrottsstöld, rån och grovt rån.'],
+      lawMode:'full',law:'Den som olovligen tager vad annan tillhör med uppsåt att tillägna sig det, dömes, om tillgreppet innebär skada, för stöld till fängelse i högst två år.',lawSource:'BrB 8:1.',lawTerms:['tillägna sig'],
+      variants:['Butikstillgrepp','Tillgrepp av annans egendom'],elements:['Olovligt tillgrepp av egendom som tillhör annan.','Uppsåt att tillägna sig egendomen.','Tillgreppet innebär ekonomisk skada.'],
+      facts:[{eyebrow:'Kursanteckning',title:'Tillägnelseuppsåt',text:'Det räcker att uppsåtet finns vid tillgreppet. Det slutliga tillägnandet behöver inte redan ha skett.',source:'Straffrätt Lund – Stöld II.'}],
+      stages:['Försök och förberedelse till stöld är straffbara enligt BrB 8:12.','Stämpling till stöld av normalgraden omfattas inte av BrB 8:12.'],related:['ringa-stold','grov-stold','inbrottsstold'],
+    },
+    {
+      id:'grov-stold',title:'Grov stöld',ref:'BrB 8 kap. 4 §',shortRef:'BrB 8:4',category:'Tillgrepp',aliases:['stöld med vapen','stöld från väska','betydande värde'],
+      penalty:'Fängelse 1–6 år',penaltyShort:'F 1–6 år',penaltyNote:'Fängelse i lägst ett och högst sex år.',custody:'possible',prosecution:'general',prosecutionLabel:'Allmänt åtal',
+      lawMode:'excerpt',law:'Är brott som avses i 1 § att anse som grovt, döms för grov stöld till fängelse i lägst ett och högst sex år.',lawSource:'BrB 8:4 första meningen. Ytterligare kvalifikationsgrunder finns i paragrafen.',lawTerms:[],
+      variants:['Tillgrepp från person','Systematisk brottslighet','Tillgrepp med vapen'],elements:['Samtliga rekvisit för stöld ska vara uppfyllda.','En helhetsbedömning visar att brottet är grovt.'],
+      facts:[{eyebrow:'Kvalifikationsgrund',title:'Omedelbar närhet',text:'En sak som någon bar på sig eller hade i sin omedelbara närhet är en omständighet som särskilt ska beaktas. Tryck på begreppet i den kompletterande förklaringen för mer information.',source:'BrB 8:4; Brottsutredning – Grov stöld.'},{eyebrow:'Viktigt',title:'Inte automatiskt grovt',text:'Att en särskild kvalifikationsgrund föreligger innebär inte i sig att brottet alltid ska bedömas som grovt.',source:'Straffrätt Lund – Grov stöld.'}],
+      stages:['Försök och förberedelse till grov stöld är straffbara.','Även stämpling till grov stöld är straffbar enligt BrB 8:12.'],related:['stold','ringa-stold','inbrottsstold'],
+    },
+    {
+      id:'inbrottsstold',title:'Inbrottsstöld',ref:'BrB 8 kap. 4 a §',shortRef:'BrB 8:4 a',category:'Tillgrepp',aliases:['inbrott','stöld i bostad','lägenhetsinbrott'],
+      penalty:'Fängelse 1–6 år',penaltyShort:'F 1–6 år',penaltyNote:'Fängelse i lägst ett och högst sex år.',custody:'possible',prosecution:'general',prosecutionLabel:'Allmänt åtal',
+      prosecutionDetails:['Allmänt åtal, utan särskild begränsning enligt BrB 8:13.','Inbrottsstöld är uttryckligen undantaget från åtalsbegränsningen som gäller flera andra tillgreppsbrott mot närstående.'],
+      lawMode:'full',law:'Om brott som avses i 1 § har skett efter intrång i bostad eller annat liknande boende, döms för inbrottsstöld till fängelse i lägst ett och högst sex år.\n\nÄr en gärning som avses i första stycket med hänsyn till integritetskränkningen eller omständigheterna i övrigt av mindre allvarlig art, döms dock inte för inbrottsstöld utan för annat brott som gärningen innefattar.',lawSource:'BrB 8:4 a.',lawTerms:['bostad'],
+      variants:['Stöld efter intrång i bostad','Stöld efter intrång i liknande boende'],elements:['En stöldgärning enligt BrB 8:1.','Gärningen har skett efter intrång i bostad eller liknande boende.','Beakta undantaget för gärningar av mindre allvarlig art.'],
+      facts:[{eyebrow:'Definition',title:'Bostad och liknande boende',text:'Skyddet gäller också vissa tillfälliga boenden. Läs mer genom att trycka på ordet bostad i lagtexten.',source:'Straffrätt Lund – Hemfridsbrott; BrB 8:4 a.'}],
+      stages:['Försök, förberedelse och stämpling till inbrottsstöld är straffbara enligt BrB 8:12.'],related:['stold','grov-stold','hemfridsbrott'],
+    },
+    {
+      id:'ran',title:'Rån',ref:'BrB 8 kap. 5 §',shortRef:'BrB 8:5',category:'Tillgrepp',aliases:['rån','motvärnsrån','rån med hot','stöld under hot'],
+      penalty:'Fängelse 1 år 6 mån – 6 år',penaltyShort:'F 1,5–6 år',penaltyNote:'Minimistraffet uppfyller gränsen för häktningspresumtion i RB 24:1 andra stycket 1.',custody:'presumption',prosecution:'general',prosecutionLabel:'Allmänt åtal',
+      lawMode:'excerpt',law:'Den som med våld på person eller med hot som innebär eller för den hotade framstår som trängande fara,\n   1. begår stöld,\n   2. tvingar någon till handling eller underlåtenhet som innebär vinning för gärningsmannen och skada för den tvingade eller någon i vars ställe denne är, eller\n   3. olovligen tar eller tvingar till sig ett betalningsverktyg med avsikt att använda det för att bereda sig själv eller någon annan vinning,\n\ndöms för rån till fängelse i lägst ett år och sex månader och högst sex år.',lawSource:'BrB 8:5 första stycket. Paragrafen innehåller även ytterligare bestämmelser, bl.a. om motvärnsrån.',lawTerms:['trängande fara'],
+      variants:['Rån genom våld','Rån genom hot','Motvärnsrån'],elements:['Våld på person eller hot som innebär, eller framstår som, trängande fara.','Tillgrepp eller annan gärning enligt lagens alternativa rekvisit.'],
+      facts:[{eyebrow:'Kursanteckning',title:'Motvärnsrån',text:'Även motvärn med sådant våld eller hot som anges i lagen efter ett tillgrepp kan utgöra rån, när ytterligare lagförutsättningar är uppfyllda.',source:'Straffrätt Lund – Rån; BrB 8:5.'}],
+      stages:['Försök, förberedelse och stämpling till rån är straffbara enligt BrB 8:12.'],related:['stold','grov-stold'],
+    },
+    {
+      id:'misshandel',title:'Misshandel',ref:'BrB 3 kap. 5 §',shortRef:'BrB 3:5',category:'Person',aliases:['slå','slagsmål','spark','våld','slag','knuff'],
+      penalty:'Fängelse högst 2 år',penaltyShort:'F 2 år',penaltyNote:'Fängelse i högst två år. Samma paragraf anger en särskild straffskala för ringa misshandel.',custody:'possible',prosecution:'general',prosecutionLabel:'Allmänt åtal',
+      lawMode:'full',law:'Den som tillfogar en annan person kroppsskada, sjukdom eller smärta eller försätter honom eller henne i vanmakt eller något annat sådant tillstånd, döms för misshandel till fängelse i högst två år eller, om brottet är ringa, till böter eller fängelse i högst sex månader.',lawSource:'BrB 3:5. Lag (1998:393).',lawTerms:['kroppsskada','vanmakt'],
+      variants:['Tillfogad smärta','Kroppsskada','Sjukdom','Vanmakt'],elements:['Gärningen orsakar kroppsskada, sjukdom, smärta, vanmakt eller motsvarande tillstånd.','Uppsåt till brottsrekvisiten krävs som huvudregel.'],
+      facts:[{eyebrow:'Praktisk gränsdragning',title:'Ringa eller normalgrad?',text:'Anteckningarna nämner hastigt övergående smärta som typiskt för ringa misshandel. Även våldets karaktär och övriga omständigheter måste vägas in.',source:'Brottsutredning – Misshandel.'},{eyebrow:'Brottsrubricering',title:'När kan gärningen vara grov?',text:'Livsfarligt våld, svår kroppsskada eller särskild hänsynslöshet är faktorer att undersöka vid bedömningen. Bedömningen är alltid samlad.',source:'Straffrätt Lund – Misshandel; BrB 3:6.'}],
+      stages:['Försök eller förberedelse till misshandel som inte är ringa är straffbara enligt BrB 3:11.','Stämpling till misshandel av normalgraden omfattas inte av samma bestämmelse.'],related:['ofredande','olaga-hot'],
+    },
+    {
+      id:'ofredande',title:'Ofredande',ref:'BrB 4 kap. 7 §',shortRef:'BrB 4:7',category:'Frid',aliases:['trakasserier','störande samtal','hänsynslöst beteende','tafsning','störande kontakter'],
+      penalty:'Böter – fängelse 1 år',penaltyShort:'B–F 1 år',penaltyNote:'Böter eller fängelse i högst ett år.',custody:'possible',prosecution:'conditional',prosecutionLabel:'Villkorat utanför allmän plats',prosecutionRule:'BrB 4 kap. 11 §',
+      prosecutionDetails:['Om ofredandet förövats på allmän plats gäller den vanliga ordningen för allmänt åtal.','Om det inte förövats på allmän plats får åklagare väcka åtal endast om målsäganden anger brottet till åtal eller om åtal är påkallat från allmän synpunkt.','Det är inte en regel som specifikt gäller ”i bostad”. Den avgörande skillnaden är om gärningen har förövats på allmän plats.'],
+      lawMode:'full',law:'Den som fysiskt antastar någon annan eller utsätter någon annan för störande kontakter eller annat hänsynslöst agerande döms, om gärningen är ägnad att kränka den utsattes frid på ett kännbart sätt, för ofredande till böter eller fängelse i högst ett år.',lawSource:'BrB 4:7. Lag (2017:1136).',lawTerms:['hänsynslöst agerande','ägnad att kränka'],
+      variants:['Fysiskt antastande','Störande kontakter','Annat hänsynslöst agerande'],elements:['Fysiskt antastande, störande kontakter eller annat hänsynslöst agerande.','Handlandet är ägnat att kränka den utsattes frid på ett kännbart sätt.'],
+      facts:[{eyebrow:'Gränsdragning',title:'Saknad misshandelseffekt',text:'Kursanteckningarna nämner att ett fysiskt agerande som inte orsakar misshandelseffekt ändå kan behöva prövas som ofredande.',source:'Brottsutredning – Misshandel.'}],
+      stages:['Det finns inget generellt straffansvar för försök till ofredande enligt 4 kap. 10 § BrB.'],related:['misshandel','olaga-hot','hemfridsbrott'],
+    },
+    {
+      id:'hemfridsbrott',title:'Hemfridsbrott',ref:'BrB 4 kap. 6 § första stycket',shortRef:'BrB 4:6',category:'Frid',aliases:['hemfrid','stannar kvar','bostadsintrång','intrång i lägenhet','trädgård'],
+      penalty:'Böter – fängelse 1 år',penaltyShort:'B–F 1 år',penaltyNote:'Böter eller fängelse i högst ett år för normalgraden.',custody:'possible',prosecution:'conditional',prosecutionLabel:'Särskild åtalsregel',prosecutionRule:'BrB 4 kap. 11 §',
+      prosecutionDetails:['Hemfridsbrott får åtalas av åklagare endast om målsäganden anger brottet till åtal eller om åtal är påkallat från allmän synpunkt.','Regeln står i BrB 4:11; även olaga intrång omfattas.'],
+      lawMode:'excerpt',law:'Den som olovligen tränger in eller stannar kvar i någon annans bostad eller annat liknande boende döms för hemfridsbrott till böter eller fängelse i högst ett år. För hemfridsbrott döms även den som olovligen tränger in eller stannar kvar i en trädgård, på en gårdsplan eller på en annan liknande plats som tillhör bostaden eller boendet.',lawSource:'BrB 4:6 första stycket. Paragrafen reglerar även olaga intrång och de grova graderna.',lawTerms:['olovligen','bostad'],
+      variants:['Olovligt inträngande','Olovligt kvarstannande','Intrång på bostadsanknuten tomt'],elements:['Inträngande eller kvarstannande utan rätt.','Den skyddade platsen omfattas av bestämmelsen om bostad eller liknande boende, eller tillhörande skyddade områden.'],
+      facts:[{eyebrow:'Definition',title:'Bostad',text:'I kursanteckningarna behandlas även tillfälligt boende, exempelvis hotellrum och tält, som möjliga skyddade utrymmen.',source:'Straffrätt Lund – Hemfridsbrott.'}],
+      stages:['Försök till hemfridsbrott av normalgraden omfattas inte av den särskilda försökskriminaliseringen i BrB 4:10.'],related:['ofredande','inbrottsstold'],
+    },
+    {
+      id:'narkotikabrott-innehav',title:'Narkotikabrott · innehav',ref:'Narkotikastrafflagen 1 § första stycket 5',shortRef:'NSL 1 §',category:'Narkotika',aliases:['innehav av narkotika','cannabis','kokain','hasch','narkotika','droger'],
+      penalty:'Fängelse högst 3 år',penaltyShort:'F 3 år',penaltyNote:'Avser gärning enligt 1 § första stycket. Vid narkotika avsedd att säljas kan andra styckets särskilda straffskala gälla.',custody:'possible',prosecution:'general',prosecutionLabel:'Allmänt åtal',
+      lawMode:'excerpt',law:'Den som olovligen\n   1. överlåter narkotika,\n   2. framställer narkotika som är avsedd för missbruk,\n   3. förvärvar narkotika i överlåtelsesyfte,\n   4. anskaffar, bearbetar, förpackar, transporterar, förvarar eller tar annan sådan befattning med narkotika som inte är avsedd för eget bruk, eller\n   5. innehar, brukar eller tar annan befattning med narkotika\n\ndöms för narkotikabrott till fängelse i högst tre år.',lawSource:'Narkotikastrafflagen 1 § första stycket. Övriga stycken ger andra straffskalor för vissa gärningar.',lawTerms:['olovligen','innehar','brukar'],
+      variants:['Innehav','Bruk','Förvärv i överlåtelsesyfte','Transport/annan befattning','Överlåtelse – annan straffskala kan gälla'],elements:['Olovlig befattning med narkotika enligt en straffbelagd variant.','Här illustreras innehav enligt första stycket 5.'],
+      facts:[{eyebrow:'Särskild straffskala',title:'Narkotika avsedd för försäljning',text:'Narkotikastrafflagen 1 § andra stycket har en särskild straffskala om lägst sex månader och högst tre år för vissa försäljningsrelaterade gärningar. Den ska inte blandas ihop med första styckets grundskala.',source:'Narkotikastrafflagen 1 §.'}],
+      stages:['Enligt narkotikastrafflagen 4 § kan försök och förberedelse vara straffbara när gärningen avser annat än bruk.','Reglerna varierar beroende på gärningsvariant.'],related:['ringa-narkotikabrott-bruk'],
+    },
+    {
+      id:'ringa-narkotikabrott-bruk',title:'Ringa narkotikabrott · bruk',ref:'Narkotikastrafflagen 2 § jfr 1 § första stycket 5',shortRef:'NSL 2 §',category:'Narkotika',aliases:['ringa narkotika','eget bruk','cannabisbruk','droger','rökt hasch','bruk av narkotika','positivt drogtest'],
+      penalty:'Böter – fängelse 6 mån',penaltyShort:'B–F 6 mån',penaltyNote:'Böter eller fängelse i högst sex månader.',custody:'none',prosecution:'general',prosecutionLabel:'Allmänt åtal',
+      lawMode:'full',law:'Är brott som avses i 1 § första stycket med hänsyn till arten och mängden narkotika samt övriga omständigheter att anse som ringa, döms för ringa narkotikabrott till böter eller fängelse i högst sex månader.',lawSource:'Narkotikastrafflagen 2 §. Lag (2016:488).',lawTerms:[],
+      variants:['Bruk – denna ingång','Innehav – ringa grad'],elements:['Straffbelagd befattning enligt 1 § första stycket.','En bedömning utifrån art, mängd och övriga omständigheter visar att brottet är ringa.'],
+      facts:[{eyebrow:'Viktigt',title:'Bruk är en egen gärningsvariant',text:'Även om bruk och innehav kan omfattas av samma rubricering bör de vara separata sökingångar för att underlätta användningen.',source:'Narkotikastrafflagen 1–2 §§.'}],
+      stages:['Försök eller förberedelse som avser enbart bruk av narkotika är undantagna från straffansvaret i 4 §.'],related:['narkotikabrott-innehav'],
+    }
+  ]
+};
+
+</script>
+  <script>
+/* Kuraterade sökingångar i steg 2. Straffskalor och lagrum från angivna SFS-texter. */
+(() => {
+const D=window.BK_DATA;
+D.categories=['Alla','Tillgrepp','Person','Frid','Förmögenhet','Egendom','Tjänsteman','Narkotika','Vapen','Trafik'];
+const R={
+ near:'Brottsutredning – anteckningar om kvalifikationsgrunder.',
+ theft:'Straffrätt Lund – Stöld och grov stöld.',
+ bodily:'Brottsutredning – Misshandelsbrotten.',
+ home:'Straffrätt Lund – Hemfridsbrott och olaga intrång.',
+ nark:'Narkotikastrafflagen (1968:64), 1–4 §§.',
+ weapons:'Vapenlagen (2026:408), 18 kap.',
+ traffic:'Lag (1951:649) om straff för vissa trafikbrott.'
+};
+D.glossary['allmän plats']={title:'Allmän plats',text:'Begreppets innebörd beror på tillämplig författning. Här är det avgörande bland annat för åtalsregeln för ofredande i BrB 4 kap. 11 §. Kontrollera om gärningsplatsen räknas som allmän plats.',source:'BrB 4:11; Straffrätt Lund.'};
+D.glossary['särskild hänsynslöshet']={title:'Särskild hänsynslöshet',text:'En kvalifikationsgrund som prövas utifrån gärningens hela förlopp. En viss metod medför inte automatiskt grov rubricering.',source:'Straffrätt Lund – Grovhetsbedömning.'};
+D.glossary['otillbörlig']={title:'Otillbörlig',text:'Värderingsrekvisit vars innebörd beror på aktuellt brott. Varken subjektiv upplevelse eller ett isolerat faktum är alltid avgörande.',source:'Straffrätt Lund – Värderingsrekvisit.'};
+const C=[];
+function add(id,title,shortRef,category,statute,penalty,penaltyShort,min,max,aliases=[],extra={}){
+ C.push({id,title,shortRef,ref:window.BK_STATUTES[statute]?.ref || shortRef,category,statute,penalty,penaltyShort,penaltyNote:penalty,custody:extra.custody||(min>=1.5?'presumption':max>=1?'possible':'none'),prosecution:'general',prosecutionLabel:'Allmänt åtal',prosecutionDetails:['Ingen särskild åtalsbegränsning har registrerats för denna sökingång. Kontrollera eventuella undantag i specialbestämmelser.'],aliases,lawMode:'full',law:window.BK_STATUTES[statute]?.text||'',lawSource:window.BK_STATUTES[statute]?.ref||shortRef,lawTerms:extra.terms||[],variants:extra.variants||[],elements:extra.elements||[],facts:extra.facts||[],stages:extra.stages||[],related:extra.related||[],...extra});
+}
+const pre8={prosecution:'conditional',prosecutionLabel:'Villkor vid närstående',prosecutionRule:'BrB 8:13',prosecutionDetails:['Brottet hör normalt till allmänt åtal.','Om det förövats mot en sådan närstående som avses i BrB 8:13 får åklagaren åtala endast efter angivelse eller om åtal är påkallat ur allmän synpunkt.','Observera att grov stöld, inbrottsstöld, rån och grovt rån är undantagna.']};
+const pre4={prosecution:'conditional',prosecutionLabel:'Angivelse / allmän synpunkt',prosecutionRule:'BrB 4:11',prosecutionDetails:['Åklagare får åtala bara om målsäganden har angett brottet till åtal eller om åtal är påkallat från allmän synpunkt.','Se 4 kap. 11 § BrB för den fullständiga uppräkningen.']};
+const pre12={prosecution:'conditional',prosecutionLabel:'Särskild åtalsprövning',prosecutionRule:'BrB 12:6',prosecutionDetails:['Om brottet endast kränker enskilds rätt får åklagare åtala bara om åtal av särskilda skäl är motiverat från allmän synpunkt.','Regeln skiljer sig från en angivelseregel: målsägandens angivelse är inte själv tillräcklig.']};
+add('ringa-misshandel','Ringa misshandel','BrB 3:5','Person','BrB:3:5','Böter – fängelse 6 mån','B–F 6 mån',0,.5,['örfil','knuff','lätt misshandel'],{elements:['Effekt enligt BrB 3:5 krävs.','Brottet är ringa vid en helhetsbedömning.'],facts:[{eyebrow:'Kursanteckning',title:'Snabbt övergående smärta',text:'Anteckningarna tar upp hastigt övergående smärta som möjlig omständighet. Våldets karaktär och övriga omständigheter spelar också roll.',source:R.bodily}],related:['misshandel','grov-misshandel']});
+add('grov-misshandel','Grov misshandel','BrB 3:6','Person','BrB:3:6','Fängelse 1 år 6 mån–7 år','F 1,5–7 år',1.5,7,['slag med tillhygge','sparkar mot huvud'],{elements:['Misshandel enligt BrB 3:5.','Grovt brott med hänsyn till t.ex. livsfarlighet, svår kroppsskada eller särskild hänsynslöshet.'],facts:[{eyebrow:'Kvalifikationsgrund',title:'Särskild hänsynslöshet eller råhet',text:'Bedöms utifrån hela händelsen. Anteckningarna nämner bl.a. upprepade sparkar mot huvud.',source:R.bodily}],related:['misshandel','synnerligen-grov-misshandel']});
+add('synnerligen-grov-misshandel','Synnerligen grov misshandel','BrB 3:6','Person','BrB:3:6','Fängelse 6–12 år','F 6–12 år',6,12,['tortyrliknande misshandel'],{elements:['Misshandel enligt BrB 3:5.','Kvalificerat allvarlig gärning, se andra stycket i BrB 3:6.'],related:['grov-misshandel']});
+add('olaga-intrang','Olaga intrång','BrB 4:6','Frid','BrB:4:6','Böter – fängelse 1 år','B–F 1 år',0,1,['går in i lokal','vägrar lämna butik'],{...pre4,elements:['Obehörigt inträngande eller kvarstannande på en skyddad plats som inte omfattas av hemfridsbrott.'],related:['hemfridsbrott','grovt-olaga-intrang']});
+add('grovt-hemfridsbrott','Grovt hemfridsbrott','BrB 4:6','Frid','BrB:4:6','Fängelse 6 mån–3 år','F 0,5–3 år',.5,3,['hot vid intrång i bostad'],{...pre4,elements:['Hemfridsbrott som är grovt.','Se kvalifikationsgrunderna i BrB 4:6 tredje stycket.'],related:['hemfridsbrott','grovt-olaga-intrang']});
+add('grovt-olaga-intrang','Grovt olaga intrång','BrB 4:6','Frid','BrB:4:6','Fängelse 6 mån–3 år','F 0,5–3 år',.5,3,['allvarligt intrång i lokal'],{...pre4,related:['olaga-intrang','grovt-hemfridsbrott']});
+add('psykiskt-vald','Psykiskt våld','BrB 4:7 b','Frid','BrB:4:7b','Fängelse högst 4 år','F 4 år',0,4,['psykiska kränkningar','otillbörlig övervakning','upprepade förolämpningar'],{elements:['Upprepade kränkningar av angivet slag eller varaktig otillbörlig övervakning.','Gärningen ska vara ägnad att allvarligt skada självkänslan.'],facts:[{eyebrow:'Lagändring',title:'Ny brottstyp 2026',text:'Brottet infördes genom lagändringen 2026:852. Håll isär detta brott och grov fridskränkning.',source:'BrB 4:7 b; SFS 2026:852.'}]});
+add('grovt-ran','Grovt rån','BrB 8:6','Tillgrepp','BrB:8:6','Fängelse 5–10 år','F 5–10 år',5,10,['väpnat rån','livsfarligt våld vid rån'],{elements:['Rån enligt BrB 8:5 och grovhetsgrund i BrB 8:6.'],related:['ran','grov-stold']});
+add('bedrageri','Bedrägeri','BrB 9:1','Förmögenhet','BrB:9:1','Fängelse högst 2 år','F 2 år',0,2,['lurat på pengar','swishbedrägeri','falsk annons','automatbedrägeri'],{prosecution:'conditional',prosecutionLabel:'Kontrollera 9:12',prosecutionRule:'BrB 9:12',prosecutionDetails:['Det finns särskilda åtalsregler i 9 kap. 12 § BrB, bland annat vid vissa förhållanden mellan närstående och vid särskilda gärningsvarianter.','Detaljerad lydelse av 9:12 återstår att importera och granska. Ingen automatisk slutsats om angivelse ska dras här.'],elements:['Vilseledande eller påverkan på automatiserad process.','Vinning och motsvarande skada.'],related:['ringa-bedrageri','grovt-bedrageri']});
+add('ringa-bedrageri','Ringa bedrägeri','BrB 9:2','Förmögenhet','BrB:9:2','Böter – fängelse 6 mån','B–F 6 mån',0,.5,['smitnota','snyltning','restaurangnota','taxinota'],{prosecution:'conditional',prosecutionLabel:'Kontrollera 9:12',prosecutionRule:'BrB 9:12',prosecutionDetails:['Det finns särskilda åtalsregler för vissa former av ringa bedrägeri.','Kursmaterialet tar upp snyltning och brott mot närstående. Full lagtext till BrB 9:12 ska tillföras innan definitiv regel visas.'],facts:[{eyebrow:'Kursanteckning',title:'Snyltning',text:'I vissa fall krävs inte ett vilseledande, exempelvis när tjänster som förutsätter kontant betalning tillgodogörs utan att betalas.',source:'Straffrätt Lund – Ringa bedrägeri.'}]});
+add('grovt-bedrageri','Grovt bedrägeri','BrB 9:3','Förmögenhet','BrB:9:3','Fängelse 1–6 år','F 1–6 år',1,6,['organiserat bedrägeri','systematiskt bedrägeri'],{elements:['Bedrägeri enligt BrB 9:1.','Samlad bedömning av kvalifikationsgrunder i BrB 9:3.'],related:['bedrageri']});
+add('skadegorelse','Skadegörelse','BrB 12:1','Egendom','BrB:12:1','Fängelse högst 2 år','F 2 år',0,2,['slår sönder','repar bil','klotter','förstörd ruta'],{elements:['Förstörande eller skadande av egendom till men för annans rätt.'],related:['ringa-skadegorelse','grov-skadegorelse']});
+add('ringa-skadegorelse','Ringa skadegörelse','BrB 12:2','Egendom','BrB:12:2','Böter – fängelse 6 mån','B–F 6 mån',0,.5,['liten skada','mindre skadegörelse'],{...pre12,related:['skadegorelse'],facts:[{eyebrow:'Kursanteckning',title:'1 500 kronor nämns som riktvärde',text:'Detta är inte en allmän lagstadgad beloppsgräns. Skadans obetydlighet och omständigheterna styr bedömningen.',source:'Brottsutredning – Skadegörelse.'}]});
+add('grov-skadegorelse','Grov skadegörelse','BrB 12:3','Egendom','BrB:12:3','Fängelse 1–6 år','F 1–6 år',1,6,['stor skadegörelse','stor kulturell skada'],{related:['skadegorelse']});
+add('vald-hot-tjansteman','Våld eller hot mot tjänsteman','BrB 17:1','Tjänsteman','BrB:17:1','Böter – fängelse 3 år','B–F 3 år',0,3,['hot mot polis','misshandlar polis','hotar ordningsvakt'],{variants:['Våld','Hot om brottslig gärning'],related:['grovt-vald-hot-tjansteman','valdsamt-motstand']});
+add('grovt-vald-hot-tjansteman','Grovt våld eller hot mot tjänsteman','BrB 17:1','Tjänsteman','BrB:17:1','Fängelse 1 år 6 mån–8 år','F 1,5–8 år',1.5,8,['grovt hot mot polis','grovt våld mot polis'],{related:['vald-hot-tjansteman']});
+add('forolampning-tjansteman','Förolämpning mot tjänsteman','BrB 17:3','Tjänsteman','BrB:17:3','Böter – fängelse 6 mån','B–F 6 mån',0,.5,['kränker polis','förolämpar polis'],{elements:['Riktat mot tjänsteman under eller med anledning av myndighetsutövning.','Ägnat att kränka tjänstemannens självkänsla eller värdighet.']});
+add('valdsamt-motstand','Våldsamt motstånd','BrB 17:4','Tjänsteman','BrB:17:4','Böter – fängelse 6 mån','B–F 6 mån',0,.5,['sliter sig loss','sätter sig till motvärn'],{related:['vald-hot-tjansteman']});
+const nd=['Nark:1','Fängelse högst 3 år','F 3 år'];
+add('narkotikabrott-overlatelse','Narkotikabrott · överlåtelse','NSL 1 § 1 st. 1','Narkotika',nd[0],nd[1],nd[2],0,3,['sälja narkotika','överlåta narkotika'],{variants:['Överlåtelse'],elements:['Överlåtelse av narkotika.','För försäljning eller annan befattning med säljavsikt kan särskild straffskala gälla enligt NSL 1 § andra stycket.'],related:['narkotikabrott-forsaljning']});
+add('narkotikabrott-framstallning','Narkotikabrott · framställning','NSL 1 § 1 st. 2','Narkotika',nd[0],nd[1],nd[2],0,3,['odla narkotika','tillverka narkotika'],{variants:['Framställning avsedd för missbruk']});
+add('narkotikabrott-forvarv','Narkotikabrott · förvärv i överlåtelsesyfte','NSL 1 § 1 st. 3','Narkotika',nd[0],nd[1],nd[2],0,3,['köpa för att sälja narkotika'],{variants:['Förvärv i överlåtelsesyfte']});
+add('narkotikabrott-transport','Narkotikabrott · transport/förvaring','NSL 1 § 1 st. 4','Narkotika',nd[0],nd[1],nd[2],0,3,['transport av narkotika','förvara åt annan','kurir'],{variants:['Anskaffning','Bearbetning','Förpackning','Transport','Förvaring'],elements:['Befattning med narkotika som inte är avsedd för eget bruk.']});
+add('narkotikabrott-forsaljning','Narkotikabrott · försäljning','NSL 1 § 2 st.','Narkotika','Nark:1','Fängelse 6 mån–3 år','F 0,5–3 år',.5,3,['sälja narkotika','narkotika till försäljning'],{variants:['Försäljning','Befattning med narkotika avsedd att säljas'],elements:['Särskild straffskala i 1 § andra stycket.']});
+add('narkotikabrott-framja','Narkotikabrott · främjande av handel','NSL 1 § 3 st.','Narkotika','Nark:1','Fängelse 6 mån–3 år','F 0,5–3 år',.5,3,['förmedla knarkhandel','försäljningskontakter narkotika'],{variants:['Utbud till försäljning','Förmedla kontakter','Förvara vederlag'],elements:['Gärning ägnad att främja narkotikahandel.']});
+add('ringa-narkotikabrott-innehav','Ringa narkotikabrott · innehav','NSL 2 § jfr 1 §','Narkotika','Nark:2','Böter – fängelse 6 mån','B–F 6 mån',0,.5,['lite cannabis','ringa innehav','mindre mängd narkotika'],{related:['narkotikabrott-innehav','ringa-narkotikabrott-bruk']});
+add('grovt-narkotikabrott','Grovt narkotikabrott','NSL 3 §','Narkotika','Nark:3','Fängelse 2–7 år','F 2–7 år',2,7,['mycket narkotika','stor narkotikamängd'],{related:['synnerligen-grovt-narkotikabrott','narkotikabrott-overlatelse']});
+add('synnerligen-grovt-narkotikabrott','Synnerligen grovt narkotikabrott','NSL 3 § 2 st.','Narkotika','Nark:3','Fängelse 6–10 år','F 6–10 år',6,10,['organiserad narkotikahandel'],{related:['grovt-narkotikabrott']});
+add('vapenbrott','Vapenbrott','VapenL 18:1','Vapen','Vapen:18:1','Fängelse högst 5 år','F 5 år',0,5,['olaga vapeninnehav','pistol utan tillstånd','vapen utan licens'],{variants:['Innehav','Tillverkning','Överlåtelse','Yrkesmässig förmedling','Utlåning'],related:['grovt-vapenbrott','vapenbrott-mindre']});
+add('vapenbrott-mindre','Mindre allvarligt vapenbrott','VapenL 18:1 st. 2','Vapen','Vapen:18:1','Böter – fängelse 6 mån','B–F 6 mån',0,.5,['ringa vapenbrott','lindrigt vapenbrott'],{related:['vapenbrott']});
+add('vapenbrott-oaktsamt','Vapenbrott av oaktsamhet','VapenL 18:1 st. 3','Vapen','Vapen:18:1','Böter – fängelse 6 mån','B–F 6 mån',0,.5,['oaktsamt olaga vapeninnehav'],{related:['vapenbrott']});
+add('grovt-vapenbrott','Grovt vapenbrott','VapenL 18:2','Vapen','Vapen:18:2','Fängelse 4–7 år','F 4–7 år',4,7,['laddad pistol allmän plats','flera olagliga vapen'],{variants:['Innehav','Tillverkning','Överlåtelse','Yrkesmässig förmedling','Utlåning'],related:['vapenbrott','synnerligen-grovt-vapenbrott']});
+add('synnerligen-grovt-vapenbrott','Synnerligen grovt vapenbrott','VapenL 18:2 st. 2','Vapen','Vapen:18:2','Fängelse 6–10 år','F 6–10 år',6,10,['många skjutvapen','vapenlager'],{related:['grovt-vapenbrott']});
+add('rattfylleri','Rattfylleri','TBL 4 §','Trafik','TBL:4','Böter – fängelse 6 mån','B–F 6 mån',0,.5,['alkohol i trafik','drograttfylla','0,2 promille'],{variants:['Alkohol','Narkotika i blodet','Påverkad förare'],facts:[{eyebrow:'Laggräns',title:'0,2 ‰ i blod / 0,10 mg/l i utandning',text:'Gäller alkoholgränsen i TBL 4 §. För narkotikapåverkan gäller andra rekvisit och undantag.',source:R.traffic}],related:['grovt-rattfylleri']});
+add('grovt-rattfylleri','Grovt rattfylleri','TBL 4 a §','Trafik','TBL:4a','Fängelse högst 2 år','F 2 år',0,2,['1,0 promille','grovt rattfull'],{facts:[{eyebrow:'Kvalifikationsgrund',title:'1,0 ‰ i blod / 0,50 mg/l i utandning',text:'En omständighet som särskilt ska beaktas. Även avsevärd påverkan eller påtaglig trafikfara kan vara avgörande.',source:R.traffic}],related:['rattfylleri']});
+add('olovlig-korning','Olovlig körning','TBL 3 §','Trafik','TBL:3','Böter','B',0,0,['kör utan körkort','utan behörighet','körkortspliktigt fordon'],{custody:'none',variants:['Körning utan behörighet'],related:['grov-olovlig-korning']});
+add('grov-olovlig-korning','Grov olovlig körning','TBL 3 §','Trafik','TBL:3','Böter – fängelse 6 mån','B–F 6 mån',0,.5,['kör efter indraget körkort','upprepad olovlig körning'],{custody:'none',related:['olovlig-korning']});
+add('knivbrott','Brott mot knivlagen','KnivL 4 § jfr 1 §','Vapen','Kniv:4','Böter – fängelse 1 år','B–F 1 år',0,1,['kniv på stan','kniv allmän plats','kniv i bil'],{variants:['Innehav på allmän plats','Innehav i fordon på allmän plats','Skolområde','Överlåtelse och saluhållande enligt 2 §'],elements:['Kontrollera förbudet och samtliga undantag i KnivL 1 §.'],related:['grovt-knivbrott']});
+add('grovt-knivbrott','Grovt brott mot knivlagen','KnivL 4 § st. 3','Vapen','Kniv:4','Fängelse 6 mån–2 år','F 0,5–2 år',.5,2,['grovt knivinnehav','farlig kniv på allmän plats'],{related:['knivbrott']});
+// Brott där samma lagrum har flera rubriceringar behåller olika sökingångar men visar gemensam fullständig paragraf.
+const existing = new Set(D.crimes.map(x=>x.id));
+D.crimes.push(...C.filter(x=>!existing.has(x.id)));
+// Urvalsregel: ALLA brott enligt Brottsbalken behålls. I specialstraffrätten
+// utesluts ENDAST straffbestämmelser vars hela straffskala är penningböter.
+// Det generella ordet "böter" betyder inte att straffet enbart är penningböter.
+// Vid import bör penaltyKind sättas explicit till 'penningboter-only',
+// 'dagsboter', 'fines-or-imprisonment' eller 'imprisonment' efter lagkontroll.
+// Påverkar katalogens sökträffar, inte källtexten i lagbiblioteket.
+function isCatalogCrime(c) {
+  if (/^BrB(?::|\b)/i.test(String(c.statute || c.shortRef || ''))) return true;
+  if (c.penaltyKind === 'penningboter-only') return false;
+  if (c.penaltyKind === 'penningboter-or-more') return true;
+  const scale = String(c.penalty || '').trim().toLowerCase();
+  return !/^(?:endast\s+)?penningböter\.?$/.test(scale);
+}
+D.crimes = D.crimes.filter(isCatalogCrime);
+D.selectionRule = 'Brottsbalken: alla brott. Specialstraffrätt: endast brott med strängare straff i skalan än enbart penningböter. Dagsböter omfattas.';
+// Synonymer och förbättrad uppdelning av originalens datagränser.
+D.crimes.forEach(c=>{
+  if(!c.statute){
+    const m=c.shortRef.match(/^BrB (\d+):(\d+)\s*(a|b)?/);
+    if(m)c.statute=`BrB:${m[1]}:${m[2]}${m[3]||''}`;
+    if(c.id.startsWith('narkotikabrott')||c.id.startsWith('ringa-narkotikabrott'))c.statute=c.id.includes('ringa')?'Nark:2':'Nark:1';
+  }
+  const sec=window.BK_STATUTES[c.statute];
+  if(sec){c.law=sec.text;c.lawMode='full';c.lawSource=sec.ref;c.statuteSource=sec.url;}
+  if(c.id==='ran'){c.penalty='Fängelse 1 år 6 mån–6 år';c.penaltyShort='F 1,5–6 år';c.custody='presumption';}
+  if(c.id==='ofredande'){
+    c.prosecution='conditional';c.prosecutionLabel='Villkor beroende på plats';c.prosecutionRule='BrB 4:11';
+    c.prosecutionDetails=['På allmän plats: allmänt åtal utan den särskilda begränsningen i BrB 4:11.','Inte på allmän plats: angivelse av målsäganden eller att åtal är påkallat från allmän synpunkt.','Det är inte bara bostäder som omfattas av undantaget; avgörande är om det är allmän plats.'];
+  }
+  if(c.id==='hemfridsbrott'){Object.assign(c,pre4)}
+});
+D.date='2026-10-12';
+})();
+
+</script>
+  <script>
+/* Brottskatalog – stage 1. No framework, no network request during use. */
+(() => {
+'use strict';
+const { crimes, glossary, categories } = window.BK_DATA;
+const provisions = window.BK_STATUTES || {};
+const sheetHistory=[];
+const byId = Object.fromEntries(crimes.map(c => [c.id,c]));
+const app = document.getElementById('app');
+const sheetRoot = document.getElementById('sheet-root');
+const LS_PREFIX = 'brottskatalog.steg1.';
+const readSetting = (key, fallback) => { try { const v = localStorage.getItem(LS_PREFIX + key); return v === null ? fallback : JSON.parse(v); } catch { return fallback; } };
+const writeSetting = (key, value) => { try { localStorage.setItem(LS_PREFIX + key, JSON.stringify(value)); } catch {} };
+const state = {
+  query:'',category:'Alla',tab:'sok',
+  favorites:readSetting('favorites', []),recents:readSetting('recents', []),
+  density:readSetting('density', 'normal'),theme:readSetting('theme','auto'),navStack:[]
+};
+const iconPaths = {
+  'scale':'<path d="M12 3v18M5 7h14M7 7l-4 6h8L7 7Zm10 0-4 6h8l-4-6ZM6 21h12"/>',
+  'search':'<circle cx="10.8" cy="10.8" r="7"/><path d="m16 16 5 5"/>',
+  'arrow-left':'<path d="m15 18-6-6 6-6"/>',
+  'chevron-right':'<path d="m9 18 6-6-6-6"/>',
+  'chevron-down':'<path d="m6 9 6 6 6-6"/>',
+  'check-circle':'<circle cx="12" cy="12" r="9"/><path d="m8 12 2.5 2.5L16 9"/>',
+  'alert-circle':'<circle cx="12" cy="12" r="9"/><path d="M12 7.5v5.5"/><path d="M12 16.5h.01"/>',
+  'minus-circle':'<circle cx="12" cy="12" r="9"/><path d="M8 12h8"/>',
+  'info':'<circle cx="12" cy="12" r="9"/><path d="M12 11v5"/><path d="M12 8h.01"/>',
+  'bookmark':'<path d="M6 4a1 1 0 0 1 1-1h10a1 1 0 0 1 1 1v17l-6-4-6 4V4Z"/>',
+  'bookmark-fill':'<path d="M6 4a1 1 0 0 1 1-1h10a1 1 0 0 1 1 1v17l-6-4-6 4V4Z" fill="currentColor"/>',
+  'book-open':'<path d="M12 7c-3-2-6-2-9-1v13c3-1 6-1 9 1 3-2 6-2 9-1V6c-3-1-6-1-9 1ZM12 7v13"/>',
+  'file-text':'<path d="M6 2h8l4 4v16H6a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2Z"/><path d="M14 2v5h5M8 12h8M8 16h8"/>',
+  'layers':'<path d="m12 2 9 5-9 5-9-5 9-5Zm-9 10 9 5 9-5M3 17l9 5 9-5"/>',
+  'list':'<path d="M9 6h12M9 12h12M9 18h12M4 6h.01M4 12h.01M4 18h.01"/>',
+  'star':'<path d="m12 2 3.1 6.4 7.1 1-5.1 5 .9 7-6-3.4L5.7 21l1.1-6.6-5.2-5 7.1-1L12 2Z"/>',
+  'settings':'<path d="M12 3v3m0 12v3M3 12h3m12 0h3M5.7 5.7l2.2 2.2m8.2 8.2 2.2 2.2m0-12.4-2.2 2.2M7.9 16.1l-2.2 2.2"/><circle cx="12" cy="12" r="4"/>',
+  'x':'<path d="M18 6 6 18M6 6l12 12"/>',
+  'copy':'<rect x="8" y="8" width="12" height="12" rx="2"/><path d="M16 8V5a2 2 0 0 0-2-2H5a2 2 0 0 0-2 2v9a2 2 0 0 0 2 2h3"/>',
+  'external-link':'<path d="M14 3h7v7M10 14 21 3M20 14v6H4V4h6"/>',
+  'book-mark':'<path d="M4 5c0-1.1.9-2 2-2h14v18H6c-1.1 0-2-.9-2-2V5Zm0 14c0-1.1.9-2 2-2h14M14 3v8l-3-2-3 2V3"/>',
+  'clock':'<circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/>',
+  'shield-check':'<path d="M12 22s8-4 8-11V5l-8-3-8 3v6c0 7 8 11 8 11Z"/><path d="m8.5 12 2.2 2.3L16 9"/>',
+  'wifi-off':'<path d="M2 7c6-5 14-5 20 0M5 11c2-2 4-3 7-3m5 1 2 2M9 15a5 5 0 0 1 6 0M12 19h.01M2 2l20 20"/>',
+  'check':'<path d="m5 12 4 4 10-10"/>',
+  'moon':'<path d="M20 15.1A8 8 0 0 1 8.9 4a8 8 0 1 0 11.1 11.1Z"/>',
+  'sun':'<circle cx="12" cy="12" r="4"/><path d="M12 2v2m0 16v2M4 12H2m20 0h-2M4.9 4.9l1.4 1.4m11.4 11.4 1.4 1.4M19.1 4.9l-1.4 1.4M6.3 17.7l-1.4 1.4"/>'
+};
+const ic = (name,cls='') => `<svg class="ic ${cls}" viewBox="0 0 24 24" aria-hidden="true">${iconPaths[name] || iconPaths.info}</svg>`;
+const escapeHtml = s => String(s ?? '').replace(/[&<>"']/g, c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
+const normalize = s => String(s||'').toLowerCase().normalize('NFD').replace(/[\u0300-\u036f]/g,'').replace(/[^a-z0-9 §:.]+/g,' ').trim();
+// Resolve same-chapter paragraph references directly to the bundled, offline legal source.
+function provisionKey(fragment, current){
+ const match=fragment.match(/(?:(\d+)\s*kap\.\s*)?(\d+)\s*([a-z]?)\s*§/i);
+ if(!match)return null;
+ const prefix=current.split(':');
+ const act=prefix[0];
+ const chapter=match[1]||((act==='BrB'||act==='RB'||act==='Vapen')?prefix[1]:null);
+ const para=match[2]+(match[3]||'');
+ const key=chapter?`${act}:${chapter}:${para}`:`${act}:${para}`;
+ return provisions[key]?key:null;
+}
+function lawMarkup(text,current,terms=[]){
+ const labels=[...(terms||[])].sort((a,b)=>b.length-a.length);
+ const refRx=/(?:\b\d+\s*kap\.\s*)?\b\d+\s*[a-z]?\s*§/gi;
+ const hits=[];
+ for(const m of text.matchAll(refRx)){
+   const key=provisionKey(m[0],current||'');
+   if(key && key!==current) hits.push({s:m.index,e:m.index+m[0].length,mode:'ref',key});
+ }
+ for(const term of labels){
+   const rx=new RegExp(term.replace(/[.*+?^${}()|[\]\\]/g,'\\$&'),'gi');
+   for(const m of text.matchAll(rx)){
+      if(hits.some(h=>h.s<m.index+m[0].length && h.e>m.index))continue;
+      hits.push({s:m.index,e:m.index+m[0].length,mode:'term',term});
+   }
+ }
+ hits.sort((a,b)=>a.s-b.s || b.e-a.e);
+ let html='',pos=0;
+ for(const hit of hits){if(hit.s<pos)continue;
+   html+=escapeHtml(text.slice(pos,hit.s));const label=escapeHtml(text.slice(hit.s,hit.e));
+   html+=hit.mode==='ref'?`<button type="button" class="ref-link" data-provision="${escapeHtml(hit.key)}" title="Visa ${escapeHtml(provisions[hit.key].ref)}">${label}${ic('external-link','xs')}</button>`:`<button type="button" class="term-link" data-term="${escapeHtml(hit.term)}" aria-label="Förklaring: ${label}">${label}</button>`;
+   pos=hit.e;
+ }
+ return html+escapeHtml(text.slice(pos));
+}
+const lawText=c=>lawMarkup(c.law,c.statute,c.lawTerms);
+function actualTheme(){const h=new Date().getHours();return state.theme==='auto'?(h>=22||h<6?'dark':'light'):state.theme;}
+function applyTheme(){const dark=actualTheme()==='dark';document.documentElement.dataset.theme=dark?'dark':'light';document.querySelector('meta[name="theme-color"]')?.setAttribute('content',dark?'#07090c':'#f7f9fa');document.querySelector('meta[name="color-scheme"]')?.setAttribute('content',dark?'dark':'light');}
+const custodyLabels = {none:'Ej enligt huvudregeln',possible:'Häktning kan vara möjlig',presumption:'Häktningspresumtion'};
+const custodyIcons = {none:'minus-circle',possible:'scale',presumption:'scale'};
+function sortedCrimes(){
+  let list = crimes.filter(c => state.category === 'Alla' || c.category === state.category);
+  if (!state.query.trim()) return list;
+  const q = normalize(state.query);
+  const tokens = q.split(' ').filter(Boolean);
+  const rank = c => {
+    const title = normalize(c.title);const ref = normalize(c.ref + ' ' + c.shortRef);
+    const aliases = (c.aliases||[]).map(normalize);
+    const all = [title,ref,...aliases,c.category.toLowerCase()].join(' ');
+    if (!tokens.every(t=>all.includes(t))) return -1;
+    if (title === q) return 200;
+    if (title.startsWith(q)) return 160;
+    if (aliases.some(a=>a===q)) return 140;
+    if (aliases.some(a=>a.startsWith(q))) return 105;
+    if (ref.includes(q)) return 100;
+    if (title.includes(q)) return 90;
+    return 30;
+  };
+  return list.map(c=>({c,score:rank(c)})).filter(o=>o.score>=0).sort((a,b)=>b.score-a.score).map(o=>o.c);
+}
+function card(c){
+  const warn = c.prosecution==='conditional';
+  return `<button type="button" class="crime-card" data-open="${c.id}" aria-label="Öppna ${escapeHtml(c.title)}">
+    <span class="crime-text"><span class="crime-title">${escapeHtml(c.title)}</span><span class="crime-ref">${escapeHtml(c.shortRef)}</span>
+    <span class="crime-meta">${warn?`<span class="mini-alert">${ic('alert-circle','xs')} Åtalsvillkor</span>`:'Allmänt åtal'}<span class="meta-line"></span><span class="${c.custody==='presumption'?'mini-pres':''}">${c.custody==='presumption'?'Presumtion':c.custody==='possible'?'Häktning möjlig':'Särskild regel'}</span></span></span>
+    <span class="crime-side"><span class="crime-penalty">${escapeHtml(c.penaltyShort)}</span>${ic('chevron-right','sm')}</span>
+  </button>`;
+}
+function brandTop(){
+  return `<div class="topline"><div class="brand-wrap"><div class="brand-symbol">${ic('scale')}</div><div><div class="brand-name">Brottskatalog</div><div class="brand-desc">JURIDISKT REFERENSVERK</div></div></div><div class="online"><span class="dot"></span><span id="connection-state">Lokalt läge</span></div></div>`;
+}
+function note(){return `<div class="mode-note">${ic('info','sm')}<span><strong>Steg 2 · arbetsversion</strong> · ${crimes.length} sökingångar. Urval – ännu inte fullständigt kvalitetssäkrad för tjänstebruk.</span></div>`;}
+function bottomNav(active){
+  return `<nav class="bottom-nav" aria-label="Huvudnavigering">
+  <button class="nav-item ${active==='sok'?'active':''}" data-tab="sok" ${active==='sok'?'aria-current="page"':''}>${ic('search')}Sök</button>
+  <button class="nav-item ${active==='sparat'?'active':''}" data-tab="sparat" ${active==='sparat'?'aria-current="page"':''}>${ic('bookmark')}Sparat</button>
+  <button class="nav-item ${active==='mer'?'active':''}" data-tab="mer" ${active==='mer'?'aria-current="page"':''}>${ic('list')}Mer</button>
+  </nav>`;
+}
+function quickRow(){
+  const opts = (state.recents.length ? state.recents : ['ringa-stold','misshandel','ofredande']).slice(0,4);
+  return `<div class="section-heading"><h2>${state.recents.length?'Senast öppnade':'Snabbval'}</h2></div><div class="quick-row">${opts.map(id=>byId[id]).filter(Boolean).map(c=>`<button type="button" class="quick-chip" data-open="${c.id}">${ic('clock','sm')}${escapeHtml(c.title)}</button>`).join('')}</div>`;
+}
+function resultsFragment(){
+  const list=sortedCrimes();
+  return `<div class="section-heading"><h2>${state.query?'Sökresultat':'Brottskatalog'}</h2><span>${list.length} ${list.length===1?'träff':'träffar'}</span></div>
+    ${list.length?`<div class="crime-list">${list.map(card).join('')}</div>`:`<div class="empty">${ic('search','xl')}<h3>Inga träffar</h3><p>Prova ett annat begrepp eller lagrum. Endast exempelbrotten är inlagda ännu.</p></div>`}`;
+}
+function updateResults(){const el=document.getElementById('results-area');if(el)el.innerHTML=resultsFragment();}
+function renderSearch(){
+  app.className='app-shell '+(state.density==='compact'?'compact':'');
+  app.innerHTML=`<main class="page">${brandTop()}${note()}<header class="hero"><div class="kicker">ETT SNABBARE SÄTT ATT HITTA RÄTT</div><h1>Vad vill du slå upp?</h1><p>Sök på brott, handling, lagrum eller vanligt uttryck.</p></header>
+  <label class="search-box" for="crime-search">${ic('search','lg')}<input id="crime-search" type="search" placeholder="T.ex. ringa stöld, BrB 8:2…" inputmode="search" enterkeyhint="search" autocapitalize="off" autocomplete="off" spellcheck="false" value="${escapeHtml(state.query)}"><button class="search-clear" data-action="clear-search" aria-label="Rensa sökning" style="${state.query?'':'display:none'}">${ic('x','sm')}</button></label>
+  <div class="filter-strip" role="group" aria-label="Filtrera brott">${categories.map(cat=>`<button class="filter ${cat===state.category?'active':''}" data-category="${escapeHtml(cat)}" aria-pressed="${cat===state.category}">${escapeHtml(cat)}</button>`).join('')}</div>
+  <div id="quick-area" ${state.query?'hidden':''}>${quickRow()}</div>
+  <div id="results-area">${resultsFragment()}</div></main>${bottomNav('sok')}`;
+  const input=document.getElementById('crime-search');
+  input.addEventListener('input', e=>{
+    state.query=e.target.value;
+    document.querySelector('.search-clear').style.display=state.query?'':'none';
+    document.getElementById('quick-area').hidden=!!state.query;
+    updateResults();
+  });
+  refreshConnection();
+}
+function renderSaved(){
+  app.className='app-shell '+(state.density==='compact'?'compact':'');
+  const saved=state.favorites.map(id=>byId[id]).filter(Boolean);
+  app.innerHTML=`<main class="page">${brandTop()}${note()}<header class="hero"><div class="kicker">DIN GENVÄG</div><h1>Sparade brott</h1><p>Markera brott med bokmärket i övre högra hörnet.</p></header>
+  <div class="section-heading"><h2>Favoriter</h2><span>${saved.length} sparade</span></div>
+  ${saved.length?`<div class="crime-list">${saved.map(card).join('')}</div>`:`<div class="empty">${ic('bookmark','xl')}<h3>Inga favoriter ännu</h3><p>Öppna ett brottskort och tryck på bokmärket. Dina favoriter lagras lokalt på den här enheten.</p></div>`}</main>${bottomNav('sparat')}`;
+  refreshConnection();
+}
+function renderMore(){
+  app.className='app-shell '+(state.density==='compact'?'compact':'');
+  app.innerHTML=`<main class="page">${brandTop()}${note()}<h1 class="settings-title">Mer</h1><p class="settings-desc">Förklaringar, visning och information om prototypen.</p>
+  <section class="settings-group"><h2 class="settings-h">UTSEENDE</h2><div class="settings-card"><div class="setting-row"><div><h3>Visningstäthet</h3><p>Anpassa kortens storlek.</p></div><div class="choice" aria-label="Visningstäthet"><button data-density="normal" class="${state.density==='normal'?'selected':''}" aria-pressed="${state.density==='normal'}">Normal</button><button data-density="compact" class="${state.density==='compact'?'selected':''}" aria-pressed="${state.density==='compact'}">Tät</button></div></div></div></section>
+  <section class="settings-group"><h2 class="settings-h">NATTLÄGE</h2><div class="settings-card"><div class="setting-row"><div><h3>${ic('moon','sm')} Skärmtema</h3><p>Automatisk mörk visning 22.00–06.00 enligt lokal tid. Ändrar inte skärmens ljusstyrka.</p></div></div><div class="setting-row"><div class="choice theme-choice" aria-label="Färgtema"><button data-theme-choice="auto" class="${state.theme==='auto'?'selected':''}" aria-pressed="${state.theme==='auto'}">Automatiskt</button><button data-theme-choice="light" class="${state.theme==='light'?'selected':''}" aria-pressed="${state.theme==='light'}">Ljust</button><button data-theme-choice="dark" class="${state.theme==='dark'?'selected':''}" aria-pressed="${state.theme==='dark'}">Mörkt</button></div></div></div></section>
+  <section class="settings-group"><h2 class="settings-h">SYMBOLER</h2><div class="settings-card">
+  <div class="setting-row"><div><h3>${ic('check-circle','sm')} Allmänt åtal</h3><p>Inga särskilda åtalsvillkor anges för brottet.</p></div></div>
+  <div class="setting-row"><div><h3>${ic('alert-circle','sm')} Särskild åtalsregel</h3><p>Tryck på åtalsraden i brottskortet för villkor och lagrum.</p></div></div>
+  <div class="setting-row"><div><h3>${ic('scale','sm')} Häktning</h3><p>Visar straffskalans relation till vanliga häktningsregler. Ingen automatisk beslutsrekommendation.</p></div></div>
+  <div class="setting-row"><div><h3>${ic('book-open','sm')} Lagtext</h3><p>Ordagrann text är separat från praxis och kursanteckningar. Understrukna ord går att trycka på.</p></div></div>
+  </div></section>
+  <section class="settings-group"><h2 class="settings-h">TEKNISK INFORMATION</h2><div class="settings-card"><div class="setting-row"><div><h3>Utan inloggning eller konto</h3><p>All exempeldata finns i appens filer. Favoriter och inställningar sparas lokalt.</p></div>${ic('shield-check')}</div><div class="setting-row"><div><h3>Offline vid installation</h3><p>Den installerade webbappen använder lokal cache. iOS kan under vissa omständigheter rensa webbdata.</p></div>${ic('wifi-off')}</div></div></section>
+  <section class="settings-group"><h2 class="settings-h">KÄLLOR OCH AVGRÄNSNING</h2><div class="settings-text"><p>48 sökingångar är inlagda. Detta är ett urval – inte en komplett brottsförteckning. Lydelser, tolkningar och statusfält behöver slutlig juridisk kvalitetskontroll före användning i tjänsten.</p>
+  <p>Rättskällor: <a href="https://www.riksdagen.se/sv/dokument-och-lagar/dokument/svensk-forfattningssamling/brottsbalk-1962700_sfs-1962-700/" target="_blank" rel="noopener noreferrer">Brottsbalken</a>, <a href="https://www.riksdagen.se/sv/dokument-och-lagar/dokument/svensk-forfattningssamling/narkotikastrafflag-196864_sfs-1968-64/" target="_blank" rel="noopener noreferrer">narkotikastrafflagen</a> och <a href="https://www.riksdagen.se/sv/dokument-och-lagar/dokument/svensk-forfattningssamling/rattegangsbalk-1942740_sfs-1942-740framtagen/" target="_blank" rel="noopener noreferrer">rättegångsbalken</a>.</p>
+  <p>Kursanteckningar: Brottsutredning, Straffprocessrätt och Straffrätt Lund. Dessa visas uttryckligen som kommentarer, aldrig som lagtext.</p><p><strong>Urval:</strong> Alla brottsbalksbrott ska ingå. Utanför brottsbalken utelämnas brott med endast penningböter i straffskalan; brott med dagsböter eller fängelse ska ingå. Katalogen håller fortfarande på att fyllas.</p><p>Arbetsversion: 0.2 · ${escapeHtml(window.BK_DATA.date)}</p></div></section>
+  </main>${bottomNav('mer')}`;
+  refreshConnection();
+}
+function accordion(id,title,ico,body){
+  return `<details class="accordion" id="sec-${id}"><summary><span class="summary-left">${ic(ico)}${escapeHtml(title)}</span>${ic('chevron-down')}</summary><div class="accordion-content">${body}</div></details>`;
+}
+function factsSection(c){
+  return (c.facts||[]).map(f=>`<div class="fact-card"><div class="fact-eyebrow">${escapeHtml(f.eyebrow)}</div><div class="fact-title">${escapeHtml(f.title)}</div><div class="fact-body">${escapeHtml(f.text)}</div><div class="fact-source">${escapeHtml(f.source)}</div></div>`).join('');
+}
+function renderDetail(c){
+  app.className='app-shell detail-mode '+(state.density==='compact'?'compact':'');
+  const saved=state.favorites.includes(c.id);
+  const prosecuting = c.prosecution==='general';
+  const variants=(c.variants||[]).map(x=>`<span class="var-chip">${escapeHtml(x)}</span>`).join('');
+  const elements=(c.elements||[]).map(x=>`<li>${escapeHtml(x)}</li>`).join('');
+  const stages=(c.stages||[]).map(x=>`<li>${escapeHtml(x)}</li>`).join('');
+  const related=(c.related||[]).map(id=>byId[id]).filter(Boolean).map(x=>`<button class="related" data-open="${x.id}">${escapeHtml(x.title)}${ic('chevron-right','sm')}</button>`).join('');
+  const law = `<div class="law-paper">${lawText(c)}</div><p class="source-label">${escapeHtml(c.lawSource)} ${c.lawMode==='excerpt'?'Utdrag – inte hela bestämmelsen.':'Lagtext i det inbyggda urvalet.'}</p><p class="source-label">Understrukna paragrafer öppnas här, utan internet.</p>`;
+  const links=[['Lagtext – Sveriges riksdag', c.category==='Narkotika'?'https://www.riksdagen.se/sv/dokument-och-lagar/dokument/svensk-forfattningssamling/narkotikastrafflag-196864_sfs-1968-64/':'https://www.riksdagen.se/sv/dokument-och-lagar/dokument/svensk-forfattningssamling/brottsbalk-1962700_sfs-1962-700/'],['Häktning – RB 24 kap.', 'https://www.riksdagen.se/sv/dokument-och-lagar/dokument/svensk-forfattningssamling/rattegangsbalk-1942740_sfs-1942-740framtagen/']];
+  app.innerHTML=`<main class="page"><div class="detail-header"><button class="back-button" data-action="back" aria-label="Tillbaka">${ic('arrow-left')} Tillbaka</button><div class="header-actions"><button class="icon-button" data-action="copy" data-id="${c.id}" aria-label="Kopiera lagrum" title="Kopiera lagrum">${ic('copy')}</button><button class="icon-button ${saved?'active':''}" data-action="favorite" data-id="${c.id}" aria-label="${saved?'Ta bort från favoriter':'Spara i favoriter'}" aria-pressed="${saved}">${ic(saved?'bookmark-fill':'bookmark','lg')}</button></div></div>
+  <div class="detail-kicker">BROTT OCH STRAFF</div><h1 class="detail-title ${c.title.length>21?'long':''}">${escapeHtml(c.title)}</h1><div class="detail-ref">${escapeHtml(c.ref)}</div>
+  <section class="penalty-panel" aria-label="Straffskala"><div class="penalty-label">Straffskala</div><div class="penalty-main">${escapeHtml(c.penalty)}</div>${c.penaltyNote?`<div class="penalty-secondary">${escapeHtml(c.penaltyNote)}</div>`:''}</section>
+  <section class="status-block" aria-label="Översikt"><button class="status-row" data-action="custody" data-id="${c.id}"><span class="status-icon">${ic(custodyIcons[c.custody])}</span><span class="status-copy"><div class="status-label">Häktning</div><div class="status-value">${custodyLabels[c.custody]}</div></span><span class="status-right">${ic('info','sm')}${ic('chevron-right','sm')}</span></button>
+  <button class="status-row" data-action="prosecution" data-id="${c.id}"><span class="status-icon ${prosecuting?'good':'warn'}">${ic(prosecuting?'check-circle':'alert-circle')}</span><span class="status-copy"><div class="status-label">Åtalsregel</div><div class="status-value">${escapeHtml(c.prosecutionLabel)}</div></span><span class="status-right">${ic('info','sm')}${ic('chevron-right','sm')}</span></button></section>
+  <section class="detail-body"><div class="accordions">
+  ${accordion('lag','Lagtext', 'book-open',law)}
+  ${accordion('rekvisit','Rekvisit och gärningsvarianter','layers',`<div class="subtle-label">Att pröva</div>${elements?`<ul>${elements}</ul>`:'<p>Kompletterande rekvisitöversikt läggs till senare. Se lagtexten ovan.</p>'}<div class="subtle-label">Gärningsvarianter</div>${variants?`<div class="var-chip-list">${variants}</div>`:'<p>Inga ytterligare varianter registrerade.</p>'}`)}
+  ${accordion('praxis','Praxis och tolkningar','file-text',factsSection(c)||'<p>Inga kommentarer inlagda för denna sökingång ännu.</p>')}
+  ${accordion('stadier','Försök och andra stadier','scale',`${stages?`<ul>${stages}</ul>`:'<p>Uppgift ännu inte granskad. Kontrollera särskild kriminalisering i tillämplig författning.</p>'}<p class="source-label">Se respektive bestämmelse om osjälvständiga brottsformer samt 23 kap. BrB.</p>`)}
+  ${accordion('relaterade','Relaterade brott','list',related||'<p>Inga relaterade exempel ännu.</p>')}
+  ${accordion('sources','Rättskällor och källtyper','book-mark',`<p><strong>Lagtext:</strong> återgiven separat och utan omskrivningar. Kontrollera aktuellt rättsläge via källan.</p><p><strong>Tolkningsstöd:</strong> kursanteckningar och praktiska sammanfattningar är inte lagtext.</p>${links.map(([title,url])=>`<a class="source-link" href="${url}" target="_blank" rel="noopener noreferrer">${ic('external-link')} ${escapeHtml(title)}</a>`).join('')}`)}
+  </div></section><p class="detail-footer">Steg 2 · kontrollera alltid aktuell lagtext vid operativa beslut.</p></main>`;
+}
+function showSheet({kicker,title,body,ref,actionHtml='',fromProvision=false}){
+  if(!fromProvision)sheetHistory.length=0;
+  const safeBody=Array.isArray(body)?body.map(x=>`<p>${escapeHtml(x)}</p>`).join(''):body;
+  sheetRoot.innerHTML=`<div class="sheet-backdrop" data-action="close-sheet"></div><section class="sheet" role="dialog" aria-modal="true" aria-label="${escapeHtml(title)}" tabindex="-1"><div class="sheet-handle"></div><div class="sheet-top"><div><div class="sheet-kicker">${escapeHtml(kicker)}</div><h2 class="sheet-title">${escapeHtml(title)}</h2></div><button class="icon-button sheet-close" data-action="close-sheet" aria-label="Stäng">${ic('x')}</button></div><div class="sheet-copy">${safeBody}</div>${actionHtml}${ref?`<div class="sheet-ref">${escapeHtml(ref)}</div>`:''}</section>`;
+  document.body.style.overflow='hidden';
+  sheetRoot.querySelector('.sheet-close').focus({preventScroll:true});
+}
+function closeSheet(){sheetRoot.innerHTML='';document.body.style.overflow='';sheetHistory.length=0;}
+function showProvision(key){
+ const p=provisions[key];if(!p)return;
+ if(sheetRoot.innerHTML)sheetHistory.push(sheetRoot.innerHTML);
+ const link=`<a class="source-link" href="${escapeHtml(p.url)}" target="_blank" rel="noopener noreferrer">Visa källa hos Sveriges riksdag ${ic('external-link','sm')}</a>`;
+ showSheet({kicker:'ORDAGRANN LAGTEXT · OFFLINE',title:p.ref,body:`<div class="law-paper">${lawMarkup(p.text,p.id,[])}</div>`,ref:'Kontrollerat mot angiven källa 12 oktober 2026. Vissa konsoliderade källor kan även visa framtida ändringar.',actionHtml:link,fromProvision:true});
+ const close=sheetRoot.querySelector('.sheet-close');
+ if(close && sheetHistory.length){close.dataset.action='back-sheet';close.setAttribute('aria-label','Tillbaka till föregående ruta');close.innerHTML=ic('arrow-left');}
+}
+
+function showCustody(c){
+  const body = c.custody==='presumption'?
+    ['Straffminimum för det här brottet är minst ett år och sex månader. Det aktualiserar häktningspresumtionen i 24 kap. 1 § andra stycket 1 RB.','Häktningspresumtion betyder inte att en polisman automatiskt ska gripa personen. Misstankegrad, undantag, proportionalitet och förutsättningarna för gripande måste prövas i varje fall.']:
+    c.custody==='possible'?
+    ['Straffskalan omfattar fängelse i minst ett år. Det kan öppna för häktning enligt 24 kap. 1 § första stycket RB, förutsatt bland annat sannolika skäl, relevant risk och proportionalitet.','Om det kan antas att påföljden stannar vid böter finns hinder mot häktning. Särskilda regler kan också påverka bedömningen.']:
+    ['Brottets straffmaximum understiger ett års fängelse och uppfyller därför inte grundkravet i 24 kap. 1 § första stycket RB.','Särskild häktning enligt 24 kap. 2 § RB kan ändå aktualiseras, exempelvis vid vissa identifieringsproblem. Det innebär inte automatiskt att gripande är lämpligt eller lagligt.'];
+  showSheet({kicker:'HÄKTNINGSÖVERSIKT',title:custodyLabels[c.custody],body,ref:'Rättegångsbalken 24 kap. 1–3 §§. Endast referensstöd – ingen individuell tvångsmedelsbedömning.'});
+}
+function showProsecution(c){
+  showSheet({kicker:'ÅTAL OCH ANGIVELSE',title:c.prosecutionLabel,body:c.prosecutionDetails||['Brottet hör som huvudregel under allmänt åtal. Ingen särskild angivelseförutsättning har lagts in för denna rubricering i prototypen.'],ref:c.prosecutionRule||'Huvudregel: allmänt åtal. Kontrollera alltid eventuella specialbestämmelser.'});
+}
+function showTerm(term){
+  const t=glossary[term.toLowerCase()];if(!t)return;
+  showSheet({kicker:'BEGREPPSFÖRKLARING · INTE LAGTEXT',title:t.title,body:[t.text],ref:'Källa: '+t.source});
+}
+function toast(msg){
+  document.querySelector('.toast')?.remove();
+  const el=document.createElement('div');el.className='toast';el.role='status';el.textContent=msg;document.body.append(el);
+  setTimeout(()=>el.remove(),2200);
+}
+function rememberRecent(id){state.recents=[id,...state.recents.filter(x=>x!==id)].slice(0,10);writeSetting('recents',state.recents);}
+function goRoute(route){ if(window.location.hash===route){renderRoute();return;}window.location.hash=route; }
+function renderRoute(){
+  closeSheet();
+  const raw=decodeURIComponent(location.hash||'#sok');
+  const id=raw.startsWith('#brott/')?raw.slice(7):null;
+  if(id&&byId[id]){
+    rememberRecent(id);renderDetail(byId[id]);state.tab='detail';window.scrollTo({top:0,behavior:'instant'});return;
+  }
+  if(raw==='#sparat'){state.tab='sparat';renderSaved();}
+  else if(raw==='#mer'){state.tab='mer';renderMore();}
+  else {state.tab='sok';renderSearch();}
+  window.scrollTo({top:0,behavior:'instant'});
+}
+function refreshConnection(){
+  const el=document.getElementById('connection-state');
+  if (el) el.textContent=navigator.onLine?'Lokalt läge':'Offline';
+}
+document.addEventListener('click', async e=>{
+  const opener=e.target.closest('[data-open]');if(opener){const id=opener.dataset.open;if(byId[id]){state.navStack.push(location.hash||'#sok');goRoute('#brott/'+id);}return;}
+  const provision=e.target.closest('[data-provision]');if(provision){showProvision(provision.dataset.provision);return;}
+  const term=e.target.closest('[data-term]');if(term){showTerm(term.dataset.term);return;}
+  const tab=e.target.closest('[data-tab]');if(tab){state.navStack=[];goRoute('#'+tab.dataset.tab);return;}
+  const category=e.target.closest('[data-category]');if(category){state.category=category.dataset.category;renderSearch();return;}
+  const density=e.target.closest('[data-density]');if(density){state.density=density.dataset.density;writeSetting('density',state.density);renderMore();return;}
+  const theme=e.target.closest('[data-theme-choice]');if(theme){state.theme=theme.dataset.themeChoice;writeSetting('theme',state.theme);applyTheme();renderMore();return;}
+  const btn=e.target.closest('[data-action]');if(!btn)return;
+  const action=btn.dataset.action,id=btn.dataset.id;
+  if(action==='close-sheet'){closeSheet();return;}
+  if(action==='back-sheet'){const old=sheetHistory.pop();if(old){sheetRoot.innerHTML=old;}else{closeSheet();}return;}
+  if(action==='clear-search'){state.query='';const inp=document.getElementById('crime-search');if(inp){inp.value='';inp.focus();}document.querySelector('.search-clear').style.display='none';document.getElementById('quick-area').hidden=false;updateResults();return;}
+  if(action==='back'){goRoute(state.navStack.pop()||'#sok');return;}
+  if(action==='custody'){showCustody(byId[id]);return;}
+  if(action==='prosecution'){showProsecution(byId[id]);return;}
+  if(action==='favorite'){
+    if(state.favorites.includes(id)){state.favorites=state.favorites.filter(x=>x!==id);toast('Borttagen från sparade');}
+    else{state.favorites.push(id);toast('Sparad i favoriter');}
+    writeSetting('favorites',state.favorites);
+    const saved=state.favorites.includes(id);
+    btn.innerHTML=ic(saved?'bookmark-fill':'bookmark','lg');btn.classList.toggle('active',saved);
+    btn.setAttribute('aria-pressed',String(saved));btn.setAttribute('aria-label',saved?'Ta bort från favoriter':'Spara i favoriter');return;
+  }
+  if(action==='copy'){
+    try{await navigator.clipboard.writeText(byId[id].shortRef);toast('Lagrum kopierat');}catch{toast('Kunde inte kopiera på denna sida');}return;
+  }
+});
+document.addEventListener('keydown', e=>{if(e.key==='Escape')closeSheet();});
+window.addEventListener('hashchange',renderRoute);
+window.addEventListener('online',refreshConnection);
+window.addEventListener('offline',refreshConnection);
+applyTheme();renderRoute();
+window.addEventListener('focus',applyTheme);document.addEventListener('visibilitychange',()=>{if(!document.hidden)applyTheme();});setInterval(applyTheme,45000);
+if('serviceWorker' in navigator && location.protocol==='https:' || ('serviceWorker' in navigator && location.hostname==='localhost')){
+  navigator.serviceWorker.register('./service-worker.js').catch(()=>{});
+}
+})();
+
+</script>
+</body>
+</html>
