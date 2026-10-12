@@ -17,7 +17,7 @@
 
 ## Kvarstående rättsliga begränsningar
 
-Genomgången av Brottsbalken prioriterar 3, 7–9, 11–14 och 17–19 kap. Där finns breda kartläggningar av förstadiernas särskilda kriminalisering. Reglerna i övriga kapitel och specialstraffrätt är inte uttömmande kontrollerade. Narkotikastrafflagens 4 § har lagts till med undantaget för gärningar som avser enbart bruk. Särskilda rekvisit, alternativa rubriceringar och ändringar över tid måste alltid kontrolleras.
+Genomgången av Brottsbalken prioriterar 3, 7–9, 11–14 och 17–19 kap. Där finns breda kartläggningar av förstadiernas särskilda kriminalisering. Reglerna i övriga kapitel och specialstraffrätt är inte uttömmande kontrollerade. Narkotikastrafflagens 4 § har lagts till med undantaget för gärningar som avser enbart bruk. Vapenlagen (2026:408) 18 kap. 15 § ingår: försök, förberedelse och stämpling till grovt och synnerligen grovt vapenbrott, men inte vapenbrott av normalgraden. Särskilda rekvisit, alternativa rubriceringar och ändringar över tid måste alltid kontrolleras.
 
 Rättskällor: [Brottsbalken](https://www.riksdagen.se/sv/dokument-och-lagar/dokument/svensk-forfattningssamling/brottsbalk-1962700_sfs-1962-700/), [Rättegångsbalken](https://www.riksdagen.se/sv/dokument-och-lagar/dokument/svensk-forfattningssamling/rattegangsbalk-1942740_sfs-1942-740/) och [Narkotikastrafflagen](https://www.riksdagen.se/sv/dokument-och-lagar/dokument/svensk-forfattningssamling/narkotikastrafflag-196864_sfs-1968-64/).
 
@@ -28,3 +28,4 @@ Rättskällor: [Brottsbalken](https://www.riksdagen.se/sv/dokument-och-lagar/dok
 - coercive-07.js: tvångsmedelsmetadata.
 - service-worker.js: offline-cache.
 - scripts/ui_smoke.mjs: mobiltester.
+- scripts/stage_rules_test.mjs: lagstödsorienterade regressionstester; körs i GitHub Actions.
