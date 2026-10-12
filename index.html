@@ -154,6 +154,12 @@
 .bk03-brand{display:flex;align-items:center;gap:10px;padding:19px 0 14px;color:var(--ink);font-size:19px}.bk03-brand .ic{width:22px;height:22px;color:var(--primary)}.bk03-brand span{margin-left:auto;color:var(--muted);font-size:11px}.bk03-brand+.search-box{margin-top:0}
 
 .saved-item{display:flex;align-items:center;gap:6px}.saved-item>.crime-card{flex:1;min-width:0}.saved-actions{display:flex;flex-direction:column;gap:5px}.saved-actions button{width:36px;height:37px;border-radius:10px;border:1px solid var(--line);color:var(--ink);background:var(--surface);font-size:18px}.compare-table{width:100%;border-collapse:collapse;font-size:13px}.compare-table td,.compare-table th{padding:8px 6px;text-align:left;border-bottom:1px solid var(--line)}
+
+html,body{width:100%;max-width:100%;overflow-x:clip;overscroll-behavior-x:none;-webkit-text-size-adjust:100%}
+.app-shell{width:100%;overflow-x:clip}.page{min-width:0;overflow-x:clip}
+.search-box input{font-size:16px!important}
+.filter-strip,.quick-row{max-width:100%;margin-left:0!important;margin-right:0!important;padding-left:0!important;padding-right:0!important;overscroll-behavior-x:contain;touch-action:pan-x}
+.crime-title,.crime-card{overflow-wrap:break-word}
 </style>
   <title>Brottskatalog · steg 2</title>
 </head>
@@ -630,6 +636,10 @@ function lawMarkup(text,current,terms=[]){
  for(const term of labels){
    const rx=new RegExp(term.replace(/[.*+?^${}()|[\]\\]/g,'\\$&'),'gi');
    for(const m of text.matchAll(rx)){
+      const before=m.index>0?text[m.index-1]:'';
+      const after=text[m.index+m[0].length]||'';
+      // Only complete words/phrases. Avoid linking "angivelse" inside "utställarangivelse".
+      if((before&&/[\p{L}\p{N}]/u.test(before))||(after&&/[\p{L}\p{N}]/u.test(after)))continue;
       if(hits.some(h=>h.s<m.index+m[0].length && h.e>m.index))continue;
       hits.push({s:m.index,e:m.index+m[0].length,mode:'term',term});
    }
