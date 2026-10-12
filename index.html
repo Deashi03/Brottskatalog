@@ -160,6 +160,28 @@ html,body{width:100%;max-width:100%;overflow-x:clip;overscroll-behavior-x:none;-
 .search-box input{font-size:16px!important}
 .filter-strip,.quick-row{max-width:100%;margin-left:0!important;margin-right:0!important;padding-left:0!important;padding-right:0!important;overscroll-behavior-x:contain;touch-action:pan-x}
 .crime-title,.crime-card{overflow-wrap:break-word}
+
+/* Version 0.5: uniform minimum/maximum typography, including mixed penalties */
+.penalty-panel{padding:17px 19px 19px}
+.penalty-kind{font-weight:760;font-size:19px;line-height:1.2;letter-spacing:-.4px;color:var(--ink);margin:11px 0 15px}
+.penalty-bounds{display:grid;grid-template-columns:minmax(0,1fr) 19px minmax(0,1fr);gap:8px;align-items:center}
+.penalty-bound{min-width:0;display:flex;flex-direction:column;gap:5px;padding:11px 9px 9px;background:rgba(255,255,255,.52);border:1px solid rgba(110,140,160,.16);border-radius:12px}
+.penalty-bound-label{font-size:10px;font-weight:850;letter-spacing:1.3px;color:#61798a}
+.penalty-bound strong{font-size:clamp(17px,4.65vw,22px);letter-spacing:-.65px;line-height:1.22;font-weight:800;overflow-wrap:break-word}
+.penalty-arrow{font-size:18px;font-weight:750;text-align:center;color:#668095}
+.penalty-context{color:var(--muted);font-size:12px;line-height:1.5;margin:12px 1px 0}
+.penalty-summary{font-size:17px;font-weight:750;line-height:1.3;margin:12px 0 4px}
+.study-entry{border-bottom:1px solid var(--line);padding:13px 0}
+.study-entry:first-child{padding-top:0}.study-entry:last-child{border-bottom:none;padding-bottom:0}
+.study-entry h3{font-size:15px;line-height:1.35;margin:0 0 8px;color:var(--ink)}
+.study-entry p{font-size:13.5px;line-height:1.63;margin:6px 0}
+.study-example,.study-caution{padding:10px 12px;margin:9px 0;border-radius:10px;background:var(--surface-secondary,rgba(108,134,151,.08))}
+.study-example span,.study-caution span{font-size:10px;letter-spacing:1.1px;font-weight:750;color:var(--muted)}
+.study-caution{background:rgba(142,122,76,.08)}
+[data-theme="dark"] .penalty-bound{background:rgba(255,255,255,.04);border-color:rgba(220,230,240,.12)}
+[data-theme="dark"] .penalty-bound-label{color:#a9bac7}
+[data-theme="dark"] .penalty-kind{color:#f0f5f7}
+@media(max-width:360px){.penalty-bound strong{font-size:17px}.penalty-panel{padding:16px 15px}}
 </style>
   <title>Brottskatalog · steg 2</title>
 </head>
@@ -566,6 +588,9 @@ D.date='2026-10-12';
   <script src="./glossary-03.js"></script>
   <script src="./data/legal-review-baseline.js"></script>
   <script src="./legal-review-04.js"></script>
+  <script src="./catalog-05.js"></script>
+  <script src="./commentary-05.js"></script>
+  <script src="./glossary-05.js"></script>
   <script>
 /* Brottskatalog – stage 1. No framework, no network request during use. */
 (() => {
@@ -773,6 +798,61 @@ function accordion(id,title,ico,body){
 function factsSection(c){
   return (c.facts||[]).map(f=>`<div class="fact-card"><div class="fact-eyebrow">${escapeHtml(f.eyebrow)}</div><div class="fact-title">${escapeHtml(f.title)}</div><div class="fact-body">${escapeHtml(f.text)}</div><div class="fact-source">${escapeHtml(f.source)}</div></div>`).join('');
 }
+
+function punishmentBlock(c){
+ const p=String(c.penalty||'Kontroll krävs').trim();
+ const parseWords=(val,assumeYears=false)=>{
+   const years=val.match(/(\d+)\s*år/),months=val.match(/(\d+)\s*mån/);
+   if(years||months){const y=years?Number(years[1]):0,m=months?Number(months[1]):0;return (y?y+' år':'')+(m?(y?' ':'')+m+' mån':'')||'–';}
+   const bare=val.match(/^\s*(\d+(?:[.,]\d+)?)\s*$/);
+   if(bare)return assumeYears?bare[1].replace('.',',')+' år':bare[1]+' mån';
+   return val.replace(/fängelse|högst|lägst/gi,'').trim()||'–';
+ };
+ const fmt=n=>!n?'Ej särskilt angivet': Number.isInteger(n)?n+' år':Math.floor(n)?Math.floor(n)+' år '+Math.round((n%1)*12)+' mån':Math.round(n*12)+' mån';
+ if(/kontroll krävs|lagtexten har ändrats|^Beror på/i.test(p)){
+   return '<div class="penalty-summary">'+escapeHtml(p)+'</div>';
+ }
+ if(/^(Penningböter|Böter)$/i.test(p)){
+   return '<div class="penalty-kind">'+escapeHtml(p)+'</div>';
+ }
+ let lower='',upper='',type='';
+ const pr=c.penaltyRange;
+ if(pr && typeof pr.max==='number' && pr.max>0){
+   type=pr.fines?'Böter eller fängelse':'Fängelse';
+   lower=pr.fines?'Böter':fmt(pr.min);
+   upper=fmt(pr.max)+(pr.life?' / livstid':'');
+ }else{
+   const fines=/^Böter/i.test(p);type=fines?'Böter eller fängelse':'Fängelse';
+   const jail=p.replace(/^Böter\s*[–-]\s*/i,'').replace(/^Fängelse\s*/i,'').replace(/^fängelse\s*/i,'');
+   if(/högst/i.test(jail)){
+     lower=fines?'Böter':'Ej särskilt angivet';
+     upper=parseWords(jail.replace(/^.*?högst\s*/i,''),true);
+   }else if(/–|-/.test(jail)){
+     const halves=jail.split(/[–-]/);
+     lower=fines?'Böter':parseWords(halves[0],/år/i.test(halves[1]||''));
+     upper=parseWords(halves[1]||'',true);
+   }else if(fines){
+     lower='Böter';upper=parseWords(jail,true);
+   }else{
+     lower='Ej särskilt angivet';upper=parseWords(jail,true);
+   }
+ }
+ const note=/mindre grovt|mindre allvarligt|underliggande|hänvisar|livstid|variant/i.test(c.penaltyNote||'')?'<p class="penalty-context">'+escapeHtml(c.penaltyNote)+'</p>':'';
+ return '<div class="penalty-kind">'+escapeHtml(type)+'</div>'+
+  '<div class="penalty-bounds"><div class="penalty-bound"><span class="penalty-bound-label">LÄGST</span><strong>'+escapeHtml(lower)+'</strong></div>'+
+  '<span class="penalty-arrow" aria-hidden="true">→</span><div class="penalty-bound"><span class="penalty-bound-label">HÖGST</span><strong>'+escapeHtml(upper)+'</strong></div></div>'+note;
+}
+function qualificationSection(c){
+ return (c.qualifications||[]).map(q=>'<article class="study-entry"><h3>'+escapeHtml(q.title)+'</h3><p>'+escapeHtml(q.rule)+'</p>'+
+   '<div class="study-example"><span>EXEMPEL ATT KONTROLLERA</span><p>'+escapeHtml(q.example)+'</p></div>'+
+   '<div class="study-caution"><span>RÄCKER INTE AUTOMATISKT</span><p>'+escapeHtml(q.limit)+'</p></div>'+
+   '<p class="source-label">'+escapeHtml(q.source)+' · Kommentar, inte lagtext</p></article>').join('');
+}
+function studyNotesSection(c){
+ return (c.studyNotes||[]).map(n=>'<article class="study-entry"><h3>'+escapeHtml(n.title)+'</h3><p>'+escapeHtml(n.text)+'</p>'+
+   '<p class="source-label">'+escapeHtml(n.source)+' · Kursanteckning</p></article>').join('');
+}
+
 function renderDetail(c){
   app.className='app-shell detail-mode '+(state.density==='compact'?'compact':'');
   const saved=state.favorites.includes(c.id);
@@ -787,12 +867,14 @@ function renderDetail(c){
   const links=[['Lagtext – Sveriges riksdag', c.category==='Narkotika'?'https://www.riksdagen.se/sv/dokument-och-lagar/dokument/svensk-forfattningssamling/narkotikastrafflag-196864_sfs-1968-64/':'https://www.riksdagen.se/sv/dokument-och-lagar/dokument/svensk-forfattningssamling/brottsbalk-1962700_sfs-1962-700/'],['Häktning – RB 24 kap.', 'https://www.riksdagen.se/sv/dokument-och-lagar/dokument/svensk-forfattningssamling/rattegangsbalk-1942740_sfs-1942-740framtagen/']];
   app.innerHTML=`<main class="page"><div class="detail-header"><button class="back-button" data-action="back" aria-label="Tillbaka">${ic('arrow-left')} Tillbaka</button><div class="header-actions"><button class="icon-button" data-action="copy" data-id="${c.id}" aria-label="Kopiera lagrum" title="Kopiera lagrum">${ic('copy')}</button><button class="icon-button ${saved?'active':''}" data-action="favorite" data-id="${c.id}" aria-label="${saved?'Ta bort från favoriter':'Spara i favoriter'}" aria-pressed="${saved}">${ic(saved?'bookmark-fill':'bookmark','lg')}</button></div></div>
   <div class="detail-kicker">BROTT OCH STRAFF</div><h1 class="detail-title ${c.title.length>21?'long':''}">${escapeHtml(c.title)}</h1><div class="detail-ref">${escapeHtml(c.ref)}</div>
-  <section class="penalty-panel" aria-label="Straffskala"><div class="penalty-label">Straffskala</div><div class="penalty-main">${escapeHtml(c.penalty)}</div>${c.penaltyNote?`<div class="penalty-secondary">${escapeHtml(c.penaltyNote)}</div>`:''}</section>
+  <section class="penalty-panel" aria-label="Straffskala"><div class="penalty-label">Straffskala</div>${punishmentBlock(c)}</section>
   <section class="status-block" aria-label="Översikt"><button class="status-row" data-action="custody" data-id="${c.id}"><span class="status-icon">${ic(custodyIcons[c.custody])}</span><span class="status-copy"><div class="status-label">Häktning</div><div class="status-value">${custodyLabels[c.custody]}</div></span><span class="status-right">${ic('info','sm')}${ic('chevron-right','sm')}</span></button>
   <button class="status-row" data-action="prosecution" data-id="${c.id}"><span class="status-icon ${prosecuting?'good':'warn'}">${ic(prosecuting?'check-circle':'alert-circle')}</span><span class="status-copy"><div class="status-label">Åtalsregel</div><div class="status-value">${escapeHtml(c.prosecutionLabel)}</div></span><span class="status-right">${ic('info','sm')}${ic('chevron-right','sm')}</span></button></section>
   <section class="detail-body"><div class="accordions">
   ${accordion('lag','Lagtext', 'book-open',law)}
   ${accordion('rekvisit','Rekvisit och gärningsvarianter','layers',`<div class="subtle-label">Att pröva</div>${elements?`<ul>${elements}</ul>`:'<p>Kompletterande rekvisitöversikt läggs till senare. Se lagtexten ovan.</p>'}<div class="subtle-label">Gärningsvarianter</div>${variants?`<div class="var-chip-list">${variants}</div>`:'<p>Inga ytterligare varianter registrerade.</p>'}`)}
+  ${(c.qualifications||[]).length?accordion('kvalifikation','Kvalifikationsgrunder – fördjupning','layers',qualificationSection(c)):''}
+  ${(c.studyNotes||[]).length?accordion('anteckningar','Anteckningar – snabbkoll','notebook-tabs',studyNotesSection(c)):''}
   ${accordion('praxis','Praxis och tolkningar','file-text',factsSection(c)||'<p>Inga kommentarer inlagda för denna sökingång ännu.</p>')}
   ${accordion('stadier','Försök och andra stadier','scale',`${stages?`<ul>${stages}</ul>`:'<p>Uppgift ännu inte granskad. Kontrollera särskild kriminalisering i tillämplig författning.</p>'}<p class="source-label">Se respektive bestämmelse om osjälvständiga brottsformer samt 23 kap. BrB.</p>`)}
   ${accordion('jamfor','Jämför rubriceringar','layers',comparison)}
