@@ -586,6 +586,7 @@ D.date='2026-10-12';
 </script>
   <script src="./data/provisions-generated.js"></script>
   <script src="./data/provisions-reviewed-05.js"></script>
+  <script src="./references-06.js"></script>
   <script src="./catalog-03.js"></script>
   <script src="./glossary-03.js"></script>
   <script src="./data/legal-review-baseline.js"></script>
@@ -595,6 +596,9 @@ D.date='2026-10-12';
   <script src="./glossary-05.js"></script>
   <script src="./data/legal-review-baseline-05.js"></script>
   <script src="./legal-validation-05.js"></script>
+  <script src="./catalog-06.js"></script>
+  <script src="./investigation-06.js"></script>
+  <script src="./context-terms-06.js"></script>
   <script>
 /* Brottskatalog – stage 1. No framework, no network request during use. */
 (() => {
@@ -679,12 +683,17 @@ function lawMarkup(text,current,terms=[]){
  let html='',pos=0;
  for(const hit of hits){if(hit.s<pos)continue;
    html+=escapeHtml(text.slice(pos,hit.s));const label=escapeHtml(text.slice(hit.s,hit.e));
-   html+=hit.mode==='ref'?`<button type="button" class="ref-link" data-provision="${escapeHtml(hit.key)}" title="Visa ${escapeHtml(provisions[hit.key].ref)}">${label}${ic('external-link','xs')}</button>`:`<button type="button" class="term-link" data-term="${escapeHtml(hit.term)}" aria-label="Förklaring: ${label}">${label}</button>`;
+   html+=hit.mode==='ref'?`<button type="button" class="ref-link" data-provision="${escapeHtml(hit.key)}" title="Visa ${escapeHtml(provisions[hit.key].ref)}">${label}${ic('external-link','xs')}</button>`:`<button type="button" class="term-link" data-term="${escapeHtml(hit.term)}" data-term-context="${escapeHtml(current||'')}" aria-label="Förklaring: ${label}">${label}</button>`;
    pos=hit.e;
  }
  return html+escapeHtml(text.slice(pos));
 }
-const lawText=c=>lawMarkup(c.law,c.statute,[...new Set([...(c.lawTerms||[]),...Object.keys(glossary).filter(t=>t.length>=5&&c.law&&c.law.toLocaleLowerCase('sv').includes(t))])]);
+const lawText=c=>{
+ const ambiguous=new Set(window.BK_AMBIGUOUS_TERMS||[]);
+ const targeted=Object.keys(window.BK_TERM_CONTEXT?.[c.statute]||{});
+ const general=Object.keys(glossary).filter(t=>t.length>=5 && !ambiguous.has(t) && c.law && c.law.toLocaleLowerCase('sv').includes(t));
+ return lawMarkup(c.law,c.statute,[...new Set([...(c.lawTerms||[]).filter(t=>!ambiguous.has(t)),...general,...targeted])]);
+};
 function actualTheme(){const h=new Date().getHours();return state.theme==='auto'?(h>=22||h<6?'dark':'light'):state.theme;}
 function applyTheme(){const dark=actualTheme()==='dark';document.documentElement.dataset.theme=dark?'dark':'light';document.querySelector('meta[name="theme-color"]')?.setAttribute('content',dark?'#07090c':'#f7f9fa');document.querySelector('meta[name="color-scheme"]')?.setAttribute('content',dark?'dark':'light');}
 const custodyLabels = {none:'Ej enligt huvudregeln',possible:'Häktning kan vara möjlig',presumption:'Häktningspresumtion',unknown:'Ej kontrollerad'};
@@ -725,7 +734,7 @@ function card(c){
 function brandTop(){
   return `<div class="topline"><div class="brand-wrap"><div class="brand-symbol">${ic('scale')}</div><div><div class="brand-name">Brottskatalog</div><div class="brand-desc">JURIDISKT REFERENSVERK</div></div></div><div class="online"><span class="dot"></span><span id="connection-state">Lokalt läge</span></div></div>`;
 }
-function note(){return `<div class="mode-note">${ic('info','sm')}<span><strong>Version 0.5 · arbetsversion</strong> · ${crimes.length} sökingångar. Nya poster väntar delvis på juridisk granskning.</span></div>`;}
+function note(){return `<div class="mode-note">${ic('info','sm')}<span><strong>Version 0.6 · arbetsversion</strong> · ${crimes.length} sökingångar. Nya poster väntar delvis på juridisk granskning.</span></div>`;}
 function bottomNav(active){
   return `<nav class="bottom-nav" aria-label="Huvudnavigering">
   <button class="nav-item ${active==='sok'?'active':''}" data-tab="sok" ${active==='sok'?'aria-current="page"':''}>${ic('search')}Sök</button>
@@ -739,13 +748,21 @@ function quickRow(){
 }
 function resultsFragment(){
   const list=sortedCrimes();
+  const query=normalize(state.query||'');
+  const references=(!query||state.category!=='Alla')?[]:(window.BK_REFERENCE_INDEX||[]).filter(p=>{
+    const names=[p.ref,p.title,...(p.aliases||[])].map(normalize);
+    return names.some(x=>x===query||x.includes(query)||query.includes(x));
+  }).slice(0,12);
+  const referenceRows=references.length?'<div class="section-heading ref-heading"><h2>Andra lagrum</h2><span>Inte egna brott</span></div><div class="crime-list">'+
+     references.map(p=>'<button class="crime-card ref-result" data-provision="'+escapeHtml(p.id)+'"><span class="crime-text"><span class="crime-title">'+escapeHtml(p.title)+'</span><span class="crime-ref">Läs bestämmelsen – inte en brottsrubricering</span></span><span class="crime-side">'+ic('book-open','sm')+'</span></button>').join('')+'</div>':'';
+
   return `<div class="section-heading"><h2>${state.query?'Sökresultat':'Brottskatalog'}</h2><span>${list.length} ${list.length===1?'träff':'träffar'}</span></div>
-    ${list.length?`<div class="crime-list">${list.map(card).join('')}</div>`:`<div class="empty">${ic('search','xl')}<h3>Inga träffar</h3><p>Prova ett annat begrepp eller lagrum. Prova även ett annat uttryck eller förkortat lagrum.</p></div>`}`;
+    ${list.length?`<div class="crime-list">${list.map(card).join('')}</div>`:(references.length?"":`<div class="empty">${ic('search','xl')}<h3>Inga träffar</h3><p>Prova ett annat begrepp eller lagrum.</p></div>`)}${referenceRows}`;
 }
 function updateResults(){const el=document.getElementById('results-area');if(el)el.innerHTML=resultsFragment();}
 function renderSearch(){
   app.className='app-shell '+(state.density==='compact'?'compact':'');
-  app.innerHTML=`<main class="page"><div class="bk03-brand">${ic('scale')}<strong>Brottskatalog</strong><span>0.5</span></div>
+  app.innerHTML=`<main class="page"><div class="bk03-brand">${ic('scale')}<strong>Brottskatalog</strong><span>0.6</span></div>
   <label class="search-box" for="crime-search">${ic('search','lg')}<input id="crime-search" type="search" placeholder="T.ex. ringa stöld, BrB 8:2…" inputmode="search" enterkeyhint="search" autocapitalize="off" autocomplete="off" spellcheck="false" value="${escapeHtml(state.query)}"><button class="search-clear" data-action="clear-search" aria-label="Rensa sökning" style="${state.query?'':'display:none'}">${ic('x','sm')}</button></label>
   <div class="filter-strip" role="group" aria-label="Filtrera brott">${categories.map(cat=>`<button class="filter ${cat===state.category?'active':''}" data-category="${escapeHtml(cat)}" aria-pressed="${cat===state.category}">${escapeHtml(cat)}</button>`).join('')}</div>
   <div id="quick-area" ${state.query?'hidden':''}>${quickRow()}</div>
@@ -784,7 +801,7 @@ function renderMore(){
   <section class="settings-group"><h2 class="settings-h">TEKNISK INFORMATION</h2><div class="settings-card"><div class="setting-row"><div><h3>Utan inloggning eller konto</h3><p>All exempeldata finns i appens filer. Favoriter och inställningar sparas lokalt.</p></div>${ic('shield-check')}</div><div class="setting-row"><div><h3>Offline vid installation</h3><p>Den installerade webbappen använder lokal cache. iOS kan under vissa omständigheter rensa webbdata.</p></div>${ic('wifi-off')}</div></div></section>
   <section class="settings-group"><h2 class="settings-h">KÄLLOR OCH AVGRÄNSNING</h2><div class="settings-text"><p>${crimes.length} sökingångar är inlagda. Nya poster kan sakna juridisk granskning. Detta är ett urval – inte en komplett brottsförteckning. Lydelser, tolkningar och statusfält behöver slutlig juridisk kvalitetskontroll före användning i tjänsten.</p>
   <p>Rättskällor: <a href="https://www.riksdagen.se/sv/dokument-och-lagar/dokument/svensk-forfattningssamling/brottsbalk-1962700_sfs-1962-700/" target="_blank" rel="noopener noreferrer">Brottsbalken</a>, <a href="https://www.riksdagen.se/sv/dokument-och-lagar/dokument/svensk-forfattningssamling/narkotikastrafflag-196864_sfs-1968-64/" target="_blank" rel="noopener noreferrer">narkotikastrafflagen</a> och <a href="https://www.riksdagen.se/sv/dokument-och-lagar/dokument/svensk-forfattningssamling/rattegangsbalk-1942740_sfs-1942-740framtagen/" target="_blank" rel="noopener noreferrer">rättegångsbalken</a>.</p>
-  <p>Kursanteckningar: Brottsutredning, Straffprocessrätt och Straffrätt Lund. Dessa visas uttryckligen som kommentarer, aldrig som lagtext.</p><p><strong>Urval:</strong> Alla brottsbalksbrott ska ingå. Utanför brottsbalken utelämnas brott med endast penningböter i straffskalan; brott med dagsböter eller fängelse ska ingå. Katalogen håller fortfarande på att fyllas.</p><p>Arbetsversion: 0.5 · ${escapeHtml(window.BK_DATA.date)} · Senaste kataloguppdatering för ${Math.max(0,Math.floor((new Date().setHours(0,0,0,0)-new Date(window.BK_DATA.date+'T00:00:00').getTime())/86400000))} dagar sedan. Detta är inte datumet för senaste lagändring.</p></div></section>
+  <p>Kursanteckningar: Brottsutredning, Straffprocessrätt och Straffrätt Lund. Dessa visas uttryckligen som kommentarer, aldrig som lagtext.</p><p><strong>Urval:</strong> Alla brottsbalksbrott ska ingå. Utanför brottsbalken utelämnas brott med endast penningböter i straffskalan; brott med dagsböter eller fängelse ska ingå. Katalogen håller fortfarande på att fyllas.</p><p>Arbetsversion: 0.6 · ${escapeHtml(window.BK_DATA.date)} · Senaste kataloguppdatering för ${Math.max(0,Math.floor((new Date().setHours(0,0,0,0)-new Date(window.BK_DATA.date+'T00:00:00').getTime())/86400000))} dagar sedan. Detta är inte datumet för senaste lagändring.</p></div></section>
   </main>${bottomNav('mer')}`;
   const statusEl=document.getElementById('bk-source-check');
   if(statusEl){
@@ -840,6 +857,9 @@ function punishmentBlock(c){
    }else{
      lower='Ej särskilt angivet';upper=parseWords(jail,true);
    }
+ }
+ if(!pr?.fines && !pr?.min && (p.toLocaleLowerCase('sv').startsWith('fängelse')||type==='Fängelse')){
+   return '<div class="penalty-kind">Fängelse</div><div class="penalty-only"><span>HÖGST</span><strong>'+escapeHtml(upper)+'</strong></div>';
  }
  const note=/mindre grovt|mindre allvarligt|underliggande|hänvisar|livstid|variant/i.test(c.penaltyNote||'')?'<p class="penalty-context">'+escapeHtml(c.penaltyNote)+'</p>':'';
  return '<div class="penalty-kind">'+escapeHtml(type)+'</div>'+
@@ -917,9 +937,11 @@ function showCustody(c){
 function showProsecution(c){
   showSheet({kicker:'ÅTAL OCH ANGIVELSE',title:c.prosecutionLabel,body:c.prosecutionDetails||['Brottet hör som huvudregel under allmänt åtal. Ingen särskild angivelseförutsättning har lagts in för denna rubricering i prototypen.'],ref:c.prosecutionRule||'Huvudregel: allmänt åtal. Kontrollera alltid eventuella specialbestämmelser.'});
 }
-function showTerm(term){
-  const t=glossary[term.toLowerCase()];if(!t)return;
-  showSheet({kicker:'BEGREPPSFÖRKLARING · INTE LAGTEXT',title:t.title,body:[t.text],ref:'Källa: '+t.source});
+function showTerm(term,ref=''){
+ const key=term.toLocaleLowerCase('sv');
+ const local=window.BK_TERM_CONTEXT?.[ref]?.[key];
+ const t=local||glossary[key];if(!t)return;
+ showSheet({kicker:local?'BROTTSSPECIFIK FÖRKLARING · INTE LAGTEXT':'BEGREPPSFÖRKLARING · INTE LAGTEXT',title:t.title,body:[t.text],ref:'Källa: '+t.source});
 }
 function toast(msg){
   document.querySelector('.toast')?.remove();
@@ -948,7 +970,7 @@ document.addEventListener('click', async e=>{
   const move=e.target.closest('[data-move]');if(move){const n=state.favorites.indexOf(move.dataset.id),d=move.dataset.move==='up'?-1:1,j=n+d;if(n>=0&&j>=0&&j<state.favorites.length){[state.favorites[n],state.favorites[j]]=[state.favorites[j],state.favorites[n]];writeSetting('favorites',state.favorites);renderSaved();}return;}
   const opener=e.target.closest('[data-open]');if(opener){const id=opener.dataset.open;if(byId[id]){state.navStack.push(location.hash||'#sok');goRoute('#brott/'+id);}return;}
   const provision=e.target.closest('[data-provision]');if(provision){showProvision(provision.dataset.provision);return;}
-  const term=e.target.closest('[data-term]');if(term){showTerm(term.dataset.term);return;}
+  const term=e.target.closest('[data-term]');if(term){showTerm(term.dataset.term,term.dataset.termContext);return;}
   const tab=e.target.closest('[data-tab]');if(tab){state.navStack=[];goRoute('#'+tab.dataset.tab);return;}
   const category=e.target.closest('[data-category]');if(category){state.category=category.dataset.category;renderSearch();return;}
   const density=e.target.closest('[data-density]');if(density){state.density=density.dataset.density;writeSetting('density',state.density);renderMore();return;}
