@@ -60,7 +60,7 @@ const score=(c,e)=>{
  if(e.scale==='f')return max>0?{label:'Straffskalekrav uppfyllt',tone:'yes'}:{label:'Inte enligt huvudregel',tone:'no'};
  if(e.scale==='fSpecial')return max>0?{label:'Huvudregelns straffskala uppfylld',tone:'yes'}:{label:'Undantag utan fängelsekrav finns',tone:'conditional'};
  if(e.scale==='one')return max>=1?{label:'Straffskalekrav uppfyllt',tone:'yes'}:{label:'Inte enligt huvudregel',tone:'no'};
- if(e.scale==='four')return min>=4?{label:'Straffskalekrav uppfyllt',tone:'yes'}:{label:'Inte enligt huvudregel',tone:'no'};
+ if(e.scale==='four')return (min>=4||(c.stageType==='forsok'&&Number(c.stageParentMin)>=4))?{label:'Straffskalekrav uppfyllt',tone:'yes'}:{label:'Inte enligt huvudregel',tone:'no'};
  return {label:'Kräver prövning',tone:'conditional'};
 };
 window.BK_COERCIVE={entries,score,range:c=>c.penaltyRange||legacyRange(c.penalty)};
