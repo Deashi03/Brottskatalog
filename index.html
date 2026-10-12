@@ -197,6 +197,11 @@ html,body{width:100%;max-width:100%;overflow-x:clip;overscroll-behavior-x:none;-
 .ref-result .crime-title{font-size:15px}
 [data-theme="dark"] .penalty-only{background:rgba(255,255,255,.04)}
 
+
+.detail-header .header-actions{display:flex;align-items:center;gap:8px}
+.detail-header .header-actions>.icon-button{min-width:36px;min-height:40px}
+.ref-result{min-height:58px}
+.ref-result .crime-ref{font-size:11px}
 </style>
   <title>Brottskatalog · steg 2</title>
 </head>
@@ -613,6 +618,7 @@ D.date='2026-10-12';
   <script src="./catalog-06.js"></script>
   <script src="./investigation-06.js"></script>
   <script src="./context-terms-06.js"></script>
+  <script src="./details-06.js"></script>
   <script>
 /* Brottskatalog – stage 1. No framework, no network request during use. */
 (() => {
@@ -909,6 +915,14 @@ function investigationSection(c){
  '<p class="source-label">Brottsspecifika förslag där tillgängliga, annars generell metodik för polisiär utredning. Inte lagtext.</p>';
 }
 
+function alternativesSection(c){
+ return (c.alternativeOffences||[]).map(x=>{
+  const dest=crimes.find(y=>y.title===x.title);
+  return '<article class="study-entry"><h3>'+escapeHtml(x.title)+'</h3><p>'+escapeHtml(x.reason)+'</p>'+
+   (dest?'<button type="button" class="related" data-open="'+escapeHtml(dest.id)+'">Öppna brottskort '+ic('chevron-right','sm')+'</button>':'')+'</article>';
+ }).join('');
+}
+
 function renderDetail(c){
   app.className='app-shell detail-mode '+(state.density==='compact'?'compact':'');
   const saved=state.favorites.includes(c.id);
@@ -923,7 +937,7 @@ function renderDetail(c){
   const sourceWarning=incompleteLaw?'<p class="source-incomplete">Lagtextutdraget är ofullständigt. Läs den fullständiga paragrafen hos Sveriges riksdag.</p>':'';
   const law = c.lawMode==='missing'?`<p>Fullständig lagtext är ännu inte kontrollerad och införd för denna sökingång.</p><a class="source-link" href="${escapeHtml(c.sourceURL||'https://data.riksdagen.se/dokument/sfs-1962-700.html')}" target="_blank" rel="noopener noreferrer">Öppna lagtext hos Sveriges riksdag ${ic('external-link','sm')}</a>`:`${sourceWarning}<div class="law-paper">${lawText(c)}</div><p class="source-label">${escapeHtml(c.lawSource)} ${c.lawMode==='excerpt'?'Utdrag – inte hela bestämmelsen.':c.lawMode==='machine'?'Maskinimporterat lagtextutdrag. Innehållet kan vara ofullständigt och är inte juridiskt slutgranskat.':'Lagtext i det inbyggda urvalet.'}</p><p class="source-label">Understrukna paragrafer öppnas här, utan internet.</p>`;
   const links=[['Lagtext – Sveriges riksdag', c.category==='Narkotika'?'https://www.riksdagen.se/sv/dokument-och-lagar/dokument/svensk-forfattningssamling/narkotikastrafflag-196864_sfs-1968-64/':'https://www.riksdagen.se/sv/dokument-och-lagar/dokument/svensk-forfattningssamling/brottsbalk-1962700_sfs-1962-700/'],['Häktning – RB 24 kap.', 'https://www.riksdagen.se/sv/dokument-och-lagar/dokument/svensk-forfattningssamling/rattegangsbalk-1942740_sfs-1942-740framtagen/']];
-  app.innerHTML=`<main class="page"><div class="detail-header"><button class="back-button" data-action="back" aria-label="Tillbaka">${ic('arrow-left')} Tillbaka</button><div class="header-actions"><button class="icon-button" data-action="copy" data-id="${c.id}" aria-label="Kopiera lagrum" title="Kopiera lagrum">${ic('copy')}</button><button class="icon-button ${saved?'active':''}" data-action="favorite" data-id="${c.id}" aria-label="${saved?'Ta bort från favoriter':'Spara i favoriter'}" aria-pressed="${saved}">${ic(saved?'bookmark-fill':'bookmark','lg')}</button></div></div>
+  app.innerHTML=`<main class="page"><div class="detail-header"><button class="back-button" data-action="back" aria-label="Tillbaka">${ic('arrow-left')} Tillbaka</button><div class="header-actions"><button class="icon-button" data-action="report" data-id="${c.id}" aria-label="Rapportera innehållsfel" title="Rapportera innehållsfel">${ic('alert-circle','sm')}</button><button class="icon-button" data-action="copy" data-id="${c.id}" aria-label="Kopiera lagrum" title="Kopiera lagrum">${ic('copy')}</button><button class="icon-button ${saved?'active':''}" data-action="favorite" data-id="${c.id}" aria-label="${saved?'Ta bort från favoriter':'Spara i favoriter'}" aria-pressed="${saved}">${ic(saved?'bookmark-fill':'bookmark','lg')}</button></div></div>
   <div class="detail-kicker">BROTT OCH STRAFF</div><h1 class="detail-title ${c.title.length>21?'long':''}">${escapeHtml(c.title)}</h1><div class="detail-ref">${escapeHtml(c.ref)}</div>
   <section class="penalty-panel" aria-label="Straffskala"><div class="penalty-label">Straffskala</div>${punishmentBlock(c)}</section>
   <section class="status-block" aria-label="Översikt"><button class="status-row" data-action="custody" data-id="${c.id}"><span class="status-icon">${ic(custodyIcons[c.custody])}</span><span class="status-copy"><div class="status-label">Häktning</div><div class="status-value">${custodyLabels[c.custody]}</div></span><span class="status-right">${ic('info','sm')}${ic('chevron-right','sm')}</span></button>
@@ -935,6 +949,7 @@ function renderDetail(c){
   ${((c.studyNotes||[]).length||c.detailedNote||c.caseNote)?accordion('anteckningar','Anteckningar – fördjupning','book-mark',studyNotesSection(c)):''}
   ${accordion('praxis','Praxis och tolkningar','file-text',factsSection(c)||'<p>Inga kommentarer inlagda för denna sökingång ännu.</p>')}
   ${accordion('stadier','Försök och andra stadier','scale',`${stages?`<ul>${stages}</ul>`:'<p>Uppgift ännu inte granskad. Kontrollera särskild kriminalisering i tillämplig författning.</p>'}<p class="source-label">Se respektive bestämmelse om osjälvständiga brottsformer samt 23 kap. BrB.</p>`)}
+  ${(c.alternativeOffences||[]).length?accordion('alternativ','Alternativa rubriceringar – pröva skillnader','layers',alternativesSection(c)):''}
   ${accordion('jamfor','Jämför rubriceringar','layers',comparison)}
   ${accordion('utredning','Utredningsuppslag och beviskällor','list',investigationSection(c))}
   ${accordion('bedomning','Rekvisit att kontrollera','list',elements?'<ul>'+elements+'</ul><p class="source-label">Detta är stödfrågor, ingen automatisk rättsl slutsats.</p>':'<p>Utgå från lagtextens rekvisit och de konkreta omständigheterna.</p>')}
@@ -1028,6 +1043,15 @@ document.addEventListener('click', async e=>{
   const theme=e.target.closest('[data-theme-choice]');if(theme){state.theme=theme.dataset.themeChoice;writeSetting('theme',state.theme);applyTheme();renderMore();return;}
   const btn=e.target.closest('[data-action]');if(!btn)return;
   const action=btn.dataset.action,id=btn.dataset.id;
+  if(action==='report' && byId[id]){
+    const c=byId[id];
+    const report='Brottskatalog '+(window.BK_DATA.release||'0.6')+'\nBrott: '+c.title+'\nLagrum: '+c.ref+'\nTyp av fel (lagtext/straffskala/åtal/begrepp/annat):\nVad bör rättas?\nKälla eller förslag:\n(Inga person- eller ärendeuppgifter.)';
+    try{await navigator.clipboard.writeText(report);toast('Mall för felrapport kopierad');}
+    catch{
+      showSheet({kicker:'FELRAPPORT · INGEN DATA SKICKAS',title:'Kopiera denna mall',body:[report],ref:'Undvik uppgifter om verkliga ärenden. Skriv in rapporten i projektets GitHub Issues eller denna chatt.'});
+    }
+    return;
+  }
   if(action==='close-sheet'){closeSheet();return;}
   if(action==='back-sheet'){const old=sheetHistory.pop();if(old){sheetRoot.innerHTML=old;}else{closeSheet();}return;}
   if(action==='clear-search'){state.query='';const inp=document.getElementById('crime-search');if(inp){inp.value='';inp.focus();}document.querySelector('.search-clear').style.display='none';document.getElementById('quick-area').hidden=false;updateResults();return;}
