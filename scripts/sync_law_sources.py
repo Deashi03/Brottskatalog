@@ -77,13 +77,13 @@ def parse_brb(html):
             sec = m.group(1) + m.group(2).lower()
             if key is not None:
                 previous = key.split(":")[-1]
-                previous_no = int(re.match(r"\\d+", previous).group())
+                previous_no = int(''.join(ch for ch in previous if ch.isdigit()))
                 current_no = int(m.group(1))
                 # Cross-references sometimes occupy a line by themselves.
                 # A new section cannot go backwards, and an inline citation
                 # cannot interrupt an unfinished sentence in the current section.
                 last = contents[-1].strip() if contents else ""
-                complete_sentence = bool(re.search(r"(?:[.!?]|\\))$", last))
+                complete_sentence = last.endswith(('.', '!', '?', ')'))
                 if current_no < previous_no or (current_no == previous_no and not m.group(2)) or not complete_sentence:
                     contents.append(ln)
                     continue
