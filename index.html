@@ -874,7 +874,7 @@ function renderDetail(c){
   ${accordion('lag','Lagtext', 'book-open',law)}
   ${accordion('rekvisit','Rekvisit och gärningsvarianter','layers',`<div class="subtle-label">Att pröva</div>${elements?`<ul>${elements}</ul>`:'<p>Kompletterande rekvisitöversikt läggs till senare. Se lagtexten ovan.</p>'}<div class="subtle-label">Gärningsvarianter</div>${variants?`<div class="var-chip-list">${variants}</div>`:'<p>Inga ytterligare varianter registrerade.</p>'}`)}
   ${(c.qualifications||[]).length?accordion('kvalifikation','Kvalifikationsgrunder – fördjupning','layers',qualificationSection(c)):''}
-  ${(c.studyNotes||[]).length?accordion('anteckningar','Anteckningar – snabbkoll','notebook-tabs',studyNotesSection(c)):''}
+  ${(c.studyNotes||[]).length?accordion('anteckningar','Anteckningar – snabbkoll','book-mark',studyNotesSection(c)):''}
   ${accordion('praxis','Praxis och tolkningar','file-text',factsSection(c)||'<p>Inga kommentarer inlagda för denna sökingång ännu.</p>')}
   ${accordion('stadier','Försök och andra stadier','scale',`${stages?`<ul>${stages}</ul>`:'<p>Uppgift ännu inte granskad. Kontrollera särskild kriminalisering i tillämplig författning.</p>'}<p class="source-label">Se respektive bestämmelse om osjälvständiga brottsformer samt 23 kap. BrB.</p>`)}
   ${accordion('jamfor','Jämför rubriceringar','layers',comparison)}
