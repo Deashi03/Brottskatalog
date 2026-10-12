@@ -1,0 +1,54 @@
+{
+  "schema": 1,
+  "description": "Officiella källor för återkommande ändringskontroll. verifieradVersion fylls först efter kontroll av rättsläget.",
+  "sources": [
+    {
+      "id": "BrB",
+      "name": "Brottsbalken",
+      "sfs": "1962-700",
+      "verifiedVersion": null
+    },
+    {
+      "id": "RB",
+      "name": "Rättegångsbalken",
+      "sfs": "1942-740",
+      "verifiedVersion": null
+    },
+    {
+      "id": "Nark",
+      "name": "Narkotikastrafflagen",
+      "sfs": "1968-64",
+      "verifiedVersion": null
+    },
+    {
+      "id": "Vapen",
+      "name": "Vapenlagen",
+      "sfs": "2026-408",
+      "verifiedVersion": null
+    },
+    {
+      "id": "TBL",
+      "name": "Trafikbrottslagen",
+      "sfs": "1951-649",
+      "verifiedVersion": null
+    },
+    {
+      "id": "Kniv",
+      "name": "Knivlagen",
+      "sfs": "1988-254",
+      "verifiedVersion": null
+    }
+  ],
+  "dependentFields": [
+    "lagtext",
+    "rubricering",
+    "straffskala",
+    "häktningsstatus",
+    "åtalsvillkor",
+    "gärningsvarianter",
+    "kvalifikationsgrunder",
+    "osjälvständiga brottsformer",
+    "brottskod",
+    "begreppsförklaringar"
+  ]
+}
