@@ -1,0 +1,42 @@
+name: Legal source synchronization
+on:
+  workflow_dispatch:
+  schedule:
+    - cron: "23 5 * * 1"
+  push:
+    branches: [main]
+    paths:
+      - "scripts/sync_law_sources.py"
+      - "data/law-sources.json"
+      - ".github/workflows/sync-laws.yml"
+permissions:
+  contents: write
+jobs:
+  sync:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - name: Check official SFS and prepare marked import
+        id: refresh
+        shell: bash
+        run: |
+          python scripts/sync_law_sources.py
+      - name: Commit generated update report and law drafts
+        if: always()
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add data/source-status.json data/provisions-generated.js
+          if ! git diff --cached --quiet; then
+            git commit -m "chore: refresh SFS source status and draft provisions"
+            git push
+          fi
+      - name: Summarize legal review state
+        if: always()
+        run: |
+          echo "Official-SFS synchronization completed or attempted." >> "$GITHUB_STEP_SUMMARY"
+          echo "Machine-extracted law text is **not legally reviewed**." >> "$GITHUB_STEP_SUMMARY"
+          echo "Penalties, custody and prosecution are never auto-approved." >> "$GITHUB_STEP_SUMMARY"
