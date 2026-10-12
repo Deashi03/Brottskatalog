@@ -58,11 +58,11 @@ def parse_brb(html):
             return
         val = "\n".join(x for x in contents if x).strip()
         if len(val) > 20 and len(val) < 14000:
-            out[key] = val
+            out.setdefault(key, val)
     for ln in lines:
         if not ln:
             continue
-        if re.search(r"^Övergångsbestämmelser", ln, re.I):
+        if re.search(r"^Övergångsbestämmelser", ln, re.I) and len(out) > 100:
             flush(); break
         ch = CHAPTER.match(ln)
         if ch:
