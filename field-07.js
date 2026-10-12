@@ -79,7 +79,33 @@ const G={
 'Sexualbrott':[['Trygghet och vård','Prioritera den utsattes säkerhet, vårdbehov och tillämpliga särskilda rutiner.'],['Färska uppgifter','Notera tider, platser, möjliga vittnen och vilka digitala spår som riskerar försvinna. Undvik ledande frågor.'],['Spårsäkring','Initiera vid behov rätt medicinsk spårsäkring genom behörig personal.']],
 'Förmögenhet':A['bedrägeri'],
 'Egendom':A['skadegörelse'],
-'Frid':A['olaga hot']
+'Frid':A['olaga hot'],
+'Smuggling':[
+ ['Varans art och mängd','Notera vad varan är, antal/vikt, märkning, emballage, förvaring och vem som hade rådighet över den. Hantera farliga ämnen genom behörig personal.'],
+ ['Gränspassage och deklaration','Dokumentera var, när och hur varan förts in/ut eller skulle föras; notera tillgängliga tullhandlingar, deklarationer och tillstånd.'],
+ ['Personer och transport','Notera förare, mottagare, avsändare, transportmedel, färdväg och möjliga vittnen/kameror.'],
+ ['Fördjupning','Kontrollera särskild brottsvariant och eventuellt konkurrerande vapen-, narkotika- eller explosivvarubrott; tulluppgifter och förstadier kräver vidare kontroll.',1]],
+'Ekonomisk brottslighet':[
+ ['Pengar och egendom','Identifiera egendom och eventuellt belopp, konton, betalningsmottagare och tidpunkt. Registrera uppgifternas källa.'],
+ ['Transaktionskedja','Säkra uppgift om betalningsvägar, överföringar, kontanter, handlingar och berörda personer. Spara originalmeddelanden och kvitton.'],
+ ['Misstänkt samband','Notera konkreta uppgifter om egendomens möjliga brottsliga ursprung eller annan otillbörlig hantering utan att förutsätta att sambandet är bevisat.'],
+ ['Fortsatt ekonomisk utredning','Spårning, transaktionsanalys och kontroll av bakomliggande brottslighet prövas i fortsatt förundersökning.',1]],
+'Skattebrott':[
+ ['Uppgift och skyldighet','Precisera vilken deklaration, skatteuppgift, bokföringsskyldighet eller underlåtenhet som berörs samt relevant tidsperiod.'],
+ ['Underlag och avvikelse','Dokumentera belopp och tillgängliga originalhandlingar, verifikationer eller uppgifter som påstås vara felaktiga.'],
+ ['Beslut och datum','Notera relevanta beslut, betalningar och kontroller utan att anta brott enbart för att en deklaration är fel.'],
+ ['Vidare kontroll','Skatteverket och FU-ledaren får bedöma skatteberäkning, fara för skatteundandragande och särskilda regler om rättelse/åtalsprövning.',1]],
+'Bidragsbrott':[
+ ['Förmån och beslut','Notera aktuell ersättning eller förmån, beslutsfattande myndighet samt utbetalningar och tidsperioder.'],
+ ['Lämnad uppgift och förändring','Identifiera exakt uppgift eller anmälningsskyldighet som kan vara aktuell och vilka förändringar som har inträffat.'],
+ ['Dokumentation','Anteckna handlingar, kommunikation och eventuella motsägande eller förklarande uppgifter.'],
+ ['Fördjupning','Kontrollera med berörd myndighet vad som varit avgörande för utbetalningen och särskilda rättelse-/åtalsförutsättningar.',1]],
+'Explosiva varor':[
+ ['Omedelbar säkerhet','Rör inte misstänkt instabila explosiva ämnen. Prioritera avstånd, avspärrning och kontakt med relevant specialistfunktion.'],
+ ['Föremål och plats','Dokumentera säkerhetsmässigt möjliga observationer av föremål, emballage, antal, plats och åtkomst utan att manipulera föremålet.'],
+ ['Tillstånd och ansvar','Identifiera ansvarig innehavare, eventuell verksamhet, förvaring och uppgifter om tillstånd och hantering.'],
+ ['Fortsatt utredning','Låt sakkunnig bedöma explosivvaruklassning, konstruktion, mängd och säker provhantering; pröva relevanta grader samt förhållandet till smugglingslagen.',1]]
+
 };
 const fallback=[['Vad har hänt?','Dokumentera plats, tid, konkret gärning och berörda personer.'],['Vittnen och spår','Identifiera relevanta iakttagelser, inspelningar och bevis som riskerar att försvinna.'],['Avvikande uppgifter','Anteckna spontana uppgifter som talar för annat händelseförlopp eller annan rubricering.']];
 for(const c of D.crimes){
