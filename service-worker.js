@@ -1,6 +1,6 @@
 /* Brottskatalog offline cache – versioned so an incomplete update never replaces the active cache. */
-const CACHE = 'brottskatalog-v04-20261012-v1';
-const CORE = ['./', './index.html', './manifest.webmanifest', './icon.svg', './catalog-03.js', './glossary-03.js', './data/provisions-generated.js', './data/legal-review-baseline.js', './legal-review-04.js', './data/source-status.json'];
+const CACHE = 'brottskatalog-v05-20261012-v2';
+const CORE = ["./","./index.html","./manifest.webmanifest","./icon.svg","./catalog-03.js","./glossary-03.js","./data/provisions-generated.js","./data/provisions-reviewed-05.js","./data/legal-review-baseline.js","./legal-review-04.js","./catalog-05.js","./commentary-05.js","./glossary-05.js","./data/legal-review-baseline-05.js","./legal-validation-05.js","./data/source-status.json","./data/review-summary-05.json"];
 self.addEventListener('install', event => {
   event.waitUntil(caches.open(CACHE).then(cache => cache.addAll(CORE)).then(() => self.skipWaiting()));
 });
