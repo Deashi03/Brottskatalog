@@ -1,35 +1,30 @@
-# Brottskatalog 0.7 – polisiärt uppslagsverk
+# Brottskatalog 0.8 – förstadier och fältstöd
 
-**Öppna i Safari:** https://deashi03.github.io/Brottskatalog/
+**Safari:** https://deashi03.github.io/Brottskatalog/
 
-Arbetsversion. Juridiskt innehåll är inte fullständigt slutgranskat. Använd inte appen som ensam grund för operativa beslut.
+**Arbetsversion:** Materialet är inte fullständigt juridiskt slutgranskat. Använd inte appen som ensam grund för operativa beslut.
 
-## Nyheter i 0.7
+## Nyheter i 0.8
 
-- **Tvångsmedel på varje brottskort:** separat meny med 26 tvångsmedel/åtgärder enligt RB 23–28 kap. Snabbkoll för reell husrannsakan, kroppsvisitation, kroppsbesiktning, beslag, avspärrning och kvarhållande av grupp. Övriga i expanderbara grupper.
-- **Straffskaleindikatorer:** jämför brottskortets registrerade minimi- och maximistraff med huvudregeln för åtgärden. Indikatorn är inte en rättslig slutsats; misstankegrad, ändamål, undantag, proportionalitet och faktisk situation måste bedömas separat.
-- **Beslutsbehörighet:** markering för när en polisman får besluta själv, vid FID (fara i dröjsmål), eller när beslut i princip tillkommer FU-ledare/åklagare/rätt. Särskilda begränsningar anges vid varje åtgärd.
-- **Häktning i fyra korta rader:** 24:1, 24:2 punkt 1, 24:2 punkt 2 och sist 24:3 **utredningshäktning**. Inga allmänna gripandelektioner.
-- **Praktiska utredningsuppslag:** första patrulls åtgärder prioriteras. Mer ingående uppsåtsprövning, teknisk bevisning och uppföljning flyttas till en egen expanderbar fortsättningsdel.
-- **Dubblettstädning:** separata menyn ”Rekvisit att kontrollera” togs bort eftersom den duplicerade rekvisitmenyn. De detaljerade anteckningarna filtrerar också bort överlappande upprepningar; relevant fördjupning behålls.
-- **Offline-cache:** båda nya filerna installeras med övriga resurser.
+- Egna sökbara poster för försök, förberedelse och stämpling till brott. Förstadieposterna visas vid sökning på ett förstadium, inte i grundlistan.
+- Tydlig röd märkning **Ej straffbart** för förstadier som saknar särskild kriminalisering enligt genomgångna kapitelbestämmelser; grå märkning **Ej verifierat** i andra fall. Ej verifierat betyder inte straffritt.
+- Förstadiestraffskalor följer BrB 23:1–2. Straffet för försök kan högst motsvara fullbordat brott; böter utesluts vid försök till brott med minimistraff om minst två år. Straff för förberedelse/stämpling ska vara under fullbordat brotts maximistraff, och mer än två års fängelse förutsätter att fullbordat brott kan ge fängelse i minst sex år.
+- Häktningspresumtionen för straffbara förstadier prövas enligt RB 24:1 andra stycket punkt 2 utifrån **fullbordat brotts** minimistraff om minst fyra år.
+- Sökresultat innehåller enbart rubricering, lagrum och straffskala, med nödvändig särskild markering för icke straffbara/ogranskade förstadier.
+- Lagtext ligger först i brottskortets meny. Tvångsmedel sorteras därefter efter RB-kapitel 23–28, med tydligare paragrafnummer och beslutsbehörighet. Hemliga tvångsmedel döljs.
+- Häktningsöversikten har fyra kort: RB 24:1 huvudregel, 24:1 presumtion, 24:2 särskilda grunder och 24:3 utredningshäktning; bock/kryss samt korta rekvisit, separat straffskala och misstankegrad.
+- Offline-cachen innehåller nu förstadiedata.
 
-## Avgränsningar
+## Kvarstående rättsliga begränsningar
 
-26 åtgärder betyder inte att alla specialregler inom polisrätten och hemliga tvångsmedel är fullständigt modellerade. Hemliga tvångsmedel har katalogbrott och alternativa straffvärderegler, varför appen anger ”särskild prövning” i stället för felaktigt nej vid låg straffskala. Vissa FU-åtgärder kan ha särskild föreskriven beslutsordning. Sammanställningen är kontrollerad mot rättegångsbalkens lydelse den 12 oktober 2026, men inte en individuell juridisk certifiering. Kontrollera särskilda lagar, behörighetsföreskrifter och eventuella lagändringar.
+Genomgången av Brottsbalken prioriterar 3, 7–9, 11–14 och 17–19 kap. Där finns breda kartläggningar av förstadiernas särskilda kriminalisering. Reglerna i övriga kapitel och specialstraffrätt är inte uttömmande kontrollerade. Narkotikastrafflagens 4 § har lagts till med undantaget för gärningar som avser enbart bruk. Särskilda rekvisit, alternativa rubriceringar och ändringar över tid måste alltid kontrolleras.
 
-Sökindex och brottsposter från 0.6 är bevarade: 251 sökingångar och 112 ordlistebegrepp. Kvarstående granskningspunkter finns i [kvalitetsrapporten](data/review-summary-06.json). Maskinimporterad lagtext kan vara ofullständig; använd länk till officiell författning vid tveksamhet.
-
-Rättskällor: [Rättegångsbalken](https://www.riksdagen.se/sv/dokument-och-lagar/dokument/svensk-forfattningssamling/rattegangsbalk-1942740_sfs-1942-740/), [Brottsbalken](https://www.riksdagen.se/sv/dokument-och-lagar/dokument/svensk-forfattningssamling/brottsbalk-1962700_sfs-1962-700/).
-
-Källmaterial för fältförslag: *Brottsutredning* (kursanteckningar), bearbetat till stöd för första patrull; förslag är inte ett beslut om tvångsmedel.
+Rättskällor: [Brottsbalken](https://www.riksdagen.se/sv/dokument-och-lagar/dokument/svensk-forfattningssamling/brottsbalk-1962700_sfs-1962-700/), [Rättegångsbalken](https://www.riksdagen.se/sv/dokument-och-lagar/dokument/svensk-forfattningssamling/rattegangsbalk-1942740_sfs-1942-740/) och [Narkotikastrafflagen](https://www.riksdagen.se/sv/dokument-och-lagar/dokument/svensk-forfattningssamling/narkotikastrafflag-196864_sfs-1968-64/).
 
 ## Filer
 
-- `coercive-07.js`: tvångsmedelsregler, beslutsbehörighet och straffskaleindikatorer.
-- `field-07.js`: brottsspecifikt fältstöd och kompletterande förundersökningsuppslag.
-- `index.html`: brottskort, kort häktningsruta, menystädning och modal/dialog.
-- `service-worker.js`: versionshanterad PWA-cache.
-- `scripts/ui_smoke.mjs`: iPhone-emulerade gränssnittstester.
-
-Offlineanvändning kräver att appen har laddats minst en gång medan nät finns. iOS kan rensa lagring.
+- stages-08.js: brottsförstadier och statusar.
+- index.html: gränssnittet.
+- coercive-07.js: tvångsmedelsmetadata.
+- service-worker.js: offline-cache.
+- scripts/ui_smoke.mjs: mobiltester.
