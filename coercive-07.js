@@ -25,7 +25,7 @@ const entries=[
 {id:'bevara',group:'Föremål och digitalt',title:'Föreläggande att bevara digital uppgift',ref:'RB 27:16–16 a',scale:'any',decision:'FU-ledare/åklagare',info:'Digital uppgift som skäligen kan antas ha betydelse för brottsutredningen. Får inte riktas till misstänkt eller angivna närstående. Ingen generell fängelsegräns.'},
 {id:'forvar',group:'Ekonomi och rörelse',title:'Förvar inför kvarstad',ref:'RB 26:3',scale:'any',decision:'Åklagare · polis FID',info:'I avvaktan på rättens kvarstadsbeslut. Polisman får ta lös egendom i förvar vid fara i dröjsmål och ska skyndsamt anmäla till åklagare.'},
 {id:'kvarstad',group:'Ekonomi och rörelse',title:'Kvarstad',ref:'RB 26:1–2',scale:'any',decision:'Rätten (på yrkande)',info:'Skäligen misstänkt och konkret risk att undandra egendom från betalning av anspråk. Ingen allmän minimistraffskala.'},
-{id:'reseforbud',group:'Ekonomi och rörelse',title:'Reseförbud och anmälningsskyldighet',ref:'RB 25:1–3',scale:'f',decision:'Åklagare eller rätten',info:'Fängelse i straffskalan och risk för undandragande samt övriga rekvisit. Är ett alternativ till häktning, inte polisiärt FID-beslut.'},
+{id:'reseforbud',group:'Ekonomi och rörelse',title:'Reseförbud och anmälningsskyldighet',ref:'RB 25:1–3',scale:'fSpecial',decision:'Åklagare eller rätten',info:'Fängelsebrott är normalfall. Även utan fängelsekrav kan reseförbud eller anmälningsskyldighet bli aktuellt vid risk att personen lämnar Sverige för att undandra sig lagföring eller straff. Inte polisiärt FID-beslut.'},
 {id:'hemlig',group:'Hemliga åtgärder',title:'Hemlig avlyssning av elektronisk kommunikation',ref:'RB 27:18 a m.fl.',scale:'twoSpecial',decision:'Rätten; i vissa akuta fall åklagare',info:'Grundspår: minst två års minimistraff. Många uttryckliga katalogbrott, försöksformer och alternativa straffvärderegler: låg straffskala utesluter INTE automatiskt. Alltid särskild prövning.'},
 {id:'hemligo',group:'Hemliga åtgärder',title:'Övriga hemliga tvångsmedel',ref:'RB 27 kap. och särskild lag',scale:'specific',decision:'Rätten eller åklagare enligt respektive regel',info:'Hemlig övervakning, kamera- och rumsavlyssning och hemlig dataavläsning har olika brottskataloger, straffskalor och undantag. Appen ger därför inte automatiskt ja/nej för dessa.'}
 ];
@@ -37,6 +37,7 @@ const score=(c,e)=>{
  if(e.scale==='specific')return {label:'Beror på annan förutsättning',tone:'conditional'};
  if(e.scale==='twoSpecial')return min>=2?{label:'Grundregelns straffskala uppfylld',tone:'yes'}:{label:'Pröva katalogbrott / undantag',tone:'conditional'};
  if(e.scale==='f')return max>0?{label:'Straffskalekrav uppfyllt',tone:'yes'}:{label:'Inte enligt huvudregel',tone:'no'};
+ if(e.scale==='fSpecial')return max>0?{label:'Huvudregelns straffskala uppfylld',tone:'yes'}:{label:'Undantag utan fängelsekrav finns',tone:'conditional'};
  if(e.scale==='one')return max>=1?{label:'Straffskalekrav uppfyllt',tone:'yes'}:{label:'Inte enligt huvudregel',tone:'no'};
  if(e.scale==='four')return min>=4?{label:'Straffskalekrav uppfyllt',tone:'yes'}:{label:'Inte enligt huvudregel',tone:'no'};
  return {label:'Kräver prövning',tone:'conditional'};
