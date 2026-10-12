@@ -16,7 +16,7 @@
   if(chapter==='7' && paragraph==='4'){prosecution='conditional';label='Åtal ur allmän synpunkt';rule='BrB 7 kap. 6 §';details=['Egenmäktighet med barn får åtalas av åklagare bara om åtal är påkallat ur allmän synpunkt. Angivelse är inte i sig ett rekvisit.'];}
   if(chapter==='9'){prosecution='conditional';label='Närstående – särskild åtalsregel';rule='BrB 9 kap. 12 § jämförd med 8 kap. 13 §';details=['Särskilda villkor gäller vid brott mot vissa närstående. Kontrollera undantag och aktuell lydelse.'];}
   D.crimes.push({id:'v05-'+slug(row.title),title:row.title,ref:'BrB '+chapter+' kap. '+paragraph+' §',shortRef:'BrB '+row.ref,statute:key,category:row.category,aliases:row.aliases,
-   penalty:pen,penaltyShort:row.code,penaltyNote:'Straffskalans grad enligt aktuell paragraf.',penaltyRange:{min,max,fines:f,life},penaltyChecked:'2026-10-12',penaltySource:'BrB '+row.ref,
+   penalty:pen,penaltyShort:(f?'B–F '+dur(max):(min?'F '+dur(min)+'–'+dur(max):'F högst '+dur(max)))+(life?' / livstid':''),penaltyNote:'Straffskalans grad enligt aktuell paragraf.',penaltyRange:{min,max,fines:f,life},penaltyChecked:'2026-10-12',penaltySource:'BrB '+row.ref,
    custody:min>=1.5?'presumption':max>=1?'possible':'none',prosecution,prosecutionLabel:label,prosecutionRule:rule,prosecutionDetails:details,
    lawMode:p?'machine':'missing',law:p?.text||'',lawSource:p?.ref||'BrB '+row.ref,sourceURL:'https://data.riksdagen.se/dokument/sfs-1962-700.html',lawTerms:[],variants:[],elements:[],facts:[],stages:[],related:[],reviewStatus:p?'penalty-reviewed-source-excerpt':'lawtext-missing',
    sourceEdition:'Brottsbalken 1962:700; uppdateringskontroll per 2026-10-12'});
