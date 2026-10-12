@@ -9,6 +9,9 @@ on:
       - "scripts/ui_smoke.mjs"
       - "scripts/stage_rules_test.mjs"
       - "stages-08.js"
+      - "special-09.js"
+      - "coercive-09.js"
+      - "scripts/integration_09.mjs"
       - ".github/workflows/ui-tests.yml"
   push:
     branches: [main]
@@ -22,6 +25,9 @@ on:
       - "scripts/ui_smoke.mjs"
       - "scripts/stage_rules_test.mjs"
       - "stages-08.js"
+      - "special-09.js"
+      - "coercive-09.js"
+      - "scripts/integration_09.mjs"
       - ".github/workflows/ui-tests.yml"
 permissions:
   contents: read
@@ -35,6 +41,8 @@ jobs:
           node-version: "22"
       - name: Verify offence stages
         run: node scripts/stage_rules_test.mjs
+      - name: Full catalog integration and statutes test
+        run: node scripts/integration_09.mjs
       - name: Install headless browser
         run: |
           npm install --no-save playwright
