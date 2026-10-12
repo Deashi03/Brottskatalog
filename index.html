@@ -202,6 +202,7 @@ html,body{width:100%;max-width:100%;overflow-x:clip;overscroll-behavior-x:none;-
 .detail-header .header-actions>.icon-button{min-width:36px;min-height:40px}
 .ref-result{min-height:58px}
 .ref-result .crime-ref{font-size:11px}
+.penalty-only{margin-top:10px}
 </style>
   <title>Brottskatalog · steg 2</title>
 </head>
@@ -619,6 +620,8 @@ D.date='2026-10-12';
   <script src="./investigation-06.js"></script>
   <script src="./context-terms-06.js"></script>
   <script src="./details-06.js"></script>
+  <script src="./data/legal-review-baseline-06.js"></script>
+  <script src="./validation-06.js"></script>
   <script>
 /* Brottskatalog – stage 1. No framework, no network request during use. */
 (() => {
@@ -992,7 +995,7 @@ function showCustody(c){
     c.custody==='possible'?
     ['Straffskalan omfattar fängelse i minst ett år. Det kan öppna för häktning enligt 24 kap. 1 § första stycket RB, förutsatt bland annat sannolika skäl, relevant risk och proportionalitet.','Om det kan antas att påföljden stannar vid böter finns hinder mot häktning. Särskilda regler kan också påverka bedömningen.']:
     ['Brottets straffmaximum understiger ett års fängelse och uppfyller därför inte grundkravet i 24 kap. 1 § första stycket RB.','Särskild häktning enligt 24 kap. 2 § RB kan ändå aktualiseras, exempelvis vid vissa identifieringsproblem. Det innebär inte automatiskt att gripande är lämpligt eller lagligt.'];
-  const selected=c.custody==='none'?[...generic,...special,...(crimeSpecific?scenarios[crimeSpecific]:[])]:c.custody==='unknown'?[...body,...generic]:[
+  const selected=c.custody==='none'?['RB 24:1 första stycket är inte tillämplig när straffmaximum understiger ett års fängelse. RB 24:2 har särskilda alternativa häktningsgrunder som kräver självständig prövning.',...generic,...special,...(crimeSpecific?scenarios[crimeSpecific]:[])]:c.custody==='unknown'?[...body,...generic]:[
    ...body,
    c.custody==='presumption'?'För presumtionsbrott ska den konkreta misstankegraden och presumtionens undantag prövas; ingripande är inte automatiskt befogat.':'Möjliga scenarier: konkret risk att misstänkt undanröjer bevis, fortsätter sin brottslighet eller undandrar sig lagföring. Utred den faktiska risken och anknytning, inte bara brottets rubricering.',
    ...generic,
