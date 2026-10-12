@@ -2,7 +2,7 @@
   "id": "./",
   "name": "Brottskatalog",
   "short_name": "Brottskatalog",
-  "description": "Brottskatalog 0.5 – juridiskt uppslagsverk med straffskalor, kvalifikationsgrunder och anteckningar.",
+  "description": "Brottskatalog 0.7 – polisiärt uppslagsverk med brott, straffskalor, tvångsmedelsstatus, beslutsbehörighet och fältstöd.",
   "start_url": "./",
   "scope": "./",
   "display": "standalone",
