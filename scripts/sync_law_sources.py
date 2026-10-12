@@ -11,6 +11,7 @@ import sys
 from datetime import datetime, timezone
 from html import unescape
 from html.parser import HTMLParser
+from bs4 import BeautifulSoup
 from pathlib import Path
 from urllib.request import Request, urlopen
 
@@ -46,9 +47,10 @@ PARAGRAPH = re.compile(r"^\s*(\d+)\s*([a-z]?)\s*§(?!§)\s*(.*)$", re.I)
 REVISION = re.compile(r"Ändrad\s*:\s*t\.?o\.?m\.?\s*SFS\s*(\d{4}:\d+)", re.I)
 
 def parse_brb(html):
-    parser = TextExtractor()
-    parser.feed(html)
-    raw = parser.text().replace("\xa0", " ")
+    soup = BeautifulSoup(html, "html.parser")
+    for tag in soup(["script", "style", "nav", "noscript"]):
+        tag.decompose()
+    raw = soup.get_text("\n").replace("\xa0", " ")
     lines = [re.sub(r"[ \t]+", " ", x).strip() for x in raw.splitlines()]
     out, chapter, key, contents = {}, None, None, []
     def flush():
@@ -112,6 +114,7 @@ def main():
             if sid=="BrB":
                 parsed,_=parse_brb(body)
                 if len(parsed)<100:
+                    print("DEBUG SFS text start:", repr(_.splitlines()[:35]), file=sys.stderr)
                     raise ValueError(f"Too few BrB provisions parsed: {len(parsed)}; no new data published")
                 for key,value in parsed.items():
                     generated[key]={"id":key,"ref":f"BrB {key.split(':')[1]} kap. {key.split(':')[2]} §",
