@@ -31,24 +31,37 @@
       "name": "Skadegörelse",
       "ref": "BrB:12:1",
       "characters": 128
-    },
-    {
-      "name": "Sexuellt övergrepp mot barn",
-      "ref": "BrB:6:6",
-      "characters": 123
-    },
-    {
-      "name": "Grovt sexuellt övergrepp mot barn",
-      "ref": "BrB:6:6",
-      "characters": 123
-    },
-    {
-      "name": "Kontakt för att träffa ett barn i sexuellt syfte",
-      "ref": "BrB:6:10a",
-      "characters": 120
     }
   ],
   "invalidRanges": [],
   "duplicateIds": [],
-  "sourceNote": "Maskinimporterade SFS-paragrafer kan vara ofullständiga och är inte certifierade. Kontrollerna nedan är maskinella plus manuell stickprovskontroll; inte fullständig rättslig kvalitetssäkring."
+  "sourceNote": "Maskinimporterade SFS-paragrafer kan vara ofullständiga och är inte certifierade. Kontrollerna nedan är maskinella plus manuell stickprovskontroll; inte fullständig rättslig kvalitetssäkring.",
+  "suspectedTruncatedSource": [
+    {
+      "crime": "Grov fridskränkning",
+      "key": "BrB:4:4a",
+      "ending": "ottsliga gärningar enligt 3-6 eller 12 kap. eller enligt"
+    },
+    {
+      "crime": "Grov kvinnofridskränkning",
+      "key": "BrB:4:4a",
+      "ending": "ottsliga gärningar enligt 3-6 eller 12 kap. eller enligt"
+    },
+    {
+      "crime": "Barnfridsbrott",
+      "key": "BrB:4:3",
+      "ending": "degörelse eller grov skadegörelse enligt 12 kap. 1 eller"
+    },
+    {
+      "crime": "Ringa barnfridsbrott",
+      "key": "BrB:4:3",
+      "ending": "degörelse eller grov skadegörelse enligt 12 kap. 1 eller"
+    },
+    {
+      "crime": "Grovt barnfridsbrott",
+      "key": "BrB:4:3",
+      "ending": "degörelse eller grov skadegörelse enligt 12 kap. 1 eller"
+    }
+  ],
+  "notesOnCorrection": "BrB 6:6, 6:10 a, 6:12 och 9:12 har kompletterats med författningstext från Sveriges riksdag. Övrig maskinimport kan innehålla ofullständiga stycken. Riskerna redovisas separat och styr inte automatiskt åtalsstatus eller häktningsbeslut."
 }
