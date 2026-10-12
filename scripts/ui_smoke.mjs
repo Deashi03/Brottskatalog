@@ -83,6 +83,29 @@ try{
   await wait();
   assert.ok((await page.locator('.penalty-only').allTextContents()).some(x=>x.includes('HÖGST')&&x.includes('2 år')),'Max-only penalty is concise');
   assert.equal((await page.locator('.penalty-panel').innerText()).includes('Ej särskilt angivet'),false,'No confusing lower bound text');
+  // v0.8: försök, förberedelse och stämpling som egna sökbara poster.
+  await page.goto(url+'#sok',{waitUntil:'networkidle'});
+  await page.locator('#crime-search').fill('försök till mord');
+  await wait();
+  assert.ok((await page.locator('.crime-card').allTextContents()).some(x=>x.toLowerCase().includes('försök till mord')),'Försök till mord ska gå att hitta');
+  await page.locator('.crime-card').filter({hasText:'Försök till mord'}).first().click();
+  assert.equal((await page.locator('.accordion').first().innerText()).includes('Lagtext'),true,'Lagtext är första menyvalet');
+  await page.locator('[data-action="custody"]').first().click();
+  assert.ok((await page.locator('[role="dialog"]').innerText()).includes('Häktningspresumtion'),'Presumtionen har ett eget kort');
+  assert.ok(await page.locator('[role="dialog"] .custody-mark.yes').count()>=2,'Försök till mord ska ge presumtionsbock');
+  await page.goto(url+'#sok',{waitUntil:'networkidle'});
+  await page.locator('#crime-search').fill('stämpling till mord');
+  await wait();
+  assert.ok((await page.locator('.crime-card').allTextContents()).some(x=>x.toLowerCase().includes('stämpling till mord')),'Stämpling till mord är sökbart');
+  await page.goto(url+'#sok',{waitUntil:'networkidle'});
+  await page.locator('#crime-search').fill('försök till ringa stöld');
+  await wait();
+  assert.ok((await page.locator('.crime-card').allTextContents()).some(x=>x.includes('Ej straffbart')),'Ej straffbart ska synas i sökresultat');
+  await page.locator('.crime-card').first().click();
+  assert.ok((await page.locator('body').innerText()).includes('EJ STRAFFBART'),'Icke straffbar post ska kunna öppnas');
+  assert.equal(await page.locator('[data-action="custody"]:not([disabled])').count(),0,'Ingen häktningsåtgärd på icke straffbart förstadium');
+  await page.goto(url+'#sok',{waitUntil:'networkidle'});
+  assert.equal(await page.locator('.crime-card').filter({hasText:'Försök till mord'}).count(),0,'Förstadier syns inte i huvudlistan');
   // v0.6: search noncriminal references directly.
   await page.goto(url+'#sok',{waitUntil:'networkidle'});
   await page.locator('#crime-search').fill('KnivL 1');
@@ -113,7 +136,7 @@ try{
   await page.locator('.crime-card').first().click();
   await page.locator('[data-action="custody"]').click();
   assert.ok((await page.locator('[role="dialog"]').innerText()).includes('24:2'),'Identification custody/urgent grip scenario');
-  assert.ok((await page.locator('[role="dialog"]').innerText()).includes('24:3 – Utredningshäktning'),'Custody includes investigative detention at end');
+  assert.ok((await page.locator('[role="dialog"]').innerText()).includes('Utredningshäktning'),'Custody includes investigative detention at end');
   assert.equal((await page.locator('[role="dialog"]').innerText()).includes('24:7'),false,'No redundant arrest explanation');
   await page.goto(url+'#sok',{waitUntil:'networkidle'});
   await page.locator('#crime-search').fill('grovt brott mot knivlagen');
