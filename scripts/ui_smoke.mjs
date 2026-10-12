@@ -23,7 +23,7 @@ try{
   assert.ok((await page.locator('.crime-card').allTextContents()).some(x=>x.includes('Mord')),'Expanded catalog must include Mord');
   await page.locator('.crime-card').first().click();
   await wait();
-  assert.ok((await page.locator('body').innerText()).includes('Kontroll krävs'),'Unreviewed penalties must not be invented');
+  assert.ok((await page.locator('body').innerText()).includes('Fängelse 10 år–18 år'),'Reviewed murder penalty must appear');
   await page.locator('summary').filter({hasText:'Lagtext'}).click();
   await wait();
   assert.ok((await page.locator('body').innerText()).includes('Maskinimporterat')||(await page.locator('body').innerText()).includes('kontrollerad'),'Legal text status visible');
@@ -39,10 +39,27 @@ try{
   }
   const pageWidth=await page.evaluate(()=>document.documentElement.scrollWidth);
   assert.ok(pageWidth<=400,'No horizontal overflow in mobile: '+pageWidth);
+  // Whole-term matching must not turn utställarangivelse into angivelse till åtal.
+  await page.goto(url+'#sok',{waitUntil:'networkidle'});
+  await page.locator('#crime-search').fill('urkundsförfalskning');
+  await wait();
+  const urk=page.locator('.crime-card').filter({hasText:'Urkundsförfalskning'}).first();
+  await urk.click();
+  await page.locator('summary').filter({hasText:'Lagtext'}).click();
+  await wait();
+  assert.equal(await page.locator('.law-paper [data-term="angivelse"]').count(),0,'Do not match angivelse inside utställarangivelse');
+  assert.ok(await page.locator('.law-paper [data-term="urkund"]').count()>0,'Stand-alone urkund should be linkable');
+  await page.goto(url+'#sok',{waitUntil:'networkidle'});
+  const search2=page.locator('#crime-search');
+  const fontSize=await search2.evaluate(el=>parseFloat(getComputedStyle(el).fontSize));
+  assert.ok(fontSize>=16,'iOS search should not cause auto zoom at font size '+fontSize);
+  await search2.focus();
+  const layout=await page.evaluate(()=>({width:document.documentElement.scrollWidth,inner:innerWidth}));
+  assert.ok(layout.width<=layout.inner+1,'No horizontal viewport shift after search focus: '+JSON.stringify(layout));
   await page.goto(url+'#mer',{waitUntil:'networkidle'});
   const settings=await page.locator('body').innerText();
   assert.ok(settings.includes('Senaste kataloguppdatering'),'Update age in settings');
   assert.ok(settings.includes('LAGKONTROLL'),'Source checker in settings');
   assert.deepEqual(errors,[],'No JS page errors');
-  console.log('PASS: iPhone search, keyboard, extended catalog, unreviewed labels, interactive law, update info, horizontal layout.');
+  console.log('PASS: iPhone search, keyboard, reviewed penalties, whole-term glossary, page focus, legal cross-references, update info.');
 }finally{await browser.close();}
