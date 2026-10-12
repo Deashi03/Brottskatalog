@@ -59,7 +59,7 @@ const duration=n=>Number.isInteger(n)?n+' år':Math.round(n*12)<12?Math.round(n*
 const isBrB=c=>/^BrB\s+\d+/i.test(c.shortRef||c.ref||'');
 const ch=c=>{const m=(c.shortRef||c.ref||'').match(/BrB\s+(\d+)/i);return m?+m[1]:0;};
 const parentMin=c=>Number(c.penaltyRange?.min)||0;
-const original=c=>c.penaltyRange&&Number.isFinite(c.penaltyRange.max)?c.penaltyRange:null;
+const original=c=>{const r=c.penaltyRange||window.BK_COERCIVE?.range?.(c);return r&&Number.isFinite(r.max)?{min:Number(r.min)||0,max:Number(r.max),fines:!!r.fines||/^(Böter|Penningböter)/i.test(c.penalty||''),life:!!r.life||/livstid/i.test(c.penalty||'')}:null;};
 let yes=0,no=0,unknown=0,unavailable=0;
 for(const c of base){
  if(c.stageType||!c.title||!original(c)) {unavailable++;continue;}
