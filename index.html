@@ -244,7 +244,7 @@ html,body{width:100%;max-width:100%;overflow-x:clip;overscroll-behavior-x:none;-
 .coercive-entry>summary{min-height:55px;gap:7px}
 .coercive-entry>summary svg:last-child{flex:0 0 15px;color:var(--muted)}
 .measure-icon{width:20px;height:20px;flex:none;display:grid;place-items:center}
-.measure-icon.yes{color:#249b67}.measure-icon.no{color:#d45b62}
+.measure-icon.yes{color:#249b67}.measure-icon.no{color:#d45b62}.measure-icon.unknown{color:var(--muted)}
 .measure-info{display:flex;min-width:0;flex:1;flex-direction:column;gap:3px}
 .measure-info>.coercive-ref{font-weight:800;font-size:11px;min-width:0;white-space:normal;color:var(--muted)}
 .measure-info>.coercive-title{font-weight:740;font-size:12px;line-height:1.35}
@@ -986,21 +986,21 @@ function coerciveSection(c){
  const chapter=e=>Number(e.ref.match(/RB (\d+):/)?.[1]||0);
  const names={23:'Utredningsåtgärder',24:'Häktning',25:'Reseförbud',26:'Kvarstad',27:'Beslag och säkring',28:'Undersökningsåtgärder'};
  const render=e=>{
-  const v=reg.score(c,e),eligible=reg.eligible?reg.eligible(c,e):v.tone!=='no';
+  const v=reg.score(c,e),eligible=reg.eligible?reg.eligible(c,e):v.tone!=='no',pending=v.tone==='unknown';
   const authority=e.decisionAuthority||e.ref;
   const officer=reg.officerSummary?reg.officerSummary(e):'Kontrollera';
   const detail=('<p><strong>Brottsrelaterat villkor:</strong> '+escapeHtml(v.label)+'</p>')+
    '<p><strong>Polismans beslut:</strong> '+escapeHtml(officer)+(e.decisionCaution?' — '+escapeHtml(e.decisionCaution):'')+'</p>'+
    '<p><strong>Annan beslutsfattare:</strong> '+escapeHtml(e.otherDecision||e.decision)+'</p>'+
    '<p>'+escapeHtml(e.info)+'</p><p class="source-label">Beslutsbehörighet: '+escapeHtml(authority)+' · '+escapeHtml(e.ref)+'</p>';
-  return '<details class="coercive-entry" data-eligible="'+String(eligible)+'"><summary>'+
-    '<span class="measure-icon '+(eligible?'yes':'no')+'" aria-label="'+(eligible?'Brottskrav medger prövning':'Brottskrav ej uppfyllt')+'">'+ic(eligible?'check-circle':'x','sm')+'</span>'+
+  return '<details class="coercive-entry" data-eligible="'+(pending?'unknown':String(eligible))+'"><summary>'+
+    '<span class="measure-icon '+(pending?'unknown':eligible?'yes':'no')+'" aria-label="'+(pending?'Straffskalan är inte verifierad':eligible?'Brottskrav medger prövning':'Brottskrav ej uppfyllt')+'">'+ic(pending?'info':eligible?'check-circle':'x','sm')+'</span>'+
     '<span class="measure-info"><strong class="coercive-ref">'+escapeHtml(e.ref.split(' jfr ')[0].split(',')[0].replace('RB ','RB '))+'</strong>'+
     '<span class="coercive-title">'+escapeHtml(e.title)+'</span></span>'+
     '<span class="measure-decision '+(e.officerMode==='none'?'no':'')+'">'+escapeHtml(officer)+'</span>'+ic('chevron-down','sm')+
     '</summary><div class="coercive-entry-body">'+detail+'</div></details>';
  };
- const panel='<div class="coercive-overview"><p class="coercive-lead">✓ = brottets straffskala och brottstyp utesluter inte åtgärden. ✕ = villkor ej uppfyllt. Övriga rekvisit måste fortfarande prövas. FID = fara i dröjsmål.</p>'+
+ const panel='<div class="coercive-overview"><p class="coercive-lead">✓ = brottets straffskala och brottstyp utesluter inte åtgärden. ✕ = villkor ej uppfyllt. Grå informationssymbol = uppgiften ej verifierad. Övriga rekvisit måste fortfarande prövas. FID = fara i dröjsmål.</p>'+
  '<label class="coercive-filter-label"><input class="coercive-filter" type="checkbox"> Visa endast ✓</label>'+
  [23,24,25,26,27,28].map(n=>{
   const list=all.filter(e=>chapter(e)===n);
