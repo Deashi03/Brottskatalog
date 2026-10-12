@@ -183,6 +183,20 @@ html,body{width:100%;max-width:100%;overflow-x:clip;overscroll-behavior-x:none;-
 [data-theme="dark"] .penalty-kind{color:#f0f5f7}
 @media(max-width:360px){.penalty-bound strong{font-size:17px}.penalty-panel{padding:16px 15px}}
 .source-incomplete{font-size:12px;line-height:1.45;padding:9px 0;color:var(--muted);font-weight:650}
+
+.penalty-only{display:flex;flex-direction:column;gap:5px;max-width:225px;padding:13px 17px;border-radius:13px;border:1px solid var(--line);background:rgba(255,255,255,.45);margin:12px 0 2px}
+.penalty-only span{font-size:11px;letter-spacing:1.3px;font-weight:750;color:var(--muted)}
+.penalty-only strong{font-size:clamp(23px,6vw,30px);line-height:1.15;color:var(--ink)}
+.investigation-step{display:flex;gap:13px;padding:14px 0;border-bottom:1px solid var(--line)}
+.investigation-step:last-of-type{border-bottom:none}
+.investigation-step .step-num{display:flex;flex:0 0 29px;width:29px;height:29px;align-items:center;justify-content:center;background:var(--surface-secondary,rgba(115,140,158,.09));border-radius:8px;font-size:12px;font-weight:800}
+.investigation-step h3{margin:0 0 5px;font-size:14px;color:var(--ink)}
+.investigation-step p{font-size:13px;line-height:1.6;margin:0}
+.inspector-intro{font-size:12px;color:var(--muted);line-height:1.6}
+.ref-heading{margin-top:20px}
+.ref-result .crime-title{font-size:15px}
+[data-theme="dark"] .penalty-only{background:rgba(255,255,255,.04)}
+
 </style>
   <title>Brottskatalog · steg 2</title>
 </head>
@@ -668,6 +682,16 @@ function lawMarkup(text,current,terms=[]){
    const key=provisionKey(m[0],current||'');
    if(key && key!==current) hits.push({s:m.index,e:m.index+m[0].length,mode:'ref',key});
  }
+ // In "1 eller 2 §" both references are separate clickable paragraphs.
+ for(const m of text.matchAll(/\b(\d+)\s+(?:eller|och)\s+(\d+)\s*§/gi)){
+   const first=provisionKey(m[1]+' §',current||'');
+   const second=provisionKey(m[2]+' §',current||'');
+   if(first && first!==current)hits.push({s:m.index,e:m.index+m[1].length,mode:'ref',key:first});
+   if(second && second!==current){
+     const i=m.index+m[0].lastIndexOf(m[2]);
+     hits.push({s:i,e:i+m[2].length+1+(m[0].slice(m[0].lastIndexOf(m[2])+m[2].length).length-1),mode:'ref',key:second});
+   }
+ }
  for(const term of labels){
    const rx=new RegExp(term.replace(/[.*+?^${}()|[\]\\]/g,'\\$&'),'gi');
    for(const m of text.matchAll(rx)){
@@ -873,8 +897,16 @@ function qualificationSection(c){
    '<p class="source-label">'+escapeHtml(q.source)+' · Kommentar, inte lagtext</p></article>').join('');
 }
 function studyNotesSection(c){
- return (c.studyNotes||[]).map(n=>'<article class="study-entry"><h3>'+escapeHtml(n.title)+'</h3><p>'+escapeHtml(n.text)+'</p>'+
+ return (c.detailedNote?'<article class="study-entry"><h3>Fördjupning från kursmaterialet</h3><p>'+escapeHtml(c.detailedNote)+'</p><p class="source-label">Sammanställning från Straffrätt Lund och Brottsutredning; inte lagtext.</p></article>':'')+(c.caseNote?'<article class="study-entry"><h3>Praktiskt exempel</h3><p>'+escapeHtml(c.caseNote)+'</p></article>':'')+(c.studyNotes||[]).map(n=>'<article class="study-entry"><h3>'+escapeHtml(n.title)+'</h3><p>'+escapeHtml(n.text)+'</p>'+
    '<p class="source-label">'+escapeHtml(n.source)+' · Kursanteckning</p></article>').join('');
+}
+
+function investigationSection(c){
+ const steps=c.investigation||[];
+ if(!steps.length)return '<p>Inga specifika förslag inlagda ännu.</p>';
+ return '<p class="inspector-intro">Förslag för att finna möjliga bevis och motbevis. Är inte beslut om tvångsmedel. Kontrollera behörighet, behov och proportionalitet i varje situation.</p>'+
+ steps.map((x,i)=>'<article class="investigation-step"><span class="step-num">'+(i+1)+'</span><div><h3>'+escapeHtml(x.title)+'</h3><p>'+escapeHtml(x.how)+'</p></div></article>').join('')+
+ '<p class="source-label">Brottsspecifika förslag där tillgängliga, annars generell metodik för polisiär utredning. Inte lagtext.</p>';
 }
 
 function renderDetail(c){
@@ -900,11 +932,12 @@ function renderDetail(c){
   ${accordion('lag','Lagtext', 'book-open',law)}
   ${accordion('rekvisit','Rekvisit och gärningsvarianter','layers',`<div class="subtle-label">Att pröva</div>${elements?`<ul>${elements}</ul>`:'<p>Kompletterande rekvisitöversikt läggs till senare. Se lagtexten ovan.</p>'}<div class="subtle-label">Gärningsvarianter</div>${variants?`<div class="var-chip-list">${variants}</div>`:'<p>Inga ytterligare varianter registrerade.</p>'}`)}
   ${(c.qualifications||[]).length?accordion('kvalifikation','Kvalifikationsgrunder – fördjupning','layers',qualificationSection(c)):''}
-  ${(c.studyNotes||[]).length?accordion('anteckningar','Anteckningar – snabbkoll','book-mark',studyNotesSection(c)):''}
+  ${((c.studyNotes||[]).length||c.detailedNote||c.caseNote)?accordion('anteckningar','Anteckningar – fördjupning','book-mark',studyNotesSection(c)):''}
   ${accordion('praxis','Praxis och tolkningar','file-text',factsSection(c)||'<p>Inga kommentarer inlagda för denna sökingång ännu.</p>')}
   ${accordion('stadier','Försök och andra stadier','scale',`${stages?`<ul>${stages}</ul>`:'<p>Uppgift ännu inte granskad. Kontrollera särskild kriminalisering i tillämplig författning.</p>'}<p class="source-label">Se respektive bestämmelse om osjälvständiga brottsformer samt 23 kap. BrB.</p>`)}
   ${accordion('jamfor','Jämför rubriceringar','layers',comparison)}
-  ${accordion('bedomning','Att kontrollera i utredningen','list',elements?'<ul>'+elements+'</ul><p class="source-label">Detta är stödfrågor, ingen automatisk rättslig slutsats.</p>':'<p>Detaljerade kontrollfrågor har ännu inte granskats för denna sökingång.</p>')}
+  ${accordion('utredning','Utredningsuppslag och beviskällor','list',investigationSection(c))}
+  ${accordion('bedomning','Rekvisit att kontrollera','list',elements?'<ul>'+elements+'</ul><p class="source-label">Detta är stödfrågor, ingen automatisk rättsl slutsats.</p>':'<p>Utgå från lagtextens rekvisit och de konkreta omständigheterna.</p>')}
   ${accordion('relaterade','Relaterade brott','list',related||'<p>Inga relaterade exempel ännu.</p>')}
   ${accordion('sources','Rättskällor och källtyper','book-mark',`<p><strong>Lagtext:</strong> återgiven separat och utan omskrivningar. Kontrollera aktuellt rättsläge via källan.</p><p><strong>Tolkningsstöd:</strong> kursanteckningar och praktiska sammanfattningar är inte lagtext.</p>${links.map(([title,url])=>`<a class="source-link" href="${url}" target="_blank" rel="noopener noreferrer">${ic('external-link')} ${escapeHtml(title)}</a>`).join('')}`)}
   </div></section><p class="detail-footer">Version 0.4 · kontrollera alltid aktuell lagtext vid operativa beslut.</p></main>`;
@@ -927,12 +960,30 @@ function showProvision(key){
 }
 
 function showCustody(c){
+ const suspect=String(c.title||'').toLocaleLowerCase('sv');
+ const generic=['Skilj på tre beslut: domstolen häktar (24 kap. 1–3 §§ RB), åklagaren anhåller (24 kap. 6 § RB) och polisen får i brådskande fall gripa om det finns skäl att anhålla (24 kap. 7 § första stycket RB). Gripande följer inte automatiskt av att brottet kan leda till häktning.'];
+ const special=[
+ 'Särskilt enligt RB 24:2 punkt 1: misstänkt på sannolika skäl är okänd och vägrar uppge namn och hemvist, eller lämnade uppgifter kan antas vara osanna. Exempel: tillförlitliga omständigheter visar att uppgivet namn och adress är falska och identifiering inte kan klarläggas utan frihetsberövande. Detta är inte ett allmänt identifieringsmandat.',
+ 'RB 24:2 punkt 2: personen saknar hemvist i Sverige och det finns konkret risk att personen genom att lämna landet undandrar sig lagföring eller straff. Utländskt medborgarskap räcker inte ensamt.',
+ 'Därefter krävs för polisiärt gripande fortfarande skäl för anhållande och brådskande fall enligt RB 24:7. Pröva proportionalitet, mindre ingripande alternativ och hinder vid sannolikt bötesstraff. Dokumentera vilket moment som uppfyllts och varför det inte var möjligt att invänta åklagarbeslut.'
+ ];
+ const scenarios={
+ 'ringa stöld':['Exempel: någon är på sannolika skäl misstänkt för butikstillgrepp och uppger ett namn som konkret kan antas falskt, vägrar lämna sanningsenlig hemvist och försöker avvika. Pröva 24:2 punkt 1 och sedan 24:7, inte enbart ringa stölds straffskala.','Motexempel: målsäganden har namn, giltiga identitetshandlingar och en säker adress; personen samarbetar. Att tillgreppet just ägt rum räcker inte i sig för att gripa med stöd av RB 24:2.'],
+ 'ringa narkotikabrott':['Exempel: osäker identitet eller konkret risk för undandragande kan väcka frågor enligt 24:2, men det är inte ett generellt skäl att frihetsberöva personer som misstänks för eget bruk.','Pröva särskilt sannolik bötespåföljd, proportionalitet och om förhör/identifiering kan lösas mindre ingripande.']
+ };
+ const crimeSpecific=Object.keys(scenarios).find(k=>suspect.includes(k));
   const body = c.custody==='unknown'?['Häktningsstatus har ännu inte kvalitetssäkrats för denna nya sökingång. Kontrollera straffskala och 24 kap. RB.']:c.custody==='presumption'?
     ['Straffminimum för det här brottet är minst ett år och sex månader. Det aktualiserar häktningspresumtionen i 24 kap. 1 § andra stycket 1 RB.','Häktningspresumtion betyder inte att en polisman automatiskt ska gripa personen. Misstankegrad, undantag, proportionalitet och förutsättningarna för gripande måste prövas i varje fall.']:
     c.custody==='possible'?
     ['Straffskalan omfattar fängelse i minst ett år. Det kan öppna för häktning enligt 24 kap. 1 § första stycket RB, förutsatt bland annat sannolika skäl, relevant risk och proportionalitet.','Om det kan antas att påföljden stannar vid böter finns hinder mot häktning. Särskilda regler kan också påverka bedömningen.']:
     ['Brottets straffmaximum understiger ett års fängelse och uppfyller därför inte grundkravet i 24 kap. 1 § första stycket RB.','Särskild häktning enligt 24 kap. 2 § RB kan ändå aktualiseras, exempelvis vid vissa identifieringsproblem. Det innebär inte automatiskt att gripande är lämpligt eller lagligt.'];
-  showSheet({kicker:'HÄKTNINGSÖVERSIKT',title:custodyLabels[c.custody],body,ref:'Rättegångsbalken 24 kap. 1–3 §§. Endast referensstöd – ingen individuell tvångsmedelsbedömning.'});
+  const selected=c.custody==='none'?[...generic,...special,...(crimeSpecific?scenarios[crimeSpecific]:[])]:c.custody==='unknown'?[...body,...generic]:[
+   ...body,
+   c.custody==='presumption'?'För presumtionsbrott ska den konkreta misstankegraden och presumtionens undantag prövas; ingripande är inte automatiskt befogat.':'Möjliga scenarier: konkret risk att misstänkt undanröjer bevis, fortsätter sin brottslighet eller undandrar sig lagföring. Utred den faktiska risken och anknytning, inte bara brottets rubricering.',
+   ...generic,
+   'Exempel när gripande kan bli aktuellt: stark misstanke och konkret kollusionsrisk, till exempel pågående försök att undanröja centrala bevis, samtidigt som ett åklagarbeslut inte kan avvaktas. Alternativ: identiteten är säker, bevisning redan säkrad och personen vill medverka; brådska eller risk kan då saknas.'
+  ];
+  showSheet({kicker:'FRIHETSBERÖVANDE · REKVISIT OCH SCENARIER',title:custodyLabels[c.custody],body:selected,ref:'Rättegångsbalken 24 kap. 1–3, 6–7 §§. Pröva även proportionalitet, särskilda regler för unga och aktuell laglydelse. Detta beslutar inte att någon ska gripas.'});
 }
 function showProsecution(c){
   showSheet({kicker:'ÅTAL OCH ANGIVELSE',title:c.prosecutionLabel,body:c.prosecutionDetails||['Brottet hör som huvudregel under allmänt åtal. Ingen särskild angivelseförutsättning har lagts in för denna rubricering i prototypen.'],ref:c.prosecutionRule||'Huvudregel: allmänt åtal. Kontrollera alltid eventuella specialbestämmelser.'});
