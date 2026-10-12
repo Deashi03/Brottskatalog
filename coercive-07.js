@@ -63,5 +63,5 @@ const score=(c,e)=>{
  if(e.scale==='four')return min>=4?{label:'Straffskalekrav uppfyllt',tone:'yes'}:{label:'Inte enligt huvudregel',tone:'no'};
  return {label:'Kräver prövning',tone:'conditional'};
 };
-window.BK_COERCIVE={entries,score};
+window.BK_COERCIVE={entries,score,range:c=>c.penaltyRange||legacyRange(c.penalty)};
 })();
