@@ -1015,7 +1015,7 @@ function renderDetail(c){
   ${!c.stageStatus||c.stageStatus==='punishable'?'<button class="status-row" data-action="prosecution" data-id="'+escapeHtml(c.id)+'"><span class="status-icon warn">'+ic('alert-circle')+'</span><span class="status-copy"><div class="status-label">Åtalsregel</div><div class="status-value">'+escapeHtml(c.prosecutionLabel)+'</div></span><span class="status-right">'+ic('info','sm')+ic('chevron-right','sm')+'</span></button>':''}</section>
   <section class="detail-body"><div class="accordions">
   ${accordion('lag','Lagtext', 'book-open',law)}
-  ${c.stageStatus==='punishable'?accordion('tvang','Tvångsmedel – översikt','shield-check',coerciveSection(c)):''}
+  ${(!c.stageStatus||c.stageStatus==='punishable')?accordion('tvang','Tvångsmedel – översikt','shield-check',coerciveSection(c)):''}
   ${accordion('rekvisit','Rekvisit och gärningsvarianter','layers',`<div class="subtle-label">Att pröva</div>${elements?`<ul>${elements}</ul>`:'<p>Kompletterande rekvisitöversikt läggs till senare. Se lagtexten ovan.</p>'}<div class="subtle-label">Gärningsvarianter</div>${variants?`<div class="var-chip-list">${variants}</div>`:'<p>Inga ytterligare varianter registrerade.</p>'}`)}
   ${(c.qualifications||[]).length?accordion('kvalifikation','Kvalifikationsgrunder – fördjupning','layers',qualificationSection(c)):''}
   ${((c.studyNotes||[]).length||c.detailedNote||c.caseNote)?accordion('anteckningar','Anteckningar – fördjupning','book-mark',studyNotesSection(c)):''}
