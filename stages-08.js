@@ -54,7 +54,7 @@ add('BrB 18:7','F','Brott mot medborgerlig frihet|Svikande av försvarsplikt');
 add('BrB 19:14','FPS','Högförräderi|Trolöshet vid förhandling med främmande makt|Spioneri|Grovt spioneri|Utlandsspioneri|Grovt utlandsspioneri|Grov obehörig befattning med hemlig uppgift|Olovlig underrättelseverksamhet mot främmande makt|Olovlig underrättelseverksamhet mot person');
 add('BrB 19:14','FP','Obehörig befattning med hemlig uppgift');
 // Explicit icke-straffbarhet för de efterfrågade kombinationerna; övriga BrB-kapitel får inte falskt nekande.
-const explicitNo=new Set(['ringa stöld','ringa misshandel','ringa bedrägeri','ringa skadegörelse','åverkan','ofredande','våldsamt motstånd','tjänstefel','olaga hot','hemfridsbrott','olaga intrång','ringa narkotikabrott · bruk','narkotikabrott · bruk']);
+const explicitNo=new Set(['ringa stöld','ringa misshandel','ringa bedrägeri','ringa skadegörelse','åverkan','ofredande','våldsamt motstånd','tjänstefel','olaga hot','hemfridsbrott','olaga intrång','ringa narkotikabrott · bruk','narkotikabrott · bruk'].map(norm));
 const chapterSource={3:'BrB 3:11',6:'BrB 6:15',7:'BrB 7:5',8:'BrB 8:12',9:'BrB 9:11',10:'BrB 10:9',11:'BrB 11:6',12:'BrB 12:5',13:'BrB 13:12',14:'BrB 14:13',15:'BrB 15:15',16:'BrB 16:17',17:'BrB 17:16',18:'BrB 18:7',19:'BrB 19:14'};
 const stageScope={
  'oredlighet mot borgenärer':{forsok:'BrB 11:6 omfattar försök till 11:1 första stycket och försök till andra stycket endast om tillgång förs ut ur landet.'},
