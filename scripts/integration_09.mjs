@@ -21,6 +21,8 @@ const status=(title,id)=>co.score(find(title),measure(id));
 assert.ok(cs.length>=950,'Broad catalog should be present: '+cs.length);
 assert.ok(cs.filter(c=>!c.stageType).length>=280,'Expanded base catalog should be present');
 assert.ok(stages.length>=800,'Stage catalog should be present');
+assert.ok(scripts.indexOf('./stages-08.js')<scripts.indexOf('./field-07.js'),'Field notes must be applied after all generated crimes');
+
 assert.equal(new Set(cs.map(c=>c.id)).size,cs.length,'No duplicate crime IDs');
 assert.equal(new Set(cs.map(c=>c.title.toLocaleLowerCase('sv'))).size,cs.length,'No duplicate titles');
 for(const c of cs){
@@ -57,6 +59,7 @@ assert.equal(status('Ringa stöld','grupp').tone,'no');
 assert.equal(status('Försök till mord','grupp').tone,'yes');
 assert.equal(status('Ringa stöld','beslag').tone,'neutral');
 assert.equal(status('Försök till ringa stöld','beslag').tone,'no');
+for(const title of ['Grovt skattebrott','Grov vapensmuggling','Försök till ringa stöld'])assert.ok(find(title)?.investigation?.length>=3,'Missing field plan for '+title);
 assert.equal(find('Grovt skattebrott').penaltyRange.min,1);
 assert.equal(find('Grovt penningtvättsbrott').penaltyRange.min,1);
 assert.equal(find('Grovt brott mot tillståndsplikten för explosiva varor').penaltyRange.min,4);
