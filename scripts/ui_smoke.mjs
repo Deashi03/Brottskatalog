@@ -75,6 +75,51 @@ try{
   await page.locator('#crime-search').fill('Tvegifte');
   await wait();
   assert.ok((await page.locator('.crime-card').allTextContents()).some(x=>x.includes('Tvegifte')),'Newly added family law offence must be searchable');
+  // v0.6: existing penalty with only a ceiling must not show a fake lower bound.
+  await page.goto(url+'#sok',{waitUntil:'networkidle'});
+  await page.locator('#crime-search').fill('urkundsförfalskning');
+  await wait();
+  await page.locator('.crime-card').filter({hasText:'Urkundsförfalskning'}).first().click();
+  await wait();
+  assert.ok((await page.locator('.penalty-only').allTextContents()).some(x=>x.includes('HÖGST')&&x.includes('2 år')),'Max-only penalty is concise');
+  assert.equal((await page.locator('.penalty-panel').innerText()).includes('Ej särskilt angivet'),false,'No confusing lower bound text');
+  // v0.6: search noncriminal references directly.
+  await page.goto(url+'#sok',{waitUntil:'networkidle'});
+  await page.locator('#crime-search').fill('KnivL 1');
+  await wait();
+  assert.ok((await page.locator('#results-area').innerText()).includes('Andra lagrum'),'Separate legal reference results');
+  await page.locator('[data-provision="Kniv:1"]').first().click();
+  assert.ok((await page.locator('[role="dialog"]').innerText()).includes('Knivlagen 1 §'),'Open noncriminal prohibition provision');
+  // v0.6: context-specific use of "underlåtenhet" in robbery law.
+  await page.goto(url+'#sok',{waitUntil:'networkidle'});
+  await page.locator('#crime-search').fill('rån');
+  await wait();
+  await page.locator('.crime-card').filter({hasText:'Rån'}).first().click();
+  await page.locator('summary').filter({hasText:'Lagtext'}).click();
+  const omission=page.locator('.law-paper [data-term="underlåtenhet"]');
+  assert.ok(await omission.count(),'Rån should link the distinct omission in coerced disposition');
+  await omission.first().click();
+  assert.ok((await page.locator('[role="dialog"]').innerText()).includes('Underlåtenhet vid rån'),'Rån-specific definition');
+  await page.goto(url+'#sok',{waitUntil:'networkidle'});
+  await page.locator('#crime-search').fill('olovlig energiavledning');
+  await wait();
+  await page.locator('.crime-card').first().click();
+  await page.locator('summary').filter({hasText:'Utredningsuppslag'}).click();
+  assert.ok((await page.locator('body').innerText()).includes('historiska mätserier'),'Energy consumption investigative guidance');
+  await page.goto(url+'#sok',{waitUntil:'networkidle'});
+  await page.locator('#crime-search').fill('ringa stöld');
+  await wait();
+  await page.locator('.crime-card').first().click();
+  await page.locator('[data-action="custody"]').click();
+  assert.ok((await page.locator('[role="dialog"]').innerText()).includes('24:2'),'Identification custody/urgent grip scenario');
+  assert.ok((await page.locator('[role="dialog"]').innerText()).includes('24:7'),'Custody separated from police power to arrest');
+  await page.goto(url+'#sok',{waitUntil:'networkidle'});
+  await page.locator('#crime-search').fill('grovt brott mot knivlagen');
+  await wait();
+  await page.locator('.crime-card').first().click();
+  await page.locator('summary').filter({hasText:'Kvalifikationsgrunder'}).click();
+  assert.ok((await page.locator('body').innerText()).includes('Annan särskilt farlig art'),'Four knife crime factors explained');
+
   await page.goto(url+'#mer',{waitUntil:'networkidle'});
   const settings=await page.locator('body').innerText();
   assert.ok(settings.includes('Senaste kataloguppdatering'),'Update age in settings');
