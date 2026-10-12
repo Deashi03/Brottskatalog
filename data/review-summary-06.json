@@ -1,0 +1,49 @@
+{
+  "schema": 1,
+  "catalogVersion": "0.6",
+  "reviewDate": "2026-10-12",
+  "brottskort": 251,
+  "newEntries": 14,
+  "referredNoncriminalStatutes": 7,
+  "glossaryItems": 112,
+  "investigationPrompts": 899,
+  "specialInvestigationPlans": 9,
+  "qualificationFactors": 50,
+  "reviewNeeded": {
+    "prosecution": [
+      "Bokföringsbrott",
+      "Grovt bokföringsbrott",
+      "Oredlighet mot borgenärer",
+      "Vårdslöshet mot borgenärer",
+      "Ringa bokföringsbrott",
+      "Brott mot rösthemlighet",
+      "Underlåtenhet att avvärja allmänfara",
+      "Otillåtet förfarande med pornografisk bild",
+      "Falskt larm",
+      "Grovt falskt larm",
+      "Missbruk av larmanordning",
+      "Osann partsutsaga",
+      "Ringa osann partsutsaga",
+      "Ovarsam utsaga",
+      "Missbruk av urkund",
+      "Grovt missbruk av urkund",
+      "Missbruk av handling",
+      "Otillbörligt gynnande av borgenär",
+      "Tagande av otillbörlig förmån vid röstning"
+    ],
+    "custody": [
+      "Brukande av falsk urkund",
+      "Arbetsmiljöbrott"
+    ],
+    "missingLaw": [],
+    "possibleTruncation": [
+      "Grov fridskränkning",
+      "Grov kvinnofridskränkning",
+      "Barnfridsbrott",
+      "Ringa barnfridsbrott",
+      "Grovt barnfridsbrott"
+    ]
+  },
+  "sourcePolicy": "Lagtext citeras som författningstext. Kursanteckningar och självständiga utredningsförslag är åtskilda och märkta. Ingen automatisk juridisk validering av åtalsregler eller häktningsbeslut.",
+  "limitations": "En maskinimporterad konsoliderad paragraf kan vara ofullständig. Kontrollerad straffskala innebär inte att hela brottskortet är juridiskt slutgranskat. Kontrollera rättsläget vid gärningstillfället."
+}
