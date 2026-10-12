@@ -55,6 +55,13 @@ add('BrB 19:14','FP','Obehörig befattning med hemlig uppgift');
 // Explicit icke-straffbarhet för de efterfrågade kombinationerna; övriga BrB-kapitel får inte falskt nekande.
 const explicitNo=new Set(['ringa stöld','ringa misshandel','ringa bedrägeri','ringa skadegörelse','åverkan','ofredande','våldsamt motstånd','tjänstefel','olaga hot','hemfridsbrott','olaga intrång','ringa narkotikabrott · bruk','narkotikabrott · bruk']);
 const chapterSource={3:'BrB 3:11',6:'BrB 6:15',7:'BrB 7:5',8:'BrB 8:12',9:'BrB 9:11',10:'BrB 10:9',11:'BrB 11:6',12:'BrB 12:5',13:'BrB 13:12',14:'BrB 14:13',15:'BrB 15:15',16:'BrB 16:17',17:'BrB 17:16',18:'BrB 18:7',19:'BrB 19:14'};
+const stageScope={
+ 'oredlighet mot borgenärer':{forsok:'BrB 11:6 omfattar försök till 11:1 första stycket och försök till andra stycket endast om tillgång förs ut ur landet.'},
+ 'grov oredlighet mot borgenärer':{forsok:'BrB 11:6 omfattar bara de särskilt angivna gärningsformerna i 11:1.'},
+ 'olovlig befattning med falska pengar':{forsok:'BrB 14:13: endast försök till anskaffande eller mottagande av det förfalskade.'},
+ 'barnpornografibrott':{forsok:'BrB 16:17: försöksansvar är begränsat till brott enligt 16:10 a första stycket.'},
+ 'dataintrång':{forsok:'BrB 4:10: endast om gärningen inte skulle ha varit ringa vid fullbordan.',forberedelse:'BrB 4:10: endast om gärningen inte skulle ha varit ringa vid fullbordan.'}
+};
 const base=D.crimes.slice(),known=new Set(base.map(c=>norm(c.title)));
 const duration=n=>Number.isInteger(n)?n+' år':Math.round(n*12)<12?Math.round(n*12)+' mån':Math.floor(n)+' år '+Math.round(n%1*12)+' mån';
 const isBrB=c=>/^BrB\s+\d+/i.test(c.shortRef||c.ref||'');
@@ -90,7 +97,8 @@ for(const c of base){
   const penalty=status==='punishable'?(code==='F'?minLabel+' – högst '+maxLabel:(maxStrict?'Böter eller fängelse, lägre än '+duration(p.max)+(p.max<6?' och högst 2 år':''):'Böter eller fängelse högst '+duration(max))):status==='not-criminalized'?'Saknar straffskala – ej kriminaliserat':'Straffbarhet/straffskala ej verifierad';
   const short=status==='punishable'?(hasFine?'B–F ':'F ')+(maxStrict?'< ':'')+maxLabel:status==='not-criminalized'?'Ej straffbart':'Ej verifierat';
   const src=permit?.source|| (brb?(chapterSource[chapter]||'BrB '+chapter+' kap. (särskild kriminalisering ej slutgranskad)'):'Specialstraffrätt – kontroll krävs');
-  const why=status==='not-criminalized'?'Det finns inte någon särskild föreskrift om ansvar för '+word+' till just denna rubricering i den kontrollerade kriminaliseringsbestämmelsen. Det utesluter inte att en annan brottsrubricering kan bli aktuell.':status==='unverified'?'Förstadiets straffbarhet har inte verifierats mot all tillämplig speciallagstiftning. Avsaknad av verifiering betyder INTE att gärningen är straffri.':limitNote;
+  const restriction=stageScope[key]?.[slug]||'';
+  const why=status==='not-criminalized'?'Det finns inte någon särskild föreskrift om ansvar för '+word+' till just denna rubricering i den kontrollerade kriminaliseringsbestämmelsen. Det utesluter inte att en annan brottsrubricering kan bli aktuell.':status==='unverified'?'Förstadiets straffbarhet har inte verifierats mot all tillämplig speciallagstiftning. Avsaknad av verifiering betyder INTE att gärningen är straffri.':limitNote+(restriction?' Begränsning: '+restriction:'');
   const stageTitle=prefix+' '+c.title.toLocaleLowerCase('sv');
   const baseLaw=(c.law||'').trim();
   const law=status==='punishable' ? ('Straffansvar för '+word+' regleras i '+src+' jämförd med BrB 23:'+para+'. Den fullständiga lydelsen finns via den officiella rättskällan.'):('Ingen egen straffbestämmelse återges för denna kombination. '+why);
@@ -99,7 +107,7 @@ for(const c of base){
    shortRef:(c.shortRef||'')+' · 23:'+para,category:c.category,aliases:[prefix.toLocaleLowerCase('sv')+' '+c.title,slug+' '+c.title],
    statute:c.statute,sourceURL:narc?NARK:BRB,penalty,penaltyShort:short,
    penaltyRange:status==='punishable'?{min,max,fines:hasFine,life:code==='F'&&!!p.life}:null,
-   penaltyNote:status==='punishable'?limitNote:why,penaltyChecked:'2026-10-12',
+   penaltyNote:why,penaltyChecked:'2026-10-12',
    stageType:slug,stageStatus:status,stageSource:src,stageParentId:c.id,
    stageParentMin:p.min,stageParentMax:p.max,stageParentLife:!!p.life,
    stageExplanation:why,
@@ -108,7 +116,7 @@ for(const c of base){
    prosecutionDetails:status==='punishable'?['Kontrollera särskilda åtalsvillkor för det aktuella brottet och förstadiet.']:['Inget straffansvar är verifierat för detta förstadium.'],
    law,lawSource:src+'; BrB 23:'+para,lawMode:'stage-reference',
    stageLawNotice:true,reviewStatus:status==='unverified'?'not-reviewed':'stage-statute-reviewed',
-   elements:[],facts:[],stages:[],related:[c.id],variants:[],lawTerms:[]
+   elements:restriction?[restriction]:[],facts:[],stages:[],related:[c.id],variants:[],lawTerms:[]
   };
   D.crimes.push(entry);
  }
