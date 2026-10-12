@@ -1002,6 +1002,7 @@ function renderDetail(c){
     else blocks.push('<p>Den särskilda kriminaliseringsbestämmelsen återges via officiell källa.</p>');
     if(general?.text)blocks.push('<h3>'+escapeHtml(general.ref)+'</h3><div class="law-paper">'+escapeHtml(general.text)+'</div>');
     else blocks.push('<p>BrB 23:'+para+' – kontrollera fullständig lydelse i rättskällan.</p>');
+    if(general?.machine||particular?.machine||general?.complete===false||particular?.complete===false)blocks.push('<p class="source-incomplete">Maskinimporterat lagtextutdrag – kontrollera fullständig aktuell lydelse hos Sveriges riksdag.</p>');
     blocks.push('<a class="source-link" href="'+escapeHtml(c.sourceURL||'https://data.riksdagen.se/dokument/sfs-1962-700.html')+'" target="_blank" rel="noopener noreferrer">Officiell författning '+ic('external-link','sm')+'</a>');
     blocks.push('<p class="source-label">Förstadiets lagrum: '+escapeHtml(c.stageSource)+'. '+escapeHtml(c.stageStatus==='not-criminalized'?'Ej särskilt straffbelagt.':c.stageStatus==='unverified'?'Straffbarhet inte slutligt granskad.':'Särskilt straffbelagt.')+'</p>');
     law=blocks.join('');
