@@ -114,5 +114,5 @@ for(const c of D.crimes){
  let plan=A[t]||A[base]||G[c.category]||fallback;
  c.investigation=plan.map(([title,how,later])=>({title,how,phase:later?'followup':'field'}));
 }
-D.release='0.9';
+D.release='1.0';
 })();
