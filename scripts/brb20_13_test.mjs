@@ -15,7 +15,7 @@ const ctx={window:w,console};
 vm.runInNewContext(readFileSync(resolve(root,'brb20-13.js'),'utf8'),ctx);
 assert.equal(w.BK_BRB20_13.corrected,4);
 assert.equal(w.BK_BRB20_13.inserted,2);
-const get=t=>w.BK_DATA.crimes.find(c=>c.title===t);
+const get=t=>w.BK_DATA.crimes.find(c=>c.title.toLocaleLowerCase('sv')===t.toLocaleLowerCase('sv'));
 assert.equal(get('Grovt tjänstefel').penaltyRange.min,1.5);
 assert.equal(get('Grovt brott mot tystnadsplikt').penaltyRange.max,6);
 assert.equal(get('Brott mot tystnadsplikt').prosecution,'conditional');
