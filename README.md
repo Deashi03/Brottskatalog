@@ -1,3 +1,15 @@
+## Uppdatering 1.1 – Rättslig kontroll längst ned (2026-10-13)
+
+- Brottskortets sista funktion före versionsfotnoten är nu **Rättslig kontroll**, en liten grå rad som är **stängd som standard**. Inget visas före lagtext, straffskala, häktning eller tvångsmedel.
+- Detaljvyn redovisar lagtextens granskningsstatus, straffskalans kvalitet, åtalets källstatus, förstadiebedömningen, en officiell författningslänk och att historisk/gällande lagversion **inte** fastställs automatiskt.
+- **Efter tre år** från en faktisk dokumenterad rättslig kontroll visas en lågmäld bärnstensfärgad markering **Äldre kontroll** på just den nedersta raden. Appen söker inte efter eller ändrar lagtext av sig själv. Användaren avgör när en ny uppdatering ska göras.
+- En maskinimport, automatiskt genererat förstadium eller en generell åtalsklassificering räknas **inte** som individuell juridisk sakgranskning. Om kontrolltidpunkt saknas står det uttryckligen så. Det utlöser ingen falsk ”tre år gamla data”-varning.
+- Straffskalorna för förberedelse och stämpling till särskilt grova brott har justerats där böter inte kan ingå och där de numeriska gränserna är villkorade av BrB 23:2. Tidigare automatiska värden ska fortsatt granskas mot rätt gärningsform.
+- Saknat fält för källa vid redan registrerat allmänt åtal får en uttrycklig hänvisning till **RB 20:3 som huvudregel**, men med tydlig anteckning om att specialundantag inte är individuellt verifierade. Detta är inte ett bevis för att allmänt åtal är tillåtet i alla omständigheter.
+- Ändringarna testas med `scripts/quality_11_test.mjs` (treårsgräns, saknade datum, rätt placering) samt befintliga katalog- och mobiltester.
+
+**Viktigt:** En genomförd databasrevision gör inte 406 ogranskade förstadier eller 46 saknade offline-lagtexter juridiskt fullständiga. De redovisas fortsatt som granskningsbehov. Ingen kontrollmarkering ändras enbart för att en kodfil har uppdaterats.
+
 # Brottskatalog 1.0 – tydligare straffskalor, beslutsbehörighet och åtalsregler
 
 **Safari:** https://deashi03.github.io/Brottskatalog/
