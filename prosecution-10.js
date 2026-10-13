@@ -50,6 +50,9 @@
   }else if(/^LBE\s/i.test(short)){
     general(c,rb+'; lagen (2010:1011) om brandfarliga och explosiva varor 29–30 a §§',
      ['Verifiera straffbarhet, rätt brottstyp och eventuella specialbestämmelser.']);
+  }else if(chapter===19 && /olovlig underrättelseverksamhet mot främmande makt|tagande av utländskt understöd|olovlig värvning/i.test(c.title)){
+    condition(c,'Regeringens förordnande','BrB 19 kap. 16 §; RB 20 kap. 3 §',
+      ['Åtal får väckas först efter regeringens förordnande i de fall som anges i BrB 19:16.', 'Bestämmelsen omfattar även vissa straffbara försök, förberedelser och stämplingar.']);
   }else if((c.prosecution==='unknown'||!c.prosecution)&&chapter&&maybeBrBGeneral.has(chapter)){
     general(c,rb+'; BrB '+chapter+' kap.',
       ['Den ordinarie åtalsregeln gäller enligt de genomgångna bestämmelserna i detta kapitel.']);
