@@ -30,7 +30,7 @@ for(const [title,ref,min,max,fines,short,sfs,effective,elems] of cases){
  c.reviewStatus='penalty-reviewed-source-excerpt';
  c.sourceURL=URL;c.effectiveFrom=effective;
  c.custody=min>=1.5?'presumption':max>=1?'possible':'none';
- c.penaltyNote='Straffskala enligt BrB '+ref+'; '+sfs+' gäller från '+effective+'.';
+ c.penaltyNote='Straffskala enligt BrB '+ref+'.';
  const excerpt=window.BK_STATUTES?.['BrB:'+ref];
  if(excerpt?.text){c.law=excerpt.text;c.lawMode='machine';c.lawSource=excerpt.ref+' · maskinimporterad ordalydelse, ej fullständighetsgranskad';}
  c.elements=elems;
@@ -77,12 +77,12 @@ const entries=[
  {id:'v13-missbruk-offentlig-stallning',title:'Missbruk av offentlig ställning',
   penalty:'Böter eller fängelse i högst två år',penaltyShort:'B–F 2 år',
   penaltyRange:{min:0,max:2,fines:true,life:false},
-  penaltyNote:'Gärningar enligt första stycket av BrB 20:2. Uppsåt krävs. Gäller från 1 augusti 2026.',
+  penaltyNote:'BrB 20:2 första stycket. Uppsåt krävs.',
   custody:'possible'},
  {id:'v13-grovt-missbruk-offentlig-stallning',title:'Grovt missbruk av offentlig ställning',
   penalty:'Fängelse i lägst ett år och sex månader och högst sex år',
   penaltyShort:'F 1,5–6 år',penaltyRange:{min:1.5,max:6,fines:false,life:false},
-  penaltyNote:'Kvalificerande omständigheter i BrB 20:2 andra stycket. Gäller från 1 augusti 2026.',
+  penaltyNote:'Kvalificerande omständigheter i BrB 20:2 andra stycket.',
   custody:'presumption',
   elements:[...common.elements,'Särskilt beakta ansvarsfull ställning, värde/vinning/skada, organiserat eller systematiskt utförande, eller särskilt farlig art.']
  }
