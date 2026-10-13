@@ -61,7 +61,14 @@ const stageScope={
  'grov oredlighet mot borgenärer':{forsok:'BrB 11:6 omfattar bara de särskilt angivna gärningsformerna i 11:1.'},
  'olovlig befattning med falska pengar':{forsok:'BrB 14:13: endast försök till anskaffande eller mottagande av det förfalskade.'},
  'barnpornografibrott':{forsok:'BrB 16:17: försöksansvar är begränsat till brott enligt 16:10 a första stycket.'},
- 'dataintrång':{forsok:'BrB 4:10: endast om gärningen inte skulle ha varit ringa vid fullbordan.',forberedelse:'BrB 4:10: endast om gärningen inte skulle ha varit ringa vid fullbordan.'}
+ 'dataintrång':{forsok:'BrB 4:10: endast om gärningen inte skulle ha varit ringa vid fullbordan.',forberedelse:'BrB 4:10: endast om gärningen inte skulle ha varit ringa vid fullbordan.'},
+ 'tillgrepp av fortskaffningsmedel':{
+  forsok:'BrB 8:12: försöksansvar gäller inte om tillgreppet, om det hade fullbordats, skulle ha varit ringa.',
+  forberedelse:'BrB 8:12: kontrollera lagens särskilda avgränsningar och gärningsform.'
+ },
+ 'utpressning':{forsok:'BrB 9:11: det särskilda undantaget från reglerna om frivilligt tillbakaträdande i 23:3 gäller för försök till utpressning.'},
+ 'ringa utpressning':{forsok:'BrB 9:11: kontrollera undantaget rörande frivilligt tillbakaträdande för försök till utpressning.'},
+ 'grov utpressning':{forsok:'BrB 9:11: kontrollera undantaget rörande frivilligt tillbakaträdande för försök till utpressning.'}
 };
 const base=D.crimes.slice(),known=new Set(base.map(c=>norm(c.title)));
 const duration=n=>Number.isInteger(n)?n+' år':Math.round(n*12)<12?Math.round(n*12)+' mån':Math.floor(n)+' år '+Math.round(n%1*12)+' mån';
