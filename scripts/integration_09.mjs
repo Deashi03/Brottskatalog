@@ -60,7 +60,7 @@ for(const measureRow of coercive){
 }
 assert.ok(co.decisionPaths(measure('beslag')).some(x=>x.label==='Polisman beslutar'));
 assert.ok(!co.decisionPaths(measure('beslag')).some(x=>x.label==='Polisman FID'));
-assert.deepEqual(co.decisionPaths(measure('husrannsakan')).map(x=>x.id).filter(x=>x==='fid'),['fid']);
+assert.equal(JSON.stringify(co.decisionPaths(measure('husrannsakan')).map(x=>x.id).filter(x=>x==='fid')),JSON.stringify(['fid']));
 
 assert.equal(measure('beslag').officerMode,'both');
 assert.equal(measure('husrannsakan').officerMode,'fid');
