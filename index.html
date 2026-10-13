@@ -1104,7 +1104,7 @@ function qualityCard(c){
   '<div class="qa-body"><p class="qa-date">'+escapeHtml(m.lastReviewLabel)+'</p>'+
   (m.stale?'<p class="qa-stale">Mer än tre år sedan senaste dokumenterade sakgranskning. Kontrollera om lagtext eller rättsläge har ändrats. Den här påminnelsen ändrar inte innehållet automatiskt.</p>':'')+
   rows.map(([title,val])=>'<div class="qa-row"><strong>'+escapeHtml(title)+'</strong><span>'+escapeHtml(val)+'</span></div>').join('')+
-  (m.effectiveNote?'<p class="qa-effective">'+escapeHtml(m.effectiveNote)+'</p>':'')+'<p class="qa-muted">'+escapeHtml(m.versionStatus)+'</p><p class="qa-muted">'+escapeHtml(m.dateNotice)+'</p>'+source+'</div></details>';
+  (m.alternateVersionNote?'<p class="qa-effective">'+escapeHtml(m.alternateVersionNote)+'</p>':'')+(m.effectiveNote?'<p class="qa-effective">'+escapeHtml(m.effectiveNote)+'</p>':'')+'<p class="qa-muted">'+escapeHtml(m.versionStatus)+'</p><p class="qa-muted">'+escapeHtml(m.dateNotice)+'</p>'+source+'</div></details>';
 }
 
 function renderDetail(c){
