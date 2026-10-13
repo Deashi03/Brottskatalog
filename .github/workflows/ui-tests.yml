@@ -14,6 +14,7 @@ on:
       - "decisions-10.js"
       - "prosecution-10.js"
       - "scripts/integration_09.mjs"
+      - "scripts/audit_catalog.mjs"
       - ".github/workflows/ui-tests.yml"
   push:
     branches: [main]
@@ -32,6 +33,7 @@ on:
       - "decisions-10.js"
       - "prosecution-10.js"
       - "scripts/integration_09.mjs"
+      - "scripts/audit_catalog.mjs"
       - ".github/workflows/ui-tests.yml"
 permissions:
   contents: read
@@ -47,6 +49,16 @@ jobs:
         run: node scripts/stage_rules_test.mjs
       - name: Full catalog integration and statutes test
         run: node scripts/integration_09.mjs
+      - name: Catalog-wide quality audit
+        run: node scripts/audit_catalog.mjs
+        continue-on-error: true
+      - name: Archive full quality report
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: brottskatalog-quality-audit
+          path: audit/quality-report.json
+          if-no-files-found: warn
       - name: Install headless browser
         run: |
           npm install --no-save playwright
