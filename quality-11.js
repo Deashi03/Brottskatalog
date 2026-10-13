@@ -32,6 +32,7 @@
      sourceURL:sourceURL(c)||sourceURL(parent||{}),
      law:lawStatus,penalty:penaltyStatus,prosecution:prosecutionStatus,stages:stageStatus,
      lastReviewLabel:lastReview?'Senaste dokumenterade sakgranskning: '+lastReview:'Ingen individuell kontrolltidpunkt dokumenterad',
+     effectiveNote:c.introducedFrom?'Brottstypen infördes '+c.introducedFrom+'. Gäller inte gärningar före ikraftträdandet.':c.effectiveFrom?'Den registrerade straffskaleversionen gäller från '+c.effectiveFrom+'. Äldre gärningar kräver äldre lagversion.':null,
      dateNotice:'Datumen avser dokumenterade kontroller, inte automatiskt uppdaterad lagtext. Rättsläget vid gärningstidpunkten behöver bedömas särskilt.',
      versionStatus:'Giltig lagversion för gärningsdatum: inte automatiskt fastställd.'
    };
