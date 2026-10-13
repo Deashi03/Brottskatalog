@@ -165,6 +165,22 @@ try{
   assert.ok(await page.locator('.coercive-entry[data-eligible="true"] .measure-icon.yes').count()>0,'Eligible measures show check mark');
   assert.ok(await page.locator('.coercive-entry[data-eligible="false"] .measure-icon.no').count()>0,'Ineligible measures show cross');
   assert.ok((await page.locator('.coercive-entry').allTextContents()).some(x=>x.includes('FID')),'Police FID badges are visible');
+  // v0.9: high-contrast crime eligibility and explicit decision-maker wording.
+  const decisionTexts=await page.locator('.coercive-entry').allTextContents();
+  assert.ok(decisionTexts.some(x=>x.includes('Eget beslut')),'Direct police decision must read Eget beslut');
+  assert.ok(decisionTexts.some(x=>x.includes('Polisman FID')),'Police urgency decision must read Polisman FID');
+  assert.ok(decisionTexts.some(x=>x.includes('FU-ledare')),'Investigation leader must be labeled FU-ledare');
+  const beslag=page.locator('.coercive-entry').filter({hasText:'27:1'}).filter({hasText:'Beslag'}).first();
+  assert.ok((await beslag.locator('.decision-pill').allTextContents()).includes('Eget beslut'),'Beslag should show own decision');
+  assert.ok((await beslag.locator('.decision-pill').allTextContents()).includes('Polisman FID'),'Beslag should show urgent decision');
+  const colors=await page.evaluate(()=>({
+    yes:getComputedStyle(document.querySelector('.measure-icon.yes')).color,
+    no:getComputedStyle(document.querySelector('.measure-icon.no')).color
+  }));
+  assert.notEqual(colors.yes,colors.no,'Green checks and red crosses must have distinct computed colors');
+  assert.ok(await page.locator('.decision-pill.own').count()>0,'Own decision badges must exist');
+  assert.ok(await page.locator('.decision-pill.fid').count()>0,'FID badges must exist');
+
   const filter=page.locator('.coercive-filter');
   await filter.check();
   assert.equal(await page.locator('.coercive-entry[data-eligible="false"]:visible').count(),0,'Only-check filter hides ineligible measures');
