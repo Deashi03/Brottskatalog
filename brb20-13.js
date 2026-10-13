@@ -30,10 +30,25 @@ for(const [title,ref,min,max,fines,short,sfs,effective,elems] of cases){
  c.reviewStatus='penalty-reviewed-source-excerpt';
  c.sourceURL=URL;c.effectiveFrom=effective;
  c.custody=min>=1.5?'presumption':max>=1?'possible':'none';
- c.penaltyNote='Straffskala enligt '+p20+ref.slice(3)+'; '+sfs+' gäller från '+effective+'.';
+ c.penaltyNote='Straffskala enligt BrB '+ref+'; '+sfs+' gäller från '+effective+'.';
  const excerpt=window.BK_STATUTES?.['BrB:'+ref];
  if(excerpt?.text){c.law=excerpt.text;c.lawMode='machine';c.lawSource=excerpt.ref+' · maskinimporterad ordalydelse, ej fullständighetsgranskad';}
  c.elements=elems;
+ if(ref==='20:3'){
+   c.prosecution='conditional';
+   c.prosecutionLabel='Villkor för viss tystnadsplikt';
+   c.prosecutionRule='BrB 20:5 sista stycket; RB 20:3';
+   c.prosecutionSource=c.prosecutionRule;
+   c.prosecutionChecked=checked;
+   c.prosecutionDetails=[
+    'När tystnadsplikten gäller till förmån för enskild målsägande får åklagare, om inte särskilda bestämmelser gäller, åtala endast efter målsägandens angivelse eller om åtal är påkallat från allmän synpunkt.',
+    'För tystnadsplikter utanför denna särskilda situation gäller huvudregeln om allmänt åtal. Kontrollera den konkreta tystnadspliktens skyddsintresse.'
+   ];
+ }else{
+   c.prosecution='general';c.prosecutionLabel='Allmänt åtal';c.prosecutionRule='RB 20:3; BrB 20:5';
+   c.prosecutionSource=c.prosecutionRule;c.prosecutionChecked=checked;
+   c.prosecutionDetails=['Allmänt åtal är huvudregel. Särskilda processhinder måste kontrolleras i det konkreta fallet.'];
+ }
  c.legalNote='Straffskala kontrollerad för gärningar från '+effective+'. Äldre gärningar kräver äldre lagversion.';
  corrected++;
 }
