@@ -43,7 +43,7 @@ for(const c of all){
   if(c.stageStatus!=='punishable'&&c.penaltyRange)flag(id,'critical','noncriminal-has-penalty','Stage without verified criminalization has penalty');
   if(!c.stageSource)flag(id,'medium','stage-source-missing','No linked stage-specific criminalization provision');
   if(c.stageStatus==='unverified')flag(id,'medium','stage-not-reviewed','Needs statute-specific status verification');
-  if(c.stageStatus==='not-criminalized'&&!c.stageSource.match(/^(BrB|NSL|Narkotikastrafflagen|VapenL|PTBL|SmuglL|SkBrL|BidrBrL|LBE)/i))
+  if(c.stageStatus==='not-criminalized'&&!String(c.stageSource||'').match(/^(BrB|NSL|Narkotikastrafflagen|VapenL|PTBL|SmuglL|SkBrL|BidrBrL|LBE)/i))
     flag(id,'medium','noncriminal-source-weak','Noncriminal stage not tied to precise law');
   if(c.stageStatus==='punishable'&&c.stageType==='forsok'&&c.stageParentMin>=2&&c.penaltyRange?.min!==1/12)
     flag(id,'high','attempt-minimum','Attempt with fängelse ≥ 2y parent should carry 1mo floor');
