@@ -51,6 +51,17 @@ for(const e of coercive){
  assert.ok(['direct','fid','both','none','special'].includes(e.officerMode),'Invalid decision code: '+e.id);
  assert.ok(/RB \d{2}:\d+/.test(e.ref),'Full statute reference: '+e.title);
 }
+// Every measure has at most one police decision label; own decision takes precedence over FID.
+for(const measureRow of coercive){
+ const allPaths=co.decisionPaths(measureRow),ids=allPaths.map(x=>x.id);
+ assert.ok(!(ids.includes('own')&&ids.includes('fid')),'Overlapping own/FID labels on '+measureRow.id);
+ if(ids.includes('own'))assert.ok(allPaths.some(x=>x.label==='Polisman beslutar'),'Wrong direct decision label for '+measureRow.id);
+ if(ids.includes('fid'))assert.ok(allPaths.some(x=>x.label==='Polisman FID'),'Wrong urgent decision label for '+measureRow.id);
+}
+assert.ok(co.decisionPaths(measure('beslag')).some(x=>x.label==='Polisman beslutar'));
+assert.ok(!co.decisionPaths(measure('beslag')).some(x=>x.label==='Polisman FID'));
+assert.deepEqual(co.decisionPaths(measure('husrannsakan')).map(x=>x.id).filter(x=>x==='fid'),['fid']);
+
 assert.equal(measure('beslag').officerMode,'both');
 assert.equal(measure('husrannsakan').officerMode,'fid');
 assert.equal(measure('postbeslag').officerMode,'none');
@@ -67,5 +78,9 @@ const offline=readFileSync(resolve(root,'service-worker.js'),'utf8');
 for(const file of ['special-09.js','coercive-09.js','stages-08.js'])assert.ok(offline.includes(file),'Missing offline file: '+file);
 assert.ok(html.includes("accordion('lag','Lagtext'"),'Law text first');
 assert.ok(html.includes('coercive-filter')&&html.includes('measure-decision'),'Measure status UI missing');
+assert.ok(html.includes('.app-shell.nav-layout>main.page'),'Scroll viewport CSS missing');
+assert.ok(html.includes('.app-shell.nav-layout>.bottom-nav'),'Non-overlay navigation CSS missing');
+assert.equal((html.match(/app.className='app-shell nav-layout '/g)||[]).length,3,'All three tabs must use content viewport');
+
 console.log('PASS full 0.9 load:',JSON.stringify({total:cs.length,base:cs.length-stages.length,stages:stages.length,byStatus:stages.reduce((a,c)=>(a[c.stageStatus]=(a[c.stageStatus]||0)+1,a),{}),measures:coercive.length,legalCases:cases.length,warnings:warning.length}));
 if(warning.length)console.log('CAVEAT unresolved legacy law-text imports:',warning.slice(0,6).join('; '));
