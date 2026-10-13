@@ -11,6 +11,8 @@ on:
       - "stages-08.js"
       - "special-09.js"
       - "coercive-09.js"
+      - "decisions-10.js"
+      - "prosecution-10.js"
       - "scripts/integration_09.mjs"
       - ".github/workflows/ui-tests.yml"
   push:
@@ -27,6 +29,8 @@ on:
       - "stages-08.js"
       - "special-09.js"
       - "coercive-09.js"
+      - "decisions-10.js"
+      - "prosecution-10.js"
       - "scripts/integration_09.mjs"
       - ".github/workflows/ui-tests.yml"
 permissions:
