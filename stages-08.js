@@ -70,7 +70,32 @@ const stageScope={
  },
  'utpressning':{forsok:'BrB 9:11: det särskilda undantaget från reglerna om frivilligt tillbakaträdande i 23:3 gäller för försök till utpressning.'},
  'ringa utpressning':{forsok:'BrB 9:11: kontrollera undantaget rörande frivilligt tillbakaträdande för försök till utpressning.'},
- 'grov utpressning':{forsok:'BrB 9:11: kontrollera undantaget rörande frivilligt tillbakaträdande för försök till utpressning.'}
+ 'grov utpressning':{forsok:'BrB 9:11: kontrollera undantaget rörande frivilligt tillbakaträdande för försök till utpressning.'},
+ 'olovlig avvikelse av krigsman':{
+  forsok:'BrB 21:1 och 21:15: kapitel 21 tillämpas vid krig eller efter särskilt regeringsbeslut vid krigsfara/utomordentliga förhållanden. Förstadieansvaret följer 21:15.',
+  forberedelse:'BrB 21:1 och 21:15: kapitel 21 gäller endast under de särskilt föreskrivna förhållandena.',
+  stampling:'BrB 21:1 och 21:15: kapitel 21 gäller endast under de särskilt föreskrivna förhållandena.'
+ },
+ 'grov olovlig avvikelse av krigsman':{
+  forsok:'BrB 21:1 och 21:15: kapitel 21 förutsätter krig eller föreskrivet regeringsbeslut.',
+  forberedelse:'BrB 21:1 och 21:15: kapitel 21 förutsätter krig eller föreskrivet regeringsbeslut.',
+  stampling:'BrB 21:1 och 21:15: kapitel 21 förutsätter krig eller föreskrivet regeringsbeslut.'
+ },
+ 'våld eller hot mot förman':{
+  forsok:'BrB 21:1, 21:8 och 21:15: kapitel 21 förutsätter krig eller föreskrivet regeringsbeslut.',
+  forberedelse:'BrB 21:1, 21:8 och 21:15: kapitel 21 förutsätter krig eller föreskrivet regeringsbeslut.',
+  stampling:'BrB 21:1, 21:8 och 21:15: kapitel 21 förutsätter krig eller föreskrivet regeringsbeslut.'
+ },
+ 'landsförräderi':{
+  forsok:'BrB 22:1 och 22:7: huvudbrottet förutsätter krig. Se även 22:10 om särskild tillämpning.',
+  forberedelse:'BrB 22:7: ansvar kan inträda även när landet hotas av krig, ockupation eller andra fientligheter.',
+  stampling:'BrB 22:7: att träda i förbindelse med fienden omfattas särskilt; förberedelse/stämpling kan vara straffbar redan vid hot om krig.'
+ },
+ 'landssvek':{
+  forsok:'BrB 22:2 och 22:7: huvudbrottet har särskilda krigsförutsättningar.',
+  forberedelse:'BrB 22:7: ansvar kan inträda även vid hot om krig, ockupation eller andra fientligheter.',
+  stampling:'BrB 22:7: särskilt utvidgat stämplingsbegrepp och möjlighet till ansvar vid hot om fientligheter.'
+ }
 };
 const base=D.crimes.slice(),known=new Set(base.map(c=>norm(c.title)));
 const duration=n=>Number.isInteger(n)?n+' år':Math.round(n*12)<12?Math.round(n*12)+' mån':Math.floor(n)+' år '+Math.round(n%1*12)+' mån';
