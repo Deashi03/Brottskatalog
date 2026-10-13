@@ -254,6 +254,22 @@ try{
   await page.locator('.crime-card').filter({hasText:'Människorov'}).first().click();
   assert.ok((await page.locator('.status-block').innerText()).includes('Allmänt åtal'),'General prosecution must be explicit');
   assert.ok(await page.locator('.status-icon.good').count()>0,'General prosecution has green check');
+  // v1.3 – updated BrB 20 offences must be searchable and carry correct dates.
+  await page.goto(url+'#sok',{waitUntil:'networkidle'});
+  await page.locator('#crime-search').fill('missbruk av offentlig ställning');await wait();
+  assert.ok(await page.locator('.crime-title').filter({hasText:'Missbruk av offentlig ställning'}).count()>0,'New public-office misuse offence must be searchable');
+  assert.ok(await page.locator('.crime-title').filter({hasText:'Grovt missbruk av offentlig ställning'}).count()>0,'Aggravated public-office misuse offence must be searchable');
+  await page.locator('.crime-card[data-open="v13-missbruk-offentlig-stallning"]').click();
+  assert.ok((await page.locator('.detail-ref').innerText()).includes('20 kap. 2'),'Correct offence statute ref must be shown');
+  assert.ok((await page.locator('.status-block').innerText()).includes('Allmänt åtal'),'Offence must display general prosecution');
+  const legalReview=page.locator('#sec-quality');
+  assert.equal(await legalReview.evaluate(el=>el.open),false,'Effective-date note stays collapsed');
+  await legalReview.locator('summary').click();
+  assert.ok((await legalReview.innerText()).includes('2026-08-01'),'Offence commencement date must be discoverable at bottom');
+  await page.goto(url+'#sok',{waitUntil:'networkidle'});
+  await page.locator('#crime-search').fill('brott mot tystnadsplikt');await wait();
+  await page.locator('.crime-card').filter({has:page.locator('.crime-title:text-is("Brott mot tystnadsplikt")')}).first().click();
+  assert.ok((await page.locator('.status-block').innerText()).includes('Villkor för viss tystnadsplikt'),'Special BrB 20:5 prosecution rule must be visible');
   await page.goto(url+'#mer',{waitUntil:'networkidle'});
   const settings=await page.locator('body').innerText();
   assert.ok(settings.includes('Senaste kataloguppdatering'),'Update age in settings');
