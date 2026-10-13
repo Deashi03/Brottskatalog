@@ -9,7 +9,7 @@ Granskningsrapporten nedan dokumenterar **äldre tillstånd** och ska inte läsa
 - Åtal: **215** grundposter märkta med allmänt åtal, **82** med åtalsvillkor, **0** oklassificerade.
 - Straffskaleformat: **295 av 297** med numeriskt intervall; **2** legitimt beroende av ett underliggande brott eller straffbud.
 - Offline lagtext: **48** poster med tidigare manuellt lagtextläge, **249** med maskinimporterat utdrag, **0** utan något textutdrag. Ett maskinimporterat utdrag är inte juridiskt slutgranskat.
-- Öppna sakgranskningspunkter: **249 maskinimporterade utdrag**, **50 poster utan dokumenterad straffskalekontroll** och **12 negativa förstadiebesked med svag explicit källkedja**. Samma post kan förekomma i flera kategorier.
+- Öppna sakgranskningspunkter: **249 maskinimporterade utdrag**, **50 poster utan dokumenterad straffskalekontroll** och **0 negativa förstadiebesked med den tidigare dokumenterade källhänvisningsluckan**. Samma post kan förekomma i flera kategorier.
 
 Automatisk granskning och godkända tester är inte likvärdiga med juridisk sakkunniggranskning. Historisk lagversion och framtida ikraftträdanden måste fortsatt hanteras separat.
 
