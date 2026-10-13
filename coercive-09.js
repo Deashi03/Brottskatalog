@@ -50,9 +50,41 @@
   }
   return savedScore(c,e);
  };
+ // Separera varje beslutsväg. "Nej" avser aldrig en beslutsfattare.
+ // Dessa uppgifter beskriver behörighet, inte att en åtgärd är tillåten i det enskilda fallet.
+ const paths={
+  husrannsakan:['fu','prosecutor','court','fid'],
+  personell:['fu','prosecutor','court','fid'],
+  publik:['fu','prosecutor','court','fid'],
+  brottslokal:['fu','prosecutor','court','fid'],
+  transport:['fu','prosecutor','court','fid'],
+  undersokning:['own','fu','prosecutor'],
+  avsparrning:['own','fid','fu','prosecutor'],
+  visitation:['fu','prosecutor','court','fid'],
+  besiktning:['fu','prosecutor','court','fid'],
+  dna:['fu','prosecutor','court','fid'],
+  daktning:['fu','prosecutor','court','fid'],
+  grupp:['fu','prosecutor'],
+  telefon:['own'],telefonvis:['own'],
+  beslag:['own','fid','fu','prosecutor'],
+  penningbeslag:['own','fid','fu','prosecutor'],
+  postbeslag:['fu','prosecutor'],
+  kopiera:['own'],
+  distans:['fu','prosecutor','court','fid'],
+  biometri:['own'],
+  bevara:['fu','prosecutor'],
+  forvar:['fid','prosecutor'],
+  kvarstad:['court'],
+  reseforbud:['prosecutor','court'],
+  'medtagande-plats':['own'],
+  'medtagande-omrade':['own'],
+  kvarstannande:['special']
+ };
+ const decisionNames={fu:'FU-ledare',fid:'Polisman FID',own:'Eget beslut',prosecutor:'Åklagare',court:'Rätten',special:'Särskild regel'};
+ reg.decisionPaths=e=>(paths[e.id]||['special']).map(id=>({id,label:decisionNames[id]}));
  reg.officerSummary=e=>{
   const val=e.officerMode||'special';
-  return val==='direct'?'Direkt':val==='fid'?'FID':val==='both'?'Direkt / FID':val==='none'?'Nej':'Särskild regel';
+  return val==='direct'?'Eget beslut':val==='fid'?'Polisman FID':val==='both'?'Eget beslut / Polisman FID':val==='none'?'Annans beslut':'Särskild regel';
  };
  reg.eligible=(c,e)=>{
   const v=reg.score(c,e);
