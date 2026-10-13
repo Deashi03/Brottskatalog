@@ -9,7 +9,7 @@
 - **✓ / ✕ direkt på varje tvångsmedel** för om brottets straffskala eller brottstyp kan medge den aktuella åtgärden. Grön bock innebär **inte** att person- eller situationsberoende rekvisit har prövats.
 - **Polisbeslut separat:** `Direkt`, `FID`, `Direkt / FID`, `Nej` eller `Särskild regel`. Andra beslutsfattare och exakta regler syns i expanderbar detalj. FID = fara i dröjsmål.
 - **Snabbare färgkodning i ljus och mörk vy:** grön ✓ för möjlig prövning utifrån brottet, rött ✕ när brottsvillkoret inte är uppfyllt, grå informationssymbol när uppgiften inte är verifierad. Status för beslutsbehörighet visas som egna etiketter under åtgärden.
-- **Beslutsfattare i klartext:** `Eget beslut` (polisman på egen behörighet), `Polisman FID`, `FU-ledare`. Där tillämpligt visas också `Åklagare` eller `Rätten`. Flera etiketter betyder alternativa behörighetsvägar med olika förutsättningar, inte att alla kan besluta i samma situation.
+- **Beslutsfattare i klartext:** `Polisman beslutar` (polisman med egen beslutsbehörighet), `Polisman FID`, `FU-ledare`. Där tillämpligt visas också `Åklagare` eller `Rätten`. Flera etiketter betyder alternativa behörighetsvägar med olika förutsättningar, inte att alla kan besluta i samma situation.
 - **Visa endast ✓** kan filtrera listan. Grupperingen RB 23–28 behålls; hemliga tvångsmedel visas inte. Fasta paragrafhänvisningar visas utan att avslutande bokstäver i t.ex. 23:8 a, 23:9 a och 27:1 a kapas.
 - **27 synliga åtgärder:** tidigare 24 plus 3 kompletteringar i RB 23:8–9 om medtagande och kvarstannande vid förhör. Strukturerad beslutsmetadata finns för samtliga.
 - **46 nya sökbara grundposter**, med straffskalor och särskild förstadiekriminalisering enligt:
@@ -22,6 +22,10 @@
 - Lagtext först i brottskortet. Sökresultaten är fortsatt avskalade till brottsrubricering, lagrum och straffskala, med röd/grå markering för förstadier som kräver det.
 - De nya brottsfamiljerna och förstadierna får utredningsuppslag efter att databasen är färdigladdad. Fältstödet innehåller särskilda anteckningar för smuggling, penningtvätt, skattebrott, bidragsbrott och explosiva varor.
 - Offline-cachen laddar de nya JS-modulerna vid första uppkopplade besöket.
+
+**Visningsregel:** En och samma åtgärd visar aldrig både `Polisman beslutar` och `Polisman FID`. När polisman kan besluta direkt visas enbart `Polisman beslutar`; FID-vägen kan i förekommande fall framgå av den expanderade beskrivningen. Andra beslutande organ får fortfarande egna etiketter.
+
+**Navigering på iPhone:** Sökresultat, Sparat och Mer skrollar i ett eget område ovanför navigationsfältet. Baren är inte längre ett flytande lager över korten, så inget sökresultat döljs under den.
 
 ## Kontroller
 
