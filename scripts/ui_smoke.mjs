@@ -187,7 +187,7 @@ try{
   const force=await page.locator('body').innerText();
   assert.ok(force.includes('Kroppsvisitation')&&force.includes('Kvarhållande av grupp'),'Core coercive measures by chapter');
   await chapters.filter({hasText:'RB 23'}).locator('.coercive-entry').first().locator('summary').click();
-  assert.ok((await page.locator('body').innerText()).includes('Polismans beslut:'),'Decision maker is accessible per measure');
+  assert.ok((await page.locator('body').innerText()).includes('Beslut i korthet:'),'Decision maker is accessible per measure');
   // v0.9: visible ✓/✕ and officer badges in the chapter list.
   // Version 1.0 – complex decision pathways must be accessible without visual clutter.
   const measureBeslag=page.locator('.coercive-entry').filter({hasText:'Beslag'}).first();
