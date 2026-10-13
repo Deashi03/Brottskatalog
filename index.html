@@ -287,6 +287,27 @@ html,body{width:100%;max-width:100%;overflow-x:clip;overscroll-behavior-x:none;-
 .status-icon.unknown{color:var(--muted);background:var(--shade)}
 :root[data-theme="dark"] .status-icon.good{color:#65d9ac;background:rgba(21,142,99,.18)}
 
+
+/* Low-priority audit control: LAST element on offence card, collapsed by default. */
+.quality-footer{margin:25px 0 0;border-top:1px solid var(--line-soft);color:var(--muted)}
+.quality-footer>summary{list-style:none;display:flex;align-items:center;gap:10px;min-height:48px;padding:11px 2px;cursor:pointer;font-size:12px;font-weight:650;color:var(--muted)}
+.quality-footer>summary::-webkit-details-marker{display:none}
+.qa-title{display:inline-flex;align-items:center;gap:7px;flex:1;min-width:0}
+.qa-title .ic{width:16px;height:16px}
+.quality-footer>summary>.ic:last-child{width:14px;height:14px;transition:transform .15s}
+.quality-footer[open]>summary>.ic:last-child{transform:rotate(180deg)}
+.qa-old{display:inline-flex;align-items:center;gap:4px;font-size:10px;color:#976317;white-space:nowrap;font-weight:750}
+.qa-old .ic{width:13px;height:13px}
+.qa-body{padding:3px 2px 18px;display:grid;gap:10px;font-size:12px;line-height:1.55}
+.qa-date{font-weight:750;color:var(--ink);margin:0}
+.qa-row{display:grid;grid-template-columns:minmax(84px,105px) minmax(0,1fr);gap:9px;border-top:1px solid var(--line-soft);padding-top:8px}
+.qa-row strong{font-size:11px;color:var(--ink)}
+.qa-muted{color:var(--muted);font-size:11px;margin:2px 0}
+.qa-stale{background:var(--amber-bg);border-radius:9px;padding:9px;color:#8f5f16;font-size:11px;margin:0}
+.qa-source{display:inline-flex;align-items:center;gap:6px;color:var(--link);font-size:12px;padding:4px 0}
+.qa-source .ic{width:13px;height:13px}
+:root[data-theme="dark"] .qa-old{color:#eabd73}
+:root[data-theme="dark"] .qa-stale{color:#e4bc73}
 </style>
   <title>Brottskatalog · steg 2</title>
 </head>
@@ -714,6 +735,7 @@ D.date='2026-10-12';
   <script src="./field-07.js"></script>
   <script src="./sources-qa.js"></script>
   <script src="./prosecution-10.js"></script>
+  <script src="./quality-11.js"></script>
   <script>
 /* Brottskatalog – stage 1. No framework, no network request during use. */
 (() => {
@@ -1066,6 +1088,19 @@ function alternativesSection(c){
  }).join('');
 }
 
+function qualityCard(c){
+ const m=window.BK_QUALITY11?.metadata?.(c);
+ if(!m)return '';
+ const rows=[['Lagtext',m.law],['Straffskala',m.penalty],['Åtalsregel',m.prosecution],['Förstadier',m.stages]];
+ const status=m.stale?'<span class="qa-old" aria-label="Längre än tre år sedan senaste dokumenterade sakgranskning">'+ic('alert-circle','sm')+' Äldre kontroll</span>':'';
+ const source=m.sourceURL?'<a class="qa-source" href="'+escapeHtml(m.sourceURL)+'" target="_blank" rel="noopener noreferrer">Officiell författning '+ic('external-link','sm')+'</a>':'<p class="qa-muted">Officiell källänk saknas för denna post.</p>';
+ return '<details class="quality-footer" id="sec-quality"><summary><span class="qa-title">'+ic('shield-check','sm')+' Rättslig kontroll</span>'+status+ic('chevron-down','sm')+'</summary>'+
+  '<div class="qa-body"><p class="qa-date">'+escapeHtml(m.lastReviewLabel)+'</p>'+
+  (m.stale?'<p class="qa-stale">Mer än tre år sedan senaste dokumenterade sakgranskning. Kontrollera om lagtext eller rättsläge har ändrats. Den här påminnelsen ändrar inte innehållet automatiskt.</p>':'')+
+  rows.map(([title,val])=>'<div class="qa-row"><strong>'+escapeHtml(title)+'</strong><span>'+escapeHtml(val)+'</span></div>').join('')+
+  '<p class="qa-muted">'+escapeHtml(m.versionStatus)+'</p><p class="qa-muted">'+escapeHtml(m.dateNotice)+'</p>'+source+'</div></details>';
+}
+
 function renderDetail(c){
   app.className='app-shell detail-mode '+(state.density==='compact'?'compact':'');
   const saved=state.favorites.includes(c.id);
@@ -1115,7 +1150,7 @@ function renderDetail(c){
 
   ${accordion('relaterade','Relaterade brott','list',related||'<p>Inga relaterade exempel ännu.</p>')}
   ${accordion('sources','Rättskällor och källtyper','book-mark',`<p><strong>Lagtext:</strong> återgiven separat och utan omskrivningar. Kontrollera aktuellt rättsläge via källan.</p><p><strong>Tolkningsstöd:</strong> kursanteckningar och praktiska sammanfattningar är inte lagtext.</p>${links.map(([title,url])=>`<a class="source-link" href="${url}" target="_blank" rel="noopener noreferrer">${ic('external-link')} ${escapeHtml(title)}</a>`).join('')}`)}
-  </div></section><p class="detail-footer">Version 1.0 · kontrollera aktuell lagtext vid operativa beslut.</p></main>`;
+  </div></section>${qualityCard(c)}<p class="detail-footer">Version 1.1 · kontrollera aktuell lagtext vid operativa beslut.</p></main>`;
 }
 function showSheet({kicker,title,body,ref,actionHtml='',fromProvision=false}){
   if(!fromProvision)sheetHistory.length=0;
