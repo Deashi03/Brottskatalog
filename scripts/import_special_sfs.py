@@ -34,16 +34,29 @@ def extract(raw):
         if 30<=len(txt)<=20000:
             # Preserve first occurrence: a later future version must not replace it.
             found.setdefault(key,{'text':txt,'machine':True,'complete':False})
+    previous=''
     for line in lines:
         if not line:continue
         if key and END.search(line) and len(found)>3:
             flush();break
         m=SECTION.match(line)
         if m:
-            flush();key=m.group(1)+m.group(2).lower()
-            body=[line]
-        elif key:
-            body.append(line)
+            after=m.group(3).strip()
+            # A cross-reference at the beginning of a wrapped line is not a new section.
+            # e.g. "6 § tullbefogenhetslagen" or standalone "7 §" following "enligt".
+            is_reference=bool(after and after[0].islower())
+            if not after and previous and not (
+                previous.rstrip().endswith(('.',':',';','!','?',')'))
+                or (previous[0].isupper() and len(previous)<65 and not previous.startswith('§'))
+            ):
+                is_reference=True
+            if not is_reference:
+                flush();key=m.group(1)+m.group(2).lower()
+                body=[line]
+                previous=line
+                continue
+        if key:body.append(line)
+        previous=line
     else:flush()
     return found,'\n'.join(lines)
 
@@ -64,6 +77,16 @@ def main():
             sections,normalized=extract(body)
             if len(sections)<minimum:
                 raise ValueError(f'Only {len(sections)} provisions; expected at least {minimum}')
+            required={
+                'SmuglL':{'3':400,'6':800,'6a':250,'6b':200,'14':300},
+                'PTBL':{'3':350,'4':100,'5':250,'7':350,'8':100},
+                'SkBrL':{'2':200,'4':200,'5':250,'7':500,'8':180,'10':300,'13':250},
+                'BidrBrL':{'1':400,'2':300,'3':200,'6a':200},
+                'LBE':{'29':400,'29a':300,'30a':100}
+            }[code]
+            missing=[k for k,v in required.items() if len(sections.get(k,{}).get('text',''))<v]
+            if missing:
+                raise ValueError('Missing or suspiciously short legal sections: '+', '.join(missing))
             match=VERSION.search(normalized)
             version=match.group(1) if match else None
             digest=hashlib.sha256(normalized.encode('utf-8')).hexdigest()
