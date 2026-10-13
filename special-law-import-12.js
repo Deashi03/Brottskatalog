@@ -6,7 +6,7 @@ let linked=0,missing=0;
 for(const c of D.crimes){
  if(c.stageType||c.lawMode!=='missing')continue;
  const ref=String(c.shortRef||'');
- const m=ref.match(/^(SmuglL|PTBL|SkBrL|BidrBrL|LBE)\s+(\d+[a-z]?)(?:\s*[–-]\s*(\d+[a-z]?))?/i);
+ const m=ref.match(/^(SmuglL|PTBL|SkBrL|BidrBrL|LBE)\s+(\d+\s*[a-z]?)(?:\s*[–-]\s*(\d+\s*[a-z]?))?/i);
  if(!m)continue;
  const code=m[1],start=m[2].replace(/\s+/g,''),end=m[3]?.replace(/\s+/g,'');
  const parsed=docs[code];if(!parsed){missing++;continue;}
