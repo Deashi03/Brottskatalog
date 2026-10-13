@@ -80,11 +80,16 @@
   'medtagande-omrade':['own'],
   kvarstannande:['special']
  };
- const decisionNames={fu:'FU-ledare',fid:'Polisman FID',own:'Eget beslut',prosecutor:'Åklagare',court:'Rätten',special:'Särskild regel'};
- reg.decisionPaths=e=>(paths[e.id]||['special']).map(id=>({id,label:decisionNames[id]}));
+ // Visa högst EN polismansväg på ett kort.
+ // Har polisman eget beslut visas inte också FID. Övriga beslutsfattare visas separat.
+ const decisionNames={fu:'FU-ledare',fid:'Polisman FID',own:'Polisman beslutar',prosecutor:'Åklagare',court:'Rätten',special:'Särskild regel'};
+ reg.decisionPaths=e=>{
+  const options=paths[e.id]||['special'];
+  return options.filter(id=>id!=='fid'||!options.includes('own')).map(id=>({id,label:decisionNames[id]}));
+ };
  reg.officerSummary=e=>{
   const val=e.officerMode||'special';
-  return val==='direct'?'Eget beslut':val==='fid'?'Polisman FID':val==='both'?'Eget beslut / Polisman FID':val==='none'?'Annans beslut':'Särskild regel';
+  return val==='direct'||val==='both'?'Polisman beslutar':val==='fid'?'Polisman FID':val==='none'?'Annans beslut':'Särskild regel';
  };
  reg.eligible=(c,e)=>{
   const v=reg.score(c,e);
