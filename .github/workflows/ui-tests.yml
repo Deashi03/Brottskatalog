@@ -5,6 +5,8 @@ on:
     paths:
       - "index.html"
       - "penalty-normalize-12.js"
+      - "core-penalties-13.js"
+      - "scripts/core_penalties_13_test.mjs"
       - "coercive-07.js"
       - "field-07.js"
       - "scripts/ui_smoke.mjs"
@@ -30,6 +32,8 @@ on:
     paths:
       - "index.html"
       - "penalty-normalize-12.js"
+      - "core-penalties-13.js"
+      - "scripts/core_penalties_13_test.mjs"
       - "coercive-07.js"
       - "field-07.js"
       - "catalog-03.js"
@@ -63,6 +67,8 @@ jobs:
       - uses: actions/setup-node@v4
         with:
           node-version: "22"
+      - name: Verify sixteen BrB penalty ranges and conflict protection
+        run: node scripts/core_penalties_13_test.mjs
       - name: Verify offence stages
         run: node scripts/stage_rules_test.mjs
       - name: Verify new 2026 public-office offences
