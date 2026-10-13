@@ -11,17 +11,17 @@
  const metadata=(c,now=new Date())=>{
    // The parent can be a better legal context for a generated stage.
    const parent=c.stageType?D.crimes.find(x=>x.id===c.stageParentId):null;
-   const penaltyVerified=!!(c.penaltyChecked&&(reviewLevels.has(c.reviewStatus)||c.stageStatus==='punishable'&&parent&&reviewLevels.has(parent.reviewStatus)));
+   const penaltyVerified=!!(c.penaltyChecked&&!c.stageType&&reviewLevels.has(c.reviewStatus));
    const legalCheck=dateOf(c.legalVerifiedAt)||dateOf(c.lawReviewedAt)||((penaltyVerified&&dateOf(c.penaltyChecked))?dateOf(c.penaltyChecked):null);
    // Special legal text/metadata can supersede penalty timestamp when explicitly confirmed.
    const latest=Math.max(...[legalCheck, dateOf(c.lawReviewedAt)].filter(Boolean).map(d=>Date.parse(d+'T00:00:00Z')),0);
    const lastReview=latest?new Date(latest).toISOString().slice(0,10):null;
    const nowMs=now instanceof Date?now.getTime():new Date(now).getTime();
-   const stale=!!(latest&&Number.isFinite(nowMs)&&nowMs>=new Date(
+   const stale=!!(latest&&Number.isFinite(nowMs)&&nowMs>=Date.UTC(
      new Date(latest).getUTCFullYear()+3,
      new Date(latest).getUTCMonth(),
      new Date(latest).getUTCDate()
-   ).getTime());
+   ));
    let lawStatus=c.lawMode==='missing'?'Saknas offline':c.lawMode==='machine'?'Maskinimporterad – ej slutgranskad':c.lawMode==='full'?'Lagtext inlagd – kontrollera aktuell lydelse':c.lawMode==='stage-reference'?'Förstadium – särskilt lagstöd måste kontrolleras':'Utdrag – kontrollera fulltext';
    if(c.reviewStatus==='source-changed')lawStatus='Källtext ändrad – kräver ny granskning';
    const penaltyStatus=c.reviewStatus==='source-changed'?'Kontroll krävs efter lagändring':penaltyVerified?'Dokumenterad kontroll '+dateOf(c.penaltyChecked):c.penaltyRange?'Strukturerad, men ej individuellt verifierad':'Straffskala inte maskinellt verifierad';
