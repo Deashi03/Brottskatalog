@@ -114,6 +114,9 @@ try{
   await wait();
   assert.ok((await page.locator('.crime-card').allTextContents()).some(x=>x.toLowerCase().includes('försök till mord')),'Försök till mord ska gå att hitta');
   await page.locator('.crime-card').filter({hasText:'Försök till mord'}).first().click();
+  assert.ok((await page.locator('.penalty-panel').innerText()).includes('1 mån'),'Attempted murder has explicit one-month minimum');
+  assert.ok((await page.locator('.penalty-panel').innerText()).includes('18 år'),'Attempted murder retains maximum');
+
   assert.equal((await page.locator('.accordion').first().innerText()).includes('Lagtext'),true,'Lagtext är första menyvalet');
   await page.locator('[data-action="custody"]').first().click();
   assert.ok((await page.locator('[role="dialog"]').innerText()).includes('Häktningspresumtion'),'Presumtionen har ett eget kort');
@@ -185,6 +188,13 @@ try{
   await chapters.filter({hasText:'RB 23'}).locator('.coercive-entry').first().locator('summary').click();
   assert.ok((await page.locator('body').innerText()).includes('Polismans beslut:'),'Decision maker is accessible per measure');
   // v0.9: visible ✓/✕ and officer badges in the chapter list.
+  // Version 1.0 – complex decision pathways must be accessible without visual clutter.
+  const measureBeslag=page.locator('.coercive-entry').filter({hasText:'Beslag'}).first();
+  assert.ok(await measureBeslag.locator('.decision-help').count()>0,'Beslag must display special-condition exclamation');
+  await measureBeslag.locator('.decision-help').click();
+  assert.ok((await page.locator('[role="dialog"]').innerText()).includes('gatan'),'Decision explanation must distinguish street from legal underlying search');
+  await page.locator('[data-action="close-sheet"]').last().click();
+  assert.ok((await page.locator('.coercive-entry').allTextContents()).some(x=>x.includes('Polisman beslutar')),'List has one clear police primary decision');
   const items=page.locator('.coercive-entry');
   assert.ok(await items.count()>15,'Broad non-secret coercive index should render');
   assert.ok(await page.locator('.coercive-entry[data-eligible="true"] .measure-icon.yes').count()>0,'Eligible measures show check mark');
@@ -226,6 +236,11 @@ try{
   await page.locator('.coercive-chapter').filter({hasText:'RB 28'}).locator('summary').first().click();
   await page.locator('.coercive-chapter').filter({hasText:'RB 28'}).locator('.coercive-entry').first().locator('summary').click();
   assert.ok((await page.locator('body').innerText()).includes('Straffskalekrav uppfyllt'),'Major offences should satisfy ordinary scale thresholds');
+  await page.goto(url+'#sok',{waitUntil:'networkidle'});
+  await page.locator('#crime-search').fill('människorov');await wait();
+  await page.locator('.crime-card').filter({hasText:'Människorov'}).first().click();
+  assert.ok((await page.locator('.status-block').innerText()).includes('Allmänt åtal'),'General prosecution must be explicit');
+  assert.ok(await page.locator('.status-icon.good').count()>0,'General prosecution has green check');
   await page.goto(url+'#mer',{waitUntil:'networkidle'});
   const settings=await page.locator('body').innerText();
   assert.ok(settings.includes('Senaste kataloguppdatering'),'Update age in settings');
