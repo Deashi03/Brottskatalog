@@ -244,12 +244,25 @@ html,body{width:100%;max-width:100%;overflow-x:clip;overscroll-behavior-x:none;-
 .coercive-entry>summary{min-height:55px;gap:7px}
 .coercive-entry>summary svg:last-child{flex:0 0 15px;color:var(--muted)}
 .measure-icon{width:20px;height:20px;flex:none;display:grid;place-items:center}
-.measure-icon.yes{color:#249b67}.measure-icon.no{color:#d45b62}.measure-icon.unknown{color:var(--muted)}
+.measure-icon.yes{color:#087c4a;background:rgba(13,153,92,.14);border:1px solid rgba(13,153,92,.34);border-radius:50%}
+.measure-icon.no{color:#c93447;background:rgba(220,52,73,.12);border:1px solid rgba(220,52,73,.28);border-radius:50%}
+.measure-icon.unknown{color:var(--muted)}
+[data-theme="dark"] .measure-icon.yes{color:#45dc9d;background:rgba(30,160,103,.2);border-color:rgba(66,211,139,.4)}
+[data-theme="dark"] .measure-icon.no{color:#ff7180;background:rgba(190,55,71,.2);border-color:rgba(235,101,112,.4)}
 .measure-info{display:flex;min-width:0;flex:1;flex-direction:column;gap:3px}
 .measure-info>.coercive-ref{font-weight:800;font-size:11px;min-width:0;white-space:normal;color:var(--muted)}
 .measure-info>.coercive-title{font-weight:740;font-size:12px;line-height:1.35}
 .measure-decision{min-width:47px;max-width:80px;text-align:right;font-size:11px;font-weight:800;line-height:1.3;white-space:normal}
 .measure-decision.no{color:var(--muted)}
+.decision-pills{display:flex;flex-wrap:wrap;gap:4px;margin-top:4px}
+.decision-pill{display:inline-flex;align-items:center;min-height:21px;border-radius:5px;padding:2px 6px;line-height:1.25;font-size:10px;font-weight:750;border:1px solid transparent;white-space:nowrap}
+.decision-pill.own{color:#1461ae;background:rgba(37,115,212,.10);border-color:rgba(37,115,212,.18)}
+.decision-pill.fid{color:#936110;background:rgba(188,125,13,.11);border-color:rgba(188,125,13,.2)}
+.decision-pill.fu{color:var(--ink);background:rgba(115,130,145,.11);border-color:var(--line)}
+.decision-pill.prosecutor,.decision-pill.court,.decision-pill.special{color:var(--muted);background:rgba(120,130,145,.07);border-color:var(--line)}
+[data-theme="dark"] .decision-pill.own{color:#93c4ff;background:rgba(54,124,224,.18);border-color:rgba(100,160,232,.3)}
+[data-theme="dark"] .decision-pill.fid{color:#f5c171;background:rgba(197,140,47,.16);border-color:rgba(224,164,68,.28)}
+.coercive-entry[data-eligible="false"] .decision-pills{opacity:.72}
 .coercive-entry-body{padding:4px 4px 12px 28px}
 .coercive-entry-body p{margin:6px 0;font-size:12px;line-height:1.6}
 .coercive-entry-body strong{font-weight:760}
@@ -988,16 +1001,18 @@ function coerciveSection(c){
  const render=e=>{
   const v=reg.score(c,e),eligible=reg.eligible?reg.eligible(c,e):v.tone!=='no',pending=v.tone==='unknown';
   const authority=e.decisionAuthority||e.ref;
-  const officer=reg.officerSummary?reg.officerSummary(e):'Kontrollera';
+  const decisions=reg.decisionPaths?reg.decisionPaths(e):[{id:'special',label:'Kontrollera'}];
+  const pills='<span class="decision-pills" aria-label="Beslutsbehörighet">'+
+    decisions.map(d=>'<span class="decision-pill '+escapeHtml(d.id)+'">'+escapeHtml(d.label)+'</span>').join('')+'</span>';
   const detail=('<p><strong>Brottsrelaterat villkor:</strong> '+escapeHtml(v.label)+'</p>')+
-   '<p><strong>Polismans beslut:</strong> '+escapeHtml(officer)+(e.decisionCaution?' — '+escapeHtml(e.decisionCaution):'')+'</p>'+
-   '<p><strong>Annan beslutsfattare:</strong> '+escapeHtml(e.otherDecision||e.decision)+'</p>'+
+   '<p><strong>Beslutsbehörighet:</strong> '+decisions.map(d=>escapeHtml(d.label)).join(' · ')+'</p>'+
+   (e.decisionCaution?'<p><strong>Undantag och begränsning:</strong> '+escapeHtml(e.decisionCaution)+'</p>':'')+
+   '<p><strong>Beslutsordning:</strong> '+escapeHtml(e.otherDecision||e.decision)+'</p>'+
    '<p>'+escapeHtml(e.info)+'</p><p class="source-label">Beslutsbehörighet: '+escapeHtml(authority)+' · '+escapeHtml(e.ref)+'</p>';
   return '<details class="coercive-entry" data-eligible="'+(pending?'unknown':String(eligible))+'"><summary>'+
     '<span class="measure-icon '+(pending?'unknown':eligible?'yes':'no')+'" aria-label="'+(pending?'Straffskalan är inte verifierad':eligible?'Brottskrav medger prövning':'Brottskrav ej uppfyllt')+'">'+ic(pending?'info':eligible?'check-circle':'x','sm')+'</span>'+
     '<span class="measure-info"><strong class="coercive-ref">'+escapeHtml(e.ref.split(' jfr ')[0].split(',')[0].replace('RB ','RB '))+'</strong>'+
-    '<span class="coercive-title">'+escapeHtml(e.title)+'</span></span>'+
-    '<span class="measure-decision '+(e.officerMode==='none'?'no':'')+'">'+escapeHtml(officer)+'</span>'+ic('chevron-down','sm')+
+    '<span class="coercive-title">'+escapeHtml(e.title)+'</span>'+pills+'</span>'+ic('chevron-down','sm')+
     '</summary><div class="coercive-entry-body">'+detail+'</div></details>';
  };
  const panel='<div class="coercive-overview"><p class="coercive-lead">✓ = brottets straffskala och brottstyp utesluter inte åtgärden. ✕ = villkor ej uppfyllt. Grå informationssymbol = uppgiften ej verifierad. Övriga rekvisit måste fortfarande prövas. FID = fara i dröjsmål.</p>'+
