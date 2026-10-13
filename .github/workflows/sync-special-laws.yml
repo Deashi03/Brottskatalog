@@ -1,0 +1,37 @@
+name: Import special-law paragraphs (machine draft)
+on:
+  workflow_dispatch:
+  push:
+    branches: [main]
+    paths:
+      - "scripts/import_special_sfs.py"
+      - ".github/workflows/sync-special-laws.yml"
+permissions:
+  contents: write
+jobs:
+  import:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          persist-credentials: true
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - name: Install official-source parser
+        run: python -m pip install beautifulsoup4
+      - name: Import marked special-law excerpts
+        run: python scripts/import_special_sfs.py
+      - name: Commit official machine-extracted drafts
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add data/special-provisions-generated.js data/special-provisions-status.json
+          if ! git diff --cached --quiet; then
+            git commit -m "data: machine-extract special SFS paragraphs (unverified)"
+            git push
+          fi
+      - name: Clarify verification status
+        run: |
+          echo "These excerpts are automatically extracted and **not independently legally verified**." >> "$GITHUB_STEP_SUMMARY"
+          echo "No criminalization, penalties, prosecution rules or custody decision statuses were automatically approved." >> "$GITHUB_STEP_SUMMARY"
