@@ -1,4 +1,22 @@
-# Brottskatalog 0.9 – tvångsmedel och utökad specialstraffrätt
+# Brottskatalog 1.0 – tydligare straffskalor, beslutsbehörighet och åtalsregler
+
+**Safari:** https://deashi03.github.io/Brottskatalog/
+
+## Förändringar i denna uppdatering
+
+- Straffbara förstadier har separata fält för **LÄGST** och **HÖGST**. Exempel: försök till mord visas som lägst fängelse 1 månad och högst fängelse 18 år eller livstid; detta bygger på BrB 23:1 jämförd med 26:1 och är inte samma straffminimum som för fullbordat mord.
+- Tvångsmedelsmenyn visar nu **en kort beslutsväg**, exempelvis `Polisman beslutar`, `Polisman FID` eller `FU-ledare`. Åklagare och rätten göms från huvudlistan.
+- Beslut med särskilda villkor får ett **tryckbart utropstecken**. Beslag enligt RB 27:4 redovisas som två olika beslutssituationer: föremål som påträffas vid en redan laglig tvångsåtgärd, respektive fristående fynd där FU-ledare/åklagare eller polisman vid FID beslutar. Andra villkorsberoende åtgärder har motsvarande korta förklaringar.
+- Åtalsregler klassificeras bredare. **Grön bock** anger registrerat allmänt åtal; orange symbol anger åtalsvillkor/undantag; neutral informationssymbol betyder att regeln inte är slutligt verifierad.
+- Ytterligare genomgång för bl.a. smugglingslagen 20 §, skattebrottslagen 13 och 13 b §§, bidragsbrottslagen 6 a § och BrB 19:16. Straffbara förstadier ärver en kontrollerad åtalsklassificering från grundbrottet när möjligt.
+- Den befintliga kapitelindelningen RB 23–28, mörkt läge och scrollningen ovanför nedersta navigationsfältet behålls.
+
+**Begränsningar:** Detta är ett juridiskt stödverktyg under utveckling. Allmänna åtalsregler innebär inte att brottet får åtalas utan hänsyn till specialbestämmelser, gärningstidpunkt och eventuell åtalsprövning i ett särskilt fall. En grön bock för tvångsmedel betyder endast att brottets automatiskt identifierbara villkor inte utesluter åtgärden. Företagna kontroller ersätter inte lagtext eller behörig beslutsprövning. Äldre poster och specialstraffrättsliga begränsningar återstår att slutgranska.
+
+**Källor:** [Brottsbalken](https://www.riksdagen.se/sv/dokument-och-lagar/dokument/svensk-forfattningssamling/brottsbalk-1962700_sfs-1962-700/), [Rättegångsbalken](https://www.riksdagen.se/sv/dokument-och-lagar/dokument/svensk-forfattningssamling/rattegangsbalk-1942740_sfs-1942-740/), [Smugglingslagen](https://www.riksdagen.se/sv/dokument-och-lagar/dokument/svensk-forfattningssamling/lag-20001225-om-straff-for-smuggling_sfs-2000-1225/), [Skattebrottslagen](https://www.riksdagen.se/sv/dokument-och-lagar/dokument/svensk-forfattningssamling/skattebrottslag-197169_sfs-1971-69/), [Bidragsbrottslagen](https://www.riksdagen.se/sv/dokument-och-lagar/dokument/svensk-forfattningssamling/bidragsbrottslag-2007612_sfs-2007-612/).
+
+## Tidigare version 0.9
+
 
 **iPhone / Safari:** https://deashi03.github.io/Brottskatalog/
 
