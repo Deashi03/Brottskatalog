@@ -84,7 +84,7 @@ for(const c of base){
  for(const [slug,prefix,word,para] of STAGES){
   const code=slug==='forsok'?'F':slug==='forberedelse'?'P':'S';
   const approved=!!permit?.types.has(code);
-  const negative=!approved&&(c.stageReviewed||explicitNo.has(norm(c.title))||narcUse||gun);
+  const negative=!approved&&(c.stageReviewed||explicitNo.has(norm(c.title))||narc||gun);
   // Ogranskade kombinationer görs sökbara vid en uttrycklig sökning, men visas inte i huvudkatalogen.
   const status=approved?'punishable':negative?'not-criminalized':'unverified';
   if(status==='punishable')yes++;else if(status==='not-criminalized')no++;else unknown++;
