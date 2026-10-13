@@ -129,7 +129,8 @@ try{
   await page.locator('#crime-search').fill('försök till ringa stöld');
   await wait();
   assert.ok((await page.locator('.crime-card').allTextContents()).some(x=>x.includes('Ej straffbart')),'Ej straffbart ska synas i sökresultat');
-  await page.locator('.crime-card').first().click();
+  await page.locator('.crime-card').filter({hasText:'Försök till ringa stöld'}).first().click();
+  assert.ok((await page.locator('.detail-title').innerText()).includes('Försök till ringa stöld'),'Correct noncriminal item opened');
   assert.ok((await page.locator('body').innerText()).includes('EJ STRAFFBART'),'Icke straffbar post ska kunna öppnas');
   assert.equal(await page.locator('[data-action="custody"]:not([disabled])').count(),0,'Ingen häktningsåtgärd på icke straffbart förstadium');
   await page.goto(url+'#sok',{waitUntil:'networkidle'});
