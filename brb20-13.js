@@ -55,7 +55,7 @@ for(const [title,ref,min,max,fines,short,sfs,effective,elems] of cases){
 const law='BrB 20 kap. 2 § (SFS 2026:1420)';
 const common={
  ref:'BrB 20 kap. 2 §',shortRef:'BrB 20:2',statute:'BrB:20:2',category:'Tjänsteman',
- sourceURL:URL,effectiveFrom:'2026-08-01',penaltyChecked:checked,penaltySource:law,
+ sourceURL:URL,effectiveFrom:'2026-08-01',introducedFrom:'2026-08-01',penaltyChecked:checked,penaltySource:law,
  penaltyRangeVerified:true,reviewStatus:'penalty-reviewed-source-excerpt',
  prosecution:'general',prosecutionLabel:'Allmänt åtal',
  prosecutionRule:'RB 20:3; BrB 20:5',prosecutionSource:'RB 20:3; BrB 20:5',
