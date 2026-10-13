@@ -48,6 +48,18 @@ try{
   assert.ok((await page.locator('.crime-card').allTextContents()).some(x=>x.includes('Mord')),'Expanded catalog must include Mord');
   await page.locator('.crime-card').first().click();
   await wait();
+  // v1.1: legal review is AFTER the ordinary details and never steals initial space.
+  const quality=page.locator('#sec-quality');
+  assert.equal(await quality.count(),1,'Card must offer a legal review details area');
+  assert.equal(await quality.evaluate(el=>el.hasAttribute('open')),false,'Legal review collapsed by default');
+  assert.ok(await quality.evaluate(el=>el.previousElementSibling?.classList.contains('detail-body')),'Review footer follows all primary crime sections');
+  assert.ok(await quality.evaluate(el=>el.nextElementSibling?.classList.contains('detail-footer')),'Review footer appears immediately before version footnote');
+  assert.ok(await quality.evaluate(el=>el.compareDocumentPosition(document.querySelector('.penalty-panel'))&Node.DOCUMENT_POSITION_PRECEDING),'Penalty remains above review footer');
+  assert.equal(await quality.locator('.qa-old').count(),0,'Recently reviewed crime has no stale icon');
+  await quality.locator('summary').click();
+  assert.ok((await quality.innerText()).includes('Giltig lagversion'),'Details explain date and version limitations');
+  await quality.locator('summary').click();
+  assert.ok((await page.evaluate(()=>window.BK_QUALITY11?.thresholdYears))===3,'Three-year limit is active');
   assert.ok((await page.locator('body').innerText()).includes('LÄGST'),'Penalty minimum heading must show');
   assert.ok((await page.locator('body').innerText()).includes('HÖGST'),'Penalty maximum heading must show');
   assert.ok((await page.locator('.penalty-bound').allTextContents()).some(x=>x.includes('10 år')),'Murder lower bound must be ten years');
