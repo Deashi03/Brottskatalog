@@ -1,3 +1,5 @@
+# Brottskatalog 1.3 – kontroll av offentliga tjänstebrott och lagversioner (2026-10-13)
+
 ## Kompletterande sakgranskning av 16 vanliga brott – 2026-10-13
 
 Ett separat verifieringslager `core-penalties-13.js` har jämfört angivna numeriska straffskaleintervall mot brottsbalkens konsoliderade lagtext för **ringa stöld, stöld, grov stöld, inbrottsstöld, rån, grovt rån, misshandel, ringa misshandel, grov misshandel, synnerligen grov misshandel, bedrägeri, ringa bedrägeri, grovt bedrägeri, skadegörelse, ringa skadegörelse och grov skadegörelse**.
@@ -9,8 +11,6 @@ Samtliga **16** överensstämde med databasens lagrade min-/maxvärden och böte
 **Källa:** [Brottsbalk (1962:700)](https://www.riksdagen.se/sv/dokument-och-lagar/dokument/svensk-forfattningssamling/brottsbalk-1962700_sfs-1962-700/), kapitel 3, 8, 9 och 12. Historisk lagversion och särskilda övergångsregler måste fortfarande prövas efter gärningsdatum.
 
 ---
-
-# Brottskatalog 1.3 – kontroll av offentliga tjänstebrott och lagversioner (2026-10-13)
 
 **[Öppna appen](https://deashi03.github.io/Brottskatalog/)** · [Senast verifierad grön testkedja](https://github.com/Deashi03/Brottskatalog/actions/runs/38419339176)
 
