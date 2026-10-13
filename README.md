@@ -1,3 +1,19 @@
+# Brottskatalog 1.3 – kontroll av offentliga tjänstebrott och lagversioner (2026-10-13)
+
+**[Öppna appen](https://deashi03.github.io/Brottskatalog/)** · [Senast verifierad grön testkedja](https://github.com/Deashi03/Brottskatalog/actions/runs/38419339176)
+
+Den här uppdateringen har lagt till **missbruk av offentlig ställning** och **grovt missbruk av offentlig ställning** enligt **BrB 20 kap. 2 §**, med ikraftträdande den **1 augusti 2026**. Straffskalor och källuppgifter för tjänstefel, grovt tjänstefel och två grader av brott mot tystnadsplikt har jämförts med 2026 års lagändringar i BrB 20:1 och 20:3. Särskilt åtalsvillkor för tystnadsplikt till skydd för enskild har förtydligats enligt 20:5. Fältanteckningar har kompletterats för dessa tre näraliggande brottsgrupper.
+
+**Rättslig kontroll ligger fortsatt hopfälld sist i brottskortet.** Endast där redovisas ikraftträdandedatum och uppmärksammas om ett maskinimporterat lagtextutdrag innehåller markeringar om parallella, framtida eller upphörande lydelser. Ingen grön status eller nytt juridiskt kontroll­datum skapas av en automatisk import. Den diskreta treårsmarkeringen är oförändrad.
+
+Efter uppdateringen innehåller katalogen **1 157 sökbara poster**: **299 grundbrott**, **858 förstadier**. Databasen klassificerar 337 förstadier som straffbara och 521 som ej straffbara, men detta är **inte liktydigt med att varje slutsats juridiskt slutgranskats individuellt**. Öppna brister är fortfarande omkring **251 maskinimporterade lagtextutdrag**, **50 poster utan individuell dokumenterad straffskalekontroll**, samt två beroende/variabla straffskalor. En ny revisionsregel söker särskilt efter framtida giltighetsmarkeringar.
+
+Källor: [Brottsbalken 20 kap.](https://www.riksdagen.se/sv/dokument-och-lagar/dokument/svensk-forfattningssamling/brottsbalk-1962700_sfs-1962-700/) · [SFS 2026:1420 och ikraftträdandedatum](https://rkrattsbaser.gov.se/sfsr?bet=1962:700) · [Prop. 2025/26:217](https://www.regeringen.se/rattsliga-dokument/proposition/2026/04/prop.-202526217).
+
+**Nästa prioritet:** individuell juridisk verifiering av maskinimporterade och tidsbundna lagtexter, inte utökning av de centrala menyerna.
+
+---
+
 # Brottskatalog 1.2 – färdigställande av databasens struktur (2026-10-13)
 
 Senaste **hela** godkända integrations-, data- och iPhone-körning: [GitHub Actions](https://github.com/Deashi03/Brottskatalog/actions/runs/38414940218).
