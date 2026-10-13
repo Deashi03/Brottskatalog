@@ -4,7 +4,7 @@ import {resolve} from 'node:path';
 import vm from 'node:vm';
 const root=resolve(import.meta.dirname,'..');
 const sample=[
- {id:'sample',title:'Granskat brott',shortRef:'BrB 3:1',ref:'BrB 3:1',penaltyChecked:'2026-10-12',reviewStatus:'law-and-penalty-reviewed',penaltyRange:{min:10,max:18},prosecution:'general',lawMode:'machine'},
+ {id:'sample',title:'Granskat brott',shortRef:'BrB 3:1',ref:'BrB 3:1',penaltyChecked:'2026-10-12',reviewStatus:'law-and-penalty-reviewed',penaltyRange:{min:10,max:18},prosecution:'general',lawMode:'machine',law:'4 § /Upphör att gälla U:2027-01-01/ Text enligt denna lagversion'},
  {id:'unreviewed',title:'Ogranskat brott',shortRef:'BrB 99:1',ref:'BrB 99:1',penaltyChecked:'2026-10-13',reviewStatus:'not-reviewed',prosecution:'unknown',lawMode:'missing'},
  {id:'stage',title:'Försök till granskat brott',stageType:'forsok',stageStatus:'punishable',stageParentId:'sample',shortRef:'BrB 3:1',penaltyChecked:'2026-10-13',reviewStatus:'stage-statute-reviewed',prosecution:'unknown',lawMode:'stage-reference'}
 ];
@@ -20,6 +20,8 @@ assert.equal(info.metadata(b,new Date('2035-10-13T00:00:00Z')).stale,false,'Unkn
 assert.equal(info.metadata(b).lastReview,null);
 assert.equal(info.metadata(c).lastReview,null,'Generated stage dates do not count as legal review');
 assert.match(info.metadata(a).law,/Maskinimporterad/);
+assert.match(info.metadata(a).alternateVersionNote,/ikraftträdande/,'Future or alternative SFS wording must be flagged');
+assert.equal(info.metadata(b).alternateVersionNote,null,'Ordinary excerpt needs no applicability warning');
 const h=readFileSync(resolve(root,'index.html'),'utf8');
 assert.ok(h.includes('qualityCard(c)}'),'Card renders separate bottom quality section');
 assert.ok(h.indexOf("accordion('sources'")<h.indexOf('qualityCard(c)}'),'Quality follows sources');
