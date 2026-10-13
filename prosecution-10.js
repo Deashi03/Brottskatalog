@@ -58,6 +58,14 @@
       ['Den ordinarie åtalsregeln gäller enligt de genomgångna bestämmelserna i detta kapitel.']);
   }
  }
+ // Källhänvisning där huvudregeln redan hade angetts utan ett separat rättskällefält.
+ // Detta är INTE ny juridisk verifiering eller en garanti att specialundantag saknas.
+ for(const c of D.crimes){
+  if(c.stageType||c.prosecution!=='general'||c.prosecutionRule)continue;
+  c.prosecutionRule=rb+' – generell utgångspunkt, pröva särskilda åtalsvillkor';
+  c.prosecutionSourceTier='general-rule-only';
+  c.prosecutionDetails=[...(c.prosecutionDetails||[]),'Källhänvisning till RB 20:3 är en generell rättslig utgångspunkt. Särskilda åtalsbegränsningar är inte individuellt slutgranskade för denna post.'];
+ }
  // Straffbara förstadier – ingen särskild okänd åtalsstatus om parent är rättsligt granskad.
  // Villkorad åtalsregel ärvs som riskmarkering och prövas utifrån aktuell gärningsform.
  for(const c of D.crimes){
