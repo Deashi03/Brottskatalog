@@ -13,6 +13,8 @@ on:
       - "coercive-09.js"
       - "decisions-10.js"
       - "prosecution-10.js"
+      - "quality-11.js"
+      - "scripts/quality_11_test.mjs"
       - "scripts/integration_09.mjs"
       - "scripts/audit_catalog.mjs"
       - "sources-qa.js"
@@ -33,6 +35,8 @@ on:
       - "coercive-09.js"
       - "decisions-10.js"
       - "prosecution-10.js"
+      - "quality-11.js"
+      - "scripts/quality_11_test.mjs"
       - "scripts/integration_09.mjs"
       - "scripts/audit_catalog.mjs"
       - "sources-qa.js"
@@ -49,6 +53,8 @@ jobs:
           node-version: "22"
       - name: Verify offence stages
         run: node scripts/stage_rules_test.mjs
+      - name: Three-year source verification UI safeguards
+        run: node scripts/quality_11_test.mjs
       - name: Full catalog integration and statutes test
         run: node scripts/integration_09.mjs
       - name: Catalog-wide quality audit
