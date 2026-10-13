@@ -163,7 +163,7 @@ try{
   await page.locator('#crime-search').fill('ringa stöld');
   await wait();
   await page.locator('.crime-card').first().click();
-  await page.locator('[data-action="custody"]').click();
+  await page.locator('.status-block [data-action="custody"]').click();
   assert.ok((await page.locator('[role="dialog"]').innerText()).includes('24:2'),'Identification custody/urgent grip scenario');
   assert.ok((await page.locator('[role="dialog"]').innerText()).includes('Utredningshäktning'),'Custody includes investigative detention at end');
   assert.equal((await page.locator('[role="dialog"]').innerText()).includes('24:7'),false,'No redundant arrest explanation');
