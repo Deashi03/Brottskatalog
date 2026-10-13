@@ -25,7 +25,7 @@
    let lawStatus=c.lawMode==='missing'?'Saknas offline':c.lawMode==='machine'?'Maskinimporterad – ej slutgranskad':c.lawMode==='full'?'Lagtext inlagd – kontrollera aktuell lydelse':c.lawMode==='stage-reference'?'Förstadium – särskilt lagstöd måste kontrolleras':'Utdrag – kontrollera fulltext';
    if(c.reviewStatus==='source-changed')lawStatus='Källtext ändrad – kräver ny granskning';
    const penaltyStatus=c.reviewStatus==='source-changed'?'Kontroll krävs efter lagändring':penaltyVerified?'Dokumenterad kontroll '+dateOf(c.penaltyChecked):c.penaltyRange?'Strukturerad, men ej individuellt verifierad':'Straffskala inte maskinellt verifierad';
-   const prosecutionStatus=c.stageStatus&&c.stageStatus!=='punishable'?'Inte relevant som självständig straffbar rubricering':c.prosecution==='unknown'?'Ej verifierad':c.prosecution==='general'?'Allmänt åtal registrerat – kontrollera undantag':'Särskilda åtalsvillkor registrerade';
+   const prosecutionStatus=c.stageStatus&&c.stageStatus!=='punishable'?'Inte relevant som självständig straffbar rubricering':c.prosecution==='unknown'?'Ej verifierad':c.prosecutionSourceTier==='general-rule-only'?'Allmänt åtal enligt huvudregel – undantag ej individuellt kontrollerade':c.prosecution==='general'?'Allmänt åtal registrerat – kontrollera undantag':'Särskilda åtalsvillkor registrerade';
    const stageStatus=!c.stageType?'Se särskilda förstadieposter':c.stageStatus==='punishable'?'Straffbart enligt registrerat lagstöd':c.stageStatus==='not-criminalized'?'Ej straffbart enligt registrerat lagstöd':'Ej verifierat – dra ingen slutsats om straffrihet';
    return {
      stale,lastReview,
