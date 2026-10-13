@@ -8,6 +8,8 @@
 
 - **✓ / ✕ direkt på varje tvångsmedel** för om brottets straffskala eller brottstyp kan medge den aktuella åtgärden. Grön bock innebär **inte** att person- eller situationsberoende rekvisit har prövats.
 - **Polisbeslut separat:** `Direkt`, `FID`, `Direkt / FID`, `Nej` eller `Särskild regel`. Andra beslutsfattare och exakta regler syns i expanderbar detalj. FID = fara i dröjsmål.
+- **Snabbare färgkodning i ljus och mörk vy:** grön ✓ för möjlig prövning utifrån brottet, rött ✕ när brottsvillkoret inte är uppfyllt, grå informationssymbol när uppgiften inte är verifierad. Status för beslutsbehörighet visas som egna etiketter under åtgärden.
+- **Beslutsfattare i klartext:** `Eget beslut` (polisman på egen behörighet), `Polisman FID`, `FU-ledare`. Där tillämpligt visas också `Åklagare` eller `Rätten`. Flera etiketter betyder alternativa behörighetsvägar med olika förutsättningar, inte att alla kan besluta i samma situation.
 - **Visa endast ✓** kan filtrera listan. Grupperingen RB 23–28 behålls; hemliga tvångsmedel visas inte. Fasta paragrafhänvisningar visas utan att avslutande bokstäver i t.ex. 23:8 a, 23:9 a och 27:1 a kapas.
 - **27 synliga åtgärder:** tidigare 24 plus 3 kompletteringar i RB 23:8–9 om medtagande och kvarstannande vid förhör. Strukturerad beslutsmetadata finns för samtliga.
 - **46 nya sökbara grundposter**, med straffskalor och särskild förstadiekriminalisering enligt:
