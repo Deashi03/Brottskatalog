@@ -71,7 +71,7 @@ assert.equal(status('Försök till mord','grupp').tone,'yes');
 assert.equal(status('Ringa stöld','beslag').tone,'neutral');
 assert.equal(status('Försök till ringa stöld','beslag').tone,'no');
 for(const title of ['Grovt skattebrott','Grov vapensmuggling','Försök till ringa stöld'])assert.ok(find(title)?.investigation?.length>=3,'Missing field plan for '+title);
-assert.equal(find('Försök till mord').stagePenaltyLower,'Fängelse 1 mån','Attempted murder must not show 18 years as minimum');
+assert.equal(find('Försök till mord').stagePenaltyLower,'1 mån','Attempted murder must not show 18 years as minimum');
 assert.equal(find('Försök till mord').penaltyRange.min,1/12);
 assert.ok(find('Försök till mord').stagePenaltyUpper.includes('18 år'));
 assert.equal(find('Människorov').prosecution,'general','Ordinary public prosecution must get a green check');
