@@ -1,6 +1,6 @@
 {
   "schema": 1,
-  "importedAt": "2026-10-13T14:28:39Z",
+  "importedAt": "2026-10-13T14:32:29Z",
   "sources": [
     {
       "code": "SmuglL",
@@ -9,7 +9,7 @@
       "paragraphCount": 50,
       "observedVersion": "2026:1321",
       "digest": "c4b781debcb446628e3be9b503023de6d58a91db7e94899414c4eedcee84bbaf",
-      "importedAt": "2026-10-13T14:28:39Z",
+      "importedAt": "2026-10-13T14:32:29Z",
       "status": "imported-machine-unverified"
     },
     {
@@ -19,7 +19,7 @@
       "paragraphCount": 13,
       "observedVersion": "2026:1323",
       "digest": "5276b01f8ea8ab68aa5228a40cb5fd76128e16d78da9d616d731436533899fcf",
-      "importedAt": "2026-10-13T14:28:39Z",
+      "importedAt": "2026-10-13T14:32:29Z",
       "status": "imported-machine-unverified"
     },
     {
@@ -29,7 +29,7 @@
       "paragraphCount": 22,
       "observedVersion": "2026:1531",
       "digest": "2c7b2d1346fce7e3e0f49091bb6dae2da22cf0d5b6126b405642c3de3b289a3d",
-      "importedAt": "2026-10-13T14:28:39Z",
+      "importedAt": "2026-10-13T14:32:29Z",
       "status": "imported-machine-unverified"
     },
     {
@@ -39,17 +39,17 @@
       "paragraphCount": 8,
       "observedVersion": "2026:1322",
       "digest": "e50ab21d221c782f5ea6e6b026592a49d2c1d51df566716820f2dc05beec55fc",
-      "importedAt": "2026-10-13T14:28:39Z",
+      "importedAt": "2026-10-13T14:32:29Z",
       "status": "imported-machine-unverified"
     },
     {
       "code": "LBE",
       "sfs": "2010-1011",
       "sourceURL": "https://data.riksdagen.se/dokument/sfs-2010-1011.html",
-      "paragraphCount": 59,
+      "paragraphCount": 58,
       "observedVersion": "2026:1584",
       "digest": "7e780afc2054dbf20f1707ea292579a4cb04cb60a79511610d210b8370d13d6e",
-      "importedAt": "2026-10-13T14:28:39Z",
+      "importedAt": "2026-10-13T14:32:29Z",
       "status": "imported-machine-unverified"
     }
   ],
