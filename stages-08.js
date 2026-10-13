@@ -6,7 +6,7 @@ const NARK='https://www.riksdagen.se/sv/dokument-och-lagar/dokument/svensk-forfa
 const GUN='https://www.riksdagen.se/sv/dokument-och-lagar/dokument/svensk-forfattningssamling/vapenlag-2026408_sfs-2026-408/';
 const norm=s=>String(s||'').toLocaleLowerCase('sv').trim().normalize('NFD').replace(/[\u0300-\u036f]/g,'').replace(/\s+/g,' ');
 const STAGES=[['forsok','Försök till','försök',1],['forberedelse','Förberedelse till','förberedelse',2],['stampling','Stämpling till','stämpling',2]];
-const permission=new Map(), checkedChapters=new Set([3,6,7,8,9,10,11,12,13,14,15,16,17,18,19]);
+const permission=new Map(), checkedChapters=new Set([3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19]);
 const add=(ref,types,names)=>{
  for(const name of names.split('|')){
   const key=norm(name);const record=permission.get(key)||{types:new Set(),source:ref};
@@ -55,7 +55,7 @@ add('BrB 19:14','FPS','Högförräderi|Trolöshet vid förhandling med främmand
 add('BrB 19:14','FP','Obehörig befattning med hemlig uppgift');
 // Explicit icke-straffbarhet för de efterfrågade kombinationerna; övriga BrB-kapitel får inte falskt nekande.
 const explicitNo=new Set(['ringa stöld','ringa misshandel','ringa bedrägeri','ringa skadegörelse','åverkan','ofredande','våldsamt motstånd','tjänstefel','olaga hot','hemfridsbrott','olaga intrång','ringa narkotikabrott · bruk','narkotikabrott · bruk'].map(norm));
-const chapterSource={3:'BrB 3:11',6:'BrB 6:15',7:'BrB 7:5',8:'BrB 8:12',9:'BrB 9:11',10:'BrB 10:9',11:'BrB 11:6',12:'BrB 12:5',13:'BrB 13:12',14:'BrB 14:13',15:'BrB 15:15',16:'BrB 16:17',17:'BrB 17:16',18:'BrB 18:7',19:'BrB 19:14'};
+const chapterSource={3:'BrB 3:11',4:'BrB 4:10',5:'BrB 5 kap. jämför BrB 23:1–2 (ingen särskild förstadiebestämmelse)',6:'BrB 6:15',7:'BrB 7:5',8:'BrB 8:12',9:'BrB 9:11',10:'BrB 10:9',11:'BrB 11:6',12:'BrB 12:5',13:'BrB 13:12',14:'BrB 14:13',15:'BrB 15:15',16:'BrB 16:17',17:'BrB 17:16',18:'BrB 18:7',19:'BrB 19:14'};
 const stageScope={
  'oredlighet mot borgenärer':{forsok:'BrB 11:6 omfattar försök till 11:1 första stycket och försök till andra stycket endast om tillgång förs ut ur landet.'},
  'grov oredlighet mot borgenärer':{forsok:'BrB 11:6 omfattar bara de särskilt angivna gärningsformerna i 11:1.'},
@@ -91,7 +91,7 @@ for(const c of base){
  for(const [slug,prefix,word,para] of STAGES){
   const code=slug==='forsok'?'F':slug==='forberedelse'?'P':'S';
   const approved=!!permit?.types.has(code);
-  const negative=!approved&&(c.stageReviewed||explicitNo.has(norm(c.title))||narc||gun);
+  const negative=!approved&&(c.stageReviewed||(brb&&checkedChapters.has(chapter))||explicitNo.has(norm(c.title))||narc||gun);
   // Ogranskade kombinationer görs sökbara vid en uttrycklig sökning, men visas inte i huvudkatalogen.
   const status=approved?'punishable':negative?'not-criminalized':'unverified';
   if(status==='punishable')yes++;else if(status==='not-criminalized')no++;else unknown++;
@@ -106,6 +106,7 @@ for(const c of base){
   const penalty=status==='punishable'?(code==='F'?minLabel+' – högst '+maxLabel:(maxStrict?'Böter eller fängelse, lägre än '+duration(p.max)+(p.max<6?' och högst 2 år':''):'Böter eller fängelse högst '+duration(max))):status==='not-criminalized'?'Saknar straffskala – ej kriminaliserat':'Straffbarhet/straffskala ej verifierad';
   const short=status==='punishable'?(hasFine?'B–F ':'F ')+(code==='F'&&!hasFine?'1 mån–':'')+(maxStrict?'< ':'')+maxLabel:status==='not-criminalized'?'Ej straffbart':'Ej verifierat';
   const src=permit?.source|| (brb?(chapterSource[chapter]||'BrB '+chapter+' kap. (särskild kriminalisering ej slutgranskad)'):'Specialstraffrätt – kontroll krävs');
+  const statutoryReview=brb&&checkedChapters.has(chapter)||!!c.stageReviewed||narc||gun;
   const restriction=stageScope[key]?.[slug]||'';
   const why=status==='not-criminalized'?'Det finns inte någon särskild föreskrift om ansvar för '+word+' till just denna rubricering i den kontrollerade kriminaliseringsbestämmelsen. Det utesluter inte att en annan brottsrubricering kan bli aktuell.':status==='unverified'?'Förstadiets straffbarhet har inte granskats tillräckligt för en säker slutsats. Avsaknad av verifiering betyder INTE att gärningen är straffri.':limitNote+(restriction?' Begränsning: '+restriction:'');
   const stageTitle=prefix+' '+c.title.toLocaleLowerCase('sv');
@@ -118,6 +119,8 @@ for(const c of base){
    penaltyRange:status==='punishable'?{min,max,fines:hasFine,life:code==='F'&&!!p.life}:null,
    penaltyNote:why,penaltyChecked:'2026-10-12',
    stageType:slug,stageStatus:status,stageSource:src,stageParentId:c.id,
+   stageReviewDate:statutoryReview?'2026-10-13':null,
+   stageReviewBasis:statutoryReview?(brb?'Kapitlets särskilda förstadiebestämmelse och BrB 23:1–2':c.stageReviewed?'Särskild specialstraffrättslig förstadiebestämmelse':'Särskild förstadiebestämmelse'):'Ej individuell lagrumsgranskning',
    stageParentMin:p.min,stageParentMax:p.max,stageParentLife:!!p.life,
    stagePenaltyLower:status==='punishable'?(hasFine?'Böter':'1 mån'):null,
    stagePenaltyUpper:status==='punishable'?(code==='F'?maxLabel:p.life?'Under livstid':p.max>2&&p.max<6?'Högst 2 år':'Under '+maxLabel):null,
@@ -133,5 +136,5 @@ for(const c of base){
  }
 }
 D.categories=['Alla',...new Set(D.crimes.map(c=>c.category))];
-window.BK_STAGES={yes,no,unknown,unavailable,source:'BrB 23 kap. och respektive särskild kriminaliseringsbestämmelse',version:'0.8'};
+window.BK_STAGES={yes,no,unknown,unavailable,source:'BrB 23 kap. och respektive särskild kriminaliseringsbestämmelse',version:'1.2',reviewedChapters:[...checkedChapters]};
 })();
