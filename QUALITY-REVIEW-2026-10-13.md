@@ -1,5 +1,21 @@
 # Brottskatalog – kvalitetsgranskning 2026-10-13
 
+## Tillägg – status efter databasuppdatering 1.2
+
+Granskningsrapporten nedan dokumenterar **äldre tillstånd** och ska inte läsas som aktuell briststatistik. Vid [godkänd automatiserad testkörning 38414940218](https://github.com/Deashi03/Brottskatalog/actions/runs/38414940218) var databasens täckning:
+
+- **297** grundbrott, **852** sökbara förstadier, totalt **1 149** poster.
+- Förstadier: **337** registrerat straffbara, **515** registrerat icke straffbara, **0** utan registrerad klassificering. Kapitelregler och specialundantag kan fortsatt kräva individuell juridisk sakgranskning.
+- Åtal: **215** grundposter märkta med allmänt åtal, **82** med åtalsvillkor, **0** oklassificerade.
+- Straffskaleformat: **295 av 297** med numeriskt intervall; **2** legitimt beroende av ett underliggande brott eller straffbud.
+- Offline lagtext: **48** poster med tidigare manuellt lagtextläge, **249** med maskinimporterat utdrag, **0** utan något textutdrag. Ett maskinimporterat utdrag är inte juridiskt slutgranskat.
+- Öppna sakgranskningspunkter: **249 maskinimporterade utdrag**, **50 poster utan dokumenterad straffskalekontroll** och **12 negativa förstadiebesked med svag explicit källkedja**. Samma post kan förekomma i flera kategorier.
+
+Automatisk granskning och godkända tester är inte likvärdiga med juridisk sakkunniggranskning. Historisk lagversion och framtida ikraftträdanden måste fortsatt hanteras separat.
+
+---
+
+
 ## Slutsats och avgränsning
 
 **Tekniskt:** Katalogens 1 149 sökbara poster har genomgått maskinell kontroll av struktur, lagrum, penaltyRange, status, relations-ID, lagtextläge, länkar, åtalsmetadata och metadata för tvångsmedel. Playwright-test har passerat på GitHub Actions, tillsammans med förstadie- och integrationstester. En framgångsrik teknisk kontroll är **inte** en individuell juridisk sakkunniggranskning av varje rad.
