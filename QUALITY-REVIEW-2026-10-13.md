@@ -1,4 +1,16 @@
 # Brottskatalog – kvalitetsgranskning 2026-10-13
+## Tillägg – faktisk status efter 1.3
+
+Den aktuella katalogen har **1 157 sökingångar (299 grundposter och 858 förstadier)**, varav 337 förstadier är markerade straffbara och 521 inte straffbara. Åtal: 215 grundposter allmänt åtal, 84 har åtalsvillkor. Den tekniska revisionsrapporten identifierar fortsatt **251 maskinimporterade lagtextutdrag** och **50 poster utan dokumenterad straffskalekontroll**. Dessa är kvarvarande juridiska granskningsuppgifter, inte lika många bekräftade faktafel.
+
+**Åtgärdat:** BrB 20:2 tillagd med två grader och giltighetsdatum 1 augusti 2026. Tjänstefel (20:1) och brott mot tystnadsplikt (20:3) har uppdaterade straffskalor. 20:5:s särskilda åtalsregel för uppgifter till skydd för enskild redovisas. En ny granskare identifierar SFS-utdrag med alternativa eller ännu ej ikraftträdda lagtextversioner. Alla sådana uppgifter visas bara i den hopfällda rättsliga kontrollen längst ned.
+
+**Verifieringsbegränsning:** Kodbasens klassificering av samtliga förstadier bygger på kapitelvis kartläggning och är inte en juridisk handgranskning av vart och ett. Framtida ikraftträdanden eller gärningsdatum kräver fortfarande separat kontroll. Grön CI testar intern konsistens och utvalda fall, inte lagligheten i varje konkret ingripande.
+
+[Senaste verifierade godkända tekniska testkedja](https://github.com/Deashi03/Brottskatalog/actions/runs/38419339176).
+
+---
+
 
 ## Tillägg – status efter databasuppdatering 1.2
 
