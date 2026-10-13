@@ -86,4 +86,8 @@ fs.writeFileSync(path.join(root,'audit','quality-report.json'),JSON.stringify(su
 const headline=Object.entries(issueCounts).map(([k,n])=>k+':'+n).join(' · ');
 console.log('FULL CATALOG AUDIT '+JSON.stringify({total:summary.total,base:summary.base,stages:summary.stages,prosecution:summary.prosecution,stageStatus:summary.stageStatus,lawText:summary.lawText,reviewStatus:summary.reviewStatus,structuredPenalty:summary.penaltyStructured,issueCounts,issueSeverities:severities,topIssues:issues.filter(x=>x.severity==='critical'||x.severity==='high').slice(0,60)},null,2));
 console.log('REVIEW TASK CATEGORIES: '+headline);
+console.log('UNVERIFIED STAGES: '+JSON.stringify(stages.filter(c=>c.stageStatus==='unverified').map(c=>({title:c.title,source:c.stageSource,parent:c.stageParentId}))));
+console.log('UNKNOWN PROSECUTIONS: '+JSON.stringify(base.filter(c=>c.prosecution==='unknown').map(c=>({title:c.title,ref:c.shortRef,reviewStatus:c.reviewStatus}))));
+console.log('UNSTRUCTURED BASE PENALTIES: '+JSON.stringify(base.filter(c=>!c.penaltyRange).map(c=>({title:c.title,ref:c.shortRef,penalty:c.penaltyShort,reviewStatus:c.reviewStatus}))));
+
 if(issues.some(x=>x.severity==='critical')){console.error('CRITICAL DATA QUALITY ISSUE PRESENT');process.exitCode=1;}
