@@ -273,6 +273,20 @@ html,body{width:100%;max-width:100%;overflow-x:clip;overscroll-behavior-x:none;-
 .coercive-entry-body p{margin:6px 0;font-size:12px;line-height:1.6}
 .coercive-entry-body strong{font-weight:760}
 
+
+/* 1.0: signifikant och entydig beslutsbehörighet */
+.decision-help{flex:0 0 26px;width:26px;height:30px;display:flex;align-items:center;justify-content:center;border:0;border-radius:7px;background:rgba(180,120,19,.11);color:#a06a13;padding:0;margin-left:2px;position:relative;z-index:1}
+.decision-help:hover,.decision-help:focus-visible{background:rgba(180,120,19,.2)}
+:root[data-theme="dark"] .decision-help{background:rgba(200,149,63,.16);color:#edb866}
+.coercive-entry>summary>.decision-help .ic{width:18px;height:18px}
+.coercive-entry .decision-pills{display:inline-flex;gap:4px}
+.coercive-entry .decision-pill{font-size:10.5px;min-height:23px}
+.coercive-entry>summary{gap:6px}
+.coercive-entry .measure-info{flex:1;min-width:0}
+.status-icon.good{color:#14815b;background:rgba(21,142,99,.13)}
+.status-icon.unknown{color:var(--muted);background:var(--shade)}
+:root[data-theme="dark"] .status-icon.good{color:#65d9ac;background:rgba(21,142,99,.18)}
+
 </style>
   <title>Brottskatalog · steg 2</title>
 </head>
@@ -694,9 +708,11 @@ D.date='2026-10-12';
   <script src="./validation-06.js"></script>
   <script src="./coercive-07.js"></script>
   <script src="./coercive-09.js"></script>
+  <script src="./decisions-10.js"></script>
   <script src="./special-09.js"></script>
   <script src="./stages-08.js"></script>
   <script src="./field-07.js"></script>
+  <script src="./prosecution-10.js"></script>
   <script>
 /* Brottskatalog – stage 1. No framework, no network request during use. */
 (() => {
@@ -931,7 +947,14 @@ function factsSection(c){
 
 function punishmentBlock(c){
  if(c.stageStatus&&c.stageStatus!=='punishable')return '<div class="penalty-summary">'+escapeHtml(c.stageStatus==='not-criminalized'?'Saknar straffskala – ej straffbart':'Straffskala ej verifierad')+'</div>';
- if(c.stageType)return '<div class="penalty-kind">'+escapeHtml(c.penaltyShort)+'</div><p class="penalty-context">'+escapeHtml(c.penaltyNote||'')+'</p>';
+ if(c.stageType){
+  const lower=c.stagePenaltyLower||(c.penaltyRange?.min>0?'Fängelse 1 mån':'Böter');
+  const upper=c.stagePenaltyUpper||'Enligt BrB 23 kap.';
+  return '<div class="penalty-kind">'+(lower.startsWith('Böter')?'Böter eller fängelse':'Fängelse')+'</div>'+
+    '<div class="penalty-bounds"><div class="penalty-bound"><span class="penalty-bound-label">LÄGST</span><strong>'+escapeHtml(lower)+'</strong></div>'+
+    '<span class="penalty-arrow" aria-hidden="true">→</span><div class="penalty-bound"><span class="penalty-bound-label">HÖGST</span><strong>'+escapeHtml(upper)+'</strong></div></div>'+
+    '<p class="penalty-context">'+escapeHtml(c.penaltyNote||'')+'</p>';
+ }
  const p=String(c.penalty||'Kontroll krävs').trim();
  const parseWords=(val,assumeYears=false)=>{
    const years=val.match(/(\d+)\s*år/),months=val.match(/(\d+)\s*mån/);
@@ -1007,18 +1030,20 @@ function coerciveSection(c){
  const render=e=>{
   const v=reg.score(c,e),eligible=reg.eligible?reg.eligible(c,e):v.tone!=='no',pending=v.tone==='unknown';
   const authority=e.decisionAuthority||e.ref;
-  const decisions=reg.decisionPaths?reg.decisionPaths(e):[{id:'special',label:'Kontrollera'}];
-  const pills='<span class="decision-pills" aria-label="Beslutsbehörighet">'+
-    decisions.map(d=>'<span class="decision-pill '+escapeHtml(d.id)+'">'+escapeHtml(d.label)+'</span>').join('')+'</span>';
+  const guide=reg.decisionGuide?reg.decisionGuide(e):{brief:'Kontrollera',complex:true,lines:[e.info],ref:e.ref};
+  const route=guide.brief==='Polisman FID'?'fid':guide.brief==='Polisman beslutar'?'own':guide.brief==='FU-ledare'?'fu':'special';
+  const pills='<span class="decision-pills" aria-label="Primär beslutsväg">'+
+   '<span class="decision-pill '+route+'">'+escapeHtml(guide.brief)+'</span></span>';
+  const help=guide.complex?'<button type="button" class="decision-help" data-decision-info="'+escapeHtml(e.id)+'" aria-label="Visa villkor för beslutsbehörigheten vid '+escapeHtml(e.title)+'" title="Beslutet har särskilda villkor">'+ic('alert-circle','sm')+'</button>':'';
   const detail=('<p><strong>Brottsrelaterat villkor:</strong> '+escapeHtml(v.label)+'</p>')+
-   '<p><strong>Beslutsbehörighet:</strong> '+decisions.map(d=>escapeHtml(d.label)).join(' · ')+'</p>'+
-   (e.decisionCaution?'<p><strong>Undantag och begränsning:</strong> '+escapeHtml(e.decisionCaution)+'</p>':'')+
-   '<p><strong>Beslutsordning:</strong> '+escapeHtml(e.otherDecision||e.decision)+'</p>'+
+   '<p><strong>Beslut i korthet:</strong> '+escapeHtml(guide.brief)+'</p>'+
+   (guide.complex?'<p>Observera att beslutet har särskilda villkor. Tryck på utropstecknet för att se undantag och alternativa beslutsvägar.</p>':'')+
+   '<p><strong>Detaljerad beslutsordning:</strong> '+escapeHtml(e.otherDecision||e.decision)+'</p>'+
    '<p>'+escapeHtml(e.info)+'</p><p class="source-label">Beslutsbehörighet: '+escapeHtml(authority)+' · '+escapeHtml(e.ref)+'</p>';
   return '<details class="coercive-entry" data-eligible="'+(pending?'unknown':String(eligible))+'"><summary>'+
     '<span class="measure-icon '+(pending?'unknown':eligible?'yes':'no')+'" aria-label="'+(pending?'Straffskalan är inte verifierad':eligible?'Brottskrav medger prövning':'Brottskrav ej uppfyllt')+'">'+ic(pending?'info':eligible?'check-circle':'x','sm')+'</span>'+
     '<span class="measure-info"><strong class="coercive-ref">'+escapeHtml(e.ref.split(' jfr ')[0].split(',')[0].replace('RB ','RB '))+'</strong>'+
-    '<span class="coercive-title">'+escapeHtml(e.title)+'</span>'+pills+'</span>'+ic('chevron-down','sm')+
+    '<span class="coercive-title">'+escapeHtml(e.title)+'</span>'+pills+'</span>'+help+ic('chevron-down','sm')+
     '</summary><div class="coercive-entry-body">'+detail+'</div></details>';
  };
  const panel='<div class="coercive-overview"><p class="coercive-lead">✓ = brottets straffskala och brottstyp utesluter inte åtgärden. ✕ = villkor ej uppfyllt. Grå informationssymbol = uppgiften ej verifierad. Övriga rekvisit måste fortfarande prövas. FID = fara i dröjsmål.</p>'+
@@ -1074,7 +1099,7 @@ function renderDetail(c){
   ${c.stageStatus==='not-criminalized'?'<div class="stage-alert no"><strong>✕ EJ STRAFFBART</strong><p>Förstadiet är inte särskilt kriminaliserat. Se lagrum och förklaring nedan.</p></div>':c.stageStatus==='unverified'?'<div class="stage-alert pending"><strong>STRAFFBARHET EJ VERIFIERAD</strong><p>Frånvaro av verifiering innebär inte att förstadiet är straffritt.</p></div>':''}
   <section class="penalty-panel" aria-label="Straffskala"><div class="penalty-label">Straffskala</div>${punishmentBlock(c)}</section>
   <section class="status-block" aria-label="Översikt"><button class="status-row" data-action="custody" data-id="${c.id}" ${c.stageStatus&&c.stageStatus!=='punishable'?'disabled aria-disabled="true"':''}><span class="status-icon">${ic(custodyIcons[c.custody])}</span><span class="status-copy"><div class="status-label">Häktning</div><div class="status-value">${escapeHtml(custodyLabel(c))}</div></span><span class="status-right">${ic('info','sm')}${ic('chevron-right','sm')}</span></button>
-  ${!c.stageStatus||c.stageStatus==='punishable'?'<button class="status-row" data-action="prosecution" data-id="'+escapeHtml(c.id)+'"><span class="status-icon warn">'+ic('alert-circle')+'</span><span class="status-copy"><div class="status-label">Åtalsregel</div><div class="status-value">'+escapeHtml(c.prosecutionLabel)+'</div></span><span class="status-right">'+ic('info','sm')+ic('chevron-right','sm')+'</span></button>':''}</section>
+  ${!c.stageStatus||c.stageStatus==='punishable'?'<button class="status-row" data-action="prosecution" data-id="'+escapeHtml(c.id)+'"><span class="status-icon '+(c.prosecution==='general'?'good':c.prosecution==='conditional'?'warn':'unknown')+'">'+ic(c.prosecution==='general'?'check-circle':c.prosecution==='conditional'?'alert-circle':'info')+'</span><span class="status-copy"><div class="status-label">Åtalsregel</div><div class="status-value">'+escapeHtml(c.prosecutionLabel||'Åtalsregel ej verifierad')+'</div></span><span class="status-right">'+ic('info','sm')+ic('chevron-right','sm')+'</span></button>':''}</section>
   <section class="detail-body"><div class="accordions">
   ${accordion('lag','Lagtext', 'book-open',law)}
   ${(!c.stageStatus||c.stageStatus==='punishable')?accordion('tvang','Tvångsmedel – översikt','shield-check',coerciveSection(c)):''}
@@ -1158,6 +1183,16 @@ function refreshConnection(){
   if (el) el.textContent=navigator.onLine?'Lokalt läge':'Offline';
 }
 document.addEventListener('click', async e=>{
+  const info=e.target.closest('[data-decision-info]');
+  if(info){
+   e.preventDefault();e.stopPropagation();
+   const measure=window.BK_COERCIVE?.entries?.find(x=>x.id===info.dataset.decisionInfo);
+   const guide=measure&&window.BK_COERCIVE?.decisionGuide?.(measure);
+   if(guide){
+     showSheet({kicker:'RB · BESLUTSBEHÖRIGHET',title:measure.title,body:guide.lines,ref:guide.ref});
+   }
+   return;
+  }
   const move=e.target.closest('[data-move]');if(move){const n=state.favorites.indexOf(move.dataset.id),d=move.dataset.move==='up'?-1:1,j=n+d;if(n>=0&&j>=0&&j<state.favorites.length){[state.favorites[n],state.favorites[j]]=[state.favorites[j],state.favorites[n]];writeSetting('favorites',state.favorites);renderSaved();}return;}
   const opener=e.target.closest('[data-open]');if(opener){const id=opener.dataset.open;if(byId[id]){state.navStack.push(location.hash||'#sok');goRoute('#brott/'+id);}return;}
   const provision=e.target.closest('[data-provision]');if(provision){showProvision(provision.dataset.provision);return;}
