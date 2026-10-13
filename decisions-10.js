@@ -73,7 +73,7 @@ reg.decisionGuide=e=>{
  const info=guide[e.id]||{};
  const basic=generic(e);
  const paths=basic.paths;
- const complexity=!!info.complex||e.officerMode==='both'||paths.filter(x=>!['fu','prosecutor','court'].includes(x.id)).length>1||e.officerMode==='special'||(!['own','fid'].some(id=>paths.some(x=>x.id===id))&&paths.length>1);
+ const complexity=!!info.complex||e.officerMode==='both'||e.officerMode==='fid'||(paths.length>1)||e.officerMode==='special';
  const fallback=info.lines||[
   basic.brief==='Polisman FID'?'Polisman får fatta beslut endast vid fara i dröjsmål; annars fattar behörig undersökningsledare/åklagare beslut.':
   basic.brief==='Polisman beslutar'?'Polismans självständiga beslutskompetens gäller endast under de särskilda förutsättningar som framgår av lagrummet.':
