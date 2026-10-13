@@ -89,15 +89,15 @@ for(const c of base){
   const status=approved?'punishable':negative?'not-criminalized':'unverified';
   if(status==='punishable')yes++;else if(status==='not-criminalized')no++;else unknown++;
   const p=original(c), hasFine=code==='F'?p.min<2:true;
-  const min=0;
+  const min=code==='F'&&p.min>=2 ? 1/12 : 0;
   const max=code==='F'?p.max:(p.max>=6?p.max:Math.min(p.max,2));
   const maxStrict=code!=='F'&&!p.life;
   const maxLabel=(p.life&&code==='F')?duration(p.max)+' / livstid':duration(max);
-  const minLabel=hasFine?'Böter':'Fängelse';
+  const minLabel=hasFine?'Böter':'Fängelse 1 mån';
   const limit=code==='F'?'Högst samma straff som fullbordat brott.':'Under fullbordat brotts maximistraff; över 2 års fängelse bara om fullbordat brott har maximum minst 6 år.';
-  const limitNote=code==='F'?(p.min>=2?'Böter uteslutna enligt BrB 23:1.':'Böter kan ingå enligt BrB 23:1.'):('BrB 23:2: '+limit);
+  const limitNote=code==='F'?(p.min>=2?'Böter uteslutna enligt BrB 23:1. Lägsta tidsbestämda fängelsestraff är 1 månad enligt BrB 26:1.':'Böter kan ingå enligt BrB 23:1.'):('BrB 23:2: '+limit);
   const penalty=status==='punishable'?(code==='F'?minLabel+' – högst '+maxLabel:(maxStrict?'Böter eller fängelse, lägre än '+duration(p.max)+(p.max<6?' och högst 2 år':''):'Böter eller fängelse högst '+duration(max))):status==='not-criminalized'?'Saknar straffskala – ej kriminaliserat':'Straffbarhet/straffskala ej verifierad';
-  const short=status==='punishable'?(hasFine?'B–F ':'F ')+(maxStrict?'< ':'')+maxLabel:status==='not-criminalized'?'Ej straffbart':'Ej verifierat';
+  const short=status==='punishable'?(hasFine?'B–F ':'F ')+(code==='F'&&!hasFine?'1 mån–':'')+(maxStrict?'< ':'')+maxLabel:status==='not-criminalized'?'Ej straffbart':'Ej verifierat';
   const src=permit?.source|| (brb?(chapterSource[chapter]||'BrB '+chapter+' kap. (särskild kriminalisering ej slutgranskad)'):'Specialstraffrätt – kontroll krävs');
   const restriction=stageScope[key]?.[slug]||'';
   const why=status==='not-criminalized'?'Det finns inte någon särskild föreskrift om ansvar för '+word+' till just denna rubricering i den kontrollerade kriminaliseringsbestämmelsen. Det utesluter inte att en annan brottsrubricering kan bli aktuell.':status==='unverified'?'Förstadiets straffbarhet har inte granskats tillräckligt för en säker slutsats. Avsaknad av verifiering betyder INTE att gärningen är straffri.':limitNote+(restriction?' Begränsning: '+restriction:'');
@@ -112,6 +112,8 @@ for(const c of base){
    penaltyNote:why,penaltyChecked:'2026-10-12',
    stageType:slug,stageStatus:status,stageSource:src,stageParentId:c.id,
    stageParentMin:p.min,stageParentMax:p.max,stageParentLife:!!p.life,
+   stagePenaltyLower:status==='punishable'?(hasFine?'Böter':'Fängelse 1 mån'):null,
+   stagePenaltyUpper:status==='punishable'?(code==='F'?'Fängelse '+maxLabel:'Under fullbordat brotts max'):null,
    stageExplanation:why,
    custody:status==='punishable'?(p.min>=4?'presumption':max>=1?'possible':'none'):'none',
    prosecution:'unknown',prosecutionLabel:status==='punishable'?'Åtalsregler måste kontrolleras':'Ej tillämpligt som egen straffbar rubricering',
