@@ -1,6 +1,21 @@
 /* Brottskatalog 0.7 – prioriterade åtgärder på plats. Ingen automatiserad tvångsmedelsbehörighet. */
 (()=>{'use strict';const D=window.BK_DATA;if(!D)return;
 const A={
+'missbruk av offentlig ställning':[
+ ['Offentlig funktion och tillämplig författning','Dokumentera tjänst, uppdrag eller annan offentlig verksamhet och vilket konkret handlande eller vilken underlåtenhet som strider mot lag eller annan författning.'],
+ ['Syfte och otillbörlig förmån eller nackdel','Anteckna vilka konkreta omständigheter som talar för avsikten att gynna sig själv/annan otillbörligt eller otillbörligt missgynna någon annan. Registrera även uppgifter som talar emot uppsåt.'],
+ ['Beslut och spårbarhet','Identifiera beslut, diarienummer, behörighetsnivå, dokumenterade kontakter och tidslinje. Säkring av loggar eller handlingar kräver eget lagligt stöd.'],
+ ['Avgränsning mot tjänstefel','Pröva först om gärningen ligger inom myndighetsutövning och kan omfattas av BrB 20:1. Missbruk av offentlig ställning enligt 20:2 är subsidiärt. Beakta gärningsdatum från 2026-08-01.',1]],
+'tjänstefel':[
+ ['Myndighetsutövning','Precisera den myndighetsutövning handlingen eller underlåtenheten hör till och vilken bestämmelse, instruktion eller uppgift som åsidosatts.'],
+ ['Handlingsförlopp och beslutsmaterial','Bevara uppgifter om tidslinje, beslut, ansvarsfördelning, eventuella kontakter och relevanta handlingar. Särskilt dokumentera egna objektiva iakttagelser.'],
+ ['Uppsåt eller oaktsamhet','Identifiera faktiska omständigheter kring gärningspersonens kunskap, uppdrag och möjliga förklaringar; gör inte automatiskt oaktsamhet till uppsåt.'],
+ ['Ringa eller grovt','Pröva undantaget för ringa gärningar, och vid grovt tjänstefel särskilt uppsåt samt kvalificerande omständigheter. Gällande minimistraff sedan 2026-08-01: 1 år 6 månader.',1]],
+'brott mot tystnadsplikt':[
+ ['Uppgift och författningsstöd','Identifiera exakt uppgift, hur den röjts eller utnyttjats, och tillämplig sekretess- eller tystnadspliktsregel.'],
+ ['Mottagare och tidslinje','Dokumentera vem som fick informationen, i vilket sammanhang, uppgiftens skyddsintresse och vilka spår som finns.'],
+ ['Uppsåt, oaktsamhet och undantag','Separera uppsåtligt röjande/utnyttjande från oaktsam gärning (särskild bötesregel). Ringa gärning är inte straffbar.'],
+ ['Åtalsvillkor och grad','Kontrollera om tystnadsplikten gäller till förmån för enskild målsägande enligt BrB 20:5. Vid grovt brott: allvarlig skada, många uppgifter eller särskilt farlig art.',1]],
 'stöld':[
 ['Gods och fyndplats','Notera vad som tagits, var det fanns och vem som hade det. Fotografera relevanta fyndförhållanden.'],
 ['Värde och ägare','Identifiera målsägande, vara och ungefärligt värde; notera om kvitto eller märkning finns.'],
