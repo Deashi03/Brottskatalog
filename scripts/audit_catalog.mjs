@@ -33,6 +33,7 @@ for(const c of all){
   if(!p&&!/kontroll|hänvisar|ändrad|Beror på/i.test(c.penalty||''))flag(id,'medium','unparsed-penalty','No structured penalty range');
   if(c.lawMode==='missing'||!c.law?.trim())flag(id,'medium','missing-offline-law','Full legal text unavailable in offline crime detail');
   if(c.lawMode==='machine')flag(id,'low','machine-law-excerpt','Statute excerpt machine imported, no independent proof of completeness');
+  if(/\/(?:Träder i kraft|Upphör att gälla|Kapitlet träder i kraft|Kapitlet upphör att gälla|Rubriken träder i kraft|Rubriken upphör att gälla)/i.test(String(c.law||'')))flag(id,'medium','alternate-effective-law-text','Imported SFS contains applicability markers; examine offence date and active wording.');
   if(c.prosecution==='unknown'||!c.prosecution)flag(id,'medium','prosecution-unverified','Prosecution rule not final');
   if(!c.prosecutionRule)flag(id,'medium','prosecution-source-missing','No explicit statute authority for prosecution');
   if(!c.penaltyChecked)flag(id,'medium','penalty-not-reviewed','Penalty data has no verified check date');
