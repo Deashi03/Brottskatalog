@@ -304,6 +304,7 @@ html,body{width:100%;max-width:100%;overflow-x:clip;overscroll-behavior-x:none;-
 .qa-row strong{font-size:11px;color:var(--ink)}
 .qa-muted{color:var(--muted);font-size:11px;margin:2px 0}
 .qa-stale{background:var(--amber-bg);border-radius:9px;padding:9px;color:#8f5f16;font-size:11px;margin:0}
+.qa-effective{font-weight:650;font-size:11px;margin:3px 0;color:var(--ink)}
 .qa-source{display:inline-flex;align-items:center;gap:6px;color:var(--link);font-size:12px;padding:4px 0}
 .qa-source .ic{width:13px;height:13px}
 :root[data-theme="dark"] .qa-old{color:#eabd73}
@@ -1103,7 +1104,7 @@ function qualityCard(c){
   '<div class="qa-body"><p class="qa-date">'+escapeHtml(m.lastReviewLabel)+'</p>'+
   (m.stale?'<p class="qa-stale">Mer än tre år sedan senaste dokumenterade sakgranskning. Kontrollera om lagtext eller rättsläge har ändrats. Den här påminnelsen ändrar inte innehållet automatiskt.</p>':'')+
   rows.map(([title,val])=>'<div class="qa-row"><strong>'+escapeHtml(title)+'</strong><span>'+escapeHtml(val)+'</span></div>').join('')+
-  '<p class="qa-muted">'+escapeHtml(m.versionStatus)+'</p><p class="qa-muted">'+escapeHtml(m.dateNotice)+'</p>'+source+'</div></details>';
+  (m.effectiveNote?'<p class="qa-effective">'+escapeHtml(m.effectiveNote)+'</p>':'')+'<p class="qa-muted">'+escapeHtml(m.versionStatus)+'</p><p class="qa-muted">'+escapeHtml(m.dateNotice)+'</p>'+source+'</div></details>';
 }
 
 function renderDetail(c){
