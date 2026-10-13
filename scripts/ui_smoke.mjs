@@ -10,6 +10,31 @@ const wait=async()=>{await page.waitForTimeout(400);};
 try{
   await page.goto(url,{waitUntil:'networkidle'});
   assert.ok(await page.locator('#crime-search').count(),'Search must exist');
+
+  // v0.9.1: Sök/Sparat/Mer do not cover the scrolling content on iPhone.
+  const navGeometry=await page.evaluate(()=>{
+    const app=document.querySelector('.app-shell.nav-layout'),main=app?.querySelector(':scope > main.page'),nav=app?.querySelector(':scope > nav.bottom-nav');
+    if(!app||!main||!nav)return null;
+    main.scrollTop=main.scrollHeight;
+    const a=app.getBoundingClientRect(),m=main.getBoundingClientRect(),n=nav.getBoundingClientRect();
+    return {scrollable:main.scrollHeight>main.clientHeight,offset:main.scrollTop,
+      mainBottom:m.bottom,navTop:n.top,navBottom:n.bottom,viewport:innerHeight,
+      navPosition:getComputedStyle(nav).position,appHeight:a.height,
+      lastCardBottom:main.querySelector('.crime-card:last-child')?.getBoundingClientRect().bottom};
+  });
+  assert.ok(navGeometry,'Tabbed layout must exist');
+  assert.ok(navGeometry.scrollable&&navGeometry.offset>0,'Search results scroll inside their own viewport');
+  assert.equal(navGeometry.navPosition,'relative','Navigation must participate in layout, not overlay the list');
+  assert.ok(navGeometry.mainBottom<=navGeometry.navTop+1,'List viewport must end above navigation');
+  assert.ok(navGeometry.navBottom<=navGeometry.viewport+2,'Navigation must remain inside mobile viewport');
+  assert.ok(navGeometry.lastCardBottom<=navGeometry.navTop+1,'Last result cannot be hidden underneath navigation');
+  await page.locator('.app-shell.nav-layout > main.page').evaluate(el=>el.scrollTop=0);
+  for(const name of ['sparat','mer','sok']){
+    await page.locator('[data-tab="'+name+'"]').click();
+    assert.ok(await page.locator('.app-shell.nav-layout > main.page').count(),
+      'Tab '+name+' must use an independent content viewport');
+  }
+
   assert.equal(await page.locator('h1:has-text("Vad vill du slå upp?")').count(),0,'Large hero removed');
   const search=page.locator('#crime-search');
   await search.fill('stöld');
@@ -167,12 +192,12 @@ try{
   assert.ok((await page.locator('.coercive-entry').allTextContents()).some(x=>x.includes('FID')),'Police FID badges are visible');
   // v0.9: high-contrast crime eligibility and explicit decision-maker wording.
   const decisionTexts=await page.locator('.coercive-entry').allTextContents();
-  assert.ok(decisionTexts.some(x=>x.includes('Eget beslut')),'Direct police decision must read Eget beslut');
+  assert.ok(decisionTexts.some(x=>x.includes('Polisman beslutar')),'Direct police decision must read Polisman beslutar');
   assert.ok(decisionTexts.some(x=>x.includes('Polisman FID')),'Police urgency decision must read Polisman FID');
   assert.ok(decisionTexts.some(x=>x.includes('FU-ledare')),'Investigation leader must be labeled FU-ledare');
   const beslag=page.locator('.coercive-entry').filter({hasText:'27:1'}).filter({hasText:'Beslag'}).first();
-  assert.ok((await beslag.locator('.decision-pill').allTextContents()).includes('Eget beslut'),'Beslag should show own decision');
-  assert.ok((await beslag.locator('.decision-pill').allTextContents()).includes('Polisman FID'),'Beslag should show urgent decision');
+  assert.ok((await beslag.locator('.decision-pill').allTextContents()).includes('Polisman beslutar'),'Beslag must show one police decision');
+  assert.equal((await beslag.locator('.decision-pill').allTextContents()).includes('Polisman FID'),false,'Beslag must not show both police decision modes');
   const colors=await page.evaluate(()=>({
     yes:getComputedStyle(document.querySelector('.measure-icon.yes')).color,
     no:getComputedStyle(document.querySelector('.measure-icon.no')).color
@@ -180,6 +205,7 @@ try{
   assert.notEqual(colors.yes,colors.no,'Green checks and red crosses must have distinct computed colors');
   assert.ok(await page.locator('.decision-pill.own').count()>0,'Own decision badges must exist');
   assert.ok(await page.locator('.decision-pill.fid').count()>0,'FID badges must exist');
+  assert.equal(await page.locator('.coercive-entry:has(.decision-pill.own):has(.decision-pill.fid)').count(),0,'Direct and FID police labels must never coexist in one measure');
 
   const filter=page.locator('.coercive-filter');
   await filter.check();
