@@ -1,3 +1,34 @@
+# Brottskatalog 1.2 – färdigställande av databasens struktur (2026-10-13)
+
+Senaste **hela** godkända integrations-, data- och iPhone-körning: [GitHub Actions](https://github.com/Deashi03/Brottskatalog/actions/runs/38414940218).
+
+| Område | Nuvarande utfall |
+|---|---|
+| Sökbara poster | 1 149 (297 grundbrott, 852 förstadier) |
+| Förstadier, kriminalisering enligt databasen | 337 straffbara; 515 ej kriminaliserade; 0 utan registrerad slutsats |
+| Grundbrott med åtalsklassificering | 297/297 (215 allmänt åtal, 82 med särskilt villkor) |
+| Offline lagtextutdrag | 297/297 grundposter (48 manuellt inlagda, 249 **maskinimporterade, ej juridiskt slutgranskade**) |
+| Strukturerade straffskalor | 295/297. Två rubriker har ingen enda generell straffskala: brukande av falsk urkund samt arbetsmiljöbrott. |
+| Fortsatta juridiska granskningsbehov | Minst 50 posters straffskaleverifikation saknas, 249 lagtextutdrag är maskinimporterade, och 12 negativa förstadiebesked har svagt maskinellt dokumenterat stöd. |
+
+**Viktig skillnad:** Siffrorna visar strukturell datatäckning och maskinellt kontrollerade klassificeringar. De innebär **inte** att varje brottsrekvisit, förstadium, lagversion, straffskala eller åtalsregel har fått en oberoende fullständig juridisk sakkunniggranskning. Tillämplig lagversion på gärningsdagen måste fortfarande fastställas.
+
+### Genomförda arbetsmoment
+
+- Förstadier har klassificerats utifrån särskilda bestämmelser i BrB:s kapitel 3–22 samt tidigare granskade specialförfattningar. Poster behåller hänvisning till aktuell kriminaliseringsbestämmelse och separat granskningsunderlag. Särskilda gärningsformsundantag måste fortfarande prövas.
+- Officiella SFS-texter har importerats för smugglingslagen, penningtvättsbrottslagen, skattebrottslagen, bidragsbrottslagen och lagen om brandfarliga och explosiva varor. Extraheringen kör kontroller som hindrar publicering av felklippta paragrafutdrag.
+- De sista 12 oklassificerade grundbrottens åtalsregler har kompletterats utifrån BrB 11:8, 16 och 17 kap., inklusive villkor för vårdslöshet mot borgenärer och ringa bokföringsbrott.
+- De tidigare visade straffskalorna har normaliserats till numeriska intervall där detta är entydigt möjligt; importerad/normaliserad information får inte automatiskt ett datum för juridisk sakgranskning.
+- Katalogens juridiska kontrollmeny ligger fortfarande hopfälld längst ned på kortet med diskret treårsmarkering när ett faktiskt dokumenterat kontrolltidpunkt finns.
+
+### Nästa krav för en juridiskt slutgranskad release
+
+1. Individuell rättskällejämförelse av de **249 maskinimporterade** lagtextutdragen inklusive rätt lydelse för gärningsdatum och övergångsbestämmelser.
+2. Kontroll av varje förstadies tillämpningsområde, gärningsform och eventuella negativa undantag; särskilt de **12** posterna med svag källkedja.
+3. Dokumentera och granska de **50** poster vars straffskaleverifikation ännu saknas.
+4. Bevara synliga villkor för de två brott där straffskalan beror på det underliggande brottet – ange **aldrig** ett enda fabricerat intervall.
+
+---
 ## Uppdatering 1.1 – Rättslig kontroll längst ned (2026-10-13)
 
 - Brottskortets sista funktion före versionsfotnoten är nu **Rättslig kontroll**, en liten grå rad som är **stängd som standard**. Inget visas före lagtext, straffskala, häktning eller tvångsmedel.
