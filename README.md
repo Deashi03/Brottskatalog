@@ -9,7 +9,7 @@ Senaste **hela** godkända integrations-, data- och iPhone-körning: [GitHub Act
 | Grundbrott med åtalsklassificering | 297/297 (215 allmänt åtal, 82 med särskilt villkor) |
 | Offline lagtextutdrag | 297/297 grundposter (48 manuellt inlagda, 249 **maskinimporterade, ej juridiskt slutgranskade**) |
 | Strukturerade straffskalor | 295/297. Två rubriker har ingen enda generell straffskala: brukande av falsk urkund samt arbetsmiljöbrott. |
-| Fortsatta juridiska granskningsbehov | Minst 50 posters straffskaleverifikation saknas, 249 lagtextutdrag är maskinimporterade, och 12 negativa förstadiebesked har svagt maskinellt dokumenterat stöd. |
+| Fortsatta juridiska granskningsbehov | Minst 50 posters straffskaleverifikation saknas och 249 lagtextutdrag är maskinimporterade; de tidigare 12 otillräckliga negativa hänvisningarna för bidragsbrott har kompletterats med paragrafintervall. |
 
 **Viktig skillnad:** Siffrorna visar strukturell datatäckning och maskinellt kontrollerade klassificeringar. De innebär **inte** att varje brottsrekvisit, förstadium, lagversion, straffskala eller åtalsregel har fått en oberoende fullständig juridisk sakkunniggranskning. Tillämplig lagversion på gärningsdagen måste fortfarande fastställas.
 
@@ -24,7 +24,7 @@ Senaste **hela** godkända integrations-, data- och iPhone-körning: [GitHub Act
 ### Nästa krav för en juridiskt slutgranskad release
 
 1. Individuell rättskällejämförelse av de **249 maskinimporterade** lagtextutdragen inklusive rätt lydelse för gärningsdatum och övergångsbestämmelser.
-2. Kontroll av varje förstadies tillämpningsområde, gärningsform och eventuella negativa undantag; särskilt de **12** posterna med svag källkedja.
+2. Kontroll av varje förstadies tillämpningsområde, gärningsform och eventuella negativa undantag; särskilt relevanta undantag och gärningsformer.
 3. Dokumentera och granska de **50** poster vars straffskaleverifikation ännu saknas.
 4. Bevara synliga villkor för de två brott där straffskalan beror på det underliggande brottet – ange **aldrig** ett enda fabricerat intervall.
 
