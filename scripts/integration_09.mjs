@@ -16,6 +16,10 @@ for(const file of scripts)vm.runInContext(readFileSync(resolve(root,file),'utf8'
 new vm.Script(blocks.at(-1),{filename:'index.html:ui'});
 const w=context.window,cs=w.BK_DATA.crimes,co=w.BK_COERCIVE,stages=cs.filter(c=>!!c.stageType);
 const find=t=>cs.find(c=>c.title.toLocaleLowerCase('sv')===t.toLocaleLowerCase('sv'));
+assert.equal(w.BK_CORE_PENALTIES13?.reviewed,16,'All sixteen common penalty ranges must match current reviewed source');
+assert.equal(w.BK_CORE_PENALTIES13?.discrepancies?.length,0,'Mismatch needs manual legal review before release');
+assert.equal(w.BK_CORE_PENALTIES13?.held?.length,0,'Source-changed common crimes need manual review');
+
 const measure=id=>co.entries.find(e=>e.id===id);
 const status=(title,id)=>co.score(find(title),measure(id));
 assert.ok(cs.length>=950,'Broad catalog should be present: '+cs.length);
