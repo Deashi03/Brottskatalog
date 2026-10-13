@@ -86,6 +86,21 @@ assert.equal(co.decisionGuide(measure('beslag')).brief,'Polisman beslutar');
 assert.equal(find('Grovt skattebrott').penaltyRange.min,1);
 assert.equal(find('Grovt penningtvättsbrott').penaltyRange.min,1);
 assert.equal(find('Grovt brott mot tillståndsplikten för explosiva varor').penaltyRange.min,4);
+// A downloaded statute may be displayed only as a MACHINE excerpt, never full verified text.
+const imp=w.BK_SPECIAL_IMPORT12, generated=w.BK_SPECIAL_EXCERPTS;
+if(generated&&Object.keys(generated).length){
+ assert.equal(imp?.linked,46,'All 46 special-law base entries must receive a source excerpt');
+ assert.equal(imp?.missing,0,'No missing source excerpt in the verified extraction set');
+ for(const c of cs.filter(x=>x.id.startsWith('v09-')&&!x.stageType)){
+  assert.equal(c.lawMode,'machine','Special-law extract must not be labeled full/verified: '+c.title);
+  assert.equal(c.lawCompletenessVerified,false,'Extract still requires legal review: '+c.title);
+  assert.ok(c.law?.length>=35,'Missing special-law paragraph: '+c.title);
+ }
+ const smuggling=generated.SmuglL.sections['6']?.text||'';
+ const tax=generated.SkBrL.sections['8']?.text||'';
+ assert.ok(smuggling.includes('narkotikasmuggling')&&smuggling.length>800,'Smuggling 6 § extraction corrupted');
+ assert.ok(tax.includes('vårdslös skatteredovisning')&&tax.length>180,'Tax 8 § extraction corrupted');
+}
 const offline=readFileSync(resolve(root,'service-worker.js'),'utf8');
 for(const file of ['special-09.js','coercive-09.js','stages-08.js'])assert.ok(offline.includes(file),'Missing offline file: '+file);
 assert.ok(html.includes("accordion('lag','Lagtext'"),'Law text first');
