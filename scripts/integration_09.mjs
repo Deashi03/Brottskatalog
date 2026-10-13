@@ -79,6 +79,13 @@ assert.equal(find('Smuggling').prosecution,'conditional','Conditional special sm
 assert.equal(find('Penningtvättsbrott').prosecution,'general','General prosecution for money-laundering');
 assert.equal(find('Skattebrott').prosecution,'conditional','Tax charge restriction must be displayed');
 assert.equal(find('Bidragsbrott').prosecution,'conditional','Admin sanction restriction must be displayed');
+assert.equal(w.BK_PROSECUTION12?.resolved,12,'All 12 previously unreviewed BrB prosecution rules must be classified');
+assert.equal(cs.filter(c=>!c.stageType&&c.prosecution==='unknown').length,0,'All base crimes require explicit prosecution rule classification');
+assert.equal(find('Ringa bokföringsbrott').prosecution,'conditional');
+assert.equal(find('Vårdslöshet mot borgenärer').prosecution,'conditional');
+assert.equal(find('Bokföringsbrott').prosecution,'general');
+assert.equal(find('Falskt larm').prosecution,'general');
+
 assert.ok(co.decisionGuide(measure('beslag')).complex,'Beslag must show warning icon for conditions');
 assert.ok(co.decisionGuide(measure('beslag')).lines.join(' ').includes('gatan'),'Beslag must explain free-standing street discoveries');
 assert.equal(co.decisionGuide(measure('husrannsakan')).brief,'Polisman FID');
