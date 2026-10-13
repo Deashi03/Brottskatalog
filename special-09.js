@@ -110,8 +110,8 @@ for(const [title,key,section,min,max,fines,stages,aliases,note] of more){
   prosecutionDetails:key==='SK'?['Särskild åtalsprövning enligt 13 §; begränsningar vid skattetillägg enligt 13 b §.']:key==='BID'?['Beakta förbudet mot dubbla förfaranden enligt 6 a §, infört 2026.']:['Kontrollera specialregler, subsidiaritet och konkurrens.'],
   lawMode:'missing',law:'',lawSource:law.name+' '+section+' §',sourceURL:law.url,
   elements:note?[note]:[],facts:[],variants:[],stages:[],related:[],
-  stageReviewed:true,stagePermissions:stages,stageSource:stageRef==='Ingen särskild förstadiebestämmelse'?stageRef:law.short+' '+stageRef,
-  stageReference:stageRef==='Ingen särskild förstadiebestämmelse'?stageRef:law.name+' '+stageRef+' §',
+  stageReviewed:true,stagePermissions:stages,stageSource:stageRef==='Ingen särskild förstadiebestämmelse'?'BidrBrL 1–7 §§; BrB 23 kap. (ingen särskild förstadiekriminalisering i den kontrollerade lagen)':law.short+' '+stageRef,
+  stageReference:stageRef==='Ingen särskild förstadiebestämmelse'?law.name+' 1–7 §§ (särskild förstadiekriminalisering saknas)':law.name+' '+stageRef+' §',
   reviewStatus:'penalty-and-stage-verified-lawtext-pending',statute:null
  });known.add(title.toLocaleLowerCase('sv'));
 }
