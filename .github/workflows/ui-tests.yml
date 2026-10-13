@@ -4,6 +4,7 @@ on:
   pull_request:
     paths:
       - "index.html"
+      - "penalty-normalize-12.js"
       - "coercive-07.js"
       - "field-07.js"
       - "scripts/ui_smoke.mjs"
@@ -26,6 +27,7 @@ on:
     branches: [main]
     paths:
       - "index.html"
+      - "penalty-normalize-12.js"
       - "coercive-07.js"
       - "field-07.js"
       - "catalog-03.js"
