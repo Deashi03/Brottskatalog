@@ -29,6 +29,12 @@
 *{box-sizing:border-box}html{min-height:100%;background:var(--ground);scroll-behavior:smooth}body{margin:0;min-height:100%;background:var(--ground)}button,input{font:inherit}button{cursor:pointer}button:disabled{cursor:not-allowed;opacity:.5}a{color:var(--primary)}button:focus-visible,a:focus-visible,summary:focus-visible,input:focus-visible{outline:3px solid #77a9cf;outline-offset:3px}
 .app-shell{max-width:490px;min-height:100dvh;margin:0 auto;background:var(--ground);position:relative;overflow-x:hidden;padding-bottom:calc(85px + env(safe-area-inset-bottom))}
 .app-shell.detail-mode{padding-bottom:calc(28px + env(safe-area-inset-bottom))}
+/* Scrollbar and bottom navigation occupy separate flex rows.
+   No search card scrolls behind Sök / Sparat / Mer on iPhone. */
+.app-shell.nav-layout{height:100dvh;min-height:0;max-height:100dvh;display:flex;flex-direction:column;overflow:hidden;padding-bottom:0}
+.app-shell.nav-layout>main.page{flex:1 1 auto;min-height:0;overflow-y:auto;overflow-x:hidden;overscroll-behavior-y:contain;-webkit-overflow-scrolling:touch;padding-bottom:30px}
+.app-shell.nav-layout>.bottom-nav{position:relative;bottom:auto;left:auto;transform:none;max-width:none;width:100%;flex:0 0 auto;margin:0}
+
 .page{padding:0 22px 24px;animation:enter .16s ease-out}
 @keyframes enter{from{opacity:.2;transform:translateY(4px)}to{opacity:1;transform:translateY(0)}}
 @media(min-width:700px){.app-shell{min-height:100vh;box-shadow:0 0 0 1px #dae1e7,0 12px 70px rgba(12,38,58,.12)}}
@@ -864,7 +870,7 @@ function resultsFragment(){
 }
 function updateResults(){const el=document.getElementById('results-area');if(el)el.innerHTML=resultsFragment();}
 function renderSearch(){
-  app.className='app-shell '+(state.density==='compact'?'compact':'');
+  app.className='app-shell nav-layout '+(state.density==='compact'?'compact':'');
   app.innerHTML=`<main class="page"><div class="bk03-brand">${ic('scale')}<strong>Brottskatalog</strong><span>0.9</span></div>
   <label class="search-box" for="crime-search">${ic('search','lg')}<input id="crime-search" type="search" placeholder="T.ex. ringa stöld, BrB 8:2…" inputmode="search" enterkeyhint="search" autocapitalize="off" autocomplete="off" spellcheck="false" value="${escapeHtml(state.query)}"><button class="search-clear" data-action="clear-search" aria-label="Rensa sökning" style="${state.query?'':'display:none'}">${ic('x','sm')}</button></label>
   <div class="filter-strip" role="group" aria-label="Filtrera brott">${categories.map(cat=>`<button class="filter ${cat===state.category?'active':''}" data-category="${escapeHtml(cat)}" aria-pressed="${cat===state.category}">${escapeHtml(cat)}</button>`).join('')}</div>
@@ -882,7 +888,7 @@ function renderSearch(){
   refreshConnection();
 }
 function renderSaved(){
-  app.className='app-shell '+(state.density==='compact'?'compact':'');
+  app.className='app-shell nav-layout '+(state.density==='compact'?'compact':'');
   const saved=state.favorites.map(id=>byId[id]).filter(Boolean);
   app.innerHTML=`<main class="page">${brandTop()}${note()}<header class="hero"><div class="kicker">DIN GENVÄG</div><h1>Sparade brott</h1><p>Markera brott med bokmärket i övre högra hörnet.</p></header>
   <div class="section-heading"><h2>Favoriter</h2><span>${saved.length} sparade</span></div>
@@ -890,7 +896,7 @@ function renderSaved(){
   refreshConnection();
 }
 function renderMore(){
-  app.className='app-shell '+(state.density==='compact'?'compact':'');
+  app.className='app-shell nav-layout '+(state.density==='compact'?'compact':'');
   app.innerHTML=`<main class="page">${brandTop()}${note()}<h1 class="settings-title">Mer</h1><p class="settings-desc">Förklaringar, visning och information om prototypen.</p>
   <section class="settings-group"><h2 class="settings-h">UTSEENDE</h2><div class="settings-card"><div class="setting-row"><div><h3>Visningstäthet</h3><p>Anpassa kortens storlek.</p></div><div class="choice" aria-label="Visningstäthet"><button data-density="normal" class="${state.density==='normal'?'selected':''}" aria-pressed="${state.density==='normal'}">Normal</button><button data-density="compact" class="${state.density==='compact'?'selected':''}" aria-pressed="${state.density==='compact'}">Tät</button></div></div></div></section>
   <section class="settings-group"><h2 class="settings-h">NATTLÄGE</h2><div class="settings-card"><div class="setting-row"><div><h3>${ic('moon','sm')} Skärmtema</h3><p>Automatisk mörk visning 22.00–06.00 enligt lokal tid. Ändrar inte skärmens ljusstyrka.</p></div></div><div class="setting-row"><div class="choice theme-choice" aria-label="Färgtema"><button data-theme-choice="auto" class="${state.theme==='auto'?'selected':''}" aria-pressed="${state.theme==='auto'}">Automatiskt</button><button data-theme-choice="light" class="${state.theme==='light'?'selected':''}" aria-pressed="${state.theme==='light'}">Ljust</button><button data-theme-choice="dark" class="${state.theme==='dark'?'selected':''}" aria-pressed="${state.theme==='dark'}">Mörkt</button></div></div></div></section>
