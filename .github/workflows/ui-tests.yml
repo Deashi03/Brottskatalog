@@ -12,6 +12,7 @@ on:
       - "stages-08.js"
       - "special-09.js"
       - "brb20-13.js"
+      - "scripts/brb20_13_test.mjs"
       - "special-law-import-12.js"
       - "data/special-provisions-generated.js"
       - "coercive-09.js"
@@ -39,6 +40,7 @@ on:
       - "stages-08.js"
       - "special-09.js"
       - "brb20-13.js"
+      - "scripts/brb20_13_test.mjs"
       - "special-law-import-12.js"
       - "data/special-provisions-generated.js"
       - "coercive-09.js"
@@ -63,6 +65,8 @@ jobs:
           node-version: "22"
       - name: Verify offence stages
         run: node scripts/stage_rules_test.mjs
+      - name: Verify new 2026 public-office offences
+        run: node scripts/brb20_13_test.mjs
       - name: Three-year source verification UI safeguards
         run: node scripts/quality_11_test.mjs
       - name: Full catalog integration and statutes test
