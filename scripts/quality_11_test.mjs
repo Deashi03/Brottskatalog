@@ -18,6 +18,18 @@ assert.equal(info.metadata(a,new Date('2029-10-12T00:00:00Z')).stale,true);
 assert.equal(info.metadata(a,new Date('2026-10-13T12:00:00Z')).stale,false);
 assert.equal(info.metadata(b,new Date('2035-10-13T00:00:00Z')).stale,false,'Unknown does not become fictitiously stale');
 assert.equal(info.metadata(b).lastReview,null);
+const specialWithoutSource={...b,shortRef:'AnnL 1 §',ref:'AnnL 1 §',sourceURL:null};
+assert.doesNotThrow(()=>info.metadata(specialWithoutSource), 'Legal footer must never crash when source URL is absent');
+assert.equal(info.metadata(specialWithoutSource).sourceURL,null);
+const stageWithoutSource={...c,shortRef:'AnnL 1 §',sourceURL:null,stageParentId:'unknown-id'};
+assert.doesNotThrow(()=>info.metadata(stageWithoutSource), 'Stage without a resolvable parent must not crash legal footer');
+assert.equal(info.metadata(stageWithoutSource).sourceURL,null);
+const stageFromParent={...c,shortRef:'AnnL 1 §',sourceURL:null};
+const sourceParent={...a,sourceURL:'https://example.org/statute',id:'sample'};
+w.BK_DATA.crimes=[sourceParent,b,stageFromParent];
+assert.equal(info.metadata(stageFromParent).sourceURL,'https://example.org/statute');
+w.BK_DATA.crimes=sample;
+
 const future={...a,legalVerifiedAt:'2099-02-01'};
 const futureResult=info.metadata(future,new Date('2026-10-15T10:00:00Z'));
 assert.equal(futureResult.lastReview,'2026-10-12','Future date must not displace real check date');
