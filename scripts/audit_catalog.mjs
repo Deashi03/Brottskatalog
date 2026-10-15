@@ -38,6 +38,9 @@ for(const c of all){
   if(!c.prosecutionRule)flag(id,'medium','prosecution-source-missing','No explicit statute authority for prosecution');
   if(!c.penaltyChecked)flag(id,'medium','penalty-not-reviewed','Penalty data has no verified check date');
   if(c.reviewStatus==='source-changed')flag(id,'high','source-changed','Known source change; fields cannot be considered verified');
+  const meta=ctx.window.BK_QUALITY11?.metadata?.(c,new Date());
+  if(meta?.futureReviewNote)flag(id,'high','future-review-date','Registered legal verification date lies in the future and cannot prove review');
+  if(meta?.invalidReviewNote)flag(id,'high','invalid-review-date','Invalid legal verification date found');
  }else{
   if(!ids.has(c.stageParentId))flag(id,'critical','orphan-stage','Parent ID missing');
   if(c.stageStatus==='punishable'&&!c.penaltyRange)flag(id,'high','punishable-no-penalty','Punishable stage has no structured penalty');
