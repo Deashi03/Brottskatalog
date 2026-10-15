@@ -736,6 +736,7 @@ D.date='2026-10-12';
   <script src="./brb20-13.js"></script>
   <script src="./brb4-review-14.js"></script>
   <script src="./brb17-review-14.js"></script>
+  <script src="./special-penalties-review-14.js"></script>
   <script src="./special-09.js"></script>
   <script src="./data/special-provisions-generated.js"></script>
   <script src="./special-law-import-12.js"></script>
@@ -1109,7 +1110,7 @@ function qualityCard(c){
   rows.map(([title,val])=>'<div class="qa-row"><strong>'+escapeHtml(title)+'</strong><span>'+escapeHtml(val)+'</span></div>').join('')+
   (m.invalidReviewNote?'<p class="qa-effective">'+escapeHtml(m.invalidReviewNote)+'</p>':'')+
   (m.futureReviewNote?'<p class="qa-effective">'+escapeHtml(m.futureReviewNote)+'</p>':'')+
-  (m.alternateVersionNote?'<p class="qa-effective">'+escapeHtml(m.alternateVersionNote)+'</p>':'')+(m.effectiveNote?'<p class="qa-effective">'+escapeHtml(m.effectiveNote)+'</p>':'')+'<p class="qa-muted">'+escapeHtml(m.versionStatus)+'</p><p class="qa-muted">'+escapeHtml(m.dateNotice)+'</p>'+source+'</div></details>';
+  (m.alternateVersionNote?'<p class="qa-effective">'+escapeHtml(m.alternateVersionNote)+'</p>':'')+(m.penaltySpecificCaution?'<p class="qa-effective">'+escapeHtml(m.penaltySpecificCaution)+'</p>':'')+(m.effectiveNote?'<p class="qa-effective">'+escapeHtml(m.effectiveNote)+'</p>':'')+'<p class="qa-muted">'+escapeHtml(m.versionStatus)+'</p><p class="qa-muted">'+escapeHtml(m.dateNotice)+'</p>'+source+'</div></details>';
 }
 
 function renderDetail(c){
