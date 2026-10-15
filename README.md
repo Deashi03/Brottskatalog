@@ -1,4 +1,19 @@
-# Brottskatalog 1.3 – kontroll av offentliga tjänstebrott och lagversioner (2026-10-13)
+# Brottskatalog 1.3 – kontroll av offentliga tjänstebrott och lagversioner (2026-10-15)
+
+## Slutkontroll 1.3 – rättslig giltighet och offline (15 oktober 2026)
+
+- **1 157 sökbara poster:** 299 grundbrott och 858 förstadier.
+- **Teknisk helgranskning:** 0 kritiska datafel i senast godkända genomgången. Strukturell granskning är inte juridisk sakkunnigverifiering.
+- **Kvar att verifiera individuellt:** 251 maskinimporterade lagtextutdrag och 34 grundposter utan dokumenterad straffskalegranskning. Två brottsposter har importerad lagtext med markeringar om gällande/framtida lydelse och behöver särskild kontroll av gärningsdatum.
+- **Rättslig kontroll** ligger fortfarande sist och hopfälld. En diskret markering visas bara efter tre år från en dokumenterad kontrolltidpunkt; saknas datum så påstår appen inte att posten har granskats.
+- **Versionssäkring:** importerade bestämmelser som innehåller markeringar som ”Träder i kraft” eller ”Upphör att gälla” visas med förklaring i den nedersta kontrollpanelen. Appen väljer inte automatiskt rätt lagversion för ett gammalt eller framtida gärningsdatum.
+- **Nya och ändrade BrB 20-brott:** missbruk av offentlig ställning och grovt missbruk av offentlig ställning har införts som egna poster; tjänstefel och brott mot tystnadsplikt har uppdaterats. Straffskalorna för 16 vanliga brott har dessutom kontrollerats separat.
+- **Testskydd:** en regression läser den faktiskt importerade BrB 7:4-texten och kontrollerar att en framtida ikraftträdandemarkering upptäcks. Testkedjan kör även lagrum, förstadier, dataintegritet och mobila interaktioner.
+
+**Avgränsning:** Uppdateringen innebär inte fullständig juridisk granskning av samtliga 1 157 poster. För polisiärt beslut måste gällande lagtext vid gärningstidpunkt, beslutsbehörighet och situationens rekvisit fortfarande kontrolleras.
+
+---
+
 
 ## Kompletterande sakgranskning av 16 vanliga brott – 2026-10-13
 
@@ -18,7 +33,7 @@ Den här uppdateringen har lagt till **missbruk av offentlig ställning** och **
 
 **Rättslig kontroll ligger fortsatt hopfälld sist i brottskortet.** Endast där redovisas ikraftträdandedatum och uppmärksammas om ett maskinimporterat lagtextutdrag innehåller markeringar om parallella, framtida eller upphörande lydelser. Ingen grön status eller nytt juridiskt kontroll­datum skapas av en automatisk import. Den diskreta treårsmarkeringen är oförändrad.
 
-Efter uppdateringen innehåller katalogen **1 157 sökbara poster**: **299 grundbrott**, **858 förstadier**. Databasen klassificerar 337 förstadier som straffbara och 521 som ej straffbara, men detta är **inte liktydigt med att varje slutsats juridiskt slutgranskats individuellt**. Öppna brister är fortfarande omkring **251 maskinimporterade lagtextutdrag**, **50 poster utan individuell dokumenterad straffskalekontroll**, samt två beroende/variabla straffskalor. En ny revisionsregel söker särskilt efter framtida giltighetsmarkeringar.
+Efter uppdateringen innehåller katalogen **1 157 sökbara poster**: **299 grundbrott**, **858 förstadier**. Databasen klassificerar 337 förstadier som straffbara och 521 som ej straffbara, men detta är **inte liktydigt med att varje slutsats juridiskt slutgranskats individuellt**. Öppna brister är fortfarande omkring **251 maskinimporterade lagtextutdrag**, **34 poster utan individuell dokumenterad straffskalekontroll**, samt två beroende/variabla straffskalor. En ny revisionsregel söker särskilt efter framtida giltighetsmarkeringar.
 
 Källor: [Brottsbalken 20 kap.](https://www.riksdagen.se/sv/dokument-och-lagar/dokument/svensk-forfattningssamling/brottsbalk-1962700_sfs-1962-700/) · [SFS 2026:1420 och ikraftträdandedatum](https://rkrattsbaser.gov.se/sfsr?bet=1962:700) · [Prop. 2025/26:217](https://www.regeringen.se/rattsliga-dokument/proposition/2026/04/prop.-202526217).
 
