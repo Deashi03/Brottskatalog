@@ -1,4 +1,16 @@
-# Brottskatalog 1.3 – kontroll av offentliga tjänstebrott och lagversioner (2026-10-15)
+# Brottskatalog 1.4 – straffskalor, juridisk spårbarhet och kvalitetstester (2026-10-15)
+
+## Slutkomplettering 1.4 – 22 specialstraffrättsliga straffskalor (15 oktober 2026)
+
+- **22 straffskalor jämförda mot officiella konsoliderade SFS:** 11 narkotikabrott (NSL 1–3 §§), 5 vapenbrott (VapenL 18 kap. 1–2 §§), 4 trafikbrott (TBL 3–4 a §§) och 2 knivbrott (KnivL 4 §). Kontroll gäller **numerisk straffskala och bötesstatus**, inte alla brottsrekvisit, tillämpliga gärningsformer eller lagtextens fullständighet.
+- **Ingen tyst rättelse:** Om en registrerad straffskala avviker från kontrolltabellen registreras avvikelsen utan att ett nytt kontroll­datum anges; värdet skrivs aldrig över automatiskt. Motsvarande regressionstester finns i `scripts/special_penalties_14_test.mjs`.
+- **Narkotika och särskild försäljningsvariant:** Den allmänna straffskalan i NSL 1 § första stycket får inte förväxlas med den särskilda lägstanivån sex månaders fängelse enligt andra stycket. Denna anmärkning är tillgänglig längst ned i den hopfällda `Rättslig kontroll`, utan ytterligare störande symboler i sökresultaten.
+- **Kraschskydd för saknad källa:** `Rättslig kontroll` öppnas även om ett brott eller ett förstadium saknar egen laglänk eller en genererad förstadiepost saknar kopplad grundpost. Källfältet visar i sådana fall neutralt att underlaget saknas, i stället för att kasta ett JavaScript-fel.
+- Offlinelagringen är versionsuppdaterad och testerna för de nya juridiska kontrollerna körs automatiskt med resten av appen.
+
+**Viktigt:** Datum i straffskalegranskningen styr inte giltigheten för tidigare gärningar. Äldre lagversioner och eventuella övergångsregler måste fortfarande kontrolleras vid operativ användning.
+
+**Officiella källor:** [Narkotikastrafflagen](https://www.riksdagen.se/sv/dokument-och-lagar/dokument/svensk-forfattningssamling/narkotikastrafflag-196864_sfs-1968-64/), [Vapenlagen](https://www.riksdagen.se/sv/dokument-och-lagar/dokument/svensk-forfattningssamling/vapenlag-2026408_sfs-2026-408/), [Trafikbrottslagen](https://www.riksdagen.se/sv/dokument-och-lagar/dokument/svensk-forfattningssamling/lag-1951649-om-straff-for-vissa-trafikbrott_sfs-1951-649/), [Knivlagen](https://www.riksdagen.se/sv/dokument-och-lagar/dokument/svensk-forfattningssamling/lag-1988254-om-forbud-betraffande-knivar-och_sfs-1988-254/).
 
 ## Uppdatering 1.4 – straffskalor i BrB 4 kap. och källversionsgranskning (15 oktober 2026)
 
