@@ -1,5 +1,15 @@
 # Brottskatalog 1.3 – kontroll av offentliga tjänstebrott och lagversioner (2026-10-15)
 
+## Fortsatt kvalitetskontroll – 15 oktober 2026
+
+- Rättslig kontroll, som ligger **sist och hopfälld** i brottskortet, kan visa exakta datum från lagtextens markeringar `Träder i kraft` och `Upphör att gälla`. Markeringarna är källuppgifter och innebär inte att appen automatiskt väljer rätt lydelse för en given gärningsdag.
+- Ett **framtida** eller kalendermässigt **ogiltigt** datum får inte längre registreras som genomförd sakgranskning. Avvikelsen förklaras endast inne i den hopfällda kontrollpanelen. Treårspåminnelsen bygger fortfarande på senaste faktiskt daterade granskning.
+- Kataloggranskningen kör nu en separat **källversionsinventering** för alla inlästa paragrafer. Rapporten listar vilka som innehåller alternativa lydelser och vilka ikraftträdanden som är beroende av regeringsbeslut.
+- CI kontrollerar med regressionstester både verkliga och artificiella datumfall, inklusive 2027-01-01 och en obestämd regeringsdag. Offlinelagringen använder ett nytt cache-ID.
+- Fortsatt begränsning: detta är en kontroll av **metadata och källversioner**, inte en garanti för att alla importerade lydelser eller förstadier har juridiskt slutgranskats.
+
+
+
 ## Slutkontroll 1.3 – rättslig giltighet och offline (15 oktober 2026)
 
 - **1 157 sökbara poster:** 299 grundbrott och 858 förstadier.
