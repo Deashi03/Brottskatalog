@@ -21,6 +21,11 @@ assert.equal(info.metadata(b).lastReview,null);
 assert.equal(info.metadata(c).lastReview,null,'Generated stage dates do not count as legal review');
 assert.match(info.metadata(a).law,/Maskinimporterad/);
 assert.match(info.metadata(a).alternateVersionNote,/ikraftträdande/,'Future or alternative SFS wording must be flagged');
+assert.match(info.metadata(a).alternateVersionNote,/Upphör 2027-01-01/,'The exact expiry marker belongs only in the expanded legal review');
+const undatedEdition={...a,law:'7 § /Träder i kraft I:den dag som regeringen bestämmer/ Special version'};
+assert.match(info.metadata(undatedEdition).alternateVersionNote,/den dag som regeringen bestämmer/,'Unknown commencement dates must not be guessed');
+const ordinaryEdition={...a,law:'7 § Vanligt lagtextutdrag.'};
+assert.equal(info.metadata(ordinaryEdition).alternateVersionNote,null,'Ordinary statute must not get future-version alert');
 assert.equal(info.metadata(b).alternateVersionNote,null,'Ordinary excerpt needs no applicability warning');
 
 const actualStatutes={};
