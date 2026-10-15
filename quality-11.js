@@ -8,6 +8,18 @@
  const dateOf=(s)=>isDate(s)?s:null;
  const reviewLevels=new Set(['law-and-penalty-reviewed','penalty-and-stage-verified-lawtext-pending','penalty-reviewed-source-excerpt','penalty-reviewed','penalty-and-stage-reviewed']);
  const sourceURL=c=>c.sourceURL||(/^BrB\b/i.test(c.shortRef||'')?'https://www.riksdagen.se/sv/dokument-och-lagar/dokument/svensk-forfattningssamling/brottsbalk-1962700_sfs-1962-700/':null);
+ const legalEditionMarkers=text=>{
+   const raw=String(text||'');
+   const found=[];
+   // A statute page can contain both the currently applicable and a future paragraph.
+   // This parser ONLY reports labels present in the supplied excerpt; never chooses the active edition.
+   for(const m of raw.matchAll(/\/(?:Rubriken |Kapitlet )?(Träder i kraft|Upphör att gälla)\s+[IU]:([^/]+)\//gi)){
+     const kind=m[1].toLocaleLowerCase('sv').includes('upphör')?'Upphör':'Träder i kraft';
+     const datum=m[2].trim();
+     if(!found.some(e=>e.kind===kind&&e.when===datum))found.push({kind,when:datum});
+   }
+   return found.slice(0,8);
+ };
  const metadata=(c,now=new Date())=>{
    // The parent can be a better legal context for a generated stage.
    const parent=c.stageType?D.crimes.find(x=>x.id===c.stageParentId):null;
@@ -24,7 +36,8 @@
    ));
    let lawStatus=c.lawMode==='missing'?'Saknas offline':c.lawMode==='machine'?'Maskinimporterad – ej slutgranskad':c.lawMode==='full'?'Lagtext inlagd – kontrollera aktuell lydelse':c.lawMode==='stage-reference'?'Förstadium – särskilt lagstöd måste kontrolleras':'Utdrag – kontrollera fulltext';
    if(c.reviewStatus==='source-changed')lawStatus='Källtext ändrad – kräver ny granskning';
-   const parallelVersions=/\/(?:Träder i kraft|Upphör att gälla|Kapitlet träder i kraft|Kapitlet upphör att gälla|Rubriken träder i kraft|Rubriken upphör att gälla)/i.test(String(c.law||''));
+   const editionMarkers=legalEditionMarkers(c.law);
+   const parallelVersions=editionMarkers.length>0;
    const penaltyStatus=c.reviewStatus==='source-changed'?'Kontroll krävs efter lagändring':penaltyVerified?'Dokumenterad kontroll '+dateOf(c.penaltyChecked):c.penaltyRange?'Strukturerad, men ej individuellt verifierad':'Straffskala inte maskinellt verifierad';
    const prosecutionStatus=c.stageStatus&&c.stageStatus!=='punishable'?'Inte relevant som självständig straffbar rubricering':c.prosecution==='unknown'?'Ej verifierad':c.prosecutionSourceTier==='general-rule-only'?'Allmänt åtal enligt huvudregel – undantag ej individuellt kontrollerade':c.prosecution==='general'?'Allmänt åtal registrerat – kontrollera undantag':'Särskilda åtalsvillkor registrerade';
    const stageStatus=!c.stageType?'Se särskilda förstadieposter':c.stageStatus==='punishable'?'Straffbart enligt registrerat lagstöd':c.stageStatus==='not-criminalized'?'Ej straffbart enligt registrerat lagstöd':'Ej verifierat – dra ingen slutsats om straffrihet';
@@ -33,7 +46,7 @@
      sourceURL:sourceURL(c)||sourceURL(parent||{}),
      law:lawStatus,penalty:penaltyStatus,prosecution:prosecutionStatus,stages:stageStatus,
      lastReviewLabel:lastReview?'Senaste dokumenterade sakgranskning: '+lastReview:'Ingen individuell kontrolltidpunkt dokumenterad',
-     alternateVersionNote:parallelVersions?'Källutdraget innehåller särskilda ikraftträdande- eller upphörandemarkeringar. Kontrollera vilken lydelse som gäller på gärningsdagen.':null,
+     alternateVersionNote:parallelVersions?'Källutdraget innehåller särskilda ikraftträdande- eller upphörandemarkeringar ('+editionMarkers.map(m=>m.kind+' '+m.when).join(' · ')+'). Kontrollera vilken lydelse som gäller på gärningsdagen.':null,
      effectiveNote:c.introducedFrom?'Brottstypen infördes '+c.introducedFrom+'. Gäller inte gärningar före ikraftträdandet.':c.effectiveFrom?'Den registrerade straffskaleversionen gäller från '+c.effectiveFrom+'. Äldre gärningar kräver äldre lagversion.':null,
      dateNotice:'Datumen avser dokumenterade kontroller, inte automatiskt uppdaterad lagtext. Rättsläget vid gärningstidpunkten behöver bedömas särskilt.',
      versionStatus:'Giltig lagversion för gärningsdatum: inte automatiskt fastställd.'
