@@ -2,7 +2,7 @@
 
 ## Uppdatering 1.4 – straffskalor i BrB 4 kap. och källversionsgranskning (15 oktober 2026)
 
-Den här versionen tillför en källkontrollerad straffskalekomplettering till sex mycket vanliga brottsrubriceringar i BrB 4 kap.: ofredande, hemfridsbrott, olaga intrång, grovt hemfridsbrott, grovt olaga intrång samt psykiskt våld. Straffskalorna har jämförts med Sveriges riksdags konsoliderade brottsbalk. Psykiskt våld har särskilt ikraftträdande `2026-07-01` markerat längst ned i Rättslig kontroll. Kontroll av straffskala innebär inte att maskinimporterad lagtext är juridiskt fullständighetsgranskad.
+Den här versionen tillför källkontrollerade straffskalor till tio polisrelevanta brottsrubriceringar: sex i BrB 4 kap. (ofredande, hemfridsbrott, olaga intrång, grovt hemfridsbrott, grovt olaga intrång och psykiskt våld) och fyra i BrB 17 kap. (våld eller hot mot tjänsteman, grovt våld eller hot mot tjänsteman, förolämpning mot tjänsteman och våldsamt motstånd). Straffskalorna har jämförts med Sveriges riksdags konsoliderade brottsbalk. Psykiskt våld har särskilt ikraftträdande `2026-07-01` markerat längst ned i Rättslig kontroll. Kontroll av straffskala innebär inte att maskinimporterad lagtext är juridiskt fullständighetsgranskad.
 
 Den hopfällda rättsliga kontrollen redovisar nu även de explicita datum och obestämda ikraftträdandetidpunkter som förekommer i textutdrag. Ogiltiga kalenderdatum och framtida "sakgranskningsdatum" ignoreras som verifiering. Helkataloggranskningen listar samtliga återstående poster med okontrollerade straffskalor och omfattar källversionsinventering av inlästa bestämmelser. Kritiska och högprioriterade dataintegritetsfel stoppar numera katalogens CI-test.
 
