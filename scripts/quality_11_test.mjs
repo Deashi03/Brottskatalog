@@ -22,6 +22,15 @@ assert.equal(info.metadata(c).lastReview,null,'Generated stage dates do not coun
 assert.match(info.metadata(a).law,/Maskinimporterad/);
 assert.match(info.metadata(a).alternateVersionNote,/ikraftträdande/,'Future or alternative SFS wording must be flagged');
 assert.equal(info.metadata(b).alternateVersionNote,null,'Ordinary excerpt needs no applicability warning');
+
+const actualStatutes={};
+vm.runInNewContext(readFileSync(resolve(root,'data/provisions-generated.js'),'utf8'),{window:actualStatutes,console});
+const section=actualStatutes.BK_STATUTES?.['BrB:7:4']?.text;
+assert.ok(section,'Actual BrB 7:4 law text is imported');
+assert.match(section,/\/Upphör att gälla U:2027-01-01\//,'Historical/future law transition survives source import');
+const actualExcerpt={...a,law:section};
+assert.match(info.metadata(actualExcerpt).alternateVersionNote,/gärningsdagen/,'Alternate legal versions must be flagged in the real source excerpt');
+
 const h=readFileSync(resolve(root,'index.html'),'utf8');
 assert.ok(h.includes('qualityCard(c)}'),'Card renders separate bottom quality section');
 assert.ok(h.indexOf("accordion('sources'")<h.indexOf('qualityCard(c)}'),'Quality follows sources');
