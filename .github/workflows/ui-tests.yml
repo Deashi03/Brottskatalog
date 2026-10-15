@@ -15,6 +15,8 @@ on:
       - "special-09.js"
       - "brb20-13.js"
       - "brb4-review-14.js"
+      - "brb17-review-14.js"
+      - "scripts/brb17_14_test.mjs"
       - "scripts/brb4_14_test.mjs"
       - "scripts/brb20_13_test.mjs"
       - "special-law-import-12.js"
@@ -47,6 +49,8 @@ on:
       - "special-09.js"
       - "brb20-13.js"
       - "brb4-review-14.js"
+      - "brb17-review-14.js"
+      - "scripts/brb17_14_test.mjs"
       - "scripts/brb4_14_test.mjs"
       - "scripts/brb20_13_test.mjs"
       - "special-law-import-12.js"
@@ -79,6 +83,8 @@ jobs:
         run: node scripts/brb20_13_test.mjs
       - name: Verify core BrB chapter 4 penalty source checks
         run: node scripts/brb4_14_test.mjs
+      - name: Verify BrB 17 police-related penalty scales
+        run: node scripts/brb17_14_test.mjs
       - name: Three-year source verification UI safeguards
         run: node scripts/quality_11_test.mjs
       - name: Full catalog integration and statutes test
