@@ -18,6 +18,17 @@ assert.equal(info.metadata(a,new Date('2029-10-12T00:00:00Z')).stale,true);
 assert.equal(info.metadata(a,new Date('2026-10-13T12:00:00Z')).stale,false);
 assert.equal(info.metadata(b,new Date('2035-10-13T00:00:00Z')).stale,false,'Unknown does not become fictitiously stale');
 assert.equal(info.metadata(b).lastReview,null);
+const future={...a,legalVerifiedAt:'2099-02-01'};
+const futureResult=info.metadata(future,new Date('2026-10-15T10:00:00Z'));
+assert.equal(futureResult.lastReview,'2026-10-12','Future date must not displace real check date');
+assert.match(futureResult.futureReviewNote,/2099-02-01/);
+assert.equal(futureResult.stale,false);
+const invalid={...a,legalVerifiedAt:'2026-02-30'};
+assert.match(info.metadata(invalid).invalidReviewNote,/ogiltigt/,'Impossible calendar date must not count');
+assert.equal(info.metadata(invalid).lastReview,'2026-10-12');
+const onlyFuture={...b,legalVerifiedAt:'2099-01-01'};
+assert.equal(info.metadata(onlyFuture,new Date('2026-10-15T10:00:00Z')).lastReview,null,
+  'Never present a future timestamp as completed legal review');
 assert.equal(info.metadata(c).lastReview,null,'Generated stage dates do not count as legal review');
 assert.match(info.metadata(a).law,/Maskinimporterad/);
 assert.match(info.metadata(a).alternateVersionNote,/ikraftträdande/,'Future or alternative SFS wording must be flagged');
