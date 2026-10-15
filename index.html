@@ -1157,7 +1157,7 @@ function renderDetail(c){
 
   ${accordion('relaterade','Relaterade brott','list',related||'<p>Inga relaterade exempel ännu.</p>')}
   ${accordion('sources','Rättskällor och källtyper','book-mark',`<p><strong>Lagtext:</strong> återgiven separat och utan omskrivningar. Kontrollera aktuellt rättsläge via källan.</p><p><strong>Tolkningsstöd:</strong> kursanteckningar och praktiska sammanfattningar är inte lagtext.</p>${links.map(([title,url])=>`<a class="source-link" href="${url}" target="_blank" rel="noopener noreferrer">${ic('external-link')} ${escapeHtml(title)}</a>`).join('')}`)}
-  </div></section>${qualityCard(c)}<p class="detail-footer">Version 1.2 · kontrollera aktuell lagtext vid operativa beslut.</p></main>`;
+  </div></section>${qualityCard(c)}<p class="detail-footer">Version 1.3 · kontrollera aktuell lagtext vid operativa beslut.</p></main>`;
 }
 function showSheet({kicker,title,body,ref,actionHtml='',fromProvision=false}){
   if(!fromProvision)sheetHistory.length=0;
