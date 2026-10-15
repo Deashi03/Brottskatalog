@@ -24,6 +24,24 @@ Den aktuella katalogen har **1 157 sökingångar (299 grundposter och 858 först
 ---
 
 
+## Aktuell uppföljning 1.4 – 15 oktober 2026
+
+Den senaste genomförda kvalitetsomgången finns i [godkänd CI-körning 38730837855](https://github.com/Deashi03/Brottskatalog/actions/runs/38730837855).
+
+- **1 157 sökbara poster** (299 grundbrott och 858 förstadier) samt 27 synliga tvångsmedel.
+- **10 tidigare odaterade straffskalor** har källkontrollerats och fått separata regressionstester: sex i BrB 4 kap. och fyra i BrB 17 kap.
+- **24 grundposter** återstår med straffskala som saknar dokumenterad kontroll, jämfört med 34 före denna granskningsomgång.
+- **251 maskinimporterade lagtextutdrag** är ännu inte individuellt fullständighetsgranskade.
+- **2 grundposter** har källtext med alternativa/framtida laglydelser.
+- Bland **587 inlästa källavsnitt** har **49** källmarkeringar om alternativa ikraftträdanden/upphöranden. **44** av dessa är kopplade till obestämt ikraftträdande beroende av regeringsbeslut. Dessa är inte automatiskt framtida brottsrubriceringar.
+- Ingen post har för närvarande statusen `unverified` för förstadiets **maskinella klassificering**. Det betyder inte att varje enskilt negativt eller positivt förstadiebesked är juridiskt slutgranskat.
+- Tekniska regressionstester, hela datakatalogens strukturgranskning och iPhone-test har passerat. Kritiska och höga integritetsfel blockerar katalogens testjobb. GitHub Pages använder separat publicering och bör **inte** tolkas som automatiskt blockerad av dessa tester.
+- Kontrolldatum som är ogiltiga eller ligger i framtiden används inte som juridisk verifiering. Källans egna ikraftträdandemarkeringar visas enbart i hopfällda `Rättslig kontroll` längst ned i brottskortet.
+
+Kvarvarande uppgifter ska prioriteras enligt faktisk juridisk användning och granskas mot officiell gällande lydelse, aktuell gärningstidpunkt, straffskalans grader och eventuella förstadie- och åtalsundantag.
+
+---
+
 ## Tillägg – status efter databasuppdatering 1.2
 
 Granskningsrapporten nedan dokumenterar **äldre tillstånd** och ska inte läsas som aktuell briststatistik. Vid [godkänd automatiserad testkörning 38414940218](https://github.com/Deashi03/Brottskatalog/actions/runs/38414940218) var databasens täckning:
