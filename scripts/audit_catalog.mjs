@@ -72,6 +72,19 @@ const cases=[
  ['Förberedelse till ringa narkotikasmuggling','punishable']
 ];
 for(const [t,expected] of cases)if(find(t)?.stageStatus!==expected)flag(t,'critical','stage-rule-mismatch','Expected '+expected+', actual '+find(t)?.stageStatus);
+const sourceSections=Object.entries(ctx.window.BK_STATUTES||{});
+const sourceMarkers=[];
+for(const [ref,provision] of sourceSections){
+  const text=String(provision?.text||'');
+  const labels=[...text.matchAll(/\/(?:Rubriken |Kapitlet )?(?:Träder i kraft|Upphör att gälla)\s+[IU]:([^/]+)\//gi)].map(m=>m[1].trim());
+  if(labels.length)sourceMarkers.push({ref,markers:[...new Set(labels)]});
+}
+const sourceAudit={
+  importedSections:sourceSections.length,
+  sectionsWithAlternativeOrFutureVersions:sourceMarkers.length,
+  sectionsRequiringGovernmentCommencement:sourceMarkers.filter(x=>x.markers.some(y=>/regeringen/i.test(y))).length,
+  affectedSections:sourceMarkers
+};
 const issueCounts=counts(issues,x=>x.category),severities=counts(issues,x=>x.severity);
 const summary={
  generatedAt:new Date().toISOString(),release:D.release,total:all.length,base:base.length,stages:stages.length,
@@ -83,6 +96,7 @@ const summary={
  byCategory:counts(base,x=>x.category||'none'),
  auditedMeasures:active.length,issuesByCategory:issueCounts,issuesBySeverity:severities,
  runtimeWarnings:warnings.length,
+ sourceAudit,
  issues
 };
 fs.mkdirSync(path.join(root,'audit'),{recursive:true});
@@ -90,6 +104,7 @@ fs.writeFileSync(path.join(root,'audit','quality-report.json'),JSON.stringify(su
 const headline=Object.entries(issueCounts).map(([k,n])=>k+':'+n).join(' · ');
 console.log('FULL CATALOG AUDIT '+JSON.stringify({total:summary.total,base:summary.base,stages:summary.stages,prosecution:summary.prosecution,stageStatus:summary.stageStatus,lawText:summary.lawText,reviewStatus:summary.reviewStatus,structuredPenalty:summary.penaltyStructured,issueCounts,issueSeverities:severities,topIssues:issues.filter(x=>x.severity==='critical'||x.severity==='high').slice(0,60)},null,2));
 console.log('REVIEW TASK CATEGORIES: '+headline);
+console.log('STATUTE EDITION AUDIT '+JSON.stringify({importedSections:sourceAudit.importedSections,versions:sourceAudit.sectionsWithAlternativeOrFutureVersions,government:sourceAudit.sectionsRequiringGovernmentCommencement}));
 console.log('UNVERIFIED STAGES: '+JSON.stringify(stages.filter(c=>c.stageStatus==='unverified').map(c=>({title:c.title,source:c.stageSource,parent:c.stageParentId}))));
 console.log('UNKNOWN PROSECUTIONS: '+JSON.stringify(base.filter(c=>c.prosecution==='unknown').map(c=>({title:c.title,ref:c.shortRef,reviewStatus:c.reviewStatus}))));
 console.log('UNSTRUCTURED BASE PENALTIES: '+JSON.stringify(base.filter(c=>!c.penaltyRange).map(c=>({title:c.title,ref:c.shortRef,penalty:c.penaltyShort,reviewStatus:c.reviewStatus}))));
