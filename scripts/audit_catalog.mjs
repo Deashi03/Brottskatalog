@@ -107,6 +107,7 @@ console.log('REVIEW TASK CATEGORIES: '+headline);
 console.log('STATUTE EDITION AUDIT '+JSON.stringify({importedSections:sourceAudit.importedSections,versions:sourceAudit.sectionsWithAlternativeOrFutureVersions,government:sourceAudit.sectionsRequiringGovernmentCommencement}));
 console.log('UNVERIFIED STAGES: '+JSON.stringify(stages.filter(c=>c.stageStatus==='unverified').map(c=>({title:c.title,source:c.stageSource,parent:c.stageParentId}))));
 console.log('UNKNOWN PROSECUTIONS: '+JSON.stringify(base.filter(c=>c.prosecution==='unknown').map(c=>({title:c.title,ref:c.shortRef,reviewStatus:c.reviewStatus}))));
+console.log('STRAFFSKALOR SOM SAKNAR DOKUMENTERAD KONTROLL: '+JSON.stringify(base.filter(c=>!c.penaltyChecked).map(c=>({title:c.title,ref:c.shortRef,penalty:c.penaltyShort,source:c.penaltySource||null}))));
 console.log('UNSTRUCTURED BASE PENALTIES: '+JSON.stringify(base.filter(c=>!c.penaltyRange).map(c=>({title:c.title,ref:c.shortRef,penalty:c.penaltyShort,reviewStatus:c.reviewStatus}))));
 
 if(issues.some(x=>x.severity==='critical')){console.error('CRITICAL DATA QUALITY ISSUE PRESENT');process.exitCode=1;}
