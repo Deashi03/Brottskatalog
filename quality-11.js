@@ -4,7 +4,11 @@
  */
 (()=>{'use strict';
  const D=window.BK_DATA;if(!D?.crimes)return;
- const isDate=s=>typeof s==='string'&&/^\d{4}-\d{2}-\d{2}$/.test(s)&&Number.isFinite(Date.parse(s+'T00:00:00Z'));
+ const isDate=s=>{
+   if(typeof s!=='string'||!/^\d{4}-\d{2}-\d{2}$/.test(s))return false;
+   const stamp=Date.parse(s+'T00:00:00Z');
+   return Number.isFinite(stamp)&&new Date(stamp).toISOString().slice(0,10)===s;
+ };
  const dateOf=(s)=>isDate(s)?s:null;
  const reviewLevels=new Set(['law-and-penalty-reviewed','penalty-and-stage-verified-lawtext-pending','penalty-reviewed-source-excerpt','penalty-reviewed','penalty-and-stage-reviewed']);
  const sourceURL=c=>c.sourceURL||(/^BrB\b/i.test(c.shortRef||'')?'https://www.riksdagen.se/sv/dokument-och-lagar/dokument/svensk-forfattningssamling/brottsbalk-1962700_sfs-1962-700/':null);
@@ -21,14 +25,19 @@
    return found.slice(0,8);
  };
  const metadata=(c,now=new Date())=>{
-   // The parent can be a better legal context for a generated stage.
-   const parent=c.stageType?D.crimes.find(x=>x.id===c.stageParentId):null;
-   const penaltyVerified=!!(c.penaltyChecked&&!c.stageType&&reviewLevels.has(c.reviewStatus));
-   const legalCheck=dateOf(c.legalVerifiedAt)||dateOf(c.lawReviewedAt)||((penaltyVerified&&dateOf(c.penaltyChecked))?dateOf(c.penaltyChecked):null);
-   // Special legal text/metadata can supersede penalty timestamp when explicitly confirmed.
-   const latest=Math.max(...[legalCheck, dateOf(c.lawReviewedAt)].filter(Boolean).map(d=>Date.parse(d+'T00:00:00Z')),0);
-   const lastReview=latest?new Date(latest).toISOString().slice(0,10):null;
+   // A future or invalid verification date must not be used as evidence of review.
    const nowMs=now instanceof Date?now.getTime():new Date(now).getTime();
+   const validNow=Number.isFinite(nowMs)?nowMs:Date.now();
+   const possible=[c.legalVerifiedAt,c.lawReviewedAt,
+      !c.stageType&&reviewLevels.has(c.reviewStatus)?c.penaltyChecked:null].filter(Boolean);
+   const badDates=possible.filter(x=>!isDate(x));
+   const dates=possible.map(dateOf).filter(Boolean);
+   const futureDates=dates.filter(d=>Date.parse(d+'T00:00:00Z')>validNow);
+   const eligibleDates=dates.filter(d=>Date.parse(d+'T00:00:00Z')<=validNow);
+   const latest=Math.max(0,...eligibleDates.map(d=>Date.parse(d+'T00:00:00Z')));
+   const lastReview=latest?new Date(latest).toISOString().slice(0,10):null;
+   const penaltyVerified=!!(!c.stageType&&reviewLevels.has(c.reviewStatus)&&dateOf(c.penaltyChecked)
+     &&Date.parse(c.penaltyChecked+'T00:00:00Z')<=validNow);
    const stale=!!(latest&&Number.isFinite(nowMs)&&nowMs>=Date.UTC(
      new Date(latest).getUTCFullYear()+3,
      new Date(latest).getUTCMonth(),
@@ -46,6 +55,8 @@
      sourceURL:sourceURL(c)||sourceURL(parent||{}),
      law:lawStatus,penalty:penaltyStatus,prosecution:prosecutionStatus,stages:stageStatus,
      lastReviewLabel:lastReview?'Senaste dokumenterade sakgranskning: '+lastReview:'Ingen individuell kontrolltidpunkt dokumenterad',
+     invalidReviewNote:badDates.length?'Varning: ogiltigt dokumenterat kontroll­datum. Tidsstämpeln har inte använts för att bedöma aktuell rättslig kontroll.':null,
+     futureReviewNote:futureDates.length?'Varning: registrerat kontroll­datum ligger i framtiden ('+futureDates.join(', ')+'). Det används inte som bevis på genomförd granskning.':null,
      alternateVersionNote:parallelVersions?'Källutdraget innehåller särskilda ikraftträdande- eller upphörandemarkeringar ('+editionMarkers.map(m=>m.kind+' '+m.when).join(' · ')+'). Kontrollera vilken lydelse som gäller på gärningsdagen.':null,
      effectiveNote:c.introducedFrom?'Brottstypen infördes '+c.introducedFrom+'. Gäller inte gärningar före ikraftträdandet.':c.effectiveFrom?'Den registrerade straffskaleversionen gäller från '+c.effectiveFrom+'. Äldre gärningar kräver äldre lagversion.':null,
      dateNotice:'Datumen avser dokumenterade kontroller, inte automatiskt uppdaterad lagtext. Rättsläget vid gärningstidpunkten behöver bedömas särskilt.',
