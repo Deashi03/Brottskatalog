@@ -110,4 +110,6 @@ console.log('UNKNOWN PROSECUTIONS: '+JSON.stringify(base.filter(c=>c.prosecution
 console.log('STRAFFSKALOR SOM SAKNAR DOKUMENTERAD KONTROLL: '+JSON.stringify(base.filter(c=>!c.penaltyChecked).map(c=>({title:c.title,ref:c.shortRef,penalty:c.penaltyShort,source:c.penaltySource||null}))));
 console.log('UNSTRUCTURED BASE PENALTIES: '+JSON.stringify(base.filter(c=>!c.penaltyRange).map(c=>({title:c.title,ref:c.shortRef,penalty:c.penaltyShort,reviewStatus:c.reviewStatus}))));
 
-if(issues.some(x=>x.severity==='critical')){console.error('CRITICAL DATA QUALITY ISSUE PRESENT');process.exitCode=1;}
+if(issues.some(x=>x.severity==='critical'||x.severity==='high')){
+ console.error('BLOCKING DATA QUALITY ISSUE PRESENT (critical/high)');process.exitCode=1;
+}
