@@ -1,5 +1,14 @@
 # Brottskatalog 1.3 – kontroll av offentliga tjänstebrott och lagversioner (2026-10-15)
 
+## Uppdatering 1.4 – straffskalor i BrB 4 kap. och källversionsgranskning (15 oktober 2026)
+
+Den här versionen tillför en källkontrollerad straffskalekomplettering till sex mycket vanliga brottsrubriceringar i BrB 4 kap.: ofredande, hemfridsbrott, olaga intrång, grovt hemfridsbrott, grovt olaga intrång samt psykiskt våld. Straffskalorna har jämförts med Sveriges riksdags konsoliderade brottsbalk. Psykiskt våld har särskilt ikraftträdande `2026-07-01` markerat längst ned i Rättslig kontroll. Kontroll av straffskala innebär inte att maskinimporterad lagtext är juridiskt fullständighetsgranskad.
+
+Den hopfällda rättsliga kontrollen redovisar nu även de explicita datum och obestämda ikraftträdandetidpunkter som förekommer i textutdrag. Ogiltiga kalenderdatum och framtida "sakgranskningsdatum" ignoreras som verifiering. Helkataloggranskningen listar samtliga återstående poster med okontrollerade straffskalor och omfattar källversionsinventering av inlästa bestämmelser. Kritiska och högprioriterade dataintegritetsfel stoppar numera katalogens CI-test.
+
+**Begränsningar:** Versionsdatumen visas som källmetadata; appen väljer inte automatiskt rätt lydelse för gärningsdagen. Kvarstående automatimporterade lagtexter och ännu inte individuellt kontrollerade straffskalor står kvar som öppna granskningspunkter.
+
+
 ## Fortsatt kvalitetskontroll – 15 oktober 2026
 
 - Rättslig kontroll, som ligger **sist och hopfälld** i brottskortet, kan visa exakta datum från lagtextens markeringar `Träder i kraft` och `Upphör att gälla`. Markeringarna är källuppgifter och innebär inte att appen automatiskt väljer rätt lydelse för en given gärningsdag.
