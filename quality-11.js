@@ -52,7 +52,7 @@
    const stageStatus=!c.stageType?'Se särskilda förstadieposter':c.stageStatus==='punishable'?'Straffbart enligt registrerat lagstöd':c.stageStatus==='not-criminalized'?'Ej straffbart enligt registrerat lagstöd':'Ej verifierat – dra ingen slutsats om straffrihet';
    return {
      stale,lastReview,
-     sourceURL:sourceURL(c)||sourceURL(parent||{}),
+     sourceURL:sourceURL(c)||(c.stageType?sourceURL(D.crimes.find(x=>x.id===c.stageParentId)||{}):null),
      law:lawStatus,penalty:penaltyStatus,prosecution:prosecutionStatus,stages:stageStatus,
      lastReviewLabel:lastReview?'Senaste dokumenterade sakgranskning: '+lastReview:'Ingen individuell kontrolltidpunkt dokumenterad',
      invalidReviewNote:badDates.length?'Varning: ogiltigt dokumenterat kontroll­datum. Tidsstämpeln har inte använts för att bedöma aktuell rättslig kontroll.':null,
