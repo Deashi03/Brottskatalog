@@ -746,6 +746,7 @@ D.date='2026-10-12';
   <script src="./sources-qa.js"></script>
   <script src="./prosecution-10.js"></script>
   <script src="./prosecution-final-12.js"></script>
+  <script src="./rekvisit-typexempel-15.js"></script>
   <script src="./quality-11.js"></script>
   <script>
 /* Brottskatalog – stage 1. No framework, no network request during use. */
@@ -1120,6 +1121,16 @@ function renderDetail(c){
   const prosecuting = c.prosecution==='general';
   const variants=(c.variants||[]).map(x=>`<span class="var-chip">${escapeHtml(x)}</span>`).join('');
   const elements=(c.elements||[]).map(x=>`<li>${escapeHtml(x)}</li>`).join('');
+  const groups15=c.rekvisit15?.groups||[];
+  const actualRequisites=groups15.map(g=>g.mode==='any'
+    ?'<li><strong>Minst ett alternativ – '+escapeHtml(g.label)+'</strong><ul>'+g.options.map(v=>'<li>'+escapeHtml(v)+'</li>').join('')+'</ul></li>'
+    :'<li>'+escapeHtml(g.label)+'</li>').join('');
+  const exampleCards=(c.typexempel15||[]).map(t=>'<div class="fact-card"><div class="fact-eyebrow">Typexempel</div><div class="fact-body">'+escapeHtml(t.text)+'</div><div class="fact-source">'+escapeHtml(t.source||'')+'</div></div>').join('');
+  const requisitesBody=(groups15.length
+    ?'<div class="subtle-label">Faktiska rekvisit – OCH om inget annat anges</div><ul>'+actualRequisites+'</ul><p class="source-label">'+escapeHtml(c.rekvisit15.note||'')+'</p>'
+    :elements?'<p class="source-label">Äldre förenklad rekvisitöversikt – ännu inte individuellt juridiskt slutgranskad.</p><ul>'+elements+'</ul>'
+    :'<p>Individuellt verifierad rekvisitöversikt saknas ännu. Se lagtexten ovan.</p>')
+    +(exampleCards?'<div class="subtle-label">Typexempel</div>'+exampleCards:'');
   const stages=(c.stages||[]).map(x=>`<li>${escapeHtml(x)}</li>`).join('');
   const related=(c.related||[]).map(id=>byId[id]).filter(Boolean).map(x=>`<button class="related" data-open="${x.id}">${escapeHtml(x.title)}${ic('chevron-right','sm')}</button>`).join('');
   const compareWith=crimes.filter(x=>x.id!==c.id&&((c.statute&&x.statute===c.statute)||(c.related||[]).includes(x.id))).slice(0,4);
@@ -1151,8 +1162,9 @@ function renderDetail(c){
   ${!c.stageStatus||c.stageStatus==='punishable'?'<button class="status-row" data-action="prosecution" data-id="'+escapeHtml(c.id)+'"><span class="status-icon '+(c.prosecution==='general'?'good':c.prosecution==='conditional'?'warn':'unknown')+'">'+ic(c.prosecution==='general'?'check-circle':c.prosecution==='conditional'?'alert-circle':'info')+'</span><span class="status-copy"><div class="status-label">Åtalsregel</div><div class="status-value">'+escapeHtml(c.prosecutionLabel||'Åtalsregel ej verifierad')+'</div></span><span class="status-right">'+ic('info','sm')+ic('chevron-right','sm')+'</span></button>':''}</section>
   <section class="detail-body"><div class="accordions">
   ${accordion('lag','Lagtext', 'book-open',law)}
+  ${accordion('rekvisit','Rekvisit','layers',requisitesBody)}
   ${(!c.stageStatus||c.stageStatus==='punishable')?accordion('tvang','Tvångsmedel – översikt','shield-check',coerciveSection(c)):''}
-  ${accordion('rekvisit','Rekvisit och gärningsvarianter','layers',`<div class="subtle-label">Att pröva</div>${elements?`<ul>${elements}</ul>`:'<p>Kompletterande rekvisitöversikt läggs till senare. Se lagtexten ovan.</p>'}<div class="subtle-label">Gärningsvarianter</div>${variants?`<div class="var-chip-list">${variants}</div>`:'<p>Inga ytterligare varianter registrerade.</p>'}`)}
+  ${variants?accordion('garningsvarianter','Gärningsvarianter','layers','<div class="var-chip-list">'+variants+'</div>'):''}
   ${(c.qualifications||[]).length?accordion('kvalifikation','Kvalifikationsgrunder – fördjupning','layers',qualificationSection(c)):''}
   ${((c.studyNotes||[]).length||c.detailedNote||c.caseNote)?accordion('anteckningar','Anteckningar – fördjupning','book-mark',studyNotesSection(c)):''}
   ${accordion('praxis','Praxis och tolkningar','file-text',factsSection(c)||'<p>Inga kommentarer inlagda för denna sökingång ännu.</p>')}
