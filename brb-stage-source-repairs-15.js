@@ -19,6 +19,26 @@ for(const [key,full] of Object.entries(texts)){
   c.lawCompletenessSourceURL=SFS;c.sourceURL=SFS;cards++;
  }
 }
+if(!D.crimes.some(c=>!c.stageType&&c.statute==='BrB:19:9')){
+ const provision=W['BrB:19:9'];
+ D.crimes.push({
+  id:'v15-vardsloshet-hemlig-uppgift',title:'Vårdslöshet med hemlig uppgift',
+  shortRef:'BrB 19:9',ref:'BrB 19 kap. 9 §',statute:'BrB:19:9',
+  category:'Rikets säkerhet',aliases:[],sourceURL:SFS,
+  law:provision.text,lawSource:provision.ref,lawMode:'full',
+  lawCompletenessVerified:true,lawCompletenessChecked:'2026-10-16',lawCompletenessSourceURL:SFS,
+  penalty:'Böter eller fängelse i högst ett år; om Sverige var i krig: böter eller fängelse i högst två år.',
+  penaltyShort:'Villkorad 1–2 år',penaltyRange:{min:0,max:2,fines:true,life:false},
+  conditionalPenalty:true,penaltyRangeVerified:false,penaltyReviewScope:'war-dependent-statutory-condition',
+  penaltyChecked:'2026-10-16',penaltySourceURL:SFS,
+  penaltyNote:'BrB 19:9: kräver grov oaktsamhet beträffande obehörigt befordrande, lämnande eller röjande av hemlig uppgift enligt 19:7. Försvarlighetsundantaget och krigsberoende maxstraff måste prövas.',
+  custody:'unknown',prosecution:'general',prosecutionLabel:'Allmänt åtal – kontrollera specialbestämmelser',
+  prosecutionRule:'RB 20:3; BrB 19 kap.',prosecutionDetails:['Kontrollera åtalsförordnande och specialundantag i 19 kap.'],
+  prosecutionChecked:'2026-10-16',prosecutionSourceURL:SFS,
+  reviewStatus:'law-text-verified-only',requisitesStatus:'pending-individual-legal-review',
+  elements:[],variants:[],facts:[],stages:[],related:[],lawTerms:[],typexempel15:[]
+ });
+}
 let conditional=0;
 for(const c of D.crimes.filter(c=>!c.stageType&&c.statute==='BrB:19:9')){
  c.conditionalPenalty=true;
