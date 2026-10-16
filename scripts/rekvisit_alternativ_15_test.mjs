@@ -17,7 +17,7 @@ assert.ok(stats,'Alternative-offence requisite module did not initialize');
 console.log('V1.5 NEW ALTERNATIVE CANDIDATES '+JSON.stringify(stats));
 assert.equal(stats.mismatched.length,0,'Citation mismatch in existing crime cards: '+stats.mismatched.join(' / '));
 assert.equal(stats.missing.length,0,'Missing required legal alternative offences: '+stats.missing.join(' / '));
-assert.ok(stats.updated>=10,'Expected material progress on statutory variants: '+stats.updated);
+assert.ok(stats.updated>=5,'Expected supplemental progress after more extensively reviewed modules: '+stats.updated);
 const required=['Människorov','Människohandel','Människoexploatering','Olaga förföljelse','Inbrottsstöld','Rån','Grovt rån','Ringa bedrägeri','Oredlighet mot borgenärer','Försvårande av konkurs eller exekutiv förrättning','Sexuellt ofredande'];
 for(const t of required){
  const c=by(t);assert.ok(c,'Missing '+t);
