@@ -124,6 +124,22 @@ Det som **inte** gjorts: inga påhittade typexempel för svårtolkade eller säl
 
 ---
 
+## Kvällens fortsättning: fullständiga SFS-utdrag och förstadiekontroll (2026-10-16)
+
+**Hela nya GitHub Actions-körningen är godkänd:** [38952755857](https://github.com/Deashi03/Brottskatalog/actions/runs/38952755857), inklusive full katalogrevision, separata rättskälletester, förstadier och iPhone.
+
+- **Sju prioriterade felaktigt avklippta importer återställda eller verifierade** mot [Riksdagens brottsbalk](https://www.riksdagen.se/sv/dokument-och-lagar/dokument/svensk-forfattningssamling/brottsbalk-1962700_sfs-1962-700/): BrB **4:3**, **6:6**, **6:10 a**, **6:12**, **9:11**, **19:9** och **19:14**. Flera utdrag hade redan kompletterats i andra moduler; aktuell fullständig text och proveniens visas nu konsekvent i appens berörda kort.
+- **Barnfridsbrott BrB 4:3:** nu återges samtliga angivna grundbrott och försöksled, dubbel närståenderelation, bevittnande samt ringa/grov grad i SFS 2026:852.
+- **Kontakt för att träffa ett barn i sexuellt syfte BrB 6:10 a:** text och rekvisit omfattar den från 2026 gällande varianten `föreslår en träff eller stämmer träff`, särskilt exploateringssyfte, barnets ålder samt ålders- och närliggande ansvarsfrihetsregler. Full aktuell lydelse enligt SFS 2026:1318.
+- **Sexuellt övergrepp mot barn BrB 6:6** och **koppleri BrB 6:12:** fulla normal-/grovstycken och särskilda handlingsalternativ. För koppleri särskiljs uttryckligen lägenhetsupplåtarens särskilda ansvarsgrund.
+- **Förstadier BrB 9:11 och 19:14:** de viktiga specialreglerna om försök till utpressning, förberedelse i försäkringsbedrägerisituationer, särskild stämpling till högförräderi och underlåtenhetsansvar återges utan att den tidigare avklippta texten tappas bort. Det betyder inte att samtliga 1083 förstadieposter fått individuell rättskällegranskning.
+- **Nytt BrB 19:9-kort: vårdslöshet med hemlig uppgift.** Rekvisit för grov oaktsamhet, de tre gärningsalternativen (befordran/lämnande/röjande), försvarlighetsundantag och ett respektive två års straffmaximum beroende på om Sverige var i krig. På grund av villkoren är tvångsmedelsindikatorn *neutral*.
+- **Automatiska regressioner** kontrollerar numera att de sju återställda paragraferna är hela, att relevant giltighetsdatum/undantag syns och att den villkorade straffskalan inte redovisas som ovillkorligt fastslagen.
+- **Nuvarande testade storlek:** **1 470** sökbara poster (387 grundposter och 1083 förstadier), varav **319 BrB-poster och 174 strukturerade BrB-rekvisit (54,5 %)**. **145** brottsbalksposter saknar fortfarande strukturerad rekvisitlista, **281** saknar individuellt verifierad fullständig lagtext och **12** förstadier har `unverified` status. **0/319** är i den stränga meningen fullständigt juridiskt slutcertifierade.
+- **Publicering fortsatt spärrad**. `main` och GitHub Pages ska fortsatt visa V1.4; pull request #2 är en draft.
+
+---
+
 ## Huvudkrav
 
 1. Samtliga straffbestämmelser i BrB 3–22 kap. inventeras paragraf för paragraf, inklusive särskilda brottsgrader, namngivna ringa brott och straffbestämmelser utan självständig rubrik. En katalogpost ska ha lagrum, aktuell straffskala eller uttryckligen **villkorad**, relevant åtalsregel och förstadier med uttryckligt lagstöd, samt källmetadata.
