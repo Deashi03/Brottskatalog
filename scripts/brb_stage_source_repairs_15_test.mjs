@@ -31,6 +31,8 @@ for(const c of linked){
  assert.ok(c.conditionalPenalty&&c.custody==='unknown','Wartime-sensitive imprisonment cannot be automatically presented as unconditional');
  assert.equal(c.law,s['BrB:19:9'].text);
  assert.equal(c.penaltyRangeVerified,false,'Do not treat one numeric range as exhaustive when alternate wartime maximum applies');
+ assert.ok(c.rekvisit15?.groups?.length>=4,'Gross negligence and exception checkboxes must be present');
+ assert.ok(c.rekvisit15.groups.some(g=>g.label.includes('grov oaktsamhet')),'Never accidentally use mere negligence');
 }
 assert.ok(ctx.window.BK_DATA.crimes.filter(c=>c.stageType).length>1000);
 console.log('PASS V1.5: 9:11 and 19:14 complete stage-support provisions, 19:9 exception and neutral conditional imprisonment');
