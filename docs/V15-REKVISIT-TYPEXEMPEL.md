@@ -76,6 +76,20 @@ Det som **inte** gjorts: inga påhittade typexempel för svårtolkade eller säl
 
 ---
 
+## Fortsättning – polisnära rekvisit och kapitelvis granskningskö (2026-10-16)
+
+**Grön GitHub Actions-körning:** [38919425950 – fullkatalog, rekvisit, förstadier, iPhone och legal QA](https://github.com/Deashi03/Brottskatalog/actions/runs/38919425950).
+
+**124 av 316 BrB-grundposter (39,2 %) har nu en strukturerad rekvisitöversikt** – en ökning med 18 jämfört med föregående körning. Rekvisitstödet har bland annat byggts ut för *våldsamt motstånd, angrepp mot tjänsteman, övergrepp i rättssak, bevisförvanskning, obefogad angivelse, vårdslös beskyllning, tillgrepp av fortskaffningsmedel, allmänfarlig vårdslöshet, häleriförseelse, tagande/givande av muta, handel med inflytande, otillbörligt gynnande av borgenär, vårdslöshet mot borgenärer, spioneri, olovlig kårverksamhet, barnadråp* och flera kompletterande gärningsalternativ.
+
+- **Rättslig noggrannhet:** Gärningsvägar har avgränsats så att polisens befogenheter inte blandas med brottsrekvisit, att passivt motstånd inte automatiskt uppfyller `våldsamt motstånd`, och att särskilt syfte/uppsåt och olika skuldformer syns.
+- **Ingen påhittad rättslig slutcertifiering:** Rekvisitöversikterna är källanknutna sammanfattningar av lagtext. De är inte individuellt godkända genom uttömmande kontroll av alla förarbeten, relevanta rättsfall och historiska laglydelser.
+- **Aktiv granskningskö:** `scripts/v15_release_readiness.mjs` producerar nu `audit/v15-release-readiness.json` med varje kapitels antal poster, antal strukturerade rekvisit, icke-strukturerade titlar och en prioriterad lista för nästa sakgranskningsomgång. `scripts/v15_release_queue_15_test.mjs` intygar att summeringen av alla kapitel är lika med hela BrB-datamängden.
+- **Återstår:** **192 av 316** brottsbalksposter saknar strukturerade rekvisit; **290 av 316** saknar individuellt verifierad fullständig lagtext; **12 förstadier** har `unverified` straffbarhet. Dessa hinder kvarstår i publiceringsspärren.
+- **Publicering:** V1.4 förblir publicerad, V1.5 är fortsatt en separat draft-PR. Inte färdig förrän även de individuella rättsliga kontrollerna är klara.
+
+---
+
 ## Huvudkrav
 
 1. Samtliga straffbestämmelser i BrB 3–22 kap. inventeras paragraf för paragraf, inklusive särskilda brottsgrader, namngivna ringa brott och straffbestämmelser utan självständig rubrik. En katalogpost ska ha lagrum, aktuell straffskala eller uttryckligen **villkorad**, relevant åtalsregel och förstadier med uttryckligt lagstöd, samt källmetadata.
