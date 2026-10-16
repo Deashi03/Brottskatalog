@@ -59,6 +59,7 @@ if(oldGrave){
  oldGrave.penaltyRangeVerified=true;oldGrave.penaltyChecked='2026-10-16';
  oldGrave.penaltyReviewScope='numeric-range-only';oldGrave.penaltySourceURL=URL;
  oldGrave.penaltyNote='Lagtextens mindre grova fall har egen straffskala. Detta är ingen självständig brottsrubricering ”grovt olaga frihetsberövande”.';
+ oldGrave.skipStageGeneration=true; // Only a penalty branch; not an independently named crime.
  oldGrave.aliases=[...(oldGrave.aliases||[]).filter(x=>!/grovt olaga frihetsberövande/i.test(x))];
  oldGrave.legalDependencies=['BrB:4:2'];
  const p=by('Olaga frihetsberövande');
