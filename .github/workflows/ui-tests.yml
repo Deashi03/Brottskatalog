@@ -12,6 +12,8 @@ on:
       - "brb11-13-expansion-15.js"
       - "brb-war-coverage-15.js"
       - "brb-special-preparation-15.js"
+      - "brb17-rymning-15.js"
+      - "scripts/brb17_rymning_15_test.mjs"
       - "scripts/brb_special_preparation_15_test.mjs"
       - "scripts/brb_war_15_test.mjs"
       - "stage-scope-15.js"
@@ -70,6 +72,8 @@ on:
       - "brb11-13-expansion-15.js"
       - "brb-war-coverage-15.js"
       - "brb-special-preparation-15.js"
+      - "brb17-rymning-15.js"
+      - "scripts/brb17_rymning_15_test.mjs"
       - "scripts/brb_special_preparation_15_test.mjs"
       - "scripts/brb_war_15_test.mjs"
       - "stage-scope-15.js"
@@ -159,6 +163,8 @@ jobs:
         run: node scripts/brb_war_15_test.mjs
       - name: V1.5 special BrB 4:9b preparatory offence without recursive stages
         run: node scripts/brb_special_preparation_15_test.mjs
+      - name: V1.5 rymning statutory reform and inchoate exceptions
+        run: node scripts/brb17_rymning_15_test.mjs
       - name: V1.5 special prosecution rules for new offences
         run: node scripts/prosecution_15_test.mjs
       - name: Three-year source verification UI safeguards
