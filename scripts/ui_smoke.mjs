@@ -10,6 +10,7 @@ const wait=async()=>{await page.waitForTimeout(400);};
 try{
   await page.goto(url,{waitUntil:'networkidle'});
   assert.ok(await page.locator('#crime-search').count(),'Search must exist');
+  assert.equal((await page.locator('.bk03-brand span').innerText()).trim(),'1.4','Search header must display current release 1.4');
 
   // v0.9.1: Sök/Sparat/Mer do not cover the scrolling content on iPhone.
   const navGeometry=await page.evaluate(()=>{
@@ -272,7 +273,8 @@ try{
   assert.ok((await page.locator('.status-block').innerText()).includes('Villkor för viss tystnadsplikt'),'Special BrB 20:5 prosecution rule must be visible');
   await page.goto(url+'#mer',{waitUntil:'networkidle'});
   const settings=await page.locator('body').innerText();
-  assert.ok(settings.includes('Senaste kataloguppdatering'),'Update age in settings');
+  assert.ok(settings.includes('Version 1.4 · publicerad 2026-10-16'),'Published version must be visible in settings');
+  assert.ok(settings.includes('Grunddata:'),'Source dataset age must be shown in settings');
   assert.ok(settings.includes('LAGKONTROLL'),'Source checker in settings');
   assert.deepEqual(errors,[],'No JS page errors');
   console.log('PASS: iPhone search, keyboard, reviewed penalties, whole-term glossary, page focus, legal cross-references, update info.');
