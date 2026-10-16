@@ -5,6 +5,8 @@ on:
     paths:
       - "index.html"
       - "brb14-expansion-15.js"
+      - "rekvisit-typexempel-15.js"
+      - "scripts/rekvisit_typfall_15_test.mjs"
       - "scripts/brb14_15_test.mjs"
       - "service-worker.js"
       - "manifest.webmanifest"
@@ -43,6 +45,8 @@ on:
     paths:
       - "index.html"
       - "brb14-expansion-15.js"
+      - "rekvisit-typexempel-15.js"
+      - "scripts/rekvisit_typfall_15_test.mjs"
       - "scripts/brb14_15_test.mjs"
       - "service-worker.js"
       - "manifest.webmanifest"
@@ -103,6 +107,8 @@ jobs:
         run: node scripts/special_penalties_14_test.mjs
       - name: V1.5 draft source-scoped BrB14 expansions
         run: node scripts/brb14_15_test.mjs
+      - name: V1.5 draft typfall and structured legal requisites
+        run: node scripts/rekvisit_typfall_15_test.mjs
       - name: Three-year source verification UI safeguards
         run: node scripts/quality_11_test.mjs
       - name: Full catalog integration and statutes test
