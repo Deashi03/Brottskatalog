@@ -38,6 +38,8 @@ on:
       - "brb-stage-source-repairs-15.js"
       - "rekvisit-frid-luckor-15.js"
       - "rekvisit-tjanst-15.js"
+      - "rekvisit-ekonomi-15.js"
+      - "scripts/rekvisit_ekonomi_15_test.mjs"
       - "scripts/rekvisit_tjanst_15_test.mjs"
       - "scripts/rekvisit_frid_luckor_15_test.mjs"
       - "scripts/brb_stage_source_repairs_15_test.mjs"
@@ -124,6 +126,8 @@ on:
       - "brb-stage-source-repairs-15.js"
       - "rekvisit-frid-luckor-15.js"
       - "rekvisit-tjanst-15.js"
+      - "rekvisit-ekonomi-15.js"
+      - "scripts/rekvisit_ekonomi_15_test.mjs"
       - "scripts/rekvisit_tjanst_15_test.mjs"
       - "scripts/rekvisit_frid_luckor_15_test.mjs"
       - "scripts/brb_stage_source_repairs_15_test.mjs"
@@ -221,6 +225,8 @@ jobs:
         run: node scripts/rekvisit_frid_luckor_15_test.mjs
       - name: V1.5 full BrB chapter 17 public-official and voting offence pathways
         run: node scripts/rekvisit_tjanst_15_test.mjs
+      - name: V1.5 complete BrB 8–9 payment, market and economic crime requisites
+        run: node scripts/rekvisit_ekonomi_15_test.mjs
       - name: V1.5 intricate offence alternatives, minority and public-order requisites
         run: node scripts/rekvisit_fordjupning_15_test.mjs
       - name: V1.5 child/adult sex-offence distinctions and limited statutory exemptions
