@@ -744,6 +744,7 @@ D.date='2026-10-12';
   <script src="./brb-core-coverage-15.js"></script>
   <script src="./brb-family-15.js"></script>
   <script src="./brb11-13-expansion-15.js"></script>
+  <script src="./brb-war-coverage-15.js"></script>
   <script src="./brb14-expansion-15.js"></script>
   <script src="./brb10-review-15.js"></script>
   <script src="./stages-08.js"></script>
@@ -988,6 +989,7 @@ function factsSection(c){
 }
 
 function punishmentBlock(c){
+ if(c.applicabilityConditional)return '<div class="penalty-summary">Tillämpningen är villkorad</div><p class="penalty-context">'+escapeHtml(c.penalty||'')+'</p><p class="penalty-context">'+escapeHtml(c.applicabilityWarning||c.penaltyNote||'')+'</p>';
  if(c.conditionalPenalty)return '<div class="penalty-summary">Villkorad straffskala</div><p class="penalty-context">'+escapeHtml(c.penaltyNote||'Straffskalan beror på gärningsform eller särskilda tillämpningsvillkor. Kontrollera lagtexten.')+'</p>';
  if(c.stageStatus&&c.stageStatus!=='punishable')return '<div class="penalty-summary">'+escapeHtml(c.stageStatus==='not-criminalized'?'Saknar straffskala – ej straffbart':'Straffskala ej verifierad')+'</div>';
  if(c.stageType){
@@ -1071,7 +1073,7 @@ function coerciveSection(c){
  const chapter=e=>Number(e.ref.match(/RB (\d+):/)?.[1]||0);
  const names={23:'Utredningsåtgärder',24:'Häktning',25:'Reseförbud',26:'Kvarstad',27:'Beslag och säkring',28:'Undersökningsåtgärder'};
  const render=e=>{
-  const v=reg.score(c,e),eligible=reg.eligible?reg.eligible(c,e):v.tone!=='no',pending=v.tone==='unknown';
+  const v=c.applicabilityConditional?{tone:'unknown',label:'Brottets krigsberoende tillämpning måste kontrolleras'}:reg.score(c,e),eligible=reg.eligible?reg.eligible(c,e):v.tone!=='no',pending=v.tone==='unknown';
   const authority=e.decisionAuthority||e.ref;
   const guide=reg.decisionGuide?reg.decisionGuide(e):{brief:'Kontrollera',complex:true,lines:[e.info],ref:e.ref};
   const route=guide.brief==='Polisman FID'?'fid':guide.brief==='Polisman beslutar'?'own':guide.brief==='FU-ledare'?'fu':'special';
