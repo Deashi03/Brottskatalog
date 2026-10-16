@@ -34,6 +34,8 @@ on:
       - "rekvisit-polisiara-15.js"
       - "rekvisit-alternativ-15.js"
       - "brb4-fridtext-15.js"
+      - "brb-source-repairs-15.js"
+      - "scripts/brb_source_repairs_15_test.mjs"
       - "scripts/brb4_fridtext_15_test.mjs"
       - "scripts/rekvisit_alternativ_15_test.mjs"
       - "rekvisit-fordjupning-15.js"
@@ -112,6 +114,8 @@ on:
       - "rekvisit-polisiara-15.js"
       - "rekvisit-alternativ-15.js"
       - "brb4-fridtext-15.js"
+      - "brb-source-repairs-15.js"
+      - "scripts/brb_source_repairs_15_test.mjs"
       - "scripts/brb4_fridtext_15_test.mjs"
       - "scripts/rekvisit_alternativ_15_test.mjs"
       - "rekvisit-fordjupning-15.js"
@@ -197,6 +201,8 @@ jobs:
         run: node scripts/rekvisit_alternativ_15_test.mjs
       - name: V1.5 full BrB 4:4a/4:4e text and compound fridsbrott requirements
         run: node scripts/brb4_fridtext_15_test.mjs
+      - name: V1.5 corrected child peace and sex offences statutory text
+        run: node scripts/brb_source_repairs_15_test.mjs
       - name: V1.5 intricate offence alternatives, minority and public-order requisites
         run: node scripts/rekvisit_fordjupning_15_test.mjs
       - name: V1.5 child/adult sex-offence distinctions and limited statutory exemptions
