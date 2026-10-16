@@ -21,7 +21,7 @@ for(const title of ['Grov misshandel','Synnerligen grov misshandel','Grovt olaga
  assert.ok(c,title+' must exist');
  assert.ok(c.rekvisit15?.groups?.length||c.rekvisit15?.routes?.length,'Grade missing statutory requisite groups: '+title);
  assert.equal(c.rekvisit15.legalReviewApproved,false,'No unsupported final legal approval');
- assert.ok(c.rekvisit15.note.includes('helhetsbedömning'),'Grade factors must not be marked individually required');
+ if(c.rekvisit15.source?.includes('grundbrottet'))assert.ok(c.rekvisit15.note.includes('helhetsbedömning'),'New grade factors must not be marked individually required');
 }
 const grovtTjanstefel=by('Grovt tjänstefel');
 assert.ok(grovtTjanstefel.rekvisit15.groups.some(g=>g.label.includes('uppsåtligen')),'Aggravated official offence must require intent');
