@@ -985,6 +985,7 @@ function factsSection(c){
 }
 
 function punishmentBlock(c){
+ if(c.conditionalPenalty)return '<div class="penalty-summary">Villkorad straffskala</div><p class="penalty-context">'+escapeHtml(c.penaltyNote||'Straffskalan beror på gärningsform eller särskilda tillämpningsvillkor. Kontrollera lagtexten.')+'</p>';
  if(c.stageStatus&&c.stageStatus!=='punishable')return '<div class="penalty-summary">'+escapeHtml(c.stageStatus==='not-criminalized'?'Saknar straffskala – ej straffbart':'Straffskala ej verifierad')+'</div>';
  if(c.stageType){
   const lower=c.stagePenaltyLower||(c.penaltyRange?.min>0?'Fängelse 1 mån':'Böter');
