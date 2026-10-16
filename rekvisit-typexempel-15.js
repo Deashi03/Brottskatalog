@@ -112,6 +112,42 @@ content['grov trolöshet mot huvudman']={
   COURT
  ]]
 };
+content['missbruk av urkund']={
+ source:'BrB 15:12 och BrB 1:2',groups:[],
+ routes:[
+  {label:'Alternativ A: användning av annans äkta identitetshandling',groups:[
+   {mode:'all',label:'En personlig urkund (exempelvis pass eller ID-kort) är utställd för någon annan.'},
+   {mode:'all',label:'Gärningspersonen åberopar sanningslöst urkunden som gällande för sig själv eller annan.'},
+   {mode:'all',label:'Åtgärden innebär fara i bevishänseende och gärningspersonen har uppsåt.'}
+  ]},
+  {label:'Alternativ B: utlämnande för sådan användning',groups:[
+   {mode:'all',label:'Gärningspersonen lämnar ut en sådan personlig urkund för att den sanningslöst ska användas som gällande för annan.'},
+   {mode:'all',label:'Åtgärden innebär fara i bevishänseende och gärningspersonen har uppsåt.'}
+  ]}
+ ],cases:[[
+  'En minderårig använder medvetet en äldre bekants äkta ID-kort och visar det som sitt eget för att bli insläppt på en nattklubb. Det finns fara att ålderskontrollen vilseleds om identiteten.',
+  'Förlaga: Brottsutredning, avsnitt 15:12 – användning av annans äkta ID-handling. Lagstöd: BrB 15:12.'
+ ]]
+};
+content['olovligt brukande']={
+ source:'BrB 10:7 och BrB 1:2',groups:[],
+ routes:[
+  {label:'Alternativ A: annans sak',groups:[
+   {mode:'all',label:'Gärningspersonen brukar olovligen en sak som tillhör någon annan.'},
+   {mode:'any',label:'Brukandet orsakar:',options:['Skada','Olägenhet']},
+   {mode:'all',label:'Uppsåt finns till brukandet och relevanta omständigheter.'}
+  ]},
+  {label:'Alternativ B: fastighet med annan rättighetshavare',groups:[
+   {mode:'all',label:'Gärningspersonen innehar en fastighet men någon annan har nyttjanderätt eller annan rätt till den.'},
+   {mode:'all',label:'Fastigheten brukas olovligen i strid med den andres rätt.'},
+   {mode:'any',label:'Brukandet orsakar:',options:['Skada','Olägenhet']},
+   {mode:'all',label:'Uppsåt finns till brukandet och relevanta omständigheter.'}
+  ]}
+ ],cases:[[
+  'En person får låna en bekants telefon för ett kort lokalsamtal men ringer utan lov ett dyrt utlandssamtal som belastar ägarens abonnemang.',
+  'Förlaga: Brottsutredning, BrB 10:7 – olovlig användning av lånad telefon och kostnad för ägaren.'
+ ]]
+};
 const seen=new Set();
 for(const crime of D.crimes){
  if(crime.stageType)continue;
