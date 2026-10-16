@@ -68,7 +68,7 @@ const specs=[
   {label:'Samhällsfarlig skada eller hinder',groups:[
    A('Gärningspersonen handlar oaktsamt.'),
    A('Oaktsamheten orsakar skada eller hinder enligt BrB 13:4 eller de särskilda gärningar i 13:5 a–b som omfattas av BrB 13:6.'),
-   A('Lagtextens hänvisningar måste vara uppfyllda.')}
+   A('Lagtextens hänvisningar måste vara uppfyllda.')]}
  ]],
  ['Häleriförseelse','9:7',[],[
   {label:'Alternativ A – ringa häleri eller utförselhäleri',groups:[
