@@ -49,6 +49,15 @@ try{
   assert.ok((await page.locator('.crime-card').allTextContents()).some(x=>x.includes('Mord')),'Expanded catalog must include Mord');
   await page.locator('.crime-card').first().click();
   await wait();
+  // v1.5: a structured summary must visibly distinguish statute comparison from final legal review.
+  const requisites=page.locator('#sec-rekvisit');
+  assert.equal(await requisites.count(),1,'Rekvisit must be accessible from every offence card');
+  await requisites.locator('summary').click();
+  const requisiteText=await requisites.innerText();
+  assert.ok(requisiteText.includes('Lagtextsbaserat rekvisitstöd'),'An unapproved summary must never appear legally certified');
+  assert.ok(requisiteText.includes('Rättslig grund: BrB 3:1'),'Murder requisite summary must cite the actual penal provision');
+  assert.ok(await requisites.locator('a[href*="riksdagen.se"]').count()>=1,'Requisite panel needs a direct official SFS link');
+  await requisites.locator('summary').click();
   // v1.1: legal review is AFTER the ordinary details and never steals initial space.
   const quality=page.locator('#sec-quality');
   assert.equal(await quality.count(),1,'Card must offer a legal review details area');
