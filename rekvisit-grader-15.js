@@ -47,7 +47,21 @@ for(const [title,ref,routes] of base){
 // Earlier experimental catalogue mislabelled the less-serious form as
 // "Grovt olaga frihetsberövande". BrB 4:2 has only a LESS GROSS
 // alternative penalty, not an offence named "Grovt olaga frihetsberövande".
-const oldGrave=by('Grovt olaga frihetsberövande');
+let oldGrave=by('Grovt olaga frihetsberövande');
+if(!oldGrave&&!by('Olaga frihetsberövande (mindre grovt fall)')){
+ const original=by('Olaga frihetsberövande');
+ const src=window.BK_STATUTES?.['BrB:4:2'];
+ if(original&&src?.text?.includes('mindre grovt')){
+  oldGrave={id:'v15-olaga-frihetsberovande-mindre-grovt',title:'Grovt olaga frihetsberövande',
+   shortRef:'BrB 4:2',ref:'BrB 4 kap. 2 §',statute:'BrB:4:2',
+   category:original.category||'Frid',aliases:[],elements:[],variants:[],facts:[],stages:[],related:[original.id],lawTerms:[],
+   typexempel15:[],sourceURL:URL,law:src.text,lawSource:src.ref,lawMode:'machine',
+   prosecution:'general',prosecutionLabel:'Allmänt åtal',prosecutionRule:'RB 20:3',
+   prosecutionDetails:['Åtalsbegränsningar och historisk laglydelse ska alltid kontrolleras.'],
+   custody:'possible',reviewStatus:'law-text-legal-review-pending',requisitesStatus:'pending-individual-legal-review'};
+  D.crimes.push(oldGrave);
+ }
+}
 if(oldGrave){
  const source=window.BK_STATUTES?.['BrB:4:2']?.text||'';
  if(!source.includes('mindre grovt'))throw Error('Cannot repair BrB 4:2 without current statutory source');
