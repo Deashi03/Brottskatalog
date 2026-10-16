@@ -17,7 +17,7 @@ concurrency:
 
 jobs:
   verify:
-    name: Verify V1.4 before publication
+    name: Verify release before publication
     runs-on: ubuntu-latest
     steps:
       - name: Checkout source
@@ -44,6 +44,8 @@ jobs:
         run: node scripts/integration_09.mjs
       - name: Run catalog-wide audit
         run: node scripts/audit_catalog.mjs
+      - name: Legal release readiness gate – block incomplete V1.5
+        run: node scripts/v15_release_readiness.mjs --release
 
   deploy:
     name: Deploy verified site
