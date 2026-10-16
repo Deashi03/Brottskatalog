@@ -44,6 +44,31 @@ for(const [title,ref,routes] of base){
   note:'Varje alternativ är en egen gärningsväg. Se originalbestämmelsen, relevanta rättsfall och gärningsdatum; denna struktur är inte juridiskt slutcertifierad.'};
  baseAdded++;
 }
+// Earlier experimental catalogue mislabelled the less-serious form as
+// "Grovt olaga frihetsberövande". BrB 4:2 has only a LESS GROSS
+// alternative penalty, not an offence named "Grovt olaga frihetsberövande".
+const oldGrave=by('Grovt olaga frihetsberövande');
+if(oldGrave){
+ const source=window.BK_STATUTES?.['BrB:4:2']?.text||'';
+ if(!source.includes('mindre grovt'))throw Error('Cannot repair BrB 4:2 without current statutory source');
+ oldGrave.title='Olaga frihetsberövande (mindre grovt fall)';
+ oldGrave.shortRef='BrB 4:2';oldGrave.ref='BrB 4 kap. 2 §';
+ oldGrave.penalty='Böter eller fängelse i högst två år';
+ oldGrave.penaltyShort='B–F högst 2 år';
+ oldGrave.penaltyRange={min:0,max:2,fines:true,life:false};
+ oldGrave.penaltyRangeVerified=true;oldGrave.penaltyChecked='2026-10-16';
+ oldGrave.penaltyReviewScope='numeric-range-only';oldGrave.penaltySourceURL=URL;
+ oldGrave.penaltyNote='Lagtextens mindre grova fall har egen straffskala. Detta är ingen självständig brottsrubricering ”grovt olaga frihetsberövande”.';
+ oldGrave.aliases=[...(oldGrave.aliases||[]).filter(x=>!/grovt olaga frihetsberövande/i.test(x))];
+ oldGrave.legalDependencies=['BrB:4:2'];
+ const p=by('Olaga frihetsberövande');
+ if(p?.rekvisit15){
+  oldGrave.rekvisit15={...JSON.parse(JSON.stringify(p.rekvisit15)),
+   groups:[...(p.rekvisit15.groups||[])],
+   routes:(p.rekvisit15.routes||[]).map(r=>({...r,groups:[...r.groups,A('Vid helhetsbedömningen ska gärningen anses mindre grov för den lindrigare straffskalan.')]})),
+   source:'BrB 4:2 (mindre grovt fall)',scope:'lagtext-jamford',legalReviewApproved:false};
+ }
+}
 // Grade type: the requirement to assess the crime holistically cannot be
 // replaced by an automatic checkbox for "weapon", "value" or "injury".
 const grades=[
@@ -52,7 +77,6 @@ const grades=[
  ['Synnerligen grov misshandel','Misshandel','3:6','Synnerligen grov efter helhetsbedömning. Särskilt beakta bestående skada, synnerligt lidande eller synnerlig hänsynslöshet.'],
  ['Grovt vållande till annans död','Vållande till annans död','3:7','Grovt oaktsamt vållande efter helhetsbedömning. Särskilt beakta medvetet allvarligt risktagande eller allvarlig försummelse, exempelvis vid påverkan.'],
  ['Grovt vållande till kroppsskada eller sjukdom','Vållande till kroppsskada eller sjukdom','3:8','Grovhetsbedömning: särskilt beakta medvetet risktagande av allvarligt slag, påverkan eller försummelse av allvarligt slag.'],
- ['Grovt olaga frihetsberövande','Olaga frihetsberövande','4:2','Lagtextens särskilda rubricering ska användas endast om brottet vid helhetsbedömningen är grovt. Kontrollera att grov-grad faktiskt förekommer i aktuell lagtext.'],
  ['Grovt olaga tvång','Olaga tvång','4:4','Grovt brott efter helhetsbedömning: särskilt våld av allvarligt slag, kraftigt förstärkt eller annat allvarligt hot, eller särskild hänsynslöshet/farlighet.'],
  ['Grovt olaga hot','Olaga hot','4:5','Grovt brott efter helhetsbedömning: särskilt förstärkt hot med vapen, sprängämne, vapenattrapp eller anspelning på våldskapital eller särskilt hänsynslöst/farligt beteende.'],
  ['Grovt hemfridsbrott','Hemfridsbrott','4:6','Grovt brott efter helhetsbedömning: särskilt inbrott, våld/hot/ofredande/skadegörelse eller särskild hänsynslöshet/farlighet.'],
