@@ -90,6 +90,26 @@ Det som **inte** gjorts: inga påhittade typexempel för svårtolkade eller säl
 
 ---
 
+## Fortsatt individuell lagtextgenomgång – 2026-10-16
+
+**Senaste godkända testkedja:** [GitHub Actions inklusive iPhone, BrB6 och full katalog](https://github.com/Deashi03/Brottskatalog/actions/runs/38922903442).
+
+**159 av 316 BrB-grundposter (50,3 %) har nu strukturerade rekvisitöversikter.** Det är en ökning med **35 poster** från förra arbetsomgången (124). De återstående **157 posterna** finns i den kapitelvisa granskningskön i `audit/v15-release-readiness.json` från GitHub Actions.
+
+### Nya rekvisit och juridisk precision
+- **19 detaljerade OCH/ELLER-rekvisit**, bland annat människorov, människohandel, människoexploatering, olaga förföljelse, ringa bedrägeri, utförselhäleri, oredlighet mot borgenärer, försvårande av konkurs/exekutiv förrättning, mened, osann partsutsaga, ovarsam utsaga, underlåtenhet att avvärja rättsfel, upplopp och våldsamt upplopp. Barn under 18 år, alternativa gärningar, roll som anförare eller deltagare och uttryckliga undantag hålls isär. Alla 19 hittades och matchade korrekt referens i den befintliga katalogen.
+- **16 sexbrott i BrB 6 kap.**, bland annat våldtäkt, sexuellt övergrepp, oaktsam våldtäkt, våldtäkt mot barn, sexuellt utnyttjande av barn, sexuell posering och sexuellt ofredande med grova grader. Åldersvägar under 15 år, 15–17 år, särskilt utsatta barn under 18 år, frivillighet, grov oaktsamhet och specialbestämmelserna BrB 6:13–14 hanteras separat. **Inga nya typexempel** har konstruerats för dessa juridiskt känsliga brott.
+- **I den expanderade rekvisitmenyn** framgår nu om översikten bara är lagtextbaserat studiestöd eller juridiskt slutgodkänd, samt rättslig grund och direkt SFS-länk. Den snabba brottsöversikten belastas inte av dessa extra upplysningar.
+- **Förstadierna:** BrB 13:12 och 21:15 har kontrollerats på ordalydelsenivå. De 12 särskilt svårbedömda grova förstadierna är fortsatt markerade `unverified` tills individuell rättslig tolkning fastställs, hellre än falskt säkra ja/nej.
+- **Risk med importerad lagtext:** vissa äldre importerade paragrafutdrag (t.ex. BrB 4:4 a, 6:6, 6:10 a, 6:12) är påvisbart avklippta. Komplettering får inte ske genom att hitta på saknade led. För de paragraferna krävs kontroll mot fullständigt officiellt SFS-underlag innan de godkänns.
+
+### Kvar före publicering
+**157** BrB-grundposter saknar strukturerade rekvisit, **290 av 316** saknar individuellt bekräftad fullständig lagtext och **12 förstadier** har ännu ingen juridiskt avgjord straffbarhetsklassning. Trots godkända funktionstester är fortfarande **0 av 316** BrB-grundposter individuellt *helt juridiskt slutcertifierade* enligt den strikta nya granskningsstandarden (lagtext, övergångsbestämmelser, rättsfall/förarbeten där relevanta samt särskilda undantag).
+
+**Releasebeslut:** V1.5 kvarstår som draft. Publicerade V1.4 är oförändrad. `node scripts/v15_release_readiness.mjs --release` måste fortsatt vägra publicering.
+
+---
+
 ## Huvudkrav
 
 1. Samtliga straffbestämmelser i BrB 3–22 kap. inventeras paragraf för paragraf, inklusive särskilda brottsgrader, namngivna ringa brott och straffbestämmelser utan självständig rubrik. En katalogpost ska ha lagrum, aktuell straffskala eller uttryckligen **villkorad**, relevant åtalsregel och förstadier med uttryckligt lagstöd, samt källmetadata.
