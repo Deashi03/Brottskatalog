@@ -1,3 +1,22 @@
+# Brottskatalog V1.4 – publiceringsversion (16 oktober 2026)
+
+**Öppna i Safari:** https://deashi03.github.io/Brottskatalog/  
+**Källkod:** https://github.com/Deashi03/Brottskatalog
+
+V1.4 är publicerad från `main` för GitHub Pages. Det är en version av det tekniska referensverket, **inte** ett intyg om fullständig juridisk sakgranskning av samtliga poster. Vid operativa beslut ska gällande författning, gärningsdatum, särskilda rekvisit och beslutsbehörighet kontrolleras självständigt.
+
+### Publiceringsavslut 2026-10-16
+
+- Versionsuppgifter i sök- och inställningsvyn har samordnats till **V1.4**. Den kvarvarande etiketten `Arbetsversion 0.6` är rättad, liksom den gamla beskrivningen av appen som en designprototyp.
+- Den installerade iPhone-appens offlinecache har fått nytt versions-ID. En frånkopplad förfrågan om JavaScript/JSON får inte längre webbplatsens HTML som felaktigt reservsvar.
+- Befintliga tester av 22 särskilt kontrollerade specialstraffrättsliga straffskalor omfattar nu också versionsetikett och offline-reservsvar.
+- Brottskortets viktiga funktioner, det hopfällda `Rättslig kontroll` längst ned och påminnelse först tre år efter dokumenterad sakgranskning är oförändrade.
+- **Fortfarande ej slutgranskat:** maskinimporterade lagtextutdrag, alla förstadiebedömningars faktiska tillämpningsområde, historiska lydelser, övergångsbestämmelser och individuellt obekräftade straffskalor/åtalsundantag. Versionspubliceringen skapar inga nya juridiska kontrollintyg.
+
+Se `scripts/special_penalties_14_test.mjs` och katalogens övriga testskript för maskinell regression. Testernas resultat måste verifieras i GitHub Actions; publicering är inte liktydig med godkänt testresultat.
+
+---
+
 # Brottskatalog 1.4 – straffskalor, juridisk spårbarhet och kvalitetstester (2026-10-15)
 
 ## Slutkomplettering 1.4 – 22 specialstraffrättsliga straffskalor (15 oktober 2026)
