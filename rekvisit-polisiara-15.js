@@ -80,7 +80,7 @@ const specs=[
    A('Gärningspersonen handlar uppsåtligen till relevanta omständigheter.') ]},
   {label:'Alternativ C – skälig anledning att anta brott',groups:[
    A('Gärningsformen omfattas av BrB 9:6 första stycket eller den särskilt angivna medverkanssituationen.'),
-   A('Gärningspersonen insåg inte brottet men hade skälig anledning att anta att sådant brott förelåg.')}
+   A('Gärningspersonen insåg inte brottet men hade skälig anledning att anta att sådant brott förelåg.')]}
  ]],
  ['Tagande av muta','10:5a',[],[
   {label:'Arbetstagare eller uppdragstagare',groups:[
