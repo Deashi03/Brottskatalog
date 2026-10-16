@@ -7,6 +7,8 @@ on:
       - "brb14-expansion-15.js"
       - "brb10-review-15.js"
       - "brb4-expansion-15.js"
+      - "brb-core-coverage-15.js"
+      - "scripts/brb_core_coverage_15_test.mjs"
       - "prosecution-review-15.js"
       - "scripts/prosecution_15_test.mjs"
       - "scripts/brb4_expansion_15_test.mjs"
@@ -54,6 +56,8 @@ on:
       - "brb14-expansion-15.js"
       - "brb10-review-15.js"
       - "brb4-expansion-15.js"
+      - "brb-core-coverage-15.js"
+      - "scripts/brb_core_coverage_15_test.mjs"
       - "prosecution-review-15.js"
       - "scripts/prosecution_15_test.mjs"
       - "scripts/brb4_expansion_15_test.mjs"
@@ -127,6 +131,8 @@ jobs:
         run: node scripts/brb10_15_test.mjs
       - name: V1.5 recent BrB4 additions with conservative typecases
         run: node scripts/brb4_expansion_15_test.mjs
+      - name: V1.5 BrB 16–19 coverage and special penalty safeguards
+        run: node scripts/brb_core_coverage_15_test.mjs
       - name: V1.5 special prosecution rules for new offences
         run: node scripts/prosecution_15_test.mjs
       - name: Three-year source verification UI safeguards
