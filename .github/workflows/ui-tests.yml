@@ -9,6 +9,9 @@ on:
       - "brb4-expansion-15.js"
       - "brb-core-coverage-15.js"
       - "brb-family-15.js"
+      - "brb11-13-expansion-15.js"
+      - "stage-scope-15.js"
+      - "scripts/brb11_13_15_test.mjs"
       - "scripts/brb_family_15_test.mjs"
       - "scripts/brb_core_coverage_15_test.mjs"
       - "prosecution-review-15.js"
@@ -60,6 +63,9 @@ on:
       - "brb4-expansion-15.js"
       - "brb-core-coverage-15.js"
       - "brb-family-15.js"
+      - "brb11-13-expansion-15.js"
+      - "stage-scope-15.js"
+      - "scripts/brb11_13_15_test.mjs"
       - "scripts/brb_family_15_test.mjs"
       - "scripts/brb_core_coverage_15_test.mjs"
       - "prosecution-review-15.js"
@@ -139,6 +145,8 @@ jobs:
         run: node scripts/brb_core_coverage_15_test.mjs
       - name: V1.5 2026 marriage and international court offences
         run: node scripts/brb_family_15_test.mjs
+      - name: V1.5 bankruptcy and air/sea safety crimes – scope-safe stages
+        run: node scripts/brb11_13_15_test.mjs
       - name: V1.5 special prosecution rules for new offences
         run: node scripts/prosecution_15_test.mjs
       - name: Three-year source verification UI safeguards
