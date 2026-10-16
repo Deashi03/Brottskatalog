@@ -27,6 +27,25 @@ for(const [key,full] of Object.entries(texts)){
  if(!item.text.includes('Lag (2026:852)'))throw Error('Wrong statute version '+key);
 }
 const by=t=>D.crimes.find(c=>!c.stageType&&String(c.title||'').toLocaleLowerCase('sv')===t.toLocaleLowerCase('sv'));
+if(!by('Hedersförtryck')){
+ const info=src['BrB:4:4e'];
+ if(!info?.text?.includes('hedersförtryck'))throw Error('Cannot insert honor crime with incomplete statute');
+ D.crimes.push({
+  id:'v15-hedersfortryck',title:'Hedersförtryck',shortRef:'BrB 4:4e',ref:'BrB 4 kap. 4 e §',
+  statute:'BrB:4:4e',category:'Person',aliases:[],sourceURL:SFS,
+  law:info.text,lawMode:'full',lawSource:info.ref,
+  lawCompletenessVerified:true,lawCompletenessSourceURL:SFS,lawCompletenessChecked:'2026-10-16',
+  penalty:'Fängelse i lägst ett och högst sex år',penaltyShort:'F 1–6 år',
+  penaltyRange:{min:1,max:6,fines:false,life:false},penaltyRangeVerified:true,
+  penaltyReviewScope:'numerical-scale-only',penaltyChecked:'2026-10-16',penaltySourceURL:SFS,
+  penaltyNote:'Hedersmotiv och upprepade integritetskränkningar enligt BrB 4:4 e; ikraftträdandefrågor och äldre gärningar måste kontrolleras.',
+  custody:'possible',prosecution:'general',prosecutionLabel:'Allmänt åtal',
+  prosecutionRule:'RB 20:3; BrB 4:4e',prosecutionDetails:['Generell åtalsregel; pröva konkurrens och omständigheterna i varje ingående gärning.'],
+  prosecutionChecked:'2026-10-16',prosecutionSourceURL:SFS,
+  reviewStatus:'law-text-and-range-reviewed',requisitesStatus:'pending-individual-legal-review',
+  elements:[],variants:[],facts:[],stages:[],related:[],lawTerms:[],typexempel15:[]
+ });
+}
 const A=label=>({mode:'all',label}),O=(label,...options)=>({mode:'any',label,options});
 const ordinary=[
  O('Varje underliggande gärning ska omfattas av någon av lagens grupper:', 'Brott enligt 3–6 kap. BrB','Brott enligt 12 kap. BrB','Överträdelse enligt 24 § kontaktförbudslagen','Straffbart försök, förberedelse eller stämpling till brott enligt de angivna grupperna'),
