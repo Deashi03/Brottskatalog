@@ -54,21 +54,79 @@ const content={
    ],cases:[['En person tar utan lov en annans bil, kör omkring och lämnar den senare, utan att ha haft för avsikt att tillägna sig bilen.','Typfall från Straffrätt Lund F49.']]
  }
 };
+const SOU_MARK='https://www.regeringen.se/contentassets/30fcbaf6af924a2d8693b063c5aabc9c/en-straffreform-sou-202566-vol-3.pdf';
+const SOU_LOYAL='https://www.riksdagen.se/sv/dokument-och-lagar/dokument/statens-offentliga-utredningar/mutbrott_gyb338/html/';
+const COURT='https://www.domstol.se/nyheter/2025/06/36-arig-man-doms-till-fangelse-for-grov-troloshet-mot-huvudman/';
+content['märkesförfalskning']={
+ source:'BrB 14:8, BrB 1:2 och SOU 2025:66 vol. 3',groups:[
+  {mode:'any',label:'Det förfalskade avser ett skyddat slags märke:',options:[
+   'Gällande frimärke, beläggningsstämpel eller annat offentligt eller för allmänheten avsett värdemärke',
+   'Offentlig svensk eller utländsk kontrollmärkning, exempelvis registreringsskylt'
+  ]},
+  {mode:'any',label:'En av de i paragrafen angivna förfalskningsåtgärderna:',options:[
+   'Eftergöra sådant märke','Anbringa ett falskt sådant märke',
+   'Obehörigen anbringa ett äkta sådant märke',
+   'På annat sätt förfalska märket eller det märkta'
+  ]},
+  {mode:'all',label:'Åtgärden innebär fara i bevishänseende.'},
+  {mode:'all',label:'Gärningspersonen har uppsåt till omständigheterna i de objektiva rekvisiten.'}
+ ],cases:[[
+  'En person monterar utan behörighet en äkta registreringsskylt från en annan bil på sitt eget fordon, för att det vid en kontroll ska framstå som att bilen har den andra bilens registreringsidentitet. Det innebär fara i bevishänseende.',
+  'Förlaga: Brottsutredning (14:8). Rättsligt stöd: BrB 14:8 och SOU 2025:66, volym 3.',
+  SOU_MARK
+ ]]
+};
+const troRoutes=[
+ {label:'Alternativ A: ekonomisk angelägenhet eller kvalificerad teknisk uppgift',groups:[
+  {mode:'all',label:'Gärningspersonen har en förtroendeställning.'},
+  {mode:'any',label:'På grund av förtroendeställningen har personen fått till uppgift att:',options:[
+   'Sköta någon annans ekonomiska angelägenhet',
+   'Självständigt hantera en kvalificerad teknisk uppgift för någon annan',
+   'Övervaka skötseln av en sådan angelägenhet eller uppgift'
+  ]},
+  {mode:'all',label:'Gärningspersonen missbrukar sin förtroendeställning.'},
+  {mode:'all',label:'Missbruket orsakar huvudmannen skada.'},
+  {mode:'all',label:'Uppsåt föreligger till rekvisiten; förskingringsbestämmelserna i BrB 10:1–3 har företräde om de är tillämpliga.'}
+ ]},
+ {label:'Alternativ B: rättslig angelägenhet',groups:[
+  {mode:'all',label:'Gärningspersonen har fått i uppgift att sköta en rättslig angelägenhet för någon annan.'},
+  {mode:'all',label:'Personen missbrukar sin förtroendeställning vid uppdraget.'},
+  {mode:'all',label:'Missbruket sker till förfång för huvudmannen (behöver inte vara av ekonomisk eller teknisk art).'},
+  {mode:'all',label:'Uppsåt föreligger till rekvisiten; förskingringsbestämmelserna i BrB 10:1–3 har företräde om de är tillämpliga.'}
+ ]}
+];
+content['trolöshet mot huvudman']={
+ source:'BrB 10:5 (SFS 2026:1318), BrB 1:2, SOU 2025:87',groups:[],routes:troRoutes,
+ cases:[[
+  'En inköpschef som självständigt får ingå leverantörsavtal för sin arbetsgivare tar en otillbörlig förmån och beställer medvetet varor till kraftigt överpris, vilket skadar arbetsgivaren ekonomiskt.',
+  'Typfall beskrivet i SOU 2010:38 om trolöshet mot huvudman och mutbrott.',
+  SOU_LOYAL
+ ]]
+};
+content['grov trolöshet mot huvudman']={
+ source:'BrB 10:5 andra stycket (SFS 2026:1318); Stockholms tingsrätt, mål B 19103-24',
+ groups:[],routes:troRoutes,
+ cases:[[
+  'En ekonomiassistent med förtroendeställning gör under flera år systematiskt obehöriga betalningar från arbetsgivarens konton till sina egna. Skadan uppgår till tiotals miljoner kronor.',
+  'Verkligt brottsupplägg: Stockholms tingsrätt, B 19103-24 (2025). Grovhetsgraden förutsätter helhetsbedömning.',
+  COURT
+ ]]
+};
 const seen=new Set();
 for(const crime of D.crimes){
  if(crime.stageType)continue;
  const key=String(crime.title||'').toLocaleLowerCase('sv');
  const item=content[key];if(!item)continue;
  seen.add(key);
- crime.rekvisit15=item.groups.length?{
-  groups:item.groups,source:item.source,sourceURL:SFS,
+ crime.rekvisit15=(item.groups.length||item.routes?.length)?{
+  groups:item.groups,routes:item.routes||[],source:item.source,sourceURL:SFS,
   scope:'lagtext-jamford','verifiedOn':'2026-10-16',
   note:'Rekvisitöversikt kontrollerad mot bestämmelsens ordalydelse. Full rättslig tolkning, praxis och undantag är inte slutgranskade.'
  }:null;
- crime.typexempel15=item.cases.map(([text,source])=>({
-  text,source,sourceURL:SFS,
-  kind:'typfall',status:'illustrative-legally-checked-2026-10-16'
+ crime.typexempel15=item.cases.map(([text,source,legalSourceURL])=>({
+  text,source,sourceURL:legalSourceURL||SFS,lawSourceURL:SFS,
+  kind:'typfall',status:'source-attributed-typical-example',typecaseReviewed:'2026-10-16'
  }));
 }
-window.BK_REKVISIT15={examples:seen.size,scope:'initial-low-ambiguity-cases',deferredExamples:['Märkesförfalskning – byte av registreringsskylt','Angrepp mot tjänsteman – spottning/knuff']};
+window.BK_REKVISIT15={examples:seen.size,scope:'initial-low-ambiguity-cases',deferredExamples:['Angrepp mot tjänsteman – spottning/knuff'],juridicallySourceChecked:['märkesförfalskning','trolöshet mot huvudman','grov trolöshet mot huvudman']};
 })();
