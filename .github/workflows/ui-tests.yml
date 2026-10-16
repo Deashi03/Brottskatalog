@@ -35,6 +35,8 @@ on:
       - "rekvisit-alternativ-15.js"
       - "brb4-fridtext-15.js"
       - "brb-source-repairs-15.js"
+      - "brb-stage-source-repairs-15.js"
+      - "scripts/brb_stage_source_repairs_15_test.mjs"
       - "scripts/brb_source_repairs_15_test.mjs"
       - "scripts/brb4_fridtext_15_test.mjs"
       - "scripts/rekvisit_alternativ_15_test.mjs"
@@ -115,6 +117,8 @@ on:
       - "rekvisit-alternativ-15.js"
       - "brb4-fridtext-15.js"
       - "brb-source-repairs-15.js"
+      - "brb-stage-source-repairs-15.js"
+      - "scripts/brb_stage_source_repairs_15_test.mjs"
       - "scripts/brb_source_repairs_15_test.mjs"
       - "scripts/brb4_fridtext_15_test.mjs"
       - "scripts/rekvisit_alternativ_15_test.mjs"
@@ -203,6 +207,8 @@ jobs:
         run: node scripts/brb4_fridtext_15_test.mjs
       - name: V1.5 corrected child peace and sex offences statutory text
         run: node scripts/brb_source_repairs_15_test.mjs
+      - name: V1.5 BrB 9/19 current pretrial stage statutes and conditional wartime penalty
+        run: node scripts/brb_stage_source_repairs_15_test.mjs
       - name: V1.5 intricate offence alternatives, minority and public-order requisites
         run: node scripts/rekvisit_fordjupning_15_test.mjs
       - name: V1.5 child/adult sex-offence distinctions and limited statutory exemptions
