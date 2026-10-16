@@ -140,6 +140,22 @@ Det som **inte** gjorts: inga påhittade typexempel för svårtolkade eller säl
 
 ---
 
+## Senaste rekvisitomgången – fyra kompletta kapitel på strukturnivå (2026-10-16)
+
+**Senaste godkända CI och iPhone-smoke:** [38955078438](https://github.com/Deashi03/Brottskatalog/actions/runs/38955078438).
+
+- **205 av 319** brottsbalksgrundposter har nu strukturerade OCH/ELLER-rekvisit (64,3 %). Förra avstämningen var 174/319. **31 ytterligare** grundposter har fått källanknutna listor denna omgång; **114** återstår.
+- **BrB 4 kap.: 41/41**, **8 kap.: 14/14**, **9 kap.: 22/22**, **17 kap.: 21/21** enligt kapitelvis databasrevision – dessa fyra kapitel är **fullständiga vad gäller förekomsten av strukturerade rekvisit**, inte rättsdogmatisk granskning av varje rekvisit.
+- **BrB 4 kap. – 13 nya checklistor:** barnäktenskapsbrott, äktenskapstvång, äktenskapsresebrott med/utan särskilt barnalternativ, oskuldskontroll, intygande av sexuell oskuld, uppmaning till självmord respektive oaktsam sådan, olovlig avlyssning, dataintrång/grovt dataintrång, ringa barnfridsbrott och den självständigt straffbelagda förberedelsegärningen BrB 4:9 b. Särskilda subjektiva, ringa- och barnvillkor visas utan spekulativa typexempel.
+- **BrB 17 kap. – åtta nya checklistor:** angrepp mot tjänsteman (grov grad), övergrepp i rättssak (grov grad), skyddande av brottsling (grov grad), otillbörligt verkande vid röstning inklusive grov grad, tagande av otillbörlig förmån vid röstning, överträdelse av myndighets bud och hindrande av förrättning. Kvalifikationsomständigheter och olika handlingsalternativ hålls isär. Särskilt åtskiljs 17:13 första styckets förbud från andra styckets vägrat tillträde, vilket enbart har böter i straffskalan.
+- **BrB 8–9 kap. – tio nya checklistor:** ringa tillgrepp av fortskaffningsmedel (inklusive straffrihet på försöksstadiet för ringa fall enligt BrB 8:12), företagskapning, olovlig befattning med betalningsverktyg/grov grad, grovt fordringsbedrägeri, svindleri/ringa/grovt, grovt utförselhäleri och ringa utpressning. De alternativa gärningsvägarna visas var för sig.
+- **Rättskälla:** [Brottsbalken (1962:700) – Sveriges riksdag](https://www.riksdagen.se/sv/dokument-och-lagar/dokument/svensk-forfattningssamling/brottsbalk-1962700_sfs-1962-700/). Inga osäkra typexempel har skapats.
+- **Automatiska testsäkringar:** `scripts/rekvisit_frid_luckor_15_test.mjs`, `scripts/rekvisit_tjanst_15_test.mjs` och `scripts/rekvisit_ekonomi_15_test.mjs` kräver sammanhängande källanknutna rekvisit och markerar brister om något av kapitlen plötsligt tappar sin struktur. Testerna kontrollerar inte hela rättspraxis eller juridisk slutcertifiering.
+- **Juridiska publiceringshinder:** 114 BrB-grundposter saknar strukturerade rekvisit, **281 av 319** saknar individuellt verifierad fullständig lagtext, **12 förstadier** har `unverified` straffbarhet, och **0/319** uppfyller den stränga märkningen för fullständig rättsdogmatisk sakgranskning. Maskinell CI och paragrafvist fullständig struktur räcker inte för att påstå att den juridiska databasen är säker att publicera.
+- **Status:** Draft PR #2 kvar i arbetsgren. V1.4 kvar på GitHub Pages, och publiceringsspärren i deployment-flödet är fortsatt aktiv.
+
+---
+
 ## Huvudkrav
 
 1. Samtliga straffbestämmelser i BrB 3–22 kap. inventeras paragraf för paragraf, inklusive särskilda brottsgrader, namngivna ringa brott och straffbestämmelser utan självständig rubrik. En katalogpost ska ha lagrum, aktuell straffskala eller uttryckligen **villkorad**, relevant åtalsregel och förstadier med uttryckligt lagstöd, samt källmetadata.
