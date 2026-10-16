@@ -15,6 +15,7 @@ on:
       - "brb17-rymning-15.js"
       - "scripts/brb17_rymning_15_test.mjs"
       - "scripts/v15_release_readiness.mjs"
+      - "scripts/v15_release_queue_15_test.mjs"
       - "scripts/brb_special_preparation_15_test.mjs"
       - "scripts/brb_war_15_test.mjs"
       - "stage-scope-15.js"
@@ -84,6 +85,7 @@ on:
       - "brb17-rymning-15.js"
       - "scripts/brb17_rymning_15_test.mjs"
       - "scripts/v15_release_readiness.mjs"
+      - "scripts/v15_release_queue_15_test.mjs"
       - "scripts/brb_special_preparation_15_test.mjs"
       - "scripts/brb_war_15_test.mjs"
       - "stage-scope-15.js"
@@ -203,6 +205,8 @@ jobs:
         run: node scripts/brb_inventory_15.mjs
       - name: Measure individual legal review coverage (draft reporting only)
         run: node scripts/v15_release_readiness.mjs
+      - name: Verify truthful and complete per-chapter legal review queue
+        run: node scripts/v15_release_queue_15_test.mjs
       - name: Archive full quality report
         if: always()
         uses: actions/upload-artifact@v4
