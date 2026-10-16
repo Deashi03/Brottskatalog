@@ -20,6 +20,35 @@ const fullyReviewed=c=>Boolean(structured(c)&&c.rekvisit15?.scope==='full-legal-
 const exactText=c=>c.lawMode==='full'||c.lawCompletenessVerified===true;
 const typecase=c=>Boolean(c.typexempel15?.length);
 const pendingRequisites=brb.filter(c=>!fullyReviewed(c));
+const notStructured=brb.filter(c=>!structured(c));
+const limitedStructured=brb.filter(c=>structured(c)&&!fullyReviewed(c));
+const chapterOf=c=>{
+ const match=String(c.statute||c.shortRef||'').match(/(?:BrB:|BrB\s+)(\d+)/);
+ return match?Number(match[1]):null;
+};
+const chapters=[...new Set(brb.map(chapterOf))].filter(Number.isFinite).sort((a,b)=>a-b);
+const perChapter=chapters.map(ch=>{
+ const rows=brb.filter(c=>chapterOf(c)===ch);
+ return {
+  chapter:ch,total:rows.length,structured:rows.filter(structured).length,
+  missingStructured:rows.filter(c=>!structured(c)).length,
+  fullyLegallyReviewed:rows.filter(fullyReviewed).length,
+  completeLawText:rows.filter(exactText).length,
+  pendingTitles:rows.filter(c=>!structured(c)).map(c=>({title:c.title,ref:c.shortRef})),
+  sourceNote:'Full lagtext/rekvisitintyg fordrar självständig juridisk sakgranskning.'
+ };
+});
+const reviewOrder=[3,4,17,8,9,10,12,15,20,6,11,14,5,7,13,16,18,19,21,22];
+const workQueue=notStructured.slice().sort((a,b)=>{
+ const ai=reviewOrder.indexOf(chapterOf(a)),bi=reviewOrder.indexOf(chapterOf(b));
+ return (ai<0?99:ai)-(bi<0?99:bi)||String(a.title).localeCompare(String(b.title),'sv');
+}).map(c=>({
+ title:c.title,ref:c.shortRef,chapter:chapterOf(c),
+ task:'Kontrollera ordalydelse, objektiva och subjektiva rekvisit, alternativa gärningsformer, undantag och relevant rättspraxis. Överför först därefter till strukturerad rekvisitlista.',
+ lawMode:c.lawMode||'unknown',
+ penaltyReviewScope:c.penaltyReviewScope||'unknown',
+ requireProvenance:true
+}));
 const pendingStatutes=brb.filter(c=>!exactText(c));
 const unverifiedStage=stages.filter(c=>c.stageStatus==='unverified');
 const incompletePenalty=base.filter(c=>c.penaltyReviewScope==='range-only'||!c.penaltyRangeVerified).filter(c=>!c.conditionalPenalty);
@@ -32,6 +61,8 @@ const summaries={
   base:base.length,brb:brb.length,stages:stages.length,total:all.length,
   structuredBrbRequisites:brb.filter(structured).length,
   fullyLegallyApprovedBrbRequisites:brb.filter(fullyReviewed).length,
+  brbPostsWithoutStructuredRequisites:notStructured.length,
+  brbPostsWithLimitedStructuredRequisites:limitedStructured.length,
   brbPostsWithVerifiedCompleteLegalText:brb.filter(exactText).length,
   brbPostsWithTypicalExamples:brb.filter(typecase).length,
   unverifiedStages:unverifiedStage.length,
@@ -44,9 +75,14 @@ const summaries={
   unexpectedFutureStageCheckDates:dateMismatch.length
  },
  samples:{
-  missingRequisites:pendingRequisites.slice(0,30).map(c=>({title:c.title,ref:c.shortRef})),
-  unverifiedStages:unverifiedStage.slice(0,20).map(c=>({title:c.title,ref:c.stageSource}))
+  missingRequisites:notStructured.slice(0,30).map(c=>({title:c.title,ref:c.shortRef})),
+  unverifiedStages:unverifiedStage.slice(0,20).map(c=>({
+    title:c.title,ref:c.stageSource,source:c.stageReviewBasis||c.stageExplanation||null,
+    requiredAction:'Separat bedömning av förstadiekriminalisering enligt aktuellt BrB-kapitel och BrB 23:1–2.'
+  }))
  },
+ byChapter:perChapter,
+ reviewQueue:workQueue,
  policy:{
   typecases:'Optional by design; withholding weak examples is correct and is not a release blocker.',
   statutoryText:'Machine-generated excerpts remain subject to individual version and completeness review.',
