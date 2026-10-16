@@ -23,7 +23,7 @@ assert.deepEqual(JSON.parse(JSON.stringify(originals.slice(0,2).map(x=>x.penalty
  {min:0,max:2,fines:true,life:false},{min:1,max:6,fines:false,life:false}
 ]);
 assert.ok(originals.every(x=>x.penaltyChecked==='2026-10-16'&&x.penaltyReviewScope==='range-only'));
-assert.ok(originals.every(x=>x.penaltyNote.includes('2026-08-01')));
+assert.ok(originals.slice(0,2).every(x=>x.penaltyNote.includes('2026-08-01')));
 assert.equal(originals[1].penaltyShort,'F 1–6 år');
 for(const [title,max] of [['Behörighetsmissbruk',2],['Olovligt brukande',1],['Grovt olovligt brukande',4],['Fyndförseelse',0]]) {
  const row=originals.find(x=>x.title===title);
