@@ -14,7 +14,7 @@ const content={
  },
  'misshandel':{
    source:'BrB 3:5 och 1:2',groups:[
-     {mode:'all',label:'Gärningen tillfogas en annan person.'},
+     {mode:'all',label:'Gärningen riktas mot en annan person.'},
      {mode:'any',label:'Minst en av följande följder har orsakats:',options:['Kroppsskada','Sjukdom','Smärta','Vanmakt eller något annat sådant tillstånd']},
      {mode:'all',label:'Gärningspersonen har uppsåt till de relevanta omständigheterna och följderna.'}
    ],cases:[['En person slår avsiktligt en annan på armen så att det gör ont.','Eget enkelt typexempel. Om brottet är ringa prövas separat.']]
@@ -35,7 +35,9 @@ const content={
  'rån':{
    source:'BrB 8:5',groups:[],
    cases:[['En person hotar en kassör med en kniv för att få kassörens kontanter och tar pengarna.','Stöldfallet med råntvång, utifrån Straffrätt Lund F48.'],
-          ['En person hotar en annan med omedelbart våld om denne inte för över pengar till gärningspersonen, varpå överföringen görs.','Utpressningsfallet med råntvång, utifrån Straffrätt Lund F48.']]
+          ['En person hotar en annan med omedelbart våld om denne inte för över pengar till gärningspersonen, varpå överföringen görs.','Utpressningsfallet med råntvång, utifrån Straffrätt Lund F48.'],
+          ['En gärningsperson hotar en person med våld som framstår som omedelbart överhängande och tvingar till sig personens bankkort i avsikt att använda det för egna betalningar.','Betalningsverktygsfallet med råntvång enligt BrB 8:5 första stycket 3 och Straffrätt Lund F48.'],
+          ['En person som just har stulit i en butik upptäcks på bar gärning och använder våld mot en butiksvakt som försöker återta det tillgripna.','Motvärnsfallet enligt BrB 8:5 andra stycket och Straffrätt Lund F48.']]
  },
  'skadegörelse':{
    source:'BrB 12:1 och 1:2',groups:[
