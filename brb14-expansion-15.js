@@ -7,11 +7,17 @@
 const D=window.BK_DATA;if(!D?.crimes)return;
 const URL='https://www.riksdagen.se/sv/dokument-och-lagar/dokument/svensk-forfattningssamling/brottsbalk-1962700_sfs-1962-700/';
 const rows=[
-  ['Märkesförfalskning','14:8',0,2,false,'FP'],
+  ['Ringa signaturförfalskning','14:5',0,.5,true,''],
+  ['Grov signaturförfalskning','14:5',.5,4,false,'FP'],
+  ['Ringa penningförfalskning','14:6',0,.5,true,''],
+  ['Ringa olovlig befattning med falska pengar','14:7',0,.5,true,''],
+  ['Grov olovlig befattning med falska pengar','14:7',.5,6,false,''],
+    ['Märkesförfalskning','14:8',0,2,false,'FP'],
   ['Ringa märkesförfalskning','14:8',0,.5,true,''],
   ['Grov märkesförfalskning','14:8',.5,4,false,'FP'],
   ['Förfalskning av fast märke','14:9',0,4,false,'FP'],
-  ['Ringa förfalskning av fast märke','14:9',0,.5,true,'']
+  ['Ringa förfalskning av fast märke','14:9',0,.5,true,''],
+  ['Olaga spridande av efterbildning','14:11',0,0,true,'']
 ];
 const known=new Set(D.crimes.map(c=>String(c.title||'').toLocaleLowerCase('sv')));
 const duration=y=>Number.isInteger(y)?y+' år':(y*12)+' mån';
@@ -21,11 +27,11 @@ for(const [title,short,min,max,fines,permissions] of rows){
  const provision=window.BK_STATUTES?.[statute];
  if(!provision?.text){console.warn('V1.5: no verifiable provision for '+title);continue;}
  const slug=title.toLocaleLowerCase('sv').normalize('NFD').replace(/[\u0300-\u036f]/g,'').replace(/[^a-z0-9]+/g,'-');
- const penalty=fines?'Böter eller fängelse i högst '+duration(max):min?'Fängelse i lägst '+duration(min)+' och högst '+duration(max):'Fängelse i högst '+duration(max);
+ const penalty=fines?(max===0?'Böter':'Böter eller fängelse i högst '+duration(max)):min?'Fängelse i lägst '+duration(min)+' och högst '+duration(max):'Fängelse i högst '+duration(max);
  const c={
   id:'v15-'+slug,title,shortRef:'BrB '+short,ref:'BrB '+short.replace(':',' kap. ')+' §',
   statute,category:'Urkund',aliases:[],
-  penalty,penaltyShort:(fines?'B–F ':min?'F '+duration(min)+'–':'F högst ')+duration(max),
+  penalty,penaltyShort:(fines?(max===0?'Böter':'B–F '+duration(max)):min?'F '+duration(min)+'–'+duration(max):'F högst '+duration(max)),
   penaltyRange:{min,max,fines,life:false},penaltyChecked:'2026-10-16',
   penaltyRangeVerified:true,penaltyReviewScope:'range-only',penaltySourceURL:URL,
   penaltyNote:'Straffskalan har jämförts med BrB '+short+'. Lagtext, rekvisit och tillämpning kräver separat juridisk granskning.',
