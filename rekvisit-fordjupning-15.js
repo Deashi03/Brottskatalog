@@ -159,7 +159,7 @@ const rows=[
    A('Rekvisiten för uppsåtligt dödande i BrB 3:1 är uppfyllda.'),
    A('Brottet är med hänsyn till de omständigheter som föranlett gärningen eller andra omständigheter mindre grovt och ska därför rubriceras som dråp.'))
  ]],
- ['Grov bokföringsbrott','11:5',[
+ ['Grovt bokföringsbrott','11:5',[
   R('Grovhetsbedömning av bokföringsbrott',
    A('Grundbrottets rekvisit enligt BrB 11:5 är uppfyllda.'),
    A('Helhetsbedömningen ger grovt brott. Särskilt beaktas mycket betydande belopp, falsk handling, systematik eller annan särskilt farlig art; faktorerna är inte var för sig obligatoriska.'))
