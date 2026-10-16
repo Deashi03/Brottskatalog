@@ -45,6 +45,24 @@ Resultat från `audit/v15-release-readiness.json`:
 
 ---
 
+## Fördjupad rekvisitomgång – 2026-10-16
+
+**Godkänd arbetsgrens- och iPhone-regression:** https://github.com/Deashi03/Brottskatalog/actions/runs/38902338202
+
+Senaste juridiska inventering omfattar **384 grundposter**, varav **316 BrB-grundposter**, och **1 074 sökbara förstadier**: totalt **1 458 poster**. Rekvisitstödet har utökats från **16 till 82 BrB-poster** (26 procent av BrB-grundposterna). Resterande grundposter utan individuellt strukturerad rekvisitöversikt är fortfarande öppet arbete. Ingen post har i denna omgång fått status **fullständigt juridiskt slutgodkänd** enligt den strikta release-grinden.
+
+Kompletterad källanknuten OCH/ELLER-struktur bland annat för vållande, framkallande av fara, olaga hot/tvång, ofredande, kränkande fotografering, olovlig identitetsanvändning, olaga integritetsintrång, förtal, förolämpning, egenmäktigt förfarande, bedrägeri, utpressning, ocker, häleri, förskingring, behörighetsmissbruk, fyndförseelse, urkundsförfalskning, skyddande av brottsling, tjänstefel och brott mot tystnadsplikt.
+
+**Grader:** 28 ringa-/grovgradsrekvisit kompletterade med grundbrottets rekvisit och separat helhetsbedömning. Kvalifikationsfaktorer som ska *särskilt beaktas* är inte var och en obligatoriska; automatiserad slutsats om grovhet ska inte dras utifrån en ensam faktor. För grovt tjänstefel och grovt brott mot tystnadsplikt får oaktsamhet inte felaktigt anges som tillräcklig skuldform.
+
+**Rättad felrubricering:** BrB 4:2 innehåller *olaga frihetsberövande* och ett *mindre grovt fall* med lindrigare straffskala, inte ett självständigt brott med rubriken `Grovt olaga frihetsberövande`. En särskild pedagogisk sökpost för den lindrigare straffskalan har införts, märkt som *straffskalealternativ, inte självständig brottsrubricering*. Den genererar inte egna försöks-/förberedelse-/stämplingsposter. Se [BrB 4:2](https://www.riksdagen.se/sv/dokument-och-lagar/dokument/svensk-forfattningssamling/brottsbalk-1962700_sfs-1962-700/).
+
+**Slutgranskningsskuld:** Av 316 BrB-grundposter saknar samtliga uttrycklig fullständighetscertifiering enligt den nya modellen, **290** saknar individuell certifiering av komplett lagtext och **12** förstadier har fortfarande oklar straffbarhetsstatus. **82 strukturerade rekvisitstöd är lagtextbaserade, men inte fullständiga rättsutredningar.** Appen får aldrig behandla en skapad punktlista som likvärdig med rättsligt fastställda rekvisit i komplicerade praxisfrågor.
+
+Det som **inte** gjorts: inga påhittade typexempel för svårtolkade eller sällsynta brott, ingen masscertifiering, ingen ändring av publicerade V1.4 och ingen merge av draft PR. `node scripts/v15_release_readiness.mjs --release` ska fortsatt stoppa publicering.
+
+---
+
 ## Huvudkrav
 
 1. Samtliga straffbestämmelser i BrB 3–22 kap. inventeras paragraf för paragraf, inklusive särskilda brottsgrader, namngivna ringa brott och straffbestämmelser utan självständig rubrik. En katalogpost ska ha lagrum, aktuell straffskala eller uttryckligen **villkorad**, relevant åtalsregel och förstadier med uttryckligt lagstöd, samt källmetadata.
