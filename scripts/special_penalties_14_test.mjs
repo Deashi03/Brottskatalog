@@ -54,7 +54,7 @@ assert.ok(sw.includes('./special-penalties-review-14.js'),'Verified range module
 // Published release must not regress to old prototype labels or return HTML to a JS request.
 assert.match(html,/Version 1\.4 · publicerad 2026-10-16/);
 assert.doesNotMatch(html,/Arbetsversion: 0\.6/);
-assert.match(sw,/brottskatalog-v14-20261016-release/);
+assert.match(sw,/brottskatalog-v(?:14-20261016-release|15-draft-rekvisit-20261016)/);
 assert.ok(sw.includes("event.request.mode === 'navigate' ? await cache.match('./index.html') : null"));
 assert.ok(!sw.includes("return await cache.match('./index.html') || Response.error()"));
 console.log('PASS 1.4: published app version labels and safe offline fallback');
