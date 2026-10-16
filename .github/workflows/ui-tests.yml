@@ -4,6 +4,8 @@ on:
   pull_request:
     paths:
       - "index.html"
+      - "brb14-expansion-15.js"
+      - "scripts/brb14_15_test.mjs"
       - "service-worker.js"
       - "manifest.webmanifest"
       - "README.md"
@@ -40,6 +42,8 @@ on:
     branches: [main]
     paths:
       - "index.html"
+      - "brb14-expansion-15.js"
+      - "scripts/brb14_15_test.mjs"
       - "service-worker.js"
       - "manifest.webmanifest"
       - "README.md"
@@ -97,6 +101,8 @@ jobs:
         run: node scripts/brb17_14_test.mjs
       - name: Verify specialty criminal penalty scales
         run: node scripts/special_penalties_14_test.mjs
+      - name: V1.5 draft source-scoped BrB14 expansions
+        run: node scripts/brb14_15_test.mjs
       - name: Three-year source verification UI safeguards
         run: node scripts/quality_11_test.mjs
       - name: Full catalog integration and statutes test
