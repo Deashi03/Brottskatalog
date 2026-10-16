@@ -8,7 +8,7 @@ const sw=readFileSync(resolve(root,'service-worker.js'),'utf8');
 const scripts=[...html.matchAll(/<script src="\.\/([^"]+)"><\/script>/g)].map(x=>x[1]);
 assert.ok(scripts.includes('rekvisit-typexempel-15.js'));
 assert.ok(sw.includes('./rekvisit-typexempel-15.js'));
-const titles=['Mord','Misshandel','Stöld','Ringa stöld','Rån','Skadegörelse','Tillgrepp av fortskaffningsmedel','Märkesförfalskning','Trolöshet mot huvudman','Grov trolöshet mot huvudman','Missbruk av urkund','Olovligt brukande','Angrepp mot tjänsteman'];
+const titles=['Mord','Misshandel','Stöld','Ringa stöld','Rån','Skadegörelse','Tillgrepp av fortskaffningsmedel','Märkesförfalskning','Trolöshet mot huvudman','Grov trolöshet mot huvudman','Psykiskt våld','Missbruk av urkund','Olovligt brukande','Angrepp mot tjänsteman'];
 const crimes=titles.map(title=>({id:title.toLowerCase(),title,elements:[],category:'Person'}));
 const w={BK_DATA:{crimes,categories:['Alla']}};
 vm.runInNewContext(readFileSync(resolve(root,'rekvisit-typexempel-15.js'),'utf8'),{window:w,console});
@@ -29,6 +29,8 @@ assert.ok(find('Märkesförfalskning').typexempel15[0].sourceURL.endsWith('.pdf'
 for(const title of ['Trolöshet mot huvudman','Grov trolöshet mot huvudman'])assert.equal(find(title)?.rekvisit15.routes.length,2,title+' must separate economic and legal pathways');
 assert.equal(find('Trolöshet mot huvudman')?.typexempel15.length,1);
 assert.equal(find('Grov trolöshet mot huvudman')?.typexempel15.length,1);
+assert.equal(find('Psykiskt våld')?.rekvisit15.routes.length,2);
+assert.equal(find('Psykiskt våld')?.typexempel15.length,0,'No speculative example for difficult new crime');
 assert.equal(find('Missbruk av urkund')?.typexempel15.length,1);
 assert.equal(find('Missbruk av urkund')?.rekvisit15.routes.length,2);
 assert.equal(find('Olovligt brukande')?.typexempel15.length,1);
