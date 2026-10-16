@@ -14,6 +14,7 @@ on:
       - "brb-special-preparation-15.js"
       - "brb17-rymning-15.js"
       - "scripts/brb17_rymning_15_test.mjs"
+      - "scripts/v15_release_readiness.mjs"
       - "scripts/brb_special_preparation_15_test.mjs"
       - "scripts/brb_war_15_test.mjs"
       - "stage-scope-15.js"
@@ -74,6 +75,7 @@ on:
       - "brb-special-preparation-15.js"
       - "brb17-rymning-15.js"
       - "scripts/brb17_rymning_15_test.mjs"
+      - "scripts/v15_release_readiness.mjs"
       - "scripts/brb_special_preparation_15_test.mjs"
       - "scripts/brb_war_15_test.mjs"
       - "stage-scope-15.js"
@@ -175,6 +177,8 @@ jobs:
         run: node scripts/audit_catalog.mjs
       - name: BrB paragraphs and missing-offence inventory
         run: node scripts/brb_inventory_15.mjs
+      - name: Measure individual legal review coverage (draft reporting only)
+        run: node scripts/v15_release_readiness.mjs
       - name: Archive full quality report
         if: always()
         uses: actions/upload-artifact@v4
@@ -183,6 +187,7 @@ jobs:
           path: |
             audit/quality-report.json
             audit/brb-inventory-15.json
+            audit/v15-release-readiness.json
           if-no-files-found: warn
       - name: Install headless browser
         run: |
