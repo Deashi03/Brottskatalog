@@ -15,11 +15,14 @@ for(const [key,full] of Object.entries(current)){
  const currentHead=s=>String(s).replace(/\s+/g,' ').trim().slice(0,70);
  if(!full.replace(/\s+/g,' ').startsWith(currentHead(item.text).slice(0,35)))throw Error('Unexpected statute start '+key);
  if(item.text.length<full.length){
-   item.text=full;item.complete=true;item.machine=false;item.checked='2026-10-16';item.url=SFS;
    restored++;
  }else if(!item.text.includes(full.slice(-20))){
    throw Error('Source newer than curated text, requires checking '+key);
  }
+ // The prior modules may already have restored a source. Whether it was
+ // repaired here or earlier, display the same checked statutory wording.
+ item.text=full;item.complete=true;item.machine=false;
+ item.checked='2026-10-16';item.url=SFS;
  for(const c of D.crimes.filter(x=>!x.stageType&&x.statute===key)){
    c.law=item.text;c.lawSource=item.ref;c.lawMode='full';
    c.lawCompletenessVerified=true;c.lawCompletenessChecked='2026-10-16';
