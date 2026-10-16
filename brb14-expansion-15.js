@@ -19,6 +19,26 @@ const rows=[
   ['Ringa förfalskning av fast märke','14:9',0,.5,true,''],
   ['Olaga spridande av efterbildning','14:11',0,0,true,'']
 ];
+// Korrigera äldre redaktionella namn utan att ändra ID eller ta bort sparade favoriter.
+for(const [oldTitle,newTitle,paragraph] of [
+ ['Ringa urkundsförfalskning','Förvanskning av urkund','14:2'],
+ ['Brukande av falsk urkund','Brukande av det förfalskade','14:10']
+]){
+ const row=D.crimes.find(x=>String(x.title||'').toLocaleLowerCase('sv')===oldTitle.toLocaleLowerCase('sv'));
+ if(!row)continue;
+ if(String(row.shortRef||'')!=='BrB '+paragraph)throw Error('V1.5 fel lagrum för gammal rubricering '+oldTitle);
+ row.title=newTitle;
+ row.aliases=[...new Set([...(row.aliases||[]),oldTitle])];
+ row.canonicalTitleSource='BrB '+paragraph;
+ // BrB 14:10: omfattar fler falska märken och pengar än bara falska urkunder.
+ if(paragraph==='14:10'){
+  row.stageReviewed=true;
+  row.stagePermissions='FP';
+  row.stageSource='BrB 14:13';
+  row.stageReviewDate='2026-10-16';
+  row.penaltyNote='Straffet är hänvisat till vad som gäller för den konkreta förfalskningen (BrB 14:10); ingen generell numerisk straffskala kan tillämpas.';
+ }
+}
 const known=new Set(D.crimes.map(c=>String(c.title||'').toLocaleLowerCase('sv')));
 const duration=y=>Number.isInteger(y)?y+' år':(y*12)+' mån';
 for(const [title,short,min,max,fines,permissions] of rows){
