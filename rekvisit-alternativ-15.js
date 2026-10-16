@@ -145,6 +145,30 @@ const specs=[
  ['Grovt sexuellt ofredande','6:10',[],null,'Sexuellt ofredande','Grovhet efter helhetsbedömning; särskilt beaktas flera deltagande förövare eller särskild hänsynslöshet med hänsyn till offrets låga ålder eller annan omständighet.'],
  ['Grovt sexuellt ofredande mot barn','6:10',[],null,'Sexuellt ofredande mot barn','Grovhet efter helhetsbedömning; särskilt beaktas flera deltagande förövare eller särskild hänsynslöshet med hänsyn till barnets låga ålder eller annan omständighet.']
 ];
+// BrB 11:1 explicitly creates a separately named aggravated grade; index it
+// if earlier inventory omitted it, before building derived inchoate cards.
+if(!D.crimes.some(c=>!c.stageType&&c.title==='Grov oredlighet mot borgenärer')){
+ const parent=D.crimes.find(c=>!c.stageType&&c.title==='Oredlighet mot borgenärer');
+ const statute=window.BK_STATUTES?.['BrB:11:1'];
+ if(!parent||!statute?.text?.includes('grov oredlighet mot borgenärer'))throw Error('Cannot safely add aggravated BrB 11:1: official law or base offence missing');
+ D.crimes.push({
+  id:'v15-grov-oredlighet-mot-borgenarer',title:'Grov oredlighet mot borgenärer',
+  shortRef:'BrB 11:1',ref:'BrB 11 kap. 1 §',statute:'BrB:11:1',
+  category:parent.category||'Förmögenhet',aliases:[],
+  law:statute.text,lawSource:statute.ref,lawMode:'machine',sourceURL:SFS,
+  penalty:'Fängelse i lägst ett och högst sex år',penaltyShort:'F 1–6 år',
+  penaltyRange:{min:1,max:6,fines:false,life:false},
+  penaltyRangeVerified:true,penaltyReviewScope:'numerical-scale-only',
+  penaltyChecked:'2026-10-16',penaltySourceURL:SFS,
+  penaltyNote:'Grovhetsbedömningen sker med stöd av BrB 11:1 efter helhetsbedömning; från 2026-08-01 gäller lägst ett års fängelse för grov form.',
+  custody:'possible',prosecution:'general',prosecutionLabel:'Allmänt åtal',
+  prosecutionRule:'RB 20:3; BrB 11:1',prosecutionSourceURL:SFS,
+  prosecutionDetails:['Kontrollera särskilda förutsättningar och gärningsdatum.'],
+  prosecutionChecked:'2026-10-16',reviewStatus:'law-text-legal-review-pending',
+  elements:[],variants:[],facts:[],stages:[],related:[parent.id],lawTerms:[],typexempel15:[],
+  requisitesStatus:'pending-individual-legal-review'
+ });
+}
 let updated=0,exists=0,missing=[],mismatched=[],inherited=0;
 const bind=(c,ref,obj)=>{
  c.rekvisit15={...obj,source:'BrB '+ref+' och BrB 1:2, där tillämpligt',
