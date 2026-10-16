@@ -1,0 +1,66 @@
+name: Publish Brottskatalog to GitHub Pages
+
+on:
+  push:
+    branches:
+      - main
+  workflow_dispatch:
+
+permissions:
+  contents: read
+  pages: write
+  id-token: write
+
+concurrency:
+  group: "brottskatalog-pages"
+  cancel-in-progress: false
+
+jobs:
+  verify:
+    name: Verify V1.4 before publication
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout source
+        uses: actions/checkout@v4
+      - name: Set up Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: "22"
+      - name: Verify common criminal penalty ranges
+        run: node scripts/core_penalties_13_test.mjs
+      - name: Verify inchoate offence stage rules
+        run: node scripts/stage_rules_test.mjs
+      - name: Verify public-office offences
+        run: node scripts/brb20_13_test.mjs
+      - name: Verify BrB chapter 4 offences
+        run: node scripts/brb4_14_test.mjs
+      - name: Verify BrB chapter 17 offences
+        run: node scripts/brb17_14_test.mjs
+      - name: Verify specialty penalty ranges and published version
+        run: node scripts/special_penalties_14_test.mjs
+      - name: Verify three-year review and legal source UI
+        run: node scripts/quality_11_test.mjs
+      - name: Verify catalog, sources and offline references
+        run: node scripts/integration_09.mjs
+      - name: Run catalog-wide audit
+        run: node scripts/audit_catalog.mjs
+
+  deploy:
+    name: Deploy verified site
+    needs: verify
+    runs-on: ubuntu-latest
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    steps:
+      - name: Checkout site
+        uses: actions/checkout@v4
+      - name: Configure GitHub Pages
+        uses: actions/configure-pages@v5
+      - name: Upload static site
+        uses: actions/upload-pages-artifact@v4
+        with:
+          path: .
+      - name: Deploy to GitHub Pages
+        id: deployment
+        uses: actions/deploy-pages@v4
