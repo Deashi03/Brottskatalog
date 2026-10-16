@@ -1,0 +1,33 @@
+import assert from 'node:assert/strict';
+import vm from 'node:vm';
+import {readFileSync} from 'node:fs';
+import {resolve} from 'node:path';
+const root=resolve(import.meta.dirname,'..');
+const html=readFileSync(resolve(root,'index.html'),'utf8');
+const sw=readFileSync(resolve(root,'service-worker.js'),'utf8');
+const scripts=[...html.matchAll(/<script src="\.\/([^"]+)"><\/script>/g)].map(x=>x[1]);
+assert.ok(scripts.includes('rekvisit-typexempel-15.js'));
+assert.ok(sw.includes('./rekvisit-typexempel-15.js'));
+const titles=['Mord','Misshandel','Stöld','Ringa stöld','Rån','Skadegörelse','Tillgrepp av fortskaffningsmedel','Märkesförfalskning','Angrepp mot tjänsteman'];
+const crimes=titles.map(title=>({id:title.toLowerCase(),title,elements:[],category:'Person'}));
+const w={BK_DATA:{crimes,categories:['Alla']}};
+vm.runInNewContext(readFileSync(resolve(root,'rekvisit-typexempel-15.js'),'utf8'),{window:w,console});
+const find=t=>crimes.find(c=>c.title===t);
+for(const title of ['Mord','Misshandel','Stöld','Ringa stöld','Skadegörelse','Tillgrepp av fortskaffningsmedel']){
+ const c=find(title);
+ assert.ok(c.rekvisit15?.groups.length>0,title+' must have structured legal-requisite entries');
+ assert.ok(c.typexempel15?.length>0,title+' must have a police-plausible typical case');
+ assert.equal(c.rekvisit15.scope,'lagtext-jamford');
+ assert.ok(c.rekvisit15.sourceURL.includes('riksdagen.se'));
+}
+assert.equal(find('Rån')?.typexempel15.length,4,'All four named robbery typfall from course notes included');
+assert.ok(find('Misshandel').rekvisit15.groups.some(g=>g.mode==='any'),'Disjunctive violence outcomes remain alternatives');
+assert.ok(find('Skadegörelse').rekvisit15.groups.some(g=>g.mode==='any'),'Alternative damage actions remain alternatives');
+for(const title of ['Märkesförfalskning','Angrepp mot tjänsteman'])assert.equal(find(title)?.typexempel15,undefined,'Potentially misleading examples must be deferred');
+const first=html.indexOf("${accordion('lag','Lagtext'");
+const req=html.indexOf("${accordion('rekvisit','Rekvisit'");
+const coercive=html.indexOf("${(!c.stageStatus||c.stageStatus==='punishable')?accordion('tvang'");
+assert.ok(first<req&&req<coercive,'Requisites must appear after statute, before coercive measures');
+assert.ok(html.includes('Äldre förenklad rekvisitöversikt – ännu inte individuellt juridiskt slutgranskad.'));
+assert.ok(html.includes('Typexempel'));
+console.log('PASS V1.5 draft: real requisites, OR alternatives, four robbery typfall, uncertain examples held back and UI order');
