@@ -19,10 +19,17 @@ const originals=[
 ];
 window.BK_DATA={crimes:originals};
 vm.runInNewContext(readFileSync(resolve(root,'brb10-review-15.js'),'utf8'),{window,console});
-assert.deepEqual(JSON.parse(JSON.stringify(originals.map(x=>x.penaltyRange))),[
+assert.deepEqual(JSON.parse(JSON.stringify(originals.slice(0,2).map(x=>x.penaltyRange))),[
  {min:0,max:2,fines:true,life:false},{min:1,max:6,fines:false,life:false}
 ]);
 assert.ok(originals.every(x=>x.penaltyChecked==='2026-10-16'&&x.penaltyReviewScope==='range-only'));
 assert.ok(originals.every(x=>x.penaltyNote.includes('2026-08-01')));
 assert.equal(originals[1].penaltyShort,'F 1–6 år');
+for(const [title,max] of [['Behörighetsmissbruk',2],['Olovligt brukande',1],['Grovt olovligt brukande',4],['Fyndförseelse',0]]) {
+ const row=originals.find(x=>x.title===title);
+ assert.ok(row,'New offence missing: '+title);
+ assert.equal(row.penaltyRange.max,max);
+ assert.ok(row.lawMode==='machine','Machine law extract is not promoted as fully reviewed');
+}
+assert.equal(originals.find(x=>x.title==='Fyndförseelse').penalty,'Böter');
 console.log('PASS V1.5: 2026-08-01 BrB 10:5 source, correct minimum for gross breach and no overbroad review status');
