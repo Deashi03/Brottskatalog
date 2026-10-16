@@ -4,7 +4,7 @@
 (()=>{'use strict';
 const D=window.BK_DATA;if(!D?.crimes)return;
 const URL='https://www.riksdagen.se/sv/dokument-och-lagar/dokument/svensk-forfattningssamling/brottsbalk-1962700_sfs-1962-700/';
-const gen=['Oskuldskontroll','Intygande av sexuell oskuld','Uppmaning till självmord','Oaktsam uppmaning till självmord'];
+const gen=['Oskuldskontroll','Intygande av sexuell oskuld','Uppmaning till självmord','Oaktsam uppmaning till självmord','Psykiskt våld'];
 const relative=['Behörighetsmissbruk','Olovligt brukande','Grovt olovligt brukande','Fyndförseelse'];
 let reviewed=0;
 for(const c of D.crimes){
