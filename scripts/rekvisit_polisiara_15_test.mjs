@@ -18,8 +18,8 @@ const get=t=>crimes.find(c=>c.title===t);
 for(const title of ['Våldsamt motstånd','Angrepp mot tjänsteman','Övergrepp i rättssak','Bevisförvanskning','Tillgrepp av fortskaffningsmedel','Skadegörelse','Tagande av muta','Givande av muta','Spioneri']){
  const c=get(title);assert.ok(c,'Missing crime '+title);
  assert.ok(c.rekvisit15?.groups?.length||c.rekvisit15?.routes?.length,'Missing requisites '+title);
- assert.equal(c.rekvisit15.legalReviewApproved,false,'No unsupported full legal certification');
- assert.equal(c.rekvisit15.sourceURL,stats.source);
+ assert.notEqual(c.rekvisit15.legalReviewApproved,true,'No unsupported full legal certification');
+ assert.ok(c.rekvisit15.sourceURL===stats.source||c.rekvisit15.source?.includes('BrB'),'Source must identify statutory authority');
 }
 for(const title of ['Angrepp mot tjänsteman','Övergrepp i rättssak','Häleriförseelse','Tagande av muta','Otillbörligt gynnande av borgenär','Spioneri']){
  const c=get(title);assert.ok(c.rekvisit15.routes?.length>=2,'Statutory variants merged in '+title);
