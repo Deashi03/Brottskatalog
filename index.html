@@ -1146,8 +1146,14 @@ function renderDetail(c){
   const sourceCases=t=>t.sourceURL?'<a class="source-link" target="_blank" rel="noopener noreferrer" href="'+escapeHtml(t.sourceURL)+'">Rättsligt underlag '+ic('external-link','sm')+'</a>':'';
   const exampleCards=(c.typexempel15||[]).map(t=>'<div class="fact-card"><div class="fact-eyebrow">Typexempel</div><div class="fact-body">'+escapeHtml(t.text)+'</div><div class="fact-source">'+escapeHtml(t.source||'')+'</div>'+sourceCases(t)+'</div>').join('');
   const routeBody=routes15.map(p=>'<div class="subtle-label">'+escapeHtml(p.label)+'</div>'+renderRequisiteGroups(p.groups)).join('');
+  const isFullyReviewed=!!(c.rekvisit15?.legalReviewApproved===true&&c.rekvisit15?.scope==='full-legal-review');
+  const legalScope=(groups15.length||routes15.length)
+    ?'<p class="source-label">'+(isFullyReviewed?'Individuellt juridiskt slutgranskad rekvisitstruktur.':'Lagtextsbaserat rekvisitstöd. Fullständig juridisk kontroll av rättspraxis, undantag och lydelse återstår.')+'</p>'
+      +(c.rekvisit15?.source?'<p class="source-label">Rättslig grund: '+escapeHtml(c.rekvisit15.source)+'</p>':'')
+      +(c.rekvisit15?.sourceURL?'<a class="source-link" target="_blank" rel="noopener noreferrer" href="'+escapeHtml(c.rekvisit15.sourceURL)+'">Läs lagtexten hos Sveriges riksdag '+ic('external-link','sm')+'</a>':'')
+    :'';
   const requisitesBody=((groups15.length||routes15.length)
-    ?'<div class="subtle-label">Faktiska rekvisit – OCH om inget annat anges</div>'
+    ?'<div class="subtle-label">Rekvisit – OCH om inget annat anges</div>'+legalScope
        +(routes15.length?'<p class="source-label">Alternativa gärningsformer – minst en av följande strukturer måste vara uppfylld.</p>'+routeBody:renderRequisiteGroups(groups15))
        +'<p class="source-label">'+escapeHtml(c.rekvisit15.note||'')+'</p>'
     :elements?'<p class="source-label">Äldre förenklad rekvisitöversikt – ännu inte individuellt juridiskt slutgranskad.</p><ul>'+elements+'</ul>'
