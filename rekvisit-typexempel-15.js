@@ -148,6 +148,22 @@ content['olovligt brukande']={
   'Förlaga: Brottsutredning, BrB 10:7 – olovlig användning av lånad telefon och kostnad för ägaren.'
  ]]
 };
+content['psykiskt våld']={
+ source:'BrB 4:7 b och BrB 1:2 (SFS 2026:852)',groups:[],
+ routes:[
+  {label:'Alternativ A – upprepade kränkningar',groups:[
+   {mode:'all',label:'En annan person utsätts upprepade gånger för kränkningar.'},
+   {mode:'any',label:'Kränkningarna utgörs av minst ett av de angivna beteendena:',options:['Beskyllning','Nedsättande uttalande','Förödmjukande beteende','Otillbörligt hot','Otillbörligt tvång','Otillbörlig övervakning']},
+   {mode:'all',label:'Kränkningarna sammantagna är ägnade att allvarligt skada personens självkänsla.'},
+   {mode:'all',label:'Gärningspersonen har uppsåt till de objektiva omständigheterna.'}
+  ]},
+  {label:'Alternativ B – varaktig övervakning',groups:[
+   {mode:'all',label:'En annan person utsätts för otillbörlig övervakning som är varaktig.'},
+   {mode:'all',label:'Gärningen är ägnad att allvarligt skada personens självkänsla.'},
+   {mode:'all',label:'Gärningspersonen har uppsåt till de objektiva omständigheterna.'}
+  ]}
+ ],cases:[]
+};
 content['rymning']={
  source:'BrB 17:12, 17:16 och BrB 1:2 (SFS 2026:924)',groups:[
   {mode:'any',label:'Gärningspersonen har en sådan frihetsberövandestatus som uttryckligen anges i BrB 17:12:',options:[
