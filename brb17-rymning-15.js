@@ -16,7 +16,7 @@ if(old&&old.shortRef!=='BrB 17:12')throw Error('Unexpected old offence law refer
 for(const [title,ref,min,max,fines,stagePermissions] of config){
  const statute='BrB:'+ref,source=window.BK_STATUTES?.[statute];
  if(!source?.text||!source.text.includes('2026:924'))throw Error('Missing current SFS 2026:924 for '+title);
- let c=title==='Främjande av rymning eller flykt'?old:
+ let c=title==='Främjande av rymning eller flykt'&&old?old:
    D.crimes.find(x=>!x.stageType&&String(x.title||'').toLocaleLowerCase('sv')===title.toLocaleLowerCase('sv'));
  if(!c){
   const id='v15-rymning-'+title.toLocaleLowerCase('sv').normalize('NFD').replace(/[\u0300-\u036f]/g,'').replace(/[^a-z0-9]+/g,'-');
