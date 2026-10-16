@@ -49,5 +49,20 @@ for(const c of D.crimes.filter(c=>!c.stageType&&c.statute==='BrB:19:9')){
  c.penaltyNote='BrB 19:9: krigstidens straffmaximum två år gäller bara när Sverige var i krig. Även försvarlighetsundantaget i andra stycket måste prövas. Tvångsmedelsindikatorer kräver separat prövning.';
  c.custody='unknown';conditional++;
 }
+for(const c of D.crimes.filter(c=>!c.stageType&&c.statute==='BrB:19:9')){
+ if(!c.rekvisit15?.groups?.length&&!c.rekvisit15?.routes?.length){
+  c.rekvisit15={
+   groups:[
+    {mode:'all',label:'Gärningen omfattas av hänvisningen till BrB 19:7 och avser en uppgift som skyddas där.'},
+    {mode:'any',label:'Den obehöriga gärningsformen är:',options:['Befordra uppgift','Lämna uppgift','Röja uppgift']},
+    {mode:'all',label:'Gärningen begås av grov oaktsamhet; vanlig oaktsamhet är inte tillräcklig.'},
+    {mode:'all',label:'Om gärningen omfattas av BrB 19:7 andra stycket måste försvarlighetsundantaget i 19:9 andra stycket prövas.'},
+    {mode:'all',label:'Straffmaximum är ett år, eller två år om Sverige var i krig. Detta är ett tillämpningsvillkor och inte ett gärningsrekvisit.'}
+   ],routes:[],source:'BrB 19:9 jämförd med BrB 19:7',sourceURL:SFS,
+   scope:'lagtext-jamford',verifiedOn:'2026-10-16',legalReviewApproved:false,
+   note:'Kräver separat kontroll av vad den hänvisade bestämmelsen skyddar, försvarlighet, grov oaktsamhet, gärningsdatum och eventuell krigssituation.'
+  };
+ }
+}
 window.BK_STAGE_SOURCE_REPAIR15={restored,cards,conditional,refs:Object.keys(texts),source:SFS};
 })();
