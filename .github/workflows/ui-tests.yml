@@ -4,6 +4,9 @@ on:
   pull_request:
     paths:
       - "index.html"
+      - "service-worker.js"
+      - "manifest.webmanifest"
+      - "README.md"
       - "penalty-normalize-12.js"
       - "core-penalties-13.js"
       - "scripts/core_penalties_13_test.mjs"
@@ -37,6 +40,9 @@ on:
     branches: [main]
     paths:
       - "index.html"
+      - "service-worker.js"
+      - "manifest.webmanifest"
+      - "README.md"
       - "penalty-normalize-12.js"
       - "core-penalties-13.js"
       - "scripts/core_penalties_13_test.mjs"
