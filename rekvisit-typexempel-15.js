@@ -148,6 +148,45 @@ content['olovligt brukande']={
   'Förlaga: Brottsutredning, BrB 10:7 – olovlig användning av lånad telefon och kostnad för ägaren.'
  ]]
 };
+content['rymning']={
+ source:'BrB 17:12, 17:16 och BrB 1:2 (SFS 2026:924)',groups:[
+  {mode:'any',label:'Gärningspersonen har en sådan frihetsberövandestatus som uttryckligen anges i BrB 17:12:',options:[
+   'Intagen i kriminalvårdsanstalt eller särskilt ungdomshem enligt angiven lag',
+   'Intagen i häkte/polisarrest i avvaktan på förpassning till sådan anstalt eller sådant hem',
+   'Häktad på grund av misstanke om brott',
+   'Tagen i förvar enligt de i paragrafen angivna lagarna'
+  ]},
+  {mode:'all',label:'Personen rymmer från ett sådant ställe eller från sådan uppsikt som omfattas av paragrafen.'},
+  {mode:'all',label:'Gärningen har begåtts med uppsåt. Om gärningen är ringa utgör den inte brott.'}
+ ],cases:[[
+  'En person som är häktad för brott klättrar medvetet ut ur häktets rastgård, tar sig förbi säkerhetsstängslet och avviker utan tillstånd.',
+  'Eget enkelt typexempel med uttryckligt stöd i BrB 17:12. Gärningens ringa karaktär måste alltid bedömas.'
+ ]]
+};
+content['grov rymning']={
+ source:'BrB 17:12 andra stycket (SFS 2026:924)',groups:[
+  {mode:'all',label:'Samtliga rekvisit för rymning enligt första stycket är uppfyllda.'},
+  {mode:'all',label:'Brottet är grovt efter en helhetsbedömning. Särskilt beaktas noggrann planering eller organisation, alternativt särskilt hänsynslöst eller farligt tillvägagångssätt.'}
+ ],cases:[]
+};
+content['främjande av rymning eller flykt']={
+ source:'BrB 17:12 a och BrB 1:2 (SFS 2026:924)',groups:[
+  {mode:'any',label:'Ett av följande handlingsalternativ föreligger:',options:[
+   'Gärningspersonen hjälper en person som omfattas av lagtextens frihetsberövanden (eller annars är med laga rätt berövad friheten) att komma lös.',
+   'Gärningspersonen främjar, genom att dölja personen eller annan sådan åtgärd, rymningen eller flykten efter att en frihetsberövad person har avvikit.'
+  ]},
+  {mode:'all',label:'Gärningspersonen handlar uppsåtligen och gärningen är inte ringa.'}
+ ],cases:[[
+  'En person vet att en häktad bekant har rymt och gömmer därefter medvetet den häktade i sin källare för att försvåra att personen hittas.',
+  'Eget enkelt typexempel med stöd i BrB 17:12 a andra handlingsalternativet.'
+ ]]
+};
+content['grovt främjande av rymning eller flykt']={
+ source:'BrB 17:12 a andra stycket (SFS 2026:924)',groups:[
+  {mode:'all',label:'Rekvisiten för främjande av rymning eller flykt enligt första stycket är uppfyllda.'},
+  {mode:'all',label:'Gärningen är grov efter en helhetsbedömning. Särskilt beaktas noggrann planering/organisation eller särskilt hänsynslös eller farlig gärning.'}
+ ],cases:[]
+};
 const seen=new Set();
 for(const crime of D.crimes){
  if(crime.stageType)continue;
