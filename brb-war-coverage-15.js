@@ -55,7 +55,7 @@ for(const [title,ref,min,max,fines,life,applicability,note] of rows){
   prosecutionChecked:'2026-10-16',prosecutionSourceURL:URL,
   reviewStatus:'law-text-legal-review-pending',requisitesStatus:'pending-individual-legal-review',
   elements:[],variants:[],facts:[],stages:[],related:[],lawTerms:[],typexempel15:[],
-  legalDependencies:[statute,...(war?['BrB:21:1','BrB:21:3']:[])],
+  legalDependencies:[statute,...(applicability==='war'?['BrB:21:1','BrB:21:3']:applicability==='land'?['BrB:22:1','BrB:22:7']:[])],
   applicabilityWarning:note
  });known.add(title.toLocaleLowerCase('sv'));added++;
 }
