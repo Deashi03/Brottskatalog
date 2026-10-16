@@ -12,8 +12,7 @@ const config=[
  ['Grovt främjande av rymning eller flykt','17:12a',.5,4,false,'FP']
 ];
 const old=D.crimes.find(c=>String(c.title||'').toLocaleLowerCase('sv')==='främjande av flykt'&&!c.stageType);
-if(!old)throw Error('Missing historic Främjande av flykt entry to migrate safely');
-if(old.shortRef!=='BrB 17:12')throw Error('Unexpected old offence law reference; refuse unsafe migration');
+if(old&&old.shortRef!=='BrB 17:12')throw Error('Unexpected old offence law reference; refuse unsafe migration');
 for(const [title,ref,min,max,fines,stagePermissions] of config){
  const statute='BrB:'+ref,source=window.BK_STATUTES?.[statute];
  if(!source?.text||!source.text.includes('2026:924'))throw Error('Missing current SFS 2026:924 for '+title);
@@ -44,5 +43,5 @@ for(const [title,ref,min,max,fines,stagePermissions] of config){
  c.requisitesStatus='pending-individual-legal-review';c.legalDependencies=[statute,'BrB:17:16'];
 }
 D.categories=['Alla',...new Set(D.crimes.map(c=>c.category))];
-window.BK_RYMNINGS_REFORM15={sfs:'2026:924',checked:'2026-10-16',entries:config.length,migratedHistoricId:old.id};
+window.BK_RYMNINGS_REFORM15={sfs:'2026:924',checked:'2026-10-16',entries:config.length,migratedHistoricId:old?.id||null};
 })();
