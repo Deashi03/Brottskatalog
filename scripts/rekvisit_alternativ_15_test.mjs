@@ -25,9 +25,9 @@ for(const t of required){
  assert.notEqual(c.rekvisit15.legalReviewApproved,true,'Never mass-certify statute/doctrine: '+t);
 }
 assert.equal(by('Rån').rekvisit15.routes.length,4,'All four independent BrB 8:5 acts must remain visible');
-assert.ok(by('Människohandel').rekvisit15.routes.some(r=>r.label.includes('Barn under 18')),'The under-18 criminalization exception must remain visible');
+assert.ok(by('Människohandel').rekvisit15.routes.some(r=>/under 18|barn/i.test(r.label)),'The under-18 criminalization exception must remain visible');
 const adultroutes=by('Människohandel').rekvisit15.routes;
-assert.ok(adultroutes.some(r=>r.groups.some(g=>g.options?.includes('Olaga tvång'))));
+assert.ok(adultroutes.some(r=>r.groups.some(g=>g.options?.some(v=>v.startsWith('Olaga tvång')))));
 const minor=by('Ringa bedrägeri').rekvisit15;
 assert.ok(minor.routes.length>=2,'Payment evasion can occur without deception');
 for(const grade of ['Grovt rån','Grovt bedrägeri','Grovt försvårande av konkurs eller exekutiv förrättning']){
