@@ -26,6 +26,25 @@ Rättskälla: [Brottsbalken (1962:700), Sveriges riksdag](https://www.riksdagen.
 
 ---
 
+## Juridisk publiceringskontroll – 2026-10-16
+
+**BLOCKERAR PUBLICERING.** Den automatiska inventeringen av paragrafer är inte ett intyg om fullständig brottskatalog. Ett separat release-test har införts: `node scripts/v15_release_readiness.mjs --release`. Det misslyckas avsiktligt tills juridiska krav är uppfyllda. GitHub Pages-flödet i arbetsgrenen ska stoppa publicering om en ofärdig version av misstag läggs på `main`.
+
+Senaste gröna databas- och iPhone-körning: [GitHub Actions](https://github.com/Deashi03/Brottskatalog/actions/runs/38899259448).
+
+Resultat från `audit/v15-release-readiness.json`:
+- 383 grundposter; **315 BrB-poster**, där övriga 68 hör till specialstraffrätt eller andra kategorier.
+- **16/315 BrB-poster** har en strukturerad rekvisitmodell med OCH/ELLER.
+- **0/315 BrB-poster** har ännu fått den nya, uttryckliga markeringen `scope=full-legal-review` och `legalReviewApproved=true`. Tidigare partiella kontroller får inte misstolkas som fullständigt godkända.
+- **26/315 BrB-poster** har enligt maskinell klassificering fullständighetskontrollerad lagtext; övriga **289** kräver individuell kontroll av utdrag, gällande lydelse och varianter.
+- **12 förstadieposter** är uttryckligen `unverified` i fråga om straffbarhet. Detta ska inte göras om till ett kategoriskt ja eller nej utan rättskällegranskning.
+- **14 BrB-poster** har redan källförsedda typexempel. Typexempel för juridiskt svårbegripliga brott kan med rätta lämnas tomma.
+- Nya kontrollfynd: `Främjande av flykt` var historiskt kopplat till BrB 17:12 trots ändring 2026:924 till 17:12 a, och `Psykiskt våld` (4:7 b) saknades som separat sökpost trots att lagtexten fanns. Båda korrigerade i arbetsgrenen, med OCH/ELLER-rekvisit och utan att hitta på osäkra typexempel.
+
+**Återstår:** juridisk individualgranskning och fastställande av rekvisit för hundratals Brottsbalksposter, verifiering av lagtextutdrag och 12 förstadiebedömningar, kontroll av gradindelning/straffskalor/åtalsregler samt slutlig appversionsmärkning. `V1.4` är tills vidare den enda publicerade versionen.
+
+---
+
 ## Huvudkrav
 
 1. Samtliga straffbestämmelser i BrB 3–22 kap. inventeras paragraf för paragraf, inklusive särskilda brottsgrader, namngivna ringa brott och straffbestämmelser utan självständig rubrik. En katalogpost ska ha lagrum, aktuell straffskala eller uttryckligen **villkorad**, relevant åtalsregel och förstadier med uttryckligt lagstöd, samt källmetadata.
