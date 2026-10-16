@@ -11,6 +11,8 @@ on:
       - "brb-family-15.js"
       - "brb11-13-expansion-15.js"
       - "brb-war-coverage-15.js"
+      - "brb-special-preparation-15.js"
+      - "scripts/brb_special_preparation_15_test.mjs"
       - "scripts/brb_war_15_test.mjs"
       - "stage-scope-15.js"
       - "scripts/brb11_13_15_test.mjs"
@@ -67,6 +69,8 @@ on:
       - "brb-family-15.js"
       - "brb11-13-expansion-15.js"
       - "brb-war-coverage-15.js"
+      - "brb-special-preparation-15.js"
+      - "scripts/brb_special_preparation_15_test.mjs"
       - "scripts/brb_war_15_test.mjs"
       - "stage-scope-15.js"
       - "scripts/brb11_13_15_test.mjs"
@@ -153,6 +157,8 @@ jobs:
         run: node scripts/brb11_13_15_test.mjs
       - name: V1.5 wartime and noncommenced offence safeguards
         run: node scripts/brb_war_15_test.mjs
+      - name: V1.5 special BrB 4:9b preparatory offence without recursive stages
+        run: node scripts/brb_special_preparation_15_test.mjs
       - name: V1.5 special prosecution rules for new offences
         run: node scripts/prosecution_15_test.mjs
       - name: Three-year source verification UI safeguards
