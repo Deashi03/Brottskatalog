@@ -1122,12 +1122,17 @@ function renderDetail(c){
   const variants=(c.variants||[]).map(x=>`<span class="var-chip">${escapeHtml(x)}</span>`).join('');
   const elements=(c.elements||[]).map(x=>`<li>${escapeHtml(x)}</li>`).join('');
   const groups15=c.rekvisit15?.groups||[];
-  const actualRequisites=groups15.map(g=>g.mode==='any'
+  const routes15=c.rekvisit15?.routes||[];
+  const renderRequisiteGroups=groups=>'<ul>'+groups.map(g=>g.mode==='any'
     ?'<li><strong>Minst ett alternativ – '+escapeHtml(g.label)+'</strong><ul>'+g.options.map(v=>'<li>'+escapeHtml(v)+'</li>').join('')+'</ul></li>'
-    :'<li>'+escapeHtml(g.label)+'</li>').join('');
-  const exampleCards=(c.typexempel15||[]).map(t=>'<div class="fact-card"><div class="fact-eyebrow">Typexempel</div><div class="fact-body">'+escapeHtml(t.text)+'</div><div class="fact-source">'+escapeHtml(t.source||'')+'</div></div>').join('');
-  const requisitesBody=(groups15.length
-    ?'<div class="subtle-label">Faktiska rekvisit – OCH om inget annat anges</div><ul>'+actualRequisites+'</ul><p class="source-label">'+escapeHtml(c.rekvisit15.note||'')+'</p>'
+    :'<li>'+escapeHtml(g.label)+'</li>').join('')+'</ul>';
+  const sourceCases=t=>t.sourceURL?'<a class="source-link" target="_blank" rel="noopener noreferrer" href="'+escapeHtml(t.sourceURL)+'">Rättsligt underlag '+ic('external-link','sm')+'</a>':'';
+  const exampleCards=(c.typexempel15||[]).map(t=>'<div class="fact-card"><div class="fact-eyebrow">Typexempel</div><div class="fact-body">'+escapeHtml(t.text)+'</div><div class="fact-source">'+escapeHtml(t.source||'')+'</div>'+sourceCases(t)+'</div>').join('');
+  const routeBody=routes15.map(p=>'<div class="subtle-label">'+escapeHtml(p.label)+'</div>'+renderRequisiteGroups(p.groups)).join('');
+  const requisitesBody=((groups15.length||routes15.length)
+    ?'<div class="subtle-label">Faktiska rekvisit – OCH om inget annat anges</div>'
+       +(routes15.length?'<p class="source-label">Alternativa gärningsformer – minst en av följande strukturer måste vara uppfylld.</p>'+routeBody:renderRequisiteGroups(groups15))
+       +'<p class="source-label">'+escapeHtml(c.rekvisit15.note||'')+'</p>'
     :elements?'<p class="source-label">Äldre förenklad rekvisitöversikt – ännu inte individuellt juridiskt slutgranskad.</p><ul>'+elements+'</ul>'
     :'<p>Individuellt verifierad rekvisitöversikt saknas ännu. Se lagtexten ovan.</p>')
     +(exampleCards?'<div class="subtle-label">Typexempel</div>'+exampleCards:'');
