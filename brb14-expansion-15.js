@@ -11,7 +11,7 @@ const rows=[
   ['Grov signaturförfalskning','14:5',.5,4,false,'FP'],
   ['Ringa penningförfalskning','14:6',0,.5,true,''],
   ['Ringa olovlig befattning med falska pengar','14:7',0,.5,true,''],
-  ['Grov olovlig befattning med falska pengar','14:7',.5,6,false,''],
+  ['Grov olovlig befattning med falska pengar','14:7',.5,6,false,'F'],
     ['Märkesförfalskning','14:8',0,2,false,'FP'],
   ['Ringa märkesförfalskning','14:8',0,.5,true,''],
   ['Grov märkesförfalskning','14:8',.5,4,false,'FP'],
