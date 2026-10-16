@@ -7,6 +7,7 @@ on:
       - "brb14-expansion-15.js"
       - "brb10-review-15.js"
       - "scripts/brb10_15_test.mjs"
+      - "scripts/brb_inventory_15.mjs"
       - "rekvisit-typexempel-15.js"
       - "scripts/rekvisit_typfall_15_test.mjs"
       - "scripts/brb14_15_test.mjs"
@@ -49,6 +50,7 @@ on:
       - "brb14-expansion-15.js"
       - "brb10-review-15.js"
       - "scripts/brb10_15_test.mjs"
+      - "scripts/brb_inventory_15.mjs"
       - "rekvisit-typexempel-15.js"
       - "scripts/rekvisit_typfall_15_test.mjs"
       - "scripts/brb14_15_test.mjs"
@@ -121,12 +123,16 @@ jobs:
         run: node scripts/integration_09.mjs
       - name: Catalog-wide quality audit
         run: node scripts/audit_catalog.mjs
+      - name: BrB paragraphs and missing-offence inventory
+        run: node scripts/brb_inventory_15.mjs
       - name: Archive full quality report
         if: always()
         uses: actions/upload-artifact@v4
         with:
           name: brottskatalog-quality-audit
-          path: audit/quality-report.json
+          path: |
+            audit/quality-report.json
+            audit/brb-inventory-15.json
           if-no-files-found: warn
       - name: Install headless browser
         run: |
