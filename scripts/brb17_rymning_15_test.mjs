@@ -36,7 +36,7 @@ for(const [title,ref,min,max,fines,permissions] of [
 vm.runInNewContext(readFileSync(resolve(root,'stages-08.js'),'utf8'),{window,console});
 const stages=window.BK_DATA.crimes.filter(c=>c.stageType);
 assert.equal(stages.length,12);
-for(const c of base){
+for(const c of base.filter(x=>!x.stageType)){
  const s=stages.filter(x=>x.stageParentId===c.id);
  assert.equal(s.length,3);
  for(const x of s)assert.equal(x.stageStatus,c.stagePermissions.includes(x.stageType==='forsok'?'F':x.stageType==='forberedelse'?'P':'S')?'punishable':'not-criminalized',x.title);
