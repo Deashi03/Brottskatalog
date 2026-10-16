@@ -95,6 +95,7 @@ summaries.releaseReady=Object.values(summaries.blockers).every(n=>n===0);
 fs.mkdirSync(path.join(root,'audit'),{recursive:true});
 fs.writeFileSync(path.join(root,'audit/v15-release-readiness.json'),JSON.stringify(summaries,null,2)+'\n');
 console.log('V1.5 RELEASE READINESS '+JSON.stringify({counts:summaries.counts,blockers:summaries.blockers,releaseReady:summaries.releaseReady}));
+console.log('V1.5 REVIEW QUEUE '+JSON.stringify({first45:summaries.reviewQueue.slice(0,45).map(({title,ref})=>({title,ref})),unverified:summaries.samples.unverifiedStages,chapters:summaries.byChapter.map(({chapter,total,missingStructured,completeLawText})=>({chapter,total,missingStructured,completeLawText}))}));
 if(process.argv.includes('--release')&&!summaries.releaseReady){
  console.error('STOP: do not merge or publish V1.5 until legal release blockers are resolved.');
  process.exitCode=2;
