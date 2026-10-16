@@ -147,7 +147,7 @@ for(const c of base){
    penaltyRange:status==='punishable'?{min,max,fines:hasFine,life:code==='F'&&!!p.life}:null,
    penaltyNote:why,penaltyChecked:'2026-10-12',
    stageType:slug,stageStatus:status,stageSource:src,stageParentId:c.id,
-   stageReviewDate:statutoryReview?'2026-10-13':null,
+   stageReviewDate:statutoryReview?(c.stageReviewed?(c.stageReviewDate||null):'2026-10-13'):null,
    stageReviewBasis:statutoryReview?(brb?'Kapitlets särskilda förstadiebestämmelse och BrB 23:1–2':c.stageReviewed?'Särskild specialstraffrättslig förstadiebestämmelse':'Särskild förstadiebestämmelse'):'Ej individuell lagrumsgranskning',
    stageParentMin:p.min,stageParentMax:p.max,stageParentLife:!!p.life,
    stagePenaltyLower:status==='punishable'?(hasFine?'Böter':'1 mån'):null,
