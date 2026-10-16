@@ -2,6 +2,15 @@
 
 Status: arbetsunderlag, **inte publicerad V1.5**. Huvudgrenen/main ska inte uppdateras med ofullständiga rekvisitposter.
 
+## Systematisk inventering och typexempel – fortsättning
+
+- `scripts/brb_inventory_15.mjs` går igenom alla tillgängliga lagtextparagrafer i brottsbalken 3–22 kap. och producerar `audit/brb-inventory-15.json` med en **manuell granskningskö**. En sådan kö får aldrig tolkas som en verifierad fullständig förteckning över saknade brott. Alla separata brottsgrader och särskilda gärningsformer måste också granskas.
+- Nya saknade BrB 10:6–8-poster: **behörighetsmissbruk, olovligt brukande, grovt olovligt brukande och fyndförseelse**. Ringa eller grov gärning registreras bara om paragrafen faktiskt anger den särskilda graden.
+- Nya BrB 4:4 f–g och 4:7 a-poster: **oskuldskontroll, intygande av sexuell oskuld, uppmaning till självmord och oaktsam uppmaning till självmord**. Inga egna typexempel har skrivits för dessa brott eftersom det krävs särskilt noggrann prövning av omständigheterna.
+- **Ytterligare två typexempel från Brottsutredning.docx:** en minderårigs användning av annans äkta ID-kort vid nattklubb (BrB 15:12; fara i bevishänseende och uppsåt) samt olovlig användning av en lånad mobiltelefon för ett dyrt utlandssamtal till ägarens kostnad (BrB 10:7; skada/olägenhet). Dessa visas enbart för respektive förklarade gärningsform.
+- **Straffskaleändring 2026-08-01:** BrB 10:5 lägst ett års fängelse för grov trolöshet mot huvudman. Äldre gärningar och övergångsregler ska kontrolleras separat.
+- **Åtalsregler:** BrB 10:10 hänvisar till 8:13 för vissa närståendebrott. I vissa fall av olovligt brukande finns ytterligare särskilda åtalsvillkor. BrB 4:11 anger särskilda åtalsundantag men dessa avser inte de fyra nyinförda rubriceringarna i denna arbetsgren. Allmänt åtal är då huvudregel enligt RB 20:3.
+
 ## Huvudkrav
 
 1. Samtliga straffbestämmelser i BrB 3–22 kap. inventeras paragraf för paragraf, inklusive särskilda brottsgrader, namngivna ringa brott och straffbestämmelser utan självständig rubrik. En katalogpost ska ha lagrum, aktuell straffskala eller uttryckligen **villkorad**, relevant åtalsregel och förstadier med uttryckligt lagstöd, samt källmetadata.
