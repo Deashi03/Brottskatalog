@@ -9,7 +9,8 @@ const rows=[
  ['Oskuldskontroll','4:4f',0,1,false],
  ['Intygande av sexuell oskuld','4:4g',0,.5,true],
  ['Uppmaning till självmord','4:7a',0,2,false],
- ['Oaktsam uppmaning till självmord','4:7a',0,.5,true]
+ ['Oaktsam uppmaning till självmord','4:7a',0,.5,true],
+ ['Psykiskt våld','4:7b',0,4,false]
 ];
 const known=new Set(D.crimes.map(c=>String(c.title||'').toLocaleLowerCase('sv')));
 for(const [title,ref,min,max,fines] of rows){
@@ -19,7 +20,7 @@ for(const [title,ref,min,max,fines] of rows){
  if(!p?.text)throw Error('V1.5 BrB4 saknar kontrollerat lagtextutdrag '+title);
  const slug=title.toLocaleLowerCase('sv').normalize('NFD').replace(/[\u0300-\u036f]/g,'').replace(/[^a-z0-9]+/g,'-');
  const span=n=>n===.5?'sex månader':n+' år';
- const note=ref==='4:7a'?'Det finns ett särskilt krav på att gärningen är ägnad att medföra en inte obetydlig fara för självmord samt en särskild ansvarsregel för mindre allvarliga fall. Uppsåts- och oaktsamhetsformer ska hållas isär.':
+ const note=ref==='4:7b'?'Bestämmelsen anger två alternativa gärningsformer: upprepade kränkningar, eller varaktig otillbörlig övervakning. Särskilt krav på att gärningen är ägnad att allvarligt skada personens självkänsla.':ref==='4:7a'?'Det finns ett särskilt krav på att gärningen är ägnad att medföra en inte obetydlig fara för självmord samt en särskild ansvarsregel för mindre allvarliga fall. Uppsåts- och oaktsamhetsformer ska hållas isär.':
    'Ringa gärning är inte kriminaliserad enligt paragrafen; den är inte en egen ringa brottsrubricering.';
  D.crimes.push({
   id:'v15-'+slug,title,ref:'BrB '+ref.replace(':',' kap. ')+' §',shortRef:'BrB '+ref,statute,
