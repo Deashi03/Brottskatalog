@@ -29,6 +29,8 @@ on:
       - "rekvisit-typexempel-15.js"
       - "rekvisit-core-15.js"
       - "rekvisit-grader-15.js"
+      - "rekvisit-special-15.js"
+      - "scripts/rekvisit_special_15_test.mjs"
       - "scripts/rekvisit_grader_15_test.mjs"
       - "scripts/rekvisit_core_15_test.mjs"
       - "scripts/rekvisit_typfall_15_test.mjs"
@@ -94,6 +96,8 @@ on:
       - "rekvisit-typexempel-15.js"
       - "rekvisit-core-15.js"
       - "rekvisit-grader-15.js"
+      - "rekvisit-special-15.js"
+      - "scripts/rekvisit_special_15_test.mjs"
       - "scripts/rekvisit_grader_15_test.mjs"
       - "scripts/rekvisit_core_15_test.mjs"
       - "scripts/rekvisit_typfall_15_test.mjs"
@@ -163,6 +167,8 @@ jobs:
         run: node scripts/rekvisit_core_15_test.mjs
       - name: V1.5 source-linked minor and aggravated offence grades
         run: node scripts/rekvisit_grader_15_test.mjs
+      - name: V1.5 statutory documents, public order and source-specific typecase
+        run: node scripts/rekvisit_special_15_test.mjs
       - name: V1.5 review of 2026 BrB 10:5 changes
         run: node scripts/brb10_15_test.mjs
       - name: V1.5 recent BrB4 additions with conservative typecases
