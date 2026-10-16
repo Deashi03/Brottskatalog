@@ -110,6 +110,20 @@ Det som **inte** gjorts: inga påhittade typexempel för svårtolkade eller säl
 
 ---
 
+## Fortsättning – sammansatta brott, brottsrubriceringar och lagtextens integritet (2026-10-16)
+
+**Senaste fullständiga godkända CI/iPhone-körning:** [GitHub Actions 38930830607](https://github.com/Deashi03/Brottskatalog/actions/runs/38930830607).
+
+- **170 av 318 BrB-grundposter** har nu strukturerade rekvisit. Katalogen innehåller **386 grundposter och 1 080 förstadieposter, totalt 1 466 sökbara**. Tidigare rapporterade 124/316 är därmed inaktuellt.
+- Den nya modulen `rekvisit-alternativ-15.js` kompletterar sex tidigare ostrukturerade poster med bland annat **rånets fyra straffbara handlingsvägar enligt BrB 8:5**, grova straffskalor, och brottsbeskrivningar där underliggande lagstöd måste särskiljas. Den **bevarar hellre redan befintliga** och individuellt genomarbetade rekvisit i `rekvisit-fordjupning-15.js` och `rekvisit-sexualbrott-15.js` än skriver över dem med dubbletter.
+- **Grov oredlighet mot borgenärer enligt BrB 11:1** saknades som särskild sökbar rubricering och har tillkommit, med aktuell straffskala ett–sex år och korrekt generering av sökbara förstadier.
+- **Hedersförtryck enligt BrB 4:4 e** saknades som separat sökbar grundpost och har tillkommit. Kompletterad juridisk översikt skiljer hedersmotiv från kraven på underliggande straffbara gärningar, upprepning och självkänsleskada.
+- **Två avklippta SFS-importer reparerade:** BrB 4:4 a om *grov fridskränkning och grov kvinnofridskränkning* respektive BrB 4:4 e om *hedersförtryck*. Fullständiga lydelser enligt SFS 2026:852, kontrollerade mot Sveriges riksdags [lagtext](https://www.riksdagen.se/sv/dokument-och-lagar/dokument/svensk-forfattningssamling/brottsbalk-1962700_sfs-1962-700/), ersätter de avbrutna utdragen; rekvisit för relation, upprepade gärningar, självkänsleskada och hedersmotiv redovisas separat. Detta är *kontroll av aktuell författningstext*, inte godkännande av all juridisk praxis.
+- **Nyupptäckta källrisker för nästa arbetsomgång:** maskinimporten har också avklippta paragrafutdrag för bl.a. BrB **4:3 (barnfridsbrott), 6:6, 6:10 a (kontakt med barn i sexuellt syfte), 6:12, 9:11, 19:9 och 19:14**. De får inte felaktigt anges som komplett verifierad lagtext. Prioritera särskilt BrB 4:3 och 6:10 a.
+- **Publicering spärrad:** 148 av 318 BrB-grundposter saknar fortfarande strukturerade rekvisit; 289 saknar individuell certifiering av *fullständig* lagtext; tolv förstadier har fortsatt osäker straffbarhetsstatus. Inga poster har fått den separata märkningen för uttömmande juridiskt slutgodkännande. V1.4 ligger kvar på `main`, V1.5 i draft-PR.
+
+---
+
 ## Huvudkrav
 
 1. Samtliga straffbestämmelser i BrB 3–22 kap. inventeras paragraf för paragraf, inklusive särskilda brottsgrader, namngivna ringa brott och straffbestämmelser utan självständig rubrik. En katalogpost ska ha lagrum, aktuell straffskala eller uttryckligen **villkorad**, relevant åtalsregel och förstadier med uttryckligt lagstöd, samt källmetadata.
