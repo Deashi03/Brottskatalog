@@ -32,7 +32,7 @@ for(const name of names){
 }
 assert.equal(get('Dataintrång').rekvisit15.routes.length,3,'Access/change/disturbance are three distinct routes');
 assert.ok(get('Grovt dataintrång').rekvisit15.routes[0].groups.some(g=>g.label.includes('samlad bedömning')),'Aggravation requires holistic analysis');
-assert.ok(get('Äktenskapsresebrott mot barn').rekvisit15.routes.length>=2,'Child's special route must not require coercion');
+assert.ok(get('Äktenskapsresebrott mot barn').rekvisit15.routes.length>=2,'Child-specific route must not require coercion');
 assert.ok(get('Barnäktenskapsbrott').rekvisit15.routes.length>=2,'Special child variant must be kept independent');
 assert.ok(get('Förberedelse genom anbringande av tekniskt hjälpmedel').isStandaloneInchoate,'No recursive stages');
 assert.equal(data.crimes.filter(c=>c.stageType&&c.stageParentId===get('Förberedelse genom anbringande av tekniskt hjälpmedel').id).length,0);
