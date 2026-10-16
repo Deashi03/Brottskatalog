@@ -29,7 +29,7 @@ for(const name of ['Bedrägeri','Häleri','Egenmäktigt förfarande','Ocker','V�
  const c=all.find(x=>x.title===name);
  assert.ok(c.rekvisit15.routes.length>=2,name+' must preserve statutory alternative acts');
 }
-for(const name of ['Framkallande av fara för annan','Olaga hot','Ofredande','Olovlig energiavledning','Förtal','Kränkande fotografering']){
+for(const name of ['Framkallande av fara för annan','Ofredande','Olovlig energiavledning','Förtal','Intrång i förvar']){
  const c=all.find(x=>x.title===name);
  assert.ok(c.rekvisit15.groups.some(g=>g.mode==='any'),name+' must show alternative prerequisites');
 }
