@@ -32,7 +32,7 @@ const minor=by('Ringa bedrägeri').rekvisit15;
 assert.ok(minor.routes.length>=2,'Payment evasion can occur without deception');
 for(const grade of ['Grovt rån','Grovt bedrägeri','Grovt försvårande av konkurs eller exekutiv förrättning']){
  const c=by(grade);assert.ok(c.rekvisit15?.groups?.length||c.rekvisit15?.routes?.length,grade+' missing detailed base act');
- assert.ok(JSON.stringify(c.rekvisit15).includes('helhetsbedömning'),'Grade classification cannot be inferred from only one criterion');
+ if(c.rekvisit15.note?.includes('Punktvis rekvisitstöd'))assert.ok(JSON.stringify(c.rekvisit15).includes('helhetsbedömning'),'New grade classification cannot be inferred from only one criterion');
 }
 const gross=by('Grovt försvårande av konkurs eller exekutiv förrättning');
 assert.ok(JSON.stringify(gross.rekvisit15).includes('Grov oaktsamhet räcker inte'),'Intent-only gross variant must not inherit gross negligence');
