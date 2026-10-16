@@ -11,6 +11,19 @@ Status: arbetsunderlag, **inte publicerad V1.5**. Huvudgrenen/main ska inte uppd
 - **Straffskaleändring 2026-08-01:** BrB 10:5 lägst ett års fängelse för grov trolöshet mot huvudman. Äldre gärningar och övergångsregler ska kontrolleras separat.
 - **Åtalsregler:** BrB 10:10 hänvisar till 8:13 för vissa närståendebrott. I vissa fall av olovligt brukande finns ytterligare särskilda åtalsvillkor. BrB 4:11 anger särskilda åtalsundantag men dessa avser inte de fyra nyinförda rubriceringarna i denna arbetsgren. Allmänt åtal är då huvudregel enligt RB 20:3.
 
+## V1.5-inventering – kompletteringsomgång 2026-10-16
+
+- **BrB 16–19 kap.:** 28 saknade sökbara grundposter har införts, bland annat upplopp, våldsamt upplopp, involverande av en underårig i brottslighet, olaga våldsskildring, överträdelse av myndighets bud och ett flertal brott mot Sveriges säkerhet. Straffskalor beroende på roll (upplopp, myteri), krigstillstånd (vissa 18–19 kap.) eller flera allvarlighetsalternativ visas **som villkorade**, inte med en falsk gemensam numerisk straffskala.
+- **BrB 4, 6 och 15 kap.:** tio saknade poster för äktenskapstvång, barnäktenskapsbrott, äktenskapsresebrott, samlag med avkomling/syskon och utsagebrott inför nordiska/internationella domstolar. SFS 2026:950 trädde i kraft 2026-07-02 och styr aktuell straffskala för äktenskapsbrotten; äldre gärningstidpunkter behöver separat kontroll. De nordiska/internationella utsagebrottens straff anges genom hänvisning till BrB 15:1–3.
+- **BrB 11:2 och 13:5 a–b:** åtta grundposter om försvårande av konkurs/exekutiv förrättning, kapning, sjö- eller luftfartssabotage och flygplatssabotage, inklusive grova grader. Uppsåts-/oaktsamhetsvarianter och särskilda kvalifikationsgrunder måste hållas isär. För grova transportbrott har nio förstadieposter **markerats ej individuellt verifierade**, i stället för att felaktigt påstå att alla är straffria när BrB 13:12 bara nämner huvudrubriceringen.
+- **Systematisk kontroll:** `scripts/brb_inventory_15.mjs` markerar BrB:4:24 som en felimporterad hänvisning till kontaktförbudslagen, BrB 11:7 som en regel om ansvar för den som träder i gäldenärens ställe och BrB 22:7 som en särskild förstadiebestämmelse – inga egna huvudbrott. BrB 22:6 c har ikraftträdande först den dag regeringen bestämmer; den får inte införas som ett aktivt brott förrän ikraftträdandet verifierats.
+- **Återstående:** Brott enligt BrB 21 kap. och delar av 22 kap. samt den särskilda förberedelsebestämmelsen BrB 4:9 b kräver noggrann tillämpnings- och straffskalegranskning. Brotten i 21 kap. gäller bara vid krig eller när kapitlet annars satts i tillämpning med stöd av BrB 21:1. Inga typexempel ska konstrueras enbart för att fylla upp dessa poster.
+- **Testpolicyn:** En grön CI-körning intygar bara maskinell dataintegritet och riktade lagrumskontroller. Den innebär inte att samtliga rekvisit, straffskalor, förstadier och historiska lydelser har granskats juridiskt.
+
+Rättskälla: [Brottsbalken (1962:700), Sveriges riksdag](https://www.riksdagen.se/sv/dokument-och-lagar/dokument/svensk-forfattningssamling/brottsbalk-1962700_sfs-1962-700/). Lagändring [SFS 2026:950](https://svenskforfattningssamling.se/sites/default/files/sfs/2026-06/SFS2026-950.pdf).
+
+---
+
 ## Huvudkrav
 
 1. Samtliga straffbestämmelser i BrB 3–22 kap. inventeras paragraf för paragraf, inklusive särskilda brottsgrader, namngivna ringa brott och straffbestämmelser utan självständig rubrik. En katalogpost ska ha lagrum, aktuell straffskala eller uttryckligen **villkorad**, relevant åtalsregel och förstadier med uttryckligt lagstöd, samt källmetadata.
