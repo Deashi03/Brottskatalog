@@ -63,6 +63,19 @@ Det som **inte** gjorts: inga påhittade typexempel för svårtolkade eller säl
 
 ---
 
+## Fortsättning: ytterligare specialbrott – 2026-10-16
+
+**Senaste godkända testning:** [GitHub Actions (fullkatalog + iPhone)](https://github.com/Deashi03/Brottskatalog/actions/runs/38903213793).
+
+- Rekvisitstödet har utökats från ursprungliga **16 till 106 av 316 BrB-poster**. I den föregående omgången fanns 82. **24 ytterligare** poster har nu fått strukturerade, källanknutna OCH/ELLER-rekvisit inklusive en ny grov grad.
+- Ytterligare individuell **lagtextsbaserad** genomgång av bland annat bokföringsbrott, åverkan, allmänfarlig ödeläggelse, sabotage, ockerpantning, signatur-/penningförfalskning, olovlig befattning med falska pengar, falsk beskyllning, osann försäkran, osant intygande, ohörsamhet mot ordningsmakten, uppvigling, olaga diskriminering, förargelseväckande beteende och förolämpning mot tjänsteman.
+- **BrB 16:10**: äldre rubriken `Brott mot griftefrid` är rättad till `Gravfridsbrott` med gammalt namn som sökalias. Egen grovgradspost för **grovt gravfridsbrott** (fängelse lägst sex månader och högst fyra år) har skapats. Kvalifikationsfaktorerna är inte var och en självständiga nödvändiga rekvisit. [Aktuell lydelse](https://www.riksdagen.se/sv/dokument-och-lagar/dokument/svensk-forfattningssamling/brottsbalk-1962700_sfs-1962-700/).
+- **Typexempel**, BrB 17:15: någon utan polisiära befogenheter bär polisuniform och tjänstetecken så att denne framstår som tillhörande Polismyndigheten. Källa: BrB 17:15. Typexemplet illustrerar ett normalt och lättbegripligt fall, inte svår polisiärrättslig gränsdragning.
+- **Teknisk kontroll:** samtliga fullkatalog- och iPhone-regressioner godkända. Skyddade nyare BrB 4:2, 16:10 och 17:12 a-bestämmelser har databas- och förstadietester.
+- **Oförändrad publiceringsspärr:** 0 BrB-poster har fullständigt juridiskt slutgodkänts enligt den nya modellen; 290 av 316 saknar individuell certifiering av *komplett lagtext*; 12 förstadier saknar verifierad straffbarhetsstatus. Antalet sökposter är 1 458 (384 grundposter, 1 074 förstadier). **Juridisk slutgranskning kvarstår.**
+
+---
+
 ## Huvudkrav
 
 1. Samtliga straffbestämmelser i BrB 3–22 kap. inventeras paragraf för paragraf, inklusive särskilda brottsgrader, namngivna ringa brott och straffbestämmelser utan självständig rubrik. En katalogpost ska ha lagrum, aktuell straffskala eller uttryckligen **villkorad**, relevant åtalsregel och förstadier med uttryckligt lagstöd, samt källmetadata.
