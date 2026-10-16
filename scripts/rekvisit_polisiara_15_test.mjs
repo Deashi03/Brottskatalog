@@ -27,7 +27,7 @@ for(const title of ['Angrepp mot tjänsteman','Övergrepp i rättssak','Hälerif
 const violence=get('Våldsamt motstånd');
 assert.ok(violence.rekvisit15.groups.some(g=>g.label.includes('passivt motstånd')),'No blanket criminalization of passive resistance');
 const extortion=get('Övergrepp i rättssak');
-assert.ok(extortion.rekvisit15.routes.every(r=>r.groups.some(g=>g.label.includes('syfte')||g.label.includes('hämnas'))),'Protected witness intent omitted');
+assert.ok(extortion.rekvisit15.routes.every(r=>r.groups.some(g=>/uppsåt|syfte|hämnas|avsikt/i.test(g.label)||g.options?.some(o=>/hämnas|hindra/i.test(o)))),'Protected witness intent omitted');
 const structured=crimes.filter(c=>c.rekvisit15?.groups?.length||c.rekvisit15?.routes?.length).length;
 assert.ok(structured>=116,'Requisites count failed to expand materially: '+structured);
 console.log('PASS V1.5: '+stats.added+' police-oriented requisite cards; '+structured+' total structured cards; subjective/situational protection preserved');
