@@ -27,6 +27,8 @@ on:
       - "scripts/brb10_15_test.mjs"
       - "scripts/brb_inventory_15.mjs"
       - "rekvisit-typexempel-15.js"
+      - "rekvisit-core-15.js"
+      - "scripts/rekvisit_core_15_test.mjs"
       - "scripts/rekvisit_typfall_15_test.mjs"
       - "scripts/brb14_15_test.mjs"
       - "service-worker.js"
@@ -88,6 +90,8 @@ on:
       - "scripts/brb10_15_test.mjs"
       - "scripts/brb_inventory_15.mjs"
       - "rekvisit-typexempel-15.js"
+      - "rekvisit-core-15.js"
+      - "scripts/rekvisit_core_15_test.mjs"
       - "scripts/rekvisit_typfall_15_test.mjs"
       - "scripts/brb14_15_test.mjs"
       - "service-worker.js"
@@ -151,6 +155,8 @@ jobs:
         run: node scripts/brb14_15_test.mjs
       - name: V1.5 draft typfall and structured legal requisites
         run: node scripts/rekvisit_typfall_15_test.mjs
+      - name: V1.5 source-linked common offence requisite expansion
+        run: node scripts/rekvisit_core_15_test.mjs
       - name: V1.5 review of 2026 BrB 10:5 changes
         run: node scripts/brb10_15_test.mjs
       - name: V1.5 recent BrB4 additions with conservative typecases
