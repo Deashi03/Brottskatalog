@@ -32,6 +32,8 @@ on:
       - "rekvisit-grader-15.js"
       - "rekvisit-special-15.js"
       - "rekvisit-polisiara-15.js"
+      - "rekvisit-alternativ-15.js"
+      - "scripts/rekvisit_alternativ_15_test.mjs"
       - "rekvisit-fordjupning-15.js"
       - "rekvisit-sexualbrott-15.js"
       - "scripts/rekvisit_sexualbrott_15_test.mjs"
@@ -106,6 +108,8 @@ on:
       - "rekvisit-grader-15.js"
       - "rekvisit-special-15.js"
       - "rekvisit-polisiara-15.js"
+      - "rekvisit-alternativ-15.js"
+      - "scripts/rekvisit_alternativ_15_test.mjs"
       - "rekvisit-fordjupning-15.js"
       - "rekvisit-sexualbrott-15.js"
       - "scripts/rekvisit_sexualbrott_15_test.mjs"
@@ -185,6 +189,8 @@ jobs:
         run: node scripts/rekvisit_special_15_test.mjs
       - name: V1.5 police-oriented BrB objective and subjective requisites
         run: node scripts/rekvisit_polisiara_15_test.mjs
+      - name: V1.5 complex statutory offence variants and gross levels
+        run: node scripts/rekvisit_alternativ_15_test.mjs
       - name: V1.5 intricate offence alternatives, minority and public-order requisites
         run: node scripts/rekvisit_fordjupning_15_test.mjs
       - name: V1.5 child/adult sex-offence distinctions and limited statutory exemptions
