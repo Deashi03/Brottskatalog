@@ -211,3 +211,18 @@ Samtliga eget formulerade fall måste verifieras mot gällande paragraf och spec
 - [ ] Straffskala, åtalsvillkor och förstadier verifierade individuellt eller neutralt märkta.
 - [ ] Test för att nya data inte ändrar kvalitetsmetadata för ogranskade poster.
 - [ ] Katalogomfattande revisionsrapport och iPhone-regression godkända före publicering.
+
+
+---
+
+## Fortsättning 17 oktober 2026 – strukturerad BrB 5, 7, 10–11, 14–15 och 20
+
+- **39 kompletterade rekvisitlistor efter föregående avstämning** (205 → målnivå 244 av 319, 76,5 %). Detaljtest: scripts/rekvisit_fortsattning_15_test.mjs; korrekt utfall ska även synas i scripts/v15_release_readiness.mjs. Procentsiffran gäller enbart **förekomsten av strukturerade OCH/ELLER-listor**, inte juridisk slutcertifiering.
+- Ny modul rekvisit-fortsattning-15.js och offline-cache-registrering. Fler rekvisit för mutbrott och vårdslös finansiering av mutbrott, grovt förtal, ringa bokföringsbrott, förfalskning och brukande av förfalskat, falskt åtal, obefogat åtal, menedgrader, falsk angivelse/beskyllning, utsagor inför nordisk respektive internationell domstol.
+- **BrB 7 kap.**: olovligt ingående av äktenskap enligt 7:1 är uttryckligen begränsat till den som är partner i registrerat partnerskap. Egenmäktighet med barn enligt 7:4 skiljer mellan obehörigt skiljande från vårdnadshavare, gemensam vårdnad, tillkommande vårdnadshavares självtäkt, pågående LVU-vård och hindrande av att LVU-vård påbörjas. Rättslig avgränsning mot brott mot frihet, uppsåt och åtalsförutsättningarna i 7:6 framgår.
+- **Lagens tidsgräns:** enligt gällande BrB 7:4 andra stycket hänvisas till lagen (1990:52), medan lydelsen **från 2027-01-01** hänvisar till lagen (2026:1600), SFS 2026:1604. En sådan framtidsupplysning har **lagts i metadatan**, aldrig som en alternativ straffbar handlingsväg.
+- **BrB 20:2:** grovt missbruk av offentlig ställning har fått uttryckliga gradindelningsomständigheter åtskilda från de objektiva och subjektiva grundrekvisiten, med särskilt klarlagt förhållande till tjänstefel i BrB 20:1.
+- **Inga nya, tvivelaktiga typexempel** har skapats. Samtliga kompletterade kort har SFS-länk, spårbar kontrollnivå lagtext-jamford och legalReviewApproved: false.
+- **Håll kvar PR #2 som draft.** Publicerad V1.4 på main ändras inte. V1.5 får inte publiceras förrän lagtextens integritet, individuella juridiska granskningar och osäkra förstadier är hanterade. Siffermåttet 244 av 319 säger ingenting om att dessa publiceringsblockerare är undanröjda.
+
+Källa för detta tillägg: [Brottsbalken (1962:700), SFS t.o.m. 2026:1656](https://www.riksdagen.se/sv/dokument-och-lagar/dokument/svensk-forfattningssamling/brottsbalk-1962700_sfs-1962-700/).
