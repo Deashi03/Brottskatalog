@@ -35,4 +35,20 @@ for(const c of linked){
  assert.ok(c.rekvisit15.groups.some(g=>g.label.includes('grov oaktsamhet')),'Never accidentally use mere negligence');
 }
 assert.ok(ctx.window.BK_DATA.crimes.filter(c=>c.stageType).length>1000);
+const uncertain=ctx.window.BK_DATA.crimes.filter(c=>c.stageType&&c.stageStatus==='unverified');
+assert.equal(uncertain.length,12,'Twelve unresolved gross-grade stages remain explicitly unverified');
+assert.equal(ctx.window.BK_STAGE_SCOPE15.gradeEvidenceAdded,12,
+ 'All twelve ambiguous grades must receive specific, source-linked evidence');
+assert.equal(uncertain.filter(c=>c.stageEvidence15?.preparatorySource?.includes('riksdagen.se')).length,9,
+ 'Nine BrB 13:12 grade questions should link to SOU 2024:55');
+assert.equal(uncertain.filter(c=>c.stageEvidence15?.legalProvisions.some(s=>s.includes('21:15'))).length,3,
+ 'Three BrB 21:15 grade questions should carry special wartime context');
+for(const c of uncertain){
+ assert.ok(c.stageEvidence15?.officialSource.includes('riksdagen.se'),c.title);
+ assert.equal(c.stageEvidence15.finalLegalConclusionApproved,false);
+ assert.ok(c.stageReviewBasis.includes('jämfört med'),c.title+' requires parent and authorization provision');
+ assert.equal(c.stageStatus,'unverified','Bibliographic evidence must NOT be treated as final legal ruling');
+ assert.equal(c.custody,'unknown','Do not infer coercive authorization from uncertain stage');
+ assert.ok(c.stageExplanation.includes('INTE fastställt'));
+}
 console.log('PASS V1.5: 9:11 and 19:14 complete stage-support provisions, 19:9 exception and neutral conditional imprisonment');
