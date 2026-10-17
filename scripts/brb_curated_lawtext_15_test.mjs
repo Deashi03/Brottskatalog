@@ -59,7 +59,7 @@ assert.equal(stats.linkedCardsChecked,21+addedCards.length+propertyCards.length+
  'All 93 current SFS paragraphs must cover their actual offence card counts');
 const markers={
  'BrB:11:1':['på obestånd','påtaglig fara','konkursförvaltningen','otillbörligt syfte','grov oredlighet mot borgenärer','Lag (2026:1318).'],
- 'BrB:11:2':['F-skuldsanering','uppsåtligen eller av grov oaktsamhet','uppgiften inte rättas','rätt att vägra yttra sig','uppsåtligen och är grovt','Lag (2026:1318).'],
+ 'BrB:11:2':['F-\nskuldsanering','uppsåtligen eller av grov oaktsamhet','uppgiften inte rättas','rätt att vägra yttra sig','uppsåtligen och är grovt','Lag (2026:1318).'],
  'BrB:11:3':['utan motsvarande nytta för rörelsen','uppsåtligen eller av grov oaktsamhet','skälig anledning anta','Lag (2005:242).'],
  'BrB:11:4':['betala skuld som inte är förfallen','annan borgenärs rätt','i hemlighet lämnar eller utlovar','Lag (2022:965).'],
  'BrB:11:5':['uppsåtligen eller av oaktsamhet','rörelsens förlopp','i huvudsak bedömas','grovt bokföringsbrott','inte bedriver näringsverksamhet','Lag (2005:242).'],
