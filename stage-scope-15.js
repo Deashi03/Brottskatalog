@@ -55,5 +55,56 @@ for(const c of D.crimes.filter(c=>c.stageType)){
  c.penaltyNote=c.stageExplanation;
  gross21Withheld++;
 }
-window.BK_STAGE_SCOPE15={withheld,warStages,gross21Withheld,reason:'BrB 13:12 and gross forms need dedicated legal determination'};
+// Per-grade ambiguity analysis: text and travaux preparatoires point to
+// coverage of the qualified grade, but no definitive catalogue verdict
+// should be stamped before specialist review of the offence/date/praxis.
+// This does not alter "unverified" status, penalty or custody.
+const SRC='https://www.riksdagen.se/sv/dokument-och-lagar/dokument/svensk-forfattningssamling/brottsbalk-1962700_sfs-1962-700/';
+const SOU='https://data.riksdagen.se/dokument/hcb355';
+const hypotheses={
+ 'Grov kapning':{
+  section:'BrB 13:5 a tredje stycket',
+  base:'kapning i BrB 13:12',
+  detail:'13:5 a anger en grov grad av kapning inom samma paragraf. 13:12 kriminaliserar försök, förberedelse och stämpling till kapning, utan att särskriva den grova graden.'
+ },
+ 'Grovt sjö- eller luftfartssabotage':{
+  section:'BrB 13:5 a tredje stycket',
+  base:'sjö- eller luftfartssabotage i BrB 13:12',
+  detail:'13:5 a anger en grov grad av sjö- eller luftfartssabotage inom samma paragraf, medan 13:12 hänvisar till grundrubriceringen.'
+ },
+ 'Grovt flygplatssabotage':{
+  section:'BrB 13:5 b andra stycket',
+  base:'flygplatssabotage i BrB 13:12',
+  detail:'13:5 b andra stycket anger en grov grad av samma gärning, medan 13:12 nämner flygplatssabotage.'
+ },
+ 'Grovt våld eller hot mot förman':{
+  section:'BrB 21:8 tredje–fjärde styckena',
+  base:'våld eller hot mot förman i BrB 21:15',
+  detail:'21:8 reglerar normalgrad och grovhetsbedömning under samma brottsbeteckning. 21:15 nämner försök, förberedelse och stämpling till våld eller hot mot förman. Särskilda villkor för 21 kap. framgår av 21:1–4.'
+ }
+};
+let gradeEvidenceAdded=0;
+for(const c of D.crimes.filter(x=>x.stageType&&x.stageStatus==='unverified')){
+ const parent=D.crimes.find(p=>!p.stageType&&p.id===c.stageParentId);
+ const hyp=hypotheses[parent?.title];if(!hyp)continue;
+ const chapter=parent.title==='Grovt våld eller hot mot förman'?21:13;
+ const note=hyp.detail+' Lagtextens hänvisning ger stöd för att kvalificeringsgraden hör till brottstypen, men denna katalog har INTE fastställt en bindande slutsats om förstadiets rubricering, straffskala eller tvångsmedel. Kontrollera gärningstidpunkt och relevant praxis.';
+ c.stageEvidence15={
+  question:'Omfattas grovhetsgraden av förstadiekriminaliseringen för namngivet grundbrott?',
+  legalProvisions:[hyp.section,hyp.base,'BrB 23:1–2'],
+  officialSource: SRC,
+  preparatorySource:chapter===13?SOU:null,
+  preliminaryAssessment:'text-and-systematics-suggest-coverage-not-finally-approved',
+  finalLegalConclusionApproved:false,
+  status:'open-individual-legal-interpretation'
+ };
+ c.stageReviewBasis=hyp.section+' jämfört med '+hyp.base+
+  (chapter===13?'; SOU 2024:55 diskuterar 13:12 och samtliga uppsåtliga allmänfarliga brott.':'')+
+  '. Brottets grova grad kräver separat juridisk slutgranskning.';
+ c.stageExplanation=note+(c.applicabilityWarning?' '+c.applicabilityWarning:'');
+ c.penaltyNote=c.stageExplanation;
+ c.custody='unknown';
+ gradeEvidenceAdded++;
+}
+window.BK_STAGE_SCOPE15={withheld,warStages,gross21Withheld,gradeEvidenceAdded,reason:'BrB 13:12 and 21:15 degree scope has source-linked open legal questions'};
 })();
