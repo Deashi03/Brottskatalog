@@ -761,3 +761,47 @@ Regressionen `scripts/brb15_false_report_requisites_15_test.mjs` kontrollerar fy
 | BrB-kort med fullständigt individuellt juridiskt slutgodkännande | **0 / 319** |
 
 **Full CI inklusive iPhone PASS:** [GitHub Actions 39078004023](https://github.com/Deashi03/Brottskatalog/actions/runs/39078004023). **Release-spärr `releaseReady:false` kvarstår.** V1.5 PR #2 är **draft**, och publicerade V1.4 på `main` är oförändrad.
+
+---
+
+## 18 oktober 2026 – fullständig BrB 14:4–7 och 14:9–13
+
+Källunderlag: [Brottsbalken (1962:700), 14 kap., Sveriges riksdag, ändrad t.o.m. SFS 2026:1656](https://www.riksdagen.se/sv/dokument-och-lagar/dokument/svensk-forfattningssamling/brottsbalk-1962700_sfs-1962-700/).
+
+### Nio ytterligare fullständiga paragrafer
+
+`brb-curated-lawtext-15.js` har kompletterats med de individuellt källjämförda fulltexterna **14:4, 14:5, 14:6, 14:7, 14:9, 14:10, 14:11, 14:12 och 14:13**. Varje nytillkommen paragraf har källdatum **2026-10-18**; äldre kontroller behåller sina tidigare datum.
+
+- **14:4 – hindrande av urkunds bevisfunktion:** En urkund förstörs, görs obrukbar eller döljs utan rätt; bevisfara måste föreligga. Regeln gäller **inte om gärningen utgör bokföringsbrott**, vilket är en uttrycklig avgränsning mot 11 kap.
+- **14:5 – signaturförfalskning:** Obehörigt upphovsmannasken vid signatur på konst eller liknande, med uttryckliga ringa och grova grader.
+- **14:6 – penningförfalskning:** Även sedlar och mynt som beslutats för utgivning men ännu inte är gällande omfattas. Grov grad har föreskrivet straffminimum **två år**.
+- **14:7 – olovlig befattning med falska pengar:** Befattning med falsk valuta med det **särskilda uppsåtet** att det förfalskade ska prånglas ut, i tre grader.
+- **14:9 – förfalskning av fast märke:** Gräns-/vattenmärke, fixpunkt och liknande plan- eller höjdmätning; straffansvar förutsätter fara i bevishänseende.
+- **14:10 – brukande av det förfalskade:** Användning eller åberopande av något som förfalskats enligt kapitlet. Lagen anger att personen ska dömas **som om denne själv hade gjort den aktuella förfalskningen**. En enda fast straffskala för hela denna brottspost vore juridiskt missvisande; katalogen har **inte** gett den ett individuellt straffskalegodkännande.
+- **14:11 – olaga spridande av efterbildning:** Särskilt subsidiärt brott med **endast böter**, för en lätt förväxlingsbar efterbildning som sprids bland allmänheten i ett annat fall än 14:10.
+- **14:12 – frivilligt avvärjande av bevisfara:** Under särskilda förutsättningar kan påföljden mildras, ibland kan ansvar falla bort. Detta är **inte** ett generellt rättelseundantag utan kräver prövning av avsevärd olägenhet, farans storlek och straffskalan.
+- **14:13 – förstadier:** Särskilt lagstöd för bestämda försök och förberedelser, samt underlåtenhet att avslöja/förhindra penningförfalskning. Försök till olovlig befattning med falska pengar avser **endast vissa gärningssätt**. Om den fullbordade gärningen hade varit **ringa**, ska det inte dömas till ansvar för förstadiet enligt denna bestämmelse. Ingen generell stämplingskriminalisering följer av paragrafen.
+
+De individuella lagtexttesterna kontrollerar ordalydelserna och säkerställer att samma verifierade fulltext visas på samtliga brottskort som använder respektive paragraf. Vid missmatchning mellan källtext och tidigare katalogversion ges inget godkännande.
+
+### Femton ytterligare straffskalegranskningar
+
+`brb-penalty-grade-audit-15.js` omfattar nu **145** individuellt kontrollerade brottsgradsskalor, efter **15** nya kontroller i BrB 14 kap. Dessa avser normala, ringa och grova grader av hindrande av urkunds bevisfunktion, signaturförfalskning, penningförfalskning och olovlig befattning med falska pengar, samt normal/ringa förfalskning av fast märke och olaga spridande av efterbildning.
+
+`scripts/brb_penalty_grade_audit_15_test.mjs` verifierar både dessa gradsspecifika intervall och att **BrB 14:10 inte felaktigt tilldelas ett generellt godkänt straffintervall**.
+
+### Avstämd release-rapport
+
+| Statusmått | Värde |
+| --- | ---: |
+| Hela individuellt kontrollerade lagparagrafer | **141** |
+| BrB-brottskort med verifierad komplett aktuell lagtext | **195/319 (61,1 %)** |
+| Därav direkt kontrollerade genom den kuraterade paragrafserien | **186** |
+| Återstående BrB-kort utan verifierad fulltext | **124** |
+| Källjämförda brottsgradsskalor | **145** |
+| Grundposter i återstående straffskalekö | **171** |
+| Separat villkorade straffskalefall | **12** |
+| Förstadier med `unverified` straffbarhet | **12** |
+| Komplett individuellt juridiskt slutgodkända BrB-brott | **0/319** |
+
+**Full CI med iPhone-/mobiltest PASS:** [GitHub Actions 39080976805](https://github.com/Deashi03/Brottskatalog/actions/runs/39080976805). Katalogen innehåller fortfarande **1 470** brotts- och förstadieposter. **Juridisk release-spärr `releaseReady:false` är aktiv**; ingen merge eller publicering.
