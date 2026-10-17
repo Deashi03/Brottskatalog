@@ -15,7 +15,7 @@ const W=ctx.window.BK_STATUTES;
 const base=ctx.window.BK_DATA.crimes.filter(c=>!c.stageType);
 const stats=ctx.window.BK_CURATED_LAWTEXT15;
 assert.ok(stats,'Curated lawtext report missing');
-assert.equal(stats.sectionsChecked,34,'Exactly thirty-four complete paragraphs must have been checked: '+JSON.stringify({missing:stats.missing,mismatch:stats.mismatch,sourceHeads:stats.mismatch.map(k=>({ref:k,text:W[k]?.text?.slice(0,110)}))}));
+assert.equal(stats.sectionsChecked,40,'Exactly forty complete paragraphs must have been checked: '+JSON.stringify({missing:stats.missing,mismatch:stats.mismatch,sourceHeads:stats.mismatch.map(k=>({ref:k,text:W[k]?.text?.slice(0,110)}))}));
 assert.equal(stats.missing.length,0,JSON.stringify(stats.missing));
 assert.equal(stats.mismatch.length,0,JSON.stringify(stats.mismatch));
 const addedCards=base.filter(c=>['BrB:13:5c','BrB:17:10'].includes(c.statute));
@@ -28,9 +28,19 @@ const officeKeys=['BrB:4:6','BrB:4:7','BrB:17:3','BrB:20:1','BrB:20:2'];
 const officeCards=base.filter(c=>officeKeys.includes(c.statute));
 for(const key of officeKeys)assert.ok(officeCards.some(c=>c.statute===key),'Missing police/public-office card: '+key);
 assert.ok(officeCards.length>=10,'Expected multiple grades in housing and official misconduct law');
-assert.equal(stats.linkedCardsChecked,21+addedCards.length+propertyCards.length+officeCards.length,
- 'All 34 source-checked paragraphs must cover their related criminal offence cards');
+const negligenceKeys=['BrB:3:7','BrB:3:8','BrB:3:9','BrB:3:10'];
+const negligenceCards=base.filter(c=>negligenceKeys.includes(c.statute));
+for(const key of negligenceKeys)assert.ok(negligenceCards.some(c=>c.statute===key),'Missing negligent offence card: '+key);
+assert.ok(negligenceCards.length>=4,'Missing police-relevant negligence offence cards');
+assert.equal(stats.linkedCardsChecked,21+addedCards.length+propertyCards.length+officeCards.length+negligenceCards.length,
+ 'All 40 source-checked paragraphs must cover their related criminal offence cards');
 const markers={
+ 'BrB:3:7':['vållande till annans död','fängelse i lägst två och högst sex år','medvetet risktagande','Lag (2026:1318).'],
+ 'BrB:3:8':['kroppsskada eller sjukdom som inte är ringa','medvetet risktagande','Lag (2001:348).'],
+ 'BrB:3:9':['av grov oaktsamhet','livsfara','Lag (2026:1318).'],
+ 'BrB:3:10':['uppsåtligen eller av oaktsamhet','arbetsmiljölagen','Lag (1991:679).'],
+ 'BrB:3:11':['För försök eller förberedelse till mord','stämpling','Lag (2017:332).'],
+ 'BrB:3:12':['målsäganden anger brottet till åtal','inte har fyllt arton år','Lag (2003:408).'],
  'BrB:4:6':['hemfridsbrott','olaga intrång','en trädgård, på en gårdsplan','grovt hemfridsbrott','Lag (2022:661).'],
  'BrB:4:7':['fysiskt antastar','störande kontakter','kränka den utsattes frid','Lag (2017:1136).'],
  'BrB:17:3':['förolämpning mot tjänsteman','självkänsla eller värdighet','Lag (2025:579).'],
@@ -86,9 +96,9 @@ assert.equal(b.length,319);
 const directCrosschecks=b.filter(c=>c.lawCompletenessVerified===true&&
  c.lawCompletenessReviewScope==='current-paragraph-only'&&
  c.lawCompletenessSourceURL?.includes('riksdagen.se'));
-assert.equal(directCrosschecks.length,21+addedCards.length+propertyCards.length+officeCards.length,
+assert.equal(directCrosschecks.length,21+addedCards.length+propertyCards.length+officeCards.length+negligenceCards.length,
  'All current SFS offence cards must carry narrow dated paragraph-crosscheck provenance');
 assert.ok(!base.some(c=>c.statute==='BrB:13:12'),'13:12 is a stage authorization source, not a standalone completed crime');
 assert.ok(b.some(c=>c.lawMode==='full'&&!c.lawCompletenessVerified),
  'Embedded full text without documented review must remain distinguishable');
-console.log('PASS V1.5: thirty-four complete current SFS paragraphs verified, without legal signoff');
+console.log('PASS V1.5: forty complete current SFS paragraphs verified, without legal signoff');
