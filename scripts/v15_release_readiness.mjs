@@ -71,6 +71,9 @@ const stageAuditQueue=unverifiedStage.map(c=>{
   sourceURL:paragraph?.url||parent?.sourceURL||null,
   status:'INCHOATE_CRIMINALIZATION_UNVERIFIED',
   reason:c.stageReviewBasis||c.stageExplanation||null,
+  legalEvidence:c.stageEvidence15||null,
+  sourceLinkedInterpretationPending:Boolean(c.stageEvidence15?.preliminaryAssessment),
+  finalLegalConclusionApproved:c.stageEvidence15?.finalLegalConclusionApproved===true,
   requiredAction:'Bedöm självständigt om den grova graden omfattas av kriminaliseringen i BrB 13:12 eller BrB 21:15 jämförd med 23 kap., tillämplig praxis och förarbeten. Dra ingen automatisk slutsats av rubrikens ordval.'
  };
 });
