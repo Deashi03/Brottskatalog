@@ -5,7 +5,7 @@ const html=fs.readFileSync(path.join(root,'index.html'),'utf8');
 const sw=fs.readFileSync(path.join(root,'service-worker.js'),'utf8');
 const scripts=[...html.matchAll(/<script\s+src="([^"]+)"/g)].map(x=>x[1]);
 const module='./brb-penalty-grade-audit-15.js';
-assert.ok(scripts.includes(module)&&sw.includes(module),'130 grade-range legal crosschecks must be available offline');
+assert.ok(scripts.includes(module)&&sw.includes(module),'145 grade-range legal crosschecks must be available offline');
 assert.ok(scripts.indexOf(module)>scripts.indexOf('./brb-curated-lawtext-15.js'));
 assert.ok(scripts.indexOf(module)<scripts.indexOf('./stages-08.js'));
 const inline=[...html.matchAll(/<script(?:\s[^>]*)?>([\s\S]*?)<\/script>/g)].map(x=>x[1]);
@@ -14,16 +14,16 @@ for(const i of [1,2,3])vm.runInContext(inline[i],ctx,{filename:'inline-'+i});
 for(const file of scripts)vm.runInContext(fs.readFileSync(path.join(root,file),'utf8'),ctx,{filename:file});
 const stats=ctx.window.BK_PENALTY_GRADE_AUDIT15;
 assert.ok(stats,'No source-checked penalty audit report');
-assert.equal(stats.planned,130,'Unexpected count of offence-grade penalty crosschecks');
+assert.equal(stats.planned,145,'Unexpected count of offence-grade penalty crosschecks');
 assert.deepEqual(Array.from(stats.missing),[],'Missing title in penalty source review');
 assert.deepEqual(Array.from(stats.unreviewedSource),[],'No source verification for penalty review');
 assert.deepEqual(Array.from(stats.held),[],'Penalty range held for source change');
 assert.deepEqual(Array.from(stats.mismatch),[],'Current statutory penalty conflicts found – repair underlying entry, never stamp false approval');
-assert.equal(stats.reviewed,130,'All 130 grade-range comparisons should match the actual catalogue');
+assert.equal(stats.reviewed,145,'All 145 grade-range comparisons should match the actual catalogue');
 const c=ctx.window.BK_DATA.crimes;
 const base=c.filter(x=>!x.stageType);
 const reviewed=base.filter(x=>x.penaltyReviewScope==='individual-current-grade-range-only');
-assert.equal(reviewed.length,130,'No extra crime can silently acquire grade-range approval');
+assert.equal(reviewed.length,145,'No extra crime can silently acquire grade-range approval');
 for(const p of reviewed){
  assert.equal(p.penaltyGradeReviewDate,p.lawCompletenessChecked);
  assert.ok(p.penaltyGradeReviewSource.includes('riksdagen.se'));
@@ -38,6 +38,36 @@ assert.ok(by('Rån').penaltyGradeReviewCaveat.includes('motvärnsrån'));
 assert.ok(by('Grovt tjänstefel').penaltyGradeReviewCaveat.includes('UPPSÅT'));
 assert.ok(by('Tjänstefel').penaltyGradeReviewCaveat.includes('oaktsamhet'));
 assert.equal(by('Grovt rån').penaltyRange.min,5);
+for(const [name,min,max,fines] of [
+ ['Hindrande av urkunds bevisfunktion',0,2,false],
+ ['Ringa hindrande av urkunds bevisfunktion',0,0.5,true],
+ ['Grovt hindrande av urkunds bevisfunktion',0.5,4,false],
+ ['Signaturförfalskning',0,2,false],
+ ['Ringa signaturförfalskning',0,0.5,true],
+ ['Grov signaturförfalskning',0.5,4,false],
+ ['Penningförfalskning',0,4,false],
+ ['Ringa penningförfalskning',0,0.5,true],
+ ['Grov penningförfalskning',2,8,false],
+ ['Olovlig befattning med falska pengar',0,2,false],
+ ['Ringa olovlig befattning med falska pengar',0,0.5,true],
+ ['Grov olovlig befattning med falska pengar',0.5,6,false],
+ ['Förfalskning av fast märke',0,4,false],
+ ['Ringa förfalskning av fast märke',0,0.5,true],
+ ['Olaga spridande av efterbildning',0,0,true]
+]){
+ const c=by(name);
+ assert.ok(c,'Expected independently source reviewed forgery grade '+name);
+ assert.equal(c.penaltyRange.min,min,name+' min');
+ assert.equal(c.penaltyRange.max,max,name+' max');
+ assert.equal(c.penaltyRange.fines,fines,name+' fines');
+ assert.equal(c.penaltyGradeReviewDate,'2026-10-18',name+' review date');
+}
+const forgeryUse=by('Brukande av det förfalskade');
+assert.ok(forgeryUse,'Missing BrB 14:10 distinct offence card');
+assert.equal(forgeryUse.statute,'BrB:14:10');
+assert.notEqual(forgeryUse.penaltyReviewScope,'individual-current-grade-range-only',
+ '14:10 has derivative penalty from the underlying forged item: never certify arbitrary single interval');
+
 for(const [name,min,max,fine] of [
  ['Falskt åtal',0,2,false],
  ['Grovt falskt åtal',0.5,4,false],
@@ -178,4 +208,4 @@ assert.equal(by('Inbrottsstöld').penaltyRange.min,1);
 assert.equal(by('Grovt missbruk av offentlig ställning').penaltyRange.max,6);
 assert.equal(base.filter(c=>c.statute?.startsWith('BrB:')).length,319);
 assert.equal(c.filter(x=>x.stageType&&x.stageStatus==='unverified').length,12,'No implicit inchoate review via base penalty scales');
-console.log('PASS V1.5: 130 current-grade BrB penalty scales source-verified; no silent conflicts or overbroad approvals');
+console.log('PASS V1.5: 145 current-grade BrB penalty scales source-verified; no silent conflicts or overbroad approvals');
