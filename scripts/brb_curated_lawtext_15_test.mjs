@@ -15,7 +15,7 @@ const W=ctx.window.BK_STATUTES;
 const base=ctx.window.BK_DATA.crimes.filter(c=>!c.stageType);
 const stats=ctx.window.BK_CURATED_LAWTEXT15;
 assert.ok(stats,'Curated lawtext report missing');
-assert.equal(stats.sectionsChecked,115,'Exactly one-hundred-fifteen complete paragraphs must have been checked: '+JSON.stringify({missing:stats.missing,mismatch:stats.mismatch,sourceHeads:stats.mismatch.map(k=>({ref:k,text:W[k]?.text?.slice(0,110)}))}));
+assert.equal(stats.sectionsChecked,122,'Exactly one-hundred-twenty-two complete paragraphs must have been checked: '+JSON.stringify({missing:stats.missing,mismatch:stats.mismatch,sourceHeads:stats.mismatch.map(k=>({ref:k,text:W[k]?.text?.slice(0,110)}))}));
 assert.equal(stats.missing.length,0,JSON.stringify(stats.missing));
 assert.equal(stats.mismatch.length,0,JSON.stringify(stats.mismatch));
 const addedCards=base.filter(c=>['BrB:13:5c','BrB:17:10'].includes(c.statute));
@@ -65,9 +65,20 @@ const freedomCards=base.filter(c=>freedomKeys.includes(c.statute));
 for(const key of freedomKeys)assert.ok(freedomCards.some(c=>c.statute===key),'Missing freedom/psychological offence card for '+key);
 const ch4Cards=base.filter(c=>ch4Keys.includes(c.statute));
 for(const key of ch4Keys.filter(k=>!['BrB:4:10','BrB:4:11'].includes(k)))assert.ok(ch4Cards.some(c=>c.statute===key),'Missing verified Ch4 crime card: '+key);
-assert.equal(stats.linkedCardsChecked,21+addedCards.length+propertyCards.length+officeCards.length+negligenceCards.length+newCards.length+economicCards.length+theftFraudCards.length+creditorCards.length+extra12Cards.length+ch4Cards.length+freedomCards.length,
- 'All 115 current SFS paragraphs must cover their actual offence card counts');
+const updatedSafetyKeys=['BrB:3:3','BrB:4:3','BrB:4:4b','BrB:4:4c','BrB:4:4d','BrB:4:4f','BrB:4:4g'];
+const updatedSafetyCards=base.filter(c=>updatedSafetyKeys.includes(c.statute));
+for(const key of ['BrB:3:3','BrB:4:3','BrB:4:4b','BrB:4:4c','BrB:4:4d','BrB:4:4f','BrB:4:4g'])
+ assert.ok(updatedSafetyCards.some(c=>c.statute===key),'Missing current dated offence card for '+key);
+assert.equal(stats.linkedCardsChecked,21+addedCards.length+propertyCards.length+officeCards.length+negligenceCards.length+newCards.length+economicCards.length+theftFraudCards.length+creditorCards.length+extra12Cards.length+ch4Cards.length+freedomCards.length+updatedSafetyCards.length,
+ 'All 122 source-checked SFS paragraphs must cover their offence card counts');
 const markers={
+ 'BrB:3:3':['Dödar kvinna sitt barn vid födelsen','upprivet sinnestillstånd','svårt trångmål'],
+ 'BrB:4:3':['5. straffbart försök till brott','bevittnats av ett barn','närstående eller tidigare närstående till både','grovt barnfridsbrott','Lag (2026:852).'],
+ 'BrB:4:4b':['kränkande fotografering enligt 4 kap. 6 a §','psykiskt våld enligt 4 kap. 7 b §','förolämpning mot tjänsteman enligt 17 kap. 3 §','19. överträdelse av kontaktförbud','upprepad kränkning','Lag (2026:852).'],
+ 'BrB:4:4c':['äktenskapsliknande förbindelse','barnäktenskapsbrott','varit oaktsam beträffande omständigheten','Lag (2026:950).'],
+ 'BrB:4:4d':['äktenskapsresebrott mot barn','förmår eller tillåter','inte fyllt arton år','Lag (2026:950).'],
+ 'BrB:4:4f':['oskuldskontroll','Om gärningen är ringa utgör den inte brott','Lag (2025:962).'],
+ 'BrB:4:4g':['intygande av sexuell oskuld','Om gärningen är ringa utgör den inte brott','Lag (2025:962).'],
  'BrB:4:1':['bemäktigar sig och för bort eller spärrar in','människorov','på livstid','mindre grovt','Lag (2009:396).'],
  'BrB:4:1a':['allvarligt begränsar personens alternativ','inte har fyllt arton år','oaktsam beträffande','mindre grovt','Lag (2018:601).'],
  'BrB:4:1b':['arbete under uppenbart orimliga villkor','inte har fyllt arton år','grov människoexploatering','Lag (2018:601).'],
@@ -188,7 +199,7 @@ for(const [ref,expected] of Object.entries(markers)){
  const item=W[ref];
  assert.equal(item.complete,true,'Source complete: '+ref);
  assert.equal(item.machine,false,'Not a machine-only excerpt: '+ref);
- assert.equal(item.checked,'2026-10-17');
+ assert.equal(item.checked,updatedSafetyKeys.includes(key)?'2026-10-18':'2026-10-17');
  assert.equal(item.completeTextProvenance,'manual-crosscheck-current-SFS-paragraph-only');
  for(const phrase of expected)assert.ok(item.text.includes(phrase),ref+' lacks '+phrase);
  for(const c of base.filter(c=>c.statute===ref)){
@@ -204,7 +215,7 @@ assert.equal(b.length,319);
 const directCrosschecks=b.filter(c=>c.lawCompletenessVerified===true&&
  c.lawCompletenessReviewScope==='current-paragraph-only'&&
  c.lawCompletenessSourceURL?.includes('riksdagen.se'));
-assert.equal(directCrosschecks.length,21+addedCards.length+propertyCards.length+officeCards.length+negligenceCards.length+newCards.length+economicCards.length+theftFraudCards.length+creditorCards.length+extra12Cards.length+ch4Cards.length+freedomCards.length,
+assert.equal(directCrosschecks.length,21+addedCards.length+propertyCards.length+officeCards.length+negligenceCards.length+newCards.length+economicCards.length+theftFraudCards.length+creditorCards.length+extra12Cards.length+ch4Cards.length+freedomCards.length+updatedSafetyCards.length,
  'All current SFS offence cards must carry narrow dated paragraph-crosscheck provenance');
 assert.ok(!base.some(c=>c.statute==='BrB:13:12'),'13:12 is a stage authorization source, not a standalone completed crime');
 const unreviewedEmbedded=b.filter(c=>c.lawMode==='full'&&!c.lawCompletenessVerified);
@@ -214,4 +225,4 @@ for(const c of unreviewedEmbedded){
 }
 assert.ok(b.some(c=>!c.lawCompletenessVerified),
  'The review must not silently approve all 319 BrB provisions');
-console.log('PASS V1.5: one-hundred-fifteen complete current SFS paragraphs verified, without legal signoff');
+console.log('PASS V1.5: one-hundred-twenty-two complete current SFS paragraphs verified, without legal signoff');
