@@ -15,11 +15,16 @@ const W=ctx.window.BK_STATUTES;
 const base=ctx.window.BK_DATA.crimes.filter(c=>!c.stageType);
 const stats=ctx.window.BK_CURATED_LAWTEXT15;
 assert.ok(stats,'Curated lawtext report missing');
-assert.equal(stats.sectionsChecked,14,'Exactly fourteen complete paragraphs must have been checked: '+JSON.stringify({missing:stats.missing,mismatch:stats.mismatch,sourceHeads:stats.mismatch.map(k=>({ref:k,text:W[k]?.text?.slice(0,110)}))}));
+assert.equal(stats.sectionsChecked,16,'Exactly sixteen complete paragraphs must have been checked: '+JSON.stringify({missing:stats.missing,mismatch:stats.mismatch,sourceHeads:stats.mismatch.map(k=>({ref:k,text:W[k]?.text?.slice(0,110)}))}));
 assert.equal(stats.missing.length,0,JSON.stringify(stats.missing));
 assert.equal(stats.mismatch.length,0,JSON.stringify(stats.mismatch));
-assert.equal(stats.linkedCardsChecked,21,'Fourteen current SFS paragraphs must cover twenty-one offence cards (13:12, 21:15 source-only); 21:15 has no main-crime card');
+const addedCards=base.filter(c=>['BrB:13:5c','BrB:17:10'].includes(c.statute));
+assert.ok(addedCards.length>=4,'Expected normal and aggravated criminal grades for both newly checked sections');
+assert.equal(stats.linkedCardsChecked,21+addedCards.length,
+ 'Sixteen current SFS paragraphs must cover prior twenty-one linked cards and the new police-priority offences');
 const markers={
+ 'BrB:13:5c':['stör polisverksamhet, räddningstjänst eller ambulanssjukvård','3. vidta annan otillbörlig åtgärd','allvarligt försvåra eller hindra','Lag (2019:1162).'],
+ 'BrB:17:10':['gjort anmälan, fört talan','Internationella brottmålsdomstolen','Om brottet med hänsyn till omständigheterna är mindre allvarligt','Lag (2022:792).'],
  'BrB:13:12':['försök, förberedelse eller stämpling','grov mordbrand','grovt sabotage mot blåljusverksamhet','Lag (2023:257).'],
  'BrB:3:5':['kroppsskada, sjukdom eller smärta','om brottet är ringa','Lag (1998:393).'],
  'BrB:3:6':['synnerligen grov misshandel','lägst sex och högst tolv år','Lag (2026:1318).'],
@@ -55,9 +60,9 @@ assert.equal(b.length,319);
 const directCrosschecks=b.filter(c=>c.lawCompletenessVerified===true&&
  c.lawCompletenessReviewScope==='current-paragraph-only'&&
  c.lawCompletenessSourceURL?.includes('riksdagen.se'));
-assert.equal(directCrosschecks.length,21,
- 'Each of 21 curated law-text cards must carry an individual documented full-paragraph crosscheck');
+assert.equal(directCrosschecks.length,21+addedCards.length,
+ 'All police-priority source cards must carry their current-paragraph-only provenance');
 assert.ok(!base.some(c=>c.statute==='BrB:13:12'),'13:12 is a stage authorization source, not a standalone completed crime');
 assert.ok(b.some(c=>c.lawMode==='full'&&!c.lawCompletenessVerified),
  'Embedded full text without documented review must remain distinguishable');
-console.log('PASS V1.5: fourteen complete current SFS paragraphs verified, without legal signoff');
+console.log('PASS V1.5: sixteen complete current SFS paragraphs verified, without legal signoff');
