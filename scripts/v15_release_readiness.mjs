@@ -17,7 +17,14 @@ const brb=base.filter(c=>/^BrB\s+\d+/i.test(c.shortRef||'')||String(c.statute||'
 const stages=all.filter(c=>c.stageType);
 const structured=c=>Boolean(c.rekvisit15?.groups?.length||c.rekvisit15?.routes?.length);
 const fullyReviewed=c=>Boolean(structured(c)&&c.rekvisit15?.scope==='full-legal-review'&&c.rekvisit15?.sourceURL&&c.rekvisit15?.legalReviewApproved===true);
-const exactText=c=>c.lawMode==='full'||c.lawCompletenessVerified===true;
+// 'lawMode=full' means an embedded text was supplied, NOT that a
+// human checked the whole currently effective paragraph. Count only
+// records with source provenance and a valid nonfuture check date.
+const embeddedFullText=c=>c.lawMode==='full'||c.lawCompletenessVerified===true;
+const dateVerified=d=>typeof d==='string'&&/^\d{4}-\d{2}-\d{2}$/.test(d)&&!Number.isNaN(Date.parse(d+'T00:00:00Z'))&&new Date(d+'T00:00:00Z').toISOString().slice(0,10)===d&&d<=new Date().toISOString().slice(0,10);
+const exactText=c=>Boolean(c.lawMode==='full'&&c.lawCompletenessVerified===true&&
+ c.lawCompletenessSourceURL?.startsWith('https://')&&dateVerified(c.lawCompletenessChecked));
+const directlyCrosschecked=c=>Boolean(exactText(c)&&c.lawCompletenessReviewScope==='current-paragraph-only');
 const typecase=c=>Boolean(c.typexempel15?.length);
 const pendingRequisites=brb.filter(c=>!fullyReviewed(c));
 const notStructured=brb.filter(c=>!structured(c));
@@ -84,7 +91,10 @@ const legalAuditQueue=pendingRequisites.slice().sort((a,b)=>{
   id:c.id,priority:policeFirst.has(c.title)?'polisiar-first':'chapter-batch',
   statute:c.statute||null,sourceURL:c.rekvisit15?.sourceURL||c.sourceURL||null,
   status:'LEGAL_AUDIT_PENDING',missing,
-  statutoryTextCertified:exactText(c),requisitesStructured:structured(c),
+  statutoryTextCertified:exactText(c),
+  directParagraphCrosscheck:directlyCrosschecked(c),
+  merelyEmbeddedFullText:embeddedFullText(c)&&!exactText(c),
+  requisitesStructured:structured(c),
   completeLegalReviewApproved:fullyReviewed(c),
   legalTextScope:c.lawMode||'unknown',
   penaltyReviewScope:c.penaltyReviewScope||'unknown',
@@ -104,6 +114,8 @@ const summaries={
   brbPostsWithoutStructuredRequisites:notStructured.length,
   brbPostsWithLimitedStructuredRequisites:limitedStructured.length,
   brbPostsWithVerifiedCompleteLegalText:brb.filter(exactText).length,
+  brbPostsWithEmbeddedFullTextOrPriorFlag:brb.filter(embeddedFullText).length,
+  brbPostsWithDirectCurrentParagraphCrosscheck:brb.filter(directlyCrosschecked).length,
   brbPostsWithTypicalExamples:brb.filter(typecase).length,
   unverifiedStages:unverifiedStage.length,
   basePenaltyCasesNeedingIndividualVerification:incompletePenalty.length,
@@ -136,7 +148,7 @@ const summaries={
  },
  policy:{
   typecases:'Optional by design; withholding weak examples is correct and is not a release blocker.',
-  statutoryText:'Machine-generated excerpts remain subject to individual version and completeness review.',
+  statutoryText:'Embedded full text alone is not verification. Count only complete legal text with an individual dated provenance and source URL; case-law review is separate.',
   requisites:'Summary of statutory wording is not the same as approved full legal requisites.',
   stages:'An unverified criminalization status is not a determination of non-criminalization.'
  },
