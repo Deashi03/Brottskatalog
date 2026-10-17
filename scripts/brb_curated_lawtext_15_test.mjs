@@ -22,7 +22,7 @@ assert.equal(stats.linkedCardsChecked,8,'Two 6:7, two 21:7, two 22:6a and two 22
 const markers={
  'BrB:6:7':['vaginalt samlag','helsyskon','otillbörligt sätt. Lag (2022:1043).'],
  'BrB:21:7':['grov olovlig avvikelse av krigsman','2. gått över till fienden','Lag (2026:924).'],
- 'BrB:21:15':['underlåtenhet att avslöja eller förhindra','för medverkan till tjänstebrott','Lag (2026:924).'],
+ 'BrB:21:15':['underlåtenhet att avslöja eller förhindra','För medverkan till tjänstebrott','Lag (2026:924).'],
  'BrB:22:6a':['1. utvecklar, producerar','4. använder ämnen för kravallbekämpning','Lag (2021:1014).'],
  'BrB:22:6b':['Första stycket gäller endast minor','Sådan befattning med minor som är tillåten','Lag (2021:1014).']
 };
