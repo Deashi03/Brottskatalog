@@ -278,9 +278,9 @@ Arbetet har gått över från att skapa strukturerade checklistor till att kontr
 
 I brottskortet **Grovt sexuellt övergrepp mot barn (BrB 6:6)** följde tidigare text om det begränsade ansvarsfrihetsundantaget i BrB 6:14 med från normalgraden när gärningsvägar kopierades. Det är missvisande, eftersom undantaget i 6:14 i detta fall uttryckligen gäller 6:6 andra stycket (mindre grovt brott), inte tredje styckets grova grad. Rekvisitgrupperna för den grova graden filtrerar nu bort den delen. En regression i scripts/rekvisit_sista_15_test.mjs skyddar skillnaden.
 
-### Fem individuellt kontrollerade fullständiga paragrafer
+### Nio individuellt kontrollerade fullständiga paragrafer
 
-Ny modul **brb-curated-lawtext-15.js** har hela den nuvarande lydelsen av BrB 6:7, 21:7, 21:15, 22:6 a och 22:6 b, jämförda med [Riksdagens brottsbalk](https://www.riksdagen.se/sv/dokument-och-lagar/dokument/svensk-forfattningssamling/brottsbalk-1962700_sfs-1962-700/) den 17 oktober 2026. Åtta tillhörande grundbrottskort får fullständig aktuell paragraftext. BrB 21:15 är en hänvisnings-/förstadiebestämmelse och har ingen egen brottsrubricering i grundkatalogen.
+Ny modul **brb-curated-lawtext-15.js** har hela den nuvarande lydelsen av BrB 3:1, 3:2, 4:5, 6:7, 17:2, 21:7, 21:15, 22:6 a och 22:6 b, jämförda med [Riksdagens brottsbalk](https://www.riksdagen.se/sv/dokument-och-lagar/dokument/svensk-forfattningssamling/brottsbalk-1962700_sfs-1962-700/) den 17 oktober 2026. Fjorton tillhörande grundbrottskort får fullständig aktuell paragraftext. Antalet BrB-kort med individuellt verifierad fullständig aktuell paragraftext är därmed **52 av 319**; 267 saknar ännu sådan verifiering. BrB 21:15 är en hänvisnings-/förstadiebestämmelse och har ingen egen brottsrubricering i grundkatalogen.
 
 **Kontrollens omfattning är snäv:** detta intygar paragraftextens nuvarande lydelse, inte att straffskalor, rättspraxis, alla rekvisit, historisk giltighet, åtalsvillkor, straffbara förstadier eller tvångsmedel har juridiskt slutgranskats. Ingen legalReviewApproved sätts till true.
 
@@ -295,3 +295,6 @@ Skriptet **scripts/v15_release_readiness.mjs** har nu en särskild **legalAuditQ
 Prioritera individuellt granskade vålds-, frids-, egendoms- och polisrelaterade brott, med varje gärningsform, undantag och skuldform. Kontrollera de 12 osäkra förstadierna separat, inklusive lagstöd i 13:12 och 21:15; **gissa inte** att grova grader är straffria eller straffbara enbart utifrån rubrik. Kontrollera gällande lagversion och aktuella straffskalor innan någon juridisk granskningsstatus höjs.
 
 **Publiceringsbeslut oförändrat:** PR #2 draft, V1.4 publicerad, ingen merge.
+
+
+**Utökad kontrollomgång 17 oktober:** Mord (BrB 3:1), dråp (3:2), olaga hot inklusive grov grad (4:5), samt angrepp mot tjänsteman inklusive grov grad (17:2) har också fått full paragraftext kontrollerad mot aktuell officiell SFS. Regressionen kräver numera nio helt kontrollerade paragrafer, 14 kopplade brottskort och uttrycklig frånvaro av juridisk slutcertifiering. [Riksdagens aktuella BrB](https://www.riksdagen.se/sv/dokument-och-lagar/dokument/svensk-forfattningssamling/brottsbalk-1962700_sfs-1962-700/). Gällande straffskala, praxis och tvångsmedel granskas fortfarande separat.
