@@ -373,3 +373,32 @@ Den separata publiceringsgrinden har därmed minskat grundposterna med kvarståe
 - **Juridisk release-spärr `releaseReady:false` kvarstår.** V1.5 PR #2 är fortfarande draft och main/V1.4 oförändrat.
 
 CI med fulla regressioner samt iPhone UI: [Godkänd Actions-run 39060683010](https://github.com/Deashi03/Brottskatalog/actions/runs/39060683010).
+
+---
+
+## BrB 1:6 – tillfälligt åldersundantag vid 14 år, källkontrollerat 17 oktober 2026
+
+### Aktuellt rättsläge och lagversion
+
+Källa: [Brottsbalk (1962:700), 1 kap. 6 §, Sveriges riksdag](https://www.riksdagen.se/sv/dokument-och-lagar/dokument/svensk-forfattningssamling/brottsbalk-1962700_sfs-1962-700/), [SFS 2026:1528](https://svenskforfattningssamling.se/), [SFS 2026:1555](https://svenskforfattningssamling.se/).
+
+- För gärningar före **10 september 2026** gäller inte det nya undantaget; brott som begåtts före 15 års ålder kunde då inte föranleda påföljd.
+- För gärningar begångna **10 september 2026–9 september 2031** kan en person som **var 14 år när brottet begicks** dömas till påföljd endast om det för fullbordat brott inte är föreskrivet lindrigare straff än fyra års fängelse, eller om gärningen är **straffbart försök, förberedelse eller stämpling** till ett sådant brott. 14-åringens ålder vid domstolsprövningen är inte avgörande för vilken åldersbestämmelse som tillämpas.
+- Från **10 september 2031** återkommer den generella 15-årsregeln genom SFS 2026:1555; dess övergångsbestämmelse fortsätter tillämpa den äldre lydelsen på gärningar begångna före ikraftträdandet.
+- Om förstadiet omfattas av regeln ska fyrårsgränsen prövas mot **det fullbordade grundbrottets straffminimum**, inte mot ett generellt lägre försöks-/förberedelsestraff. Förstadiet måste dessutom **vara särskilt kriminaliserat** i lag. Ett godkänt fyrårsminimum ger varken automatiskt straffansvar, påföljdsbestämning eller rätt till tvångsmedel.
+
+### Genomfört i programmet
+
+Modulen `age14-offence-scope-15.js` laddas **efter** `stages-08.js` och `stage-scope-15.js` för att aldrig åsidosätta deras särskilda förstadiekontroller. Den kompletterar alla **1 470 brottskort och förstadiekort** med tidsbestämd och källanknuten metadata. `BrB:1:6` har dessutom en sökbar lokal lagtextpost med de tidsbestämda lagversionerna.
+
+Regeln visas först i en **frivilligt expanderbar panel nära slutet av brottskortet**, efter relaterade brott och före rättskällor, så att den inte stör brottsrubricering, straffskala, lagtext eller tvångsmedelsöversikten.
+
+För kategorisering gäller säkerhetsordningen: ej slutligt klarlagt förstadie – ej självständigt straffbelagt förstadie – villkorat krigs-/straffskaleläge – ej självständigt verifierad straffskala – fyrårströskel uppfylld/inte uppfylld. Därmed kan **inga** av de 12 osäkra förstadierna få automatisk straffbarhetsmarkering genom åldersundantaget.
+
+I senaste testresultatet fanns **86 grund- och förstadiekort med en lagrad grundbrottsstraffskala på minst fyra år**. **82 av dessa** kräver ytterligare självständig granskning av straffskala, förstadiekriminalisering eller övriga tillämplighetsvillkor. Fyra av kandidaterna fick en individuellt kontrollerad fyrårströskel utan något påstående om full juridisk prövning. Detta är inte 86 brott som automatiskt kan leda till påföljd mot en 14-åring.
+
+### Tester och publiceringsspärr
+
+`scripts/age14_offence_scope_15_test.mjs` testar bland annat **3,99 års kontra 4 års** lagstadgat straffminimum, användning av huvudbrottets minimum i förstadier, ej kriminaliserade och osäkra förstadier, särskilt villkorade brott och att tvångsmedel aldrig automatiskt godkänns. Revisionsgrinden `scripts/v15_release_readiness.mjs` listar individuella ålderskandidater, förbehåll och saknade kontroller samt stoppar utkastet om någon post saknar åldersmetadata.
+
+**Alla 319 BrB-poster är fortsatt endast strukturerade, 0 har fullständigt juridiskt slutgodkännande; 257 saknar verifierad fullständig lagtext, 283 grundposter och 12 särskilt villkorade straffskalesituationer återstår, och 12 förstadier är ännu osäkra. V1.5 publiceras inte.**
