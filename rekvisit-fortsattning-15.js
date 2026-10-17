@@ -11,6 +11,38 @@ const O=(label,...options)=>({mode:'any',label,options});
 const R=(label,...groups)=>({label,groups});
 const by=title=>D.crimes.find(c=>!c.stageType&&String(c.title||'').toLocaleLowerCase('sv')===title.toLocaleLowerCase('sv'));
 const direct=[
+ ['Olovligt ingående av äktenskap','7:1',[
+  R('Registrerad partner ingår äktenskap',
+   A('Gärningspersonen är fortfarande part i ett registrerat partnerskap.'),
+   A('Gärningspersonen ingår äktenskap trots det registrerade partnerskapet.'),
+   A('Gärningen är uppsåtlig. Detta är en annan gärningsform än tvegifte i första stycket, som avser att någon redan är gift.'))]],
+ ['Egenmäktighet med barn','7:4',[
+  R('Utomstående skiljer barnet från vårdnadshavare',
+   A('Barnet är under 15 år.'),
+   A('Gärningspersonen skiljer obehörigen barnet från någon som har vårdnaden.'),
+   A('Gärningen omfattas inte i stället av ett brott mot frihet enligt BrB 4 kap.'),
+   A('Gärningspersonen handlar uppsåtligen.')),
+  R('Gemensam vårdnad – skiljer från den andra vårdnadshavaren',
+   A('Barnet är under 15 år och gärningspersonen har gemensam vårdnad med någon annan.'),
+   A('Barnet skiljs egenmäktigt från den andra vårdnadshavaren utan beaktansvärt skäl.'),
+   A('Gärningspersonen handlar uppsåtligen.')),
+  R('Tillkommande vårdnadshavare tar sig rätt',
+   A('Barnet är under 15 år och gärningspersonen ska ha vårdnaden.'),
+   A('Personen bemäktigar sig obehörigen barnet och tar därigenom själv sin rätt.'),
+   A('Gärningspersonen handlar uppsåtligen.')),
+  R('Barn som vårdas enligt LVU – olovligt bortförande',
+   A('Barnet är under 15 år och vårdas med stöd av lagen (1990:52) med särskilda bestämmelser om vård av unga (LVU).'),
+   A('Barnet skiljs obehörigen från den som vårdar barnet.'),
+   A('Gärningen utgör inte i stället brott mot frihet eller främjande av flykt. Uppsåt krävs.')),
+  R('Hindrande av påbörjande av LVU-vård',
+   A('Barnet är under 15 år.'),
+   O('Gärningen består av:', 'Bortförande','Annat undanhållande'),
+   A('Åtgärden är ägnad att hindra att vård enligt lagen (1990:52) med särskilda bestämmelser om vård av unga påbörjas.'),
+   A('Gärningen utgör inte brott mot frihet; uppsåt krävs.')),
+  R('Tidsgräns för den särskilda LVU-hänvisningen',
+   A('Vid gärning före 1 januari 2027 avser BrB 7:4 andra stycket lagen (1990:52).'),
+   A('Från 1 januari 2027 ersätts hänvisningen av lagen (2026:1600) om omhändertagande för vård av barn och unga (SFS 2026:1604).'),
+   A('Detta är en lagversionsupplysning och INTE ett ytterligare självständigt gärningsalternativ. Åtalsvillkoret enligt BrB 7:6 gäller även grov grad.'))]],
  ['Vårdslös finansiering av mutbrott','10:5e',[
   R('Grov oaktsamhet vid tillhandahållande av tillgångar',
    A('Gärningspersonen är näringsidkare och tillhandahåller pengar eller andra tillgångar.'),
@@ -80,6 +112,10 @@ const direct=[
 ];
 const grades=[
  // BrB 10:5 c – alternative primary conduct must be kept separate.
+ ['Grov egenmäktighet med barn','7:4','Egenmäktighet med barn',
+  'Brottet måste efter en samlad prövning vara grovt. Brottets grundrekvisit och de särskilda formerna av obehörigt skiljande/bortförande kvarstår. Inget enskilt lagstadgat grovhetskriterium är automatiskt utslagsgivande. BrB 7:6 begränsar åtalsrätten.'],
+ ['Grovt missbruk av offentlig ställning','20:2','Missbruk av offentlig ställning',
+  'Efter en samlad bedömning grovt brott; särskilt beakta missbruk av särskilt ansvarsfull ställning eller särskilt viktig verksamhet, betydande förmån eller vinning, avsevärd skada, organiserad/systematisk brottslighet eller annan särskilt farlig art. Samtliga grundrekvisit i BrB 20:2 måste vara uppfyllda och gärningen får inte i stället omfattas av BrB 20:1.'],
  ['Grovt tagande av muta','10:5c','Tagande av muta',
   'Helhetsbedömning som grovt brott. Särskilt beakta missbruk av särskilt ansvarsfull ställning, betydande värde, systematik/större omfattning eller särskilt farlig art.'],
  ['Grovt givande av muta','10:5c','Givande av muta',
