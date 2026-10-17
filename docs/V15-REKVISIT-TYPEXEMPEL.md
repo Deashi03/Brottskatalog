@@ -453,3 +453,35 @@ Separat **BrB 17:3 förolämpning mot tjänsteman** är en annan rubricering och
 **Ingen av de 43 straffskalekontrollerna, de tre åtalskontrollerna eller de 54 fulltextsgranskningarna höjer `legalReviewApproved`: alltjämt 0/319. De 12 juridiskt öppna grova förstadierna förblir `unverified`; ingen automatisk tvångsmedelsbehörighet.**
 
 **Senast helt godkänd GitHub Actions inklusive iPhone:** [39064400496](https://github.com/Deashi03/Brottskatalog/actions/runs/39064400496). **PR #2 förblir DRAFT. Ingen merge och ingen V1.5-publicering.**
+
+---
+
+## BrB 10 kap. – förskingring, trolöshet, mutbrott och särskilda åtalsvillkor – 17 oktober 2026
+
+Källa: [gällande konsoliderad Brottsbalk, BrB 10:1–10 och 20:5 (SFS 1962:700, t.o.m. ändring SFS 2026:1656)](https://www.riksdagen.se/sv/dokument-och-lagar/dokument/svensk-forfattningssamling/brottsbalk-1962700_sfs-1962-700/).
+
+### Tretton ytterligare komplett kontrollerade paragrafer
+
+`brb-curated-lawtext-15.js` har ökat från 54 till **67** kontrollerade paragrafer genom följande bestämmelser:
+
+- **BrB 10:1–3**: förskingring, ringa förskingring och grov förskingring. Skillnaden mot stöld och trolöshet omfattar egendom som redan anförtrotts gärningspersonen i annans intresse med utgivande-/redovisningsskyldighet, samt vinning/skada.
+- **BrB 10:4**: olovligt förfogande och grov grad. Underlaget beaktar särskild ägande- eller säkerhetsrätt i besittad egendom och subsidiariteten till 10:1–3.
+- **BrB 10:5**: trolöshet mot huvudman och grov grad. Omfattar inte bara ekonomiska angelägenheter utan även självständigt hanterade kvalificerade tekniska uppgifter samt rättsliga angelägenheter i tredje stycket. Lagtexten skiljer krav på skada/förfång och är subsidiär till förskingring enligt 10:1–3. **Inga påhittade typfall för komplicerade gränsdragningar.**
+- **BrB 10:5 a–e**: tagande och givande av muta, grova grader, handel med inflytande och vårdslös finansiering av mutbrott. Inkluderar alla alternativa gärningsformer, skyldighetens anknytning till anställning/uppdrag och särskilda fall av grov oaktsamhet.
+- **BrB 10:9**: särskild förstadiekriminalisering, inklusive att försök till förskingring/trolöshet har annat lagstöd än försök, förberedelse och stämpling till deras grova grader, samt förberedelse till grovt givande av muta.
+- **BrB 10:10**: begränsningar av åklagarens åtalsrätt, närståendebrott, vissa hyres-/kreditköpsfall och flera mutbrott. Vissa brott kräver allmän synpunkt eller särskilda skäl.
+- **BrB 20:5**: särskilda regler om åklagares åtalsrätt för offentliga anställda, uppdragstagare och myndighetsutövare. Bestämmelsen kan undanröja begränsningen i BrB 10:10 för vissa fall, men har själv uttryckliga undantag.
+
+Lagtextkontrollen omfattar nu **67 hela paragrafer**, **95/319 BrB-brottskort (29,8 %) med dokumenterat verifierad komplett paragraftext**, och **83 direkt kontrollerade kort** i den kuraterade serien. **224** BrB-kort återstår utan motsvarande dokumenterad fulltextkontroll. Alla rekvisitstrukturer (319/319) är fortfarande endast lagtextbaserat stöd, **0/319 är fullständigt juridiskt slutgodkända**.
+
+### Rättad individuell åtalsbedömning för mutbrott
+
+Ny separat modul `brb10-prosecution-review-15.js` och regression `scripts/brb10_prosecution_15_test.mjs` hanterar **tagande av muta, givande av muta, handel med inflytande och vårdslös finansiering av mutbrott**. Dessa är inte ovillkorligt under allmänt åtal. Enligt **BrB 10:10 tredje stycket** krävs normalt att åtal är motiverat från allmän synpunkt. Kontroll av **BrB 20:5** kan ändra resultatet för vissa offentligt anställda eller andra skyddade yrkes-/uppdragskategorier om gärningen är knuten till tjänsteutövningen. Den enskilda personens tjänsteställning måste alltid prövas; annan lag och särskilt åtalsförordnande kan vara relevant.
+
+Regeln **är inte generaliserad från vanliga till grova mutbrott enligt 10:5 c utan individuell kontroll**. Om lagtextens källstatus eller brottsreferensen inte stämmer, avstår modulen från att märka posten som individuellt källkontrollerad. Inga ändringar görs i åtalstillståndet för de 12 fortsatt osäkra förstadierna.
+
+### 13 extra individuellt kontrollerade straffskalor
+
+`brb-penalty-grade-audit-15.js` har utökats med **13** gradsspecifika kontroller av minimistraff, maximistraff, bötesmöjlighet och livstid enligt 10 kap. Det ger **56 individuellt källjämförda brottsgradsskalor** i katalogen. Kontrollen korrigerar inte tyst felaktiga uppgifter utan håller tillbaka godkännande vid konflikt. Återstående individuell granskning av grundbrottsstraffskalor: **252** (tidigare 265), samt **12** villkorade skalor i separat kö.
+
+**Juridisk release-spärr kvarstår: 0/319 fullständigt godkända brott, 224 ej fulltextverifierade BrB-kort, 252 öppna normala och 12 villkorade straffskalegranskningar, 12 osäkra förstadier. Ingen automatisk slutsats om straffansvar, åtalsmöjlighet eller tvångsmedel. PR #2 förblir draft.**
