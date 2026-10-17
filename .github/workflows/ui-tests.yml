@@ -49,6 +49,8 @@ on:
       - "rekvisit-krig-15.js"
       - "rekvisit-sista-15.js"
       - "brb-curated-lawtext-15.js"
+      - "brb4-child-stalking-requisites-15.js"
+      - "scripts/brb4_child_stalking_requisites_15_test.mjs"
       - "brb5-prosecution-review-15.js"
       - "brb10-prosecution-review-15.js"
       - "brb8-near-relative-prosecution-15.js"
@@ -171,6 +173,8 @@ on:
       - "rekvisit-krig-15.js"
       - "rekvisit-sista-15.js"
       - "brb-curated-lawtext-15.js"
+      - "brb4-child-stalking-requisites-15.js"
+      - "scripts/brb4_child_stalking_requisites_15_test.mjs"
       - "brb5-prosecution-review-15.js"
       - "brb10-prosecution-review-15.js"
       - "brb8-near-relative-prosecution-15.js"
@@ -313,6 +317,8 @@ jobs:
         run: node scripts/rekvisit_sista_15_test.mjs
       - name: V1.5 five individually verified current BrB statutory paragraphs
         run: node scripts/brb_curated_lawtext_15_test.mjs
+      - name: V1.5 source-checked current child-witness and stalking requisite alternatives
+        run: node scripts/brb4_child_stalking_requisites_15_test.mjs
       - name: V1.5 Chapter 5 private prosecution and underage/public-interest exceptions
         run: node scripts/brb5_prosecution_15_test.mjs
       - name: V1.5 bribery prosecutorial rules and BrB 20:5 public-service exceptions
