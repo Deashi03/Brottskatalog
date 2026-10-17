@@ -576,3 +576,44 @@ Ny modul `brb11-prosecution-review-15.js`, offline i service worker, med särski
 | `releaseReady` | **false** |
 
 **Senaste godkända GitHub Actions:** [39072087909](https://github.com/Deashi03/Brottskatalog/actions/runs/39072087909). Alla regressionskontroller och iPhone-smoke passerade efter källradbrytningsjustering. PR #2 är fortfarande **draft**. **Ingen merge/deploy; V1.4 kvarstår på main och GitHub Pages.**
+
+---
+
+## BrB 12 kap.: åverkan, olovlig väg, förstadier och åtalsvillkor – 17 oktober 2026
+
+Källa: [Brottsbalken (1962:700), 12 kap. 2 a och 4–6 §§, Riksdagens aktuella författningstext (t.o.m. SFS 2026:1656)](https://www.riksdagen.se/sv/dokument-och-lagar/dokument/svensk-forfattningssamling/brottsbalk-1962700_sfs-1962-700/).
+
+### Fyra källjämförda kompletta lagparagrafer
+
+**BrB 12:2 a (åverkan):** Ringa olovligt tillgrepp av vissa obearbetade naturprodukter i skog eller mark (t.ex. träd, grus, torv och vissa växtdelar), med straffskalan **enbart böter**. Straffbestämmelsen måste särskiljas från stöldreglerna och 8:11:s hänvisning.
+
+**BrB 12:4 (tagande av olovlig väg):** Olovlig färd på annat än väg över tomt, plantering eller annan mark som kan skadas. Straffskala **böter eller fängelse i högst sex månader**.
+
+**BrB 12:5:** Särskilt och uttömmande uppräknat lagstöd för försök/förberedelse till grov skadegörelse och försök till skadegörelse samt underlåtenhet att avslöja eller förhindra grov skadegörelse. Det skapar inte automatiskt straffbarhet för alla andra grader eller förstadier.
+
+**BrB 12:6:** Särskild åtalsbegränsning för **ringa skadegörelse, åverkan och tagande av olovlig väg, om brottet endast kränker enskilds rätt**. I detta fall får åklagaren väcka åtal bara när **särskilda skäl gör åtal motiverat från allmän synpunkt**. Det är ett villkorat undantag, inte ett generellt åtalshinder för dessa brott när ett allmänt intresse också kränks.
+
+De fyra paragraferna kompletterar de sedan tidigare källgranskade 12:1–3. De tillförs via `brb-curated-lawtext-15.js`; brottskortens egen text ersätts med fullständig källtext där lagrum och inledande text överensstämmer.
+
+### Separata operativa kontroller
+
+- Ny modul `brb12-prosecution-review-15.js` sätter villkorad åtalsstatus och begripligt förbehåll på just **ringa skadegörelse, åverkan och tagande av olovlig väg**. Gäller bara om gärningen enbart kränker enskilds rätt; åklagarens sakliga prövning kvarstår. Ingen generalisering till skadegörelse av normalgraden eller grov skadegörelse.
+- Ny regression `scripts/brb12_prosecution_15_test.mjs` testar de tre rubriceringarnas källreferenser, avtals-/rättsgränsen, otillräcklig rättskälla som *hold*, gränsen mot andra skadegörelsebrott och att inga osäkra förstadier får statusförändring.
+- **Två ytterligare individuellt jämförda straffskalor**, åverkan och tagande av olovlig väg, har lagts till i `brb-penalty-grade-audit-15.js` med explicit hänvisning till särskild åtalsregel. Felaktiga intervall skulle inte få granskningsgodkännande.
+
+### Ny strikt revisionsstatus
+
+| Kontrolldimension | Resultat |
+|---|---:|
+| Aktuella fullständiga lagparagrafer i den särskilda serien | **97** |
+| BrB-brottskort med verifierad komplett aktuell lagtext | **130 / 319** |
+| Därav direkt individuellt paragrafgranskade | **118** |
+| BrB-kort utan dokumenterat verifierad komplett lagtext | **189** |
+| BrB-grundposter med strukturerade, ännu ej slutcertifierade rekvisit | 319 / 319 |
+| Individuellt källjämförda straffskalor (ny serie) | **86** |
+| Grundposter som fortfarande kräver individuell straffskalegranskning | **225** |
+| Särskilt villkorade straffskalesituationer som väntar på individuell prövning | 12 |
+| Ännu inte slutligt granskade förstadier | 12 |
+| Individuellt fullständigt juridiskt godkända BrB-brott | **0 / 319** |
+
+Regressionstesterna för lagtext, åtalsvillkor och straffskalor passerade i [GitHub Actions-körning 39072646403](https://github.com/Deashi03/Brottskatalog/actions/runs/39072646403); samma arbetsflöde omfattar iPhone-UI-smoke. **V1.5 förblir opublicerad draft. `releaseReady:false` är avsiktligt.**
