@@ -15,7 +15,7 @@ const W=ctx.window.BK_STATUTES;
 const base=ctx.window.BK_DATA.crimes.filter(c=>!c.stageType);
 const stats=ctx.window.BK_CURATED_LAWTEXT15;
 assert.ok(stats,'Curated lawtext report missing');
-assert.equal(stats.sectionsChecked,109,'Exactly one-hundred-nine complete paragraphs must have been checked: '+JSON.stringify({missing:stats.missing,mismatch:stats.mismatch,sourceHeads:stats.mismatch.map(k=>({ref:k,text:W[k]?.text?.slice(0,110)}))}));
+assert.equal(stats.sectionsChecked,115,'Exactly one-hundred-fifteen complete paragraphs must have been checked: '+JSON.stringify({missing:stats.missing,mismatch:stats.mismatch,sourceHeads:stats.mismatch.map(k=>({ref:k,text:W[k]?.text?.slice(0,110)}))}));
 assert.equal(stats.missing.length,0,JSON.stringify(stats.missing));
 assert.equal(stats.mismatch.length,0,JSON.stringify(stats.mismatch));
 const addedCards=base.filter(c=>['BrB:13:5c','BrB:17:10'].includes(c.statute));
@@ -60,11 +60,20 @@ const extra12Cards=base.filter(c=>extra12Keys.includes(c.statute));
 assert.ok(extra12Cards.some(c=>c.statute==='BrB:12:2a'),'Åverkan card missing');
 assert.ok(extra12Cards.some(c=>c.statute==='BrB:12:4'),'Tagande av olovlig väg card missing');
 const ch4Keys=['BrB:4:2','BrB:4:6a','BrB:4:6b','BrB:4:6c','BrB:4:6d','BrB:4:8','BrB:4:9','BrB:4:9a','BrB:4:9b','BrB:4:9c','BrB:4:10','BrB:4:11'];
+const freedomKeys=['BrB:4:1','BrB:4:1a','BrB:4:1b','BrB:4:4','BrB:4:7a','BrB:4:7b'];
+const freedomCards=base.filter(c=>freedomKeys.includes(c.statute));
+for(const key of freedomKeys)assert.ok(freedomCards.some(c=>c.statute===key),'Missing freedom/psychological offence card for '+key);
 const ch4Cards=base.filter(c=>ch4Keys.includes(c.statute));
 for(const key of ch4Keys.filter(k=>!['BrB:4:10','BrB:4:11'].includes(k)))assert.ok(ch4Cards.some(c=>c.statute===key),'Missing verified Ch4 crime card: '+key);
-assert.equal(stats.linkedCardsChecked,21+addedCards.length+propertyCards.length+officeCards.length+negligenceCards.length+newCards.length+economicCards.length+theftFraudCards.length+creditorCards.length+extra12Cards.length+ch4Cards.length,
- 'All 109 current SFS paragraphs must cover their actual offence card counts');
+assert.equal(stats.linkedCardsChecked,21+addedCards.length+propertyCards.length+officeCards.length+negligenceCards.length+newCards.length+economicCards.length+theftFraudCards.length+creditorCards.length+extra12Cards.length+ch4Cards.length+freedomCards.length,
+ 'All 115 current SFS paragraphs must cover their actual offence card counts');
 const markers={
+ 'BrB:4:1':['bemäktigar sig och för bort eller spärrar in','människorov','på livstid','mindre grovt','Lag (2009:396).'],
+ 'BrB:4:1a':['allvarligt begränsar personens alternativ','inte har fyllt arton år','oaktsam beträffande','mindre grovt','Lag (2018:601).'],
+ 'BrB:4:1b':['arbete under uppenbart orimliga villkor','inte har fyllt arton år','grov människoexploatering','Lag (2018:601).'],
+ 'BrB:4:4':['hot att åtala eller ange någon annan för brott','om tvånget är otillbörligt','grovt olaga tvång','Lag (2023:257).'],
+ 'BrB:4:7a':['inte obetydlig fara','oaktsam uppmaning till självmord','mindre allvarlig','Lag (2021:225).'],
+ 'BrB:4:7b':['otillbörlig övervakning','ägnade att allvarligt skada personens självkänsla','är varaktig','Lag (2026:852).'],
  'BrB:4:2':['olaga frihetsberövande','mindre grovt','Lag (2002:436).'],
  'BrB:4:6a':['i hemlighet tar upp bild','med hänsyn till syftet','led i en myndighets verksamhet','Lag (2013:366).'],
  'BrB:4:6b':['olovligen använda en annan persons identitetsuppgifter','skada eller olägenhet','Lag (2016:485).'],
@@ -195,9 +204,9 @@ assert.equal(b.length,319);
 const directCrosschecks=b.filter(c=>c.lawCompletenessVerified===true&&
  c.lawCompletenessReviewScope==='current-paragraph-only'&&
  c.lawCompletenessSourceURL?.includes('riksdagen.se'));
-assert.equal(directCrosschecks.length,21+addedCards.length+propertyCards.length+officeCards.length+negligenceCards.length+newCards.length+economicCards.length+theftFraudCards.length+creditorCards.length+extra12Cards.length+ch4Cards.length,
+assert.equal(directCrosschecks.length,21+addedCards.length+propertyCards.length+officeCards.length+negligenceCards.length+newCards.length+economicCards.length+theftFraudCards.length+creditorCards.length+extra12Cards.length+ch4Cards.length+freedomCards.length,
  'All current SFS offence cards must carry narrow dated paragraph-crosscheck provenance');
 assert.ok(!base.some(c=>c.statute==='BrB:13:12'),'13:12 is a stage authorization source, not a standalone completed crime');
 assert.ok(b.some(c=>c.lawMode==='full'&&!c.lawCompletenessVerified),
  'Embedded full text without documented review must remain distinguishable');
-console.log('PASS V1.5: one-hundred-nine complete current SFS paragraphs verified, without legal signoff');
+console.log('PASS V1.5: one-hundred-fifteen complete current SFS paragraphs verified, without legal signoff');
