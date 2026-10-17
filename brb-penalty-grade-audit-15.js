@@ -1,4 +1,4 @@
-/* V1.5: explicit individual-range checks of 130 common BrB grades.
+/* V1.5: explicit individual-range checks of 145 common BrB grades.
  * The controlling CURRENT complete SFS paragraphs are curated in
  * brb-curated-lawtext-15.js. Full legal/penalty applicability is NOT approved.
  * Date-dependent, inchoate and coercive rules remain separate work.
@@ -25,6 +25,21 @@ const rows=[
  ['Förtal','5:1',0,0,true,false,'Böter enligt 5:1. Försvarlighet och sann/skälig uppgift måste prövas separat; enskilt åtal enligt 5:5 huvudregel.'],
  ['Grovt förtal','5:2',0,2,true,false,'Även grovt förtal kan ge böter. Spridningsomfattning och skada samt villkoren i 5:5 prövas särskilt.'],
  ['Förolämpning','5:3',0,0.5,true,false,'Särskilt åtalsfilter i 5:5. Förväxla inte 5:3 med förolämpning mot tjänsteman enligt 17:3.'],
+ ['Hindrande av urkunds bevisfunktion','14:4',0,2,false,false,'Förstör, gör obrukbar eller döljer en urkund utan rätt, fara i bevishänseende, men brottet får inte i stället vara bokföringsbrott.'],
+ ['Ringa hindrande av urkunds bevisfunktion','14:4',0,0.5,true,false,'Ringa grad i samma paragraf; krav på olovlig åtgärd och bevisfara kvarstår.'],
+ ['Grovt hindrande av urkunds bevisfunktion','14:4',0.5,4,false,false,'Grovt brott enligt 14:4; förväxla inte med bevisförvanskning som kräver uppsåt att oskyldig fälls.'],
+ ['Signaturförfalskning','14:5',0,2,false,false,'Förfalskar annans signatur på konst/brukskonst eller liknande, och ger sken av annans upphovsmannaskap.'],
+ ['Ringa signaturförfalskning','14:5',0,0.5,true,false,'Ringa grad av falskt påstått upphovsmannaskap, med bibehållna grundrekvisit.'],
+ ['Grov signaturförfalskning','14:5',0.5,4,false,false,'Individuellt grovhetsomdöme enligt 14:5; samma grundrekvisit.'],
+ ['Penningförfalskning','14:6',0,4,false,false,'Avser gällande sedlar/mynt i eller utanför Sverige och sådan beslutad ännu ej utgiven valuta.'],
+ ['Ringa penningförfalskning','14:6',0,0.5,true,false,'Ringa grad; grundrekvisit avseende förfalskade sedlar/mynt kvarstår.'],
+ ['Grov penningförfalskning','14:6',2,8,false,false,'Grov grad med föreskrivet minimum två år; särskild gradbedömning.'],
+ ['Olovlig befattning med falska pengar','14:7',0,2,false,false,'Kräver befattning med falsk sedel/mynt och särskilt uppsåt att förfalskningen ska prånglas ut.'],
+ ['Ringa olovlig befattning med falska pengar','14:7',0,0.5,true,false,'Ringa grad; bevisning om avsikten att prångla ut krävs.'],
+ ['Grov olovlig befattning med falska pengar','14:7',0.5,6,false,false,'Grov grad enligt 14:7; särskilt utspridningsuppsåt fortsatt ett krav.'],
+ ['Förfalskning av fast märke','14:9',0,4,false,false,'Falskt/anbringat/flyttat/skadat fast märke avseende plan-/höjdmätning med fara i bevishänseende.'],
+ ['Ringa förfalskning av fast märke','14:9',0,0.5,true,false,'Ringa grad enligt 14:9, fortfarande krav på fara i bevishänseende.'],
+ ['Olaga spridande av efterbildning','14:11',0,0,true,false,'Böter enbart: allmän spridning av sedel-/mynt-/värdemärkesefterbildning som inte är brukande av det förfalskade enligt 14:10.'],
  ['Urkundsförfalskning','14:1',0,2,false,false,'Krav på urkund och fara i bevishänseende; separera elektroniska handlingar och originalkaraktär.'],
  ['Förvanskning av urkund','14:2',0,0.5,true,false,'Ringa form av urkundsförfalskning; observera den särskilda lindringsgrunden i lagtexten.'],
  ['Grov urkundsförfalskning','14:3',1,6,false,false,'2026 års straffminimum; särskilt betydelsefull urkund eller farlig gärning ger grovhetsindikatorer.'],
