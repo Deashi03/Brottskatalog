@@ -49,6 +49,8 @@ on:
       - "rekvisit-krig-15.js"
       - "rekvisit-sista-15.js"
       - "brb-curated-lawtext-15.js"
+      - "brb5-prosecution-review-15.js"
+      - "scripts/brb5_prosecution_15_test.mjs"
       - "brb-penalty-grade-audit-15.js"
       - "scripts/brb_penalty_grade_audit_15_test.mjs"
       - "praxis-vapenbilden-15.js"
@@ -159,6 +161,8 @@ on:
       - "rekvisit-krig-15.js"
       - "rekvisit-sista-15.js"
       - "brb-curated-lawtext-15.js"
+      - "brb5-prosecution-review-15.js"
+      - "scripts/brb5_prosecution_15_test.mjs"
       - "brb-penalty-grade-audit-15.js"
       - "scripts/brb_penalty_grade_audit_15_test.mjs"
       - "praxis-vapenbilden-15.js"
@@ -289,6 +293,8 @@ jobs:
         run: node scripts/rekvisit_sista_15_test.mjs
       - name: V1.5 five individually verified current BrB statutory paragraphs
         run: node scripts/brb_curated_lawtext_15_test.mjs
+      - name: V1.5 Chapter 5 private prosecution and underage/public-interest exceptions
+        run: node scripts/brb5_prosecution_15_test.mjs
       - name: V1.5 25 individual current-grade penalty range comparisons
         run: node scripts/brb_penalty_grade_audit_15_test.mjs
       - name: V1.5 documented HD Vapenbilden example and police-statutory correction
