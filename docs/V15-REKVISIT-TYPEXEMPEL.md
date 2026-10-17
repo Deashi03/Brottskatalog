@@ -267,3 +267,31 @@ Den återstående arbetskön har kompletterats efter föregående lägesbild. **
 
 Rättskälla: [Brottsbalk (1962:700) hos Sveriges riksdag](https://www.riksdagen.se/sv/dokument-och-lagar/dokument/svensk-forfattningssamling/brottsbalk-1962700_sfs-1962-700/), ändrad t.o.m. SFS 2026:1656.
 
+
+---
+
+## Juridisk kvalitetssäkring efter 319/319 – 17 oktober 2026
+
+Arbetet har gått över från att skapa strukturerade checklistor till att kontrollera deras juridiska hållbarhet. **319/319 strukturerade rekvisit är inte liktydigt med 319 individuellt juridiskt granskade brott.**
+
+### Första sakliga korrigeringen
+
+I brottskortet **Grovt sexuellt övergrepp mot barn (BrB 6:6)** följde tidigare text om det begränsade ansvarsfrihetsundantaget i BrB 6:14 med från normalgraden när gärningsvägar kopierades. Det är missvisande, eftersom undantaget i 6:14 i detta fall uttryckligen gäller 6:6 andra stycket (mindre grovt brott), inte tredje styckets grova grad. Rekvisitgrupperna för den grova graden filtrerar nu bort den delen. En regression i scripts/rekvisit_sista_15_test.mjs skyddar skillnaden.
+
+### Fem individuellt kontrollerade fullständiga paragrafer
+
+Ny modul **brb-curated-lawtext-15.js** har hela den nuvarande lydelsen av BrB 6:7, 21:7, 21:15, 22:6 a och 22:6 b, jämförda med [Riksdagens brottsbalk](https://www.riksdagen.se/sv/dokument-och-lagar/dokument/svensk-forfattningssamling/brottsbalk-1962700_sfs-1962-700/) den 17 oktober 2026. Åtta tillhörande grundbrottskort får fullständig aktuell paragraftext. BrB 21:15 är en hänvisnings-/förstadiebestämmelse och har ingen egen brottsrubricering i grundkatalogen.
+
+**Kontrollens omfattning är snäv:** detta intygar paragraftextens nuvarande lydelse, inte att straffskalor, rättspraxis, alla rekvisit, historisk giltighet, åtalsvillkor, straffbara förstadier eller tvångsmedel har juridiskt slutgranskats. Ingen legalReviewApproved sätts till true.
+
+### Ny korrekt granskningskö
+
+Skriptet **scripts/v15_release_readiness.mjs** har nu en särskild **legalAuditQueue** där samtliga 319 icke slutgodkända BrB-brott ligger kvar efter att den tidigare strukturkön blivit tom. Köposterna visar vilka typer av granskning som kvarstår: lagtext, straffskala/villkor, rekvisit och rättspraxis. Polisiärt viktiga brott kommer först. Den tidigare reviewQueue behålls som historik över just saknade checklistor.
+
+**Straffskalegranskning – inklusive särskilt villkorade straffskalor – är nu en egen release-blockerare.** Ett grönt test som bara kontrollerar att appen fungerar får aldrig automatiskt släppa fram V1.5.
+
+### Nästa rättsliga granskningssteg
+
+Prioritera individuellt granskade vålds-, frids-, egendoms- och polisrelaterade brott, med varje gärningsform, undantag och skuldform. Kontrollera de 12 osäkra förstadierna separat, inklusive lagstöd i 13:12 och 21:15; **gissa inte** att grova grader är straffria eller straffbara enbart utifrån rubrik. Kontrollera gällande lagversion och aktuella straffskalor innan någon juridisk granskningsstatus höjs.
+
+**Publiceringsbeslut oförändrat:** PR #2 draft, V1.4 publicerad, ingen merge.
