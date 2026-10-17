@@ -62,9 +62,11 @@ for(const [title,key,groups,gradeNote] of specs){
  const c=D.crimes.find(c=>!c.stageType&&c.title===title);
  if(!c){report.missing.push(title);continue;}
  if(c.statute!==key||!valid(key)){report.held.push({title,ref:c.statute,reason:'source-review-or-reference-mismatch'});continue;}
+ const checklistGroups=groups.map(g=>({...g,options:g.options?[...g.options]:undefined}));
+ const isStalking=title==='Olaga förföljelse';
  c.rekvisit15={
-  groups:groups.map(g=>({...g,options:g.options?[...g.options]:undefined})),
-  routes:[],
+  groups:isStalking?[]:checklistGroups,
+  routes:isStalking?[{label:'Upprepad kränkning genom lagens särskilt uppräknade brott',groups:checklistGroups}]:[],
   source:'BrB '+key.slice(4),
   sourceURL:SRC,
   scope:'current-statutory-OCH-ELLER-2026-10-18',
