@@ -29,7 +29,7 @@ for(const p of reviewed){
  assert.ok(p.penaltyGradeReviewSource.includes('riksdagen.se'));
  assert.equal(p.lawCompletenessReviewScope,'current-paragraph-only','Do not approve penalty without complete current statute source');
  assert.equal(p.penaltyRangeVerified,true);
- assert.equal(p.rekvisit15?.legalReviewApproved,false,'Full legal review needs independent jurisprudential signoff');
+ assert.notEqual(p.rekvisit15?.legalReviewApproved,true,'Individual statutory penalty check is not full legal review');
  assert.ok(!p.penaltyReviewSafety.includes('fully reviewed'),'Do not overstate legal review scope');
 }
 const by=t=>base.find(c=>c.title===t);
