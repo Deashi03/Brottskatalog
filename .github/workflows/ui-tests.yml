@@ -52,6 +52,8 @@ on:
       - "brb5-prosecution-review-15.js"
       - "brb10-prosecution-review-15.js"
       - "brb8-near-relative-prosecution-15.js"
+      - "brb11-prosecution-review-15.js"
+      - "scripts/brb11_prosecution_15_test.mjs"
       - "scripts/brb8_near_relative_prosecution_15_test.mjs"
       - "scripts/brb10_prosecution_15_test.mjs"
       - "scripts/brb5_prosecution_15_test.mjs"
@@ -168,6 +170,8 @@ on:
       - "brb5-prosecution-review-15.js"
       - "brb10-prosecution-review-15.js"
       - "brb8-near-relative-prosecution-15.js"
+      - "brb11-prosecution-review-15.js"
+      - "scripts/brb11_prosecution_15_test.mjs"
       - "scripts/brb8_near_relative_prosecution_15_test.mjs"
       - "scripts/brb10_prosecution_15_test.mjs"
       - "scripts/brb5_prosecution_15_test.mjs"
@@ -307,6 +311,8 @@ jobs:
         run: node scripts/brb10_prosecution_15_test.mjs
       - name: V1.5 BrB 8:13 close-relative prosecution exceptions and stages safeguard
         run: node scripts/brb8_near_relative_prosecution_15_test.mjs
+      - name: V1.5 BrB 11:8 creditor negligence and ringa bookkeeping prosecution exceptions
+        run: node scripts/brb11_prosecution_15_test.mjs
       - name: V1.5 25 individual current-grade penalty range comparisons
         run: node scripts/brb_penalty_grade_audit_15_test.mjs
       - name: V1.5 documented HD Vapenbilden example and police-statutory correction
