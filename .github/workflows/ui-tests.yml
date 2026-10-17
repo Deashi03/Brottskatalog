@@ -44,6 +44,8 @@ on:
       - "rekvisit-ordning-15.js"
       - "rekvisit-hogmal-15.js"
       - "rekvisit-riket-15.js"
+      - "rekvisit-krig-15.js"
+      - "scripts/rekvisit_krig_15_test.mjs"
       - "scripts/rekvisit_riket_15_test.mjs"
       - "scripts/rekvisit_hogmal_15_test.mjs"
       - "scripts/rekvisit_ordning_15_test.mjs"
@@ -142,6 +144,8 @@ on:
       - "rekvisit-ordning-15.js"
       - "rekvisit-hogmal-15.js"
       - "rekvisit-riket-15.js"
+      - "rekvisit-krig-15.js"
+      - "scripts/rekvisit_krig_15_test.mjs"
       - "scripts/rekvisit_riket_15_test.mjs"
       - "scripts/rekvisit_hogmal_15_test.mjs"
       - "scripts/rekvisit_ordning_15_test.mjs"
@@ -257,6 +261,8 @@ jobs:
         run: node scripts/rekvisit_hogmal_15_test.mjs
       - name: V1.5 BrB 19 national security and foreign intelligence distinctions
         run: node scripts/rekvisit_riket_15_test.mjs
+      - name: V1.5 wartime BrB 21–22 applicability and convention exemptions
+        run: node scripts/rekvisit_krig_15_test.mjs
       - name: V1.5 intricate offence alternatives, minority and public-order requisites
         run: node scripts/rekvisit_fordjupning_15_test.mjs
       - name: V1.5 child/adult sex-offence distinctions and limited statutory exemptions
