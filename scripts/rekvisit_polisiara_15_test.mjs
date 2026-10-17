@@ -25,7 +25,7 @@ for(const title of ['Angrepp mot tjänsteman','Övergrepp i rättssak','Hälerif
  const c=get(title);assert.ok(c.rekvisit15.routes?.length>=2,'Statutory variants merged in '+title);
 }
 const violence=get('Våldsamt motstånd');
-assert.ok(violence.rekvisit15.groups.some(g=>g.label.includes('passivt motstånd')),'No blanket criminalization of passive resistance');
+assert.ok(violence.rekvisit15.groups.some(g=>g.label.includes('passiv vägran')),'No blanket criminalization of passive resistance');
 const resistance=violence.rekvisit15.groups.find(g=>g.mode==='any'&&g.options?.length===2);
 assert.ok(resistance,'BrB 17:4 must distinguish both statutory modes');
 assert.ok(resistance.options[0].includes('sätta sig till motvärn')&&!resistance.options[0].includes('motvärn med våld'),
