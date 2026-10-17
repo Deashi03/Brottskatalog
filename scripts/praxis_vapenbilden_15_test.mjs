@@ -32,7 +32,7 @@ assert.ok(options&&options[0].includes('sätta sig till motvärn'));
 assert.ok(options[1].includes('annars med våld'));
 assert.ok(!options[0].includes('motvärn med våld'),'Do not invent an express violence condition for motvärn route');
 const finalReport=ctx.window.BK_CURATED_LAWTEXT15;
-assert.equal(finalReport.sectionsChecked,34,'Curated SFS library now includes 34 sections, including public-office offences');
+assert.equal(finalReport.sectionsChecked,40,'Curated SFS library now includes 40 sections, including negligence and public-office offences');
 for(const k of ['BrB:13:5c','BrB:17:10']) {
  const law=ctx.window.BK_STATUTES[k];
  assert.equal(law.complete,true);
