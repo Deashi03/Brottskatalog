@@ -1,5 +1,29 @@
 # V1.5 – obligatorisk policy för rekvisit och typexempel
 
+## Aktuell verifierad granskningsstatus – 17 oktober 2026
+
+**Detta avsnitt ersätter tidigare, mindre strikt statistik längre ned i arbetsloggen.** Funktionstester: [GitHub Actions 39055997678](https://github.com/Deashi03/Brottskatalog/actions/runs/39055997678) – PASS, inklusive iPhone-gränssnittet.
+
+| Mätpunkt | Antal | Betydelse |
+| --- | ---: | --- |
+| BrB-grundposter med strukturerade rekvisit | 319/319 | OCH/ELLER-studiestöd finns; inte färdig rättsutredning |
+| Inbäddad full lagtext eller tidigare fulltextflagga | 52/319 | Innebär INTE dokumenterad verifiering |
+| Fullständig aktuell lagtext med källa och giltigt verifieringsdatum | 33/319 | Dokumenterad fulltextkontroll, ingen slutlig praxisprövning |
+| Direkt individkontrollerade kort i den kuraterade paragrafserien | 21 | En delmängd av de 33 |
+| Individuellt juridiskt slutgodkända brottskort | 0/319 | Praxis, gärningsdatum, brottsrekvisit, skuldform, åtalsregler, straffskala med mera kvarstår |
+| Osäkra förstadieklassningar | 12 | Separat lagstödsprövning krävs |
+
+**Den äldre siffran 52 som ”lagtextverifierade” var för hög.** Den tidigare algoritmen räknade även texter med `lawMode='full'` utan daterat verifieringsunderlag. Kontrollmodulen kräver nu `lawCompletenessVerified`, källa och giltigt tidigare eller aktuellt datum. Appen visar en särskild märkning för individsakgranskad paragraf, men säger uttryckligen att den **inte** innebär fullständig juridisk rekvisitgranskning. För tidigare fulltextmarkerade men ej dokumenterat verifierade texter visas i stället en tydlig försiktighetsmarkering.
+
+Fyra ytterligare paragrafer har kontrollerats i denna omgång: **BrB 3:5, 3:6, 17:1, 17:4**, inklusive den relevanta 2026-ändringen i 3:6. Den särskilda kriminaliseringsbestämmelsen **BrB 13:12** har också jämförts med gällande SFS. Totalt finns 14 källkontrollerade paragrafer i den kuraterade serien; två av dem (13:12 och 21:15) styr särskilda förstadiefrågor och är inte självständiga grundbrott.
+
+**Förstadiekön är fortfarande 12/12 oavgjord i juridisk mening:** nio poster rör grov kapning, grovt sjö- eller luftfartssabotage respektive grovt flygplatssabotage enligt 13:12; tre rör grovt våld eller hot mot förman enligt 21:15. Att paragraftexten är kontrollerad innebär inte att rättsfrågan om de grova graderna är avgjord. `stageAuditQueue` anger källa, moderbrott och uttrycklig instruktion om individuell analys av 23 kap., förarbeten och praxis.
+
+**Publiceringsspärren kvarstår.** V1.5 är draft i PR #2. Den publicerade V1.4 på `main` ska förbli oförändrad; `releaseReady: false` gäller fortsatt. Primärkälla: [Brottsbalken (1962:700), Riksdagen](https://www.riksdagen.se/sv/dokument-och-lagar/dokument/svensk-forfattningssamling/brottsbalk-1962700_sfs-1962-700/).
+
+---
+
+
 Status: arbetsunderlag, **inte publicerad V1.5**. Huvudgrenen/main ska inte uppdateras med ofullständiga rekvisitposter.
 
 ## Systematisk inventering och typexempel – fortsättning
