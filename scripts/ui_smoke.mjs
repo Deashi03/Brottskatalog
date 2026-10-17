@@ -76,7 +76,8 @@ try{
   await page.locator('summary').filter({hasText:'Lagtext'}).click();
   await wait();
   const lawTextStatus=(await page.locator('body').innerText());
-  assert.ok(['Maskinimporterat','kontrollerad','Lagtext inlagd','Lagtext i det inbyggda urvalet.'].some(label=>lawTextStatus.includes(label)),'Legal text status visible');
+  assert.ok(lawTextStatus.includes('Paragraftext individuellt kontrollerad mot aktuell SFS'),'Murder must show individually checked statute text');
+  assert.ok(lawTextStatus.includes('Inte fullständig juridisk rekvisitgranskning'),'Current-paragraph validation must not be presented as full legal clearance');
   await page.goto(url+'#sok',{waitUntil:'networkidle'});
   await page.locator('#crime-search').fill('ringa stöld');
   await wait();
