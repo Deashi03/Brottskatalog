@@ -76,7 +76,7 @@ try{
   await page.locator('summary').filter({hasText:'Lagtext'}).click();
   await wait();
   const lawTextStatus=(await page.locator('body').innerText());
-  assert.ok(['Maskinimporterat','kontrollerad','Lagtext inlagd'].some(label=>lawTextStatus.includes(label)),'Legal text status visible');
+  assert.ok(['Maskinimporterat','kontrollerad','Lagtext inlagd','Lagtext i det inbyggda urvalet.'].some(label=>lawTextStatus.includes(label)),'Legal text status visible');
   await page.goto(url+'#sok',{waitUntil:'networkidle'});
   await page.locator('#crime-search').fill('ringa stöld');
   await wait();
