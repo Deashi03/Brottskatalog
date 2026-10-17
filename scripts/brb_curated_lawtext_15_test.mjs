@@ -53,7 +53,7 @@ assert.equal(stats.linkedCardsChecked,21+addedCards.length+propertyCards.length+
  'All 85 current SFS paragraphs must cover their actual offence card counts');
 const markers={
  'BrB:9:8':['i annat fall än förut i detta kapitel','förfar oredligt','Lag (1970:414).'],
- 'BrB:9:9':['pris på vara, värdepapper','uppsåtligen eller av grov oaktsamhet','grovt svindleri','Lag (2026:1318).'],
+ 'BrB:9:9':['priset på vara, värdepapper','uppsåtligen eller av grov oaktsamhet','grovt svindleri','Lag (2026:1318).'],
  'BrB:9:10':['påtryckningsmedel vid krav','check utan täckning','ockerpantning'],
  'BrB:9:11':['försök eller förberedelse till bedrägeri','stämpling till grovt bedrägeri','23 kap. 3 § ska dock inte gälla','frivilligt avstått','Lag (2025:1269).'],
  'BrB:8:8':['olovligen rubbar någon annans besittning','rätt att hålla kvar eller ta något','grovt egenmäktigt förfarande','Lag (2017:442).'],
