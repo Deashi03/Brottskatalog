@@ -75,7 +75,9 @@ for(const c of D.crimes){
   stageStatus:stage?(c.stageStatus||'unknown'):null,
   completedOffenceMinimumYears:Number.isFinite(min)?min:null,
   completedOffencePenaltyIndividuallyVerified:verified,
-  provisionalOnly:status!=='minimum-threshold-met'&&status!=='minimum-threshold-not-met',
+  statutoryThresholdIndividuallyChecked:status==='minimum-threshold-met'||status==='minimum-threshold-not-met',
+  caseSpecificApplicationApproved:false,
+  provisionalOnly:true, // Always: date/age, prior law, 23 kap. and special juvenile rules not certified.
   neverApprovesInchoateCriminalization:true,
   neverApprovesCoerciveMeasures:true,
   reviewNote:'Bedöm ålder och gärningsdatum separat. Regeln gäller gärningar från 2026-09-10 till före 2031-09-10. För äldre gärningar gäller äldre regler. Från 2031-09-10 återställs 15-årsgränsen för nya gärningar; tidigare begångna gärningar omfattas av övergångsregeln i SFS 2026:1555 även om prövningen sker senare. Straffminimum avser huvudbrottet även när prövningen gäller förstadier.'
