@@ -528,3 +528,51 @@ Ny modul `brb8-near-relative-prosecution-15.js` och nytt regressionstest `script
 **Senaste fullständiga testkörning:** [GitHub Actions 39071214156](https://github.com/Deashi03/Brottskatalog/actions/runs/39071214156), **PASS**, inklusive lagtext, åtalsundantag, straffskalor, juridisk release-grind och iPhone-smoke. Kontrollsträngen för BrB 9:9 justerades till den korrekta lagtextfrasen `priset på vara`, utan att själva lagtexten behövde ändras.
 
 **V1.5 är fortsatt ett opublicerat draft-utkast på PR #2.** 319/319 strukturellt täckta rekvisit är inte samma sak som fullständig legal prövning. Ingen merge, deploy eller grön juridisk release.
+
+---
+
+## BrB 11:1–8 – borgenärsbrott, bokföringsbrott och särskilda åtalströsklar, 17 oktober 2026
+
+Källa: [Sveriges riksdag, konsoliderad BrB 11 kap. (1962:700), ändrad t.o.m. SFS 2026:1656](https://www.riksdagen.se/sv/dokument-och-lagar/dokument/svensk-forfattningssamling/brottsbalk-1962700_sfs-1962-700/). Varje paragraf har jämförts mot gällande text. Några av sidans historiska lagtextstycken innehåller synliga radbrytningsartefakter, exempelvis `F-\nskuldsanering` i 11:2, vilka bevaras i normaliserad jämförelse för att undvika falsk källmatch. Detta innebär **inte** full rättspraxis- eller tillämplighetscertifiering.
+
+### Åtta kompletta lagparagrafer införda
+
+- **BrB 11:1:** Oredlighet mot borgenärer och grov grad. Bevarar den alternativa gärningsformsstrukturen: egendomsavhändande på/inför obestånd, specifik bortföring/undanhållande vid konkurs samt vägrad medverkan beträffande utländska konkursmedel på uppmaning av konkursförvaltaren. Lagtextens särskilda grovhetsgrunder återges.
+- **BrB 11:2:** Försvårande av konkurs eller exekutiv förrättning, även grov grad. **Normalgraden kan vara uppsåtlig eller grovt oaktsam**, medan **grov grad uttryckligen kräver uppsåt**. Bevarar rättelse före beedigande/användning, obetydlig uppgift och ursäktlig rätt att vägra yttra sig samt särskild variant för annan exekutiv förrättning.
+- **BrB 11:3:** Vårdslöshet mot borgenärer. Uppsåt eller grov oaktsamhet rörande avsevärd förmögenhetsförsämring samt den särskilda regeln om skälig anledning att anta obestånd.
+- **BrB 11:4:** Otillbörligt gynnande av borgenär, inklusive särskilt skydd för den andra borgenärens rätt och den hemliga ackords-/rekonstruktionsbetalningen.
+- **BrB 11:5:** Bokföringsbrott, ringa och grov grad. Normalgraden **kan bygga på vanlig oaktsamhet** (till skillnad från många andra 11-kap.-brott). Måste därutöver gå att koppla till att rörelsens förlopp, ekonomiska resultat eller ställning **inte i huvudsak kan bedömas** med ledning av bokföringen. Undantaget för viss juridisk person som inte bedriver näringsverksamhet bevaras.
+- **BrB 11:6:** Förstadiekriminalisering med noggranna begränsningar. Försök till oredlighet mot borgenärer enligt 11:1 första stycket respektive visst bortförande från riket enligt andra stycket, förberedelse/stämpling till grov oredlighet samt förberedelse till grovt bokföringsbrott. **Inte** ett allmänt stöd för försök, förberedelse eller stämpling till varje brott i kapitlet.
+- **BrB 11:7:** Ställföreträdaransvar och den särskilda begränsningen av borgenärens medverkansansvar vid gynnande enligt 11:4.
+- **BrB 11:8:** Åtalsvillkoren för vårdslöshet mot borgenärer respektive ringa bokföringsbrott.
+
+### Faktisk individuell åtalsprövning på brottskortet
+
+Ny modul `brb11-prosecution-review-15.js`, offline i service worker, med särskilt test `scripts/brb11_prosecution_15_test.mjs`:
+
+- **Vårdslöshet mot borgenärer**: åklagaråtal endast om det är **påkallat från allmän synpunkt**, 11:8 första stycket.
+- **Ringa bokföringsbrott**: åklagaråtal kräver att det **av särskilda skäl är påkallat från allmän synpunkt**, 11:8 andra stycket.
+- **Bokföringsbrott av normalgraden och grovt bokföringsbrott** är uttryckligen **inte** uppgraderade till denna särskilda åtalsbegränsning.
+- Saknad/ofullständigt granskad källparagraf håller tillbaka individuell verifiering, utan att tyst ersätta befintliga åtalsuppgifter. Förstadiernas rättsliga status ändras inte.
+
+### Nio fler brottsgradsskalor individuellt kontrollerade
+
+`brb-penalty-grade-audit-15.js` innehåller nu **84/84** överensstämmande direkta jämförelser av minimistraff, maximistraff, böter och livstid. Nya kontroller: oredlighet/grov oredlighet, försvårande/grovt försvårande, vårdslöshet mot borgenärer, otillbörligt gynnande, bokföringsbrott/ringa/grovt. Det finns inga numeriska konflikter i dessa nio intervall. Tre var tidigare markerade som numeriskt kontrollerade i äldre begränsad mening; **den restriktiva återstående straffskalekön har därför minskat från 233 till 227**, inte med samtliga nio.
+
+### Senast avlästa blockerande release-mått
+
+| Kontroll | Resultat |
+| --- | ---: |
+| BrB-brottskort med strukturerad OCH/ELLER-rekvisitlista | 319/319 |
+| Fullständiga hela paragrafer i individuellt dokumenterad källa | **93** |
+| BrB-brottskort med dokumenterat verifierad fullständig lagtext | **128/319 (40,1 %)** |
+| Direkt kuraterad källa-/datumkontroll av lagtext | **116** kort |
+| Kvar i kö för källverifiering av komplett BrB-lagtext | **191** |
+| Individuellt granskade brottsgradsskalor | **84** |
+| Kvar i individuell straffskalekö | **227** |
+| Separata villkorade straffskalesituationer | **12** |
+| Förstadier med fortfarande oklar status | **12** |
+| Fullständigt juridiskt godkända BrB-brott | **0/319** |
+| `releaseReady` | **false** |
+
+**Senaste godkända GitHub Actions:** [39072087909](https://github.com/Deashi03/Brottskatalog/actions/runs/39072087909). Alla regressionskontroller och iPhone-smoke passerade efter källradbrytningsjustering. PR #2 är fortfarande **draft**. **Ingen merge/deploy; V1.4 kvarstår på main och GitHub Pages.**
