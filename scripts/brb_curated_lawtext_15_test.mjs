@@ -199,7 +199,7 @@ for(const [ref,expected] of Object.entries(markers)){
  const item=W[ref];
  assert.equal(item.complete,true,'Source complete: '+ref);
  assert.equal(item.machine,false,'Not a machine-only excerpt: '+ref);
- assert.equal(item.checked,updatedSafetyKeys.includes(key)?'2026-10-18':'2026-10-17');
+ assert.equal(item.checked,updatedSafetyKeys.includes(ref)?'2026-10-18':'2026-10-17');
  assert.equal(item.completeTextProvenance,'manual-crosscheck-current-SFS-paragraph-only');
  for(const phrase of expected)assert.ok(item.text.includes(phrase),ref+' lacks '+phrase);
  for(const c of base.filter(c=>c.statute===ref)){
