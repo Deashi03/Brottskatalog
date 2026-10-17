@@ -10,9 +10,9 @@ const O=(label,...options)=>({mode:'any',label,options});
 const specs=[
  ['Våldsamt motstånd','17:4',[
   A('En tjänsteman utför myndighetsutövning. Även en person med motsvarande lagstadgat skydd enligt 17:5 kan omfattas.'),
-  O('Gärningspersonen försöker hindra tjänstemannen genom:', 'Att sätta sig till motvärn med våld','Annat våld som används för att hindra myndighetsutövningen'),
+  O('Gärningspersonen försöker hindra tjänstemannen genom en av de två gärningsformerna i BrB 17:4:', 'Att sätta sig till motvärn (aktivt motvärn; detta alternativ anges separat från uttrycket annars med våld i lagtexten)','Att annars med våld försöka hindra myndighetsutövningen'),
   A('Gärningen omfattas inte i stället av BrB 17:1 eller 17:2.'),
-  A('Gärningspersonen handlar uppsåtligen; passivt motstånd utan våld uppfyller inte i sig detta brotts rekvisit.')
+  A('Gärningspersonen handlar uppsåtligen. Enbart passiv vägran utan aktivt motvärn eller annars våld uppfyller inte i sig gärningsrekvisitet. Motvärn och annat våld är olika alternativ i BrB 17:4.')
  ]],
  ['Angrepp mot tjänsteman','17:2',[],[
   {label:'Brottsligt angrepp på tjänsteman eller närstående',groups:[
