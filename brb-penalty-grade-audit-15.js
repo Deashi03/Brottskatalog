@@ -1,4 +1,4 @@
-/* V1.5: explicit individual-range checks of 75 common BrB grades.
+/* V1.5: explicit individual-range checks of 84 common BrB grades.
  * The controlling CURRENT complete SFS paragraphs are curated in
  * brb-curated-lawtext-15.js. Full legal/penalty applicability is NOT approved.
  * Date-dependent, inchoate and coercive rules remain separate work.
@@ -57,6 +57,15 @@ const rows=[
  ['Utförselhäleri','9:6a',0,2,false,false,'Syfte att föra den misstänkt brottshärrörande egendomen ut ur landet enligt 9:6 a.'],
  ['Grovt utförselhäleri','9:6a',1,6,false,false,'Särskild utlandsavsikt och samlad grovhetsbedömning enligt 9:6 a.'],
  ['Häleriförseelse','9:7',0,0.5,true,false,'Inbegriper ringa häleri/utförselhäleri och separat brottsinsikt med skälig anledning att anta.'],
+ ['Oredlighet mot borgenärer','11:1',0,2,false,false,'Alternativ: obestånd/påtaglig obeståndsfara, undanröjande av betydande värde eller viss konkursundandragning; återstående rekvisit och gärningstid separat.'],
+ ['Grov oredlighet mot borgenärer','11:1',1,6,false,false,'Grovhetsbedömning efter 11:1 fjärde stycket; förstadierna i 11:6 har särskilda gärningsformsvillkor.'],
+ ['Försvårande av konkurs eller exekutiv förrättning','11:2',0,2,false,false,'Uppsåt eller grov oaktsamhet i första stycket; särskilt uppsåtsfall i andra. Rättelse och saknat betydelse/ursäkt kan utesluta ansvar.'],
+ ['Grovt försvårande av konkurs eller exekutiv förrättning','11:2',1,6,false,false,'Grova formen kräver uttryckligen uppsåt enligt fjärde stycket; grov oaktsamhet ensam räcker inte.'],
+ ['Vårdslöshet mot borgenärer','11:3',0,2,false,false,'Uppsåt eller grov oaktsamhet vid avsevärd förmögenhetsförsämring; särskild åtalsbegränsning i 11:8.'],
+ ['Otillbörligt gynnande av borgenär','11:4',0,2,false,false,'Särskild risk att annan borgenärs rätt avsevärt förringas eller otillbörligt hemligt gynnande.'],
+ ['Bokföringsbrott','11:5',0,2,false,false,'Uppsåt eller vanlig oaktsamhet, men rörelsens resultat/förlopp/ställning ska inte i huvudsak kunna bedömas. Ej ringa fall.'],
+ ['Ringa bokföringsbrott','11:5',0,0.5,true,false,'Särskild ringa grad med böter; 11:8 kräver särskilda skäl och allmän synpunkt för åklagaråtal.'],
+ ['Grovt bokföringsbrott','11:5',0.5,6,false,false,'Grova graden har lägst sex månaders fängelse; kvalifikationsfaktorer enligt andra stycket; förberedelse enligt 11:6.'],
  ['Stöld','8:1',0,2,false,false,'Uppsåt att tillägna sig och skada prövas separat.'],
  ['Ringa stöld','8:2',0,0.5,true,false,'Förutsätter 8:1 och helhetsbedömning av ringa grad.'],
  ['Grov stöld','8:4',1,6,false,false,'Kvalifikationsfaktorer är inte var och en obligatoriska; helhetsbedömning.'],
