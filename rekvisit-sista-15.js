@@ -67,11 +67,15 @@ for(const [title,ref,parentName,grading] of degrees){
  const p=by(parentName);if(!structured(p)){out.missingParent.push(title+' ← '+parentName);continue;}
  const prev=JSON.parse(JSON.stringify(p.rekvisit15));
  const qualifier=A('Separat gradindelning, inte nytt grundrekvisit: '+grading);
- // The close-in-age BrB 6:14 exception is only for the lesser-offence
- // route, never generic aggravated child sexual assault.
- const routes=prev.routes?.length?prev.routes.map(r=>({...r,groups:[...(r.groups||[]),qualifier]})):[];
+ // BrB 6:14 applies only to a lesser-serious offence under 6:6 second
+ // paragraph, never to aggravated 6:6 third paragraph. Do NOT carry its
+ // exception through when cloning the normal-grade route.
+ const routes=prev.routes?.length?prev.routes.map(r=>({
+  ...r,
+  groups:[...(r.groups||[]).filter(g=>!String(g.label||'').includes('6:14')),qualifier]
+ })):[];
  assign(c,ref,[],routes);
- c.rekvisit15.note+=' Grov grad kan inte förutsätta ansvarsfrihetsundantag för den mindre grova graden enligt BrB 6:14.';
+ c.rekvisit15.note='Grovt sexuellt övergrepp mot barn enligt BrB 6:6 tredje–fjärde styckena: kontrollera grundgärningen enligt första stycket och samlad grovhetsbedömning. Ansvarsfrihetsundantaget i 6:14 avser endast den mindre grova graden i 6:6 andra stycket och är INTE tillämpligt på den grova graden. Strukturen är inte en fullständig juridisk rättsutredning.';
 }
 window.BK_REKVISIT_SISTA15=out;
 })();
