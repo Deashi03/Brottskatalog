@@ -45,4 +45,16 @@ assert.equal(file.counts.basePenaltyCasesNeedingIndividualVerification,
 assert.equal(file.counts.conditionallyScopedPenaltyCasesNeedingReview,
  file.blockers.conditionalPenaltyCasesNeedingIndividualVerification);
 
+
+assert.equal(file.stageAuditQueue.length,12,'All twelve unresolved special-inchoate cases must remain in the legal audit queue');
+assert.equal(file.counts.inchoateLegalAuditQueueEntries,file.counts.unverifiedStages);
+for(const entry of file.stageAuditQueue){
+ assert.equal(entry.status,'INCHOATE_CRIMINALIZATION_UNVERIFIED');
+ assert.ok(['BrB:13:12','BrB:21:15'].includes(entry.sourceRef),'Ambiguous stage must cite 13:12 or 21:15');
+ assert.ok(entry.sourceTextIndividuallyChecked,'Checked source provision must remain accessible to legal reviewer');
+ assert.ok(entry.sourceURL?.includes('riksdagen.se'));
+ assert.ok(entry.requiredAction.includes('praxis'),'Scope must not be decided from title alone');
+}
+assert.ok(file.blockers.unverifiedInchoateStatus===12,'Unresolved degrees must block release, despite complete source wording');
+
 console.log('PASS V1.5: per-chapter legal review queue, truthful source scopes, '+file.counts.brbPostsWithoutStructuredRequisites+' still missing structures, Pages release blocked');
