@@ -15,7 +15,7 @@ const W=ctx.window.BK_STATUTES;
 const base=ctx.window.BK_DATA.crimes.filter(c=>!c.stageType);
 const stats=ctx.window.BK_CURATED_LAWTEXT15;
 assert.ok(stats,'Curated lawtext report missing');
-assert.equal(stats.sectionsChecked,13,'Exactly thirteen complete paragraphs must have been checked: '+JSON.stringify({missing:stats.missing,mismatch:stats.mismatch}));
+assert.equal(stats.sectionsChecked,13,'Exactly thirteen complete paragraphs must have been checked: '+JSON.stringify({missing:stats.missing,mismatch:stats.mismatch,sourceHeads:stats.mismatch.map(k=>({ref:k,text:W[k]?.text?.slice(0,110)}))}));
 assert.equal(stats.missing.length,0,JSON.stringify(stats.missing));
 assert.equal(stats.mismatch.length,0,JSON.stringify(stats.mismatch));
 assert.equal(stats.linkedCardsChecked,21,'Thirteen current SFS paragraphs must cover twenty-one offence cards; 21:15 has no main-crime card');
