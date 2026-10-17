@@ -53,6 +53,46 @@ const pendingStatutes=brb.filter(c=>!exactText(c));
 const unverifiedStage=stages.filter(c=>c.stageStatus==='unverified');
 const incompletePenalty=base.filter(c=>c.penaltyReviewScope==='range-only'||!c.penaltyRangeVerified).filter(c=>!c.conditionalPenalty);
 const dateMismatch=base.filter(c=>c.stageReviewed&&c.stageReviewDate&&c.stageReviewDate>new Date().toISOString().slice(0,10));
+// The old "reviewQueue" represents *missing structure* only. It becomes
+// empty after 319/319 and MUST NOT be presented as a finished legal audit.
+// A separate queue tracks EVERY offence still needing individual legal signoff.
+const policeFirst=new Set([
+ 'Mord','Dråp','Misshandel','Ringa misshandel','Grov misshandel',
+ 'Våldtäkt','Grov våldtäkt','Våldtäkt mot barn','Sexuellt övergrepp mot barn','Grovt sexuellt övergrepp mot barn',
+ 'Olaga hot','Grovt olaga hot','Olaga tvång','Ofredande','Hemfridsbrott',
+ 'Stöld','Ringa stöld','Grov stöld','Rån','Grovt rån','Bedrägeri','Grovt bedrägeri',
+ 'Skadegörelse','Ringa skadegörelse','Grov skadegörelse','Narkotikabrott',
+ 'Våld eller hot mot tjänsteman','Grovt våld eller hot mot tjänsteman',
+ 'Angrepp mot tjänsteman','Grovt angrepp mot tjänsteman',
+ 'Våldsamt motstånd','Sabotage mot blåljusverksamhet','Övergrepp i rättssak',
+ 'Barnfridsbrott','Grovt barnfridsbrott','Tjänstefel','Grovt tjänstefel'
+]);
+const hasPenaltyReview=c=>Boolean(c.penaltyRangeVerified&&c.penaltyReviewScope!=='range-only'&&!c.conditionalPenalty);
+const legalAuditQueue=pendingRequisites.slice().sort((a,b)=>{
+ const pa=policeFirst.has(a.title)?0:1,pb=policeFirst.has(b.title)?0:1;
+ if(pa!==pb)return pa-pb;
+ const ac=reviewOrder.indexOf(chapterOf(a)),bc=reviewOrder.indexOf(chapterOf(b));
+ return (ac<0?99:ac)-(bc<0?99:bc)||String(a.title).localeCompare(String(b.title),'sv');
+}).map(c=>{
+ const missing=[];
+ if(!structured(c))missing.push('structured-requisites');
+ if(!exactText(c))missing.push('complete-current-statutory-text');
+ if(!hasPenaltyReview(c))missing.push('individually-reviewed-penalty-or-conditional-scale');
+ missing.push('individual-requisite-and-case-law-approval');
+ return {
+  title:c.title,ref:c.shortRef,chapter:chapterOf(c),
+  id:c.id,priority:policeFirst.has(c.title)?'polisiar-first':'chapter-batch',
+  statute:c.statute||null,sourceURL:c.rekvisit15?.sourceURL||c.sourceURL||null,
+  status:'LEGAL_AUDIT_PENDING',missing,
+  statutoryTextCertified:exactText(c),requisitesStructured:structured(c),
+  completeLegalReviewApproved:fullyReviewed(c),
+  legalTextScope:c.lawMode||'unknown',
+  penaltyReviewScope:c.penaltyReviewScope||'unknown',
+  requiresCaseLawAndEffectiveDateCheck:true,
+  signoffRequired:'Individual check against applicable statutory version and relevant preparatory works/case law; verify exceptions, subjective elements, charges, inchoate criminalization and penalty.'
+ };
+});
+const outstandingConditionalPenalty=base.filter(c=>c.conditionalPenalty&&!c.penaltyRangeVerified);
 const summaries={
  generatedAt:new Date().toISOString(),
  title:'Brottskatalog V1.5 – juridisk publiceringskontroll',
@@ -66,13 +106,17 @@ const summaries={
   brbPostsWithVerifiedCompleteLegalText:brb.filter(exactText).length,
   brbPostsWithTypicalExamples:brb.filter(typecase).length,
   unverifiedStages:unverifiedStage.length,
-  basePenaltyCasesNeedingIndividualVerification:incompletePenalty.length
+  basePenaltyCasesNeedingIndividualVerification:incompletePenalty.length,
+  brbOffencesInLegalAuditQueue:legalAuditQueue.length,
+  conditionallyScopedPenaltyCasesNeedingReview:outstandingConditionalPenalty.length
  },
  blockers:{
   brbRequisitesNotIndividuallyApproved:pendingRequisites.length,
   brbLawTextNotIndividuallyCertified:pendingStatutes.length,
   unverifiedInchoateStatus:unverifiedStage.length,
-  unexpectedFutureStageCheckDates:dateMismatch.length
+  unexpectedFutureStageCheckDates:dateMismatch.length,
+  basePenaltyCasesNeedingIndividualVerification:incompletePenalty.length,
+  conditionalPenaltyCasesNeedingIndividualVerification:outstandingConditionalPenalty.length
  },
  samples:{
   missingRequisites:notStructured.slice(0,30).map(c=>({title:c.title,ref:c.shortRef})),
@@ -83,6 +127,13 @@ const summaries={
  },
  byChapter:perChapter,
  reviewQueue:workQueue,
+ legalAuditQueue,
+ legalAuditSummary:{
+  auditPending:legalAuditQueue.length,
+  policePriorityPending:legalAuditQueue.filter(c=>c.priority==='polisiar-first').length,
+  allStructuredDoesNotMeanAllReviewed:true,
+  legalAuditDefinition:'Individuell lagversions-, rekvisit-, skuldforms-, undantags-, praxis-, påföljds-, åtals- och förstadiegranskning krävs före juridiskt slutgodkännande.'
+ },
  policy:{
   typecases:'Optional by design; withholding weak examples is correct and is not a release blocker.',
   statutoryText:'Machine-generated excerpts remain subject to individual version and completeness review.',
@@ -95,6 +146,7 @@ summaries.releaseReady=Object.values(summaries.blockers).every(n=>n===0);
 fs.mkdirSync(path.join(root,'audit'),{recursive:true});
 fs.writeFileSync(path.join(root,'audit/v15-release-readiness.json'),JSON.stringify(summaries,null,2)+'\n');
 console.log('V1.5 RELEASE READINESS '+JSON.stringify({counts:summaries.counts,blockers:summaries.blockers,releaseReady:summaries.releaseReady}));
+console.log('V1.5 LEGAL AUDIT QUEUE '+JSON.stringify({pending:legalAuditQueue.length,policeFirst:legalAuditQueue.filter(c=>c.priority==='polisiar-first').length,first25:legalAuditQueue.slice(0,25).map(c=>({title:c.title,ref:c.ref,missing:c.missing}))}));
 console.log('V1.5 REVIEW QUEUE '+JSON.stringify({first45:summaries.reviewQueue.slice(0,45).map(({title,ref})=>({title,ref})),unverified:summaries.samples.unverifiedStages,chapters:summaries.byChapter.map(({chapter,total,missingStructured,completeLawText})=>({chapter,total,missingStructured,completeLawText}))}));
 if(process.argv.includes('--release')&&!summaries.releaseReady){
  console.error('STOP: do not merge or publish V1.5 until legal release blockers are resolved.');
