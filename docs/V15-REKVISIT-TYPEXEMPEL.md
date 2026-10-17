@@ -718,3 +718,46 @@ Ny full regression: `scripts/brb4_child_stalking_requisites_15_test.mjs`, som pr
 | Fullständigt juridiskt slutgodkända BrB-brott | **0 / 319** |
 
 **Verifierad full CI med mobil/iPhone:** [GitHub Actions 39077037418](https://github.com/Deashi03/Brottskatalog/actions/runs/39077037418) – PASS. Juridisk publiceringsspärr är fortfarande `releaseReady:false`. V1.5 förblir endast draft PR #2; publicerad V1.4 och `main` har inte ändrats.
+
+---
+
+## 18 oktober 2026 – falsk angivelse, falsk beskyllning och bevisförvanskning
+
+### Tio nya fullständiga paragrafer från BrB 15 kap.
+
+Efter individuell jämförelse med [Riksdagens nu gällande konsoliderade Brottsbalk (1962:700), ändrad t.o.m. SFS 2026:1656](https://www.riksdagen.se/sv/dokument-och-lagar/dokument/svensk-forfattningssamling/brottsbalk-1962700_sfs-1962-700/) har `brb-curated-lawtext-15.js` kompletterats med **BrB 15:5–14**. Varje tillagd källa har egen granskningsdag **2026-10-18**; tidigare verifierade paragrafer har inte fått felaktigt ny datumstämpel.
+
+- **15:5:** Falskt åtal, ringa/grov grad, och separat brottet **obefogat åtal**. Att *väcka åtal* är inte samma som att *ange någon till åtal*.
+- **15:6:** Falsk angivelse, ringa och grov grad, och **obefogad angivelse**. Uppsåtlig falsk angivelse förutsätter angivelse av en oskyldig med syfte att denne ska dömas; obefogad angivelse har den särskilda skuldförutsättningen att personen inte insåg oskulden men hade skälig anledning att anta den.
+- **15:7:** Falsk beskyllning, ringa/grov grad, och **vårdslös beskyllning**. Det är en myndighetsanknuten uppgift (beskyllning, besvärande påstående eller förnekande av friande/mildrande omständighet) i annat fall än 15:6. Myndigheten måste vara sådan som ska ta upp anmälan i frågan. Vårdslös beskyllning kräver inte att personen insåg osanningen, men att det fanns skälig anledning att anta den.
+- **15:8–9:** Bevisförvanskning, inklusive särskilt uppsåt att en oskyldig ska fällas, samt underlåtenhet att avvärja rättsfel.
+- **15:10–13:** Osann/vårdslös försäkran, osant intygande och brukande av osann urkund, missbruk av urkund och handling samt förnekande av underskrift. Bevisfara, formkrav, användning av annans identitet och skuldformer skiljs åt i respektive fullständiga källa.
+- **15:14:** Frivillig rättelse och avvärjande av fara kan under de i lagen uttryckligen angivna förutsättningarna leda till lägre straff eller ibland ansvarsfrihet. **Ingen automatisk ansvarsfrihet** kan slutsats från enbart en efterföljande rättelse.
+
+Även **BrB 15:15** är redan fulltextgranskad. Straffbarhet för försök, förberedelse och stämpling ska avgöras med uttryckligt lagstöd och inte härledas ur grundbrottets straffskala.
+
+### Ny polisiär OCH/ELLER-kontroll
+
+Modulen `brb15-false-report-requisites-15.js` har enskilda detaljerade checklistor för **falsk angivelse, obefogad angivelse, falsk beskyllning och vårdslös beskyllning**. Den prövar separat gärningsform, myndighetsanknytning, oskyldig person, den avvikande skuldformen respektive särskilda uppsåtskrav. Modulen har dokumenterat **källvillkor** och vägrar ersätta tidigare begränsad rekvisitstruktur om någon av de nödvändiga paragraftexterna saknar individuellt verifierat källdatum. Brottskortens rekvisit får uttryckligen `legalReviewApproved:false` och anvisningen om 15:14:s *icke automatiska* rättelseverkan.
+
+Regressionen `scripts/brb15_false_report_requisites_15_test.mjs` kontrollerar fyra rubriceringar, de tre alternativa sätten att beskylla någon, särskild skuldform, ansvarslindringsinformationen, källstopp, offlinecache samt bibehållen spärr för de **12 juridiskt oavgjorda förstadierna**. Mobil/iPhone-tester är del av samma Actions-arbetsflöde.
+
+### Femton nya källjämförda brottsgradsskalor
+
+`brb-penalty-grade-audit-15.js` jämför nu **130** individuella straffskalor. Denna omgångs **15 tillägg** täcker grader av falskt/obefogat åtal, falsk/obefogad angivelse, falsk/vårdslös beskyllning, bevisförvanskning, osann försäkran, osant intygande, missbruk av urkund och förnekande av underskrift. Samtliga har **källa daterad 2026-10-18**. Straffskalan kontrolleras som lagstadgat intervall/bötesmöjlighet, *inte* som ett faktiskt straffvärde eller ett tvångsmedelsbeslut. Käll- eller numerisk avvikelse ska ge explicit stopp i stället för tyst godkännande.
+
+### Strikt juridisk revisionsstatus
+
+| Dimension | Efter denna omgång |
+| --- | ---: |
+| Hela individuellt kontrollerade BrB-paragrafer | **132** |
+| BrB-brottskort med verifierad komplett aktuell lagtext | **179 / 319 (56,1 %)** |
+| Därav kort med direkt daterad paragrafkontroll | **170** |
+| BrB-kort utan tillräckligt dokumenterad fulltextkontroll | **140** |
+| Individuellt källa-jämförda straffskalor | **130** |
+| Grundposter som ännu kräver individuell straffskalegranskning | **186** |
+| Villkorade straffskalor med separat granskning | **12** |
+| Oavgjorda förstadieposter (`unverified`) | **12** |
+| BrB-kort med fullständigt individuellt juridiskt slutgodkännande | **0 / 319** |
+
+**Full CI inklusive iPhone PASS:** [GitHub Actions 39078004023](https://github.com/Deashi03/Brottskatalog/actions/runs/39078004023). **Release-spärr `releaseReady:false` kvarstår.** V1.5 PR #2 är **draft**, och publicerade V1.4 på `main` är oförändrad.
