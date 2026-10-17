@@ -158,6 +158,7 @@ for(const [title,ref,routes] of direct){
  if(!window.BK_STATUTES?.['BrB:'+ref]?.text){results.missing.push('lagtext: '+ref);continue;}
  if(c.rekvisit15?.groups?.length||c.rekvisit15?.routes?.length){results.already.push(title);continue;}
  assign(c,ref,[],routes);
+ if(title==='Egenmäktighet med barn')c.rekvisit15.note+=' Lagversionsgräns: före 2027-01-01 avser andra stycket LVU (1990:52). Från 2027-01-01 avser hänvisningen lagen (2026:1600), enligt SFS 2026:1604. Detta är INTE en självständig gärningsväg. Åtal endast om påkallat från allmän synpunkt enligt BrB 7:6.';
 }
 for(const [title,ref,parentName,qualification] of grades){
  const c=by(title);if(!c){results.missing.push(title);continue;}
@@ -173,6 +174,7 @@ for(const [title,ref,parentName,qualification] of grades){
  const groups=parent.groups?.length?[...parent.groups,qualifier]:[];
  const routes=parent.routes?.length?parent.routes.map(route=>({...route,groups:[...(route.groups||[]),qualifier]})):[];
  assign(c,ref,groups,routes);
+ if(title==='Grov egenmäktighet med barn')c.rekvisit15.note+=' BrB 7:4 andra stycket hänvisar fram till 2027-01-01 till lagen (1990:52); från detta datum till lagen (2026:1600), SFS 2026:1604. Kontrollera BrB 7:6 särskilda åtalsvillkor.';
 }
 window.BK_REKVISIT_FORTS15=results;
 })();
