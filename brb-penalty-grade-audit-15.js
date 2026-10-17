@@ -1,4 +1,4 @@
-/* V1.5: explicit individual-range checks of 96 common BrB grades.
+/* V1.5: explicit individual-range checks of 105 common BrB grades.
  * The controlling CURRENT complete SFS paragraphs are curated in
  * brb-curated-lawtext-15.js. Full legal/penalty applicability is NOT approved.
  * Date-dependent, inchoate and coercive rules remain separate work.
@@ -78,6 +78,15 @@ const rows=[
  ['Olovlig avlyssning','4:9a',0,2,true,false,'Hemlig avlyssning med tekniskt ljudhjälpmedel av särskilt skyddade samtal; platsvillkoret i 4:11 påverkar åtal.'],
  ['Dataintrång','4:9c',0,2,true,false,'Olovligt förfarande med uppgift avsedd för automatiserad behandling, inklusive allvarlig störning/hinder enligt lagtexten.'],
  ['Grovt dataintrång','4:9c',1,8,false,false,'Allvarlig skada, många uppgifter eller särskilt farlig art; 2026 års fängelseskala 1–8 år.'],
+ ['Människorov','4:1',4,18,false,true,'Människorov enligt huvudgraden har minimum fyra år och kan ge livstid; mindre grovt fall har särskild skala högst sex år.'],
+ ['Människohandel','4:1a',2,10,false,false,'Ändamål att exploatera, särskilda otillbörliga medel; barnundantag från medelkravet och oaktsamhet i fråga om ålder.'],
+ ['Människoexploatering','4:1b',0,4,false,false,'Tvångsarbete, arbete under uppenbart orimliga villkor eller tiggeri; barnundantag från tvångs-/utnyttjandekrav.'],
+ ['Grov människoexploatering','4:1b',2,10,false,false,'Grov bedömning med bland annat omfattning, vinning eller särskilt hänsynslöst utnyttjande.'],
+ ['Olaga tvång','4:4',0,2,true,false,'Våld eller brottsligt hot, eller otillbörligt hot om åtal, anmälan eller menligt meddelande; det sistnämnda alternativet har särskild åtalsregel i 4:11.'],
+ ['Grovt olaga tvång','4:4',1,6,false,false,'Allvarligt våld/hot inklusive förstärkt vapenhot eller särskild farlighet; sammanvägd grovhetsbedömning.'],
+ ['Uppmaning till självmord','4:7a',0,2,false,false,'Uppmaning/psykisk påverkan med inte obetydlig farorisk, undantag när gärningen är mindre allvarlig.'],
+ ['Oaktsam uppmaning till självmord','4:7a',0,0.5,true,false,'Oaktsamhet beträffande omständigheter som innebär sådan fara, även här gäller undantaget för mindre allvarlig gärning.'],
+ ['Psykiskt våld','4:7b',0,4,false,false,'Upprepade kränkningar som är ägnade att allvarligt skada självkänslan, alternativt varaktig otillbörlig övervakning.'],
  ['Stöld','8:1',0,2,false,false,'Uppsåt att tillägna sig och skada prövas separat.'],
  ['Ringa stöld','8:2',0,0.5,true,false,'Förutsätter 8:1 och helhetsbedömning av ringa grad.'],
  ['Grov stöld','8:4',1,6,false,false,'Kvalifikationsfaktorer är inte var och en obligatoriska; helhetsbedömning.'],
