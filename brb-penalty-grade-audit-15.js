@@ -1,4 +1,4 @@
-/* V1.5: explicit individual-range checks of 105 common BrB grades.
+/* V1.5: explicit individual-range checks of 115 common BrB grades.
  * The controlling CURRENT complete SFS paragraphs are curated in
  * brb-curated-lawtext-15.js. Full legal/penalty applicability is NOT approved.
  * Date-dependent, inchoate and coercive rules remain separate work.
@@ -7,6 +7,16 @@
 const URL='https://www.riksdagen.se/sv/dokument-och-lagar/dokument/svensk-forfattningssamling/brottsbalk-1962700_sfs-1962-700/';
 const rows=[
  // Title, official SFS section, min/max years, fines permitted, life, special caveat.
+ ['Barnadråp','3:3',0,6,false,false,'Avser moderns dödande vid nedkomsten i upprivet sinnestillstånd/svårt trångmål; högst sex år, skilda rekvisit från mord/dråp.'],
+ ['Barnfridsbrott','4:3',0,2,false,false,'Kräver straffbar grundgärning i den uttömmande listan, bevittnande av barnet och dubbelt närståendeförhållande; ringa/grov är särskilda grader.'],
+ ['Grovt barnfridsbrott','4:3',1,6,false,false,'Mycket allvarlig bevittnad gärning eller särskild hänsynslöshet; barnets bevittnande och närståendebanden måste vara styrkta.'],
+ ['Olaga förföljelse','4:4b',0,4,false,false,'Upprepade integritetskränkningar av uttryckligen uppräknade brott, inklusive 2026 års psykiskt våld och särskilda tjänstemannabrott.'],
+ ['Äktenskapstvång','4:4c',0.5,6,false,false,'Otillbörligt medel och ett faktiskt äktenskap/äktenskapsliknande förbindelse enligt alternativ i 4:4 c.'],
+ ['Barnäktenskapsbrott','4:4c',0.5,6,false,false,'Särskilda alternativ till att förmå eller tillåta äktenskap/förbindelse; oaktsamhet i fråga om att barnet inte fyllt 18 år kan räcka.'],
+ ['Äktenskapsresebrott','4:4d',0,4,false,false,'Resa till annan stat i syfte att utsättas för gärning enligt 4:4 c; påverkansmedlen kontrolleras separat.'],
+ ['Äktenskapsresebrott mot barn','4:4d',0,4,false,false,'Barnvariant av äktenskapsresa, inkluderar förmå eller tillåta resa och oaktsamhet om ålder.'],
+ ['Oskuldskontroll','4:4f',0,1,false,false,'2025 års brott, den beskrivna undersökningen och syftet måste vara uppfyllda; ringa gärning utgör inte brott.'],
+ ['Intygande av sexuell oskuld','4:4g',0,0.5,true,false,'Skriftligt eller muntligt intygande med hänvisning till kvinnliga könsorgan; ringa gärning utgör inte brott.'],
  ['Vållande till annans död','3:7',0,3,false,false,'Ringa fall kan enligt samma paragraf ge böter; normalgraden avser fängelse i högst tre år.'],
  ['Grovt vållande till annans död','3:7',2,6,false,false,'Grov oaktsamhet med lagens kvalifikationsgrunder; SFS 2026:1318.'],
  ['Vållande till kroppsskada eller sjukdom','3:8',0,0.5,true,false,'Skada/sjukdom som inte är ringa; lagens oaktsamhetsrekvisit.'],
@@ -120,7 +130,7 @@ for(const [title,ref,min,max,fines,life,caveat] of rows){
  if(!c){out.missing.push(title);continue;}
  if(c.statute!=='BrB:'+ref){out.mismatch.push({title,reason:'incorrect-statutory-reference',actual:c.statute,expected:'BrB:'+ref});continue;}
  const section=W['BrB:'+ref];
- if(!section?.complete||section.completeTextProvenance!=='manual-crosscheck-current-SFS-paragraph-only'||section.checked!=='2026-10-17'||!c.lawCompletenessVerified){
+ if(!section?.complete||section.completeTextProvenance!=='manual-crosscheck-current-SFS-paragraph-only'||!['2026-10-17','2026-10-18'].includes(section.checked)||c.lawCompletenessChecked!==section.checked||!c.lawCompletenessVerified){
   out.unreviewedSource.push(title+' '+ref);continue;
  }
  const r=c.penaltyRange||{};
@@ -136,7 +146,7 @@ for(const [title,ref,min,max,fines,life,caveat] of rows){
  if(c.reviewStatus==='source-changed'){out.held.push(title);continue;}
  c.penaltyRangeVerified=true;
  c.penaltyReviewScope='individual-current-grade-range-only';
- c.penaltyGradeReviewDate='2026-10-17';
+ c.penaltyGradeReviewDate=section.checked;
  c.penaltyGradeReviewSource=URL;
  c.penaltyGradeReviewProvision='BrB '+ref;
  c.penaltyGradeReviewCaveat=caveat;
