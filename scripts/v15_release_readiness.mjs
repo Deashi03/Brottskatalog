@@ -122,6 +122,22 @@ const legalAuditQueue=pendingRequisites.slice().sort((a,b)=>{
  };
 });
 const outstandingConditionalPenalty=base.filter(c=>c.conditionalPenalty&&!c.penaltyRangeVerified);
+// Independent BrB 1:6 age-at-offence triage. A four-year minimum for a
+// qualifying completed offence does not itself prove inchoate liability,
+// applicability on historical offence dates or coercive power.
+const age14Report=ctx.window.BK_AGE14_15||null;
+const age14CardsWithoutMetadata=all.filter(c=>!c.age14Exception15);
+const age14Candidates=all.filter(c=>Number(c.age14Exception15?.completedOffenceMinimumYears)>=4);
+const age14PotentialCases=age14Candidates.map(c=>({
+ title:c.title,ref:c.shortRef,stageType:c.stageType||null,
+ status:c.age14Exception15.status,
+ penaltyReviewed:c.age14Exception15.completedOffencePenaltyIndividuallyVerified,
+ parentRef:c.age14Exception15.parentRef||null,
+ offenceDateRequired:true,
+ inchoateAuthorizationIsIndependent:true,
+ safeForCustodyDetermination:false
+}));
+const age14PendingCandidates=age14PotentialCases.filter(c=>c.status!=='minimum-threshold-met');
 const summaries={
  generatedAt:new Date().toISOString(),
  title:'Brottskatalog V1.5 – juridisk publiceringskontroll',
@@ -140,7 +156,10 @@ const summaries={
   inchoateLegalAuditQueueEntries:stageAuditQueue.length,
   basePenaltyCasesNeedingIndividualVerification:incompletePenalty.length,
   brbOffencesInLegalAuditQueue:legalAuditQueue.length,
-  conditionallyScopedPenaltyCasesNeedingReview:outstandingConditionalPenalty.length
+  conditionallyScopedPenaltyCasesNeedingReview:outstandingConditionalPenalty.length,
+  age14RulesCovered:all.length-age14CardsWithoutMetadata.length,
+  age14PotentialMinimumFourCases:age14PotentialCases.length,
+  age14FourYearCandidatesAwaitingIndividualApplicabilityReview:age14PendingCandidates.length
  },
  blockers:{
   brbRequisitesNotIndividuallyApproved:pendingRequisites.length,
@@ -148,7 +167,8 @@ const summaries={
   unverifiedInchoateStatus:unverifiedStage.length,
   unexpectedFutureStageCheckDates:dateMismatch.length,
   basePenaltyCasesNeedingIndividualVerification:incompletePenalty.length,
-  conditionalPenaltyCasesNeedingIndividualVerification:outstandingConditionalPenalty.length
+  conditionalPenaltyCasesNeedingIndividualVerification:outstandingConditionalPenalty.length,
+  age14OffenceCardsWithoutAgeAtActRule:age14CardsWithoutMetadata.length
  },
  samples:{
   missingRequisites:notStructured.slice(0,30).map(c=>({title:c.title,ref:c.shortRef})),
@@ -161,6 +181,16 @@ const summaries={
  reviewQueue:workQueue,
  legalAuditQueue,
  stageAuditQueue,
+ age14Triage:{
+  legalWindow:{from:'2026-09-10',toExclusive:'2031-09-10',transition:'SFS 2026:1555'},
+  source:'BrB 1 kap. 6 §, SFS 2026:1528 and 2026:1555',
+  totalIndexed:age14Report?.total||0,
+  potentialCandidates:age14PotentialCases,
+  pendingWithinCandidates:age14PendingCandidates.length,
+  noAge14StatuteCard:age14CardsWithoutMetadata.length,
+  warnsInchoateAndCustodyIndependently:true,
+  noAutomaticCriminalizationOrCustodyApproval:true
+ },
  legalAuditSummary:{
   auditPending:legalAuditQueue.length,
   policePriorityPending:legalAuditQueue.filter(c=>c.priority==='polisiar-first').length,
