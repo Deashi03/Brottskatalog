@@ -207,6 +207,11 @@ const directCrosschecks=b.filter(c=>c.lawCompletenessVerified===true&&
 assert.equal(directCrosschecks.length,21+addedCards.length+propertyCards.length+officeCards.length+negligenceCards.length+newCards.length+economicCards.length+theftFraudCards.length+creditorCards.length+extra12Cards.length+ch4Cards.length+freedomCards.length,
  'All current SFS offence cards must carry narrow dated paragraph-crosscheck provenance');
 assert.ok(!base.some(c=>c.statute==='BrB:13:12'),'13:12 is a stage authorization source, not a standalone completed crime');
-assert.ok(b.some(c=>c.lawMode==='full'&&!c.lawCompletenessVerified),
- 'Embedded full text without documented review must remain distinguishable');
+const unreviewedEmbedded=b.filter(c=>c.lawMode==='full'&&!c.lawCompletenessVerified);
+for(const c of unreviewedEmbedded){
+ assert.notEqual(c.lawCompletenessReviewScope,'current-paragraph-only',
+  'An imported full statute without provenance must never gain a source-review stamp');
+}
+assert.ok(b.some(c=>!c.lawCompletenessVerified),
+ 'The review must not silently approve all 319 BrB provisions');
 console.log('PASS V1.5: one-hundred-fifteen complete current SFS paragraphs verified, without legal signoff');
