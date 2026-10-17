@@ -338,3 +338,38 @@ Den här omgången prioriterar faktiskt lagtextinnehåll, konkreta rekvisitfel, 
 Primärkällor: [BrB (1962:700), Riksdagen](https://www.riksdagen.se/sv/dokument-och-lagar/dokument/svensk-forfattningssamling/brottsbalk-1962700_sfs-1962-700/), [SOU 2024:55](https://data.riksdagen.se/dokument/hcb355) och [HD NJA 2025 s. 992](https://www.domstol.se/nyheter/2025/10/grovt-hot-mot-tjansteman/).
 
 **Releasebeslut oförändrat:** PR #2 draft. Ingen merge eller publicering av V1.5; V1.4 ligger kvar på main/GitHub Pages.
+
+---
+
+## Kvalitetsgranskning av tillgrepp, bedrägeri, skadegörelse och tjänstebrott – 17 oktober 2026
+
+### 18 nya fullständiga aktuella lagparagrafer
+
+Efter jämförelse med [Riksdagens aktuella BrB (1962:700), ändrad t.o.m. SFS 2026:1656](https://www.riksdagen.se/sv/dokument-och-lagar/dokument/svensk-forfattningssamling/brottsbalk-1962700_sfs-1962-700/) har `brb-curated-lawtext-15.js` utökats från **16 till 34 paragraftexter**. De nytillkomna är:
+
+- **BrB 8 kap.:** 8:1, 8:2, 8:4, 8:4 a, 8:5, 8:6 och 8:7. Stöld och ringa/grov stöld, inbrottsstöld, rån med även motvärns- och betalningsverktygsalternativ, grovt rån och alla tillgreppsgrader för motorfordon. Den mindre allvarliga gärningens undantag i 8:4 a och 8:5 måste beaktas separat.
+- **BrB 9 kap.:** 9:1, 9:2 och 9:3. Både traditionellt vilseledande och olovlig påverkan av automatisk informationsbehandling enligt 9:1; ringa bedrägeris särskilda kontantbetalningsgärning **utan nödvändigt vilseledande** enligt 9:2; grovt bedrägeris samtliga särskilda kvalifikationsfaktorer och aktuell skala.
+- **BrB 12 kap.:** 12:1, 12:2 och 12:3. Skadegörelse, ringa och grov grad, inklusive 2026 års aktuella straffskalor.
+- **BrB 4 kap.:** 4:6 (hemfridsbrott, olaga intrång och grova grader, med bostadsanknuten trädgård/gårdsplan), 4:7 (ofredande).
+- **BrB 17 och 20 kap.:** 17:3 (förolämpning mot tjänsteman), 20:1 (tjänstefel/grovt tjänstefel) och 20:2 (missbruk av offentlig ställning/grov grad). Tjänstefel i normalgraden kan begås genom oaktsamhet, men **grovt tjänstefel förutsätter uppsåt**. Gränserna till ringa handling, andra straffbud och myndighetsutövningsanknytningen följer uttryckligen lagtexten.
+
+Detta ger **62 av 319 BrB-brottskort med dokumenterat verifierad fullständig aktuell paragraftext**, varav **50 direkt källa-jämförda genom den nya individuellt daterade granskningsserien**. Resterande **257** kort saknar fortfarande sådan dokumentation. Äldre eller maskinimporterad heltext är **inte** en fullständighetsgranskning.
+
+### 25 separat källverifierade brottsgradsskalor
+
+Ny modul: `brb-penalty-grade-audit-15.js`, med test `scripts/brb_penalty_grade_audit_15_test.mjs`. Den har individuellt jämfört exakt minimi- och maximistraff, förekomst av böter och livstid samt korrekt paragraf/grad för 25 vanliga BrB-rubriceringar. Om ett värde avviker markerar skriptet **konflikt och stoppar källverifiering utan att tyst ersätta värdet**. Den aktuella körningen visade **25/25 korrekta intervall och inga konflikter**.
+
+Strafskalegranskningens metadata sätts till `penaltyReviewScope='individual-current-grade-range-only'`. Detta innebär **endast** kontroll av den lagstadgade straffskalan för aktuell brottsgrad, **inte** att gärningsdatum, tillämpliga undantag, kriminalisering av förstadier, rättspraxis, åtalsvillkor, preskriptionsfrågor eller tvångsmedel är individuellt slutgranskade.
+
+Den separata publiceringsgrinden har därmed minskat grundposterna med kvarstående individuell straffskalegranskning från **298 till 283**. De **12 villkorade** straffskalesituationerna står kvar i separat kö.
+
+### Säkerhetsstatus
+
+- **319/319** BrB-grundposter har strukturerade rekvisit, **0/319** är fullständigt juridiskt slutgodkända.
+- **62/319** har verifierad komplett aktuell lagtext, **257** kvar.
+- **25** separata brottsgradsskalor har källverifierats i denna omgång, med strikt oenighetsstopp.
+- **283** grundposter kvarstår för individuell straffskalegranskning enligt revisionsgrindens definition; **12** ytterligare särskilt villkorade skalor.
+- **12** förstadieposter är oförändrat `unverified`; möjlig häktning får inte utläsas ur sådana poster.
+- **Juridisk release-spärr `releaseReady:false` kvarstår.** V1.5 PR #2 är fortfarande draft och main/V1.4 oförändrat.
+
+CI med fulla regressioner samt iPhone UI: [Godkänd Actions-run 39060683010](https://github.com/Deashi03/Brottskatalog/actions/runs/39060683010).
