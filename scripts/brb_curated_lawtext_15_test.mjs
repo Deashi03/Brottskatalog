@@ -15,7 +15,7 @@ const W=ctx.window.BK_STATUTES;
 const base=ctx.window.BK_DATA.crimes.filter(c=>!c.stageType);
 const stats=ctx.window.BK_CURATED_LAWTEXT15;
 assert.ok(stats,'Curated lawtext report missing');
-assert.equal(stats.sectionsChecked,54,'Exactly fifty-four complete paragraphs must have been checked: '+JSON.stringify({missing:stats.missing,mismatch:stats.mismatch,sourceHeads:stats.mismatch.map(k=>({ref:k,text:W[k]?.text?.slice(0,110)}))}));
+assert.equal(stats.sectionsChecked,66,'Exactly sixty-six complete paragraphs must have been checked: '+JSON.stringify({missing:stats.missing,mismatch:stats.mismatch,sourceHeads:stats.mismatch.map(k=>({ref:k,text:W[k]?.text?.slice(0,110)}))}));
 assert.equal(stats.missing.length,0,JSON.stringify(stats.missing));
 assert.equal(stats.mismatch.length,0,JSON.stringify(stats.mismatch));
 const addedCards=base.filter(c=>['BrB:13:5c','BrB:17:10'].includes(c.statute));
@@ -38,9 +38,27 @@ for(const key of ['BrB:5:1','BrB:5:2','BrB:5:3','BrB:14:1','BrB:14:2','BrB:14:3'
  assert.ok(newCards.some(c=>c.statute===key),'Expected an existing official offence card for '+key);
 }
 assert.ok(newCards.length>=10,'New SFS paragraphs must link to genuine searchable crime cards');
-assert.equal(stats.linkedCardsChecked,21+addedCards.length+propertyCards.length+officeCards.length+negligenceCards.length+newCards.length,
- 'All 54 current SFS paragraphs must cover their actual offence card counts');
+const economicKeys=['BrB:10:1','BrB:10:2','BrB:10:3','BrB:10:4','BrB:10:5','BrB:10:5a','BrB:10:5b','BrB:10:5c','BrB:10:5d','BrB:10:5e','BrB:10:9','BrB:10:10'];
+const economicCards=base.filter(c=>economicKeys.includes(c.statute));
+for(const key of economicKeys.filter(k=>!['BrB:10:9','BrB:10:10'].includes(k))){
+ assert.ok(economicCards.some(c=>c.statute===key),'Missing source-checked economic crime card: '+key);
+}
+assert.ok(economicCards.length>=10,'BrB 10 catalogue cards must cover the economic offences');
+assert.equal(stats.linkedCardsChecked,21+addedCards.length+propertyCards.length+officeCards.length+negligenceCards.length+newCards.length+economicCards.length,
+ 'All 66 current SFS paragraphs must cover their actual offence card counts');
 const markers={
+ 'BrB:10:1':['fått egendom i besittning för annan','vinning för honom och skada','förskingring'],
+ 'BrB:10:2':['det förskingrades värde','ringa förskingring','Lag (2017:442).'],
+ 'BrB:10:3':['grov förskingring','vilseledande bokföring','Lag (2026:1318).'],
+ 'BrB:10:4':['ägande- eller säkerhetsrätt','grovt olovligt förfogande','Lag (2017:442).'],
+ 'BrB:10:5':['självständigt hantera en kvalificerad teknisk uppgift','grov trolöshet mot huvudman','rättslig angelägenhet','Lag (2026:1318).'],
+ 'BrB:10:5a':['tar emot, godtar ett löfte om eller begär','innan gärningsmannen fått en sådan ställning','Lag (2026:1318).'],
+ 'BrB:10:5b':['lämnar, utlovar eller erbjuder','otillbörlig förmån','Lag (2026:1318).'],
+ 'BrB:10:5c':['grovt tagande av muta eller grovt givande av muta','ett år och sex månader','Lag (2026:1318).'],
+ 'BrB:10:5d':['handel med inflytande','offentlig upphandling','Lag (2026:1318).'],
+ 'BrB:10:5e':['av grov oaktsamhet','vårdslös finansiering av mutbrott','Lag (2012:301).'],
+ 'BrB:10:9':['försök till förskingring eller trolöshet mot huvudman','förberedelse till grovt givande av muta','Lag (2016:508).'],
+ 'BrB:10:10':['dock inte grov förskingring och grov trolöshet','åtal av särskilda skäl','20 kap. 5 §','Lag (2017:442).'],
  'BrB:5:1':['eljest lämnar uppgift','sann eller att han hade skälig grund'],
  'BrB:5:2':['grovt förtal','omfattningen av spridningen','Lag (2017:1136).'],
  'BrB:5:3':['förolämpning','självkänsla eller värdighet','Lag (2026:1318).'],
@@ -116,9 +134,9 @@ assert.equal(b.length,319);
 const directCrosschecks=b.filter(c=>c.lawCompletenessVerified===true&&
  c.lawCompletenessReviewScope==='current-paragraph-only'&&
  c.lawCompletenessSourceURL?.includes('riksdagen.se'));
-assert.equal(directCrosschecks.length,21+addedCards.length+propertyCards.length+officeCards.length+negligenceCards.length+newCards.length,
+assert.equal(directCrosschecks.length,21+addedCards.length+propertyCards.length+officeCards.length+negligenceCards.length+newCards.length+economicCards.length,
  'All current SFS offence cards must carry narrow dated paragraph-crosscheck provenance');
 assert.ok(!base.some(c=>c.statute==='BrB:13:12'),'13:12 is a stage authorization source, not a standalone completed crime');
 assert.ok(b.some(c=>c.lawMode==='full'&&!c.lawCompletenessVerified),
  'Embedded full text without documented review must remain distinguishable');
-console.log('PASS V1.5: fifty-four complete current SFS paragraphs verified, without legal signoff');
+console.log('PASS V1.5: sixty-six complete current SFS paragraphs verified, without legal signoff');
