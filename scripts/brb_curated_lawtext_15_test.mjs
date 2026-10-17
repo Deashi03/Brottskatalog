@@ -51,7 +51,11 @@ for(const [ref,expected] of Object.entries(markers)){
 assert.equal(base.filter(c=>c.rekvisit15?.legalReviewApproved===true).length,0);
 const b=base.filter(c=>c.statute?.startsWith('BrB:'));
 assert.equal(b.length,319);
-const verifiedBrbCards=b.filter(c=>c.lawMode==='full'||c.lawCompletenessVerified===true).length;
-assert.ok(verifiedBrbCards>=59,
- 'Expected 59 complete-lawtext BrB cards but found '+verifiedBrbCards);
+const directCrosschecks=b.filter(c=>c.lawCompletenessVerified===true&&
+ c.lawCompletenessReviewScope==='current-paragraph-only'&&
+ c.lawCompletenessSourceURL?.includes('riksdagen.se'));
+assert.equal(directCrosschecks.length,21,
+ 'Each of 21 curated law-text cards must carry an individual documented full-paragraph crosscheck');
+assert.ok(b.some(c=>c.lawMode==='full'&&!c.lawCompletenessVerified),
+ 'Embedded full text without documented review must remain distinguishable');
 console.log('PASS V1.5: thirteen complete current SFS paragraphs verified, without legal signoff');
