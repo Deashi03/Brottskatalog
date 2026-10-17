@@ -41,6 +41,8 @@ on:
       - "rekvisit-ekonomi-15.js"
       - "rekvisit-fortsattning-15.js"
       - "rekvisit-allmanfara-15.js"
+      - "rekvisit-ordning-15.js"
+      - "scripts/rekvisit_ordning_15_test.mjs"
       - "scripts/rekvisit_allmanfara_15_test.mjs"
       - "scripts/rekvisit_fortsattning_15_test.mjs"
       - "scripts/rekvisit_ekonomi_15_test.mjs"
@@ -133,6 +135,8 @@ on:
       - "rekvisit-ekonomi-15.js"
       - "rekvisit-fortsattning-15.js"
       - "rekvisit-allmanfara-15.js"
+      - "rekvisit-ordning-15.js"
+      - "scripts/rekvisit_ordning_15_test.mjs"
       - "scripts/rekvisit_allmanfara_15_test.mjs"
       - "scripts/rekvisit_fortsattning_15_test.mjs"
       - "scripts/rekvisit_ekonomi_15_test.mjs"
@@ -239,6 +243,8 @@ jobs:
         run: node scripts/rekvisit_fortsattning_15_test.mjs
       - name: V1.5 all BrB chapter 13 statutory offence structures
         run: node scripts/rekvisit_allmanfara_15_test.mjs
+      - name: V1.5 complete BrB 16 offence routes, exceptions, and gradings
+        run: node scripts/rekvisit_ordning_15_test.mjs
       - name: V1.5 intricate offence alternatives, minority and public-order requisites
         run: node scripts/rekvisit_fordjupning_15_test.mjs
       - name: V1.5 child/adult sex-offence distinctions and limited statutory exemptions
