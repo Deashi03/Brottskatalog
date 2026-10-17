@@ -226,3 +226,28 @@ Samtliga eget formulerade fall måste verifieras mot gällande paragraf och spec
 - **Håll kvar PR #2 som draft.** Publicerad V1.4 på main ändras inte. V1.5 får inte publiceras förrän lagtextens integritet, individuella juridiska granskningar och osäkra förstadier är hanterade. Siffermåttet 244 av 319 säger ingenting om att dessa publiceringsblockerare är undanröjda.
 
 Källa för detta tillägg: [Brottsbalken (1962:700), SFS t.o.m. 2026:1656](https://www.riksdagen.se/sv/dokument-och-lagar/dokument/svensk-forfattningssamling/brottsbalk-1962700_sfs-1962-700/).
+
+---
+
+## Fortsättning 17 oktober 2026 – kapitel 13, 16, 18 och 19
+
+**Strukturell utbyggnad från 244 till 297 av 319 BrB-grundposter (93,1 %).** Nya källanknutna modulskript och automatiska tester:
+
+| Kapitel | Nytillkomna rekvisitstrukturer | Nu strukturerat |
+| --- | ---: | ---: |
+| BrB 13 – allmänfarliga brott | 17 | 21/21 |
+| BrB 16 – allmän ordning | 14 | 23/23 |
+| BrB 18 – högmålsbrott | 4 | 5/5 |
+| BrB 19 – Sveriges säkerhet | 18 | 20/20 |
+
+- BrB 13: Kapning, sjö- eller luftfartssabotage, flygplatssabotage och sabotage mot blåljusverksamhet har uttryckliga alternativa gärningsvägar. Grova brott kopierar endast sina kontrollerade grundrekvisit plus en **separat helhetsbedömning**. Särskilda bestämmelser i 13:11–12 och osäkra grova förstadier ändras **inte**.
+- BrB 16: Hets mot folkgrupp, involverande av en underårig i brottslighet, djurplågeri, barnpornografibrott, olaga våldsskildring, myteri och övriga återstående brott är strukturerade. Särskilda undantag för exempelvis försvarliga gärningar, åldersregler och olika skuldformer återges. Äldre typexempel har inte fabricerats fram för känsliga brott.
+- BrB 18: Uppror, väpnat hot mot laglig ordning, brott mot medborgerlig frihet och svikande av försvarsplikt. De särskilda syftesrekvisiten och krigsberoende straffskalorna anges utan att påstå att ett visst straff alltid gäller.
+- BrB 19: Uppsåtsbrott, grov oaktsamhet, underrättelseverksamhet i Sverige och särskilda möjligheter till ansvarsfrihet hålls isär. Utlandsspioneriets försvarlighetsundantag samt undantag och åtalsförordnanden för bland annat olovlig värvning och utländskt understöd redovisas. Villkorad krigstida straffskala och kvalificerat hemlighets- och skadeföremål måste fortsatt prövas särskilt.
+- Nya filer: rekvisit-allmanfara-15.js, rekvisit-ordning-15.js, rekvisit-hogmal-15.js, rekvisit-riket-15.js, samt scripts/rekvisit_allmanfara_15_test.mjs, scripts/rekvisit_ordning_15_test.mjs, scripts/rekvisit_hogmal_15_test.mjs och scripts/rekvisit_riket_15_test.mjs.
+- **Noll ny juridisk slutcertifiering.** Nya listor är märkta lagtext-jamford och legalReviewApproved: false. Totalsiffran 297/319 gäller ENBART närvaron av strukturerat studiestöd; inte individuell kontroll av originaltextens fullständighet, praxis, övergångsbestämmelser eller alla förstadier.
+- De tre återstående kapitlen med strukturella luckor är BrB 6, 21 och 22. De är juridiskt känsliga och behöver fortsatt separat jämförelse.
+- Publiceringsspärr, draft-PR och V1.4 på main bibehålls.
+
+Primärkälla: [Sveriges riksdag, Brottsbalk (1962:700)](https://www.riksdagen.se/sv/dokument-och-lagar/dokument/svensk-forfattningssamling/brottsbalk-1962700_sfs-1962-700/), ändrad t.o.m. SFS 2026:1656.
+
