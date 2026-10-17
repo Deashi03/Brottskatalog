@@ -775,6 +775,7 @@ D.date='2026-10-12';
   <script src="./praxis-vapenbilden-15.js"></script>
   <script src="./stages-08.js"></script>
   <script src="./stage-scope-15.js"></script>
+  <script src="./age14-offence-scope-15.js"></script>
   <script src="./field-07.js"></script>
   <script src="./sources-qa.js"></script>
   <script src="./prosecution-10.js"></script>
@@ -1220,6 +1221,12 @@ function renderDetail(c){
   ${accordion('utredning','Utredningsuppslag och beviskällor','list',investigationSection(c))}
 
   ${accordion('relaterade','Relaterade brott','list',related||'<p>Inga relaterade exempel ännu.</p>')}
+  ${c.age14Exception15?accordion('age14','Särskild påföljdsregel vid 14 år','calendar-clock',
+    '<p><strong>Gärningsåldern, inte åldern vid rättegången, är avgörande.</strong> För brott begångna från 10 september 2026 till 9 september 2031 kan en 14-åring dömas till påföljd endast när den i BrB 1:6 angivna undantagsregeln är tillämplig.</p>'+
+    '<p>'+escapeHtml(c.age14Exception15.description)+'</p>'+
+    '<p class="source-label">'+escapeHtml(c.age14Exception15.reviewNote)+'</p>'+
+    '<p class="source-label"><strong>Ingen automatisk bedömning av gripande, anhållande eller häktning.</strong> För förstadier ska straffbarhet prövas självständigt. Eventuella särskilda regler om unga personer måste alltid beaktas.</p>'+
+    '<a class="source-link" target="_blank" rel="noopener noreferrer" href="'+escapeHtml(c.age14Exception15.sourceURL)+'">BrB 1:6 och övergångsreglerna (SFS 2026:1528, 1555) '+ic('external-link','sm')+'</a>'):''}
   ${accordion('sources','Rättskällor och källtyper','book-mark',`<p><strong>Lagtext:</strong> återgiven separat och utan omskrivningar. Kontrollera aktuellt rättsläge via källan.</p><p><strong>Tolkningsstöd:</strong> kursanteckningar och praktiska sammanfattningar är inte lagtext.</p>${links.map(([title,url])=>`<a class="source-link" href="${url}" target="_blank" rel="noopener noreferrer">${ic('external-link')} ${escapeHtml(title)}</a>`).join('')}`)}
   </div></section>${qualityCard(c)}<p class="detail-footer">Version 1.4 · kontrollera aktuell lagtext vid operativa beslut.</p></main>`;
 }
