@@ -673,3 +673,48 @@ Källkontrollserien innehåller **105/105 godkända exakt avgränsade brottsgrad
 | Releasegrind | **`releaseReady:false`** |
 
 **Senaste fullständiga gröna testkörning, inklusive iPhone-UI:** [GitHub Actions 39073590017](https://github.com/Deashi03/Brottskatalog/actions/runs/39073590017). En kvalitetsregression för historisk fulltextstatus anpassades korrekt efter att fler källposter blivit individuellt kontrollerade. **V1.5 får fortfarande inte mergas eller publiceras; V1.4 på `main` är opåverkad.**
+
+---
+
+## 18 oktober 2026 – barnfridsbrott, olaga förföljelse och äktenskapsbrott
+
+Denna omgång utgår från [Riksdagens konsoliderade brottsbalk (1962:700), SFS ändrad t.o.m. 2026:1656](https://www.riksdagen.se/sv/dokument-och-lagar/dokument/svensk-forfattningssamling/brottsbalk-1962700_sfs-1962-700/). **Ny källverifiering är datumstämplad 2026-10-18**, utan att äldre kontrollers faktiska datum skrivs över.
+
+### Sju hela aktuella paragrafer
+
+I `brb-curated-lawtext-15.js` har vi kompletterat **BrB 3:3, 4:3, 4:4 b, 4:4 c, 4:4 d, 4:4 f och 4:4 g**. Relevanta fulltextkort får korrekt uppdaterad lagtext och separat källdatum. De nya kontrollerna behandlar:
+
+- **Barnadråp 3:3**: särskilt brott med anknytning till förlossning och moderns därmed sammanhängande omständigheter; inte liktydigt med vanligt mord eller dråp.
+- **Barnfridsbrott 4:3**: fem uttryckliga kategorier av grundgärningar, inklusive vissa straffbara försök; kravet att ett barn bevittnar gärningen och är eller har varit närstående till **både** gärningspersonen och den utsatta; egen ringa och grov grad. **2026 års ändringar i katalogen är uttryckligen inkluderade**, bland annat psykiskt våld och aktuella angivna sexualbrott.
+- **Olaga förföljelse 4:4 b**: **19 uttömmande uppräknade grundbrottstyper**, inklusive brotten som nyligen tillkommit 2026 (bl.a. psykiskt våld, vissa tjänstemannabrott), och att **varje** gärning ingår i en upprepad integritetskränkning. Ingen allmän likställning med annat störande beteende.
+- **Äktenskapstvång och barnäktenskapsbrott 4:4 c**: två giltiga former av äktenskap/äktenskapsliknande förbindelse, särskilda barnalternativ och uttrycklig bestämmelse om oaktsamhet avseende ålder.
+- **Äktenskapsresebrott respektive barnvarianten 4:4 d**: utlandsresa och avsikten att utsättas för äktenskapstvång/barnäktenskapsbrott; olika handlingsalternativ i barnfallen.
+- **Oskuldskontroll och intygande av sexuell oskuld 4:4 f–g**: undersöknings- respektive intygandegärningar. **Ringa gärningar är enligt respektive paragraf inte brott.**
+
+### Mer pedagogiska rekvisit för två av de svåraste brotten
+
+Ny `brb4-child-stalking-requisites-15.js` organiserar 4:3:s **fem grundkategorier** och 4:4 b:s **19 exakta brottstyper** i OCH/ELLER-grupper. Barnfridsbrottets krav på bevittnande och dubbelt närståendeförhållande redovisas som separata rekvisit. För olaga förföljelse används en expanderbar alternativväg som bevarar befintliga kort och tidigare undervisningstester.
+
+Modulen skriver endast över en tidigare begränsad rekvisitstruktur om aktuell full paragraftext finns källverifierad. **`legalReviewApproved:false` kvarstår**; brottsgrad, gärningsdatum, konkurrens, skuldform, praxis, åtal och tvångsmedel måste prövas självständigt. Ingen ändring av de 12 osäkra förstadierna.
+
+Ny full regression: `scripts/brb4_child_stalking_requisites_15_test.mjs`, som prövar listornas längder, särskilda 2026-rekvisit, fulltextkällor, datummärkning, konservativt stopp vid saknad källa, äldre appens alternativväg och att förstadier inte ändras.
+
+### Tio nya individuellt kontrollerade straffskalor
+
+`brb-penalty-grade-audit-15.js` omfattar nu **115** individuellt källa-jämförda brottsgradsskalor, varav tio nytillkomna för barnadråp, barnfridsbrott, grovt barnfridsbrott, olaga förföljelse, äktenskapstvång, barnäktenskapsbrott, äktenskapsresebrott med/utan barn, oskuldskontroll och intygande av sexuell oskuld. Tilläggens straffskalekontroll är daterad **2026-10-18**, de gamla behåller sitt korrekta datum. Ingen avvikelse upptäcktes i jämförda intervall.
+
+### Senaste strikta revisionsstatus
+
+| Mått | Status |
+| --- | ---: |
+| Dokumenterat kompletta, källverifierade paragrafer | **122** |
+| BrB-kort med verifierad komplett aktuell lagtext | **159 / 319 (49,8 %)** |
+| Därav direkt aktuellt paragrafgranskade | **150** |
+| BrB-kort som ännu saknar dokumenterad fulltextkontroll | **160** |
+| Individuellt kontrollerade straffskalor | **115** |
+| Grundposter kvar i straffskalegranskning | **201** |
+| Särskilt villkorade straffskalor som kräver granskning | **12** |
+| Ännu osäkra förstadier | **12** |
+| Fullständigt juridiskt slutgodkända BrB-brott | **0 / 319** |
+
+**Verifierad full CI med mobil/iPhone:** [GitHub Actions 39077037418](https://github.com/Deashi03/Brottskatalog/actions/runs/39077037418) – PASS. Juridisk publiceringsspärr är fortfarande `releaseReady:false`. V1.5 förblir endast draft PR #2; publicerad V1.4 och `main` har inte ändrats.
