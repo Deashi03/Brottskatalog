@@ -1,4 +1,4 @@
-/* V1.5: explicit individual-range checks of 84 common BrB grades.
+/* V1.5: explicit individual-range checks of 86 common BrB grades.
  * The controlling CURRENT complete SFS paragraphs are curated in
  * brb-curated-lawtext-15.js. Full legal/penalty applicability is NOT approved.
  * Date-dependent, inchoate and coercive rules remain separate work.
@@ -66,6 +66,8 @@ const rows=[
  ['Bokföringsbrott','11:5',0,2,false,false,'Uppsåt eller vanlig oaktsamhet, men rörelsens resultat/förlopp/ställning ska inte i huvudsak kunna bedömas. Ej ringa fall.'],
  ['Ringa bokföringsbrott','11:5',0,0.5,true,false,'Särskild ringa grad med böter; 11:8 kräver särskilda skäl och allmän synpunkt för åklagaråtal.'],
  ['Grovt bokföringsbrott','11:5',0.5,6,false,false,'Grova graden har lägst sex månaders fängelse; kvalifikationsfaktorer enligt andra stycket; förberedelse enligt 11:6.'],
+ ['Åverkan','12:2a',0,0,true,false,'Ringa olovligt tillgrepp av särskilda obearbetade naturprodukter i skog/mark; endast böter, särskild åtalsbegränsning i 12:6 vid enbart enskild rätt.'],
+ ['Tagande av olovlig väg','12:4',0,0.5,true,false,'Olovlig färd på annat än väg över tomt, plantering eller annan mark som kan skadas; 12:6 åtalsvillkor bara när enskilds rätt ensam kränks.'],
  ['Stöld','8:1',0,2,false,false,'Uppsåt att tillägna sig och skada prövas separat.'],
  ['Ringa stöld','8:2',0,0.5,true,false,'Förutsätter 8:1 och helhetsbedömning av ringa grad.'],
  ['Grov stöld','8:4',1,6,false,false,'Kvalifikationsfaktorer är inte var och en obligatoriska; helhetsbedömning.'],
