@@ -57,4 +57,19 @@ for(const entry of file.stageAuditQueue){
 }
 assert.ok(file.blockers.unverifiedInchoateStatus===12,'Unresolved degrees must block release, despite complete source wording');
 
+assert.equal(file.counts.age14RulesCovered,1470,
+ 'Every base offence and inchoate card needs an offence-age metadata warning');
+assert.equal(file.blockers.age14OffenceCardsWithoutAgeAtActRule,0,
+ 'Any missing BrB 1:6 age exception metadata blocks publication');
+assert.equal(file.age14Triage.legalWindow.from,'2026-09-10');
+assert.equal(file.age14Triage.legalWindow.toExclusive,'2031-09-10');
+assert.equal(file.age14Triage.totalIndexed,1470);
+assert.ok(file.age14Triage.potentialCandidates.some(c=>c.title==='Grovt rån'));
+assert.ok(file.age14Triage.potentialCandidates.every(c=>c.offenceDateRequired===true));
+assert.ok(file.age14Triage.potentialCandidates.every(c=>!c.safeForCustodyDetermination));
+assert.ok(file.age14Triage.potentialCandidates.every(c=>c.inchoateAuthorizationIsIndependent));
+assert.equal(file.age14Triage.pendingWithinCandidates,
+ file.counts.age14FourYearCandidatesAwaitingIndividualApplicabilityReview);
+assert.equal(file.age14Triage.noAge14StatuteCard,0);
+assert.equal(file.releaseReady,false);
 console.log('PASS V1.5: per-chapter legal review queue, truthful source scopes, '+file.counts.brbPostsWithoutStructuredRequisites+' still missing structures, Pages release blocked');
