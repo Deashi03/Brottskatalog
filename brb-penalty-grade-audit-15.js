@@ -1,4 +1,4 @@
-/* V1.5: explicit individual-range checks of 43 common BrB grades.
+/* V1.5: explicit individual-range checks of 56 common BrB grades.
  * The controlling CURRENT complete SFS paragraphs are curated in
  * brb-curated-lawtext-15.js. Full legal/penalty applicability is NOT approved.
  * Date-dependent, inchoate and coercive rules remain separate work.
@@ -25,6 +25,19 @@ const rows=[
  ['Grov mened','15:1',2,8,false,false,'Grovt brott kräver särskild helhetsbedömning och lagens uppsåtsrelaterade kvalifikationsfaktorer.'],
  ['Osann partsutsaga','15:2',0,2,false,false,'Ringa variant har särskild bötesmöjlighet enligt 15:2. Separat vittnesed krävs inte för partsutsaga.'],
  ['Ovarsam utsaga','15:3',0,0.5,true,false,'Grov oaktsamhet krävs, jämför undantagen om betydelselös utsaga/rätt att tiga i 15:4.'],
+ ['Förskingring','10:1',0,2,false,false,'Besittning för annans räkning, redovisningsskyldighet, vinning och skada måste särskiljas från stöld och trolöshet.'],
+ ['Ringa förskingring','10:2',0,0.5,true,false,'Ringa grad enligt förskingringsrekvisiten i BrB 10:1. I vissa hyres-/kreditköpsfall gäller särskild åtalsbegränsning i 10:10.'],
+ ['Grov förskingring','10:3',1,6,false,false,'Grov grad med samlad bedömning, särskilt ansvarsfull ställning, handlingar/bokföring, betydande värde eller kännbar skada.'],
+ ['Olovligt förfogande','10:4',0,1,true,false,'Gärning med annans egendoms- eller säkerhetsrätt i förhållande till egendom i gärningspersonens besittning, i annat fall än 10:1–3.'],
+ ['Grovt olovligt förfogande','10:4',0.5,4,false,false,'Samlad grovhetsbedömning enligt 10:4 andra stycket.'],
+ ['Trolöshet mot huvudman','10:5',0,2,true,false,'Förtroendeställning, kvalificerad ekonomisk, teknisk eller rättslig angelägenhet, skada/förfång samt subsidiaritet till 10:1–3.'],
+ ['Grov trolöshet mot huvudman','10:5',1,6,false,false,'Särskild grovhetsbedömning och alltjämt subsidiär mot förskingring i 10:1–3.'],
+ ['Tagande av muta','10:5a',0,2,false,false,'Tar emot, begär eller godtar löfte; offentlig anställning eller allmänt anordnad vadhållning; särskilt åtalsvillkor 10:10/20:5.'],
+ ['Givande av muta','10:5b',0,2,false,false,'Lämnar, utlovar eller erbjuder otillbörlig förmån; särskilt åtalsvillkor 10:10/20:5.'],
+ ['Grovt tagande av muta','10:5c',1.5,6,false,false,'Grovhetsbedömning av 10:5a-typ enligt 10:5c; åtalsfrågan i grov grad måste bedömas särskilt.'],
+ ['Grovt givande av muta','10:5c',1.5,6,false,false,'Grovhetsbedömning av 10:5b-typ enligt 10:5c; särskilt lagstöd för förberedelse i 10:9.'],
+ ['Handel med inflytande','10:5d',0,2,false,false,'Otillbörlig förmån för påverkan på myndighetsutövning/offentlig upphandling, i annat fall än 10:5a–b; åtalsvillkor enligt 10:10.'],
+ ['Vårdslös finansiering av mutbrott','10:5e',0,2,true,false,'Grov oaktsamhet vid finansiering av vissa bestämda mutbrott; särskilt åtalsvillkor enligt 10:10 och 20:5.'],
  ['Stöld','8:1',0,2,false,false,'Uppsåt att tillägna sig och skada prövas separat.'],
  ['Ringa stöld','8:2',0,0.5,true,false,'Förutsätter 8:1 och helhetsbedömning av ringa grad.'],
  ['Grov stöld','8:4',1,6,false,false,'Kvalifikationsfaktorer är inte var och en obligatoriska; helhetsbedömning.'],
