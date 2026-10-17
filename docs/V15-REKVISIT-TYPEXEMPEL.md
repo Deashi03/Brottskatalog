@@ -251,3 +251,19 @@ Källa för detta tillägg: [Brottsbalken (1962:700), SFS t.o.m. 2026:1656](http
 
 Primärkälla: [Sveriges riksdag, Brottsbalk (1962:700)](https://www.riksdagen.se/sv/dokument-och-lagar/dokument/svensk-forfattningssamling/brottsbalk-1962700_sfs-1962-700/), ändrad t.o.m. SFS 2026:1656.
 
+
+---
+
+## Slutlig strukturell täckning 17 oktober 2026 – 319/319, 20/20 kapitel
+
+Den återstående arbetskön har kompletterats efter föregående lägesbild. **Det är enbart en strukturell rekvisitkomplettering och får absolut inte beskrivas som att V1.5 är juridiskt färdig eller publiceringsklar.**
+
+- BrB 21 kap.: 12 ytterligare checklistor. Samtliga anger först att krigsreglernas **tillämpning förutsätter krig eller regeringens beslut vid angivna krisförhållanden**, jämte särskilda definitioner i 21:3–4. Olovlig avvikelse, lydnadsbrott, våld/hot mot förman, samröre med fienden, undergrävande av stridsviljan, militärt tjänstebrott m.m. skiljs åt. Rekvisiten enligt 21:16 om vidgat fiendebegrepp flaggas. Under den lagtextbaserade granskningen införs ingen presumtion om att dessa bestämmelser gäller i fred.
+- BrB 22 kap.: sex ytterligare checklistor. Landssvek och landsskadlig vårdslöshet separerar skuldform och skadegrad; BrB 22:4 om tillåten försörjning vid ockupation tas uttryckligen med. Befattning med kemiska vapen och antipersonella minor är **inte generellt beroende av att Sverige är i krig**: konventionsdefinitioner, undantagen i 1997 års minkonvention och konkurrens med krigsförbrytelser måste alltid prövas. De fyra olika gärningsleden i 22:6 a respektive sex verben i 22:6 b bevaras.
+- BrB 6 kap.: de fyra kvarstående posterna avser sexuellt övergrepp mot barn (normal/grov grad) samt samlag med avkomling och samlag med syskon. Sexuellt övergrepp mot barn har skilda barnålders- och relationsvägar. **Undantaget i BrB 6:14 gäller inte generellt alla gärningar enligt 6:6** utan är särskilt avgränsat till där uppräknade situationer. För BrB 6:7 visas krav på vaginalt samlag, rätt släktskap, subsidiaritet och ansvarsfrihet för den som förmåtts genom olaga tvång eller annat otillbörligt sätt. Inga hypotetiska spetsfall publiceras.
+- Nya filer: rekvisit-krig-15.js, rekvisit-sista-15.js, scripts/rekvisit_krig_15_test.mjs, scripts/rekvisit_sista_15_test.mjs. Funktionstester kräver exakt **319 sökbara BrB-grundposter med en OCH/ELLER-struktur** och 20 kapitel utan strukturglapp.
+- **Oförändrade publiceringshinder:** Ingen BrB-post ska märkas legalReviewApproved=true enbart på denna grund. De 281 tidigare ogranskade lagtextposterna måste granskas självständigt; därtill 12 juridiskt osäkra förstadier och kvarstående individuell kontroll av straffskalor, åtalsregler, undantag och andra rättskällor. Det tidigare måttet 0/319 slutcertifierade kan endast ändras efter faktisk individuell fullständig kontroll.
+- **Releaseinstruktion:** Behåll PR #2 som draft och main/GitHub Pages på godkänd V1.4. Kör alltid juridiska säkerhetsgrinden med --release; den ska avslå en merge trots grönt strukturellt CI tills blockerarna verkligen är undanröjda.
+
+Rättskälla: [Brottsbalk (1962:700) hos Sveriges riksdag](https://www.riksdagen.se/sv/dokument-och-lagar/dokument/svensk-forfattningssamling/brottsbalk-1962700_sfs-1962-700/), ändrad t.o.m. SFS 2026:1656.
+
