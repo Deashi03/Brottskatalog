@@ -485,3 +485,46 @@ Regeln **är inte generaliserad från vanliga till grova mutbrott enligt 10:5 c 
 `brb-penalty-grade-audit-15.js` har utökats med **13** gradsspecifika kontroller av minimistraff, maximistraff, bötesmöjlighet och livstid enligt 10 kap. Det ger **56 individuellt källjämförda brottsgradsskalor** i katalogen. Kontrollen korrigerar inte tyst felaktiga uppgifter utan håller tillbaka godkännande vid konflikt. Återstående individuell granskning av grundbrottsstraffskalor: **252** (tidigare 265), samt **12** villkorade skalor i separat kö.
 
 **Juridisk release-spärr kvarstår: 0/319 fullständigt godkända brott, 224 ej fulltextverifierade BrB-kort, 252 öppna normala och 12 villkorade straffskalegranskningar, 12 osäkra förstadier. Ingen automatisk slutsats om straffansvar, åtalsmöjlighet eller tvångsmedel. PR #2 förblir draft.**
+
+---
+
+## Tillgrepp och oredlighet – BrB 8:8–13, 9:3 a/c/d och 9:4–11 – 17 oktober 2026
+
+Rättslig källa är [Riksdagens konsoliderade Brottsbalk (1962:700), t.o.m. SFS 2026:1656](https://www.riksdagen.se/sv/dokument-och-lagar/dokument/svensk-forfattningssamling/brottsbalk-1962700_sfs-1962-700/), särskilt kapitlen 8, 9 och 23. Detta är **textuell källjämförelse, inte fullständigt juridiskt slutgodkännande**.
+
+### 18 nya kompletta paragrafer
+
+Totalt **18 ytterligare hela paragrafer** har kontrollerats och införts via `brb-curated-lawtext-15.js`:
+
+- **BrB 8:8–10:** egenmäktigt förfarande och grov grad, självtäkt, olovlig energiavledning och grov grad. Egenmäktigt förfarande har **flera alternativa gärningsformer**: olovligt tillgrepp/brukande, besittningsrubbning med skada/olägenhet och våld/hot som hindrar annans rätt att hålla kvar/ta något. Självtäkt har uttryckligen syftet att själv ta sig rätt. Olovlig energiavledning kan även avse värmeenergi.
+- **BrB 8:11–13:** gräns mot åverkan enligt 12:2 a, **särskilt lagstöd för försök/förberedelse/stämpling**, undantag för ringa tillgrepp av fortskaffningsmedel och **särskilt åtalsvillkor för närståendebrott**. BrB 8:13 **undantager grov stöld, inbrottsstöld, rån och grovt rån** från denna närståendebegränsning, men föreskriver också likställande av häleri och häleriförseelse. Brott enligt 9:6 a (utförselhäleri) har inte automatiskt tilldelats denna särskilda regel.
+- **BrB 9:3 a, 3 c–d:** grovt fordringsbedrägeri, olovlig befattning med betalningsverktyg och grov grad, samt företagskapning. 9:3 c har flera alternativa tillvägagångssätt, en **bred definition av betalningsverktyg** och en särskild subsidiaritetsregel när samma eller strängare straff kan följa av annan bestämmelse.
+- **BrB 9:4–7:** utpressning inklusive ringa/grov grad, ocker, häleri, utförselhäleri och häleriförseelse. Utpressning är **subsidiär till rån**, medan 9:7 uttryckligen täcker vissa gärningar där personen **hade skälig anledning att anta** brottslig bakgrund utan att faktiskt inse den. Häleri och utförselhäleri skiljer sig särskilt åt genom utförselavsikten.
+- **BrB 9:8–11:** oredligt förfarande, svindleri, ockerpantning och det detaljerade förstadielagstödet i 9:11. BrB 9:11 innehåller uttryckligt **undantag från BrB 23:3 om frivilligt tillbakaträdande i fråga om försök till utpressning, ringa utpressning eller grov utpressning**, liksom separat specialregel för försäkringsbedrägeriförberedelse. Dessa är juridiskt betydelsefulla och får inte tappas bort i en allmän förstadiesammanfattning.
+
+### Åtalsrätt – säker specialkontroll
+
+Ny modul `brb8-near-relative-prosecution-15.js` och nytt regressionstest `scripts/brb8_near_relative_prosecution_15_test.mjs`: om relevant egendomsbrott utförs mot person som är närstående enligt **BrB 8:13**, prövas **målsägandens angivelse eller allmän synpunkt**; för övriga fall gäller inte denna begränsning automatiskt. Den aktuella lagen har en uttrycklig lista med undantagna grova stöld-/rånbrott. Därför är dessa **inte** felaktigt satta som villkorade enligt BrB 8:13. För häleri/häleriförseelse kontrolleras sista meningen i 8:13. Osäkra individuella juridiska slutsatser, förstadier och daterade gärningar återstår separat.
+
+### 19 ytterligare kontrollerade straffskalor
+
+`brb-penalty-grade-audit-15.js` jämför nu **75 grundbrottsgrader individuellt** med den kontrollerade lagtexten. De **19 nya** omfattar egenmäktigt förfarande/grov grad, självtäkt, energiavledning, grovt fordringsbedrägeri, betalningsverktygsbrott, företagskapning, utpressning/ringa/grov, ocker/grov, häleri/grov, utförselhäleri/grov och häleriförseelse. Kontrollerna kräver matching av lagrum, min/max, böter och livstidsstatus och **avstår från godkännande om något inte stämmer**. Inga intervallkonflikter påträffades.
+
+### Verifierad reviderad status efter den här omgången
+
+| Mätpunkt | Aktuell status |
+| --- | ---: |
+| Strukturerade rekvisit på BrB-brottskort | 319/319 |
+| **Hela kontrollerade BrB-paragrafer i källserien** | **85** |
+| **BrB-brottskort med dokumenterad verifierad komplett lagtext** | **119/319 (37,3 %)** |
+| Därav direkt verifierade via kuraterad paragrafkontroll | **107** |
+| BrB-kort utan motsvarande verifierad fullständig lagtext | **200** |
+| Individuellt källjämförda brottsgradsskalor i den strikta serien | **75** |
+| Grundposter som saknar full individuell straffskalegranskning | **233** |
+| Separata villkorade straffskalor som kräver vidare arbete | **12** |
+| Förstadier med `unverified` straffbarhet | **12** |
+| BrB-brottskort med fullständig individuell juridisk certifiering | **0/319** |
+
+**Senaste fullständiga testkörning:** [GitHub Actions 39071214156](https://github.com/Deashi03/Brottskatalog/actions/runs/39071214156), **PASS**, inklusive lagtext, åtalsundantag, straffskalor, juridisk release-grind och iPhone-smoke. Kontrollsträngen för BrB 9:9 justerades till den korrekta lagtextfrasen `priset på vara`, utan att själva lagtexten behövde ändras.
+
+**V1.5 är fortsatt ett opublicerat draft-utkast på PR #2.** 319/319 strukturellt täckta rekvisit är inte samma sak som fullständig legal prövning. Ingen merge, deploy eller grön juridisk release.
