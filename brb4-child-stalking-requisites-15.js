@@ -65,7 +65,7 @@ for(const [title,key,groups,gradeNote] of specs){
  c.rekvisit15={
   groups:groups.map(g=>({...g,options:g.options?[...g.options]:undefined})),
   routes:[],
-  source:key.replace(/:/g,' ').replace('BrB ','BrB '),
+  source:'BrB '+key.slice(4),
   sourceURL:SRC,
   scope:'current-statutory-OCH-ELLER-2026-10-18',
   verifiedOn:'2026-10-18',
