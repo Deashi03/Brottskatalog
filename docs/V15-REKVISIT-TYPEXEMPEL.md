@@ -617,3 +617,59 @@ De fyra paragraferna kompletterar de sedan tidigare källgranskade 12:1–3. De 
 | Individuellt fullständigt juridiskt godkända BrB-brott | **0 / 319** |
 
 Regressionstesterna för lagtext, åtalsvillkor och straffskalor passerade i [GitHub Actions-körning 39072646403](https://github.com/Deashi03/Brottskatalog/actions/runs/39072646403); samma arbetsflöde omfattar iPhone-UI-smoke. **V1.5 förblir opublicerad draft. `releaseReady:false` är avsiktligt.**
+
+---
+
+## BrB 4 kap. – frihetsbrott, integritet, cyberbrott och åtalsregler – 17 oktober 2026
+
+**Källa:** [Sveriges riksdag, aktuell konsoliderad brottsbalk (1962:700), ändrad t.o.m. SFS 2026:1656](https://www.riksdagen.se/sv/dokument-och-lagar/dokument/svensk-forfattningssamling/brottsbalk-1962700_sfs-1962-700/), särskilt BrB 4:1–2, 4:4, 4:6 a–d, 4:7 a–b och 4:8–11.
+
+### 18 ytterligare fullständiga paragrafer – inga påståenden om full juridisk slutcertifiering
+
+Den kuraterade direktkällkontrollen i `brb-curated-lawtext-15.js` omfattar nu **115 hela aktuella BrB-paragrafer**, jämfört med 97 innan denna omgång. Nya fulltexter:
+
+- **BrB 4:1:** människorov, med de specifika syftesrekvisiten, livstidsskalan och särskild mindre-grov grad.
+- **BrB 4:1 a:** människohandel med alternativa otillbörliga medel, flera exploateringsändamål och **särskilt barnundantag från kravet på sådant medel**. Även den särskilda oaktsamhetsbedömningen av barnets ålder framgår.
+- **BrB 4:1 b:** människoexploatering och grov grad med särskilda barnregler och kvalifikationsfaktorer.
+- **BrB 4:2:** olaga frihetsberövande, uttrycklig subsidiaritet till 4:1 och 4:1 a samt separat **mindre grov** straffskala.
+- **BrB 4:4:** olaga tvång och grov grad med separata gärningsalternativ (våld/brottsligt hot och otillbörligt hot om åtal, angivelse eller menligt meddelande).
+- **BrB 4:6 a:** kränkande fotografering, krav på hemlig teknisk upptagning i angivna utrymmen samt **försvarlighetsundantag och särskilt myndighetsundantag**.
+- **BrB 4:6 b–d:** olovlig identitetsanvändning, olaga integritetsintrång och grov grad. För 4:6 c har samtliga fem skyddade uppgifts-/bildkategorier, särskild skaderisk och försvarlighetsundantaget medtagits.
+- **BrB 4:7 a–b:** uppmaning/oaktsam uppmaning till självmord med särskilt ansvarsfrihetsundantag för mindre allvarlig gärning; psykiskt våld med två separata gärningsalternativ (**upprepade kränkningar** respektive **varaktig otillbörlig övervakning**).
+- **BrB 4:8–9 b:** brytande av post-/telehemlighet, intrång i förvar, olovlig avlyssning samt det **egna fullbordade straffbudet i 4:9 b för förberedelse med tekniskt hjälpmedel**. Detta ska inte bli källa till rekursiva, påhittade förstadieposter.
+- **BrB 4:9 c:** dataintrång/grovt dataintrång, inklusive de alternativa olovliga handlingarna mot uppgifter för automatiserad behandling och den aktuella **grovgradsskalan 1–8 års fängelse**.
+- **BrB 4:10:** exakt särskilt stöd för försök, förberedelse och stämpling. Framför allt skiljer lagen mellan **dataintrång som om det fullbordats inte skulle ha varit ringa** och grovt dataintrång, och stödjer inte automatisk straffbarhet för alla tänkbara förstadier till samtliga integritetsbrott.
+- **BrB 4:11:** särskilda åtalsförutsättningar för vissa brott mot frihet och frid, inklusive de två avgränsade **allmän-plats-villkoren** för ofredande respektive olovlig avlyssning och det särskilda tvångsalternativet med hot om åtal/angivelse/menligt meddelande.
+
+### Åtta särskilt kontrollerade åtalskategorier
+
+Ny modul `brb4-prosecution-review-15.js` och regression `scripts/brb4_prosecution_15_test.mjs` kräver komplett verifierad **BrB 4:11** och individuellt verifierad grundparagraf innan åtalspost får status `conditional`. De åtta rubriceringarna är: **hemfridsbrott, olaga intrång, kränkande fotografering, olovlig identitetsanvändning, olaga integritetsintrång, ofredande, intrång i förvar och olovlig avlyssning**.
+
+För **ofredande/olovlig avlyssning** påstår systemet inte att särskilda åtalsvillkor alltid gäller: BrB 4:11 knyter dem till att brottet **inte förövats på allmän plats**. Villkoret är **målsägandens angivelse ELLER att åtal är påkallat från allmän synpunkt**. För de andra direkt namngivna brotten är enskild bedömning av åtalsvillkoren alltid nödvändig. Grova grader, andra tvångsalternativ och förstadier är **inte massgodkända utifrån enbart brottsfamilj**.
+
+Vid källkonflikt förs brottet till granskningskö utan att dess åtalsstatus automatiskt uppgraderas. Ingen frihetsberövande- eller tvångsmedelsbehörighet tilldelas genom åtalstexten.
+
+### Nya straffskalekontroller och kvalitetstest
+
+**19 ytterligare specifika straffskalor** har jämförts individuellt med de aktuella hela BrB-paragraferna: tio för olaga frihetsberövande, kränkande fotografering, identitetsanvändning, integritetsintrång, post- och förvarsbrott, olovlig avlyssning och dataintrång; nio för människorov, människohandel, människoexploatering, olaga tvång, uppmaning till självmord och psykiskt våld.
+
+Källkontrollserien innehåller **105/105 godkända exakt avgränsade brottsgradsskalor**, inklusive när **livstid** kan ingå. Straffskalans matematiska jämförelse är fortfarande **inte** en total juridisk prövning av gärningen, förstadiet, lagversion vid gärningstillfället eller tvångsmedel. Ett äldre test som krävde minst en ännu ogranskad importerad fulltext har rättats: när alla importerade fulltexter blivit källgranskade är det en förbättring, inte ett kvalitetsfel. Testet förhindrar fortfarande att kvarvarande ogranskade kort får verifieringsstämpel utan källa.
+
+### Revisionsresultat från senaste fullständiga CI
+
+| Dimension | Utfallet |
+| --- | ---: |
+| Brottskort i katalogen, grundbrott och förstadier | 1 470 |
+| BrB-grundbrott med strukturerade rekvisit | 319/319 |
+| **Fullständiga aktuella källkontrollerade BrB-paragrafer** | **115** |
+| **BrB-kort med dokumenterat verifierad fullständig lagtext** | **151/319 (47,3 %)** |
+| Därav direkt paragrafkontrollerade | **139** |
+| Återstår utan fullständig dokumenterad lagtextkontroll | **168** |
+| **Källverifierade exakta brottsgradsskalor** | **105** |
+| Återstår för individuell grundpost-straffskalegranskning | **207** |
+| Villkorade straffskaleärenden i särskild granskningskö | **12** |
+| Osäkra förstadier | **12** |
+| Fullständigt juridiskt slutgodkända BrB-brott | **0/319** |
+| Releasegrind | **`releaseReady:false`** |
+
+**Senaste fullständiga gröna testkörning, inklusive iPhone-UI:** [GitHub Actions 39073590017](https://github.com/Deashi03/Brottskatalog/actions/runs/39073590017). En kvalitetsregression för historisk fulltextstatus anpassades korrekt efter att fler källposter blivit individuellt kontrollerade. **V1.5 får fortfarande inte mergas eller publiceras; V1.4 på `main` är opåverkad.**
