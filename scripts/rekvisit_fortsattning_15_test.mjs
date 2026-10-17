@@ -22,7 +22,7 @@ assert.ok(report,'Missing statutory batch report');
 assert.deepEqual(Array.from(report.mismatch),[],'Never attribute a checklist to the wrong paragraph');
 assert.deepEqual(Array.from(report.missing),[],'Offence or source missing in draft');
 assert.deepEqual(Array.from(report.missingParent),[],'Do not copy an unstructured parent');
-assert.equal(report.added.length+report.already.length,35,'All 35 explicitly scoped offences must be accounted for');
+assert.equal(report.added.length+report.already.length,39,'All 39 explicitly scoped offences must be accounted for');
 for(const name of [...report.added,...report.already]){
  const crime=brb.find(c=>c.title===name);
  assert.ok(crime?.rekvisit15?.routes?.length||crime?.rekvisit15?.groups?.length,'Missing structured checklist: '+name);
@@ -36,13 +36,17 @@ assert.ok(JSON.stringify(get('Grovt tagande av muta').rekvisit15).includes('sär
 assert.ok(JSON.stringify(get('Brukande av det förfalskade').rekvisit15).includes('som om personen själv'));
 assert.ok(JSON.stringify(get('Ovarsam utsaga inför en internationell domstol').rekvisit15).includes('INTE utsaga inför Internationella brottmålsdomstolen'));
 assert.equal(get('Osann utsaga inför nordisk domstol').rekvisit15.routes.length,2,'Witness and civil-party variants differ');
-for(const chap of [5,10,11,14,15]){
+assert.equal(get('Egenmäktighet med barn').rekvisit15.routes.length,5,'Custody, co-custody and LVU acts must be distinct; future-law advisory is NOT a route');
+assert.ok(get('Egenmäktighet med barn').rekvisit15.note.includes('Från 2027-01-01'),'Future law must not appear in current 2026 operative routes');
+assert.ok(get('Grov egenmäktighet med barn').rekvisit15.note.includes('2027-01-01'),'Grov grade must carry effective-date warning');
+assert.ok(JSON.stringify(get('Grovt missbruk av offentlig ställning').rekvisit15).includes('ansvarsfull ställning'));
+for(const chap of [5,7,10,11,14,15,20]){
  const offences=brb.filter(c=>c.statute.startsWith('BrB:'+chap+':'));
  assert.ok(offences.length>0,'Chapter not found: '+chap);
  const unstructured=offences.filter(c=>!c.rekvisit15?.routes?.length&&!c.rekvisit15?.groups?.length);
  assert.equal(unstructured.length,0,'Missing structured offences in BrB chapter '+chap+': '+unstructured.map(x=>x.title).join(', '));
 }
 const structured=brb.filter(c=>c.rekvisit15?.routes?.length||c.rekvisit15?.groups?.length).length;
-assert.ok(structured>=240,'Need at least 240 of 319 structured BrB offences; found '+structured);
+assert.ok(structured>=244,'Need at least 240 of 319 structured BrB offences; found '+structured);
 assert.ok(brb.every(c=>c.rekvisit15?.legalReviewApproved!==true),'Full legal certification requires distinct review');
-console.log('PASS V1.5: 35 further statutory outlines, five more complete chapters, '+structured+'/'+brb.length+' BrB structured offences');
+console.log('PASS V1.5: 39 further statutory outlines, seven more complete chapters, '+structured+'/'+brb.length+' BrB structured offences');
