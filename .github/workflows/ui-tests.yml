@@ -52,6 +52,8 @@ on:
       - "brb5-prosecution-review-15.js"
       - "brb10-prosecution-review-15.js"
       - "brb8-near-relative-prosecution-15.js"
+      - "brb12-prosecution-review-15.js"
+      - "scripts/brb12_prosecution_15_test.mjs"
       - "brb11-prosecution-review-15.js"
       - "scripts/brb11_prosecution_15_test.mjs"
       - "scripts/brb8_near_relative_prosecution_15_test.mjs"
@@ -170,6 +172,8 @@ on:
       - "brb5-prosecution-review-15.js"
       - "brb10-prosecution-review-15.js"
       - "brb8-near-relative-prosecution-15.js"
+      - "brb12-prosecution-review-15.js"
+      - "scripts/brb12_prosecution_15_test.mjs"
       - "brb11-prosecution-review-15.js"
       - "scripts/brb11_prosecution_15_test.mjs"
       - "scripts/brb8_near_relative_prosecution_15_test.mjs"
@@ -311,6 +315,8 @@ jobs:
         run: node scripts/brb10_prosecution_15_test.mjs
       - name: V1.5 BrB 8:13 close-relative prosecution exceptions and stages safeguard
         run: node scripts/brb8_near_relative_prosecution_15_test.mjs
+      - name: V1.5 BrB 12:6 special prosecution when only private rights are infringed
+        run: node scripts/brb12_prosecution_15_test.mjs
       - name: V1.5 BrB 11:8 creditor negligence and ringa bookkeeping prosecution exceptions
         run: node scripts/brb11_prosecution_15_test.mjs
       - name: V1.5 25 individual current-grade penalty range comparisons
