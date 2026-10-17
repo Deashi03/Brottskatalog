@@ -46,6 +46,8 @@ on:
       - "rekvisit-riket-15.js"
       - "rekvisit-krig-15.js"
       - "rekvisit-sista-15.js"
+      - "brb-curated-lawtext-15.js"
+      - "scripts/brb_curated_lawtext_15_test.mjs"
       - "scripts/rekvisit_sista_15_test.mjs"
       - "scripts/rekvisit_krig_15_test.mjs"
       - "scripts/rekvisit_riket_15_test.mjs"
@@ -148,6 +150,8 @@ on:
       - "rekvisit-riket-15.js"
       - "rekvisit-krig-15.js"
       - "rekvisit-sista-15.js"
+      - "brb-curated-lawtext-15.js"
+      - "scripts/brb_curated_lawtext_15_test.mjs"
       - "scripts/rekvisit_sista_15_test.mjs"
       - "scripts/rekvisit_krig_15_test.mjs"
       - "scripts/rekvisit_riket_15_test.mjs"
@@ -269,6 +273,8 @@ jobs:
         run: node scripts/rekvisit_krig_15_test.mjs
       - name: V1.5 all 319 BrB offences structurally covered, without false legal approval
         run: node scripts/rekvisit_sista_15_test.mjs
+      - name: V1.5 five individually verified current BrB statutory paragraphs
+        run: node scripts/brb_curated_lawtext_15_test.mjs
       - name: V1.5 intricate offence alternatives, minority and public-order requisites
         run: node scripts/rekvisit_fordjupning_15_test.mjs
       - name: V1.5 child/adult sex-offence distinctions and limited statutory exemptions
