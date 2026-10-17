@@ -4,6 +4,96 @@ on:
   pull_request:
     paths:
       - "index.html"
+      - "brb14-expansion-15.js"
+      - "brb10-review-15.js"
+      - "brb4-expansion-15.js"
+      - "brb-core-coverage-15.js"
+      - "brb-family-15.js"
+      - "brb11-13-expansion-15.js"
+      - "brb-war-coverage-15.js"
+      - "brb-special-preparation-15.js"
+      - "brb17-rymning-15.js"
+      - "scripts/brb17_rymning_15_test.mjs"
+      - "scripts/v15_release_readiness.mjs"
+      - "scripts/v15_release_queue_15_test.mjs"
+      - "scripts/brb_special_preparation_15_test.mjs"
+      - "scripts/brb_war_15_test.mjs"
+      - "stage-scope-15.js"
+      - "age14-offence-scope-15.js"
+      - "scripts/age14_offence_scope_15_test.mjs"
+      - "scripts/brb11_13_15_test.mjs"
+      - "scripts/brb_family_15_test.mjs"
+      - "scripts/brb_core_coverage_15_test.mjs"
+      - "prosecution-review-15.js"
+      - "scripts/prosecution_15_test.mjs"
+      - "scripts/brb4_expansion_15_test.mjs"
+      - "scripts/brb10_15_test.mjs"
+      - "scripts/brb_inventory_15.mjs"
+      - "rekvisit-typexempel-15.js"
+      - "rekvisit-core-15.js"
+      - "rekvisit-grader-15.js"
+      - "rekvisit-special-15.js"
+      - "rekvisit-polisiara-15.js"
+      - "rekvisit-alternativ-15.js"
+      - "brb4-fridtext-15.js"
+      - "brb-source-repairs-15.js"
+      - "brb-stage-source-repairs-15.js"
+      - "rekvisit-frid-luckor-15.js"
+      - "rekvisit-tjanst-15.js"
+      - "rekvisit-ekonomi-15.js"
+      - "rekvisit-fortsattning-15.js"
+      - "rekvisit-allmanfara-15.js"
+      - "rekvisit-ordning-15.js"
+      - "rekvisit-hogmal-15.js"
+      - "rekvisit-riket-15.js"
+      - "rekvisit-krig-15.js"
+      - "rekvisit-sista-15.js"
+      - "brb-curated-lawtext-15.js"
+      - "brb4-child-stalking-requisites-15.js"
+      - "brb15-false-report-requisites-15.js"
+      - "scripts/brb15_false_report_requisites_15_test.mjs"
+      - "scripts/brb4_child_stalking_requisites_15_test.mjs"
+      - "brb5-prosecution-review-15.js"
+      - "brb10-prosecution-review-15.js"
+      - "brb8-near-relative-prosecution-15.js"
+      - "brb12-prosecution-review-15.js"
+      - "brb4-prosecution-review-15.js"
+      - "scripts/brb4_prosecution_15_test.mjs"
+      - "scripts/brb12_prosecution_15_test.mjs"
+      - "brb11-prosecution-review-15.js"
+      - "scripts/brb11_prosecution_15_test.mjs"
+      - "scripts/brb8_near_relative_prosecution_15_test.mjs"
+      - "scripts/brb10_prosecution_15_test.mjs"
+      - "scripts/brb5_prosecution_15_test.mjs"
+      - "brb-penalty-grade-audit-15.js"
+      - "scripts/brb_penalty_grade_audit_15_test.mjs"
+      - "praxis-vapenbilden-15.js"
+      - "scripts/praxis_vapenbilden_15_test.mjs"
+      - "scripts/brb_curated_lawtext_15_test.mjs"
+      - "scripts/rekvisit_sista_15_test.mjs"
+      - "scripts/rekvisit_krig_15_test.mjs"
+      - "scripts/rekvisit_riket_15_test.mjs"
+      - "scripts/rekvisit_hogmal_15_test.mjs"
+      - "scripts/rekvisit_ordning_15_test.mjs"
+      - "scripts/rekvisit_allmanfara_15_test.mjs"
+      - "scripts/rekvisit_fortsattning_15_test.mjs"
+      - "scripts/rekvisit_ekonomi_15_test.mjs"
+      - "scripts/rekvisit_tjanst_15_test.mjs"
+      - "scripts/rekvisit_frid_luckor_15_test.mjs"
+      - "scripts/brb_stage_source_repairs_15_test.mjs"
+      - "scripts/brb_source_repairs_15_test.mjs"
+      - "scripts/brb4_fridtext_15_test.mjs"
+      - "scripts/rekvisit_alternativ_15_test.mjs"
+      - "rekvisit-fordjupning-15.js"
+      - "rekvisit-sexualbrott-15.js"
+      - "scripts/rekvisit_sexualbrott_15_test.mjs"
+      - "scripts/rekvisit_fordjupning_15_test.mjs"
+      - "scripts/rekvisit_polisiara_15_test.mjs"
+      - "scripts/rekvisit_special_15_test.mjs"
+      - "scripts/rekvisit_grader_15_test.mjs"
+      - "scripts/rekvisit_core_15_test.mjs"
+      - "scripts/rekvisit_typfall_15_test.mjs"
+      - "scripts/brb14_15_test.mjs"
       - "service-worker.js"
       - "manifest.webmanifest"
       - "README.md"
@@ -40,6 +130,96 @@ on:
     branches: [main]
     paths:
       - "index.html"
+      - "brb14-expansion-15.js"
+      - "brb10-review-15.js"
+      - "brb4-expansion-15.js"
+      - "brb-core-coverage-15.js"
+      - "brb-family-15.js"
+      - "brb11-13-expansion-15.js"
+      - "brb-war-coverage-15.js"
+      - "brb-special-preparation-15.js"
+      - "brb17-rymning-15.js"
+      - "scripts/brb17_rymning_15_test.mjs"
+      - "scripts/v15_release_readiness.mjs"
+      - "scripts/v15_release_queue_15_test.mjs"
+      - "scripts/brb_special_preparation_15_test.mjs"
+      - "scripts/brb_war_15_test.mjs"
+      - "stage-scope-15.js"
+      - "age14-offence-scope-15.js"
+      - "scripts/age14_offence_scope_15_test.mjs"
+      - "scripts/brb11_13_15_test.mjs"
+      - "scripts/brb_family_15_test.mjs"
+      - "scripts/brb_core_coverage_15_test.mjs"
+      - "prosecution-review-15.js"
+      - "scripts/prosecution_15_test.mjs"
+      - "scripts/brb4_expansion_15_test.mjs"
+      - "scripts/brb10_15_test.mjs"
+      - "scripts/brb_inventory_15.mjs"
+      - "rekvisit-typexempel-15.js"
+      - "rekvisit-core-15.js"
+      - "rekvisit-grader-15.js"
+      - "rekvisit-special-15.js"
+      - "rekvisit-polisiara-15.js"
+      - "rekvisit-alternativ-15.js"
+      - "brb4-fridtext-15.js"
+      - "brb-source-repairs-15.js"
+      - "brb-stage-source-repairs-15.js"
+      - "rekvisit-frid-luckor-15.js"
+      - "rekvisit-tjanst-15.js"
+      - "rekvisit-ekonomi-15.js"
+      - "rekvisit-fortsattning-15.js"
+      - "rekvisit-allmanfara-15.js"
+      - "rekvisit-ordning-15.js"
+      - "rekvisit-hogmal-15.js"
+      - "rekvisit-riket-15.js"
+      - "rekvisit-krig-15.js"
+      - "rekvisit-sista-15.js"
+      - "brb-curated-lawtext-15.js"
+      - "brb4-child-stalking-requisites-15.js"
+      - "brb15-false-report-requisites-15.js"
+      - "scripts/brb15_false_report_requisites_15_test.mjs"
+      - "scripts/brb4_child_stalking_requisites_15_test.mjs"
+      - "brb5-prosecution-review-15.js"
+      - "brb10-prosecution-review-15.js"
+      - "brb8-near-relative-prosecution-15.js"
+      - "brb12-prosecution-review-15.js"
+      - "brb4-prosecution-review-15.js"
+      - "scripts/brb4_prosecution_15_test.mjs"
+      - "scripts/brb12_prosecution_15_test.mjs"
+      - "brb11-prosecution-review-15.js"
+      - "scripts/brb11_prosecution_15_test.mjs"
+      - "scripts/brb8_near_relative_prosecution_15_test.mjs"
+      - "scripts/brb10_prosecution_15_test.mjs"
+      - "scripts/brb5_prosecution_15_test.mjs"
+      - "brb-penalty-grade-audit-15.js"
+      - "scripts/brb_penalty_grade_audit_15_test.mjs"
+      - "praxis-vapenbilden-15.js"
+      - "scripts/praxis_vapenbilden_15_test.mjs"
+      - "scripts/brb_curated_lawtext_15_test.mjs"
+      - "scripts/rekvisit_sista_15_test.mjs"
+      - "scripts/rekvisit_krig_15_test.mjs"
+      - "scripts/rekvisit_riket_15_test.mjs"
+      - "scripts/rekvisit_hogmal_15_test.mjs"
+      - "scripts/rekvisit_ordning_15_test.mjs"
+      - "scripts/rekvisit_allmanfara_15_test.mjs"
+      - "scripts/rekvisit_fortsattning_15_test.mjs"
+      - "scripts/rekvisit_ekonomi_15_test.mjs"
+      - "scripts/rekvisit_tjanst_15_test.mjs"
+      - "scripts/rekvisit_frid_luckor_15_test.mjs"
+      - "scripts/brb_stage_source_repairs_15_test.mjs"
+      - "scripts/brb_source_repairs_15_test.mjs"
+      - "scripts/brb4_fridtext_15_test.mjs"
+      - "scripts/rekvisit_alternativ_15_test.mjs"
+      - "rekvisit-fordjupning-15.js"
+      - "rekvisit-sexualbrott-15.js"
+      - "scripts/rekvisit_sexualbrott_15_test.mjs"
+      - "scripts/rekvisit_fordjupning_15_test.mjs"
+      - "scripts/rekvisit_polisiara_15_test.mjs"
+      - "scripts/rekvisit_special_15_test.mjs"
+      - "scripts/rekvisit_grader_15_test.mjs"
+      - "scripts/rekvisit_core_15_test.mjs"
+      - "scripts/rekvisit_typfall_15_test.mjs"
+      - "scripts/brb14_15_test.mjs"
       - "service-worker.js"
       - "manifest.webmanifest"
       - "README.md"
@@ -89,6 +269,8 @@ jobs:
         run: node scripts/core_penalties_13_test.mjs
       - name: Verify offence stages
         run: node scripts/stage_rules_test.mjs
+      - name: V1.5 age-14 statute exception, dates, minimum and stage limitations
+        run: node scripts/age14_offence_scope_15_test.mjs
       - name: Verify new 2026 public-office offences
         run: node scripts/brb20_13_test.mjs
       - name: Verify core BrB chapter 4 penalty source checks
@@ -97,18 +279,111 @@ jobs:
         run: node scripts/brb17_14_test.mjs
       - name: Verify specialty criminal penalty scales
         run: node scripts/special_penalties_14_test.mjs
+      - name: V1.5 draft source-scoped BrB14 expansions
+        run: node scripts/brb14_15_test.mjs
+      - name: V1.5 draft typfall and structured legal requisites
+        run: node scripts/rekvisit_typfall_15_test.mjs
+      - name: V1.5 source-linked common offence requisite expansion
+        run: node scripts/rekvisit_core_15_test.mjs
+      - name: V1.5 source-linked minor and aggravated offence grades
+        run: node scripts/rekvisit_grader_15_test.mjs
+      - name: V1.5 statutory documents, public order and source-specific typecase
+        run: node scripts/rekvisit_special_15_test.mjs
+      - name: V1.5 police-oriented BrB objective and subjective requisites
+        run: node scripts/rekvisit_polisiara_15_test.mjs
+      - name: V1.5 complex statutory offence variants and gross levels
+        run: node scripts/rekvisit_alternativ_15_test.mjs
+      - name: V1.5 full BrB 4:4a/4:4e text and compound fridsbrott requirements
+        run: node scripts/brb4_fridtext_15_test.mjs
+      - name: V1.5 corrected child peace and sex offences statutory text
+        run: node scripts/brb_source_repairs_15_test.mjs
+      - name: V1.5 BrB 9/19 current pretrial stage statutes and conditional wartime penalty
+        run: node scripts/brb_stage_source_repairs_15_test.mjs
+      - name: V1.5 complete BrB chapter 4 offence requisite pathways
+        run: node scripts/rekvisit_frid_luckor_15_test.mjs
+      - name: V1.5 full BrB chapter 17 public-official and voting offence pathways
+        run: node scripts/rekvisit_tjanst_15_test.mjs
+      - name: V1.5 complete BrB 8–9 payment, market and economic crime requisites
+        run: node scripts/rekvisit_ekonomi_15_test.mjs
+      - name: V1.5 BrB 5, 10, 11, 14 and 15 source-scoped requisite coverage
+        run: node scripts/rekvisit_fortsattning_15_test.mjs
+      - name: V1.5 all BrB chapter 13 statutory offence structures
+        run: node scripts/rekvisit_allmanfara_15_test.mjs
+      - name: V1.5 complete BrB 16 offence routes, exceptions, and gradings
+        run: node scripts/rekvisit_ordning_15_test.mjs
+      - name: V1.5 four BrB 18 high-offence requisites
+        run: node scripts/rekvisit_hogmal_15_test.mjs
+      - name: V1.5 BrB 19 national security and foreign intelligence distinctions
+        run: node scripts/rekvisit_riket_15_test.mjs
+      - name: V1.5 wartime BrB 21–22 applicability and convention exemptions
+        run: node scripts/rekvisit_krig_15_test.mjs
+      - name: V1.5 all 319 BrB offences structurally covered, without false legal approval
+        run: node scripts/rekvisit_sista_15_test.mjs
+      - name: V1.5 five individually verified current BrB statutory paragraphs
+        run: node scripts/brb_curated_lawtext_15_test.mjs
+      - name: V1.5 source-checked current child-witness and stalking requisite alternatives
+        run: node scripts/brb4_child_stalking_requisites_15_test.mjs
+      - name: V1.5 falsk angivelse, falsk beskyllning and correction-of-error safeguards
+        run: node scripts/brb15_false_report_requisites_15_test.mjs
+      - name: V1.5 Chapter 5 private prosecution and underage/public-interest exceptions
+        run: node scripts/brb5_prosecution_15_test.mjs
+      - name: V1.5 bribery prosecutorial rules and BrB 20:5 public-service exceptions
+        run: node scripts/brb10_prosecution_15_test.mjs
+      - name: V1.5 BrB 8:13 close-relative prosecution exceptions and stages safeguard
+        run: node scripts/brb8_near_relative_prosecution_15_test.mjs
+      - name: V1.5 BrB 12:6 special prosecution when only private rights are infringed
+        run: node scripts/brb12_prosecution_15_test.mjs
+      - name: V1.5 chapter four special prosecution restrictions and place qualifiers
+        run: node scripts/brb4_prosecution_15_test.mjs
+      - name: V1.5 BrB 11:8 creditor negligence and ringa bookkeeping prosecution exceptions
+        run: node scripts/brb11_prosecution_15_test.mjs
+      - name: V1.5 25 individual current-grade penalty range comparisons
+        run: node scripts/brb_penalty_grade_audit_15_test.mjs
+      - name: V1.5 documented HD Vapenbilden example and police-statutory correction
+        run: node scripts/praxis_vapenbilden_15_test.mjs
+      - name: V1.5 intricate offence alternatives, minority and public-order requisites
+        run: node scripts/rekvisit_fordjupning_15_test.mjs
+      - name: V1.5 child/adult sex-offence distinctions and limited statutory exemptions
+        run: node scripts/rekvisit_sexualbrott_15_test.mjs
+      - name: V1.5 review of 2026 BrB 10:5 changes
+        run: node scripts/brb10_15_test.mjs
+      - name: V1.5 recent BrB4 additions with conservative typecases
+        run: node scripts/brb4_expansion_15_test.mjs
+      - name: V1.5 BrB 16–19 coverage and special penalty safeguards
+        run: node scripts/brb_core_coverage_15_test.mjs
+      - name: V1.5 2026 marriage and international court offences
+        run: node scripts/brb_family_15_test.mjs
+      - name: V1.5 bankruptcy and air/sea safety crimes – scope-safe stages
+        run: node scripts/brb11_13_15_test.mjs
+      - name: V1.5 wartime and noncommenced offence safeguards
+        run: node scripts/brb_war_15_test.mjs
+      - name: V1.5 special BrB 4:9b preparatory offence without recursive stages
+        run: node scripts/brb_special_preparation_15_test.mjs
+      - name: V1.5 rymning statutory reform and inchoate exceptions
+        run: node scripts/brb17_rymning_15_test.mjs
+      - name: V1.5 special prosecution rules for new offences
+        run: node scripts/prosecution_15_test.mjs
       - name: Three-year source verification UI safeguards
         run: node scripts/quality_11_test.mjs
       - name: Full catalog integration and statutes test
         run: node scripts/integration_09.mjs
       - name: Catalog-wide quality audit
         run: node scripts/audit_catalog.mjs
+      - name: BrB paragraphs and missing-offence inventory
+        run: node scripts/brb_inventory_15.mjs
+      - name: Measure individual legal review coverage (draft reporting only)
+        run: node scripts/v15_release_readiness.mjs
+      - name: Verify truthful and complete per-chapter legal review queue
+        run: node scripts/v15_release_queue_15_test.mjs
       - name: Archive full quality report
         if: always()
         uses: actions/upload-artifact@v4
         with:
           name: brottskatalog-quality-audit
-          path: audit/quality-report.json
+          path: |
+            audit/quality-report.json
+            audit/brb-inventory-15.json
+            audit/v15-release-readiness.json
           if-no-files-found: warn
       - name: Install headless browser
         run: |

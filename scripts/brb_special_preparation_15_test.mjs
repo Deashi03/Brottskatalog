@@ -1,0 +1,25 @@
+import assert from 'node:assert/strict';
+import vm from 'node:vm';
+import {readFileSync} from 'node:fs';
+import {resolve} from 'node:path';
+const root=resolve(import.meta.dirname,'..');
+const html=readFileSync(resolve(root,'index.html'),'utf8');
+const sw=readFileSync(resolve(root,'service-worker.js'),'utf8');
+const scripts=[...html.matchAll(/<script src="\.\/([^"]+)"><\/script>/g)].map(x=>x[1]);
+assert.ok(scripts.indexOf('brb-special-preparation-15.js')<scripts.indexOf('stages-08.js'));
+assert.ok(sw.includes('./brb-special-preparation-15.js'));
+const window={BK_DATA:{crimes:[],categories:['Alla']}};
+vm.runInNewContext(readFileSync(resolve(root,'data/provisions-generated.js'),'utf8'),{window});
+for(const filename of ['brb-special-preparation-15.js','stages-08.js'])
+ vm.runInNewContext(readFileSync(resolve(root,filename),'utf8'),{window,console});
+assert.equal(window.BK_DATA.crimes.length,1,'BrB 4:9b must not automatically spawn attempted preparations');
+const p=window.BK_DATA.crimes[0];
+assert.equal(p.shortRef,'BrB 4:9b');
+assert.equal(p.isStandaloneInchoate,true);
+assert.equal(p.penaltyRange.max,2);
+assert.equal(p.penaltyRange.fines,true);
+assert.equal(p.typexempel15.length,0);
+assert.ok(p.penaltyNote.includes('tekniskt hjälpmedel'));
+assert.ok(p.aliases.some(x=>x.includes('kränkande fotografering')));
+assert.ok(window.BK_STAGES);
+console.log('PASS V1.5: BrB 4:9b explicit special preparation is indexed without impossible recursively generated stages');

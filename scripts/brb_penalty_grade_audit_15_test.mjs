@@ -1,0 +1,211 @@
+import assert from 'node:assert/strict';
+import fs from 'node:fs';import path from 'node:path';import vm from 'node:vm';
+const root=path.resolve(import.meta.dirname,'..');
+const html=fs.readFileSync(path.join(root,'index.html'),'utf8');
+const sw=fs.readFileSync(path.join(root,'service-worker.js'),'utf8');
+const scripts=[...html.matchAll(/<script\s+src="([^"]+)"/g)].map(x=>x[1]);
+const module='./brb-penalty-grade-audit-15.js';
+assert.ok(scripts.includes(module)&&sw.includes(module),'145 grade-range legal crosschecks must be available offline');
+assert.ok(scripts.indexOf(module)>scripts.indexOf('./brb-curated-lawtext-15.js'));
+assert.ok(scripts.indexOf(module)<scripts.indexOf('./stages-08.js'));
+const inline=[...html.matchAll(/<script(?:\s[^>]*)?>([\s\S]*?)<\/script>/g)].map(x=>x[1]);
+const ctx=vm.createContext({window:{},console:{log:()=>{},warn:()=>{},error:()=>{}}});
+for(const i of [1,2,3])vm.runInContext(inline[i],ctx,{filename:'inline-'+i});
+for(const file of scripts)vm.runInContext(fs.readFileSync(path.join(root,file),'utf8'),ctx,{filename:file});
+const stats=ctx.window.BK_PENALTY_GRADE_AUDIT15;
+assert.ok(stats,'No source-checked penalty audit report');
+assert.equal(stats.planned,145,'Unexpected count of offence-grade penalty crosschecks');
+assert.deepEqual(Array.from(stats.missing),[],'Missing title in penalty source review');
+assert.deepEqual(Array.from(stats.unreviewedSource),[],'No source verification for penalty review');
+assert.deepEqual(Array.from(stats.held),[],'Penalty range held for source change');
+assert.deepEqual(Array.from(stats.mismatch),[],'Current statutory penalty conflicts found – repair underlying entry, never stamp false approval');
+assert.equal(stats.reviewed,145,'All 145 grade-range comparisons should match the actual catalogue');
+const c=ctx.window.BK_DATA.crimes;
+const base=c.filter(x=>!x.stageType);
+const reviewed=base.filter(x=>x.penaltyReviewScope==='individual-current-grade-range-only');
+assert.equal(reviewed.length,145,'No extra crime can silently acquire grade-range approval');
+for(const p of reviewed){
+ assert.equal(p.penaltyGradeReviewDate,p.lawCompletenessChecked);
+ assert.ok(p.penaltyGradeReviewSource.includes('riksdagen.se'));
+ assert.equal(p.lawCompletenessReviewScope,'current-paragraph-only','Do not approve penalty without complete current statute source');
+ assert.equal(p.penaltyRangeVerified,true);
+ assert.notEqual(p.rekvisit15?.legalReviewApproved,true,'Individual statutory penalty check is not full legal review');
+ assert.ok(!p.penaltyReviewSafety.includes('fully reviewed'),'Do not overstate legal review scope');
+}
+const by=t=>base.find(c=>c.title===t);
+assert.ok(by('Ringa bedrägeri').penaltyGradeReviewCaveat.includes('utan krav på vilseledande'));
+assert.ok(by('Rån').penaltyGradeReviewCaveat.includes('motvärnsrån'));
+assert.ok(by('Grovt tjänstefel').penaltyGradeReviewCaveat.includes('UPPSÅT'));
+assert.ok(by('Tjänstefel').penaltyGradeReviewCaveat.includes('oaktsamhet'));
+assert.equal(by('Grovt rån').penaltyRange.min,5);
+for(const [name,min,max,fines] of [
+ ['Hindrande av urkunds bevisfunktion',0,2,false],
+ ['Ringa hindrande av urkunds bevisfunktion',0,0.5,true],
+ ['Grovt hindrande av urkunds bevisfunktion',0.5,4,false],
+ ['Signaturförfalskning',0,2,false],
+ ['Ringa signaturförfalskning',0,0.5,true],
+ ['Grov signaturförfalskning',0.5,4,false],
+ ['Penningförfalskning',0,4,false],
+ ['Ringa penningförfalskning',0,0.5,true],
+ ['Grov penningförfalskning',2,8,false],
+ ['Olovlig befattning med falska pengar',0,2,false],
+ ['Ringa olovlig befattning med falska pengar',0,0.5,true],
+ ['Grov olovlig befattning med falska pengar',0.5,6,false],
+ ['Förfalskning av fast märke',0,4,false],
+ ['Ringa förfalskning av fast märke',0,0.5,true],
+ ['Olaga spridande av efterbildning',0,0,true]
+]){
+ const c=by(name);
+ assert.ok(c,'Expected independently source reviewed forgery grade '+name);
+ assert.equal(c.penaltyRange.min,min,name+' min');
+ assert.equal(c.penaltyRange.max,max,name+' max');
+ assert.equal(c.penaltyRange.fines,fines,name+' fines');
+ assert.equal(c.penaltyGradeReviewDate,'2026-10-18',name+' review date');
+}
+const forgeryUse=by('Brukande av det förfalskade');
+assert.ok(forgeryUse,'Missing BrB 14:10 distinct offence card');
+assert.equal(forgeryUse.statute,'BrB:14:10');
+assert.notEqual(forgeryUse.penaltyReviewScope,'individual-current-grade-range-only',
+ '14:10 has derivative penalty from the underlying forged item: never certify arbitrary single interval');
+
+for(const [name,min,max,fine] of [
+ ['Falskt åtal',0,2,false],
+ ['Grovt falskt åtal',0.5,4,false],
+ ['Obefogat åtal',0,0.5,true],
+ ['Falsk angivelse',0,2,false],
+ ['Grov falsk angivelse',0.5,4,false],
+ ['Obefogad angivelse',0,0.5,true],
+ ['Falsk beskyllning',0,2,false],
+ ['Grov falsk beskyllning',0.5,4,false],
+ ['Vårdslös beskyllning',0,0.5,true],
+ ['Bevisförvanskning',0,2,false],
+ ['Grov bevisförvanskning',0.5,4,false],
+ ['Osann försäkran',0,0.5,true],
+ ['Osant intygande',0,0.5,true],
+ ['Missbruk av urkund',0,0.5,true],
+ ['Förnekande av underskrift',0,0.5,true]
+]) {
+ const card=by(name); assert.ok(card,'Expected existing police-relevant justice card: '+name);
+ assert.equal(card.penaltyRange.min,min,name+' min');
+ assert.equal(card.penaltyRange.max,max,name+' max');
+ assert.equal(card.penaltyRange.fines,fine,name+' fines');
+ assert.equal(card.penaltyGradeReviewDate,'2026-10-18',name+' dated source comparison');
+}
+assert.ok(by('Vårdslös beskyllning').penaltyGradeReviewCaveat.includes('skälig anledning'));
+assert.ok(by('Falsk angivelse').penaltyGradeReviewCaveat.includes('oskyldig'));
+
+assert.equal(by('Människorov').penaltyRange.min,4);
+assert.equal(by('Människorov').penaltyRange.max,18);
+assert.equal(by('Människorov').penaltyRange.life,true);
+assert.equal(by('Människohandel').penaltyRange.min,2);
+assert.equal(by('Människoexploatering').penaltyRange.max,4);
+assert.equal(by('Grov människoexploatering').penaltyRange.min,2);
+assert.equal(by('Olaga tvång').penaltyRange.fines,true);
+assert.equal(by('Grovt olaga tvång').penaltyRange.min,1);
+assert.equal(by('Uppmaning till självmord').penaltyRange.max,2);
+assert.equal(by('Oaktsam uppmaning till självmord').penaltyRange.fines,true);
+assert.equal(by('Psykiskt våld').penaltyRange.max,4);
+assert.ok(by('Människohandel').penaltyGradeReviewCaveat.includes('barnundantag'));
+assert.ok(by('Olaga tvång').penaltyGradeReviewCaveat.includes('4:11'));
+
+assert.equal(by('Olaga frihetsberövande').penaltyRange.min,1);
+assert.equal(by('Olaga frihetsberövande').penaltyRange.max,10);
+assert.equal(by('Kränkande fotografering').penaltyRange.fines,true);
+assert.equal(by('Olovlig identitetsanvändning').penaltyRange.max,2);
+assert.equal(by('Olaga integritetsintrång').penaltyRange.fines,true);
+assert.equal(by('Grovt olaga integritetsintrång').penaltyRange.min,0.5);
+assert.equal(by('Brytande av post- eller telehemlighet').penaltyRange.max,2);
+assert.equal(by('Intrång i förvar').penaltyRange.fines,true);
+assert.equal(by('Olovlig avlyssning').penaltyRange.max,2);
+assert.equal(by('Dataintrång').penaltyRange.max,2);
+assert.equal(by('Grovt dataintrång').penaltyRange.min,1);
+assert.equal(by('Grovt dataintrång').penaltyRange.max,8);
+assert.ok(by('Kränkande fotografering').penaltyGradeReviewCaveat.includes('myndighetsundantaget'));
+assert.ok(by('Olovlig avlyssning').penaltyGradeReviewCaveat.includes('platsvillkoret'));
+
+assert.equal(by('Åverkan').penaltyRange.fines,true);
+assert.equal(by('Åverkan').penaltyRange.max,0);
+assert.equal(by('Tagande av olovlig väg').penaltyRange.max,0.5);
+assert.equal(by('Tagande av olovlig väg').penaltyRange.fines,true);
+assert.ok(by('Åverkan').penaltyGradeReviewCaveat.includes('12:6'));
+assert.ok(by('Tagande av olovlig väg').penaltyGradeReviewCaveat.includes('enskilds rätt'));
+assert.equal(by('Oredlighet mot borgenärer').penaltyRange.max,2);
+assert.equal(by('Grov oredlighet mot borgenärer').penaltyRange.min,1);
+assert.equal(by('Försvårande av konkurs eller exekutiv förrättning').penaltyRange.max,2);
+assert.equal(by('Grovt försvårande av konkurs eller exekutiv förrättning').penaltyRange.min,1);
+assert.equal(by('Vårdslöshet mot borgenärer').penaltyRange.max,2);
+assert.equal(by('Otillbörligt gynnande av borgenär').penaltyRange.max,2);
+assert.equal(by('Bokföringsbrott').penaltyRange.max,2);
+assert.equal(by('Ringa bokföringsbrott').penaltyRange.fines,true);
+assert.equal(by('Grovt bokföringsbrott').penaltyRange.min,0.5);
+assert.ok(by('Grovt försvårande av konkurs eller exekutiv förrättning').penaltyGradeReviewCaveat.includes('uppsåt'));
+assert.ok(by('Ringa bokföringsbrott').penaltyGradeReviewCaveat.includes('särskilda skäl'));
+
+assert.equal(by('Egenmäktigt förfarande').penaltyRange.max,1);
+assert.equal(by('Grovt egenmäktigt förfarande').penaltyRange.min,0.5);
+assert.equal(by('Självtäkt').penaltyRange.fines,true);
+assert.equal(by('Olovlig energiavledning').penaltyRange.fines,true);
+assert.equal(by('Grov olovlig energiavledning').penaltyRange.max,4);
+assert.equal(by('Grovt fordringsbedrägeri').penaltyRange.min,1);
+assert.equal(by('Olovlig befattning med betalningsverktyg').penaltyRange.fines,true);
+assert.equal(by('Grov olovlig befattning med betalningsverktyg').penaltyRange.min,1);
+assert.equal(by('Företagskapning').penaltyRange.fines,true);
+assert.equal(by('Utpressning').penaltyRange.max,3);
+assert.equal(by('Ringa utpressning').penaltyRange.max,0.5);
+assert.equal(by('Grov utpressning').penaltyRange.min,2);
+assert.equal(by('Ocker').penaltyRange.fines,true);
+assert.equal(by('Grovt ocker').penaltyRange.min,1);
+assert.equal(by('Häleri').penaltyRange.max,2);
+assert.equal(by('Grovt häleri').penaltyRange.min,1);
+assert.equal(by('Utförselhäleri').penaltyRange.max,2);
+assert.equal(by('Grovt utförselhäleri').penaltyRange.min,1);
+assert.equal(by('Häleriförseelse').penaltyRange.fines,true);
+assert.ok(by('Häleriförseelse').penaltyGradeReviewCaveat.includes('skälig anledning'));
+assert.ok(by('Självtäkt').penaltyGradeReviewCaveat.includes('själv ta sig rätt'));
+assert.ok(by('Grov utpressning').penaltyGradeReviewCaveat.includes('våldskapital'));
+
+assert.equal(by('Förskingring').penaltyRange.max,2);
+assert.equal(by('Ringa förskingring').penaltyRange.fines,true);
+assert.equal(by('Grov förskingring').penaltyRange.min,1);
+assert.equal(by('Olovligt förfogande').penaltyRange.max,1);
+assert.equal(by('Grovt olovligt förfogande').penaltyRange.min,0.5);
+assert.equal(by('Trolöshet mot huvudman').penaltyRange.fines,true);
+assert.equal(by('Grov trolöshet mot huvudman').penaltyRange.min,1);
+assert.equal(by('Tagande av muta').penaltyRange.fines,false);
+assert.equal(by('Givande av muta').penaltyRange.max,2);
+assert.equal(by('Grovt tagande av muta').penaltyRange.min,1.5);
+assert.equal(by('Grovt givande av muta').penaltyRange.min,1.5);
+assert.equal(by('Handel med inflytande').penaltyRange.max,2);
+assert.equal(by('Vårdslös finansiering av mutbrott').penaltyRange.fines,true);
+assert.ok(by('Vårdslös finansiering av mutbrott').penaltyGradeReviewCaveat.includes('Grov oaktsamhet'));
+assert.ok(by('Trolöshet mot huvudman').penaltyGradeReviewCaveat.includes('subsidiaritet'));
+
+assert.equal(by('Förtal').penaltyRange.max,0,'Ordinary defamation carries fines only');
+assert.equal(by('Grovt förtal').penaltyRange.fines,true,'Gross defamation allows fine');
+assert.equal(by('Förolämpning').penaltyRange.max,0.5);
+assert.equal(by('Urkundsförfalskning').penaltyRange.max,2);
+assert.equal(by('Förvanskning av urkund').penaltyRange.fines,true);
+assert.equal(by('Grov urkundsförfalskning').penaltyRange.min,1);
+assert.equal(by('Märkesförfalskning').penaltyRange.max,2);
+assert.equal(by('Ringa märkesförfalskning').penaltyRange.max,0.5);
+assert.equal(by('Grov märkesförfalskning').penaltyRange.min,0.5);
+assert.equal(by('Mened').penaltyRange.min,0.5);
+assert.equal(by('Grov mened').penaltyRange.min,2);
+assert.equal(by('Osann partsutsaga').penaltyRange.max,2);
+assert.equal(by('Ovarsam utsaga').penaltyRange.fines,true);
+assert.ok(by('Mened').penaltyGradeReviewCaveat.includes('mindre allvarligt'),'Do not conflate lesser mened grade with ordinary');
+assert.ok(by('Ovarsam utsaga').penaltyGradeReviewCaveat.includes('Grov oaktsamhet'));
+assert.ok(by('Grovt förtal').penaltyGradeReviewCaveat.includes('5:5'));
+
+assert.equal(by('Vållande till annans död').penaltyRange.max,3);
+assert.equal(by('Grovt vållande till annans död').penaltyRange.min,2);
+assert.equal(by('Vållande till kroppsskada eller sjukdom').penaltyRange.max,0.5);
+assert.equal(by('Grovt vållande till kroppsskada eller sjukdom').penaltyRange.max,4);
+assert.equal(by('Framkallande av fara för annan').penaltyRange.max,3);
+assert.ok(by('Framkallande av fara för annan').penaltyGradeReviewCaveat.includes('grov oaktsamhet'));
+
+assert.equal(by('Inbrottsstöld').penaltyRange.min,1);
+assert.equal(by('Grovt missbruk av offentlig ställning').penaltyRange.max,6);
+assert.equal(base.filter(c=>c.statute?.startsWith('BrB:')).length,319);
+assert.equal(c.filter(x=>x.stageType&&x.stageStatus==='unverified').length,12,'No implicit inchoate review via base penalty scales');
+console.log('PASS V1.5: 145 current-grade BrB penalty scales source-verified; no silent conflicts or overbroad approvals');

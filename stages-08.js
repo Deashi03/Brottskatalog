@@ -105,7 +105,7 @@ const parentMin=c=>Number(c.penaltyRange?.min)||0;
 const original=c=>{const r=c.penaltyRange||window.BK_COERCIVE?.range?.(c);return r&&Number.isFinite(r.max)?{min:Number(r.min)||0,max:Number(r.max),fines:!!r.fines||/^(Böter|Penningböter)/i.test(c.penalty||''),life:!!r.life||/livstid/i.test(c.penalty||'')}:null;};
 let yes=0,no=0,unknown=0,unavailable=0;
 for(const c of base){
- if(c.stageType||!c.title||!original(c)) {unavailable++;continue;}
+ if(c.stageType||c.isStandaloneInchoate||c.skipStageGeneration||!c.title||!original(c)) {unavailable++;continue;}
  const chapter=ch(c),brb=isBrB(c);
  if(!brb && !/narkotikabrott/i.test(c.title)&&!/VapenL\s+18:/i.test(c.ref||'')&&!c.stageReviewed)continue;
  const key=norm(c.title.replace(/\s*·.*$/,''));
@@ -147,7 +147,7 @@ for(const c of base){
    penaltyRange:status==='punishable'?{min,max,fines:hasFine,life:code==='F'&&!!p.life}:null,
    penaltyNote:why,penaltyChecked:'2026-10-12',
    stageType:slug,stageStatus:status,stageSource:src,stageParentId:c.id,
-   stageReviewDate:statutoryReview?'2026-10-13':null,
+   stageReviewDate:statutoryReview?(c.stageReviewed?(c.stageReviewDate||null):'2026-10-13'):null,
    stageReviewBasis:statutoryReview?(brb?'Kapitlets särskilda förstadiebestämmelse och BrB 23:1–2':c.stageReviewed?'Särskild specialstraffrättslig förstadiebestämmelse':'Särskild förstadiebestämmelse'):'Ej individuell lagrumsgranskning',
    stageParentMin:p.min,stageParentMax:p.max,stageParentLife:!!p.life,
    stagePenaltyLower:status==='punishable'?(hasFine?'Böter':'1 mån'):null,

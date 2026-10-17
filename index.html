@@ -740,11 +740,55 @@ D.date='2026-10-12';
   <script src="./special-09.js"></script>
   <script src="./data/special-provisions-generated.js"></script>
   <script src="./special-law-import-12.js"></script>
+  <script src="./brb4-expansion-15.js"></script>
+  <script src="./brb-core-coverage-15.js"></script>
+  <script src="./brb-family-15.js"></script>
+  <script src="./brb11-13-expansion-15.js"></script>
+  <script src="./brb-war-coverage-15.js"></script>
+  <script src="./brb-special-preparation-15.js"></script>
+  <script src="./brb17-rymning-15.js"></script>
+  <script src="./brb14-expansion-15.js"></script>
+  <script src="./brb10-review-15.js"></script>
+  <script src="./rekvisit-typexempel-15.js"></script>
+  <script src="./rekvisit-core-15.js"></script>
+  <script src="./rekvisit-grader-15.js"></script>
+  <script src="./rekvisit-special-15.js"></script>
+  <script src="./rekvisit-polisiara-15.js"></script>
+  <script src="./rekvisit-fordjupning-15.js"></script>
+  <script src="./rekvisit-sexualbrott-15.js"></script>
+  <script src="./rekvisit-alternativ-15.js"></script>
+  <script src="./brb4-fridtext-15.js"></script>
+  <script src="./brb-source-repairs-15.js"></script>
+  <script src="./brb-stage-source-repairs-15.js"></script>
+  <script src="./rekvisit-frid-luckor-15.js"></script>
+  <script src="./rekvisit-tjanst-15.js"></script>
+  <script src="./rekvisit-ekonomi-15.js"></script>
+  <script src="./rekvisit-fortsattning-15.js"></script>
+  <script src="./rekvisit-allmanfara-15.js"></script>
+  <script src="./rekvisit-ordning-15.js"></script>
+  <script src="./rekvisit-hogmal-15.js"></script>
+  <script src="./rekvisit-riket-15.js"></script>
+  <script src="./rekvisit-krig-15.js"></script>
+  <script src="./rekvisit-sista-15.js"></script>
+  <script src="./brb-curated-lawtext-15.js"></script>
+  <script src="./brb-penalty-grade-audit-15.js"></script>
+  <script src="./brb4-child-stalking-requisites-15.js"></script>
+  <script src="./brb15-false-report-requisites-15.js"></script>
+  <script src="./praxis-vapenbilden-15.js"></script>
   <script src="./stages-08.js"></script>
+  <script src="./stage-scope-15.js"></script>
+  <script src="./age14-offence-scope-15.js"></script>
   <script src="./field-07.js"></script>
   <script src="./sources-qa.js"></script>
   <script src="./prosecution-10.js"></script>
   <script src="./prosecution-final-12.js"></script>
+  <script src="./prosecution-review-15.js"></script>
+  <script src="./brb5-prosecution-review-15.js"></script>
+  <script src="./brb10-prosecution-review-15.js"></script>
+  <script src="./brb8-near-relative-prosecution-15.js"></script>
+  <script src="./brb12-prosecution-review-15.js"></script>
+  <script src="./brb4-prosecution-review-15.js"></script>
+  <script src="./brb11-prosecution-review-15.js"></script>
   <script src="./quality-11.js"></script>
   <script>
 /* Brottskatalog – stage 1. No framework, no network request during use. */
@@ -980,6 +1024,8 @@ function factsSection(c){
 
 function punishmentBlock(c){
  if(c.stageStatus&&c.stageStatus!=='punishable')return '<div class="penalty-summary">'+escapeHtml(c.stageStatus==='not-criminalized'?'Saknar straffskala – ej straffbart':'Straffskala ej verifierad')+'</div>';
+ if(c.applicabilityConditional)return '<div class="penalty-summary">Tillämpningen är villkorad</div><p class="penalty-context">'+escapeHtml(c.penalty||'')+'</p><p class="penalty-context">'+escapeHtml(c.applicabilityWarning||c.penaltyNote||'')+'</p>';
+ if(c.conditionalPenalty)return '<div class="penalty-summary">Villkorad straffskala</div><p class="penalty-context">'+escapeHtml(c.penaltyNote||'Straffskalan beror på gärningsform eller särskilda tillämpningsvillkor. Kontrollera lagtexten.')+'</p>';
  if(c.stageType){
   const lower=c.stagePenaltyLower||(c.penaltyRange?.min>0?'Fängelse 1 mån':'Böter');
   const upper=c.stagePenaltyUpper||'Enligt BrB 23 kap.';
@@ -1061,7 +1107,7 @@ function coerciveSection(c){
  const chapter=e=>Number(e.ref.match(/RB (\d+):/)?.[1]||0);
  const names={23:'Utredningsåtgärder',24:'Häktning',25:'Reseförbud',26:'Kvarstad',27:'Beslag och säkring',28:'Undersökningsåtgärder'};
  const render=e=>{
-  const v=reg.score(c,e),eligible=reg.eligible?reg.eligible(c,e):v.tone!=='no',pending=v.tone==='unknown';
+  const v=c.applicabilityConditional?{tone:'unknown',label:'Brottets krigsberoende tillämpning måste kontrolleras'}:reg.score(c,e),eligible=reg.eligible?reg.eligible(c,e):v.tone!=='no',pending=v.tone==='unknown';
   const authority=e.decisionAuthority||e.ref;
   const guide=reg.decisionGuide?reg.decisionGuide(e):{brief:'Kontrollera',complex:true,lines:[e.info],ref:e.ref};
   const route=guide.brief==='Polisman FID'?'fid':guide.brief==='Polisman beslutar'?'own':guide.brief==='FU-ledare'?'fu':'special';
@@ -1119,13 +1165,34 @@ function renderDetail(c){
   const prosecuting = c.prosecution==='general';
   const variants=(c.variants||[]).map(x=>`<span class="var-chip">${escapeHtml(x)}</span>`).join('');
   const elements=(c.elements||[]).map(x=>`<li>${escapeHtml(x)}</li>`).join('');
+  const groups15=c.rekvisit15?.groups||[];
+  const routes15=c.rekvisit15?.routes||[];
+  const renderRequisiteGroups=groups=>'<ul>'+groups.map(g=>g.mode==='any'
+    ?'<li><strong>Minst ett alternativ – '+escapeHtml(g.label)+'</strong><ul>'+g.options.map(v=>'<li>'+escapeHtml(v)+'</li>').join('')+'</ul></li>'
+    :'<li>'+escapeHtml(g.label)+'</li>').join('')+'</ul>';
+  const sourceCases=t=>t.sourceURL?'<a class="source-link" target="_blank" rel="noopener noreferrer" href="'+escapeHtml(t.sourceURL)+'">Rättsligt underlag '+ic('external-link','sm')+'</a>':'';
+  const exampleCards=(c.typexempel15||[]).map(t=>'<div class="fact-card"><div class="fact-eyebrow">Typexempel</div><div class="fact-body">'+escapeHtml(t.text)+'</div><div class="fact-source">'+escapeHtml(t.source||'')+'</div>'+sourceCases(t)+'</div>').join('');
+  const routeBody=routes15.map(p=>'<div class="subtle-label">'+escapeHtml(p.label)+'</div>'+renderRequisiteGroups(p.groups)).join('');
+  const isFullyReviewed=!!(c.rekvisit15?.legalReviewApproved===true&&c.rekvisit15?.scope==='full-legal-review');
+  const legalScope=(groups15.length||routes15.length)
+    ?'<p class="source-label">'+(isFullyReviewed?'Individuellt juridiskt slutgranskad rekvisitstruktur.':'Lagtextsbaserat rekvisitstöd. Fullständig juridisk kontroll av rättspraxis, undantag och lydelse återstår.')+'</p>'
+      +(c.rekvisit15?.source?'<p class="source-label">Rättslig grund: '+escapeHtml(c.rekvisit15.source)+'</p>':'')
+      +(c.rekvisit15?.sourceURL?'<a class="source-link" target="_blank" rel="noopener noreferrer" href="'+escapeHtml(c.rekvisit15.sourceURL)+'">Läs lagtexten hos Sveriges riksdag '+ic('external-link','sm')+'</a>':'')
+    :'';
+  const requisitesBody=((groups15.length||routes15.length)
+    ?'<div class="subtle-label">Rekvisit – OCH om inget annat anges</div>'+legalScope
+       +(routes15.length?'<p class="source-label">Alternativa gärningsformer – minst en av följande strukturer måste vara uppfylld.</p>'+routeBody:renderRequisiteGroups(groups15))
+       +'<p class="source-label">'+escapeHtml(c.rekvisit15.note||'')+'</p>'
+    :elements?'<p class="source-label">Äldre förenklad rekvisitöversikt – ännu inte individuellt juridiskt slutgranskad.</p><ul>'+elements+'</ul>'
+    :'<p>Individuellt verifierad rekvisitöversikt saknas ännu. Se lagtexten ovan.</p>')
+    +(exampleCards?'<div class="subtle-label">Typexempel</div>'+exampleCards:'');
   const stages=(c.stages||[]).map(x=>`<li>${escapeHtml(x)}</li>`).join('');
   const related=(c.related||[]).map(id=>byId[id]).filter(Boolean).map(x=>`<button class="related" data-open="${x.id}">${escapeHtml(x.title)}${ic('chevron-right','sm')}</button>`).join('');
   const compareWith=crimes.filter(x=>x.id!==c.id&&((c.statute&&x.statute===c.statute)||(c.related||[]).includes(x.id))).slice(0,4);
   const comparison=compareWith.length?'<table class="compare-table"><thead><tr><th>Brott</th><th>Straffskala</th><th>Åtal</th></tr></thead><tbody>'+[c,...compareWith].map(x=>'<tr><td>'+escapeHtml(x.title)+'</td><td>'+escapeHtml(x.penaltyShort)+'</td><td>'+escapeHtml(x.prosecution==='general'?'Allmänt':x.prosecution==='unknown'?'Ej kontrollerat':'Villkor')+'</td></tr>').join('')+'</tbody></table>':'<p>Inga relevanta jämförelsebrott har kopplats ännu.</p>';
   const incompleteLaw=c.lawMode==='machine' && c.law && !/[.!?)]$/.test(c.law.trim());
   const sourceWarning=incompleteLaw?'<p class="source-incomplete">Lagtextutdraget är ofullständigt. Läs den fullständiga paragrafen hos Sveriges riksdag.</p>':'';
-  let law = c.lawMode==='missing'?`<p>Fullständig lagtext är ännu inte kontrollerad och införd för denna sökingång.</p><a class="source-link" href="${escapeHtml(c.sourceURL||'https://data.riksdagen.se/dokument/sfs-1962-700.html')}" target="_blank" rel="noopener noreferrer">Öppna lagtext hos Sveriges riksdag ${ic('external-link','sm')}</a>`:`${sourceWarning}<div class="law-paper">${lawText(c)}</div><p class="source-label">${escapeHtml(c.lawSource)} ${c.lawMode==='excerpt'?'Utdrag – inte hela bestämmelsen.':c.lawMode==='machine'?'Maskinimporterat lagtextutdrag. Innehållet kan vara ofullständigt och är inte juridiskt slutgranskat.':'Lagtext i det inbyggda urvalet.'}</p><p class="source-label">Understrukna paragrafer öppnas här, utan internet.</p>`;
+  let law = c.lawMode==='missing'?`<p>Fullständig lagtext är ännu inte kontrollerad och införd för denna sökingång.</p><a class="source-link" href="${escapeHtml(c.sourceURL||'https://data.riksdagen.se/dokument/sfs-1962-700.html')}" target="_blank" rel="noopener noreferrer">Öppna lagtext hos Sveriges riksdag ${ic('external-link','sm')}</a>`:`${sourceWarning}<div class="law-paper">${lawText(c)}</div><p class="source-label">${escapeHtml(c.lawSource)} ${c.lawMode==='excerpt'?'Utdrag – inte hela bestämmelsen.':c.lawMode==='machine'?'Maskinimporterat lagtextutdrag. Innehållet kan vara ofullständigt och är inte juridiskt slutgranskat.':c.lawMode==='full'&&c.lawCompletenessVerified===true?'Paragraftext individuellt kontrollerad mot aktuell SFS'+(c.lawCompletenessChecked?' '+escapeHtml(c.lawCompletenessChecked):'')+'. Inte fullständig juridisk rekvisitgranskning.':'Lagtext i det inbyggda urvalet – fullständig aktuell lydelse ej individuellt verifierad.'}</p><p class="source-label">Understrukna paragrafer öppnas här, utan internet.</p>`;
   if(c.stageType){
     const para=c.stageType==='forsok'?'1':'2';
     const general=provisions['BrB:23:'+para];
@@ -1150,8 +1217,9 @@ function renderDetail(c){
   ${!c.stageStatus||c.stageStatus==='punishable'?'<button class="status-row" data-action="prosecution" data-id="'+escapeHtml(c.id)+'"><span class="status-icon '+(c.prosecution==='general'?'good':c.prosecution==='conditional'?'warn':'unknown')+'">'+ic(c.prosecution==='general'?'check-circle':c.prosecution==='conditional'?'alert-circle':'info')+'</span><span class="status-copy"><div class="status-label">Åtalsregel</div><div class="status-value">'+escapeHtml(c.prosecutionLabel||'Åtalsregel ej verifierad')+'</div></span><span class="status-right">'+ic('info','sm')+ic('chevron-right','sm')+'</span></button>':''}</section>
   <section class="detail-body"><div class="accordions">
   ${accordion('lag','Lagtext', 'book-open',law)}
+  ${accordion('rekvisit','Rekvisit','layers',requisitesBody)}
   ${(!c.stageStatus||c.stageStatus==='punishable')?accordion('tvang','Tvångsmedel – översikt','shield-check',coerciveSection(c)):''}
-  ${accordion('rekvisit','Rekvisit och gärningsvarianter','layers',`<div class="subtle-label">Att pröva</div>${elements?`<ul>${elements}</ul>`:'<p>Kompletterande rekvisitöversikt läggs till senare. Se lagtexten ovan.</p>'}<div class="subtle-label">Gärningsvarianter</div>${variants?`<div class="var-chip-list">${variants}</div>`:'<p>Inga ytterligare varianter registrerade.</p>'}`)}
+  ${variants?accordion('garningsvarianter','Gärningsvarianter','layers','<div class="var-chip-list">'+variants+'</div>'):''}
   ${(c.qualifications||[]).length?accordion('kvalifikation','Kvalifikationsgrunder – fördjupning','layers',qualificationSection(c)):''}
   ${((c.studyNotes||[]).length||c.detailedNote||c.caseNote)?accordion('anteckningar','Anteckningar – fördjupning','book-mark',studyNotesSection(c)):''}
   ${accordion('praxis','Praxis och tolkningar','file-text',factsSection(c)||'<p>Inga kommentarer inlagda för denna sökingång ännu.</p>')}
@@ -1161,6 +1229,12 @@ function renderDetail(c){
   ${accordion('utredning','Utredningsuppslag och beviskällor','list',investigationSection(c))}
 
   ${accordion('relaterade','Relaterade brott','list',related||'<p>Inga relaterade exempel ännu.</p>')}
+  ${c.age14Exception15?accordion('age14','Särskild påföljdsregel vid 14 år','calendar-clock',
+    '<p><strong>Gärningsåldern, inte åldern vid rättegången, är avgörande.</strong> För brott begångna från 10 september 2026 till 9 september 2031 kan en 14-åring dömas till påföljd endast när den i BrB 1:6 angivna undantagsregeln är tillämplig.</p>'+
+    '<p>'+escapeHtml(c.age14Exception15.description)+'</p>'+
+    '<p class="source-label">'+escapeHtml(c.age14Exception15.reviewNote)+'</p>'+
+    '<p class="source-label"><strong>Ingen automatisk bedömning av gripande, anhållande eller häktning.</strong> För förstadier ska straffbarhet prövas självständigt. Eventuella särskilda regler om unga personer måste alltid beaktas.</p>'+
+    '<a class="source-link" target="_blank" rel="noopener noreferrer" href="'+escapeHtml(c.age14Exception15.sourceURL)+'">BrB 1:6 och övergångsreglerna (SFS 2026:1528, 1555) '+ic('external-link','sm')+'</a>'):''}
   ${accordion('sources','Rättskällor och källtyper','book-mark',`<p><strong>Lagtext:</strong> återgiven separat och utan omskrivningar. Kontrollera aktuellt rättsläge via källan.</p><p><strong>Tolkningsstöd:</strong> kursanteckningar och praktiska sammanfattningar är inte lagtext.</p>${links.map(([title,url])=>`<a class="source-link" href="${url}" target="_blank" rel="noopener noreferrer">${ic('external-link')} ${escapeHtml(title)}</a>`).join('')}`)}
   </div></section>${qualityCard(c)}<p class="detail-footer">Version 1.4 · kontrollera aktuell lagtext vid operativa beslut.</p></main>`;
 }
