@@ -47,6 +47,8 @@ on:
       - "rekvisit-krig-15.js"
       - "rekvisit-sista-15.js"
       - "brb-curated-lawtext-15.js"
+      - "brb-penalty-grade-audit-15.js"
+      - "scripts/brb_penalty_grade_audit_15_test.mjs"
       - "praxis-vapenbilden-15.js"
       - "scripts/praxis_vapenbilden_15_test.mjs"
       - "scripts/brb_curated_lawtext_15_test.mjs"
@@ -153,6 +155,8 @@ on:
       - "rekvisit-krig-15.js"
       - "rekvisit-sista-15.js"
       - "brb-curated-lawtext-15.js"
+      - "brb-penalty-grade-audit-15.js"
+      - "scripts/brb_penalty_grade_audit_15_test.mjs"
       - "praxis-vapenbilden-15.js"
       - "scripts/praxis_vapenbilden_15_test.mjs"
       - "scripts/brb_curated_lawtext_15_test.mjs"
@@ -279,6 +283,8 @@ jobs:
         run: node scripts/rekvisit_sista_15_test.mjs
       - name: V1.5 five individually verified current BrB statutory paragraphs
         run: node scripts/brb_curated_lawtext_15_test.mjs
+      - name: V1.5 25 individual current-grade penalty range comparisons
+        run: node scripts/brb_penalty_grade_audit_15_test.mjs
       - name: V1.5 documented HD Vapenbilden example and police-statutory correction
         run: node scripts/praxis_vapenbilden_15_test.mjs
       - name: V1.5 intricate offence alternatives, minority and public-order requisites
