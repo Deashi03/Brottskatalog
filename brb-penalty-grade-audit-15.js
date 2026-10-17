@@ -1,4 +1,4 @@
-/* V1.5: explicit individual-range checks of 25 common BrB grades.
+/* V1.5: explicit individual-range checks of 30 common BrB grades.
  * The controlling CURRENT complete SFS paragraphs are curated in
  * brb-curated-lawtext-15.js. Full legal/penalty applicability is NOT approved.
  * Date-dependent, inchoate and coercive rules remain separate work.
@@ -7,6 +7,11 @@
 const URL='https://www.riksdagen.se/sv/dokument-och-lagar/dokument/svensk-forfattningssamling/brottsbalk-1962700_sfs-1962-700/';
 const rows=[
  // Title, official SFS section, min/max years, fines permitted, life, special caveat.
+ ['Vållande till annans död','3:7',0,3,false,false,'Ringa fall kan enligt samma paragraf ge böter; normalgraden avser fängelse i högst tre år.'],
+ ['Grovt vållande till annans död','3:7',2,6,false,false,'Grov oaktsamhet med lagens kvalifikationsgrunder; SFS 2026:1318.'],
+ ['Vållande till kroppsskada eller sjukdom','3:8',0,0.5,true,false,'Skada/sjukdom som inte är ringa; lagens oaktsamhetsrekvisit.'],
+ ['Grovt vållande till kroppsskada eller sjukdom','3:8',0,4,false,false,'Grovhetsgrunden i 3:8, högst fyra års fängelse.'],
+ ['Framkallande av fara för annan','3:9',0,3,true,false,'Kräver grov oaktsamhet och konkret skyddad fara, inte vanligt oaktsamhetsbrott.'],
  ['Stöld','8:1',0,2,false,false,'Uppsåt att tillägna sig och skada prövas separat.'],
  ['Ringa stöld','8:2',0,0.5,true,false,'Förutsätter 8:1 och helhetsbedömning av ringa grad.'],
  ['Grov stöld','8:4',1,6,false,false,'Kvalifikationsfaktorer är inte var och en obligatoriska; helhetsbedömning.'],
