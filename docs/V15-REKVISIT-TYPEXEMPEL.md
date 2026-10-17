@@ -425,3 +425,31 @@ Sex ytterligare kompletta paragrafer har jämförts mot [gällande brottsbalk (R
 **278** grundposter i hela katalogen återstår för individuell straffskalegranskning enligt det restriktiva release-måttet, ned från 283. **12** villkorade situationer ligger i separat kö. Ingen straffskalekontroll innebär juridiskt slutgodkännande av rekvisit, praxis, gärningsdatum, förstadier eller tvångsmedel.
 
 **Teststatus:** [GitHub Actions 39063402764](https://github.com/Deashi03/Brottskatalog/actions/runs/39063402764) **PASS**, inklusive mobil/iPhone-smoke, BrB 1:6-datum och förstadieskydd, 40 fullständiga paragrafer och 30 straffskalegranskningar. De **12 osäkra förstadierna** och **0/319 fullständigt juridiskt certifierade BrB-brott** kvarstår. **Ingen merge/deploy.**
+
+---
+
+## Källgranskning av ärekränkning, urkundsförfalskning och mened – 17 oktober 2026
+
+Kontrollomgången utgår från [den aktuella konsoliderade brottsbalken (Riksdagen, ändrad t.o.m. SFS 2026:1656)](https://www.riksdagen.se/sv/dokument-och-lagar/dokument/svensk-forfattningssamling/brottsbalk-1962700_sfs-1962-700/). De nya fullständiga lagtexterna finns i `brb-curated-lawtext-15.js` och återges ordagrant i relevanta brottskort. Kontrollstatusen gäller **hela paragraftexten och dess källproveniens, inte en fullständig juridisk praxisbedömning**.
+
+### 14 ytterligare kompletta lagparagrafer
+
+- **BrB 5:1–5:** förtal, grovt förtal, förolämpning, förtal av avliden och **åtalsbegränsningar**. Fulltexten visar att ett sanningspåstående inte automatiskt är ansvarsfritt: 5:1 prövar också försvarlighet och sanning/skälig grund. 5:5 måste alltid prövas vid allmänt åtal; även målsägandens ålder och brottets art kan vara avgörande.
+- **BrB 14:1–3 och 14:8:** urkundsförfalskning, ringa form enligt den **rätta rubriken förvanskning av urkund**, grov urkundsförfalskning och märkesförfalskning i tre grader. Inkluderar definitionen av urkund (även tillförlitligt verifierbar elektronisk handling och bevismärke), bevisfara samt de särskilda 2026-straffminimireglerna.
+- **BrB 15:1–4 och 15:15:** mened, grov mened, osann partsutsaga och ovarsam utsaga, **betydelselös utsaga och skyddad vägran** som ansvarsfrihet enligt 15:4, samt den särskilda förstadiekriminaliseringen i 15:15. Särskilj uppsåtlig mened från ovarsam utsagas **grova oaktsamhet**. Mened av mindre allvarligt slag och ringa osann partsutsaga har särskilda skalor som inte får döljas.
+
+**Resultat:** **54** hela paragrafer individuellt jämförda i den kuraterade källserien, **82 av 319 BrB-brottskort** med verifierad komplett aktuell paragraftext (25,7 %), varav **70** med direkt källkontroll av typen `current-paragraph-only`. Det återstår **237** kort utan sådan dokumentation; fullständigt juridiskt slutgodkända kvarstår på **0/319**.
+
+### Separata åtalsregler och källkonfliktsskydd
+
+Ny modul `brb5-prosecution-review-15.js` laddas efter de generella åtalsreglerna så att BrB 5:5 aldrig felaktigt ersätts med schablonen `general`. Den specificerar för **Förtal, Grovt förtal och Förolämpning** att målsäganden normalt själv väcker enskilt åtal. Åklagare kan under de särskilda förutsättningarna i 5:5 väcka åtal beroende på målsägandens ålder/angivelse, allmänt intresse och för förolämpning dessutom brottets särskilda typ (myndighetsutövning eller diskrimineringsanknytning). Särskild ordning för avlidna och vissa utländska dignitärer uppmärksammas.
+
+Separat **BrB 17:3 förolämpning mot tjänsteman** är en annan rubricering och får inte automatiskt omfattas av 5:5:s villkor. Regressionen `scripts/brb5_prosecution_15_test.mjs` kräver aktuell komplett källparagraf och lämnar alla tre granskningsposter oförändrade om källa eller rubricering är fel.
+
+### 13 till källjämförda straffskalor
+
+`brb-penalty-grade-audit-15.js` omfattar nu **43/43** direkt jämförda intervall för brottsgrader. Nytt är 13 skalor i 5, 14 och 15 kap., inklusive bötesexklusivt förtal, bötesmöjlighet vid grovt förtal, ringa/grov märkesförfalskning, mened och grov mened. Den rättade straffskalekön är **265** kvarstående grundposter (från 278) samt **12 särskilt villkorade** situationer. Testerna kräver explicit match på paragraf, straffminimum, straffmaximum, bötesmöjlighet och livstid. Inga numeriska oenigheter påträffades. Ändrad lagtext/straffskala får inte tyst få godkänd stämpel.
+
+**Ingen av de 43 straffskalekontrollerna, de tre åtalskontrollerna eller de 54 fulltextsgranskningarna höjer `legalReviewApproved`: alltjämt 0/319. De 12 juridiskt öppna grova förstadierna förblir `unverified`; ingen automatisk tvångsmedelsbehörighet.**
+
+**Senast helt godkänd GitHub Actions inklusive iPhone:** [39064400496](https://github.com/Deashi03/Brottskatalog/actions/runs/39064400496). **PR #2 förblir DRAFT. Ingen merge och ingen V1.5-publicering.**
