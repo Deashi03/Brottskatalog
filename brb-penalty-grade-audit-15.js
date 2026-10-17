@@ -1,4 +1,4 @@
-/* V1.5: explicit individual-range checks of 115 common BrB grades.
+/* V1.5: explicit individual-range checks of 130 common BrB grades.
  * The controlling CURRENT complete SFS paragraphs are curated in
  * brb-curated-lawtext-15.js. Full legal/penalty applicability is NOT approved.
  * Date-dependent, inchoate and coercive rules remain separate work.
@@ -31,6 +31,21 @@ const rows=[
  ['Märkesförfalskning','14:8',0,2,false,false,'Giltiga märken, falsk eller felaktigt anbringad äkta märkning och fara i bevishänseende.'],
  ['Ringa märkesförfalskning','14:8',0,0.5,true,false,'Ringa grad i andra stycket. Brottskortet är avgränsat från normala och grova graden.'],
  ['Grov märkesförfalskning','14:8',0.5,4,false,false,'Grov grad enligt tredje stycket. Full tillämpning och praxis kräver separat kontroll.'],
+ ['Falskt åtal','15:5',0,2,false,false,'Uppsåt att oskyldig fälls och väckande av åtal; särskilt brott skilt från att ange en person till åtal.'],
+ ['Grovt falskt åtal','15:5',0.5,4,false,false,'Grovhetsbedömning särskilt om åtalet avser allvarligt brott eller innefattar missbruk av tjänsteställning.'],
+ ['Obefogat åtal','15:5',0,0.5,true,false,'Åtal väcks trots att sannolika skäl saknas; inte samma uppsåt som vid falskt åtal.'],
+ ['Falsk angivelse','15:6',0,2,false,false,'Anger oskyldig till åtal med särskilt syfte att personen ska dömas; 2022 års uppdelning i angivelse och beskyllning.'],
+ ['Grov falsk angivelse','15:6',0.5,4,false,false,'Allvarlig brottslighet i angivelsen är en särskilt beaktad men inte ensam avgörande grovhetsfaktor.'],
+ ['Obefogad angivelse','15:6',0,0.5,true,false,'Personen insåg inte oskulden men hade skälig anledning att anta att personen var oskyldig.'],
+ ['Falsk beskyllning','15:7',0,2,false,false,'Osann brottsbeskyllning eller besvärande/friande omständighet hos behörig myndighet; skilj från angivelse till åtal.'],
+ ['Grov falsk beskyllning','15:7',0.5,4,false,false,'Osann myndighetsbeskyllning av allvarlig brottslighet, med individuell grovhetsbedömning.'],
+ ['Vårdslös beskyllning','15:7',0,0.5,true,false,'Insåg inte osanningen men hade skälig anledning att anta att uppgiften var osann.'],
+ ['Bevisförvanskning','15:8',0,2,false,false,'Förvanskar eller undanröjer bevis eller åberopar falskt bevis, med uppsåt att oskyldig fälls.'],
+ ['Grov bevisförvanskning','15:8',0.5,4,false,false,'Grovhet och särskilt uppsåt att oskyldig fälls prövas separat.'],
+ ['Osann försäkran','15:10',0,0.5,true,false,'På annat sätt än muntligen, under heder och samvete eller motsvarande, med fara i bevishänseende.'],
+ ['Osant intygande','15:11',0,0.5,true,false,'Osann identitetsuppgift eller annan än egen angelägenhet/skendurkund med fara i bevishänseende.'],
+ ['Missbruk av urkund','15:12',0,0.5,true,false,'Använder sanningslöst annans pass/betyg/identitetshandling som giltig för sig eller annan; bevisfara.'],
+ ['Förnekande av underskrift','15:13',0,0.5,true,false,'Egen underskrift eller likställd utställarangivelse förnekas med fara i bevishänseende.'],
  ['Mened','15:1',0.5,4,false,false,'Normalgradens minimum är sex månader; mindre allvarligt menedsbrott har särskild skala i samma paragraf.'],
  ['Grov mened','15:1',2,8,false,false,'Grovt brott kräver särskild helhetsbedömning och lagens uppsåtsrelaterade kvalifikationsfaktorer.'],
  ['Osann partsutsaga','15:2',0,2,false,false,'Ringa variant har särskild bötesmöjlighet enligt 15:2. Separat vittnesed krävs inte för partsutsaga.'],
