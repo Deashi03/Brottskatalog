@@ -51,6 +51,7 @@ for(const [ref,expected] of Object.entries(markers)){
 assert.equal(base.filter(c=>c.rekvisit15?.legalReviewApproved===true).length,0);
 const b=base.filter(c=>c.statute?.startsWith('BrB:'));
 assert.equal(b.length,319);
-assert.ok(b.filter(c=>c.lawMode==='full'||c.lawCompletenessVerified===true).length>=59,
- 'At least twenty-one linked cards should now have complete current paragraph text');
+const verifiedBrbCards=b.filter(c=>c.lawMode==='full'||c.lawCompletenessVerified===true).length;
+assert.ok(verifiedBrbCards>=59,
+ 'Expected 59 complete-lawtext BrB cards but found '+verifiedBrbCards);
 console.log('PASS V1.5: thirteen complete current SFS paragraphs verified, without legal signoff');
