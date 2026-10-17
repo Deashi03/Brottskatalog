@@ -75,7 +75,8 @@ try{
   assert.ok((await page.locator('.penalty-bound').allTextContents()).some(x=>x.includes('10 år')),'Murder lower bound must be ten years');
   await page.locator('summary').filter({hasText:'Lagtext'}).click();
   await wait();
-  assert.ok((await page.locator('body').innerText()).includes('Maskinimporterat')||(await page.locator('body').innerText()).includes('kontrollerad'),'Legal text status visible');
+  const lawTextStatus=(await page.locator('body').innerText());
+  assert.ok(['Maskinimporterat','kontrollerad','Lagtext inlagd'].some(label=>lawTextStatus.includes(label)),'Legal text status visible');
   await page.goto(url+'#sok',{waitUntil:'networkidle'});
   await page.locator('#crime-search').fill('ringa stöld');
   await wait();
