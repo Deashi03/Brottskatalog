@@ -22,4 +22,27 @@ for(const c of file.reviewQueue){
  assert.ok(c.title&&c.ref&&c.chapter);
  assert.ok(c.task.includes('rättspraxis'),'Legal review must extend beyond literal SFS');
 }
+assert.equal(file.legalAuditQueue.length,319,
+ 'All 319 structurally complete BrB crimes still require individual legal audit');
+assert.equal(file.counts.brbOffencesInLegalAuditQueue,file.legalAuditQueue.length);
+assert.equal(file.legalAuditSummary.auditPending,319);
+assert.equal(file.byChapter.filter(c=>c.missingStructured>0).length,0,
+ 'Structure should be complete but must NOT imply individual legal approval');
+assert.equal(new Set(file.legalAuditQueue.map(c=>c.id)).size,319,
+ 'Legal audit queue must not omit or duplicate any BrB base offence');
+assert.ok(file.legalAuditQueue.some(c=>c.title==='Sexuellt övergrepp mot barn'));
+assert.ok(file.legalAuditQueue.some(c=>c.title==='Våldsamt motstånd'));
+for(const crime of file.legalAuditQueue){
+ assert.equal(crime.completeLegalReviewApproved,false);
+ assert.ok(crime.missing.includes('individual-requisite-and-case-law-approval'));
+ assert.ok(crime.requiresCaseLawAndEffectiveDateCheck);
+ assert.ok(crime.sourceURL,'Auditors need a source link: '+crime.title);
+}
+assert.ok(file.blockers.basePenaltyCasesNeedingIndividualVerification>0,
+ 'Incomplete penalty verification must block legal release');
+assert.equal(file.counts.basePenaltyCasesNeedingIndividualVerification,
+ file.blockers.basePenaltyCasesNeedingIndividualVerification);
+assert.equal(file.counts.conditionallyScopedPenaltyCasesNeedingReview,
+ file.blockers.conditionalPenaltyCasesNeedingIndividualVerification);
+
 console.log('PASS V1.5: per-chapter legal review queue, truthful source scopes, '+file.counts.brbPostsWithoutStructuredRequisites+' still missing structures, Pages release blocked');
