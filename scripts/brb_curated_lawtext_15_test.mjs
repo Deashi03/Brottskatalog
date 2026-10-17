@@ -15,11 +15,15 @@ const W=ctx.window.BK_STATUTES;
 const base=ctx.window.BK_DATA.crimes.filter(c=>!c.stageType);
 const stats=ctx.window.BK_CURATED_LAWTEXT15;
 assert.ok(stats,'Curated lawtext report missing');
-assert.equal(stats.sectionsChecked,9,'Exactly nine complete paragraphs must have been checked');
+assert.equal(stats.sectionsChecked,13,'Exactly thirteen complete paragraphs must have been checked');
 assert.equal(stats.missing.length,0,JSON.stringify(stats.missing));
 assert.equal(stats.mismatch.length,0,JSON.stringify(stats.mismatch));
-assert.equal(stats.linkedCardsChecked,14,'Nine current SFS paragraphs must cover fourteen offence cards; 21:15 has no main-crime card');
+assert.equal(stats.linkedCardsChecked,21,'Thirteen current SFS paragraphs must cover twenty-one offence cards; 21:15 has no main-crime card');
 const markers={
+ 'BrB:3:5':['kroppsskada, sjukdom eller smärta','om brottet är ringa','Lag (1998:393).'],
+ 'BrB:3:6':['synnerligen grov misshandel','lägst sex och högst tolv år','Lag (2026:1318).'],
+ 'BrB:17:1':['tjänsteman vid hans eller hennes myndighetsutövning','lägst ett år och sex månader och högst åtta år','Lag (2025:579).'],
+ 'BrB:17:4':['motvärn','i 1 och 2 §§','Lag (2025:579).'],
  'BrB:3:1':['berövar annan livet','noggrann planering','Lag (2019:805).'],
  'BrB:3:2':['mindre grovt','fängelse, lägst sex och högst tio år.'],
  'BrB:4:5':['allvarlig rädsla','vapenattrapp','Lag (2023:257).'],
@@ -47,6 +51,6 @@ for(const [ref,expected] of Object.entries(markers)){
 assert.equal(base.filter(c=>c.rekvisit15?.legalReviewApproved===true).length,0);
 const b=base.filter(c=>c.statute?.startsWith('BrB:'));
 assert.equal(b.length,319);
-assert.ok(b.filter(c=>c.lawMode==='full'||c.lawCompletenessVerified===true).length>=52,
- 'At least fourteen additional linked cards should now have complete current paragraph text');
-console.log('PASS V1.5: nine complete current SFS paragraphs verified, without legal signoff');
+assert.ok(b.filter(c=>c.lawMode==='full'||c.lawCompletenessVerified===true).length>=59,
+ 'At least twenty-one linked cards should now have complete current paragraph text');
+console.log('PASS V1.5: thirteen complete current SFS paragraphs verified, without legal signoff');
