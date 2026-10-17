@@ -1,4 +1,4 @@
-/* V1.5: explicit individual-range checks of 30 common BrB grades.
+/* V1.5: explicit individual-range checks of 43 common BrB grades.
  * The controlling CURRENT complete SFS paragraphs are curated in
  * brb-curated-lawtext-15.js. Full legal/penalty applicability is NOT approved.
  * Date-dependent, inchoate and coercive rules remain separate work.
@@ -12,6 +12,19 @@ const rows=[
  ['Vållande till kroppsskada eller sjukdom','3:8',0,0.5,true,false,'Skada/sjukdom som inte är ringa; lagens oaktsamhetsrekvisit.'],
  ['Grovt vållande till kroppsskada eller sjukdom','3:8',0,4,false,false,'Grovhetsgrunden i 3:8, högst fyra års fängelse.'],
  ['Framkallande av fara för annan','3:9',0,3,true,false,'Kräver grov oaktsamhet och konkret skyddad fara, inte vanligt oaktsamhetsbrott.'],
+ ['Förtal','5:1',0,0,true,false,'Böter enligt 5:1. Försvarlighet och sann/skälig uppgift måste prövas separat; enskilt åtal enligt 5:5 huvudregel.'],
+ ['Grovt förtal','5:2',0,2,true,false,'Även grovt förtal kan ge böter. Spridningsomfattning och skada samt villkoren i 5:5 prövas särskilt.'],
+ ['Förolämpning','5:3',0,0.5,true,false,'Särskilt åtalsfilter i 5:5. Förväxla inte 5:3 med förolämpning mot tjänsteman enligt 17:3.'],
+ ['Urkundsförfalskning','14:1',0,2,false,false,'Krav på urkund och fara i bevishänseende; separera elektroniska handlingar och originalkaraktär.'],
+ ['Förvanskning av urkund','14:2',0,0.5,true,false,'Ringa form av urkundsförfalskning; observera den särskilda lindringsgrunden i lagtexten.'],
+ ['Grov urkundsförfalskning','14:3',1,6,false,false,'2026 års straffminimum; särskilt betydelsefull urkund eller farlig gärning ger grovhetsindikatorer.'],
+ ['Märkesförfalskning','14:8',0,2,false,false,'Giltiga märken, falsk eller felaktigt anbringad äkta märkning och fara i bevishänseende.'],
+ ['Ringa märkesförfalskning','14:8',0,0.5,true,false,'Ringa grad i andra stycket. Brottskortet är avgränsat från normala och grova graden.'],
+ ['Grov märkesförfalskning','14:8',0.5,4,false,false,'Grov grad enligt tredje stycket. Full tillämpning och praxis kräver separat kontroll.'],
+ ['Mened','15:1',0.5,4,false,false,'Normalgradens minimum är sex månader; mindre allvarligt menedsbrott har särskild skala i samma paragraf.'],
+ ['Grov mened','15:1',2,8,false,false,'Grovt brott kräver särskild helhetsbedömning och lagens uppsåtsrelaterade kvalifikationsfaktorer.'],
+ ['Osann partsutsaga','15:2',0,2,false,false,'Ringa variant har särskild bötesmöjlighet enligt 15:2. Separat vittnesed krävs inte för partsutsaga.'],
+ ['Ovarsam utsaga','15:3',0,0.5,true,false,'Grov oaktsamhet krävs, jämför undantagen om betydelselös utsaga/rätt att tiga i 15:4.'],
  ['Stöld','8:1',0,2,false,false,'Uppsåt att tillägna sig och skada prövas separat.'],
  ['Ringa stöld','8:2',0,0.5,true,false,'Förutsätter 8:1 och helhetsbedömning av ringa grad.'],
  ['Grov stöld','8:4',1,6,false,false,'Kvalifikationsfaktorer är inte var och en obligatoriska; helhetsbedömning.'],
