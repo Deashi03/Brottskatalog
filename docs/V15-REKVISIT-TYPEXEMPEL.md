@@ -402,3 +402,26 @@ I senaste testresultatet fanns **86 grund- och förstadiekort med en lagrad grun
 `scripts/age14_offence_scope_15_test.mjs` testar bland annat **3,99 års kontra 4 års** lagstadgat straffminimum, användning av huvudbrottets minimum i förstadier, ej kriminaliserade och osäkra förstadier, särskilt villkorade brott och att tvångsmedel aldrig automatiskt godkänns. Revisionsgrinden `scripts/v15_release_readiness.mjs` listar individuella ålderskandidater, förbehåll och saknade kontroller samt stoppar utkastet om någon post saknar åldersmetadata.
 
 **Alla 319 BrB-poster är fortsatt endast strukturerade, 0 har fullständigt juridiskt slutgodkännande; 257 saknar verifierad fullständig lagtext, 283 grundposter och 12 särskilt villkorade straffskalesituationer återstår, och 12 förstadier är ännu osäkra. V1.5 publiceras inte.**
+
+---
+
+## BrB 3:7–12 – oaktsamhetsbrott, straffskalor och åtalsvillkor – 17 oktober 2026
+
+Sex ytterligare kompletta paragrafer har jämförts mot [gällande brottsbalk (Riksdagen)](https://www.riksdagen.se/sv/dokument-och-lagar/dokument/svensk-forfattningssamling/brottsbalk-1962700_sfs-1962-700/):
+
+- **BrB 3:7:** Vållande till annans död, inklusive den separata ringa bötesvarianten och grov grads minimi- och maximistraff samt allvarligt medvetet risktagande och kvalificerad försummelse. Ändrad genom SFS 2026:1318.
+- **BrB 3:8:** Vållande till kroppsskada eller sjukdom, inklusive gradindelning, gränsen för icke-ringa skada/sjukdom och omständigheterna som särskilt beaktas för grovt brott.
+- **BrB 3:9:** Framkallande av fara för annan. **Grov oaktsamhet** krävs; vanlig oaktsamhet räcker inte för 3:9.
+- **BrB 3:10:** Arbetsmiljöbrott. Det är en **hänvisningsbestämmelse**: förutsätter brott enligt 3:7–9 och åsidosättande av relevanta arbetsmiljöskyldigheter. Straff följer hänvisade brott, inte ett enda schablonmässigt intervall.
+- **BrB 3:11:** Särskilt lagstöd för försök, förberedelse, stämpling och underlåtenhetsansvar i kapitlet; straffbart förstadium får inte antas genom enbart straffskalan.
+- **BrB 3:12:** Särskilt åtalsvillkor för vållande till kroppsskada eller sjukdom som inte är grovt. Målsägandens angivelse + allmänt åtal påkallat från allmän synpunkt. **Angivelse krävs inte när den utsatte är under 18 år.** Detta får inte döljas i brottskortets generella åtalsrubricering.
+
+**Ny strikt granskningsstatus:** **40 kompletta nu gällande paragrafer**, **68/319 BrB-kort med verifierad komplett paragraftext (21,3 %)**, **56 av dessa direkt kontrollerade genom den särskilda kuraterade serien**, **251 fortfarande utan tillräckligt dokumenterad fulltextkontroll**.
+
+### Fem ytterligare individuellt jämförda straffskalor
+
+`brb-penalty-grade-audit-15.js` omfattar nu **30/30 individuella källjämförelser**, inklusive normal och grov grad för vållande till annans död, normal och grov grad för vållande till kroppsskada eller sjukdom samt framkallande av fara för annan. Ingen lagrad intervallavvikelse påträffades; källkonflikter skulle stoppa automatisk verifiering. Normalgradens skala prövas separat från ringa och grova varianter.
+
+**278** grundposter i hela katalogen återstår för individuell straffskalegranskning enligt det restriktiva release-måttet, ned från 283. **12** villkorade situationer ligger i separat kö. Ingen straffskalekontroll innebär juridiskt slutgodkännande av rekvisit, praxis, gärningsdatum, förstadier eller tvångsmedel.
+
+**Teststatus:** [GitHub Actions 39063402764](https://github.com/Deashi03/Brottskatalog/actions/runs/39063402764) **PASS**, inklusive mobil/iPhone-smoke, BrB 1:6-datum och förstadieskydd, 40 fullständiga paragrafer och 30 straffskalegranskningar. De **12 osäkra förstadierna** och **0/319 fullständigt juridiskt certifierade BrB-brott** kvarstår. **Ingen merge/deploy.**
