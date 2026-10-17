@@ -59,4 +59,9 @@ assert.equal(w.BK_BRB10_PROSECUTION15.reviewed,0);
 assert.equal(w.BK_BRB10_PROSECUTION15.held.length,4);
 assert.ok(fake.every(c=>c.prosecution==='unknown'));
 assert.equal(ctx.window.BK_DATA.crimes.filter(c=>c.stageType&&c.stageStatus==='unverified').length,12);
+const penaltyTitles=["Förskingring","Ringa förskingring","Grov förskingring","Olovligt förfogande","Grovt olovligt förfogande","Trolöshet mot huvudman","Grov trolöshet mot huvudman","Tagande av muta","Givande av muta","Grovt tagande av muta","Grovt givande av muta","Handel med inflytande","Vårdslös finansiering av mutbrott"];
+console.log('V1.5 BRB10 PENALTY TRIAGE '+JSON.stringify(penaltyTitles.map(title=>{
+ const c=b.find(c=>c.title===title);
+ return {title,statute:c?.statute,range:c?.penaltyRange||null,verified:c?.penaltyRangeVerified||false,scope:c?.penaltyReviewScope||null};
+})));
 console.log('PASS V1.5: BrB 10:10/20:5 prosecution cases, conditional public interest, public service exceptions, source holds and untouched gross grades');
