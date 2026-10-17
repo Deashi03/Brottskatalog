@@ -35,6 +35,13 @@ assert.ok(JSON.stringify(child.rekvisit15).includes('6:14'),'Limited youth excep
 const grave=by('Grovt sexuellt övergrepp mot barn');
 assert.equal(grave.rekvisit15.routes.length,3);
 assert.ok(JSON.stringify(grave.rekvisit15).includes('Separat gradindelning'));
+assert.ok(grave.rekvisit15.routes.every(r=>r.groups.every(g=>!String(g.label||'').includes('6:14'))),
+  'BrB 6:14 minor-offence exception MUST NOT become an aggravated-offence requisite');
+assert.ok(grave.rekvisit15.note.includes('INTE tillämpligt på den grova graden'),
+  'Explain why BrB 6:14 cannot be used for gross offence');
+assert.ok(child.rekvisit15.routes[0].groups.some(g=>String(g.label).includes('6:14')),
+  'Maintain limited 6:14 note in normal-grade context');
+
 for(const name of ['Samlag med avkomling','Samlag med syskon']){
  const c=by(name);assert.equal(c.rekvisit15.routes.length,1);
  assert.ok(JSON.stringify(c.rekvisit15).includes('vaginalt'),'Special 6:7 act restriction required');
