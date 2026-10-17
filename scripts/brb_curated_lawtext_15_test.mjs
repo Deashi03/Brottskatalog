@@ -15,7 +15,7 @@ const W=ctx.window.BK_STATUTES;
 const base=ctx.window.BK_DATA.crimes.filter(c=>!c.stageType);
 const stats=ctx.window.BK_CURATED_LAWTEXT15;
 assert.ok(stats,'Curated lawtext report missing');
-assert.equal(stats.sectionsChecked,132,'Exactly one-hundred-thirty-two complete paragraphs must have been checked: '+JSON.stringify({missing:stats.missing,mismatch:stats.mismatch,sourceHeads:stats.mismatch.map(k=>({ref:k,text:W[k]?.text?.slice(0,110)}))}));
+assert.equal(stats.sectionsChecked,141,'Exactly one-hundred-forty-one complete paragraphs must have been checked: '+JSON.stringify({missing:stats.missing,mismatch:stats.mismatch,sourceHeads:stats.mismatch.map(k=>({ref:k,text:W[k]?.text?.slice(0,110)}))}));
 assert.equal(stats.missing.length,0,JSON.stringify(stats.missing));
 assert.equal(stats.mismatch.length,0,JSON.stringify(stats.mismatch));
 const addedCards=base.filter(c=>['BrB:13:5c','BrB:17:10'].includes(c.statute));
@@ -75,9 +75,24 @@ for(const key of ['BrB:15:5','BrB:15:6','BrB:15:7','BrB:15:8','BrB:15:10','BrB:1
  assert.ok(justiceCards.some(c=>c.statute===key),'Missing core justice-system police card '+key);
 }
 assert.ok(justiceCards.length>=7,'Expected individual justice crime records');
-assert.equal(stats.linkedCardsChecked,21+addedCards.length+propertyCards.length+officeCards.length+negligenceCards.length+newCards.length+economicCards.length+theftFraudCards.length+creditorCards.length+extra12Cards.length+ch4Cards.length+freedomCards.length+updatedSafetyCards.length+justiceCards.length,
- 'All 132 source-checked SFS paragraphs must cover their offence card counts');
+const remaining14Keys=['BrB:14:4','BrB:14:5','BrB:14:6','BrB:14:7','BrB:14:9','BrB:14:10','BrB:14:11','BrB:14:12','BrB:14:13'];
+const remaining14Cards=base.filter(c=>remaining14Keys.includes(c.statute));
+for(const key of ['BrB:14:4','BrB:14:5','BrB:14:6','BrB:14:7','BrB:14:9','BrB:14:10','BrB:14:11']){
+ assert.ok(remaining14Cards.some(c=>c.statute===key),'Missing independently checked forgery offence: '+key);
+}
+assert.ok(remaining14Cards.length>=7,'Expected directly verified forgery crime cards');
+assert.equal(stats.linkedCardsChecked,21+addedCards.length+propertyCards.length+officeCards.length+negligenceCards.length+newCards.length+economicCards.length+theftFraudCards.length+creditorCards.length+extra12Cards.length+ch4Cards.length+freedomCards.length+updatedSafetyCards.length+justiceCards.length+remaining14Cards.length,
+ 'All 141 source-checked SFS paragraphs must cover their offence card counts');
 const markers={
+ 'BrB:14:4':['hindrande av urkunds bevisfunktion','utan att vid tillfället ha rätt till det','fara i bevishänseende','brottet inte är att anse som bokföringsbrott','Lag (2013:425).'],
+ 'BrB:14:5':['signaturförfalskning','ger sken av att den personen angett sig vara upphovsman','Lag (2013:425).'],
+ 'BrB:14:6':['penningförfalskning','har beslutats för utgivning men ännu inte är gällande','lägst två och högst åtta år','Lag (2013:425).'],
+ 'BrB:14:7':['med uppsåt att det förfalskade ska prånglas ut','olovlig befattning med falska pengar','Lag (2016:348).'],
+ 'BrB:14:9':['förfalskning av fast märke','gränsmärke, vattenmärke, fixpunkt','Lag (2013:425).'],
+ 'BrB:14:10':['Den som åberopar falsk urkund','brukande av det förfalskade','som om han eller hon själv hade gjort förfalskningen','Lag (2013:425).'],
+ 'BrB:14:11':['i annat fall än som avses i 10 §','olaga spridande av efterbildning till böter','Lag (2013:425).'],
+ 'BrB:14:12':['frivilligt och innan avsevärd olägenhet','lindrigare straff','inte dömas till ansvar','Lag (2013:425).'],
+ 'BrB:14:13':['försök eller förberedelse till urkundsförfalskning','försök till anskaffande eller mottagande','inte medföra ansvar','Lag (2016:508).'],
  'BrB:15:5':['falskt åtal','uppsåt att denne må bliva fälld','missbruk av tjänsteställning','obefogat åtal'],
  'BrB:15:6':['falsk angivelse','ringa falsk angivelse','grov falsk angivelse','obefogad angivelse','Lag (2022:792).'],
  'BrB:15:7':['falsk beskyllning','ringa falsk beskyllning','grov falsk beskyllning','vårdslös beskyllning','Lag (2022:792).'],
@@ -215,7 +230,7 @@ for(const [ref,expected] of Object.entries(markers)){
  const item=W[ref];
  assert.equal(item.complete,true,'Source complete: '+ref);
  assert.equal(item.machine,false,'Not a machine-only excerpt: '+ref);
- assert.equal(item.checked,(updatedSafetyKeys.includes(ref)||justiceKeys.includes(ref))?'2026-10-18':'2026-10-17');
+ assert.equal(item.checked,(updatedSafetyKeys.includes(ref)||justiceKeys.includes(ref)||remaining14Keys.includes(ref))?'2026-10-18':'2026-10-17');
  assert.equal(item.completeTextProvenance,'manual-crosscheck-current-SFS-paragraph-only');
  for(const phrase of expected)assert.ok(item.text.includes(phrase),ref+' lacks '+phrase);
  for(const c of base.filter(c=>c.statute===ref)){
@@ -231,7 +246,7 @@ assert.equal(b.length,319);
 const directCrosschecks=b.filter(c=>c.lawCompletenessVerified===true&&
  c.lawCompletenessReviewScope==='current-paragraph-only'&&
  c.lawCompletenessSourceURL?.includes('riksdagen.se'));
-assert.equal(directCrosschecks.length,21+addedCards.length+propertyCards.length+officeCards.length+negligenceCards.length+newCards.length+economicCards.length+theftFraudCards.length+creditorCards.length+extra12Cards.length+ch4Cards.length+freedomCards.length+updatedSafetyCards.length+justiceCards.length,
+assert.equal(directCrosschecks.length,21+addedCards.length+propertyCards.length+officeCards.length+negligenceCards.length+newCards.length+economicCards.length+theftFraudCards.length+creditorCards.length+extra12Cards.length+ch4Cards.length+freedomCards.length+updatedSafetyCards.length+justiceCards.length+remaining14Cards.length,
  'All current SFS offence cards must carry narrow dated paragraph-crosscheck provenance');
 assert.ok(!base.some(c=>c.statute==='BrB:13:12'),'13:12 is a stage authorization source, not a standalone completed crime');
 const unreviewedEmbedded=b.filter(c=>c.lawMode==='full'&&!c.lawCompletenessVerified);
@@ -241,4 +256,4 @@ for(const c of unreviewedEmbedded){
 }
 assert.ok(b.some(c=>!c.lawCompletenessVerified),
  'The review must not silently approve all 319 BrB provisions');
-console.log('PASS V1.5: one-hundred-thirty-two complete current SFS paragraphs verified, without legal signoff');
+console.log('PASS V1.5: one-hundred-forty-one complete current SFS paragraphs verified, without legal signoff');
