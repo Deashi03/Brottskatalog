@@ -1,4 +1,4 @@
-/* V1.5: explicit individual-range checks of 56 common BrB grades.
+/* V1.5: explicit individual-range checks of 75 common BrB grades.
  * The controlling CURRENT complete SFS paragraphs are curated in
  * brb-curated-lawtext-15.js. Full legal/penalty applicability is NOT approved.
  * Date-dependent, inchoate and coercive rules remain separate work.
@@ -38,6 +38,25 @@ const rows=[
  ['Grovt givande av muta','10:5c',1.5,6,false,false,'Grovhetsbedömning av 10:5b-typ enligt 10:5c; särskilt lagstöd för förberedelse i 10:9.'],
  ['Handel med inflytande','10:5d',0,2,false,false,'Otillbörlig förmån för påverkan på myndighetsutövning/offentlig upphandling, i annat fall än 10:5a–b; åtalsvillkor enligt 10:10.'],
  ['Vårdslös finansiering av mutbrott','10:5e',0,2,true,false,'Grov oaktsamhet vid finansiering av vissa bestämda mutbrott; särskilt åtalsvillkor enligt 10:10 och 20:5.'],
+ ['Egenmäktigt förfarande','8:8',0,1,true,false,'Tre lagstadgade tillvägagångssätt: tillgrepp/brukande, olovlig besittningsrubbning med skada eller olägenhet, och våld/hot vid annans rätt att hålla kvar eller ta egendom.'],
+ ['Grovt egenmäktigt förfarande','8:8',0.5,4,false,false,'Grovhetsbedömning enligt 8:8 tredje stycket. Även våld, hot, betydande värde och särskild hänsynslöshet ska beaktas.'],
+ ['Självtäkt','8:9',0,0.5,true,false,'8:9 kräver en gärning som anges i 8:8 med syfte att själv ta sig rätt; egen rätt gör inte tvångsingripandet tillåtet.'],
+ ['Olovlig energiavledning','8:10',0,1,true,false,'Omfattar även viss olovlig värmeenergiavledning, inte bara elektricitet.'],
+ ['Grov olovlig energiavledning','8:10',0.5,4,false,false,'Samlad kvalifikationsbedömning; fara, betydande värde och synnerligen kännbar skada.'],
+ ['Grovt fordringsbedrägeri','9:3a',1,6,false,false,'Till vidare krets riktade betalningsuppmaningar i vilseledandesyfte och betydande värde.'],
+ ['Olovlig befattning med betalningsverktyg','9:3c',0,2,true,false,'Skyddade betalningsverktyg, även uppgifter; lagens uttryckliga subsidiaritetsklausul prövas separat.'],
+ ['Grov olovlig befattning med betalningsverktyg','9:3c',1,6,false,false,'2026 års grovhetsindikatorer och uttryckligt subsidiaritetsvillkor enligt 9:3 c.'],
+ ['Företagskapning','9:3d',0,2,true,false,'Utge sig för att företräda en juridisk person genom otillåten användning av identitetsuppgifter; faktisk skada eller olägenhet.'],
+ ['Utpressning','9:4',0,3,false,false,'Olaga tvång med förmögenhetsöverföring och skada; subsidiärt till rån eller grovt rån. Ringa grad har annan skala.'],
+ ['Ringa utpressning','9:4',0,0.5,true,false,'Särskild ringa grad av 9:4 med bötesmöjlighet; förstadielagstöd i 9:11.'],
+ ['Grov utpressning','9:4',2,8,false,false,'Hot med vapen/vapenattrapp eller anspelning på våldskapital är kvalifikationsfaktorer; bedömningen är samlad.'],
+ ['Ocker','9:5',0,2,true,false,'Utnyttjande av trångmål/oförstånd m.m. eller kreditgivning i näringsverksamhet i lagens alternativa form.'],
+ ['Grovt ocker','9:5',1,6,false,false,'Särskilt värde eller hänsynslös/farlig art; helhetsbedömning.'],
+ ['Häleri','9:6',0,2,false,false,'Tre lagstadgade huvudalternativ och separat näringsverksamhetsalternativ som täcker skäligen kan antas.'],
+ ['Grovt häleri','9:6',1,6,false,false,'Särskilt betydande värde, systematik eller annan särskilt farlig art.'],
+ ['Utförselhäleri','9:6a',0,2,false,false,'Syfte att föra den misstänkt brottshärrörande egendomen ut ur landet enligt 9:6 a.'],
+ ['Grovt utförselhäleri','9:6a',1,6,false,false,'Särskild utlandsavsikt och samlad grovhetsbedömning enligt 9:6 a.'],
+ ['Häleriförseelse','9:7',0,0.5,true,false,'Inbegriper ringa häleri/utförselhäleri och separat brottsinsikt med skälig anledning att anta.'],
  ['Stöld','8:1',0,2,false,false,'Uppsåt att tillägna sig och skada prövas separat.'],
  ['Ringa stöld','8:2',0,0.5,true,false,'Förutsätter 8:1 och helhetsbedömning av ringa grad.'],
  ['Grov stöld','8:4',1,6,false,false,'Kvalifikationsfaktorer är inte var och en obligatoriska; helhetsbedömning.'],
