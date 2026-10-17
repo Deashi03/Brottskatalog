@@ -15,7 +15,7 @@ const W=ctx.window.BK_STATUTES;
 const base=ctx.window.BK_DATA.crimes.filter(c=>!c.stageType);
 const stats=ctx.window.BK_CURATED_LAWTEXT15;
 assert.ok(stats,'Curated lawtext report missing');
-assert.equal(stats.sectionsChecked,93,'Exactly ninety-three complete paragraphs must have been checked: '+JSON.stringify({missing:stats.missing,mismatch:stats.mismatch,sourceHeads:stats.mismatch.map(k=>({ref:k,text:W[k]?.text?.slice(0,110)}))}));
+assert.equal(stats.sectionsChecked,97,'Exactly ninety-seven complete paragraphs must have been checked: '+JSON.stringify({missing:stats.missing,mismatch:stats.mismatch,sourceHeads:stats.mismatch.map(k=>({ref:k,text:W[k]?.text?.slice(0,110)}))}));
 assert.equal(stats.missing.length,0,JSON.stringify(stats.missing));
 assert.equal(stats.mismatch.length,0,JSON.stringify(stats.mismatch));
 const addedCards=base.filter(c=>['BrB:13:5c','BrB:17:10'].includes(c.statute));
@@ -55,9 +55,17 @@ for(const key of creditorKeys.slice(0,5)){
  assert.ok(creditorCards.some(c=>c.statute===key),'Missing creditor crime card for '+key);
 }
 assert.ok(creditorCards.length>=7,'Chapter 11 offences must map to legal cards');
-assert.equal(stats.linkedCardsChecked,21+addedCards.length+propertyCards.length+officeCards.length+negligenceCards.length+newCards.length+economicCards.length+theftFraudCards.length+creditorCards.length,
- 'All 93 current SFS paragraphs must cover their actual offence card counts');
+const extra12Keys=['BrB:12:2a','BrB:12:4','BrB:12:5','BrB:12:6'];
+const extra12Cards=base.filter(c=>extra12Keys.includes(c.statute));
+assert.ok(extra12Cards.some(c=>c.statute==='BrB:12:2a'),'Åverkan card missing');
+assert.ok(extra12Cards.some(c=>c.statute==='BrB:12:4'),'Tagande av olovlig väg card missing');
+assert.equal(stats.linkedCardsChecked,21+addedCards.length+propertyCards.length+officeCards.length+negligenceCards.length+newCards.length+economicCards.length+theftFraudCards.length+creditorCards.length+extra12Cards.length,
+ 'All 97 current SFS paragraphs must cover their actual offence card counts');
 const markers={
+ 'BrB:12:2a':['olovligen tar växande träd eller gräs','eller annat som inte är bearbetat','åverkan till böter','Lag (2017:442).'],
+ 'BrB:12:4':['på annat än väg färdas över tomt eller plantering','tagande av olovlig väg','Lag (2017:442).'],
+ 'BrB:12:5':['För försök eller förberedelse till grov skadegörelse','underlåtenhet att avslöja eller förhindra','Lag (2016:508).'],
+ 'BrB:12:6':['om brottet endast kränker enskilds rätt','åtal av särskilda skäl','Lag (2017:442).'],
  'BrB:11:1':['på obestånd','påtaglig fara','konkursförvaltningen','otillbörligt syfte','grov oredlighet mot borgenärer','Lag (2026:1318).'],
  'BrB:11:2':['F-\nskuldsanering','uppsåtligen eller av grov oaktsamhet','uppgiften inte rättas','rätt att vägra yttra sig','uppsåtligen och är grovt','Lag (2026:1318).'],
  'BrB:11:3':['utan motsvarande nytta för rörelsen','uppsåtligen eller av grov oaktsamhet','skälig anledning anta','Lag (2005:242).'],
@@ -172,9 +180,9 @@ assert.equal(b.length,319);
 const directCrosschecks=b.filter(c=>c.lawCompletenessVerified===true&&
  c.lawCompletenessReviewScope==='current-paragraph-only'&&
  c.lawCompletenessSourceURL?.includes('riksdagen.se'));
-assert.equal(directCrosschecks.length,21+addedCards.length+propertyCards.length+officeCards.length+negligenceCards.length+newCards.length+economicCards.length+theftFraudCards.length+creditorCards.length,
+assert.equal(directCrosschecks.length,21+addedCards.length+propertyCards.length+officeCards.length+negligenceCards.length+newCards.length+economicCards.length+theftFraudCards.length+creditorCards.length+extra12Cards.length,
  'All current SFS offence cards must carry narrow dated paragraph-crosscheck provenance');
 assert.ok(!base.some(c=>c.statute==='BrB:13:12'),'13:12 is a stage authorization source, not a standalone completed crime');
 assert.ok(b.some(c=>c.lawMode==='full'&&!c.lawCompletenessVerified),
  'Embedded full text without documented review must remain distinguishable');
-console.log('PASS V1.5: ninety-three complete current SFS paragraphs verified, without legal signoff');
+console.log('PASS V1.5: ninety-seven complete current SFS paragraphs verified, without legal signoff');
