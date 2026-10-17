@@ -21,7 +21,7 @@ const fullyReviewed=c=>Boolean(structured(c)&&c.rekvisit15?.scope==='full-legal-
 // human checked the whole currently effective paragraph. Count only
 // records with source provenance and a valid nonfuture check date.
 const embeddedFullText=c=>c.lawMode==='full'||c.lawCompletenessVerified===true;
-const dateVerified=d=>typeof d==='string'&&/^\d{4}-\d{2}-\d{2}$/.test(d)&&!Number.isNaN(Date.parse(d+'T00:00:00Z'))&&new Date(d+'T00:00:00Z').toISOString().slice(0,10)===d&&d<=new Date().toISOString().slice(0,10);
+const dateVerified=d=>typeof d==='string'&&/^\d{4}-\d{2}-\d{2}$/.test(d)&&!Number.isNaN(Date.parse(d+'T00:00:00Z'))&&new Date(d+'T00:00:00Z').toISOString().slice(0,10)===d&&d<=new Date().toLocaleDateString('sv-SE',{timeZone:'Europe/Stockholm'});
 const exactText=c=>Boolean(c.lawMode==='full'&&c.lawCompletenessVerified===true&&
  c.lawCompletenessSourceURL?.startsWith('https://')&&dateVerified(c.lawCompletenessChecked));
 const directlyCrosschecked=c=>Boolean(exactText(c)&&c.lawCompletenessReviewScope==='current-paragraph-only');
@@ -67,7 +67,7 @@ const stageAuditQueue=unverifiedStage.map(c=>{
  return {
   title:c.title,stageType:c.stageType,
   parent:parent?.title||null,parentRef:parent?.shortRef||null,
-  sourceRef:key,sourceTextIndividuallyChecked:Boolean(paragraph?.complete&&paragraph?.checked==='2026-10-17'),
+  sourceRef:key,sourceTextIndividuallyChecked:Boolean(paragraph?.complete&&dateVerified(paragraph?.checked)),
   sourceURL:paragraph?.url||parent?.sourceURL||null,
   status:'INCHOATE_CRIMINALIZATION_UNVERIFIED',
   reason:c.stageReviewBasis||c.stageExplanation||null,
