@@ -15,14 +15,31 @@ const W=ctx.window.BK_STATUTES;
 const base=ctx.window.BK_DATA.crimes.filter(c=>!c.stageType);
 const stats=ctx.window.BK_CURATED_LAWTEXT15;
 assert.ok(stats,'Curated lawtext report missing');
-assert.equal(stats.sectionsChecked,16,'Exactly sixteen complete paragraphs must have been checked: '+JSON.stringify({missing:stats.missing,mismatch:stats.mismatch,sourceHeads:stats.mismatch.map(k=>({ref:k,text:W[k]?.text?.slice(0,110)}))}));
+assert.equal(stats.sectionsChecked,29,'Exactly twenty-nine complete paragraphs must have been checked: '+JSON.stringify({missing:stats.missing,mismatch:stats.mismatch,sourceHeads:stats.mismatch.map(k=>({ref:k,text:W[k]?.text?.slice(0,110)}))}));
 assert.equal(stats.missing.length,0,JSON.stringify(stats.missing));
 assert.equal(stats.mismatch.length,0,JSON.stringify(stats.mismatch));
 const addedCards=base.filter(c=>['BrB:13:5c','BrB:17:10'].includes(c.statute));
 assert.ok(addedCards.length>=4,'Expected normal and aggravated criminal grades for both newly checked sections');
-assert.equal(stats.linkedCardsChecked,21+addedCards.length,
- 'Sixteen current SFS paragraphs must cover prior twenty-one linked cards and the new police-priority offences');
+const propertyKeys=['BrB:8:1','BrB:8:2','BrB:8:4','BrB:8:4a','BrB:8:5','BrB:8:6','BrB:8:7','BrB:9:1','BrB:9:2','BrB:9:3','BrB:12:1','BrB:12:2','BrB:12:3'];
+const propertyCards=base.filter(c=>propertyKeys.includes(c.statute));
+assert.ok(propertyCards.length>=13,'Every additional official provision must have at least one catalogue card');
+for(const key of propertyKeys)assert.ok(propertyCards.some(c=>c.statute===key),'Missing offence card for '+key);
+assert.equal(stats.linkedCardsChecked,21+addedCards.length+propertyCards.length,
+ 'All 29 current SFS paragraphs must cover every related criminal offence card');
 const markers={
+ 'BrB:8:1':['olovligen tager vad annan tillhör','uppsåt att tillägna sig','om tillgreppet innebär skada'],
+ 'BrB:8:2':['det tillgripnas värde','omständigheter vid brottet','Lag (2017:442).'],
+ 'BrB:8:4':['grov stöld','brottslighet som utövats systematiskt','Lag (2026:1318).'],
+ 'BrB:8:4a':['intrång i bostad','mindre allvarlig art','Lag (2021:35).'],
+ 'BrB:8:5':['3. olovligen tar eller tvingar till sig ett betalningsverktyg','bar gärning','vanmakt','mindre allvarlig art','Lag (2023:257).'],
+ 'BrB:8:6':['grovt rån','svår kroppsskada','särskilt farlig art','Lag (2017:332).'],
+ 'BrB:8:7':['olovligen tar och brukar ett motorfordon','Om brottet är ringa','Är brottet grovt','Lag (2017:442).'],
+ 'BrB:9:1':['medelst vilseledande','automatisk informationsbehandling','Lag (1986:123).'],
+ 'BrB:9:2':['kontant betalning','oavsett om han eller hon vilseleder någon','Lag (2017:442).'],
+ 'BrB:9:3':['skyddslösa eller utsatta ställning','organiserad form eller systematiskt','Lag (2026:1318).'],
+ 'BrB:12:1':['förstör eller skadar egendom','till men för någon annans rätt','Lag (2017:442).'],
+ 'BrB:12:2':['skadans obetydlighet','övriga omständigheter','Lag (2017:442).'],
+ 'BrB:12:3':['kulturell eller ekonomisk betydelse','särskilt hänsynslös art','Lag (2026:1318).'],
  'BrB:13:5c':['stör polisverksamhet, räddningstjänst eller ambulanssjukvård','3. vidta annan otillbörlig åtgärd','allvarligt försvåra eller hindra','Lag (2019:1162).'],
  'BrB:17:10':['gjort anmälan, fört talan','Internationella brottmålsdomstolen','Om brottet med hänsyn till omständigheterna är mindre allvarligt','Lag (2022:792).'],
  'BrB:13:12':['försök, förberedelse eller stämpling','grov mordbrand','grovt sabotage mot blåljusverksamhet','Lag (2023:257).'],
@@ -60,9 +77,9 @@ assert.equal(b.length,319);
 const directCrosschecks=b.filter(c=>c.lawCompletenessVerified===true&&
  c.lawCompletenessReviewScope==='current-paragraph-only'&&
  c.lawCompletenessSourceURL?.includes('riksdagen.se'));
-assert.equal(directCrosschecks.length,21+addedCards.length,
- 'All police-priority source cards must carry their current-paragraph-only provenance');
+assert.equal(directCrosschecks.length,21+addedCards.length+propertyCards.length,
+ 'All source-checked criminal offence cards must carry current-paragraph-only provenance');
 assert.ok(!base.some(c=>c.statute==='BrB:13:12'),'13:12 is a stage authorization source, not a standalone completed crime');
 assert.ok(b.some(c=>c.lawMode==='full'&&!c.lawCompletenessVerified),
  'Embedded full text without documented review must remain distinguishable');
-console.log('PASS V1.5: sixteen complete current SFS paragraphs verified, without legal signoff');
+console.log('PASS V1.5: twenty-nine complete current SFS paragraphs verified, without legal signoff');
