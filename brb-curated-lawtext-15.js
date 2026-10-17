@@ -23,8 +23,12 @@ const heading={'BrB:6:7':/^7\s*§/,'BrB:21:7':/^7\s*§/,'BrB:21:15':/^15\s*§/,'
 for(const [key,text] of Object.entries(full)){
  const item=W[key];
  if(!item?.text){report.missing.push(key);continue;}
- // Guard against future source import changes being silently re-certified.
- if(!heading[key].test(String(item.text).trim())||!heading[key].test(text)){
+ // Machine imports can omit the paragraph number. Require a matching
+ // normalized leading statutory passage (at least 60 characters) instead
+ // of accepting an arbitrary same-number heading after legislation changes.
+ const norm=s=>String(s||'').trim().replace(/^\d+\s*[a-z]?\s*§\s*/i,'').replace(/\s+/g,' ').trim();
+ const importedStart=norm(item.text),verifiedStart=norm(text);
+ if(!heading[key].test(text)||importedStart.length<60||importedStart.slice(0,60)!==verifiedStart.slice(0,60)){
   report.mismatch.push(key);continue;
  }
  item.text=text;item.complete=true;item.machine=false;
