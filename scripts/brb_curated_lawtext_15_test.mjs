@@ -15,7 +15,7 @@ const W=ctx.window.BK_STATUTES;
 const base=ctx.window.BK_DATA.crimes.filter(c=>!c.stageType);
 const stats=ctx.window.BK_CURATED_LAWTEXT15;
 assert.ok(stats,'Curated lawtext report missing');
-assert.equal(stats.sectionsChecked,81,'Exactly eighty-one complete paragraphs must have been checked: '+JSON.stringify({missing:stats.missing,mismatch:stats.mismatch,sourceHeads:stats.mismatch.map(k=>({ref:k,text:W[k]?.text?.slice(0,110)}))}));
+assert.equal(stats.sectionsChecked,85,'Exactly eighty-five complete paragraphs must have been checked: '+JSON.stringify({missing:stats.missing,mismatch:stats.mismatch,sourceHeads:stats.mismatch.map(k=>({ref:k,text:W[k]?.text?.slice(0,110)}))}));
 assert.equal(stats.missing.length,0,JSON.stringify(stats.missing));
 assert.equal(stats.mismatch.length,0,JSON.stringify(stats.mismatch));
 const addedCards=base.filter(c=>['BrB:13:5c','BrB:17:10'].includes(c.statute));
@@ -44,14 +44,18 @@ for(const key of economicKeys.filter(k=>!['BrB:10:9','BrB:10:10'].includes(k))){
  assert.ok(economicCards.some(c=>c.statute===key),'Missing source-checked economic crime card: '+key);
 }
 assert.ok(economicCards.length>=10,'BrB 10 catalogue cards must cover the economic offences');
-const theftFraudKeys=['BrB:8:8','BrB:8:9','BrB:8:10','BrB:8:11','BrB:8:12','BrB:8:13','BrB:9:3a','BrB:9:3c','BrB:9:3d','BrB:9:4','BrB:9:5','BrB:9:6','BrB:9:6a','BrB:9:7'];
+const theftFraudKeys=['BrB:8:8','BrB:8:9','BrB:8:10','BrB:8:11','BrB:8:12','BrB:8:13','BrB:9:3a','BrB:9:3c','BrB:9:3d','BrB:9:4','BrB:9:5','BrB:9:6','BrB:9:6a','BrB:9:7','BrB:9:8','BrB:9:9','BrB:9:10','BrB:9:11'];
 const theftFraudCards=base.filter(c=>theftFraudKeys.includes(c.statute));
-for(const key of theftFraudKeys.filter(k=>!['BrB:8:11','BrB:8:12','BrB:8:13'].includes(k))) {
+for(const key of theftFraudKeys.filter(k=>!['BrB:8:11','BrB:8:12','BrB:8:13','BrB:9:11'].includes(k))) {
  assert.ok(theftFraudCards.some(c=>c.statute===key),'Missing substantive theft/fraud offence for '+key);
 }
 assert.equal(stats.linkedCardsChecked,21+addedCards.length+propertyCards.length+officeCards.length+negligenceCards.length+newCards.length+economicCards.length+theftFraudCards.length,
- 'All 81 current SFS paragraphs must cover their actual offence card counts');
+ 'All 85 current SFS paragraphs must cover their actual offence card counts');
 const markers={
+ 'BrB:9:8':['i annat fall än förut i detta kapitel','förfar oredligt','Lag (1970:414).'],
+ 'BrB:9:9':['pris på vara, värdepapper','uppsåtligen eller av grov oaktsamhet','grovt svindleri','Lag (2026:1318).'],
+ 'BrB:9:10':['påtryckningsmedel vid krav','check utan täckning','ockerpantning'],
+ 'BrB:9:11':['försök eller förberedelse till bedrägeri','stämpling till grovt bedrägeri','23 kap. 3 § ska dock inte gälla','frivilligt avstått','Lag (2025:1269).'],
  'BrB:8:8':['olovligen rubbar någon annans besittning','rätt att hålla kvar eller ta något','grovt egenmäktigt förfarande','Lag (2017:442).'],
  'BrB:8:9':['åtgärd som avses i 8 §','för att själv ta sig rätt','Lag (2017:442).'],
  'BrB:8:10':['olovligen avleder elektrisk kraft','värmeenergi','grov olovlig energiavledning','Lag (2017:442).'],
@@ -159,4 +163,4 @@ assert.equal(directCrosschecks.length,21+addedCards.length+propertyCards.length+
 assert.ok(!base.some(c=>c.statute==='BrB:13:12'),'13:12 is a stage authorization source, not a standalone completed crime');
 assert.ok(b.some(c=>c.lawMode==='full'&&!c.lawCompletenessVerified),
  'Embedded full text without documented review must remain distinguishable');
-console.log('PASS V1.5: eighty-one complete current SFS paragraphs verified, without legal signoff');
+console.log('PASS V1.5: eighty-five complete current SFS paragraphs verified, without legal signoff');
