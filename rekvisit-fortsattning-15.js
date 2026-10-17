@@ -38,11 +38,7 @@ const direct=[
    A('Barnet är under 15 år.'),
    O('Gärningen består av:', 'Bortförande','Annat undanhållande'),
    A('Åtgärden är ägnad att hindra att vård enligt lagen (1990:52) med särskilda bestämmelser om vård av unga påbörjas.'),
-   A('Gärningen utgör inte brott mot frihet; uppsåt krävs.')),
-  R('Tidsgräns för den särskilda LVU-hänvisningen',
-   A('Vid gärning före 1 januari 2027 avser BrB 7:4 andra stycket lagen (1990:52).'),
-   A('Från 1 januari 2027 ersätts hänvisningen av lagen (2026:1600) om omhändertagande för vård av barn och unga (SFS 2026:1604).'),
-   A('Detta är en lagversionsupplysning och INTE ett ytterligare självständigt gärningsalternativ. Åtalsvillkoret enligt BrB 7:6 gäller även grov grad.'))]],
+   A('Gärningen utgör inte brott mot frihet; uppsåt krävs.'))]],
  ['Vårdslös finansiering av mutbrott','10:5e',[
   R('Grov oaktsamhet vid tillhandahållande av tillgångar',
    A('Gärningspersonen är näringsidkare och tillhandahåller pengar eller andra tillgångar.'),
