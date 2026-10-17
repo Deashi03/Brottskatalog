@@ -23,6 +23,8 @@ assert.equal(ctx.window.BK_STATUTES['BrB:1:6'].complete,true);
 assert.ok(ctx.window.BK_STATUTES['BrB:1:6'].text.includes('fyra år'));
 assert.ok(ctx.window.BK_STATUTES['BrB:1:6'].text.includes('Lag (2026:1555)'));
 assert.ok(D.crimes.every(c=>c.age14Exception15?.neverApprovesCoerciveMeasures===true));
+assert.ok(D.crimes.every(c=>c.age14Exception15?.caseSpecificApplicationApproved===false));
+assert.ok(D.crimes.every(c=>c.age14Exception15?.provisionalOnly===true));
 assert.ok(D.crimes.every(c=>c.age14Exception15?.neverApprovesInchoateCriminalization===true));
 const by=t=>D.crimes.find(c=>!c.stageType&&c.title===t);
 const robbery=by('Grovt rån');
