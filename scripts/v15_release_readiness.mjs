@@ -58,6 +58,22 @@ const workQueue=notStructured.slice().sort((a,b)=>{
 }));
 const pendingStatutes=brb.filter(c=>!exactText(c));
 const unverifiedStage=stages.filter(c=>c.stageStatus==='unverified');
+const stageAuditQueue=unverifiedStage.map(c=>{
+ const parent=base.find(p=>p.id===c.stageParentId);
+ const source=String(c.stageSource||c.stageReviewBasis||'');
+ const m=source.match(/BrB\s+(13:12|21:15)\b/i);
+ const key=m?'BrB:'+m[1]:null;
+ const paragraph=key?ctx.window.BK_STATUTES?.[key]:null;
+ return {
+  title:c.title,stageType:c.stageType,
+  parent:parent?.title||null,parentRef:parent?.shortRef||null,
+  sourceRef:key,sourceTextIndividuallyChecked:Boolean(paragraph?.complete&&paragraph?.checked==='2026-10-17'),
+  sourceURL:paragraph?.url||parent?.sourceURL||null,
+  status:'INCHOATE_CRIMINALIZATION_UNVERIFIED',
+  reason:c.stageReviewBasis||c.stageExplanation||null,
+  requiredAction:'Bedöm självständigt om den grova graden omfattas av kriminaliseringen i BrB 13:12 eller BrB 21:15 jämförd med 23 kap., tillämplig praxis och förarbeten. Dra ingen automatisk slutsats av rubrikens ordval.'
+ };
+});
 const incompletePenalty=base.filter(c=>c.penaltyReviewScope==='range-only'||!c.penaltyRangeVerified).filter(c=>!c.conditionalPenalty);
 const dateMismatch=base.filter(c=>c.stageReviewed&&c.stageReviewDate&&c.stageReviewDate>new Date().toISOString().slice(0,10));
 // The old "reviewQueue" represents *missing structure* only. It becomes
@@ -118,6 +134,7 @@ const summaries={
   brbPostsWithDirectCurrentParagraphCrosscheck:brb.filter(directlyCrosschecked).length,
   brbPostsWithTypicalExamples:brb.filter(typecase).length,
   unverifiedStages:unverifiedStage.length,
+  inchoateLegalAuditQueueEntries:stageAuditQueue.length,
   basePenaltyCasesNeedingIndividualVerification:incompletePenalty.length,
   brbOffencesInLegalAuditQueue:legalAuditQueue.length,
   conditionallyScopedPenaltyCasesNeedingReview:outstandingConditionalPenalty.length
@@ -140,6 +157,7 @@ const summaries={
  byChapter:perChapter,
  reviewQueue:workQueue,
  legalAuditQueue,
+ stageAuditQueue,
  legalAuditSummary:{
   auditPending:legalAuditQueue.length,
   policePriorityPending:legalAuditQueue.filter(c=>c.priority==='polisiar-first').length,
@@ -158,6 +176,7 @@ summaries.releaseReady=Object.values(summaries.blockers).every(n=>n===0);
 fs.mkdirSync(path.join(root,'audit'),{recursive:true});
 fs.writeFileSync(path.join(root,'audit/v15-release-readiness.json'),JSON.stringify(summaries,null,2)+'\n');
 console.log('V1.5 RELEASE READINESS '+JSON.stringify({counts:summaries.counts,blockers:summaries.blockers,releaseReady:summaries.releaseReady}));
+console.log('V1.5 STAGE LEGAL TRIAGE '+JSON.stringify({pending:stageAuditQueue.length,items:stageAuditQueue.map(({title,sourceRef,sourceTextIndividuallyChecked})=>({title,sourceRef,sourceTextIndividuallyChecked}))}));
 console.log('V1.5 LEGAL AUDIT QUEUE '+JSON.stringify({pending:legalAuditQueue.length,policeFirst:legalAuditQueue.filter(c=>c.priority==='polisiar-first').length,first25:legalAuditQueue.slice(0,25).map(c=>({title:c.title,ref:c.ref,missing:c.missing}))}));
 console.log('V1.5 REVIEW QUEUE '+JSON.stringify({first45:summaries.reviewQueue.slice(0,45).map(({title,ref})=>({title,ref})),unverified:summaries.samples.unverifiedStages,chapters:summaries.byChapter.map(({chapter,total,missingStructured,completeLawText})=>({chapter,total,missingStructured,completeLawText}))}));
 if(process.argv.includes('--release')&&!summaries.releaseReady){
