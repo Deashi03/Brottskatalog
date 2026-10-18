@@ -1,4 +1,4 @@
-/* V1.5: explicit individual-range checks of 157 common BrB grades.
+/* V1.5: explicit individual-range checks of 174 common BrB grades.
  * The controlling CURRENT complete SFS paragraphs are curated in
  * brb-curated-lawtext-15.js. Full legal/penalty applicability is NOT approved.
  * Date-dependent, inchoate and coercive rules remain separate work.
@@ -6,6 +6,23 @@
 (()=>{'use strict';const D=window.BK_DATA,W=window.BK_STATUTES;if(!D?.crimes||!W)return;
 const URL='https://www.riksdagen.se/sv/dokument-och-lagar/dokument/svensk-forfattningssamling/brottsbalk-1962700_sfs-1962-700/';
 const rows=[
+ ["Ringa barnfridsbrott","4:3",0,0.5,true,false,"Ringa barnfridsbrott bedöms separat från normal och grov grad; bevittnad gärning och dubbla närståendekrav består."],
+ ["Grovt koppleri","6:12",2,10,false,false,"Grov koppleriverksamhet, särskilt omfattning, vinning eller hänsynslöst utnyttjande; straffminimum två år."],
+ ["Grovt sexuellt ofredande","6:10",0.5,3,false,false,"Grovhetsbedömning enligt 6:10 av vuxenbrottets andra stycke; annan källa och straffskala än första styckets barnvariant."],
+ ["Grovt sexuellt ofredande mot barn","6:10",0.5,3,false,false,"Grov grad av första styckets barnvariant; särskilt flera deltagare, barnets ålder och hänsynslöshet."],
+ ["Grovt sexuellt övergrepp","6:2",1,6,false,false,"Grov grad av 6:2; straffminimum ett år, annan bedömning än normalgraden och mindre grovt alternativ."],
+ ["Grovt sexuellt övergrepp mot barn","6:6",1.5,6,false,false,"Barnets ålder, beroende/ställning och hänsynslöshet bedöms särskilt; lagens grova intervall ett år och sex månader–sex år."],
+ ["Grovt utnyttjande av barn för sexuell posering","6:8",0.5,6,false,false,"Grov grad med verksamhetens omfattning, vinning och barnets hänsynslösa utnyttjande som särskilda omständigheter."],
+ ["Kontakt för att träffa ett barn i sexuellt syfte","6:10a",0,2,false,false,"Kräver särskilt syfte avseende uppräknade sexualbrott; BrB 6:14 kan i särskilda fall undanröja ansvar, inte en ändrad straffskala."],
+ ["Koppleri","6:12",0,4,false,false,"Normalgrad högst fyra år; omfattar främjande eller otillbörligt ekonomiskt utnyttjande och vissa hyresvärdsfall enligt paragrafen."],
+ ["Köp av sexuell handling","6:11",0,1,false,false,"Avser handling mot ersättning i 6:11; inget bötesalternativ, högst ett års fängelse; kontrollera konkurrens med 6:9."],
+ ["Oaktsam våldtäkt","6:1a",0,4,false,false,"Grov oaktsamhet beträffande frivillighet krävs; mindre allvarlig gärning leder till att ansvar inte döms ut."],
+ ["Oaktsamt sexuellt övergrepp","6:3",0,4,false,false,"Grov oaktsamhet avseende den andre personens frivillighet; mindre allvarlig gärning inte straffbar."],
+ ["Sexuellt ofredande","6:10",0,2,true,false,"Andra styckets vuxenbrott ger böter eller högst två års fängelse; första styckets barnvariant har INTE bötesalternativ."],
+ ["Sexuellt ofredande mot barn","6:10",0,2,false,false,"Första styckets barnbrott ger endast fängelse högst två år; annat straffalternativ än vuxenbrottet."],
+ ["Sexuellt utnyttjande av barn","6:5",0,4,false,false,"Mindre grovt brott i förhållande till 6:4, utan bötesalternativ; åldersundantaget i 6:14 prövas separat."],
+ ["Sexuellt övergrepp","6:2",0.5,2,false,false,"Normalgradens minimum sex månader; mindre grovt alternativ i samma paragraf är separat fall."],
+ ["Sexuellt övergrepp mot barn","6:6",0.5,2,false,false,"Normalgradens minimum sex månader; mindre grovt och grovt har andra intervall i samma paragraf; 6:14-undantag separat."],
  ["Mord","3:1",10,18,false,true,"Grundskala tio till arton år eller livstid; jämför livstidsindikationer och särskilda tidsbundna bestämmelser individuellt."],
  ["Dråp","3:2",6,10,false,false,"Mindre grovt dödande jämfört med mord; kvalifikationen avgörs efter omständigheterna, inte enbart straffskalan."],
  ["Misshandel","3:5",0,2,false,false,"Normalgraden högst två års fängelse; ringa misshandel i samma paragraf har egen böter-/fängelseskala."],

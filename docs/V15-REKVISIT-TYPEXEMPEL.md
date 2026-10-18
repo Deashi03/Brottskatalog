@@ -1,3 +1,13 @@
+# Straffskalerevision 18 oktober 2026 – 17 grader inom sexualbrott och barnfridsbrott
+
+17 ytterligare brottsgrader har jämförts individuellt med Riksdagens aktuella BrB 4:3 och BrB 6:1 a–12, inklusive grova och ringa grader, men utan att slå ihop de olika specialreglerna. Särskilt viktigt: **sexuellt ofredande enligt BrB 6:10 andra stycket har bötesalternativ, men sexuellt ofredande mot barn enligt första stycket saknar detta**, och grovt sexuellt övergrepp mot barn har annat minimistraff än grovt sexuellt övergrepp enligt 6:2. Ansvarsfrihetsmöjligheten i BrB 6:14 är inte en ändring av straffskalan. Minderåriga offer, oaktsamhetsrekvisit och försök/beredelse bedöms självständigt.
+
+**174 individuellt granskade straffskalegrader**, **142** vanliga samt **12** villkorade fall återstår (innan CI-kontroll). Fortfarande ingen fullständig juridisk certifiering av brottsrekvisit, påföljdshistorik eller tvångsmedel.
+
+Källa: https://www.riksdagen.se/sv/dokument-och-lagar/dokument/svensk-forfattningssamling/brottsbalk-1962700_sfs-1962-700/
+
+---
+
 # Straffskalerevision 18 oktober 2026 – 12 polisiära kärngrader
 
 Tolv ytterligare separata straffskaleintervall är individuellt jämförda med Sveriges riksdags aktuella konsoliderade BrB (3:1–2, 3:5–6, 4:5, 6:1 och 6:4): mord, dråp, misshandel, ringa misshandel, grov misshandel, synnerligen grov misshandel, olaga hot, grovt olaga hot, våldtäkt, grov våldtäkt, våldtäkt mot barn och grov våldtäkt mot barn. Separata böter-/livstidsflaggor kontrolleras och de alternativa graderna i samma paragraf (bl.a. mindre grov våldtäkt, ringa misshandel, synnerligen grov misshandel, sexuellt utnyttjande av barn) förblir tydligt åtskilda. Lagtexterna laddas och verifieras **före** straffskalerevisionen. Endast den aktuella gradens numeriska straffintervall verifieras, inte historiskt gärningsdatum, praxis, straffbarhet i enskilda fall eller tvångsmedel.
