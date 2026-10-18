@@ -85,11 +85,11 @@ def parse_brb(html):
             # ordinarily ends with punctuation or an SFS amendment marker.
             tail = contents[-1].rstrip() if contents else ""
             incomplete_cross_reference = bool(re.search(
-                r"(?i)\\b(?:i|av|enligt|eller|samt|till|från|jämför|i\\s+enlighet\\s+med)\\s*$", tail
+                r"(?i)\b(?:i|av|enligt|eller|samt|till|från|jämför|i\s+enlighet\s+med)\s*$", tail
             ))
             if incomplete_cross_reference:
                 m = None
-        if m and key is not None and not re.match(r"^/Träder i kraft\\b", m.group(3)):
+        if m and key is not None and not re.match(r"^/Träder i kraft\b", m.group(3)):
             prev_sec = key.split(":")[-1]
             old_order = re.fullmatch(r"(\d+)([a-z]?)", prev_sec)
             if old_order:
