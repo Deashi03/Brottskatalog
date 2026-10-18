@@ -19,6 +19,21 @@ const cases=[
 ];
 assert.equal(reg.score(ordinary,entry).tone,'yes','Verified numeric threshold can be displayed as a preliminary screen');
 for(const c of cases){assert.equal(reg.score(c,entry).tone,'unknown');assert.equal(reg.eligible(c,entry),false,'Unknown cannot count as eligible');}
+const group=reg.entries.find(x=>x.id==='grupp');
+const seized=reg.entries.find(x=>x.id==='beslag');
+const murderAttempt={title:'Försök till mord',stageType:'forsok',stageStatus:'punishable',
+ stageParentMin:10,stageReviewDate:'2026-10-18',stageSource:'BrB 3:11',
+ penaltyRange:{min:1/12,max:18,fines:false,life:false},penaltyRangeVerified:false};
+assert.equal(reg.score(murderAttempt,group).tone,'yes',
+ 'Review-confirmed attempt to a four-year-minimum offence meets the narrow 23:8a threshold');
+assert.equal(reg.score(murderAttempt,seized).tone,'unknown',
+ 'A specific four-year threshold does not certify the attempt range for all measures');
+assert.equal(reg.score({...murderAttempt,stageStatus:'unverified'},group).tone,'unknown',
+ 'Unverified inchoate stages must never be presumed punishable');
+assert.equal(reg.score({...murderAttempt,stageReviewDate:null},group).tone,'unknown',
+ 'No source-reviewed attempt should give a positive threshold');
+assert.equal(reg.score({...murderAttempt,stageStatus:'not-criminalized'},seized).tone,'no',
+ 'Confirmed noncriminalized attempts must show an explicit negative, not an unknown status');
 assert.ok(html.includes('const unresolved=Boolean(window.BK_COERCIVE?.unresolvedForCoercion15?.(c))'));
 assert.ok(html.includes("card('Särskilda grunder','RB 24:2',null,'Oberoende av brottets straffskala'"));
 assert.ok(html.includes("card('Utredningshäktning','RB 24:3',null,'Enligt 24:1 eller 24:2'"));
