@@ -145,6 +145,28 @@ try{
   await page.locator('[data-action="custody"]').first().click();
   assert.ok((await page.locator('[role="dialog"]').innerText()).includes('Häktningspresumtion'),'Presumtionen har ett eget kort');
   assert.ok(await page.locator('[role="dialog"] .custody-mark.yes').count()>=2,'Försök till mord ska ge presumtionsbock');
+  // V1.5: RB 24:2 is an individual identity/domicile exception, even for
+  // a fine-only offence. RB 24:3 requires separate reasonable suspicion.
+  await page.goto(url+'#sok',{waitUntil:'networkidle'});
+  await page.locator('#crime-search').fill('förargelseväckande beteende');
+  await wait();
+  const fineCard=page.locator('.crime-card').filter({hasText:'Förargelseväckande beteende'}).first();
+  assert.ok(await fineCard.count(),'Fine-only offence must be searchable');
+  await fineCard.click();
+  await wait();
+  await page.locator('[data-action="custody"]').first().click();
+  const fineCustody=page.locator('[role="dialog"] .custody-box');
+  assert.equal(await fineCustody.count(),4,'All four RB 24 approaches must be separately visible');
+  assert.ok(await fineCustody.nth(0).locator('.custody-mark.no').count(),'Ordinary RB 24:1 threshold cannot apply to fine-only offences');
+  assert.ok(await fineCustody.nth(2).locator('.custody-mark.unknown').count(),'RB 24:2 requires individual identity and domicile assessment, not a fine-based red X');
+  assert.ok(await fineCustody.nth(3).locator('.custody-mark.unknown').count(),'RB 24:3 cannot be mechanically excluded by a fine-only statutory penalty');
+  await page.goto(url+'#sok',{waitUntil:'networkidle'});
+  await page.locator('#crime-search').fill('försök till mord');
+  await wait();
+  await page.locator('.crime-card').filter({hasText:'Försök till mord'}).first().click();
+  await page.locator('[data-action="custody"]').first().click();
+  assert.ok(await page.locator('[role="dialog"] .custody-box').nth(1).locator('.custody-mark.yes').count(),
+    'Verified attempted murder should retain the explicit statutory four-year presumption route');
   await page.goto(url+'#sok',{waitUntil:'networkidle'});
   await page.locator('#crime-search').fill('stämpling till mord');
   await wait();
