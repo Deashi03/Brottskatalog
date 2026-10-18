@@ -28,8 +28,8 @@ for(const c of checked){
  if(c.stageStatus==='punishable')assert.equal(c.custody,'unknown','Stage eligibility is not a custody determination');
 }
 assert.equal(crimes.length,1473);assert.equal(stages.length,1086);
-assert.equal(stages.filter(c=>c.stageStatus==='unverified').length,12);
-assert.equal(stages.filter(c=>c.stageStatus!=='unverified'&&c.stageSource&&c.stageReviewDate).length,1074);
+assert.equal(stages.filter(c=>c.stageStatus==='unverified').length,15);
+assert.equal(stages.filter(c=>c.stageStatus!=='unverified'&&c.stageSource&&c.stageReviewDate).length,1071);
 const get=(title,type)=>{const p=crimes.find(c=>c.title===title&&!c.stageType);assert.ok(p,title);const c=stages.find(c=>c.stageParentId===p.id&&c.stageType===type);assert.ok(c,title+':'+type);return c;};
 assert.equal(get('Ringa smuggling','forsok').stageStatus,'not-criminalized');
 assert.equal(get('Ringa narkotikasmuggling','forberedelse').stageStatus,'punishable');
