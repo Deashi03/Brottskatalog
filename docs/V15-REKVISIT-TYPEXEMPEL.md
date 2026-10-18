@@ -1,3 +1,11 @@
+# Alternativa straffskalor – samtliga 14 villkorade fall (18 oktober 2026)
+
+Tolv villkorade paragraffall får **explicita läsbara alternativa straffskalor**, med villkor och lagrum direkt i det expanderade brottskortet. Det gäller BrB 15:4 a–b, 16:1–2 och 16:6, 18:6 samt 19:1, 19:4, 19:9 och 19:12. För de två hänvisningsstyrda fallen BrB 3:10 och 14:10 redovisas beroendet av respektive underbrott i stället för ett påhittat intervall. Varje villkorsgren måste väljas genom rekvisit-, roll-, gärningsforms-, grad- och tidsprövning. **14 av 14 villkorade fall är strukturellt beskrivna, men 14 av 14 behöver fortfarande situationsspecifik juridisk slutbedömning**. Ingen straffskalegren väljs automatiskt och ingen tvångsmedelsbehörighet har godkänts.
+
+Lagtextkälla: Sveriges riksdags gällande brottsbalk (1962:700), t.o.m. SFS 2026:1656.
+
+---
+
 # Samtliga fasta grundstraffskalor kontrollerade – smugglingslagen 18 oktober 2026
 
 De återstående **23 intervallen** i smugglingslagen (2000:1225), t.o.m. SFS 2026:1321, är individuellt kontrollerade mot originaltexten i 3–13 §§. Jämförelsen håller narkotikasmuggling med försäljningssyfte, vapensmuggling, smuggling av explosiv vara samt deras normala, ringa, grova och synnerligen grova grader skilda åt. Ringa smuggling, ringa smuggling av explosiv vara och ringa tullbrott har **endast penningböter**. Om exakta SFS-markörer eller lagversioner inte stämmer får inget kontrollintyg utfärdas.

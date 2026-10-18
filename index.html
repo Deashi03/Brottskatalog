@@ -785,6 +785,7 @@ D.date='2026-10-12';
   <script src="./brb4-frid-current-provenance-15.js"></script>
   <script src="./brb-penalty-grade-audit-15.js"></script>
   <script src="./brb-derivative-penalties-15.js"></script>
+  <script src="./brb-conditional-penalty-options-15.js"></script>
   <script src="./brb4-child-stalking-requisites-15.js"></script>
   <script src="./brb15-false-report-requisites-15.js"></script>
   <script src="./praxis-vapenbilden-15.js"></script>
@@ -1038,7 +1039,13 @@ function factsSection(c){
 function punishmentBlock(c){
  if(c.stageStatus&&c.stageStatus!=='punishable')return '<div class="penalty-summary">'+escapeHtml(c.stageStatus==='not-criminalized'?'Saknar straffskala – ej straffbart':'Straffskala ej verifierad')+'</div>';
  if(c.applicabilityConditional)return '<div class="penalty-summary">Tillämpningen är villkorad</div><p class="penalty-context">'+escapeHtml(c.penalty||'')+'</p><p class="penalty-context">'+escapeHtml(c.applicabilityWarning||c.penaltyNote||'')+'</p>';
- if(c.conditionalPenalty)return '<div class="penalty-summary">Villkorad straffskala</div><p class="penalty-context">'+escapeHtml(c.penaltyNote||'Straffskalan beror på gärningsform eller särskilda tillämpningsvillkor. Kontrollera lagtexten.')+'</p>';
+ if(c.conditionalPenalty){
+  const choices=(c.penaltyAlternatives15||[]).map(a=>'<li class="penalty-context"><strong>'+escapeHtml(a.when)+'</strong>: '+escapeHtml(a.scale)+' <span class="fact-source">('+escapeHtml(a.source)+')</span></li>').join('');
+  return '<div class="penalty-summary">Villkorad straffskala – välj inte utan rekvisitprövning</div>'+
+    (choices?'<ul class="penalty-alternatives">'+choices+'</ul>':'')+
+    '<p class="penalty-context">'+escapeHtml(c.penaltyNote||'Straffskalan beror på gärningsform eller särskilda tillämpningsvillkor. Kontrollera lagtexten.')+'</p>'+
+    '<p class="penalty-context">Ingen automatisk slutsats om häktning eller andra tvångsmedel.</p>';
+ }
  if(c.stageType){
   const lower=c.stagePenaltyLower||(c.penaltyRange?.min>0?'Fängelse 1 mån':'Böter');
   const upper=c.stagePenaltyUpper||'Enligt BrB 23 kap.';

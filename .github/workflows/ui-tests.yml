@@ -70,6 +70,8 @@ on:
       - "scripts/brb_penalty_grade_audit_15_test.mjs"
       - "brb-derivative-penalties-15.js"
       - "scripts/brb_derivative_penalties_15_test.mjs"
+      - "brb-conditional-penalty-options-15.js"
+      - "scripts/brb_conditional_penalty_options_15_test.mjs"
       - "praxis-vapenbilden-15.js"
       - "scripts/praxis_vapenbilden_15_test.mjs"
       - "scripts/brb_curated_lawtext_15_test.mjs"
@@ -356,6 +358,8 @@ jobs:
         run: node scripts/special_other_penalty_grades_15_test.mjs
       - name: V1.5 verify twenty-three SmuglL individual completed grade penalty scales
         run: node scripts/smuggling_penalty_grades_15_test.mjs
+      - name: V1.5 all fourteen conditional penalty pathways visible with no automatic choice
+        run: node scripts/brb_conditional_penalty_options_15_test.mjs
       - name: V1.5 derivative penalty reference safety for BrB 3:10 and 14:10
         run: node scripts/brb_derivative_penalties_15_test.mjs
       - name: V1.5 special-law grade-only crosschecks against four current SFS texts
