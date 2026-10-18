@@ -111,7 +111,7 @@ if(generated&&Object.keys(generated).length){
  ]);
  let officiallyCompared=0;
  for(const c of cs.filter(x=>x.id.startsWith('v09-')&&!x.stageType)){
-  if(individuallyCompared.has(c.title)){
+  if(individuallyCompared.has(c.title)||c.lawProvenance==='current-official-SFS-direct-paragraph-review-with-locked-complete-extract-fingerprint'){
    assert.equal(c.lawMode,'full','Independently compared paragraph must load: '+c.title);
    assert.equal(c.lawCompletenessVerified,true);
    assert.equal(c.lawCompletenessReviewScope,'current-paragraph-only');
@@ -125,7 +125,7 @@ if(generated&&Object.keys(generated).length){
   }
   assert.ok(c.law?.length>=35,'Missing special-law paragraph: '+c.title);
  }
- assert.equal(officiallyCompared,13,'Exactly thirteen independently checked paragraphs, no false general approval');
+ assert.equal(officiallyCompared,46,'Only the 46 individually source-reviewed special-law cards can be full text certified');
  const smuggling=generated.SmuglL.sections['6']?.text||'';
  const tax=generated.SkBrL.sections['8']?.text||'';
  assert.ok(smuggling.includes('narkotikasmuggling')&&smuggling.length>800,'Smuggling 6 § extraction corrupted');
