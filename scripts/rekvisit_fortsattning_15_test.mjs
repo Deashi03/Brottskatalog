@@ -28,7 +28,17 @@ for(const name of [...report.added,...report.already]){
  assert.ok(crime?.rekvisit15?.routes?.length||crime?.rekvisit15?.groups?.length,'Missing structured checklist: '+name);
  assert.equal(crime.rekvisit15.legalReviewApproved,false,'No unearned full legal certification: '+name);
  assert.ok(crime.rekvisit15.sourceURL?.includes('riksdagen.se'),'Current statutory source missing: '+name);
- assert.equal(crime.typexempel15?.length||0,0,'Do not fabricate a typical police case for: '+name);
+ const examples=crime.typexempel15||[];
+ if(name==='Brukande av det förfalskade'){
+  assert.equal(examples.length,1,'One authentic HD Freja court case – no invented additional examples');
+  assert.ok(examples.every(x=>x.kind==='praxisgrundat-typexempel'&&
+   x.status==='cited-supreme-court-acquittal'&&
+   x.sourceURL==='https://www.domstol.se/nyheter/2025/11/var-det-brukande-av-falsk-urkund-att-visa-upp-en-skarmbild-av-ett-falskt-freja-eid/'&&
+   x.source.includes('B 920-25')),
+   'Only fully source-grounded authentic HD cases may override the no-invented-typecase rule');
+ }else{
+  assert.equal(examples.length,0,'Do not fabricate a typical police case for: '+name);
+ }
 }
 const get=t=>brb.find(c=>c.title===t);
 assert.ok(JSON.stringify(get('Vårdslös finansiering av mutbrott').rekvisit15).includes('grov oaktsamhet'));
