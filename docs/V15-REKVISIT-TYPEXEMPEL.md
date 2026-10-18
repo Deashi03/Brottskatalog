@@ -1070,3 +1070,34 @@ Skildringarna ersätter inte befintliga rekvisitstrukturer, utan läggs till nä
 ### Revisionsgränsen är fortfarande juridisk, inte teknisk
 
 I det nuvarande arbetsutkastet kan **319/319** BrB-kort ha fullständig daterad och källkopplad lagtext och pedagogiskt strukturerade rekvisit, men **0/319** har självständigt fullständig juridisk slutcertifiering. Granskningen av **12 förstadier**, **14 villkorade straffskalesituationer**, **66 möjliga åldersundantag** och individuell brottsbedömning kvarstår. Inga tvångsmedel beviljas eller godkänns automatiskt på grundval av rättsfallet. **`releaseReady:false` och draft PR #2 kvarstår, V1.4 på main opåverkad.**
+
+---
+
+## 18 oktober 2026 – korrigerad förstadieklassificering i BrB 14:13 (brukande av det förfalskade)
+
+### Faktiskt upptäckt katalogfel och rättelse
+
+I förstadiegeneratorn `stages-08.js` angavs brottet under ordalydelsen **”Brukande av vad som förfalskats”** från **BrB 14:13**, medan katalogens brottskort enligt **BrB 14:10** heter **”Brukande av det förfalskade”**. Båda uttrycken hänvisar till samma brott, men namnmatchningen i generatorn kunde inte förena dem. Dessutom saknar BrB 14:10 ett **enda fast numeriskt straffintervall**, eftersom paragrafen hänvisar till straffet för den konkreta förfalskningen. Generatorn utelämnade därför **alla tre** sökbara förstadieposter till detta brott.
+
+Rättelserna ger följande synliga, sökbara poster i V1.5:
+- **Försök till brukande av det förfalskade** – BrB 14:10 och 14:13 ger ett straffbart försöksstadium för de förfaranden som omfattas, **under förutsättning att den fullbordade gärningen inte skulle ha varit ringa**.
+- **Förberedelse till brukande av det förfalskade** – motsvarande lagstöd och särskilt **icke-ringa-villkor**.
+- **Stämpling till brukande av det förfalskade** – markeras **inte straffbelagd enligt BrB 14:13**, som inte föreskriver stämpling här.
+
+Den särskilda modulen `brb14-stage-scope-15.js` körs efter den generella förstadiegeneratorn och före den datum-/åldersberoende kontrollen. Den skapar endast saknade, individuellt källförankrade förstadiekort utan att konstruera ett numeriskt straffintervall. `prosecution-10.js` respekterar sedan deras rättsliga förbehåll och får inte automatiskt ärva en ovillkorlig åtalsstatus från grundbrottet. **Ingen häktnings- eller tvångsmedelsbehörighet får fastställas för dessa fall enbart från denna kataloguppgift.**
+
+### Begränsning för falska pengar – BrB 14:7 och 14:13
+
+Straffansvar för **försök till olovlig befattning med falska pengar** avser enligt den särskilda sista delen i BrB 14:13 **försök att anskaffa eller ta emot** de förfalskade pengarna. Det innebär inte att alla tänkbara försök till de andra alternativa gärningsformerna i BrB 14:7 är kriminaliserade genom samma bestämmelse. Förstadieposten innehåller nu detta precisa förbehåll, utan automatisk straffskalebedömning eller häktningsklassificering.
+
+**BrB 14:12** om frivilligt avvärjande av fara i bevishänseende har hållits separat från **14:13**. Ansvarslindring eller ansvarsfrihet kräver egna lagförutsättningar och är aldrig automatisk. [Kontrollkälla: Riksdagens gällande BrB 14:10–13](https://www.riksdagen.se/sv/dokument-och-lagar/dokument/svensk-forfattningssamling/brottsbalk-1962700_sfs-1962-700/).
+
+### Automatisk kvalitetssäkring
+
+Ny regression `scripts/brb14_stage_scope_15_test.mjs` verifierar **samtliga sex** förstadier för de två grundbrotten, förbudet mot stämpling till brukande av det förfalskade, anskaffande-/mottagandebegränsningen, undantaget för ringa gärningar, fulltextsproveniens, frånvaro av falska numeriska intervall, okänd tvångsmedelsstatus samt att en ogiltig rättskälla inte kan skapa eller godkänna något förstadium.
+
+`scripts/audit_catalog.mjs` särskiljer uttryckligen dessa **tre** källgranskade men numeriskt fortfarande villkorade försöks-/förberedelsesituationer från ett verkligt datakvalitetsfel. Den registrerar dem som **fortsatt öppna juridiska granskningar** och tillåter inte att andra straffbara förstadier saknar ett tillämpligt straffintervall utan att det blir ett blockerande kvalitetsfel. **Juridisk publiceringsspärr förblir `releaseReady:false`.**
+
+**Ny inventering:** **387 grundbrott**, **1 086 förstadiekort**, totalt **1 473 sökbara katalogposter**. **319 BrB-grundkort** har fulltext införda, men detta innebär inte fullständig individuell juridisk certifiering. **154** hela BrB-paragrafer ingår i den särskilt daterade kuraterade kontrollserien och **247** brottsgradsskalor har individuell källjämförelse. **0/319** är juridiskt slutcertifierade. De **12** tidigare uttryckligen oavgjorda förstadierna är fortsatt `unverified`.
+
+V1.5 är fortsatt ett **opublicerat utkast** i PR #2; publicerade V1.4 på `main` ändras inte.
