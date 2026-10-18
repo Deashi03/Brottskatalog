@@ -27,6 +27,8 @@ on:
       - "scripts/special_stage_enumeration_15_test.mjs"
       - "brb20-stage-negative-source-15.js"
       - "scripts/brb20_stage_negative_source_15_test.mjs"
+      - "brb13-poison-stage-scope-hold-15.js"
+      - "scripts/brb13_poison_stage_scope_hold_15_test.mjs"
       - "scripts/v15_penalty_audit_queue.mjs"
       - "scripts/v15_release_queue_15_test.mjs"
       - "scripts/brb_special_preparation_15_test.mjs"
@@ -556,6 +558,8 @@ jobs:
         run: node scripts/special_stage_enumeration_15_test.mjs
       - name: Review six BrB 20:2 stage source links
         run: node scripts/brb20_stage_negative_source_15_test.mjs
+      - name: Hold three unjustified negative BrB 13:7 stages for legal review
+        run: node scripts/brb13_poison_stage_scope_hold_15_test.mjs
       - name: Verify truthful and complete per-chapter legal review queue
         run: node scripts/v15_release_queue_15_test.mjs
       - name: Archive full quality report
