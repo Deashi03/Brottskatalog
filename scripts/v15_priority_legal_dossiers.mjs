@@ -110,7 +110,7 @@ const pending=stages.filter(s=>s.stageStatus==='unverified').map(s=>{
  const parent=base.find(c=>c.id===s.stageParentId),e=s.stageEvidence15||{};
  const sourceRef=parent?.statute?.startsWith('BrB:21:')?'BrB:21:15':'BrB:13:12';
  const chapter=sourceRef==='BrB:13:12'?13:21;
- const statutoryLaw=chapter===13?['BrB:13:5a','BrB:13:5b']:['BrB:21:8'];
+ const statutoryLaw=chapter===13?['BrB:13:5a','BrB:13:5b','BrB:13:7']:['BrB:21:8'];
  return {
  id:s.id,title:s.title,stageType:s.stageType,parent:parent?.title||null,parentStatute:parent?.statute||null,
  authorizingProvision:sourceRef,authorizingFullText:W[sourceRef]?.text||null,
@@ -146,7 +146,7 @@ fs.mkdirSync(path.join(root,'audit'),{recursive:true});
 fs.writeFileSync(path.join(root,'audit/v15-priority-legal-dossiers.json'),JSON.stringify(output,null,2)+'\n');
 console.log('V1.5 LEGAL DOSSIERS '+JSON.stringify({counts:output.counts,examples:crimes.slice(0,5).map(x=>x.title),
  stageGroups:pending.reduce((acc,x)=>{acc[x.authorizingProvision]=(acc[x.authorizingProvision]||0)+1;return acc;},{})}));
-if(crimes.length!==37||remainingBrB.length!==282||allDossiers.length!==319||pending.length!==12)throw Error('Review coverage changed; audit dossiers need reconciliation');
+if(crimes.length!==37||remainingBrB.length!==282||allDossiers.length!==319||pending.length!==15)throw Error('Review coverage changed; audit dossiers need reconciliation');
 if(allDossiers.some(x=>!x.statuteFullTextIndividuallyVerified||!x.statutoryText||x.legalChecklist.length!==9))
  throw Error('Incomplete primary law or audit checkpoints');
 if(pending.some(x=>!x.authorizingFullText||!x.parentFullText||x.stageStatus!=='unverified'||x.finalLegalConclusionApproved))
