@@ -47,7 +47,7 @@ assert.ok(all.find(c=>c.title==='Falsk beskyllning').scopedSourceNotes.length===
 assert.ok(all.find(c=>c.title==='Våldsamt motstånd').scopedSourceNotes
  .some(x=>x.kind==='BRB17_OFFICIAL_FUNCTION_BOUNDARIES'));
 assert.equal(r.counts.allBrBCardsFullyLegallyApproved,0);
-assert.equal(r.counts.unverifiedStageCases,12);
+assert.equal(r.counts.unverifiedStageCases,15);
 assert.equal(r.releaseReady,false);
 assert.equal(r.automaticCustodyAuthorization,false);
 console.log('PASS V1.5: 21 distinct source-scoped notes across 20 BrB cards; all 319 individual signoffs still pending');
