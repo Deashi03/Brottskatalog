@@ -83,8 +83,10 @@ on:
       - "urkund-gransdragning-15.js"
       - "brb14-evidence-distinctions-15.js"
       - "praxis-alibit-15.js"
+      - "brb15-accusation-source-limits-15.js"
       - "scripts/brb14_evidence_distinctions_15_test.mjs"
       - "scripts/praxis_alibit_15_test.mjs"
+      - "scripts/brb15_accusation_source_limits_15_test.mjs"
       - "scripts/urkund_gransdragning_15_test.mjs"
       - "scripts/praxis_freja_electronic_urkund_15_test.mjs"
       - "scripts/praxis_vapenbilden_15_test.mjs"
@@ -247,8 +249,10 @@ on:
       - "urkund-gransdragning-15.js"
       - "brb14-evidence-distinctions-15.js"
       - "praxis-alibit-15.js"
+      - "brb15-accusation-source-limits-15.js"
       - "scripts/brb14_evidence_distinctions_15_test.mjs"
       - "scripts/praxis_alibit_15_test.mjs"
+      - "scripts/brb15_accusation_source_limits_15_test.mjs"
       - "scripts/urkund_gransdragning_15_test.mjs"
       - "scripts/praxis_freja_electronic_urkund_15_test.mjs"
       - "scripts/praxis_vapenbilden_15_test.mjs"
@@ -444,6 +448,8 @@ jobs:
         run: node scripts/brb14_evidence_distinctions_15_test.mjs
       - name: V1.5 HD Alibit scope and false-alibi versus false accusation boundary
         run: node scripts/praxis_alibit_15_test.mjs
+      - name: V1.5 BrB 15 accusation and innocence limits in preparatory works
+        run: node scripts/brb15_accusation_source_limits_15_test.mjs
       - name: V1.5 intricate offence alternatives, minority and public-order requisites
         run: node scripts/rekvisit_fordjupning_15_test.mjs
       - name: V1.5 child/adult sex-offence distinctions and limited statutory exemptions
