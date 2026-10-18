@@ -42,9 +42,10 @@ assert.equal(stages.filter(c=>c.individualLegalAudit15?.consequences?.status==='
 assert.equal(stages.filter(c=>c.stageStatus==='punishable'&&c.individualLegalAudit15?.scope?.status==='APPROVED').length,0);
 const r=JSON.parse(JSON.stringify(ctx.window.BK_SPECIAL_STAGE_ENUMERATION15));
 r.sourceOK.SmuglL=false;
-const iso=vm.createContext({window:{BK_DATA:{crimes:JSON.parse(JSON.stringify(cards.filter(c=>c.stagePreliminaryScope15||c.id?.startsWith('v09-')&&!c.stageType).map(c=>{
- const x=c;delete x.individualLegalAudit15;return x;
- }))},BK_SPECIAL_STAGE_ENUMERATION15:r}});
+const isolatedCrimes=cards.filter(c=>c.stagePreliminaryScope15||(c.id?.startsWith('v09-')&&!c.stageType)).map(c=>{
+ const x=JSON.parse(JSON.stringify(c));delete x.individualLegalAudit15;return x;
+});
+const iso=vm.createContext({window:{BK_DATA:{crimes:isolatedCrimes},BK_SPECIAL_STAGE_ENUMERATION15:r}});
 vm.runInContext(fs.readFileSync(path.join(root,mod),'utf8'),iso);
 assert.equal(iso.window.BK_SPECIAL_NEGATIVE_STAGE_AUDIT15.byFamily.SmuglL.completed,0);
 assert.equal(iso.window.BK_SPECIAL_NEGATIVE_STAGE_AUDIT15.byFamily.SmuglL.planned,23);
