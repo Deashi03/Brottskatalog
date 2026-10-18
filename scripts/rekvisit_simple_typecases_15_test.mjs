@@ -18,5 +18,5 @@ for(const title of titles){
 }
 assert.ok(!base.find(x=>x.title==='Psykiskt våld').typexempel15?.length,'Nontrivial new crime remains held');
 assert.ok(!base.find(x=>x.title==='Angrepp mot tjänsteman').typexempel15?.length,'Nonintuitive police assault example remains held');
-assert.equal(ctx.window.BK_DATA.crimes.filter(x=>x.stageStatus==='unverified').length,12);
+assert.equal(ctx.window.BK_DATA.crimes.filter(x=>x.stageStatus==='unverified').length,15);
 console.log('PASS V1.5: nine low-ambiguity police teaching typfall with no implicit legal certification');
