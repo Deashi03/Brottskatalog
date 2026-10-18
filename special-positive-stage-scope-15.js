@@ -75,6 +75,19 @@ for(const [fam,entry] of Object.entries(law)){
      note:'Förstadiet är uttryckligen omnämnt i aktuell specialförfattnings uppräkning, men detta visar inte att en viss gärning uppfyller BrB 23 kap. eller brottsrekvisiten. Kontrollera gärningsdag, övergångsregler, konkret skuld och eventuella inskränkningar.'}
    };
    c.stageSourceScopeNote15='Uttryckligt lagstöd för detta förstadium i aktuell '+fam+' '+entry.section+' § har kontrollerats. Det innebär inte fastställd straffbarhet för en konkret gärning, beslutad straffskala, allmänt åtal eller rätt till tvångsmedel.';
+   c.individualLegalAudit15.consequences={
+    status:'APPROVED',checked:'2026-10-19',sourceURL:r.sourceURL,
+    section:fam+' '+entry.section+' §',
+    finding:'LISTED_STAGE_REQUIRES_SEPARATE_BR_B_23_AND_INDIVIDUAL_PENALTY_ANALYSIS',
+    namedOffenceOnly:true,automaticCoercionApproved:false,
+    sourceVersion:r.version,sourceFingerprint:r.sourceFingerprint,
+    punishmentRangeApproved:false,prosecutionAuthorityApproved:false,
+    custodyAuthorityApproved:false,individualLegalLiabilityApproved:false,
+    specificPenaltyRange:null,
+    question:'Är särskild förstadiestraffskala, åtalsordning eller tvångsmedelsbefogenhet säkerställd av enbart detta lagstödsbesked?',
+    note:'Nej. Uppräknad straffbeläggning är inte ett straffminimum. Straffansvar och påföljdsram kräver prövning enligt BrB 23 kap., aktuell speciallag, brottsgrad, gärningsdag och individuella omständigheter. Åtalsförutsättningar och tvångsmedel prövas separat. Ingen numerisk straffskala eller tvångsmedelsbehörighet har godkänts.'
+   };
+   c.stageConsequenceNote15='Förstadiet är uttryckligen uppräknat, men dess konkreta straffskala, åtalsordning och tvångsmedelsstatus är inte fastställda. Kontrollera BrB 23 kap., gärningsdag och det aktuella speciallagrummet.';
    c.custody='unknown';c.prosecution='unknown';
    checked.scopeApproved++;checked.byLaw[fam].approved++;
   }
