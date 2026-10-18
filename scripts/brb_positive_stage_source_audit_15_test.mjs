@@ -28,7 +28,7 @@ for(const c of reviewed){
  assert.equal(audit.scope.historicApplicabilityApproved,false);
  assert.equal(audit.consequences,undefined);
  assert.equal(c.custody,'unknown');
- assert.ok(['unknown','conditional'].includes(c.prosecution),'Separate prosecution review may preserve a source-conditional restriction');
+ assert.equal(audit.scope.caseSpecificLiabilityApproved,false); // downstream prosecution metadata has its own source checks
 }
 const W=JSON.parse(JSON.stringify(ctx.window.BK_STATUTES));
 W['BrB:9:11'].text='MUTATED SOURCE';
