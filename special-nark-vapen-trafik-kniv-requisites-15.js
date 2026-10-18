@@ -47,7 +47,7 @@ const report={planned:rows.length,structured:0,held:[],already:[],status:'prelim
  fullTextUpgrades:0,finalLegalApprovals:0,penaltyChanges:0,coercionChanges:0};
 for(const r of rows){
  const c=D.crimes.find(c=>!c.stageType&&c.title===r.title);
- if(!c||c.lawCompletenessVerified===true||c.rekvisit15?.legalReviewApproved===true
+ if(!c||(c.lawCompletenessVerified===true&&c.lawProvenance!=='current-SFS-paragraph-independently-transcribed-reviewed-20261018')||c.rekvisit15?.legalReviewApproved===true
   ||c.penaltyRangeVerified!==true
   ||c.penaltyGradeReviewSource!==law[r.code]||c.penaltyGradeReviewDate!=='2026-10-18'
   ||c.rekvisit15?.routes?.length||c.rekvisit15?.groups?.length){
