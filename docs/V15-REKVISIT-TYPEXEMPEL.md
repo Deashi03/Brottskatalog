@@ -1101,3 +1101,21 @@ Ny regression `scripts/brb14_stage_scope_15_test.mjs` verifierar **samtliga sex*
 **Ny inventering:** **387 grundbrott**, **1 086 förstadiekort**, totalt **1 473 sökbara katalogposter**. **319 BrB-grundkort** har fulltext införda, men detta innebär inte fullständig individuell juridisk certifiering. **154** hela BrB-paragrafer ingår i den särskilt daterade kuraterade kontrollserien och **247** brottsgradsskalor har individuell källjämförelse. **0/319** är juridiskt slutcertifierade. De **12** tidigare uttryckligen oavgjorda förstadierna är fortsatt `unverified`.
 
 V1.5 är fortsatt ett **opublicerat utkast** i PR #2; publicerade V1.4 på `main` ändras inte.
+
+---
+
+## 18 oktober 2026 – gärningsform och bevisfara i BrB 14–15 kap.
+
+Den nya modulen `brb14-evidence-distinctions-15.js` kompletterar den tidigare individuella gränsdragningen mellan förfalskad och osann urkund. **Åtta brottskort** får praktiska, specifika rättsliga förklaringar med tydlig jämförelse mot närliggande rubricering. Särskilda rekvisit och brottens lagstadgade gärningsformer kommer från [Brottsbalk 14:4–11 och 15:8, gällande SFS](https://www.riksdagen.se/sv/dokument-och-lagar/dokument/svensk-forfattningssamling/brottsbalk-1962700_sfs-1962-700/).
+
+- **Hindrande av urkunds bevisfunktion (14:4)** jämförs med **bevisförvanskning (15:8)**. För 14:4 är obehörigt förstörande, obrukbargörande eller döljande av urkund, bevisfara och gränsen mot bokföringsbrott centrala. BrB 15:8 kräver i stället ett **särskilt uppsåt att en oskyldig ska fällas**; det är inte ett generellt brott för alla störningar av en brottsutredning.
+- **Penningförfalskning (14:6)** är att framställa eller förfalska sedlar/mynt. **Olovlig befattning med falska pengar (14:7)** är bl.a. anskaffning, mottagande och transport med det **särskilda uppsåtet att pengarna ska prånglas ut**. Faktiskt utprånglande kan omfattas av **14:10**. Försöksansvaret i 14:13 är begränsat till **anskaffande eller mottagande** vid 14:7.
+- **Brukande av det förfalskade (14:10)** avser de i lagtexten uppräknade sätten att använda eller åberopa redan förfalskat material, med bevisfara och **straff som för den konkreta förfalskningen**. Ingen generell numerisk straffskala eller automatisk tvångsmedelsklassificering konstrueras.
+- **Olaga spridande av efterbildning (14:11)** är den särskilda, rent bötesstraffade gärningen att bland allmänheten sprida lätt förväxlingsbar efterbildning i annat fall än 14:10.
+- **Märkesförfalskning (14:8)** avser bl.a. offentliga värdemärken och kontrollmärkningar. **Förfalskning av fast märke (14:9)** avser gräns-/mätningsmärken och fixpunkter. Föremålets faktiska rättsliga funktion, den förbjudna åtgärden och bevisfaran måste bedömas.
+
+Detta är endast **lagtextbaserat rekvisitstöd**, med texten placerad under brottskortets redan expanderbara rekvisitmeny. Alla åtta poster kräver individuellt dokumenterat fulltextunderlag, annars avstår modulen från att uppdatera. Ingen presumtion om skuld, grad, åtalsförutsättningar, straffbarhet för förstadier eller tvångsmedel införs.
+
+Ny regression `scripts/brb14_evidence_distinctions_15_test.mjs` verifierar alla åtta kort, jämförelserna, rättskällorna, särskilda begränsningar, att härledd straffskala inte behandlas som numeriskt fast, ingen förändring av **1 086** förstadier och säker avvisning när källan är ofullständig. Testet är nu obligatoriskt i Actions och modulen ligger i iPhone-appens versionssäkra offlinecache.
+
+**Samlad spärr och revisionsstatus är oförändrad:** 387 grundbrott, 319 BrB-brott, 1 086 förstadier, 1 473 poster. 154 hela BrB-paragrafer i särskild direkt kuraterad kontrollserie, 247 individuellt straffskalekontrollerade grader, fullständig textproveniens för 319 BrB-kort genom övriga källmoduler, men **0/319 slutligt rättsligt certifierade**. 12 förstadier och 14 villkorade straffskalelägen kräver ytterligare bedömning. Publiceringsspärren `releaseReady:false` kvarstår; PR #2 förblir draft och V1.4 på `main` opåverkad.
