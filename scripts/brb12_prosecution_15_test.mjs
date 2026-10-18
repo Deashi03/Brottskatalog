@@ -37,7 +37,7 @@ for(const title of ['Skadegörelse','Grov skadegörelse']){
   'BrB 12:6 does not cover normal/gross skadegörelse');
 }
 assert.equal(report.stageEntriesModified,0);
-assert.equal(cards.filter(c=>c.stageType&&c.stageStatus==='unverified').length,12);
+assert.equal(cards.filter(c=>c.stageType&&c.stageStatus==='unverified').length,15);
 const statute=ctx.window.BK_STATUTES['BrB:12:6'];
 assert.ok(statute?.text.includes('endast kränker enskilds rätt'));
 assert.equal(statute.completeTextProvenance,'manual-crosscheck-current-SFS-paragraph-only');
