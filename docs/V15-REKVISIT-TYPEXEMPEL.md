@@ -1,3 +1,13 @@
+# Samtliga fasta grundstraffskalor kontrollerade – smugglingslagen 18 oktober 2026
+
+De återstående **23 intervallen** i smugglingslagen (2000:1225), t.o.m. SFS 2026:1321, är individuellt kontrollerade mot originaltexten i 3–13 §§. Jämförelsen håller narkotikasmuggling med försäljningssyfte, vapensmuggling, smuggling av explosiv vara samt deras normala, ringa, grova och synnerligen grova grader skilda åt. Ringa smuggling, ringa smuggling av explosiv vara och ringa tullbrott har **endast penningböter**. Om exakta SFS-markörer eller lagversioner inte stämmer får inget kontrollintyg utfärdas.
+
+När CI är grön återstår **0 ordinarie numeriska straffskalefall** och **14 villkorade/hänvisade fall** i denna kö. Det betyder ENDAST att enstaka graders numeriska straffskalor jämförts; det betyder **inte** att 319 BrB-rekvisit, förstadier, tolkningar och tvångsmedel är juridiskt slutgodkända. Speciallagarnas maskinimporterade fulltexter är fortsatt ej individuellt lagtextcertifierade. Publiceringsspärr kvar.
+
+Primärkälla: https://www.riksdagen.se/sv/dokument-och-lagar/dokument/svensk-forfattningssamling/lag-20001225-om-straff-for-smuggling_sfs-2000-1225/
+
+---
+
 # Specialstraffrätt – 23 fullständiga straffskalegrader 18 oktober 2026
 
 Separat juridisk sifferkontroll av **23 normala, ringa och grova grader** mot den officiella aktuella författningstexten: 4 BidrBrL (t.o.m. 2026:1322), 6 PTBL (t.o.m. 2026:1323), 9 SkBrL (t.o.m. 2026:1531) samt 4 LBE (t.o.m. 2026:1584). Bl.a. har de under 2026 höjda minimistraffen för grovt bidragsbrott och grova penningtvättsbrott kontrollerats. Bötesbrott redovisas utan påhittat minimifängelsestraff. Skydd mot otillbörliga åtals- och tvångsmedelsslutsatser kvarstår; speciallagarnas maskinimporterade fulltexter godkänns INTE automatiskt. Äldre gärningar kan kräva äldre straffskala.

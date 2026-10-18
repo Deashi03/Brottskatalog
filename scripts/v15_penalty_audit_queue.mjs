@@ -31,6 +31,6 @@ const out={date:new Date().toISOString(),version:'V1.5',releaseReady:false,metho
 fs.mkdirSync(path.join(root,'audit'),{recursive:true});
 fs.writeFileSync(path.join(root,'audit/v15-penalty-review-queue.json'),JSON.stringify(out,null,2)+'\n');
 console.log('V1.5 PENALTY AUDIT QUEUE '+JSON.stringify({counts,policeFirst:numeric.filter(c=>c.priority==='polisiar').slice(0,30).map(c=>({title:c.title,ref:c.ref,range:c.knownRange})),firstTwenty:numeric.slice(0,20).map(c=>({title:c.title,ref:c.ref,range:c.knownRange}))}));
-if(counts.basic!==23||counts.conditional!==14)throw Error('Unexpected penalty review queue totals: '+JSON.stringify(counts));
+if(counts.basic!==0||counts.conditional!==14)throw Error('Unexpected penalty review queue totals: '+JSON.stringify(counts));
 console.log('V1.5 PENALTY CASES '+JSON.stringify({byFamily:numeric.reduce((a,c)=>{const k=String(c.statute||c.ref).split(' ')[0].split(':')[0];(a[k]??=[]).push({title:c.title,ref:c.ref,range:c.knownRange});return a;},{}),conditional:special.map(c=>({title:c.title,ref:c.ref,derivative:c.penaltyReviewScope==='derivative-sfs-reference-conditional'}))}));
 if(numeric.some(c=>c.automaticApproval||c.legalReviewApproved))throw Error('Unapproved penalty ranges were incorrectly marked as approved');
