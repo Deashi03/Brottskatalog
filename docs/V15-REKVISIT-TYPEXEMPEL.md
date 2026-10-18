@@ -1,3 +1,13 @@
+# Specialstraffrätt – 23 fullständiga straffskalegrader 18 oktober 2026
+
+Separat juridisk sifferkontroll av **23 normala, ringa och grova grader** mot den officiella aktuella författningstexten: 4 BidrBrL (t.o.m. 2026:1322), 6 PTBL (t.o.m. 2026:1323), 9 SkBrL (t.o.m. 2026:1531) samt 4 LBE (t.o.m. 2026:1584). Bl.a. har de under 2026 höjda minimistraffen för grovt bidragsbrott och grova penningtvättsbrott kontrollerats. Bötesbrott redovisas utan påhittat minimifängelsestraff. Skydd mot otillbörliga åtals- och tvångsmedelsslutsatser kvarstår; speciallagarnas maskinimporterade fulltexter godkänns INTE automatiskt. Äldre gärningar kan kräva äldre straffskala.
+
+Efter grön CI: **23 ordinarie samt 14 villkorade** penning- och övriga intervall kvar i särskild revisionskö. Inga ytterligare brottsrekvisit eller förstadier juridiskt slutgodkända. `releaseReady:false`.
+
+Primärkällor: https://www.riksdagen.se/sv/dokument-och-lagar/dokument/svensk-forfattningssamling/bidragsbrottslag-2007612_sfs-2007-612/ ; https://rkrattsbaser.gov.se/sfst?bet=2014:307 ; https://www.riksdagen.se/sv/dokument-och-lagar/dokument/svensk-forfattningssamling/skattebrottslag-197169_sfs-1971-69/ ; https://www.riksdagen.se/sv/dokument-och-lagar/dokument/svensk-forfattningssamling/lag-20101011-om-brandfarliga-och-explosiva_sfs-2010-1011/
+
+---
+
 # Straffskalehänvisningar BrB 3:10 och 14:10 (18 oktober 2026)
 
 **Arbetsmiljöbrott** och **brukande av det förfalskade** saknar egen enhetlig straffskala. BrB 3:10 anger straffet för den faktiska gärningen enligt BrB 3:7–9. BrB 14:10 anger straff som om gärningspersonen själv hade gjort den relevanta förfalskningen i 14 kap. Det är rättsligt missvisande att visa en gemensam numerisk straffskala för dessa brott. Kortens gränssnitt ska därför ange **villkorad straffskala**, beskriva tillämpliga hänvisningar och lämna numerisk skala/tvångsmedel ogodkända.

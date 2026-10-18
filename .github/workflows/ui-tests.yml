@@ -136,6 +136,8 @@ on:
       - "scripts/special_penalties_14_test.mjs"
       - "special-penalty-grade-audit-15.js"
       - "scripts/special_penalty_grade_audit_15_test.mjs"
+      - "special-other-penalty-grades-15.js"
+      - "scripts/special_other_penalty_grades_15_test.mjs"
       - "scripts/brb17_14_test.mjs"
       - "scripts/brb4_14_test.mjs"
       - "scripts/brb20_13_test.mjs"
@@ -348,6 +350,8 @@ jobs:
         run: |
           python3 -m pip install --user beautifulsoup4
           python3 scripts/test_brb_parser_15.py
+      - name: V1.5 validate 23 BidrBrL PTBL SkBrL LBE statutory grade scales
+        run: node scripts/special_other_penalty_grades_15_test.mjs
       - name: V1.5 derivative penalty reference safety for BrB 3:10 and 14:10
         run: node scripts/brb_derivative_penalties_15_test.mjs
       - name: V1.5 special-law grade-only crosschecks against four current SFS texts
