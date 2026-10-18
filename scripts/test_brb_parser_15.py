@@ -37,5 +37,19 @@ class ParseBrbRegression(unittest.TestCase):
         self.assertIn("15 § i detta kapitel", provisions["BrB:6:12a"])
         self.assertNotIn("BrB:6:15", provisions)
 
+    def test_bare_chapter_reference_keeps_19_14_to_16(self):
+        html = """<h3>19 kap. Om brott mot Sveriges säkerhet</h3>
+        <p>14 § För försök, förberedelse eller stämpling döms till ansvar enligt</p>
+        <p>23 kap.</p>
+        <p>15 § Den som medverkar till gärningen döms till ansvar enligt lagen.</p>
+        <p>16 § Åtal kräver särskild ordning när detta uttryckligen föreskrivs.</p>
+        <h3>20 kap. Om tjänstefel m.m.</h3>
+        <p>1 § Den som åsidosätter vad som gäller för uppgiften döms till ansvar.</p>"""
+        result, _ = parse_brb(html)
+        self.assertIn("23 kap.", result["BrB:19:14"])
+        self.assertIn("BrB:19:15", result)
+        self.assertIn("BrB:19:16", result)
+        self.assertIn("BrB:20:1", result)
+        self.assertNotIn("BrB:23:15", result)
 if __name__ == "__main__":
     unittest.main()
