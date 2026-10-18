@@ -86,12 +86,16 @@ add('Förstadier','Preliminär källkopplad straffbarhetsstatus',stages.filter(c
 add('Förstadier','Individuellt godkänd kriminaliseringsprövning',stages.filter(c=>
  c.individualLegalAudit15?.scope?.status==='APPROVED'
  &&validDate(c.individualLegalAudit15.scope.checked)
- &&c.individualLegalAudit15.scope.sourceURL?.startsWith('https://')).length,
+ &&c.individualLegalAudit15.scope.sourceURL?.startsWith('https://')
+ &&c.individualLegalAudit15.scope.caseSpecificLiabilityApproved===false
+ &&c.individualLegalAudit15.scope.coercionApproved!==true).length,
  stages.length,'en individuell lagstödsprövning per förstadium');
 add('Förstadier','Individuell kontroll av straffskala/åtal/tvångsmedel',stages.filter(c=>
  c.individualLegalAudit15?.consequences?.status==='APPROVED'
  &&validDate(c.individualLegalAudit15.consequences.checked)
- &&c.individualLegalAudit15.consequences.sourceURL?.startsWith('https://')).length,
+ &&c.individualLegalAudit15.consequences.sourceURL?.startsWith('https://')
+ &&c.individualLegalAudit15.consequences.automaticCoercionApproved===false
+ &&c.individualLegalAudit15.consequences.namedOffenceOnly===true).length,
  stages.length,'en konsekvenskontroll per förstadium, även bekräftad icke-straffbarhet');
 const ageCandidates=all.filter(c=>Number(c.age14Exception15?.completedOffenceMinimumYears)>=4);
 add('Särskilda kontroller','Individuellt källgranskad tillämplighet för 14-årsundantag',ageCandidates.filter(c=>
