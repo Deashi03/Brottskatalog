@@ -34,5 +34,5 @@ fs.mkdirSync(path.join(root,'audit'),{recursive:true});
 fs.writeFileSync(path.join(root,'audit/v15-penalty-direct-evidence-queue.json'),JSON.stringify(report,null,2)+'\n');
 console.log('V1.5 DIRECT PENALTY GAP FAMILIES '+JSON.stringify(Object.fromEntries(Object.entries(families).map(([k,v])=>[k,{n:v.length,titles:v}]))));
 console.log('V1.5 DIRECT PENALTY GAP ENTRIES '+JSON.stringify(pending.map(c=>({title:c.title,ref:c.ref,range:c.penaltyRange,scope:c.gradeScope,checked:c.checked}))));
-if(pending.length!==58||conditional.length!==14||report.counts.basicAlreadyCertified!==315)
+if(pending.length!==33||conditional.length!==14||report.counts.basicAlreadyCertified!==340)
  throw Error('Unexpected direct penalty queue shape: '+JSON.stringify(report.counts));
