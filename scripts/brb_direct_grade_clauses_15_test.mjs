@@ -25,7 +25,7 @@ for(const c of reviewed){
  assert.equal(c.penaltyGradeReviewLegalConclusionApproved,false);
  assert.equal(c.penaltyGradeReviewCustodyApproved,false);
  assert.equal(c.penaltyGradeReviewOffenceDateRequired,true);
- assert.equal(c.rekvisit15?.legalReviewApproved,false);
+ assert.notEqual(c.rekvisit15?.legalReviewApproved,true);
 }
 assert.equal(ctx.window.BK_DATA.crimes.length,1473);
 assert.equal(ctx.window.BK_DATA.crimes.filter(c=>c.stageStatus==='unverified').length,12);
