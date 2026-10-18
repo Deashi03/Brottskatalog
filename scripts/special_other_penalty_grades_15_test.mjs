@@ -26,5 +26,5 @@ for(const c of rows){
 assert.equal(base.find(c=>c.title==='Grovt penningtvättsbrott').penaltyRange.min,1);
 assert.equal(base.find(c=>c.title==='Grovt bidragsbrott').penaltyRange.min,1);
 assert.equal(base.find(c=>c.title==='Skatteförseelse').penaltyRange.max,0);
-assert.equal(ctx.window.BK_DATA.crimes.filter(c=>c.stageStatus==='unverified').length,12);
+assert.equal(ctx.window.BK_DATA.crimes.filter(c=>c.stageStatus==='unverified').length,15);
 console.log('PASS V1.5: 23 numerically source-compared BidrBrL/PTBL/SkBrL/LBE grades, no full legal or coerced approval');
