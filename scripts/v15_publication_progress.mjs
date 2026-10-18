@@ -21,11 +21,22 @@ const structured=c=>Boolean(c.rekvisit15?.groups?.length||c.rekvisit15?.routes?.
 const validDate=x=>typeof x==='string'&&/^\d{4}-\d{2}-\d{2}$/.test(x)&&!Number.isNaN(Date.parse(x))&&x<=new Date().toISOString().slice(0,10);
 const datedFullText=c=>c.lawMode==='full'&&c.lawCompletenessVerified===true
   &&validDate(c.lawCompletenessChecked)&&c.lawCompletenessSourceURL?.startsWith('https://');
-const statuteGrade=c=>c.penaltyRangeVerified===true&&!c.conditionalPenalty
+// A conditional/cross-referenced scale may be APPROVED as conditional,
+// without inventing a numerical range or enabling coercive-measure advice.
+const safeConditional=c=>Boolean(c.conditionalPenalty===true
+  &&c.penaltyRangeVerified===false
+  &&c.conditionalPenaltyFinalAudit15?.status==='APPROVED'
+  &&validDate(c.conditionalPenaltyFinalAudit15.checked)
+  &&c.conditionalPenaltyFinalAudit15.sourceURL?.startsWith('https://')
+  &&c.penaltyAlternativeReview15?.automaticSelectionAllowed===false
+  &&c.penaltyAlternativeReview15?.custodyApproved===false);
+const ordinaryRange=c=>c.penaltyRangeVerified===true&&!c.conditionalPenalty
   &&c.penaltyReviewScope!=='range-only'&&Boolean(c.penaltyChecked);
-const directGrade=c=>statuteGrade(c)&&validDate(c.penaltyGradeReviewDate)
+const statuteGrade=c=>ordinaryRange(c)||safeConditional(c);
+const directGrade=c=>Boolean(ordinaryRange(c)&&validDate(c.penaltyGradeReviewDate)
   &&c.penaltyGradeReviewSource?.startsWith('https://')
-  &&Boolean(c.penaltyGradeReviewProvision);
+  &&c.penaltyGradeReviewProvision)
+  ||Boolean(safeConditional(c)&&c.conditionalPenaltyFinalAudit15.directSourceCheckApproved===true);
 const age=c=>c.age14Exception15?.sourceRef==='BrB 1:6'
   &&c.age14Exception15?.caseSpecificApplicationApproved===false;
 const work=[];
