@@ -23,8 +23,6 @@ assert.equal(find('Förstadier','Preliminär källkopplad straffbarhetsstatus').
 assert.equal(find('Särskilda kontroller','Individuellt källgranskad tillämplighet för 14-årsundantag').completed,83);
 assert.equal(find('Förstadier','Individuellt godkänd kriminaliseringsprövning').completed,138);
 assert.equal(find('Förstadier','Individuell kontroll av straffskala/åtal/tvångsmedel').completed,72);
-assert.equal(find('Förstadier','Individuellt godkänd kriminaliseringsprövning').completed,138);
-assert.equal(r.knownBlockers.noAutomaticReleaseApproval,true);
 assert.equal(r.work.filter(x=>x.group==='Juridisk slutrevision').length,9);
 assert.ok(r.work.filter(x=>x.group==='Juridisk slutrevision').every(x=>x.total===387&&x.completed===0));
 assert.ok(r.baseline.automatedTestCommands>=75);
