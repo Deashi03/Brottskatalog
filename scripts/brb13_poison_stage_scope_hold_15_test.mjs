@@ -1,0 +1,35 @@
+import assert from 'node:assert/strict';import fs from 'node:fs';import vm from 'node:vm';import path from 'node:path';
+const root=path.resolve(import.meta.dirname,'..');
+const html=fs.readFileSync(path.join(root,'index.html'),'utf8'),sw=fs.readFileSync(path.join(root,'service-worker.js'),'utf8');
+const scripts=[...html.matchAll(/<script\s+src="([^"]+)"/g)].map(m=>m[1]),mod='./brb13-poison-stage-scope-hold-15.js';
+assert.ok(scripts.includes(mod)&&sw.includes(mod));
+assert.ok(scripts.indexOf(mod)>scripts.indexOf('./brb20-stage-negative-source-15.js'));
+assert.ok(scripts.indexOf(mod)<scripts.indexOf('./age14-offence-scope-15.js'));
+const inline=[...html.matchAll(/<script(?:\s[^>]*)?>([\s\S]*?)<\/script>/g)].map(m=>m[1]);
+const ctx=vm.createContext({window:{},console:{log:()=>{},warn:()=>{},error:()=>{}}});
+for(const i of [1,2,3])vm.runInContext(inline[i],ctx,{filename:'inline-'+i});
+for(const src of scripts)vm.runInContext(fs.readFileSync(path.join(root,src),'utf8'),ctx,{filename:src});
+const r=ctx.window.BK_GROSS_POISON_STAGE_HOLD15;
+assert.equal(r.planned,3);assert.equal(r.withheld,3,JSON.stringify(r));assert.equal(r.held.length,0);
+const all=ctx.window.BK_DATA.crimes,stages=all.filter(c=>c.stageType);
+assert.equal(all.length,1473);assert.equal(stages.length,1086);
+assert.equal(stages.filter(c=>c.stageStatus==='unverified').length,15);
+const parent=all.find(c=>c.title==='Grovt spridande av gift eller smitta'&&!c.stageType);
+assert.ok(parent);
+for(const type of ['forsok','forberedelse','stampling']){
+ const c=stages.find(x=>x.stageType===type&&x.stageParentId===parent.id);
+ assert.equal(c.stageStatus,'unverified');assert.equal(c.custody,'unknown');
+ assert.equal(c.penaltyRange,null);assert.equal(c.stageReviewDate,null);
+ assert.equal(c.stageEvidence15.finalLegalConclusionApproved,false);
+ assert.equal(c.age14Exception15?.status,'inchoate-unverified');
+ assert.ok(!c.stageExplanation.includes('inte straffbar enligt'));
+}
+const copy=JSON.parse(JSON.stringify(stages.find(c=>c.stageParentId===parent.id)));
+copy.stageStatus='not-criminalized';copy.stageReviewDate=null;
+const clonedParent=JSON.parse(JSON.stringify(parent));const W=JSON.parse(JSON.stringify(ctx.window.BK_STATUTES));
+W['BrB:13:12'].text='UNTRUSTED';
+const isolated=vm.createContext({window:{BK_DATA:{crimes:[clonedParent,copy]},BK_STATUTES:W}});
+vm.runInContext(fs.readFileSync(path.join(root,mod),'utf8'),isolated);
+assert.equal(isolated.window.BK_GROSS_POISON_STAGE_HOLD15.withheld,0);
+assert.equal(copy.stageStatus,'not-criminalized','Mutation without original source must never be certified');
+console.log('PASS V1.5: false-negative stage triad changed to legally unresolved and no presumption of criminality/custody');
