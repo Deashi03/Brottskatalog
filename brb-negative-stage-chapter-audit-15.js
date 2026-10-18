@@ -12,7 +12,20 @@
 (()=>{'use strict';const D=window.BK_DATA,W=window.BK_STATUTES;if(!D?.crimes||!W)return;
 const SOURCE='https://www.riksdagen.se/sv/dokument-och-lagar/dokument/svensk-forfattningssamling/brottsbalk-1962700_sfs-1962-700/';
 const spec={
+ 3:{section:'3:11',allowed:{
+ 'Mord':'FPS','Dråp':'FPS','Barnadråp':'FP',
+ 'Misshandel':'FP','Grov misshandel':'FPS','Synnerligen grov misshandel':'FPS'}},
  5:{section:null,allowed:{}},
+ 6:{section:'6:15',allowed:{
+ 'Våldtäkt':'FPS','Grov våldtäkt':'FPS',
+ 'Sexuellt övergrepp':'F','Grovt sexuellt övergrepp':'F',
+ 'Våldtäkt mot barn':'FPS','Grov våldtäkt mot barn':'FPS',
+ 'Sexuellt utnyttjande av barn':'F','Sexuellt övergrepp mot barn':'F',
+ 'Grovt sexuellt övergrepp mot barn':'F',
+ 'Utnyttjande av barn för sexuell posering':'F',
+ 'Grovt utnyttjande av barn för sexuell posering':'FPS',
+ 'Utnyttjande av barn genom köp av sexuell handling':'F',
+ 'Köp av sexuell handling':'F','Koppleri':'FP','Grovt koppleri':'FPS'}},
  7:{section:'7:5',allowed:{
  'Otillbörligt utverkande av samtycke eller tillstånd till adoption av barn':'F',
  'Förvanskande av familjeställning':'F','Grov egenmäktighet med barn':'F'}},
