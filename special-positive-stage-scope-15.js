@@ -34,7 +34,8 @@ const distinctions={
  SmuglL:{'Narkotikasmuggling – avsedd att säljas':'narkotikasmuggling',
    'Ringa smuggling av explosiv vara':'ringa smuggling av explosiv vara'},
  PTBL:{'Grov näringspenningtvätt':'näringspenningtvätt som inte är ringa'},
- LBE:{'Synnerligen grovt brott mot tillståndsplikten för explosiva varor':'brott enligt 29 a § första eller andra stycket'}
+ LBE:{'Grovt brott mot tillståndsplikten för explosiva varor':'brott enligt 29 a § första eller andra stycket',
+ 'Synnerligen grovt brott mot tillståndsplikten för explosiva varor':'brott enligt 29 a § första eller andra stycket'}
 };
 const stages=[['forsok','F'],['forberedelse','P'],['stampling','S']];
 const parentMap=new Map(D.crimes.filter(c=>!c.stageType).map(c=>[c.title,c]));
