@@ -15,7 +15,7 @@ assert.equal(r.byGroup.reduce((n,x)=>n+x.total,0),r.counts.total);
 const find=(g,label)=>r.work.find(x=>x.group===g&&x.label===label);
 assert.equal(find('Grundbrott','Sökbar grundpost').completed,387);
 assert.equal(find('Grundbrott','Komplett daterad lagtext med källhänvisning').completed,332);
-assert.equal(find('Grundbrott','Strukturerad inledande rekvisitgenomgång').completed,332);
+assert.equal(find('Grundbrott','Strukturerad inledande rekvisitgenomgång').completed,387);
 assert.equal(find('Förstadier','Sökbart förstadiekort').completed,1086);
 assert.equal(find('Förstadier','Individuellt godkänd kriminaliseringsprövning').completed,0);
 assert.equal(find('Förstadier','Individuell kontroll av straffskala/åtal/tvångsmedel').completed,0);
