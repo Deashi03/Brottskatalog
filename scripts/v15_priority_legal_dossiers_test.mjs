@@ -19,13 +19,13 @@ for(const c of f.remainingBrB){
  assert.equal(c.finalLegalConclusionApproved,false);
  assert.equal(c.operationalCustodyAdviceApproved,false);
 }
-assert.equal(f.counts.unverifiedStageCases,12);
+assert.equal(f.counts.unverifiedStageCases,15);
 assert.equal(f.counts.policeCardsWithCompleteStatute,37);
 assert.equal(f.counts.policeCardsFullyLegallyApproved,0);
 assert.equal(f.releaseReady,false);
 assert.equal(f.automaticCustodyAuthorization,false);
 assert.equal(new Set(f.policePriority.map(x=>x.id)).size,37);
-assert.equal(new Set(f.ambiguousInchoate.map(x=>x.id)).size,12);
+assert.equal(new Set(f.ambiguousInchoate.map(x=>x.id)).size,15);
 for(const c of f.policePriority){
  assert.ok(c.id&&c.title&&c.statute.startsWith('BrB:'));
  assert.ok(c.statuteTextChecked&&c.statuteFullTextIndividuallyVerified);
@@ -50,8 +50,8 @@ for(const s of f.ambiguousInchoate){
  assert.ok(s.requiredSteps.some(q=>q.includes('tvångsmedel')));
  assert.ok(s.noNegativeInferencesFromMissingApproval);
 }
-assert.equal(f.ambiguousInchoate.filter(x=>x.authorizingProvision==='BrB:13:12').length,9);
+assert.equal(f.ambiguousInchoate.filter(x=>x.authorizingProvision==='BrB:13:12').length,12);
 assert.equal(f.ambiguousInchoate.filter(x=>x.authorizingProvision==='BrB:21:15').length,3);
 assert.ok(f.policePriority.some(c=>c.title==='Våldsamt motstånd'));
 assert.ok(f.policePriority.some(c=>c.title==='Barnfridsbrott'));
-console.log('PASS V1.5: 37 police priority legal dossiers plus 282 remaining and 12 inchoate dossiers, all held for independent review');
+console.log('PASS V1.5: 37 police priority legal dossiers plus 282 remaining and 15 inchoate dossiers, all held for independent review');
