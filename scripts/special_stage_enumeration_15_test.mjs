@@ -14,7 +14,7 @@ assert.equal(r.plannedFamilies,5);assert.equal(r.plannedParents,46);assert.equal
 assert.equal(r.reviewed,138,JSON.stringify(r));
 assert.equal(r.criminalized,66);assert.equal(r.notCriminalized,72);assert.equal(r.held.length,0);
 assert.ok(Object.values(r.sourceOK).every(Boolean));
-const crimes=ctx.window.BK_DATA.crimes,stages=crimes.filter(c=>c.stageType),checked=stages.filter(c=>c.stagePreliminaryScope15?.status==='SOURCE_ENUMERATION_REVIEWED');
+const crimes=ctx.window.BK_DATA.crimes,stages=crimes.filter(c=>c.stageType),checked=stages.filter(c=>c.stagePreliminaryScope15?.status==='SOURCE_ENUMERATION_REVIEWED'&&!c.stagePreliminaryScope15.reviewedMainSection);
 assert.equal(checked.length,138);
 for(const c of checked){
  const x=c.stagePreliminaryScope15;
@@ -29,7 +29,7 @@ for(const c of checked){
 }
 assert.equal(crimes.length,1473);assert.equal(stages.length,1086);
 assert.equal(stages.filter(c=>c.stageStatus==='unverified').length,12);
-assert.equal(stages.filter(c=>c.stageStatus!=='unverified'&&c.stageSource&&c.stageReviewDate).length,1068);
+assert.equal(stages.filter(c=>c.stageStatus!=='unverified'&&c.stageSource&&c.stageReviewDate).length,1074);
 const get=(title,type)=>{const p=crimes.find(c=>c.title===title&&!c.stageType);assert.ok(p,title);const c=stages.find(c=>c.stageParentId===p.id&&c.stageType===type);assert.ok(c,title+':'+type);return c;};
 assert.equal(get('Ringa smuggling','forsok').stageStatus,'not-criminalized');
 assert.equal(get('Ringa narkotikasmuggling','forberedelse').stageStatus,'punishable');
