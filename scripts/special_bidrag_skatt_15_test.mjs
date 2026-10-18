@@ -44,7 +44,7 @@ assert.ok(get('Skatteavdragsbrott').rekvisit15.routes[0].groups.some(g=>g.mode==
 assert.equal(all.length,1473);
 assert.equal(all.filter(c=>c.stageStatus==='unverified').length,12);
 assert.equal(base.filter(c=>c.conditionalPenalty&&!c.penaltyRangeVerified).length,14);
-assert.equal(base.filter(c=>c.lawCompletenessVerified===true&&c.lawMode==='full').length,365,'13 tax/benefit + 33 import family cards verified against current SFS');
+assert.equal(base.filter(c=>c.lawCompletenessVerified===true&&c.lawMode==='full').length,387,'All 387 base cards now have individually checked current SFS paragraph text; final legal review remains outstanding');
 assert.equal(base.filter(c=>c.rekvisit15?.groups?.length||c.rekvisit15?.routes?.length).length,387,'All 68 special-law cards now have separate preliminary structures');
 assert.equal(base.filter(c=>c.rekvisit15?.legalReviewApproved===true).length,0);
 // Fail closed: a single wrong imported section must not get fulltext or requisite approval.
