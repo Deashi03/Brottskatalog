@@ -31,7 +31,7 @@ for(const c of checked){
  }else{
   assert.equal(c.individualLegalAudit15?.scope?.status,'APPROVED');
   assert.equal(c.individualLegalAudit15?.scope?.caseSpecificLiabilityApproved,false);
-  assert.equal(c.individualLegalAudit15?.consequences,undefined);
+  assert.equal(c.individualLegalAudit15?.consequences?.punishmentRangeApproved,false);
  }
  if(c.stageStatus==='punishable')assert.equal(c.custody,'unknown','Stage eligibility is not a custody determination');
 }
