@@ -51,7 +51,7 @@ vm.runInNewContext(fs.readFileSync(path.join(root,mod),'utf8'),{window:synthetic
 assert.equal(synthetic.BK_BRB5_PROSECUTION15.reviewed,0);
 assert.equal(synthetic.BK_BRB5_PROSECUTION15.hold.length,3);
 assert.ok(testRows.every(c=>c.prosecution==='unknown'),'Source mismatch must NEVER grant a prosecution approval');
-assert.equal(ctx.window.BK_DATA.crimes.filter(c=>c.stageType&&c.stageStatus==='unverified').length,12);
+assert.equal(ctx.window.BK_DATA.crimes.filter(c=>c.stageType&&c.stageStatus==='unverified').length,15);
 const penaltyTitles=["Förtal","Grovt förtal","Förolämpning","Urkundsförfalskning","Förvanskning av urkund","Grov urkundsförfalskning","Märkesförfalskning","Ringa märkesförfalskning","Grov märkesförfalskning","Mened","Grov mened","Osann partsutsaga","Ovarsam utsaga"];
 console.log('V1.5 PENALTY SOURCE TRIAGE '+JSON.stringify(penaltyTitles.map(title=>{
  const p=b.find(c=>c.title===title);
