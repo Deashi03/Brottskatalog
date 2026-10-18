@@ -1,5 +1,7 @@
 # Brottskatalog V1.5 – mätbar väg till publicering
 
+> **Senaste avstämning: 48,3 % (5 527/11 442), 5 915 åtgärder återstår.** Se avstämningen längst ned; äldre procentsiffror nedan är sparade som revisionshistorik.\n\n
+
 **Beräknad status: 46,3 % (5 297 av 11 434 jämnt räknade åtgärder).** Återstår **6 137**. Avser arbetsgren `v15-komplett-brb-rekvisit-typexempel`, avstämd 18 oktober 2026. Testad i [GitHub Actions 39154276028](https://github.com/Deashi03/Brottskatalog/actions/runs/39154276028).
 
 ## Räkneregel
@@ -124,3 +126,44 @@ Räknaren används genom `node scripts/v15_publication_progress.mjs`. Verifiera 
 2. Genomför **individuell rättslig käll- och förstadiegranskning** i större, välavgränsade familjegrupper. Kontrollera de 12 explicit osäkra förstadierna först men dra inte negativa slutsatser utan särskilt lagstöd.
 3. Slutför polisprioriterade grundbrotts individuella nio juridiska slutmoment och fortsätt systematiskt i kapitelordning. Ingen automatisk helhetscertifiering från full lagtext och preliminära rekvisit.
 
+
+
+
+---
+
+## 18 oktober 2026 – 48,3 %, inledande grundbrottsmoment fullständiga
+
+**Aktuell avstämning: 5 527 av 11 442 jämnt räknade åtgärder = 48,3 %. Återstår 5 915.** Sedan föregående avstämning 47,5 % (5 437/11 438) har **86 tidigare öppna kortuppgifter stängts**, och fyra nya separata CI-kontroller tillkommit och passerat. Detta är samma fastlagda räkneregel: en individuell kortåtgärd eller en fristående kontroll motsvarar en enhet.
+
+### 14 villkorade straffskalor – individuellt källkontrollerade grenar
+
+Nya `brb-conditional-source-audit-15.js` jämför 14 fall med aktuella paragrafer i [BrB (1962:700)](https://www.riksdagen.se/sv/dokument-och-lagar/dokument/svensk-forfattningssamling/brottsbalk-1962700_sfs-1962-700/), inklusive hänvisade straffbestämmelser. Arbetsmiljöbrott och brukande av det förfalskade behåller uttryckligen sin härledda straffskala. Tio andra bestämmelser har skilda grenar beroende på bland annat krigstillstånd, gärningsgrad, deltagarroll och typ av utsaga.
+
+**28 kortmoment slutförda:** 14 källkontrollerade villkorade skalmodeller och 14 separata direkta hänvisnings-/grenjämförelser. `penaltyRangeVerified` förblir **false** för alla 14: en enda siffra skulle vara felaktig. `conditionalPenaltyFinalAudit15.status=APPROVED` betyder **enbart källavstämning av de villkorade lagstadgade alternativen**, inte att något alternativ automatiskt gäller för en konkret gärning. Programmet måste fortfarande kräva relevant gärningsdatum, de konkreta omständigheterna och individuell kontroll av åtal och tvångsmedel. Dessa 14 fall räknas fortfarande som juridiska villkorsfrågor i det slutliga revisionsarbetet.
+
+### 58 separata direktkontroller – individuellt jämförda med straffskala i SFS
+
+Två nya moduler `brb-direct-grade-clauses-15.js` och `brb-direct-grade-remaining-15.js` anger för varje brottskort **ett eget källstyrkt straffsatsparti** och jämför dess bötesmöjlighet, lägsta/högsta fängelsestraff, livstidsalternativ och källproveniens. Först granskades 25 poster i 16–20 kap. BrB; därefter 33 poster inom 4, 6, 13, 17, 19, 21 och 22 kap. BrB. Källavvikelser, fel straffskala eller saknad fulltext spärrar godkännandet.
+
+**58 kortmoment slutförda:** alla tidigare saknade direkta straffskaleintyg är nu källkontrollerade. För brott i 21–22 kap. är särskilda krigs- och tjänstgöringsförutsättningar fortfarande uttryckligen märkta **som oprövade**. Inga grader är automatiskt tillämpliga utan konkreta omständigheter och gärningsdatum. Inte heller dessa intyg är fullständig juridisk slutgranskning.
+
+`scripts/v15_penalty_direct_evidence_queue.mjs` genererar en spårbar lista på ej direktintygade poster: nu **0 kvar**. Detta är ett kontrollresultat om grundbrottens **straffskaleuppgift**, inte en friande eller fällande bedömning eller ett tvångsmedelsbesked.
+
+### Status efter avstämningen
+
+| Delmoment | Före | Nu |
+| --- | ---: | ---: |
+| Grundbrott – sökpost, åldersmetadata, lagtext, rekvisit och straffskalor | 2 236/2 322 | **2 322/2 322 (100 %)** |
+| Grundläggande straffskaleavstämningar | 373/387 | **387/387** |
+| Individuella direktkontroller, inklusive korrekt villkorad hänvisning | 315/387 | **387/387** |
+| Juridisk slutrevision: nio självständiga moment per grundbrott | 0/3 483 | **0/3 483** |
+| Förstadier: fem uppgifter per post | 3 102/5 430 | **3 102/5 430** |
+| Åldersundantagets individuella kandidater | 0/86 | **0/86** |
+| Automatiserade CI-kontroller | 87/87 | **91/91** |
+| Infrastruktur | 12/12 | **12/12** |
+| Slutpublicering | 0/18 | **0/18** |
+| **Totalt** | **5 437/11 438 (47,5 %)** | **5 527/11 442 (48,3 %)** |
+
+**CI med komplett iPhone-regression:** [körning 39159735439](https://github.com/Deashi03/Brottskatalog/actions/runs/39159735439). De fyra nya kontrollstegen granskar 14 villkorade rättskällegrenar, 25 och 33 individuellt avgränsade straffskalor samt nollrapportering av oavklarade direkta intervall.
+
+**Fortsatt publiceringsspärr:** 0/3 483 juridiska slutkontroller, 2 328 förstadieåtgärder, 86 särskilda åldersundantagskontroller och 18 releaseåtgärder återstår. Tolv förstadier är särskilt osäkra. Samtliga 14 villkorade straffskalor måste fortfarande ges en villkorad, inte en automatiskt numerisk, tillämpning i det konkreta fallet. Ingen merge eller publicering av v1.5 är gjord; V1.4 på `main` lämnas oförändrad.
