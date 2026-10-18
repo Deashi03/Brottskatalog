@@ -1,4 +1,4 @@
-/* Brottskatalog V1.5. Chapter-by-chapter source audit of BrB 5,7,10,11,
+/* Brottskatalog V1.5. Chapter-by-chapter source audit of BrB 5,7–12,14–20,
  * 12,15,16,20 negative inchoate entries (current SFS only).
  *
  * For every candidate, compare the exact parent offence, kind of inchoate
@@ -16,6 +16,16 @@ const spec={
  7:{section:'7:5',allowed:{
  'Otillbörligt utverkande av samtycke eller tillstånd till adoption av barn':'F',
  'Förvanskande av familjeställning':'F','Grov egenmäktighet med barn':'F'}},
+ 8:{section:'8:12',allowed:{
+ 'Stöld':'FP','Grov stöld':'FPS','Inbrottsstöld':'FPS','Rån':'FPS','Grovt rån':'FPS',
+ 'Tillgrepp av fortskaffningsmedel':'FP','Grovt tillgrepp av fortskaffningsmedel':'FP',
+ 'Olovlig energiavledning':'FP','Grov olovlig energiavledning':'FP'}},
+ 9:{section:'9:11',allowed:{
+ 'Bedrägeri':'FP','Grovt bedrägeri':'FPS',
+ 'Olovlig befattning med betalningsverktyg':'FP','Grov olovlig befattning med betalningsverktyg':'FP',
+ 'Utpressning':'FP','Ringa utpressning':'FP','Grov utpressning':'FPS',
+ 'Ocker':'FP','Grovt ocker':'FP','Häleri':'FPS','Grovt häleri':'FPS',
+ 'Utförselhäleri':'FPS','Grovt utförselhäleri':'FPS','Grovt fordringsbedrägeri':'P'}},
  10:{section:'10:9',allowed:{
  'Förskingring':'F','Grov förskingring':'FPS',
  'Trolöshet mot huvudman':'F','Grov trolöshet mot huvudman':'FPS',
@@ -25,6 +35,12 @@ const spec={
  'Grovt bokföringsbrott':'P'}},
  12:{section:'12:5',allowed:{
  'Skadegörelse':'F','Grov skadegörelse':'FP'}},
+ 14:{section:'14:13',allowed:{
+ 'Urkundsförfalskning':'FP','Grov urkundsförfalskning':'FP',
+ 'Hindrande av urkunds bevisfunktion':'FP','Signaturförfalskning':'FP',
+ 'Penningförfalskning':'FP','Märkesförfalskning':'FP',
+ 'Förfalskning av fast märke':'FP','Brukande av vad som förfalskats':'FP',
+ 'Brukande av det förfalskade':'FP','Olovlig befattning med falska pengar':'F'}},
  15:{section:'15:15',allowed:{
  'Mened':'PS','Grov mened':'PS',
  'Bevisförvanskning':'F','Grov bevisförvanskning':'F'}},
@@ -32,6 +48,23 @@ const spec={
  'Myteri':'PS',
  'Gravfridsbrott':'F','Grovt gravfridsbrott':'FPS',
  'Barnpornografibrott':'F','Grovt barnpornografibrott':'FP'}},
+ 17:{section:'17:16',allowed:{
+ 'Våld eller hot mot tjänsteman':'FPS','Grovt våld eller hot mot tjänsteman':'FPS',
+ 'Angrepp mot tjänsteman':'FPS','Grovt angrepp mot tjänsteman':'FPS',
+ 'Övergrepp i rättssak':'FPS','Grovt övergrepp i rättssak':'FPS',
+ 'Skyddande av brottsling':'FPS','Grovt skyddande av brottsling':'FPS',
+ 'Främjande av rymning eller flykt':'FP','Grovt främjande av rymning eller flykt':'FP',
+ 'Rymning':'F','Grov rymning':'F'}},
+ 18:{section:'18:7',allowed:{
+ 'Uppror':'FPS','Väpnat hot mot laglig ordning':'FPS',
+ 'Brott mot medborgerlig frihet':'F','Svikande av försvarsplikt':'F'}},
+ 19:{section:'19:14',allowed:{
+ 'Högförräderi':'FPS','Trolöshet vid förhandling med främmande makt':'FPS',
+ 'Spioneri':'FPS','Grovt spioneri':'FPS','Utlandsspioneri':'FPS','Grovt utlandsspioneri':'FPS',
+ 'Grov obehörig befattning med hemlig uppgift':'FPS',
+ 'Olovlig underrättelseverksamhet mot främmande makt':'FPS',
+ 'Olovlig underrättelseverksamhet mot person':'FPS',
+ 'Obehörig befattning med hemlig uppgift':'FP'}},
  20:{section:null,allowed:{}}
 };
 const stageAbbr={forsok:'F',forberedelse:'P',stampling:'S'};
