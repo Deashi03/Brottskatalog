@@ -1135,3 +1135,20 @@ Nya `praxis-alibit-15.js` ger **tre brottskort** en individuellt källkontroller
 **Ett enda nytt typfall** för skyddande av brottsling har tillförts, grundat på det sätt att dölja gärningspersonen som HD särskilt beskriver i domskälen. Det är ett separat pedagogiskt exempel, **inte gärningsomständigheterna i Alibit** och inte en automatisk fällande bedömning. Inga nya typfall för de mer svåravgränsade korten falsk beskyllning eller mened har konstruerats.
 
 Modulen kräver aktuell, individuellt daterad komplett SFS-paragraf för varje post. Regressionen `scripts/praxis_alibit_15_test.mjs` granskar tre källbundna praxisanteckningar, typfallsreservationen och negativt fall när underliggande paragraf saknar källintyg. Ingen ändring sker av 1 473 sökbara poster, förstadier, straffskalor, åtalsregler eller tvångsmedelsstatus. Antalet BrB-kort med typfall förväntas öka från **26 till 27**, men **0/319** är juridiskt slutgodkända; `releaseReady:false`, PR #2 förblir draft, V1.4 publicerad oförändrad.
+
+---
+
+## 18 oktober 2026 – fyra brott enligt BrB 15:6–7, begränsningar i förarbetena
+
+**Rättskällor:** [BrB 15:6–7, gällande SFS](https://www.riksdagen.se/sv/dokument-och-lagar/dokument/svensk-forfattningssamling/brottsbalk-1962700_sfs-1962-700/) och [prop. 2021/22:186, avsnitt 7, särskilt s. 72–75](https://data.riksdagen.se/fil/0C7F6285-D67F-423E-9EB8-EB9DC2B43339).
+
+Den nya modulen `brb15-accusation-source-limits-15.js` kompletterar **fyra** redan strukturerade brottskort med särskilda, förarbetsförankrade rekvisitbegränsningar, under den befintliga expanderbara menyn:
+
+- **Falsk angivelse:** angivelse är en brottsanmälan till behörig mottagare som pekar ut någon annan som brottsling. Faktisk oskuld till den uppgivna gärningen och särskilt uppsåt att den oskyldige ska dömas måste föreligga. Att en utredning läggs ned, preskriberas eller inte håller för fällande dom bevisar inte automatiskt oskuld.
+- **Obefogad angivelse:** samma grundläggande krav på angivelse och faktisk oskuld, men gärningspersonen insåg inte oskulden och hade skälig anledning att anta den.
+- **Falsk beskyllning:** 15:7 är subsidiär till 15:6; en brottsanmälan med begäran om åtal är inte nödvändig och den utpekade behöver inte vara helt oskyldig. Att uttryckligen förneka en friande omständighet skiljer sig från att endast underlåta att nämna en sådan. Särskild försiktighet behövs om den uppgiftslämnande själv är misstänkt och rätten att inte belasta sig själv aktualiseras.
+- **Vårdslös beskyllning:** objektiva gärningsformer prövas enligt 15:7, men skuldformen kräver särskilt att gärningspersonen inte insåg osanningen och hade skälig anledning att anta den.
+
+Inget av dessa fyra brottskort får ett nytt konstruerat typfall eftersom de avgörande skuld- och gärningsgränserna kan vara kontraintuitiva. Inga straffskalor, förstadier, åtalsbeslut eller tvångsmedel ändras. Ny regression `scripts/brb15_accusation_source_limits_15_test.mjs` kontrollerar uttryckligen gärningsgränser, företrädesregel, källintyg, negativt källfall och oförändrad release-spärr.
+
+**Status:** samtliga 319 BrB-kort kräver fortfarande juridisk helhetsgranskning; även efter denna förarbetsfördjupning är antalet slutgodkända **0/319**. De tidigare öppna 12 osäkra förstadierna och 14 villkorade straffskalorna kvarstår. V1.5 förblir draft och publiceringsspärren är aktiv.
