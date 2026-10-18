@@ -40,7 +40,7 @@ assert.equal(attempt.age14Exception15.completedOffenceMinimumYears,5,
 assert.equal(by('Stöld').age14Exception15.status,'minimum-threshold-not-met');
 assert.equal(by('Grovt tjänstefel').age14Exception15.status,'minimum-threshold-not-met');
 const unresolved=D.crimes.filter(c=>c.stageType&&c.stageStatus==='unverified');
-assert.equal(unresolved.length,12);
+assert.equal(unresolved.length,15);
 assert.ok(unresolved.every(c=>c.age14Exception15.status==='inchoate-unverified'));
 assert.ok(unresolved.every(c=>c.custody==='unknown'));
 const panel=html.indexOf("accordion('age14','Särskild påföljdsregel vid 14 år'");
