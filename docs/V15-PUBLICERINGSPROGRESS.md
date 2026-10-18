@@ -1,6 +1,6 @@
 # Brottskatalog V1.5 – mätbar väg till publicering
 
-> **Senaste avstämning: 48,3 % (5 527/11 442), 5 915 åtgärder återstår.** Se avstämningen längst ned; äldre procentsiffror nedan är sparade som revisionshistorik.\n\n
+> **Senaste avstämning: 48,3 % (5 527/11 442), 5 915 åtgärder återstår.** Se avstämningen längst ned; äldre procentsiffror nedan är sparade som revisionshistorik.
 
 **Beräknad status: 46,3 % (5 297 av 11 434 jämnt räknade åtgärder).** Återstår **6 137**. Avser arbetsgren `v15-komplett-brb-rekvisit-typexempel`, avstämd 18 oktober 2026. Testad i [GitHub Actions 39154276028](https://github.com/Deashi03/Brottskatalog/actions/runs/39154276028).
 
