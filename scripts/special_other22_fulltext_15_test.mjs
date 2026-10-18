@@ -33,7 +33,7 @@ assert.ok(get('Ringa narkotikabrott · bruk').law.includes('2 §'));
 assert.ok(get('Rattfylleri').law.includes('ordination'));
 assert.ok(get('Grovt brott mot knivlagen').law.includes('ringa fall utgör gärningen dock inte brott'));
 assert.equal(all.length,1473);
-assert.equal(all.filter(c=>c.stageStatus==='unverified').length,12);
+assert.equal(all.filter(c=>c.stageStatus==='unverified').length,15);
 assert.equal(base.filter(c=>c.conditionalPenalty&&!c.penaltyRangeVerified).length,14);
 assert.equal(base.filter(c=>c.rekvisit15?.legalReviewApproved===true).length,0);
 // Invalid grade provenance fails closed even with a manually transcribed text.
