@@ -1,3 +1,9 @@
+# BrB 13 – 13 ytterligare hela paragrafer, 18 oktober 2026
+
+Fullständiga lagtexter källjämförda: BrB 13:1–5, 5 a–b och 6–11. Tidigare redan verifierade 13:5 c och 13:12 står kvar. Den upphävda 13:8 a har inte felaktigt godkänts som gällande brott. Källkontrollen innebär **263 hela individuellt jämförda paragrafer efter grön CI**. Förstadieposter i 13 kap., bland annat grova grader och den uttömmande bestämmelsen i 13:12, är fortfarande individuellt oavgjorda och ger inget automatiskt tvångsmedelsbesked. Primärkälla: Riksdagens Brottsbalk SFS 1962:700 (t.o.m. 2026:1656).
+
+---
+
 # BrB 20–22: kompletterande källgranskning 18 oktober 2026
 
 25 fler hela paragrafer har jämförts med Sveriges riksdags aktuella brottsbalk: BrB 20:3–4, 21:1–6, 21:8–14, 21:16 och 22:1–5, 22:7, 22:9–11. BrB 21:7, 21:15 och 22:6 a–b var sedan tidigare granskade. BrB 22:6 c är uttryckligen inte ikraftträdd och har **inte** certifierats som gällande lag. Vid BrB 22:7 behålls den nu gällande lydelsen separat från den framtida ikraftträdandevarianten. Efter grön CI finns **250 individuellt källjämförda kompletta BrB-paragrafer**. Fortsatt `releaseReady:false` och inga nya fullständiga juridiska eller tvångsmedelsmässiga godkännanden.
