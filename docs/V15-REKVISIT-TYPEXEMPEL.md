@@ -1,3 +1,11 @@
+# Tvångsmedelsgranskning – RB 24:1–3 och övriga tröskelvärden, 18 oktober 2026
+
+Säkerhetsspärr tillagd: brottskort med villkorad straffskala, krigsberoende tillämplighet, oavgjort förstadie eller ej källgranskad straffskala får **ingen grön markering för tvångsmedel**. Det tidigare tröskelvärdet i häktningsöversikten för RB 24:2 gav felaktigt rött för bötesbrott. Det har rättats: RB 24:2 har ingen absolut straffskalegräns och kräver särskild individuell prövning av identitet/hemvist och undandraganderisk. RB 24:3 visas separat med grå symbol tills situationens nödvändiga rekvisit är prövade. Gröna symboler för RB 24:1 gäller endast verifierade **formella** tröskelvärden och är inte juridiska beslutsrekommendationer.
+
+Källkontroll: Sveriges riksdags rättegångsbalk (1942:740), 24 kap. 1–3 §§, ändrad t.o.m. SFS 2026:1657.
+
+---
+
 # Nio nya pedagogiska typexempel – 18 oktober 2026
 
 Nio nya **enkla självkonstruerade typfall** har lagts till för olaga hot, hemfridsbrott, olaga intrång, bedrägeri, olaga frihetsberövande, mordbrand, falskt larm, tvegifte och dataintrång. De betonar de typiska objektiva gärningsmomenten och anger för varje fall vilken ytterligare bedömning som krävs. Typfallen kan inte betraktas som rättsfall, prejudikat eller juridiskt slutgodkända; ursprungsangivelsen tydliggör att exemplen är konstruerade. Vi avvaktar fortfarande med svårbedömda exempel för psykiskt våld och angrepp mot tjänsteman (spottning/knuff). Rekvisit och straffskalor ändras inte i denna omgång.

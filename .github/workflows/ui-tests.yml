@@ -150,6 +150,8 @@ on:
       - "special-law-import-12.js"
       - "data/special-provisions-generated.js"
       - "coercive-09.js"
+      - "coercive-safety-15.js"
+      - "scripts/coercive_safety_15_test.mjs"
       - "decisions-10.js"
       - "prosecution-10.js"
       - "prosecution-final-12.js"
@@ -362,6 +364,8 @@ jobs:
         run: node scripts/smuggling_penalty_grades_15_test.mjs
       - name: V1.5 nine simple police typfall retained without misleading legal signoff
         run: node scripts/rekvisit_simple_typecases_15_test.mjs
+      - name: V1.5 hide premature coercion green lights and correct RB 24:2 custody exception
+        run: node scripts/coercive_safety_15_test.mjs
       - name: V1.5 all fourteen conditional penalty pathways visible with no automatic choice
         run: node scripts/brb_conditional_penalty_options_15_test.mjs
       - name: V1.5 derivative penalty reference safety for BrB 3:10 and 14:10
