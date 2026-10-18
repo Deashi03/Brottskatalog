@@ -1,3 +1,15 @@
+# Revisionsakter för polisiära kärnbrott och 12 särskilda förstadier – 18 oktober 2026
+
+En ny CI-genererad arbetsfil `audit/v15-priority-legal-dossiers.json` innehåller **36 prioriterade BrB-brottskort** och **12 individuella osäkra förstadieposter**. För varje kärnbrott ingår den aktuella fullständiga lagtexten, källans granskningsdatum, tidigare strukturerade rekvisit och alternativa gärningsformer, identifierad straffskala, källvarningar, åtalsuppgifter, 14-årstillämpning samt en checklista med nio separata prövningsområden (bl.a. objektiva/subjektiva rekvisit, undantag, förarbeten, praxis, gärningsdatum, förstadier och tvångsmedel). En revisionsakt är ett arbetsunderlag och utgör **inte** ett juridiskt kontrollintyg.
+
+De nio förstadierna enligt BrB 13:12 och tre enligt BrB 21:15 har var sin egen akt med fullständig paragraftext för grundbrott och kriminaliseringsbestämmelse, källhänvisningar, preciserad tolkningsfråga och åtgärdskrav. Lagtext och historiska förarbeten ger indicier för att grova grader inom samma brottsbestämmelse kan omfattas, men ingen analogisk slutsats eller positivt tvångsmedelsbesked har fastställts. Samtliga 12 har kvar `unverified` och `custody='unknown'` i appen.
+
+Målet är att möjliggöra faktisk **individuell** kvalitetssäkring, i stället för att markera 319 kort som färdiggranskade på grund av att de har korrekt layout eller fullständig lagtext. CI kontrollerar att alla akter innehåller gällande lagtext och att ofärdig juridik inte godkänns automatiskt. `releaseReady:false` tills slutgranskningen är färdig.
+
+Källor: Sveriges riksdags Brottsbalk (1962:700) t.o.m. SFS 2026:1656, SOU 2024:55 (https://data.riksdagen.se/dokument/hcb355), prop. 1985/86:9 (https://www.regeringen.se/rattsliga-dokument/proposition/1985/10/prop.-1985869/).
+
+---
+
 # Korrigering av häktningspresumtionens förstadiespår
 
 RB 24:1 andra stycket 2 har en uttrycklig särskild presumtionsregel för straffbara försök, förberedelser och stämplingar till brott med minst fyra års föreskrivet minimistraff. Det tidigare skyddet mot ogrundade gröna bockar hade även dolt formellt korrekta presumtionsmarkeringar för exempelvis ett lagtextkontrollerat **försök till mord**. Nu öppnas endast denna snäva förstadiegrind när både individuell förstadiestraffbarhet, källstöd, granskningsdatum och huvudbrottets fyraårsminimum är dokumenterade. Osäkra förstadier (12) och villkorade straffskalor får fortfarande grå markeringar. En bock visar endast ett formellt kriterium, inte att någon faktiskt får häktas. RB 24:2–3 förblir individuella, grå rekvisitbedömningar.

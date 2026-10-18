@@ -15,6 +15,8 @@ on:
       - "brb17-rymning-15.js"
       - "scripts/brb17_rymning_15_test.mjs"
       - "scripts/v15_release_readiness.mjs"
+      - "scripts/v15_priority_legal_dossiers.mjs"
+      - "scripts/v15_priority_legal_dossiers_test.mjs"
       - "scripts/v15_penalty_audit_queue.mjs"
       - "scripts/v15_release_queue_15_test.mjs"
       - "scripts/brb_special_preparation_15_test.mjs"
@@ -446,6 +448,8 @@ jobs:
         run: node scripts/v15_release_readiness.mjs
       - name: Generate individually scoped outstanding penalty audit queue
         run: node scripts/v15_penalty_audit_queue.mjs
+      - name: Prepare individual evidence-based legal review dossiers without false approvals
+        run: node scripts/v15_priority_legal_dossiers_test.mjs
       - name: Verify truthful and complete per-chapter legal review queue
         run: node scripts/v15_release_queue_15_test.mjs
       - name: Archive full quality report
@@ -458,6 +462,7 @@ jobs:
             audit/brb-inventory-15.json
             audit/v15-release-readiness.json
             audit/v15-penalty-review-queue.json
+            audit/v15-priority-legal-dossiers.json
           if-no-files-found: warn
       - name: Install headless browser
         run: |
