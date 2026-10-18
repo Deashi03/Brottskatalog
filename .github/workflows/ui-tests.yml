@@ -86,6 +86,8 @@ on:
       - "scripts/brb_conditional_source_audit_15_test.mjs"
       - "brb-direct-grade-clauses-15.js"
       - "scripts/brb_direct_grade_clauses_15_test.mjs"
+      - "brb-direct-grade-remaining-15.js"
+      - "scripts/brb_direct_grade_remaining_15_test.mjs"
       - "praxis-vapenbilden-15.js"
       - "praxis-freja-electronic-urkund-15.js"
       - "urkund-gransdragning-15.js"
@@ -432,6 +434,8 @@ jobs:
         run: node scripts/brb_conditional_source_audit_15_test.mjs
       - name: Verify 25 current SFS numeric grade passages individually
         run: node scripts/brb_direct_grade_clauses_15_test.mjs
+      - name: Complete remaining 33 individual BrB sentence-scale source checks
+        run: node scripts/brb_direct_grade_remaining_15_test.mjs
       - name: V1.5 derivative penalty reference safety for BrB 3:10 and 14:10
         run: node scripts/brb_derivative_penalties_15_test.mjs
       - name: V1.5 special-law grade-only crosschecks against four current SFS texts
