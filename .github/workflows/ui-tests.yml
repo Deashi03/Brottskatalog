@@ -70,6 +70,8 @@ on:
       - "praxis-vapenbilden-15.js"
       - "scripts/praxis_vapenbilden_15_test.mjs"
       - "scripts/brb_curated_lawtext_15_test.mjs"
+      - "scripts/test_brb_parser_15.py"
+      - "scripts/sync_law_sources.py"
       - "scripts/rekvisit_sista_15_test.mjs"
       - "scripts/rekvisit_krig_15_test.mjs"
       - "scripts/rekvisit_riket_15_test.mjs"
@@ -319,7 +321,11 @@ jobs:
         run: node scripts/rekvisit_krig_15_test.mjs
       - name: V1.5 all 319 BrB offences structurally covered, without false legal approval
         run: node scripts/rekvisit_sista_15_test.mjs
-      - name: V1.5 five individually verified current BrB statutory paragraphs
+      - name: V1.5 statutory parser regression against false SFS paragraph references
+        run: |
+          python3 -m pip install --user beautifulsoup4
+          python3 scripts/test_brb_parser_15.py
+      - name: V1.5 154 individually compared current BrB statutory paragraphs
         run: node scripts/brb_curated_lawtext_15_test.mjs
       - name: V1.5 source-checked current child-witness and stalking requisite alternatives
         run: node scripts/brb4_child_stalking_requisites_15_test.mjs
