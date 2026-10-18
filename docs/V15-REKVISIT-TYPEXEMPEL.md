@@ -1,3 +1,9 @@
+# BrB 20–22: kompletterande källgranskning 18 oktober 2026
+
+25 fler hela paragrafer har jämförts med Sveriges riksdags aktuella brottsbalk: BrB 20:3–4, 21:1–6, 21:8–14, 21:16 och 22:1–5, 22:7, 22:9–11. BrB 21:7, 21:15 och 22:6 a–b var sedan tidigare granskade. BrB 22:6 c är uttryckligen inte ikraftträdd och har **inte** certifierats som gällande lag. Vid BrB 22:7 behålls den nu gällande lydelsen separat från den framtida ikraftträdandevarianten. Efter grön CI finns **250 individuellt källjämförda kompletta BrB-paragrafer**. Fortsatt `releaseReady:false` och inga nya fullständiga juridiska eller tvångsmedelsmässiga godkännanden.
+
+---
+
 # Nytt: fullständiga paragrafer i BrB 19 kap., 18 oktober 2026
 
 20 individuellt källjämförda hela paragrafer i 19 kap. utöver redan reparerade 19:9. Den kompletta texten för BrB 19:14–16 har lagts in manuellt efter upptäckt av parserfelet där en hänvisning till 23 kap. avbröt importen. Förstadielagstödet enligt 19:14, den särskilda medhjälpsregeln 19:15 och regeringens åtalsförordnande enligt 19:16 är endast textverifierade. De får inte tolkas som klar juridisk signoff för ett visst brott eller förstadium.

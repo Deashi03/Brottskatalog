@@ -80,6 +80,8 @@ on:
       - "scripts/brb6_further_fulltext_15_test.mjs"
       - "brb19-fulltext-15.js"
       - "scripts/brb19_fulltext_15_test.mjs"
+      - "brb20-22-fulltext-15.js"
+      - "scripts/brb20_22_fulltext_15_test.mjs"
       - "scripts/test_brb_parser_15.py"
       - "scripts/sync_law_sources.py"
       - "scripts/rekvisit_sista_15_test.mjs"
@@ -347,6 +349,8 @@ jobs:
         run: node scripts/brb6_further_fulltext_15_test.mjs
       - name: V1.5 chapter 19 full-source comparison and restored stage/prosecution sections
         run: node scripts/brb19_fulltext_15_test.mjs
+      - name: V1.5 full-current BrB 20-22 provisions and future effect exceptions
+        run: node scripts/brb20_22_fulltext_15_test.mjs
       - name: V1.5 source-checked current child-witness and stalking requisite alternatives
         run: node scripts/brb4_child_stalking_requisites_15_test.mjs
       - name: V1.5 falsk angivelse, falsk beskyllning and correction-of-error safeguards
