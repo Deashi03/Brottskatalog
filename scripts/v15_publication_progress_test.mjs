@@ -19,6 +19,7 @@ assert.equal(find('Grundbrott','Strukturerad inledande rekvisitgenomgång').comp
 assert.equal(find('Grundbrott','Grundläggande straffskaleavstämning').completed,387);
 assert.equal(find('Grundbrott','Separat direktkontroll av brottsgradens straffskala').completed,387);
 assert.equal(find('Förstadier','Sökbart förstadiekort').completed,1086);
+assert.equal(find('Förstadier','Preliminär källkopplad straffbarhetsstatus').completed,1074);
 assert.equal(find('Förstadier','Individuellt godkänd kriminaliseringsprövning').completed,0);
 assert.equal(find('Förstadier','Individuell kontroll av straffskala/åtal/tvångsmedel').completed,0);
 assert.equal(r.work.filter(x=>x.group==='Juridisk slutrevision').length,9);
