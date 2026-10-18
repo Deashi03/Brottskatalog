@@ -39,7 +39,7 @@ const stages=cards.filter(c=>c.stageType);
 assert.equal(stages.length,1086);assert.equal(stages.filter(c=>c.stageStatus==='unverified').length,15);
 assert.equal(stages.filter(c=>c.individualLegalAudit15?.scope?.status==='APPROVED').length,138);
 assert.equal(stages.filter(c=>c.individualLegalAudit15?.consequences?.status==='APPROVED').length,72);
-assert.equal(stages.filter(c=>c.stageStatus==='punishable'&&c.individualLegalAudit15?.scope?.status==='APPROVED').length,0);
+assert.equal(stages.filter(c=>c.stageStatus==='punishable'&&c.individualLegalAudit15?.consequences?.status==='APPROVED').length,0);
 const r=JSON.parse(JSON.stringify(ctx.window.BK_SPECIAL_STAGE_ENUMERATION15));
 r.sourceOK.SmuglL=false;
 const isolatedCrimes=cards.filter(c=>c.stagePreliminaryScope15||(c.id?.startsWith('v09-')&&!c.stageType)).map(c=>{
