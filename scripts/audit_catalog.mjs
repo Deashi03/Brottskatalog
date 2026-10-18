@@ -43,7 +43,15 @@ for(const c of all){
   if(meta?.invalidReviewNote)flag(id,'high','invalid-review-date','Invalid legal verification date found');
  }else{
   if(!ids.has(c.stageParentId))flag(id,'critical','orphan-stage','Parent ID missing');
-  if(c.stageStatus==='punishable'&&!c.penaltyRange)flag(id,'high','punishable-no-penalty','Punishable stage has no structured penalty');
+  if(c.stageStatus==='punishable'&&!c.penaltyRange){
+   const boundedBySource=Boolean(c.forgeryStageScope15?.finalCriminalityApproved===false&&
+    c.forgeryStageScope15?.statutoryRingaExclusion===true&&
+    c.forgeryStageScope15?.caseSpecificCustodyApproved===false&&
+    c.custody==='unknown'&&c.penaltyShort==='Villkorad skala');
+   if(boundedBySource)flag(id,'medium','conditional-stage-penalty-review',
+    'BrB 14:13 covers this restricted stage route but the concrete non-ringa offence/derivative penalty and custody require individual review');
+   else flag(id,'high','punishable-no-penalty','Punishable stage has no structured penalty');
+  }
   if(c.stageStatus!=='punishable'&&c.penaltyRange)flag(id,'critical','noncriminal-has-penalty','Stage without verified criminalization has penalty');
   if(!c.stageSource)flag(id,'medium','stage-source-missing','No linked stage-specific criminalization provision');
   if(c.stageStatus==='unverified')flag(id,'medium','stage-not-reviewed','Needs statute-specific status verification');
