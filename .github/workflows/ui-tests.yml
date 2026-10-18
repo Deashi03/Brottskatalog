@@ -132,6 +132,8 @@ on:
       - "brb17-review-14.js"
       - "special-penalties-review-14.js"
       - "scripts/special_penalties_14_test.mjs"
+      - "special-penalty-grade-audit-15.js"
+      - "scripts/special_penalty_grade_audit_15_test.mjs"
       - "scripts/brb17_14_test.mjs"
       - "scripts/brb4_14_test.mjs"
       - "scripts/brb20_13_test.mjs"
@@ -344,6 +346,8 @@ jobs:
         run: |
           python3 -m pip install --user beautifulsoup4
           python3 scripts/test_brb_parser_15.py
+      - name: V1.5 special-law grade-only crosschecks against four current SFS texts
+        run: node scripts/special_penalty_grade_audit_15_test.mjs
       - name: V1.5 154 individually compared current BrB statutory paragraphs
         run: node scripts/brb_curated_lawtext_15_test.mjs
       - name: V1.5 chapter-16 fulltext extension with official source crosschecks

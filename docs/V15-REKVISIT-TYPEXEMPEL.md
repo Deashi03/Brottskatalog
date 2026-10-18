@@ -1,3 +1,13 @@
+# Specialstraffrätt: 22 källjämförda intervall (18 oktober 2026)
+
+22 sedan V1.4 förhandsgranskade intervall enligt narkotikastrafflagen (11 brottskort), vapenlagen (5), trafikbrottslagen (4) och knivlagen (2) har **på nytt kontrollerats individuellt mot aktuella lagtexter**. Årets konsoliderade versioner: NSL 1968:64 t.o.m. 2024:797, VapenL 2026:408 t.o.m. 2026:1250, TBL 1951:649 t.o.m. 2024:715 och KnivL 1988:254 t.o.m. 2026:413. Särskilda alternativ (narkotikaförsäljning, oaktsamhet, ringa brott, grova grader) förblir egna fall. Inga maskinimporterade speciallagstexter markeras som fullständigt juridiskt verifierade. Ingen fullständig rekvisit-, praxis- eller tvångsmedelsgranskning utförs genom denna kontroll.
+
+Efter grön CI ska tidigare 72 ordinarie granskningsfall minska till **50** (plus 12 villkorade). Fulltexten för BrB är fortsatt 319/319, men speciallagarnas lagtextcertifiering kräver fortsatt arbete. `releaseReady:false`.
+
+Primärkällor: https://www.riksdagen.se/sv/dokument-och-lagar/dokument/svensk-forfattningssamling/narkotikastrafflag-196864_sfs-1968-64/ ; https://www.riksdagen.se/sv/dokument-och-lagar/dokument/svensk-forfattningssamling/vapenlag-2026408_sfs-2026-408/ ; https://www.riksdagen.se/sv/dokument-och-lagar/dokument/svensk-forfattningssamling/lag-1951649-om-straff-for-vissa-trafikbrott_sfs-1951-649/ ; https://www.riksdagen.se/sv/dokument-och-lagar/dokument/svensk-forfattningssamling/lag-1988254-om-forbud-betraffande-knivar-och_sfs-1988-254/
+
+---
+
 # Straffskalor 16–19 kap. – 18 ytterligare grader (18 oktober 2026)
 
 **18 individuellt jämförda straffskalor** i BrB 16:3–11, 17:2–15, 18:1 och 19:6. Fokus på polisiär verksamhet: angrepp mot tjänsteman, grovt angrepp mot tjänsteman, övergrepp i rättssak, grovt övergrepp i rättssak, skyddande av brottsling och valrelaterade brott. Särskilt skiljs normala och grova minimistraff åt, liksom livstidsalternativen för uppror och grovt spioneri. Även bötesbrott och undantag för mindre allvarliga fall förblir avgränsade.
