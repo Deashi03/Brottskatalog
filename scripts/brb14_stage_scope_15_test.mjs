@@ -60,7 +60,7 @@ assert.equal(money.forgeryStageScope15.limitedToAcquisitionOrReceipt,true);
 assert.ok(money.stageExplanation.includes('ANSKAFFA eller TA EMOT'));
 for(const kind of ['forberedelse','stampling'])
  assert.equal(get('Olovlig befattning med falska pengar',kind).stageStatus,'not-criminalized');
-assert.equal(D.crimes.filter(c=>c.stageType&&c.stageStatus==='unverified').length,12);
+assert.equal(D.crimes.filter(c=>c.stageType&&c.stageStatus==='unverified').length,15);
 assert.equal(D.crimes.length,1473,'Three missing derivative-parent stage records are added without touching other crimes');
 assert.equal(D.crimes.filter(c=>c.stageType).length,1086);
 assert.equal(D.crimes.filter(c=>!c.stageType&&c.statute?.startsWith('BrB:')).length,319);
