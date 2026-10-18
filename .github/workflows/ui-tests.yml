@@ -22,6 +22,7 @@ on:
       - "scripts/v15_publication_progress_test.mjs"
       - "scripts/v15_penalty_direct_evidence_queue.mjs"
       - "scripts/v15_stage_evidence_gaps.mjs"
+      - "scripts/v15_brb_stage_chapter_queue.mjs"
       - "scripts/v15_age14_candidate_inventory.mjs"
       - "age14-candidate-source-audit-15.js"
       - "scripts/age14_candidate_source_audit_15_test.mjs"
@@ -558,6 +559,8 @@ jobs:
         run: node scripts/v15_penalty_direct_evidence_queue.mjs
       - name: Inventory 156 inchoate evidence and dated-source gaps
         run: node scripts/v15_stage_evidence_gaps.mjs
+      - name: Map remaining BrB inchoate stages by current chapter
+        run: node scripts/v15_brb_stage_chapter_queue.mjs
       - name: Enumerate age-14 statutory threshold candidates
         run: node scripts/v15_age14_candidate_inventory.mjs
       - name: Review 83 individual age-14 statutory minimum thresholds
