@@ -1,6 +1,6 @@
 # Brottskatalog V1.5 – mätbar väg till publicering
 
-> **Senaste avstämning: 52,1 % (5 969/11 450), 5 481 åtgärder återstår.** De 138 speciallagsförstadierna har nu särskilt godkända, källbegränsade lagstödsbesked. Brottens fullständiga rättsliga slutrevision och konkret tvångsmedelsbedömning återstår. Äldre avstämningar redovisas nedan som revisionshistorik.
+> **Senaste avstämning: 61,1 % (7 003/11 453). 4 450 uppgifter återstår.** 399 individuella negativa BrB-förstadier och deras 399 konsekvenskontroller samt 167 uttryckliga positiva förstadier har källgranskats. Den separata juridiska slutrevisionen av grundbrotten är fortfarande 0/3 483. Äldre procenttal nedan är revisionshistorik.
 
 **Beräknad status: 46,3 % (5 297 av 11 434 jämnt räknade åtgärder).** Återstår **6 137**. Avser arbetsgren `v15-komplett-brb-rekvisit-typexempel`, avstämd 18 oktober 2026. Testad i [GitHub Actions 39154276028](https://github.com/Deashi03/Brottskatalog/actions/runs/39154276028).
 
@@ -242,3 +242,36 @@ Båda modulerna kräver oförändrad versionsbunden källa, godkänd individuell
 **Rättslig release-spärr kvar:** 0/3 483 juridiska slutkontroller av grundbrott, **15 särskilt oavgjorda förstadier**, 3 kontroller av 14-årsundantaget och 18 egentliga publiceringsåtgärder. Inget nytt automatiskt beslut om gripande, anhållande, häktning eller andra tvångsmedel. V1.5 fortsatt draft, V1.4 på `main` oförändrad.
 
 Källor för gruppvis kontroll: [smugglingslagen 14 §](https://www.riksdagen.se/sv/dokument-och-lagar/dokument/svensk-forfattningssamling/lag-20001225-om-straff-for-smuggling_sfs-2000-1225/), [penningtvättsbrottslagen 8 §](https://www.riksdagen.se/sv/dokument-och-lagar/dokument/svensk-forfattningssamling/lag-2014307-om-straff-for-penningtvattsbrott_sfs-2014-307/), [skattebrottslagen 11 §](https://www.riksdagen.se/sv/dokument-och-lagar/dokument/svensk-forfattningssamling/skattebrottslag-197169_sfs-1971-69/), [bidragsbrottslagen](https://www.riksdagen.se/sv/dokument-och-lagar/dokument/svensk-forfattningssamling/bidragsbrottslag-2007612_sfs-2007-612/) och [lagen om brandfarliga och explosiva varor 30 a §](https://www.riksdagen.se/sv/dokument-och-lagar/dokument/svensk-forfattningssamling/lag-20101011-om-brandfarliga-och-explosiva_sfs-2010-1011/).
+
+---
+
+## 19 oktober 2026 – 61,1 %, stor källrevision av brottsbalkens förstadier
+
+**Senast godkända körning: 7 003 av 11 453 lika vägda åtgärder, 61,1 %, 4 450 återstår.** Jämförelsepunkt: 52,1 % och 5 969/11 450. Skillnaden är **1 034 faktiska avslutade arbetsinventeringsenheter**: 66 tidigare inlagda men då ännu ej grönt testade särskilda förstadiekonsekvenser, **399 individuella BrB-förstadier med särskilt kontrollerat negativt lagstöd och varsin avgränsad konsekvensprövning (798 moment)**, **167 individuella positiva förstadieuppräkningar i BrB** samt **tre nya CI-registrerade kontrollsteg**. Någon allmän juridisk slutrevision har **inte** godkänts av dessa moment. Omkring 965 av de 1 034 enheterna är nya direkta BrB-kortkontroller, inte dokumentationsändringar.
+
+### BrB 5, 7–12 och 14–20 kap. – individuell paragraf- och brottsgradsavstämning
+
+Ny modul `brb-negative-stage-chapter-audit-15.js` går igenom **14 kapitel och deras individuella grundbrott**, och kontrollerar faktisk förstadietyp mot kapitlets gällande, källverifierade förstadieparagraf: BrB 7:5, 8:12, 9:11, 10:9, 11:6, 12:5, 14:13, 15:15, 16:17, 17:16, 18:7, 19:14. För kap. 5 och 20 granskas de katalogförda paragraferna mot frånvaro av särskilt förstadiebud i det aktuella kapitlet. Varje kort måste ha fullständig daterad källtext, korrekt koppling till eget grundbrott, korrekt förstadieform och en motsvarande separat aktuell kapiteluppräkning. Misstänkt avvikelse spärrar det aktuella kortet.
+
+**399 tidigare saknade negativa förstadiekontroller** har nu ett individuellt avgränsat aktuellt rättskällebesked. **399 separata konsekvensbedömningar** anger att ett förstadium som inte är kriminaliserat *som den namngivna kombinationen enligt det granskade aktuella kapitlet* inte ensamt kan bilda eget straffbud, åtal eller tvångsmedelsgrund. Andra rubriceringar, lagversionen på gärningsdagen och andra lagliga tvångsmedelsgrunder är uttryckligen undantagna från påståendet. Detta är inte ett frikännande eller en konkret häktningsbedömning.
+
+`brb-positive-stage-source-audit-15.js` kontrollerar dessutom varje straffbelagt förstadium mot en **uttrycklig källa och namnankare** i samma gällande förstadieparagraf. **167 positiva aktuella lagstödsuppräkningar** har därmed individuellt källavstämts. De har **inte** blivit automatiskt godkända för viss straffskala, åtal eller tvångsmedel. I kortet hålls häktningsstatus fortsatt okänd och BrB 23 kap. måste prövas självständigt.
+
+**Rättsliga avvikelser som inte godkänts:** Fem förstadieposter för grov signaturförfalskning, grov märkesförfalskning och grov olovlig befattning med falska pengar har avvikande positiv status jämfört med den direkt angivna förstadieuppräkningen i BrB 14:13. De är avsiktligt **källrevisionsspärrade** i den nya granskningen, inte felaktigt överförda till annan slutsats. Dessutom hålls försöksfrågan om grov bevisförvanskning öppen eftersom det bokstavliga ankaret inte stämmer med BrB 15:15. Dessa särskilda konflikter tillkommer utöver de 15 sedan tidigare uttryckligen olösta förstadieposterna och måste prövas mot systematik, förarbeten och praxis. Tidigare förstadieklassificering i katalogen räknas inte som nytt juridiskt godkännande för dessa fall.
+
+### Pågående slutrevision och publikation
+
+| Arbetsgrupp | Genomfört | Totalt | Återstår |
+| --- | ---: | ---: | ---: |
+| Grundbrottens sex inledande uppgifter | 2 322 | 2 322 | 0 |
+| Grundbrottens nio självständiga juridiska slutmoment | 0 | 3 483 | 3 483 |
+| Förstadiernas fem moment per post | 4 484 | 5 430 | 946 |
+| 14-årsundantagets individuella källkontroller | 83 | 86 | 3 |
+| CI-registrerade Node-teststeg | 102 | 102 | 0 |
+| Teknik och logistik | 12 | 12 | 0 |
+| Slutpublicering | 0 | 18 | 18 |
+| **Summa** | **7 003** | **11 453** | **4 450** |
+
+**Verifiering:** [Godkänd komplett GitHub Actions-körning 39177166788](https://github.com/Deashi03/Brottskatalog/actions/runs/39177166788), inklusive mobil/iPhone, kvalitetsskript och negativt test med manipulerad primärrättskälla. Slutlig individuell lag-/praxis-/straffskale-/tvångsmedelsrevision är fortsatt helt separat.
+
+**Slutlig rättslig release-spärr:** 3 483 återstående oberoende grundbrottsdelmoment, 946 återstående förstadiedelmoment, tre osäkra 14-årskandidater och 18 releasekontroller. **PR #2 förblir draft, main/V1.4 oförändrad, V1.5 opublicerad.** Underlaget är [gällande BrB 1962:700 i Riksdagens SFS](https://www.riksdagen.se/sv/dokument-och-lagar/dokument/svensk-forfattningssamling/brottsbalk-1962700_sfs-1962-700/).
