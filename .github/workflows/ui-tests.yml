@@ -95,6 +95,9 @@ on:
       - "scripts/brb15_accusation_source_limits_15_test.mjs"
       - "scripts/brb17_official_boundaries_15_test.mjs"
       - "scripts/special_bidrag_skatt_15_test.mjs"
+      - "special-smuggling-money-lbe-requisites-15.js"
+      - "special-nark-vapen-trafik-kniv-requisites-15.js"
+      - "scripts/special_remaining_55_requisites_15_test.mjs"
       - "scripts/urkund_gransdragning_15_test.mjs"
       - "scripts/praxis_freja_electronic_urkund_15_test.mjs"
       - "scripts/praxis_vapenbilden_15_test.mjs"
@@ -266,6 +269,9 @@ on:
       - "scripts/brb15_accusation_source_limits_15_test.mjs"
       - "scripts/brb17_official_boundaries_15_test.mjs"
       - "scripts/special_bidrag_skatt_15_test.mjs"
+      - "special-smuggling-money-lbe-requisites-15.js"
+      - "special-nark-vapen-trafik-kniv-requisites-15.js"
+      - "scripts/special_remaining_55_requisites_15_test.mjs"
       - "scripts/urkund_gransdragning_15_test.mjs"
       - "scripts/praxis_freja_electronic_urkund_15_test.mjs"
       - "scripts/praxis_vapenbilden_15_test.mjs"
@@ -467,6 +473,8 @@ jobs:
         run: node scripts/brb17_official_boundaries_15_test.mjs
       - name: V1.5 independently verified tax and benefit offence fulltext/requisites
         run: node scripts/special_bidrag_skatt_15_test.mjs
+      - name: V1.5 source-scoped 55 additional special-law offence structures
+        run: node scripts/special_remaining_55_requisites_15_test.mjs
       - name: V1.5 intricate offence alternatives, minority and public-order requisites
         run: node scripts/rekvisit_fordjupning_15_test.mjs
       - name: V1.5 child/adult sex-offence distinctions and limited statutory exemptions
