@@ -22,6 +22,8 @@ on:
       - "scripts/brb_special_preparation_15_test.mjs"
       - "scripts/brb_war_15_test.mjs"
       - "stage-scope-15.js"
+      - "brb14-stage-scope-15.js"
+      - "scripts/brb14_stage_scope_15_test.mjs"
       - "age14-offence-scope-15.js"
       - "scripts/age14_offence_scope_15_test.mjs"
       - "scripts/brb11_13_15_test.mjs"
@@ -186,6 +188,8 @@ on:
       - "scripts/brb_special_preparation_15_test.mjs"
       - "scripts/brb_war_15_test.mjs"
       - "stage-scope-15.js"
+      - "brb14-stage-scope-15.js"
+      - "scripts/brb14_stage_scope_15_test.mjs"
       - "age14-offence-scope-15.js"
       - "scripts/age14_offence_scope_15_test.mjs"
       - "scripts/brb11_13_15_test.mjs"
@@ -314,6 +318,8 @@ jobs:
         run: node scripts/core_penalties_13_test.mjs
       - name: Verify offence stages
         run: node scripts/stage_rules_test.mjs
+      - name: V1.5 BrB 14:13 title alias, specific money attempt scope and ringa exception
+        run: node scripts/brb14_stage_scope_15_test.mjs
       - name: V1.5 age-14 statute exception, dates, minimum and stage limitations
         run: node scripts/age14_offence_scope_15_test.mjs
       - name: Verify new 2026 public-office offences
