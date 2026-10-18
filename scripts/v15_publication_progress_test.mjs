@@ -16,6 +16,8 @@ const find=(g,label)=>r.work.find(x=>x.group===g&&x.label===label);
 assert.equal(find('Grundbrott','Sökbar grundpost').completed,387);
 assert.equal(find('Grundbrott','Komplett daterad lagtext med källhänvisning').completed,387);
 assert.equal(find('Grundbrott','Strukturerad inledande rekvisitgenomgång').completed,387);
+assert.equal(find('Grundbrott','Grundläggande straffskaleavstämning').completed,387);
+assert.equal(find('Grundbrott','Separat direktkontroll av brottsgradens straffskala').completed,387);
 assert.equal(find('Förstadier','Sökbart förstadiekort').completed,1086);
 assert.equal(find('Förstadier','Individuellt godkänd kriminaliseringsprövning').completed,0);
 assert.equal(find('Förstadier','Individuell kontroll av straffskala/åtal/tvångsmedel').completed,0);
