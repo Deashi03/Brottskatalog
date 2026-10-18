@@ -11,7 +11,17 @@ const rows=base.filter(c=>c.penaltyReviewScope==='individual-current-special-sta
 for(const c of rows){
  assert.equal(c.penaltyGradeReviewDate,'2026-10-18');assert.ok(c.penaltyGradeReviewSource.startsWith('https://'));
  assert.equal(c.penaltyRangeVerified,true);assert.equal(c.penaltyReviewSafety.includes('Only numeric'),true);
- assert.notEqual(c.rekvisit15?.legalReviewApproved,true);assert.notEqual(c.lawCompletenessVerified,true);
+ assert.notEqual(c.rekvisit15?.legalReviewApproved,true);
+ const verifiedNames=new Set(['Bidragsbrott','Ringa bidragsbrott','Grovt bidragsbrott','Vårdslöst bidragsbrott',
+  'Skattebrott','Skatteförseelse','Grovt skattebrott','Vårdslös skatteuppgift','Skatteavdragsbrott',
+  'Skatteredovisningsbrott','Vårdslös skatteredovisning','Försvårande av skattekontroll',
+  'Grovt försvårande av skattekontroll']);
+ if(verifiedNames.has(c.title)){
+  assert.equal(c.lawCompletenessVerified,true,'New independent SFS paragraph audit: '+c.title);
+  assert.equal(c.lawCompletenessReviewScope,'current-paragraph-only');
+  assert.ok(c.lawCompletenessSourceURL?.includes('riksdagen.se'));
+  assert.notEqual(c.rekvisit15?.legalReviewApproved,true);
+ }else assert.notEqual(c.lawCompletenessVerified,true);
 }
 assert.equal(base.find(c=>c.title==='Grovt penningtvättsbrott').penaltyRange.min,1);
 assert.equal(base.find(c=>c.title==='Grovt bidragsbrott').penaltyRange.min,1);
