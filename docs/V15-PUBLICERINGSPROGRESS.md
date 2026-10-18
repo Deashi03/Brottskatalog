@@ -1,6 +1,6 @@
 # Brottskatalog V1.5 – mätbar väg till publicering
 
-> **Senaste avstämning: 50,3 % (5 757/11 448), 5 691 åtgärder återstår.** Individuella rättsliga slutrevisioner är fortfarande inte godkända. Äldre procentsiffror nedan redovisar revisionshistorik.
+> **Senaste avstämning: 52,1 % (5 969/11 450), 5 481 åtgärder återstår.** De 138 speciallagsförstadierna har nu särskilt godkända, källbegränsade lagstödsbesked. Brottens fullständiga rättsliga slutrevision och konkret tvångsmedelsbedömning återstår. Äldre avstämningar redovisas nedan som revisionshistorik.
 
 **Beräknad status: 46,3 % (5 297 av 11 434 jämnt räknade åtgärder).** Återstår **6 137**. Avser arbetsgren `v15-komplett-brb-rekvisit-typexempel`, avstämd 18 oktober 2026. Testad i [GitHub Actions 39154276028](https://github.com/Deashi03/Brottskatalog/actions/runs/39154276028).
 
@@ -203,3 +203,42 @@ Två nya moduler `brb-direct-grade-clauses-15.js` och `brb-direct-grade-remainin
 | **Summa** | **5 757** | **11 448** | **5 691** |
 
 **Närmast kvar:** hantera de 15 öppna grad-/förstadietolkningarna vars negativa eller positiva svar inte får bestämmas genom rubrikmatchning, gå därefter vidare med individuell källbaserad förstadiestraffskalegranskning och de nio rättsliga slutmomenten per grundbrott. Ingen ny automatisk prövning av häktning, åtal eller tvångsmedel; ingen juridisk slutrevision har ännu godkänts. **PR #2 är fortfarande draft och V1.4 på `main` opåverkad.**
+
+---
+
+## 18 oktober 2026 – 52,1 %, särskilda förstadiernas individuella lagstödsgranskning
+
+**Verifierad status: 5 969 av 11 450 lika vägda åtgärder = 52,1 %. Återstår 5 481.** Föregående avstämning var **50,3 % (5 757/11 448)**. I denna omgång har **210 separata förstadieuppgifter** utförts och två nya CI-kontroller lagts till och genomgått fullständig testkörning. Totalt alltså **+212 avklarade uppgifter**.
+
+### 72 särskilda förstadier utan uttrycklig kriminalisering
+
+En separat, strikt källbunden granskning i `special-negative-stage-scope-15.js` jämför varje namn och förstadie med den aktuella specialförfattningens uttryckliga uppräkning. **72 individuella lagstödsprövningar** har fått ett snävt negativt rättskällebesked: förstadiet är inte särskilt straffbelagt **som just den namngivna brottstypen enligt den granskade gällande lagen**. De utgör 23 fall inom smugglingslagen, sex inom penningtvättsbrottslagen, 25 inom skattebrottslagen, tolv inom bidragsbrottslagen och sex inom lagen om brandfarliga och explosiva varor.
+
+Samma 72 kort har fått en separat **begränsad konsekvenskontroll**: ett förstadium som inte är kriminaliserat genom just det granskade straffbudet får ingen egen påföljd, åtalspunkt eller självständig tvångsmedelsgrund **enbart genom det förstadiet**. Detta är inte ett frikännande, inte ett påstående om att gärningen inte kan omfattas av något annat brott och inte en tillämpningsbedömning av äldre lagversion. **Automatisk tvångsmedelsbefogenhet har inte godkänts.**
+
+### 66 uttryckligt kriminaliserade speciallagsförstadier
+
+Ytterligare **66 individuella lagstödsprövningar**, dokumenterade i `special-positive-stage-scope-15.js`, bekräftar att det namngivna förstadiet finns med i aktuellt särskilt kriminaliseringsstadgande: 46 enligt smugglingslagen, tolv enligt penningtvättsbrottslagen, två enligt skattebrottslagen och sex enligt lagen om brandfarliga och explosiva varor.
+
+De 66 kortens **andra juridiska slutmoment (straffskala/åtal/tvångsmedel) är fortfarande oavgjort**. Hänvisningen till BrB 23 kap. måste prövas med faktiska omständigheter, gärningsdag, subjektiva rekvisit och övergångsregler. Godkännandet är enbart avgränsad **aktuell förstadieuppräkning**, inte ett fastställande av straffansvar för en konkret person.
+
+Båda modulerna kräver oförändrad versionsbunden källa, godkänd individuell preliminär källkoppling och korrekt specifik brottstyp och förstadieform. Förändrad eller utebliven källa ger inget nytt intyg. Testerna omfattar negativa källmutationer och att de 66 positiva fallen inte av misstag får den negativa konsekvenskontrollens godkännande.
+
+### Avstämning efter arbetet
+
+| Grupp | Genomfört | Totalt | Kvar |
+| --- | ---: | ---: | ---: |
+| Grundbrottens inledande uppgifter | 2 322 | 2 322 | 0 |
+| Grundbrottens nio individuella juridiska slutmoment | 0 | 3 483 | 3 483 |
+| Förstadier: preliminära och individuella kontroller | 3 453 | 5 430 | 1 977 |
+| Särskilda 14-årskontroller | 83 | 86 | 3 |
+| Automatiserade CI-kontroller | 99 | 99 | 0 |
+| Teknik och logistik | 12 | 12 | 0 |
+| Slutpublicering | 0 | 18 | 18 |
+| **Summa** | **5 969** | **11 450** | **5 481** |
+
+**Verifierad testkörning inklusive iPhone:** [GitHub Actions 39166528537](https://github.com/Deashi03/Brottskatalog/actions/runs/39166528537). Samtliga 99 separata registrerade CI-steg godkända.
+
+**Rättslig release-spärr kvar:** 0/3 483 juridiska slutkontroller av grundbrott, **15 särskilt oavgjorda förstadier**, 3 kontroller av 14-årsundantaget och 18 egentliga publiceringsåtgärder. Inget nytt automatiskt beslut om gripande, anhållande, häktning eller andra tvångsmedel. V1.5 fortsatt draft, V1.4 på `main` oförändrad.
+
+Källor för gruppvis kontroll: [smugglingslagen 14 §](https://www.riksdagen.se/sv/dokument-och-lagar/dokument/svensk-forfattningssamling/lag-20001225-om-straff-for-smuggling_sfs-2000-1225/), [penningtvättsbrottslagen 8 §](https://www.riksdagen.se/sv/dokument-och-lagar/dokument/svensk-forfattningssamling/lag-2014307-om-straff-for-penningtvattsbrott_sfs-2014-307/), [skattebrottslagen 11 §](https://www.riksdagen.se/sv/dokument-och-lagar/dokument/svensk-forfattningssamling/skattebrottslag-197169_sfs-1971-69/), [bidragsbrottslagen](https://www.riksdagen.se/sv/dokument-och-lagar/dokument/svensk-forfattningssamling/bidragsbrottslag-2007612_sfs-2007-612/) och [lagen om brandfarliga och explosiva varor 30 a §](https://www.riksdagen.se/sv/dokument-och-lagar/dokument/svensk-forfattningssamling/lag-20101011-om-brandfarliga-och-explosiva_sfs-2010-1011/).
