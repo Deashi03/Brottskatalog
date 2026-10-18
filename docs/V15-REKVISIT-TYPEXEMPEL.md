@@ -1,3 +1,11 @@
+# Fullständig revisionsakt för samtliga 319 BrB-brottskort
+
+Revisionsverktyget utökas från 37 polisprioriterade kort till **alla 319 BrB-brottskort**, bestående av 37 prioriterade akter och 282 övriga. Akterna innehåller individuellt källkopplad lagtext, lagtextdatum, brottsgrad, strukturerade undervisningsrekvisit, eventuella förstadier, åldersregler och en nio-stegs checklista för den återstående juridiska granskningen. Även samtliga 12 osäkra förstadier har egna akter.
+
+**Viktigt:** 319 förberedda revisionsakter innebär inte 319 juridiskt godkända brott. Samtliga omfattas fortfarande av publiceringsspärr och har status `LEGAL_AUDIT_PENDING` tills lagversion, praxis, förarbeten, alternativ, rekvisit, undantag, åtalsfrågor och tvångsmedel är granskade individuellt. Den fullständiga filen levereras som en GitHub Actions-testartefakt, `v15-priority-legal-dossiers.json`.
+
+---
+
 # Revisionsakter för polisiära kärnbrott och 12 särskilda förstadier – 18 oktober 2026
 
 En ny CI-genererad arbetsfil `audit/v15-priority-legal-dossiers.json` innehåller **37 prioriterade BrB-brottskort** och **12 individuella osäkra förstadieposter**. För varje kärnbrott ingår den aktuella fullständiga lagtexten, källans granskningsdatum, tidigare strukturerade rekvisit och alternativa gärningsformer, identifierad straffskala, källvarningar, åtalsuppgifter, 14-årstillämpning samt en checklista med nio separata prövningsområden (bl.a. objektiva/subjektiva rekvisit, undantag, förarbeten, praxis, gärningsdatum, förstadier och tvångsmedel). En revisionsakt är ett arbetsunderlag och utgör **inte** ett juridiskt kontrollintyg.

@@ -35,7 +35,7 @@ const questionSet=[
  {id:'prosecution',label:'Kontrollera särskilda åtalsregler och beslutande befogenheter',status:'PENDING'},
  {id:'coercion',label:'Pröva tvångsmedel, proportionalitet, behörighet och konkreta rekvisit självständigt',status:'PENDING'}
 ];
-const crimes=front.map(c=>{
+const toDossier=c=>{
  const p=W[c.statute],ts=p?.text||'',q=c.rekvisit15||{};
  const stageCards=stages.filter(s=>s.stageParentId===c.id);
  return {
@@ -54,7 +54,13 @@ const crimes=front.map(c=>{
  independentHumanLegalReviewRequired:true,
  operationalCustodyAdviceApproved:false,status:'LEGAL_AUDIT_PENDING'
  };
-});
+};
+const crimes=front.map(toDossier);
+const brbAll=base.filter(c=>c.statute?.startsWith('BrB:'));
+const priorityIds=new Set(front.map(c=>c.id));
+const remainingBrB=brbAll.filter(c=>!priorityIds.has(c.id))
+ .sort((a,b)=>Number(a.statute.match(/^BrB:(\d+):/)?.[1]||99)-Number(b.statute.match(/^BrB:(\d+):/)?.[1]||99)||a.title.localeCompare(b.title,'sv')).map(toDossier);
+const allDossiers=[...crimes,...remainingBrB];
 const pending=stages.filter(s=>s.stageStatus==='unverified').map(s=>{
  const parent=base.find(c=>c.id===s.stageParentId),e=s.stageEvidence15||{};
  const sourceRef=parent?.statute?.startsWith('BrB:21:')?'BrB:21:15':'BrB:13:12';
@@ -81,18 +87,22 @@ const pending=stages.filter(s=>s.stageStatus==='unverified').map(s=>{
 });
 const output={schema:1,version:'1.5',generatedAt:new Date().toISOString(),
  purpose:'Individuell juridisk arbetsakt, utan automatisk saklig godkännandeeffekt',
- counts:{policePriorityBrBCards:crimes.length,unverifiedStageCases:pending.length,
+ counts:{policePriorityBrBCards:crimes.length,otherBrBCards:remainingBrB.length,
+ allBrBCards:allDossiers.length,allBrBCardsWithCompleteStatute:allDossiers.filter(x=>x.statuteFullTextIndividuallyVerified).length,
+ unverifiedStageCases:pending.length,
  policeCardsWithCompleteStatute:crimes.filter(x=>x.statuteFullTextIndividuallyVerified).length,
- policeCardsFullyLegallyApproved:crimes.filter(x=>x.finalLegalConclusionApproved).length},
- policePriority:crimes,ambiguousInchoate:pending,
+ policeCardsFullyLegallyApproved:crimes.filter(x=>x.finalLegalConclusionApproved).length,
+ allBrBCardsFullyLegallyApproved:allDossiers.filter(x=>x.finalLegalConclusionApproved).length},
+ policePriority:crimes,remainingBrB,ambiguousInchoate:pending,
  releaseReady:false,automaticCustodyAuthorization:false};
 fs.mkdirSync(path.join(root,'audit'),{recursive:true});
 fs.writeFileSync(path.join(root,'audit/v15-priority-legal-dossiers.json'),JSON.stringify(output,null,2)+'\n');
 console.log('V1.5 LEGAL DOSSIERS '+JSON.stringify({counts:output.counts,examples:crimes.slice(0,5).map(x=>x.title),
  stageGroups:pending.reduce((acc,x)=>{acc[x.authorizingProvision]=(acc[x.authorizingProvision]||0)+1;return acc;},{})}));
-if(crimes.length!==37||pending.length!==12)throw Error('Review coverage changed; audit dossiers need reconciliation');
-if(crimes.some(x=>!x.statuteFullTextIndividuallyVerified||!x.statutoryText||x.legalChecklist.length!==9))
+if(crimes.length!==37||remainingBrB.length!==282||allDossiers.length!==319||pending.length!==12)throw Error('Review coverage changed; audit dossiers need reconciliation');
+if(allDossiers.some(x=>!x.statuteFullTextIndividuallyVerified||!x.statutoryText||x.legalChecklist.length!==9))
  throw Error('Incomplete primary law or audit checkpoints');
 if(pending.some(x=>!x.authorizingFullText||!x.parentFullText||x.stageStatus!=='unverified'||x.finalLegalConclusionApproved))
  throw Error('Unresolved stage must have complete statutory evidence and remain without approval');
+if(new Set(allDossiers.map(x=>x.id)).size!==319)throw Error('Duplicate or missing BrB legal dossiers');
 if(output.releaseReady||output.automaticCustodyAuthorization)throw Error('Unsafe inferred release or detention authority');
