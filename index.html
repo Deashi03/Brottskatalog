@@ -1281,7 +1281,15 @@ function showCustody(c){
  if(c.stageStatus&&c.stageStatus!=='punishable')return;
  const pr=window.BK_COERCIVE?.range?.(c)||c.penaltyRange;
  const unresolved=Boolean(window.BK_COERCIVE?.unresolvedForCoercion15?.(c));
- const known=Boolean(!unresolved&&pr&&Number.isFinite(pr.min)&&Number.isFinite(pr.max));
+ // Only a source-checked, explicitly punishable inchoate to an offence
+ // with a minimum of four years may pass the special formal 24:1 gate.
+ // This is NOT a full inchoate penalty-range verification or custody decision.
+ const verifiedInchoatePresumption=Boolean(c.stageType&&
+  ['forsok','forberedelse','stampling'].includes(c.stageType)&&
+  c.stageStatus==='punishable'&&c.stageReviewDate&&c.stageSource&&
+  Number(c.stageParentMin)>=4&&!c.conditionalPenalty&&
+  !c.applicabilityConditional&&!c.penaltyCrosscheckIssue);
+ const known=Boolean((!unresolved||verifiedInchoatePresumption)&&pr&&Number.isFinite(pr.min)&&Number.isFinite(pr.max));
  const main=known?(pr.max>=1):null;
  const stage=!!c.stageType;
  const presum=known?(stage?(Number(c.stageParentMin)>=4):(pr.min>=1.5||['Grov fridskränkning','Grov kvinnofridskränkning','Hedersförtryck'].includes(c.title))):null;

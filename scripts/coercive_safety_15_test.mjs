@@ -35,6 +35,10 @@ assert.equal(reg.score({...murderAttempt,stageReviewDate:null},group).tone,'unkn
 assert.equal(reg.score({...murderAttempt,stageStatus:'not-criminalized'},seized).tone,'no',
  'Confirmed noncriminalized attempts must show an explicit negative, not an unknown status');
 assert.ok(html.includes('const unresolved=Boolean(window.BK_COERCIVE?.unresolvedForCoercion15?.(c))'));
+assert.ok(html.includes('const verifiedInchoatePresumption=Boolean(c.stageType&&'));
+assert.ok(html.includes('Number(c.stageParentMin)>=4&&!c.conditionalPenalty'));
+assert.ok(html.includes('(!unresolved||verifiedInchoatePresumption)&&pr'));
+
 assert.ok(html.includes("card('Särskilda grunder','RB 24:2',null,'Oberoende av brottets straffskala'"));
 assert.ok(html.includes("card('Utredningshäktning','RB 24:3',null,'Enligt 24:1 eller 24:2'"));
 assert.ok(html.includes('yes===null?\'unknown\''),'Custody card needs three-state marker');

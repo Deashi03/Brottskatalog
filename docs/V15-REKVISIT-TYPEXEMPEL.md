@@ -1,3 +1,9 @@
+# Korrigering av häktningspresumtionens förstadiespår
+
+RB 24:1 andra stycket 2 har en uttrycklig särskild presumtionsregel för straffbara försök, förberedelser och stämplingar till brott med minst fyra års föreskrivet minimistraff. Det tidigare skyddet mot ogrundade gröna bockar hade även dolt formellt korrekta presumtionsmarkeringar för exempelvis ett lagtextkontrollerat **försök till mord**. Nu öppnas endast denna snäva förstadiegrind när både individuell förstadiestraffbarhet, källstöd, granskningsdatum och huvudbrottets fyraårsminimum är dokumenterade. Osäkra förstadier (12) och villkorade straffskalor får fortfarande grå markeringar. En bock visar endast ett formellt kriterium, inte att någon faktiskt får häktas. RB 24:2–3 förblir individuella, grå rekvisitbedömningar.
+
+---
+
 # Tvångsmedelsgranskning – RB 24:1–3 och övriga tröskelvärden, 18 oktober 2026
 
 Säkerhetsspärr tillagd: brottskort med villkorad straffskala, krigsberoende tillämplighet, oavgjort förstadie eller ej källgranskad straffskala får **ingen grön markering för tvångsmedel**. Det tidigare tröskelvärdet i häktningsöversikten för RB 24:2 gav felaktigt rött för bötesbrott. Det har rättats: RB 24:2 har ingen absolut straffskalegräns och kräver särskild individuell prövning av identitet/hemvist och undandraganderisk. RB 24:3 visas separat med grå symbol tills situationens nödvändiga rekvisit är prövade. Gröna symboler för RB 24:1 gäller endast verifierade **formella** tröskelvärden och är inte juridiska beslutsrekommendationer.
