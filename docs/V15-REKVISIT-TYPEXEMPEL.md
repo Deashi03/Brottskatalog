@@ -1,3 +1,13 @@
+# Fulltexter med direkt källjämförelse – 319/319 samt tre ytterligare straffskalor
+
+Hela BrB 4:4 a och 4:4 e har nu jämförts som självständiga kompletta källparagrafer mot Riksdagens gällande lydelse SFS 2026:852, i stället för att enbart visas som reparerade, oklassificerade fulltexter. Det innebär **267 fullständiga kontrollerade paragrafer och direktkälljämförelse på alla 319 BrB-kort**, om regressionssviten är grön. Tre straffskalor har samtidigt kontrollerats separat: grov fridskränkning, grov kvinnofridskränkning och hedersförtryck, alla fängelse lägst ett och högst sex år. Rekvisiten är rättsligt komplicerade och behöver fortfarande individuell praxis- och ansvarskontroll; skalan innebär inte godkänd rättslig tvångsmedelsbedömning.
+
+Straffskalerevisionen omfattar efter detta **177 kontrollerade grader** och **140** återstående grundfall samt **12** villkorade fall. Release-grinden står kvar på STOP.
+
+Källa: https://www.riksdagen.se/sv/dokument-och-lagar/dokument/svensk-forfattningssamling/brottsbalk-1962700_sfs-1962-700/
+
+---
+
 # Straffskalerevision 18 oktober 2026 – 17 grader inom sexualbrott och barnfridsbrott
 
 17 ytterligare brottsgrader har jämförts individuellt med Riksdagens aktuella BrB 4:3 och BrB 6:1 a–12, inklusive grova och ringa grader, men utan att slå ihop de olika specialreglerna. Särskilt viktigt: **sexuellt ofredande enligt BrB 6:10 andra stycket har bötesalternativ, men sexuellt ofredande mot barn enligt första stycket saknar detta**, och grovt sexuellt övergrepp mot barn har annat minimistraff än grovt sexuellt övergrepp enligt 6:2. Ansvarsfrihetsmöjligheten i BrB 6:14 är inte en ändring av straffskalan. Minderåriga offer, oaktsamhetsrekvisit och försök/beredelse bedöms självständigt.

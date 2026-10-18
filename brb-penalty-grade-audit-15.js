@@ -1,4 +1,4 @@
-/* V1.5: explicit individual-range checks of 174 common BrB grades.
+/* V1.5: explicit individual-range checks of 177 common BrB grades.
  * The controlling CURRENT complete SFS paragraphs are curated in
  * brb-curated-lawtext-15.js. Full legal/penalty applicability is NOT approved.
  * Date-dependent, inchoate and coercive rules remain separate work.
@@ -6,6 +6,9 @@
 (()=>{'use strict';const D=window.BK_DATA,W=window.BK_STATUTES;if(!D?.crimes||!W)return;
 const URL='https://www.riksdagen.se/sv/dokument-och-lagar/dokument/svensk-forfattningssamling/brottsbalk-1962700_sfs-1962-700/';
 const rows=[
+ ["Grov fridskränkning","4:4a",1,6,false,false,"Upprepade brott mot närstående med integritetskränkning och skada på självkänslan; särskilt hänsyn till samtliga undergärningar."],
+ ["Grov kvinnofridskränkning","4:4a",1,6,false,false,"Särskilda subjekt-, relations- och könsvillkor enligt andra stycket; samma straffintervall men annan rubricering."],
+ ["Hedersförtryck","4:4e",1,6,false,false,"Särskilt hedersmotiv och upprepade kränkningar; närståendeförhållande är inte självständigt rekvisit enligt 4:4 e."],
  ["Ringa barnfridsbrott","4:3",0,0.5,true,false,"Ringa barnfridsbrott bedöms separat från normal och grov grad; bevittnad gärning och dubbla närståendekrav består."],
  ["Grovt koppleri","6:12",2,10,false,false,"Grov koppleriverksamhet, särskilt omfattning, vinning eller hänsynslöst utnyttjande; straffminimum två år."],
  ["Grovt sexuellt ofredande","6:10",0.5,3,false,false,"Grovhetsbedömning enligt 6:10 av vuxenbrottets andra stycke; annan källa och straffskala än första styckets barnvariant."],
