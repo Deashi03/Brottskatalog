@@ -1,3 +1,9 @@
+# Nio nya pedagogiska typexempel – 18 oktober 2026
+
+Nio nya **enkla självkonstruerade typfall** har lagts till för olaga hot, hemfridsbrott, olaga intrång, bedrägeri, olaga frihetsberövande, mordbrand, falskt larm, tvegifte och dataintrång. De betonar de typiska objektiva gärningsmomenten och anger för varje fall vilken ytterligare bedömning som krävs. Typfallen kan inte betraktas som rättsfall, prejudikat eller juridiskt slutgodkända; ursprungsangivelsen tydliggör att exemplen är konstruerade. Vi avvaktar fortfarande med svårbedömda exempel för psykiskt våld och angrepp mot tjänsteman (spottning/knuff). Rekvisit och straffskalor ändras inte i denna omgång.
+
+---
+
 # Alternativa straffskalor – samtliga 14 villkorade fall (18 oktober 2026)
 
 Tolv villkorade paragraffall får **explicita läsbara alternativa straffskalor**, med villkor och lagrum direkt i det expanderade brottskortet. Det gäller BrB 15:4 a–b, 16:1–2 och 16:6, 18:6 samt 19:1, 19:4, 19:9 och 19:12. För de två hänvisningsstyrda fallen BrB 3:10 och 14:10 redovisas beroendet av respektive underbrott i stället för ett påhittat intervall. Varje villkorsgren måste väljas genom rekvisit-, roll-, gärningsforms-, grad- och tidsprövning. **14 av 14 villkorade fall är strukturellt beskrivna, men 14 av 14 behöver fortfarande situationsspecifik juridisk slutbedömning**. Ingen straffskalegren väljs automatiskt och ingen tvångsmedelsbehörighet har godkänts.

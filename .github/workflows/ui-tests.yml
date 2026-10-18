@@ -31,6 +31,8 @@ on:
       - "scripts/brb10_15_test.mjs"
       - "scripts/brb_inventory_15.mjs"
       - "rekvisit-typexempel-15.js"
+      - "rekvisit-simple-typecases-15.js"
+      - "scripts/rekvisit_simple_typecases_15_test.mjs"
       - "rekvisit-core-15.js"
       - "rekvisit-grader-15.js"
       - "rekvisit-special-15.js"
@@ -358,6 +360,8 @@ jobs:
         run: node scripts/special_other_penalty_grades_15_test.mjs
       - name: V1.5 verify twenty-three SmuglL individual completed grade penalty scales
         run: node scripts/smuggling_penalty_grades_15_test.mjs
+      - name: V1.5 nine simple police typfall retained without misleading legal signoff
+        run: node scripts/rekvisit_simple_typecases_15_test.mjs
       - name: V1.5 all fourteen conditional penalty pathways visible with no automatic choice
         run: node scripts/brb_conditional_penalty_options_15_test.mjs
       - name: V1.5 derivative penalty reference safety for BrB 3:10 and 14:10

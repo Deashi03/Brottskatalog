@@ -1,0 +1,18 @@
+/* V1.5: independently authored simple POLICE TYPFALL. Explanations are examples,
+ * not judicial decisions or substitute for individual legal element/grade review.
+ * Do not invent contested examples where conduct can have several legal meanings.
+ */
+(()=>{'use strict';const D=window.BK_DATA;if(!D?.crimes)return;
+const source="https://www.riksdagen.se/sv/dokument-och-lagar/dokument/svensk-forfattningssamling/brottsbalk-1962700_sfs-1962-700/", rows=[["Olaga hot","BrB:4:5","En person riktar en kniv mot en annan person och säger uttryckligen att han ska döda personen, på ett sätt som typiskt sett är ägnat att framkalla allvarlig rädsla för dennes säkerhet.","Hot med brottslig gärning; den särskilda faran och graden måste alltid prövas."],["Hemfridsbrott","BrB:4:6","En person går utan lov in i en annans bostad genom ytterdörren trots att bostadsinnehavaren uttryckligen har förbjudit inträde.","Olovligt inträngande i annans bostad. Inte samma sak som olaga intrång i andra lokaler."],["Olaga intrång","BrB:4:6","En person bryter upp en låst dörr till ett företags lagerutrymme och går in utan någon rätt att vistas där.","Ett skyddat utrymme utanför bostaden. Inbrottsskador och andra brott kan bedömas separat."],["Bedrägeri","BrB:9:1","En person annonserar en telefon som personen vet inte finns till försäljning. Köparen vilseleds att föra över pengar, som gärningspersonen behåller utan att leverera någon telefon.","Vilseledandet har orsakat disposition, vinning och motsvarande ekonomisk skada. Uppsåt ska föreligga vid gärningen."],["Olaga frihetsberövande","BrB:4:2","En person låser in en annan mot dennes vilja i ett förråd och vägrar låsa upp dörren, så att personen inte kan lämna utrymmet.","Uppsåtligt och olovligt frihetsberövande. Skilj från olaga tvång och från lagliga frihetsberövanden."],["Mordbrand","BrB:13:1","En person tänder avsiktligt eld i trapphuset till ett flerfamiljshus där människor vistas. Branden innebär konkret fara för att personer ska skadas till liv eller hälsa.","Förutsätter den i 13:1 angivna faran. Om gärningen är mindre allvarlig eller grov krävs separat gradbedömning."],["Falskt larm","BrB:16:15","En person ringer medvetet ett falskt bombhot till en myndighet. Uppgiften leder till att polis och räddningstjänst gör en onödig säkerhetsinsats.","Oriktig uppgift om fara och onödig säkerhetsåtgärd. Skilj från missbruk av larmanordning."],["Tvegifte","BrB:7:1","En person som fortfarande är gift med sin första make eller maka ingår ett nytt äktenskap utan att det första äktenskapet har upplösts.","Grundförutsättningen är ett giltigt bestående äktenskap och ett nytt äktenskapsingående."],["Dataintrång","BrB:4:9c","En person använder utan tillstånd en kollegas inloggningsuppgifter för att läsa e-post i dennes privata konto, som är skyddat mot obehörig åtkomst.","Olovlig åtkomst till uppgift avsedd för automatiserad behandling. Behörighet och uppsåt måste prövas."]];
+const report={planned:rows.length,added:0,held:[],existing:[],checked:'2026-10-18',status:'teaching-examples-only'};
+for(const [title,statute,example,note] of rows){
+ const c=D.crimes.find(x=>!x.stageType&&x.title===title);
+ if(!c||c.statute!==statute||!c.lawCompletenessVerified||!c.law||!c.rekvisit15?.groups?.length&&!c.rekvisit15?.routes?.length){report.held.push(title);continue;}
+ if(c.typexempel15?.length){report.existing.push(title);continue;}
+ c.typexempel15=[{text:example,source:'Eget konstruerat pedagogiskt typfall med stöd i '+statute.replace('BrB:', 'BrB ')+'. '+note,
+  sourceURL:source,lawSourceURL:source,kind:'typfall',status:'draft-simple-example-needs-final-juridical-approval',
+  typecaseReviewed:'2026-10-18',legalReviewApproved:false}];
+ report.added++;
+}
+window.BK_SIMPLE_TYPECASES15=report;
+})();
