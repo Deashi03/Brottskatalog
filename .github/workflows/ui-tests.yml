@@ -88,10 +88,13 @@ on:
       - "praxis-alibit-15.js"
       - "brb15-accusation-source-limits-15.js"
       - "brb17-official-boundaries-15.js"
+      - "special-bidrag-skatt-fulltext-15.js"
+      - "special-bidrag-skatt-requisites-15.js"
       - "scripts/brb14_evidence_distinctions_15_test.mjs"
       - "scripts/praxis_alibit_15_test.mjs"
       - "scripts/brb15_accusation_source_limits_15_test.mjs"
       - "scripts/brb17_official_boundaries_15_test.mjs"
+      - "scripts/special_bidrag_skatt_15_test.mjs"
       - "scripts/urkund_gransdragning_15_test.mjs"
       - "scripts/praxis_freja_electronic_urkund_15_test.mjs"
       - "scripts/praxis_vapenbilden_15_test.mjs"
@@ -256,10 +259,13 @@ on:
       - "praxis-alibit-15.js"
       - "brb15-accusation-source-limits-15.js"
       - "brb17-official-boundaries-15.js"
+      - "special-bidrag-skatt-fulltext-15.js"
+      - "special-bidrag-skatt-requisites-15.js"
       - "scripts/brb14_evidence_distinctions_15_test.mjs"
       - "scripts/praxis_alibit_15_test.mjs"
       - "scripts/brb15_accusation_source_limits_15_test.mjs"
       - "scripts/brb17_official_boundaries_15_test.mjs"
+      - "scripts/special_bidrag_skatt_15_test.mjs"
       - "scripts/urkund_gransdragning_15_test.mjs"
       - "scripts/praxis_freja_electronic_urkund_15_test.mjs"
       - "scripts/praxis_vapenbilden_15_test.mjs"
@@ -459,6 +465,8 @@ jobs:
         run: node scripts/brb15_accusation_source_limits_15_test.mjs
       - name: V1.5 2025 protection reforms and BrB 17 official-function boundaries
         run: node scripts/brb17_official_boundaries_15_test.mjs
+      - name: V1.5 independently verified tax and benefit offence fulltext/requisites
+        run: node scripts/special_bidrag_skatt_15_test.mjs
       - name: V1.5 intricate offence alternatives, minority and public-order requisites
         run: node scripts/rekvisit_fordjupning_15_test.mjs
       - name: V1.5 child/adult sex-offence distinctions and limited statutory exemptions
