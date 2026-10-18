@@ -74,6 +74,17 @@ def parse_brb(html):
         # are not paragraph headings. Do not create phantom BrB:4:24.
         if m and re.match(r"(?i)^(?:lagen|förordningen|brottsbalken)\s*\(", m.group(3)):
             m = None
+        # References to previously encountered paragraphs are commonly
+        # wrapped onto a new HTML text line. They must not terminate the
+        # active paragraph (for example BrB 6:6 referring to 4 §).
+        if m and key is not None and not re.match(r"^/Träder i kraft\b", m.group(3)):
+            prev_sec = key.split(":")[-1]
+            old_order = re.fullmatch(r"(\d+)([a-z]?)", prev_sec)
+            if old_order:
+                previous_rank = (int(old_order.group(1)), old_order.group(2))
+                candidate_rank = (int(m.group(1)), m.group(2).lower())
+                if candidate_rank <= previous_rank:
+                    m = None
         if m:
             flush()
             sec = m.group(1) + m.group(2).lower()
