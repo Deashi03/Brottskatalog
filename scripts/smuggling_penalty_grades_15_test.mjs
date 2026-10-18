@@ -12,5 +12,5 @@ for(const c of verified){assert.equal(c.penaltyGradeReviewDate,'2026-10-18');ass
 for(const t of ['Ringa smuggling','Ringa smuggling av explosiv vara','Ringa tullbrott']){
  const c=verified.find(c=>c.title===t);assert.ok(c);assert.equal(c.penaltyFineType15,'penningböter');assert.equal(c.penaltyRange.max,0);
 }
-assert.equal(ctx.window.BK_DATA.crimes.filter(c=>c.stageStatus==='unverified').length,12);
+assert.equal(ctx.window.BK_DATA.crimes.filter(c=>c.stageStatus==='unverified').length,15);
 console.log('PASS V1.5: 23 full-current numerical SmuglL grades sourced from official 2026:1321, no overbroad stage/penalty signoff');
