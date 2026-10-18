@@ -105,7 +105,7 @@ for(const [title,key,sec] of map){
    ||c.penaltyGradeReviewDate!=='2026-10-18'
    ||c.penaltyGradeReviewSource!==l.url
    ||c.lawCompletenessVerified===true||c.rekvisit15?.legalReviewApproved===true
-   ||!text?.startsWith((key==='VapenL'?'18 kap. ':'')+sec.replace(/(\d+)([a-z])/,'$1 $2')+' §')
+   ||!text?.startsWith(key==='VapenL'?'18 kap. '+sec.split(':')[1]+' §':sec.replace(/(\d+)([a-z])/,'$1 $2')+' §')
    ||text.length<120){
   report.held.push(title);continue;
  }
