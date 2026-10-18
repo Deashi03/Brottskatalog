@@ -23,6 +23,8 @@ on:
       - "scripts/v15_penalty_direct_evidence_queue.mjs"
       - "scripts/v15_stage_evidence_gaps.mjs"
       - "scripts/v15_age14_candidate_inventory.mjs"
+      - "age14-candidate-source-audit-15.js"
+      - "scripts/age14_candidate_source_audit_15_test.mjs"
       - "special-stage-enumeration-15.js"
       - "scripts/special_stage_enumeration_15_test.mjs"
       - "brb20-stage-negative-source-15.js"
@@ -554,6 +556,8 @@ jobs:
         run: node scripts/v15_stage_evidence_gaps.mjs
       - name: Enumerate age-14 statutory threshold candidates
         run: node scripts/v15_age14_candidate_inventory.mjs
+      - name: Review 83 individual age-14 statutory minimum thresholds
+        run: node scripts/age14_candidate_source_audit_15_test.mjs
       - name: Verify 138 individual special-law inchoate enumerations
         run: node scripts/special_stage_enumeration_15_test.mjs
       - name: Review six BrB 20:2 stage source links
