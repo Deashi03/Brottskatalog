@@ -1,4 +1,4 @@
-/* V1.5: explicit individual-range checks of 145 common BrB grades.
+/* V1.5: explicit individual-range checks of 157 common BrB grades.
  * The controlling CURRENT complete SFS paragraphs are curated in
  * brb-curated-lawtext-15.js. Full legal/penalty applicability is NOT approved.
  * Date-dependent, inchoate and coercive rules remain separate work.
@@ -6,6 +6,18 @@
 (()=>{'use strict';const D=window.BK_DATA,W=window.BK_STATUTES;if(!D?.crimes||!W)return;
 const URL='https://www.riksdagen.se/sv/dokument-och-lagar/dokument/svensk-forfattningssamling/brottsbalk-1962700_sfs-1962-700/';
 const rows=[
+ ["Mord","3:1",10,18,false,true,"Grundskala tio till arton år eller livstid; jämför livstidsindikationer och särskilda tidsbundna bestämmelser individuellt."],
+ ["Dråp","3:2",6,10,false,false,"Mindre grovt dödande jämfört med mord; kvalifikationen avgörs efter omständigheterna, inte enbart straffskalan."],
+ ["Misshandel","3:5",0,2,false,false,"Normalgraden högst två års fängelse; ringa misshandel i samma paragraf har egen böter-/fängelseskala."],
+ ["Ringa misshandel","3:5",0,0.5,true,false,"Ringa graden enligt 3:5, böter eller fängelse högst sex månader; gradbedömning och uppsåt kräver separat analys."],
+ ["Grov misshandel","3:6",1.5,7,false,false,"Grov grad enligt 3:6 första stycket: livsfarlig gärning, svår skada eller särskild hänsynslöshet; synnerligen grov har eget intervall."],
+ ["Synnerligen grov misshandel","3:6",6,12,false,false,"Synnerligen grov grad enligt 3:6 andra stycket: bestående skada, synnerligt lidande eller synnerlig hänsynslöshet."],
+ ["Olaga hot","4:5",0,2,true,false,"Böter eller högst två års fängelse för normalgraden; särskild grovhetsprövning av hotets allvar och förstärkning."],
+ ["Grovt olaga hot","4:5",1,4,false,false,"Grov grad i 4:5 med särskilda grovhetsomständigheter; kravet på allvarlig rädsla och uppsåt prövas separat."],
+ ["Våldtäkt","6:1",3,6,false,false,"Normalgrad tre till sex år. Minder grovt enligt 6:1 har särskilt intervall sex månader till fyra år; får inte ärvas av normalgradskortet."],
+ ["Grov våldtäkt","6:1",5,12,false,false,"Grov grad fem till tolv år enligt 6:1; särskilt allvarligt våld/hot, flera gärningspersoner och hänsynslöshet kräver samlad bedömning."],
+ ["Våldtäkt mot barn","6:4",3,6,false,false,"Normalgrad tre till sex år; 6:4 inkluderar särskilda 15–17-årsfall, medan mindre grovt regleras i 6:5."],
+ ["Grov våldtäkt mot barn","6:4",5,12,false,false,"Grov grad fem till tolv år, bl.a. allvarligt våld, flera deltagare och särskild hänsynslöshet; barns ålder och relation prövas."],
  // Title, official SFS section, min/max years, fines permitted, life, special caveat.
  ['Barnadråp','3:3',0,6,false,false,'Avser moderns dödande vid nedkomsten i upprivet sinnestillstånd/svårt trångmål; högst sex år, skilda rekvisit från mord/dråp.'],
  ['Barnfridsbrott','4:3',0,2,false,false,'Kräver straffbar grundgärning i den uttömmande listan, bevittnande av barnet och dubbelt närståendeförhållande; ringa/grov är särskilda grader.'],

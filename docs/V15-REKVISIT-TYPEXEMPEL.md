@@ -1,3 +1,13 @@
+# Straffskalerevision 18 oktober 2026 – 12 polisiära kärngrader
+
+Tolv ytterligare separata straffskaleintervall är individuellt jämförda med Sveriges riksdags aktuella konsoliderade BrB (3:1–2, 3:5–6, 4:5, 6:1 och 6:4): mord, dråp, misshandel, ringa misshandel, grov misshandel, synnerligen grov misshandel, olaga hot, grovt olaga hot, våldtäkt, grov våldtäkt, våldtäkt mot barn och grov våldtäkt mot barn. Separata böter-/livstidsflaggor kontrolleras och de alternativa graderna i samma paragraf (bl.a. mindre grov våldtäkt, ringa misshandel, synnerligen grov misshandel, sexuellt utnyttjande av barn) förblir tydligt åtskilda. Lagtexterna laddas och verifieras **före** straffskalerevisionen. Endast den aktuella gradens numeriska straffintervall verifieras, inte historiskt gärningsdatum, praxis, straffbarhet i enskilda fall eller tvångsmedel.
+
+**157/157** nu genomgångna straffskalefall; **159** grundfall och **12** särskilt villkorade fall återstår. CI genererar fortsatt en rangordnad kö och spärrar varje ogrundat fullständigt godkännande. Fullständig juridisk signoff 0/319; release STOP.
+
+Källa: https://www.riksdagen.se/sv/dokument-och-lagar/dokument/svensk-forfattningssamling/brottsbalk-1962700_sfs-1962-700/
+
+---
+
 # Straffskalegranskningen – detaljerad åtgärdskö
 
 Ny CI-genererad revisionsfil: `audit/v15-penalty-review-queue.json` med varje återstående baspost, lagrum, hittills lagrat intervall, villkorade undantag, verifieringskälla, rättslig kontrollista och uttrycklig spärr mot automatiskt godkännande. Den skiljer mellan 171 ordinarie och 12 särskilt villkorade straffskalefall. Polisrelevanta poster prioriteras, men juridisk säkerhet väger tyngre än antal färdigmarkerade kort. CI kräver att kön är heltäckande och uppdaterad; rapporten publiceras endast som testartefakt, inte i V1.4.
