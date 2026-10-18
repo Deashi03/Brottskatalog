@@ -1,3 +1,13 @@
+# Straffskalerevision: familje- och förmögenhetsbrott (18 oktober 2026)
+
+Ytterligare **15 brottsgradsskalor** från BrB 7:1–4, 9:8–10 och 10:6–8 har källjämförts med Riksdagens konsoliderade Brottsbalk t.o.m. SFS 2026:1656. Fyndförseelse (10:8) är bötesbrott utan fängelseskala; svindleri (9:9) har särskilt bötesalternativ endast för ringa grad; grov egenmäktighet med barn (7:4) får inte förväxlas med normalgradens bötesalternativ. Dagens 7:4 står kvar, den nya lydelsen **2027-01-01 får inte användas i förtid**.
+
+**192** kontrollerade straffskalegrader; **125** ordinarie och 12 villkorade fall återstår. Kontrollen omfattar **endast** numerisk straffskala för aktuell grad och är inte slutgiltig rättslig certifiering av brottsrekvisit, förstadier, praxis eller tvångsmedel. `releaseReady:false`.
+
+Källa: https://www.riksdagen.se/sv/dokument-och-lagar/dokument/svensk-forfattningssamling/brottsbalk-1962700_sfs-1962-700/
+
+---
+
 # Fulltexter med direkt källjämförelse – 319/319 samt tre ytterligare straffskalor
 
 Hela BrB 4:4 a och 4:4 e har nu jämförts som självständiga kompletta källparagrafer mot Riksdagens gällande lydelse SFS 2026:852, i stället för att enbart visas som reparerade, oklassificerade fulltexter. Det innebär **267 fullständiga kontrollerade paragrafer och direktkälljämförelse på alla 319 BrB-kort**, om regressionssviten är grön. Tre straffskalor har samtidigt kontrollerats separat: grov fridskränkning, grov kvinnofridskränkning och hedersförtryck, alla fängelse lägst ett och högst sex år. Rekvisiten är rättsligt komplicerade och behöver fortfarande individuell praxis- och ansvarskontroll; skalan innebär inte godkänd rättslig tvångsmedelsbedömning.

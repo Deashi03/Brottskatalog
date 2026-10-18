@@ -1,4 +1,4 @@
-/* V1.5: explicit individual-range checks of 177 common BrB grades.
+/* V1.5: explicit individual-range checks of 192 common BrB grades.
  * The controlling CURRENT complete SFS paragraphs are curated in
  * brb-curated-lawtext-15.js. Full legal/penalty applicability is NOT approved.
  * Date-dependent, inchoate and coercive rules remain separate work.
@@ -6,6 +6,21 @@
 (()=>{'use strict';const D=window.BK_DATA,W=window.BK_STATUTES;if(!D?.crimes||!W)return;
 const URL='https://www.riksdagen.se/sv/dokument-och-lagar/dokument/svensk-forfattningssamling/brottsbalk-1962700_sfs-1962-700/';
 const rows=[
+ ["Egenmäktighet med barn","7:4",0,2,true,false,"Normalgraden böter eller fängelse högst två år. Kontrollera under-15-årsvillkor, vårdnadsställning och särskilt subsidiaritetsvillkor. Framtida lydelse från 2027-01-01 ska inte förtillämpas."],
+ ["Grov egenmäktighet med barn","7:4",1,6,false,false,"Grov grad fängelse ett till sex år; normalgradens bötesalternativ gäller inte. Ny lydelse från 2027-01-01 hålls skild från dagens."],
+ ["Förvanskande av familjeställning","7:3",0,2,true,false,"Böter eller fängelse högst två år; annan rubricering än egenmäktighet med barn, se 7:5 för försök."],
+ ["Olovligt ingående av äktenskap","7:1",0,2,true,false,"Separat andra stycket av 7:1 för registrerat partnerskap; böter eller fängelse högst två år."],
+ ["Otillbörligt utverkande av samtycke eller tillstånd till adoption av barn","7:2",0,2,true,false,"Otillbörliga medel vid adoption av minderårig; böter eller fängelse högst två år, försök enligt 7:5."],
+ ["Tvegifte","7:1",0,2,true,false,"Första stycket, böter eller fängelse högst två år; skilj från olovligt ingående av äktenskap."],
+ ["Grovt svindleri","9:9",1,6,false,false,"Grov svindlerigärning enligt tredje stycket, ett till sex års fängelse; inte samma bötesalternativ som ringa graden."],
+ ["Ockerpantning","9:10",0,2,true,false,"Böter eller fängelse högst två år; mottagen handling som otillbörligt påtryckningsmedel vid krav."],
+ ["Oredligt förfarande","9:8",0,2,true,false,"Böter eller fängelse högst två år; subsidiärt till tidigare bestämmelser i 9 kap."],
+ ["Ringa svindleri","9:9",0,0.5,true,false,"Ringa svindleri böter eller fängelse högst sex månader enligt 9:9 första stycket."],
+ ["Svindleri","9:9",0,2,false,false,"Ordinarie svindleri fängelse högst två år, trots att ringa svindleri tillåter böter."],
+ ["Behörighetsmissbruk","10:6",0,2,true,false,"Böter eller fängelse högst två år; särskilda gärningsformer vid missbrukad behörighet eller skuldebrev."],
+ ["Fyndförseelse","10:8",0,0,true,false,"Endast böter. Uppsåtligt tillägnande eller olovligt förfogande kan hänföras till 10:4 i stället."],
+ ["Grovt olovligt brukande","10:7",0.5,4,false,false,"Grov grad fängelse sex månader till fyra år; annan skala än normalgradens böter eller fängelse."],
+ ["Olovligt brukande","10:7",0,1,true,false,"Normalgraden böter eller högst ett års fängelse; kräver skada eller olägenhet och annan rätt till egendomen."],
  ["Grov fridskränkning","4:4a",1,6,false,false,"Upprepade brott mot närstående med integritetskränkning och skada på självkänslan; särskilt hänsyn till samtliga undergärningar."],
  ["Grov kvinnofridskränkning","4:4a",1,6,false,false,"Särskilda subjekt-, relations- och könsvillkor enligt andra stycket; samma straffintervall men annan rubricering."],
  ["Hedersförtryck","4:4e",1,6,false,false,"Särskilt hedersmotiv och upprepade kränkningar; närståendeförhållande är inte självständigt rekvisit enligt 4:4 e."],
