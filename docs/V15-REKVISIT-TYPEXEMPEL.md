@@ -1039,3 +1039,34 @@ De individuella lagtexttesterna kontrollerar ordalydelserna och säkerställer a
 | Komplett individuellt juridiskt slutgodkända BrB-brott | **0/319** |
 
 **Full CI med iPhone-/mobiltest PASS:** [GitHub Actions 39080976805](https://github.com/Deashi03/Brottskatalog/actions/runs/39080976805). Katalogen innehåller fortfarande **1 470** brotts- och förstadieposter. **Juridisk release-spärr `releaseReady:false` är aktiv**; ingen merge eller publicering.
+
+---
+
+## 18 oktober 2026 – HD NJA 2025 s. 1029 ”Freja” och urkundsbrottens gränsdragning
+
+### Autentiskt prejudikat: brukande av falsk elektronisk urkund
+
+HD:s dom **4 november 2025**, **NJA 2025 s. 1029 (”Freja”), mål B 920-25**, är nu knuten till brottskortet **Brukande av det förfalskade, BrB 14:10** som ett **verkligt, källbundet rättsfallsbaserat typexempel**, inte ett påhittat polisiärt scenario.
+
+- [HD:s officiella domstolsnyhet](https://www.domstol.se/nyheter/2025/11/var-det-brukande-av-falsk-urkund-att-visa-upp-en-skarmbild-av-ett-falskt-freja-eid/) beskriver att personen vid restaurangbesök och för polis visat en bild som såg ut som Freja eID med felaktig ålder.
+- HD frikände från **brukande av falsk urkund**. För en **elektronisk handling** krävs att **utställarangivelsen på handlingen i lagrad form** kan kontrolleras på ett sätt som åtminstone framstår som tillförlitligt. Det var inte styrkt i målet. Att bilden ser ut som en riktig legitimation på skärmen är inte ensamt tillräckligt.
+- Avgörandet innebär **inte** att alla falska skärmbilder, e-legitimationer eller förfalskade handlingar är straffria. Rättsregeln rör rekvisitet *urkund* för den elektroniska varianten och HD:s bedömning av utredningen.
+- BrB 14:10 omfattar också **andra former av förfalskning** än urkunder. Straffet följer **vilken konkret förfalskning som brukats**, alltså finns ingen rättvisande enda numerisk straffskala för hela 14:10.
+- Källbundna rättspraxisanteckningar på BrB **14:1** och **14:10**; ingen ny fullständig rekvisit-, grad-, skuld- eller tvångsmedelscertifiering.
+
+Ny fil `praxis-freja-electronic-urkund-15.js` och regression `scripts/praxis_freja_electronic_urkund_15_test.mjs`. Regressionen kräver äkta HD-källa, rätt lagrum, bevarad digital kontrollskillnad, **exakt ett** typexempel trots omkörning, skydd mot påhittade HD-fall samt oförändrad juridisk publiceringsspärr. Det äldre no-typecase-testet för BrB 14:10 har skärpts: **endast det individuellt hänvisade autentiska HD-avgörandet** får vara undantag från förbudet mot osäkra påhittade typfall.
+
+### Fyra skilda juridiska gärningsformer – visas som anteckning i befintliga kort
+
+`urkund-gransdragning-15.js` anger skillnaderna med direkt stöd i fullständig aktuell SFS-text:
+
+1. **BrB 14:1 Urkundsförfalskning**: obehörig framställning av en falsk urkund eller ändring/utfyllnad av en äkta, med dokumentets särskilda karaktär och fara i bevishänseende.
+2. **BrB 14:10 Brukande av det förfalskade**: faktisk användning/åberopande av förfalskade föremål enligt kapitlet, med bevisfara och straffhänvisning till den aktuella förfalskningen.
+3. **BrB 15:11 Osant intygande**: osann uppgift i intyg/urkund enligt paragrafens avgränsade förutsättningar, eller en skenhandling om rättshandling, med bevisfara; andra stycket omfattar brukande av sådan osann urkund.
+4. **BrB 15:12 Missbruk av urkund**: sanningslöst åberopande av personlig urkund, utlämnande för sådant missbruk eller påstående om riktig kopia enligt särskilt reglerade alternativ; kräver bevisfara.
+
+Skildringarna ersätter inte befintliga rekvisitstrukturer, utan läggs till när **samtliga fyra paragraftexter är individuellt källverifierade**. Vid källkonflikt stannar systemet i befintligt läge. Regression `scripts/urkund_gransdragning_15_test.mjs` kräver detta och att alla fyra kort fortsatt är **juridiskt osignerade**.
+
+### Revisionsgränsen är fortfarande juridisk, inte teknisk
+
+I det nuvarande arbetsutkastet kan **319/319** BrB-kort ha fullständig daterad och källkopplad lagtext och pedagogiskt strukturerade rekvisit, men **0/319** har självständigt fullständig juridisk slutcertifiering. Granskningen av **12 förstadier**, **14 villkorade straffskalesituationer**, **66 möjliga åldersundantag** och individuell brottsbedömning kvarstår. Inga tvångsmedel beviljas eller godkänns automatiskt på grundval av rättsfallet. **`releaseReady:false` och draft PR #2 kvarstår, V1.4 på main opåverkad.**
