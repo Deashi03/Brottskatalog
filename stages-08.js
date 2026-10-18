@@ -44,7 +44,7 @@ add('BrB 11:6','P','Grovt bokföringsbrott');
 add('BrB 12:5','F','Skadegörelse|Grov skadegörelse');
 add('BrB 12:5','P','Grov skadegörelse');
 add('BrB 13:12','FPS','Mordbrand|Grov mordbrand|Allmänfarlig ödeläggelse|Grov allmänfarlig ödeläggelse|Sabotage|Grovt sabotage|Kapning|Sjö- eller luftfartssabotage|Flygplatssabotage|Sabotage mot blåljusverksamhet|Grovt sabotage mot blåljusverksamhet|Spridande av gift eller smitta|Förgöring');
-add('BrB 14:13','FP','Urkundsförfalskning|Grov urkundsförfalskning|Hindrande av urkunds bevisfunktion|Signaturförfalskning|Penningförfalskning|Märkesförfalskning|Förfalskning av fast märke|Brukande av vad som förfalskats');
+add('BrB 14:13','FP','Urkundsförfalskning|Grov urkundsförfalskning|Hindrande av urkunds bevisfunktion|Signaturförfalskning|Penningförfalskning|Märkesförfalskning|Förfalskning av fast märke|Brukande av vad som förfalskats|Brukande av det förfalskade');
 add('BrB 14:13','F','Olovlig befattning med falska pengar');
 add('BrB 17:16','FPS','Våld eller hot mot tjänsteman|Grovt våld eller hot mot tjänsteman|Angrepp mot tjänsteman|Grovt angrepp mot tjänsteman|Övergrepp i rättssak|Grovt övergrepp i rättssak|Skyddande av brottsling|Grovt skyddande av brottsling');
 add('BrB 17:16','FP','Främjande av rymning eller flykt|Grovt främjande av rymning eller flykt');
