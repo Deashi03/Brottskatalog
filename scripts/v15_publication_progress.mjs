@@ -28,6 +28,13 @@ const safeConditional=c=>Boolean(c.conditionalPenalty===true
   &&c.conditionalPenaltyFinalAudit15?.status==='APPROVED'
   &&validDate(c.conditionalPenaltyFinalAudit15.checked)
   &&c.conditionalPenaltyFinalAudit15.sourceURL?.startsWith('https://')
+  &&c.conditionalPenaltyFinalAudit15.approvedScope==='complete-current-SFS-branch-and-cross-reference-description-only'
+  &&c.conditionalPenaltyFinalAudit15.branchCount===c.penaltyAlternatives15?.length
+  &&c.conditionalPenaltyFinalAudit15.caseSpecificScaleResolved===false
+  &&c.conditionalPenaltyFinalAudit15.caseSpecificBranchSelectionApproved===false
+  &&c.conditionalPenaltyFinalAudit15.automaticCustodyDecisionApproved===false
+  &&c.conditionalPenaltyFinalAudit15.legalLiabilityApproved===false
+  &&c.conditionalPenaltyFinalAudit15.offenceDateStillRequired===true
   &&c.penaltyAlternativeReview15?.automaticSelectionAllowed===false
   &&c.penaltyAlternativeReview15?.custodyApproved===false);
 const ordinaryRange=c=>c.penaltyRangeVerified===true&&!c.conditionalPenalty
