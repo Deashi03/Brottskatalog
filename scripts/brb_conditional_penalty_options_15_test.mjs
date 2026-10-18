@@ -24,6 +24,6 @@ assert.equal(find('Myteri').penaltyAlternatives15.length,5);
 assert.equal(find('Egenmäktighet vid förhandling med främmande makt').penaltyAlternatives15.length,4);
 assert.equal(find('Upplopp').penaltyAlternatives15.length,3);
 assert.ok(find('Ovarsam utsaga inför en internationell domstol').penaltyAlternatives15[0].when.includes('ej ICC'));
-assert.equal(ctx.window.BK_DATA.crimes.filter(c=>c.stageStatus==='unverified').length,12);
+assert.equal(ctx.window.BK_DATA.crimes.filter(c=>c.stageStatus==='unverified').length,15);
 assert.ok(html.includes('c.penaltyAlternatives15'),'UI must show alternative scales when card is opened');
 console.log('PASS V1.5: fourteen conditional penalty cases have explicit source-anchored alternatives without automatic choice or coercion approval');
