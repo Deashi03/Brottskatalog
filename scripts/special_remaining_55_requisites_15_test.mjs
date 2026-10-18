@@ -27,7 +27,7 @@ assert.equal(specials.filter(c=>!c.lawCompletenessVerified).length,0,'All 68 spe
 assert.equal(base.filter(c=>c.lawCompletenessVerified).length,387,'Do not certify machine-imported content from prerequisite summaries');
 assert.equal(base.filter(c=>c.rekvisit15?.legalReviewApproved===true).length,0);
 assert.equal(ctx.window.BK_DATA.crimes.length,1473);
-assert.equal(ctx.window.BK_DATA.crimes.filter(c=>c.stageStatus==='unverified').length,12);
+assert.equal(ctx.window.BK_DATA.crimes.filter(c=>c.stageStatus==='unverified').length,15);
 assert.equal(base.filter(c=>c.conditionalPenalty&&!c.penaltyRangeVerified).length,14);
 function get(title){const c=base.find(x=>x.title===title);assert.ok(c,title);return c;}
 for(const title of ['Penningtvättsbrott','Grovt penningtvättsbrott','Ringa näringspenningtvätt',
