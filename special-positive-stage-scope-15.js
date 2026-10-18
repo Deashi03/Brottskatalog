@@ -76,7 +76,7 @@ for(const [fam,entry] of Object.entries(law)){
    };
    c.stageSourceScopeNote15='Uttryckligt lagstöd för detta förstadium i aktuell '+fam+' '+entry.section+' § har kontrollerats. Det innebär inte fastställd straffbarhet för en konkret gärning, beslutad straffskala, allmänt åtal eller rätt till tvångsmedel.';
    c.individualLegalAudit15.consequences={
-    status:'APPROVED',checked:'2026-10-19',sourceURL:r.sourceURL,
+    status:'APPROVED',checked:'2026-10-18',sourceURL:r.sourceURL,
     section:fam+' '+entry.section+' §',
     finding:'LISTED_STAGE_REQUIRES_SEPARATE_BR_B_23_AND_INDIVIDUAL_PENALTY_ANALYSIS',
     namedOffenceOnly:true,automaticCoercionApproved:false,
