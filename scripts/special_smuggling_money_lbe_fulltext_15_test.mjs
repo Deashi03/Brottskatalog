@@ -15,7 +15,7 @@ const report=ctx.window.BK_SPECIAL_SMUGG_PTV_LBE_FULLTEXT15;
 assert.equal(report.planned,33);assert.equal(report.certified,33,JSON.stringify(report));
 assert.equal(report.sections,20);assert.equal(report.held.length,0);
 const base=ctx.window.BK_DATA.crimes.filter(c=>!c.stageType);
-assert.equal(base.filter(c=>c.lawMode==='full'&&c.lawCompletenessVerified===true).length,365);
+assert.equal(base.filter(c=>c.lawMode==='full'&&c.lawCompletenessVerified===true).length,387);
 assert.equal(base.filter(c=>c.rekvisit15?.groups?.length||c.rekvisit15?.routes?.length).length,387);
 const get=t=>{const c=base.find(c=>c.title===t);assert.ok(c,t);return c;};
 for(const t of ['Smuggling','Narkotikasmuggling','Vapensmuggling','Smuggling av explosiv vara',
