@@ -93,6 +93,7 @@ for(const [chapter,v] of Object.entries(spec)){
 }
 const report={expectedChapters:Object.keys(spec).map(Number),checked:'2026-10-18',
  planned:0,alreadyReviewed:0,scopeApproved:0,consequencesApproved:0,
+ currentStatutoryStageManifest:spec,
  held:[],byChapter:{},chapterReady,failedClosed:true,
  finalCaseLiabilityApprovals:0,sourceAndHistoricLawApprovals:0,
  approvedAutomaticCoercionDecisions:0};
