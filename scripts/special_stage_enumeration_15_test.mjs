@@ -24,7 +24,11 @@ for(const c of checked){
  assert.equal(x.individualCriminalizationFinalApproved,false);
  assert.equal(x.consequencesApproved,false);
  assert.equal(x.coercionApproved,false);
- assert.equal(c.individualLegalAudit15,undefined);
+ if(c.stageStatus==='not-criminalized'){
+  assert.equal(c.individualLegalAudit15?.scope?.status,'APPROVED');
+  assert.equal(c.individualLegalAudit15?.scope?.caseSpecificLiabilityApproved,false);
+  assert.equal(c.individualLegalAudit15?.consequences?.automaticCoercionApproved,false);
+ }else assert.equal(c.individualLegalAudit15,undefined);
  if(c.stageStatus==='punishable')assert.equal(c.custody,'unknown','Stage eligibility is not a custody determination');
 }
 assert.equal(crimes.length,1473);assert.equal(stages.length,1086);
