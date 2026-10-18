@@ -35,6 +35,40 @@ const questionSet=[
  {id:'prosecution',label:'Kontrollera särskilda åtalsregler och beslutande befogenheter',status:'PENDING'},
  {id:'coercion',label:'Pröva tvångsmedel, proportionalitet, behörighet och konkreta rekvisit självständigt',status:'PENDING'}
 ];
+// Scoped legal-source notes are PROGRESS INDICATORS, not completion of any of
+// the nine independent legal review steps. Never infer completed legal signoff.
+const scopedSourceReviewsFor=c=>{
+ const p=W[c.statute];
+ if(!c.lawCompletenessVerified||!p?.complete
+    ||p.completeTextProvenance!=='manual-crosscheck-current-SFS-paragraph-only'
+    ||!p.checked||p.url!==source)return [];
+ const candidates=[
+  {kind:'HD_ALIBIT_DISTINCTION',data:c.praxisAlibit15,
+   link:x=>x.sourceURL,verified:x=>x.legalReviewApproved===false
+    &&x.statuteChecked===p.checked&&x.statuteSourceURL===source},
+  {kind:'BRB15_ACCUSATION_LIMITS',data:c.accusationLimits15,
+   link:x=>x.preparatoryWorks,verified:x=>x.finalLegalReviewApproved===false
+    &&x.checked===p.checked&&x.sourceURL===source},
+  {kind:'BRB14_EVIDENCE_DISTINCTIONS',data:c.evidenceDistinction15,
+   link:x=>x.sourceURL,verified:x=>x.legalReviewApproved===false
+    &&x.sourceDate===p.checked},
+  {kind:'BRB17_OFFICIAL_FUNCTION_BOUNDARIES',data:c.officialFunctionBoundaries15,
+   link:x=>x.preparatorySourceURL,verified:x=>x.individuallyApproved===false
+    &&x.statuteChecked===p.checked&&x.sourceURL===source}
+ ];
+ return candidates.filter(x=>{
+  const d=x.data;return Boolean(d&&x.verified(d)&&
+   typeof d.note==='string'&&d.note.length>=90&&
+   typeof x.link(d)==='string'&&x.link(d).startsWith('https://'));
+ }).map(x=>({
+  kind:x.kind,status:'SCOPED_SOURCE_NOTE_ONLY',
+  lawRef:c.statute,statutoryTextChecked:p.checked,
+  statutorySourceURL:source,additionalSourceURL:x.link(x.data),
+  finding:x.data.note,finalLegalConclusionApproved:false,
+  legalChecklistCompletedByThisNote:0,
+  offenceDateAndCompetingProvisionsStillRequireReview:true
+ }));
+};
 const toDossier=c=>{
  const p=W[c.statute],ts=p?.text||'',q=c.rekvisit15||{};
  const stageCards=stages.filter(s=>s.stageParentId===c.id);
@@ -45,6 +79,7 @@ const toDossier=c=>{
  gradeCaveat:c.penaltyGradeReviewCaveat||c.penaltyNote||null,
  listedStatutoryRequisites:q.groups||[],listedAlternativeRoutes:q.routes||[],
  requisitesSource:q.sourceURL||c.sourceURL||null,existingTeachingExamples:c.typexempel15||[],
+ scopedSourceNotes:scopedSourceReviewsFor(c),
  inchoateCards:stageCards.map(s=>({id:s.id,title:s.title,status:s.stageStatus||null,source:s.stageSource||null})),
  prosecutionSummary:c.prosecutionDetails||[],existingProsecutionRule:c.prosecutionRule||null,
  age14Applicability:c.age14Exception15||null,
@@ -61,6 +96,16 @@ const priorityIds=new Set(front.map(c=>c.id));
 const remainingBrB=brbAll.filter(c=>!priorityIds.has(c.id))
  .sort((a,b)=>Number(a.statute.match(/^BrB:(\d+):/)?.[1]||99)-Number(b.statute.match(/^BrB:(\d+):/)?.[1]||99)||a.title.localeCompare(b.title,'sv')).map(toDossier);
 const allDossiers=[...crimes,...remainingBrB];
+const scopedSourceSummary=(()=>{
+ const byKind={},cards=new Set();let count=0;
+ for(const d of allDossiers)for(const note of d.scopedSourceNotes){
+  byKind[note.kind]=(byKind[note.kind]||0)+1;count++;cards.add(d.id);
+ }
+ return {entries:count,cardsWithAtLeastOneNote:cards.size,byKind,
+  allNotesArePartial:true,fullLegalReviewApprovalsFromNotes:0,
+  outstandingIndividualFinalReviews:allDossiers.length};
+})();
+
 const pending=stages.filter(s=>s.stageStatus==='unverified').map(s=>{
  const parent=base.find(c=>c.id===s.stageParentId),e=s.stageEvidence15||{};
  const sourceRef=parent?.statute?.startsWith('BrB:21:')?'BrB:21:15':'BrB:13:12';
@@ -92,8 +137,10 @@ const output={schema:1,version:'1.5',generatedAt:new Date().toISOString(),
  unverifiedStageCases:pending.length,
  policeCardsWithCompleteStatute:crimes.filter(x=>x.statuteFullTextIndividuallyVerified).length,
  policeCardsFullyLegallyApproved:crimes.filter(x=>x.finalLegalConclusionApproved).length,
+ scopedSourceNoteEntries:scopedSourceSummary.entries,
+ brbCardsWithScopedSourceNotes:scopedSourceSummary.cardsWithAtLeastOneNote,
  allBrBCardsFullyLegallyApproved:allDossiers.filter(x=>x.finalLegalConclusionApproved).length},
- policePriority:crimes,remainingBrB,ambiguousInchoate:pending,
+ policePriority:crimes,remainingBrB,scopedSourceSummary,ambiguousInchoate:pending,
  releaseReady:false,automaticCustodyAuthorization:false};
 fs.mkdirSync(path.join(root,'audit'),{recursive:true});
 fs.writeFileSync(path.join(root,'audit/v15-priority-legal-dossiers.json'),JSON.stringify(output,null,2)+'\n');
@@ -105,4 +152,8 @@ if(allDossiers.some(x=>!x.statuteFullTextIndividuallyVerified||!x.statutoryText|
 if(pending.some(x=>!x.authorizingFullText||!x.parentFullText||x.stageStatus!=='unverified'||x.finalLegalConclusionApproved))
  throw Error('Unresolved stage must have complete statutory evidence and remain without approval');
 if(new Set(allDossiers.map(x=>x.id)).size!==319)throw Error('Duplicate or missing BrB legal dossiers');
+if(scopedSourceSummary.entries!==Object.values(scopedSourceSummary.byKind).reduce((a,b)=>a+b,0)
+ ||scopedSourceSummary.cardsWithAtLeastOneNote>319
+ ||allDossiers.some(d=>d.scopedSourceNotes.some(n=>n.finalLegalConclusionApproved
+  ||n.legalChecklistCompletedByThisNote!==0)))throw Error('Scoped review is not final legal signoff');
 if(output.releaseReady||output.automaticCustodyAuthorization)throw Error('Unsafe inferred release or detention authority');
