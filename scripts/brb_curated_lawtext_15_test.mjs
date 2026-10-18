@@ -15,7 +15,7 @@ const W=ctx.window.BK_STATUTES;
 const base=ctx.window.BK_DATA.crimes.filter(c=>!c.stageType);
 const stats=ctx.window.BK_CURATED_LAWTEXT15;
 assert.ok(stats,'Curated lawtext report missing');
-assert.equal(stats.sectionsChecked,141,'Exactly one-hundred-forty-one complete paragraphs must have been checked: '+JSON.stringify({missing:stats.missing,mismatch:stats.mismatch,sourceHeads:stats.mismatch.map(k=>({ref:k,text:W[k]?.text?.slice(0,110)}))}));
+assert.equal(stats.sectionsChecked,154,'Exactly one-hundred-fifty-four complete paragraphs must have been checked: '+JSON.stringify({missing:stats.missing,mismatch:stats.mismatch,sourceHeads:stats.mismatch.map(k=>({ref:k,text:W[k]?.text?.slice(0,110)}))}));
 assert.equal(stats.missing.length,0,JSON.stringify(stats.missing));
 assert.equal(stats.mismatch.length,0,JSON.stringify(stats.mismatch));
 const addedCards=base.filter(c=>['BrB:13:5c','BrB:17:10'].includes(c.statute));
@@ -75,15 +75,31 @@ for(const key of ['BrB:15:5','BrB:15:6','BrB:15:7','BrB:15:8','BrB:15:10','BrB:1
  assert.ok(justiceCards.some(c=>c.statute===key),'Missing core justice-system police card '+key);
 }
 assert.ok(justiceCards.length>=7,'Expected individual justice crime records');
+const new20261018Keys=["BrB:7:1","BrB:7:2","BrB:7:3","BrB:7:4","BrB:7:5","BrB:7:6","BrB:10:6","BrB:10:7","BrB:10:8","BrB:16:1","BrB:16:2","BrB:16:3","BrB:16:4"];
+const new20261018Cards=base.filter(c=>new20261018Keys.includes(c.statute));
 const remaining14Keys=['BrB:14:4','BrB:14:5','BrB:14:6','BrB:14:7','BrB:14:9','BrB:14:10','BrB:14:11','BrB:14:12','BrB:14:13'];
 const remaining14Cards=base.filter(c=>remaining14Keys.includes(c.statute));
 for(const key of ['BrB:14:4','BrB:14:5','BrB:14:6','BrB:14:7','BrB:14:9','BrB:14:10','BrB:14:11']){
  assert.ok(remaining14Cards.some(c=>c.statute===key),'Missing independently checked forgery offence: '+key);
 }
 assert.ok(remaining14Cards.length>=7,'Expected directly verified forgery crime cards');
-assert.equal(stats.linkedCardsChecked,21+addedCards.length+propertyCards.length+officeCards.length+negligenceCards.length+newCards.length+economicCards.length+theftFraudCards.length+creditorCards.length+extra12Cards.length+ch4Cards.length+freedomCards.length+updatedSafetyCards.length+justiceCards.length+remaining14Cards.length,
- 'All 141 source-checked SFS paragraphs must cover their offence card counts');
+assert.equal(stats.linkedCardsChecked,21+addedCards.length+propertyCards.length+officeCards.length+negligenceCards.length+newCards.length+economicCards.length+theftFraudCards.length+creditorCards.length+extra12Cards.length+ch4Cards.length+freedomCards.length+updatedSafetyCards.length+justiceCards.length+remaining14Cards.length+new20261018Cards.length,
+ 'All 154 source-checked SFS paragraphs must cover their offence card counts');
 const markers={
+ "BrB:7:1":["tvegifte","olovligt ingående av äktenskap"],
+ "BrB:7:2":["otillbörligt utverkande"],
+ "BrB:7:3":["förvanskande av familjeställning"],
+ "BrB:7:4":["Upphör att gälla U:2027-01-01","egenmäktighet med barn"],
+ "BrB:7:5":["För försök","grovt"],
+ "BrB:7:6":["påkallat ur allmän synpunkt"],
+ "BrB:10:6":["behörighetsmissbruk","skuldebrev"],
+ "BrB:10:7":["olovligt brukande","grovt olovligt brukande"],
+ "BrB:10:8":["fyndförseelse","uppsåt att tillägna sig"],
+ "BrB:16:1":["upplopp","skingrar sig"],
+ "BrB:16:2":["våldsamt upplopp","högst tio år"],
+ "BrB:16:3":["ohörsamhet mot ordningsmakten"],
+ "BrB:16:4":["störande av förrättning","Internationella brottmålsdomstolen"],
+
  'BrB:14:4':['hindrande av urkunds bevisfunktion','utan att vid tillfället ha rätt till det','fara i bevishänseende','brottet inte är att anse som bokföringsbrott','Lag (2013:425).'],
  'BrB:14:5':['signaturförfalskning','ger sken av att den personen angett sig vara upphovsman','Lag (2013:425).'],
  'BrB:14:6':['penningförfalskning','har beslutats för utgivning men ännu inte är gällande','lägst två och högst åtta år','Lag (2013:425).'],
@@ -230,7 +246,7 @@ for(const [ref,expected] of Object.entries(markers)){
  const item=W[ref];
  assert.equal(item.complete,true,'Source complete: '+ref);
  assert.equal(item.machine,false,'Not a machine-only excerpt: '+ref);
- assert.equal(item.checked,(updatedSafetyKeys.includes(ref)||justiceKeys.includes(ref)||remaining14Keys.includes(ref))?'2026-10-18':'2026-10-17');
+ assert.equal(item.checked,(updatedSafetyKeys.includes(ref)||justiceKeys.includes(ref)||remaining14Keys.includes(ref)||new20261018Keys.includes(ref))?'2026-10-18':'2026-10-17');
  assert.equal(item.completeTextProvenance,'manual-crosscheck-current-SFS-paragraph-only');
  for(const phrase of expected)assert.ok(item.text.includes(phrase),ref+' lacks '+phrase);
  for(const c of base.filter(c=>c.statute===ref)){

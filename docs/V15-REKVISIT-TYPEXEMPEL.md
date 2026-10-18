@@ -1,3 +1,13 @@
+# Granskningsomgång 18 oktober 2026 – kompletterande lagtext
+
+Ytterligare 13 fullständiga SFS-paragrafer (BrB 7:1–6, 10:6–8 och 16:1–4) har jämförts med Riksdagens konsoliderade lydelse t.o.m. SFS 2026:1656. Den kuraterade serien innehåller 154 individuella hela paragraftexter. BrB 7:4 har särskild ikraftträdandetid 2027-01-01 för en ny alternativ lydelse, och får inte tolkas som att dagens regler automatiskt gäller efter denna dag. Fortsatt juridisk signoff krävs för rekvisit, grader, förstadier och tvångsmedel.
+
+Importörens parser har även försetts med en spärr mot att hänvisningen '24 § lagen (1988:688)' i BrB 4:4 a eller 4:4 e feltolkas som en ny paragraf BrB 4:24. Gamla importerade 4:4 a/e är ännu inte slutgranskade och måste regenereras från officiell källa.
+
+Primärkälla: https://www.riksdagen.se/sv/dokument-och-lagar/dokument/svensk-forfattningssamling/brottsbalk-1962700_sfs-1962-700/
+
+---
+
 # V1.5 – obligatorisk policy för rekvisit och typexempel
 
 ## Aktuell verifierad granskningsstatus – 17 oktober 2026

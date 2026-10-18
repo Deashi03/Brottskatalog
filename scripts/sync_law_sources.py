@@ -70,6 +70,10 @@ def parse_brb(html):
             chapter=int(ch.group(1));key=None;contents=[]
             continue
         m = PARAGRAPH.match(ln) if chapter is not None else None
+        # Split-line statutory citations such as "24 § lagen (1988:688)"
+        # are not paragraph headings. Do not create phantom BrB:4:24.
+        if m and re.match(r"(?i)^(?:lagen|förordningen|brottsbalken)\s*\(", m.group(3)):
+            m = None
         if m:
             flush()
             sec = m.group(1) + m.group(2).lower()
