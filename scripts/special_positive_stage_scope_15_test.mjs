@@ -19,7 +19,7 @@ const all=ctx.window.BK_DATA.crimes,stages=all.filter(c=>c.stageType),checked=st
 assert.equal(all.length,1473);assert.equal(stages.length,1086);
 assert.equal(checked.length,66);
 assert.equal(stages.filter(c=>c.individualLegalAudit15?.scope?.status==='APPROVED').length,138);
-assert.equal(stages.filter(c=>c.individualLegalAudit15?.consequences?.status==='APPROVED').length,72);
+assert.equal(stages.filter(c=>c.individualLegalAudit15?.consequences?.status==='APPROVED').length,138);
 assert.equal(stages.filter(c=>c.stageStatus==='unverified').length,15);
 for(const c of checked){
  const x=c.individualLegalAudit15.scope;
@@ -29,7 +29,8 @@ for(const c of checked){
  assert.equal(x.historicApplicabilityApproved,false);
  assert.equal(x.coercionApproved,false);
  assert.equal(c.custody,'unknown');
- assert.equal(c.individualLegalAudit15.consequences,undefined);
+ assert.equal(c.individualLegalAudit15.consequences?.punishmentRangeApproved,false);
+ assert.equal(c.individualLegalAudit15.consequences?.automaticCoercionApproved,false);
 }
 const d=JSON.parse(JSON.stringify(ctx.window.BK_SPECIAL_STAGE_ENUMERATION15));d.sourceOK.PTBL=false;
 const copy=all.filter(c=>c.stagePreliminaryScope15||(c.id?.startsWith('v09-')&&!c.stageType)).map(x=>{const v=JSON.parse(JSON.stringify(x));delete v.individualLegalAudit15;return v;});
