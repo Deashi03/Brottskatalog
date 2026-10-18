@@ -1119,3 +1119,19 @@ Detta är endast **lagtextbaserat rekvisitstöd**, med texten placerad under bro
 Ny regression `scripts/brb14_evidence_distinctions_15_test.mjs` verifierar alla åtta kort, jämförelserna, rättskällorna, särskilda begränsningar, att härledd straffskala inte behandlas som numeriskt fast, ingen förändring av **1 086** förstadier och säker avvisning när källan är ofullständig. Testet är nu obligatoriskt i Actions och modulen ligger i iPhone-appens versionssäkra offlinecache.
 
 **Samlad spärr och revisionsstatus är oförändrad:** 387 grundbrott, 319 BrB-brott, 1 086 förstadier, 1 473 poster. 154 hela BrB-paragrafer i särskild direkt kuraterad kontrollserie, 247 individuellt straffskalekontrollerade grader, fullständig textproveniens för 319 BrB-kort genom övriga källmoduler, men **0/319 slutligt rättsligt certifierade**. 12 förstadier och 14 villkorade straffskalelägen kräver ytterligare bedömning. Publiceringsspärren `releaseReady:false` kvarstår; PR #2 förblir draft och V1.4 på `main` opåverkad.
+
+---
+
+## 18 oktober 2026 – HD:s Alibit: falska polisuppgifter kontra skyddande av brottsling
+
+**Källa:** [Högsta domstolen, NJA 2019 s. 294, mål B 5577-18](https://www.domstol.se/hogsta-domstolen/avgoranden2/2019/20599/), jämförd med [gällande BrB 15:1, 15:7 och 17:11](https://www.riksdagen.se/sv/dokument-och-lagar/dokument/svensk-forfattningssamling/brottsbalk-1962700_sfs-1962-700/).
+
+Nya `praxis-alibit-15.js` ger **tre brottskort** en individuellt källkontrollerad praxisgräns, under den redan expanderbara rekvisitmenyn:
+
+- **Skyddande av brottsling (17:11):** HD bedömde att ett medvetet falskt alibi under polisförhör inte utgör skyddande av brottsling om det **endast påverkar bevisläget** mot den skyldige. Gärningsformer som att gömma gärningspersonen eller på annat sätt göra denne oåtkomlig för polisen skiljs från att enbart försvåra bevisningen. Ringa-undantag och särskilt skuldalternativ måste granskas separat.
+- **Falsk beskyllning (15:7):** en i lagen särskilt förbjuden osann beskyllning mot någon annan kan vara straffbar, även om osanna polisuppgifter generellt inte är ett självständigt brott. Särskilda myndighets- och konkurrensrekvisit kontrolleras uttryckligen. Detta är inte liktydigt med ett falskt alibi som bara gynnar den verklige gärningspersonen.
+- **Mened (15:1):** vanligt polisförhör är inte liktydigt med uppgift under en **i lag föreskriven ed**. Menedsansvar och möjliga undantag måste alltid prövas utifrån tillämpliga lagrum.
+
+**Ett enda nytt typfall** för skyddande av brottsling har tillförts, grundat på det sätt att dölja gärningspersonen som HD särskilt beskriver i domskälen. Det är ett separat pedagogiskt exempel, **inte gärningsomständigheterna i Alibit** och inte en automatisk fällande bedömning. Inga nya typfall för de mer svåravgränsade korten falsk beskyllning eller mened har konstruerats.
+
+Modulen kräver aktuell, individuellt daterad komplett SFS-paragraf för varje post. Regressionen `scripts/praxis_alibit_15_test.mjs` granskar tre källbundna praxisanteckningar, typfallsreservationen och negativt fall när underliggande paragraf saknar källintyg. Ingen ändring sker av 1 473 sökbara poster, förstadier, straffskalor, åtalsregler eller tvångsmedelsstatus. Antalet BrB-kort med typfall förväntas öka från **26 till 27**, men **0/319** är juridiskt slutgodkända; `releaseReady:false`, PR #2 förblir draft, V1.4 publicerad oförändrad.
