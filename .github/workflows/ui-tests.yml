@@ -22,6 +22,8 @@ on:
       - "scripts/v15_publication_progress_test.mjs"
       - "scripts/v15_penalty_direct_evidence_queue.mjs"
       - "scripts/v15_stage_evidence_gaps.mjs"
+      - "special-stage-enumeration-15.js"
+      - "scripts/special_stage_enumeration_15_test.mjs"
       - "scripts/v15_penalty_audit_queue.mjs"
       - "scripts/v15_release_queue_15_test.mjs"
       - "scripts/brb_special_preparation_15_test.mjs"
@@ -545,6 +547,8 @@ jobs:
         run: node scripts/v15_penalty_direct_evidence_queue.mjs
       - name: Inventory 156 inchoate evidence and dated-source gaps
         run: node scripts/v15_stage_evidence_gaps.mjs
+      - name: Verify 138 individual special-law inchoate enumerations
+        run: node scripts/special_stage_enumeration_15_test.mjs
       - name: Verify truthful and complete per-chapter legal review queue
         run: node scripts/v15_release_queue_15_test.mjs
       - name: Archive full quality report
