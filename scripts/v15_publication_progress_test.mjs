@@ -30,5 +30,7 @@ assert.equal(r.knownBlockers.noAutomaticReleaseApproval,true);
 assert.ok(r.counts.percent>0&&r.counts.percent<100);
 assert.ok(r.finalReleaseActions.length>=15);
 assert.equal(find('Slutpublicering','Frisläppning, slutlig kontroll och efterkontroll').completed,0);
+console.log('V1.5 ATOMIC GROUPS '+JSON.stringify(r.byGroup));
+console.log('V1.5 ACTION ROWS '+JSON.stringify(r.work.map(x=>({group:x.group,label:x.label,completed:x.completed,total:x.total}))));
 console.log('PASS V1.5: atomic all-card, stage, legal and logistics progress is consistent and cannot inflate legal signoffs ('+
  r.counts.completed+'/'+r.counts.total+' = '+r.counts.percent+'%)');
