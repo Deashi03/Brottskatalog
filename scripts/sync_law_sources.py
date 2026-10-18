@@ -77,7 +77,19 @@ def parse_brb(html):
         # References to previously encountered paragraphs are commonly
         # wrapped onto a new HTML text line. They must not terminate the
         # active paragraph (for example BrB 6:6 referring to 4 §).
-        if m and key is not None and not re.match(r"^/Träder i kraft\b", m.group(3)):
+        if m and key is not None:
+            # When the preceding line ends in an unfinished statutory
+            # cross-reference, preserve the current paragraph even when
+            # the cited section number is larger than the current number.
+            # Compare with section transitions: a completed paragraph
+            # ordinarily ends with punctuation or an SFS amendment marker.
+            tail = contents[-1].rstrip() if contents else ""
+            incomplete_cross_reference = bool(re.search(
+                r"(?i)\\b(?:i|av|enligt|eller|samt|till|från|jämför|i\\s+enlighet\\s+med)\\s*$", tail
+            ))
+            if incomplete_cross_reference:
+                m = None
+        if m and key is not None and not re.match(r"^/Träder i kraft\\b", m.group(3)):
             prev_sec = key.split(":")[-1]
             old_order = re.fullmatch(r"(\d+)([a-z]?)", prev_sec)
             if old_order:
