@@ -11,7 +11,7 @@ for(const i of [1,2,3])vm.runInContext(inlines[i],ctx);
 for(const src of sources)vm.runInContext(fs.readFileSync(path.join(root,src),"utf8"),ctx,{filename:src});
 const r=ctx.window.BK_BRB16_FULLTEXT15,source=ctx.window.BK_CURATED_LAWTEXT15;
 assert.ok(r&&r.sectionsChecked===16&&r.missing.length===0&&r.mismatch.length===0,JSON.stringify(r));
-assert.equal(source.sectionsChecked,170);
+assert.ok(source.sectionsChecked>=170);
 const base=ctx.window.BK_DATA.crimes.filter(c=>!c.stageType);
 assert.ok(source.linkedCardsChecked>=200);
 for(const k of ["BrB:16:5","BrB:16:5a","BrB:16:6","BrB:16:8","BrB:16:9","BrB:16:10","BrB:16:10a","BrB:16:10b","BrB:16:10c","BrB:16:10d","BrB:16:11","BrB:16:12","BrB:16:13","BrB:16:15","BrB:16:16","BrB:16:17"]){const s=ctx.window.BK_STATUTES[k];assert.equal(s.checked,"2026-10-18");assert.equal(s.complete,true);assert.equal(s.machine,false);assert.equal(s.completeTextProvenance,"manual-crosscheck-current-SFS-paragraph-only");for(const c of base.filter(c=>c.statute===k)){assert.equal(c.law,s.text);assert.equal(c.lawCompletenessVerified,true);assert.notEqual(c.rekvisit15?.legalReviewApproved,true);}}

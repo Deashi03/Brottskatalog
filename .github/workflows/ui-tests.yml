@@ -72,6 +72,8 @@ on:
       - "scripts/brb_curated_lawtext_15_test.mjs"
       - "brb16-fulltext-15.js"
       - "scripts/brb16_fulltext_15_test.mjs"
+      - "brb17-18-fulltext-15.js"
+      - "scripts/brb17_18_fulltext_15_test.mjs"
       - "scripts/test_brb_parser_15.py"
       - "scripts/sync_law_sources.py"
       - "scripts/rekvisit_sista_15_test.mjs"
@@ -331,6 +333,8 @@ jobs:
         run: node scripts/brb_curated_lawtext_15_test.mjs
       - name: V1.5 chapter-16 fulltext extension with official source crosschecks
         run: node scripts/brb16_fulltext_15_test.mjs
+      - name: V1.5 BrB 17 and 18 additional current statutory paragraphs
+        run: node scripts/brb17_18_fulltext_15_test.mjs
       - name: V1.5 source-checked current child-witness and stalking requisite alternatives
         run: node scripts/brb4_child_stalking_requisites_15_test.mjs
       - name: V1.5 falsk angivelse, falsk beskyllning and correction-of-error safeguards

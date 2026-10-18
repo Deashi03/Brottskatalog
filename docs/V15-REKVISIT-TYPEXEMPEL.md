@@ -1,3 +1,9 @@
+# Kompletterande BrB 17–18 – 18 oktober 2026
+
+18 hela och daterade paragraftexter kontrollerade mot Sveriges riksdags konsoliderade lydelse: BrB 17:5–6, 8–9, 11–13 (inkl. 12 a), 15–16 samt 18:1–8. Upphävda BrB 17:7, 17:14 och 17:17 har inte presenterats som självständiga gällande straffbestämmelser. Tjänstemannaskyddets utvidgningar, särskilda rösträttsbrott, rymning/flykt, rättskipningshinder, brott mot statsledningen och högmålsbrott är i detta steg endast fulltextgranskade. **Totalt 188 hela källjämförda BrB-paragrafer**, fortsatt `releaseReady:false` eftersom rekvisit, förstadier och tvångsmedel inte är slutgodkända.
+
+---
+
 # Granskning BrB 16 kap. – 18 oktober 2026
 
 16 ytterligare hela lagparagrafer individuellt jämförda mot den konsoliderade SFS-texten: BrB 16:5, 5 a, 6, 8, 9, 10, 10 a–d, 11–13 samt 15–17. Kapitlets undantags- och förstadiebestämmelser visas tillsammans med respektive hel paragraf men medför ingen automatisk godkänd kriminaliserings-/tvångsmedelsanalys. Ingen egen brottspost för upphävda paragrafer.
