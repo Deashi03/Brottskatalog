@@ -1,3 +1,11 @@
+# Granskning BrB 16 kap. – 18 oktober 2026
+
+16 ytterligare hela lagparagrafer individuellt jämförda mot den konsoliderade SFS-texten: BrB 16:5, 5 a, 6, 8, 9, 10, 10 a–d, 11–13 samt 15–17. Kapitlets undantags- och förstadiebestämmelser visas tillsammans med respektive hel paragraf men medför ingen automatisk godkänd kriminaliserings-/tvångsmedelsanalys. Ingen egen brottspost för upphävda paragrafer.
+
+**Kuraterad källa: 170 hela paragrafer**, under förutsättning att CI validerar samtliga källposter. Fullständigt rättsligt certifierade BrB-kort alltjämt 0/319; `releaseReady:false`. Källan är Riksdagens Brottsbalk 1962:700 i lydelse t.o.m. 2026:1656. https://www.riksdagen.se/sv/dokument-och-lagar/dokument/svensk-forfattningssamling/brottsbalk-1962700_sfs-1962-700/
+
+---
+
 # Granskningsomgång 18 oktober 2026 – kompletterande lagtext
 
 Ytterligare 13 fullständiga SFS-paragrafer (BrB 7:1–6, 10:6–8 och 16:1–4) har jämförts med Riksdagens konsoliderade lydelse t.o.m. SFS 2026:1656. Den kuraterade serien innehåller 154 individuella hela paragraftexter. BrB 7:4 har särskild ikraftträdandetid 2027-01-01 för en ny alternativ lydelse, och får inte tolkas som att dagens regler automatiskt gäller efter denna dag. Fortsatt juridisk signoff krävs för rekvisit, grader, förstadier och tvångsmedel.
