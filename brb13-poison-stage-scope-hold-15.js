@@ -21,8 +21,8 @@ for(const type of ['forsok','forberedelse','stampling']){
   report.held.push({type,sourceVerified:legalSource,status:c?.stageStatus,parentRef:parent?.statute});continue;
  }
  c.stageStatus='unverified';c.stageReviewDate=null;c.stageSource='BrB 13:7 och 13:12, jämför BrB 23:1–2';
- c.stageReviewBasis='BrB 13:12 anger spridande av gift eller smitta, medan grov grad finns i 13:7 andra stycket. Gradtäckningen måste avgöras genom separat juridisk bedömning, inte genom namnmatchning.';
- c.stageExplanation='Förstadiets omfattning för den grova graden är ännu inte slutligt verifierad. Katalogens tidigare besked om att detta förstadium inte är straffbart saknade tillräckligt stöd. Kontrollera gärningsdatum, lagtextens systematik, förarbeten och praxis.';
+ c.stageReviewBasis='BrB 13:7 andra stycket jämfört med BrB 13:12, som anger spridande av gift eller smitta, medan grov grad finns i 13:7 andra stycket. Gradtäckningen måste avgöras genom separat juridisk bedömning, inte genom namnmatchning.';
+ c.stageExplanation='Förstadiets omfattning för den grova graden är ännu INTE fastställt i en slutlig rättslig bedömning. Katalogens tidigare besked om att detta förstadium inte är straffbart saknade tillräckligt stöd. Kontrollera gärningsdatum, lagtextens systematik, förarbeten och praxis.';
  c.penalty='Straffbarhet/straffskala ej verifierad';c.penaltyShort='Ej verifierat';
  c.penaltyRange=null;c.penaltyNote=c.stageExplanation;c.custody='unknown';
  c.prosecution='unknown';c.prosecutionLabel='Åtalsregel måste kontrolleras';
