@@ -1,6 +1,6 @@
 # Brottskatalog V1.5 – mätbar väg till publicering
 
-> **Senaste avstämning: 61,1 % (7 003/11 453). 4 450 uppgifter återstår.** 399 individuella negativa BrB-förstadier och deras 399 konsekvenskontroller samt 167 uttryckliga positiva förstadier har källgranskats. Den separata juridiska slutrevisionen av grundbrotten är fortfarande 0/3 483. Äldre procenttal nedan är revisionshistorik.
+> **Senaste avstämning: 62,6 % (7 175/11 453), 4 278 åtgärder återstår.** 16 av brottsbalkens kapitel har genomgått källbundet individuellt förstadiearbete. 463 negativa förstadier har fått varsin separat lagstöds- och konsekvenskontroll och 211 positiva förstadier har granskats mot gällande förstadieparagraf. Den självständiga juridiska slutrevisionen återstår.
 
 **Beräknad status: 46,3 % (5 297 av 11 434 jämnt räknade åtgärder).** Återstår **6 137**. Avser arbetsgren `v15-komplett-brb-rekvisit-typexempel`, avstämd 18 oktober 2026. Testad i [GitHub Actions 39154276028](https://github.com/Deashi03/Brottskatalog/actions/runs/39154276028).
 
@@ -275,3 +275,30 @@ Ny modul `brb-negative-stage-chapter-audit-15.js` går igenom **14 kapitel och d
 **Verifiering:** [Godkänd komplett GitHub Actions-körning 39177166788](https://github.com/Deashi03/Brottskatalog/actions/runs/39177166788), inklusive mobil/iPhone, kvalitetsskript och negativt test med manipulerad primärrättskälla. Slutlig individuell lag-/praxis-/straffskale-/tvångsmedelsrevision är fortsatt helt separat.
 
 **Slutlig rättslig release-spärr:** 3 483 återstående oberoende grundbrottsdelmoment, 946 återstående förstadiedelmoment, tre osäkra 14-årskandidater och 18 releasekontroller. **PR #2 förblir draft, main/V1.4 oförändrad, V1.5 opublicerad.** Underlaget är [gällande BrB 1962:700 i Riksdagens SFS](https://www.riksdagen.se/sv/dokument-och-lagar/dokument/svensk-forfattningssamling/brottsbalk-1962700_sfs-1962-700/).
+
+---
+
+## 19 oktober 2026 – utvidgad och grön källrevision till 62,6 %
+
+Efter den tidigare avstämningen på 61,1 % tillkom **172 individuellt utförda kortmoment** med bibehållen försiktighetsprincip i BrB **3 och 6 kap.** De har källgranskats mot **BrB 3:11** (brott mot liv och hälsa) och **BrB 6:15** (sexualbrott), med förstadieform jämförd mot brottets exakta rubricering och den kompletta källparagrafen.
+
+Därmed är **463 negativa förstadier** kontrollerade både i fråga om särskilt kriminaliseringsstöd (463 åtgärder) och den rättsligt avgränsade konsekvensen av att just det namngivna förstadiet inte är kriminaliserat enligt den aktuella bestämmelsen (463 åtgärder). **211 positiva förstadier** har separat stämts av mot sina uttryckligen nämnda aktuella lagstödsbestämmelser. Sammantaget **1 137 individuella BrB-kortmoment** i den här större granskningsetappen.
+
+Tillsammans med **66 tidigare inlagda men först nu grönt verifierade speciallagskonsekvenser** och tre nytillkomna CI-kontroller innebär detta **1 206 faktiskt avklarade inventeringsuppgifter sedan den tidigare verifierade 52,1 %-nivån**. Den **fullständiga juridiska slutrevisionen är fortfarande 0/3 483**, och källavgränsade förstadieintyg är inte någon bedömning av konkret uppsåt, farekrav, straffskala, åtalsbehörighet, historisk lag eller tvångsmedelsrätt.
+
+**Kvarstående särskilda osäkerheter** är fortfarande 15 tidigare uttryckligen öppna förstadier, fem bokstavliga brottsgrad-/lagstödsavvikelser i BrB 14:13 samt ett ofullständigt namnankare för försöksfrågan om grov bevisförvanskning i BrB 15:15. Ingen av dessa har godkänts eller utjämnats bara för att förbättra procenttalet.
+
+| Grupp | Färdiga | Totalt | Kvar |
+| --- | ---: | ---: | ---: |
+| Grundbrottens inledande genomgång | 2 322 | 2 322 | 0 |
+| Nio separat granskade juridiska slutmoment per grundbrott | 0 | 3 483 | 3 483 |
+| Förstadier – fem individuella moment per kort | 4 656 | 5 430 | 774 |
+| Särskilda kontroller av 14-årsundantaget | 83 | 86 | 3 |
+| Automatiserade tester (CI-steg) | 102 | 102 | 0 |
+| Teknik/logistik | 12 | 12 | 0 |
+| Slutpublicering | 0 | 18 | 18 |
+| **Totalt** | **7 175** | **11 453** | **4 278** |
+
+**Grön slutlig CI-regression inkl. iPhone:** [GitHub Actions 39177493062](https://github.com/Deashi03/Brottskatalog/actions/runs/39177493062). Testerna verifierar också att ändrat lagtextunderlag inte kan ge ett positivt källgodkännande. Aktuell grundkälla är [Riksdagens brottsbalk (1962:700)](https://www.riksdagen.se/sv/dokument-och-lagar/dokument/svensk-forfattningssamling/brottsbalk-1962700_sfs-1962-700/).
+
+**Viktig avgränsning:** Detta är ett stort genomfört och verifierat *aktuellt lagstödsarbete för förstadier*, inte 1 137 fullständiga slutligt rättsligt godkända brottsbedömningar. Alla rättsliga slutkontroller av grundbrotten, öppna förstadiefrågor och formella publiceringsuppgifter är fortsatt blockerande. V1.5 är ännu endast draft, V1.4 på `main` är oförändrad.
