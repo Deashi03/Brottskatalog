@@ -7,7 +7,7 @@ execFileSync(process.execPath,['scripts/v15_priority_legal_dossiers.mjs'],{cwd:r
 const f=JSON.parse(fs.readFileSync(path.join(root,'audit/v15-priority-legal-dossiers.json'),'utf8'));
 assert.equal(f.counts.policePriorityBrBCards,37);
 assert.equal(f.counts.unverifiedStageCases,12);
-assert.equal(f.counts.policeCardsWithCompleteStatute,36);
+assert.equal(f.counts.policeCardsWithCompleteStatute,37);
 assert.equal(f.counts.policeCardsFullyLegallyApproved,0);
 assert.equal(f.releaseReady,false);
 assert.equal(f.automaticCustodyAuthorization,false);
