@@ -36,6 +36,8 @@ on:
       - "scripts/brb20_stage_negative_source_15_test.mjs"
       - "brb13-poison-stage-scope-hold-15.js"
       - "scripts/brb13_poison_stage_scope_hold_15_test.mjs"
+      - "brb-negative-stage-chapter-audit-15.js"
+      - "scripts/brb_negative_stage_chapter_audit_15_test.mjs"
       - "scripts/v15_penalty_audit_queue.mjs"
       - "scripts/v15_release_queue_15_test.mjs"
       - "scripts/brb_special_preparation_15_test.mjs"
@@ -575,6 +577,8 @@ jobs:
         run: node scripts/brb20_stage_negative_source_15_test.mjs
       - name: Hold three unjustified negative BrB 13:7 stages for legal review
         run: node scripts/brb13_poison_stage_scope_hold_15_test.mjs
+      - name: Review eight BrB chapters of negative inchoate offences and legal consequences
+        run: node scripts/brb_negative_stage_chapter_audit_15_test.mjs
       - name: Verify truthful and complete per-chapter legal review queue
         run: node scripts/v15_release_queue_15_test.mjs
       - name: Archive full quality report
