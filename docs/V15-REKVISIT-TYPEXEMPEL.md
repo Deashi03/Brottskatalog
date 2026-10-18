@@ -1,3 +1,13 @@
+# Straffskalerevision 18 oktober 2026: allmänfarliga brott och två sexualbrott
+
+**17 nya separata brottsgrader** har källjämförts med Riksdagens brottsbalk, SFS 1962:700 (t.o.m. 2026:1656): 15 brottsgrader i 13 kap. och två i 6 kap. Bland annat har allmänfarlig vårdslöshet separerats från grovt allmänfarlig vårdslöshet (bötesalternativ gäller endast normalgraden), sabotage mot blåljusverksamhet separerats från dess grova grad, och mordbrand från grov mordbrand. Livstidsalternativet finns kvar för berörda grova grader. Undantagen om mindre allvarligt brott i 13:1 och 13:3 är separata fall och har inte felaktigt sammanförts med normalgradens intervall. 12 osäkra förstadier har inte autoavgjorts genom detta arbete.
+
+Efter godkänd CI är **209** grader numeriskt individuellt kontrollerade. Fortsatt **108** ordinarie och **12** villkorade straffskalefall i revisionskö. `releaseReady:false` till fullständig rättslig kontroll.
+
+Primärkälla: https://www.riksdagen.se/sv/dokument-och-lagar/dokument/svensk-forfattningssamling/brottsbalk-1962700_sfs-1962-700/
+
+---
+
 # Straffskalerevision: familje- och förmögenhetsbrott (18 oktober 2026)
 
 Ytterligare **15 brottsgradsskalor** från BrB 7:1–4, 9:8–10 och 10:6–8 har källjämförts med Riksdagens konsoliderade Brottsbalk t.o.m. SFS 2026:1656. Fyndförseelse (10:8) är bötesbrott utan fängelseskala; svindleri (9:9) har särskilt bötesalternativ endast för ringa grad; grov egenmäktighet med barn (7:4) får inte förväxlas med normalgradens bötesalternativ. Dagens 7:4 står kvar, den nya lydelsen **2027-01-01 får inte användas i förtid**.

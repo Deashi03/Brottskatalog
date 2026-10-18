@@ -1,4 +1,4 @@
-/* V1.5: explicit individual-range checks of 192 common BrB grades.
+/* V1.5: explicit individual-range checks of 209 common BrB grades.
  * The controlling CURRENT complete SFS paragraphs are curated in
  * brb-curated-lawtext-15.js. Full legal/penalty applicability is NOT approved.
  * Date-dependent, inchoate and coercive rules remain separate work.
@@ -6,6 +6,23 @@
 (()=>{'use strict';const D=window.BK_DATA,W=window.BK_STATUTES;if(!D?.crimes||!W)return;
 const URL='https://www.riksdagen.se/sv/dokument-och-lagar/dokument/svensk-forfattningssamling/brottsbalk-1962700_sfs-1962-700/';
 const rows=[
+ ["Utnyttjande av barn för sexuell posering","6:8",0,2,false,false,"Normalgraden högst två år; straffbart försök enligt BrB 6:15 och ansvarsfrihet i särskilda jämnårighetsfall enligt 6:14 ska bedömas separat."],
+ ["Utnyttjande av barn genom köp av sexuell handling","6:9",0.5,4,false,false,"Normalgraden sex månader till fyra år; mindre grovt fall i samma paragraf har särskild skala högst ett år; betalning från tredje man omfattas."],
+ ["Allmänfarlig vårdslöshet","13:6",0,0.5,true,false,"Oaktsamhetsbrott som uttryckligen tillåter böter eller högst sex månaders fängelse; grövre grad saknar bötesalternativ."],
+ ["Allmänfarlig ödeläggelse","13:3",2,8,false,false,"Normalgraden två till åtta år. Mindre allvarlig gärning har annan skala ett till tre år; grov grad sex till arton år eller livstid."],
+ ["Förgöring","13:8",0,2,true,false,"Fara för djur och växter, böter eller fängelse högst två år; grov grad har särskilt minimum."],
+ ["Grov allmänfarlig ödeläggelse","13:3",6,18,false,true,"Grov grad sex till arton års fängelse eller livstid; lagens särskilda fare- och allvarskriterier prövas separat."],
+ ["Grov förgöring","13:8",0.5,6,false,false,"Grov grad sex månader till sex år; särskilda grovhetsindikatorer är uppsåt att skada och betydande egendomsfara."],
+ ["Grov mordbrand","13:2",6,18,false,true,"Grov mordbrand sex till arton år eller livstid; särskilt beaktande av tättbebyggt samhälle, spridningsfara och fara för flera."],
+ ["Grovt allmänfarlig vårdslöshet","13:6",0,2,false,false,"Grov oaktsamhetsgärning: enbart fängelse högst två år. Bötesalternativet tillhör normalgraden."],
+ ["Grovt sabotage","13:5",2,18,false,true,"Grov sabotagegärning två till arton år eller livstid, bl.a. fara för rikets säkerhet och flera människoliv."],
+ ["Grovt sabotage mot blåljusverksamhet","13:5c",2,18,false,true,"Grov grad två till arton år eller livstid; förhållandet till blåljusverksamheten och konkret fara granskas självständigt."],
+ ["Grovt spridande av gift eller smitta","13:7",4,18,false,true,"Grov spridning fyra till arton år eller livstid; särskilt uppsåt att skada eller fara för många."],
+ ["Mordbrand","13:1",2,8,false,false,"Normalgraden två till åtta år; mindre allvarlig variant i samma paragraf ett till tre år ska skiljas åt."],
+ ["Sabotage","13:4",0,4,false,false,"Normalgradens fängelseskala högst fyra år utan bötesalternativ; särskilt betydelsefull egendom och allvarligt hinder."],
+ ["Sabotage mot blåljusverksamhet","13:5c",0,4,false,false,"Normalgradens fängelseskala högst fyra år; anknytning till polis, ambulans eller räddningstjänst samt försvåranderisk."],
+ ["Spridande av gift eller smitta","13:7",0,6,false,false,"Normalgraden enbart fängelse högst sex år, till skillnad från grov grad fyra till arton år eller livstid."],
+ ["Underlåtenhet att avvärja allmänfara","13:10",0,1,true,false,"Böter eller fängelse högst ett år, förutsätter att den egna faran inte redan bestraffas enligt tidigare i kapitlet."],
  ["Egenmäktighet med barn","7:4",0,2,true,false,"Normalgraden böter eller fängelse högst två år. Kontrollera under-15-årsvillkor, vårdnadsställning och särskilt subsidiaritetsvillkor. Framtida lydelse från 2027-01-01 ska inte förtillämpas."],
  ["Grov egenmäktighet med barn","7:4",1,6,false,false,"Grov grad fängelse ett till sex år; normalgradens bötesalternativ gäller inte. Ny lydelse från 2027-01-01 hålls skild från dagens."],
  ["Förvanskande av familjeställning","7:3",0,2,true,false,"Böter eller fängelse högst två år; annan rubricering än egenmäktighet med barn, se 7:5 för försök."],
