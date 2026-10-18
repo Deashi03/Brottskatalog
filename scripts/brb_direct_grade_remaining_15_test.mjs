@@ -31,7 +31,7 @@ for(const c of reviewed){
   assert.equal(c.penaltyGradeReviewApplicabilityPending,true);
 }
 assert.equal(all.length,1473);
-assert.equal(all.filter(c=>c.stageStatus==='unverified').length,12);
+assert.equal(all.filter(c=>c.stageStatus==='unverified').length,15);
 assert.equal(base.filter(c=>c.conditionalPenalty&&!c.penaltyRangeVerified).length,14);
 const original=JSON.parse(JSON.stringify(reviewed.find(c=>c.title==='Våldsamt motstånd')));
 delete original.penaltyGradeReviewDate;delete original.penaltyGradeReviewScope15;
