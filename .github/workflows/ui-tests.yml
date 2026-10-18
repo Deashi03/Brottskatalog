@@ -100,6 +100,8 @@ on:
       - "scripts/special_remaining_55_requisites_15_test.mjs"
       - "special-smuggling-money-lbe-fulltext-15.js"
       - "scripts/special_smuggling_money_lbe_fulltext_15_test.mjs"
+      - "special-nark-vapen-trafik-kniv-fulltext-15.js"
+      - "scripts/special_other22_fulltext_15_test.mjs"
       - "scripts/urkund_gransdragning_15_test.mjs"
       - "scripts/praxis_freja_electronic_urkund_15_test.mjs"
       - "scripts/praxis_vapenbilden_15_test.mjs"
@@ -276,6 +278,8 @@ on:
       - "scripts/special_remaining_55_requisites_15_test.mjs"
       - "special-smuggling-money-lbe-fulltext-15.js"
       - "scripts/special_smuggling_money_lbe_fulltext_15_test.mjs"
+      - "special-nark-vapen-trafik-kniv-fulltext-15.js"
+      - "scripts/special_other22_fulltext_15_test.mjs"
       - "scripts/urkund_gransdragning_15_test.mjs"
       - "scripts/praxis_freja_electronic_urkund_15_test.mjs"
       - "scripts/praxis_vapenbilden_15_test.mjs"
@@ -481,6 +485,8 @@ jobs:
         run: node scripts/special_remaining_55_requisites_15_test.mjs
       - name: V1.5 33 directly reviewed special SFS sections and imported heading guards
         run: node scripts/special_smuggling_money_lbe_fulltext_15_test.mjs
+      - name: V1.5 22 statutory paragraphs for narcotics weapons traffic and knives
+        run: node scripts/special_other22_fulltext_15_test.mjs
       - name: V1.5 intricate offence alternatives, minority and public-order requisites
         run: node scripts/rekvisit_fordjupning_15_test.mjs
       - name: V1.5 child/adult sex-offence distinctions and limited statutory exemptions
