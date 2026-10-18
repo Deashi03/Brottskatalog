@@ -42,7 +42,7 @@ assert.ok(stats.excluded>=4,'All four excluded categories should remain outside 
 assert.ok(stats.held.every(x=>!expected.includes(x.title)),
  'Do not claim named covered cards are source-checked if their paragraph has not been examined');
 assert.equal(stats.stageEntriesModified,0);
-assert.equal(D.crimes.filter(c=>c.stageType&&c.stageStatus==='unverified').length,12);
+assert.equal(D.crimes.filter(c=>c.stageType&&c.stageStatus==='unverified').length,15);
 const w=ctx.window.BK_STATUTES;
 assert.equal(w['BrB:8:13'].completeTextProvenance,'manual-crosscheck-current-SFS-paragraph-only');
 assert.ok(w['BrB:8:13'].text.includes('häleri eller häleriförseelse'));
