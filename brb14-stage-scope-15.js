@@ -30,7 +30,45 @@ const report={source:SOURCE,reviewed:'2026-10-18',sourceOK:statuteOK,planned:6,s
 for(const spec of specs){
  const parent=base.find(c=>c.title===spec.title&&c.statute===spec.law);
  if(!parent){report.missing.push(spec.title);continue;}
- const related=stages.filter(c=>c.stageParentId===parent.id);
+ // The generic generator skips derivative-penalty base cards with no fixed
+ // numeric range. Create the THREE structurally valid catalogue entries
+ // directly with unknown custody/range: never manufacture a number merely
+ // to force 0.8's generator to include a source-authorized stage.
+ if(spec.law==='BrB:14:10'&&statuteOK){
+  for(const [kind,prefix,ref23] of [
+   ['forsok','Försök till','23:1'],
+   ['forberedelse','Förberedelse till','23:2'],
+   ['stampling','Stämpling till','23:2']
+  ]){
+   if(D.crimes.some(x=>x.stageType===kind&&x.stageParentId===parent.id))continue;
+   const allowed=spec.allowed.includes(kind);
+   D.crimes.push({
+    id:'stadium-08-'+kind+'-'+parent.id,
+    title:prefix+' '+parent.title.toLocaleLowerCase('sv'),
+    ref:(parent.ref||'BrB 14:10')+'; BrB 14:13; BrB '+ref23,
+    shortRef:(parent.shortRef||'BrB 14:10')+' · '+ref23,
+    statute:parent.statute,sourceURL:SOURCE,
+    category:parent.category,aliases:[kind+' '+parent.title],
+    stageType:kind,stageParentId:parent.id,stageSource:'BrB 14:13',
+    stageStatus:allowed?'punishable':'not-criminalized',
+    stageReviewDate:'2026-10-18',
+    stageReviewBasis:'BrB 14:10 och 14:13 – uttryckligt försök/förberedelse men ingen stämpling',
+    penaltyRange:null,penalty:'Straffskalan kräver val av konkret förfalskning och grad',
+    penaltyShort:allowed?'Villkorad skala':'Ej straffbart',
+    penaltyChecked:'2026-10-18',custody:'unknown',
+    prosecution:'unknown',prosecutionLabel:'Åtalsregler måste kontrolleras',
+    prosecutionDetails:['Pröva lagstöd, ringa-undantag och tillämpliga åtalsvillkor.'],
+    law:allowed?'Straffbarhet för '+kind+' beror på BrB 14:10 och 14:13.':'BrB 14:13 föreskriver inte stämpling för detta brott.',
+    lawSource:'BrB 14:13 och '+ref23,lawMode:'stage-reference',
+    stageLawNotice:true,reviewStatus:'stage-statute-reviewed',
+    elements:[],facts:[],stages:[],related:[parent.id],variants:[],lawTerms:[],
+    penaltyNote:spec.qualifier,stageExplanation:spec.qualifier,
+    stagePenaltyLower:null,stagePenaltyUpper:null
+   });
+   report.created=(report.created||0)+1;
+  }
+ }
+ const related=D.crimes.filter(c=>c.stageType&&c.stageParentId===parent.id);
  for(const kind of ['forsok','forberedelse','stampling']){
   const c=related.find(x=>x.stageType===kind);
   if(!c){report.missing.push(kind+' till '+spec.title);continue;}
