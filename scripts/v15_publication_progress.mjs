@@ -95,7 +95,8 @@ add('Förstadier','Individuell kontroll av straffskala/åtal/tvångsmedel',stage
  &&validDate(c.individualLegalAudit15.consequences.checked)
  &&c.individualLegalAudit15.consequences.sourceURL?.startsWith('https://')
  &&c.individualLegalAudit15.consequences.automaticCoercionApproved===false
- &&c.individualLegalAudit15.consequences.namedOffenceOnly===true).length,
+ &&c.individualLegalAudit15.consequences.namedOffenceOnly===true
+ &&(c.individualLegalAudit15.consequences.finding==='NO_INDEPENDENT_PENALTY_PROSECUTION_OR_COERCION_FOR_UNENUMERATED_STAGE'||c.individualLegalAudit15.consequences.finding==='LISTED_STAGE_REQUIRES_SEPARATE_BR_B_23_AND_INDIVIDUAL_PENALTY_ANALYSIS')).length,
  stages.length,'en konsekvenskontroll per förstadium, även bekräftad icke-straffbarhet');
 const ageCandidates=all.filter(c=>Number(c.age14Exception15?.completedOffenceMinimumYears)>=4);
 add('Särskilda kontroller','Individuellt källgranskad tillämplighet för 14-årsundantag',ageCandidates.filter(c=>
