@@ -46,7 +46,7 @@ for(const [title,ref,other,distinguishing] of expected){
  assert.ok(c.rekvisit15.note.includes('Gränsdragning enligt 14–15 kap. BrB'));
 }
 assert.ok(!Number.isFinite(by('Brukande av det förfalskade').penaltyRange?.min)&&!Number.isFinite(by('Brukande av det förfalskade').penaltyRange?.max),'Derivative penalty must have no fixed numeric interval, whether missing or null');
-assert.equal(D.crimes.filter(c=>c.stageType&&c.stageStatus==='unverified').length,12,'Uncertain stages must remain uncertain');
+assert.equal(D.crimes.filter(c=>c.stageType&&c.stageStatus==='unverified').length,15,'Uncertain stages must remain uncertain');
 assert.equal(D.crimes.filter(c=>c.stageType).length,1086,'Forensic notes must not create new stage cards');
 const originalSource=fs.readFileSync(path.join(root,mod),'utf8');
 // Fail closed when the source text, provenance or requisites are not available.
