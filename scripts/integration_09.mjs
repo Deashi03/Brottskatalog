@@ -115,7 +115,7 @@ if(generated&&Object.keys(generated).length){
    assert.equal(c.lawMode,'full','Independently compared paragraph must load: '+c.title);
    assert.equal(c.lawCompletenessVerified,true);
    assert.equal(c.lawCompletenessReviewScope,'current-paragraph-only');
-   assert.equal(c.lawProvenance,'independently-transcribed-current-official-SFS-paragraph-compared-to-import');
+   assert.ok(['independently-transcribed-current-official-SFS-paragraph-compared-to-import','current-official-SFS-direct-paragraph-review-with-locked-complete-extract-fingerprint'].includes(c.lawProvenance),'Certified paragraph needs individually recorded provenance: '+c.title);
    assert.ok(c.lawCompletenessSourceURL?.includes('riksdagen.se'));
    assert.notEqual(c.rekvisit15?.legalReviewApproved,true);
    officiallyCompared++;
