@@ -49,3 +49,36 @@ För **1 086 förstadieposter** krävs fem insatser per kort: sökbar post (**1 
 Räknaren används genom `node scripts/v15_publication_progress.mjs`. Verifiera med `node scripts/v15_publication_progress_test.mjs`. Den skriver hela inventeringen och blockeringarna till **`audit/v15-publication-progress.json`**, automatiskt arkiverad med varje GitHub Actions-körning.
 
 **Release-spärr:** V1.5 ligger kvar som **draft** tills slutkontrollerna är genomförda, källfrågor sakligt hanterade och GitHub Actions/produktionskontroller godkända. V1.4 på `main` lämnas oförändrad. Ett grönt automatiskt test ersätter aldrig en juridisk granskning.
+
+---
+
+## Arbetsavstämning 18 oktober 2026 – 46,6 %
+
+**Ny verifierad status:** **5 324 av 11 435 åtgärder (46,6 %)**, **6 111 återstår**. Förändring mot låst baslinje 46,3 % (5 297/11 434): **26 tidigare återstående brottskortsuppgifter har slutförts**, och **ett nytt automatiskt test har lagts till och passerat**. Därmed har antalet arbetsuppgifter i inventeringen ökat med ett, så den nya jämförelsen avser samma katalogomfattning med ytterligare ett självständigt CI-test.
+
+### Genomförd utbyggnad: bidrags- och skattebrott
+
+- **13 brottskort** har fått var sin **individuellt källjämförd, fullständig aktuell paragraftext**, och var sin **strukturerad inledande rekvisitöversikt**.
+- Detta är **26 avklarade kortuppgifter**, inte 26 juridiska slutgodkännanden.
+- **Bidragsbrottslag (2007:612):** bidragsbrott, ringa bidragsbrott, grovt bidragsbrott, vårdslöst bidragsbrott; jämförda officiella paragrafer **2–4 §§**, med särskilda förklaringar om farekvisit, uppgift/ändringsanmälan, grov oaktsamhet, 1 § tillämpningsområde, frivillig rättelse enligt 5 § samt åtalsbegränsning enligt 6 a §. Lagversion vid kontroll: t.o.m. **SFS 2026:1322**.
+- **Skattebrottslag (1971:69):** skattebrott, skatteförseelse, grovt skattebrott, vårdslös skatteuppgift, skatteavdragsbrott, skatteredovisningsbrott, vårdslös skatteredovisning, försvårande av skattekontroll samt grovt försvårande av skattekontroll; jämförda **2–8 och 10 §§**, med förbehåll om 1 §, frivillig rättelse enligt 12 §, särskild åtalsprövning enligt 13 § och skattetilläggsspärren i 13 b §. Lagversion vid kontroll: t.o.m. **SFS 2026:1531**.
+- Brottskorten har fått alternativ där lagtexten ställer upp alternativa gärningsformer. Inga nya svårbedömda typfall har uppfunnits. Straffskalor, förstadier och tvångsmedel har inte getts någon ny automatisk slutsats.
+- Källor: [bidragsbrottslagen](https://www.riksdagen.se/sv/dokument-och-lagar/dokument/svensk-forfattningssamling/bidragsbrottslag-2007612_sfs-2007-612/) och [skattebrottslagen](https://www.riksdagen.se/sv/dokument-och-lagar/dokument/svensk-forfattningssamling/skattebrottslag-197169_sfs-1971-69/).
+- Nya filer: `special-bidrag-skatt-fulltext-15.js`, `special-bidrag-skatt-requisites-15.js`, `scripts/special_bidrag_skatt_15_test.mjs`. Källjämförelsen kräver exakt motsvarande lagtext, en känd observerad författningsversion och källhänvisning. Ett ändrat eller trasigt importerad stycke spärrar både fulltextstatus och rekvisitklassificering.
+- Äldre tester har uppdaterats så att **endast dessa 13 poster** kan gå från maskinimporterad text till fulltextverifiering på det nya underlaget. Övriga 33 av de ursprungliga 46 maskinimporterade speciallagsposterna förblir maskinimporterade. Även övriga 22 speciallagskort utan denna certifiering måste granskas individuellt.
+- [GitHub Actions – fullständigt godkänd regression inklusive iPhone och progressberäkning](https://github.com/Deashi03/Brottskatalog/actions/runs/39155718440).
+
+| Område | Förra mätningen | Nu | Kvar |
+| --- | ---: | ---: | ---: |
+| Inledande grundbrottsuppgifter | 2 100/2 322 | 2 126/2 322 | 196 |
+| Daterad och certifierad fullständig paragraftext, grundbrott | 319/387 | 332/387 | 55 |
+| Inledande strukturerade rekvisit, grundbrott | 319/387 | 332/387 | 55 |
+| Juridisk helhetsgranskning | 0/3 483 | 0/3 483 | 3 483 |
+| Förstadieuppgifter | 3 102/5 430 | 3 102/5 430 | 2 328 |
+| Specialkontroll av 14-årsundantag | 0/86 | 0/86 | 86 |
+| Automatiserade CI-tester | 83/83 | 84/84 | 0 |
+| Infrastruktur | 12/12 | 12/12 | 0 |
+| Slutrelease | 0/18 | 0/18 | 18 |
+| **Summa** | **5 297/11 434 (46,3 %)** | **5 324/11 435 (46,6 %)** | **6 111** |
+
+**Fortsatt spärr:** 319 BrB-brott och 68 speciallagsbrott kräver fortfarande separata juridiska slutkontroller. Tolv uttryckligen osäkra förstadier samt 14 villkorade straffskaleärenden kvarstår. Juridiskt godkänd release: **nej**.
