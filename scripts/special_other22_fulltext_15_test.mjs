@@ -1,0 +1,47 @@
+import assert from 'node:assert/strict';
+import fs from 'node:fs';import vm from 'node:vm';import path from 'node:path';
+const root=path.resolve(import.meta.dirname,'..');
+const html=fs.readFileSync(path.join(root,'index.html'),'utf8'),sw=fs.readFileSync(path.join(root,'service-worker.js'),'utf8');
+const scripts=[...html.matchAll(/<script\s+src="([^"]+)"/g)].map(m=>m[1]);
+const mod='./special-nark-vapen-trafik-kniv-fulltext-15.js';
+assert.ok(scripts.includes(mod)&&sw.includes(mod));
+assert.ok(scripts.indexOf(mod)>scripts.indexOf('./special-penalty-grade-audit-15.js'));
+assert.ok(scripts.indexOf(mod)<scripts.indexOf('./stages-08.js'));
+const inline=[...html.matchAll(/<script(?:\s[^>]*)?>([\s\S]*?)<\/script>/g)].map(m=>m[1]);
+const ctx=vm.createContext({window:{},console:{log:()=>{},warn:()=>{},error:()=>{}}});
+for(const i of [1,2,3])vm.runInContext(inline[i],ctx,{filename:'inline-'+i});
+for(const s of scripts)vm.runInContext(fs.readFileSync(path.join(root,s),'utf8'),ctx,{filename:s});
+const r=ctx.window.BK_OTHER22_SPECIAL_FULLTEXT15;
+assert.equal(r.planned,22);assert.equal(r.certified,22,JSON.stringify(r));
+assert.equal(r.held.length,0);assert.equal(r.paragraphsReviewed,9);
+const all=ctx.window.BK_DATA.crimes,base=all.filter(c=>!c.stageType),special=base.filter(c=>!c.statute?.startsWith('BrB:'));
+assert.equal(base.length,387);assert.equal(special.length,68);
+assert.equal(base.filter(c=>c.lawCompletenessVerified===true).length,387);
+assert.equal(base.filter(c=>c.rekvisit15?.groups?.length||c.rekvisit15?.routes?.length).length,387);
+for(const c of special){
+ assert.equal(c.lawMode,'full');assert.equal(c.lawCompletenessVerified,true);
+ assert.equal(c.lawCompletenessReviewScope,'current-paragraph-only');
+ assert.ok(c.lawCompletenessSourceURL?.startsWith('https://www.riksdagen.se/'));
+ assert.ok(c.law.length>=60);
+ assert.equal(c.rekvisit15?.legalReviewApproved,false);
+}
+const get=x=>base.find(c=>c.title===x);
+assert.ok(get('Vapenbrott').law.includes('18 kap. 1 §'));
+assert.ok(get('Synnerligen grovt vapenbrott').law.includes('18 kap. 2 §'));
+assert.ok(get('Grovt rattfylleri').law.includes('4 a §'));
+assert.ok(get('Ringa narkotikabrott · bruk').law.includes('2 §'));
+assert.ok(get('Rattfylleri').law.includes('ordination'));
+assert.ok(get('Grovt brott mot knivlagen').law.includes('ringa fall utgör gärningen dock inte brott'));
+assert.equal(all.length,1473);
+assert.equal(all.filter(c=>c.stageStatus==='unverified').length,12);
+assert.equal(base.filter(c=>c.conditionalPenalty&&!c.penaltyRangeVerified).length,14);
+assert.equal(base.filter(c=>c.rekvisit15?.legalReviewApproved===true).length,0);
+// Invalid grade provenance fails closed even with a manually transcribed text.
+const copy=JSON.parse(JSON.stringify(get('Vapenbrott')));
+copy.lawMode='missing';copy.law='';copy.lawCompletenessVerified=false;
+copy.penaltyGradeReviewSource='https://invalid.example/';
+const isolated=vm.createContext({window:{BK_DATA:{crimes:[copy]}}});
+vm.runInContext(fs.readFileSync(path.join(root,mod),'utf8'),isolated);
+assert.equal(isolated.window.BK_OTHER22_SPECIAL_FULLTEXT15.certified,0);
+assert.equal(copy.lawCompletenessVerified,false);
+console.log('PASS V1.5: 22 additional primary-source complete special-law sections; all 387 base cards have current complete text and preliminary routes');
