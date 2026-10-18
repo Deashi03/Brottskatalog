@@ -82,3 +82,45 @@ Räknaren används genom `node scripts/v15_publication_progress.mjs`. Verifiera 
 | **Summa** | **5 297/11 434 (46,3 %)** | **5 324/11 435 (46,6 %)** | **6 111** |
 
 **Fortsatt spärr:** 319 BrB-brott och 68 speciallagsbrott kräver fortfarande separata juridiska slutkontroller. Tolv uttryckligen osäkra förstadier samt 14 villkorade straffskaleärenden kvarstår. Juridiskt godkänd release: **nej**.
+
+---
+
+## 18 oktober 2026 – större gemensamt speciallagsblock, 47,5 %
+
+**Verifierad status: 5 437/11 438 åtgärder = 47,5 %. 6 001 återstår.** Förändring sedan 46,6 % (5 324/11 435): **110 nya slutförda brottskortsuppgifter**, **3 nya CI-kontroller**. Totalt antal inventerade åtgärder har ökat med tre därför att varje ny separat regression räknas som en enhet.
+
+### Genomfört
+
+- **55/55** kvarvarande grundbrott i specialstraffrätten har fått individuellt källanknutna **preliminära strukturerade rekvisit**: **23** smugglingskort, **6** penningtvättskort, **4** kort för brandfarliga/explosiva varor, **11** narkotikabrott, **5** vapenbrott, **4** trafikbrott och **2** knivlagsbrott.
+- **33/33** maskinimporterade speciallagskort för smuggling, penningtvätt och explosivvaruhantering har fått avgränsad kontroll av **fullständig nutida paragraftext** mot primära källor. Tjugo distinkta paragrafer har källgranskats med versions- och innehållslås. Tre importerade efterföljande rubriker har avlägsnats ur felaktigt inkluderad lagtext.
+- **22/22** återstående speciallagskort för narkotika, vapen, trafik och knivlagen har fått individuellt transkriberad och källkontrollerad aktuell paragraftext från Riksdagen. Nio distinkta bestämmelser har granskats. **Fulltextstatus och inledande rekvisitstruktur är nu 387/387 för grundbrotten.**
+- **Tre nya regressionssviter** verifierar att ändringar i importversioner, lagtext, källhänvisningar och tidigare ofullständiga avgränsningar inte tyst ger falskt godkännande, samt att katalog, offlinecache och iPhone fungerar. Äldre tester som avsiktligt låste gamla lägre antal har uppdaterats. Alla **87/87 CI-steg** godkända, inklusive iPhone.
+- Källor: [smugglingslagen](https://www.riksdagen.se/sv/dokument-och-lagar/dokument/svensk-forfattningssamling/lag-20001225-om-straff-for-smuggling_sfs-2000-1225/), [penningtvättsbrottslagen](https://www.riksdagen.se/sv/dokument-och-lagar/dokument/svensk-forfattningssamling/lag-2014307-om-straff-for-penningtvattsbrott_sfs-2014-307/), [brandfarliga och explosiva varor](https://www.riksdagen.se/sv/dokument-och-lagar/dokument/svensk-forfattningssamling/lag-20101011-om-brandfarliga-och-explosiva_sfs-2010-1011/), [narkotikastrafflagen](https://www.riksdagen.se/sv/dokument-och-lagar/dokument/svensk-forfattningssamling/narkotikastrafflag-196864_sfs-1968-64/), [vapenlagen](https://www.riksdagen.se/sv/dokument-och-lagar/dokument/svensk-forfattningssamling/vapenlag-2026408_sfs-2026-408/), [trafikbrottslagen](https://www.riksdagen.se/sv/dokument-och-lagar/dokument/svensk-forfattningssamling/lag-1951649-om-straff-for-vissa-trafikbrott_sfs-1951-649/), [knivlagen](https://www.riksdagen.se/sv/dokument-och-lagar/dokument/svensk-forfattningssamling/lag-1988254-om-forbud-betraffande-knivar-och_sfs-1988-254/).
+- [Verifierad komplett GitHub Actions-körning 39157921972](https://github.com/Deashi03/Brottskatalog/actions/runs/39157921972).
+
+### Revisionsstatus
+
+| Moment | Färdigt | Totalt | Kvar |
+| --- | ---: | ---: | ---: |
+| Sökbara grundbrott | 387 | 387 | 0 |
+| Åldersmetadata grundbrott | 387 | 387 | 0 |
+| Komplett daterad aktuell paragraftext | 387 | 387 | 0 |
+| Preliminära strukturerade rekvisit | 387 | 387 | 0 |
+| Grundläggande straffskaleavstämning | 373 | 387 | 14 |
+| Separata direktkontroller av straffskala | 315 | 387 | 72 |
+| Nio juridiska slutkontroller per grundbrott | 0 | 3 483 | 3 483 |
+| Förstadieposter, fem kontroller per post | 3 102 | 5 430 | 2 328 |
+| Särskild åldersundantagskontroll | 0 | 86 | 86 |
+| Registrerade automatiserade tester | 87 | 87 | 0 |
+| Infrastruktur och revisionslogistik | 12 | 12 | 0 |
+| Slutrelease | 0 | 18 | 18 |
+| **Summa** | **5 437** | **11 438** | **6 001** |
+
+**VIKTIG AVGRÄNSNING:** Komplett paragraftext avser den kontrollerade aktuella rättskällans angivna paragraf(er), inte automatisk slutsats om gärningsdag, hänvisade rättsregler eller fullständig juridisk tillämplighet. Rekvisitlistorna är preliminära, och fullständigt individuellt juridiskt slutgodkännande är alltjämt **0/387 grundbrott**. Tolv osäkra förstadier och fjorton villkorade straffskalefall kvarstår. Inga automatiska nya beslutsbefogenheter, tvångsmedelsbesked eller straffbarhetsbeslut har markerats. Version 1.5 är fortfarande draft och publiceringsspärren gäller.
+
+### Nästa prioriterade arbetsblock
+
+1. Åtgärda återstående **86 grundbrottsrelaterade straffskalekontroller**, där 14 är villkorade och 72 ännu saknar separat direktintyg.
+2. Genomför **individuell rättslig käll- och förstadiegranskning** i större, välavgränsade familjegrupper. Kontrollera de 12 explicit osäkra förstadierna först men dra inte negativa slutsatser utan särskilt lagstöd.
+3. Slutför polisprioriterade grundbrotts individuella nio juridiska slutmoment och fortsätt systematiskt i kapitelordning. Ingen automatisk helhetscertifiering från full lagtext och preliminära rekvisit.
+
