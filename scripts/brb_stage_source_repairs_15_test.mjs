@@ -36,7 +36,7 @@ for(const c of linked){
 }
 assert.ok(ctx.window.BK_DATA.crimes.filter(c=>c.stageType).length>1000);
 const uncertain=ctx.window.BK_DATA.crimes.filter(c=>c.stageType&&c.stageStatus==='unverified');
-assert.equal(uncertain.length,12,'Twelve unresolved gross-grade stages remain explicitly unverified');
+assert.equal(uncertain.length,15,'Fifteen unresolved gross-grade stages remain explicitly unverified');
 assert.equal(ctx.window.BK_STAGE_SCOPE15.gradeEvidenceAdded,12,
  'All twelve ambiguous grades must receive specific, source-linked evidence');
 assert.equal(uncertain.filter(c=>c.stageEvidence15?.preparatorySource?.includes('riksdagen.se')).length,9,
