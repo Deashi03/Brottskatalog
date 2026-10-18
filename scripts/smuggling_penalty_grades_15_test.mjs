@@ -8,7 +8,7 @@ const a=ctx.window.BK_SMUGLL_GRADES15,base=ctx.window.BK_DATA.crimes.filter(c=>!
 assert.ok(a&&a.planned===23&&a.reviewed===23&&a.missing.length===0&&a.held.length===0&&a.mismatch.length===0,JSON.stringify(a));
 assert.equal(a.penningboter,3);
 const verified=base.filter(c=>c.penaltyReviewScope==='individual-current-smuggling-grade-range-only');assert.equal(verified.length,23);
-for(const c of verified){assert.equal(c.penaltyGradeReviewDate,'2026-10-18');assert.equal(c.penaltyRangeVerified,true);assert.equal(c.penaltyGradeReviewSourceVersion,'2026:1321');assert.notEqual(c.lawCompletenessVerified,true);assert.notEqual(c.rekvisit15?.legalReviewApproved,true);}
+for(const c of verified){assert.equal(c.penaltyGradeReviewDate,'2026-10-18');assert.equal(c.penaltyRangeVerified,true);assert.equal(c.penaltyGradeReviewSourceVersion,'2026:1321');assert.equal(c.lawCompletenessVerified,true);assert.equal(c.lawCompletenessReviewScope,'current-paragraph-only');assert.notEqual(c.rekvisit15?.legalReviewApproved,true);}
 for(const t of ['Ringa smuggling','Ringa smuggling av explosiv vara','Ringa tullbrott']){
  const c=verified.find(c=>c.title===t);assert.ok(c);assert.equal(c.penaltyFineType15,'penningböter');assert.equal(c.penaltyRange.max,0);
 }
