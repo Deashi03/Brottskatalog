@@ -38,8 +38,12 @@ for(const crime of file.legalAuditQueue){
  assert.ok(crime.requiresCaseLawAndEffectiveDateCheck);
  assert.ok(crime.sourceURL,'Auditors need a source link: '+crime.title);
 }
-assert.ok(file.blockers.basePenaltyCasesNeedingIndividualVerification>0,
- 'Incomplete penalty verification must block legal release');
+assert.equal(file.blockers.basePenaltyCasesNeedingIndividualVerification,0,
+ 'All base-grade numeric intervals should now be individually source-checked');
+assert.equal(file.blockers.conditionalPenaltyCasesNeedingIndividualVerification,14,
+ 'Fourteen derivative or special-case grades still require separate legal review');
+assert.equal(file.releaseReady,false,
+ 'Even after basic grade checks, full individual legal review and stage uncertainty block release');
 assert.equal(file.counts.basePenaltyCasesNeedingIndividualVerification,
  file.blockers.basePenaltyCasesNeedingIndividualVerification);
 assert.equal(file.counts.conditionallyScopedPenaltyCasesNeedingReview,
