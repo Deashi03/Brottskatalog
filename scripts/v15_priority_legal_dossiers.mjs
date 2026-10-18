@@ -90,7 +90,7 @@ fs.mkdirSync(path.join(root,'audit'),{recursive:true});
 fs.writeFileSync(path.join(root,'audit/v15-priority-legal-dossiers.json'),JSON.stringify(output,null,2)+'\n');
 console.log('V1.5 LEGAL DOSSIERS '+JSON.stringify({counts:output.counts,examples:crimes.slice(0,5).map(x=>x.title),
  stageGroups:pending.reduce((acc,x)=>{acc[x.authorizingProvision]=(acc[x.authorizingProvision]||0)+1;return acc;},{})}));
-if(crimes.length!==36||pending.length!==12)throw Error('Review coverage changed; audit dossiers need reconciliation');
+if(crimes.length!==37||pending.length!==12)throw Error('Review coverage changed; audit dossiers need reconciliation');
 if(crimes.some(x=>!x.statuteFullTextIndividuallyVerified||!x.statutoryText||x.legalChecklist.length!==9))
  throw Error('Incomplete primary law or audit checkpoints');
 if(pending.some(x=>!x.authorizingFullText||!x.parentFullText||x.stageStatus!=='unverified'||x.finalLegalConclusionApproved))

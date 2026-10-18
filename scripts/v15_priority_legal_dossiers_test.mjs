@@ -5,13 +5,13 @@ import {execFileSync} from 'node:child_process';
 const root=path.resolve(import.meta.dirname,'..');
 execFileSync(process.execPath,['scripts/v15_priority_legal_dossiers.mjs'],{cwd:root,stdio:'pipe'});
 const f=JSON.parse(fs.readFileSync(path.join(root,'audit/v15-priority-legal-dossiers.json'),'utf8'));
-assert.equal(f.counts.policePriorityBrBCards,36);
+assert.equal(f.counts.policePriorityBrBCards,37);
 assert.equal(f.counts.unverifiedStageCases,12);
 assert.equal(f.counts.policeCardsWithCompleteStatute,36);
 assert.equal(f.counts.policeCardsFullyLegallyApproved,0);
 assert.equal(f.releaseReady,false);
 assert.equal(f.automaticCustodyAuthorization,false);
-assert.equal(new Set(f.policePriority.map(x=>x.id)).size,36);
+assert.equal(new Set(f.policePriority.map(x=>x.id)).size,37);
 assert.equal(new Set(f.ambiguousInchoate.map(x=>x.id)).size,12);
 for(const c of f.policePriority){
  assert.ok(c.id&&c.title&&c.statute.startsWith('BrB:'));
