@@ -50,7 +50,7 @@ for(const p of [parent,aggravated,stalking]){
  assert.ok(p.rekvisit15.note.includes('fastställer inte skuld'));
 }
 assert.equal(cards.filter(c=>!c.stageType&&c.statute?.startsWith('BrB:')).length,319);
-assert.equal(cards.filter(c=>c.stageType&&c.stageStatus==='unverified').length,12);
+assert.equal(cards.filter(c=>c.stageType&&c.stageStatus==='unverified').length,15);
 assert.equal(s.stageEntriesModified,0);
 const raw=fs.readFileSync(path.join(root,mod),'utf8');
 const sample=[{title:'Barnfridsbrott',statute:'BrB:4:3',rekvisit15:{legalReviewApproved:false,groups:[{mode:'all',label:'untouched'}]}}];
