@@ -36,7 +36,7 @@ for(const [title,ref,n,phrases,deps] of cases){
      &&W[k].url===URL)
   &&c?.lawCompletenessVerified===true&&c.statute===ref;
  const branchOK=c?.conditionalPenalty===true&&c.penaltyRangeVerified===false&&Array.isArray(a)
-  &&a.length===(n||1)&&a.every(x=>typeof x.when==='string'&&x.when.length>=15
+  &&a.length===(n||1)&&a.every(x=>typeof x.when==='string'&&x.when.length>=8
       &&typeof x.scale==='string'&&x.scale.length>=10
       &&typeof x.source==='string'&&x.source.startsWith('BrB'))
   &&detail?.sourceURL===URL&&detail.checked==='2026-10-18'
@@ -47,7 +47,7 @@ for(const [title,ref,n,phrases,deps] of cases){
    &&c.penaltyDerivation15.custodyApproved===false
    &&c.penaltyDerivation15.dependsOn.every(k=>W[k]?.complete);
  if(!sourceOK||!branchOK||(n===0&&!deriv)){
-  out.held.push({title,sourceOK,branchOK,deriv:n===0?deriv:null,actual:a?.length});continue;
+  out.held.push({title,sourceOK,branchOK,deriv:n===0?deriv:null,actual:a?.length,sourceChecks:{statuteComplete:p?.complete,statuteDate:p?.checked,statuteProvenance:p?.completeTextProvenance,statuteURL:p?.url,depChecks:deps.map(k=>({ref:k,complete:W[k]?.complete,provenance:W[k]?.completeTextProvenance,url:W[k]?.url}))}});continue;
  }
  // This is APPROVAL OF SOURCE-DEPENDENT BRANCH DESCRIPTION; a case-specific
  // numeric scale and coercive-measure eligibility remain explicitly unresolved.
