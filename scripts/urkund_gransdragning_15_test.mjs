@@ -1,0 +1,47 @@
+import assert from 'node:assert/strict';
+import fs from 'node:fs';import vm from 'node:vm';import path from 'node:path';
+const root=path.resolve(import.meta.dirname,'..'),html=fs.readFileSync(path.join(root,'index.html'),'utf8'),sw=fs.readFileSync(path.join(root,'service-worker.js'),'utf8');
+const mod='./urkund-gransdragning-15.js',scripts=[...html.matchAll(/<script\s+src="([^"]+)"/g)].map(x=>x[1]);
+assert.ok(scripts.includes(mod)&&sw.includes(mod),'BrB 14/15 source comparison must load offline');
+assert.ok(scripts.indexOf(mod)>scripts.indexOf('./praxis-freja-electronic-urkund-15.js'));
+assert.ok(scripts.indexOf(mod)<scripts.indexOf('./stages-08.js'));
+const inline=[...html.matchAll(/<script(?:\s[^>]*)?>([\s\S]*?)<\/script>/g)].map(x=>x[1]);
+const ctx=vm.createContext({window:{},console:{log:()=>{},warn:()=>{},error:()=>{}}});
+for(const i of [1,2,3])vm.runInContext(inline[i],ctx,{filename:'inline-'+i});
+for(const src of scripts)vm.runInContext(fs.readFileSync(path.join(root,src),'utf8'),ctx,{filename:src});
+const r=ctx.window.BK_URKUND_DISTINCTION15;assert.ok(r);
+assert.equal(r.planned,4);
+assert.equal(r.annotated,4,JSON.stringify(r));
+assert.equal(r.missing.length,0);
+assert.equal(r.held.length,0);
+assert.equal(r.certified,false);
+assert.equal(r.noGeneralSinglePenaltyFor14_10,true);
+const base=ctx.window.BK_DATA.crimes.filter(c=>!c.stageType);
+const by=t=>base.find(c=>c.title===t);
+const items=[['Urkundsförfalskning','BrB:14:1'],['Brukande av det förfalskade','BrB:14:10'],['Osant intygande','BrB:15:11'],['Missbruk av urkund','BrB:15:12']];
+for(const [title,ref] of items){
+ const c=by(title);
+ assert.ok(c,'Missing '+title);
+ assert.equal(c.statute,ref);
+ assert.ok(c.rekvisit15.note.includes('Gränsdragning BrB '+ref.slice(4)));
+ assert.equal(c.rekvisit15.legalReviewApproved,false);
+ assert.equal(c.urkundDistinction15.individuallyCertified,false);
+ assert.equal(c.urkundDistinction15.noAutomaticProsecutionAdvice,true);
+ assert.equal(c.urkundDistinction15.noAutomaticCustodyAdvice,true);
+ assert.equal(c.urkundDistinction15.checked,'2026-10-18');
+}
+assert.ok(by('Urkundsförfalskning').urkundDistinction15.note.includes('Enbart ett osant sakpåstående'));
+assert.ok(by('Brukande av det förfalskade').urkundDistinction15.note.includes('ingen enda generell straffskala'));
+assert.ok(by('Osant intygande').urkundDistinction15.note.includes('ANNAT ÄN egna angelägenheter'));
+assert.ok(by('Missbruk av urkund').urkundDistinction15.note.includes('pass, betyg eller identitetshandling'));
+assert.notEqual(by('Brukande av det förfalskade').penaltyRangeVerified,true,
+ 'General range for BrB 14:10 is impossible: underlying forgery controls the range');
+assert.equal(ctx.window.BK_DATA.crimes.filter(c=>c.stageType&&c.stageStatus==='unverified').length,12);
+const raw=fs.readFileSync(path.join(root,mod),'utf8');
+const fake=items.map(([title,statute])=>({title,statute,rekvisit15:{note:'untouched',legalReviewApproved:false}}));
+const o={window:{BK_DATA:{crimes:fake},BK_STATUTES:{}},console};
+vm.runInNewContext(raw,o,{filename:mod});
+assert.equal(o.window.BK_URKUND_DISTINCTION15.annotated,0);
+assert.equal(o.window.BK_URKUND_DISTINCTION15.held.length,4);
+assert.ok(fake.every(c=>c.rekvisit15.note==='untouched'),'Do not rewrite cards on missing current SFS evidence');
+console.log('PASS V1.5: true vs forged certificate, forged-use penalty reference and misleading screenshot cautions under BrB 14/15');
