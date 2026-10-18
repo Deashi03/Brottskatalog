@@ -270,6 +270,7 @@ for(const c of unreviewedEmbedded){
  assert.notEqual(c.lawCompletenessReviewScope,'current-paragraph-only',
   'An imported full statute without provenance must never gain a source-review stamp');
 }
-assert.ok(b.some(c=>!c.lawCompletenessVerified),
- 'The review must not silently approve all 319 BrB provisions');
+assert.equal(b.filter(c=>c.lawCompletenessVerified).length,319,
+ 'Source-text verification must now cover all 319 BrB cards, without any final legal signoff');
+assert.equal(b.filter(c=>c.rekvisit15?.legalReviewApproved===true).length,0);
 console.log('PASS V1.5: one-hundred-forty-one complete current SFS paragraphs verified, without legal signoff');

@@ -1,3 +1,9 @@
+# BrB-fulltext 100 % – endast dokumenterad lagtextnivå (18 oktober 2026)
+
+BrB 15:4 a–b (osann/ovarsam utsaga inför nordisk respektive internationell domstol) var de sista två kvarvarande hela paragraftexterna som omfattar fyra BrB-brottskort. Efter källjämförelse och godkänd regression omfattar den kuraterade serien **265 fullständiga paragrafer** och **319/319 BrB-brottskort med källa och daterad komplett lagtext**. Detta är ENDAST fulltextsteget. Straffskale-, gärningsdatum-, rekvisit-, rättspraxis-, åtals-, förstadie- och tvångsmedelsgranskningen är inte färdig. `releaseReady:false` och publiceringsspärren ska fortsätta gälla.
+
+---
+
 # BrB 13 – 13 ytterligare hela paragrafer, 18 oktober 2026
 
 Fullständiga lagtexter källjämförda: BrB 13:1–5, 5 a–b och 6–11. Tidigare redan verifierade 13:5 c och 13:12 står kvar. Den upphävda 13:8 a har inte felaktigt godkänts som gällande brott. Källkontrollen innebär **263 hela individuellt jämförda paragrafer efter grön CI**. Förstadieposter i 13 kap., bland annat grova grader och den uttömmande bestämmelsen i 13:12, är fortfarande individuellt oavgjorda och ger inget automatiskt tvångsmedelsbesked. Primärkälla: Riksdagens Brottsbalk SFS 1962:700 (t.o.m. 2026:1656).
