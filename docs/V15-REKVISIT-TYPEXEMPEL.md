@@ -1,3 +1,9 @@
+# Importkvalitet: manuellt kontrollerade reparerade texter (18 oktober 2026)
+
+Fyra tidigare avklippta maskinimporterade paragrafer har ersatts med hela aktuella lagtexter från Riksdagen: **BrB 6:6, 6:10 a, 6:12 och 19:9**. Den nya täckningen omfattar 192 kuraterade hela paragrafer när de 188 tidigare texterna behålls. Detta återställer centrala sexualbrotts- och säkerhetsbrottsbestämmelser. Kontrollerna är begränsade till paragrafens ordalydelse; rubricering, historisk giltighet, straffskala, förstadier, praxis och tvångsmedel är inte därmed slutgodkända. Riksdagens officiella SFS 1962:700, konsoliderad t.o.m. SFS 2026:1656: https://www.riksdagen.se/sv/dokument-och-lagar/dokument/svensk-forfattningssamling/brottsbalk-1962700_sfs-1962-700/
+
+---
+
 # Kompletterande BrB 17–18 – 18 oktober 2026
 
 18 hela och daterade paragraftexter kontrollerade mot Sveriges riksdags konsoliderade lydelse: BrB 17:5–6, 8–9, 11–13 (inkl. 12 a), 15–16 samt 18:1–8. Upphävda BrB 17:7, 17:14 och 17:17 har inte presenterats som självständiga gällande straffbestämmelser. Tjänstemannaskyddets utvidgningar, särskilda rösträttsbrott, rymning/flykt, rättskipningshinder, brott mot statsledningen och högmålsbrott är i detta steg endast fulltextgranskade. **Totalt 188 hela källjämförda BrB-paragrafer**, fortsatt `releaseReady:false` eftersom rekvisit, förstadier och tvångsmedel inte är slutgodkända.
