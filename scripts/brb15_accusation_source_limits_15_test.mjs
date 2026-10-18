@@ -30,7 +30,7 @@ assert.ok(get('Falsk beskyllning').rekvisit15.note.includes('rätten att inte be
 assert.ok(get('Obefogad angivelse').rekvisit15.note.includes('faktiska oskuld'));
 assert.ok(get('Vårdslös beskyllning').rekvisit15.note.includes('inte att utsagan var osann'));
 assert.equal(all.length,1473);
-assert.equal(all.filter(c=>c.stageStatus==='unverified').length,12);
+assert.equal(all.filter(c=>c.stageStatus==='unverified').length,15);
 assert.equal(base.filter(c=>c.conditionalPenalty&&!c.penaltyRangeVerified).length,14);
 const W=JSON.parse(JSON.stringify(ctx.window.BK_STATUTES));
 const single=JSON.parse(JSON.stringify(get('Falsk angivelse')));
