@@ -31,5 +31,5 @@ const out={date:new Date().toISOString(),version:'V1.5',releaseReady:false,metho
 fs.mkdirSync(path.join(root,'audit'),{recursive:true});
 fs.writeFileSync(path.join(root,'audit/v15-penalty-review-queue.json'),JSON.stringify(out,null,2)+'\n');
 console.log('V1.5 PENALTY AUDIT QUEUE '+JSON.stringify({counts,policeFirst:numeric.filter(c=>c.priority==='polisiar').slice(0,30).map(c=>({title:c.title,ref:c.ref,range:c.knownRange})),firstTwenty:numeric.slice(0,20).map(c=>({title:c.title,ref:c.ref,range:c.knownRange}))}));
-if(counts.basic!==72||counts.conditional!==12)throw Error('Unexpected penalty review queue totals: '+JSON.stringify(counts));
+if(counts.basic!==48||counts.conditional!==12)throw Error('Unexpected penalty review queue totals: '+JSON.stringify(counts));
 if(numeric.some(c=>c.automaticApproval||c.legalReviewApproved))throw Error('Unapproved penalty ranges were incorrectly marked as approved');

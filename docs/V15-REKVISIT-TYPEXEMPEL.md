@@ -1,3 +1,13 @@
+# Säkerhetsbrott – 18 oktober 2026
+
+Riksdagens aktuella BrB 19:5 och 19:7 jämförda med de två återstående normala säkerhetsbrottsgraderna: **Spioneri (fängelse högst sex år)** och **obehörig befattning med hemlig uppgift (böter eller fängelse högst två år)**. Rätten att göra undantag från straffansvar för försvarlig gärning i BrB 19:7 andra stycket prövas separat, liksom grov grad, gärningsdatum och förstadier enligt 19:14.
+
+V1.5 har därmed **247** numeriskt jämförda BrB-grader; speciallagen 22 grader är separat källjämförda. Totala kvarvarande ordinarie fall **48**, varav **2 derivativa BrB-intervall** utan en enda lagstadgad gemensam skala (3:10 och 14:10). Tolv villkorade fall kvar. För brott enligt speciallagar kvarstår individuella kontroller. Juridisk helhetsgranskning 0/319 och publiceringsspärr kvar.
+
+Källa: https://www.riksdagen.se/sv/dokument-och-lagar/dokument/svensk-forfattningssamling/brottsbalk-1962700_sfs-1962-700/
+
+---
+
 # Specialstraffrätt: 22 källjämförda intervall (18 oktober 2026)
 
 22 sedan V1.4 förhandsgranskade intervall enligt narkotikastrafflagen (11 brottskort), vapenlagen (5), trafikbrottslagen (4) och knivlagen (2) har **på nytt kontrollerats individuellt mot aktuella lagtexter**. Årets konsoliderade versioner: NSL 1968:64 t.o.m. 2024:797, VapenL 2026:408 t.o.m. 2026:1250, TBL 1951:649 t.o.m. 2024:715 och KnivL 1988:254 t.o.m. 2026:413. Särskilda alternativ (narkotikaförsäljning, oaktsamhet, ringa brott, grova grader) förblir egna fall. Inga maskinimporterade speciallagstexter markeras som fullständigt juridiskt verifierade. Ingen fullständig rekvisit-, praxis- eller tvångsmedelsgranskning utförs genom denna kontroll.

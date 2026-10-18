@@ -1,4 +1,4 @@
-/* V1.5: explicit individual-range checks of 245 common BrB grades.
+/* V1.5: explicit individual-range checks of 247 common BrB grades.
  * The controlling CURRENT complete SFS paragraphs are curated in
  * brb-curated-lawtext-15.js. Full legal/penalty applicability is NOT approved.
  * Date-dependent, inchoate and coercive rules remain separate work.
@@ -6,6 +6,8 @@
 (()=>{'use strict';const D=window.BK_DATA,W=window.BK_STATUTES;if(!D?.crimes||!W)return;
 const URL='https://www.riksdagen.se/sv/dokument-och-lagar/dokument/svensk-forfattningssamling/brottsbalk-1962700_sfs-1962-700/';
 const rows=[
+ ["Spioneri","19:5",0,6,false,false,"Fängelse högst sex år; grovt spioneri enligt 19:6 har egen strängare skala. Främmande makt-syfte och uppgiftens karaktär bedöms separat."],
+ ["Obehörig befattning med hemlig uppgift","19:7",0,2,true,false,"Böter eller högst två års fängelse; andra styckets ansvarsfrihetsundantag när gärningen är försvarlig bedöms separat. Grov grad i 19:8."],
  ["Ohörsamhet mot ordningsmakten","16:3",0,0.5,true,false,"Böter eller fängelse högst sex månader, subsidiärt när upplopp inte föreligger."],
  ["Olaga diskriminering","16:9",0,1,true,false,"Böter eller fängelse högst ett år; personkrets och särskilda diskrimineringsgrunder prövas separat."],
  ["Otillåtet förfarande med pornografisk bild","16:11",0,0.5,true,false,"Böter eller fängelse högst sex månader; särskild typ av offentlig eller oombedd spridning."],

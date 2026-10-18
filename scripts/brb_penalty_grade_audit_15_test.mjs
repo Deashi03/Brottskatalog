@@ -5,7 +5,7 @@ const html=fs.readFileSync(path.join(root,'index.html'),'utf8');
 const sw=fs.readFileSync(path.join(root,'service-worker.js'),'utf8');
 const scripts=[...html.matchAll(/<script\s+src="([^"]+)"/g)].map(x=>x[1]);
 const module='./brb-penalty-grade-audit-15.js';
-assert.ok(scripts.includes(module)&&sw.includes(module),'245 grade-range legal crosschecks must be available offline');
+assert.ok(scripts.includes(module)&&sw.includes(module),'247 grade-range legal crosschecks must be available offline');
 assert.ok(scripts.indexOf(module)>scripts.indexOf('./brb-curated-lawtext-15.js'));
 assert.ok(scripts.indexOf(module)<scripts.indexOf('./stages-08.js'));
 const inline=[...html.matchAll(/<script(?:\s[^>]*)?>([\s\S]*?)<\/script>/g)].map(x=>x[1]);
@@ -14,16 +14,16 @@ for(const i of [1,2,3])vm.runInContext(inline[i],ctx,{filename:'inline-'+i});
 for(const file of scripts)vm.runInContext(fs.readFileSync(path.join(root,file),'utf8'),ctx,{filename:file});
 const stats=ctx.window.BK_PENALTY_GRADE_AUDIT15;
 assert.ok(stats,'No source-checked penalty audit report');
-assert.equal(stats.planned,245,'Unexpected count of offence-grade penalty crosschecks');
+assert.equal(stats.planned,247,'Unexpected count of offence-grade penalty crosschecks');
 assert.deepEqual(Array.from(stats.missing),[],'Missing title in penalty source review');
 assert.deepEqual(Array.from(stats.unreviewedSource),[],'No source verification for penalty review');
 assert.deepEqual(Array.from(stats.held),[],'Penalty range held for source change');
 assert.deepEqual(Array.from(stats.mismatch),[],'Current statutory penalty conflicts found – repair underlying entry, never stamp false approval');
-assert.equal(stats.reviewed,245,'All 245 grade-range comparisons should match the actual catalogue');
+assert.equal(stats.reviewed,247,'All 247 grade-range comparisons should match the actual catalogue');
 const c=ctx.window.BK_DATA.crimes;
 const base=c.filter(x=>!x.stageType);
 const reviewed=base.filter(x=>x.penaltyReviewScope==='individual-current-grade-range-only');
-assert.equal(reviewed.length,245,'No extra crime can silently acquire grade-range approval');
+assert.equal(reviewed.length,247,'No extra crime can silently acquire grade-range approval');
 for(const p of reviewed){
  assert.equal(p.penaltyGradeReviewDate,p.lawCompletenessChecked);
  assert.ok(p.penaltyGradeReviewSource.includes('riksdagen.se'));
@@ -33,6 +33,17 @@ for(const p of reviewed){
  assert.ok(!p.penaltyReviewSafety.includes('fully reviewed'),'Do not overstate legal review scope');
 }
 const by=t=>base.find(c=>c.title===t);
+
+const securityRanges=[{"title":"Spioneri","statute":"BrB:19:5","min":0,"max":6,"fines":false,"life":false},{"title":"Obehörig befattning med hemlig uppgift","statute":"BrB:19:7","min":0,"max":2,"fines":true,"life":false}];
+for(const r of securityRanges){
+ const c=by(r.title);assert.ok(c,r.title);
+ assert.equal(c.statute,r.statute,'Wrong statutory provision');
+ for(const p of ['min','max','fines','life'])assert.equal(c.penaltyRange[p],r[p],r.title+' '+p);
+ assert.equal(c.penaltyReviewScope,'individual-current-grade-range-only');
+ assert.equal(c.penaltyGradeReviewDate,c.lawCompletenessChecked);
+ assert.notEqual(c.rekvisit15?.legalReviewApproved,true,'No full legal signoff from penalty interval');
+}
+
 
 const policeAndOrderGrades=[{"title":"Ohörsamhet mot ordningsmakten","statute":"BrB:16:3","min":0,"max":0.5,"fines":true,"life":false},{"title":"Olaga diskriminering","statute":"BrB:16:9","min":0,"max":1,"fines":true,"life":false},{"title":"Otillåtet förfarande med pornografisk bild","statute":"BrB:16:11","min":0,"max":0.5,"fines":true,"life":false},{"title":"Störande av förrättning eller av allmän sammankomst","statute":"BrB:16:4","min":0,"max":0.5,"fines":true,"life":false},{"title":"Uppvigling","statute":"BrB:16:5","min":0,"max":0.5,"fines":true,"life":false},{"title":"Angrepp mot tjänsteman","statute":"BrB:17:2","min":0,"max":2,"fines":true,"life":false},{"title":"Brott mot rösthemlighet","statute":"BrB:17:9","min":0,"max":0.5,"fines":true,"life":false},{"title":"Föregivande av allmän ställning","statute":"BrB:17:15","min":0,"max":0.5,"fines":true,"life":false},{"title":"Grovt angrepp mot tjänsteman","statute":"BrB:17:2","min":0.5,"max":6,"fines":false,"life":false},{"title":"Grovt otillbörligt verkande vid röstning","statute":"BrB:17:8","min":0,"max":4,"fines":false,"life":false},{"title":"Grovt skyddande av brottsling","statute":"BrB:17:11","min":1,"max":6,"fines":false,"life":false},{"title":"Grovt övergrepp i rättssak","statute":"BrB:17:10","min":2,"max":8,"fines":false,"life":false},{"title":"Otillbörligt verkande vid röstning","statute":"BrB:17:8","min":0,"max":0.5,"fines":true,"life":false},{"title":"Skyddande av brottsling","statute":"BrB:17:11","min":0,"max":2,"fines":true,"life":false},{"title":"Tagande av otillbörlig förmån vid röstning","statute":"BrB:17:8","min":0,"max":0.5,"fines":true,"life":false},{"title":"Övergrepp i rättssak","statute":"BrB:17:10","min":0.5,"max":4,"fines":false,"life":false},{"title":"Uppror","statute":"BrB:18:1","min":10,"max":18,"fines":false,"life":true},{"title":"Grovt spioneri","statute":"BrB:19:6","min":4,"max":18,"fines":false,"life":true}];
 for(const row of policeAndOrderGrades){
@@ -306,4 +317,4 @@ assert.equal(by('Inbrottsstöld').penaltyRange.min,1);
 assert.equal(by('Grovt missbruk av offentlig ställning').penaltyRange.max,6);
 assert.equal(base.filter(c=>c.statute?.startsWith('BrB:')).length,319);
 assert.equal(c.filter(x=>x.stageType&&x.stageStatus==='unverified').length,12,'No implicit inchoate review via base penalty scales');
-console.log('PASS V1.5: 245 current-grade BrB penalty scales source-verified; no silent conflicts or overbroad approvals');
+console.log('PASS V1.5: 247 current-grade BrB penalty scales source-verified; no silent conflicts or overbroad approvals');
