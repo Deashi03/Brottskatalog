@@ -78,6 +78,8 @@ on:
       - "scripts/brb_conditional_penalty_options_15_test.mjs"
       - "praxis-vapenbilden-15.js"
       - "praxis-freja-electronic-urkund-15.js"
+      - "urkund-gransdragning-15.js"
+      - "scripts/urkund_gransdragning_15_test.mjs"
       - "scripts/praxis_freja_electronic_urkund_15_test.mjs"
       - "scripts/praxis_vapenbilden_15_test.mjs"
       - "scripts/brb_curated_lawtext_15_test.mjs"
@@ -234,6 +236,8 @@ on:
       - "scripts/brb_penalty_grade_audit_15_test.mjs"
       - "praxis-vapenbilden-15.js"
       - "praxis-freja-electronic-urkund-15.js"
+      - "urkund-gransdragning-15.js"
+      - "scripts/urkund_gransdragning_15_test.mjs"
       - "scripts/praxis_freja_electronic_urkund_15_test.mjs"
       - "scripts/praxis_vapenbilden_15_test.mjs"
       - "scripts/brb_curated_lawtext_15_test.mjs"
@@ -420,6 +424,8 @@ jobs:
         run: node scripts/praxis_vapenbilden_15_test.mjs
       - name: V1.5 HD Freja electronic-urkund acquittal, source check and offline regression
         run: node scripts/praxis_freja_electronic_urkund_15_test.mjs
+      - name: V1.5 documentary forgery versus false statement and document misuse
+        run: node scripts/urkund_gransdragning_15_test.mjs
       - name: V1.5 intricate offence alternatives, minority and public-order requisites
         run: node scripts/rekvisit_fordjupning_15_test.mjs
       - name: V1.5 child/adult sex-offence distinctions and limited statutory exemptions
