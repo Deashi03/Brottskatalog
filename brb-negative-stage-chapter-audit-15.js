@@ -120,8 +120,12 @@ for(const [ch,rule] of Object.entries(spec)){
   const primary=W[p?.statute],permit=rule.section?W['BrB:'+rule.section]:null;
   const valid=Boolean(chapterReady[ch]&&statuteOK(primary)
     &&(!permit||statuteOK(permit))
-    &&c.stageStatus==='not-criminalized'&&c.stageReviewDate==='2026-10-13'
-    &&c.stageSource?.includes(rule.section?'BrB '+rule.section:'BrB '+ch+' kap.')
+    &&c.stageStatus==='not-criminalized'
+    &&['2026-10-13','2026-10-16','2026-10-18'].includes(c.stageReviewDate)
+    &&(c.stageSource?.includes(rule.section?'BrB '+rule.section:'BrB '+ch+' kap.')
+      ||(ch==='20'&&p.statute==='BrB:20:2'
+        &&c.stageSource?.startsWith('BrB 20:2')
+        &&c.stagePreliminaryScope15?.positiveCriminalizationUnderNamedProvisions===false))
     &&p?.statute?.startsWith('BrB:'+ch+':')
     &&c.custody==='none'&&c.penaltyRange===null&&c.stageParentId===p.id
     &&c.stageType in stageAbbr);
