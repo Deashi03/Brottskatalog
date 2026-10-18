@@ -25,7 +25,9 @@ for(const c of checked){
  assert.equal(c.stagePreliminaryScope15.positiveCriminalizationUnderNamedProvisions,false);
  assert.equal(c.stagePreliminaryScope15.finalIndividualScopeApproved,false);
  assert.equal(c.stagePreliminaryScope15.coercionApproved,false);
- assert.equal(c.individualLegalAudit15,undefined);
+ assert.equal(c.individualLegalAudit15?.scope?.finding,'NO_NAMED_STAGE_OFFENCE_IN_CURRENT_BRB_CHAPTER');
+ assert.equal(c.individualLegalAudit15?.scope?.caseSpecificLiabilityApproved,false);
+ assert.equal(c.individualLegalAudit15?.consequences?.automaticCoercionApproved,false);
 }
 const W=JSON.parse(JSON.stringify(ctx.window.BK_STATUTES));W['BrB:20:2'].complete=false;
 const copy=JSON.parse(JSON.stringify(checked[0]));copy.stageReviewDate=null;
