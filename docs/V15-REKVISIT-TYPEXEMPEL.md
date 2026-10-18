@@ -1,3 +1,13 @@
+# Straffskalor 16–19 kap. – 18 ytterligare grader (18 oktober 2026)
+
+**18 individuellt jämförda straffskalor** i BrB 16:3–11, 17:2–15, 18:1 och 19:6. Fokus på polisiär verksamhet: angrepp mot tjänsteman, grovt angrepp mot tjänsteman, övergrepp i rättssak, grovt övergrepp i rättssak, skyddande av brottsling och valrelaterade brott. Särskilt skiljs normala och grova minimistraff åt, liksom livstidsalternativen för uppror och grovt spioneri. Även bötesbrott och undantag för mindre allvarliga fall förblir avgränsade.
+
+**245** straffskalor kontrollerade efter grön CI. **72** ordinarie samt 12 villkorade fall kvar. Endast individuell gradskala godkänd, inte rekvisit, praxis, förstadier eller tvångsmedelsbehörighet. `releaseReady:false`.
+
+Källa: https://www.riksdagen.se/sv/dokument-och-lagar/dokument/svensk-forfattningssamling/brottsbalk-1962700_sfs-1962-700/
+
+---
+
 # Straffskalerevision: 15 och 16 kap. BrB (18 oktober 2026)
 
 Ytterligare **18 brottsgrader** har individuellt källjämförts mot Riksdagens konsoliderade brottsbalk (SFS 1962:700), 6 grader i 15 kap. och 12 grader i 16 kap. Separat kontrollerade skillnader inkluderar ringa falsk angivelse och falsk beskyllning, osann partsutsaga, ordinärt och grovt gravfridsbrott, djurplågeri, falskt larm, barnpornografibrott samt normalgraden hets mot folkgrupp. Förargelseväckande beteende har **endast penningböter**, inte fängelse. Kontrollerna omfattar **endast numerisk skala och bötes-/livstidsalternativ** för respektive grad.

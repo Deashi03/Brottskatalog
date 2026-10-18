@@ -1,4 +1,4 @@
-/* V1.5: explicit individual-range checks of 227 common BrB grades.
+/* V1.5: explicit individual-range checks of 245 common BrB grades.
  * The controlling CURRENT complete SFS paragraphs are curated in
  * brb-curated-lawtext-15.js. Full legal/penalty applicability is NOT approved.
  * Date-dependent, inchoate and coercive rules remain separate work.
@@ -6,6 +6,24 @@
 (()=>{'use strict';const D=window.BK_DATA,W=window.BK_STATUTES;if(!D?.crimes||!W)return;
 const URL='https://www.riksdagen.se/sv/dokument-och-lagar/dokument/svensk-forfattningssamling/brottsbalk-1962700_sfs-1962-700/';
 const rows=[
+ ["Ohörsamhet mot ordningsmakten","16:3",0,0.5,true,false,"Böter eller fängelse högst sex månader, subsidiärt när upplopp inte föreligger."],
+ ["Olaga diskriminering","16:9",0,1,true,false,"Böter eller fängelse högst ett år; personkrets och särskilda diskrimineringsgrunder prövas separat."],
+ ["Otillåtet förfarande med pornografisk bild","16:11",0,0.5,true,false,"Böter eller fängelse högst sex månader; särskild typ av offentlig eller oombedd spridning."],
+ ["Störande av förrättning eller av allmän sammankomst","16:4",0,0.5,true,false,"Böter eller fängelse högst sex månader, inklusive vissa förrättningar och Internationella brottmålsdomstolen."],
+ ["Uppvigling","16:5",0,0.5,true,false,"Normalgraden böter eller fängelse högst sex månader; grov uppvigling har högst sex år, ringa fall är straffritt."],
+ ["Angrepp mot tjänsteman","17:2",0,2,true,false,"Böter eller fängelse högst två år; inte samma brott som våld eller hot mot tjänsteman i 17:1."],
+ ["Brott mot rösthemlighet","17:9",0,0.5,true,false,"Böter eller fängelse högst sex månader; obehörigt anskaffande av hemlig rösträttsinformation."],
+ ["Föregivande av allmän ställning","17:15",0,0.5,true,false,"Normalgraden böter eller fängelse högst sex månader; grov form har enbart fängelse högst två år."],
+ ["Grovt angrepp mot tjänsteman","17:2",0.5,6,false,false,"Grov grad sex månader till sex år; närståendeangrepp och hänsynslöshet kan vara särskilda grovhetsindikatorer."],
+ ["Grovt otillbörligt verkande vid röstning","17:8",0,4,false,false,"Grov grad fängelse högst fyra år; våld/hot eller missbruk av tjänsteställning."],
+ ["Grovt skyddande av brottsling","17:11",1,6,false,false,"Grov grad ett till sex års fängelse; betydande men för det allmänna eller särskilt farlig gärning."],
+ ["Grovt övergrepp i rättssak","17:10",2,8,false,false,"Grov grad två till åtta års fängelse; särskild fara och angrepp mot rättsprocessen."],
+ ["Otillbörligt verkande vid röstning","17:8",0,0.5,true,false,"Normalgrad böter eller fängelse högst sex månader; grov grad separat."],
+ ["Skyddande av brottsling","17:11",0,2,true,false,"Normalgraden böter eller fängelse högst två år; den särskilda bötesbestämmelsen vid skälig anledning och ringa-undantaget separat."],
+ ["Tagande av otillbörlig förmån vid röstning","17:8",0,0.5,true,false,"Böter eller fängelse högst sex månader; separat från mutbrott och valpåverkan."],
+ ["Övergrepp i rättssak","17:10",0.5,4,false,false,"Normalgraden fängelse sex månader till fyra år; mindre allvarliga fall högst ett års fängelse har separat skala."],
+ ["Uppror","18:1",10,18,false,true,"Uppror tio till arton års fängelse eller livstid; ringa fara i samma bestämmelse ger skala fyra till tio år."],
+ ["Grovt spioneri","19:6",4,18,false,true,"Grovt spioneri fyra till arton år eller livstid; inte samma skala som vanligt spioneri."],
  ["Grovt missbruk av urkund","15:12",0,2,false,false,"Grov form av missbruk av urkund: fängelse högst två år; grundbrottet har böter eller högst sex månaders fängelse."],
  ["Missbruk av handling","15:12",0,0.5,true,false,"Osann kopieutgivning enligt 15:12 tredje stycket, normalgraden böter eller högst sex månaders fängelse; grov situation kan innebära annan skala."],
  ["Ringa falsk angivelse","15:6",0,0.5,true,false,"Ringa falsk angivelse böter eller fängelse högst sex månader, skild från normal- och grovgraden samt obefogad angivelse."],
