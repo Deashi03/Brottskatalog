@@ -29,6 +29,8 @@ on:
       - "scripts/special_stage_enumeration_15_test.mjs"
       - "special-negative-stage-scope-15.js"
       - "scripts/special_negative_stage_scope_15_test.mjs"
+      - "special-positive-stage-scope-15.js"
+      - "scripts/special_positive_stage_scope_15_test.mjs"
       - "brb20-stage-negative-source-15.js"
       - "scripts/brb20_stage_negative_source_15_test.mjs"
       - "brb13-poison-stage-scope-hold-15.js"
@@ -564,6 +566,8 @@ jobs:
         run: node scripts/special_stage_enumeration_15_test.mjs
       - name: Individually review 72 negative special-law stages and consequences
         run: node scripts/special_negative_stage_scope_15_test.mjs
+      - name: Individually verify 66 positive special-law inchoate authorizations
+        run: node scripts/special_positive_stage_scope_15_test.mjs
       - name: Review six BrB 20:2 stage source links
         run: node scripts/brb20_stage_negative_source_15_test.mjs
       - name: Hold three unjustified negative BrB 13:7 stages for legal review
