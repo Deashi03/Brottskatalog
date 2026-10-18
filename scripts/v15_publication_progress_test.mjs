@@ -19,14 +19,14 @@ assert.equal(find('Grundbrott','Strukturerad inledande rekvisitgenomgång').comp
 assert.equal(find('Grundbrott','Grundläggande straffskaleavstämning').completed,387);
 assert.equal(find('Grundbrott','Separat direktkontroll av brottsgradens straffskala').completed,387);
 assert.equal(find('Förstadier','Sökbart förstadiekort').completed,1086);
-assert.equal(find('Förstadier','Preliminär källkopplad straffbarhetsstatus').completed,1074);
+assert.equal(find('Förstadier','Preliminär källkopplad straffbarhetsstatus').completed,1071);
 assert.equal(find('Förstadier','Individuellt godkänd kriminaliseringsprövning').completed,0);
 assert.equal(find('Förstadier','Individuell kontroll av straffskala/åtal/tvångsmedel').completed,0);
 assert.equal(r.work.filter(x=>x.group==='Juridisk slutrevision').length,9);
 assert.ok(r.work.filter(x=>x.group==='Juridisk slutrevision').every(x=>x.total===387&&x.completed===0));
 assert.ok(r.baseline.automatedTestCommands>=75);
 assert.equal(r.knownBlockers.brbFullFinalApproved,0);
-assert.equal(r.knownBlockers.unverifiedStages,12);
+assert.equal(r.knownBlockers.unverifiedStages,15);
 assert.equal(r.knownBlockers.conditionalPenaltyCases,14);
 assert.equal(r.knownBlockers.specialBaseCardsWithoutCertifiedCompleteLaw,0);
 assert.equal(r.knownBlockers.noAutomaticReleaseApproval,true);
