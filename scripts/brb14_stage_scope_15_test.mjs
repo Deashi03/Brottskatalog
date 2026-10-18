@@ -22,6 +22,7 @@ assert.ok(report,'No BrB 14 stage audit');
 assert.equal(report.sourceOK,true,'All three controlling statutes must have checked full text');
 assert.equal(report.planned,6);
 assert.equal(report.seen,6);
+assert.equal(report.created,3,'Derivative parent must produce all three distinct stage records exactly once');
 assert.equal(report.missing.length,0,JSON.stringify(report));
 assert.equal(report.held.length,0,JSON.stringify(report));
 assert.equal(report.unexpected.length,0,JSON.stringify(report));
@@ -60,6 +61,8 @@ assert.ok(money.stageExplanation.includes('ANSKAFFA eller TA EMOT'));
 for(const kind of ['forberedelse','stampling'])
  assert.equal(get('Olovlig befattning med falska pengar',kind).stageStatus,'not-criminalized');
 assert.equal(D.crimes.filter(c=>c.stageType&&c.stageStatus==='unverified').length,12);
+assert.equal(D.crimes.length,1473,'Three missing derivative-parent stage records are added without touching other crimes');
+assert.equal(D.crimes.filter(c=>c.stageType).length,1086);
 assert.equal(D.crimes.filter(c=>!c.stageType&&c.statute?.startsWith('BrB:')).length,319);
 const laws=ctx.window.BK_STATUTES;
 assert.ok(laws['BrB:14:13'].text.includes('om det fullbordats, ha varit att anse som ringa'));
