@@ -1,3 +1,13 @@
+# Straffskalerevision: 15 och 16 kap. BrB (18 oktober 2026)
+
+Ytterligare **18 brottsgrader** har individuellt källjämförts mot Riksdagens konsoliderade brottsbalk (SFS 1962:700), 6 grader i 15 kap. och 12 grader i 16 kap. Separat kontrollerade skillnader inkluderar ringa falsk angivelse och falsk beskyllning, osann partsutsaga, ordinärt och grovt gravfridsbrott, djurplågeri, falskt larm, barnpornografibrott samt normalgraden hets mot folkgrupp. Förargelseväckande beteende har **endast penningböter**, inte fängelse. Kontrollerna omfattar **endast numerisk skala och bötes-/livstidsalternativ** för respektive grad.
+
+**227** gradintervall individuellt källjämförda; **90** ordinarie fall och **12** villkorade fall återstår. Övriga lagar (utanför BrB) behöver separata författningskällor. `releaseReady:false`.
+
+Källa: https://www.riksdagen.se/sv/dokument-och-lagar/dokument/svensk-forfattningssamling/brottsbalk-1962700_sfs-1962-700/
+
+---
+
 # Straffskalerevision 18 oktober 2026: allmänfarliga brott och två sexualbrott
 
 **17 nya separata brottsgrader** har källjämförts med Riksdagens brottsbalk, SFS 1962:700 (t.o.m. 2026:1656): 15 brottsgrader i 13 kap. och två i 6 kap. Bland annat har allmänfarlig vårdslöshet separerats från grovt allmänfarlig vårdslöshet (bötesalternativ gäller endast normalgraden), sabotage mot blåljusverksamhet separerats från dess grova grad, och mordbrand från grov mordbrand. Livstidsalternativet finns kvar för berörda grova grader. Undantagen om mindre allvarligt brott i 13:1 och 13:3 är separata fall och har inte felaktigt sammanförts med normalgradens intervall. 12 osäkra förstadier har inte autoavgjorts genom detta arbete.

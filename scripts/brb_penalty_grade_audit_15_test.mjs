@@ -5,7 +5,7 @@ const html=fs.readFileSync(path.join(root,'index.html'),'utf8');
 const sw=fs.readFileSync(path.join(root,'service-worker.js'),'utf8');
 const scripts=[...html.matchAll(/<script\s+src="([^"]+)"/g)].map(x=>x[1]);
 const module='./brb-penalty-grade-audit-15.js';
-assert.ok(scripts.includes(module)&&sw.includes(module),'209 grade-range legal crosschecks must be available offline');
+assert.ok(scripts.includes(module)&&sw.includes(module),'227 grade-range legal crosschecks must be available offline');
 assert.ok(scripts.indexOf(module)>scripts.indexOf('./brb-curated-lawtext-15.js'));
 assert.ok(scripts.indexOf(module)<scripts.indexOf('./stages-08.js'));
 const inline=[...html.matchAll(/<script(?:\s[^>]*)?>([\s\S]*?)<\/script>/g)].map(x=>x[1]);
@@ -14,16 +14,16 @@ for(const i of [1,2,3])vm.runInContext(inline[i],ctx,{filename:'inline-'+i});
 for(const file of scripts)vm.runInContext(fs.readFileSync(path.join(root,file),'utf8'),ctx,{filename:file});
 const stats=ctx.window.BK_PENALTY_GRADE_AUDIT15;
 assert.ok(stats,'No source-checked penalty audit report');
-assert.equal(stats.planned,209,'Unexpected count of offence-grade penalty crosschecks');
+assert.equal(stats.planned,227,'Unexpected count of offence-grade penalty crosschecks');
 assert.deepEqual(Array.from(stats.missing),[],'Missing title in penalty source review');
 assert.deepEqual(Array.from(stats.unreviewedSource),[],'No source verification for penalty review');
 assert.deepEqual(Array.from(stats.held),[],'Penalty range held for source change');
 assert.deepEqual(Array.from(stats.mismatch),[],'Current statutory penalty conflicts found – repair underlying entry, never stamp false approval');
-assert.equal(stats.reviewed,209,'All 209 grade-range comparisons should match the actual catalogue');
+assert.equal(stats.reviewed,227,'All 227 grade-range comparisons should match the actual catalogue');
 const c=ctx.window.BK_DATA.crimes;
 const base=c.filter(x=>!x.stageType);
 const reviewed=base.filter(x=>x.penaltyReviewScope==='individual-current-grade-range-only');
-assert.equal(reviewed.length,209,'No extra crime can silently acquire grade-range approval');
+assert.equal(reviewed.length,227,'No extra crime can silently acquire grade-range approval');
 for(const p of reviewed){
  assert.equal(p.penaltyGradeReviewDate,p.lawCompletenessChecked);
  assert.ok(p.penaltyGradeReviewSource.includes('riksdagen.se'));
@@ -33,6 +33,20 @@ for(const p of reviewed){
  assert.ok(!p.penaltyReviewSafety.includes('fully reviewed'),'Do not overstate legal review scope');
 }
 const by=t=>base.find(c=>c.title===t);
+
+const courtroomAndOrderGrades=[{"title":"Grovt missbruk av urkund","ref":"BrB:15:12","min":0,"max":2,"fines":false,"life":false},{"title":"Missbruk av handling","ref":"BrB:15:12","min":0,"max":0.5,"fines":true,"life":false},{"title":"Ringa falsk angivelse","ref":"BrB:15:6","min":0,"max":0.5,"fines":true,"life":false},{"title":"Ringa falsk beskyllning","ref":"BrB:15:7","min":0,"max":0.5,"fines":true,"life":false},{"title":"Ringa osann partsutsaga","ref":"BrB:15:2","min":0,"max":0.5,"fines":true,"life":false},{"title":"Underlåtenhet att avvärja rättsfel","ref":"BrB:15:9","min":0,"max":0.5,"fines":true,"life":false},{"title":"Barnpornografibrott","ref":"BrB:16:10a","min":0,"max":2,"fines":false,"life":false},{"title":"Djurplågeri","ref":"BrB:16:13","min":0,"max":2,"fines":true,"life":false},{"title":"Falskt larm","ref":"BrB:16:15","min":0,"max":1,"fines":true,"life":false},{"title":"Förargelseväckande beteende","ref":"BrB:16:16","min":0,"max":0,"fines":true,"life":false},{"title":"Förledande av ungdom","ref":"BrB:16:12","min":0,"max":0.5,"fines":true,"life":false},{"title":"Gravfridsbrott","ref":"BrB:16:10","min":0,"max":2,"fines":true,"life":false},{"title":"Grovt barnpornografibrott","ref":"BrB:16:10a","min":1,"max":6,"fines":false,"life":false},{"title":"Grovt djurplågeri","ref":"BrB:16:13","min":0.5,"max":4,"fines":false,"life":false},{"title":"Grovt falskt larm","ref":"BrB:16:15","min":0.5,"max":4,"fines":false,"life":false},{"title":"Grovt gravfridsbrott","ref":"BrB:16:10","min":0.5,"max":4,"fines":false,"life":false},{"title":"Hets mot folkgrupp","ref":"BrB:16:8","min":0,"max":2,"fines":false,"life":false},{"title":"Missbruk av larmanordning","ref":"BrB:16:15","min":0,"max":0.5,"fines":true,"life":false}];
+for(const x of courtroomAndOrderGrades){
+ const c=by(x.title);assert.ok(c,'Missing crime card '+x.title);
+ assert.equal(c.statute,x.ref,'Wrong provision '+x.title);
+ for(const k of ['min','max','fines','life'])assert.equal(c.penaltyRange[k],x[k],'Wrong '+k+' for '+x.title);
+ assert.equal(c.penaltyReviewScope,'individual-current-grade-range-only','No grade signoff '+x.title);
+ assert.equal(c.penaltyGradeReviewDate,c.lawCompletenessChecked,'Source text and penalty date mismatch '+x.title);
+ assert.notEqual(c.rekvisit15?.legalReviewApproved,true,'Whole-case legal review is pending '+x.title);
+}
+assert.equal(by('Förargelseväckande beteende').penaltyRange.max,0);
+assert.ok(by('Förargelseväckande beteende').penaltyGradeReviewCaveat.includes('penningböter'));
+assert.notEqual(by('Hets mot folkgrupp').penaltyRange.fines,true,'Do not mix normal and ringa grade');
+
 
 const highRiskGrades=[{"title":"Utnyttjande av barn för sexuell posering","statute":"BrB:6:8","min":0,"max":2,"fines":false,"life":false},{"title":"Utnyttjande av barn genom köp av sexuell handling","statute":"BrB:6:9","min":0.5,"max":4,"fines":false,"life":false},{"title":"Allmänfarlig vårdslöshet","statute":"BrB:13:6","min":0,"max":0.5,"fines":true,"life":false},{"title":"Allmänfarlig ödeläggelse","statute":"BrB:13:3","min":2,"max":8,"fines":false,"life":false},{"title":"Förgöring","statute":"BrB:13:8","min":0,"max":2,"fines":true,"life":false},{"title":"Grov allmänfarlig ödeläggelse","statute":"BrB:13:3","min":6,"max":18,"fines":false,"life":true},{"title":"Grov förgöring","statute":"BrB:13:8","min":0.5,"max":6,"fines":false,"life":false},{"title":"Grov mordbrand","statute":"BrB:13:2","min":6,"max":18,"fines":false,"life":true},{"title":"Grovt allmänfarlig vårdslöshet","statute":"BrB:13:6","min":0,"max":2,"fines":false,"life":false},{"title":"Grovt sabotage","statute":"BrB:13:5","min":2,"max":18,"fines":false,"life":true},{"title":"Grovt sabotage mot blåljusverksamhet","statute":"BrB:13:5c","min":2,"max":18,"fines":false,"life":true},{"title":"Grovt spridande av gift eller smitta","statute":"BrB:13:7","min":4,"max":18,"fines":false,"life":true},{"title":"Mordbrand","statute":"BrB:13:1","min":2,"max":8,"fines":false,"life":false},{"title":"Sabotage","statute":"BrB:13:4","min":0,"max":4,"fines":false,"life":false},{"title":"Sabotage mot blåljusverksamhet","statute":"BrB:13:5c","min":0,"max":4,"fines":false,"life":false},{"title":"Spridande av gift eller smitta","statute":"BrB:13:7","min":0,"max":6,"fines":false,"life":false},{"title":"Underlåtenhet att avvärja allmänfara","statute":"BrB:13:10","min":0,"max":1,"fines":true,"life":false}];
 for(const x of highRiskGrades){
@@ -276,4 +290,4 @@ assert.equal(by('Inbrottsstöld').penaltyRange.min,1);
 assert.equal(by('Grovt missbruk av offentlig ställning').penaltyRange.max,6);
 assert.equal(base.filter(c=>c.statute?.startsWith('BrB:')).length,319);
 assert.equal(c.filter(x=>x.stageType&&x.stageStatus==='unverified').length,12,'No implicit inchoate review via base penalty scales');
-console.log('PASS V1.5: 209 current-grade BrB penalty scales source-verified; no silent conflicts or overbroad approvals');
+console.log('PASS V1.5: 227 current-grade BrB penalty scales source-verified; no silent conflicts or overbroad approvals');

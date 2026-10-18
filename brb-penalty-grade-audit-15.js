@@ -1,4 +1,4 @@
-/* V1.5: explicit individual-range checks of 209 common BrB grades.
+/* V1.5: explicit individual-range checks of 227 common BrB grades.
  * The controlling CURRENT complete SFS paragraphs are curated in
  * brb-curated-lawtext-15.js. Full legal/penalty applicability is NOT approved.
  * Date-dependent, inchoate and coercive rules remain separate work.
@@ -6,6 +6,24 @@
 (()=>{'use strict';const D=window.BK_DATA,W=window.BK_STATUTES;if(!D?.crimes||!W)return;
 const URL='https://www.riksdagen.se/sv/dokument-och-lagar/dokument/svensk-forfattningssamling/brottsbalk-1962700_sfs-1962-700/';
 const rows=[
+ ["Grovt missbruk av urkund","15:12",0,2,false,false,"Grov form av missbruk av urkund: fängelse högst två år; grundbrottet har böter eller högst sex månaders fängelse."],
+ ["Missbruk av handling","15:12",0,0.5,true,false,"Osann kopieutgivning enligt 15:12 tredje stycket, normalgraden böter eller högst sex månaders fängelse; grov situation kan innebära annan skala."],
+ ["Ringa falsk angivelse","15:6",0,0.5,true,false,"Ringa falsk angivelse böter eller fängelse högst sex månader, skild från normal- och grovgraden samt obefogad angivelse."],
+ ["Ringa falsk beskyllning","15:7",0,0.5,true,false,"Ringa falsk beskyllning böter eller fängelse högst sex månader; åklagare, polis eller annan behörig mottagare enligt paragrafen."],
+ ["Ringa osann partsutsaga","15:2",0,0.5,true,false,"Ringa osann partsutsaga har böter eller fängelse högst sex månader; huvudgraden enbart fängelse högst två år."],
+ ["Underlåtenhet att avvärja rättsfel","15:9",0,0.5,true,false,"Böter eller fängelse högst sex månader; förutsätter egen framkallad risk och särskild insikt om faran."],
+ ["Barnpornografibrott","16:10a",0,2,false,false,"Normalgrad högst två års fängelse; ringa har egen skala böter/högst sex månader och grov grad ett till sex år."],
+ ["Djurplågeri","16:13",0,2,true,false,"Böter eller fängelse högst två år, uppsåt eller grov oaktsamhet; särskild grovhetsprövning för grovt djurplågeri."],
+ ["Falskt larm","16:15",0,1,true,false,"Oriktig farouppgift som orsakar onödig säkerhetsåtgärd; böter eller fängelse högst ett år."],
+ ["Förargelseväckande beteende","16:16",0,0,true,false,"Endast penningböter, inte dagsböter eller fängelse; offentligt eller på allmän plats enligt paragrafen."],
+ ["Förledande av ungdom","16:12",0,0.5,true,false,"Böter eller fängelse högst sex månader; spridning till barn/ungdom av material med särskilt angiven fara."],
+ ["Gravfridsbrott","16:10",0,2,true,false,"Böter eller fängelse högst två år; grovt gravfridsbrott har separat minimistraff."],
+ ["Grovt barnpornografibrott","16:10a",1,6,false,false,"Grov grad fängelse ett till sex år, bl.a. omfattning, vinstsyfte och allvarligt utnyttjande; undantag i 16:10 b separat."],
+ ["Grovt djurplågeri","16:13",0.5,4,false,false,"Grov grad sex månader till fyra år, bl.a. allvarligt lidande och flera djur."],
+ ["Grovt falskt larm","16:15",0.5,4,false,false,"Grov grad sex månader till fyra år, till skillnad från normalgradens bötesalternativ."],
+ ["Grovt gravfridsbrott","16:10",0.5,4,false,false,"Grov grad sex månader till fyra år, svår skada på lik, omfattande förstörelse eller särskild hänsynslöshet."],
+ ["Hets mot folkgrupp","16:8",0,2,false,false,"Normalgraden fängelse högst två år; ringa hets mot folkgrupp ger böter och grov grad sex månader till fyra års fängelse."],
+ ["Missbruk av larmanordning","16:15",0,0.5,true,false,"Böter eller fängelse högst sex månader, om missbruk av larm orsakar onödig myndighetsutryckning."],
  ["Utnyttjande av barn för sexuell posering","6:8",0,2,false,false,"Normalgraden högst två år; straffbart försök enligt BrB 6:15 och ansvarsfrihet i särskilda jämnårighetsfall enligt 6:14 ska bedömas separat."],
  ["Utnyttjande av barn genom köp av sexuell handling","6:9",0.5,4,false,false,"Normalgraden sex månader till fyra år; mindre grovt fall i samma paragraf har särskild skala högst ett år; betalning från tredje man omfattas."],
  ["Allmänfarlig vårdslöshet","13:6",0,0.5,true,false,"Oaktsamhetsbrott som uttryckligen tillåter böter eller högst sex månaders fängelse; grövre grad saknar bötesalternativ."],
