@@ -15,5 +15,23 @@ class ParseBrbRegression(unittest.TestCase):
         self.assertIn("24 § lagen (1988:688)", provisions["BrB:4:4a"])
         self.assertIn("BrB:4:4b", provisions)
 
+    def test_backward_section_references_keep_paragraph_complete(self):
+        html = """<h3>6 kap. Om sexualbrott</h3>
+        <p>4 § Den som begår en gärning mot ett barn ska dömas till ansvar.</p>
+        <p>6 § Den som med ett barn och där omständigheterna är sådana som avses i</p>
+        <p>4 § andra stycket, ska dömas för en annan gärning enligt denna paragraf.</p>
+        <p>10 § Den som begår en gärning enligt föregående stycke.</p>
+        <p>10 a § Den som planerar brott enligt</p>
+        <p>10 §, döms till ansvar enligt denna bestämmelse.</p>
+        <p>11 § Den som begår en annan gärning.</p>
+        <p>12 § Den som hänvisar till</p>
+        <p>11 § döms till ansvar.</p>
+        <p>13 § Ny paragraf.</p>"""
+        provisions, _ = parse_brb(html)
+        self.assertIn("4 § andra stycket", provisions["BrB:6:6"])
+        self.assertIn("10 §, döms", provisions["BrB:6:10a"])
+        self.assertIn("11 § döms", provisions["BrB:6:12"])
+        self.assertIn("BrB:6:13", provisions)
+
 if __name__ == "__main__":
     unittest.main()
