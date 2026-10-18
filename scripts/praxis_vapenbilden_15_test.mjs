@@ -32,7 +32,7 @@ assert.ok(options&&options[0].includes('sätta sig till motvärn'));
 assert.ok(options[1].includes('annars med våld'));
 assert.ok(!options[0].includes('motvärn med våld'),'Do not invent an express violence condition for motvärn route');
 const finalReport=ctx.window.BK_CURATED_LAWTEXT15;
-assert.equal(finalReport.sectionsChecked,141,'Curated SFS library includes 141 current complete paragraphs, including the amended BrB 4:3 and 4:4b');
+assert.ok(finalReport.sectionsChecked>=154,'Curated SFS library must preserve at least 154 complete source-crosschecked paragraphs, including BrB 4:3 and 4:4b');
 for(const k of ['BrB:13:5c','BrB:17:10']) {
  const law=ctx.window.BK_STATUTES[k];
  assert.equal(law.complete,true);
