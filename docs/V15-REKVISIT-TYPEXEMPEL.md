@@ -1,3 +1,9 @@
+# Rättskällekontroll: ytterligare 13 paragrafer i BrB 6 kap. (18 oktober 2026)
+
+Hela SFS-texter för BrB 6:1, 1 a, 2–5, 8–10, 11 samt 13–15 har jämförts med Sveriges riksdags konsoliderade text och försetts med käll- och datumstämplar. Tillsammans med BrB 6:6, 6:7, 6:10 a och 6:12 täcks kapitlets 17 relevanta paragrafer. Detta innebär **205 individuellt jämförda hela paragraftexter** i kuraterade serien, efter grön testkörning. Fortfarande ingen full juridisk slutgranskning av något av de 319 BrB-brottskorten. Flera historiska lydelser och samtliga förstadie- och tvångsmedelsslutsatser kvarstår som separat revisionsarbete.
+
+---
+
 # Importkvalitet: manuellt kontrollerade reparerade texter (18 oktober 2026)
 
 Fyra tidigare avklippta maskinimporterade paragrafer har ersatts med hela aktuella lagtexter från Riksdagen: **BrB 6:6, 6:10 a, 6:12 och 19:9**. Den nya täckningen omfattar 192 kuraterade hela paragrafer när de 188 tidigare texterna behålls. Detta återställer centrala sexualbrotts- och säkerhetsbrottsbestämmelser. Kontrollerna är begränsade till paragrafens ordalydelse; rubricering, historisk giltighet, straffskala, förstadier, praxis och tvångsmedel är inte därmed slutgodkända. Riksdagens officiella SFS 1962:700, konsoliderad t.o.m. SFS 2026:1656: https://www.riksdagen.se/sv/dokument-och-lagar/dokument/svensk-forfattningssamling/brottsbalk-1962700_sfs-1962-700/
