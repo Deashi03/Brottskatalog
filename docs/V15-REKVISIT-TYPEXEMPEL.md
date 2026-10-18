@@ -1,3 +1,11 @@
+# Nytt: fullständiga paragrafer i BrB 19 kap., 18 oktober 2026
+
+20 individuellt källjämförda hela paragrafer i 19 kap. utöver redan reparerade 19:9. Den kompletta texten för BrB 19:14–16 har lagts in manuellt efter upptäckt av parserfelet där en hänvisning till 23 kap. avbröt importen. Förstadielagstödet enligt 19:14, den särskilda medhjälpsregeln 19:15 och regeringens åtalsförordnande enligt 19:16 är endast textverifierade. De får inte tolkas som klar juridisk signoff för ett visst brott eller förstadium.
+
+Efter grönt CI innebär denna omgång **225 fullständiga individuellt kontrollerade BrB-paragrafer**. Source: Riksdagens konsoliderade brottsbalk (SFS 1962:700), ändrad t.o.m. SFS 2026:1656. https://www.riksdagen.se/sv/dokument-och-lagar/dokument/svensk-forfattningssamling/brottsbalk-1962700_sfs-1962-700/
+
+---
+
 # Rättskällekontroll: ytterligare 13 paragrafer i BrB 6 kap. (18 oktober 2026)
 
 Hela SFS-texter för BrB 6:1, 1 a, 2–5, 8–10, 11 samt 13–15 har jämförts med Sveriges riksdags konsoliderade text och försetts med käll- och datumstämplar. Tillsammans med BrB 6:6, 6:7, 6:10 a och 6:12 täcks kapitlets 17 relevanta paragrafer. Detta innebär **205 individuellt jämförda hela paragraftexter** i kuraterade serien, efter grön testkörning. Fortfarande ingen full juridisk slutgranskning av något av de 319 BrB-brottskorten. Flera historiska lydelser och samtliga förstadie- och tvångsmedelsslutsatser kvarstår som separat revisionsarbete.

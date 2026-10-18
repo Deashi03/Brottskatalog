@@ -78,6 +78,8 @@ on:
       - "scripts/brb_truncated_source_repairs_15_test.mjs"
       - "brb6-further-fulltext-15.js"
       - "scripts/brb6_further_fulltext_15_test.mjs"
+      - "brb19-fulltext-15.js"
+      - "scripts/brb19_fulltext_15_test.mjs"
       - "scripts/test_brb_parser_15.py"
       - "scripts/sync_law_sources.py"
       - "scripts/rekvisit_sista_15_test.mjs"
@@ -343,6 +345,8 @@ jobs:
         run: node scripts/brb_truncated_source_repairs_15_test.mjs
       - name: V1.5 13 further current sex-offence provisions, fulltext only
         run: node scripts/brb6_further_fulltext_15_test.mjs
+      - name: V1.5 chapter 19 full-source comparison and restored stage/prosecution sections
+        run: node scripts/brb19_fulltext_15_test.mjs
       - name: V1.5 source-checked current child-witness and stalking requisite alternatives
         run: node scripts/brb4_child_stalking_requisites_15_test.mjs
       - name: V1.5 falsk angivelse, falsk beskyllning and correction-of-error safeguards
