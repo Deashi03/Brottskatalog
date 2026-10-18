@@ -29,7 +29,7 @@ För **387 grundbrott** (319 i BrB och 68 i andra författningar) räknas först
 2. Särskild åldersmetadata – **387/387**, inte slutlig tillämpning i varje fall.
 3. Daterad och källverifierad fullständig lagtext – **319/387**; de 68 andra författningarna har ännu inte motsvarande fulltextcertifiering.
 4. Strukturerade inledande rekvisit – **319/387**.
-5. Grundläggande straffskaleavstämning – **373/387**; 14 villkorade/härledda fall kräver rättslig acceptans av sina villkor utan påhittad enda siffra.
+5. Grundläggande straffskaleavstämning – **373/387**; 14 villkorade/härledda fall kräver separat rättslig acceptans av sina alternativ och tillämpningsvillkor, utan påhittat numeriskt intervall. Procentmätaren stöder uttryckligen källbelagt godkännande av en sådan villkorad skala utan automatiskt tvångsmedelsbesked.
 6. Separat dokumenterad direktkontroll av straffskalan – **315/387**. Resterande 72 innebär inte automatiskt att nuvarande straffskalor är fel.
 
 Därefter ska **nio distinkta slutkontroller för varje grundbrott** göras: gärningsdatum och rätt lydelse; objektiva rekvisit; subjektiva rekvisit; undantag och konkurrens; brottsgrad; relevanta förarbeten och praxis; förstadieansvar; åtalsregler; samt straffskalevillkor och tvångsmedelsbehörighet. Totalt **3 483 moment**, hittills **inga slutligt intygade**. De 319 redan skapade BrB-arbetsakterna håller dessa steg uttryckligen öppna. Även 68 speciallagsbrott behöver motsvarande individuella slutkontroll.
@@ -41,7 +41,7 @@ För **1 086 förstadieposter** krävs fem insatser per kort: sökbar post (**1 
 ## Prioriterad fortsatt arbetsordning
 
 1. **Färdigställ grunddatans 222 luckor**, med de 68 specialförfattningsfulltexterna och deras rekvisit främst. Behåll villkorade straffskalor där ett enda numeriskt intervall inte är sakligt möjligt.
-2. **Stäng de mest riskfyllda förstadiekorten först:** 12 uttryckligen oavgjorda fall, övriga 156 preliminära utan tillräckligt källintyg, därefter systematisk individuell genomgång av alla 1 086 kortens lagstöd och påföljdskonsekvenser.
+2. **Stäng de mest riskfyllda förstadiekorten först:** bland 156 ännu inte tillräckligt källdokumenterade preliminära klassificeringar ingår 12 uttryckligen oavgjorda fall. Fortsätt därefter med systematisk individuell genomgång av alla 1 086 kortens lagstöd och påföljdskonsekvenser.
 3. **Arbeta kapitelvis genom de nio juridiska slutkontrollerna**, med de 37 polisprioriterade BrB-korten först, därefter 282 övriga BrB-kort och 68 brott i särskild strafflagstiftning. Slutgranskningsmoment får bara bockas av med faktisk daterad sakprövning och källhänvisning.
 4. **Granska 86 åldersundantagskandidater** och beroenden till individuella brottsgrader och förstadier.
 5. **Slutför 18 frisläppningssteg**: historiska lagversioner, slutlig källförändringskontroll, negativ rättighets-/tvångsmedelskontroll, produktionsdata och källänkar, verklig iPhone/offline-verifiering, sista regressionskörning, releasegodkännande, PR-merge, Pages-deploy, efterkontroll och rollbackdokumentation.
