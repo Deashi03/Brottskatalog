@@ -1,3 +1,9 @@
+# Straffskalegranskningen – detaljerad åtgärdskö
+
+Ny CI-genererad revisionsfil: `audit/v15-penalty-review-queue.json` med varje återstående baspost, lagrum, hittills lagrat intervall, villkorade undantag, verifieringskälla, rättslig kontrollista och uttrycklig spärr mot automatiskt godkännande. Den skiljer mellan 171 ordinarie och 12 särskilt villkorade straffskalefall. Polisrelevanta poster prioriteras, men juridisk säkerhet väger tyngre än antal färdigmarkerade kort. CI kräver att kön är heltäckande och uppdaterad; rapporten publiceras endast som testartefakt, inte i V1.4.
+
+---
+
 # BrB-fulltext 100 % – endast dokumenterad lagtextnivå (18 oktober 2026)
 
 BrB 15:4 a–b (osann/ovarsam utsaga inför nordisk respektive internationell domstol) var de sista två kvarvarande hela paragraftexterna som omfattar fyra BrB-brottskort. Efter källjämförelse och godkänd regression omfattar den kuraterade serien **265 fullständiga paragrafer** och **319/319 BrB-brottskort med källa och daterad komplett lagtext**. Detta är ENDAST fulltextsteget. Straffskale-, gärningsdatum-, rekvisit-, rättspraxis-, åtals-, förstadie- och tvångsmedelsgranskningen är inte färdig. `releaseReady:false` och publiceringsspärren ska fortsätta gälla.
