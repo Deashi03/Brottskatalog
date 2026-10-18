@@ -20,6 +20,7 @@ on:
       - "scripts/v15_scoped_source_progress_15_test.mjs"
       - "scripts/v15_publication_progress.mjs"
       - "scripts/v15_publication_progress_test.mjs"
+      - "scripts/v15_penalty_direct_evidence_queue.mjs"
       - "scripts/v15_penalty_audit_queue.mjs"
       - "scripts/v15_release_queue_15_test.mjs"
       - "scripts/brb_special_preparation_15_test.mjs"
@@ -527,6 +528,8 @@ jobs:
         run: node scripts/v15_scoped_source_progress_15_test.mjs
       - name: Calculate V1.5 equal-weight public-release progress and enforce legal blockers
         run: node scripts/v15_publication_progress_test.mjs
+      - name: Inventory remaining direct penalty range checks by legal provision
+        run: node scripts/v15_penalty_direct_evidence_queue.mjs
       - name: Verify truthful and complete per-chapter legal review queue
         run: node scripts/v15_release_queue_15_test.mjs
       - name: Archive full quality report
@@ -541,6 +544,7 @@ jobs:
             audit/v15-penalty-review-queue.json
             audit/v15-priority-legal-dossiers.json
             audit/v15-publication-progress.json
+            audit/v15-penalty-direct-evidence-queue.json
           if-no-files-found: warn
       - name: Install headless browser
         run: |
