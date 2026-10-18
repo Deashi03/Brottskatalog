@@ -26,7 +26,7 @@ const expected=[
  ['Hindrande av urkunds bevisfunktion','BrB:14:4','Bevisförvanskning','bokföringsbrott'],
  ['Bevisförvanskning','BrB:15:8','Hindrande av urkunds bevisfunktion','oskyldig'],
  ['Penningförfalskning','BrB:14:6','Olovlig befattning med falska pengar','prånglas ut'],
- ['Olovlig befattning med falska pengar','BrB:14:7','Penningförfalskning','ANSKAFFA'],
+ ['Olovlig befattning med falska pengar','BrB:14:7','Penningförfalskning','anskaffa eller ta emot'],
  ['Brukande av det förfalskade','BrB:14:10','Urkundsförfalskning','enda allmänt giltig numerisk straffskala'],
  ['Olaga spridande av efterbildning','BrB:14:11','Brukande av det förfalskade','enbart böter'],
  ['Märkesförfalskning','BrB:14:8','Förfalskning av fast märke','värdemärken'],
