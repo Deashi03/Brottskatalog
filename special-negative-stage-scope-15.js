@@ -52,9 +52,7 @@ for(const [fam,label] of families){
    const c=D.crimes.find(x=>x.stageParentId===p?.id&&x.stageType===slug);
    const s=c?.stagePreliminaryScope15;
    const valid=Boolean(r.sourceOK?.[fam]===true&&r.held.length===0
-     &&p?.stageReviewed===true&&p?.stagePermissions&&!p.stagePermissions.includes(abbr)
-     ||r.sourceOK?.[fam]===true&&r.held.length===0
-       &&p?.stageReviewed===true&&!p?.stagePermissions?.includes(abbr));
+     &&p?.stageReviewed===true&&!String(p.stagePermissions||'').includes(abbr));
    const sourceOK=Boolean(valid&&c?.stageStatus==='not-criminalized'
      &&c.stageReviewDate==='2026-10-18'&&c.stageSource===p?.stageSource
      &&s?.reviewKind==='specified-offence-and-specific-stage-enumeration'
@@ -80,7 +78,7 @@ for(const [fam,label] of families){
      question:'Kan just ett ej straffbelagt förstadium enligt den namngivna författningen ensamt bära straffskala, åtal eller tvångsmedel?',
      finding:'NO_INDEPENDENT_PENALTY_PROSECUTION_OR_COERCION_FOR_UNENUMERATED_STAGE',
      namedOffenceOnly:true,otherOffencesMayApply:true,historicLawNotChecked:true,
-     approvesNoCaseSpecificCustodyDecision:true,automaticCoercionApproved:false,
+     noCaseSpecificCustodyDecision:true,automaticCoercionApproved:false,
      note:'Ingen självständig påföljd, åtalsgrund eller tvångsmedelsgrund kan härledas ur just ett icke kriminaliserat namngivet förstadium. Andra brott och självständiga tvångsmedelsgrunder måste kontrolleras separat.'
     }
    };
