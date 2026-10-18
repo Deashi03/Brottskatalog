@@ -1,6 +1,6 @@
 # Brottskatalog V1.5 – mätbar väg till publicering
 
-> **Senaste avstämning: 48,3 % (5 527/11 442), 5 915 åtgärder återstår.** Se avstämningen längst ned; äldre procentsiffror nedan är sparade som revisionshistorik.
+> **Senaste avstämning: 50,3 % (5 757/11 448), 5 691 åtgärder återstår.** Individuella rättsliga slutrevisioner är fortfarande inte godkända. Äldre procentsiffror nedan redovisar revisionshistorik.
 
 **Beräknad status: 46,3 % (5 297 av 11 434 jämnt räknade åtgärder).** Återstår **6 137**. Avser arbetsgren `v15-komplett-brb-rekvisit-typexempel`, avstämd 18 oktober 2026. Testad i [GitHub Actions 39154276028](https://github.com/Deashi03/Brottskatalog/actions/runs/39154276028).
 
@@ -167,3 +167,39 @@ Två nya moduler `brb-direct-grade-clauses-15.js` och `brb-direct-grade-remainin
 **CI med komplett iPhone-regression:** [körning 39159735439](https://github.com/Deashi03/Brottskatalog/actions/runs/39159735439). De fyra nya kontrollstegen granskar 14 villkorade rättskällegrenar, 25 och 33 individuellt avgränsade straffskalor samt nollrapportering av oavklarade direkta intervall.
 
 **Fortsatt publiceringsspärr:** 0/3 483 juridiska slutkontroller, 2 328 förstadieåtgärder, 86 särskilda åldersundantagskontroller och 18 releaseåtgärder återstår. Tolv förstadier är särskilt osäkra. Samtliga 14 villkorade straffskalor måste fortfarande ges en villkorad, inte en automatiskt numerisk, tillämpning i det konkreta fallet. Ingen merge eller publicering av v1.5 är gjord; V1.4 på `main` lämnas oförändrad.
+
+---
+
+## 18 oktober 2026 – milstolpe 50,3 %; 83 kontroller av 14-årsundantaget och 144 förstadiekällor
+
+**Verifierad status: 5 757/11 448 åtgärder = 50,3 %. 5 691 återstår.** Förändringen sedan avstämningen 48,3 % (5 527/11 442) är **+230 slutförda åtgärder** och **+6 testmoment i den totala inventeringen**. Räkneregeln är fortfarande en självständig granskning per brottskort, förstadiekort eller CI-uppgift. **Samtliga 97/97 registrerade automatiska CI-tester har passerat** inklusive iPhone, se [Actions 39164907417](https://github.com/Deashi03/Brottskatalog/actions/runs/39164907417).
+
+### Sammanhängande källgranskning: 144 förstadiekort
+
+- **138 speciallagsförstadier** (46 brott × försök, förberedelse, stämpling) har fått varsin individuellt avgränsad preliminär källkoppling till en av fem familjer av straffbud: smugglingslagens 14 §, penningtvättsbrottslagens 8 §, skattebrottslagens 11 §, brandfarliga/explosiva varors 30 a § och bidragsbrottslagens uppräknade bestämmelser. **66** är enligt uttrycklig aktuellt lagstöd preliminärt markerade straffbelagda och **72** saknar sådan särskild kriminalisering i kontrollerad bestämmelse. Inte ett individuellt konstaterande av brottslig gärning.
+- **Sex förstadier** till **missbruk av offentlig ställning och grovt missbruk av offentlig ställning** har fått egna dokumenterade negativa kontroller mot BrB 20:2 och kapitlets särskilda kriminaliseringsstöd.
+- Den tidigare kategoriska **icke-straffbarhetsklassificeringen för tre förstadier till grovt spridande av gift eller smitta** har spärrats. BrB 13:7 anger grov grad och 13:12 kriminaliserar förstadier till spridande av gift eller smitta; gradens omfattning kräver rättslig tolkning. Det är **15**, inte 12, uttryckligen öppna förstadiefrågor nu. Katalogen visar `unverified`, okänd straffskala och ingen automatisk tvångsmedelsindikator för dessa tre. Se `brb13-poison-stage-scope-hold-15.js`.
+- Den tidigare käll- och datumkön för 156 förstadier har krympt till **15 öppna**, utan att enbart fylla i ett datum på en juridiskt oavgjord fråga. Juridiska slutrevisioner av samtliga förstadier kvarstår enligt de fem uppgifterna per post.
+
+### 14 år och BrB 1 kap. 6 § – 83 separata källavstämningar
+
+- **86 kandidater** når det numeriska tröskelvärdet **fyra års minimistraff för det fullbordade brottet** och har identifierats för särskild kontroll.
+- **83/86** har fått självständig källanknuten kontroll av den dokumenterade, aktuella fullbordade straffskalan och – för förstadier – en separat preliminär källkoppling till uttrycklig förstadiekriminalisering. Källmaterial: [BrB 1:6, SFS 2026:1528 och 2026:1555](https://www.riksdagen.se/sv/dokument-och-lagar/dokument/svensk-forfattningssamling/brottsbalk-1962700_sfs-1962-700/) samt respektive brotts specialbestämmelse. Även speciallagarnas minimiintervalldokumentation har jämförts.
+- **Tre kandidater**, just förstadierna till grovt spridande av gift eller smitta, är spärrade från ett källomfattningsintyg eftersom deras gradvisa förstadieansvar är rättsligt öppet.
+- `individualSourceScopeApproved=true` innebär **endast en genomförd juridiskt avgränsad SFS-kontroll av minimistraff och förstadiekoppling**, aldrig att ett visst barn automatiskt kan dömas, att en gärning faktiskt är straffbar eller att tvångsmedel kan användas. Varje intyg har `caseSpecificApplicationApproved=false`, `provisionalOnly=true`, `neverApprovesCoerciveMeasures=true`. Gärningsdag, ålder, övergångsregler, särskilda tillämpningsvillkor och ungdomars processuella skydd måste bedömas i varje konkret fall.
+- Nya handlingar: `special-stage-enumeration-15.js`, `brb20-stage-negative-source-15.js`, `brb13-poison-stage-scope-hold-15.js`, `age14-candidate-source-audit-15.js` samt fyra separata regressionsfiler och två separata inventeringsskript. Sex ytterligare CI-steg är installerade och gröna.
+
+### Verifierad avstämning
+
+| Grupp | Färdigt | Totalt | Kvar |
+| --- | ---: | ---: | ---: |
+| Grundbrottens sex inledande uppgifter | 2 322 | 2 322 | 0 |
+| Grundbrottens nio juridiska slutkontroller | 0 | 3 483 | 3 483 |
+| Förstadiernas fem uppgifter per post | 3 243 | 5 430 | 2 187 |
+| 14-årsundantag: individuella källkontroller | 83 | 86 | 3 |
+| Automatiserade CI-kontroller | 97 | 97 | 0 |
+| Teknik och logistik | 12 | 12 | 0 |
+| Slutpublicering | 0 | 18 | 18 |
+| **Summa** | **5 757** | **11 448** | **5 691** |
+
+**Närmast kvar:** hantera de 15 öppna grad-/förstadietolkningarna vars negativa eller positiva svar inte får bestämmas genom rubrikmatchning, gå därefter vidare med individuell källbaserad förstadiestraffskalegranskning och de nio rättsliga slutmomenten per grundbrott. Ingen ny automatisk prövning av häktning, åtal eller tvångsmedel; ingen juridisk slutrevision har ännu godkänts. **PR #2 är fortfarande draft och V1.4 på `main` opåverkad.**
