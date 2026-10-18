@@ -26,12 +26,16 @@ class ParseBrbRegression(unittest.TestCase):
         <p>11 § Den som begår en annan gärning.</p>
         <p>12 § Den som hänvisar till</p>
         <p>11 § döms till ansvar.</p>
-        <p>13 § Ny paragraf.</p>"""
+        <p>12 a § Den som hänvisar till</p>
+        <p>15 § i detta kapitel skall anses ha gjort så enligt lagen.</p>
+        <p>13 § Den som bryter mot lagens bestämmelser döms till böter.</p>"""
         provisions, _ = parse_brb(html)
         self.assertIn("4 § andra stycket", provisions["BrB:6:6"])
         self.assertIn("10 §, döms", provisions["BrB:6:10a"])
         self.assertIn("11 § döms", provisions["BrB:6:12"])
         self.assertIn("BrB:6:13", provisions)
+        self.assertIn("15 § i detta kapitel", provisions["BrB:6:12a"])
+        self.assertNotIn("BrB:6:15", provisions)
 
 if __name__ == "__main__":
     unittest.main()
