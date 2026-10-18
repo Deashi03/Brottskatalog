@@ -1152,3 +1152,23 @@ Den nya modulen `brb15-accusation-source-limits-15.js` kompletterar **fyra** red
 Inget av dessa fyra brottskort får ett nytt konstruerat typfall eftersom de avgörande skuld- och gärningsgränserna kan vara kontraintuitiva. Inga straffskalor, förstadier, åtalsbeslut eller tvångsmedel ändras. Ny regression `scripts/brb15_accusation_source_limits_15_test.mjs` kontrollerar uttryckligen gärningsgränser, företrädesregel, källintyg, negativt källfall och oförändrad release-spärr.
 
 **Status:** samtliga 319 BrB-kort kräver fortfarande juridisk helhetsgranskning; även efter denna förarbetsfördjupning är antalet slutgodkända **0/319**. De tidigare öppna 12 osäkra förstadierna och 14 villkorade straffskalorna kvarstår. V1.5 förblir draft och publiceringsspärren är aktiv.
+
+
+---
+
+## 18 oktober 2026 – BrB 17:1–5: sex polisrelevanta brottskort, 2025 års skyddsreform
+
+**Källor:** [Riksdagens gällande BrB 17:1–5 och 17:16](https://www.riksdagen.se/sv/dokument-och-lagar/dokument/svensk-forfattningssamling/brottsbalk-1962700_sfs-1962-700/), [prop. 2024/25:141, särskilt s. 44–73](https://www.regeringen.se/contentassets/861bd0de88764d2aa4a8f523f523d674/ett-starkare-skydd-for-offentliganstallda-mot-vald-hot-och-trakasserier-m.m.-prop.-202425141.pdf).
+
+Den nya modulen `brb17-official-boundaries-15.js` tillför **sex källspärrade förklaringar under den befintliga rekvisitmenyn**:
+
+- **Våld eller hot mot tjänsteman (17:1):** skillnaden mellan våld och hot om *brottslig gärning*, inklusive hot om skadegörelse efter 2025 års reform; skydd i tjänsteutövning, med särskilt syfte samt för tidigare tjänstemän enligt lagtexten.
+- **Grovt våld eller hot mot tjänsteman (17:1):** lagstadgade kvalifikationsomständigheter som allvarligt våld, förstärkt hot eller särskilt hänsynslöst/farligt handlingssätt; grovhetsgraden kräver helhetsbedömning.
+- **Angrepp mot tjänsteman (17:2):** den självständigt brottsliga gärningsformen kräver inte ytterligare separat lidande/skada/olägenhet efter 2025 års reform. Däremot kräver den *alternativa* gärningsformen annan otillbörlig gärning eller hot om sådan uttryckligen sådan effekt. 17:2 är subsidiär till 17:1 och 17:3.
+- **Grovt angrepp mot tjänsteman (17:2):** särskilda kvalifikationsomständigheter rörande närstående, värde, skada och hänsynslöshet; det underliggande brottets grad behöver inte följa samma rubricering.
+- **Förolämpning mot tjänsteman (17:3):** särskilt rekvisit om att uttryck eller förödmjukande beteende är ägnat att kränka självkänsla/värdighet; kritik eller otrevlighet är inte automatiskt brott.
+- **Våldsamt motstånd (17:4):** två alternativ, aktivt motvärn eller annat våld för att försöka hindra myndighetsutövning; brottsrubriceringen kräver inte alltid våld. Passiv vägran är inte i sig tillräckligt. Enligt propositionen är 17:4 subsidiär till 17:1–2, **inte generellt till 17:3**; konkurrens med förolämpning måste avgöras individuellt.
+
+Varje anteckning förklarar dessutom skillnaden i **17:5** mellan särskilt lagstadgat likställt myndighetsutövningsskydd (17:1–4) och skydd för uttryckligen uppräknade samhällsnyttiga funktioner (endast 17:1–2 enligt andra stycket). Denna avgränsning prövas tillsammans med fulltext i 17:5 och 17:16.
+
+Ny negativ regression `scripts/brb17_official_boundaries_15_test.mjs` ska neka alla förklaringar om den delade skyddskretsparagrafen inte har komplett källintyg. **Inga konstruerade typfall** för de svårbedömda situationerna. **Ingen förändring av straffskalor, förstadier, brottsantal, åtalsregler, åldersregler, tvångsmedel eller juridisk slutcertifiering.** V1.5 förblir draft, releaseReady är inte uppfylld och V1.4 ska inte publiceras om.
