@@ -22,7 +22,7 @@ const specs=[
  {title:'Märkesförfalskning',ref:'BrB:14:8',must:['gällande frimärke','kontrollmärkning','fara i bevishänseende'],other:'Förfalskning av fast märke',otherRef:'BrB 14:9',
   rule:'BrB 14:8 gäller särskilda offentliga värdemärken och kontrollmärkningar, med krav på fara i bevishänseende. BrB 14:9 gäller i stället fasta gräns- och mätningsmärken, bland annat fixpunkter. Att ett föremål kallas märke räcker inte för att välja rätt paragraf; märkets rättsliga funktion avgör vilken bestämmelse som behöver prövas.'},
  {title:'Förfalskning av fast märke',ref:'BrB:14:9',must:['gränsmärke, vattenmärke, fixpunkt','flyttar, tar bort, skadar eller förstör','fara i bevishänseende'],other:'Märkesförfalskning',otherRef:'BrB 14:8',
-  rule:'BrB 14:9 avser bland annat att obehörigen anbringa ett förväxlingsbart fast märke eller flytta, ta bort, skada eller förstöra ett verkligt gräns- eller mätningsmärke, när fara i bevishänseende uppkommer. Skilj från kontroll- och värdemärken i BrB 14:8. En obehörig fysisk förändring och faktisk fara måste analyseras var för sig.'}
+  rule:'BrB 14:9 avser bland annat att obehörigen anbringa ett förväxlingsbart fast märke eller flytta, ta bort, skada eller förstöra ett verkligt gräns- eller mätningsmärke, inklusive fixpunkt, när fara i bevishänseende uppkommer. Skilj från kontroll- och värdemärken i BrB 14:8. En obehörig fysisk förändring och faktisk fara måste analyseras var för sig.'}
 ];
 const dates=new Set(['2026-10-17','2026-10-18']);
 const checked=(ref,markers)=>{
