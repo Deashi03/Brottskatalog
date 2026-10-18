@@ -16,5 +16,21 @@ const report={scope:'READ_ONLY_PROVISIONAL_ELIGIBILITY',total:cases.length,summa
 fs.mkdirSync(path.join(root,'audit'),{recursive:true});
 fs.writeFileSync(path.join(root,'audit/v15-age14-candidate-inventory.json'),JSON.stringify(report,null,2)+'\n');
 console.log('V1.5 AGE14 CANDIDATES '+JSON.stringify(summary));
+const byId=new Map(ctx.window.BK_DATA.crimes.filter(c=>!c.stageType).map(c=>[c.id,c]));
+const parents=new Map();
+for(const c of cases){
+ const p=c.stageType?byId.get(c.stageParentId):c;
+ if(!p)throw Error('Missing age14 parent '+c.title);
+ const x=parents.get(p.id)||{title:p.title,statute:p.statute,ref:p.shortRef,min:p.penaltyRange?.min,
+   gradeVerified:p.penaltyRangeVerified,gradeScope:p.penaltyReviewScope,
+   gradeReviewedDate:p.penaltyGradeReviewDate,gradeReviewedSource:p.penaltyGradeReviewSource,
+   gradeReviewedProvision:p.penaltyGradeReviewProvision,
+   gradeReviewScope15:p.penaltyGradeReviewScope15,
+   lawCompletenessVerified:p.lawCompletenessVerified,
+   lawCompletenessSourceURL:p.lawCompletenessSourceURL,stageCount:0,gradeCases:0};
+ if(c.stageType)x.stageCount++;
+ x.gradeCases++;parents.set(p.id,x);
+}
+console.log('V1.5 AGE14 UNIQUE PARENTS '+JSON.stringify([...parents.values()].sort((a,b)=>a.title.localeCompare(b.title,'sv'))));
 if(cases.length!==86)throw Error('Age14 source checklist baseline changed: '+cases.length);
 console.log('PASS V1.5: 86 age14 threshold candidates inventoried; not a criminal-responsibility decision');
