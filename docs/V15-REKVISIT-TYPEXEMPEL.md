@@ -1,3 +1,11 @@
+# Straffskalehänvisningar BrB 3:10 och 14:10 (18 oktober 2026)
+
+**Arbetsmiljöbrott** och **brukande av det förfalskade** saknar egen enhetlig straffskala. BrB 3:10 anger straffet för den faktiska gärningen enligt BrB 3:7–9. BrB 14:10 anger straff som om gärningspersonen själv hade gjort den relevanta förfalskningen i 14 kap. Det är rättsligt missvisande att visa en gemensam numerisk straffskala för dessa brott. Kortens gränssnitt ska därför ange **villkorad straffskala**, beskriva tillämpliga hänvisningar och lämna numerisk skala/tvångsmedel ogodkända.
+
+Två fall flyttas från generell kö till den särskilda villkorade kön: ordinarie 46, villkorade 14 (alltjämt totalt 60), innan nästa revisionskörning. Inga fall slutförs genom endast omklassificering. Källan är Riksdagens gällande BrB 3:10 och 14:10.
+
+---
+
 # Säkerhetsbrott – 18 oktober 2026
 
 Riksdagens aktuella BrB 19:5 och 19:7 jämförda med de två återstående normala säkerhetsbrottsgraderna: **Spioneri (fängelse högst sex år)** och **obehörig befattning med hemlig uppgift (böter eller fängelse högst två år)**. Rätten att göra undantag från straffansvar för försvarlig gärning i BrB 19:7 andra stycket prövas separat, liksom grov grad, gärningsdatum och förstadier enligt 19:14.
