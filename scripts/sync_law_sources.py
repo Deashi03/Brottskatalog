@@ -42,7 +42,7 @@ class TextExtractor(HTMLParser):
     def text(self):
         return unescape("".join(self.parts))
 
-CHAPTER = re.compile(r"^\s*(\d{1,2})\s*kap\.\s*(?:[A-ZÅÄÖ].*)?$", re.I)
+# A chapter heading must contain its descriptive title. A bare "23 kap."\n# after an inline "enligt" is a statutory reference, NOT a chapter boundary.\nCHAPTER = re.compile(r"^\s*(\d{1,2})\s*kap\.\s+Om\s+.+$", re.I)
 PARAGRAPH = re.compile(r"^\s*(\d+)\s*([a-z]?)\s*§(?!§)\s*(.*)$", re.I)
 REVISION = re.compile(r"Ändrad\s*:\s*t\.?o\.?m\.?\s*SFS\s*(\d{4}:\d+)", re.I)
 
