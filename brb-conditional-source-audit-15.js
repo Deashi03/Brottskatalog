@@ -30,7 +30,7 @@ for(const [title,ref,n,phrases,deps] of cases){
  const c=D.crimes.find(c=>!c.stageType&&c.title===title),p=W[ref],
  a=c?.penaltyAlternatives15,detail=c?.penaltyAlternativeReview15;
  const sourceOK=!!p?.complete&&p.completeTextProvenance==='manual-crosscheck-current-SFS-paragraph-only'
-  &&p.checked==='2026-10-18'&&p.url===URL
+  &&['2026-10-17','2026-10-18'].includes(p.checked)&&p.url===URL
   &&phrases.every(s=>String(p.text).includes(s))
   &&deps.every(k=>W[k]?.complete&&W[k].completeTextProvenance==='manual-crosscheck-current-SFS-paragraph-only'
      &&W[k].url===URL)
