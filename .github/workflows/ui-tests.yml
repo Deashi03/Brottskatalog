@@ -586,7 +586,7 @@ jobs:
       - name: Review positively enumerated inchoate stages in fourteen BrB chapters
         run: node scripts/brb_positive_stage_source_audit_15_test.mjs
       - name: V1.5 BrB positive stage consequence source and negative-power review
-          run: node scripts/brb_positive_stage_consequences_15_test.mjs
+        run: node scripts/brb_positive_stage_consequences_15_test.mjs
       - name: Verify truthful and complete per-chapter legal review queue
         run: node scripts/v15_release_queue_15_test.mjs
       - name: Archive full quality report
