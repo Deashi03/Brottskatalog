@@ -164,7 +164,11 @@ for(const [ch,rule] of Object.entries(spec)){
         &&c.stageSource?.startsWith('BrB 20:2')
         &&c.stagePreliminaryScope15?.positiveCriminalizationUnderNamedProvisions===false))
     &&p?.statute?.startsWith('BrB:'+ch+':')
-    &&(c.custody==='none'||((ch==='21'||ch==='22')&&c.custody==='unknown'))
+    &&(c.custody==='none'||((ch==='21'||ch==='22')&&c.custody==='unknown')
+      ||(ch==='14'&&p?.statute==='BrB:14:10'&&c.stageType==='stampling'
+        &&c.forgeryStageScope15?.finalCriminalityApproved===false
+        &&c.forgeryStageScope15?.kind==='stampling'
+        &&c.custody==='unknown'))
     &&c.penaltyRange===null&&c.stageParentId===p.id
     &&c.stageType in stageAbbr);
   if(!valid){group.held++;report.held.push({chapter:Number(ch),title:p?.title,stage:c.stageType,
