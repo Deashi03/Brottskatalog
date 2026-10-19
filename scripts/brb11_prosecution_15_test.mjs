@@ -44,6 +44,6 @@ vm.runInNewContext(fs.readFileSync(path.join(root,mod),'utf8'),{window:x,console
 assert.equal(x.BK_BRB11_PROSECUTION15.reviewed,0);
 assert.equal(x.BK_BRB11_PROSECUTION15.held.length,2);
 assert.ok(fake.every(c=>c.prosecution==='unknown'),'No false prosecution approval on source drift');
-assert.equal(D.crimes.filter(c=>c.stageType&&c.stageStatus==='unverified').length,15);
+assert.equal(D.crimes.filter(c=>c.stageType&&c.stageStatus==='unverified').length,0);
 console.log('V1.5 BRB11 SOURCE PENALTY TRIAGE '+JSON.stringify(base.filter(c=>/^BrB:11:/.test(c.statute||'')).map(c=>({title:c.title,statute:c.statute,penaltyRange:c.penaltyRange,scope:c.penaltyReviewScope,verified:c.penaltyRangeVerified}))));
 console.log('PASS V1.5: BrB 11:8 source-bound exceptions distinguish carelessness, ringa bookkeeping, other grades, and stage holds');

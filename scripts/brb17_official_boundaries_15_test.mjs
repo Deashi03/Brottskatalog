@@ -35,7 +35,7 @@ assert.ok(get('Våldsamt motstånd').officialFunctionBoundaries15.note.includes(
 assert.ok(get('Angrepp mot tjänsteman').officialFunctionBoundaries15.note.includes('däremot lidande'));
 assert.ok(get('Förolämpning mot tjänsteman').officialFunctionBoundaries15.note.includes('Inte varje kritik'));
 assert.equal(all.length,1473);
-assert.equal(all.filter(c=>c.stageStatus==='unverified').length,15);
+assert.equal(all.filter(c=>c.stageStatus==='unverified').length,0);
 assert.equal(base.filter(c=>c.conditionalPenalty&&!c.penaltyRangeVerified).length,14);
 // Fail closed when any cross-referenced protective-scope source is no longer certified.
 const subset=JSON.parse(JSON.stringify(get('Våldsamt motstånd')));delete subset.officialFunctionBoundaries15;

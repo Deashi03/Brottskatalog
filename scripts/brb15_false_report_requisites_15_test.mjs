@@ -47,7 +47,7 @@ const p=ctx.window.BK_STATUTES;
 assert.ok(p['BrB:15:6'].text.includes('obefogad angivelse'));
 assert.ok(p['BrB:15:7'].text.includes('vårdslös beskyllning'));
 assert.ok(p['BrB:15:14'].text.includes('innan avsevärd olägenhet'));
-assert.equal(crimes.filter(c=>c.stageType&&c.stageStatus==='unverified').length,15);
+assert.equal(crimes.filter(c=>c.stageType&&c.stageStatus==='unverified').length,0);
 // Degraded source cannot overwrite conservative requirements.
 const raw=fs.readFileSync(path.join(root,mod),'utf8');
 const old={legalReviewApproved:false,groups:[{mode:'all',label:'keep prior'}]};

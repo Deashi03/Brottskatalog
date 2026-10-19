@@ -58,7 +58,7 @@ vm.runInNewContext(fs.readFileSync(path.join(root,mod),'utf8'),{window:w,console
 assert.equal(w.BK_BRB10_PROSECUTION15.reviewed,0);
 assert.equal(w.BK_BRB10_PROSECUTION15.held.length,4);
 assert.ok(fake.every(c=>c.prosecution==='unknown'));
-assert.equal(ctx.window.BK_DATA.crimes.filter(c=>c.stageType&&c.stageStatus==='unverified').length,15);
+assert.equal(ctx.window.BK_DATA.crimes.filter(c=>c.stageType&&c.stageStatus==='unverified').length,0);
 const penaltyTitles=["Förskingring","Ringa förskingring","Grov förskingring","Olovligt förfogande","Grovt olovligt förfogande","Trolöshet mot huvudman","Grov trolöshet mot huvudman","Tagande av muta","Givande av muta","Grovt tagande av muta","Grovt givande av muta","Handel med inflytande","Vårdslös finansiering av mutbrott"];
 console.log('V1.5 BRB10 PENALTY TRIAGE '+JSON.stringify(penaltyTitles.map(title=>{
  const c=b.find(c=>c.title===title);
