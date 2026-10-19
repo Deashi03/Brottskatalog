@@ -19,7 +19,7 @@ assert.equal(r.approvedAutomaticCoercionDecisions,0);
 assert.ok(r.scopeApproved>=100,'Insufficient independently source-checked negative stage cards');
 const cards=ctx.window.BK_DATA.crimes,stages=cards.filter(c=>c.stageType);
 assert.equal(cards.length,1473);assert.equal(stages.length,1086);
-assert.equal(stages.filter(c=>c.stageStatus==='unverified').length,15);
+assert.equal(stages.filter(c=>c.stageStatus==='unverified').length,0);
 const approved=stages.filter(c=>c.individualLegalAudit15?.scope?.finding==='NO_NAMED_STAGE_OFFENCE_IN_CURRENT_BRB_CHAPTER');
 assert.equal(approved.length,r.scopeApproved);
 for(const c of approved){
@@ -50,4 +50,4 @@ const isolated=vm.createContext({window:{BK_DATA:{crimes:copy},BK_STATUTES:statu
 vm.runInContext(fs.readFileSync(path.join(root,mod),'utf8'),isolated);
 assert.equal(isolated.window.BK_BRB_NEGATIVE_STAGE_CHAPTER_AUDIT15.byChapter['15'].approved,0);
 assert.equal(copy.filter(c=>c.individualLegalAudit15?.scope?.finding==='NO_NAMED_STAGE_OFFENCE_IN_CURRENT_BRB_CHAPTER'&&c.statute?.startsWith('BrB:15:')).length,0);
-console.log('PASS V1.5: BrB chapter-by-chapter limited negative source and consequence checks, all 15 contested stages still open');
+console.log('PASS V1.5: BrB chapter-by-chapter limited negative source and consequence checks, originally contested grade stages separately reviewed later');

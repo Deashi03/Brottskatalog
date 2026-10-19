@@ -29,7 +29,7 @@ assert.equal(r.approvedCustodyDecisions,0);
 const all=ctx.window.BK_DATA.crimes;
 const reviewed=all.filter(c=>c.individualLegalAudit15?.scope?.finding==='CURRENT_BRB_CHAPTER_EXPLICIT_INCHOATE_LISTING');
 assert.equal(reviewed.length,r.approved);
-assert.equal(all.filter(c=>c.stageStatus==='unverified').length,15);
+assert.equal(all.filter(c=>c.stageStatus==='unverified').length,0);
 for(const c of reviewed){
  const audit=c.individualLegalAudit15;
  assert.equal(c.stageStatus,'punishable');

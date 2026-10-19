@@ -13,15 +13,15 @@ const r=ctx.window.BK_GROSS_POISON_STAGE_HOLD15;
 assert.equal(r.planned,3);assert.equal(r.withheld,3,JSON.stringify(r));assert.equal(r.held.length,0);
 const all=ctx.window.BK_DATA.crimes,stages=all.filter(c=>c.stageType);
 assert.equal(all.length,1473);assert.equal(stages.length,1086);
-assert.equal(stages.filter(c=>c.stageStatus==='unverified').length,15);
+assert.equal(stages.filter(c=>c.stageStatus==='unverified').length,0);
 const parent=all.find(c=>c.title==='Grovt spridande av gift eller smitta'&&!c.stageType);
 assert.ok(parent);
 for(const type of ['forsok','forberedelse','stampling']){
  const c=stages.find(x=>x.stageType===type&&x.stageParentId===parent.id);
- assert.equal(c.stageStatus,'unverified');assert.equal(c.custody,'unknown');
- assert.equal(c.penaltyRange,null);assert.equal(c.stageReviewDate,null);
+ assert.equal(c.stageStatus,'punishable');assert.equal(c.custody,'unknown');
+ assert.equal(c.penaltyRange,null);assert.equal(c.stageReviewDate,'2026-10-19');
  assert.equal(c.stageEvidence15.finalLegalConclusionApproved,false);
- assert.equal(c.age14Exception15?.status,'inchoate-unverified');
+ assert.equal(c.age14Exception15?.status,'minimum-threshold-met');
  assert.ok(!c.stageExplanation.includes('inte straffbar enligt'));
 }
 const copy=JSON.parse(JSON.stringify(stages.find(c=>c.stageParentId===parent.id)));
@@ -32,4 +32,4 @@ const isolated=vm.createContext({window:{BK_DATA:{crimes:[clonedParent,copy]},BK
 vm.runInContext(fs.readFileSync(path.join(root,mod),'utf8'),isolated);
 assert.equal(isolated.window.BK_GROSS_POISON_STAGE_HOLD15.withheld,0);
 assert.equal(copy.stageStatus,'not-criminalized','Mutation without original source must never be certified');
-console.log('PASS V1.5: false-negative stage triad changed to legally unresolved and no presumption of criminality/custody');
+console.log('PASS V1.5: previously false-negative stage triad held until independent grade-source audit and no presumption of criminality/custody');

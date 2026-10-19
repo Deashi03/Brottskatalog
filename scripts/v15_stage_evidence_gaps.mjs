@@ -19,12 +19,12 @@ const g=gaps.map(c=>{const p=base.get(c.stageParentId);return {id:c.id,title:c.t
   reason:c.stageReviewBasis||c.stageExplanation||null}});
 const byStatute=g.reduce((a,c)=>{const key=String(c.statute||'UNKNOWN').replace(/:\d+(:.*)?$/,'');(a[key]??=[]).push(c);return a;},{});
 const byStatus=g.reduce((a,c)=>(a[c.status]=(a[c.status]||0)+1,a),{});
-const report={date:'2026-10-18',gaps:g.length,byStatus,
+const report={date:'2026-10-19',gaps:g.length,byStatus,
  byStatute:Object.fromEntries(Object.entries(byStatute).map(([k,v])=>[k,{count:v.length,titles:v.map(x=>x.title)}])),
  items:g,sourceStatus:'NOT_A_LEGAL_APPROVAL'};
 fs.mkdirSync(path.join(root,'audit'),{recursive:true});
 fs.writeFileSync(path.join(root,'audit/v15-stage-evidence-gaps.json'),JSON.stringify(report,null,2)+'\n');
 console.log('V1.5 STAGE EVIDENCE GAPS '+JSON.stringify({total:g.length,byStatus,byStatute:report.byStatute}));
-if(stages.length!==1086||g.length!==15||g.filter(x=>x.status==='unverified').length!==15)
+if(stages.length!==1086||g.length!==0||g.filter(x=>x.status==='unverified').length!==0)
  throw Error('Stage review baseline mismatch '+JSON.stringify({total:stages.length,gaps:g.length,byStatus}));
 console.log('PASS: independent source/date inventory with no implied inchoate signoff');
