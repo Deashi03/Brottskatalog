@@ -60,10 +60,13 @@ const isolated2=vm.createContext({window:{BK_DATA:{crimes:clone2},BK_STATUTES:W2
 vm.runInContext(source,isolated2);
 assert.equal(isolated2.window.BK_BRB12_BASE_AUDIT15.perType.grade,0);
 assert.equal(isolated2.window.BK_BRB12_BASE_AUDIT15.perType.objective,4);
-// A fabricated early full approval can never be overwritten by a new source review.
-const bad=clone2.find(c=>c.title==='Skadegörelse'&&!c.stageType);
+// A fabricated earlier checkpoint must not be overwritten by a new review.
+// Start with a fresh clone; the previous tamper control has already mutated clone2.
+const clone3=JSON.parse(JSON.stringify(all));
+for(const c of clone3)if(c.legalAudit15?.sourceAudit==='BrB12-2026-10-20')delete c.legalAudit15;
+const bad=clone3.find(c=>c.title==='Skadegörelse'&&!c.stageType);
 bad.legalAudit15={checkpoints:{objective:{status:'APPROVED',checked:'1900-01-01'}}};
-const iso3=vm.createContext({window:{BK_DATA:{crimes:clone2},BK_STATUTES:ctx.window.BK_STATUTES}});
+const iso3=vm.createContext({window:{BK_DATA:{crimes:clone3},BK_STATUTES:ctx.window.BK_STATUTES}});
 vm.runInContext(source,iso3);
 assert.equal(bad.legalAudit15.checkpoints.objective.checked,'1900-01-01');
 assert.equal(iso3.window.BK_BRB12_BASE_AUDIT15.completed,20);
