@@ -15,5 +15,5 @@ const gaps=crimes.filter(x=>x.stageType).flatMap(c=>{
 });
 const summary=Object.entries(Object.groupBy(gaps,c=>c.statute?.split(':')[0]||'UNKNOWN')).map(([statute,cards])=>({statute,count:cards.length,items:cards}));
 console.log('V1.5 FINAL STAGE GAPS '+JSON.stringify({total:gaps.length,summary}));
-if(gaps.length!==55)throw Error('Expected 55 unapproved individual stage cards, got '+gaps.length);
-console.log('PASS V1.5: all 55 unresolved stage cards explicitly inventoried; no legal certification');
+if(gaps.length!==22)throw Error('Expected 22 unresolved BrB stage cards, got '+gaps.length);
+console.log('PASS V1.5: all 22 unresolved BrB stage cards explicitly inventoried; no legal certification');
