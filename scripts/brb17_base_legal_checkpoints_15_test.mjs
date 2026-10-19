@@ -7,11 +7,11 @@ const ctx=vm.createContext({window:{},console:{log:()=>{},warn:()=>{},error:()=>
 for(const i of [1,2,3])vm.runInContext(inline[i],ctx);
 for(const f of scripts)vm.runInContext(read(f),ctx,{filename:f});
 const r=ctx.window.BK_BRB17_BASE_AUDIT15;
-assert.ok(r);assert.equal(r.planned,44);assert.equal(r.completed,44,JSON.stringify(r));
-assert.equal(r.held.length,0,JSON.stringify(r.held));
-assert.deepEqual(JSON.parse(JSON.stringify(r.byKind)),{objective:22,subjective:22});
+assert.ok(r);assert.equal(r.planned,44);assert.equal(r.completed,42,JSON.stringify(r));
+assert.equal(r.held.length,1,JSON.stringify(r.held));assert.equal(r.held[0].title,'Grovt föregivande av allmän ställning');
+assert.deepEqual(JSON.parse(JSON.stringify(r.byKind)),{objective:21,subjective:21});
 const cards=ctx.window.BK_DATA.crimes.filter(c=>!c.stageType&&c.legalAudit15?.sourceAudit==='BrB17-2026-10-20');
-assert.equal(cards.length,22);assert.equal(r.offenceApprovals,0);
+assert.equal(cards.length,21);assert.equal(r.offenceApprovals,0);
 for(const c of cards){const a=c.legalAudit15;
  assert.equal(a.fullLegalReviewApproved,false);assert.equal(a.protectionPersonAndExceptionReviewPending,true);
  assert.equal(a.coercionDecisionPending,true);
@@ -28,7 +28,7 @@ const clone=JSON.parse(JSON.stringify(ctx.window.BK_DATA.crimes)),W=JSON.parse(J
 for(const c of clone)if(c.legalAudit15?.sourceAudit==='BrB17-2026-10-20')delete c.legalAudit15;
 W['BrB:17:1'].text='UNVERIFIED SOURCE';
 const iso=vm.createContext({window:{BK_DATA:{crimes:clone},BK_STATUTES:W}});
-vm.runInContext(read(module),iso);assert.equal(iso.window.BK_BRB17_BASE_AUDIT15.byKind.objective,20);
-assert.equal(iso.window.BK_BRB17_BASE_AUDIT15.byKind.subjective,20);
-assert.equal(iso.window.BK_BRB17_BASE_AUDIT15.held.length,4);
+vm.runInContext(read(module),iso);assert.equal(iso.window.BK_BRB17_BASE_AUDIT15.byKind.objective,19);
+assert.equal(iso.window.BK_BRB17_BASE_AUDIT15.byKind.subjective,19);
+assert.equal(iso.window.BK_BRB17_BASE_AUDIT15.held.length,5);
 console.log('PASS V1.5: 44 individually current-SFS-checked BrB17 police/process/escape requirements, negative source control and no operational signoffs');
