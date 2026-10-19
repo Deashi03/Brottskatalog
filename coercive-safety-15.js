@@ -14,6 +14,15 @@ R.score=(c,e)=>{
  // ambiguous stage remains unknown. Do not turn either into a green tick.
  if(c?.stageStatus==='not-criminalized')return {label:'Förstadiet är inte straffbelagt enligt den kontrollerade bestämmelsen',tone:'no'};
  if(c?.stageStatus==='unverified')return unknown;
+ // A current-law named-grade inchoate audit is NOT a final factual threshold
+ // or power review. Prevent the special four-year attempt fast path from
+ // turning 21 newly enumerated (and 15 formerly unknown) stages green.
+ if(c?.individualLegalAudit15?.scope?.finding==='CURRENT_BRB_SAME_SECTION_GRADE_COVERED_BY_NAMED_STAGE'){
+  if(e?.scale==='four'&&c.stageType==='forsok'&&Number(c.stageParentMin)>=4&&
+    !c.applicabilityConditional&&!c.conditionalPenalty)
+   return {label:'Fyrårsgränsen kan vara uppfylld enligt det granskade brottsstadiet. Brottsgrad, gärningsdag och åtgärdens övriga rekvisit måste prövas.',tone:'conditional'};
+  return unknown;
+ }
  // RB 23:8 a–b expressly covers attempts to completed offences with
  // minimum four years. Here only a positively reviewed and criminalized
  // attempt may use its parent minimum as a *threshold*, not as a

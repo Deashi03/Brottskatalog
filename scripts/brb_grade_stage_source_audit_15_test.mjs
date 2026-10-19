@@ -46,6 +46,18 @@ for(const c of audited){
  assert.equal(a.consequences.specificPenaltyRange,null);
  assert.equal(c.stageEvidence15.finalLegalConclusionApproved,false);
 }
+// A current-law grade-stage result must NOT reach the old green four-year
+// offence-attempt shortcut without independent case and coercion evaluation.
+const fourYear=audited.filter(c=>c.stageType==='forsok'&&Number(c.stageParentMin)>=4&&!c.applicabilityConditional&&!c.conditionalPenalty);
+assert.ok(fourYear.length>=1);
+for(const c of audited){
+ const baseline=ctx.window.BK_COERCIVE.score(c,{id:'husrannsakan',scale:'any'});
+ assert.equal(baseline.tone,'unknown',c.title);
+}
+for(const c of fourYear){
+ const threshold=ctx.window.BK_COERCIVE.score(c,{id:'medtagande-omrade',scale:'four'});
+ assert.equal(threshold.tone,'conditional',c.title);
+}
 assert.equal(ctx.window.BK_AGE14_CANDIDATE_SOURCE_AUDIT15.sourceReviewed,86);
 assert.equal(ctx.window.BK_AGE14_CANDIDATE_SOURCE_AUDIT15.unresolved.length,0);
 // Negative-control: reset each of the 21 newly approved cards, then corrupt
