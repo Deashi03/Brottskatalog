@@ -7,13 +7,14 @@ const ctx=vm.createContext({window:{},console:{log:()=>{},warn:()=>{},error:()=>
 for(const i of [1,2,3])vm.runInContext(inline[i],ctx);
 for(const p of scripts)vm.runInContext(read(p),ctx,{filename:p});
 const r=ctx.window.BK_BRB13_BASE_AUDIT15;
-assert.ok(r);assert.equal(r.planned,44);assert.equal(r.completed,44,JSON.stringify(r));
-assert.equal(r.byOffence.length,22);assert.equal(r.held.length,0,JSON.stringify(r.held));
-assert.deepEqual(JSON.parse(JSON.stringify(r.byType)),{objective:22,subjective:22});
+assert.ok(r);assert.equal(r.planned,44);assert.equal(r.completed,42,JSON.stringify(r));
+assert.equal(r.byOffence.length,22);assert.equal(r.held.length,1,JSON.stringify(r.held));
+assert.equal(r.held[0].title,'Vårdslöshet med gift eller smittämne','Missing dedicated crime remains a visible catalogue gap, not a fabricated approval');
+assert.deepEqual(JSON.parse(JSON.stringify(r.byType)),{objective:21,subjective:21});
 for(const k of ['finalOffenceApprovals','offenceDateApprovals','prosecutionApprovals','coercionApprovals','jurisprudenceApprovals','stageSignoffs'])assert.equal(r[k],0);
 const all=ctx.window.BK_DATA.crimes;
 const reviewed=all.filter(c=>!c.stageType&&c.legalAudit15?.sourceAudit==='BrB13-2026-10-20');
-assert.equal(reviewed.length,22);
+assert.equal(reviewed.length,21);
 for(const c of reviewed){
  const a=c.legalAudit15;assert.equal(a.fullLegalReviewApproved,false);
  assert.equal(a.offenceDatePending,true);assert.equal(a.jurisprudencePending,true);
@@ -37,7 +38,7 @@ for(const c of clone)if(c.legalAudit15?.sourceAudit==='BrB13-2026-10-20')delete 
 W['BrB:13:5a'].text='TAMPERED';
 const iso=vm.createContext({window:{BK_DATA:{crimes:clone},BK_STATUTES:W}});
 vm.runInContext(read(mod),iso);
-assert.equal(iso.window.BK_BRB13_BASE_AUDIT15.byType.objective,18);
-assert.equal(iso.window.BK_BRB13_BASE_AUDIT15.byType.subjective,18);
-assert.equal(iso.window.BK_BRB13_BASE_AUDIT15.held.length,8);
+assert.equal(iso.window.BK_BRB13_BASE_AUDIT15.byType.objective,17);
+assert.equal(iso.window.BK_BRB13_BASE_AUDIT15.byType.subjective,17);
+assert.equal(iso.window.BK_BRB13_BASE_AUDIT15.held.length,9);
 console.log('PASS V1.5: 44 individually sourced BrB13 offence and fault checks, guarded against corrupted current SFS; no premature operational certification');
