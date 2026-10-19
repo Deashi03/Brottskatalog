@@ -11,7 +11,15 @@ for(const [key,full] of Object.entries(texts)){
  const prefix=s=>String(s).replace(/\s+/g,' ').trim().slice(0,35);
  if(prefix(item.text)!==prefix(full))throw Error('Unexpected legal section heading '+key);
  if(item.text.length<full.length)restored++;
- else if(String(item.text).replace(/\s+/g,' ').trim()!==full.replace(/\s+/g,' ').trim())throw Error('Source may have changed; manual review '+key);
+ else if(String(item.text).replace(/\s+/g,' ').trim()!==full.replace(/\s+/g,' ').trim()){
+  // Some machine extracts append adjacent section text to BrB 19:14.
+  // Accept only a longer import with exact full paragraph present;
+  // a substantive divergence must still fail closed.
+  const actual=String(item.text).replace(/\s+/g,' ').trim();
+  const expected=full.replace(/\s+/g,' ').trim();
+  if(!(actual.length>expected.length&&actual.includes(expected)))
+   throw Error('Source may have changed; manual review '+key);
+ }
  item.text=full;item.complete=true;item.machine=false;item.checked='2026-10-16';item.url=SFS;
  for(const c of D.crimes.filter(c=>!c.stageType&&c.statute===key)){
   c.law=full;c.lawMode='full';c.lawSource=item.ref;
