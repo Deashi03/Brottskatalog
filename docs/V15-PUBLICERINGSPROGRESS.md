@@ -1,6 +1,6 @@
 # Brottskatalog V1.5 – mätbar väg till publicering
 
-> **Senaste avstämning: 65,7 % (7 523/11 453), 3 930 åtgärder återstår.** Under denna arbetsomgång har 348 individuella BrB-förstadieåtgärder genomförts och verifierats. De nio juridiska slutkontrollerna per grundbrott kvarstår helt (0/3 483).
+> **Senaste avstämning: 68,3 % (7 825/11 454), 3 629 åtgärder återstår.** Sedan 65,7 %-avstämningen har 301 individuella begränsade BrB-förstadiekonsekvenskontroller och ett nytt regressionsprov genomförts. Inget av detta är ett slutgodkänt brottskort eller en fullständig rättslig ansvarsprövning.
 
 **Beräknad status: 46,3 % (5 297 av 11 434 jämnt räknade åtgärder).** Återstår **6 137**. Avser arbetsgren `v15-komplett-brb-rekvisit-typexempel`, avstämd 18 oktober 2026. Testad i [GitHub Actions 39154276028](https://github.com/Deashi03/Brottskatalog/actions/runs/39154276028).
 
@@ -329,3 +329,26 @@ Efter den tidigare godkända avstämningen **62,6 % (7 175/11 453)** har **348 n
 **Verifiering:** [Godkänd GitHub Actions-körning 39213295096](https://github.com/Deashi03/Brottskatalog/actions/runs/39213295096) inklusive iPhone och revisions-/källmanipulationstester. Rättskälla: [Brottsbalk (1962:700), Sveriges riksdag](https://www.riksdagen.se/sv/dokument-och-lagar/dokument/svensk-forfattningssamling/brottsbalk-1962700_sfs-1962-700/).
 
 **Publiceringsspärr:** 0/3 483 juridiska grundbrottsslutkontroller, 426 återstående förstadieåtgärder, tre särskilda 14-årskontroller och 18 releaseåtgärder. PR #2 är fortfarande draft, `main`/V1.4 orörd, V1.5 inte publicerad.
+
+---
+
+## 19 oktober 2026 – 68,3 %, 301 individuella BrB-förstadiekonsekvenskontroller
+
+**Utgångspunkt:** 7 523/11 453 (65,7 %). **Verifierat nytt läge:** 7 825/11 454 (68,3 %). **Nya avgränsade kortåtgärder:** 301; **nytt separat automatiserat test:** 1. **Inga slutligt juridiskt godkända grundbrott eller fullständiga förstadiekort** har tillkommit.
+
+De **301 individuellt redan källkontrollerade positiva BrB-förstadierna** har nu fått en separat, käll- och brottsspecifikt låst **konsekvensgränskontroll**. För varje enskilt förstadiekort kontrolleras dess föräldragrundbrott, typ (försök/förberedelse/stämpling), aktuellt kapitels särskilda kriminaliseringsparagraf, fulltextproveniens och befintlig positiv lagstödsrevision. Slutsatsen är uttryckligen begränsad: en laguppräkning fastställer **inte** en konkret straffskala, straffansvar, åtalsordning eller tvångsmedelsbefogenhet. Straffskala och skuldvillkor kräver särskild analys enligt 23 kap. BrB och aktuellt straffbud; gärningsdag, brottsgrad och eventuella specialvillkor kvarstår.
+
+Detta är **301 verkliga individuella negativa konsekvenskontroller**, inte 301 slutligt godkända straffskalor. Den tidigare avsaknaden av särskilda konsekvensposter är åtgärdad utan att godkänna numeriska påföljder eller polisiär befogenhet. En källmanipulationskontroll visar att ändrad auktoriserande paragraf spärrar motsvarande nya konsekvensbedömningar.
+
+| Arbetsområde | Färdigt | Totalt | Återstår |
+| --- | ---: | ---: | ---: |
+| Grundbrottens sex inledande moment | 2 322 | 2 322 | 0 |
+| Juridisk slutrevision, nio moment per grundbrott | 0 | 3 483 | 3 483 |
+| Förstadier, fem moment per post | 5 305 | 5 430 | 125 |
+| Särskilda 14-årskontroller | 83 | 86 | 3 |
+| CI-registrerade Node-kontroller | 103 | 103 | 0 |
+| Teknik och logistik | 12 | 12 | 0 |
+| Slutpublicering | 0 | 18 | 18 |
+| **Totalt** | **7 825** | **11 454** | **3 629** |
+
+**Verifiering:** [Godkänd GitHub Actions 39214356417](https://github.com/Deashi03/Brottskatalog/actions/runs/39214356417), inklusive 103 CI-registrerade Node-tester och iPhone-regression. **Frisläppningsspärren kvarstår:** 0/3 483 fullständiga juridiska grundbrottsslutkontroller, 125 förstadieuppgifter, 3 särskilda ålderskontroller och 18 publiceringsuppgifter. PR #2 förblir draft, V1.4 på `main` orörd.
