@@ -1,8 +1,8 @@
 # Brottskatalog V1.5 – mätbar väg till publicering
 
-> **Senaste avstämning: 68,3 % (7 825/11 454), 3 629 åtgärder återstår.** Sedan 65,7 %-avstämningen har 301 individuella begränsade BrB-förstadiekonsekvenskontroller och ett nytt regressionsprov genomförts. Inget av detta är ett slutgodkänt brottskort eller en fullständig rättslig ansvarsprövning.
+> **Senaste avstämning: 68,9 % (7 893/11 456), 3 563 åtgärder återstår.** 33 narkotikastrafflagsförstadier har genomgått varsin källbunden individuell lagstödsprövning och separat begränsad konsekvensprövning. Två nya automatiserade kontrollsteg har lagts till. Juridisk slutrevision av grundbrotten är fortfarande 0/3 483.
 
-**Beräknad status: 46,3 % (5 297 av 11 434 jämnt räknade åtgärder).** Återstår **6 137**. Avser arbetsgren `v15-komplett-brb-rekvisit-typexempel`, avstämd 18 oktober 2026. Testad i [GitHub Actions 39154276028](https://github.com/Deashi03/Brottskatalog/actions/runs/39154276028).
+**Historisk baslinje (18 oktober):** 46,3 % (5 297/11 434). Denna siffra är ersatt av den aktuella CI-beräkningen ovan; äldre tabeller nedan är historiska ögonblicksbilder, inte senaste status.
 
 ## Räkneregel
 
@@ -352,3 +352,33 @@ Detta är **301 verkliga individuella negativa konsekvenskontroller**, inte 301 
 | **Totalt** | **7 825** | **11 454** | **3 629** |
 
 **Verifiering:** [Godkänd GitHub Actions 39214356417](https://github.com/Deashi03/Brottskatalog/actions/runs/39214356417), inklusive 103 CI-registrerade Node-tester och iPhone-regression. **Frisläppningsspärren kvarstår:** 0/3 483 fullständiga juridiska grundbrottsslutkontroller, 125 förstadieuppgifter, 3 särskilda ålderskontroller och 18 publiceringsuppgifter. PR #2 förblir draft, V1.4 på `main` orörd.
+
+---
+
+## 19 oktober 2026 – 68,9 %, 66 nya individuella NSL-förstadieåtgärder
+
+Sedan senast godkända **68,3 % (7 825/11 454)** har **33 förstadiekort i narkotikastrafflagen** fått varsin **individuell källavstämning mot 4 §** och varsin **separat begränsad konsekvensbedömning**: **66 faktiska kortåtgärder**. Två nya CI-kontroller har lagts till, vilket också ökar arbetsinventeringens nämnare med två.
+
+Källa: [Narkotikastrafflagen (1968:64), 4 §, Sveriges riksdag](https://www.riksdagen.se/sv/dokument-och-lagar/dokument/svensk-forfattningssamling/narkotikastrafflag-196864_sfs-1968-64/) i lydelse till och med SFS 2024:797.
+
+**Källavgränsningar per individuell post:**
+- Försök/förberedelse omfattar enligt aktuell 4 § narkotikabrott, ringa narkotikabrott, grovt och synnerligen grovt narkotikabrott, men endast när gärningen gäller annat än bruk.
+- Stämpling är uppräknad för narkotikabrott, grovt och synnerligen grovt narkotikabrott, inte för ringa narkotikabrott.
+- De tre korten för ringa narkotikabrott genom **bruk** får inte felaktigt godkännas som straffbara förstadier; de tre korten för ringa narkotikabrott genom **innehav** skiljer mellan försök/förberedelse och stämpling.
+- Varken en källuppräkning eller ett negativt besked fastställer påföljd, allmänt åtal, tvångsmedel eller konkret straffansvar; gärningsdatum och BrB 23 kap. måste fortfarande prövas.
+- Ett regressionsprov manipulerar källhänvisningen på ett av 33 kort och kräver att den individuella kontrollen underkänns.
+
+| Grupp | Färdiga | Totalt | Kvar |
+| --- | ---: | ---: | ---: |
+| Grundbrottens sex inledande moment | 2 322 | 2 322 | 0 |
+| Nio juridiska slutmoment per grundbrott | 0 | 3 483 | 3 483 |
+| Förstadiernas fem moment per kort | 5 371 | 5 430 | 59 |
+| Särskilda 14-årskontroller | 83 | 86 | 3 |
+| CI-registrerade Node-kontroller | 105 | 105 | 0 |
+| Teknik och logistik | 12 | 12 | 0 |
+| Slutpublicering | 0 | 18 | 18 |
+| **Totalt** | **7 893** | **11 456** | **3 563** |
+
+**Återstående förstadier:** 22 ännu inte slutligt avgränsade BrB-kort (44 individuella lagstöds-/konsekvensmoment) samt 15 förstadier med oavgjord preliminär straffbarhetsstatus (15 moment), totalt 59 moment. Osäkra brottsgrader får inte massgodkännas.
+
+**Verifiering:** [GitHub Actions 39227402981](https://github.com/Deashi03/Brottskatalog/actions/runs/39227402981) grön, inklusive 105 CI-registrerade Node-kontroller och iPhone-regression. **Publiceringsspärren kvarstår**: inga av 3 483 grundbrottsslutkontroller är godkända, och 18 releaseåtgärder återstår. PR #2 är draft, V1.4 på `main` är orörd.
