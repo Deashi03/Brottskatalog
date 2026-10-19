@@ -22,8 +22,8 @@ assert.equal(r.counts.brbCardsWithScopedSourceNotes,20);
 assert.equal(sum.allNotesArePartial,true);
 assert.equal(sum.fullLegalReviewApprovalsFromNotes,0);
 assert.equal(sum.outstandingIndividualFinalReviews,319);
-assert.equal(r.counts.individuallySourceCheckedLegalChecklistSteps,486);
-assert.equal(r.counts.cardsWithPartiallyCheckedLegalChecklist,218);
+assert.equal(r.counts.individuallySourceCheckedLegalChecklistSteps,492);
+assert.equal(r.counts.cardsWithPartiallyCheckedLegalChecklist,221);
 for(const c of all){
  const notes=c.scopedSourceNotes;
  assert.ok(Array.isArray(notes));

@@ -1,0 +1,25 @@
+import assert from 'node:assert/strict';import fs from 'node:fs';import vm from 'node:vm';import path from 'node:path';
+const root=path.resolve(import.meta.dirname,'..'),read=p=>fs.readFileSync(path.join(root,p),'utf8'),module='./brb5-base-legal-checkpoints-15.js';
+const html=read('index.html'),sw=read('service-worker.js'),scripts=[...html.matchAll(/<script\s+src="([^"]+)"/g)].map(x=>x[1]);
+assert.ok(scripts.includes(module)&&sw.includes(module));
+const inline=[...html.matchAll(/<script(?:\s[^>]*)?>([\s\S]*?)<\/script>/g)].map(x=>x[1]);
+const ctx=vm.createContext({window:{},console:{log:()=>{},warn:()=>{},error:()=>{}}});
+for(const i of [1,2,3])vm.runInContext(inline[i],ctx);
+for(const f of scripts)vm.runInContext(read(f),ctx,{filename:f});
+const r=ctx.window.BK_BRB5_BASE_AUDIT15;
+assert.ok(r);assert.equal(r.planned,6);assert.equal(r.completed,6,JSON.stringify(r));
+assert.equal(r.held.length,0,JSON.stringify(r.held));assert.deepEqual(JSON.parse(JSON.stringify(r.byType)),{objective:3,subjective:3});
+const reviewed=ctx.window.BK_DATA.crimes.filter(c=>!c.stageType&&c.legalAudit15?.sourceAudit==='BrB5-2026-10-20');
+assert.equal(reviewed.length,3);
+for(const c of reviewed){assert.equal(c.legalAudit15.fullLegalReviewApproved,false);
+ assert.equal(c.legalAudit15.historyCaseLawAndConstitutionalContextPending,true);
+ assert.equal(c.legalAudit15.truthDefenceAndProsecution5_5Pending,true);
+ for(const k of ['objective','subjective']){const a=c.legalAudit15.checkpoints[k];assert.equal(a.status,'APPROVED');
+ assert.equal(a.checked,'2026-10-20');assert.equal(a.chargeConditions5_5Approved,false);
+ assert.equal(a.constitutionalAndSupremeCourtDoctrineApproved,false);
+ assert.equal(a.caseSpecificLiabilityApproved,false);assert.equal(a.coercivePowerApproved,false);}}
+const clone=JSON.parse(JSON.stringify(ctx.window.BK_DATA.crimes)),W=JSON.parse(JSON.stringify(ctx.window.BK_STATUTES));
+for(const c of clone)if(c.legalAudit15?.sourceAudit==='BrB5-2026-10-20')delete c.legalAudit15;
+W['BrB:5:1'].text='TAMPERED';const iso=vm.createContext({window:{BK_DATA:{crimes:clone},BK_STATUTES:W}});
+vm.runInContext(read(module),iso);assert.equal(iso.window.BK_BRB5_BASE_AUDIT15.completed,2);
+console.log('PASS: six separately source-reviewed BrB5 statutory elements; truthful allegation, charge rules and constitutional protections remain independently pending');

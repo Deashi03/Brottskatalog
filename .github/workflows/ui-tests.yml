@@ -106,6 +106,8 @@ on:
       - "brb16-base-legal-checkpoints-15.js"
       - "brb17-base-legal-checkpoints-15.js"
       - "brb4-base-legal-checkpoints-15.js"
+      - "brb5-base-legal-checkpoints-15.js"
+      - "scripts/brb5_base_legal_checkpoints_15_test.mjs"
       - "scripts/brb4_base_legal_checkpoints_15_test.mjs"
       - "scripts/brb17_base_legal_checkpoints_15_test.mjs"
       - "scripts/brb16_base_legal_checkpoints_15_test.mjs"
@@ -546,6 +548,8 @@ jobs:
         run: node scripts/brb17_base_legal_checkpoints_15_test.mjs
       - name: Individually verify BrB4 personal freedom, privacy and child-protection offence sources
         run: node scripts/brb4_base_legal_checkpoints_15_test.mjs
+      - name: Verify BrB5 defamation and insult statutory conditions and evidence limitations
+        run: node scripts/brb5_base_legal_checkpoints_15_test.mjs
       - name: V1.5 chapter four special prosecution restrictions and place qualifiers
         run: node scripts/brb4_prosecution_15_test.mjs
       - name: V1.5 BrB 11:8 creditor negligence and ringa bookkeeping prosecution exceptions
