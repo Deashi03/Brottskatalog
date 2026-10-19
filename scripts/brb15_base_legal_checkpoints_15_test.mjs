@@ -10,7 +10,7 @@ for(const f of scripts)vm.runInContext(read(f),ctx,{filename:f});
 const r=ctx.window.BK_BRB15_BASE_AUDIT15;
 assert.ok(r);assert.equal(r.planned,70);assert.equal(r.completed,58,JSON.stringify(r));
 assert.equal(r.held.length,6,JSON.stringify(r.held));
-assert.deepEqual(r.held.map(x=>x.title).sort(),['Ringa bevisförvanskning','Grov osann försäkran','Vårdslös försäkran','Grovt osant intygande','Brukande av osann urkund','Grovt förnekande av underskrift'].sort());
+assert.deepEqual(JSON.parse(JSON.stringify(r.held.map(x=>x.title).sort())),['Ringa bevisförvanskning','Grov osann försäkran','Vårdslös försäkran','Grovt osant intygande','Brukande av osann urkund','Grovt förnekande av underskrift'].sort());
 assert.deepEqual(JSON.parse(JSON.stringify(r.byKind)),{objective:29,subjective:29});
 const cards=ctx.window.BK_DATA.crimes.filter(c=>!c.stageType&&c.legalAudit15?.sourceAudit==='BrB15-2026-10-20');
 assert.equal(cards.length,29);assert.equal(r.fullOffenceLegalSignoffs,0);
