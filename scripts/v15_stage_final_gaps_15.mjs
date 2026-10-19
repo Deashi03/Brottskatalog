@@ -1,8 +1,8 @@
 // Individual unresolved inchoate source and consequence queue, no automatic approvals.
 import fs from 'node:fs';import vm from 'node:vm';import path from 'node:path';
 const root=path.resolve(import.meta.dirname,'..'),html=fs.readFileSync(path.join(root,'index.html'),'utf8');
-const inline=[...html.matchAll(/<script(?:\\s[^>]*)?>([\\s\\S]*?)<\\/script>/g)].map(x=>x[1]);
-const scripts=[...html.matchAll(/<script\\s+src="([^"]+)"/g)].map(x=>x[1]);
+const inline=[...html.matchAll(/<script(?:\s[^>]*)?>([\s\S]*?)<\/script>/g)].map(x=>x[1]);
+const scripts=[...html.matchAll(/<script\s+src="([^"]+)"/g)].map(x=>x[1]);
 const ctx=vm.createContext({window:{},console:{log:()=>{},warn:()=>{},error:()=>{}}});
 for(const i of [1,2,3])vm.runInContext(inline[i],ctx,{filename:'inline-'+i});
 for(const s of scripts)vm.runInContext(fs.readFileSync(path.join(root,s),'utf8'),ctx,{filename:s});
