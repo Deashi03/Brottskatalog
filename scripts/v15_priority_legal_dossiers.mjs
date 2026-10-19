@@ -168,7 +168,7 @@ if(scopedSourceSummary.entries!==Object.values(scopedSourceSummary.byKind).reduc
  ||allDossiers.some(d=>d.scopedSourceNotes.some(n=>n.finalLegalConclusionApproved
   ||n.legalChecklistCompletedByThisNote!==0)))throw Error('Scoped review is not final legal signoff');
 if(output.releaseReady||output.automaticCustodyAuthorization)throw Error('Unsafe inferred release or detention authority');
-if(output.counts.individuallySourceCheckedLegalChecklistSteps!==222
- ||output.counts.cardsWithPartiallyCheckedLegalChecklist!==86
+if(output.counts.individuallySourceCheckedLegalChecklistSteps!==266
+ ||output.counts.cardsWithPartiallyCheckedLegalChecklist!==108
  ||allDossiers.some(d=>d.legalChecklist.some(q=>q.status==='APPROVED'&&(!q.sourceURL||!q.checked||q.caseSpecificLegalConclusionApproved))))
  throw Error('Individual partial BrB3/12 source checks have not reconciled against the legal audit queue');

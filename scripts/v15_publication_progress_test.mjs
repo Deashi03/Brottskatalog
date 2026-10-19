@@ -24,7 +24,7 @@ assert.equal(find('Särskilda kontroller','Individuellt källgranskad tillämpli
 assert.equal(find('Förstadier','Individuellt godkänd kriminaliseringsprövning').completed,1086);
 assert.equal(find('Förstadier','Individuell kontroll av straffskala/åtal/tvångsmedel').completed,1086);
 assert.equal(r.work.filter(x=>x.group==='Juridisk slutrevision').length,9);
-const completedByCheck={time:0,objective:86,subjective:86,exceptions:0,grade:5,jurisprudence:0,inchoate:40,prosecution:5,coercion:0};
+const completedByCheck={time:0,objective:108,subjective:108,exceptions:0,grade:5,jurisprudence:0,inchoate:40,prosecution:5,coercion:0};
 const check=r.work.filter(x=>x.group==='Juridisk slutrevision');
 assert.ok(check.every(x=>x.total===387));
 assert.deepEqual(check.map(x=>x.completed),Object.values(completedByCheck),'25 BrB12, 36 BrB3 and 39 BrB8 and 30 BrB9 and 32 BrB10 source-scoped legal checkpoints counted; all complete offence audits remain unapproved');

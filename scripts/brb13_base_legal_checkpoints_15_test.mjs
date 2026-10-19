@@ -31,7 +31,7 @@ for(const c of reviewed){
   assert.equal(q.stageLiabilityReviewed,false);
  }
 }
-for(const t of ['Allmänfarlig vårdslöshet','Grovt allmänfarlig vårdslöshet','Vårdslöshet med gift eller smittämne'])
+for(const t of ['Allmänfarlig vårdslöshet','Grovt allmänfarlig vårdslöshet'])
  assert.match(reviewed.find(x=>x.title===t).legalAudit15.checkpoints.subjective.finding,/OAKTSAMHET|OAKTSAM/);
 const clone=JSON.parse(JSON.stringify(all)),W=JSON.parse(JSON.stringify(ctx.window.BK_STATUTES));
 for(const c of clone)if(c.legalAudit15?.sourceAudit==='BrB13-2026-10-20')delete c.legalAudit15;

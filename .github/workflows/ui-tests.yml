@@ -101,6 +101,8 @@ on:
       - "brb10-base-legal-checkpoints-15.js"
       - "brb11-base-legal-checkpoints-15.js"
       - "brb13-base-legal-checkpoints-15.js"
+      - "brb14-base-legal-checkpoints-15.js"
+      - "scripts/brb14_base_legal_checkpoints_15_test.mjs"
       - "scripts/brb13_base_legal_checkpoints_15_test.mjs"
       - "scripts/brb11_base_legal_checkpoints_15_test.mjs"
       - "scripts/brb10_base_legal_checkpoints_15_test.mjs"
@@ -526,6 +528,8 @@ jobs:
         run: node scripts/brb11_base_legal_checkpoints_15_test.mjs
       - name: Independently verify BrB13 public danger crimes and negligence/intent distinction
         run: node scripts/brb13_base_legal_checkpoints_15_test.mjs
+      - name: Verify twenty-two distinct BrB14 forgery objective and fault controls
+        run: node scripts/brb14_base_legal_checkpoints_15_test.mjs
       - name: V1.5 chapter four special prosecution restrictions and place qualifiers
         run: node scripts/brb4_prosecution_15_test.mjs
       - name: V1.5 BrB 11:8 creditor negligence and ringa bookkeeping prosecution exceptions
