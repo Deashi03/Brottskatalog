@@ -17,7 +17,7 @@ const required={
  '10:5c':['grovt tagande av muta eller grovt givande av muta','särskilt ansvarsfull ställning','brottslighet som utövats systematiskt','Lag (2026:1318)'],
  '10:5d':['handel med inflytande','för att påverka annans beslut eller åtgärd','myndighetsutövning eller offentlig upphandling'],
  '10:5e':['näringsidkare som tillhandahåller pengar eller andra tillgångar','av grov oaktsamhet främjar givande av muta'],
- '10:6':['genom missbruk av behörighet','skadar denne','check'],
+ '10:6':['genom missbruk av behörighet','skadar denne','kräver att utfå gods'],
  '10:7':['olovligen bruka någon annans sak','vållar skada eller olägenhet','grovt olovligt brukande']
 };
 const source=(ref,words)=>{const p=W['BrB:'+ref];return Boolean(p?.complete===true
