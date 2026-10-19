@@ -12,7 +12,7 @@ for(const i of [1,2,3])vm.runInContext(inline[i],ctx,{filename:'inline-'+i});
 for(const s of scripts)vm.runInContext(fs.readFileSync(path.join(root,s),'utf8'),ctx,{filename:s});
 const r=ctx.window.BK_BRB_NEGATIVE_STAGE_CHAPTER_AUDIT15;
 console.log('V1.5 EIGHT BRB CHAPTER SOURCE AUDIT '+JSON.stringify(r));
-assert.deepEqual(Array.from(r.expectedChapters),[3,5,6,7,8,9,10,11,12,14,15,16,17,18,19,20]);
+assert.deepEqual(Array.from(r.expectedChapters),[3,4,5,6,7,8,9,10,11,12,14,15,16,17,18,19,20]);
 assert.equal(r.scopeApproved,r.consequencesApproved);
 assert.equal(r.finalCaseLiabilityApprovals,0);
 assert.equal(r.approvedAutomaticCoercionDecisions,0);
