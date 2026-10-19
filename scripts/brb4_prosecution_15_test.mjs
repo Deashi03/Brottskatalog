@@ -47,7 +47,7 @@ for(const title of ['Grovt hemfridsbrott','Grovt olaga intrång','Grovt olaga in
   'Do not generalize conditional charging to distinct aggravated or detainment offence '+title);
 }
 assert.equal(q.stageEntriesModified,0);
-assert.equal(ctx.window.BK_DATA.crimes.filter(c=>c.stageType&&c.stageStatus==='unverified').length,15);
+assert.equal(ctx.window.BK_DATA.crimes.filter(c=>c.stageType&&c.stageStatus==='unverified').length,0);
 const law=ctx.window.BK_STATUTES['BrB:4:11'];
 assert.equal(law.completeTextProvenance,'manual-crosscheck-current-SFS-paragraph-only');
 assert.ok(law.text.includes('ofredande som inte förövats på allmän plats'));

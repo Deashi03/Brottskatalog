@@ -32,7 +32,7 @@ for(const c of cases){
  assert.notEqual(c.rekvisit15?.legalReviewApproved,true);
 }
 assert.equal(ctx.window.BK_DATA.crimes.length,1473);
-assert.equal(ctx.window.BK_DATA.crimes.filter(c=>c.stageStatus==='unverified').length,15);
+assert.equal(ctx.window.BK_DATA.crimes.filter(c=>c.stageStatus==='unverified').length,0);
 const copy=JSON.parse(JSON.stringify(cases.find(c=>c.title==='Upplopp')));
 delete copy.conditionalPenaltyFinalAudit15;
 const W=JSON.parse(JSON.stringify(ctx.window.BK_STATUTES));

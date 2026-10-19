@@ -16,8 +16,8 @@ assert.equal(report.planned,6);assert.equal(report.reviewed,6,JSON.stringify(rep
 assert.equal(report.held.length,0);
 const all=ctx.window.BK_DATA.crimes,stages=all.filter(c=>c.stageType);
 assert.equal(stages.length,1086);
-assert.equal(stages.filter(c=>c.stageStatus==='unverified').length,15);
-assert.equal(stages.filter(c=>c.stageReviewDate&&c.stageSource&&c.stageStatus!=='unverified').length,1071);
+assert.equal(stages.filter(c=>c.stageStatus==='unverified').length,0);
+assert.equal(stages.filter(c=>c.stageReviewDate&&c.stageSource&&c.stageStatus!=='unverified').length,1086);
 const checked=stages.filter(c=>c.stagePreliminaryScope15?.reviewedMainSection==='BrB 20:2');
 assert.equal(checked.length,6);
 for(const c of checked){

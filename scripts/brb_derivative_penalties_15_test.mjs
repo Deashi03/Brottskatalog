@@ -19,5 +19,5 @@ for(const name of ['Arbetsmiljöbrott','Brukande av det förfalskade']){
  assert.notEqual(c.rekvisit15?.legalReviewApproved,true);
 }
 assert.deepEqual(Array.from(base.find(c=>c.title==='Arbetsmiljöbrott').penaltyDerivation15.dependsOn),['BrB:3:7','BrB:3:8','BrB:3:9']);
-assert.equal(ctx.window.BK_DATA.crimes.filter(c=>c.stageStatus==='unverified').length,15);
+assert.equal(ctx.window.BK_DATA.crimes.filter(c=>c.stageStatus==='unverified').length,0);
 console.log('PASS V1.5: derivative BrB 3:10 and 14:10 safely categorized without fictitious fixed ranges or coercion signoff');
