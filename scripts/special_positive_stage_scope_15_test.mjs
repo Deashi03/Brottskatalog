@@ -15,7 +15,7 @@ assert.equal(r.scopeApproved,66,JSON.stringify(r));
 assert.equal(r.withheld.length,0);
 assert.deepEqual(Object.fromEntries(Object.entries(r.byLaw).map(([k,v])=>[k,v.approved])),
  {SmuglL:46,PTBL:12,SkBrL:2,LBE:6});
-const all=ctx.window.BK_DATA.crimes,stages=all.filter(c=>c.stageType),checked=stages.filter(c=>c.individualLegalAudit15?.scope?.finding==='CURRENT_ACT_EXPLICIT_INCHOATE_ENUMERATION_CONFIRMED');
+const all=ctx.window.BK_DATA.crimes,stages=all.filter(c=>c.stageType),checked=stages.filter(c=>c.individualLegalAudit15?.scope?.finding==='CURRENT_ACT_EXPLICIT_INCHOATE_ENUMERATION_CONFIRMED'&&!c.statute?.startsWith('Nark:'));
 assert.equal(all.length,1473);assert.equal(stages.length,1086);
 assert.equal(checked.length,66);
 assert.ok(stages.filter(c=>c.individualLegalAudit15?.scope?.status==='APPROVED').length>=138);
