@@ -11,7 +11,7 @@ for(const [key,full] of Object.entries(texts)){
  const prefix=s=>String(s).replace(/\s+/g,' ').trim().slice(0,35);
  if(prefix(item.text)!==prefix(full))throw Error('Unexpected legal section heading '+key);
  if(item.text.length<full.length)restored++;
- else if(!item.text.includes(full.slice(-22)))throw Error('Source may have changed; manual review '+key);
+ else if(String(item.text).replace(/\s+/g,' ').trim()!==full.replace(/\s+/g,' ').trim())throw Error('Source may have changed; manual review '+key);
  item.text=full;item.complete=true;item.machine=false;item.checked='2026-10-16';item.url=SFS;
  for(const c of D.crimes.filter(c=>!c.stageType&&c.statute===key)){
   c.law=full;c.lawMode='full';c.lawSource=item.ref;
