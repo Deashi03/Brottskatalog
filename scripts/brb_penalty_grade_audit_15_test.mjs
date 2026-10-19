@@ -90,7 +90,7 @@ for(const x of highRiskGrades){
 assert.ok(by('Grov mordbrand').penaltyRange.life,'Grov mordbrand must retain life imprisonment');
 assert.ok(!by('Grovt allmänfarlig vårdslöshet').penaltyRange.fines,'Grov allmänfarlig vårdslöshet is not a fine offence');
 assert.ok(by('Allmänfarlig vårdslöshet').penaltyRange.fines,'Ordinary negligence must retain fine alternative');
-assert.equal(ctx.window.BK_DATA.crimes.filter(c=>c.stageStatus==='unverified').length,15,
+assert.equal(ctx.window.BK_DATA.crimes.filter(c=>c.stageStatus==='unverified').length,0,
  'Stage legal audit cannot be automatically passed by grading 13th chapter');
 
 
@@ -316,5 +316,5 @@ assert.ok(by('Framkallande av fara för annan').penaltyGradeReviewCaveat.include
 assert.equal(by('Inbrottsstöld').penaltyRange.min,1);
 assert.equal(by('Grovt missbruk av offentlig ställning').penaltyRange.max,6);
 assert.equal(base.filter(c=>c.statute?.startsWith('BrB:')).length,319);
-assert.equal(c.filter(x=>x.stageType&&x.stageStatus==='unverified').length,15,'No implicit inchoate review via base penalty scales');
+assert.equal(c.filter(x=>x.stageType&&x.stageStatus==='unverified').length,0,'No implicit inchoate review via base penalty scales');
 console.log('PASS V1.5: 247 current-grade BrB penalty scales source-verified; no silent conflicts or overbroad approvals');

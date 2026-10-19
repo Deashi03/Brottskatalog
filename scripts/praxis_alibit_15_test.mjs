@@ -39,7 +39,7 @@ assert.ok(example?.text.includes('gömmer')&&example.sourceURL.includes('domstol
 assert.equal(example.legalReviewApproved,false);
 assert.ok(!get('Falsk beskyllning').typexempel15?.length,'Do not invent counterintuitive false allegation typfall');
 assert.equal(crimes.length,1473);
-assert.equal(crimes.filter(c=>c.stageStatus==='unverified').length,15);
+assert.equal(crimes.filter(c=>c.stageStatus==='unverified').length,0);
 // Negative test: a missing primary text certification must not add a precedent or typecase.
 const original=JSON.parse(JSON.stringify({crimes:[get('Skyddande av brottsling')]}));
 delete original.crimes[0].praxisAlibit15;

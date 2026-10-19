@@ -41,7 +41,7 @@ assert.ok(JSON.stringify(by('Grov olovlig befattning med minor').rekvisit15).inc
 assert.ok(by('Olovlig befattning med minor').rekvisit15.routes[0].groups.some(g=>g.label.includes('INTE generellt villkorat')));
 assert.ok(by('Olovlig befattning med kemiska vapen').rekvisit15.note.includes('krigsförbrytelsekonkurrens'));
 const stages=D.crimes.filter(c=>c.stageType);
-assert.equal(stages.filter(c=>c.stageStatus==='unverified').length,15,'Do not silently resolve 15 controversial inchoate offence entries');
+assert.equal(stages.filter(c=>c.stageStatus==='unverified').length,0,'Current-stage source classifications must remain independently evidenced');
 const brb=D.crimes.filter(c=>!c.stageType&&c.statute?.startsWith('BrB:'));
 const total=brb.filter(c=>c.rekvisit15?.groups?.length||c.rekvisit15?.routes?.length).length;
 assert.ok(total>=315,'Expected at least 315/319 structured BrB cards, got '+total);

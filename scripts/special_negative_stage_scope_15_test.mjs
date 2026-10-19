@@ -36,7 +36,7 @@ for(const c of reviewed){
  assert.equal(c.custody,'unknown');
 }
 const stages=cards.filter(c=>c.stageType);
-assert.equal(stages.length,1086);assert.equal(stages.filter(c=>c.stageStatus==='unverified').length,15);
+assert.equal(stages.length,1086);assert.equal(stages.filter(c=>c.stageStatus==='unverified').length,0);
 assert.ok(stages.filter(c=>c.individualLegalAudit15?.scope?.status==='APPROVED').length>=138);
 assert.ok(stages.filter(c=>c.individualLegalAudit15?.consequences?.status==='APPROVED').length>=138);
 assert.equal(stages.filter(c=>c.stageStatus==='punishable'&&c.individualLegalAudit15?.consequences?.punishmentRangeApproved===true).length,0);

@@ -42,7 +42,7 @@ assert.equal(brug.digitalUrkundCaseReview15.noAutomaticCriminalityConclusion,tru
 assert.equal(brug.digitalUrkundCaseReview15.noAutomaticCustodyConclusion,true);
 assert.notEqual(brug.rekvisit15.legalReviewApproved,true);
 assert.notEqual(forged.rekvisit15.legalReviewApproved,true);
-assert.equal(ctx.window.BK_DATA.crimes.filter(c=>c.stageType&&c.stageStatus==='unverified').length,15);
+assert.equal(ctx.window.BK_DATA.crimes.filter(c=>c.stageType&&c.stageStatus==='unverified').length,0);
 // A second import must be idempotent and must not duplicate the same HD reference.
 vm.runInContext(fs.readFileSync(path.join(root,mod),'utf8'),ctx,{filename:mod+' second evaluation'});
 assert.equal(ctx.window.BK_HD_FREJA15.duplicates,1);

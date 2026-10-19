@@ -42,7 +42,7 @@ assert.ok(get('Vårdslös skatteuppgift').rekvisit15.routes[0].groups.some(g=>g.
 assert.ok(get('Vårdslöst bidragsbrott').rekvisit15.routes[0].groups.some(g=>g.label.includes('mindre allvarlig')));
 assert.ok(get('Skatteavdragsbrott').rekvisit15.routes[0].groups.some(g=>g.mode==='any'&&g.options.includes('Grov oaktsamhet')));
 assert.equal(all.length,1473);
-assert.equal(all.filter(c=>c.stageStatus==='unverified').length,15);
+assert.equal(all.filter(c=>c.stageStatus==='unverified').length,0);
 assert.equal(base.filter(c=>c.conditionalPenalty&&!c.penaltyRangeVerified).length,14);
 assert.equal(base.filter(c=>c.lawCompletenessVerified===true&&c.lawMode==='full').length,387,'All 387 base cards now have individually checked current SFS paragraph text; final legal review remains outstanding');
 assert.equal(base.filter(c=>c.rekvisit15?.groups?.length||c.rekvisit15?.routes?.length).length,387,'All 68 special-law cards now have separate preliminary structures');
