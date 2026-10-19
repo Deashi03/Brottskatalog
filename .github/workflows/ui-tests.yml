@@ -23,6 +23,7 @@ on:
       - "scripts/v15_penalty_direct_evidence_queue.mjs"
       - "scripts/v15_stage_evidence_gaps.mjs"
       - "scripts/v15_stage_final_gaps_15.mjs"
+      - "scripts/nark_inchoate_source_consequences_15_test.mjs"
       - "scripts/v15_brb_stage_chapter_queue.mjs"
       - "scripts/v15_age14_candidate_inventory.mjs"
       - "age14-candidate-source-audit-15.js"
@@ -569,6 +570,8 @@ jobs:
         run: node scripts/v15_stage_evidence_gaps.mjs
       - name: Inventory all unresolved individually audited inchoate cards
         run: node scripts/v15_stage_final_gaps_15.mjs
+      - name: Verify 33 NSL 4 inchoate stage source reviews and negative controls
+        run: node scripts/nark_inchoate_source_consequences_15_test.mjs
       - name: Map remaining BrB inchoate stages by current chapter
         run: node scripts/v15_brb_stage_chapter_queue.mjs
       - name: Enumerate age-14 statutory threshold candidates
