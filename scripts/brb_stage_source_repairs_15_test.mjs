@@ -43,7 +43,7 @@ assert.equal(ctx.window.BK_STAGE_SCOPE15.gradeEvidenceAdded,12,
 // the later, separately evidenced CURRENT-SFS grade-stage classification.
 // No full offence-date or case-specific approval is implied.
 const carried=ctx.window.BK_DATA.crimes.filter(c=>c.stageType&&c.stageEvidence15?.preliminaryAssessment);
-assert.equal(carried.length,12,'All twelve historical grade-evidence files must survive source review');
+assert.equal(carried.length,15,'All fifteen historical gross-grade evidence files, including the separately held poison triad, must survive source review');
 assert.equal(carried.filter(c=>c.stageEvidence15?.preparatorySource?.includes('riksdagen.se')).length,9,
  'Nine BrB 13:12 grade questions must retain the SOU 2024:55 source');
 assert.equal(carried.filter(c=>c.stageEvidence15?.legalProvisions?.some(s=>s.includes('21:15'))).length,3,
