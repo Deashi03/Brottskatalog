@@ -49,7 +49,8 @@ for(const c of D.crimes.filter(x=>x.stageType&&x.individualLegalAudit15?.scope?.
    ' till '+p.title+'. Försök respektive förberedelse/stämpling prövas enligt olika rekvisit i 23 kap. BrB. Den konkreta straffskalan, gärningsdagens lag, skuldform, eventuella undantag, åtalsregler och tvångsmedelsvillkor har inte fastställts. Ingen automatisk numerisk straffskala eller tvångsmedelsbehörighet får härledas ur uppräkningen.'
  };
  c.stageConsequenceNote15='Uttryckligt förstadielagstöd är inte en färdig straffskala eller tvångsmedelsgrund. Pröva 23 kap. BrB, gärningsdag, aktuell brottsgrad och särskilda åtalsvillkor individuellt.';
- c.prosecution='unknown';c.custody='unknown';report.approved++;g.approved++;
+ if(c.prosecution!=='conditional')c.prosecution='unknown';
+ c.custody='unknown';report.approved++;g.approved++;
 }
 window.BK_BRB_POSITIVE_STAGE_CONSEQUENCES15=report;
 })();
