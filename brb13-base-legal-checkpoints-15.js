@@ -92,7 +92,7 @@ const specs=[
  'Gärningen ska vara OAKTSAM enligt 13:9. Det särskilda oaktsamhetsbrottet är åtskilt från de uppsåtliga gift- och smittbrotten; olyckliga resultat utan skuldrekvisit eller relevant allmänfara räcker inte.'],
  ['Underlåtenhet att avvärja allmänfara','13:10','efter att hava kommit till insikt',['13:10'],
  'Gärningspersonen har själv framkallat viss fara genom hantering av eld, sprängämnen, gift eller jämförbart förfarande och fått faktisk insikt om faran, men underlåter vad som skäligen kan krävas för att avvärja den. Personen får inte redan träffas av ansvar enligt föregående bestämmelser.',
- 'Personen ska efter faktisk INSİKT om den egna framkallade faran uppsåtligen underlåta det skäliga avvärjandet. Enbart abstrakt möjlighet att upptäcka en fara är inte detsamma som det insiktsrekvisit som anges i 13:10.']
+ 'Personen ska efter faktisk INSIKT om den egna framkallade faran uppsåtligen underlåta det skäliga avvärjandet. Enbart abstrakt möjlighet att upptäcka en fara är inte detsamma som det insiktsrekvisit som anges i 13:10.']
 ];
 const report={planned:specs.length*2,completed:0,byType:{objective:0,subjective:0},held:[],byOffence:[],
  date:'2026-10-20',sourceURL:SRC,
