@@ -1,6 +1,6 @@
 # Brottskatalog V1.5 – mätbar väg till publicering
 
-> **Senaste avstämning: 62,6 % (7 175/11 453), 4 278 åtgärder återstår.** 16 av brottsbalkens kapitel har genomgått källbundet individuellt förstadiearbete. 463 negativa förstadier har fått varsin separat lagstöds- och konsekvenskontroll och 211 positiva förstadier har granskats mot gällande förstadieparagraf. Den självständiga juridiska slutrevisionen återstår.
+> **Senaste avstämning: 65,7 % (7 523/11 453), 3 930 åtgärder återstår.** Under denna arbetsomgång har 348 individuella BrB-förstadieåtgärder genomförts och verifierats. De nio juridiska slutkontrollerna per grundbrott kvarstår helt (0/3 483).
 
 **Beräknad status: 46,3 % (5 297 av 11 434 jämnt räknade åtgärder).** Återstår **6 137**. Avser arbetsgren `v15-komplett-brb-rekvisit-typexempel`, avstämd 18 oktober 2026. Testad i [GitHub Actions 39154276028](https://github.com/Deashi03/Brottskatalog/actions/runs/39154276028).
 
@@ -302,3 +302,31 @@ Tillsammans med **66 tidigare inlagda men först nu grönt verifierade specialla
 **Grön slutlig CI-regression inkl. iPhone:** [GitHub Actions 39177493062](https://github.com/Deashi03/Brottskatalog/actions/runs/39177493062). Testerna verifierar också att ändrat lagtextunderlag inte kan ge ett positivt källgodkännande. Aktuell grundkälla är [Riksdagens brottsbalk (1962:700)](https://www.riksdagen.se/sv/dokument-och-lagar/dokument/svensk-forfattningssamling/brottsbalk-1962700_sfs-1962-700/).
 
 **Viktig avgränsning:** Detta är ett stort genomfört och verifierat *aktuellt lagstödsarbete för förstadier*, inte 1 137 fullständiga slutligt rättsligt godkända brottsbedömningar. Alla rättsliga slutkontroller av grundbrotten, öppna förstadiefrågor och formella publiceringsuppgifter är fortsatt blockerande. V1.5 är ännu endast draft, V1.4 på `main` är oförändrad.
+
+---
+
+## 19 oktober 2026 – 65,7 %, 348 nya individuellt verifierade förstadieåtgärder
+
+Efter den tidigare godkända avstämningen **62,6 % (7 175/11 453)** har **348 nya individuella lagstöds- och konsekvensåtgärder** slutförts och verifierats i CI, utan att några juridiska grundbrottsslutkontroller ommärkts som färdiga.
+
+- **BrB 4 kap.**: 78 negativa förstadieprövningar med 78 separata konsekvensprövningar samt 39 positiva uttryckliga förstadieuppräkningar; totalt **195** individuella uppgifter. Källa: **BrB 4:10** enligt 2026:950. Villkoret att dataintrång inte skulle vara ringa måste fortfarande bedömas individuellt; någon automatisk straffskala eller gripandebefogenhet har inte godkänts.
+- **BrB 13 kap.**: 12 negativa källavstämningar med 12 separata konsekvensprövningar samt 39 uttryckliga positiva uppräkningar; totalt **63** uppgifter. Källa: **BrB 13:12**. De 12 tidigare spärrade osäkra förstadierna för grova grader är fortfarande **uttryckligen olösta**, inte felaktigt klassificerade.
+- **BrB 21–22 kap.**: 27 negativa förstadieprövningar med 27 separata konsekvensprövningar och 12 uttryckliga positiva lagstödsuppräkningar; totalt **66** uppgifter. Källor: **BrB 21:15 och 22:7**. Krigstillämplighet, lagversion och eventuellt särskilt ikraftträdande är fortfarande separat nödvändiga kontroller. Inga automatiska tvångsmedelsbesked.
+- **Ytterligare 24** individuella moment kommer av att tidigare redan källgranskade 21–22 kap.-poster med `custody='unknown'` nu genomgår separat avgränsad negativ kontroll utan att statusen ändras till ett positivt eller negativt tvångsmedelsbesked.
+
+**Summering:** 348 nya avgränsade BrB-kortmoment. Endast faktiskt CI-verifierade poster räknas. Källkontrollerna är inte en fullständig prövning av förstadieansvar i ett enskilt fall. De 15 tidigare `unverified`-förstadierna och de fem avvikande förfalskningsgraderna samt grov bevisförvanskning kräver fortfarande självständig rättslig granskning.
+
+| Grupp | Färdiga | Totalt | Kvar |
+| --- | ---: | ---: | ---: |
+| Grundbrottens sex inledande moment | 2 322 | 2 322 | 0 |
+| Nio oberoende juridiska slutmoment per grundbrott | 0 | 3 483 | 3 483 |
+| Förstadiernas fem moment per post | 5 004 | 5 430 | 426 |
+| Särskilda kontroller för 14-årsundantaget | 83 | 86 | 3 |
+| CI-registrerade Node-kontroller | 102 | 102 | 0 |
+| Teknik och logistik | 12 | 12 | 0 |
+| Slutpublicering | 0 | 18 | 18 |
+| **Totalt** | **7 523** | **11 453** | **3 930** |
+
+**Verifiering:** [Godkänd GitHub Actions-körning 39213295096](https://github.com/Deashi03/Brottskatalog/actions/runs/39213295096) inklusive iPhone och revisions-/källmanipulationstester. Rättskälla: [Brottsbalk (1962:700), Sveriges riksdag](https://www.riksdagen.se/sv/dokument-och-lagar/dokument/svensk-forfattningssamling/brottsbalk-1962700_sfs-1962-700/).
+
+**Publiceringsspärr:** 0/3 483 juridiska grundbrottsslutkontroller, 426 återstående förstadieåtgärder, tre särskilda 14-årskontroller och 18 releaseåtgärder. PR #2 är fortfarande draft, `main`/V1.4 orörd, V1.5 inte publicerad.
