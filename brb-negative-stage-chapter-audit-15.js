@@ -15,6 +15,15 @@ const spec={
  3:{section:'3:11',allowed:{
  'Mord':'FPS','Dråp':'FPS','Barnadråp':'FP',
  'Misshandel':'FP','Grov misshandel':'FPS','Synnerligen grov misshandel':'FPS'}},
+ 4:{section:'4:10',allowed:{
+ 'Människorov':'FPS','Människohandel':'FPS',
+ 'Grov människoexploatering':'FPS','Människoexploatering':'FPS',
+ 'Olaga frihetsberövande':'FPS',
+ 'Äktenskapstvång':'FPS','Barnäktenskapsbrott':'FPS',
+ 'Grovt olaga tvång':'FPS','Grovt olaga hot':'FPS',
+ 'Grovt hemfridsbrott':'FPS','Grovt olaga intrång':'FPS',
+ 'Äktenskapsresebrott':'F','Äktenskapsresebrott mot barn':'F',
+ 'Dataintrång':'FP','Grovt dataintrång':'FP'}},
  5:{section:null,allowed:{}},
  6:{section:'6:15',allowed:{
  'Våldtäkt':'FPS','Grov våldtäkt':'FPS',
