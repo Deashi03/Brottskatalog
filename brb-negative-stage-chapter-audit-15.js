@@ -87,7 +87,13 @@ const spec={
  'Olovlig underrättelseverksamhet mot främmande makt':'FPS',
  'Olovlig underrättelseverksamhet mot person':'FPS',
  'Obehörig befattning med hemlig uppgift':'FP'}},
- 20:{section:null,allowed:{}}
+ 20:{section:null,allowed:{}},
+ 21:{section:'21:15',allowed:{
+ 'Olovlig avvikelse av krigsman':'FPS',
+ 'Grov olovlig avvikelse av krigsman':'FPS',
+ 'Våld eller hot mot förman':'FPS'}},
+ 22:{section:'22:7',allowed:{
+ 'Landsförräderi':'FPS','Landssvek':'FPS'}}
 };
 const stageAbbr={forsok:'F',forberedelse:'P',stampling:'S'};
 const originals=new Map(D.crimes.filter(c=>!c.stageType).map(c=>[c.id,c]));
