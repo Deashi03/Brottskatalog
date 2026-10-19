@@ -25,7 +25,7 @@ const sourceAuth=Boolean(auth?.complete&&auth?.machine===false&&auth.url===SRC
  &&['2026-10-16','2026-10-17','2026-10-18'].includes(auth.checked)
  &&window.BK_STAGE_SOURCE_REPAIR15?.refs?.includes('BrB:9:11')
  &&['försök eller förberedelse till bedrägeri','ringa utpressning','grovt ocker',
- 'stämpling till grovt bedrägeri','stämpling till grov utpressning',
+ 'stämpling till grovt bedrägeri','stämpling till grovt bedrägeri, grov utpressning',
  '23 kap. 3 § ska dock inte gälla','för att bedra försäkringsgivare'].every(x=>n(auth.text).includes(n(x))));
 const defaultFault=n(W['BrB:1:2']?.text).includes('endast då den begås uppsåtligen');
 const specs=[
