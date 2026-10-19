@@ -26,7 +26,10 @@ for(const c of reviewed){
  assert.equal(audit.scope.coercionApproved,false);
  assert.equal(audit.scope.chapter23ConditionsReviewed,false);
  assert.equal(audit.scope.historicApplicabilityApproved,false);
- assert.equal(audit.consequences,undefined);
+ assert.equal(audit.consequences?.status,'APPROVED');
+ assert.equal(audit.consequences?.automaticCoercionApproved,false);
+ assert.equal(audit.consequences?.punishmentRangeApproved,false);
+ assert.equal(audit.consequences?.historicLawApproved,false);
  assert.equal(c.custody,'unknown');
  assert.equal(audit.scope.caseSpecificLiabilityApproved,false); // downstream prosecution metadata has its own source checks
 }
