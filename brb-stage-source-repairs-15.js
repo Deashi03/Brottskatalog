@@ -17,7 +17,7 @@ for(const [key,full] of Object.entries(texts)){
   // a substantive divergence must still fail closed.
   const normalize=s=>String(s).replace(/\s+/g,' ').replace(/\s+([.,;:])/g,'$1').trim();
   const actual=normalize(item.text),expected=normalize(full);
-  if(!(actual.length>expected.length&&actual.includes(expected)))
+  if(!(actual===expected||(actual.length>expected.length&&actual.includes(expected))))
    throw Error('Source may have changed; manual review '+key);
  }
  item.text=full;item.complete=true;item.machine=false;item.checked='2026-10-16';item.url=SFS;
