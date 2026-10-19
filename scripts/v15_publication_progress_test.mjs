@@ -24,7 +24,10 @@ assert.equal(find('Särskilda kontroller','Individuellt källgranskad tillämpli
 assert.equal(find('Förstadier','Individuellt godkänd kriminaliseringsprövning').completed,1086);
 assert.equal(find('Förstadier','Individuell kontroll av straffskala/åtal/tvångsmedel').completed,1086);
 assert.equal(r.work.filter(x=>x.group==='Juridisk slutrevision').length,9);
-assert.ok(r.work.filter(x=>x.group==='Juridisk slutrevision').every(x=>x.total===387&&x.completed===0));
+const completedByCheck={time:0,objective:5,subjective:5,exceptions:0,grade:5,jurisprudence:0,inchoate:5,prosecution:5,coercion:0};
+const check=r.work.filter(x=>x.group==='Juridisk slutrevision');
+assert.ok(check.every(x=>x.total===387));
+assert.deepEqual(check.map(x=>x.completed),Object.values(completedByCheck),'Only 25 individual BrB12 statutory checkpoints may count; all 387 complete offence audits remain unapproved');
 assert.ok(r.baseline.automatedTestCommands>=75);
 assert.equal(r.knownBlockers.brbFullFinalApproved,0);
 assert.equal(r.knownBlockers.unverifiedStages,0);
