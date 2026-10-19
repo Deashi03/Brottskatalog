@@ -8,7 +8,18 @@ assert.ok(scripts.indexOf(mod)<scripts.indexOf('./age14-offence-scope-15.js'));
 const inline=[...html.matchAll(/<script(?:\s[^>]*)?>([\s\S]*?)<\/script>/g)].map(m=>m[1]);
 const ctx=vm.createContext({window:{},console:{log:()=>{},warn:()=>{},error:()=>{}}});
 for(const i of [1,2,3])vm.runInContext(inline[i],ctx);
-for(const p of scripts)vm.runInContext(fs.readFileSync(path.join(root,p),'utf8'),ctx,{filename:p});
+let restrictedId=null;
+for(const p of scripts){
+ if(p==='./brb-positive-stage-source-audit-15.js'){
+  const candidate=ctx.window.BK_DATA.crimes.find(c=>c.stageType&&c.stageStatus==='punishable'&&c.statute?.startsWith('BrB:9:'));
+  assert.ok(candidate,'Need a positive BrB 9 stage to verify restrictive prosecution preservation');
+  candidate.prosecution='conditional';candidate.prosecutionLabel='Särskild åtalsprövning enligt annan källa';
+  restrictedId=candidate.id;
+ }
+ vm.runInContext(fs.readFileSync(path.join(root,p),'utf8'),ctx,{filename:p});
+}
+assert.equal(ctx.window.BK_DATA.crimes.find(c=>c.id===restrictedId).prosecution,'conditional',
+ 'A stage-only source audit must not erase a more restrictive prosecution prerequisite');
 const r=ctx.window.BK_BRB_POSITIVE_STAGE_SOURCE_AUDIT15;
 console.log('V1.5 BRB POSITIVE STAGE SOURCE AUDIT '+JSON.stringify(r));
 assert.ok(r.approved>=80,'No mass source-validation of BrB positive stages');
