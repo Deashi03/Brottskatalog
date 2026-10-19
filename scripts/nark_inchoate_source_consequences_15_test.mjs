@@ -21,9 +21,10 @@ for(const c of stages){
  assert.equal(a.consequences.automaticCoercionApproved,false);assert.equal(a.consequences.punishmentRangeApproved,false);
  assert.equal(c.custody,'unknown');assert.equal(c.prosecution,'unknown');
 }
-const bruk=stages.filter(c=>c.stageParentId==='ringa-narkotikabrott-bruk');
+const parentTitles=new Map(ctx.window.BK_DATA.crimes.filter(x=>!x.stageType).map(x=>[x.id,x.title]));
+const bruk=stages.filter(c=>parentTitles.get(c.stageParentId)==='Ringa narkotikabrott · bruk');
 assert.equal(bruk.length,3);assert.ok(bruk.every(c=>c.stageStatus==='not-criminalized'));
-const ringaInnehav=stages.filter(c=>c.title?.includes('ringa narkotikabrott')&&c.title?.includes('innehav'));
+const ringaInnehav=stages.filter(c=>parentTitles.get(c.stageParentId)==='Ringa narkotikabrott · innehav');
 assert.equal(ringaInnehav.length,3);
 assert.equal(ringaInnehav.filter(c=>c.stageStatus==='not-criminalized').length,1);
 const clone=JSON.parse(JSON.stringify(ctx.window.BK_DATA.crimes));
