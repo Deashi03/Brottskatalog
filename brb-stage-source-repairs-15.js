@@ -18,7 +18,7 @@ for(const [key,full] of Object.entries(texts)){
   const actual=String(item.text).replace(/\s+/g,' ').trim();
   const expected=full.replace(/\s+/g,' ').trim();
   if(!(actual.length>expected.length&&actual.includes(expected)))
-   throw Error('Source may have changed; manual review '+key);
+   throw Error('Source may have changed; manual review '+key+' original length '+actual.length+' official length '+expected.length+' suffix '+actual.slice(-130));
  }
  item.text=full;item.complete=true;item.machine=false;item.checked='2026-10-16';item.url=SFS;
  for(const c of D.crimes.filter(c=>!c.stageType&&c.statute===key)){
