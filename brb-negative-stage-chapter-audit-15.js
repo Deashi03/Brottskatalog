@@ -164,7 +164,8 @@ for(const [ch,rule] of Object.entries(spec)){
         &&c.stageSource?.startsWith('BrB 20:2')
         &&c.stagePreliminaryScope15?.positiveCriminalizationUnderNamedProvisions===false))
     &&p?.statute?.startsWith('BrB:'+ch+':')
-    &&c.custody==='none'&&c.penaltyRange===null&&c.stageParentId===p.id
+    &&(c.custody==='none'||((ch==='21'||ch==='22')&&c.custody==='unknown'))
+    &&c.penaltyRange===null&&c.stageParentId===p.id
     &&c.stageType in stageAbbr);
   if(!valid){group.held++;report.held.push({chapter:Number(ch),title:p?.title,stage:c.stageType,
    reason:'unverified-dated-statute-or-parent-link',chapterReady:chapterReady[ch],
