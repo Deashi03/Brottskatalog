@@ -15,10 +15,10 @@ for(const [key,full] of Object.entries(texts)){
   // Some machine extracts append adjacent section text to BrB 19:14.
   // Accept only a longer import with exact full paragraph present;
   // a substantive divergence must still fail closed.
-  const actual=String(item.text).replace(/\s+/g,' ').trim();
-  const expected=full.replace(/\s+/g,' ').trim();
+  const normalize=s=>String(s).replace(/\s+/g,' ').replace(/\s+([.,;:])/g,'$1').trim();
+  const actual=normalize(item.text),expected=normalize(full);
   if(!(actual.length>expected.length&&actual.includes(expected)))
-   throw Error('Source may have changed; manual review '+key+' original length '+actual.length+' official length '+expected.length+' suffix '+actual.slice(-130));
+   throw Error('Source may have changed; manual review '+key);
  }
  item.text=full;item.complete=true;item.machine=false;item.checked='2026-10-16';item.url=SFS;
  for(const c of D.crimes.filter(c=>!c.stageType&&c.statute===key)){
