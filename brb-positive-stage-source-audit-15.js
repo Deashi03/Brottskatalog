@@ -58,7 +58,10 @@ for(const [chapter,rule] of Object.entries(prior.currentStatutoryStageManifest))
   };
   c.stageSourceScopeNote15='Kontrollerad uttrycklig förstadiekriminalisering enligt BrB '+rule.section+
    '. Straffskala och tvångsmedelsstatus får inte avgöras utifrån denna uppgift.';
-  c.custody='unknown';c.prosecution='unknown';
+  c.custody='unknown';
+  // A previously source-restricted prosecution must never be broadened
+  // by a review limited to inchoate criminalization.
+  if(c.prosecution!=='conditional')c.prosecution='unknown';
   c.prosecutionLabel='Kontrollera åtal och 23 kap. BrB individuellt';
   g.approved++;report.approved++;
  }
