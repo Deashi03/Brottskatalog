@@ -99,6 +99,8 @@ on:
       - "brb8-base-legal-checkpoints-15.js"
       - "brb9-base-legal-checkpoints-15.js"
       - "brb10-base-legal-checkpoints-15.js"
+      - "brb11-base-legal-checkpoints-15.js"
+      - "scripts/brb11_base_legal_checkpoints_15_test.mjs"
       - "scripts/brb10_base_legal_checkpoints_15_test.mjs"
       - "scripts/brb9_base_legal_checkpoints_15_test.mjs"
       - "scripts/brb8_base_legal_checkpoints_15_test.mjs"
@@ -518,6 +520,8 @@ jobs:
         run: node scripts/brb9_base_legal_checkpoints_15_test.mjs
       - name: Test BrB10 sixteen fiduciary and bribery offence source and subjective reviews
         run: node scripts/brb10_base_legal_checkpoints_15_test.mjs
+      - name: BrB11 independently test creditor and bookkeeping objective/fault branches
+        run: node scripts/brb11_base_legal_checkpoints_15_test.mjs
       - name: V1.5 chapter four special prosecution restrictions and place qualifiers
         run: node scripts/brb4_prosecution_15_test.mjs
       - name: V1.5 BrB 11:8 creditor negligence and ringa bookkeeping prosecution exceptions
