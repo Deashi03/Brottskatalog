@@ -1,6 +1,6 @@
 # Brottskatalog V1.5 – mätbar väg till publicering
 
-> **Senaste avstämning: 68,9 % (7 893/11 456), 3 563 åtgärder återstår.** 33 narkotikastrafflagsförstadier har genomgått varsin källbunden individuell lagstödsprövning och separat begränsad konsekvensprövning. Två nya automatiserade kontrollsteg har lagts till. Juridisk slutrevision av grundbrotten är fortfarande 0/3 483.
+> **Senaste godkända avstämning: 69,4 % (7 956/11 457), 3 501 åtgärder återstår.** Samtliga 1 086 förstadiekort har nu varsin begränsad prövning av gällande förstadieuppräkning och separat konsekvensgränskontroll. 86/86 särskilda källbundna 14-årströskelkontroller är utförda. Grundbrottens fullständiga juridiska slutrevision är alltjämt 0/3 483. Alla 106 CI-registrerade Node-kontroller och iPhone-regressionen har passerat.
 
 **Historisk baslinje (18 oktober):** 46,3 % (5 297/11 434). Denna siffra är ersatt av den aktuella CI-beräkningen ovan; äldre tabeller nedan är historiska ögonblicksbilder, inte senaste status.
 
@@ -382,3 +382,30 @@ Källa: [Narkotikastrafflagen (1968:64), 4 §, Sveriges riksdag](https://www.rik
 **Återstående förstadier:** 22 ännu inte slutligt avgränsade BrB-kort (44 individuella lagstöds-/konsekvensmoment) samt 15 förstadier med oavgjord preliminär straffbarhetsstatus (15 moment), totalt 59 moment. Osäkra brottsgrader får inte massgodkännas.
 
 **Verifiering:** [GitHub Actions 39227402981](https://github.com/Deashi03/Brottskatalog/actions/runs/39227402981) grön, inklusive 105 CI-registrerade Node-kontroller och iPhone-regression. **Publiceringsspärren kvarstår**: inga av 3 483 grundbrottsslutkontroller är godkända, och 18 releaseåtgärder återstår. PR #2 är draft, V1.4 på `main` är orörd.
+
+---
+
+## 19 oktober 2026 – 69,4 %, tidigare öppna grova BrB-förstadier källavgränsade
+
+**Godkänd status:** **7 956/11 457 arbetsmoment (69,4 %)**, varav **3 501 återstår**. Förändring från föregående CI-godkända commit: **+60 avgränsade juridiska kortmoment**, **+1 nytt självständigt automatiserat test**. Detta är inte 60 kompletta juridiska slutrevisioner.
+
+- **21 individuella källavstämningar** av aktuellt förstadielagstöd för nio grova BrB-grupper (13:7, 13:5 a, 13:5 b, 21:8, 14:5, 14:7, 14:8 och 15:8 med respektive förstadiebestämmelse). Källhanteringen omfattar för varje kort både grundbrottets aktuella gradbestämmelse och den specifika förstadietyp som särskilt anges.
+- **21 separata negativa konsekvensgränskontroller** dokumenterar uttryckligen att källavstämning av den namngivna brottsgraden inte godkänner ett numeriskt förstadiestraff, konkret straffansvar, åtalsbehörighet, äldre lagversion eller tvångsmedel.
+- **15 tidigare oavgjorda preliminära förstadieklassificeringar** har fått aktuell lagtextanknuten avgränsning. De tidigare rättsliga källdossiererna och deras uttryckliga förbehåll om fullständig prövning har behållits.
+- **3 särskilda 14-årströskelkontroller** avser nu även BrB 13:7:s tre aktuellt källprövade grova förstadier. Ingen tillämpning på en konkret 14-åring eller befogenhet till frihetsberövande är godkänd.
+- **En ny Node-regression** prövar samtliga 21 kort individuellt och underkänner manipulerad huvudlagtext eller ändrad gradbestämmelse. Äldre regressioner har justerats utan att lagrumsgranskningar ommärkts som fullständigt godkända. Kvalitetsrevisionen håller nu **21 numeriska förstadiestraffskalor uttryckligen öppna**, i stället för att felaktigt kräva en uppfunnen fixerad straffskala.
+
+| Område | Färdigt | Totalt | Återstår |
+| --- | ---: | ---: | ---: |
+| Grundbrottens sex grunduppgifter | 2 322 | 2 322 | 0 |
+| Grundbrottens nio oberoende juridiska slutkontroller | 0 | 3 483 | 3 483 |
+| Förstadieuppgifter (begränsat käll-/konsekvensomfång) | 5 430 | 5 430 | 0 |
+| Särskilda källkontroller av 14-årströskeln | 86 | 86 | 0 |
+| Automatiserade CI-kontroller | 106 | 106 | 0 |
+| Teknik och logistik | 12 | 12 | 0 |
+| Frisläppning och efterkontroll | 0 | 18 | 18 |
+| **Totalt** | **7 956** | **11 457** | **3 501** |
+
+**Godkänd regression:** [GitHub Actions 39330330500](https://github.com/Deashi03/Brottskatalog/actions/runs/39330330500) – samtliga CI-steg, integrerad kataloggranskning och iPhone-webbläsartest passerade. Aktuell rättskälla för avstämningen: [Brottsbalk (1962:700), Sveriges riksdag](https://www.riksdagen.se/sv/dokument-och-lagar/dokument/svensk-forfattningssamling/brottsbalk-1962700_sfs-1962-700/).
+
+**Releaseblockering kvarstår:** **3 483** självständiga slutkontroller av **387 grundbrott** och **18** frisläppningsuppgifter, inklusive detaljerade prövningar av gärningsdatum, rekvisit, brottsgrader, praxis, påföljder, åtalsvillkor och tvångsmedel. Att de avgränsade förstadie- och ålderströskelmomenten är räknemässigt färdiga innebär **inte** att något förstadiekort är slutligt godkänt för polisiärt beslutsstöd i enskilt ärende. PR #2 är fortfarande utkast, V1.4 på `main` är oförändrad och version 1.5 är inte publicerad.
