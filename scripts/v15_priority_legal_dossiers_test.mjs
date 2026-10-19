@@ -15,13 +15,16 @@ assert.equal(new Set([...f.policePriority,...f.remainingBrB].map(x=>x.id)).size,
 for(const c of f.remainingBrB){
  assert.ok(c.statuteFullTextIndividuallyVerified&&c.statutoryText.length>30,c.title);
  assert.equal(c.legalChecklist.length,9);
- assert.ok(c.legalChecklist.every(x=>x.status==='PENDING'));
+ assert.ok(c.legalChecklist.every(x=>['PENDING','APPROVED'].includes(x.status)));
  assert.equal(c.finalLegalConclusionApproved,false);
  assert.equal(c.operationalCustodyAdviceApproved,false);
 }
 assert.equal(f.counts.unverifiedStageCases,0);
 assert.equal(f.counts.policeCardsWithCompleteStatute,37);
 assert.equal(f.counts.policeCardsFullyLegallyApproved,0);
+assert.equal(f.counts.individuallySourceCheckedLegalChecklistSteps,61);
+assert.equal(f.counts.cardsWithPartiallyCheckedLegalChecklist,17);
+assert.equal([...f.policePriority,...f.remainingBrB].reduce((n,d)=>n+d.legalChecklist.filter(x=>x.status==='APPROVED').length,0),61);
 assert.equal(f.releaseReady,false);
 assert.equal(f.automaticCustodyAuthorization,false);
 assert.equal(new Set(f.policePriority.map(x=>x.id)).size,37);
@@ -34,7 +37,9 @@ for(const c of f.policePriority){
  assert.equal(c.finalLegalConclusionApproved,false);
  assert.equal(c.operationalCustodyAdviceApproved,false);
  assert.equal(c.legalChecklist.length,9);
- assert.ok(c.legalChecklist.every(q=>q.status==='PENDING'),'No automatic completion from static data');
+ assert.ok(c.legalChecklist.every(q=>['PENDING','APPROVED'].includes(q.status)&&
+ (q.status==='PENDING'||(q.sourceURL&&q.checked&&q.caseSpecificLegalConclusionApproved===false))),
+ 'Only individually sourced, non-case-specific legal steps may be approved');
  assert.ok(c.legalChecklist.some(q=>q.id==='jurisprudence'));
  assert.ok(c.legalChecklist.some(q=>q.id==='coercion'));
 }

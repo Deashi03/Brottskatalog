@@ -22,13 +22,16 @@ assert.equal(r.counts.brbCardsWithScopedSourceNotes,20);
 assert.equal(sum.allNotesArePartial,true);
 assert.equal(sum.fullLegalReviewApprovalsFromNotes,0);
 assert.equal(sum.outstandingIndividualFinalReviews,319);
+assert.equal(r.counts.individuallySourceCheckedLegalChecklistSteps,61);
+assert.equal(r.counts.cardsWithPartiallyCheckedLegalChecklist,17);
 for(const c of all){
  const notes=c.scopedSourceNotes;
  assert.ok(Array.isArray(notes));
  assert.equal(c.finalLegalConclusionApproved,false);
  assert.equal(c.status,'LEGAL_AUDIT_PENDING');
  assert.equal(c.legalChecklist.length,9);
- assert.ok(c.legalChecklist.every(s=>s.status==='PENDING'));
+ assert.ok(c.legalChecklist.every(s=>['PENDING','APPROVED'].includes(s.status)&&
+ (s.status==='PENDING'||(s.sourceURL&&s.checked&&s.caseSpecificLegalConclusionApproved===false))));
  for(const note of notes){
   assert.equal(note.status,'SCOPED_SOURCE_NOTE_ONLY');
   assert.equal(note.lawRef,c.statute);

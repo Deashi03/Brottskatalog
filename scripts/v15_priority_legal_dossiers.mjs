@@ -83,7 +83,16 @@ const toDossier=c=>{
  inchoateCards:stageCards.map(s=>({id:s.id,title:s.title,status:s.stageStatus||null,source:s.stageSource||null})),
  prosecutionSummary:c.prosecutionDetails||[],existingProsecutionRule:c.prosecutionRule||null,
  age14Applicability:c.age14Exception15||null,
- legalChecklist:questionSet.map(x=>({...x})),
+ legalChecklist:questionSet.map(x=>{
+  const a=c.legalAudit15?.checkpoints?.[x.id];
+  // Reflect only individually dated, source-linked and unambiguously scoped
+  // checkpoints; do not mistake a partial checklist for full legal certification.
+  if(a?.status==='APPROVED'&&/^2026-10-\d{2}$/.test(a.checked||'')&&a.sourceURL===source
+    &&a.caseSpecificLiabilityApproved!==true&&a.caseSpecificCustodyApproved!==true)
+   return {...x,status:'APPROVED',sourceURL:a.sourceURL,checked:a.checked,
+    scope:a.scope,finding:a.finding,caseSpecificLegalConclusionApproved:false};
+  return {...x};
+ }),
  unresolvedQuestions:[],
  finalLegalConclusionApproved:false,sourceTextIsNotCaseLawApproval:true,
  independentHumanLegalReviewRequired:true,
@@ -139,7 +148,9 @@ const output={schema:1,version:'1.5',generatedAt:new Date().toISOString(),
  policeCardsFullyLegallyApproved:crimes.filter(x=>x.finalLegalConclusionApproved).length,
  scopedSourceNoteEntries:scopedSourceSummary.entries,
  brbCardsWithScopedSourceNotes:scopedSourceSummary.cardsWithAtLeastOneNote,
- allBrBCardsFullyLegallyApproved:allDossiers.filter(x=>x.finalLegalConclusionApproved).length},
+ allBrBCardsFullyLegallyApproved:allDossiers.filter(x=>x.finalLegalConclusionApproved).length,
+ individuallySourceCheckedLegalChecklistSteps:allDossiers.reduce((n,d)=>n+d.legalChecklist.filter(c=>c.status==='APPROVED').length,0),
+ cardsWithPartiallyCheckedLegalChecklist:allDossiers.filter(d=>d.legalChecklist.some(c=>c.status==='APPROVED')).length},
  policePriority:crimes,remainingBrB,scopedSourceSummary,ambiguousInchoate:pending,
  releaseReady:false,automaticCustodyAuthorization:false};
 fs.mkdirSync(path.join(root,'audit'),{recursive:true});
@@ -157,3 +168,7 @@ if(scopedSourceSummary.entries!==Object.values(scopedSourceSummary.byKind).reduc
  ||allDossiers.some(d=>d.scopedSourceNotes.some(n=>n.finalLegalConclusionApproved
   ||n.legalChecklistCompletedByThisNote!==0)))throw Error('Scoped review is not final legal signoff');
 if(output.releaseReady||output.automaticCustodyAuthorization)throw Error('Unsafe inferred release or detention authority');
+if(output.counts.individuallySourceCheckedLegalChecklistSteps!==61
+ ||output.counts.cardsWithPartiallyCheckedLegalChecklist!==17
+ ||allDossiers.some(d=>d.legalChecklist.some(q=>q.status==='APPROVED'&&(!q.sourceURL||!q.checked||q.caseSpecificLegalConclusionApproved))))
+ throw Error('Individual partial BrB3/12 source checks have not reconciled against the legal audit queue');
