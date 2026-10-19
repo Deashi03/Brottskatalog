@@ -44,6 +44,8 @@ on:
       - "scripts/brb_positive_stage_source_audit_15_test.mjs"
       - "brb-positive-stage-consequences-15.js"
       - "nark-inchoate-source-consequences-15.js"
+      - "brb-grade-stage-source-audit-15.js"
+      - "scripts/brb_grade_stage_source_audit_15_test.mjs"
       - "scripts/brb_positive_stage_consequences_15_test.mjs"
       - "scripts/v15_penalty_audit_queue.mjs"
       - "scripts/v15_release_queue_15_test.mjs"
@@ -566,17 +568,19 @@ jobs:
         run: node scripts/v15_publication_progress_test.mjs
       - name: Inventory remaining direct penalty range checks by legal provision
         run: node scripts/v15_penalty_direct_evidence_queue.mjs
-      - name: Inventory 156 inchoate evidence and dated-source gaps
+      - name: Inventory remaining inchoate evidence and dated-source gaps
         run: node scripts/v15_stage_evidence_gaps.mjs
-      - name: Inventory all unresolved individually audited inchoate cards
+      - name: Inventory remaining individually audited inchoate gaps
         run: node scripts/v15_stage_final_gaps_15.mjs
       - name: Verify 33 NSL 4 inchoate stage source reviews and negative controls
         run: node scripts/nark_inchoate_source_consequences_15_test.mjs
+      - name: Verify 21 BrB grade-stage source decisions with independent negative controls
+        run: node scripts/brb_grade_stage_source_audit_15_test.mjs
       - name: Map remaining BrB inchoate stages by current chapter
         run: node scripts/v15_brb_stage_chapter_queue.mjs
       - name: Enumerate age-14 statutory threshold candidates
         run: node scripts/v15_age14_candidate_inventory.mjs
-      - name: Review 83 individual age-14 statutory minimum thresholds
+      - name: Review 86 individual age-14 statutory minimum thresholds
         run: node scripts/age14_candidate_source_audit_15_test.mjs
       - name: Verify 138 individual special-law inchoate enumerations
         run: node scripts/special_stage_enumeration_15_test.mjs

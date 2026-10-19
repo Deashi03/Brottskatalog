@@ -50,7 +50,7 @@ assert.equal(file.counts.conditionallyScopedPenaltyCasesNeedingReview,
  file.blockers.conditionalPenaltyCasesNeedingIndividualVerification);
 
 
-assert.equal(file.stageAuditQueue.length,15,'All fifteen unresolved special-inchoate cases must remain in the legal audit queue');
+assert.equal(file.stageAuditQueue.length,0,'No unresolved current-SFS stage classifications remain; full legal review still required');
 assert.equal(file.counts.inchoateLegalAuditQueueEntries,file.counts.unverifiedStages);
 for(const entry of file.stageAuditQueue){
  assert.equal(entry.status,'INCHOATE_CRIMINALIZATION_UNVERIFIED');
@@ -59,7 +59,7 @@ for(const entry of file.stageAuditQueue){
  assert.ok(entry.sourceURL?.includes('riksdagen.se'));
  assert.ok(entry.requiredAction.includes('praxis'),'Scope must not be decided from title alone');
 }
-assert.ok(file.blockers.unverifiedInchoateStatus===15,'Unresolved degrees must block release, despite complete source wording');
+assert.ok(file.blockers.unverifiedInchoateStatus===0,'Unresolved degrees must block release, despite complete source wording');
 
 assert.equal(file.counts.age14RulesCovered,1473,
  'Every base offence and inchoate card needs an offence-age metadata warning');
