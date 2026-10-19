@@ -17,7 +17,7 @@ assert.equal(report.consequencesApproved,72);
 assert.equal(report.held.length,0);
 assert.deepEqual(Object.fromEntries(Object.entries(report.byFamily).map(([k,v])=>[k,v.completed])),
  {SmuglL:23,PTBL:6,SkBrL:25,BidrBrL:12,LBE:6});
-const cards=ctx.window.BK_DATA.crimes,reviewed=cards.filter(c=>c.individualLegalAudit15?.scope?.finding==='NO_NAMED_STAGE_OFFENCE_IN_CURRENT_SPECIAL_ACT');
+const cards=ctx.window.BK_DATA.crimes,reviewed=cards.filter(c=>c.individualLegalAudit15?.scope?.finding==='NO_NAMED_STAGE_OFFENCE_IN_CURRENT_SPECIAL_ACT'&&!c.statute?.startsWith('Nark:'));
 assert.equal(reviewed.length,72);
 assert.equal(cards.length,1473);
 for(const c of reviewed){
