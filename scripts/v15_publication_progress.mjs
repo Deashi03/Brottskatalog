@@ -18,7 +18,7 @@ const brb=base.filter(c=>c.statute?.startsWith('BrB:'));
 const special=base.filter(c=>!c.statute?.startsWith('BrB:'));
 const stages=all.filter(c=>c.stageType);
 const structured=c=>Boolean(c.rekvisit15?.groups?.length||c.rekvisit15?.routes?.length);
-const validDate=x=>typeof x==='string'&&/^\d{4}-\d{2}-\d{2}$/.test(x)&&!Number.isNaN(Date.parse(x))&&x<=new Date().toISOString().slice(0,10);
+const validDate=x=>typeof x==='string'&&/^\d{4}-\d{2}-\d{2}$/.test(x)&&!Number.isNaN(Date.parse(x))&&x<=new Date().toLocaleDateString('sv-SE',{timeZone:'Europe/Stockholm'});
 const datedFullText=c=>c.lawMode==='full'&&c.lawCompletenessVerified===true
   &&validDate(c.lawCompletenessChecked)&&c.lawCompletenessSourceURL?.startsWith('https://');
 // A conditional/cross-referenced scale may be APPROVED as conditional,
