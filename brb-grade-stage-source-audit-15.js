@@ -11,7 +11,7 @@
 const D=window.BK_DATA,W=window.BK_STATUTES;
 if(!D?.crimes||!W)return;
 const URL='https://www.riksdagen.se/sv/dokument-och-lagar/dokument/svensk-forfattningssamling/brottsbalk-1962700_sfs-1962-700/';
-const norm=s=>String(s||'').normalize('NFC').toLocaleLowerCase('sv').replace(/\\s+/g,' ').trim();
+const norm=s=>String(s||'').normalize('NFC').toLocaleLowerCase('sv').replace(/\s+/g,' ').trim();
 const source=(ref,phrases)=>{
  const s=W['BrB:'+ref],text=norm(s?.text);
  return !!(s?.complete===true&&s.url===URL&&/^2026-10-(17|18|19)$/.test(s.checked||'')
