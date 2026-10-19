@@ -96,6 +96,8 @@ on:
       - "brb12-prosecution-review-15.js"
       - "brb12-base-legal-checkpoints-15.js"
       - "brb3-base-legal-checkpoints-15.js"
+      - "brb8-base-legal-checkpoints-15.js"
+      - "scripts/brb8_base_legal_checkpoints_15_test.mjs"
       - "scripts/brb3_base_legal_checkpoints_15_test.mjs"
       - "scripts/brb12_base_legal_checkpoints_15_test.mjs"
       - "brb4-prosecution-review-15.js"
@@ -506,6 +508,8 @@ jobs:
         run: node scripts/brb12_base_legal_checkpoints_15_test.mjs
       - name: Individually verify twelve BrB3 substantive and stage-source legal reviews
         run: node scripts/brb3_base_legal_checkpoints_15_test.mjs
+      - name: Verify thirteen BrB8 individual current-statute final audit dimensions
+        run: node scripts/brb8_base_legal_checkpoints_15_test.mjs
       - name: V1.5 chapter four special prosecution restrictions and place qualifiers
         run: node scripts/brb4_prosecution_15_test.mjs
       - name: V1.5 BrB 11:8 creditor negligence and ringa bookkeeping prosecution exceptions

@@ -1,0 +1,51 @@
+import assert from 'node:assert/strict';import fs from 'node:fs';import vm from 'node:vm';import path from 'node:path';
+const root=path.resolve(import.meta.dirname,'..'),read=p=>fs.readFileSync(path.join(root,p),'utf8'),name='./brb8-base-legal-checkpoints-15.js';
+const html=read('index.html'),sw=read('service-worker.js'),paths=[...html.matchAll(/<script\s+src="([^"]+)"/g)].map(x=>x[1]);
+assert.ok(paths.includes(name)&&sw.includes(name));
+assert.ok(paths.indexOf(name)>paths.indexOf('./brb3-base-legal-checkpoints-15.js'));
+assert.ok(paths.indexOf(name)<paths.indexOf('./quality-11.js'));
+const inline=[...html.matchAll(/<script(?:\s[^>]*)?>([\s\S]*?)<\/script>/g)].map(x=>x[1]);
+const ctx=vm.createContext({window:{},console:{log:()=>{},warn:()=>{},error:()=>{}}});
+for(const i of [1,2,3])vm.runInContext(inline[i],ctx);
+for(const p of paths)vm.runInContext(read(p),ctx,{filename:p});
+const r=ctx.window.BK_BRB8_BASE_AUDIT15;assert.ok(r);
+assert.equal(r.planned,39);assert.equal(r.completed,39,JSON.stringify(r));
+assert.equal(r.held.length,0,JSON.stringify(r.held));assert.equal(r.byOffence.length,13);
+assert.deepEqual(JSON.parse(JSON.stringify(r.byKind)),{objective:13,subjective:13,inchoate:13});
+for(const key of ['caseSpecificLiabilityApprovals','completedOffenceReviews','historicApplicabilityApprovals','prosecutionApprovals','coercionApprovals'])assert.equal(r[key],0);
+const all=ctx.window.BK_DATA.crimes,base=all.filter(c=>!c.stageType),stages=all.filter(c=>c.stageType),approved=base.filter(c=>c.legalAudit15?.sourceAudit==='BrB8-2026-10-20');
+assert.equal(approved.length,13);
+for(const c of approved){
+ assert.equal(c.legalAudit15.fullLegalReviewApproved,false);
+ assert.equal(c.legalAudit15.crimeDateStillPending,true);
+ assert.equal(c.legalAudit15.caseLawAndCompetitorsStillPending,true);
+ assert.equal(c.legalAudit15.prosecutionAndCoercionPending,true);
+ assert.equal(c.legalAudit15.criminalGradeAndPenaltyStillPending,true);
+ for(const key of ['objective','subjective','inchoate']){
+  const v=c.legalAudit15.checkpoints[key];assert.equal(v.status,'APPROVED');
+  assert.equal(v.checked,'2026-10-20');assert.ok(v.finding.length>=95);
+  assert.equal(v.caseSpecificLiabilityApproved,false);
+  assert.equal(v.offenceDateAndTransitionalLawApproved,false);
+  assert.equal(v.jurisprudenceApproved,false);assert.equal(v.caseSpecificCustodyApproved,false);
+  assert.equal(v.caseSpecificProsecutionApproved,false);
+  assert.ok(v.sourceRefs.length>0);
+ }
+}
+assert.equal(stages.filter(c=>c.stageStatus==='unverified').length,0);
+assert.equal(stages.filter(c=>c.individualLegalAudit15?.scope?.status==='APPROVED').length,1086);
+const saved=read(name),c=JSON.parse(JSON.stringify(all)),W=JSON.parse(JSON.stringify(ctx.window.BK_STATUTES));
+for(const x of c)if(x.legalAudit15?.sourceAudit==='BrB8-2026-10-20')delete x.legalAudit15;
+W['BrB:8:12'].text='TAMPERED';
+const iso=vm.createContext({window:{BK_DATA:{crimes:c},BK_STATUTES:W}});
+vm.runInContext(saved,iso);
+assert.equal(iso.window.BK_BRB8_BASE_AUDIT15.byKind.inchoate,0);
+assert.equal(iso.window.BK_BRB8_BASE_AUDIT15.completed,26);
+const c2=JSON.parse(JSON.stringify(all)),W2=JSON.parse(JSON.stringify(ctx.window.BK_STATUTES));
+for(const x of c2)if(x.legalAudit15?.sourceAudit==='BrB8-2026-10-20')delete x.legalAudit15;
+W2['BrB:8:5'].text='CHANGED';
+const iso2=vm.createContext({window:{BK_DATA:{crimes:c2},BK_STATUTES:W2}});
+vm.runInContext(saved,iso2);
+assert.equal(iso2.window.BK_BRB8_BASE_AUDIT15.byKind.objective,11);
+assert.equal(iso2.window.BK_BRB8_BASE_AUDIT15.byKind.subjective,11);
+assert.equal(iso2.window.BK_BRB8_BASE_AUDIT15.byKind.inchoate,11);
+console.log('PASS V1.5: 39 independently gated BrB8 statutory elements, intent and 8:12 stage up-to-date; no case-specific charge or coercion');
