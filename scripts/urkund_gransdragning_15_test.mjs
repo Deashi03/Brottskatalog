@@ -36,7 +36,7 @@ assert.ok(by('Osant intygande').urkundDistinction15.note.includes('ANNAT ÄN egn
 assert.ok(by('Missbruk av urkund').urkundDistinction15.note.includes('pass, betyg eller identitetshandling'));
 assert.notEqual(by('Brukande av det förfalskade').penaltyRangeVerified,true,
  'General range for BrB 14:10 is impossible: underlying forgery controls the range');
-assert.equal(ctx.window.BK_DATA.crimes.filter(c=>c.stageType&&c.stageStatus==='unverified').length,15);
+assert.equal(ctx.window.BK_DATA.crimes.filter(c=>c.stageType&&c.stageStatus==='unverified').length,0);
 const raw=fs.readFileSync(path.join(root,mod),'utf8');
 const fake=items.map(([title,statute])=>({title,statute,rekvisit15:{note:'untouched',legalReviewApproved:false}}));
 const o={window:{BK_DATA:{crimes:fake},BK_STATUTES:{}},console};

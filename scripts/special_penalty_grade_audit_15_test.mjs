@@ -9,5 +9,5 @@ assert.ok(r&&r.planned===22&&r.reviewed===22&&r.held.length===0&&r.mismatch.leng
 const reviewed=crimes.filter(c=>c.penaltyReviewScope==="individual-current-special-grade-range-only");assert.equal(reviewed.length,22);
 for(const c of reviewed){assert.equal(c.penaltyGradeReviewDate,"2026-10-18");assert.equal(c.penaltyRangeVerified,true);assert.ok(c.penaltyGradeReviewSource.includes("riksdagen.se"));assert.ok(c.penaltyGradeReviewProvision);assert.equal(c.penaltyReviewSafety.includes("not full lawtext"),true);assert.notEqual(c.rekvisit15?.legalReviewApproved,true);}
 for(const title of ["Narkotikabrott · försäljning","Grovt vapenbrott","Grov olovlig körning","Grovt brott mot knivlagen"]){const c=reviewed.find(c=>c.title===title);assert.ok(c,title);assert.equal(c.lawCompletenessVerified,true,'Independently transcribed current SFS provision must now be certified');assert.equal(c.lawCompletenessReviewScope,'current-paragraph-only');}
-assert.equal(ctx.window.BK_DATA.crimes.filter(c=>c.stageStatus==="unverified").length,15);
+assert.equal(ctx.window.BK_DATA.crimes.filter(c=>c.stageStatus==="unverified").length,0);
 console.log("PASS V1.5: 22 current independently compared special-law penalty intervals; imported lawtext not certified and no custody inferred");

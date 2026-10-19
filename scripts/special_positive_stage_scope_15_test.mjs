@@ -20,7 +20,7 @@ assert.equal(all.length,1473);assert.equal(stages.length,1086);
 assert.equal(checked.length,66);
 assert.ok(stages.filter(c=>c.individualLegalAudit15?.scope?.status==='APPROVED').length>=138);
 assert.ok(stages.filter(c=>c.individualLegalAudit15?.consequences?.status==='APPROVED').length>=138);
-assert.equal(stages.filter(c=>c.stageStatus==='unverified').length,15);
+assert.equal(stages.filter(c=>c.stageStatus==='unverified').length,0);
 for(const c of checked){
  const x=c.individualLegalAudit15.scope;
  assert.equal(c.stageStatus,'punishable');
