@@ -57,6 +57,14 @@ const spec={
  'Grovt bokföringsbrott':'P'}},
  12:{section:'12:5',allowed:{
  'Skadegörelse':'F','Grov skadegörelse':'FP'}},
+ 13:{section:'13:12',allowed:{
+ 'Mordbrand':'FPS','Grov mordbrand':'FPS',
+ 'Allmänfarlig ödeläggelse':'FPS','Grov allmänfarlig ödeläggelse':'FPS',
+ 'Sabotage':'FPS','Grovt sabotage':'FPS',
+ 'Kapning':'FPS','Sjö- eller luftfartssabotage':'FPS',
+ 'Flygplatssabotage':'FPS','Sabotage mot blåljusverksamhet':'FPS',
+ 'Grovt sabotage mot blåljusverksamhet':'FPS',
+ 'Spridande av gift eller smitta':'FPS','Förgöring':'FPS'}},
  14:{section:'14:13',allowed:{
  'Urkundsförfalskning':'FP','Grov urkundsförfalskning':'FP',
  'Hindrande av urkunds bevisfunktion':'FP','Signaturförfalskning':'FP',
