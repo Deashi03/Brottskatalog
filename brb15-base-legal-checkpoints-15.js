@@ -37,7 +37,7 @@ const clauses={
  subj:'Lagtexten kräver uttryckligt UPPÅT att en oskyldig ska fällas till ansvar. Bevisåtgärden ensam utan detta specifika syfte räcker inte för den angivna brottstypen; andra brott kan då behöva prövas.'},
  '15:9':{anchor:['utan att vara förfallen till ansvar','framkallat fara för att annan','efter att hava kommit till insikt','göra vad skäligen kan begäras'],
  obj:'Den som utan annat ansvar i kapitlet framkallat fara för att en annan ska dömas utan laglig grund eller lida avsevärt förfång och därefter insett faran men inte gjort vad som skäligen kan krävas kan göra sig skyldig till underlåtenhet att avvärja rättsfel.',
- subj:'Ett faktiskt INSİKTSREKVISIT gäller efter att gärningspersonen själv framkallat faran. Ansvarsprövningen kräver därefter uppsåtlig underlåtenhet att vidta skäligt avvärjande, inte bara abstrakt möjlighet att känna till en fara.'},
+ subj:'Ett faktiskt INSIKTSREKVISIT gäller efter att gärningspersonen själv framkallat faran. Ansvarsprövningen kräver därefter uppsåtlig underlåtenhet att vidta skäligt avvärjande, inte bara abstrakt möjlighet att känna till en fara.'},
  '15:10':{anchor:['på annat sätt än muntligen lämnar osann uppgift','heder och samvete','fara i bevishänseende','vårdslös försäkran'],
  obj:'Osann försäkran innebär icke muntlig oriktig uppgift eller förtigande när författning fordrar heder och samvete eller jämförlig försäkran, samt fara i bevishänseende. Den särskilda vårdslösa försäkran gäller samma objektiva gärning men annan skuldform.',
  subj:'Osann försäkran kräver uppsåt enligt 1:2 till feluppgift/förtigande och relevanta förhållanden. VÅRDSLÖS försäkran förutsätter i stället uttryckligen GROV OAKTSAMHET. Brottsgradens höjning ändrar inte skuldformsregeln.'},
