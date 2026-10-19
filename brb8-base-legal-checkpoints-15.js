@@ -19,7 +19,7 @@ const ok={
  '8:5':full('8:5',['hot som innebär eller för den hotade framstår som trängande fara','betalningsverktyg','anträffats på bar gärning','motvärn','mindre allvarlig art']),
  '8:6':full('8:6',['grovt rån','våldet har varit livsfarligt','särskilt farlig art']),
  '8:7':full('8:7',['olovligen tar och brukar ett motorfordon','inte är belagd med straff enligt 1, 2 eller 4-6 §§','grovt tillgrepp av fortskaffningsmedel']),
- '8:8':full('8:8',['olovligen tar och brukar eller på annat sätt tillgriper','rubbar någon annans besittning','håller kvar eller ta något','grovt egenmäktigt förfarande']),
+ '8:8':full('8:8',['olovligen tar och brukar eller på annat sätt tillgriper','rubbar någon annans besittning','hålla kvar eller ta något','grovt egenmäktigt förfarande']),
  '8:9':full('8:9',['för att själv ta sig rätt','självtäkt']),
  '8:10':full('8:10',['olovligen avleder elektrisk kraft','värmeenergi','grov olovlig energiavledning']),
  '8:12':full('8:12',['försök eller förberedelse till stöld','för stämpling till grov stöld eller inbrottsstöld','stämpling till eller underlåtenhet att avslöja eller förhindra rån','skulle tillgrepp av fortskaffningsmedel','ringa'])
