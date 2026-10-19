@@ -9,7 +9,7 @@ const p={
  '14:1':{need:['framställer en falsk urkund','ändrar eller fyller ut en äkta urkund','fara i bevishänseende','elektronisk handling'],
   obj:'Den som obehörigen skapar falsk urkund genom annans namngivning eller motsvarande, eller ändrar eller fyller ut en äkta urkund, måste därigenom skapa fara i bevishänseende. Lagtexten definierar både pappersurkund, tillförlitligt verifierbar elektronisk urkund och bevismärke.',
   subj:'Uppsåt enligt BrB 1:2 krävs till förfalskningshandlingen och de faktiska förhållanden som skapar bevisfaran. Skillnaden mellan falsk utställarangivelse och osant materiellt innehåll måste avgöras särskilt; all osann information är inte urkundsförfalskning.'},
- '14:2':{need:['brott som avses i 1 §','förvanskning av urkund','urkund är av mindre vikt'],
+ '14:2':{need:['brott som avses i 1 §','förvanskning av urkund','om urkunden är av mindre vikt'],
   obj:'Förvanskning av urkund är uttryckligen ringa grad av gärning som avses i 14:1, med samma krav på obehörig urkundsförfalskning och bevisfara. Vid ringabedömningen beaktas särskilt en mindre viktig urkund och om gärningen syftat till att hjälpa någon till sin rätt.',
   subj:'Förvanskningens uppsåtsrekvisit följer 14:1 jämförd med 1:2. Den ringa brottsgraden är en rättslig helhetsbedömning, inte en ny laglig möjlighet att ändra annans dokument genom ett välmenande motiv.'},
  '14:3':{need:['grov urkundsförfalskning','myndighets arkivhandling av vikt','särskilt betydelsefull i den allmänna omsättningen'],
