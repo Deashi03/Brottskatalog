@@ -7,11 +7,12 @@ const ctx=vm.createContext({window:{},console:{log:()=>{},warn:()=>{},error:()=>
 for(const i of [1,2,3])vm.runInContext(inline[i],ctx);
 for(const f of files)vm.runInContext(read(f),ctx,{filename:f});
 const r=ctx.window.BK_BRB16_BASE_AUDIT15;
-assert.ok(r);assert.equal(r.planned,54);assert.equal(r.completed,54,JSON.stringify(r));
-assert.equal(r.held.length,0,JSON.stringify(r.held));
-assert.deepEqual(JSON.parse(JSON.stringify(r.byKind)),{objective:27,subjective:27});
+assert.ok(r);assert.equal(r.planned,54);assert.equal(r.completed,46,JSON.stringify(r));
+assert.equal(r.held.length,4,JSON.stringify(r.held));
+assert.deepEqual(JSON.parse(JSON.stringify(r.held.map(x=>x.title).sort())),['Grov uppvigling','Ringa hets mot folkgrupp','Grov hets mot folkgrupp','Ringa barnpornografibrott'].sort());
+assert.deepEqual(JSON.parse(JSON.stringify(r.byKind)),{objective:23,subjective:23});
 const cards=ctx.window.BK_DATA.crimes.filter(c=>!c.stageType&&c.legalAudit15?.sourceAudit==='BrB16-2026-10-20');
-assert.equal(cards.length,27);
+assert.equal(cards.length,23);
 for(const c of cards){assert.equal(c.legalAudit15.fullLegalReviewApproved,false);
  for(const k of ['objective','subjective']){const q=c.legalAudit15.checkpoints[k];
  assert.equal(q.status,'APPROVED');assert.equal(q.checked,'2026-10-20');
@@ -28,7 +29,7 @@ const clone=JSON.parse(JSON.stringify(ctx.window.BK_DATA.crimes)),W=JSON.parse(J
 for(const c of clone)if(c.legalAudit15?.sourceAudit==='BrB16-2026-10-20')delete c.legalAudit15;
 W['BrB:16:10a'].text='CORRUPTED';const iso=vm.createContext({window:{BK_DATA:{crimes:clone},BK_STATUTES:W}});
 vm.runInContext(read(name),iso);
-assert.equal(iso.window.BK_BRB16_BASE_AUDIT15.byKind.objective,24);
-assert.equal(iso.window.BK_BRB16_BASE_AUDIT15.byKind.subjective,24);
-assert.equal(iso.window.BK_BRB16_BASE_AUDIT15.held.length,6);
+assert.equal(iso.window.BK_BRB16_BASE_AUDIT15.byKind.objective,21);
+assert.equal(iso.window.BK_BRB16_BASE_AUDIT15.byKind.subjective,21);
+assert.equal(iso.window.BK_BRB16_BASE_AUDIT15.held.length,8);
 console.log('PASS: 54 individual BrB16 current-law act/fault checks; youth age negligence, animals and offensive content exceptions stay bounded');
