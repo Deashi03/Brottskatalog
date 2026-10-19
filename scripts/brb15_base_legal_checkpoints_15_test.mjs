@@ -8,11 +8,12 @@ const ctx=vm.createContext({window:{},console:{log:()=>{},warn:()=>{},error:()=>
 for(const i of [1,2,3])vm.runInContext(inline[i],ctx);
 for(const f of scripts)vm.runInContext(read(f),ctx,{filename:f});
 const r=ctx.window.BK_BRB15_BASE_AUDIT15;
-assert.ok(r);assert.equal(r.planned,70);assert.equal(r.completed,70,JSON.stringify(r));
-assert.equal(r.held.length,0,JSON.stringify(r.held));
-assert.deepEqual(JSON.parse(JSON.stringify(r.byKind)),{objective:35,subjective:35});
+assert.ok(r);assert.equal(r.planned,70);assert.equal(r.completed,58,JSON.stringify(r));
+assert.equal(r.held.length,6,JSON.stringify(r.held));
+assert.deepEqual(r.held.map(x=>x.title).sort(),['Ringa bevisförvanskning','Grov osann försäkran','Vårdslös försäkran','Grovt osant intygande','Brukande av osann urkund','Grovt förnekande av underskrift'].sort());
+assert.deepEqual(JSON.parse(JSON.stringify(r.byKind)),{objective:29,subjective:29});
 const cards=ctx.window.BK_DATA.crimes.filter(c=>!c.stageType&&c.legalAudit15?.sourceAudit==='BrB15-2026-10-20');
-assert.equal(cards.length,35);assert.equal(r.fullOffenceLegalSignoffs,0);
+assert.equal(cards.length,29);assert.equal(r.fullOffenceLegalSignoffs,0);
 for(const c of cards){assert.equal(c.legalAudit15.fullLegalReviewApproved,false);
  for(const kind of ['objective','subjective']){const v=c.legalAudit15.checkpoints[kind];
  assert.equal(v.status,'APPROVED');assert.equal(v.checked,'2026-10-20');assert.ok(v.finding.length>=115);
@@ -24,7 +25,7 @@ assert.match(cards.find(c=>c.title==='Ovarsam utsaga inför en internationell do
 const clone=JSON.parse(JSON.stringify(ctx.window.BK_DATA.crimes)),W=JSON.parse(JSON.stringify(ctx.window.BK_STATUTES));
 for(const c of clone)if(c.legalAudit15?.sourceAudit==='BrB15-2026-10-20')delete c.legalAudit15;
 W['BrB:15:7'].text='CHANGED';const iso=vm.createContext({window:{BK_DATA:{crimes:clone},BK_STATUTES:W}});
-vm.runInContext(read(name),iso);assert.equal(iso.window.BK_BRB15_BASE_AUDIT15.byKind.objective,31);
-assert.equal(iso.window.BK_BRB15_BASE_AUDIT15.byKind.subjective,31);
-assert.equal(iso.window.BK_BRB15_BASE_AUDIT15.held.length,8);
+vm.runInContext(read(name),iso);assert.equal(iso.window.BK_BRB15_BASE_AUDIT15.byKind.objective,25);
+assert.equal(iso.window.BK_BRB15_BASE_AUDIT15.byKind.subjective,25);
+assert.equal(iso.window.BK_BRB15_BASE_AUDIT15.held.length,14);
 console.log('PASS: 70 source-limited BrB15 criminal requisites and fault distinctions, including negligent ICC exclusion; no full legal signoff');
