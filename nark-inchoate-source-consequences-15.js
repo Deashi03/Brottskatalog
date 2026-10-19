@@ -72,7 +72,9 @@ for(const [name,permitted] of Object.entries(names)){
     :'Ingen självständig påföljd, åtalsgrund eller tvångsmedelsgrund kan grundas på just detta icke straffbelagda förstadium enligt den granskade aktuella paragrafen. Andra brott och lagversioner måste kontrolleras.'
   };
   c.individualLegalAudit15={scope,consequences};
-  c.custody='unknown';c.prosecution='unknown';
+  c.custody='unknown';
+  // Do not erase an independently established restrictive prosecution condition.
+  if(c.prosecution!=='conditional')c.prosecution='unknown';
   c.stageSourceScopeNote15='Narkotikastrafflagen 4 §: '+(positive?'uttryckligt lagstöd för förstadiet; undantag för bruk.':'inte särskilt kriminaliserat som detta förstadium.')+' Ingen automatisk tvångsmedelsbedömning.';
   c.stageConsequenceNote15=consequences.note;
   report.scopeApproved++;report.consequencesApproved++;
