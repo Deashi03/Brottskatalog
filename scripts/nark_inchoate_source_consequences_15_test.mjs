@@ -19,7 +19,7 @@ for(const c of stages){
  const a=c.individualLegalAudit15;assert.equal(a.scope.status,'APPROVED');assert.equal(a.consequences.status,'APPROVED');
  assert.equal(a.scope.caseSpecificLiabilityApproved,false);assert.equal(a.scope.historicApplicabilityApproved,false);
  assert.equal(a.consequences.automaticCoercionApproved,false);assert.equal(a.consequences.punishmentRangeApproved,false);
- assert.equal(c.custody,'unknown');assert.equal(c.prosecution,'unknown');
+ assert.equal(c.custody,'unknown');assert.equal(a.consequences.prosecutionAuthorityApproved,false);
 }
 const parentTitles=new Map(ctx.window.BK_DATA.crimes.filter(x=>!x.stageType).map(x=>[x.id,x.title]));
 const bruk=stages.filter(c=>parentTitles.get(c.stageParentId)==='Ringa narkotikabrott · bruk');
