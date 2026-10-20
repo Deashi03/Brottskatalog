@@ -1,6 +1,6 @@
 # Brottskatalog V1.5 – mätbar väg till publicering
 
-> **Aktuell arbetsavstämning 20 oktober: 80,0 % av den låsta arbetsinventeringen (9 189/11 485), 2 296 moment återstår.** Alla 387 grundkort har källbundna objektiva och subjektiva delkontroller. Aktuella lagtextsregler för åtal är kontrollerade för 318/319 BrB-kort och samtliga 68 specialstraffrättsliga kort i arbetsinventeringen. Sammanlagt 1 205/3 483 juridiska delmoment är avklarade. Ingen post är fullständigt juridiskt slutgodkänd och publiceringsspärren kvarstår.
+> **Aktuell arbetsavstämning 20 oktober: 80,0 % (9 266/11 580), 2 314 moment återstår.** Arbetsinventeringen är ombaserad efter tre nytillagda huvudbrott: 390 grundkort (322 BrB och 68 specialstraffrättsliga) och 1 095 förstadiekort. Alla grundkort har lagtext, rekvisitstruktur och källbundna objektiva/subjektiva delkontroller. Aktuella åtalsregler är delgranskade för 321/322 BrB-kort och samtliga 68 specialkort. Sammanlagt 1 214/3 510 juridiska delmoment är avklarade. Ingen post är fullständigt juridiskt slutgodkänd och publiceringsspärren kvarstår.
 
 **Historisk baslinje (18 oktober):** 46,3 % (5 297/11 434). Denna siffra är ersatt av den aktuella CI-beräkningen ovan; äldre tabeller nedan är historiska ögonblicksbilder, inte senaste status.
 
@@ -505,3 +505,15 @@ Den första externa mobilkörningen stoppade vid den befintliga navigationsmätn
 Inventeringens tidigare mönster kände igen ”döms”/”dömes” men missade vissa straffbud med ”dömas”, exempelvis ”skall han dömas”. Efter rättning och separat avgränsning av strafflindrings-, ansvarsfrihets- och medverkansregler identifieras **tre verkliga huvudbrott utan egen grundpost**: vårdslöshet med gift eller smittämne (13:9), landsförräderi (22:1) och ryktesspridning till fara för rikets säkerhet (22:5). De aktuella straffbuden har jämförts med Riksdagens text den 20 oktober och lagts i ett beständigt källunderlag för täckningskrav.
 
 Releasekontrollen blockerar nu uttryckligen publicering så länge dessa tre saknar egna kort. Inventeringstestet kräver att de syns i kön; när de införs ska hela tillhörande databasarbete, förstadier och revisionsmoment läggas till och procentbaslinjen räknas om. **80,0 % gäller därför den hittills låsta inventeringen, inte 80,0 % av en bevisat komplett förteckning över alla aktuella brott.** Dessa nyupptäckta luckor räknas inte som färdigställda juridiska kontroller och inte heller bort ur nämnaren för att höja procenten.
+
+## Tillägg 20 oktober: tre inventeringsluckor stängda
+
+Den föregående luckrapporten ovan är ersatt: **vårdslöshet med gift eller smittämne (13:9), landsförräderi (22:1) och ryktesspridning till fara för rikets säkerhet (22:5)** har nu egna grundkort och nio förstadieposter. Det uttryckliga minimikravet i `data/v15-required-offence-coverage.json` kvarstår som regression; det är inte ett bevis för att varje tänkbar brottsrubricering är inventerad.
+
+Rekvisitfunktionen visar två skilda alternativ för oaktsam allmänfara (människor respektive djur/växter), landsförräderiets fyra handlingsalternativ med det ytterligare men-/biståndskravet och ryktesspridningens skilda mottagar- och farerekvisit. Befintliga begreppsförklaringar om oaktsamhet, orsakssamband och ”ägnat att” har kopplats till relevanta nya kort. Inga komplexa typexempel har uppfunnits.
+
+Straffskalorna är separat kontrollerade: böter eller högst två års fängelse för 13:9 och 22:5; fyra–tio år eller livstid för 22:1. Krigs-, ockupations- och föreskriftsvillkor hålls uttryckliga och ger inget automatiskt tvångsmedelsbesked. Sex negativa förstadiekombinationer och landsförräderiets tre positiva uppräkningar är kontrollerade mot 13:12 respektive nu gällande 22:7. Framtida lydelse om kärnsprängning har inte lagts till som gällande brott.
+
+**Ombasering:** +3 grundkort × 15 moment, +9 förstadiekort × 5 moment, +4 ålderskandidater och +1 separat testkommando = **95 nya arbetsmoment**. Av dessa är 77 färdiga; 18 återstår i de nya kortens öppna juridiska revisionsdimensioner. Totalt blir det 9 266 av 11 580, med 2 314 kvar. Den avrundade andelen är fortfarande 80,0 %, trots större faktisk omfattning. Källa: aktuell körning av `scripts/v15_publication_progress.mjs`.
+
+GitHub Actions körning 1005 verifierade föregående mobilfix inklusive åtalsrutornas iPhone-bredd. Den utökade katalogen ska dessutom passera en ny fullständig körning före slutavstämning.

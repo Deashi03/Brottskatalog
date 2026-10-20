@@ -14,10 +14,10 @@ const all=ctx.window.BK_DATA.crimes,before=JSON.stringify(all);
 vm.runInContext(read(mod),ctx);
 const r=ctx.window.BK_CATALOG_SELECTION15,visible=all.filter(r.included);
 assert.equal(JSON.stringify(all),before,'Visibility must not mutate legal evidence, stage status, scales or powers');
-assert.equal(r.inventory,1473);assert.equal(r.searchable,1461);
+assert.equal(r.inventory,1485);assert.equal(r.searchable,1473);
 assert.equal(r.excludedBaseIds.length,3);assert.equal(r.excludedStageIds.length,9);
-assert.equal(visible.filter(c=>!c.stageType).length,384);
-assert.equal(visible.filter(c=>!c.stageType&&c.statute?.startsWith('BrB:')).length,319);
+assert.equal(visible.filter(c=>!c.stageType).length,387);
+assert.equal(visible.filter(c=>!c.stageType&&c.statute?.startsWith('BrB:')).length,322);
 for(const title of ['Ringa smuggling','Ringa tullbrott','Ringa smuggling av explosiv vara']){
  const c=all.find(c=>c.title===title);assert.ok(c);assert.equal(r.included(c),false);
  assert.equal(c.penaltyRange.max,0);assert.equal(c.penaltyRange.fines,true);
@@ -33,4 +33,4 @@ assert.equal(r.included({id:'test',penalty:'Penningböter eller fängelse'}),tru
 assert.equal(r.included({id:'test',penalty:'Endast penningböter.'}),false);
 assert.equal(r.included({id:'test',statute:'BrB:16:16',penalty:'Penningböter'}),true);
 assert.equal(r.included({id:'orphan',stageType:'forsok',stageParentId:'missing'}),false);
-console.log('PASS: final catalogue visibility excludes three special-law fine-only families (12 entries), preserves all 319 BrB cards and all original legal evidence');
+console.log('PASS: final catalogue visibility excludes three special-law fine-only families (12 entries), preserves all 322 BrB cards and all original legal evidence');

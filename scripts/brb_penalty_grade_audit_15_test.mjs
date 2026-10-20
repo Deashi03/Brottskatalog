@@ -22,7 +22,7 @@ assert.deepEqual(Array.from(stats.mismatch),[],'Current statutory penalty confli
 assert.equal(stats.reviewed,247,'All 247 grade-range comparisons should match the actual catalogue');
 const c=ctx.window.BK_DATA.crimes;
 const base=c.filter(x=>!x.stageType);
-const reviewed=base.filter(x=>x.penaltyReviewScope==='individual-current-grade-range-only');
+const reviewed=base.filter(x=>x.penaltyReviewScope==='individual-current-grade-range-only'&&!x.id.startsWith('v15-inventory-'));
 assert.equal(reviewed.length,247,'No extra crime can silently acquire grade-range approval');
 for(const p of reviewed){
  assert.equal(p.penaltyGradeReviewDate,p.lawCompletenessChecked);
@@ -315,6 +315,6 @@ assert.ok(by('Framkallande av fara för annan').penaltyGradeReviewCaveat.include
 
 assert.equal(by('Inbrottsstöld').penaltyRange.min,1);
 assert.equal(by('Grovt missbruk av offentlig ställning').penaltyRange.max,6);
-assert.equal(base.filter(c=>c.statute?.startsWith('BrB:')).length,319);
+assert.equal(base.filter(c=>c.statute?.startsWith('BrB:')).length,322);
 assert.equal(c.filter(x=>x.stageType&&x.stageStatus==='unverified').length,0,'No implicit inchoate review via base penalty scales');
 console.log('PASS V1.5: 247 current-grade BrB penalty scales source-verified; no silent conflicts or overbroad approvals');

@@ -12,7 +12,7 @@ for(const src of scripts)vm.runInContext(fs.readFileSync(path.join(root,src),'ut
 const r=ctx.window.BK_GROSS_POISON_STAGE_HOLD15;
 assert.equal(r.planned,3);assert.equal(r.withheld,3,JSON.stringify(r));assert.equal(r.held.length,0);
 const all=ctx.window.BK_DATA.crimes,stages=all.filter(c=>c.stageType);
-assert.equal(all.length,1473);assert.equal(stages.length,1086);
+assert.equal(all.length,1485);assert.equal(stages.length,1095);
 assert.equal(stages.filter(c=>c.stageStatus==='unverified').length,0);
 const parent=all.find(c=>c.title==='Grovt spridande av gift eller smitta'&&!c.stageType);
 assert.ok(parent);

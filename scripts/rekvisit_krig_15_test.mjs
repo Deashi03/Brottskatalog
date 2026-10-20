@@ -22,7 +22,7 @@ assert.equal(report.added.length+report.already.length,18,'All 18 remaining 21â€
 const ch21=D.crimes.filter(c=>!c.stageType&&c.statute?.startsWith('BrB:21:'));
 const ch22=D.crimes.filter(c=>!c.stageType&&c.statute?.startsWith('BrB:22:'));
 assert.equal(ch21.length,12);
-assert.equal(ch22.length,6);
+assert.equal(ch22.length,8);
 for(const c of [...ch21,...ch22]){
  assert.ok(c.rekvisit15?.routes?.length||c.rekvisit15?.groups?.length,'Wartime requisite structure missing: '+c.title);
  assert.equal(c.rekvisit15.legalReviewApproved,false,'No full legal certification of special military law: '+c.title);
@@ -44,5 +44,5 @@ const stages=D.crimes.filter(c=>c.stageType);
 assert.equal(stages.filter(c=>c.stageStatus==='unverified').length,0,'Current-stage source classifications must remain independently evidenced');
 const brb=D.crimes.filter(c=>!c.stageType&&c.statute?.startsWith('BrB:'));
 const total=brb.filter(c=>c.rekvisit15?.groups?.length||c.rekvisit15?.routes?.length).length;
-assert.ok(total>=315,'Expected at least 315/319 structured BrB cards, got '+total);
+assert.ok(total>=315,'Expected at least 315/322 structured BrB cards, got '+total);
 console.log('PASS V1.5: BrB 21/22 war-time scope, inchoate hold and exemptions, '+total+'/'+brb.length+' structured');

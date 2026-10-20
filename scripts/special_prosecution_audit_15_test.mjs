@@ -21,7 +21,7 @@ assert.deepEqual(copy(r.byFamily),{NSL:11,VapenL:5,TBL:4,KnivL:2,SmuglL:23,PTBL:
 assert.equal(r.correctedModes.length,5);assert.equal(r.fullLegalApprovals,0);assert.equal(r.caseSpecificChargingApprovals,0);assert.equal(r.coercionApprovals,0);
 const specials=all.filter(c=>!c.stageType&&!c.statute?.startsWith('BrB:'));
 assert.equal(specials.filter(c=>c.legalAudit15?.checkpoints?.prosecution?.status==='APPROVED').length,68);
-assert.equal(all.filter(c=>!c.stageType&&c.legalAudit15?.checkpoints?.prosecution?.status==='APPROVED').length,386);
+assert.equal(all.filter(c=>!c.stageType&&c.legalAudit15?.checkpoints?.prosecution?.status==='APPROVED').length,389);
 const changes=new Set(r.correctedModes),fields=['prosecution','prosecutionLabel','prosecutionRule','prosecutionDetails','prosecutionSource','prosecutionSourceURL','prosecutionChecked','prosecutionReviewStatus'];
 for(const c of all){const old=before.find(x=>x.id===c.id),a=copy(c),b=copy(old);
  if(specials.includes(c)){const p=c.legalAudit15.checkpoints.prosecution;assert.equal(old.legalAudit15.checkpoints.prosecution,undefined);assert.equal(p.checked,'2026-10-20');assert.equal(p.caseSpecificChargingApproved,false);assert.equal(p.caseSpecificCustodyApproved,false);assert.equal(p.jurisprudenceApproved,false);assert.ok(p.finding.startsWith(c.title+' ('));

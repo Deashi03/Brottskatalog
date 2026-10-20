@@ -41,4 +41,4 @@ assert.ok(JSON.stringify(by('Grovt djurplågeri').rekvisit15).includes('Grov oak
 const brb=D.crimes.filter(c=>!c.stageType&&c.statute?.startsWith('BrB:'));
 const total=brb.filter(c=>c.rekvisit15?.groups?.length||c.rekvisit15?.routes?.length).length;
 assert.ok(total>=275,'Need at least 275 structured BrB cards, got '+total);
-console.log('PASS V1.5: all 14 remaining BrB chapter 16 requisites and age/exemption safeguards, '+total+'/319 structured BrB cards');
+console.log('PASS V1.5: all 14 remaining BrB chapter 16 requisites and age/exemption safeguards, '+total+'/322 structured BrB cards');

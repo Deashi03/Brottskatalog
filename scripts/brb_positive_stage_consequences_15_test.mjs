@@ -13,7 +13,7 @@ const ctx=vm.createContext({window:{},console:{log:()=>{},warn:()=>{},error:()=>
 for(const i of [1,2,3])vm.runInContext(inline[i],ctx,{filename:'inline-'+i});
 for(const p of scripts)vm.runInContext(fs.readFileSync(path.join(root,p),'utf8'),ctx,{filename:p});
 const r=ctx.window.BK_BRB_POSITIVE_STAGE_CONSEQUENCES15;
-assert.equal(r.planned,301);assert.equal(r.approved,301);assert.equal(r.held.length,0);
+assert.equal(r.planned,304);assert.equal(r.approved,304);assert.equal(r.held.length,0);
 assert.equal(r.automaticPenaltyApprovals,0);assert.equal(r.automaticProsecutionApprovals,0);
 assert.equal(r.automaticCoercionApprovals,0);assert.equal(r.finalLegalApprovals,0);
 const stages=ctx.window.BK_DATA.crimes.filter(c=>c.stageType);

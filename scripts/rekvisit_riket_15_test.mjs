@@ -44,5 +44,5 @@ const tg=JSON.stringify(by('Tagande av utländskt understöd').rekvisit15);
 assert.ok(tg.includes('regeringens förordnande')&&tg.includes('säkerhet'),'Do not suggest all foreign support is a crime');
 const all=data.crimes.filter(c=>!c.stageType&&c.statute?.startsWith('BrB:'));
 const count=all.filter(c=>c.rekvisit15?.groups?.length||c.rekvisit15?.routes?.length).length;
-assert.ok(count>=297,'Expected at least 297/319 structured BrB crimes, got '+count);
+assert.ok(count>=297,'Expected at least 297/322 structured BrB crimes, got '+count);
 console.log('PASS V1.5: 18 BrB 19 distinctions, exceptions and prosecution notes; '+count+'/'+all.length+' structured');

@@ -6,8 +6,8 @@ const root=path.resolve(import.meta.dirname,'..');
 execFileSync(process.execPath,['scripts/v15_priority_legal_dossiers.mjs'],{cwd:root,stdio:'pipe'});
 const r=JSON.parse(fs.readFileSync(path.join(root,'audit/v15-priority-legal-dossiers.json'),'utf8'));
 const all=[...r.policePriority,...r.remainingBrB],sum=r.scopedSourceSummary;
-assert.equal(all.length,319);
-assert.equal(new Set(all.map(c=>c.id)).size,319);
+assert.equal(all.length,322);
+assert.equal(new Set(all.map(c=>c.id)).size,322);
 const expected={
  HD_ALIBIT_DISTINCTION:3,
  BRB15_ACCUSATION_LIMITS:4,
@@ -21,9 +21,9 @@ assert.equal(r.counts.scopedSourceNoteEntries,21);
 assert.equal(r.counts.brbCardsWithScopedSourceNotes,20);
 assert.equal(sum.allNotesArePartial,true);
 assert.equal(sum.fullLegalReviewApprovalsFromNotes,0);
-assert.equal(sum.outstandingIndividualFinalReviews,319);
-assert.equal(r.counts.individuallySourceCheckedLegalChecklistSteps,1001);
-assert.equal(r.counts.cardsWithPartiallyCheckedLegalChecklist,319);
+assert.equal(sum.outstandingIndividualFinalReviews,322);
+assert.equal(r.counts.individuallySourceCheckedLegalChecklistSteps,1010);
+assert.equal(r.counts.cardsWithPartiallyCheckedLegalChecklist,322);
 for(const c of all){
  const notes=c.scopedSourceNotes;
  assert.ok(Array.isArray(notes));
@@ -53,4 +53,4 @@ assert.equal(r.counts.allBrBCardsFullyLegallyApproved,0);
 assert.equal(r.counts.unverifiedStageCases,0);
 assert.equal(r.releaseReady,false);
 assert.equal(r.automaticCustodyAuthorization,false);
-console.log('PASS V1.5: 21 distinct source-scoped notes across 20 BrB cards; all 319 individual signoffs still pending');
+console.log('PASS V1.5: 21 distinct source-scoped notes across 20 BrB cards; all 322 individual signoffs still pending');

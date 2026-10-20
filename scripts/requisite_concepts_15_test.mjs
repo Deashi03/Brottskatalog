@@ -42,7 +42,7 @@ assert.match(R['bk:sanningsplikt'].text,/inte begränsat till huvudförhandling/
 assert.match(R['bk:motvarnsran'].text,/betalningsverktyg/,'Current statutory alternative must not be omitted');
 const mapped=rows.filter(c=>c.requisiteConcepts15?.length),base=rows.filter(c=>!c.stageType&&c.rekvisit15);
 assert.equal(mapped.length,base.length,'Every structured base card has accessible core explanations');
-assert.ok(mapped.length>=387);
+assert.ok(mapped.length>=390);
 for(const c of mapped){
  assert.ok(!c.stageType,'No inherited completed-offence doctrine on inchoate cards');
  assert.equal(new Set(c.requisiteConcepts15.map(r=>r.conceptId)).size,c.requisiteConcepts15.length,'Duplicate button on '+c.title);

@@ -20,7 +20,7 @@ assert.equal(stats.mismatch.length,0,JSON.stringify(stats.mismatch));
 assert.equal(stats.missingParent.length,0,JSON.stringify(stats.missingParent));
 assert.equal(stats.added.length+stats.already.length,4,'Expected four previously unstructured BrB 6 cards');
 const brb=D.crimes.filter(c=>!c.stageType&&c.statute?.startsWith('BrB:'));
-assert.equal(brb.length,319,'319 BrB base offences inventory must be preserved');
+assert.equal(brb.length,322,'322 BrB base offences inventory must be preserved');
 assert.equal(brb.filter(c=>!c.rekvisit15?.groups?.length&&!c.rekvisit15?.routes?.length).length,0,'No missing STRUCTURAL BrB requisites remain');
 const chapters=[...new Set(brb.map(c=>Number(c.statute.match(/^BrB:(\d+):/)[1])))];
 assert.equal(chapters.length,20);
@@ -50,5 +50,5 @@ for(const name of ['Samlag med avkomling','Samlag med syskon']){
 assert.ok(JSON.stringify(by('Samlag med syskon').rekvisit15).includes('HELsyskon'));
 assert.ok(brb.every(c=>c.rekvisit15?.legalReviewApproved!==true),'Structure is not evidence of complete independent legal certification');
 assert.equal(D.crimes.filter(c=>c.stageType&&c.stageStatus==='unverified').length,0,'Do not infer case-specific guilt from source-limited stage review');
-assert.equal(D.crimes.length,1473,'Offence/stage inventory must remain unchanged');
-console.log('PASS V1.5: all 319 BrB base offences carry statutory OCH/ELLER structures, still NO full legal approval');
+assert.equal(D.crimes.length,1485,'Offence/stage inventory must remain unchanged');
+console.log('PASS V1.5: all 322 BrB base offences carry statutory OCH/ELLER structures, still NO full legal approval');

@@ -15,9 +15,9 @@ const report=ctx.window.BK_BRB20_INCHOATE_NEGATIVES15;
 assert.equal(report.planned,6);assert.equal(report.reviewed,6,JSON.stringify(report));
 assert.equal(report.held.length,0);
 const all=ctx.window.BK_DATA.crimes,stages=all.filter(c=>c.stageType);
-assert.equal(stages.length,1086);
+assert.equal(stages.length,1095);
 assert.equal(stages.filter(c=>c.stageStatus==='unverified').length,0);
-assert.equal(stages.filter(c=>c.stageReviewDate&&c.stageSource&&c.stageStatus!=='unverified').length,1086);
+assert.equal(stages.filter(c=>c.stageReviewDate&&c.stageSource&&c.stageStatus!=='unverified').length,1095);
 const checked=stages.filter(c=>c.stagePreliminaryScope15?.reviewedMainSection==='BrB 20:2');
 assert.equal(checked.length,6);
 for(const c of checked){
@@ -36,4 +36,4 @@ const isolated=vm.createContext({window:{BK_DATA:{crimes:[JSON.parse(JSON.string
 vm.runInContext(fs.readFileSync(path.join(root,mod),'utf8'),isolated);
 assert.equal(isolated.window.BK_BRB20_INCHOATE_NEGATIVES15.reviewed,0);
 assert.equal(copy.stageReviewDate,null);
-console.log('PASS V1.5: six BrB 20:2 no-inchoate source statuses, 1071/1086 sourced preliminary stage records');
+console.log('PASS V1.5: six BrB 20:2 no-inchoate source statuses, 1071/1095 sourced preliminary stage records');

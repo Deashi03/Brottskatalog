@@ -21,7 +21,7 @@ assert.equal(report.mismatch.length,0,JSON.stringify(report.mismatch));
 assert.equal(report.missingParent.length,0,JSON.stringify(report.missingParent));
 assert.equal(report.added.length+report.already.length,17,'All 17 previously unstructured Chapter 13 titles must be accounted for');
 const ch13=D.crimes.filter(c=>!c.stageType&&c.statute?.startsWith('BrB:13:'));
-assert.equal(ch13.length,21,'BrB 13 inventory count unexpectedly changed');
+assert.equal(ch13.length,22,'BrB 13 inventory count unexpectedly changed');
 assert.equal(ch13.filter(c=>!c.rekvisit15?.groups?.length&&!c.rekvisit15?.routes?.length).length,0,
   'Chapter 13 remains structurally incomplete: '+ch13.filter(c=>!c.rekvisit15?.groups?.length&&!c.rekvisit15?.routes?.length).map(x=>x.title).join(', '));
 const by=t=>ch13.find(c=>c.title===t);
@@ -42,4 +42,4 @@ assert.ok(JSON.stringify(by('Grovt allmänfarlig vårdslöshet').rekvisit15).inc
 assert.ok(JSON.stringify(by('Grov kapning').rekvisit15).includes('samlad'));
 const total=D.crimes.filter(c=>!c.stageType&&c.statute?.startsWith('BrB:')&&(c.rekvisit15?.routes?.length||c.rekvisit15?.groups?.length)).length;
 assert.ok(total>=261,'Expected at least 261 structured BrB card requisites, got '+total);
-console.log('PASS V1.5: 17 further chapter 13 offences with alternate routes, no false legal approval; '+total+'/319 total');
+console.log('PASS V1.5: 17 further chapter 13 offences with alternate routes, no false legal approval; '+total+'/322 total');

@@ -27,7 +27,7 @@ for(const c of reviewed){
  assert.equal(c.penaltyGradeReviewOffenceDateRequired,true);
  assert.notEqual(c.rekvisit15?.legalReviewApproved,true);
 }
-assert.equal(ctx.window.BK_DATA.crimes.length,1473);
+assert.equal(ctx.window.BK_DATA.crimes.length,1485);
 assert.equal(ctx.window.BK_DATA.crimes.filter(c=>c.stageStatus==='unverified').length,0);
 assert.equal(base.filter(c=>c.conditionalPenalty&&!c.penaltyRangeVerified).length,14);
 const c=JSON.parse(JSON.stringify(reviewed.find(c=>c.title==='Rymning')));

@@ -15,7 +15,7 @@ const parents=new Map(D.crimes.filter(c=>!c.stageType).map(c=>[c.id,c]));
 const recordReady=(p)=>{
  if(!p?.penaltyRangeVerified||!p.lawCompletenessVerified
    ||!Number.isFinite(p.penaltyRange?.min)||p.penaltyRange.min<4
-   ||!['2026-10-17','2026-10-18'].includes(p.penaltyGradeReviewDate)
+   ||!['2026-10-17','2026-10-18','2026-10-20'].includes(p.penaltyGradeReviewDate)
    ||!p.penaltyGradeReviewProvision
    ||!p.penaltyGradeReviewSource?.startsWith('https://www.riksdagen.se/')
    ||p.penaltyGradeReviewSource!==p.lawCompletenessSourceURL)return false;
@@ -47,7 +47,7 @@ for(const c of cases){
  if(!valid){report.unresolved.push({title:c.title,kind:c.stageType||'fullbordat',
     sourceReady:lawReady,parentGradeReady:recordReady(p),stageReady,oldStatus:a?.status});continue;}
  a.individualSourceScopeApproved=true;
- a.individualSourceScopeChecked='2026-10-18';
+ a.individualSourceScopeChecked=p.penaltyGradeReviewDate==='2026-10-20'?'2026-10-20':'2026-10-18';
  a.individualSourceScopeSources=[source,p.penaltyGradeReviewSource,...(stage?[c.stagePreliminaryScope15?.sourceURL||c.sourceURL]:[])];
  a.individualSourceScopeResult='MINIMUM_4_YEARS_CONFIRMED_STATUTORY_ONLY';
  a.completedOffencePenaltyIndividuallyVerified=true;
@@ -62,7 +62,7 @@ for(const c of cases){
  a.provisionalOnly=true;
  if(!p.conditionalPenalty&&!p.applicabilityConditional&&!c.applicabilityConditional)a.status='minimum-threshold-met';
  else a.status='conditional-applicability';
- a.reviewNote='Källgranskat 2026-10-18: endast den aktuella BrB 1:6-regelns lägsta fullbordatsstraff och det namngivna förstadiets preliminära straffbeläggning. Inte beslut om ansvar: pröva gärningsdatum, ålder, faktisk straffbarhet, övergångsregler, kapitelundantag och ungdomens särskilda processuella skydd. Inte beslut om tvångsmedel.';
+ a.reviewNote='Källgranskat '+a.individualSourceScopeChecked+': endast den aktuella BrB 1:6-regelns lägsta fullbordatsstraff och det namngivna förstadiets preliminära straffbeläggning. Inte beslut om ansvar: pröva gärningsdatum, ålder, faktisk straffbarhet, övergångsregler, kapitelundantag och ungdomens särskilda processuella skydd. Inte beslut om tvångsmedel.';
  report.sourceReviewed++;
 }
 window.BK_AGE14_CANDIDATE_SOURCE_AUDIT15=report;

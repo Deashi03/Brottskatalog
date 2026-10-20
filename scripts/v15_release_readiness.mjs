@@ -82,7 +82,7 @@ const stageAuditQueue=unverifiedStage.map(c=>{
 const incompletePenalty=base.filter(c=>c.penaltyReviewScope==='range-only'||!c.penaltyRangeVerified).filter(c=>!c.conditionalPenalty);
 const dateMismatch=base.filter(c=>c.stageReviewed&&c.stageReviewDate&&c.stageReviewDate>new Date().toISOString().slice(0,10));
 // The old "reviewQueue" represents *missing structure* only. It becomes
-// empty after 319/319 and MUST NOT be presented as a finished legal audit.
+// empty after 322/322 and MUST NOT be presented as a finished legal audit.
 // A separate queue tracks EVERY offence still needing individual legal signoff.
 const policeFirst=new Set([
  'Mord','Dråp','Misshandel','Ringa misshandel','Grov misshandel',

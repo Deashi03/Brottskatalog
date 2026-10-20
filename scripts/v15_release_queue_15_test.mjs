@@ -22,13 +22,13 @@ for(const c of file.reviewQueue){
  assert.ok(c.title&&c.ref&&c.chapter);
  assert.ok(c.task.includes('rättspraxis'),'Legal review must extend beyond literal SFS');
 }
-assert.equal(file.legalAuditQueue.length,319,
- 'All 319 structurally complete BrB crimes still require individual legal audit');
+assert.equal(file.legalAuditQueue.length,322,
+ 'All 322 structurally complete BrB crimes still require individual legal audit');
 assert.equal(file.counts.brbOffencesInLegalAuditQueue,file.legalAuditQueue.length);
-assert.equal(file.legalAuditSummary.auditPending,319);
+assert.equal(file.legalAuditSummary.auditPending,322);
 assert.equal(file.byChapter.filter(c=>c.missingStructured>0).length,0,
  'Structure should be complete but must NOT imply individual legal approval');
-assert.equal(new Set(file.legalAuditQueue.map(c=>c.id)).size,319,
+assert.equal(new Set(file.legalAuditQueue.map(c=>c.id)).size,322,
  'Legal audit queue must not omit or duplicate any BrB base offence');
 assert.ok(file.legalAuditQueue.some(c=>c.title==='Sexuellt övergrepp mot barn'));
 assert.ok(file.legalAuditQueue.some(c=>c.title==='Våldsamt motstånd'));
@@ -61,13 +61,13 @@ for(const entry of file.stageAuditQueue){
 }
 assert.ok(file.blockers.unverifiedInchoateStatus===0,'Unresolved degrees must block release, despite complete source wording');
 
-assert.equal(file.counts.age14RulesCovered,1473,
+assert.equal(file.counts.age14RulesCovered,1485,
  'Every base offence and inchoate card needs an offence-age metadata warning');
 assert.equal(file.blockers.age14OffenceCardsWithoutAgeAtActRule,0,
  'Any missing BrB 1:6 age exception metadata blocks publication');
 assert.equal(file.age14Triage.legalWindow.from,'2026-09-10');
 assert.equal(file.age14Triage.legalWindow.toExclusive,'2031-09-10');
-assert.equal(file.age14Triage.totalIndexed,1473);
+assert.equal(file.age14Triage.totalIndexed,1485);
 assert.ok(file.age14Triage.potentialCandidates.some(c=>c.title==='Grovt rån'));
 assert.ok(file.age14Triage.potentialCandidates.every(c=>c.offenceDateRequired===true));
 assert.ok(file.age14Triage.potentialCandidates.every(c=>!c.safeForCustodyDetermination));
@@ -77,5 +77,5 @@ assert.equal(file.age14Triage.pendingWithinCandidates,
 assert.equal(file.age14Triage.noAge14StatuteCard,0);
 assert.equal(file.releaseReady,false);
 console.log('PASS V1.5: per-chapter legal review queue, truthful source scopes, '+file.counts.brbPostsWithoutStructuredRequisites+' still missing structures, Pages release blocked');
-assert.equal(file.blockers.knownActiveOffencesWithoutOwnCard,3);
-assert.deepEqual(file.knownCoverageGaps.map(x=>x.statute),['BrB:13:9','BrB:22:1','BrB:22:5']);
+assert.equal(file.blockers.knownActiveOffencesWithoutOwnCard,0);
+assert.deepEqual(file.knownCoverageGaps.map(x=>x.statute),[]);

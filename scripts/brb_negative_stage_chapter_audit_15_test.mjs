@@ -18,7 +18,7 @@ assert.equal(r.finalCaseLiabilityApprovals,0);
 assert.equal(r.approvedAutomaticCoercionDecisions,0);
 assert.ok(r.scopeApproved>=100,'Insufficient independently source-checked negative stage cards');
 const cards=ctx.window.BK_DATA.crimes,stages=cards.filter(c=>c.stageType);
-assert.equal(cards.length,1473);assert.equal(stages.length,1086);
+assert.equal(cards.length,1485);assert.equal(stages.length,1095);
 assert.equal(stages.filter(c=>c.stageStatus==='unverified').length,0);
 const approved=stages.filter(c=>c.individualLegalAudit15?.scope?.finding==='NO_NAMED_STAGE_OFFENCE_IN_CURRENT_BRB_CHAPTER');
 assert.equal(approved.length,r.scopeApproved);

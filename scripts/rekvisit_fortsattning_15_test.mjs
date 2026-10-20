@@ -57,6 +57,6 @@ for(const chap of [5,7,10,11,14,15,20]){
  assert.equal(unstructured.length,0,'Missing structured offences in BrB chapter '+chap+': '+unstructured.map(x=>x.title).join(', '));
 }
 const structured=brb.filter(c=>c.rekvisit15?.routes?.length||c.rekvisit15?.groups?.length).length;
-assert.ok(structured>=244,'Need at least 240 of 319 structured BrB offences; found '+structured);
+assert.ok(structured>=244,'Need at least 240 of 322 structured BrB offences; found '+structured);
 assert.ok(brb.every(c=>c.rekvisit15?.legalReviewApproved!==true),'Full legal certification requires distinct review');
 console.log('PASS V1.5: 39 further statutory outlines, seven more complete chapters, '+structured+'/'+brb.length+' BrB structured offences');

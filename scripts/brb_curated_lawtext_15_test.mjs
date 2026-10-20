@@ -258,7 +258,7 @@ for(const [ref,expected] of Object.entries(markers)){
 }
 assert.equal(base.filter(c=>c.rekvisit15?.legalReviewApproved===true).length,0);
 const b=base.filter(c=>c.statute?.startsWith('BrB:'));
-assert.equal(b.length,319);
+assert.equal(b.length,322);
 const directCrosschecks=b.filter(c=>c.lawCompletenessVerified===true&&
  c.lawCompletenessReviewScope==='current-paragraph-only'&&
  c.lawCompletenessSourceURL?.includes('riksdagen.se'));
@@ -270,7 +270,7 @@ for(const c of unreviewedEmbedded){
  assert.notEqual(c.lawCompletenessReviewScope,'current-paragraph-only',
   'An imported full statute without provenance must never gain a source-review stamp');
 }
-assert.equal(b.filter(c=>c.lawCompletenessVerified).length,319,
- 'Source-text verification must now cover all 319 BrB cards, without any final legal signoff');
+assert.equal(b.filter(c=>c.lawCompletenessVerified).length,322,
+ 'Source-text verification must now cover all 322 BrB cards, without any final legal signoff');
 assert.equal(b.filter(c=>c.rekvisit15?.legalReviewApproved===true).length,0);
 console.log('PASS V1.5: one-hundred-forty-one complete current SFS paragraphs verified, without legal signoff');

@@ -41,7 +41,7 @@ for(const k of ['BrB:13:5c','BrB:17:10']) {
  assert.ok(base.filter(c=>c.statute===k).every(c=>c.lawCompletenessVerified&&
   c.rekvisit15?.legalReviewApproved!==true));
 }
-assert.equal(base.filter(c=>c.statute?.startsWith('BrB:')).length,319);
+assert.equal(base.filter(c=>c.statute?.startsWith('BrB:')).length,322);
 assert.equal(ctx.window.BK_DATA.crimes.filter(c=>c.stageType&&c.stageStatus==='unverified').length,0,
  'Inchoate grades require separate source analysis; do not auto-resolve');
 console.log('PASS V1.5: HD Vapenbilden authentic precedent, BrB 17:4 corrected, two full current police SFS sections, no unjustified legal approval');

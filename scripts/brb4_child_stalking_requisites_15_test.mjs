@@ -49,7 +49,7 @@ for(const p of [parent,aggravated,stalking]){
  assert.ok(p.rekvisit15.sourceURL.includes('riksdagen.se'));
  assert.ok(p.rekvisit15.note.includes('fastställer inte skuld'));
 }
-assert.equal(cards.filter(c=>!c.stageType&&c.statute?.startsWith('BrB:')).length,319);
+assert.equal(cards.filter(c=>!c.stageType&&c.statute?.startsWith('BrB:')).length,322);
 assert.equal(cards.filter(c=>c.stageType&&c.stageStatus==='unverified').length,0);
 assert.equal(s.stageEntriesModified,0);
 const raw=fs.readFileSync(path.join(root,mod),'utf8');

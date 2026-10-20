@@ -35,5 +35,5 @@ for(const chapter of [8,9]){
  assert.equal(rows.filter(c=>!c.rekvisit15?.groups?.length&&!c.rekvisit15?.routes?.length).length,0,'Chapter '+chapter+' still lacks structured requisites');
 }
 const total=base.filter(c=>c.statute?.startsWith('BrB:')&&(c.rekvisit15?.groups?.length||c.rekvisit15?.routes?.length)).length;
-assert.ok(total>=205,'Expected 205 of 319 BrB requisite summaries, got '+total);
+assert.ok(total>=205,'Expected 205 of 322 BrB requisite summaries, got '+total);
 console.log('PASS V1.5: 10 newly scoped economic crime requisite cards, fully structured chapters 8 and 9, '+total+' BrB structured overall');

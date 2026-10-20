@@ -157,18 +157,18 @@ fs.mkdirSync(path.join(root,'audit'),{recursive:true});
 fs.writeFileSync(path.join(root,'audit/v15-priority-legal-dossiers.json'),JSON.stringify(output,null,2)+'\n');
 console.log('V1.5 LEGAL DOSSIERS '+JSON.stringify({counts:output.counts,examples:crimes.slice(0,5).map(x=>x.title),
  stageGroups:pending.reduce((acc,x)=>{acc[x.authorizingProvision]=(acc[x.authorizingProvision]||0)+1;return acc;},{})}));
-if(crimes.length!==37||remainingBrB.length!==282||allDossiers.length!==319||pending.length!==0)throw Error('Review coverage changed; audit dossiers need reconciliation');
+if(crimes.length!==37||remainingBrB.length!==285||allDossiers.length!==322||pending.length!==0)throw Error('Review coverage changed; audit dossiers need reconciliation');
 if(allDossiers.some(x=>!x.statuteFullTextIndividuallyVerified||!x.statutoryText||x.legalChecklist.length!==9))
  throw Error('Incomplete primary law or audit checkpoints');
 if(pending.some(x=>!x.authorizingFullText||!x.parentFullText||x.stageStatus!=='unverified'||x.finalLegalConclusionApproved))
  throw Error('Unresolved stage must have complete statutory evidence and remain without approval');
-if(new Set(allDossiers.map(x=>x.id)).size!==319)throw Error('Duplicate or missing BrB legal dossiers');
+if(new Set(allDossiers.map(x=>x.id)).size!==322)throw Error('Duplicate or missing BrB legal dossiers');
 if(scopedSourceSummary.entries!==Object.values(scopedSourceSummary.byKind).reduce((a,b)=>a+b,0)
- ||scopedSourceSummary.cardsWithAtLeastOneNote>319
+ ||scopedSourceSummary.cardsWithAtLeastOneNote>322
  ||allDossiers.some(d=>d.scopedSourceNotes.some(n=>n.finalLegalConclusionApproved
   ||n.legalChecklistCompletedByThisNote!==0)))throw Error('Scoped review is not final legal signoff');
 if(output.releaseReady||output.automaticCustodyAuthorization)throw Error('Unsafe inferred release or detention authority');
-if(output.counts.individuallySourceCheckedLegalChecklistSteps!==1001
- ||output.counts.cardsWithPartiallyCheckedLegalChecklist!==319
+if(output.counts.individuallySourceCheckedLegalChecklistSteps!==1010
+ ||output.counts.cardsWithPartiallyCheckedLegalChecklist!==322
  ||allDossiers.some(d=>d.legalChecklist.some(q=>q.status==='APPROVED'&&(!q.sourceURL||!q.checked||q.caseSpecificLegalConclusionApproved))))
  throw Error('Individual partial BrB3/12 source checks have not reconciled against the legal audit queue');

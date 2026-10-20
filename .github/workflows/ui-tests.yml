@@ -4,6 +4,10 @@ on:
   pull_request:
     paths:
       - "index.html"
+      - "brb-inventory-completion-15.js"
+      - "brb-inventory-penalties-15.js"
+      - "brb-inventory-final-scope-15.js"
+      - "scripts/brb_inventory_completion_15_test.mjs"
       - "data/v15-required-offence-coverage.json"
       - "special-prosecution-sources-15.js"
       - "special-prosecution-audit-15.js"
@@ -286,6 +290,10 @@ on:
     branches: [main]
     paths:
       - "index.html"
+      - "brb-inventory-completion-15.js"
+      - "brb-inventory-penalties-15.js"
+      - "brb-inventory-final-scope-15.js"
+      - "scripts/brb_inventory_completion_15_test.mjs"
       - "brb14-expansion-15.js"
       - "brb10-review-15.js"
       - "brb4-expansion-15.js"
@@ -505,7 +513,7 @@ jobs:
         run: node scripts/rekvisit_riket_15_test.mjs
       - name: V1.5 wartime BrB 21–22 applicability and convention exemptions
         run: node scripts/rekvisit_krig_15_test.mjs
-      - name: V1.5 all 319 BrB offences structurally covered, without false legal approval
+      - name: V1.5 all 322 BrB offences structurally covered, without false legal approval
         run: node scripts/rekvisit_sista_15_test.mjs
       - name: V1.5 statutory parser regression against false SFS paragraph references
         run: |
@@ -547,7 +555,7 @@ jobs:
         run: node scripts/brb20_22_fulltext_15_test.mjs
       - name: V1.5 BrB 13 current complete source text and special stage preservation
         run: node scripts/brb13_fulltext_15_test.mjs
-      - name: V1.5 all 319 BrB cards fully dated and source-text-complete
+      - name: V1.5 all 322 BrB cards fully dated and source-text-complete
         run: node scripts/brb15_complete_fulltext_15_test.mjs
       - name: V1.5 source-check full fridskränkning and hedersförtryck text, every BrB card
         run: node scripts/brb4_frid_current_provenance_15_test.mjs
@@ -685,7 +693,7 @@ jobs:
         run: node scripts/v15_brb_stage_chapter_queue.mjs
       - name: Enumerate age-14 statutory threshold candidates
         run: node scripts/v15_age14_candidate_inventory.mjs
-      - name: Review 86 individual age-14 statutory minimum thresholds
+      - name: Review 90 individual age-14 statutory minimum thresholds
         run: node scripts/age14_candidate_source_audit_15_test.mjs
       - name: Verify 138 individual special-law inchoate enumerations
         run: node scripts/special_stage_enumeration_15_test.mjs
@@ -729,6 +737,8 @@ jobs:
         run: node scripts/brb_prosecution_audit_15_test.mjs
       - name: Check 68 special-law statutory prosecution filters
         run: node scripts/special_prosecution_audit_15_test.mjs
+      - name: Check three newly indexed active offences and source mutation safeguards
+        run: node scripts/brb_inventory_completion_15_test.mjs
       - name: Check final catalogue selection
         run: node scripts/catalog_selection_15_test.mjs
       - name: Install headless browser

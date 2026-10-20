@@ -67,7 +67,10 @@ try{
     ['Vapenbrott','18:14 gäller när någon frivilligt'],
     ['Skattebrott','OCH samma felaktighet'],
     ['Skatteförseelse','inte först när ett visst belopp'],
-    ['Bidragsbrott','6 a § hindrar åtal']
+    ['Bidragsbrott','6 a § hindrar åtal'],
+    ['Vårdslöshet med gift eller smittämne','inget eget angivelse-'],
+    ['Landsförräderi','inget eget angivelse-'],
+    ['Ryktesspridning till fara för rikets säkerhet','inget eget angivelse-']
   ]){
     await page.goto(url+'#sok',{waitUntil:'networkidle'});
     await page.locator('#crime-search').fill(title);await wait();
