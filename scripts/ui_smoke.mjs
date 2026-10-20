@@ -314,6 +314,14 @@ try{
   await page.locator('#crime-search').fill('brott mot tystnadsplikt');await wait();
   await page.locator('.crime-card').filter({has:page.locator('.crime-title:text-is("Brott mot tystnadsplikt")')}).first().click();
   assert.ok((await page.locator('.status-block').innerText()).includes('Villkor för viss tystnadsplikt'),'Special BrB 20:5 prosecution rule must be visible');
+  await page.goto(url+'#sok',{waitUntil:'networkidle'});
+  await page.locator('#crime-search').fill('svindleri');await wait();
+  await page.locator('.crime-card').filter({has:page.locator('.crime-title:text-is("Svindleri")')}).first().click();
+  await page.locator('#sec-rekvisit > summary').click();
+  const fraudPanel=await page.locator('#sec-rekvisit').innerText();
+  assert.ok(fraudPanel.includes('Objektiva krav – förklaring')&&fraudPanel.includes('Subjektiva krav – förklaring'),'Both reviewed explanation blocks render inside requisite panel');
+  assert.ok(fraudPanel.includes('Företagsalternativet straffbelägger uttryckligen både uppsåt och grov oaktsamhet'),'Alternative statutory fault forms are taught in actual UI');
+  assert.equal(await page.evaluate(()=>window.BK_DATA.glossary['täckningsprincipen']===window.BK_REQUISITE_CONCEPTS15['bk:tackning']),true,'Glossary and requisite popup share one canonical definition');
   await page.goto(url+'#mer',{waitUntil:'networkidle'});
   const settings=await page.locator('body').innerText();
   assert.ok(settings.includes('Version 1.4 · publicerad 2026-10-16'),'Published version must be visible in settings');

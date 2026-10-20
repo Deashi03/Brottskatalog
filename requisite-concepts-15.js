@@ -75,6 +75,17 @@ const concepts={};for(const [id,title,text,courseSources,lawRef,sourceURL] of en
  if(concepts[id])throw Error('Duplicate requisite concept '+id);
  concepts[id]={id:'bk:'+id,senseId:'bk:'+id+':criminal-law',title,text,courseSources,lawRef,sourceURL:sourceURL||S,checked:'2026-10-20',type:'Pedagogisk begreppsförklaring'};
 }
+// Reuse canonical meanings for existing glossary keys. Preserve the existing
+// key set and all statute-specific overrides: no new global word matching.
+const norm=s=>s.normalize('NFC').toLocaleLowerCase('sv');
+const aliases={'täckningsprincipen':'tackning','tillägnelseuppsåt':'tillagnelse','abstrakt fara':'abstrakt-fara','ägnat att':'abstrakt-fara','kausalitet':'orsak','fara i bevishänseende':'bevisfara','utställarangivelse':'utstallare','originalkaraktär':'original','ekonomisk skada':'skada','kvalifikationsgrund':'grovhet'};
+let sharedGlossaryMeanings=0;
+for(const key of Object.keys(D.glossary||{})){
+ const id=aliases[norm(key)]||Object.keys(concepts).find(id=>norm(concepts[id].title)===norm(key));
+ if(!id)continue;const c=concepts[id];
+ c.source=c.lawRef+'; '+c.courseSources.map(s=>s.file.normalize('NFC')+' '+(s.pages?'s. ':'stycke ')+(s.pages||s.paragraphs).join('–')).join('; ');
+ D.glossary[key]=c;sharedGlossaryMeanings++;
+}
 // Explicit statute maps prevent ambiguous words from crossing between offences.
 const maps=[
 ['3:1 3:2 3:3',['effekt','orsak','tackning','garant','skyddsgarant','ansvarsfrihet','avsikt','insikt','likgiltighet']],
@@ -120,5 +131,5 @@ let cards=0,links=0;for(const c of D.crimes){
  c.requisiteConcepts15=ids.map(id=>({conceptId:'bk:'+id,senseId:concepts[id].senseId,displayTerm:concepts[id].title}));cards++;links+=ids.length;
 }
 window.BK_REQUISITE_CONCEPTS15=Object.fromEntries(Object.values(concepts).map(c=>[c.id,c]));
-window.BK_REQUISITE_CONCEPT_REPORT15={concepts:entries.length,cards,links,checked:'2026-10-20',fullLegalApprovals:0};
+window.BK_REQUISITE_CONCEPT_REPORT15={concepts:entries.length,cards,links,checked:'2026-10-20',fullLegalApprovals:0,sharedGlossaryMeanings};
 })();

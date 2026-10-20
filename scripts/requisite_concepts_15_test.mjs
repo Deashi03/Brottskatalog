@@ -10,13 +10,19 @@ const ctx=vm.createContext({window:{},console});
 for(const i of [1,2,3])vm.runInContext(inline[i],ctx);
 for(const src of srcs)if(!src.includes('requisite-concepts-15'))vm.runInContext(read(src),ctx);
 // A teaching supplement must not mutate legal state, law text, or existing definitions.
-const before=JSON.stringify(ctx.window.BK_DATA),glossary=JSON.stringify(ctx.window.BK_DATA.glossary);
+const before=JSON.stringify(ctx.window.BK_DATA),glossaryKeys=Object.keys(ctx.window.BK_DATA.glossary);
+const priorGlossary=JSON.parse(JSON.stringify(ctx.window.BK_DATA.glossary));
+const contexts=JSON.stringify(ctx.window.BK_TERM_CONTEXT);
 vm.runInContext(code,ctx);
 const R=ctx.window.BK_REQUISITE_CONCEPTS15,rows=ctx.window.BK_DATA.crimes,manifest=JSON.parse(read('data/course-source-manifest-15.json'));
 const withoutLinks=JSON.parse(JSON.stringify(ctx.window.BK_DATA));
 for(const c of withoutLinks.crimes)delete c.requisiteConcepts15;
+withoutLinks.glossary=priorGlossary;
 assert.equal(JSON.stringify(withoutLinks),before,'Concept links must not change law, powers or legal approvals');
-assert.equal(JSON.stringify(ctx.window.BK_DATA.glossary),glossary,'Existing contextual glossary is not overwritten');
+assert.deepEqual(Object.keys(ctx.window.BK_DATA.glossary),glossaryKeys,'No new automatic global term matching');
+assert.equal(JSON.stringify(ctx.window.BK_TERM_CONTEXT),contexts,'Statute-specific meanings are preserved');
+assert.equal(ctx.window.BK_DATA.glossary['täckningsprincipen'],R['bk:tackning'],'Panel and glossary use the same canonical definition object');
+assert.ok(ctx.window.BK_REQUISITE_CONCEPT_REPORT15.sharedGlossaryMeanings>=20);
 for(const c of Object.values(R)){
  assert.ok(c.id&&c.senseId&&c.text&&c.lawRef&&c.courseSources.length);
  assert.ok(/^https:\/\/(www\.)?(riksdagen.se|domstol.se)\//.test(c.sourceURL));
@@ -47,4 +53,4 @@ assert.ok(html.includes('requisiteConceptButtons(c)'));
 assert.ok(html.includes('showRequisiteConcept(concept.dataset.requisiteConcept,concept.dataset.requisiteSense)'));
 // A missing data bundle must fail closed rather than breaking the app.
 vm.runInNewContext(code,{window:{}});
-console.log('PASS: '+Object.keys(R).length+' source-linked concepts across '+mapped.length+' base cards; distinct meanings, locator bounds, unchanged legal state and offline integration');
+console.log('PASS: '+Object.keys(R).length+' source-linked concepts across '+mapped.length+' base cards; distinct meanings, locator bounds, shared canonical glossary, unchanged legal state and offline integration');
