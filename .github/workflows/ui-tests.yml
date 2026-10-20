@@ -109,6 +109,8 @@ on:
       - "brb5-base-legal-checkpoints-15.js"
       - "brb6-base-legal-checkpoints-15.js"
       - "brb18-base-legal-checkpoints-15.js"
+      - "brb19-base-legal-checkpoints-15.js"
+      - "scripts/brb19_base_legal_checkpoints_15_test.mjs"
       - "scripts/brb18_base_legal_checkpoints_15_test.mjs"
       - "scripts/brb6_base_legal_checkpoints_15_test.mjs"
       - "scripts/brb5_base_legal_checkpoints_15_test.mjs"
@@ -558,6 +560,8 @@ jobs:
         run: node scripts/brb6_base_legal_checkpoints_15_test.mjs
       - name: Verify BrB18 five offences specific intent and statutory acts
         run: node scripts/brb18_base_legal_checkpoints_15_test.mjs
+      - name: Verify BrB19 espionage offences individual statutory acts and mental states
+        run: node scripts/brb19_base_legal_checkpoints_15_test.mjs
       - name: V1.5 chapter four special prosecution restrictions and place qualifiers
         run: node scripts/brb4_prosecution_15_test.mjs
       - name: V1.5 BrB 11:8 creditor negligence and ringa bookkeeping prosecution exceptions
