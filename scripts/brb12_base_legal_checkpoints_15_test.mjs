@@ -43,7 +43,7 @@ for(const title of titles){
 }
 const st=all.filter(c=>c.stageType);
 assert.equal(st.filter(c=>c.stageStatus==='unverified').length,0);
-assert.equal(st.filter(c=>c.individualLegalAudit15?.scope?.status==='APPROVED').length,1095);
+assert.equal(st.filter(c=>c.individualLegalAudit15?.scope?.status==='APPROVED').length,1167);
 // Primary-source tampering must block only the relevant independent review.
 const source=read(name),clone=JSON.parse(JSON.stringify(all)),W=JSON.parse(JSON.stringify(ctx.window.BK_STATUTES));
 for(const c of clone)if(c.legalAudit15?.sourceAudit==='BrB12-2026-10-20')delete c.legalAudit15;

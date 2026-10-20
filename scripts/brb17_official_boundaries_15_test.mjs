@@ -34,7 +34,7 @@ assert.ok(get('Våldsamt motstånd').officialFunctionBoundaries15.note.includes(
 assert.ok(get('Våldsamt motstånd').officialFunctionBoundaries15.note.includes('INTE generellt till 17:3'));
 assert.ok(get('Angrepp mot tjänsteman').officialFunctionBoundaries15.note.includes('däremot lidande'));
 assert.ok(get('Förolämpning mot tjänsteman').officialFunctionBoundaries15.note.includes('Inte varje kritik'));
-assert.equal(all.length,1485);
+assert.equal(all.length,1557);
 assert.equal(all.filter(c=>c.stageStatus==='unverified').length,0);
 assert.equal(base.filter(c=>c.conditionalPenalty&&!c.penaltyRangeVerified).length,14);
 // Fail closed when any cross-referenced protective-scope source is no longer certified.

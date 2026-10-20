@@ -47,6 +47,7 @@ const perChapter=chapters.map(ch=>{
   sourceNote:'Full lagtext/rekvisitintyg fordrar självständig juridisk sakgranskning.'
  };
 });
+const missingStageParents=base.filter(c=>!c.isStandaloneInchoate&&(['forsok','forberedelse','stampling'].some(k=>stages.filter(s=>s.stageParentId===c.id&&s.stageType===k).length!==1)));
 const reviewOrder=[3,4,17,8,9,10,12,15,20,6,11,14,5,7,13,16,18,19,21,22];
 const workQueue=notStructured.slice().sort((a,b)=>{
  const ai=reviewOrder.indexOf(chapterOf(a)),bi=reviewOrder.indexOf(chapterOf(b));
@@ -127,6 +128,7 @@ const outstandingConditionalPenalty=base.filter(c=>c.conditionalPenalty&&!c.pena
 // Independent BrB 1:6 age-at-offence triage. A four-year minimum for a
 // qualifying completed offence does not itself prove inchoate liability,
 // applicability on historical offence dates or coercive power.
+const stagePenaltyWithoutRange=stages.filter(c=>c.stageStatus==='punishable'&&!c.penaltyRange);
 const age14Report=ctx.window.BK_AGE14_15||null;
 const age14CardsWithoutMetadata=all.filter(c=>!c.age14Exception15);
 const age14Candidates=all.filter(c=>Number(c.age14Exception15?.completedOffenceMinimumYears)>=4);
@@ -147,6 +149,8 @@ const summaries={
  counts:{
   base:base.length,brb:brb.length,stages:stages.length,total:all.length,
   knownActiveOffencesWithoutOwnCard:knownCoverageGaps.length,
+  baseCardsWithoutExactlyThreeStageEntries:missingStageParents.length,
+  punishableStagesWithoutResolvedPenaltyRange:stagePenaltyWithoutRange.length,
   structuredBrbRequisites:brb.filter(structured).length,
   fullyLegallyApprovedBrbRequisites:brb.filter(fullyReviewed).length,
   brbPostsWithoutStructuredRequisites:notStructured.length,
@@ -166,6 +170,8 @@ const summaries={
  },
  blockers:{
   knownActiveOffencesWithoutOwnCard:knownCoverageGaps.length,
+  baseCardsWithoutExactlyThreeStageEntries:missingStageParents.length,
+  punishableStagesWithoutResolvedPenaltyRange:stagePenaltyWithoutRange.length,
   brbRequisitesNotIndividuallyApproved:pendingRequisites.length,
   brbLawTextNotIndividuallyCertified:pendingStatutes.length,
   unverifiedInchoateStatus:unverifiedStage.length,
@@ -175,6 +181,7 @@ const summaries={
   age14OffenceCardsWithoutAgeAtActRule:age14CardsWithoutMetadata.length
  },
  knownCoverageGaps,
+ missingStageParents:missingStageParents.map(c=>({id:c.id,title:c.title,statute:c.statute})),
  samples:{
   missingRequisites:notStructured.slice(0,30).map(c=>({title:c.title,ref:c.shortRef})),
   unverifiedStages:unverifiedStage.slice(0,20).map(c=>({

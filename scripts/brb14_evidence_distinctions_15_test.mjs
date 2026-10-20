@@ -47,7 +47,7 @@ for(const [title,ref,other,distinguishing] of expected){
 }
 assert.ok(!Number.isFinite(by('Brukande av det förfalskade').penaltyRange?.min)&&!Number.isFinite(by('Brukande av det förfalskade').penaltyRange?.max),'Derivative penalty must have no fixed numeric interval, whether missing or null');
 assert.equal(D.crimes.filter(c=>c.stageType&&c.stageStatus==='unverified').length,0,'Previously unsettled stages require separate full legal reviews');
-assert.equal(D.crimes.filter(c=>c.stageType).length,1095,'Forensic notes must not create new stage cards');
+assert.equal(D.crimes.filter(c=>c.stageType).length,1167,'Forensic notes must not create new stage cards');
 const originalSource=fs.readFileSync(path.join(root,mod),'utf8');
 // Fail closed when the source text, provenance or requisites are not available.
 const fake={title:'Penningförfalskning',statute:'BrB:14:6',rekvisit15:{legalReviewApproved:false,note:'preexisting note'}};

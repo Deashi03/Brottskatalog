@@ -14,7 +14,7 @@ const all=ctx.window.BK_DATA.crimes,before=JSON.stringify(all);
 vm.runInContext(read(mod),ctx);
 const r=ctx.window.BK_CATALOG_SELECTION15,visible=all.filter(r.included);
 assert.equal(JSON.stringify(all),before,'Visibility must not mutate legal evidence, stage status, scales or powers');
-assert.equal(r.inventory,1485);assert.equal(r.searchable,1473);
+assert.equal(r.inventory,1557);assert.equal(r.searchable,1545);
 assert.equal(r.excludedBaseIds.length,3);assert.equal(r.excludedStageIds.length,9);
 assert.equal(visible.filter(c=>!c.stageType).length,387);
 assert.equal(visible.filter(c=>!c.stageType&&c.statute?.startsWith('BrB:')).length,322);

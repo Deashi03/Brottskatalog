@@ -47,7 +47,7 @@ for(const c of cases){
  if(!valid){report.unresolved.push({title:c.title,kind:c.stageType||'fullbordat',
     sourceReady:lawReady,parentGradeReady:recordReady(p),stageReady,oldStatus:a?.status});continue;}
  a.individualSourceScopeApproved=true;
- a.individualSourceScopeChecked=p.penaltyGradeReviewDate==='2026-10-20'?'2026-10-20':'2026-10-18';
+ a.individualSourceScopeChecked=(p.penaltyGradeReviewDate==='2026-10-20'||c.id.startsWith('stage-gap15-'))?'2026-10-20':'2026-10-18';
  a.individualSourceScopeSources=[source,p.penaltyGradeReviewSource,...(stage?[c.stagePreliminaryScope15?.sourceURL||c.sourceURL]:[])];
  a.individualSourceScopeResult='MINIMUM_4_YEARS_CONFIRMED_STATUTORY_ONLY';
  a.completedOffencePenaltyIndividuallyVerified=true;

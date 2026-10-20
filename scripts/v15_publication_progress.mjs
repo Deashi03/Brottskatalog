@@ -54,7 +54,7 @@ function add(group,label,completed,total,basis){
    throw Error('Invalid task count '+group+': '+label+' '+completed+'/'+total);
  work.push({group,label,completed,total,remaining:total-completed,basis});
 }
-if(base.length!==390||brb.length!==322||special.length!==68||stages.length!==1095)
+if(base.length!==390||brb.length!==322||special.length!==68||stages.length!==1167)
  throw Error('Catalog footprint changed; rebaseline before publishing percentages');
 add('Grundbrott','Grundpost i arbetsinventeringen',base.filter(c=>c.id&&c.title&&c.ref).length,base.length,'en grundpost = en färdig indexåtgärd');
 add('Grundbrott','Åldersregel/metadata i brottskort',base.filter(age).length,base.length,'metadata, inte individuell tillämpningsbedömning');

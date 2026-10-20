@@ -30,7 +30,7 @@ for(const c of reviewed){
  if(c.statute.startsWith('BrB:21:')||c.statute.startsWith('BrB:22:'))
   assert.equal(c.penaltyGradeReviewApplicabilityPending,true);
 }
-assert.equal(all.length,1485);
+assert.equal(all.length,1557);
 assert.equal(all.filter(c=>c.stageStatus==='unverified').length,0);
 assert.equal(base.filter(c=>c.conditionalPenalty&&!c.penaltyRangeVerified).length,14);
 const original=JSON.parse(JSON.stringify(reviewed.find(c=>c.title==='Våldsamt motstånd')));

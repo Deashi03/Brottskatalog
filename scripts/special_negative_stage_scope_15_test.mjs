@@ -19,7 +19,7 @@ assert.deepEqual(Object.fromEntries(Object.entries(report.byFamily).map(([k,v])=
  {SmuglL:23,PTBL:6,SkBrL:25,BidrBrL:12,LBE:6});
 const cards=ctx.window.BK_DATA.crimes,reviewed=cards.filter(c=>c.individualLegalAudit15?.scope?.finding==='NO_NAMED_STAGE_OFFENCE_IN_CURRENT_SPECIAL_ACT'&&!c.statute?.startsWith('Nark:'));
 assert.equal(reviewed.length,72);
-assert.equal(cards.length,1485);
+assert.equal(cards.length,1557);
 for(const c of reviewed){
  const scope=c.individualLegalAudit15.scope,con=c.individualLegalAudit15.consequences;
  assert.equal(c.stageStatus,'not-criminalized');
@@ -36,7 +36,7 @@ for(const c of reviewed){
  assert.equal(c.custody,'unknown');
 }
 const stages=cards.filter(c=>c.stageType);
-assert.equal(stages.length,1095);assert.equal(stages.filter(c=>c.stageStatus==='unverified').length,0);
+assert.equal(stages.length,1167);assert.equal(stages.filter(c=>c.stageStatus==='unverified').length,0);
 assert.ok(stages.filter(c=>c.individualLegalAudit15?.scope?.status==='APPROVED').length>=138);
 assert.ok(stages.filter(c=>c.individualLegalAudit15?.consequences?.status==='APPROVED').length>=138);
 assert.equal(stages.filter(c=>c.stageStatus==='punishable'&&c.individualLegalAudit15?.consequences?.punishmentRangeApproved===true).length,0);

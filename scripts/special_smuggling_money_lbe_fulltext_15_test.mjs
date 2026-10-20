@@ -34,7 +34,7 @@ assert.ok(!get('Grov olovlig befattning med smuggelgods').law.endsWith('Försök
 assert.ok(get('Penningtvättsbrott').law.includes('4 §'));
 assert.equal(get('Penningtvättsbrott').rekvisit15.routes.length,2);
 assert.equal(base.filter(c=>c.lawCompletenessVerified===true&&c.rekvisit15?.legalReviewApproved===true).length,0);
-assert.equal(ctx.window.BK_DATA.crimes.length,1485);
+assert.equal(ctx.window.BK_DATA.crimes.length,1557);
 assert.equal(ctx.window.BK_DATA.crimes.filter(c=>c.stageStatus==='unverified').length,0);
 const wrong=get('Smuggling');
 const testEntry=JSON.parse(JSON.stringify(wrong));testEntry.lawMode='machine';testEntry.lawCompletenessVerified=false;testEntry.law=ctx.window.BK_SPECIAL_EXCERPTS.SmuglL.sections['3'].text;

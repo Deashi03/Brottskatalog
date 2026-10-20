@@ -13,7 +13,7 @@ for(const r of requirements){const c=base.find(c=>c.statute===r.statute);assert.
  if(r.statute.startsWith('BrB:22:'))assert.equal(c.applicabilityConditional,true);
 }
 const land=base.find(c=>c.statute==='BrB:22:1');assert.deepEqual(JSON.parse(JSON.stringify(land.penaltyRange)),{min:4,max:10,fines:false,life:true});assert.equal(land.age14Exception15.status,'conditional-applicability');assert.equal(land.age14Exception15.individualSourceScopeChecked,'2026-10-20');
-assert.equal(w.BK_AGE14_CANDIDATE_SOURCE_AUDIT15.sourceReviewed,90);
+assert.equal(w.BK_AGE14_CANDIDATE_SOURCE_AUDIT15.sourceReviewed,96);
 assert.ok(base.find(c=>c.statute==='BrB:13:9').requisiteConcepts15.some(c=>c.conceptId==='bk:medveten-oaktsamhet'));
 assert.ok(base.find(c=>c.statute==='BrB:22:5').requisiteConcepts15.some(c=>c.conceptId==='bk:abstrakt-fara'));
 // A changed own paragraph or supporting prosecution/stage paragraph cannot retain approval.

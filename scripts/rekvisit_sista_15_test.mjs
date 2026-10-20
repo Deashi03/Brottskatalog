@@ -50,5 +50,5 @@ for(const name of ['Samlag med avkomling','Samlag med syskon']){
 assert.ok(JSON.stringify(by('Samlag med syskon').rekvisit15).includes('HELsyskon'));
 assert.ok(brb.every(c=>c.rekvisit15?.legalReviewApproved!==true),'Structure is not evidence of complete independent legal certification');
 assert.equal(D.crimes.filter(c=>c.stageType&&c.stageStatus==='unverified').length,0,'Do not infer case-specific guilt from source-limited stage review');
-assert.equal(D.crimes.length,1485,'Offence/stage inventory must remain unchanged');
+assert.equal(D.crimes.length,1557,'Offence/stage inventory must remain unchanged');
 console.log('PASS V1.5: all 322 BrB base offences carry statutory OCH/ELLER structures, still NO full legal approval');

@@ -16,7 +16,7 @@ assert.equal(r.withheld.length,0);
 assert.deepEqual(Object.fromEntries(Object.entries(r.byLaw).map(([k,v])=>[k,v.approved])),
  {SmuglL:46,PTBL:12,SkBrL:2,LBE:6});
 const all=ctx.window.BK_DATA.crimes,stages=all.filter(c=>c.stageType),checked=stages.filter(c=>c.individualLegalAudit15?.scope?.finding==='CURRENT_ACT_EXPLICIT_INCHOATE_ENUMERATION_CONFIRMED'&&!c.statute?.startsWith('Nark:'));
-assert.equal(all.length,1485);assert.equal(stages.length,1095);
+assert.equal(all.length,1557);assert.equal(stages.length,1167);
 assert.equal(checked.length,66);
 assert.ok(stages.filter(c=>c.individualLegalAudit15?.scope?.status==='APPROVED').length>=138);
 assert.ok(stages.filter(c=>c.individualLegalAudit15?.consequences?.status==='APPROVED').length>=138);
@@ -39,4 +39,4 @@ vm.runInContext(fs.readFileSync(path.join(root,mod),'utf8'),iso);
 assert.equal(iso.window.BK_SPECIAL_POSITIVE_STAGE_AUDIT15.byLaw.PTBL.approved,0);
 assert.equal(iso.window.BK_SPECIAL_POSITIVE_STAGE_AUDIT15.byLaw.PTBL.planned,12);
 assert.equal(iso.window.BK_SPECIAL_POSITIVE_STAGE_AUDIT15.scopeApproved,54);
-console.log('PASS V1.5: 66 current-statute positive stage listing reviews, 138 of 1095 stage source scopes; no automatic case-specific consequences');
+console.log('PASS V1.5: 66 current-statute positive stage listing reviews, 138 of 1167 stage source scopes; no automatic case-specific consequences');

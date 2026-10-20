@@ -41,7 +41,7 @@ assert.ok(get('Vårdslös skatteredovisning').rekvisit15.routes[0].groups.some(g
 assert.ok(get('Vårdslös skatteuppgift').rekvisit15.routes[0].groups.some(g=>g.label.includes('inte generellt varje utebliven deklaration')));
 assert.ok(get('Vårdslöst bidragsbrott').rekvisit15.routes[0].groups.some(g=>g.label.includes('mindre allvarlig')));
 assert.ok(get('Skatteavdragsbrott').rekvisit15.routes[0].groups.some(g=>g.mode==='any'&&g.options.includes('Grov oaktsamhet')));
-assert.equal(all.length,1485);
+assert.equal(all.length,1557);
 assert.equal(all.filter(c=>c.stageStatus==='unverified').length,0);
 assert.equal(base.filter(c=>c.conditionalPenalty&&!c.penaltyRangeVerified).length,14);
 assert.equal(base.filter(c=>c.lawCompletenessVerified===true&&c.lawMode==='full').length,390,'All 390 base cards now have individually checked current SFS paragraph text; final legal review remains outstanding');

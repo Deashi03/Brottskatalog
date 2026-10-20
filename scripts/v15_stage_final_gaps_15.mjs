@@ -16,4 +16,4 @@ const gaps=crimes.filter(x=>x.stageType).flatMap(c=>{
 const summary=Object.entries(Object.groupBy(gaps,c=>c.statute?.split(':')[0]||'UNKNOWN')).map(([statute,cards])=>({statute,count:cards.length,items:cards}));
 console.log('V1.5 FINAL STAGE GAPS '+JSON.stringify({total:gaps.length,summary}));
 if(gaps.length!==0)throw Error('Expected 0 unresolved BrB stage cards, got '+gaps.length);
-console.log('PASS V1.5: all 1095 inchoate cards have limited current-SFS checks; still no complete factual legal certification');
+console.log('PASS V1.5: all 1167 inchoate cards have limited current-SFS checks; still no complete factual legal certification');

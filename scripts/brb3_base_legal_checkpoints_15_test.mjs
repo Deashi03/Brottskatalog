@@ -41,7 +41,7 @@ for(const c of reviewed){
  }
 }
 assert.equal(stage.filter(c=>c.stageStatus==='unverified').length,0);
-assert.equal(stage.filter(c=>c.individualLegalAudit15?.scope?.status==='APPROVED').length,1095);
+assert.equal(stage.filter(c=>c.individualLegalAudit15?.scope?.status==='APPROVED').length,1167);
 // Mutated special attempt law must not cause positive or negative certification.
 const copy=JSON.parse(JSON.stringify(all)),W=JSON.parse(JSON.stringify(ctx.window.BK_STATUTES));
 for(const c of copy)if(c.legalAudit15?.sourceAudit==='BrB3-2026-10-20')delete c.legalAudit15;

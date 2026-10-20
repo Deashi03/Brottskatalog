@@ -90,6 +90,33 @@ try{
     await page.getByRole('button',{name:'Stäng',exact:true}).click();
   }
   await page.goto(url+'#sok',{waitUntil:'networkidle'});
+  // Every restored parent has direct links to all three stage cards.
+  for(const [parent,kind,punishable,phrase] of [
+    ['Grovt vapenbrott','Försök',true,'Utförandet av ett visst brott har påbörjats'],
+    ['Vapenbrott','Försök',false,'endast grovt och synnerligen grovt'],
+    ['Myteri','Försök',false,'men inte försök till myteri'],
+    ['Myteri','Stämpling',true,'Kommer överens med någon annan'],
+    ['Osann utsaga inför nordisk domstol','Förberedelse',true,'Partsutsaga enligt 15:2'],
+    ['Osann utsaga inför en internationell domstol','Förberedelse',true,'mindre allvarligt fall omfattas inte'],
+    ['Högförräderi','Stämpling',true,'förbindelse med främmande makt']
+  ]){
+    await page.goto(url+'#sok',{waitUntil:'networkidle'});await search.fill(parent);await wait();
+    await page.locator('.crime-card').filter({has:page.getByText(parent,{exact:true})}).click();
+    const overview=page.locator('#sec-stadier');await overview.locator(':scope > summary').click();
+    assert.equal(await overview.locator('.stage-overview-link').count(),3,'Three direct stage links: '+parent);
+    const link=overview.locator('.stage-overview-link').filter({hasText:kind+' ·'});
+    if(parent.startsWith('Osann utsaga'))assert.ok((await link.innerText()).includes('i angivna fall'));
+    await link.click();await wait();
+    assert.ok((await page.locator('h1').innerText()).startsWith(kind+' till'));
+    if(punishable){await page.locator('#sec-rekvisit > summary').click();assert.ok((await page.locator('#sec-rekvisit').innerText()).includes(phrase),'Stage-specific requisites: '+parent);}
+    else assert.ok((await page.locator('.stage-alert').innerText()).includes('EJ STRAFFBART'));
+    await page.locator('#sec-lag > summary').click();
+    const lawPhrase=parent==='Grovt vapenbrott'?'18:15 räknar uttryckligen':parent==='Myteri'&&punishable?'16:17 räknar upp förberedelse':phrase;
+    assert.ok((await page.locator('#sec-lag').innerText()).includes(lawPhrase),'Specific statutory restriction visible: '+parent);
+    if(parent==='Grovt vapenbrott'){assert.ok((await page.locator('#sec-lag').innerText()).includes('synnerligen grovt vapenbrott'));assert.ok((await page.locator('.penalty-panel').innerText()).includes('Individuell straffskaleprövning'));assert.equal(await page.locator('.penalty-panel .penalty-bounds').count(),0,'No invented fine minimum for attempted gross weapon offence');}
+    assert.equal(await page.evaluate(()=>document.documentElement.scrollWidth<=innerWidth+1),true,'Restored stage fits iPhone: '+parent);
+  }
+  await page.goto(url+'#sok',{waitUntil:'networkidle'});
   await search.fill('stöld');
   await search.press('Enter');
   await wait();

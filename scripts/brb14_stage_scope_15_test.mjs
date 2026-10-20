@@ -61,8 +61,8 @@ assert.ok(money.stageExplanation.includes('ANSKAFFA eller TA EMOT'));
 for(const kind of ['forberedelse','stampling'])
  assert.equal(get('Olovlig befattning med falska pengar',kind).stageStatus,'not-criminalized');
 assert.equal(D.crimes.filter(c=>c.stageType&&c.stageStatus==='unverified').length,0);
-assert.equal(D.crimes.length,1485,'Three missing derivative-parent stage records are added without touching other crimes');
-assert.equal(D.crimes.filter(c=>c.stageType).length,1095);
+assert.equal(D.crimes.length,1557,'Three missing derivative-parent stage records are added without touching other crimes');
+assert.equal(D.crimes.filter(c=>c.stageType).length,1167);
 assert.equal(D.crimes.filter(c=>!c.stageType&&c.statute?.startsWith('BrB:')).length,322);
 const laws=ctx.window.BK_STATUTES;
 assert.ok(laws['BrB:14:13'].text.includes('om det fullbordats, ha varit att anse som ringa'));

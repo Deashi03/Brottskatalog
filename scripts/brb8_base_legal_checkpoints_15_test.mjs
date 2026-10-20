@@ -32,7 +32,7 @@ for(const c of approved){
  }
 }
 assert.equal(stages.filter(c=>c.stageStatus==='unverified').length,0);
-assert.equal(stages.filter(c=>c.individualLegalAudit15?.scope?.status==='APPROVED').length,1095);
+assert.equal(stages.filter(c=>c.individualLegalAudit15?.scope?.status==='APPROVED').length,1167);
 const saved=read(name),c=JSON.parse(JSON.stringify(all)),W=JSON.parse(JSON.stringify(ctx.window.BK_STATUTES));
 for(const x of c)if(x.legalAudit15?.sourceAudit==='BrB8-2026-10-20')delete x.legalAudit15;
 W['BrB:8:12'].text='TAMPERED';

@@ -32,5 +32,5 @@ for(const c of cases){
  x.gradeCases++;parents.set(p.id,x);
 }
 console.log('V1.5 AGE14 UNIQUE PARENTS '+JSON.stringify([...parents.values()].sort((a,b)=>a.title.localeCompare(b.title,'sv'))));
-if(cases.length!==90)throw Error('Age14 source checklist baseline changed: '+cases.length);
-console.log('PASS V1.5: 90 age14 threshold candidates inventoried; not a criminal-responsibility decision');
+if(cases.length!==96)throw Error('Age14 source checklist baseline changed: '+cases.length);
+console.log('PASS V1.5: 96 age14 threshold candidates inventoried; not a criminal-responsibility decision');

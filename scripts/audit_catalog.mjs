@@ -60,10 +60,23 @@ for(const c of all){
     c.individualLegalAudit15?.consequences?.specificPenaltyRange===null&&
     c.custody==='unknown'
    );
+   const restoredStageBound=Boolean(c.id.startsWith('stage-gap15-')
+    &&ctx.window.BK_MISSING_STAGE_RULES15?.some(r=>c.stageParentId===r.id&&r.allowed.includes(({forsok:'F',forberedelse:'P',stampling:'S'})[c.stageType]))
+    &&c.individualLegalAudit15?.scope?.finding==='CURRENT_MISSING_PARENT_STAGE_EXPRESSLY_LISTED'
+    &&c.individualLegalAudit15.scope.status==='APPROVED'
+    &&c.individualLegalAudit15.scope.checked==='2026-10-20'
+    &&c.individualLegalAudit15.scope.caseSpecificLiabilityApproved===false
+    &&c.individualLegalAudit15.scope.historicApplicabilityApproved===false
+    &&c.individualLegalAudit15.consequences?.status==='APPROVED'
+    &&c.individualLegalAudit15.consequences.punishmentRangeApproved===false
+    &&c.individualLegalAudit15.consequences.automaticCoercionApproved===false
+    &&c.individualLegalAudit15.consequences.specificPenaltyRange===null
+    &&c.penaltyRangeVerified===false&&c.custody==='unknown'&&c.prosecution==='unknown');
    if(boundedBySource)flag(id,'medium','conditional-stage-penalty-review',
     'BrB 14:13 covers this restricted stage route but the concrete non-ringa offence/derivative penalty and custody require individual review');
    else if(gradeSourceBound)flag(id,'medium','grade-stage-penalty-still-pending',
     'Statutory grade/stage listing was source-checked; do not infer a numeric 23 kap. penalty, offence-date applicability, prosecution or police authority');
+   else if(restoredStageBound)flag(id,'medium','restored-stage-penalty-still-pending','Expressly source-checked missing stage; no numerical range, prosecution, historical or coercive approval has been granted');
    else flag(id,'high','punishable-no-penalty','Punishable stage has no structured penalty');
   }
   if(c.stageStatus!=='punishable'&&c.penaltyRange)flag(id,'critical','noncriminal-has-penalty','Stage without verified criminalization has penalty');

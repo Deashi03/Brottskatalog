@@ -23,12 +23,12 @@ assert.equal(r.byParent.length,9);
 assert.ok(r.byParent.every(x=>x.approved===x.expected&&x.held===0));
 for(const k of ['finalLegalLiabilityApprovals','automaticPenaltyApprovals','automaticProsecutionApprovals','automaticCoercionApprovals'])assert.equal(r[k],0);
 const all=ctx.window.BK_DATA.crimes,stages=all.filter(c=>c.stageType);
-assert.equal(stages.length,1095);
+assert.equal(stages.length,1167);
 assert.equal(stages.filter(c=>c.stageStatus==='unverified').length,0);
 const parents=new Map(all.filter(c=>!c.stageType).map(c=>[c.id,c]));
 const audited=stages.filter(c=>c.individualLegalAudit15?.scope?.finding==='CURRENT_BRB_SAME_SECTION_GRADE_COVERED_BY_NAMED_STAGE');
 assert.equal(audited.length,21);
-assert.equal(stages.filter(c=>c.individualLegalAudit15?.scope?.status==='APPROVED'&&c.individualLegalAudit15?.consequences?.status==='APPROVED').length,1095);
+assert.equal(stages.filter(c=>c.individualLegalAudit15?.scope?.status==='APPROVED'&&c.individualLegalAudit15?.consequences?.status==='APPROVED').length,1167);
 for(const c of audited){
  const a=c.individualLegalAudit15,p=parents.get(c.stageParentId);
  assert.ok(p);assert.equal(c.stageStatus,'punishable');
@@ -58,7 +58,7 @@ for(const c of fourYear){
  const threshold=ctx.window.BK_COERCIVE.score(c,{id:'medtagande-omrade',scale:'four'});
  assert.equal(threshold.tone,'conditional',c.title);
 }
-assert.equal(ctx.window.BK_AGE14_CANDIDATE_SOURCE_AUDIT15.sourceReviewed,90);
+assert.equal(ctx.window.BK_AGE14_CANDIDATE_SOURCE_AUDIT15.sourceReviewed,96);
 assert.equal(ctx.window.BK_AGE14_CANDIDATE_SOURCE_AUDIT15.unresolved.length,0);
 // Negative-control: reset each of the 21 newly approved cards, then corrupt
 // two primary legal sources and verify no reapproval for affected chapters.

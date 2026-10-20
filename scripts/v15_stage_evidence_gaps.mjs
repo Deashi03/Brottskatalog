@@ -25,6 +25,6 @@ const report={date:'2026-10-19',gaps:g.length,byStatus,
 fs.mkdirSync(path.join(root,'audit'),{recursive:true});
 fs.writeFileSync(path.join(root,'audit/v15-stage-evidence-gaps.json'),JSON.stringify(report,null,2)+'\n');
 console.log('V1.5 STAGE EVIDENCE GAPS '+JSON.stringify({total:g.length,byStatus,byStatute:report.byStatute}));
-if(stages.length!==1095||g.length!==0||g.filter(x=>x.status==='unverified').length!==0)
+if(stages.length!==1167||g.length!==0||g.filter(x=>x.status==='unverified').length!==0)
  throw Error('Stage review baseline mismatch '+JSON.stringify({total:stages.length,gaps:g.length,byStatus}));
 console.log('PASS: independent source/date inventory with no implied inchoate signoff');
