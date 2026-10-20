@@ -1,4 +1,4 @@
-> **Senaste avstämning 20 oktober:** Rekvisitfunktionen har nu en hopfälld gradfördjupning för 174 grundkort med gradalternativ, uttryckliga kvalifikationsgrunder och avgränsningar mot andra brott eller ansvarsfrihet. Den bygger på 101 kompletta BrB-paragrafer. Tidigare 452 förstadieöversikter och 59 begreppsförklaringar finns kvar. Fullständig juridisk slutgranskning är fortfarande öppen. Se `V15-PUBLICERINGSPROGRESS.md` för aktuell status: 85,0 %.
+> **Senaste avstämning 20 oktober:** Ytterligare 211 källavgränsade gradfrågor och 174 kontroller av uttryckliga ansvarsbegränsningar är avslutade. Totalt 390/390 grundkort har aktuell lagtextsbunden gradkontroll. Rekvisitfunktionen visar hopfällda grad- och begränsningsförklaringar utan automatisk slutsats om ett konkret fall. Tidigare begrepp, typexempel och förstadieöversikter bevaras. Se `V15-PUBLICERINGSPROGRESS.md`: 88,2 %, juridisk slutgranskning fortsatt öppen.
 
 # Fullständig revisionsakt för samtliga 319 BrB-brottskort
 

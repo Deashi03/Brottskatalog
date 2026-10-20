@@ -156,6 +156,43 @@ try{
     assert.equal(await page.evaluate(()=>document.documentElement.scrollWidth<=innerWidth+1),true,'Degree detail fits viewport: '+title);
   }
   await page.goto(url+'#sok',{waitUntil:'networkidle'});
+  for(const [title,phrase]of[
+    ['Grov misshandel','synnerligt lidande'],
+    ['Arbetsmiljöbrott','en gemensam automatisk brottsgrad'],
+    ['Inbrottsstöld','inte för en ringa inbrottsstöld'],
+    ['Hets mot folkgrupp','OCH spridning'],
+    ['Grovt rattfylleri','1,0 promille'],
+    ['Vapenbrott av oaktsamhet','inte oaktsamhetsalternativet'],
+    ['Näringspenningtvätt','ska inte utan stöd kopieras'],
+    ['Grovt fordringsbedrägeri','Betydande värde är ett grundrekvisit']
+  ]){
+    await page.goto(url+'#sok',{waitUntil:'networkidle'});await search.fill(title);await wait();
+    await page.locator('.crime-card').filter({has:page.getByText(title,{exact:true})}).click();
+    await page.locator('#sec-rekvisit > summary').click();const grades=page.locator('.statutory-grade-review');
+    assert.equal(await grades.getAttribute('open'),null);await grades.locator(':scope > summary').click();
+    assert.ok((await grades.innerText()).includes(phrase),'Remaining grade route: '+title);
+    assert.equal(await grades.evaluate(el=>el.scrollWidth<=el.clientWidth+1),true,'Remaining grade fits iPhone: '+title);
+  }
+  for(const [title,phrase]of[
+    ['Förtal','OCH att uppgiften visas sann'],
+    ['Kränkande fotografering','ett led i myndighets verksamhet'],
+    ['Sexuellt utnyttjande av barn','FÖRSTA MENINGEN'],
+    ['Kapning','endast 5 a § andra stycket 2'],
+    ['Förvanskning av urkund','sex månaders fängelse'],
+    ['Mened','betydelse för saken'],
+    ['Förolämpning mot tjänsteman','utvidgar 1–2 §§, inte 3 §'],
+    ['Osant intygande','falska identitetsuppgifter']
+  ]){
+    await page.goto(url+'#sok',{waitUntil:'networkidle'});await search.fill(title);await wait();
+    await page.locator('.crime-card').filter({has:page.getByText(title,{exact:true})}).click();
+    await page.locator('#sec-rekvisit > summary').click();const limits=page.locator('.statutory-limits-review');
+    assert.equal(await limits.getAttribute('open'),null,'Explicit limits start collapsed: '+title);
+    await limits.locator(':scope > summary').click();assert.ok((await limits.innerText()).includes(phrase),'Precise statutory limitation: '+title);
+    assert.ok((await limits.innerText()).includes('24 kap.'));assert.ok(await limits.locator('a[href*="riksdagen.se"]').count());
+    assert.equal(await limits.evaluate(el=>el.scrollWidth<=el.clientWidth+1),true,'Statutory limitation fits iPhone: '+title);
+    assert.equal(await page.evaluate(()=>document.documentElement.scrollWidth<=innerWidth+1),true);
+  }
+  await page.goto(url+'#sok',{waitUntil:'networkidle'});
   await search.fill('stöld');
   await search.press('Enter');
   await wait();

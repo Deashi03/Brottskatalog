@@ -8,7 +8,7 @@ assert.deepEqual(JSON.parse(JSON.stringify(r.byChapter)),{4:41,5:3,6:24,7:6,13:2
 assert.equal(Object.keys(manifest.sourcePins).length,101);assert.equal(manifest.families.length,94);assert.equal(manifest.records.length,174);
 assert.deepEqual(JSON.parse(JSON.stringify(w.BK_STATUTORY_GRADE_RECORDS15)),manifest.records);
 assert.deepEqual(JSON.parse(JSON.stringify(w.BK_STATUTORY_GRADE_FAMILIES15)),manifest.families);
-assert.equal(base.filter(c=>c.legalAudit15?.checkpoints?.grade?.status==='APPROVED').length,179);assert.equal(all.length,1557);
+assert.equal(base.filter(c=>c.legalAudit15?.checkpoints?.grade?.status==='APPROVED').length,390);assert.equal(all.length,1557);
 for(const row of manifest.records){const c=base.find(c=>c.id===row.id),g=c.statutoryGradeReview15,a=c.legalAudit15.checkpoints.grade;
  assert.equal(c.title,row.title);assert.equal(g.scope,manifest.scope);assert.equal(a.scope,manifest.scope);assert.equal(a.status,'APPROVED');assert.equal(g.caseSpecificGradeApproved,false);assert.equal(g.fullLegalReviewApproved,false);assert.equal(c.legalAudit15.fullLegalReviewApproved,false);
  for(const k of ['caseSpecificGradeApproved','caseFactsEvaluated','historicLawApproved','jurisprudenceApproved','competitionApproved','caseSpecificLiabilityApproved','penaltyRangeApproved','caseSpecificCustodyApproved','automaticOperationalAdviceApproved'])assert.equal(a[k],false,k+' '+c.title);
@@ -27,7 +27,7 @@ assert.match(txt('Föregivande av allmän ställning'),/grov grad i andra stycke
 // Every existing field, requisites group, grade scale and other audit dimension
 // is retained exactly; a grade-source review must never rewrite another area.
 const before=load([mod]),old=JSON.parse(JSON.stringify(before.window.BK_DATA.crimes));vm.runInContext(read(mod),before);
-for(const c of before.window.BK_DATA.crimes){const copy=JSON.parse(JSON.stringify(c));delete copy.statutoryGradeReview15;const prev=old.find(p=>p.id===c.id);if(!prev.legalAudit15?.checkpoints?.grade&&copy.legalAudit15?.checkpoints?.grade)delete copy.legalAudit15.checkpoints.grade;assert.deepEqual(copy,prev,'Preserve '+c.title);}
+for(const c of before.window.BK_DATA.crimes){const copy=JSON.parse(JSON.stringify(c));const prev=old.find(p=>p.id===c.id);if(!prev.statutoryGradeReview15)delete copy.statutoryGradeReview15;if(!prev.legalAudit15?.checkpoints?.grade&&copy.legalAudit15?.checkpoints?.grade)delete copy.legalAudit15.checkpoints.grade;assert.deepEqual(copy,prev,'Preserve '+c.title);}
 function changed(mutate){const x=load([mod]);mutate(x.window);vm.runInContext(read(mod),x);return x.window.BK_STATUTORY_GRADE_REVIEW15;}
 assert.equal(changed(w=>{w.BK_STATUTES['BrB:14:3'].text+=' CHANGED';}).completed,170,'Three forgery grades and derivative must stay open');
 assert.equal(changed(w=>{w.BK_STATUTES['BrB:15:1'].text+=' CHANGED';}).completed,168,'Both mened cards and four foreign-testimony cards need unmodified source');

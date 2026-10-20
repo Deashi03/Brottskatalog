@@ -871,6 +871,8 @@ D.date='2026-10-12';
 <script src="./missing-stage-base-audit-15.js"></script>
 <script src="./base-inchoate-review-15.js"></script>
 <script src="./statutory-grade-review-15.js"></script>
+<script src="./remaining-grade-review-15.js"></script>
+<script src="./statutory-limits-review-15.js"></script>
 <script src="./catalog-selection-15.js"></script>
   <script>
 /* Brottskatalog – stage 1. No framework, no network request during use. */
@@ -1290,6 +1292,11 @@ function renderDetail(c){
     +'<p>'+escapeHtml(gradeReview.assessmentNote)+'</p><ul>'+gradeReview.limits.map(x=>'<li>'+escapeHtml(x)+'</li>').join('')+'</ul>'
     +'<p class="source-label">'+gradeReview.sourceRefs.map(escapeHtml).join('; ')+' · Kontrollerad '+escapeHtml(gradeReview.checked)+'</p>'
     +'<a class="source-link" target="_blank" rel="noopener noreferrer" href="'+escapeHtml(gradeReview.sourceURL)+'">Läs lagtexten hos Sveriges riksdag '+ic('external-link','sm')+'</a></details>':'';
+  const limitsReview=c.statutoryLimitsReview15;
+  const limitsReviewBody=limitsReview?'<details class="requisite-explanations statutory-limits-review"><summary>Ansvarsbegränsningar och hänvisningar</summary>'
+    +'<p>'+escapeHtml(limitsReview.focus)+'</p><ul>'+limitsReview.limits.map(x=>'<li>'+escapeHtml(x)+'</li>').join('')+'</ul>'
+    +'<p>'+escapeHtml(limitsReview.assessmentNote)+'</p><p class="source-label">'+limitsReview.sourceRefs.map(escapeHtml).join('; ')+' · Kontrollerad '+escapeHtml(limitsReview.checked)+'</p>'
+    +'<a class="source-link" target="_blank" rel="noopener noreferrer" href="'+escapeHtml(limitsReview.sourceURL)+'">Läs lagtexten hos Sveriges riksdag '+ic('external-link','sm')+'</a></details>':'';
   const requisitesBody=((groups15.length||routes15.length)
     ?'<div class="subtle-label">Rekvisit – OCH om inget annat anges</div>'+legalScope
        +(routes15.length?'<p class="source-label">Alternativa gärningsformer – minst en av följande strukturer måste vara uppfylld.</p>'+routeBody:renderRequisiteGroups(groups15))
@@ -1300,6 +1307,7 @@ function renderDetail(c){
     +(c.smugglingLimits15?'<details class="requisite-explanations smuggling-limits"><summary>Rättelse och åtalsvillkor</summary>'
       +c.smugglingLimits15.notes.map(n=>'<div class="subtle-label">'+escapeHtml(n.title)+'</div><p>'+escapeHtml(n.text)+'</p>').join('')
       +'<a class="source-link" target="_blank" rel="noopener noreferrer" href="'+escapeHtml(c.smugglingLimits15.sourceURL)+'">Smugglingslagen 12, 15 och 20 §§ '+ic('external-link','sm')+'</a></details>':'')
+    +limitsReviewBody
     +gradeReviewBody
     +requisiteConceptButtons(c)
     +(exampleCards?'<div class="subtle-label">Typexempel</div>'+exampleCards:'');

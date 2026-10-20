@@ -14,6 +14,12 @@ on:
       - "statutory-grade-review-15.js"
       - "data/statutory-grade-review-15.json"
       - "scripts/statutory_grade_review_15_test.mjs"
+      - "remaining-grade-review-15.js"
+      - "statutory-limits-review-15.js"
+      - "data/remaining-grade-review-15.json"
+      - "data/statutory-limits-review-15.json"
+      - "scripts/remaining_grade_review_15_test.mjs"
+      - "scripts/statutory_limits_review_15_test.mjs"
       - "base-inchoate-review-15.js"
       - "stage-grade-corrections-15.js"
       - "data/base-inchoate-review-15.json"
@@ -313,6 +319,12 @@ on:
       - "statutory-grade-review-15.js"
       - "data/statutory-grade-review-15.json"
       - "scripts/statutory_grade_review_15_test.mjs"
+      - "remaining-grade-review-15.js"
+      - "statutory-limits-review-15.js"
+      - "data/remaining-grade-review-15.json"
+      - "data/statutory-limits-review-15.json"
+      - "scripts/remaining_grade_review_15_test.mjs"
+      - "scripts/statutory_limits_review_15_test.mjs"
       - "base-inchoate-review-15.js"
       - "stage-grade-corrections-15.js"
       - "data/base-inchoate-review-15.json"
@@ -773,6 +785,10 @@ jobs:
         run: node scripts/base_inchoate_review_15_test.mjs
       - name: Verify 174 individual statutory grade branches and qualifiers
         run: node scripts/statutory_grade_review_15_test.mjs
+      - name: Verify 211 remaining statutory grade questions
+        run: node scripts/remaining_grade_review_15_test.mjs
+      - name: Verify 174 explicit statutory limits and cross-references
+        run: node scripts/statutory_limits_review_15_test.mjs
       - name: Install headless browser
         run: |
           npm install --no-save playwright

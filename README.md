@@ -220,3 +220,10 @@ Arbetsgrenen har nu 9 984/11 948 avslutade moment, 1 964 återstår. Detta pass 
 174 individuella aktuella gradfrågor är källgranskade och visas som hopfälld fördjupning i rekvisitfunktionen. 101 fullständiga BrB-paragrafer ligger till grund för gradregler, uttryckliga indikatorer och gränser mot andra gärningsformer eller ansvarsfrihet. Hänvisningsbrott får separata källberoenden. Ändrad källtext eller en befintlig granskarspärr lämnar kontrollen öppen.
 
 10 159/11 949 arbetsmoment är avslutade, 1 790 återstår. Det nya blocket avslutar 174 befintliga moment och ett testkommando, utan ändrad brottsinventering. Samtliga grundrekvisit, straffskalor och övriga revisionsdimensioner är bevarade. Ingen konkret brottsgrad eller fullständigt juridiskt slutgodkännande har fastställts genom dessa lagtextskontroller. V1.5 förblir utkast i PR #2.
+
+
+### V1.5 arbetsavstämning 20 oktober – 88,2 %
+
+211 återstående gradfrågor och 174 uttryckliga lagtextbegränsningar/hänvisningar har egna källkontroller. Samtliga 390 grundkort har nu aktuell lagtextsbunden gradkontroll; rekvisitfunktionen visar även hopfällda förklaringar om ansvarsbegränsningar för 174 BrB-kort. Dessa prövningar ersätter inte praxis, historisk lag, allmänna ansvarsfrihetsregler eller konkret konkurrensanalys.
+
+10 546/11 951 arbetsmoment är avslutade, 1 405 återstår. Senaste passet avslutar 385 befintliga databasfrågor och två nya testkommandon. Ingen brottspost eller förstadiepost har lagts till eller räknats bort. Grundrekvisit, straffskalor, förstadier och tidigare revisionsdimensioner bevaras. V1.5 är fortsatt utkast i PR #2.

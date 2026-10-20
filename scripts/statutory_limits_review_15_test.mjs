@@ -1,0 +1,24 @@
+import assert from'node:assert/strict';import fs from'node:fs';import path from'node:path';import vm from'node:vm';
+const root=path.resolve(import.meta.dirname,'..'),read=p=>fs.readFileSync(path.join(root,p),'utf8'),html=read('index.html'),mod='./statutory-limits-review-15.js';
+const files=[...html.matchAll(/<script\s+src="([^"]+)"/g)].map(x=>x[1]),inline=[...html.matchAll(/<script(?:\s[^>]*)?>([\s\S]*?)<\/script>/g)].map(x=>x[1]);
+function load(skip=[]){const ctx=vm.createContext({window:{},console:{log(){},warn(){},error(){}}});for(const i of[1,2,3])vm.runInContext(inline[i],ctx);for(const f of files)if(!skip.includes(f))vm.runInContext(read(f),ctx,{filename:f});return ctx;}
+const ctx=load(),w=ctx.window,r=w.BK_STATUTORY_LIMITS_REVIEW15,base=w.BK_DATA.crimes.filter(c=>!c.stageType),data=JSON.parse(read('data/statutory-limits-review-15.json'));
+assert.equal(r.planned,174);assert.equal(r.completed,174);assert.equal(r.held.length,0);assert.equal(r.fullLegalApprovals,0);assert.equal(r.caseSpecificExceptionApprovals,0);assert.equal(Object.keys(data.sourcePins).length,109);
+assert.deepEqual(JSON.parse(JSON.stringify(w.BK_STATUTORY_LIMITS_RECORDS15)),data.records);assert.equal(base.filter(c=>c.legalAudit15?.checkpoints?.exceptions?.status==='APPROVED').length,174);
+for(const row of data.records){const c=base.find(c=>c.id===row.id),a=c.legalAudit15.checkpoints.exceptions,l=c.statutoryLimitsReview15;assert.equal(c.legalAudit15.fullLegalReviewApproved,false);assert.equal(a.scope,data.scope);assert.equal(l.scope,data.scope);assert.deepEqual(Array.from(l.limits),row.limits);assert.ok(a.finding.includes(row.title));for(const k of ['caseSpecificExceptionApproved','fullCompetitionAnalysisApproved','generalChapter24AssessmentApproved','caseSpecificLiabilityApproved','historicLawApproved','jurisprudenceApproved','penaltyRangeApproved','caseSpecificCustodyApproved','automaticOperationalAdviceApproved'])assert.equal(a[k],false,k+' '+row.title);assert.match(l.assessmentNote,/24 kap/);}
+const txt=t=>JSON.stringify(base.find(c=>c.title===t).statutoryLimitsReview15);
+for(const[title,phrase]of[['Förtal','OCH att uppgiften visas sann'],['Grovt förtal','Sann uppgift är inte ensam'],['Kränkande fotografering','ett led i myndighets verksamhet'],['Sexuellt utnyttjande av barn','FÖRSTA MENINGEN'],['Utnyttjande av barn genom köp av sexuell handling','omfattar inte köpbrottet i 9 §'],['Ovarsam utsaga inför en internationell domstol','Det undantaget får inte föras över till uppsåtlig'],['Förolämpning mot tjänsteman','utvidgar 1–2 §§, inte 3 §'],['Grovt tjänstefel','ledamot av beslutande'],['Brott mot tystnadsplikt','ringa-undantag hör till oaktsamhetsalternativet'],['Underlåtenhet att avvärja allmänfara','ett års fängelse'],['Förvanskning av urkund','sex månaders fängelse'],['Mened','betydelse för saken'],['Grov förgöring','Båda rekvisitleden']])assert.ok(txt(title).includes(phrase),title);
+assert.match(txt('Osant intygande'),/får inte användas för att generellt undanta falska identitetsuppgifter/);
+assert.match(txt('Kapning'),/endast 5 a § andra stycket 2/);assert.match(txt('Grov mordbrand'),/frivilligt avvärjande/);assert.match(txt('Grovt sabotage'),/räknar inte upp sabotage/);
+const before=load([mod]),old=JSON.parse(JSON.stringify(before.window.BK_DATA.crimes));vm.runInContext(read(mod),before);
+for(const c of before.window.BK_DATA.crimes){const copy=JSON.parse(JSON.stringify(c)),prev=old.find(p=>p.id===c.id);delete copy.statutoryLimitsReview15;if(!prev.legalAudit15?.checkpoints?.exceptions&&copy.legalAudit15?.checkpoints?.exceptions)delete copy.legalAudit15.checkpoints.exceptions;assert.deepEqual(copy,prev,'Preserve '+c.title);}
+function change(mutate){const x=load([mod]);mutate(x.window);vm.runInContext(read(mod),x);return x.window.BK_STATUTORY_LIMITS_REVIEW15;}
+assert.equal(change(w=>{w.BK_STATUTES['BrB:14:12'].text+=' CHANGED';}).completed,152);
+assert.equal(change(w=>{w.BK_STATUTES['BrB:15:14'].text+=' CHANGED';}).completed,145);
+assert.equal(change(w=>{w.BK_STATUTES['BrB:6:14'].text+=' CHANGED';}).completed,150);
+assert.equal(change(w=>{w.BK_STATUTES['BrB:17:5'].complete=false;}).completed,168);
+assert.equal(change(w=>{w.BK_STATUTES['BrB:13:11'].checked='2099-01-01';}).completed,152);
+assert.equal(change(w=>{w.BK_DATA.crimes.find(c=>c.title==='Förtal').law+=' CHANGED';}).completed,173);
+assert.equal(change(w=>{w.BK_DATA.crimes.find(c=>c.title==='Ofredande').legalAudit15.checkpoints.exceptions={status:'PENDING',finding:'Independent hold'};}).completed,173);
+assert.ok(read('service-worker.js').includes(mod));assert.ok(html.includes('statutory-limits-review'));assert.ok(html.includes('+limitsReviewBody'));for(const s of inline)new Function(s);
+console.log('PASS: 174 explicit statutory limit reviews, precise defence boundaries and 109 source pins; no case-specific or full competition approval');
