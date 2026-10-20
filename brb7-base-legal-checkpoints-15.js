@@ -15,7 +15,7 @@ const law={
  '7:3':{need:['understicker eller förbyter barn','oriktig anmälan till myndighet','falsk familjeställning'],
  obj:'Förvanskande av familjeställning kan begås genom understickande eller förbytande av barn eller genom oriktig myndighetsanmälan eller underlåtenhet att anmäla, så att personen själv eller annan ges falsk familjeställning eller någon berövas riktig sådan. Effekten på familjeställningen måste föreligga.',
  sub:'Uppsåt till den angivna förvanskningshandlingen och de relevanta faktiska relationer som påverkar den juridiska familjeställningen krävs. En oavsiktlig administrativ feluppgift utan uppsåtligt ändrat familjerättsligt förhållande är inte automatiskt detta brott.'},
- '7:4':{need:['upphör att gälla u:2027-01-01','obehörigen skiljer ett barn under femton år','den andra vårdnadshavaren','vård av unga','brottet som avses i första eller andra stycket är grovt'],
+ '7:4':{need:['upphör att gälla u:2027-01-01','obehörigen skiljer ett barn under femton år','den andra vårdnadshavaren','vård av unga','ett brott som avses i första eller andra stycket är grovt'],
  obj:'Egenmäktighet med barn omfattar olovligt skiljande av barn under 15 från vårdnadshavare eller vissa LVU-vårdare, obehörigt undanhållande för att hindra vård och i gemensam vårdnad egenmäktigt skiljande från andra vårdnadshavaren utan beaktansvärt skäl. Brottet är subsidiärt till angivna frihetsbrott, och grov grad kräver särskild prövning.',
  sub:'Uppsåt till den otillåtna separations- eller undanhållandegärningen och faktiska barn-, vårdnads- eller LVU-förhållanden krävs. Vid gemensam vårdnad är avsaknad av beaktansvärt skäl ett särskilt rekvisit; enbart konflikt mellan vårdnadshavare räcker inte.'}
 };
