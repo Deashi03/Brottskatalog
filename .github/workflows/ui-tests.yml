@@ -113,6 +113,8 @@ on:
       - "brb20-base-legal-checkpoints-15.js"
       - "brb21-base-legal-checkpoints-15.js"
       - "brb22-base-legal-checkpoints-15.js"
+      - "brb7-base-legal-checkpoints-15.js"
+      - "scripts/brb7_base_legal_checkpoints_15_test.mjs"
       - "scripts/brb22_base_legal_checkpoints_15_test.mjs"
       - "scripts/brb21_base_legal_checkpoints_15_test.mjs"
       - "scripts/brb20_base_legal_checkpoints_15_test.mjs"
@@ -574,6 +576,8 @@ jobs:
         run: node scripts/brb21_base_legal_checkpoints_15_test.mjs
       - name: Independently test BrB22 war, treaty and landsskadlig negligence offences
         run: node scripts/brb22_base_legal_checkpoints_15_test.mjs
+      - name: Individually verify BrB7 adoption marriage and custody criminal requirements
+        run: node scripts/brb7_base_legal_checkpoints_15_test.mjs
       - name: V1.5 chapter four special prosecution restrictions and place qualifiers
         run: node scripts/brb4_prosecution_15_test.mjs
       - name: V1.5 BrB 11:8 creditor negligence and ringa bookkeeping prosecution exceptions
