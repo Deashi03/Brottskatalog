@@ -4,6 +4,9 @@ on:
   pull_request:
     paths:
       - "index.html"
+      - "special-prosecution-sources-15.js"
+      - "special-prosecution-audit-15.js"
+      - "scripts/special_prosecution_audit_15_test.mjs"
       - "brb-prosecution-sources-15.js"
       - "brb-prosecution-audit-15.js"
       - "scripts/brb_prosecution_sources_15_test.mjs"
@@ -723,6 +726,8 @@ jobs:
         run: node scripts/brb_prosecution_sources_15_test.mjs
       - name: Check 313 individually mapped current prosecution filters
         run: node scripts/brb_prosecution_audit_15_test.mjs
+      - name: Check 68 special-law statutory prosecution filters
+        run: node scripts/special_prosecution_audit_15_test.mjs
       - name: Check final catalogue selection
         run: node scripts/catalog_selection_15_test.mjs
       - name: Install headless browser

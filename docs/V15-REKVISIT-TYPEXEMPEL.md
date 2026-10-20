@@ -1188,3 +1188,10 @@ Ny negativ regression `scripts/brb17_official_boundaries_15_test.mjs` ska neka a
 Förarbetena klargör särskilt avgränsningen mot de grova mutbrotten (prop. 2011/12:79 s. 50), grovt olovligt förfogande/brukande (prop. 2016/17:131 s. 104–105), grovt hemfridsbrott/intrång (prop. 2021/22:194 s. 43) och arbetsmiljöbrott i förhållande till vanligt vållande (prop. 1990/91:140 s. 130–131). Närståendehänvisningar ska hållas isär från de andra åtalsfiltren. Inga nya konstruerade gärningsfall har införts.
 
 Åtalsrutan visar den individuellt kopplade förklaringen med originalkällor och en stängd underpanel för övriga villkor/beslutsordning. Historiska lagversioner, konkreta processhinder, fakta, immunitet och åklagarbeslut godkänns inte automatiskt. Inga straffskalor, tvångsmedelsindikatorer eller förstadier ändras av dessa kontroller.
+
+
+### 20 oktober – speciallagarnas åtalsregler och frivillig vapeninlämning
+
+68 individuellt identifierade specialstraffrättsliga grundkort har nu källbundna kontroller av aktuella åtalsfilter. Vapenlagens 18:14 tillförs på alla fem vapenposter och rättar den tidigare generella åtalsstatusen. Villkoret vid frivillig inlämning avser åtal för olovligt innehav, utan att innebära automatisk ansvarsfrihet eller ett generellt undantag för andra gärningsformer.
+
+Skattebrottslagens särskilda-skäl-prövning och sanktionsspärr hålls isär, liksom bidragsbrottslagens myndighetsanmälan och åklagarspärr. Sex kompletta stödparagrafer och egna lagtexter låser kontrollernas underlag. Samma åtalsruta visar förklaringar, beslutsordning och rätt namngivna speciallagskällor. Inga nya gärningsexempel eller ändringar av straffskalor, förstadier eller tvångsmedel införs.

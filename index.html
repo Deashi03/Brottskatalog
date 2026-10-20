@@ -859,6 +859,8 @@ D.date='2026-10-12';
 <script src="./smuggling-limits-15.js"></script>
 <script src="./brb-prosecution-sources-15.js"></script>
 <script src="./brb-prosecution-audit-15.js"></script>
+<script src="./special-prosecution-sources-15.js"></script>
+<script src="./special-prosecution-audit-15.js"></script>
 <script src="./catalog-selection-15.js"></script>
   <script>
 /* Brottskatalog – stage 1. No framework, no network request during use. */
@@ -1380,7 +1382,7 @@ function showCustody(c){
 function showProsecution(c){
   const review=c.prosecutionStatutoryReview15;
   if(review){
-    const links=[['Brottsbalkens åtalsregler',review.sourceURL],['Rättegångsbalken 20 kap.',review.supportingSourceURL],...(review.interpretation?[[review.interpretation.locator,review.interpretation.url]]:[])];
+    const links=[[review.sourceLabel||'Brottsbalkens åtalsregler',review.sourceURL],['Rättegångsbalken 20 kap.',review.supportingSourceURL],...(review.interpretation?[[review.interpretation.locator,review.interpretation.url]]:[])];
     const body='<p>'+escapeHtml(review.finding)+'</p>'
       +'<details class="prosecution-conditions"><summary>Övriga villkor och beslutsordning</summary>'
       +review.notes.map(n=>'<p>'+escapeHtml(n)+'</p>').join('')+'</details>'

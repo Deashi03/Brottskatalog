@@ -15,7 +15,7 @@ for(const c of checked){
  const old=before.find(x=>x.id===c.id);assert.ok(!old.legalAudit15?.checkpoints?.objective&&!old.legalAudit15?.checkpoints?.subjective);
  assert.equal(c.rekvisit15.explanations15.length,2);assert.equal(c.legalAudit15.fullLegalReviewApproved,false);assert.notEqual(c.rekvisit15.legalReviewApproved,true);
  for(const key of ['objective','subjective']){const a=c.legalAudit15.checkpoints[key];assert.equal(a.status,'APPROVED');assert.ok(a.finding.length>=170);assert.ok(a.sourceURL.includes('riksdagen.se'));assert.ok(a.sourceRefs.length);assert.equal(a.caseSpecificLiabilityApproved,false);assert.equal(a.caseSpecificCustodyApproved,false);assert.equal(a.historicLawApproved,false);assert.equal(a.jurisprudenceApproved,false);}
- for(const key of ['time','exceptions','grade','jurisprudence','inchoate','prosecution','coercion'])assert.equal(c.legalAudit15.checkpoints[key],old.legalAudit15?.checkpoints?.[key]);
+ for(const key of ['time','exceptions','grade','jurisprudence','inchoate','prosecution','coercion'])assert.deepEqual(copy(c.legalAudit15.checkpoints[key]??null),copy(old.legalAudit15?.checkpoints?.[key]??null));
  const clone=copy(c);delete clone.legalAudit15;delete clone.rekvisit15.explanations15;const prior=copy(old);delete prior.legalAudit15;assert.deepEqual(clone,prior,'No hidden penalty, law, stage, prosecution or police power changes: '+c.title);
 }
 assert.equal(report.fullLegalApprovals,0);assert.equal(report.caseSpecificDecisions,0);

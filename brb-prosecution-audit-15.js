@@ -9,11 +9,13 @@ const data={"rows":[{"id":"ringa-stold","title":"Ringa stöld","statute":"BrB:8:
 const interpretationPins={"workplace":{"url":"https://www.riksdagen.se/sv/dokument-och-lagar/dokument/proposition/arbetsmiljo-och-rehabilitering_ge03140/html/","locator":"Prop. 1990/91:140 s. 130–131, kommentarerna till 3 kap. 10 och 12 §§","checked":"2026-10-20","finding":"Den särskilda åtalsbegränsningen för vanligt vållande ska inte gälla arbetsmiljöbrott. Om arbetsmiljösambandet inte kan visas och ett alternativt vanligt vållandebrott aktualiseras måste dess egna åtalsvillkor prövas."},"rentalGross":{"url":"https://www.riksdagen.se/sv/dokument-och-lagar/dokument/proposition/grovt-fordringsbedrageri-och-andra_h403131/html/","locator":"Prop. 2016/17:131 s. 104–105, kommentaren till 10 kap. 10 § andra stycket","checked":"2026-10-20","finding":"De egna grova brottsbeteckningarna klargör att andra styckets särskilda hyres-/kreditköpsprövning inte gäller grovt olovligt förfogande eller grovt olovligt brukande. Första styckets närståendehänvisning är en separat regel."},"homeGross":{"url":"https://www.riksdagen.se/sv/dokument-och-lagar/dokument/proposition/ett-modernare-straffrattsligt-skydd-mot_h903194/html/","locator":"Prop. 2021/22:194 s. 43, kommentaren till 4 kap. 11 §","checked":"2026-10-20","finding":"De nya grova brottsbeteckningarna medförde att orden som inte är grovt kunde tas bort ur åtalsregeln utan ändring i sak."},"grossBribery":{"url":"https://www.riksdagen.se/sv/dokument-och-lagar/dokument/proposition/en-reformerad-mutbrottslagstiftning_gz0379/html/","locator":"Prop. 2011/12:79 s. 50, kommentaren till 10 kap. 10 § tredje stycket","checked":"2026-10-20","finding":"Tredje styckets åtalsprövningsregel omfattar inte grovt tagande eller grovt givande av muta. Den generella närståendehänvisningen i första stycket måste hållas isär från detta."}};
 const norm=s=>String(s||'').replace(/\s+/g,' ').trim();
 const hash=s=>{let h=2166136261;for(let i=0;i<s.length;i++)h=Math.imul(h^s.charCodeAt(i),16777619);return (h>>>0).toString(16).padStart(8,'0');};
-const validDate=s=>/^\d{4}-\d{2}-\d{2}$/.test(s||'')&&!Number.isNaN(Date.parse(s))&&s<=new Date().toLocaleDateString('sv-SE',{timeZone:'Europe/Stockholm'});
+const today=new Date().toLocaleDateString('sv-SE',{timeZone:'Europe/Stockholm'});
+const validDate=s=>/^\d{4}-\d{2}-\d{2}$/.test(s||'')&&!Number.isNaN(Date.parse(s))&&s<=today;
 const checked=key=>{const p=W[key];return p?.complete===true
  &&p.completeTextProvenance==='manual-crosscheck-current-SFS-paragraph-only'
  &&validDate(p.checked)&&p.url===(key.startsWith('RB:')?RB:SRC)
  &&norm(p.text)===data.pins[key];};
+const sourceReady=Object.fromEntries(Object.keys(data.pins).map(k=>[k,checked(k)]));
 const jurisdiction='Åtalsförordnande och jurisdiktion ska prövas särskilt. BrB 2:2 har särskilda fall även för brott begångna i Sverige. För utlandsbrott finns 2:7 med uttryckliga undantag; enligt 2:8 beslutar riksåklagaren om inte annat föreskrivs, med möjlighet eller skyldighet till annan beslutsordning i angivna fall. Den här kontrollen väljer inte rätt beslutsfattare för ett konkret ärende.';
 const publicOffice='BrB 20:5 kan ändra åklagarens åtalsrätt i vissa offentliga anställnings- och uppdragsfall. Förordnandekrav och andra uttryckliga undantag består. Det är inte ett allmänt undantag från immunitet eller en automatisk behörighet att åtala varje offentlig befattningshavare.';
 const report={planned:data.rows.length,completed:0,byChapter:{},byRule:{},held:[],correctedModes:[],clarifiedCards:[],
@@ -29,7 +31,7 @@ for(const row of data.rows){
   ||c.prosecution!==row.previousMode||c.lawMode!=='full'||c.lawCompletenessVerified!==true
   ||c.lawCompletenessSourceURL!==SRC||!validDate(c.lawCompletenessChecked)
   ||text.length!==row.ownText.length||hash(text)!==row.ownText.digest
-  ||!row.sourceRefs.every(checked)||!interpretationReady||c.legalAudit15?.checkpoints?.prosecution){
+  ||!row.sourceRefs.every(k=>sourceReady[k])||!interpretationReady||c.legalAudit15?.checkpoints?.prosecution){
   report.held.push({id:row.id,title:row.title,reason:!interpretationReady?'interpretation-source-mismatch':'source-card-or-existing-review-mismatch'});continue;
  }
  const ch=Number(row.statute.split(':')[1]);

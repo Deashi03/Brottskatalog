@@ -11,12 +11,12 @@ assert.equal(r.planned,313);assert.equal(r.completed,313);assert.equal(r.held.le
 assert.equal(Object.values(r.byChapter).reduce((a,b)=>a+b,0),313);
 assert.equal(Object.values(r.byRule).reduce((a,b)=>a+b,0),313);
 assert.equal(r.fullLegalApprovals,0);assert.equal(r.caseSpecificChargingApprovals,0);assert.equal(r.coercionApprovals,0);
-assert.equal(all.filter(c=>!c.stageType&&c.legalAudit15?.checkpoints?.prosecution?.status==='APPROVED').length,318);
+assert.equal(all.filter(c=>!c.stageType&&c.statute?.startsWith('BrB:')&&c.legalAudit15?.checkpoints?.prosecution?.status==='APPROVED').length,318);
 assert.deepEqual(copy(r.correctedModes).sort(),['Grovt hemfridsbrott','Grovt olaga intrång','Grovt fordringsbedrägeri','Förberedelse genom anbringande av tekniskt hjälpmedel'].sort());
 assert.equal(r.clarifiedCards.length,11);
 const changed=new Set(r.clarifiedCards),allowed=['prosecutionStatutoryReview15','legalAudit15'],fixFields=['prosecution','prosecutionLabel','prosecutionRule','prosecutionDetails','prosecutionSource','prosecutionSourceURL','prosecutionChecked','prosecutionReviewStatus'];
 for(const c of all){const old=before.find(x=>x.id===c.id);const current=copy(c),prior=copy(old);
- if(c.prosecutionStatutoryReview15){const p=c.legalAudit15.checkpoints.prosecution;
+ if(c.prosecutionStatutoryReview15&&c.statute?.startsWith('BrB:')){const p=c.legalAudit15.checkpoints.prosecution;
   assert.equal(p.status,'APPROVED');assert.equal(p.checked,'2026-10-20');assert.equal(p.caseSpecificChargingApproved,false);assert.equal(p.jurisdictionAndImmunityInConcreteCaseApproved,false);assert.equal(p.caseSpecificCustodyApproved,false);assert.equal(p.jurisprudenceApproved,false);
   assert.ok(p.finding.startsWith(c.title+' ('));assert.ok(p.sourceRefs.includes(c.statute)&&p.sourceRefs.includes('RB:20:3'));
   const oldAudit=copy(old.legalAudit15);const newAudit=copy(c.legalAudit15);delete newAudit.checkpoints.prosecution;assert.deepEqual(newAudit,oldAudit,'Other eight legal checkpoints are preserved');

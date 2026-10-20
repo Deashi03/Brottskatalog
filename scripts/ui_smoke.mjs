@@ -12,6 +12,8 @@ try{
   assert.ok(await page.locator('#crime-search').count(),'Search must exist');
   assert.equal((await page.locator('.bk03-brand span').innerText()).trim(),'1.4','Search header must display current release 1.4');
 
+  // Measure settled layout, after the page's translateY entrance animation.
+  await page.locator('.app-shell.nav-layout > main.page').evaluate(el=>Promise.all(el.getAnimations().map(a=>a.finished)));
   // v0.9.1: Sök/Sparat/Mer do not cover the scrolling content on iPhone.
   const navGeometry=await page.evaluate(()=>{
     const app=document.querySelector('.app-shell.nav-layout'),main=app?.querySelector(':scope > main.page'),nav=app?.querySelector(':scope > nav.bottom-nav');
@@ -26,7 +28,7 @@ try{
   assert.ok(navGeometry,'Tabbed layout must exist');
   assert.ok(navGeometry.scrollable&&navGeometry.offset>0,'Search results scroll inside their own viewport');
   assert.equal(navGeometry.navPosition,'relative','Navigation must participate in layout, not overlay the list');
-  assert.ok(navGeometry.mainBottom<=navGeometry.navTop+1,'List viewport must end above navigation');
+  assert.ok(navGeometry.mainBottom<=navGeometry.navTop+1,'List viewport must end above navigation: '+JSON.stringify(navGeometry));
   assert.ok(navGeometry.navBottom<=navGeometry.viewport+2,'Navigation must remain inside mobile viewport');
   assert.ok(navGeometry.lastCardBottom<=navGeometry.navTop+1,'Last result cannot be hidden underneath navigation');
   await page.locator('.app-shell.nav-layout > main.page').evaluate(el=>el.scrollTop=0);
@@ -61,7 +63,11 @@ try{
     ['Förberedelse genom anbringande av tekniskt hjälpmedel','vilket av de tre brotten'],
     ['Grovt tagande av muta','särskilda mutbrottsfilter inte omfattar'],
     ['Grovt olovligt brukande','andra stycket inte tillämpas'],
-    ['Arbetsmiljöbrott','omfattas inte av 3:12']
+    ['Arbetsmiljöbrott','omfattas inte av 3:12'],
+    ['Vapenbrott','18:14 gäller när någon frivilligt'],
+    ['Skattebrott','OCH samma felaktighet'],
+    ['Skatteförseelse','inte först när ett visst belopp'],
+    ['Bidragsbrott','6 a § hindrar åtal']
   ]){
     await page.goto(url+'#sok',{waitUntil:'networkidle'});
     await page.locator('#crime-search').fill(title);await wait();
