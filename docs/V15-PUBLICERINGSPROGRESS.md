@@ -1,6 +1,6 @@
 # Brottskatalog V1.5 – mätbar väg till publicering
 
-> **Aktuell arbetsavstämning 20 oktober: 76,7 % (8 805/11 482), 2 677 moment återstår.** Alla 387 grundkort har separata källbundna objektiva och subjektiva delkontroller; sammanlagt 824/3 483 juridiska kontrollmoment är avklarade. Detta är avgränsad granskning av aktuella straffbestämmelser, inte fullständig juridisk slutcertifiering. Rekvisitfunktionen innehåller dessutom 59 begreppsförklaringar med kurskällor. Publiceringsspärren kvarstår.
+> **Aktuell arbetsavstämning 20 oktober: 79,4 % (9 120/11 484), 2 364 moment återstår.** Alla 387 grundkort har källbundna objektiva och subjektiva delkontroller. Därtill har 318 av 319 BrB-kort kontrollerade lagtextsregler för åtal; specialstraffrättens 68 åtalskontroller och ett BrB-fall återstår. Sammanlagt 1 137/3 483 juridiska kontrollmoment är avklarade. Ingen post är fullständigt juridiskt slutgodkänd och publiceringsspärren kvarstår.
 
 **Historisk baslinje (18 oktober):** 46,3 % (5 297/11 434). Denna siffra är ersatt av den aktuella CI-beräkningen ovan; äldre tabeller nedan är historiska ögonblicksbilder, inte senaste status.
 
@@ -462,3 +462,25 @@ Att dölja en familj ändrar inga rättsliga källor eller straffbarhetsbesked. 
 Smugglingslagens 12, 15 och 20 §§ har lästs i Riksdagens konsoliderade text den 20 oktober. **23 grundkort** får förklaringar om frivillig rättelse, den skilda räckvidden för ansvarsfrihet respektive åtalsbegränsning och relevanta ringa-/subsidiaritetsregler. Förklaringarna visas i en stängd panel under rekvisit. Hela de tre referensparagrafernas text, källidentitet och författningsversion måste stämma; fel stoppar förklaringarna. Kursanteckningarna ersätter inte originalbestämmelserna.
 
 Detta är innehållsförbättringar och en urvalsrättning, **inte** 23 fullständiga undantags-, åtals- eller historikgodkännanden. Den juridiska kön är oförändrad: **824/3 483**, med **2 677 återstående arbetsmoment**. Två nya CI-kontroller ändrar den tekniska inventeringen till **8 805/11 482 (76,7 %)**. V1.5 är fortsatt utkast.
+
+## 20 oktober – individuella kontroller av åtalsregler för 313 BrB-kort
+
+Ett nytt block innehåller **313 fasta poster med individuella id:n, rubriceringar, brottsgrader, författningshänvisningar och kontrollerad regelklass**. För varje post jämförs den egna lagtexten och alla använda stödparagrafer. Underlaget omfattar 226 olika paragrafer och särskilda tolkningsanteckningar från fyra propositioner. De fem redan registrerade åtalskontrollerna i 12 kap. räknas inte igen. Totalt är därmed **318/319 BrB-korts aktuella lagtextsregler för åtal kontrollerade**. Grovt olaga tvång hålls öppet i just denna kontroll eftersom förhållandet mellan den grova graden och den särskilda hotformen i 4:11 kräver ytterligare tolkningsunderlag.
+
+Kontrollerna omfattar bland annat:
+
+- 3:12: angivelse **och** allmän synpunkt för icke grovt vållande till kroppsskada/sjukdom; angivelseundantaget för barn lämnar allmänsynpunktskravet kvar. Arbetsmiljöbrott enligt 3:10 hålls skilt från ett alternativt vanligt vållandebrott, med stöd av prop. 1990/91:140 s. 130–131.
+- 4:11: normalgradsregler, allmän plats, särskilda tvångsformer och de tre alternativa avsikterna bakom hjälpmedelsförberedelse enligt 4:9 b. **Grovt hemfridsbrott och grovt olaga intrång rättas från villkorat till allmänt åtal** enligt normal utgångspunkt, med uttryckligt stöd i prop. 2021/22:194 s. 43.
+- 5:5: enskilt åtal som huvudregel, åklagarens begränsade undantag, avlidna och främmande makt. Förolämpning enligt 5:3 blandas inte ihop med 17:3.
+- 7:6 och 8:13: allmän synpunkt respektive närståendekrets, alternativa grunder samt de uttryckliga undantagen för grov stöld, inbrottsstöld och rån.
+- 9:12: närståendehänvisningen skiljs från kontouttags-/ringa-fallen. **Grovt fordringsbedrägeri rättas till villkorad status vid relevanta närståendeförhållanden**; det är inte ett av de två namngivna undantagen grovt bedrägeri och grov utpressning.
+- 10:10: närståenderegel, hyres-/kreditköpsregeln och mutbrottsfiltret hålls isär. De grova rubriceringarna för olovligt förfogande/brukande omfattas inte av andra styckets hyres-/kreditköpsfilter (prop. 2016/17:131 s. 104–105). Grovt tagande/givande av muta omfattas inte av tredje styckets särskilda filter (prop. 2011/12:79 s. 50); första styckets generella närståendehänvisning prövas separat.
+- 11:8, 19:16 och 20:5: särskilda skäl för ringa bokföringsbrott, regeringens förordnande för namngivna säkerhetsbrott, offentlig tjänst och tystnadsplikt till förmån för enskild. Felaktig hänvisning till sista stycket i 20:5 rättas till tredje stycket.
+
+Gemensamma, nu fullständigt återgivna stödtexter omfattar BrB 2:2, 2:7 och 2:8 samt RB 20:2–6. Även BrB 9:12 får fullständig aktuell källproveniens. Den nya textmodulen ändrar inte brottsrekvisit eller straffskalor. Kontrollblocket tar dessutom hänsyn till de källbundna särskilda personfallen i 18:2/8 och 19:11/16 där de kan beröra 3–5 kap.
+
+**Fyra statusklassificeringar rättas och elva kort får rättade/förtydligade åtalsuppgifter.** I åtalsrutan visas nu den granskade huvudförklaringen och officiella länkar. Jurisdiktion, ytterligare villkor och beslutsordning ligger i en från början stängd underpanel. De nya åtalskontrollerna ändrar inga förstadiekort, straffskalor eller tvångsmedelsbesked.
+
+Negativa tester stoppar kontroller vid ändrad gemensam RB-text, fel källadress, framtida granskningsdatum, ändrade närstående-/förordnanderegler, ändrad egen brottstext eller saknat tolkningsunderlag. En tidigare bevarandekontroll använder nu djupjämförelse för redan existerande kontrollobjekt; en JSON-kopia kan inte jämföras med objektreferens. Innebörden av bevarandekravet är oförändrad.
+
+**Räkning:** 313 nya juridiska delmoment och två nya CI-kontroller ger **9 120/11 484 (79,4 %)**, jämfört med föregående 8 805/11 482. Förklaringsstycken, källänkar och upprepade lagtextkopplingar ger inga extra poäng. **1 137/3 483 juridiska moment** är klara; **2 364 totala arbetsmoment** återstår. Lagtextskontroll av åtalsfilter är inte ett beslut om konkret åtalsrätt, historisk tillämplighet, immunitet, preskription, bevisläge, åtalsunderlåtelse eller fullständig praxisgranskning. V1.5 är fortfarande utkast.

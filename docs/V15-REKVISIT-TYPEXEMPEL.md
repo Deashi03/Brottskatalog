@@ -1179,3 +1179,12 @@ Ny negativ regression `scripts/brb17_official_boundaries_15_test.mjs` ska neka a
 `catalog-selection-15.js` tillämpar penningbötesavgränsningen på den färdiga katalogen. Appens samtliga ingångar använder samma inkluderade lista; revisionsunderlaget sparas oförändrat. 384 grundkort och 1 077 förstadiekort återstår som sökingångar.
 
 `smuggling-limits-15.js` tillför en från början stängd förklaringspanel på 23 smugglingsgrundkort i arbetsinventeringen (20 av dem ingår i katalogurvalet). Panelen skiljer mellan frivilligt undanröjande av föreskriven fara, effektiv rättelse av tull/skatt/avgift, ringa-undantag, subsidiaritet och de särskilda uppräkningarna i 20 §. Källtexten i 12, 15 och 20 §§ låses i sin helhet mot Riksdagens lydelse läst 2026-10-20. Förklaringarna ändrar inga straffskalor, åtalsstatusar, förstadier eller juridiska slutgodkännanden.
+
+
+### 20 oktober – särskilda åtalsvillkor och beslutande befogenheter
+
+313 nya BrB-poster har fasta, källbundna kontroller av aktuella åtalsregler. Fem BrB12-kontroller bevaras och räknas inte på nytt; ett fall (grovt olaga tvång) förblir öppet i det nya kontrollblocket. Statusen på grovt hemfridsbrott, grovt olaga intrång, grovt fordringsbedrägeri och den alternativa hjälpmedelsförberedelsen enligt 4:9 b rättas. Elva kort får rättade eller förtydligade åtalsuppgifter.
+
+Förarbetena klargör särskilt avgränsningen mot de grova mutbrotten (prop. 2011/12:79 s. 50), grovt olovligt förfogande/brukande (prop. 2016/17:131 s. 104–105), grovt hemfridsbrott/intrång (prop. 2021/22:194 s. 43) och arbetsmiljöbrott i förhållande till vanligt vållande (prop. 1990/91:140 s. 130–131). Närståendehänvisningar ska hållas isär från de andra åtalsfiltren. Inga nya konstruerade gärningsfall har införts.
+
+Åtalsrutan visar den individuellt kopplade förklaringen med originalkällor och en stängd underpanel för övriga villkor/beslutsordning. Historiska lagversioner, konkreta processhinder, fakta, immunitet och åklagarbeslut godkänns inte automatiskt. Inga straffskalor, tvångsmedelsindikatorer eller förstadier ändras av dessa kontroller.

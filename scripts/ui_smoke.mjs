@@ -54,6 +54,32 @@ try{
   assert.ok(await limits.locator('a[href*="riksdagen.se"]').count());
   assert.equal(await limits.evaluate(el=>el.scrollWidth<=el.clientWidth+1),true,'Expanded limits fit iPhone width');
   await page.locator('[data-action="back"]').click();await wait();
+  // Current statutory prosecution rules must distinguish grades and alternatives.
+  for(const [title,phrase] of [
+    ['Grovt hemfridsbrott','omfattas inte av normalgradernas begränsning'],
+    ['Grovt fordringsbedrägeri','bara grovt bedrägeri och grov utpressning'],
+    ['Förberedelse genom anbringande av tekniskt hjälpmedel','vilket av de tre brotten'],
+    ['Grovt tagande av muta','särskilda mutbrottsfilter inte omfattar'],
+    ['Grovt olovligt brukande','andra stycket inte tillämpas'],
+    ['Arbetsmiljöbrott','omfattas inte av 3:12']
+  ]){
+    await page.goto(url+'#sok',{waitUntil:'networkidle'});
+    await page.locator('#crime-search').fill(title);await wait();
+    await page.locator('.crime-card').filter({has:page.getByText(title,{exact:true})}).click();
+    assert.equal(await page.evaluate(()=>document.documentElement.scrollWidth<=innerWidth+1),true,'Crime detail fits iPhone width: '+title);
+    if(title==='Grovt hemfridsbrott')assert.ok((await page.locator('.status-block').innerText()).includes('Allmänt åtal'));
+    await page.locator('[data-action="prosecution"]').click();
+    const dialog=page.locator('[role="dialog"]');
+    assert.ok((await dialog.innerText()).includes(phrase),'Specific current prosecution distinction: '+title);
+    const conditions=dialog.locator('.prosecution-conditions');
+    assert.equal(await conditions.getAttribute('open'),null,'Additional decision conditions collapsed initially');
+    await conditions.locator(':scope > summary').click();
+    assert.ok((await conditions.innerText()).includes('riksåklagaren'),'Competent decision-maker and referral conditions are accessible');
+    assert.ok(await dialog.locator('a[href*="riksdagen.se"]').count()>=2,'Both official statutory sources are accessible');
+    assert.equal(await dialog.evaluate(el=>el.scrollWidth<=el.clientWidth+1),true,'Prosecution explanation fits iPhone width');
+    await page.getByRole('button',{name:'Stäng',exact:true}).click();
+  }
+  await page.goto(url+'#sok',{waitUntil:'networkidle'});
   await search.fill('stöld');
   await search.press('Enter');
   await wait();

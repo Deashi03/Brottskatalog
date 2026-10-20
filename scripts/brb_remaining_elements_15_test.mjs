@@ -13,7 +13,7 @@ for(const c of checked){
  const prior=before.find(x=>x.id===c.id);assert.ok(!prior.legalAudit15?.checkpoints?.objective&&!prior.legalAudit15?.checkpoints?.subjective);
  assert.equal(c.rekvisit15.explanations15.length,2);assert.equal(c.legalAudit15.fullLegalReviewApproved,false);
  for(const k of ['objective','subjective']){const q=c.legalAudit15.checkpoints[k];assert.equal(q.status,'APPROVED');assert.ok(q.finding.length>140);assert.ok(q.sourceRefs.length);assert.equal(q.caseSpecificLiabilityApproved,false);assert.equal(q.historicLawApproved,false);assert.equal(q.jurisprudenceApproved,false);}
- for(const k of ['time','exceptions','grade','jurisprudence','inchoate','prosecution','coercion'])assert.equal(c.legalAudit15.checkpoints[k],prior.legalAudit15?.checkpoints?.[k]);
+ for(const k of ['time','exceptions','grade','jurisprudence','inchoate','prosecution','coercion'])assert.deepEqual(copy(c.legalAudit15.checkpoints[k]??null),copy(prior.legalAudit15?.checkpoints?.[k]??null));
  const clone=copy(c);delete clone.legalAudit15;delete clone.rekvisit15.explanations15;const old=copy(prior);delete old.legalAudit15;assert.deepEqual(clone,old,'No hidden penalty, stage, powers or law changes: '+c.title);
 }
 const by=t=>checked.find(c=>c.title===t),note=(t,k)=>by(t).legalAudit15.checkpoints[k].finding;

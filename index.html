@@ -857,6 +857,8 @@ D.date='2026-10-12';
 <script src="./special-elements-audit-15.js"></script>
 <script src="./quality-11.js"></script>
 <script src="./smuggling-limits-15.js"></script>
+<script src="./brb-prosecution-sources-15.js"></script>
+<script src="./brb-prosecution-audit-15.js"></script>
 <script src="./catalog-selection-15.js"></script>
   <script>
 /* Brottskatalog – stage 1. No framework, no network request during use. */
@@ -1376,6 +1378,17 @@ function showCustody(c){
  showSheet({kicker:'RB 24 KAP. · SNABBKOLL',title:'Häktning',body:s1+s2+s3+s4+'<p class="custody-note">Bock/kryss avser endast ett verifierat formellt straffskalekrav, inte beslut om häktning. Grå ikon = villkoren kan inte avgöras automatiskt. RB 24:2 saknar absolut straffskalegräns; identitet, hemvist och undandraganderisk kräver separat prövning. RB 24:3 kräver därutöver skälig misstanke och synnerlig vikt. Proportionalitet och tillämplig lagversion måste alltid kontrolleras.</p>',ref:'Rättegångsbalken 24:1–3.'});
 }
 function showProsecution(c){
+  const review=c.prosecutionStatutoryReview15;
+  if(review){
+    const links=[['Brottsbalkens åtalsregler',review.sourceURL],['Rättegångsbalken 20 kap.',review.supportingSourceURL],...(review.interpretation?[[review.interpretation.locator,review.interpretation.url]]:[])];
+    const body='<p>'+escapeHtml(review.finding)+'</p>'
+      +'<details class="prosecution-conditions"><summary>Övriga villkor och beslutsordning</summary>'
+      +review.notes.map(n=>'<p>'+escapeHtml(n)+'</p>').join('')+'</details>'
+      +'<p class="source-label">Lagtextens åtalsregler kontrollerade '+escapeHtml(review.checked)+'. Gärningsdag, ärendets omständigheter och övriga processhinder behöver prövas särskilt.</p>'
+      +links.map(([label,url])=>'<a class="source-link" target="_blank" rel="noopener noreferrer" href="'+escapeHtml(url)+'">'+escapeHtml(label)+' '+ic('external-link','sm')+'</a>').join('');
+    showSheet({kicker:'ÅTAL OCH ANGIVELSE',title:review.label,body,ref:'Lagtextsbaserat stöd – inget beslut om åtal i ett enskilt ärende.'});
+    return;
+  }
   showSheet({kicker:'ÅTAL OCH ANGIVELSE',title:c.prosecutionLabel,body:c.prosecutionDetails||['Brottet hör som huvudregel under allmänt åtal. Ingen särskild angivelseförutsättning har lagts in för denna rubricering i prototypen.'],ref:c.prosecutionRule||'Huvudregel: allmänt åtal. Kontrollera alltid eventuella specialbestämmelser.'});
 }
 function showTerm(term,ref=''){
