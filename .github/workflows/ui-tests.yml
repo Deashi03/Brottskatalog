@@ -111,6 +111,8 @@ on:
       - "brb18-base-legal-checkpoints-15.js"
       - "brb19-base-legal-checkpoints-15.js"
       - "brb20-base-legal-checkpoints-15.js"
+      - "brb21-base-legal-checkpoints-15.js"
+      - "scripts/brb21_base_legal_checkpoints_15_test.mjs"
       - "scripts/brb20_base_legal_checkpoints_15_test.mjs"
       - "scripts/brb19_base_legal_checkpoints_15_test.mjs"
       - "scripts/brb18_base_legal_checkpoints_15_test.mjs"
@@ -566,6 +568,8 @@ jobs:
         run: node scripts/brb19_base_legal_checkpoints_15_test.mjs
       - name: Source-check BrB20 public office fault, duties and confidentiality
         run: node scripts/brb20_base_legal_checkpoints_15_test.mjs
+      - name: Verify statutory wartime triggers and individual BrB21 offences
+        run: node scripts/brb21_base_legal_checkpoints_15_test.mjs
       - name: V1.5 chapter four special prosecution restrictions and place qualifiers
         run: node scripts/brb4_prosecution_15_test.mjs
       - name: V1.5 BrB 11:8 creditor negligence and ringa bookkeeping prosecution exceptions
