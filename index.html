@@ -1236,7 +1236,7 @@ function requisiteConceptButtons(c){
 }
 function showRequisiteConcept(id,sense){
   const c=window.BK_REQUISITE_CONCEPTS15?.[id];if(!c||c.senseId!==sense)return;
-  const course=c.courseSources.map(s=>s.file+' · '+(s.pages?'s. '+s.pages.join('–'):'stycke '+s.paragraphs.join('–'))).join('; ');
+  const course=c.courseSources.map(s=>s.file.normalize('NFC')+' · '+(s.pages?'s. '+s.pages.join('–'):'stycke '+s.paragraphs.join('–'))).join('; ');
   showSheet({kicker:'REKVISIT · BEGREPPSFÖRKLARING',title:c.title,
     body:'<p>'+escapeHtml(c.text)+'</p><p class="source-label">Rättslig anknytning: '+escapeHtml(c.lawRef)+'</p><p class="source-label">Kursunderlag: '+escapeHtml(course)+'</p><a class="source-link" href="'+escapeHtml(c.sourceURL)+'" target="_blank" rel="noopener noreferrer">Öppna rättskällan '+ic('external-link','sm')+'</a>',
     ref:'Pedagogisk förklaring · '+c.checked});
