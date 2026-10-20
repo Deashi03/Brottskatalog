@@ -1197,3 +1197,15 @@ Förarbetena klargör särskilt avgränsningen mot de grova mutbrotten (prop. 20
 68 individuellt identifierade specialstraffrättsliga grundkort har nu källbundna kontroller av aktuella åtalsfilter. Vapenlagens 18:14 tillförs på alla fem vapenposter och rättar den tidigare generella åtalsstatusen. Villkoret vid frivillig inlämning avser åtal för olovligt innehav, utan att innebära automatisk ansvarsfrihet eller ett generellt undantag för andra gärningsformer.
 
 Skattebrottslagens särskilda-skäl-prövning och sanktionsspärr hålls isär, liksom bidragsbrottslagens myndighetsanmälan och åklagarspärr. Sex kompletta stödparagrafer och egna lagtexter låser kontrollernas underlag. Samma åtalsruta visar förklaringar, beslutsordning och rätt namngivna speciallagskällor. Inga nya gärningsexempel eller ändringar av straffskalor, förstadier eller tvångsmedel införs.
+
+### 20 oktober 2026 – återstående uttryckliga begränsningar
+
+**96,2 %: 11 502 av 11 956 arbetsmoment.** Ökningen från 95,1 % består av **130 individuella lagtextbundna begränsningskontroller** och ett nytt regressionskommando. Målet 97,5 % är ännu inte uppnått; ytterligare 156 avslutade moment skulle krävas med denna nämnare. Inga förarbets-/praxisdelgranskningar räknas som färdiga slutmoment.
+
+`remaining-statutory-limits-review-15.js` omfattar 130 grundkort, 98 egna straffparagrafer och 110 låsta källparagrafer. Fördelning: BrB 8 kap. 14 kort, 9 kap. 22, 10 kap. 17, 11 kap. 9, 16 kap. 23, 18 kap. 5, 19 kap. 20, 21 kap. 12 och 22 kap. 8. Tillsammans med tidigare kontroller har alla **390 grundkort** nu lagtextbundna avgränsningsanteckningar i den expanderbara Rekvisitfunktionen.
+
+Särskilt kontrollerat: mindre allvarlig inbrottsstöld/rån leder till prövning av annat brott, inte automatisk straffrihet; betalningsverktygsbrottets uttryckliga subsidiaritet; rättelse och ursäkt i BrB 11:2; barnpornografibrottets hänvisning till 16:10 b; försvarlighetsregelns olika räckvidd i 19 kap.; krigsmannakrets och kapiteltillämplighet i 21:1–4; det utvidgade fiendebegreppet i 21:16; samt ockupationsundantaget i 22:4. 22:10:s utsträckning av krigsvillkor överförs inte automatiskt till 18 kap. Konventionsdefinitioner för kemiska vapen och minor lämnas uttryckligen till fortsatt självständig kontroll.
+
+Regressionen provar både sakliga gränser och att ändrad/inkomplett källa, fel källadress, maskintext eller en redan öppen kontroll stoppar nytt godkännande. Övriga uppgifter på samtliga 1 557 poster bevaras. Mobiltestet har ytterligare elva avgränsningsfall och datumförväntningen för egenmäktighet med barn följer appens svenska datumformat.
+
+**3 074/3 510 juridiska delmoment** är källavgränsat avslutade. **454 arbetsmoment återstår:** 45 tidsfrågor, 390 förarbets-/praxisfrågor, ett åtalsfilter och 18 frisläppningsmoment. Fullständig konkurrens, allmänna ansvarsfrihetsgrunder, historisk jämförelse och konkret rättslig tillämpning ingår inte i dessa begränsningskontroller. Inga fullständiga juridiska slutgodkännanden utfärdas; 56 individuella förstadiestraffskalor förblir releaseblockerande.

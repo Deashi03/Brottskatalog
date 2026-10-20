@@ -241,7 +241,7 @@ try{
     ['Psykiskt våld','2026-07-01'],
     ['Rymning','2026-07-02'],
     ['Vapenbrott','november 2026'],
-    ['Egenmäktighet med barn','2027-01-01'],
+    ['Egenmäktighet med barn','1 januari 2027'],
     ['Tullbrott','deklarationer']
   ]){
     await page.goto(url+'#sok',{waitUntil:'networkidle'});await search.fill(title);await wait();
@@ -262,7 +262,18 @@ try{
     ['Arbetsmiljöbrott','krav på skada/sjukdom som inte är ringa'],
     ['Skadegörelse','Äganderätten ensam avgör'],
     ['Åverkan','8:11'],
-    ['Tagande av olovlig väg','faktisk skada']
+    ['Tagande av olovlig väg','faktisk skada'],
+    ['Inbrottsstöld','annat brott'],
+    ['Rån','bar gärning'],
+    ['Ringa bedrägeri','även utan vilseledande'],
+    ['Olovlig befattning med betalningsverktyg','samma eller strängare'],
+    ['Fyndförseelse','tillägnelseuppsåt'],
+    ['Bokföringsbrott','inte bedriver näringsverksamhet'],
+    ['Upplopp','skingras'],
+    ['Barnpornografibrott','10 b'],
+    ['Vårdslöshet med hemlig uppgift','Varje oaktsamt anskaffande'],
+    ['Lydnadsbrott','uppenbart att ordern inte angår tjänsten'],
+    ['Landsförräderi','22:4']
   ]){
     await page.goto(url+'#sok',{waitUntil:'networkidle'});await search.fill(title);await wait();
     await page.locator('.crime-card').filter({has:page.getByText(title,{exact:true})}).click();

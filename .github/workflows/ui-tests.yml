@@ -23,10 +23,13 @@ on:
       - "temporal-sources-15.js"
       - "base-temporal-review-15.js"
       - "life-property-limits-review-15.js"
+      - "remaining-statutory-limits-review-15.js"
       - "data/base-temporal-review-15.json"
       - "data/life-property-limits-review-15.json"
+      - "data/remaining-statutory-limits-review-15.json"
       - "scripts/base_temporal_review_15_test.mjs"
       - "scripts/life_property_limits_review_15_test.mjs"
+      - "scripts/remaining_statutory_limits_review_15_test.mjs"
       - "data/procedural-source-review-15.json"
       - "data/special-limits-review-15.json"
       - "data/base-coercion-review-15.json"
@@ -344,10 +347,13 @@ on:
       - "temporal-sources-15.js"
       - "base-temporal-review-15.js"
       - "life-property-limits-review-15.js"
+      - "remaining-statutory-limits-review-15.js"
       - "data/base-temporal-review-15.json"
       - "data/life-property-limits-review-15.json"
+      - "data/remaining-statutory-limits-review-15.json"
       - "scripts/base_temporal_review_15_test.mjs"
       - "scripts/life_property_limits_review_15_test.mjs"
+      - "scripts/remaining_statutory_limits_review_15_test.mjs"
       - "data/procedural-source-review-15.json"
       - "data/special-limits-review-15.json"
       - "data/base-coercion-review-15.json"
@@ -829,6 +835,8 @@ jobs:
         run: node scripts/base_temporal_review_15_test.mjs
       - name: Verify 18 BrB life and property statutory limit reviews
         run: node scripts/life_property_limits_review_15_test.mjs
+      - name: Test remaining express statutory limits
+        run: node scripts/remaining_statutory_limits_review_15_test.mjs
       - name: Install headless browser
         run: |
           npm install --no-save playwright
