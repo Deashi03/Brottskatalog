@@ -806,6 +806,7 @@ D.date='2026-10-12';
   <script src="./special-nark-vapen-trafik-kniv-fulltext-15.js"></script>
   <script src="./special-nark-vapen-trafik-kniv-requisites-15.js"></script>
   <script src="./rekvisit-simple-typecases-15.js"></script>
+  <script src="./requisite-concepts-15.js"></script>
   <script src="./stages-08.js"></script>
   <script src="./stage-scope-15.js"></script>
   <script src="./brb14-stage-scope-15.js"></script>
@@ -1228,6 +1229,19 @@ function qualityCard(c){
   (m.alternateVersionNote?'<p class="qa-effective">'+escapeHtml(m.alternateVersionNote)+'</p>':'')+(m.penaltySpecificCaution?'<p class="qa-effective">'+escapeHtml(m.penaltySpecificCaution)+'</p>':'')+(m.effectiveNote?'<p class="qa-effective">'+escapeHtml(m.effectiveNote)+'</p>':'')+'<p class="qa-muted">'+escapeHtml(m.versionStatus)+'</p><p class="qa-muted">'+escapeHtml(m.dateNotice)+'</p>'+source+'</div></details>';
 }
 
+function requisiteConceptButtons(c){
+  const refs=(c.requisiteConcepts15||[]).filter(r=>window.BK_REQUISITE_CONCEPTS15?.[r.conceptId]?.senseId===r.senseId);
+  if(!refs.length)return '';
+  return '<details class="requisite-explanations"><summary>Förklara rekvisiten</summary><p>Tryck på ett begrepp för förklaring och källa.</p><div class="var-chip-list">'+refs.map(r=>'<button type="button" class="quick-chip" data-requisite-concept="'+escapeHtml(r.conceptId)+'" data-requisite-sense="'+escapeHtml(r.senseId)+'">'+escapeHtml(r.displayTerm)+'</button>').join('')+'</div></details>';
+}
+function showRequisiteConcept(id,sense){
+  const c=window.BK_REQUISITE_CONCEPTS15?.[id];if(!c||c.senseId!==sense)return;
+  const course=c.courseSources.map(s=>s.file+' · '+(s.pages?'s. '+s.pages.join('–'):'stycke '+s.paragraphs.join('–'))).join('; ');
+  showSheet({kicker:'REKVISIT · BEGREPPSFÖRKLARING',title:c.title,
+    body:'<p>'+escapeHtml(c.text)+'</p><p class="source-label">Rättslig anknytning: '+escapeHtml(c.lawRef)+'</p><p class="source-label">Kursunderlag: '+escapeHtml(course)+'</p><a class="source-link" href="'+escapeHtml(c.sourceURL)+'" target="_blank" rel="noopener noreferrer">Öppna rättskällan '+ic('external-link','sm')+'</a>',
+    ref:'Pedagogisk förklaring · '+c.checked});
+}
+
 function renderDetail(c){
   app.className='app-shell detail-mode '+(state.density==='compact'?'compact':'');
   const saved=state.favorites.includes(c.id);
@@ -1254,6 +1268,7 @@ function renderDetail(c){
        +'<p class="source-label">'+escapeHtml(c.rekvisit15.note||'')+'</p>'
     :elements?'<p class="source-label">Äldre förenklad rekvisitöversikt – ännu inte individuellt juridiskt slutgranskad.</p><ul>'+elements+'</ul>'
     :'<p>Individuellt verifierad rekvisitöversikt saknas ännu. Se lagtexten ovan.</p>')
+    +requisiteConceptButtons(c)
     +(exampleCards?'<div class="subtle-label">Typexempel</div>'+exampleCards:'');
   const stages=(c.stages||[]).map(x=>`<li>${escapeHtml(x)}</li>`).join('');
   const related=(c.related||[]).map(id=>byId[id]).filter(Boolean).map(x=>`<button class="related" data-open="${x.id}">${escapeHtml(x.title)}${ic('chevron-right','sm')}</button>`).join('');
@@ -1397,6 +1412,7 @@ document.addEventListener('click', async e=>{
   const move=e.target.closest('[data-move]');if(move){const n=state.favorites.indexOf(move.dataset.id),d=move.dataset.move==='up'?-1:1,j=n+d;if(n>=0&&j>=0&&j<state.favorites.length){[state.favorites[n],state.favorites[j]]=[state.favorites[j],state.favorites[n]];writeSetting('favorites',state.favorites);renderSaved();}return;}
   const opener=e.target.closest('[data-open]');if(opener){const id=opener.dataset.open;if(byId[id]){state.navStack.push(location.hash||'#sok');goRoute('#brott/'+id);}return;}
   const provision=e.target.closest('[data-provision]');if(provision){showProvision(provision.dataset.provision);return;}
+  const concept=e.target.closest('[data-requisite-concept]');if(concept){showRequisiteConcept(concept.dataset.requisiteConcept,concept.dataset.requisiteSense);return;}
   const term=e.target.closest('[data-term]');if(term){showTerm(term.dataset.term,term.dataset.termContext);return;}
   const tab=e.target.closest('[data-tab]');if(tab){state.navStack=[];goRoute('#'+tab.dataset.tab);return;}
   const category=e.target.closest('[data-category]');if(category){state.category=category.dataset.category;renderSearch();return;}

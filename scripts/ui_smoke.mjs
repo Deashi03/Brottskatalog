@@ -52,12 +52,22 @@ try{
   // v1.5: a structured summary must visibly distinguish statute comparison from final legal review.
   const requisites=page.locator('#sec-rekvisit');
   assert.equal(await requisites.count(),1,'Rekvisit must be accessible from every offence card');
-  await requisites.locator('summary').click();
+  await requisites.locator(':scope > summary').click();
   const requisiteText=await requisites.innerText();
   assert.ok(requisiteText.includes('Lagtextsbaserat rekvisitstöd'),'An unapproved summary must never appear legally certified');
   assert.ok(requisiteText.includes('Rättslig grund: BrB 3:1'),'Murder requisite summary must cite the actual penal provision');
   assert.ok(await requisites.locator('a[href*="riksdagen.se"]').count()>=1,'Requisite panel needs a direct official SFS link');
-  await requisites.locator('summary').click();
+  const explanations=requisites.locator('.requisite-explanations');
+  assert.equal(await explanations.getAttribute('open'),null,'Concept list collapsed initially');
+  await explanations.locator(':scope > summary').click();
+  await explanations.locator('[data-requisite-concept="bk:likgiltighet"]').click();
+  assert.ok((await page.locator('[role="dialog"]').innerText()).includes('faktiskt förverkligades'),'Concept explains indifference to outcome, not just risk');
+  assert.ok((await page.locator('[role="dialog"]').innerText()).includes('Straffrätt Lund 2.docx'),'Readable document locator is shown');
+  assert.ok(await page.locator('[role="dialog"] a[href*="domstol.se"]').count(),'Primary source opens from the explanation');
+  await page.getByRole('button',{name:'Stäng',exact:true}).click();
+  assert.equal(await page.locator('[role="dialog"]').count(),0);
+  assert.equal(await page.locator('.requisite-explanations').evaluate(el=>el.scrollWidth<=el.clientWidth+1),true,'Concept buttons wrap on iPhone');
+  await requisites.locator(':scope > summary').click();
   // v1.1: legal review is AFTER the ordinary details and never steals initial space.
   const quality=page.locator('#sec-quality');
   assert.equal(await quality.count(),1,'Card must offer a legal review details area');
