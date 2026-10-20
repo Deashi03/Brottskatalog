@@ -206,3 +206,10 @@ Senaste **hela** godkända integrations-, data- och iPhone-körning: [GitHub Act
 - `coercive-07.js`, `coercive-09.js`: tvångsmedel och strukturerad beslutsbehörighet.
 - `index.html`: iPhone UI med kapitelindelning, filter och fyra häktningskort.
 - `service-worker.js`: versionshanterad offline-cache.
+
+
+### V1.5 arbetsavstämning 20 oktober – 83,6 %
+
+Arbetsgrenen har nu 9 984/11 948 avslutade moment, 1 964 återstår. Detta pass avslutar 326 befintliga grundbrottskontroller av aktuell förstadiekriminalisering och en ny regression. Fem grova brottsgrader hade felaktigt negativa förstadiebesked; 13 kombinationer är rättade mot grund- och kriminaliseringsparagrafen med bevarat ersättningsregister. Alla 452 positiva förstadiekombinationer har rekvisitöversikter. Grundkortens förstadieavsnitt visar daterade källförklaringar och uttryckliga undantag.
+
+56 positiva förstadier har fortfarande öppen individuell straffskaleprövning. 1 946 juridiska delmoment och 18 publiceringsmoment återstår; inga fullständiga juridiska slutgodkännanden har tillkommit. V1.5 är fortsatt utkast i PR #2. Se den senaste avstämningen i `docs/V15-PUBLICERINGSPROGRESS.md`.

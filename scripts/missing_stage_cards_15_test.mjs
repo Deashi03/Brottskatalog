@@ -6,7 +6,7 @@ function load(skip=[]){const ctx=vm.createContext({window:{},console:{log(){},wa
 const ctx=load(),w=ctx.window,rows=w.BK_DATA.crimes,base=rows.filter(c=>!c.stageType),st=rows.filter(c=>c.stageType),newStage=st.filter(c=>c.id.startsWith('stage-gap15-'));
 assert.equal(rows.length,1557);assert.equal(base.length,390);assert.equal(st.length,1167);assert.equal(newStage.length,72);
 assert.equal(w.BK_MISSING_STAGE_CARDS15.added,72);assert.equal(w.BK_MISSING_STAGE_CARDS15.positive,19);assert.equal(w.BK_MISSING_STAGE_CARDS15.negative,53);assert.equal(w.BK_MISSING_STAGE_CARDS15.held.length,0);
-assert.equal(w.BK_STAGE_GENERAL_SOURCES15.completed,3);assert.equal(w.BK_STAGE_REQUISITE_OUTLINES15.completed,439);assert.equal(w.BK_MISSING_STAGE_BASE_AUDIT15.completed,24);
+assert.equal(w.BK_STAGE_GENERAL_SOURCES15.completed,3);assert.equal(w.BK_STAGE_REQUISITE_OUTLINES15.completed,452);assert.equal(w.BK_MISSING_STAGE_BASE_AUDIT15.completed,24);
 for(const c of base){const ss=st.filter(s=>s.stageParentId===c.id);if(c.isStandaloneInchoate){assert.equal(ss.length,0,'No recursively generated stages of standalone 4:9b');continue;}assert.equal(ss.length,3,c.title);assert.deepEqual(Array.from(ss,s=>s.stageType).sort(),['forberedelse','forsok','stampling']);}
 for(const c of newStage){assert.equal(c.penaltyRange,null);assert.equal(c.penaltyRangeVerified,false);assert.equal(c.custody,'unknown');assert.equal(c.prosecution,'unknown');assert.equal(c.individualLegalAudit15.scope.caseSpecificLiabilityApproved,false);assert.equal(c.individualLegalAudit15.consequences.punishmentRangeApproved,false);assert.equal(c.individualLegalAudit15.consequences.automaticCoercionApproved,false);
  if(c.stageStatus==='punishable'){assert.ok(c.rekvisit15.groups.length>=4);assert.equal(c.rekvisit15.legalReviewApproved,false);assert.equal(c.rekvisit15.verifiedOn,'2026-10-20');}
@@ -18,7 +18,7 @@ const nordic=by('Förberedelse till osann utsaga inför nordisk domstol');assert
 assert.equal(w.BK_AGE14_CANDIDATE_SOURCE_AUDIT15.sourceReviewed,96);for(const c of newStage.filter(c=>c.stageParentMin>=4))assert.equal(c.age14Exception15.individualSourceScopeChecked,'2026-10-20');
 const manifest=JSON.parse(read('data/stage-requisite-manifest-15.json')).records;
 assert.deepEqual(JSON.parse(JSON.stringify(w.BK_STAGE_REQUISITE_MANIFEST15)),manifest,'Review manifest and runtime identities must agree');
-const positive=st.filter(c=>c.stageStatus==='punishable');assert.equal(positive.length,439);
+const positive=st.filter(c=>c.stageStatus==='punishable');assert.equal(positive.length,452);
 for(const c of positive){assert.ok(c.rekvisit15.groups.length>=4,c.title);assert.equal(c.rekvisit15.legalReviewApproved,false);assert.match(c.rekvisit15.source,/23:1–3/);}
 const summary=t=>st.find(c=>c.title===t).rekvisit15.groups.map(g=>g.label).join(' ');
 for(const title of ['Försök till utpressning','Försök till ringa utpressning','Försök till grov utpressning'])assert.match(summary(title),/gäller inte BrB 23:3/);
@@ -36,4 +36,4 @@ const authCtx=load([baseAudit]);authCtx.window.BK_STATUTES['BrB:19:14'].text+=' 
 for(const f of[mod,outline,baseAudit,'./stage-general-sources-15.js'])assert.ok(read('service-worker.js').includes(f));
 for(const script of inline)new Function(script);
 assert.ok(html.includes('stage-overview-link'));assert.ok(html.includes('provisions[c.stageAuthorizingStatute15]'));
-console.log('PASS: all 389 eligible base offences have three stage entries; 72 new bounded records, 439 study outlines, 24 parent checks and source mutation safeguards');
+console.log('PASS: all 389 eligible base offences have three stage entries; 72 new bounded records, 452 study outlines, 24 parent checks and source mutation safeguards');

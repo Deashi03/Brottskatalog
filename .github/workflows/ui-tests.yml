@@ -10,6 +10,10 @@ on:
       - "stage-requisite-outlines-15.js"
       - "data/stage-requisite-manifest-15.json"
       - "scripts/missing_stage_cards_15_test.mjs"
+      - "scripts/base_inchoate_review_15_test.mjs"
+      - "base-inchoate-review-15.js"
+      - "stage-grade-corrections-15.js"
+      - "data/base-inchoate-review-15.json"
       - "brb-inventory-completion-15.js"
       - "brb-inventory-penalties-15.js"
       - "brb-inventory-final-scope-15.js"
@@ -302,6 +306,10 @@ on:
       - "stage-requisite-outlines-15.js"
       - "data/stage-requisite-manifest-15.json"
       - "scripts/missing_stage_cards_15_test.mjs"
+      - "scripts/base_inchoate_review_15_test.mjs"
+      - "base-inchoate-review-15.js"
+      - "stage-grade-corrections-15.js"
+      - "data/base-inchoate-review-15.json"
       - "brb-inventory-completion-15.js"
       - "brb-inventory-penalties-15.js"
       - "brb-inventory-final-scope-15.js"
@@ -755,6 +763,8 @@ jobs:
         run: node scripts/catalog_selection_15_test.mjs
       - name: Verify complete stage-parent coverage and new statutory stage outlines
         run: node scripts/missing_stage_cards_15_test.mjs
+      - name: Check 326 base inchoate rules and thirteen traced grade corrections
+        run: node scripts/base_inchoate_review_15_test.mjs
       - name: Install headless browser
         run: |
           npm install --no-save playwright

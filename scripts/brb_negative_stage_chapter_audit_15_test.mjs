@@ -21,7 +21,10 @@ const cards=ctx.window.BK_DATA.crimes,stages=cards.filter(c=>c.stageType);
 assert.equal(cards.length,1557);assert.equal(stages.length,1167);
 assert.equal(stages.filter(c=>c.stageStatus==='unverified').length,0);
 const approved=stages.filter(c=>c.individualLegalAudit15?.scope?.finding==='NO_NAMED_STAGE_OFFENCE_IN_CURRENT_BRB_CHAPTER');
-assert.equal(approved.length,r.scopeApproved);
+const superseded=ctx.window.BK_STAGE_GRADE_CORRECTIONS15.superseded;
+assert.equal(superseded.length,13);
+assert.equal(approved.length+superseded.length,r.scopeApproved);
+for(const old of superseded){assert.equal(old.scope.finding,'NO_NAMED_STAGE_OFFENCE_IN_CURRENT_BRB_CHAPTER');assert.equal(stages.find(c=>c.id===old.id).stageStatus,'punishable');}
 for(const c of approved){
  const a=c.individualLegalAudit15;
  assert.equal(c.stageStatus,'not-criminalized');

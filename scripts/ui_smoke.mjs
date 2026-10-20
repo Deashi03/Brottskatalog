@@ -98,7 +98,10 @@ try{
     ['Myteri','Stämpling',true,'Kommer överens med någon annan'],
     ['Osann utsaga inför nordisk domstol','Förberedelse',true,'Partsutsaga enligt 15:2'],
     ['Osann utsaga inför en internationell domstol','Förberedelse',true,'mindre allvarligt fall omfattas inte'],
-    ['Högförräderi','Stämpling',true,'förbindelse med främmande makt']
+    ['Högförräderi','Stämpling',true,'förbindelse med främmande makt'],
+    ['Grov förgöring','Försök',true,'den grova graden definieras i samma paragraf'],
+    ['Grov penningförfalskning','Förberedelse',true,'den grova graden definieras i samma paragraf'],
+    ['Grov olovlig underrättelseverksamhet mot person','Stämpling',true,'den grova graden definieras i samma paragraf']
   ]){
     await page.goto(url+'#sok',{waitUntil:'networkidle'});await search.fill(parent);await wait();
     await page.locator('.crime-card').filter({has:page.getByText(parent,{exact:true})}).click();
@@ -115,6 +118,20 @@ try{
     assert.ok((await page.locator('#sec-lag').innerText()).includes(lawPhrase),'Specific statutory restriction visible: '+parent);
     if(parent==='Grovt vapenbrott'){assert.ok((await page.locator('#sec-lag').innerText()).includes('synnerligen grovt vapenbrott'));assert.ok((await page.locator('.penalty-panel').innerText()).includes('Individuell straffskaleprövning'));assert.equal(await page.locator('.penalty-panel .penalty-bounds').count(),0,'No invented fine minimum for attempted gross weapon offence');}
     assert.equal(await page.evaluate(()=>document.documentElement.scrollWidth<=innerWidth+1),true,'Restored stage fits iPhone: '+parent);
+  }
+  await page.goto(url+'#sok',{waitUntil:'networkidle'});
+  for(const [title,phrase,links]of[
+    ['Ringa narkotikabrott · bruk','undantar bruk av narkotika',3],
+    ['Grovt skattebrott','endast förberedelse och stämpling',3],
+    ['Bidragsbrott','redan fullbordat brott',3],
+    ['Förberedelse genom anbringande av tekniskt hjälpmedel','självständigt förberedelsebrott',0]
+  ]){
+    await page.goto(url+'#sok',{waitUntil:'networkidle'});await search.fill(title);await wait();
+    await page.locator('.crime-card').filter({has:page.getByText(title,{exact:true})}).click();
+    const section=page.locator('#sec-stadier');assert.equal(await section.getAttribute('open'),null);
+    await section.locator(':scope > summary').click();assert.ok((await section.innerText()).includes(phrase),title);
+    assert.equal(await section.locator('.stage-overview-link').count(),links);
+    assert.equal(await section.evaluate(el=>el.scrollWidth<=el.clientWidth+1),true,'Source-bound overview fits iPhone: '+title);
   }
   await page.goto(url+'#sok',{waitUntil:'networkidle'});
   await search.fill('stöld');

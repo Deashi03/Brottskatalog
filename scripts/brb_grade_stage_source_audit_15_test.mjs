@@ -26,7 +26,9 @@ const all=ctx.window.BK_DATA.crimes,stages=all.filter(c=>c.stageType);
 assert.equal(stages.length,1167);
 assert.equal(stages.filter(c=>c.stageStatus==='unverified').length,0);
 const parents=new Map(all.filter(c=>!c.stageType).map(c=>[c.id,c]));
-const audited=stages.filter(c=>c.individualLegalAudit15?.scope?.finding==='CURRENT_BRB_SAME_SECTION_GRADE_COVERED_BY_NAMED_STAGE');
+const gradeCovered=stages.filter(c=>c.individualLegalAudit15?.scope?.finding==='CURRENT_BRB_SAME_SECTION_GRADE_COVERED_BY_NAMED_STAGE');
+const audited=gradeCovered.filter(c=>c.individualLegalAudit15.scope.checked===r.reviewed);
+assert.equal(gradeCovered.length,21+ctx.window.BK_STAGE_GRADE_CORRECTIONS15.corrected);
 assert.equal(audited.length,21);
 assert.equal(stages.filter(c=>c.individualLegalAudit15?.scope?.status==='APPROVED'&&c.individualLegalAudit15?.consequences?.status==='APPROVED').length,1167);
 for(const c of audited){
@@ -65,7 +67,7 @@ assert.equal(ctx.window.BK_AGE14_CANDIDATE_SOURCE_AUDIT15.unresolved.length,0);
 const copy=JSON.parse(JSON.stringify(all));
 const contested=new Set(['Grovt spridande av gift eller smitta','Grov kapning','Grovt sjö- eller luftfartssabotage','Grovt flygplatssabotage','Grovt våld eller hot mot förman']);
 for(const c of copy){
- if(c.individualLegalAudit15?.scope?.finding!=='CURRENT_BRB_SAME_SECTION_GRADE_COVERED_BY_NAMED_STAGE')continue;
+ if(!audited.some(x=>x.id===c.id))continue;
  if(contested.has(parents.get(c.stageParentId)?.title)){
   c.stageStatus='unverified';c.stageReviewDate=null;
  }

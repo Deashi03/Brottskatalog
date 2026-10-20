@@ -824,6 +824,7 @@ D.date='2026-10-12';
 <script src="./brb-grade-stage-source-audit-15.js"></script>
   <script src="./stage-general-sources-15.js"></script>
   <script src="./missing-stage-cards-15.js"></script>
+  <script src="./stage-grade-corrections-15.js"></script>
   <script src="./stage-requisite-outlines-15.js"></script>
   <script src="./age14-offence-scope-15.js"></script>
   <script src="./age14-candidate-source-audit-15.js"></script>
@@ -868,6 +869,7 @@ D.date='2026-10-12';
 <script src="./special-prosecution-audit-15.js"></script>
 <script src="./brb-inventory-final-scope-15.js"></script>
 <script src="./missing-stage-base-audit-15.js"></script>
+<script src="./base-inchoate-review-15.js"></script>
 <script src="./catalog-selection-15.js"></script>
   <script>
 /* Brottskatalog – stage 1. No framework, no network request during use. */
@@ -1291,8 +1293,10 @@ function renderDetail(c){
       +'<a class="source-link" target="_blank" rel="noopener noreferrer" href="'+escapeHtml(c.smugglingLimits15.sourceURL)+'">Smugglingslagen 12, 15 och 20 §§ '+ic('external-link','sm')+'</a></details>':'')
     +requisiteConceptButtons(c)
     +(exampleCards?'<div class="subtle-label">Typexempel</div>'+exampleCards:'');
-  const stages=(c.stages||[]).map(x=>`<li>${escapeHtml(x)}</li>`).join('');
+  const stages=(c.baseInchoateReview15?[]:c.stages||[]).map(x=>`<li>${escapeHtml(x)}</li>`).join('');
   const stageEntries=c.stageType?[]:crimes.filter(s=>s.stageParentId===c.id);
+  const inchoateReview=c.baseInchoateReview15;
+  const inchoateSummary=inchoateReview?'<p>'+escapeHtml(inchoateReview.summary)+'</p><p>'+escapeHtml(inchoateReview.note)+'</p><p class="source-label">'+escapeHtml(inchoateReview.source)+' · Kontrollerad '+escapeHtml(inchoateReview.checked)+'</p>':'';
   const stageOverview=stageEntries.length?'<p class="source-label">Välj ett förstadium för lagstöd, avgränsning och straffskalefrågor.</p>'+stageEntries.map(s=>'<button class="related stage-overview-link" data-open="'+escapeHtml(s.id)+'"><span>'+escapeHtml(({forsok:'Försök',forberedelse:'Förberedelse',stampling:'Stämpling'})[s.stageType])+' · '+escapeHtml(s.stageStatus==='punishable'?(s.stageCriminalizationConditional15?'Särskilt straffbelagt i angivna fall':'Särskilt straffbelagt'):s.stageStatus==='not-criminalized'?'Inte särskilt straffbelagt':'Ej avgjort')+'</span>'+ic('chevron-right','sm')+'</button>').join(''):'';
   const related=(c.related||[]).map(id=>byId[id]).filter(Boolean).map(x=>`<button class="related" data-open="${x.id}">${escapeHtml(x.title)}${ic('chevron-right','sm')}</button>`).join('');
   const compareWith=crimes.filter(x=>x.id!==c.id&&((c.statute&&x.statute===c.statute)||(c.related||[]).includes(x.id))).slice(0,4);
@@ -1306,8 +1310,8 @@ function renderDetail(c){
     const sourceMatch=(c.stageSource||'').match(/BrB (\d+):(\d+[a-z]?)/i);
     const particular=c.stageAuthorizingStatute15?provisions[c.stageAuthorizingStatute15]:sourceMatch?provisions['BrB:'+sourceMatch[1]+':'+sourceMatch[2]]:null;
     const blocks=[];
-    if(c.id.startsWith('stage-gap15-'))blocks.push('<p class="source-label">'+escapeHtml(c.stageExplanation||'')+'</p>');
-    const stageParent=c.id.startsWith('stage-gap15-')?byId[c.stageParentId]:null;
+    if(c.id.startsWith('stage-gap15-')||c.stageGradeCorrection15)blocks.push('<p class="source-label">'+escapeHtml(c.stageExplanation||'')+'</p>');
+    const stageParent=(c.id.startsWith('stage-gap15-')||c.stageGradeCorrection15)?byId[c.stageParentId]:null;
     if(stageParent?.lawMode==='full'&&stageParent.lawCompletenessVerified)blocks.push('<h3>'+escapeHtml(stageParent.ref)+'</h3><div class="law-paper">'+escapeHtml(stageParent.law)+'</div>');
     if(particular?.text)blocks.push('<h3>'+escapeHtml(particular.ref)+'</h3><div class="law-paper">'+escapeHtml(particular.text)+'</div>');
     else blocks.push('<p>Den särskilda kriminaliseringsbestämmelsen återges via officiell källa.</p>');
@@ -1333,7 +1337,7 @@ function renderDetail(c){
   ${(c.qualifications||[]).length?accordion('kvalifikation','Kvalifikationsgrunder – fördjupning','layers',qualificationSection(c)):''}
   ${((c.studyNotes||[]).length||c.detailedNote||c.caseNote)?accordion('anteckningar','Anteckningar – fördjupning','book-mark',studyNotesSection(c)):''}
   ${accordion('praxis','Praxis och tolkningar','file-text',factsSection(c)||'<p>Inga kommentarer inlagda för denna sökingång ännu.</p>')}
-  ${accordion('stadier','Försök och andra stadier','scale',`${stageOverview}${stages?`<ul>${stages}</ul>`:stageEntries.length?'':'<p>Uppgift ännu inte granskad. Kontrollera särskild kriminalisering i tillämplig författning.</p>'}<p class="source-label">Se respektive bestämmelse om osjälvständiga brottsformer samt 23 kap. BrB.</p>`)}
+  ${accordion('stadier','Försök och andra stadier','scale',`${inchoateSummary}${stageOverview}${stages?`<ul>${stages}</ul>`:(stageEntries.length||inchoateReview)?'':'<p>Uppgift ännu inte granskad. Kontrollera särskild kriminalisering i tillämplig författning.</p>'}<p class="source-label">Se respektive bestämmelse om osjälvständiga brottsformer samt 23 kap. BrB.</p>`)}
   ${(c.alternativeOffences||[]).length?accordion('alternativ','Alternativa rubriceringar – pröva skillnader','layers',alternativesSection(c)):''}
   ${accordion('jamfor','Jämför rubriceringar','layers',comparison)}
   ${accordion('utredning','Utredningsuppslag och beviskällor','list',investigationSection(c))}

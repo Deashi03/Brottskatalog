@@ -2820,6 +2820,39 @@
       "ownTextFingerprint": "fbba57d4"
     },
     {
+      "id": "stadium-08-forsok-v05-grov-forgoring",
+      "title": "Försök till grov förgöring",
+      "parentId": "v05-grov-forgoring",
+      "parentTitle": "Grov förgöring",
+      "parentStatute": "BrB:13:8",
+      "stageType": "forsok",
+      "stageSource": "BrB 13:12",
+      "scopeFinding": "CURRENT_BRB_SAME_SECTION_GRADE_COVERED_BY_NAMED_STAGE",
+      "ownTextFingerprint": "fbba57d4"
+    },
+    {
+      "id": "stadium-08-forberedelse-v05-grov-forgoring",
+      "title": "Förberedelse till grov förgöring",
+      "parentId": "v05-grov-forgoring",
+      "parentTitle": "Grov förgöring",
+      "parentStatute": "BrB:13:8",
+      "stageType": "forberedelse",
+      "stageSource": "BrB 13:12",
+      "scopeFinding": "CURRENT_BRB_SAME_SECTION_GRADE_COVERED_BY_NAMED_STAGE",
+      "ownTextFingerprint": "fbba57d4"
+    },
+    {
+      "id": "stadium-08-stampling-v05-grov-forgoring",
+      "title": "Stämpling till grov förgöring",
+      "parentId": "v05-grov-forgoring",
+      "parentTitle": "Grov förgöring",
+      "parentStatute": "BrB:13:8",
+      "stageType": "stampling",
+      "stageSource": "BrB 13:12",
+      "scopeFinding": "CURRENT_BRB_SAME_SECTION_GRADE_COVERED_BY_NAMED_STAGE",
+      "ownTextFingerprint": "fbba57d4"
+    },
+    {
       "id": "stadium-08-forsok-v05-hindrande-av-urkunds-bevisfunktion",
       "title": "Försök till hindrande av urkunds bevisfunktion",
       "parentId": "v05-hindrande-av-urkunds-bevisfunktion",
@@ -2839,6 +2872,28 @@
       "stageType": "forberedelse",
       "stageSource": "BrB 14:13",
       "scopeFinding": "CURRENT_BRB_CHAPTER_EXPLICIT_INCHOATE_LISTING",
+      "ownTextFingerprint": "c2d1ac8c"
+    },
+    {
+      "id": "stadium-08-forsok-v05-grovt-hindrande-av-urkunds-bevisfunktion",
+      "title": "Försök till grovt hindrande av urkunds bevisfunktion",
+      "parentId": "v05-grovt-hindrande-av-urkunds-bevisfunktion",
+      "parentTitle": "Grovt hindrande av urkunds bevisfunktion",
+      "parentStatute": "BrB:14:4",
+      "stageType": "forsok",
+      "stageSource": "BrB 14:13",
+      "scopeFinding": "CURRENT_BRB_SAME_SECTION_GRADE_COVERED_BY_NAMED_STAGE",
+      "ownTextFingerprint": "c2d1ac8c"
+    },
+    {
+      "id": "stadium-08-forberedelse-v05-grovt-hindrande-av-urkunds-bevisfunktion",
+      "title": "Förberedelse till grovt hindrande av urkunds bevisfunktion",
+      "parentId": "v05-grovt-hindrande-av-urkunds-bevisfunktion",
+      "parentTitle": "Grovt hindrande av urkunds bevisfunktion",
+      "parentStatute": "BrB:14:4",
+      "stageType": "forberedelse",
+      "stageSource": "BrB 14:13",
+      "scopeFinding": "CURRENT_BRB_SAME_SECTION_GRADE_COVERED_BY_NAMED_STAGE",
       "ownTextFingerprint": "c2d1ac8c"
     },
     {
@@ -2883,6 +2938,28 @@
       "stageType": "forberedelse",
       "stageSource": "BrB 14:13",
       "scopeFinding": "CURRENT_BRB_CHAPTER_EXPLICIT_INCHOATE_LISTING",
+      "ownTextFingerprint": "af10c30f"
+    },
+    {
+      "id": "stadium-08-forsok-v05-grov-penningforfalskning",
+      "title": "Försök till grov penningförfalskning",
+      "parentId": "v05-grov-penningforfalskning",
+      "parentTitle": "Grov penningförfalskning",
+      "parentStatute": "BrB:14:6",
+      "stageType": "forsok",
+      "stageSource": "BrB 14:13",
+      "scopeFinding": "CURRENT_BRB_SAME_SECTION_GRADE_COVERED_BY_NAMED_STAGE",
+      "ownTextFingerprint": "af10c30f"
+    },
+    {
+      "id": "stadium-08-forberedelse-v05-grov-penningforfalskning",
+      "title": "Förberedelse till grov penningförfalskning",
+      "parentId": "v05-grov-penningforfalskning",
+      "parentTitle": "Grov penningförfalskning",
+      "parentStatute": "BrB:14:6",
+      "stageType": "forberedelse",
+      "stageSource": "BrB 14:13",
+      "scopeFinding": "CURRENT_BRB_SAME_SECTION_GRADE_COVERED_BY_NAMED_STAGE",
       "ownTextFingerprint": "af10c30f"
     },
     {
@@ -3953,6 +4030,39 @@
       "ownTextFingerprint": "96904ebd"
     },
     {
+      "id": "stadium-08-forsok-v15-cover-grov-olovlig-underrattelseverksamhet-mot-frammande-makt",
+      "title": "Försök till grov olovlig underrättelseverksamhet mot främmande makt",
+      "parentId": "v15-cover-grov-olovlig-underrattelseverksamhet-mot-frammande-makt",
+      "parentTitle": "Grov olovlig underrättelseverksamhet mot främmande makt",
+      "parentStatute": "BrB:19:10a",
+      "stageType": "forsok",
+      "stageSource": "BrB 19:14",
+      "scopeFinding": "CURRENT_BRB_SAME_SECTION_GRADE_COVERED_BY_NAMED_STAGE",
+      "ownTextFingerprint": "96904ebd"
+    },
+    {
+      "id": "stadium-08-forberedelse-v15-cover-grov-olovlig-underrattelseverksamhet-mot-frammande-makt",
+      "title": "Förberedelse till grov olovlig underrättelseverksamhet mot främmande makt",
+      "parentId": "v15-cover-grov-olovlig-underrattelseverksamhet-mot-frammande-makt",
+      "parentTitle": "Grov olovlig underrättelseverksamhet mot främmande makt",
+      "parentStatute": "BrB:19:10a",
+      "stageType": "forberedelse",
+      "stageSource": "BrB 19:14",
+      "scopeFinding": "CURRENT_BRB_SAME_SECTION_GRADE_COVERED_BY_NAMED_STAGE",
+      "ownTextFingerprint": "96904ebd"
+    },
+    {
+      "id": "stadium-08-stampling-v15-cover-grov-olovlig-underrattelseverksamhet-mot-frammande-makt",
+      "title": "Stämpling till grov olovlig underrättelseverksamhet mot främmande makt",
+      "parentId": "v15-cover-grov-olovlig-underrattelseverksamhet-mot-frammande-makt",
+      "parentTitle": "Grov olovlig underrättelseverksamhet mot främmande makt",
+      "parentStatute": "BrB:19:10a",
+      "stageType": "stampling",
+      "stageSource": "BrB 19:14",
+      "scopeFinding": "CURRENT_BRB_SAME_SECTION_GRADE_COVERED_BY_NAMED_STAGE",
+      "ownTextFingerprint": "96904ebd"
+    },
+    {
       "id": "stadium-08-forsok-v15-cover-olovlig-underrattelseverksamhet-mot-person",
       "title": "Försök till olovlig underrättelseverksamhet mot person",
       "parentId": "v15-cover-olovlig-underrattelseverksamhet-mot-person",
@@ -3983,6 +4093,39 @@
       "stageType": "stampling",
       "stageSource": "BrB 19:14",
       "scopeFinding": "CURRENT_BRB_CHAPTER_EXPLICIT_INCHOATE_LISTING",
+      "ownTextFingerprint": "841143b6"
+    },
+    {
+      "id": "stadium-08-forsok-v15-cover-grov-olovlig-underrattelseverksamhet-mot-person",
+      "title": "Försök till grov olovlig underrättelseverksamhet mot person",
+      "parentId": "v15-cover-grov-olovlig-underrattelseverksamhet-mot-person",
+      "parentTitle": "Grov olovlig underrättelseverksamhet mot person",
+      "parentStatute": "BrB:19:10b",
+      "stageType": "forsok",
+      "stageSource": "BrB 19:14",
+      "scopeFinding": "CURRENT_BRB_SAME_SECTION_GRADE_COVERED_BY_NAMED_STAGE",
+      "ownTextFingerprint": "841143b6"
+    },
+    {
+      "id": "stadium-08-forberedelse-v15-cover-grov-olovlig-underrattelseverksamhet-mot-person",
+      "title": "Förberedelse till grov olovlig underrättelseverksamhet mot person",
+      "parentId": "v15-cover-grov-olovlig-underrattelseverksamhet-mot-person",
+      "parentTitle": "Grov olovlig underrättelseverksamhet mot person",
+      "parentStatute": "BrB:19:10b",
+      "stageType": "forberedelse",
+      "stageSource": "BrB 19:14",
+      "scopeFinding": "CURRENT_BRB_SAME_SECTION_GRADE_COVERED_BY_NAMED_STAGE",
+      "ownTextFingerprint": "841143b6"
+    },
+    {
+      "id": "stadium-08-stampling-v15-cover-grov-olovlig-underrattelseverksamhet-mot-person",
+      "title": "Stämpling till grov olovlig underrättelseverksamhet mot person",
+      "parentId": "v15-cover-grov-olovlig-underrattelseverksamhet-mot-person",
+      "parentTitle": "Grov olovlig underrättelseverksamhet mot person",
+      "parentStatute": "BrB:19:10b",
+      "stageType": "stampling",
+      "stageSource": "BrB 19:14",
+      "scopeFinding": "CURRENT_BRB_SAME_SECTION_GRADE_COVERED_BY_NAMED_STAGE",
       "ownTextFingerprint": "841143b6"
     },
     {

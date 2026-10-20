@@ -1,3 +1,5 @@
+> **Senaste avstämning 20 oktober:** 322 BrB-grundposter och 68 speciallagsposter; 452 straffbelagda förstadiekombinationer har strukturerat rekvisitstöd. 326 nya grundbrottskontroller av aktuell FPS-uppräkning och uttryckliga begränsningar är klara. 13 felaktigt negativa grova förstadier är rättade. Fullständig juridisk slutgranskning är fortsatt öppen. Äldre avsnitt nedan är historiska arbetsnoteringar. Se `V15-PUBLICERINGSPROGRESS.md` för aktuell totalsiffra.
+
 # Fullständig revisionsakt för samtliga 319 BrB-brottskort
 
 Revisionsverktyget utökas från 37 polisprioriterade kort till **alla 319 BrB-brottskort**, bestående av 37 prioriterade akter och 282 övriga. Akterna innehåller individuellt källkopplad lagtext, lagtextdatum, brottsgrad, strukturerade undervisningsrekvisit, eventuella förstadier, åldersregler och en nio-stegs checklista för den återstående juridiska granskningen. Även samtliga 12 osäkra förstadier har egna akter.
