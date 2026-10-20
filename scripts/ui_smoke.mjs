@@ -281,7 +281,7 @@ try{
   assert.equal(bounds.length,2,'All prison ranges must have exactly two visible bounds');
   assert.ok(bounds[0].includes('1 år 6 mån'),'Lower bound for gross assault');
   assert.ok(bounds[1].includes('7 år'),'Upper bound for gross assault');
-  await page.locator('summary').filter({hasText:'Kvalifikationsgrunder'}).click();
+  await page.locator('#sec-kvalifikation > summary').click();
   assert.ok((await page.locator('body').innerText()).includes('Livsfarlig gärning'),'Qualification notes exist');
   await page.locator('summary').filter({hasText:'Anteckningar'}).click();
   assert.ok((await page.locator('body').innerText()).includes('Samlad förklaring')||(await page.locator('body').innerText()).includes('Kursanteckning'),'Non-redundant course explanation available');
@@ -382,7 +382,7 @@ try{
   await page.locator('#crime-search').fill('grovt brott mot knivlagen');
   await wait();
   await page.locator('.crime-card').first().click();
-  await page.locator('summary').filter({hasText:'Kvalifikationsgrunder'}).click();
+  await page.locator('#sec-kvalifikation > summary').click();
   assert.ok((await page.locator('body').innerText()).includes('Annan särskilt farlig art'),'Four knife crime factors explained');
 
   // v0.7: coercive-measures statuses are per crime, separate from actual case facts.
