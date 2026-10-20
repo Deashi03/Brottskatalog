@@ -11,6 +11,9 @@ on:
       - "data/stage-requisite-manifest-15.json"
       - "scripts/missing_stage_cards_15_test.mjs"
       - "scripts/base_inchoate_review_15_test.mjs"
+      - "statutory-grade-review-15.js"
+      - "data/statutory-grade-review-15.json"
+      - "scripts/statutory_grade_review_15_test.mjs"
       - "base-inchoate-review-15.js"
       - "stage-grade-corrections-15.js"
       - "data/base-inchoate-review-15.json"
@@ -307,6 +310,9 @@ on:
       - "data/stage-requisite-manifest-15.json"
       - "scripts/missing_stage_cards_15_test.mjs"
       - "scripts/base_inchoate_review_15_test.mjs"
+      - "statutory-grade-review-15.js"
+      - "data/statutory-grade-review-15.json"
+      - "scripts/statutory_grade_review_15_test.mjs"
       - "base-inchoate-review-15.js"
       - "stage-grade-corrections-15.js"
       - "data/base-inchoate-review-15.json"
@@ -765,6 +771,8 @@ jobs:
         run: node scripts/missing_stage_cards_15_test.mjs
       - name: Check 326 base inchoate rules and thirteen traced grade corrections
         run: node scripts/base_inchoate_review_15_test.mjs
+      - name: Verify 174 individual statutory grade branches and qualifiers
+        run: node scripts/statutory_grade_review_15_test.mjs
       - name: Install headless browser
         run: |
           npm install --no-save playwright

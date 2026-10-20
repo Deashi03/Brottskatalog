@@ -870,6 +870,7 @@ D.date='2026-10-12';
 <script src="./brb-inventory-final-scope-15.js"></script>
 <script src="./missing-stage-base-audit-15.js"></script>
 <script src="./base-inchoate-review-15.js"></script>
+<script src="./statutory-grade-review-15.js"></script>
 <script src="./catalog-selection-15.js"></script>
   <script>
 /* Brottskatalog – stage 1. No framework, no network request during use. */
@@ -1281,6 +1282,14 @@ function renderDetail(c){
       +(c.rekvisit15?.source?'<p class="source-label">Rättslig grund: '+escapeHtml(c.rekvisit15.source)+'</p>':'')
       +(c.rekvisit15?.sourceURL?'<a class="source-link" target="_blank" rel="noopener noreferrer" href="'+escapeHtml(c.rekvisit15.sourceURL)+'">Läs lagtexten hos Sveriges riksdag '+ic('external-link','sm')+'</a>':'')
     :'';
+  const gradeReview=c.statutoryGradeReview15;
+  const gradeReviewBody=gradeReview?'<details class="requisite-explanations statutory-grade-review"><summary>Brottsgrad och kvalifikationsgrunder</summary>'
+    +'<p>'+escapeHtml(gradeReview.focus)+'</p><p>'+escapeHtml(gradeReview.summary)+'</p>'
+    +'<p><strong>Lagtextens alternativ:</strong> '+gradeReview.branches.map(escapeHtml).join(' · ')+'</p>'
+    +(gradeReview.indicators.length?'<p><strong>Omständigheter att särskilt beakta</strong></p><ul>'+gradeReview.indicators.map(x=>'<li>'+escapeHtml(x)+'</li>').join('')+'</ul>':'')
+    +'<p>'+escapeHtml(gradeReview.assessmentNote)+'</p><ul>'+gradeReview.limits.map(x=>'<li>'+escapeHtml(x)+'</li>').join('')+'</ul>'
+    +'<p class="source-label">'+gradeReview.sourceRefs.map(escapeHtml).join('; ')+' · Kontrollerad '+escapeHtml(gradeReview.checked)+'</p>'
+    +'<a class="source-link" target="_blank" rel="noopener noreferrer" href="'+escapeHtml(gradeReview.sourceURL)+'">Läs lagtexten hos Sveriges riksdag '+ic('external-link','sm')+'</a></details>':'';
   const requisitesBody=((groups15.length||routes15.length)
     ?'<div class="subtle-label">Rekvisit – OCH om inget annat anges</div>'+legalScope
        +(routes15.length?'<p class="source-label">Alternativa gärningsformer – minst en av följande strukturer måste vara uppfylld.</p>'+routeBody:renderRequisiteGroups(groups15))
@@ -1291,6 +1300,7 @@ function renderDetail(c){
     +(c.smugglingLimits15?'<details class="requisite-explanations smuggling-limits"><summary>Rättelse och åtalsvillkor</summary>'
       +c.smugglingLimits15.notes.map(n=>'<div class="subtle-label">'+escapeHtml(n.title)+'</div><p>'+escapeHtml(n.text)+'</p>').join('')
       +'<a class="source-link" target="_blank" rel="noopener noreferrer" href="'+escapeHtml(c.smugglingLimits15.sourceURL)+'">Smugglingslagen 12, 15 och 20 §§ '+ic('external-link','sm')+'</a></details>':'')
+    +gradeReviewBody
     +requisiteConceptButtons(c)
     +(exampleCards?'<div class="subtle-label">Typexempel</div>'+exampleCards:'');
   const stages=(c.baseInchoateReview15?[]:c.stages||[]).map(x=>`<li>${escapeHtml(x)}</li>`).join('');

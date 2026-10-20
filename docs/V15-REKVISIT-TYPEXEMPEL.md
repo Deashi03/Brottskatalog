@@ -1,4 +1,4 @@
-> **Senaste avstämning 20 oktober:** 322 BrB-grundposter och 68 speciallagsposter; 452 straffbelagda förstadiekombinationer har strukturerat rekvisitstöd. 326 nya grundbrottskontroller av aktuell FPS-uppräkning och uttryckliga begränsningar är klara. 13 felaktigt negativa grova förstadier är rättade. Fullständig juridisk slutgranskning är fortsatt öppen. Äldre avsnitt nedan är historiska arbetsnoteringar. Se `V15-PUBLICERINGSPROGRESS.md` för aktuell totalsiffra.
+> **Senaste avstämning 20 oktober:** Rekvisitfunktionen har nu en hopfälld gradfördjupning för 174 grundkort med gradalternativ, uttryckliga kvalifikationsgrunder och avgränsningar mot andra brott eller ansvarsfrihet. Den bygger på 101 kompletta BrB-paragrafer. Tidigare 452 förstadieöversikter och 59 begreppsförklaringar finns kvar. Fullständig juridisk slutgranskning är fortfarande öppen. Se `V15-PUBLICERINGSPROGRESS.md` för aktuell status: 85,0 %.
 
 # Fullständig revisionsakt för samtliga 319 BrB-brottskort
 

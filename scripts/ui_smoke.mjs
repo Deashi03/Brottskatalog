@@ -134,6 +134,28 @@ try{
     assert.equal(await section.evaluate(el=>el.scrollWidth<=el.clientWidth+1),true,'Source-bound overview fits iPhone: '+title);
   }
   await page.goto(url+'#sok',{waitUntil:'networkidle'});
+  // Statutory degree guidance stays inside the expanded requisite section.
+  for(const [title,phrase]of[
+    ['Grovt tjänstefel','kräver att brottet enligt första stycket har begåtts uppsåtligen'],
+    ['Brott mot tystnadsplikt','ringa-undantag hör till oaktsamhetsalternativet'],
+    ['Rymning','Ringa är ansvarsfrihet'],
+    ['Ovarsam utsaga','Grov oaktsamhet är skuldformen'],
+    ['Grov urkundsförfalskning','hjälpa någon till hans eller hennes rätt'],
+    ['Brukande av det förfalskade','Ingen enda automatisk brottsgrad'],
+    ['Grov våldtäkt mot barn','skiljer sig i ordalydelse från vuxenbrottets'],
+    ['Osann utsaga inför nordisk domstol','ingen grov menedsgrad']
+  ]){
+    await page.goto(url+'#sok',{waitUntil:'networkidle'});await search.fill(title);await wait();
+    await page.locator('.crime-card').filter({has:page.getByText(title,{exact:true})}).click();
+    await page.locator('#sec-rekvisit > summary').click();const grades=page.locator('.statutory-grade-review');
+    assert.equal(await grades.getAttribute('open'),null,'Degree detail starts collapsed: '+title);
+    await grades.locator(':scope > summary').click();assert.ok((await grades.innerText()).includes(phrase),'Precise statutory degree distinction: '+title);
+    assert.ok((await grades.innerText()).includes('konkret gärning'));
+    assert.ok(await grades.locator('a[href*="riksdagen.se"]').count());
+    assert.equal(await grades.evaluate(el=>el.scrollWidth<=el.clientWidth+1),true,'Degree qualifiers fit iPhone: '+title);
+    assert.equal(await page.evaluate(()=>document.documentElement.scrollWidth<=innerWidth+1),true,'Degree detail fits viewport: '+title);
+  }
+  await page.goto(url+'#sok',{waitUntil:'networkidle'});
   await search.fill('stöld');
   await search.press('Enter');
   await wait();
