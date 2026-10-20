@@ -21,5 +21,5 @@ for(const c of reviewed){assert.equal(c.legalAudit15.fullLegalReviewApproved,fal
 const clone=JSON.parse(JSON.stringify(ctx.window.BK_DATA.crimes)),W=JSON.parse(JSON.stringify(ctx.window.BK_STATUTES));
 for(const c of clone)if(c.legalAudit15?.sourceAudit==='BrB5-2026-10-20')delete c.legalAudit15;
 W['BrB:5:1'].text='TAMPERED';const iso=vm.createContext({window:{BK_DATA:{crimes:clone},BK_STATUTES:W}});
-vm.runInContext(read(module),iso);assert.equal(iso.window.BK_BRB5_BASE_AUDIT15.completed,2);
+vm.runInContext(read(module),iso);assert.equal(iso.window.BK_BRB5_BASE_AUDIT15.completed,0,'Changing the shared BrB5:1 source must also block dependent BrB5:2 grades');
 console.log('PASS: six separately source-reviewed BrB5 statutory elements; truthful allegation, charge rules and constitutional protections remain independently pending');
