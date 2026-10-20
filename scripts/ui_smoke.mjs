@@ -53,7 +53,7 @@ try{
   assert.ok((await limits.innerText()).includes('frivillig åtgärd'),'Rectification requires a voluntary effective action');
   assert.ok(await limits.locator('a[href*="riksdagen.se"]').count());
   assert.equal(await limits.evaluate(el=>el.scrollWidth<=el.clientWidth+1),true,'Expanded limits fit iPhone width');
-  await page.locator('.sheet-close').click();await wait();
+  await page.locator('[data-action="back"]').click();await wait();
   await search.fill('stöld');
   await search.press('Enter');
   await wait();
