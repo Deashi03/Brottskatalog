@@ -6,10 +6,11 @@ const ctx=vm.createContext({window:{},console:{log:()=>{},warn:()=>{},error:()=>
 for(const i of [1,2,3])vm.runInContext(inline[i],ctx);
 for(const f of files)vm.runInContext(read(f),ctx,{filename:f});
 const r=ctx.window.BK_BRB22_BASE_AUDIT15;
-assert.ok(r);assert.equal(r.planned,16);assert.equal(r.completed,16,JSON.stringify(r));assert.equal(r.held.length,0,JSON.stringify(r.held));
-assert.deepEqual(JSON.parse(JSON.stringify(r.byType)),{objective:8,subjective:8});
+assert.ok(r);assert.equal(r.planned,16);assert.equal(r.completed,12,JSON.stringify(r));assert.equal(r.held.length,2,JSON.stringify(r.held));
+assert.deepEqual(JSON.parse(JSON.stringify(r.held.map(x=>x.title).sort())),['Landsförräderi','Ryktesspridning till fara för rikets säkerhet'].sort());
+assert.deepEqual(JSON.parse(JSON.stringify(r.byType)),{objective:6,subjective:6});
 const reviewed=ctx.window.BK_DATA.crimes.filter(c=>!c.stageType&&c.legalAudit15?.sourceAudit==='BrB22-2026-10-20');
-assert.equal(reviewed.length,8);
+assert.equal(reviewed.length,6);
 for(const c of reviewed){const a=c.legalAudit15;assert.equal(a.fullLegalReviewApproved,false);
  assert.equal(a.armedConflictAndOffenceDatePending,true);assert.equal(a.internationalLawExceptionsPending,true);
  for(const k of ['objective','subjective']){const x=a.checkpoints[k];assert.equal(x.status,'APPROVED');
