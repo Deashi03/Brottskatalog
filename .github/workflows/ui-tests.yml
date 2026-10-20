@@ -6,6 +6,8 @@ on:
       - "index.html"
       - "requisite-concepts-15.js"
       - "brb-remaining-elements-15.js"
+      - "special-elements-audit-15.js"
+      - "scripts/special_elements_audit_15_test.mjs"
       - "scripts/brb_remaining_elements_15_test.mjs"
       - "data/course-source-manifest-15.json"
       - "scripts/requisite_concepts_15_test.mjs"
@@ -455,6 +457,8 @@ jobs:
         run: node scripts/requisite_concepts_15_test.mjs
       - name: Verify the 25 remaining BrB act and fault reviews
         run: node scripts/brb_remaining_elements_15_test.mjs
+      - name: Individually verify 68 special-law act and fault reviews
+        run: node scripts/special_elements_audit_15_test.mjs
       - name: V1.5 source-linked common offence requisite expansion
         run: node scripts/rekvisit_core_15_test.mjs
       - name: V1.5 source-linked minor and aggravated offence grades

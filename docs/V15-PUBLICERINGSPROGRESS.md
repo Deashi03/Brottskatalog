@@ -1,6 +1,6 @@
 # Brottskatalog V1.5 – mätbar väg till publicering
 
-> **Aktuell arbetsavstämning 20 oktober: 75,5 % (8 666/11 479), 2 813 moment återstår.** Alla 319 BrB-grundkort har nu separata källbundna objektiva och subjektiva delkontroller; sammanlagt 688/3 483 juridiska kontrollmoment är avklarade. Ingen fullständig juridisk slutcertifiering eller release har gjorts. Rekvisitfunktionen har dessutom 59 begreppsförklaringar med spårbara hänvisningar till de fyra kursdokument som tillhandahölls den 20 oktober. Begrepp och automatiskt kopplade knappar räknas inte som extra juridiska slutkontroller.
+> **Aktuell arbetsavstämning 20 oktober: 76,7 % (8 803/11 480), 2 677 moment återstår.** Alla 387 grundkort har separata källbundna objektiva och subjektiva delkontroller; sammanlagt 824/3 483 juridiska kontrollmoment är avklarade. Detta är avgränsad granskning av aktuella straffbestämmelser, inte fullständig juridisk slutcertifiering. Rekvisitfunktionen innehåller dessutom 59 begreppsförklaringar med kurskällor. Publiceringsspärren kvarstår.
 
 **Historisk baslinje (18 oktober):** 46,3 % (5 297/11 434). Denna siffra är ersatt av den aktuella CI-beräkningen ovan; äldre tabeller nedan är historiska ögonblicksbilder, inte senaste status.
 
@@ -423,3 +423,29 @@ De fyra tillhandahållna kursdokumenten identifieras med filnamn och SHA-256 i `
 **Avgränsning:** Samtliga grundbrott saknar fortfarande fullständig slutgranskning. Gärningsdatum och övergångsregler, all relevant praxis, undantag/konkurrens och individuella tvångsmedelsförutsättningar har inte slutgodkänts genom dessa delkontroller. De 68 speciallagskortens separata objektiva/subjektiva slutmoment kvarstår också. Publiceringsspärren och utkaststatusen för PR #2 består.
 
 Inventeringen ökar med två separata registrerade CI-kontroller. Begreppsförklaringarna, kopplingarna och mobiltestets delassertioner har inte gjorts om till juridiska poäng. Sedan avstämningen före detta arbete är räknarens förändring därför **+50 juridiska moment och +2 testmoment**, från 8 614/11 477 till 8 666/11 479.
+
+
+## 20 oktober 2026 – 136 speciallagskontroller
+
+Samtliga 68 befintliga speciallagskort har fått en individuell objektiv och en individuell subjektiv delkontroll i `special-elements-audit-15.js`, med två läsbara förklaringar i rekvisitfältet. De kompletterar tidigare strukturerade listor och ger inte fullständigt juridiskt godkännande.
+
+| Författning | Kort | Nya delkontroller |
+| --- | ---: | ---: |
+| Narkotikastrafflagen | 11 | 22 |
+| Vapenlagen | 5 | 10 |
+| Trafikbrottslagen | 4 | 8 |
+| Knivlagen | 2 | 4 |
+| Bidragsbrottslagen | 4 | 8 |
+| Skattebrottslagen | 9 | 18 |
+| Smugglingslagen | 23 | 46 |
+| Penningtvättsbrottslagen | 6 | 12 |
+| Brandfarliga och explosiva varor | 4 | 8 |
+| **Summa** | **68** | **136** |
+
+Granskningen håller bland annat isär faktisk besittning och bruk, egetbruksbegränsningen för viss narkotikahantering, uppsåtligt mindre allvarligt respektive oaktsamt vapenbrott, rattfylleriets olika undantag, skatteredovisningens hänvisningar, penningtvättens alternativa syfteskonstruktioner och det separata bötesansvaret för vanlig oaktsamhet enligt LBE.
+
+Varje delkontroll binds till dess fullständiga, tidigare manuellt källjämförda paragraftext och rättsliga källidentitet. Ändrad källa i en lagfamilj spärrar även beroende grader. Regeln om uppsåt i BrB 1:2 har jämförts som hel paragraf; tidigare importstatus ändras inte till ett påhittat globalt fulltextintyg.
+
+128 lokala Node-kommandon har passerat, inklusive negativa tester för ändrad narkotikatext, ofullständig skattelagstext, framtida granskningsdatum, fel källadress och ändrad allmän uppsåtsregel. Ett nytt separat CI-steg tillkommer; räkneförändringen är **+136 juridiska delmoment och +1 testmoment**, från 8 666/11 479 till 8 803/11 480.
+
+**Fortfarande öppet:** historik/övergångsregler, fullständig undantags- och konkurrensprövning, brottsgrader, relevanta förarbeten/praxis, åtal och tvångsmedel. En särskild urvalsavvikelse att hantera i återstående katalogkontroll är att ringa smuggling, ringa tullbrott och ringa smuggling av explosiv vara har egna befintliga sökposter trots att straffet endast är penningböter. De aktuella rättsliga förklaringarna är granskade, men frågan om deras placering som sökposter respektive relaterade grader är inte markerad som löst. Ingen publicering har gjorts.
