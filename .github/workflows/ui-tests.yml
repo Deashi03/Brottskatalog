@@ -5,6 +5,8 @@ on:
     paths:
       - "index.html"
       - "requisite-concepts-15.js"
+      - "brb-remaining-elements-15.js"
+      - "scripts/brb_remaining_elements_15_test.mjs"
       - "data/course-source-manifest-15.json"
       - "scripts/requisite_concepts_15_test.mjs"
       - "brb14-expansion-15.js"
@@ -451,6 +453,8 @@ jobs:
         run: node scripts/rekvisit_typfall_15_test.mjs
       - name: Verify source-linked requisite explanations
         run: node scripts/requisite_concepts_15_test.mjs
+      - name: Verify the 25 remaining BrB act and fault reviews
+        run: node scripts/brb_remaining_elements_15_test.mjs
       - name: V1.5 source-linked common offence requisite expansion
         run: node scripts/rekvisit_core_15_test.mjs
       - name: V1.5 source-linked minor and aggravated offence grades

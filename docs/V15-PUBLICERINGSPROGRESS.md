@@ -1,6 +1,6 @@
 # Brottskatalog V1.5 – mätbar väg till publicering
 
-> **Senaste godkända avstämning: 69,4 % (7 956/11 457), 3 501 åtgärder återstår.** Samtliga 1 086 förstadiekort har nu varsin begränsad prövning av gällande förstadieuppräkning och separat konsekvensgränskontroll. 86/86 särskilda källbundna 14-årströskelkontroller är utförda. Grundbrottens fullständiga juridiska slutrevision är alltjämt 0/3 483. Alla 106 CI-registrerade Node-kontroller och iPhone-regressionen har passerat.
+> **Aktuell arbetsavstämning 20 oktober: 75,5 % (8 666/11 479), 2 813 moment återstår.** Alla 319 BrB-grundkort har nu separata källbundna objektiva och subjektiva delkontroller; sammanlagt 688/3 483 juridiska kontrollmoment är avklarade. Ingen fullständig juridisk slutcertifiering eller release har gjorts. Rekvisitfunktionen har dessutom 59 begreppsförklaringar med spårbara hänvisningar till de fyra kursdokument som tillhandahölls den 20 oktober. Begrepp och automatiskt kopplade knappar räknas inte som extra juridiska slutkontroller.
 
 **Historisk baslinje (18 oktober):** 46,3 % (5 297/11 434). Denna siffra är ersatt av den aktuella CI-beräkningen ovan; äldre tabeller nedan är historiska ögonblicksbilder, inte senaste status.
 
@@ -409,3 +409,17 @@ Källa: [Narkotikastrafflagen (1968:64), 4 §, Sveriges riksdag](https://www.rik
 **Godkänd regression:** [GitHub Actions 39330330500](https://github.com/Deashi03/Brottskatalog/actions/runs/39330330500) – samtliga CI-steg, integrerad kataloggranskning och iPhone-webbläsartest passerade. Aktuell rättskälla för avstämningen: [Brottsbalk (1962:700), Sveriges riksdag](https://www.riksdagen.se/sv/dokument-och-lagar/dokument/svensk-forfattningssamling/brottsbalk-1962700_sfs-1962-700/).
 
 **Releaseblockering kvarstår:** **3 483** självständiga slutkontroller av **387 grundbrott** och **18** frisläppningsuppgifter, inklusive detaljerade prövningar av gärningsdatum, rekvisit, brottsgrader, praxis, påföljder, åtalsvillkor och tvångsmedel. Att de avgränsade förstadie- och ålderströskelmomenten är räknemässigt färdiga innebär **inte** att något förstadiekort är slutligt godkänt för polisiärt beslutsstöd i enskilt ärende. PR #2 är fortfarande utkast, V1.4 på `main` är oförändrad och version 1.5 är inte publicerad.
+
+
+## 20 oktober 2026 – kursunderlag och återstående BrB-rekvisit
+
+De fyra tillhandahållna kursdokumenten identifieras med filnamn och SHA-256 i `data/course-source-manifest-15.json`. Originaldokumenten publiceras inte i repositoryt. DOCX-hänvisningar anger stycken från 1, inklusive tomma stycken i huvudtexten; PDF-hänvisningar anger fysisk sida från 1. Hänvisningarna pekar på just de tillhandahållna filversionerna.
+
+- **59 begreppsförklaringar**, lagrade en gång per begrepp och betydelse, med referenser från rekvisitfältet i **387 grundbrottskort**. Brottsspecifika kopplingar används för att hålla exempelvis råntvång och bevisfara i rätt sammanhang. Befintliga understrukna ord i lagtexten använder fortfarande sin tidigare kontextfunktion.
+- **25 tidigare återstående BrB-kort** har fått två individuella, uttryckligt avgränsade delkontroller vardera: objektiva rekvisit och uppsåt/oaktsamhet. **50 nya juridiska kontrollmoment**, inte 25 fullständiga brottsgodkännanden. Förklaringarna visas även inne i respektive rekvisitfält.
+- Särskilda gränser har kontrollerats: alternativa häleribrott, koppleriets lägenhetsalternativ, betalningsverktygens bedrägliga användningssyfte, arbetsmiljöbrottets dubbla hänvisning, svindleriets skilda skuldformer, hedersmotiv och kränkningsserier samt hemliga uppgifters begränsade oaktsamhetsansvar.
+- De nya kontrollerna binds till exakt text i **31 hänvisade BrB-paragrafer**; ändrad/ofullständig källa eller fel granskningsdatum blockerar de beroende delkontrollerna. Nytt källmanipulationstest och utökat mobiltest ingår i CI.
+
+**Avgränsning:** Samtliga grundbrott saknar fortfarande fullständig slutgranskning. Gärningsdatum och övergångsregler, all relevant praxis, undantag/konkurrens och individuella tvångsmedelsförutsättningar har inte slutgodkänts genom dessa delkontroller. De 68 speciallagskortens separata objektiva/subjektiva slutmoment kvarstår också. Publiceringsspärren och utkaststatusen för PR #2 består.
+
+Inventeringen ökar med två separata registrerade CI-kontroller. Begreppsförklaringarna, kopplingarna och mobiltestets delassertioner har inte gjorts om till juridiska poäng. Sedan avstämningen före detta arbete är räknarens förändring därför **+50 juridiska moment och +2 testmoment**, från 8 614/11 477 till 8 666/11 479.

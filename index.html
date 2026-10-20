@@ -853,6 +853,7 @@ D.date='2026-10-12';
 <script src="./brb21-base-legal-checkpoints-15.js"></script>
 <script src="./brb22-base-legal-checkpoints-15.js"></script>
 <script src="./brb7-base-legal-checkpoints-15.js"></script>
+<script src="./brb-remaining-elements-15.js"></script>
 <script src="./quality-11.js"></script>
   <script>
 /* Brottskatalog – stage 1. No framework, no network request during use. */
@@ -1268,6 +1269,7 @@ function renderDetail(c){
        +'<p class="source-label">'+escapeHtml(c.rekvisit15.note||'')+'</p>'
     :elements?'<p class="source-label">Äldre förenklad rekvisitöversikt – ännu inte individuellt juridiskt slutgranskad.</p><ul>'+elements+'</ul>'
     :'<p>Individuellt verifierad rekvisitöversikt saknas ännu. Se lagtexten ovan.</p>')
+    +(c.rekvisit15?.explanations15||[]).map(n=>'<div class="subtle-label">'+escapeHtml(n.title)+'</div><p>'+escapeHtml(n.text)+'</p>').join('')
     +requisiteConceptButtons(c)
     +(exampleCards?'<div class="subtle-label">Typexempel</div>'+exampleCards:'');
   const stages=(c.stages||[]).map(x=>`<li>${escapeHtml(x)}</li>`).join('');
