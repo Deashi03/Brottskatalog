@@ -1,0 +1,25 @@
+import assert from 'node:assert/strict';import fs from 'node:fs';import vm from 'node:vm';import path from 'node:path';
+const root=path.resolve(import.meta.dirname,'..'),read=p=>fs.readFileSync(path.join(root,p),'utf8'),m='./brb18-base-legal-checkpoints-15.js';
+const html=read('index.html'),sw=read('service-worker.js'),scripts=[...html.matchAll(/<script\s+src="([^"]+)"/g)].map(x=>x[1]);
+assert.ok(scripts.includes(m)&&sw.includes(m));
+const inline=[...html.matchAll(/<script(?:\s[^>]*)?>([\s\S]*?)<\/script>/g)].map(x=>x[1]);
+const ctx=vm.createContext({window:{},console:{log:()=>{},warn:()=>{},error:()=>{}}});
+for(const i of [1,2,3])vm.runInContext(inline[i],ctx);
+for(const p of scripts)vm.runInContext(read(p),ctx,{filename:p});
+const r=ctx.window.BK_BRB18_BASE_AUDIT15;assert.ok(r);
+assert.equal(r.planned,10);assert.equal(r.completed,10,JSON.stringify(r));
+assert.equal(r.held.length,0,JSON.stringify(r.held));
+assert.deepEqual(JSON.parse(JSON.stringify(r.byKind)),{objective:5,subjective:5});
+const cards=ctx.window.BK_DATA.crimes.filter(c=>!c.stageType&&c.legalAudit15?.sourceAudit==='BrB18-2026-10-20');assert.equal(cards.length,5);
+for(const c of cards){assert.equal(c.legalAudit15.fullLegalReviewApproved,false);
+ for(const kind of ['objective','subjective']){const q=c.legalAudit15.checkpoints[kind];
+ assert.equal(q.status,'APPROVED');assert.equal(q.checked,'2026-10-20');
+ assert.ok(q.finding.length>=120);assert.equal(q.offenceDateApproved,false);
+ assert.equal(q.historicLawApproved,false);assert.equal(q.currentSupremeCourtDoctrineApproved,false);
+ assert.equal(q.fullCriminalLiabilityApproved,false);assert.equal(q.chapter18SpecialChargeRulesApproved,false);
+ assert.equal(q.inchoateStagesApproved,false);assert.equal(q.caseSpecificCoercionApproved,false);}}
+const clone=JSON.parse(JSON.stringify(ctx.window.BK_DATA.crimes)),W=JSON.parse(JSON.stringify(ctx.window.BK_STATUTES));
+for(const c of clone)if(c.legalAudit15?.sourceAudit==='BrB18-2026-10-20')delete c.legalAudit15;
+W['BrB:18:1'].text='CHANGED';const iso=vm.createContext({window:{BK_DATA:{crimes:clone},BK_STATUTES:W}});
+vm.runInContext(read(m),iso);assert.equal(iso.window.BK_BRB18_BASE_AUDIT15.completed,8);
+console.log('PASS: ten source-gated BrB18 offence requirements with corruption regression; no full case signoffs');
