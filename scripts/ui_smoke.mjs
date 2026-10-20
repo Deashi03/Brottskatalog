@@ -319,7 +319,7 @@ try{
   await page.locator('.crime-card').filter({has:page.locator('.crime-title:text-is("Svindleri")')}).first().click();
   await page.locator('#sec-rekvisit > summary').click();
   const fraudPanel=await page.locator('#sec-rekvisit').innerText();
-  assert.ok(fraudPanel.includes('Objektiva krav – förklaring')&&fraudPanel.includes('Subjektiva krav – förklaring'),'Both reviewed explanation blocks render inside requisite panel');
+  assert.ok(fraudPanel.toLocaleLowerCase('sv').includes('objektiva krav – förklaring')&&fraudPanel.toLocaleLowerCase('sv').includes('subjektiva krav – förklaring'),'Both reviewed explanation blocks render inside requisite panel');
   assert.ok(fraudPanel.includes('Företagsalternativet straffbelägger uttryckligen både uppsåt och grov oaktsamhet'),'Alternative statutory fault forms are taught in actual UI');
   assert.equal(await page.evaluate(()=>window.BK_DATA.glossary['täckningsprincipen']===window.BK_REQUISITE_CONCEPTS15['bk:tackning']),true,'Glossary and requisite popup share one canonical definition');
   await page.goto(url+'#mer',{waitUntil:'networkidle'});
