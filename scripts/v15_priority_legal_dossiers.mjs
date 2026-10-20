@@ -87,7 +87,7 @@ const toDossier=c=>{
   const a=c.legalAudit15?.checkpoints?.[x.id];
   // Reflect only individually dated, source-linked and unambiguously scoped
   // checkpoints; do not mistake a partial checklist for full legal certification.
-  if(a?.status==='APPROVED'&&/^2026-10-\d{2}$/.test(a.checked||'')&&a.sourceURL===source
+  if(a?.status==='APPROVED'&&/^2026-10-\d{2}$/.test(a.checked||'')&&(a.sourceURL===source||(x.id==='coercion'&&a.offenceSourceURL===source&&a.sourceURL==='https://www.riksdagen.se/sv/dokument-och-lagar/dokument/svensk-forfattningssamling/rattegangsbalk-1942740_sfs-1942-740framtagen/'&&a.scope==='current-statutory-penalty-thresholds-and-described-decision-paths-only'&&a.automaticOperationalAdviceApproved===false&&a.allCoerciveMeasuresApproved===false))
     &&a.caseSpecificLiabilityApproved!==true&&a.caseSpecificCustodyApproved!==true)
    return {...x,status:'APPROVED',sourceURL:a.sourceURL,checked:a.checked,
     scope:a.scope,finding:a.finding,caseSpecificLegalConclusionApproved:false};
@@ -168,7 +168,7 @@ if(scopedSourceSummary.entries!==Object.values(scopedSourceSummary.byKind).reduc
  ||allDossiers.some(d=>d.scopedSourceNotes.some(n=>n.finalLegalConclusionApproved
   ||n.legalChecklistCompletedByThisNote!==0)))throw Error('Scoped review is not final legal signoff');
 if(output.releaseReady||output.automaticCustodyAuthorization)throw Error('Unsafe inferred release or detention authority');
-if(output.counts.individuallySourceCheckedLegalChecklistSteps!==1783
+if(output.counts.individuallySourceCheckedLegalChecklistSteps!==2105
  ||output.counts.cardsWithPartiallyCheckedLegalChecklist!==322
  ||allDossiers.some(d=>d.legalChecklist.some(q=>q.status==='APPROVED'&&(!q.sourceURL||!q.checked||q.caseSpecificLegalConclusionApproved))))
  throw Error('Individual partial BrB3/12 source checks have not reconciled against the legal audit queue');

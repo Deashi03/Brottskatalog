@@ -193,6 +193,47 @@ try{
     assert.equal(await page.evaluate(()=>document.documentElement.scrollWidth<=innerWidth+1),true);
   }
   await page.goto(url+'#sok',{waitUntil:'networkidle'});
+  for(const [title,phrase]of[
+    ['Rattfylleri','utesluter inte tredje styckets'],
+    ['Grovt rattfylleri','endast första och andra'],
+    ['Brott mot knivlagen','inte samma prövning'],
+    ['Vapenbrott','inte generell ansvarsfrihet'],
+    ['Smuggling','ANDRA STYCKET'],
+    ['Vårdslös skatteuppgift','Mindre allvarlig gärning'],
+    ['Vårdslöst bidragsbrott','FÖRE utbetalning'],
+    ['Grovt brott mot tillståndsplikten för explosiva varor','till BrB endast för 28 och 29']
+  ]){
+    await page.goto(url+'#sok',{waitUntil:'networkidle'});await search.fill(title);await wait();
+    await page.locator('.crime-card').filter({has:page.getByText(title,{exact:true})}).click();
+    await page.locator('#sec-rekvisit > summary').click();const limits=page.locator('.statutory-limits-review');
+    assert.equal(await limits.getAttribute('open'),null);await limits.locator(':scope > summary').click();
+    assert.ok((await limits.innerText()).includes(phrase),'Special-law limit: '+title);
+    assert.ok(await limits.locator('a[href*="riksdagen.se"]').count());
+    assert.equal(await limits.evaluate(el=>el.scrollWidth<=el.clientWidth+1),true,'Special-law limits fit iPhone: '+title);
+  }
+  for(const [title,rule,phrase]of[
+    ['Förtal','Särskilda häktningsgrunder','ingen allmän straffskalegräns'],
+    ['Ringa stöld','Ett år i straffskalan','Ordinarie straffskaletröskel ej uppfylld'],
+    ['Ofredande','Ett år i straffskalan','Straffskaletröskeln uppfylld'],
+    ['Grov fridskränkning','Häktningspresumtion','Straffskaletröskeln uppfylld'],
+    ['Grovt vapenbrott','Fyra års minimistraff','Straffskaletröskeln uppfylld'],
+    ['Arbetsmiljöbrott','Fängelse i straffskalan','Välj tillämplighet och straffskalegren'],
+    ['Lydnadsbrott','Fängelse i straffskalan','Välj tillämplighet och straffskalegren'],
+    ['Grovt bedrägeri','Hemlig avlyssning – särskild prövning','elektronisk kommunikation']
+  ]){
+    await page.goto(url+'#sok',{waitUntil:'networkidle'});await search.fill(title);await wait();
+    await page.locator('.crime-card').filter({has:page.getByText(title,{exact:true})}).click();
+    await page.locator('#sec-tvang > summary').click();const review=page.locator('.coercion-threshold-review');
+    assert.equal(await review.getAttribute('open'),null,'Threshold review starts collapsed: '+title);
+    await review.locator(':scope > summary').click();
+    const row=review.locator('li').filter({has:page.getByText(rule,{exact:true})});
+    assert.ok((await row.innerText()).includes(phrase),'Source-specific threshold distinction: '+title);
+    assert.ok((await review.innerText()).includes('Inget beslut om tvångsmedel'));
+    assert.equal(await review.locator('a[href*="riksdagen.se"]').count(),2);
+    assert.equal(await review.evaluate(el=>el.scrollWidth<=el.clientWidth+1),true,'Threshold review fits iPhone: '+title);
+    assert.equal(await page.evaluate(()=>document.documentElement.scrollWidth<=innerWidth+1),true);
+  }
+  await page.goto(url+'#sok',{waitUntil:'networkidle'});
   await search.fill('stöld');
   await search.press('Enter');
   await wait();

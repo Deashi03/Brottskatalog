@@ -222,8 +222,10 @@ Arbetsgrenen har nu 9 984/11 948 avslutade moment, 1 964 återstår. Detta pass 
 10 159/11 949 arbetsmoment är avslutade, 1 790 återstår. Det nya blocket avslutar 174 befintliga moment och ett testkommando, utan ändrad brottsinventering. Samtliga grundrekvisit, straffskalor och övriga revisionsdimensioner är bevarade. Ingen konkret brottsgrad eller fullständigt juridiskt slutgodkännande har fastställts genom dessa lagtextskontroller. V1.5 förblir utkast i PR #2.
 
 
-### V1.5 arbetsavstämning 20 oktober – 88,2 %
+### V1.5 arbetsavstämning 20 oktober – 92,1 %
 
-211 återstående gradfrågor och 174 uttryckliga lagtextbegränsningar/hänvisningar har egna källkontroller. Samtliga 390 grundkort har nu aktuell lagtextsbunden gradkontroll; rekvisitfunktionen visar även hopfällda förklaringar om ansvarsbegränsningar för 174 BrB-kort. Dessa prövningar ersätter inte praxis, historisk lag, allmänna ansvarsfrihetsregler eller konkret konkurrensanalys.
+390 individuella kontroller kopplar grundkortens egna straffskalor till aktuella trösklar och beskrivna beslutsvägar i RB. Källstödet omfattar 55 särskilt jämförda RB/LUL-paragrafer. 30 kort med villkorad skala eller krigsberoende tillämpning behåller uttryckligt krav på separat val/prövning. Inga operativa indikatorer eller straffskalor ändras genom granskningsposterna.
 
-10 546/11 951 arbetsmoment är avslutade, 1 405 återstår. Senaste passet avslutar 385 befintliga databasfrågor och två nya testkommandon. Ingen brottspost eller förstadiepost har lagts till eller räknats bort. Grundrekvisit, straffskalor, förstadier och tidigare revisionsdimensioner bevaras. V1.5 är fortsatt utkast i PR #2.
+68 ytterligare individuella kontroller av speciallagarnas uttryckliga begränsningar använder 45 källparagrafer. Rekvisitfunktionen har nu sådana förklaringar för 242 grundkort. En hopfälld fördjupning under tvångsmedel förklarar skillnader mellan maximistraff, minimistraff, särskilda häktningsgrunder och alternativa hemliga tvångsmedelsspår.
+
+11 006/11 953 arbetsmoment är avslutade, 947 återstår. Senaste passet avslutar 458 befintliga databasfrågor och två nya testkommandon. Inventeringen är oförändrad. Aktuell källavgränsad delgranskning ersätter inte praxis, historisk lag eller konkret tillämpning. Ingen brottspost är fullständigt juridiskt slutgodkänd. V1.5 är fortsatt utkast i PR #2.

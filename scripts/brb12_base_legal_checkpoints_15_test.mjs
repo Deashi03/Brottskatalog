@@ -30,7 +30,7 @@ for(const title of titles){
  assert.equal(c.legalAudit15.coercionDecisionStillPending,true);
  assert.equal(c.legalAudit15.competitionAndExceptionsStillPending,true);
  assert.notEqual(c.rekvisit15?.legalReviewApproved,true);
- const steps=c.legalAudit15.checkpoints;assert.deepEqual(Object.keys(steps),['objective','subjective','grade','inchoate','prosecution']);
+ const steps=c.legalAudit15.checkpoints;assert.deepEqual(Object.keys(steps),['objective','subjective','grade','inchoate','prosecution','coercion']);
  for(const [key,x] of Object.entries(steps)){
   assert.equal(x.status,'APPROVED');assert.equal(x.checked,'2026-10-20');
   assert.ok(x.sourceURL.includes('riksdagen.se'));

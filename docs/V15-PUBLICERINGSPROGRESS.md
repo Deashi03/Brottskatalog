@@ -1,6 +1,6 @@
 # Brottskatalog V1.5 – mätbar väg till publicering
 
-> **Aktuell arbetsavstämning 20 oktober: 88,2 % (10 546/11 951), 1 405 moment återstår.** Senaste blocket avslutar 211 återstående lagtextsbundna gradfrågor, 174 kontroller av uttryckliga ansvarsbegränsningar och två testkommandon. Samtliga 390 grundkort har nu en aktuell källavgränsad gradkontroll; 174 har motsvarande kontroll av uttryckliga begränsningar/hänvisningar. Totalt är 2 123/3 510 juridiska delmoment begränsat avslutade. Fullständig juridisk slutgranskning återstår; 56 positiva förstadiekorts individuella straffskalor är fortsatt öppna.
+> **Aktuell arbetsavstämning 20 oktober: 92,1 % (11 006/11 953), 947 moment återstår.** Senaste blocket avslutar 390 individuella aktuella straffskale-/beslutsvägskontroller, 68 speciallagskontroller av uttryckliga begränsningar samt två testkommandon. Totalt är 2 581/3 510 juridiska delmoment källavgränsat avslutade. Fullständig juridisk slutgranskning återstår; 56 positiva förstadiekorts individuella straffskalor är fortsatt öppna.
 
 **Historisk baslinje (18 oktober):** 46,3 % (5 297/11 434). Denna siffra är ersatt av den aktuella CI-beräkningen ovan; äldre tabeller nedan är historiska ögonblicksbilder, inte senaste status.
 
@@ -578,3 +578,15 @@ Begränsningsblocket omfattar 174 BrB-kort i 4–7, 13–15, 17 och 20 kap., med
 De nya förklaringarna ligger i hopfällda fördjupningar inne i rekvisitfunktionen. Lagtextens ansvarsfrihet, lägre straffskalor, särskilda skuldalternativ och subsidiaritet hålls isär. Befintliga rekvisitstrukturer, straffskalor, förstadier och andra revisionsdimensioner jämförs före/efter och ska förbli identiska. En befintlig separat granskarspärr skrivs inte över.
 
 Detta är kontroller av **uttryckliga aktuella lagtextbegränsningar och angivna hänvisningar**, inte fullständig konkurrensanalys, allmän ansvarsfrihetsprövning enligt 24 kap., praxis, historiska lagversioner eller ett konkret fall. Inga nya fullständiga juridiska slutgodkännanden, numeriska förstadiestraffskalor eller operativa befogenheter utfärdas. Totalt **2 123/3 510** begränsat avslutade juridiska moment; **1 387 juridiska och 18 publiceringsmoment** återstår. De 56 öppna förstadiestraffskalorna och 14 villkorade grundstraffskalefallen kvarstår.
+
+## Arbetsavstämning 20 oktober – 92,1 %
+
+**11 006/11 953 moment = 92,1 %, 947 kvar.** Detta pass avslutar **390 befintliga moment om aktuella straffskaletrösklar/beskrivna beslutsvägar och 68 befintliga moment om speciallagarnas uttryckliga begränsningar**, samt två nya regressionstestkommandon: totalt **460 fler färdiga**, +2 i nämnaren. Inventeringen av grundbrott och förstadier är oförändrad.
+
+De 390 posterna har egen kortidentitet, fulltext, straffskaleprofil och fasta källberoenden. 55 RB/LUL-paragrafer stödjer tio uttryckligt avgränsade regelgrupper. Maximistraff vid ettårsgränserna skiljs från minimistraff vid presumtion, fyrårsregler och hemlig avlyssning. RB 24:2, utredningshäktning, åtgärder utan allmän fängelsegräns och hemliga katalog-/straffvärdesspår hålls särskilda. Reglernas beslutsvägar beskrivs, men inga faktiska tvångsmedelsbeslut godkänns. Samtliga tidigare indikatorer, straffskalor och förstadier bevaras. De 14 villkorade straffskalefallen och 16 krigsberoende tillämpningar ger fortsatt inget automatiskt tröskelbesked.
+
+68 speciallagskort har egna begränsningsposter med 45 källparagrafer i nio författningar. Befogat innehav skiljs från ringa knivbrott, ordinationsundantag från påverkan vid rattfylleri, inlämning av vapen från materiell ansvarsfrihet, och frivillig rättelse från efterhandsånger/återbetalning. Skatte- och bidragsbrottens lagföringsspärrar beskrivs separat från ansvarsfrihet.
+
+**2 581/3 510 juridiska delmoment** är nu källavgränsat avslutade. **929 juridiska moment och 18 publiceringsmoment återstår.** Brottsgrad 390/390, uttryckliga begränsningar 242/390 och aktuell straffskale-/beslutsvägsbeskrivning 390/390 innebär inte fullständiga juridiska slutgodkännanden. Gärningsdatum/historisk lydelse, praxis, kvarstående begränsningsfrågor och ett åtalsfilter återstår. Konkret befogenhet, ungdomsregler och fullständig analys av samtliga hemliga tvångsmedel är inte godkända.
+
+Två nya regressionskommandon prövar de fasta posterna och negativa käll-/versions-/skalmutationer. Mobilregressionen har sexton nya fall för speciallagsundantag och tröskelskillnader. Källparagraferna är inbyggda för offlinebruk; originaluppladdningar har inte publicerats.
