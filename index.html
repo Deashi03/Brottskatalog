@@ -881,6 +881,7 @@ D.date='2026-10-12';
 <script src="./life-property-limits-review-15.js"></script>
 <script src="./remaining-statutory-limits-review-15.js"></script>
 <script src="./base-temporal-review-15.js"></script>
+<script src="./preparatory-reform-notes-15.js"></script>
 <script src="./catalog-selection-15.js"></script>
   <script>
 /* Brottskatalog – stage 1. No framework, no network request during use. */
@@ -1312,6 +1313,11 @@ function renderDetail(c){
     +'<p>'+escapeHtml(limitsReview.focus)+'</p><ul>'+limitsReview.limits.map(x=>'<li>'+escapeHtml(x)+'</li>').join('')+'</ul>'
     +'<p>'+escapeHtml(limitsReview.assessmentNote)+'</p><p class="source-label">'+limitsReview.sourceRefs.map(escapeHtml).join('; ')+' · Kontrollerad '+escapeHtml(limitsReview.checked)+'</p>'
     +'<a class="source-link" target="_blank" rel="noopener noreferrer" href="'+escapeHtml(limitsReview.sourceURL)+'">Läs lagtexten hos Sveriges riksdag '+ic('external-link','sm')+'</a></details>':'';
+  const reformNote=c.preparatoryReformNote15;
+  const reformNoteBody=reformNote?'<details class="requisite-explanations preparatory-reform-note"><summary>Förarbeten – 2026 års ändring</summary>'
+    +'<p>'+escapeHtml(reformNote.focus)+': '+escapeHtml(reformNote.note)+'</p><p>'+escapeHtml(reformNote.assessmentNote)+'</p>'
+    +'<p class="source-label">'+escapeHtml(reformNote.locator)+' · Kontrollerad '+escapeHtml(reformNote.checked)+'</p>'
+    +'<a class="source-link" target="_blank" rel="noopener noreferrer" href="'+escapeHtml(reformNote.sourceURL)+'">Läs författningskommentaren hos Sveriges riksdag '+ic('external-link','sm')+'</a></details>':'';
   const requisitesBody=((groups15.length||routes15.length)
     ?'<div class="subtle-label">Rekvisit – OCH om inget annat anges</div>'+legalScope
        +(routes15.length?'<p class="source-label">Alternativa gärningsformer – minst en av följande strukturer måste vara uppfylld.</p>'+routeBody:renderRequisiteGroups(groups15))
@@ -1324,6 +1330,7 @@ function renderDetail(c){
       +'<a class="source-link" target="_blank" rel="noopener noreferrer" href="'+escapeHtml(c.smugglingLimits15.sourceURL)+'">Smugglingslagen 12, 15 och 20 §§ '+ic('external-link','sm')+'</a></details>':'')
     +limitsReviewBody
     +gradeReviewBody
+    +reformNoteBody
     +requisiteConceptButtons(c)
     +(exampleCards?'<div class="subtle-label">Typexempel</div>'+exampleCards:'');
   const stages=(c.baseInchoateReview15?[]:c.stages||[]).map(x=>`<li>${escapeHtml(x)}</li>`).join('');

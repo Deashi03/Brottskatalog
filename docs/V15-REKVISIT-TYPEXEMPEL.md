@@ -1209,3 +1209,13 @@ Särskilt kontrollerat: mindre allvarlig inbrottsstöld/rån leder till prövnin
 Regressionen provar både sakliga gränser och att ändrad/inkomplett källa, fel källadress, maskintext eller en redan öppen kontroll stoppar nytt godkännande. Övriga uppgifter på samtliga 1 557 poster bevaras. Mobiltestet har ytterligare elva avgränsningsfall och datumförväntningen för egenmäktighet med barn följer appens svenska datumformat.
 
 **3 074/3 510 juridiska delmoment** är källavgränsat avslutade. **454 arbetsmoment återstår:** 45 tidsfrågor, 390 förarbets-/praxisfrågor, ett åtalsfilter och 18 frisläppningsmoment. Fullständig konkurrens, allmänna ansvarsfrihetsgrunder, historisk jämförelse och konkret rättslig tillämpning ingår inte i dessa begränsningskontroller. Inga fullständiga juridiska slutgodkännanden utfärdas; 56 individuella förstadiestraffskalor förblir releaseblockerande.
+
+### 21 oktober 2026 – författningskommentarer utan nya praxisgodkännanden
+
+50 grundkort har fått individuellt kopplade anteckningar till **prop. 2025/26:218, avsnitt 10.1**, i en egen expanderbar del av Rekvisit. Underlaget avser 32 egna straffparagrafer. Förklaringar om bibehållna gradgränser, borttagen grov förolämpning, mindre allvarlig mened och gemensamt livstidsstraff för flerfaldig brottslighet ska motverka att reformens straffnivåer uppfattas som nya automatiska rekvisit.
+
+Anteckningarna är kontrollerade mot respektive aktuella fullständiga SFS-paragraf och stoppas vid käll- eller textavvikelse. De ändrar inga befintliga rekvisit, straffskalor, förstadier, åtalsvillkor, tvångsmedelsstatus eller juridiska kontrollmarkeringar. **Ingen av de 390 förarbets-/praxisfrågorna avslutas genom dessa avgränsade anteckningar.**
+
+Ett nytt regressionskommando och fem ytterligare mobilfall ingår. Den räknade statusen är **11 503/11 957 = 96,2 %**, med **454 moment kvar**. Det är fortfarande 156 avslutade moment till avrundade 97,5 % enligt nuvarande nämnare; målet är inte uppnått. Fullständig juridisk acceptans och publicering kvarstår.
+
+Primärkälla: [Riksdagens proposition 2025/26:218](https://data.riksdagen.se/dokument/HD03218), respektive paragrafkommentar i avsnitt 10.1. Källans hämtade text har SHA-256 dokumenterad i `data/preparatory-reform-notes-15.json`.

@@ -282,6 +282,22 @@ try{
     assert.ok((await limits.innerText()).includes(phrase),'Life/property limitation: '+title);
     assert.equal(await limits.evaluate(el=>el.scrollWidth<=el.clientWidth+1),true,'Life/property limits fit iPhone: '+title);
   }
+  for(const [title,phrase]of[
+    ['Grov stöld','inte ändra gränsen'],
+    ['Förolämpning','grova svårhetsgraden tas bort'],
+    ['Mened','utan särskilt brottsnamn'],
+    ['Tagande av muta','varje förmån'],
+    ['Grov våldtäkt','flerfaldig brottslighet']
+  ]){
+    await page.goto(url+'#sok',{waitUntil:'networkidle'});await search.fill(title);await wait();
+    await page.locator('.crime-card').filter({has:page.getByText(title,{exact:true})}).click();
+    await page.locator('#sec-rekvisit > summary').click();const note=page.locator('.preparatory-reform-note');
+    assert.equal(await note.getAttribute('open'),null);await note.locator(':scope > summary').click();
+    assert.ok((await note.innerText()).includes(phrase),'Preparatory reform distinction: '+title);
+    assert.ok((await note.innerText()).includes('inget nytt juridiskt slutgodkännande'));
+    assert.equal(await note.locator('a[href="https://data.riksdagen.se/dokument/HD03218"]').count(),1);
+    assert.equal(await note.evaluate(el=>el.scrollWidth<=el.clientWidth+1),true,'Reform note fits iPhone: '+title);
+  }
   await page.goto(url+'#sok',{waitUntil:'networkidle'});await search.fill('Stöld');await wait();
   await page.locator('.crime-card').filter({has:page.getByText('Stöld',{exact:true})}).click();
   await page.locator('#sec-lag > summary').click();
