@@ -31,7 +31,7 @@ const law={
  '19:6b':{need:['brott som avses i 6 a § är grovt','grovt utlandsspioneri','förhållande av stor betydelse'],
  obj:'Grovt utlandsspioneri förutsätter utlandsspioneri enligt 19:6 a, inklusive internationell sekretess, kvalificerad fara för Sveriges förhållanden och försvarlighetsundantaget. Grovhet bedöms särskilt med hänsyn till krigsläge, uppgifternas betydelse och förtroendeställning.',
  sub:'Det särskilda främmandemaktssyftet i 19:6 a består också vid grovt utlandsspioneri. Uppsåt till den obehöriga gärningen och de relevanta faktiska förhållandena ska prövas självständigt.'},
- '19:7':{need:['utan syfte att gå en främmande makt','hemlig natur','gäller också den som','försvarlig'],
+ '19:7':{need:['utan syfte att gå en främmande makt','hemlig natur','döms också den som','försvarlig'],
  obj:'Obehörig befattning med hemlig uppgift gäller utan det särskilda syftet att bistå främmande makt, men kräver en gärning enligt 19:5 avseende uppgift av hemlig natur eller gärning enligt 19:6 a. Den internationella varianten har uttrycklig försvarlighetsbedömning.',
  sub:'Gärningspersonen handlar UTAN särskilt främmandemaktssyfte, vilket avgränsar paragrafen mot spioneri, men uppsåt till den obehöriga informationshandlingen och dess relevanta omständigheter krävs enligt huvudregeln.'},
  '19:8':{need:['brott som avses i 7 § är grovt','grov obehörig befattning','synnerligen farlig beskaffenhet'],
