@@ -234,6 +234,48 @@ try{
     assert.equal(await page.evaluate(()=>document.documentElement.scrollWidth<=innerWidth+1),true);
   }
   await page.goto(url+'#sok',{waitUntil:'networkidle'});
+  for(const [title,phrase]of[
+    ['Mord','2020-01-01'],
+    ['Ofredande','2018-01-01'],
+    ['Grov misshandel','2026-08-01'],
+    ['Psykiskt våld','2026-07-01'],
+    ['Rymning','2026-07-02'],
+    ['Vapenbrott','november 2026'],
+    ['Egenmäktighet med barn','2027-01-01'],
+    ['Tullbrott','deklarationer']
+  ]){
+    await page.goto(url+'#sok',{waitUntil:'networkidle'});await search.fill(title);await wait();
+    await page.locator('.crime-card').filter({has:page.getByText(title,{exact:true})}).click();
+    await page.locator('#sec-lag > summary').click();const temporal=page.locator('.law-temporal-review');
+    assert.equal(await temporal.getAttribute('open'),null,'Temporal review starts collapsed: '+title);
+    await temporal.locator(':scope > summary').click();assert.ok((await temporal.innerText()).includes(phrase),'Temporal distinction: '+title);
+    assert.ok((await temporal.innerText()).includes('Ingen lagversion väljs automatiskt'));
+    assert.equal(await temporal.locator('a[href*="rkrattsbaser.gov.se"]').count(),1);
+    assert.equal(await temporal.evaluate(el=>el.scrollWidth<=el.clientWidth+1),true,'Temporal review fits iPhone: '+title);
+    assert.equal(await page.evaluate(()=>document.documentElement.scrollWidth<=innerWidth+1),true);
+  }
+  for(const [title,phrase]of[
+    ['Mord','grundgärningen'],
+    ['Dråp','inte ansvarsfrihet'],
+    ['Barnadråp','sitt eget barn'],
+    ['Vållande till kroppsskada eller sjukdom','INTE är ringa'],
+    ['Arbetsmiljöbrott','krav på skada/sjukdom som inte är ringa'],
+    ['Skadegörelse','Äganderätten ensam avgör'],
+    ['Åverkan','8:11'],
+    ['Tagande av olovlig väg','faktisk skada']
+  ]){
+    await page.goto(url+'#sok',{waitUntil:'networkidle'});await search.fill(title);await wait();
+    await page.locator('.crime-card').filter({has:page.getByText(title,{exact:true})}).click();
+    await page.locator('#sec-rekvisit > summary').click();const limits=page.locator('.statutory-limits-review');
+    assert.equal(await limits.getAttribute('open'),null);await limits.locator(':scope > summary').click();
+    assert.ok((await limits.innerText()).includes(phrase),'Life/property limitation: '+title);
+    assert.equal(await limits.evaluate(el=>el.scrollWidth<=el.clientWidth+1),true,'Life/property limits fit iPhone: '+title);
+  }
+  await page.goto(url+'#sok',{waitUntil:'networkidle'});await search.fill('Stöld');await wait();
+  await page.locator('.crime-card').filter({has:page.getByText('Stöld',{exact:true})}).click();
+  await page.locator('#sec-lag > summary').click();
+  assert.equal(await page.locator('.law-temporal-review').count(),0,'Do not invent commencement dates for unmapped original-wording cards');
+  await page.goto(url+'#sok',{waitUntil:'networkidle'});
   await search.fill('stöld');
   await search.press('Enter');
   await wait();

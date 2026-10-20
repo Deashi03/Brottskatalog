@@ -1,4 +1,4 @@
-> **Senaste avstämning 20 oktober:** Rekvisitfunktionen har fått 68 ytterligare källavgränsade förklaringar om speciallagarnas uttryckliga begränsningar, totalt 242 grundkort. 390 individuella aktuella straffskale-/beslutsvägskontroller visas i en hopfälld fördjupning under tvångsmedel. Aktuell lagtext och trösklar ersätter inte konkret rättslig prövning. Se `V15-PUBLICERINGSPROGRESS.md`: 92,1 %, juridisk slutgranskning fortsatt öppen.
+> **Senaste avstämning 20 oktober:** 18 ytterligare källavgränsade begränsningsförklaringar i BrB 3/12 ger totalt 260 grundkort. 345 kontroller av angiven ändringslag och ikraftträdande visas i hopfälld fördjupning under lagtexten; 45 tidsluckor hålls öppna. Äldre lydelser och konkreta gärningar är inte automatiskt godkända. Se `V15-PUBLICERINGSPROGRESS.md`: 95,1 %, juridisk slutgranskning fortsatt öppen.
 
 # Fullständig revisionsakt för samtliga 319 BrB-brottskort
 

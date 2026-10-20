@@ -20,6 +20,13 @@ on:
       - "special-limits-sources-15.js"
       - "special-limits-review-15.js"
       - "base-coercion-review-15.js"
+      - "temporal-sources-15.js"
+      - "base-temporal-review-15.js"
+      - "life-property-limits-review-15.js"
+      - "data/base-temporal-review-15.json"
+      - "data/life-property-limits-review-15.json"
+      - "scripts/base_temporal_review_15_test.mjs"
+      - "scripts/life_property_limits_review_15_test.mjs"
       - "data/procedural-source-review-15.json"
       - "data/special-limits-review-15.json"
       - "data/base-coercion-review-15.json"
@@ -334,6 +341,13 @@ on:
       - "special-limits-sources-15.js"
       - "special-limits-review-15.js"
       - "base-coercion-review-15.js"
+      - "temporal-sources-15.js"
+      - "base-temporal-review-15.js"
+      - "life-property-limits-review-15.js"
+      - "data/base-temporal-review-15.json"
+      - "data/life-property-limits-review-15.json"
+      - "scripts/base_temporal_review_15_test.mjs"
+      - "scripts/life_property_limits_review_15_test.mjs"
       - "data/procedural-source-review-15.json"
       - "data/special-limits-review-15.json"
       - "data/base-coercion-review-15.json"
@@ -811,6 +825,10 @@ jobs:
         run: node scripts/special_limits_review_15_test.mjs
       - name: Verify 390 independent current statutory threshold reviews
         run: node scripts/base_coercion_review_15_test.mjs
+      - name: Verify 345 individually mapped commencement dates and transition boundaries
+        run: node scripts/base_temporal_review_15_test.mjs
+      - name: Verify 18 BrB life and property statutory limit reviews
+        run: node scripts/life_property_limits_review_15_test.mjs
       - name: Install headless browser
         run: |
           npm install --no-save playwright

@@ -1,6 +1,6 @@
 # Brottskatalog V1.5 – mätbar väg till publicering
 
-> **Aktuell arbetsavstämning 20 oktober: 92,1 % (11 006/11 953), 947 moment återstår.** Senaste blocket avslutar 390 individuella aktuella straffskale-/beslutsvägskontroller, 68 speciallagskontroller av uttryckliga begränsningar samt två testkommandon. Totalt är 2 581/3 510 juridiska delmoment källavgränsat avslutade. Fullständig juridisk slutgranskning återstår; 56 positiva förstadiekorts individuella straffskalor är fortsatt öppna.
+> **Aktuell arbetsavstämning 20 oktober: 95,1 % (11 371/11 955), 584 moment återstår.** Senaste blocket avslutar 345 individuella kontroller av angiven ändringslags ikraftträdande/övergångsregler, 18 kontroller av uttryckliga begränsningar samt två testkommandon. Totalt är 2 944/3 510 juridiska delmoment källavgränsat avslutade. Fullständig juridisk slutgranskning återstår; 56 positiva förstadiekorts individuella straffskalor är fortsatt öppna.
 
 **Historisk baslinje (18 oktober):** 46,3 % (5 297/11 434). Denna siffra är ersatt av den aktuella CI-beräkningen ovan; äldre tabeller nedan är historiska ögonblicksbilder, inte senaste status.
 
@@ -590,3 +590,17 @@ De 390 posterna har egen kortidentitet, fulltext, straffskaleprofil och fasta k�
 **2 581/3 510 juridiska delmoment** är nu källavgränsat avslutade. **929 juridiska moment och 18 publiceringsmoment återstår.** Brottsgrad 390/390, uttryckliga begränsningar 242/390 och aktuell straffskale-/beslutsvägsbeskrivning 390/390 innebär inte fullständiga juridiska slutgodkännanden. Gärningsdatum/historisk lydelse, praxis, kvarstående begränsningsfrågor och ett åtalsfilter återstår. Konkret befogenhet, ungdomsregler och fullständig analys av samtliga hemliga tvångsmedel är inte godkända.
 
 Två nya regressionskommandon prövar de fasta posterna och negativa käll-/versions-/skalmutationer. Mobilregressionen har sexton nya fall för speciallagsundantag och tröskelskillnader. Källparagraferna är inbyggda för offlinebruk; originaluppladdningar har inte publicerats.
+
+## Arbetsavstämning 20 oktober – 95,1 %
+
+**11 371/11 955 moment = 95,1 %, 584 kvar.** Detta pass avslutar **345 befintliga moment om paragraftextens angivna ändringslag, ikraftträdande och publicerade övergångsregler samt 18 befintliga begränsningsmoment i BrB 3/12**, plus två nya regressionstestkommandon: **365 fler färdiga**, +2 i nämnaren. Brottsinventeringen är oförändrad.
+
+De 345 tidskontrollerna gäller 282 BrB-kort och 63 speciallagskort med fasta egna identiteter och text-/versionsberoenden. 83 primära källposter omfattar daterade ändringsregisterutdrag, kvarstående särskilda övergångsbestämmelser och 5/7 §§ BrP. En datumgräns för en paragraf är inte samma sak som när brottstypen först infördes, när en gärning kriminaliserades eller vilken historisk straffskala som gäller. Hänvisade bestämmelser och processuella regler kan ha egna tidsgränser.
+
+**45 grundkort hålls öppna i tidsdimensionen:** 37 saknar självständigt kartlagd ändringshänvisning i den egna återgivna texten och åtta behöver ytterligare primär kontroll av ikraftträdandedag. Inga ursprungsdatum gissas. De gamla/nya gränserna för egenmäktighet med barn, vapentillverkningens övergångsrätt och tulluppgifter före 2022 redovisas särskilt. Senare lindrigare lag enligt 5 § BrP och den särskilda åtalsregeln i 7 § BrP väljs inte automatiskt; gärningsfakta och historiska lydelser är fortsatt öppna. Ingen av de 345 posterna är ett fullständigt historiskt fallgodkännande.
+
+18 individuella begränsningsposter omfattar samtliga 13 grundkort i BrB 3 och fem i BrB 12, med 17 egna/stödjande paragrafer. Ringa oaktsam kroppsskada/sjukdom faller utanför 3:8 medan ringa dödsvållande uttryckligen är straffbart. Åverkan kräver ringa gärning och kan annars hänvisas till tillgreppsbrott genom 8:11. Begränsade åtalsregler hålls isär från materiell ansvarsfrihet.
+
+**2 944/3 510 juridiska delmoment** är källavgränsat avslutade. **566 juridiska moment och 18 publiceringsmoment återstår:** 45 tidsfrågor, 130 begränsningsfrågor, 390 förarbets-/praxisfrågor och ett åtalsfilter. Konkret rättslig tillämpning och full historisk jämförelse krävs fortfarande; ingen brottspost är fullständigt juridiskt slutgodkänd. 56 positiva förstadiekorts individuella straffskaleprövningar är också fortsatt releaseblockerande och får inte döljas av katalogens arbetsinventering.
+
+Två nya regressioner verifierar de fasta granskningsposterna, alla datumgränser, aviserad framtida lydelse, kvarstående luckor och negativa mutationer av källa, tid, version och granskarspärr. Sjutton nya mobilfall testar tids-/begränsningsfördjupningar och att kort utan kartlagt ändringsdatum inte får påhittad datering. Övriga fält, straffskalor, indikatorer och förstadier bevaras.
