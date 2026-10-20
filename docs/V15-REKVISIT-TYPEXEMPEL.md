@@ -1172,3 +1172,10 @@ Den nya modulen `brb17-official-boundaries-15.js` tillför **sex källspärrade 
 Varje anteckning förklarar dessutom skillnaden i **17:5** mellan särskilt lagstadgat likställt myndighetsutövningsskydd (17:1–4) och skydd för uttryckligen uppräknade samhällsnyttiga funktioner (endast 17:1–2 enligt andra stycket). Denna avgränsning prövas tillsammans med fulltext i 17:5 och 17:16.
 
 Ny negativ regression `scripts/brb17_official_boundaries_15_test.mjs` ska neka alla förklaringar om den delade skyddskretsparagrafen inte har komplett källintyg. **Inga konstruerade typfall** för de svårbedömda situationerna. **Ingen förändring av straffskalor, förstadier, brottsantal, åtalsregler, åldersregler, tvångsmedel eller juridisk slutcertifiering.** V1.5 förblir draft, releaseReady är inte uppfylld och V1.4 ska inte publiceras om.
+
+
+### 20 oktober – katalogurval och smugglingslagens begränsningsregler
+
+`catalog-selection-15.js` tillämpar penningbötesavgränsningen på den färdiga katalogen. Appens samtliga ingångar använder samma inkluderade lista; revisionsunderlaget sparas oförändrat. 384 grundkort och 1 077 förstadiekort återstår som sökingångar.
+
+`smuggling-limits-15.js` tillför en från början stängd förklaringspanel på 23 smugglingsgrundkort i arbetsinventeringen (20 av dem ingår i katalogurvalet). Panelen skiljer mellan frivilligt undanröjande av föreskriven fara, effektiv rättelse av tull/skatt/avgift, ringa-undantag, subsidiaritet och de särskilda uppräkningarna i 20 §. Källtexten i 12, 15 och 20 §§ låses i sin helhet mot Riksdagens lydelse läst 2026-10-20. Förklaringarna ändrar inga straffskalor, åtalsstatusar, förstadier eller juridiska slutgodkännanden.

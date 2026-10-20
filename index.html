@@ -856,11 +856,14 @@ D.date='2026-10-12';
 <script src="./brb-remaining-elements-15.js"></script>
 <script src="./special-elements-audit-15.js"></script>
 <script src="./quality-11.js"></script>
+<script src="./smuggling-limits-15.js"></script>
+<script src="./catalog-selection-15.js"></script>
   <script>
 /* Brottskatalog – stage 1. No framework, no network request during use. */
 (() => {
 'use strict';
-const { crimes, glossary, categories } = window.BK_DATA;
+const { glossary, categories } = window.BK_DATA;
+const crimes = window.BK_DATA.crimes.filter(window.BK_CATALOG_SELECTION15.included);
 const provisions = window.BK_STATUTES || {};
 const sheetHistory=[];
 const byId = Object.fromEntries(crimes.map(c => [c.id,c]));
@@ -1271,6 +1274,9 @@ function renderDetail(c){
     :elements?'<p class="source-label">Äldre förenklad rekvisitöversikt – ännu inte individuellt juridiskt slutgranskad.</p><ul>'+elements+'</ul>'
     :'<p>Individuellt verifierad rekvisitöversikt saknas ännu. Se lagtexten ovan.</p>')
     +(c.rekvisit15?.explanations15||[]).map(n=>'<div class="subtle-label">'+escapeHtml(n.title)+'</div><p>'+escapeHtml(n.text)+'</p>').join('')
+    +(c.smugglingLimits15?'<details class="requisite-explanations smuggling-limits"><summary>Rättelse och åtalsvillkor</summary>'
+      +c.smugglingLimits15.notes.map(n=>'<div class="subtle-label">'+escapeHtml(n.title)+'</div><p>'+escapeHtml(n.text)+'</p>').join('')
+      +'<a class="source-link" target="_blank" rel="noopener noreferrer" href="'+escapeHtml(c.smugglingLimits15.sourceURL)+'">Smugglingslagen 12, 15 och 20 §§ '+ic('external-link','sm')+'</a></details>':'')
     +requisiteConceptButtons(c)
     +(exampleCards?'<div class="subtle-label">Typexempel</div>'+exampleCards:'');
   const stages=(c.stages||[]).map(x=>`<li>${escapeHtml(x)}</li>`).join('');

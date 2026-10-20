@@ -1,6 +1,6 @@
 # Brottskatalog V1.5 – mätbar väg till publicering
 
-> **Aktuell arbetsavstämning 20 oktober: 76,7 % (8 803/11 480), 2 677 moment återstår.** Alla 387 grundkort har separata källbundna objektiva och subjektiva delkontroller; sammanlagt 824/3 483 juridiska kontrollmoment är avklarade. Detta är avgränsad granskning av aktuella straffbestämmelser, inte fullständig juridisk slutcertifiering. Rekvisitfunktionen innehåller dessutom 59 begreppsförklaringar med kurskällor. Publiceringsspärren kvarstår.
+> **Aktuell arbetsavstämning 20 oktober: 76,7 % (8 805/11 482), 2 677 moment återstår.** Alla 387 grundkort har separata källbundna objektiva och subjektiva delkontroller; sammanlagt 824/3 483 juridiska kontrollmoment är avklarade. Detta är avgränsad granskning av aktuella straffbestämmelser, inte fullständig juridisk slutcertifiering. Rekvisitfunktionen innehåller dessutom 59 begreppsförklaringar med kurskällor. Publiceringsspärren kvarstår.
 
 **Historisk baslinje (18 oktober):** 46,3 % (5 297/11 434). Denna siffra är ersatt av den aktuella CI-beräkningen ovan; äldre tabeller nedan är historiska ögonblicksbilder, inte senaste status.
 
@@ -449,3 +449,16 @@ Varje delkontroll binds till dess fullständiga, tidigare manuellt källjämför
 128 lokala Node-kommandon har passerat, inklusive negativa tester för ändrad narkotikatext, ofullständig skattelagstext, framtida granskningsdatum, fel källadress och ändrad allmän uppsåtsregel. Ett nytt separat CI-steg tillkommer; räkneförändringen är **+136 juridiska delmoment och +1 testmoment**, från 8 666/11 479 till 8 803/11 480.
 
 **Fortfarande öppet:** historik/övergångsregler, fullständig undantags- och konkurrensprövning, brottsgrader, relevanta förarbeten/praxis, åtal och tvångsmedel. En särskild urvalsavvikelse att hantera i återstående katalogkontroll är att ringa smuggling, ringa tullbrott och ringa smuggling av explosiv vara har egna befintliga sökposter trots att straffet endast är penningböter. De aktuella rättsliga förklaringarna är granskade, men frågan om deras placering som sökposter respektive relaterade grader är inte markerad som löst. Ingen publicering har gjorts.
+
+
+## 20 oktober – slutligt katalogurval och rättelseförklaringar
+
+Urvalsregeln tillämpas nu efter samtliga importer och granskningar. Tre specialstraffrättsliga penningbötesgrader (ringa smuggling, ringa tullbrott och ringa smuggling av explosiv vara) samt deras nio förstadiekort visas inte längre i sökning, sparade poster, historik eller jämförelser. Alla 319 BrB-grader behålls, även förargelseväckande beteende. Dagsböter och ospecificerade böter är fortfarande inkluderade.
+
+Arbetsinventeringen med 1 473 poster behålls som granskningsunderlag, medan **1 461 sökingångar, varav 384 grundkort**, nu uppfyller katalogurvalet. De tidigare 387 grundkorten och 1 086 förstadiekorten används fortfarande som fast revisionsbas. Rapportschemat skiljer nu uttryckligen `inventory`, `searchable` och `excludedBySelection`; de två indexmomentens etiketter säger arbetsinventering. Urvalsrättningen räknas inte som nya juridiska godkännanden.
+
+Att dölja en familj ändrar inga rättsliga källor eller straffbarhetsbesked. Särskilt bevaras uppgiften att 14 § uttryckligen nämner försök till ringa smuggling av explosiv vara. Den uteslutna familjens förstadiekort bedöms inte som straffritt genom urvalsbeslutet.
+
+Smugglingslagens 12, 15 och 20 §§ har lästs i Riksdagens konsoliderade text den 20 oktober. **23 grundkort** får förklaringar om frivillig rättelse, den skilda räckvidden för ansvarsfrihet respektive åtalsbegränsning och relevanta ringa-/subsidiaritetsregler. Förklaringarna visas i en stängd panel under rekvisit. Hela de tre referensparagrafernas text, källidentitet och författningsversion måste stämma; fel stoppar förklaringarna. Kursanteckningarna ersätter inte originalbestämmelserna.
+
+Detta är innehållsförbättringar och en urvalsrättning, **inte** 23 fullständiga undantags-, åtals- eller historikgodkännanden. Den juridiska kön är oförändrad: **824/3 483**, med **2 677 återstående arbetsmoment**. Två nya CI-kontroller ändrar den tekniska inventeringen till **8 805/11 482 (76,7 %)**. V1.5 är fortsatt utkast.

@@ -38,6 +38,22 @@ try{
 
   assert.equal(await page.locator('h1:has-text("Vad vill du slå upp?")').count(),0,'Large hero removed');
   const search=page.locator('#crime-search');
+  for(const title of ['Ringa smuggling','Ringa tullbrott','Ringa smuggling av explosiv vara','Försök till ringa smuggling av explosiv vara']){
+    await search.fill(title);await wait();
+    const titles=await page.locator('.crime-title').allTextContents();
+    assert.equal(titles.some(t=>t.trim().toLocaleLowerCase('sv')===title.toLocaleLowerCase('sv')),false,'Excluded family cannot reappear through search: '+title);
+  }
+  await search.fill('Tullbrott');await wait();
+  await page.locator('.crime-card').filter({has:page.getByText('Tullbrott',{exact:true})}).click();
+  await page.locator('#sec-rekvisit > summary').click();
+  const limits=page.locator('.smuggling-limits');
+  assert.equal(await limits.getAttribute('open'),null,'Detailed statutory limits stay collapsed initially');
+  await limits.locator(':scope > summary').click();
+  assert.ok((await limits.innerText()).includes('5 kap. 5–10 §§'),'Exact customs surcharge condition is visible');
+  assert.ok((await limits.innerText()).includes('frivillig åtgärd'),'Rectification requires a voluntary effective action');
+  assert.ok(await limits.locator('a[href*="riksdagen.se"]').count());
+  assert.equal(await limits.evaluate(el=>el.scrollWidth<=el.clientWidth+1),true,'Expanded limits fit iPhone width');
+  await page.locator('.sheet-close').click();await wait();
   await search.fill('stöld');
   await search.press('Enter');
   await wait();

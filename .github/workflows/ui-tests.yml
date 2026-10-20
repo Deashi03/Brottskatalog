@@ -4,6 +4,10 @@ on:
   pull_request:
     paths:
       - "index.html"
+      - "catalog-selection-15.js"
+      - "smuggling-limits-15.js"
+      - "scripts/smuggling_limits_15_test.mjs"
+      - "scripts/catalog_selection_15_test.mjs"
       - "requisite-concepts-15.js"
       - "brb-remaining-elements-15.js"
       - "special-elements-audit-15.js"
@@ -709,6 +713,10 @@ jobs:
             audit/v15-stage-evidence-gaps.json
             audit/v15-age14-candidate-inventory.json
           if-no-files-found: warn
+      - name: Check smuggling rectification and prosecution explanations
+        run: node scripts/smuggling_limits_15_test.mjs
+      - name: Check final catalogue selection
+        run: node scripts/catalog_selection_15_test.mjs
       - name: Install headless browser
         run: |
           npm install --no-save playwright

@@ -54,7 +54,7 @@ function add(group,label,completed,total,basis){
 }
 if(base.length!==387||brb.length!==319||special.length!==68||stages.length!==1086)
  throw Error('Catalog footprint changed; rebaseline before publishing percentages');
-add('Grundbrott','Sökbar grundpost',base.filter(c=>c.id&&c.title&&c.ref).length,base.length,'en grundpost = en färdig indexåtgärd');
+add('Grundbrott','Grundpost i arbetsinventeringen',base.filter(c=>c.id&&c.title&&c.ref).length,base.length,'en grundpost = en färdig indexåtgärd');
 add('Grundbrott','Åldersregel/metadata i brottskort',base.filter(age).length,base.length,'metadata, inte individuell tillämpningsbedömning');
 add('Grundbrott','Komplett daterad lagtext med källhänvisning',base.filter(datedFullText).length,base.length,'specialförfattningars maskintext är inte verifierad fulltext');
 add('Grundbrott','Strukturerad inledande rekvisitgenomgång',base.filter(structured).length,base.length,'rekvisitstruktur är inte juridiskt slutgodkännande');
@@ -78,7 +78,7 @@ for(const [key,label] of checkpoints){
    &&c.legalAudit15.checkpoints[key].sourceURL?.startsWith('https://')).length;
  add('Juridisk slutrevision',label,approved,base.length,'separat avslutad kontroll per grundbrott; delgranskning ger ingen automatisk kredit');
 }
-add('Förstadier','Sökbart förstadiekort',stages.filter(c=>c.id&&c.title&&c.stageParentId).length,stages.length,'en sökbar post per förstadium');
+add('Förstadier','Förstadiekort i arbetsinventeringen',stages.filter(c=>c.id&&c.title&&c.stageParentId).length,stages.length,'en sökbar post per förstadium');
 add('Förstadier','Åldersregel/metadata för förstadiet',stages.filter(age).length,stages.length,'endast dokumentation om åldersgräns');
 add('Förstadier','Preliminär källkopplad straffbarhetsstatus',stages.filter(c=>
  c.stageStatus!=='unverified'&&Boolean(c.stageSource)&&validDate(c.stageReviewDate)).length,
@@ -159,7 +159,7 @@ const report={
  version:'1.5',schema:1,generatedAt:new Date().toISOString(),
  method:'Alla åtgärder väger en (1) enhet. Separat åtgärd per kort och juridiskt moment, test och logistikpunkt. Ingen viktning efter tidsåtgång. Status gäller den låsta arbetsinventeringen, inte ett löfte om tidsåtgång.',
  baseline:{base:base.length,brb:brb.length,special:special.length,stages:stages.length,
-   searchable:all.length,ageCandidates:ageCandidates.length,automatedTestCommands:tests.length},
+   inventory:all.length,searchable:all.filter(ctx.window.BK_CATALOG_SELECTION15.included).length,excludedBySelection:all.filter(c=>!ctx.window.BK_CATALOG_SELECTION15.included(c)).length,ageCandidates:ageCandidates.length,automatedTestCommands:tests.length},
  counts:{completed,total,remaining:total-completed,percent:Math.round(completed/total*1000)/10},
  byGroup,work,legalChecklist:checkpoints.map(([id,label])=>({id,label})),
  finalReleaseActions:finalRelease,knownBlockers:{

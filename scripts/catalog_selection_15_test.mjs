@@ -1,0 +1,36 @@
+import assert from 'node:assert/strict';
+import fs from 'node:fs';import vm from 'node:vm';import path from 'node:path';
+const root=path.resolve(import.meta.dirname,'..'),read=p=>fs.readFileSync(path.join(root,p),'utf8');
+const html=read('index.html'),mod='./catalog-selection-15.js';
+const sources=[...html.matchAll(/<script\s+src="([^"]+)"/g)].map(x=>x[1]);
+assert.equal(sources.at(-1),mod,'Visibility must be evaluated after every importer and legal module');
+assert.ok(read('service-worker.js').includes(mod));
+assert.ok(html.includes('const crimes = window.BK_DATA.crimes.filter(window.BK_CATALOG_SELECTION15.included);'),'Search, favourites, recents, comparison and counts share one filtered collection');
+const inline=[...html.matchAll(/<script(?:\s[^>]*)?>([\s\S]*?)<\/script>/g)].map(x=>x[1]);
+const ctx=vm.createContext({window:{},console});
+for(const i of [1,2,3])vm.runInContext(inline[i],ctx);
+for(const s of sources.filter(s=>s!==mod))vm.runInContext(read(s),ctx,{filename:s});
+const all=ctx.window.BK_DATA.crimes,before=JSON.stringify(all);
+vm.runInContext(read(mod),ctx);
+const r=ctx.window.BK_CATALOG_SELECTION15,visible=all.filter(r.included);
+assert.equal(JSON.stringify(all),before,'Visibility must not mutate legal evidence, stage status, scales or powers');
+assert.equal(r.inventory,1473);assert.equal(r.searchable,1461);
+assert.equal(r.excludedBaseIds.length,3);assert.equal(r.excludedStageIds.length,9);
+assert.equal(visible.filter(c=>!c.stageType).length,384);
+assert.equal(visible.filter(c=>!c.stageType&&c.statute?.startsWith('BrB:')).length,319);
+for(const title of ['Ringa smuggling','Ringa tullbrott','Ringa smuggling av explosiv vara']){
+ const c=all.find(c=>c.title===title);assert.ok(c);assert.equal(r.included(c),false);
+ assert.equal(c.penaltyRange.max,0);assert.equal(c.penaltyRange.fines,true);
+ for(const stage of all.filter(s=>s.stageParentId===c.id))assert.equal(r.included(stage),false);
+}
+for(const title of ['Förargelseväckande beteende','Olovlig körning','Ringa narkotikasmuggling','Ringa vapensmuggling'])assert.ok(visible.some(c=>c.title===title),title+' must remain searchable');
+const attempt=all.find(c=>c.title==='Försök till ringa smuggling av explosiv vara');
+assert.equal(attempt.stageStatus,'punishable','Removing a search family must not rewrite explicit SmuglL 14 enumeration');
+assert.equal(attempt.custody,'unknown');
+assert.equal(r.included({id:'test',penalty:'Böter'}),true,'Böter does not mean penningböter-only');
+assert.equal(r.included({id:'test',penalty:'Dagsböter'}),true);
+assert.equal(r.included({id:'test',penalty:'Penningböter eller fängelse'}),true);
+assert.equal(r.included({id:'test',penalty:'Endast penningböter.'}),false);
+assert.equal(r.included({id:'test',statute:'BrB:16:16',penalty:'Penningböter'}),true);
+assert.equal(r.included({id:'orphan',stageType:'forsok',stageParentId:'missing'}),false);
+console.log('PASS: final catalogue visibility excludes three special-law fine-only families (12 entries), preserves all 319 BrB cards and all original legal evidence');
