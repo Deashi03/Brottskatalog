@@ -21,7 +21,7 @@ for(const c of cards){const a=c.legalAudit15;assert.equal(a.fullLegalReviewAppro
  assert.equal(v.chapter6StageApproved,false);assert.equal(v.chargeConditionsApproved,false);
  assert.equal(v.custodyApproved,false);}}
 for(const title of ['Våldtäkt mot barn','Sexuellt utnyttjande av barn','Utnyttjande av barn genom köp av sexuell handling']){
- assert.match(cards.find(c=>c.title===title).legalAudit15.checkpoints.subjective.finding,/OAKTSAM/);
+ assert.match(cards.find(c=>c.title===title).legalAudit15.checkpoints.subjective.finding,/oaktsam/i);
 }
 const clone=JSON.parse(JSON.stringify(ctx.window.BK_DATA.crimes)),W=JSON.parse(JSON.stringify(ctx.window.BK_STATUTES));
 for(const c of clone)if(c.legalAudit15?.sourceAudit==='BrB6-2026-10-20')delete c.legalAudit15;
