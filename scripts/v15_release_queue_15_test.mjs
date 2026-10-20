@@ -77,3 +77,5 @@ assert.equal(file.age14Triage.pendingWithinCandidates,
 assert.equal(file.age14Triage.noAge14StatuteCard,0);
 assert.equal(file.releaseReady,false);
 console.log('PASS V1.5: per-chapter legal review queue, truthful source scopes, '+file.counts.brbPostsWithoutStructuredRequisites+' still missing structures, Pages release blocked');
+assert.equal(file.blockers.knownActiveOffencesWithoutOwnCard,3);
+assert.deepEqual(file.knownCoverageGaps.map(x=>x.statute),['BrB:13:9','BrB:22:1','BrB:22:5']);

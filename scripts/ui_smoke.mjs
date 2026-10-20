@@ -82,7 +82,8 @@ try{
     await conditions.locator(':scope > summary').click();
     assert.ok((await conditions.innerText()).includes('riksåklagaren'),'Competent decision-maker and referral conditions are accessible');
     assert.ok(await dialog.locator('a[href*="riksdagen.se"]').count()>=2,'Both official statutory sources are accessible');
-    assert.equal(await dialog.evaluate(el=>el.scrollWidth<=el.clientWidth+1),true,'Prosecution explanation fits iPhone width');
+    const dialogWidth=await dialog.evaluate(el=>({client:el.clientWidth,scroll:el.scrollWidth,overflow:[...el.querySelectorAll('*')].filter(n=>n.clientWidth&&n.scrollWidth>n.clientWidth+1).slice(0,3).map(n=>({tag:n.tagName,class:n.className,text:n.textContent.slice(0,80),client:n.clientWidth,scroll:n.scrollWidth}))}));
+    assert.ok(dialogWidth.scroll<=dialogWidth.client+1,'Prosecution explanation fits iPhone width: '+title+' '+JSON.stringify(dialogWidth));
     await page.getByRole('button',{name:'Stäng',exact:true}).click();
   }
   await page.goto(url+'#sok',{waitUntil:'networkidle'});

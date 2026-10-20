@@ -15,6 +15,8 @@ const all=ctx.window.BK_DATA.crimes;
 const base=all.filter(c=>!c.stageType);
 const brb=base.filter(c=>/^BrB\s+\d+/i.test(c.shortRef||'')||String(c.statute||'').startsWith('BrB:'));
 const stages=all.filter(c=>c.stageType);
+const coverageRequirements=JSON.parse(fs.readFileSync(path.join(root,'data/v15-required-offence-coverage.json'),'utf8')).records;
+const knownCoverageGaps=coverageRequirements.filter(r=>!base.some(c=>c.statute===r.statute));
 const structured=c=>Boolean(c.rekvisit15?.groups?.length||c.rekvisit15?.routes?.length);
 const fullyReviewed=c=>Boolean(structured(c)&&c.rekvisit15?.scope==='full-legal-review'&&c.rekvisit15?.sourceURL&&c.rekvisit15?.legalReviewApproved===true);
 // 'lawMode=full' means an embedded text was supplied, NOT that a
@@ -144,6 +146,7 @@ const summaries={
  principle:'Grön testkörning och noll paragrafsluckor betyder inte juridiskt godkänd komplett katalog.',
  counts:{
   base:base.length,brb:brb.length,stages:stages.length,total:all.length,
+  knownActiveOffencesWithoutOwnCard:knownCoverageGaps.length,
   structuredBrbRequisites:brb.filter(structured).length,
   fullyLegallyApprovedBrbRequisites:brb.filter(fullyReviewed).length,
   brbPostsWithoutStructuredRequisites:notStructured.length,
@@ -162,6 +165,7 @@ const summaries={
   age14FourYearCandidatesAwaitingIndividualApplicabilityReview:age14PendingCandidates.length
  },
  blockers:{
+  knownActiveOffencesWithoutOwnCard:knownCoverageGaps.length,
   brbRequisitesNotIndividuallyApproved:pendingRequisites.length,
   brbLawTextNotIndividuallyCertified:pendingStatutes.length,
   unverifiedInchoateStatus:unverifiedStage.length,
@@ -170,6 +174,7 @@ const summaries={
   conditionalPenaltyCasesNeedingIndividualVerification:outstandingConditionalPenalty.length,
   age14OffenceCardsWithoutAgeAtActRule:age14CardsWithoutMetadata.length
  },
+ knownCoverageGaps,
  samples:{
   missingRequisites:notStructured.slice(0,30).map(c=>({title:c.title,ref:c.shortRef})),
   unverifiedStages:unverifiedStage.slice(0,20).map(c=>({

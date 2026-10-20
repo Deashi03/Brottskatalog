@@ -1,6 +1,6 @@
 # Brottskatalog V1.5 – mätbar väg till publicering
 
-> **Aktuell arbetsavstämning 20 oktober: 80,0 % (9 189/11 485), 2 296 moment återstår.** Alla 387 grundkort har källbundna objektiva och subjektiva delkontroller. Aktuella lagtextsregler för åtal är kontrollerade för 318/319 BrB-kort och samtliga 68 specialstraffrättsliga kort i arbetsinventeringen. Sammanlagt 1 205/3 483 juridiska delmoment är avklarade. Ingen post är fullständigt juridiskt slutgodkänd och publiceringsspärren kvarstår.
+> **Aktuell arbetsavstämning 20 oktober: 80,0 % av den låsta arbetsinventeringen (9 189/11 485), 2 296 moment återstår.** Alla 387 grundkort har källbundna objektiva och subjektiva delkontroller. Aktuella lagtextsregler för åtal är kontrollerade för 318/319 BrB-kort och samtliga 68 specialstraffrättsliga kort i arbetsinventeringen. Sammanlagt 1 205/3 483 juridiska delmoment är avklarade. Ingen post är fullständigt juridiskt slutgodkänd och publiceringsspärren kvarstår.
 
 **Historisk baslinje (18 oktober):** 46,3 % (5 297/11 434). Denna siffra är ersatt av den aktuella CI-beräkningen ovan; äldre tabeller nedan är historiska ögonblicksbilder, inte senaste status.
 
@@ -498,3 +498,10 @@ Sex stödparagrafer återges med komplett aktuell källproveniens: VapenL 18:14,
 Den första externa mobilkörningen stoppade vid den befintliga navigationsmätningen. Testet inväntar nu att sidans öppningsanimation är färdig innan fasta layoutgränser jämförs; överlappningskravet är oförändrat och felutskriften innehåller faktisk geometri. Upprepade datum- och paragrafkontroller görs en gång per initiering i respektive granskningsblock, utan att källkraven ändras. Mobilregressionen kontrollerar tio konkreta BrB-/speciallagsrutor, stängda underpaneler, beslutsordning, källänkar och iPhone-bredd.
 
 **Sammanlagt under denna arbetsomgång:** 313 + 68 = **381 nya lagtextsbundna juridiska delkontroller**, nio rättade statusklassificeringar och ytterligare förtydliganden. Tre nya CI-kommandon ger totalt **9 189/11 485 (80,0 %)**. Den juridiska kön har **1 205/3 483** avslutade delmoment; **2 296 totala arbetsmoment** återstår. Grovt olaga tvång hålls fortsatt öppet i åtalsblocket. Aktuella lagtextskontroller ersätter inte historik, praxis, konkret åtalsbeslut, immunitets-/jurisdiktionsprövning eller fullständig juridisk slutgranskning. Ingen publicering eller mergning har gjorts.
+
+
+### Upptäckta katalogluckor utanför procentbaslinjen
+
+Inventeringens tidigare mönster kände igen ”döms”/”dömes” men missade vissa straffbud med ”dömas”, exempelvis ”skall han dömas”. Efter rättning och separat avgränsning av strafflindrings-, ansvarsfrihets- och medverkansregler identifieras **tre verkliga huvudbrott utan egen grundpost**: vårdslöshet med gift eller smittämne (13:9), landsförräderi (22:1) och ryktesspridning till fara för rikets säkerhet (22:5). De aktuella straffbuden har jämförts med Riksdagens text den 20 oktober och lagts i ett beständigt källunderlag för täckningskrav.
+
+Releasekontrollen blockerar nu uttryckligen publicering så länge dessa tre saknar egna kort. Inventeringstestet kräver att de syns i kön; när de införs ska hela tillhörande databasarbete, förstadier och revisionsmoment läggas till och procentbaslinjen räknas om. **80,0 % gäller därför den hittills låsta inventeringen, inte 80,0 % av en bevisat komplett förteckning över alla aktuella brott.** Dessa nyupptäckta luckor räknas inte som färdigställda juridiska kontroller och inte heller bort ur nämnaren för att höja procenten.

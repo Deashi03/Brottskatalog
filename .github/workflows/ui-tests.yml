@@ -4,6 +4,7 @@ on:
   pull_request:
     paths:
       - "index.html"
+      - "data/v15-required-offence-coverage.json"
       - "special-prosecution-sources-15.js"
       - "special-prosecution-audit-15.js"
       - "scripts/special_prosecution_audit_15_test.mjs"

@@ -17,6 +17,8 @@ const base=all.filter(c=>!c.stageType);
 const brb=base.filter(c=>c.statute?.startsWith('BrB:'));
 const special=base.filter(c=>!c.statute?.startsWith('BrB:'));
 const stages=all.filter(c=>c.stageType);
+const coverageRequirements=JSON.parse(file('data/v15-required-offence-coverage.json')).records;
+const knownOffencesOutsideBaseline=coverageRequirements.filter(r=>!base.some(c=>c.statute===r.statute));
 const structured=c=>Boolean(c.rekvisit15?.groups?.length||c.rekvisit15?.routes?.length);
 const validDate=x=>typeof x==='string'&&/^\d{4}-\d{2}-\d{2}$/.test(x)&&!Number.isNaN(Date.parse(x))&&x<=new Date().toLocaleDateString('sv-SE',{timeZone:'Europe/Stockholm'});
 const datedFullText=c=>c.lawMode==='full'&&c.lawCompletenessVerified===true
@@ -163,13 +165,16 @@ const report={
  counts:{completed,total,remaining:total-completed,percent:Math.round(completed/total*1000)/10},
  byGroup,work,legalChecklist:checkpoints.map(([id,label])=>({id,label})),
  finalReleaseActions:finalRelease,knownBlockers:{
+  knownActiveOffencesOutsideBaseline:knownOffencesOutsideBaseline.length,
   brbFullFinalApproved:brb.filter(c=>c.rekvisit15?.legalReviewApproved===true).length,
   unverifiedStages:stages.filter(c=>c.stageStatus==='unverified').length,
   conditionalPenaltyCases:base.filter(c=>c.conditionalPenalty&&!c.penaltyRangeVerified).length,
   specialBaseCardsWithoutCertifiedCompleteLaw:special.filter(c=>!datedFullText(c)).length,
   noAutomaticReleaseApproval:true
  },
+ requiredOffenceCoverageGaps:knownOffencesOutsideBaseline,
  assumptions:[
+  'Procenten gäller den fasta arbetsinventeringen. Kända saknade huvudbrott utanför baslinjen måste tillföras och ombaseras före fullständig katalogrelease.',
   'Ett brottskorts olika arbetsmoment räknas individuellt; typfall är frivilliga och läggs inte till som fiktiva obligatoriska luckor.',
   'Preliminär förstadieklassificering och maskinimporterade straffskalor räknas inte som juridiskt slutgodkända.',
   '9 juridiska slutmoment per grundbrott och 2 individuella slutmoment per förstadium behövs för publiceringsgranskning.',

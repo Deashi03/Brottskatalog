@@ -29,6 +29,8 @@ const check=r.work.filter(x=>x.group==='Juridisk slutrevision');
 assert.ok(check.every(x=>x.total===387));
 assert.deepEqual(check.map(x=>x.completed),Object.values(completedByCheck),'25 BrB12, 36 BrB3 and 39 BrB8 and 30 BrB9 and 32 BrB10 source-scoped legal checkpoints counted; all complete offence audits remain unapproved');
 assert.ok(r.baseline.automatedTestCommands>=75);
+assert.equal(r.knownBlockers.knownActiveOffencesOutsideBaseline,3);
+assert.deepEqual(r.requiredOffenceCoverageGaps.map(x=>x.statute),['BrB:13:9','BrB:22:1','BrB:22:5']);
 assert.equal(r.knownBlockers.brbFullFinalApproved,0);
 assert.equal(r.knownBlockers.unverifiedStages,0);
 assert.equal(r.knownBlockers.conditionalPenaltyCases,14);

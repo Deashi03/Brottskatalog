@@ -14,6 +14,13 @@ const statutes=ctx.window.BK_STATUTES||{};
 const base=ctx.window.BK_DATA.crimes.filter(c=>!c.stageType);
 const paragraphs=[];
 const nonOffenceReviewed=new Map([
+ ['BrB:13:11','Frivilligt avvärjande: strafflindring/ansvarsfrihet, inte ett separat huvudbrott.'],
+ ['BrB:14:12','Avvärjande av fara i bevishänseende: strafflindring/ansvarsfrihet, inte ett separat huvudbrott.'],
+ ['BrB:15:4','Betydelselös utsaga och skälig ursäkt: ansvarsfrihetsregel, inte ett separat huvudbrott.'],
+ ['BrB:15:14','Frivillig rättelse/avvärjande: strafflindring/ansvarsfrihet, inte ett separat huvudbrott.'],
+ ['BrB:18:2','Särskild straffskalemodifiering vid förgripelse mot skyddad statschef/personkrets; inget separat fullbordat huvudbrott.'],
+ ['BrB:19:11','Särskild straffskalemodifiering vid kränkning av främmande makt; inget separat fullbordat huvudbrott.'],
+ ['BrB:19:15','Särskild medverkansregel med oaktsamhetsinslag och strafftak; ingen egen fullbordad brottsrubricering.'],
  ['BrB:11:7','Ansvarsutvidgning till person i gäldenärs ställe och medverkansregel; ingen separat brottsrubricering.'],
  ['BrB:22:7','Särskild kriminalisering av försök, förberedelse och stämpling; inte ett eget fullbordat huvudbrott.']
 ]);
@@ -29,7 +36,7 @@ for(const [key,data] of Object.entries(statutes)){
  const ch=Number(match[1]);if(ch<3||ch>22)continue;
  const provision=sanitize(data.text);
  const exists=base.filter(c=>String(c.statute||'')===key || String(c.shortRef||'').match(new RegExp('^BrB '+ch+':'+match[2]+'(?![0-9a-z])','i')));
- const hasPenaltyWords=/(?:döms|dömes|straffas|skall dömas|ska dömas)[\s\S]{0,220}?(?:för\s+[a-zåäö]|till\s+böter|till\s+fängelse)/i.test(provision);
+ const hasPenaltyWords=/(?:döms|dömes|dömas|straffas|skall dömas|ska dömas)[\s\S]{0,220}?(?:för\s+[a-zåäö]|till\s+böter|till\s+fängelse)/i.test(provision);
  const isCrossReferenceOnly=/^(?:\d+[a-z]?\s*§\s*)?(?:För\s+(?:försök|förberedelse|stämpling)|Det\s+som\s+föreskrivs)/i.test(provision)&&!exists.length;
  const excluded=nonOffenceReviewed.get(key)||nonCurrentReviewed.get(key)||malformedSourceReviewed.get(key);
  const suspectedUncovered=hasPenaltyWords&&!exists.length&&!isCrossReferenceOnly&&!excluded;
@@ -61,3 +68,9 @@ console.log('V1.5 BRB COVERAGE '+JSON.stringify({scannedParagraphs:report.scanne
 if(paragraphs.length<200)throw Error('Too few scanned BrB paragraphs; official import incomplete');
 for(const key of ['BrB:4:24','BrB:11:7','BrB:22:7','BrB:22:6c'])if(!paragraphs.find(p=>p.ref===key&&p.status!=='manual-inventory-needed'))throw Error('Manual legal exclusion not applied '+key);
 for(const name of ['Märkesförfalskning','Förvanskning av urkund','Brukande av det förfalskade','Trolöshet mot huvudman'])if(!base.some(c=>c.title===name))throw Error('Core Brottsbalken rubricering missing: '+name);
+
+const requiredCoverage=JSON.parse(fs.readFileSync(path.join(root,'data/v15-required-offence-coverage.json'),'utf8')).records;
+for(const r of requiredCoverage){
+ const p=paragraphs.find(p=>p.ref===r.statute);
+ if(!p||(!p.crimeTitles.length&&p.status!=='manual-inventory-needed'))throw Error('Known active offence must remain in coverage queue: '+r.title);
+}
