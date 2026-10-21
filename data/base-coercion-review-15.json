@@ -14213,9 +14213,74 @@
         "applicabilityConditional": null,
         "penaltyAlternatives15": [
           {
-            "when": "Den konkreta tillämpliga undergärningen och dess grad har identifierats",
-            "scale": "Straff följer hänvisad brottstyp; ingen enhetlig straffskala",
-            "source": "BrB 14:10"
+            "when": "Brukande motsvarande urkundsförfalskning, normalgraden",
+            "scale": "Fängelse högst 2 år",
+            "source": "BrB 14:10 jämförd med 14:1"
+          },
+          {
+            "when": "Brukande motsvarande förvanskning av urkund, ringa brott",
+            "scale": "Böter eller fängelse högst 6 månader",
+            "source": "BrB 14:10 jämförd med 14:2"
+          },
+          {
+            "when": "Brukande motsvarande grov urkundsförfalskning",
+            "scale": "Fängelse 1–6 år",
+            "source": "BrB 14:10 jämförd med 14:3"
+          },
+          {
+            "when": "Brukande motsvarande signaturförfalskning, normalgraden",
+            "scale": "Fängelse högst 2 år",
+            "source": "BrB 14:10 jämförd med 14:5 första stycket"
+          },
+          {
+            "when": "Brukande motsvarande signaturförfalskning, ringa brott",
+            "scale": "Böter eller fängelse högst 6 månader",
+            "source": "BrB 14:10 jämförd med 14:5 andra stycket"
+          },
+          {
+            "when": "Brukande motsvarande signaturförfalskning, grovt brott",
+            "scale": "Fängelse 6 månader–4 år",
+            "source": "BrB 14:10 jämförd med 14:5 tredje stycket"
+          },
+          {
+            "when": "Brukande motsvarande penningförfalskning, normalgraden",
+            "scale": "Fängelse högst 4 år",
+            "source": "BrB 14:10 jämförd med 14:6 första stycket"
+          },
+          {
+            "when": "Brukande motsvarande penningförfalskning, ringa brott",
+            "scale": "Böter eller fängelse högst 6 månader",
+            "source": "BrB 14:10 jämförd med 14:6 andra stycket"
+          },
+          {
+            "when": "Brukande motsvarande penningförfalskning, grovt brott",
+            "scale": "Fängelse 2–8 år",
+            "source": "BrB 14:10 jämförd med 14:6 tredje stycket"
+          },
+          {
+            "when": "Brukande motsvarande märkesförfalskning, normalgraden",
+            "scale": "Fängelse högst 2 år",
+            "source": "BrB 14:10 jämförd med 14:8 första stycket"
+          },
+          {
+            "when": "Brukande motsvarande märkesförfalskning, ringa brott",
+            "scale": "Böter eller fängelse högst 6 månader",
+            "source": "BrB 14:10 jämförd med 14:8 andra stycket"
+          },
+          {
+            "when": "Brukande motsvarande märkesförfalskning, grovt brott",
+            "scale": "Fängelse 6 månader–4 år",
+            "source": "BrB 14:10 jämförd med 14:8 tredje stycket"
+          },
+          {
+            "when": "Brukande motsvarande förfalskning av fast märke, normalgraden",
+            "scale": "Fängelse högst 4 år",
+            "source": "BrB 14:10 jämförd med 14:9 första stycket"
+          },
+          {
+            "when": "Brukande motsvarande förfalskning av fast märke, ringa brott",
+            "scale": "Böter eller fängelse högst 6 månader",
+            "source": "BrB 14:10 jämförd med 14:9 andra stycket"
           }
         ]
       },
@@ -14289,7 +14354,8 @@
         "LUL:36",
         "LUL:36a",
         "LUL:36b"
-      ]
+      ],
+      "checked": "2026-10-21"
     },
     {
       "id": "v03-mened",

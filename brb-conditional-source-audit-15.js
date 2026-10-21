@@ -36,10 +36,10 @@ for(const [title,ref,n,phrases,deps] of cases){
      &&W[k].url===URL)
   &&c?.lawCompletenessVerified===true&&c.statute===ref;
  const branchOK=c?.conditionalPenalty===true&&c.penaltyRangeVerified===false&&Array.isArray(a)
-  &&a.length===(n||(title==='Arbetsmiljöbrott'?6:1))&&a.every(x=>typeof x.when==='string'&&x.when.length>=8
+  &&a.length===(n||(title==='Arbetsmiljöbrott'?6:title==='Brukande av det förfalskade'?14:1))&&a.every(x=>typeof x.when==='string'&&x.when.length>=8
       &&typeof x.scale==='string'&&(x.scale==='Böter'||x.scale.length>=10)
       &&typeof x.source==='string'&&x.source.startsWith('BrB'))
-  &&detail?.sourceURL===URL&&detail.checked===(title==='Arbetsmiljöbrott'?'2026-10-21':'2026-10-18')
+  &&detail?.sourceURL===URL&&detail.checked===(['Arbetsmiljöbrott','Brukande av det förfalskade'].includes(title)?'2026-10-21':'2026-10-18')
   &&detail.automaticSelectionAllowed===false&&detail.custodyApproved===false
   &&c.rekvisit15?.legalReviewApproved!==true;
  const deriv=n===0&&c?.penaltyDerivation15?.kind==='statutory-cross-reference'

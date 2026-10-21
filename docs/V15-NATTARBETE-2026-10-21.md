@@ -292,3 +292,48 @@ Urkundsdossiern har också kompletterats med hela originaldomen **De vita korten
 **Verifiering:** Riktade tester för de sex alternativen, varje ändrad källpinne, omladdning, 14 grundkorts källkontroll och bevarade krigsvillkor har passerat. Den fulla lokala Node-sviten för föregående apppaket genomfördes med 144/145 direkt godkända kommandon; det enda felet var en testhänvisning till Frejas tidigare nyhetssida och det testet passerade efter byte till originaldomen. Det är testbevis för föregående urkundspaket, inte för senare arbetsmiljökod. Ny full CI inklusive mobil kontrolleras separat.
 
 Nästa handläggning: utgå från aktuellt PR-huvud och verifiera full CI för arbetsmiljöpaktet, inklusive den nya sexalternativsmenyn på iPhone. Överskriv inte generella numeriska värden för att försöka lösa ett villkorat grundkort. Urkundsdossierns NJA 2009 s. 111 är nu läst, inklusive majoritet och skiljaktighet; den ska inte längre tas upp som oläst. Fortsatt urkundspraxis och arbetsmiljöfrågorna om ansvarsfördelning/delegering och kausalitet återstår. Åtalsfiltret för grovt olaga tvång är fortfarande öppet. Bevara 14 villkorade grundkort, 12 förstadier med alternativa skalor och inga nya progresspoäng utan självständig kontroll av den faktiska checkpunkten.
+
+
+## Senaste testavstämning och fortsatt arbetsmiljöpraxis
+
+Den sparade appkoden på **f1e63d46e07b10347dd22f24b97dab2abd1fade7**, träd **4ac11a812c8633304cb5c1bcf5b375ba7c227d67**, har **145/145 passerade lokala Node-kommandon**. Kommandon, utfall och SHA-256 för respektive testutskrift finns i `data/v15-workplace-verification-2026-10-21.json`. Även den fullständiga [Actions 1037](https://github.com/Deashi03/Brottskatalog/actions/runs/39647518407) är avslutad grön inklusive iPhone-testet. Detta gäller f1e63d4 med arbetsmiljöalternativen, före det senare paketet med 14 brukandealternativ.
+
+Utökningen av arbetsmiljöbrottets alternativ krävde även en ny avstämning av dess tvångsmedelsunderlag. Den gamla textpinnen pekade på det tidigare enda generella alternativet och höll därför korrekt inne kontrollen när sex alternativ infördes. Pinnen har ersatts med de sex individuellt källkontrollerade alternativen och datum 21 oktober. Alla straffskaleberoende besked kräver fortfarande val av konkret gärningsgren; inga befogenheter eller häktningsbesked har blivit positiva. Detta återställer den tidigare granskningens giltighet, ger ingen extra progresspoäng och behåller **11 548/11 957, 409 kvar**.
+
+I mobiltestet jämförs myteri och svikande av försvarsplikt nu med deras verkliga varningstexter. Det tidigare testet antog felaktigt att båda skulle visa krigskapitlens generella varning. Vyn bevarar de faktiska varningarna och visar samtidigt alternativen.
+
+Fyra hela originaldomar om arbetsmiljöbrott har dessutom lästs och sparats som avgränsat granskningsunderlag med PDF-hashar i `data/workplace-primary-case-review-15.json`:
+
+| Dom | Avgränsad slutsats som behöver hållas isär |
+|---|---|
+| B 4471-02, 5 februari 2004, nio sidor | Arbetsmiljöansvar och orsakssamband kunde konstateras, men tillräckligt klandervärd oaktsamhet saknades i det konkreta fallet |
+| B 3184-03, 23 mars 2004, nio sidor | Majoriteten fällde platschefen efter tidigare olycka och oklara ansvarsgränser; den skiljaktiga frikännande bedömningen är inte domslutet |
+| B 2011-03, 24 februari 2004, sju sidor | Rektorns säkerhetsansvar medförde inte automatiskt straffansvar; den erforderliga oaktsamheten var inte styrkt |
+| B 1609-06, 31 maj 2007, sju sidor | Bristande rutiner för signalman kunde orsaka dödsfallet; HD dömde för normalgraden och prövade dåvarande företagsbotsregler separat |
+
+Inga historiska AFS-nummer, straffnivåer eller företagsbotsregler återges som aktuella 2026-regler. Detta kompletterar granskningen men utgör inte en uttömmande praxisinventering eller ett fullständigt juridiskt godkännande.
+
+Konkret överlämning: kontrollera först aktuellt PR-huvud och Actions för f1e63d4 eller senare huvud. Läs det senaste testbeviset; äldre misslyckade körningar är historik, inte godkänd testning. Appens dåvarande runtimehash var `8d2ef40a75a7674c63ce35ce573ecf5c82cf26b27d65699077f67589603b8e4c`; publicerad 1.4 har hash `b4059fb41c1da166a15f0baf2ced33551075cca206944b26fc17994f1f90700f` enligt metoden i snapshotfilen. De fyra arbetsmiljödomarna ovan och NJA 2009 s. 111 är nu lästa. Fortsätt med nästa faktiskt olästa källa, t.ex. NJA 1991 s. 247, 1993 s. 245 och senare ansvarspraxis; återanvänd inte sökträffar som om originalen lästs. Gör fortsatt separat undersökning av åtalsfrågan i BrB 4:11 för grovt olaga tvång. 390 praxischeckpunkter, ett åtalsfilter och 18 avsiktligt orörda publiceringsmoment kvarstår. Ingen main-merge, release, tagg eller deploy.
+
+
+## Alla 14 villkorade grundkort har nu konkreta alternativ
+
+Även grundkortet **Brukande av det förfalskade** har nu fått konkreta skalor. Den tidigare enda generella hänvisningen har ersatts med **14 alternativ** efter individuell kontroll av BrB 14:1–3, 5–6 och 8–10:
+
+| Den förfalskning brukandet motsvarar | Antal grundkortsalternativ |
+|---|---:|
+| Urkundsförfalskning/förvanskning/grov urkundsförfalskning | 3 |
+| Signaturförfalskning, ringa/normal/grov | 3 |
+| Penningförfalskning, ringa/normal/grov | 3 |
+| Märkesförfalskning, ringa/normal/grov | 3 |
+| Förfalskning av fast märke, ringa/normal | 2 |
+
+Här ingår fem ringa fullbordansalternativ. Försöks- och förberedelsekorten behåller däremot sina nio alternativ var och undantar ringa fullbordansfall enligt 14:13. Grundkortets 14 alternativ får alltså inte kopieras rakt till förstadierna. Olovlig befattning med falska pengar enligt 14:7 är inte en egen förfalskningstyp i denna lista. Samtliga skalor och exakta lagtextpinnar finns i `data/forged-use-derived-penalty-options-15.json`.
+
+Tillsammans med arbetsmiljöbrottets sex alternativ innebär det **52 konkreta alternativbeskrivningar på 14 villkorade grundkort**. De två tidigare generella hänvisningsalternativen har utvecklats till 20 konkreta beskrivningar. Alla 14 grundkort behåller sin villkorade status. Ingen gemensam numerisk skala tilldelas, ingen faktisk gren väljs och ingen brottsgrad eller befogenhet godkänns automatiskt. Både grundkortens och förstadiernas längre listor kan öppnas vid behov.
+
+Straffskaleberoende tvångsmedelskontroller har stämts av mot respektive nya alternativlista och kräver fortfarande eget val av konkret gren. Förstadiernas källkontroller är uppdaterade till det nya grundkortets alternativ utan att tilldela ringa förstadier straffansvar. Det tillkommer inga progresspoäng: **11 548/11 957 = 96,6 %, 409 kvar**, varav 18 avsiktligt ogjorda publiceringsmoment. Fullständiga juridiska godkännanden är fortfarande noll. Ny fullständig testning av detta sista alternativpaket görs separat från föregående paket.
+
+Överlämning efter grundkortens alternativarbete: utgå från faktiskt PR-huvud; bekräfta att alla 14 grundkort har sammanlagt 52 konkreta alternativ, att brukandets grundkort har 14 inklusive fem ringa, och att dess två positiva förstadier fortfarande har nio var utan ringa. Kontrollera full CI inklusive den nya mobilmenyn för grundkortet. Dossiern för arbetsmiljöbrott omfattar nu även hela B 3184-03, majoritet och skiljaktighet. Nästa källarbete gäller ännu olästa relevanta avgöranden och aktuellt föreskriftsstöd, samt den uttryckliga åtalsfrågan för grovt olaga tvång. Skapa inga fullständiga praxisgodkännanden genom att enbart räkna källor eller anteckningar. De villkorade korten är inte längre generella tomma hänvisningar, men faktisk tillämpning och juridisk slutrevision är fortfarande separata frågor.
+
+Senaste alternativpaketets aktuella runtimehash: `9ee8139fc2520e2c6e5a474a112b98729268677d8acfe5b611687631d44188c7`. Jämför alltid aktuell snapshot med faktiskt apphuvud; en senare dokumentationscommit ändrar inte appens runtimehash.

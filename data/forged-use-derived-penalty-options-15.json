@@ -1,0 +1,93 @@
+{
+  "checked": "2026-10-21",
+  "title": "Brukande av det förfalskade",
+  "statute": "BrB:14:10",
+  "sourceURL": "https://www.riksdagen.se/sv/dokument-och-lagar/dokument/svensk-forfattningssamling/brottsbalk-1962700_sfs-1962-700/",
+  "pins": {
+    "BrB:14:1": "1 §\nDen som obehörigen, genom att skriva eller på liknande sätt ange en annan persons namn eller på annat sätt, framställer en falsk urkund eller ändrar eller fyller ut en äkta urkund döms, om åtgärden innebär fara i bevishänseende, för urkundsförfalskning till fängelse i högst två år.\nMed urkund avses\n1. en handling som upprättats till bevis eller annars är av betydelse som bevis och som har en utställarangivelse och originalkaraktär,\n2. en elektronisk handling som upprättats till bevis eller annars är av betydelse som bevis och som har en utställarangivelse som kan kontrolleras på ett tillförlitligt sätt, och\n3. ett märke som ställts ut till bevis om en persons identitet eller om en viss rättighet eller prestation och som har originalkaraktär (bevismärke). Lag (2013:425).",
+    "BrB:14:2": "2 §\nÄr brott som avses i 1 § att anse som ringa, döms för förvanskning av urkund till böter eller fängelse i högst sex månader.\n\nVid bedömande av om brottet är ringa ska det särskilt beaktas om urkunden är av mindre vikt eller om gärningen har begåtts för att hjälpa någon till hans eller hennes rätt.\nLag (2013:425).",
+    "BrB:14:3": "3 §\nÄr brott som avses i 1 § att anse som grovt, döms för grov urkundsförfalskning till fängelse i lägst ett och högst sex år.\nVid bedömningen av om brottet är grovt ska det särskilt beaktas om förfalskningen avsett en myndighets arkivhandling av vikt eller en urkund som är särskilt betydelsefull i den allmänna omsättningen eller om gärningen annars varit av särskilt farlig art. Lag (2026:1318).",
+    "BrB:14:5": "5 §\nDen som olovligen anbringar eller annars förfalskar någon annans namnteckning eller signatur på ett alster av konst eller brukskonst eller på annat sådant verk och därigenom ger sken av att den personen angett sig vara upphovsman till verket döms för signaturförfalskning till fängelse i högst två år.\nÄr brottet ringa, döms till böter eller fängelse i högst sex månader.\nÄr brottet grovt, döms till fängelse i lägst sex månader och högst fyra år. Lag (2013:425).",
+    "BrB:14:6": "6 §\nDen som eftergör eller på annat sätt förfalskar sedel eller mynt som gäller i Sverige eller utomlands eller som har beslutats för utgivning men ännu inte är gällande döms för penningförfalskning till fängelse i högst fyra år.\nÄr brottet ringa, döms till böter eller fängelse i högst sex månader.\nÄr brottet grovt, döms till fängelse i lägst två och högst åtta år. Lag (2013:425).",
+    "BrB:14:8": "8 §\nDen som eftergör gällande frimärke, beläggningsstämpel eller annat offentligt eller för allmänheten avsett svenskt eller utländskt värdemärke eller offentlig svensk eller utländsk kontrollmärkning på mått, vikt, vara, handling eller annat, eller anbringar falskt sådant märke eller obehörigen anbringar äkta märke eller annars förfalskar sådant märke eller det märkta, döms, om åtgärden innebär fara i bevishänseende, för märkesförfalskning till fängelse i högst två år.\nÄr brottet ringa, döms till böter eller fängelse i högst sex månader.\n\nÄr brottet grovt, döms till fängelse i lägst sex månader och högst fyra år. Lag (2013:425).",
+    "BrB:14:9": "9 §\nDen som obehörigen anbringar ett märke eller annat föremål som kan förväxlas med gällande gränsmärke, vattenmärke, fixpunkt eller annat märke för plan- eller höjdmätning eller flyttar, tar bort, skadar eller förstör ett sådant märke döms, om åtgärden innebär fara i bevishänseende, för förfalskning av fast märke till fängelse i högst fyra år.\nÄr brottet ringa, döms till böter eller fängelse i högst sex månader. Lag (2013:425).",
+    "BrB:14:10": "10 §\nDen som åberopar falsk urkund, bjuder ut eller saluför verk med falsk signatur, prånglar ut falsk sedel eller falskt mynt, använder falskt värde- eller kontrollmärke, åberopar falskt fast märke eller annars brukar något som förfalskats på ett sätt som anges i detta kapitel, döms, om åtgärden innebär fara i bevishänseende, för brukande av det förfalskade som om han eller hon själv hade gjort förfalskningen. Lag (2013:425)."
+  },
+  "alternatives": [
+    {
+      "when": "Brukande motsvarande urkundsförfalskning, normalgraden",
+      "scale": "Fängelse högst 2 år",
+      "source": "BrB 14:10 jämförd med 14:1"
+    },
+    {
+      "when": "Brukande motsvarande förvanskning av urkund, ringa brott",
+      "scale": "Böter eller fängelse högst 6 månader",
+      "source": "BrB 14:10 jämförd med 14:2"
+    },
+    {
+      "when": "Brukande motsvarande grov urkundsförfalskning",
+      "scale": "Fängelse 1–6 år",
+      "source": "BrB 14:10 jämförd med 14:3"
+    },
+    {
+      "when": "Brukande motsvarande signaturförfalskning, normalgraden",
+      "scale": "Fängelse högst 2 år",
+      "source": "BrB 14:10 jämförd med 14:5 första stycket"
+    },
+    {
+      "when": "Brukande motsvarande signaturförfalskning, ringa brott",
+      "scale": "Böter eller fängelse högst 6 månader",
+      "source": "BrB 14:10 jämförd med 14:5 andra stycket"
+    },
+    {
+      "when": "Brukande motsvarande signaturförfalskning, grovt brott",
+      "scale": "Fängelse 6 månader–4 år",
+      "source": "BrB 14:10 jämförd med 14:5 tredje stycket"
+    },
+    {
+      "when": "Brukande motsvarande penningförfalskning, normalgraden",
+      "scale": "Fängelse högst 4 år",
+      "source": "BrB 14:10 jämförd med 14:6 första stycket"
+    },
+    {
+      "when": "Brukande motsvarande penningförfalskning, ringa brott",
+      "scale": "Böter eller fängelse högst 6 månader",
+      "source": "BrB 14:10 jämförd med 14:6 andra stycket"
+    },
+    {
+      "when": "Brukande motsvarande penningförfalskning, grovt brott",
+      "scale": "Fängelse 2–8 år",
+      "source": "BrB 14:10 jämförd med 14:6 tredje stycket"
+    },
+    {
+      "when": "Brukande motsvarande märkesförfalskning, normalgraden",
+      "scale": "Fängelse högst 2 år",
+      "source": "BrB 14:10 jämförd med 14:8 första stycket"
+    },
+    {
+      "when": "Brukande motsvarande märkesförfalskning, ringa brott",
+      "scale": "Böter eller fängelse högst 6 månader",
+      "source": "BrB 14:10 jämförd med 14:8 andra stycket"
+    },
+    {
+      "when": "Brukande motsvarande märkesförfalskning, grovt brott",
+      "scale": "Fängelse 6 månader–4 år",
+      "source": "BrB 14:10 jämförd med 14:8 tredje stycket"
+    },
+    {
+      "when": "Brukande motsvarande förfalskning av fast märke, normalgraden",
+      "scale": "Fängelse högst 4 år",
+      "source": "BrB 14:10 jämförd med 14:9 första stycket"
+    },
+    {
+      "when": "Brukande motsvarande förfalskning av fast märke, ringa brott",
+      "scale": "Böter eller fängelse högst 6 månader",
+      "source": "BrB 14:10 jämförd med 14:9 andra stycket"
+    }
+  ],
+  "note": "Fastställ vilket förfalskat föremål som brukats, hur det åberopats eller använts och vilken förfalskning och grad detta motsvarar. Fara i bevishänseende krävs. Ringa fall kan bestraffas vid fullbordat brukande; 14:13 undantar dem från förstadieansvar. Olovlig befattning med falska pengar enligt 14:7 är inte en egen förfalskningstyp i denna alternativlista.",
+  "scope": "Current completed-offence statutory alternatives only; no automatic object, grade, historic applicability, prosecution or coercion selection",
+  "globalRangeAssigned": false,
+  "fullLegalApprovalGranted": false,
+  "progressCredit": 0
+}

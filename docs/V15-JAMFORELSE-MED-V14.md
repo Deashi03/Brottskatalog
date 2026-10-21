@@ -1,5 +1,42 @@
 # Brottskatalog 1.5 jämfört med publicerad 1.4
 
+## Alla 14 villkorade grundkort har nu konkreta alternativ
+
+Även grundkortet **Brukande av det förfalskade** har nu fått konkreta skalor. Den tidigare enda generella hänvisningen har ersatts med **14 alternativ** efter individuell kontroll av BrB 14:1–3, 5–6 och 8–10:
+
+| Den förfalskning brukandet motsvarar | Antal grundkortsalternativ |
+|---|---:|
+| Urkundsförfalskning/förvanskning/grov urkundsförfalskning | 3 |
+| Signaturförfalskning, ringa/normal/grov | 3 |
+| Penningförfalskning, ringa/normal/grov | 3 |
+| Märkesförfalskning, ringa/normal/grov | 3 |
+| Förfalskning av fast märke, ringa/normal | 2 |
+
+Här ingår fem ringa fullbordansalternativ. Försöks- och förberedelsekorten behåller däremot sina nio alternativ var och undantar ringa fullbordansfall enligt 14:13. Grundkortets 14 alternativ får alltså inte kopieras rakt till förstadierna. Olovlig befattning med falska pengar enligt 14:7 är inte en egen förfalskningstyp i denna lista. Samtliga skalor och exakta lagtextpinnar finns i `data/forged-use-derived-penalty-options-15.json`.
+
+Tillsammans med arbetsmiljöbrottets sex alternativ innebär det **52 konkreta alternativbeskrivningar på 14 villkorade grundkort**. De två tidigare generella hänvisningsalternativen har utvecklats till 20 konkreta beskrivningar. Alla 14 grundkort behåller sin villkorade status. Ingen gemensam numerisk skala tilldelas, ingen faktisk gren väljs och ingen brottsgrad eller befogenhet godkänns automatiskt. Både grundkortens och förstadiernas längre listor kan öppnas vid behov.
+
+Straffskaleberoende tvångsmedelskontroller har stämts av mot respektive nya alternativlista och kräver fortfarande eget val av konkret gren. Förstadiernas källkontroller är uppdaterade till det nya grundkortets alternativ utan att tilldela ringa förstadier straffansvar. Det tillkommer inga progresspoäng: **11 548/11 957 = 96,6 %, 409 kvar**, varav 18 avsiktligt ogjorda publiceringsmoment. Fullständiga juridiska godkännanden är fortfarande noll. Ny fullständig testning av detta sista alternativpaket görs separat från föregående paket.
+
+## Senaste testavstämning och fortsatt arbetsmiljöpraxis
+
+Den sparade appkoden på **f1e63d46e07b10347dd22f24b97dab2abd1fade7**, träd **4ac11a812c8633304cb5c1bcf5b375ba7c227d67**, har **145/145 passerade lokala Node-kommandon**. Kommandon, utfall och SHA-256 för respektive testutskrift finns i `data/v15-workplace-verification-2026-10-21.json`. Även den fullständiga [Actions 1037](https://github.com/Deashi03/Brottskatalog/actions/runs/39647518407) är avslutad grön inklusive iPhone-testet. Detta gäller f1e63d4 med arbetsmiljöalternativen, före det senare paketet med 14 brukandealternativ.
+
+Utökningen av arbetsmiljöbrottets alternativ krävde även en ny avstämning av dess tvångsmedelsunderlag. Den gamla textpinnen pekade på det tidigare enda generella alternativet och höll därför korrekt inne kontrollen när sex alternativ infördes. Pinnen har ersatts med de sex individuellt källkontrollerade alternativen och datum 21 oktober. Alla straffskaleberoende besked kräver fortfarande val av konkret gärningsgren; inga befogenheter eller häktningsbesked har blivit positiva. Detta återställer den tidigare granskningens giltighet, ger ingen extra progresspoäng och behåller **11 548/11 957, 409 kvar**.
+
+I mobiltestet jämförs myteri och svikande av försvarsplikt nu med deras verkliga varningstexter. Det tidigare testet antog felaktigt att båda skulle visa krigskapitlens generella varning. Vyn bevarar de faktiska varningarna och visar samtidigt alternativen.
+
+Fyra hela originaldomar om arbetsmiljöbrott har dessutom lästs och sparats som avgränsat granskningsunderlag med PDF-hashar i `data/workplace-primary-case-review-15.json`:
+
+| Dom | Avgränsad slutsats som behöver hållas isär |
+|---|---|
+| B 4471-02, 5 februari 2004, nio sidor | Arbetsmiljöansvar och orsakssamband kunde konstateras, men tillräckligt klandervärd oaktsamhet saknades i det konkreta fallet |
+| B 3184-03, 23 mars 2004, nio sidor | Majoriteten fällde platschefen efter tidigare olycka och oklara ansvarsgränser; den skiljaktiga frikännande bedömningen är inte domslutet |
+| B 2011-03, 24 februari 2004, sju sidor | Rektorns säkerhetsansvar medförde inte automatiskt straffansvar; den erforderliga oaktsamheten var inte styrkt |
+| B 1609-06, 31 maj 2007, sju sidor | Bristande rutiner för signalman kunde orsaka dödsfallet; HD dömde för normalgraden och prövade dåvarande företagsbotsregler separat |
+
+Inga historiska AFS-nummer, straffnivåer eller företagsbotsregler återges som aktuella 2026-regler. Detta kompletterar granskningen men utgör inte en uttömmande praxisinventering eller ett fullständigt juridiskt godkännande.
+
 ## Arbetsmiljöbrott: sex kontrollerade härledda alternativ
 
 Grundkortet hade tidigare ett enda generellt alternativ: ”Straff följer hänvisad brottstyp; ingen enhetlig straffskala”. Det har nu ersatts med följande sex separata alternativ, kontrollerade mot aktuell BrB 3:7–10 den 21 oktober 2026:

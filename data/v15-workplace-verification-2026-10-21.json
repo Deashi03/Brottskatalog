@@ -1,0 +1,890 @@
+{
+  "appCommit": "f1e63d46e07b10347dd22f24b97dab2abd1fade7",
+  "appTree": "4ac11a812c8633304cb5c1bcf5b375ba7c227d67",
+  "runtimeSHA256": "8d2ef40a75a7674c63ce35ce573ecf5c82cf26b27d65699077f67589603b8e4c",
+  "checked": "2026-10-21",
+  "nodeCommands": 145,
+  "nodePassed": 145,
+  "nodeFailed": 0,
+  "method": "Run the 145 Node commands from .github/workflows/ui-tests.yml, excluding ui_smoke.mjs, against the working tree whose exact Git tree matches the saved app commit. This is local evidence; the browser suite is independently verified in Actions.",
+  "commands": [
+    {
+      "command": "node scripts/age14_candidate_source_audit_15_test.mjs",
+      "exit": 0,
+      "seconds": 2.44,
+      "combinedOutputSHA256": "50d853218926384c4dc0e1994b4dd4103f706a11cdf8d678366cdc049d09c6c5"
+    },
+    {
+      "command": "node scripts/age14_offence_scope_15_test.mjs",
+      "exit": 0,
+      "seconds": 6.61,
+      "combinedOutputSHA256": "fb27da0d33a24e610846acf961a123487d1db54298717dabb83685170a14fd54"
+    },
+    {
+      "command": "node scripts/audit_catalog.mjs",
+      "exit": 0,
+      "seconds": 2.94,
+      "combinedOutputSHA256": "0eacf05be7607a0b960115975655fc58bc012e55896c27cd63d291367e922220"
+    },
+    {
+      "command": "node scripts/base_coercion_review_15_test.mjs",
+      "exit": 0,
+      "seconds": 14.94,
+      "combinedOutputSHA256": "88e5e611ff1bd9c44702cd2d7b2c9a9d76167b3e4bf28eedf3ed98a30eb39315"
+    },
+    {
+      "command": "node scripts/base_inchoate_review_15_test.mjs",
+      "exit": 0,
+      "seconds": 122.08,
+      "combinedOutputSHA256": "1c6c12dccf0557980983222738124d734aa80f7dc86e0f7f7d7be4079c3da645"
+    },
+    {
+      "command": "node scripts/base_temporal_review_15_test.mjs",
+      "exit": 0,
+      "seconds": 39.69,
+      "combinedOutputSHA256": "e7308ec4ee39fc6a52c596ffac310ca12fc93f17dfc32bae252386232bed5132"
+    },
+    {
+      "command": "node scripts/brb10_15_test.mjs",
+      "exit": 0,
+      "seconds": 0.23,
+      "combinedOutputSHA256": "8cb9e0c630f1c08731e573d08bf81bbd61291af15dd10dc448b960faed818383"
+    },
+    {
+      "command": "node scripts/brb10_base_legal_checkpoints_15_test.mjs",
+      "exit": 0,
+      "seconds": 2.6,
+      "combinedOutputSHA256": "0f58196be78470cefbfcfbed7dde1b7d1ad3a8f5d637767289322293ab3c773c"
+    },
+    {
+      "command": "node scripts/brb10_prosecution_15_test.mjs",
+      "exit": 0,
+      "seconds": 2.2,
+      "combinedOutputSHA256": "8ca8308aa34b067f6fcbfbca4a7b27e2946a3f91d9f4ac9c32d0784449a85bba"
+    },
+    {
+      "command": "node scripts/brb11_13_15_test.mjs",
+      "exit": 0,
+      "seconds": 0.21,
+      "combinedOutputSHA256": "dc59a1f1f51745cd9aee94b0bf3aa04a7c5b072dfba775a542d0fa50fddc906f"
+    },
+    {
+      "command": "node scripts/brb11_base_legal_checkpoints_15_test.mjs",
+      "exit": 0,
+      "seconds": 3.96,
+      "combinedOutputSHA256": "29613a84deb5eeece0a6ecc778f987e56ead8ab0833874fd2d3058b957b63a5b"
+    },
+    {
+      "command": "node scripts/brb11_prosecution_15_test.mjs",
+      "exit": 0,
+      "seconds": 4.35,
+      "combinedOutputSHA256": "bc19ddce4e36d82100eb380722bd1b0476d07e214ddc0f6a70990f8a6ebc8f5e"
+    },
+    {
+      "command": "node scripts/brb12_base_legal_checkpoints_15_test.mjs",
+      "exit": 0,
+      "seconds": 4.61,
+      "combinedOutputSHA256": "fccb060fd46a789080a96c6e817dc6a77f3e48a6400c61fb705874bc06fa30f2"
+    },
+    {
+      "command": "node scripts/brb12_prosecution_15_test.mjs",
+      "exit": 0,
+      "seconds": 4.47,
+      "combinedOutputSHA256": "744a5aed47a5bde24b5f74691278b2ae2f50055cb27af9eef5a175123eeffb10"
+    },
+    {
+      "command": "node scripts/brb13_base_legal_checkpoints_15_test.mjs",
+      "exit": 0,
+      "seconds": 2.61,
+      "combinedOutputSHA256": "3f7f737e402cd6f031236fb56e908def33b210bd5b3dca1e25524052064261ba"
+    },
+    {
+      "command": "node scripts/brb13_fulltext_15_test.mjs",
+      "exit": 0,
+      "seconds": 13.48,
+      "combinedOutputSHA256": "fd29f57683f54430565870c89358ebf5322e309437f52b8301cb35b854f63c49"
+    },
+    {
+      "command": "node scripts/brb13_poison_stage_scope_hold_15_test.mjs",
+      "exit": 0,
+      "seconds": 2.72,
+      "combinedOutputSHA256": "16a8337b873a69281f15eddfc4302df025dac8a366ca55b9032e288bf0476074"
+    },
+    {
+      "command": "node scripts/brb14_15_test.mjs",
+      "exit": 0,
+      "seconds": 0.31,
+      "combinedOutputSHA256": "54ef8b538c6137cd7492f49c8bef3fcebe88c0ab1feac4de102280b4fa840248"
+    },
+    {
+      "command": "node scripts/brb14_base_legal_checkpoints_15_test.mjs",
+      "exit": 0,
+      "seconds": 2.36,
+      "combinedOutputSHA256": "ba63d1ae4bb97a6a59c7576943516e1066f231439ab3b2fc3b0ec2afed3a51dc"
+    },
+    {
+      "command": "node scripts/brb14_evidence_distinctions_15_test.mjs",
+      "exit": 0,
+      "seconds": 3.42,
+      "combinedOutputSHA256": "c92af258d335b2d5c45bd9ecce67ecc7e34c66d45556f115bbce49a7965ceae1"
+    },
+    {
+      "command": "node scripts/brb14_stage_scope_15_test.mjs",
+      "exit": 0,
+      "seconds": 1.87,
+      "combinedOutputSHA256": "1514307ab14ff9d4c3da2cf4fdf0c8e05c132bd2903d51fc2b68024debb99523"
+    },
+    {
+      "command": "node scripts/brb15_accusation_source_limits_15_test.mjs",
+      "exit": 0,
+      "seconds": 2.2,
+      "combinedOutputSHA256": "ae9114984fcf26fa01a0a2f9b55a7665d9433cc3c8c0cdf053378c47d3ec26d1"
+    },
+    {
+      "command": "node scripts/brb15_base_legal_checkpoints_15_test.mjs",
+      "exit": 0,
+      "seconds": 3.52,
+      "combinedOutputSHA256": "1abcbdbc841c34a63b0b59032f76e382eda77b10a016073804b035fcf1691185"
+    },
+    {
+      "command": "node scripts/brb15_complete_fulltext_15_test.mjs",
+      "exit": 0,
+      "seconds": 3.01,
+      "combinedOutputSHA256": "a830d11a631d9c09d2fb03cc7b0b0192bb5f68aefe1067dd4bed8c5e9b475b08"
+    },
+    {
+      "command": "node scripts/brb15_false_report_requisites_15_test.mjs",
+      "exit": 0,
+      "seconds": 10.57,
+      "combinedOutputSHA256": "b2d319ae9e50ea6f53a0c181af00dedde9eb0e2d94ee07295d21e0b33b840370"
+    },
+    {
+      "command": "node scripts/brb16_base_legal_checkpoints_15_test.mjs",
+      "exit": 0,
+      "seconds": 2.22,
+      "combinedOutputSHA256": "a4d48c18fca84599b757ff4622546c544a207a537a927fe6d375eb3bed0b5156"
+    },
+    {
+      "command": "node scripts/brb16_fulltext_15_test.mjs",
+      "exit": 0,
+      "seconds": 2.88,
+      "combinedOutputSHA256": "8eba443510882c3336e0b8064d176930e58097e2f9c2d442c990c5f6b2fca8fc"
+    },
+    {
+      "command": "node scripts/brb17_14_test.mjs",
+      "exit": 0,
+      "seconds": 0.23,
+      "combinedOutputSHA256": "b5fb9b07634423f1bf4e9caf481e49524b43bfef67b66de27a6ff6c3c671d20a"
+    },
+    {
+      "command": "node scripts/brb17_18_fulltext_15_test.mjs",
+      "exit": 0,
+      "seconds": 1.46,
+      "combinedOutputSHA256": "eba697a116510d0dc49049229426d6326016209ba7c12083191c537e532a9ab4"
+    },
+    {
+      "command": "node scripts/brb17_base_legal_checkpoints_15_test.mjs",
+      "exit": 0,
+      "seconds": 5.02,
+      "combinedOutputSHA256": "ccd8a709d10406299d03697114e13188823807a47eaf19f3bc43d6d7a21b1069"
+    },
+    {
+      "command": "node scripts/brb17_official_boundaries_15_test.mjs",
+      "exit": 0,
+      "seconds": 3.46,
+      "combinedOutputSHA256": "4436c537099078cc9edec6e500a147c5bdfff42bb2b5bd684e036db7c91d8917"
+    },
+    {
+      "command": "node scripts/brb17_rymning_15_test.mjs",
+      "exit": 0,
+      "seconds": 0.25,
+      "combinedOutputSHA256": "252a08831d87ad4dcd079709cf674c742c2379dba3e7b255e42b5c083a8b3eab"
+    },
+    {
+      "command": "node scripts/brb18_base_legal_checkpoints_15_test.mjs",
+      "exit": 0,
+      "seconds": 13.3,
+      "combinedOutputSHA256": "ca3ca405c526404c970221c8884ff5fd036b31a908af190bde03b36857969ed3"
+    },
+    {
+      "command": "node scripts/brb19_base_legal_checkpoints_15_test.mjs",
+      "exit": 0,
+      "seconds": 10.91,
+      "combinedOutputSHA256": "a9297594748da5fd5b4d80435bc13fedb56c9adff78ef04d1020e7c9f83a2bff"
+    },
+    {
+      "command": "node scripts/brb19_fulltext_15_test.mjs",
+      "exit": 0,
+      "seconds": 2.09,
+      "combinedOutputSHA256": "e2289dce44fc0d8760116f576631b095a8ea5c4cad97c11d02b9c2a5e349b0e6"
+    },
+    {
+      "command": "node scripts/brb20_13_test.mjs",
+      "exit": 0,
+      "seconds": 0.14,
+      "combinedOutputSHA256": "37fb745f77a884b355c3a491e99f6369d252972c229e17d64cde3c41e1fbc404"
+    },
+    {
+      "command": "node scripts/brb20_22_fulltext_15_test.mjs",
+      "exit": 0,
+      "seconds": 1.97,
+      "combinedOutputSHA256": "44441542ba8dca1074520cb9feffed5ea517bac5c18e8bd99384f34931732d12"
+    },
+    {
+      "command": "node scripts/brb20_base_legal_checkpoints_15_test.mjs",
+      "exit": 0,
+      "seconds": 2.63,
+      "combinedOutputSHA256": "22b2cc0bc290222a6642fccf57e177f4c562a9bdbe69f876ea43fca680d2ace5"
+    },
+    {
+      "command": "node scripts/brb20_stage_negative_source_15_test.mjs",
+      "exit": 0,
+      "seconds": 4.35,
+      "combinedOutputSHA256": "7684be60dec46b3fbf1d403a7a5c5db223afa2ee88f9d07b5c6b1640a0902347"
+    },
+    {
+      "command": "node scripts/brb21_base_legal_checkpoints_15_test.mjs",
+      "exit": 0,
+      "seconds": 12.13,
+      "combinedOutputSHA256": "316e9bd85e78e12b71431d42042f8eb687ae18b0025712e9ba2c59cc3f9a49b8"
+    },
+    {
+      "command": "node scripts/brb22_base_legal_checkpoints_15_test.mjs",
+      "exit": 0,
+      "seconds": 8.25,
+      "combinedOutputSHA256": "82fc8d01048d2e3533566c60cf5e51795d2b051fb5b1f1310a7fac6166c66134"
+    },
+    {
+      "command": "node scripts/brb3_base_legal_checkpoints_15_test.mjs",
+      "exit": 0,
+      "seconds": 7.49,
+      "combinedOutputSHA256": "6c17f962b56681400a434d2b246b550310e1db48e5d91fd1080f570588518fcc"
+    },
+    {
+      "command": "node scripts/brb4_14_test.mjs",
+      "exit": 0,
+      "seconds": 0.12,
+      "combinedOutputSHA256": "4bd8fca1c898772b6a8ed10c439a42b12bf4230c5433263ec3517d9a8fdbfe05"
+    },
+    {
+      "command": "node scripts/brb4_base_legal_checkpoints_15_test.mjs",
+      "exit": 0,
+      "seconds": 3.88,
+      "combinedOutputSHA256": "a59af4fe2441b525de4a46309a4b7c648ba921e59a2f2baa853593f871fe929b"
+    },
+    {
+      "command": "node scripts/brb4_child_stalking_requisites_15_test.mjs",
+      "exit": 0,
+      "seconds": 8.05,
+      "combinedOutputSHA256": "c5a68ab5c6044a2ed50ca75db6b49e7f649f67ad3740fcb5f1824cc87b1d52ed"
+    },
+    {
+      "command": "node scripts/brb4_expansion_15_test.mjs",
+      "exit": 0,
+      "seconds": 0.22,
+      "combinedOutputSHA256": "f6d998ce273152fbe1f43099b60de08d1f8e7c5e1ffebb29aa2d927f6249e568"
+    },
+    {
+      "command": "node scripts/brb4_frid_current_provenance_15_test.mjs",
+      "exit": 0,
+      "seconds": 2.08,
+      "combinedOutputSHA256": "19d93b9122fb2ed0be4835f79ba33b41a49a855e271f73c6fdbd4ef772c21052"
+    },
+    {
+      "command": "node scripts/brb4_fridtext_15_test.mjs",
+      "exit": 0,
+      "seconds": 4.82,
+      "combinedOutputSHA256": "c654b3f55832ace062429096bda669b8d0e11e4a50911f9d8fb73ec3c31b64e8"
+    },
+    {
+      "command": "node scripts/brb4_prosecution_15_test.mjs",
+      "exit": 0,
+      "seconds": 5.88,
+      "combinedOutputSHA256": "89713001b7ab79b875e21a35c72b2fd1ffb16b098df6026fcdd6628849c542f1"
+    },
+    {
+      "command": "node scripts/brb5_base_legal_checkpoints_15_test.mjs",
+      "exit": 0,
+      "seconds": 6.35,
+      "combinedOutputSHA256": "79549fc24b489bbd543ccc8c6931b7d87eed4b7fbba326d693a5271bc2186722"
+    },
+    {
+      "command": "node scripts/brb5_prosecution_15_test.mjs",
+      "exit": 0,
+      "seconds": 9.41,
+      "combinedOutputSHA256": "2c75c20863924e8ecb15e62df70af9cde111aa979084e07ac379cb485f2aeaf9"
+    },
+    {
+      "command": "node scripts/brb6_base_legal_checkpoints_15_test.mjs",
+      "exit": 0,
+      "seconds": 7.3,
+      "combinedOutputSHA256": "55f99fe84168ec40b39a8af75d63234da54179ace958defdab23f15415a316ea"
+    },
+    {
+      "command": "node scripts/brb6_further_fulltext_15_test.mjs",
+      "exit": 0,
+      "seconds": 6.58,
+      "combinedOutputSHA256": "b0948c0685c4257946a264c6e548bca8b4d04b5e7ba1c68251191cc033b95ada"
+    },
+    {
+      "command": "node scripts/brb7_base_legal_checkpoints_15_test.mjs",
+      "exit": 0,
+      "seconds": 4.13,
+      "combinedOutputSHA256": "0e985b0255136806e4e5e1c195cbc57ad234d9ae3eee8d4026735e4f7fd4e908"
+    },
+    {
+      "command": "node scripts/brb8_base_legal_checkpoints_15_test.mjs",
+      "exit": 0,
+      "seconds": 2.52,
+      "combinedOutputSHA256": "7b57fb901618a2f66275229b938e122454c18ae9823530ae2178218950b61251"
+    },
+    {
+      "command": "node scripts/brb8_near_relative_prosecution_15_test.mjs",
+      "exit": 0,
+      "seconds": 1.96,
+      "combinedOutputSHA256": "54e516cf9023d59e0d27c014dbd08abe2eafe9f075b9f9168271b3fdaf34dcb1"
+    },
+    {
+      "command": "node scripts/brb9_base_legal_checkpoints_15_test.mjs",
+      "exit": 0,
+      "seconds": 2.83,
+      "combinedOutputSHA256": "e8c81097abe3e10c6fa27885bd7869b2269cb64c71afaeca999deca3b0e6e2aa"
+    },
+    {
+      "command": "node scripts/brb_conditional_penalty_options_15_test.mjs",
+      "exit": 0,
+      "seconds": 5.35,
+      "combinedOutputSHA256": "b6e2f75e418c98809c7c8d741a6a260f3309aafe48a920ba84ffdbc6416f299d"
+    },
+    {
+      "command": "node scripts/brb_conditional_source_audit_15_test.mjs",
+      "exit": 0,
+      "seconds": 10.47,
+      "combinedOutputSHA256": "3c5c4be2c0fbf70a8a1aac523e73952bd44d92a5a4965e192cbdf62cba7971f4"
+    },
+    {
+      "command": "node scripts/brb_core_coverage_15_test.mjs",
+      "exit": 0,
+      "seconds": 1.14,
+      "combinedOutputSHA256": "a9638bf5e8f795b3ce526da39aba16a9003623209f1d96620bc08488b56a9c46"
+    },
+    {
+      "command": "node scripts/brb_curated_lawtext_15_test.mjs",
+      "exit": 0,
+      "seconds": 3.57,
+      "combinedOutputSHA256": "1e21325a2dcb3b6b2eb410a371680cfb83e35a42bc7efc941854dd9e1a7e9ca2"
+    },
+    {
+      "command": "node scripts/brb_derivative_penalties_15_test.mjs",
+      "exit": 0,
+      "seconds": 4.03,
+      "combinedOutputSHA256": "5d73587f60fce59caf1dc1638d79ea72aee1eaeabd6cb1d9e94aaa206dbf18af"
+    },
+    {
+      "command": "node scripts/brb_direct_grade_clauses_15_test.mjs",
+      "exit": 0,
+      "seconds": 4.12,
+      "combinedOutputSHA256": "f0bc3118aa4843aa70337459db6191e452b166fd0b390a610cf8e34f7db06584"
+    },
+    {
+      "command": "node scripts/brb_direct_grade_remaining_15_test.mjs",
+      "exit": 0,
+      "seconds": 4.01,
+      "combinedOutputSHA256": "6b1320773617debb45910da212a5239cd4c7242ce8f3901a6f55b1ab907b124c"
+    },
+    {
+      "command": "node scripts/brb_family_15_test.mjs",
+      "exit": 0,
+      "seconds": 0.13,
+      "combinedOutputSHA256": "3218b8f42cd110fae71ff48b8cecd08b2f4aa0ce5d88803335aebb9009adad7a"
+    },
+    {
+      "command": "node scripts/brb_grade_stage_source_audit_15_test.mjs",
+      "exit": 0,
+      "seconds": 7.41,
+      "combinedOutputSHA256": "fb260b58a506da1ae606ae95910c635d166f896a9a01fa4850c2abfa91848317"
+    },
+    {
+      "command": "node scripts/brb_inventory_15.mjs",
+      "exit": 0,
+      "seconds": 3.09,
+      "combinedOutputSHA256": "eb41adfc5b921f417af23b7348fe15b0d356e9a6d30fea12db68eee12fedce26"
+    },
+    {
+      "command": "node scripts/brb_inventory_completion_15_test.mjs",
+      "exit": 0,
+      "seconds": 13.18,
+      "combinedOutputSHA256": "701b7e0151e832d6bcaa6cf4a84ffa0e97bf11f73123b9457957475f58191195"
+    },
+    {
+      "command": "node scripts/brb_negative_stage_chapter_audit_15_test.mjs",
+      "exit": 0,
+      "seconds": 9.14,
+      "combinedOutputSHA256": "27eea85493cae7d69b3ca3fe8f9090ceeb99aa88ceaedbd7aa21877b93058064"
+    },
+    {
+      "command": "node scripts/brb_penalty_grade_audit_15_test.mjs",
+      "exit": 0,
+      "seconds": 2.61,
+      "combinedOutputSHA256": "2e591fc26a3a57ccac35c85ffc6a6fb9a2faad200a187248959372797767efe4"
+    },
+    {
+      "command": "node scripts/brb_positive_stage_consequences_15_test.mjs",
+      "exit": 0,
+      "seconds": 2.96,
+      "combinedOutputSHA256": "e8789a60eda1cbaeeaf42208cf10eeec540993e37177e3585afcc5042fe96735"
+    },
+    {
+      "command": "node scripts/brb_positive_stage_source_audit_15_test.mjs",
+      "exit": 0,
+      "seconds": 3.7,
+      "combinedOutputSHA256": "155f776fb0e1134f468a6dcd87904785668858c04e335150b0fd6333471d9eee"
+    },
+    {
+      "command": "node scripts/brb_prosecution_audit_15_test.mjs",
+      "exit": 0,
+      "seconds": 22.78,
+      "combinedOutputSHA256": "5b9f057a37bec082f515705ab0ac83973ed2412ee707a8d52e8ba7e8b4303e68"
+    },
+    {
+      "command": "node scripts/brb_prosecution_sources_15_test.mjs",
+      "exit": 0,
+      "seconds": 4.53,
+      "combinedOutputSHA256": "a7ca276e772e49bb61ee3d841cdc444e897bf2ce67a6b4ef7aa4584a61ec8e50"
+    },
+    {
+      "command": "node scripts/brb_remaining_elements_15_test.mjs",
+      "exit": 0,
+      "seconds": 11.22,
+      "combinedOutputSHA256": "3e858cf60a78ecde11b65d8bc640fc3c783c7e12506296a2ae651b351e73ca77"
+    },
+    {
+      "command": "node scripts/brb_source_repairs_15_test.mjs",
+      "exit": 0,
+      "seconds": 5.44,
+      "combinedOutputSHA256": "d809b53815f0058bcd819afc2c43c9bb360e849c633d2d1a321e80ae1416690f"
+    },
+    {
+      "command": "node scripts/brb_special_preparation_15_test.mjs",
+      "exit": 0,
+      "seconds": 0.21,
+      "combinedOutputSHA256": "967fb3063c5faeebfe993b8834b2966c10e1b45312955614535e2d0c075b1442"
+    },
+    {
+      "command": "node scripts/brb_stage_source_repairs_15_test.mjs",
+      "exit": 0,
+      "seconds": 5.04,
+      "combinedOutputSHA256": "f95a6d20bac4027f216dc305e74adb56afc528599efb248bba1091936d704a15"
+    },
+    {
+      "command": "node scripts/brb_truncated_source_repairs_15_test.mjs",
+      "exit": 0,
+      "seconds": 2.45,
+      "combinedOutputSHA256": "111561b82e366d004c5b05bb83b0e58bcd110615e908c8368634b49d16e8885e"
+    },
+    {
+      "command": "node scripts/brb_war_15_test.mjs",
+      "exit": 0,
+      "seconds": 0.16,
+      "combinedOutputSHA256": "9d7117ee02f7ddd57db35ff1d54a1f69b40bfa44548c5a93aff54092d6c595f8"
+    },
+    {
+      "command": "node scripts/catalog_selection_15_test.mjs",
+      "exit": 0,
+      "seconds": 8.04,
+      "combinedOutputSHA256": "1fa1cf3982e0803bdc9dd607a6a1e000eba20fee8432a75bb8b152163c496b9d"
+    },
+    {
+      "command": "node scripts/coercive_safety_15_test.mjs",
+      "exit": 0,
+      "seconds": 0.14,
+      "combinedOutputSHA256": "9ec4a81ca1e260e233ae7479e0b3ed9ae2fb9ab5dcc708336df3257f364c29bb"
+    },
+    {
+      "command": "node scripts/core_penalties_13_test.mjs",
+      "exit": 0,
+      "seconds": 0.12,
+      "combinedOutputSHA256": "c3e80736a551687364bf55ac4c1a3484eb865e24beb92a77868cf65b088ebd2b"
+    },
+    {
+      "command": "node scripts/integration_09.mjs",
+      "exit": 0,
+      "seconds": 5.36,
+      "combinedOutputSHA256": "b930ade6354b0a4305b3249b028ada24446577a3cab0ba362feface07970d691"
+    },
+    {
+      "command": "node scripts/life_property_limits_review_15_test.mjs",
+      "exit": 0,
+      "seconds": 10.45,
+      "combinedOutputSHA256": "1cbfab029bfa2abe482ddc8d20a14c165d0c2ccabc2bb5df807ec6babc1d8a9d"
+    },
+    {
+      "command": "node scripts/missing_stage_cards_15_test.mjs",
+      "exit": 0,
+      "seconds": 41.79,
+      "combinedOutputSHA256": "75c1e143f09bbd340d7b5e576af17a74fe5a5239e6f993330b15a64b46fb894c"
+    },
+    {
+      "command": "node scripts/nark_inchoate_source_consequences_15_test.mjs",
+      "exit": 0,
+      "seconds": 2.75,
+      "combinedOutputSHA256": "757a98c0da47eac47a85a37c6151b2b2b60282c8390717ba2557b1fc5336722e"
+    },
+    {
+      "command": "node scripts/praxis_alibit_15_test.mjs",
+      "exit": 0,
+      "seconds": 6.47,
+      "combinedOutputSHA256": "d8104a1d0494c0ea770aaeaa191a8e6cc3b0f0d1a45844938b5d3f51dc698062"
+    },
+    {
+      "command": "node scripts/praxis_freja_electronic_urkund_15_test.mjs",
+      "exit": 0,
+      "seconds": 2.83,
+      "combinedOutputSHA256": "b40a83ba6a42de15584b9f1322ecc6237cdae4f590308a5f86e3e5b2114fb198"
+    },
+    {
+      "command": "node scripts/praxis_vapenbilden_15_test.mjs",
+      "exit": 0,
+      "seconds": 25.02,
+      "combinedOutputSHA256": "aba2048f6985fbfc5826518c34ee12546cec19ad205ad98fb1498c39a11544af"
+    },
+    {
+      "command": "node scripts/preparatory_reform_notes_15_test.mjs",
+      "exit": 0,
+      "seconds": 10.89,
+      "combinedOutputSHA256": "8713acf4bb7ab91c80160563a67d62dee35e5ffec1b0dcff222a724c3f530de9"
+    },
+    {
+      "command": "node scripts/prosecution_15_test.mjs",
+      "exit": 0,
+      "seconds": 0.14,
+      "combinedOutputSHA256": "ee42bfb38307756875d603f5fe4296aaeb01b2eaa7cda076eb81f82ce8447145"
+    },
+    {
+      "command": "node scripts/quality_11_test.mjs",
+      "exit": 0,
+      "seconds": 0.17,
+      "combinedOutputSHA256": "8f87c41be5634c9708e99ed2c5b128981ebe381089c6911506fb87dbc5b87a5f"
+    },
+    {
+      "command": "node scripts/rekvisit_allmanfara_15_test.mjs",
+      "exit": 0,
+      "seconds": 3.02,
+      "combinedOutputSHA256": "c7729cde27ba9f83990b228b6d74c808b0f204697da3260e156691e5842a0576"
+    },
+    {
+      "command": "node scripts/rekvisit_alternativ_15_test.mjs",
+      "exit": 0,
+      "seconds": 3.59,
+      "combinedOutputSHA256": "879be944e8c1cb97645a8dba76678ea13a326388394031d38acce9fac45cdf2a"
+    },
+    {
+      "command": "node scripts/rekvisit_core_15_test.mjs",
+      "exit": 0,
+      "seconds": 2.47,
+      "combinedOutputSHA256": "6202545e5d0a62785b72dfcc560ef6e555f1052743031a51a52d5a28fdc56868"
+    },
+    {
+      "command": "node scripts/rekvisit_ekonomi_15_test.mjs",
+      "exit": 0,
+      "seconds": 5.72,
+      "combinedOutputSHA256": "0e0565376454b34f5d5b09f54c3d321912be1719fbaa2ec3eb90fbb728894b1a"
+    },
+    {
+      "command": "node scripts/rekvisit_fordjupning_15_test.mjs",
+      "exit": 0,
+      "seconds": 1.98,
+      "combinedOutputSHA256": "472e0a4ab935ae664f4baa038254f0789843e8be7f4f021035a6206cc31582d2"
+    },
+    {
+      "command": "node scripts/rekvisit_fortsattning_15_test.mjs",
+      "exit": 0,
+      "seconds": 3.23,
+      "combinedOutputSHA256": "bf77cc65c2dd1120fa49623c8be27e73dd4008b7d0f637932eade048bdfff7ed"
+    },
+    {
+      "command": "node scripts/rekvisit_frid_luckor_15_test.mjs",
+      "exit": 0,
+      "seconds": 2.65,
+      "combinedOutputSHA256": "100f1ba61504a8c301a8ba5d7868e24cddb2a02a86a8af09e63aa35160d35b06"
+    },
+    {
+      "command": "node scripts/rekvisit_grader_15_test.mjs",
+      "exit": 0,
+      "seconds": 3.13,
+      "combinedOutputSHA256": "cf3ee20f50d8abe49b4d24b3600040326ef530b567ecaeec8c2e9a6cb81b17e0"
+    },
+    {
+      "command": "node scripts/rekvisit_hogmal_15_test.mjs",
+      "exit": 0,
+      "seconds": 3.51,
+      "combinedOutputSHA256": "64339e8eaf813f91a861025e9264f964a36f1dd9ab3bfd65060044407aac0e1d"
+    },
+    {
+      "command": "node scripts/rekvisit_krig_15_test.mjs",
+      "exit": 0,
+      "seconds": 1.48,
+      "combinedOutputSHA256": "bb160b6ea442856fd1f8d3c0ef910c739919c0e3e0c78c73ee261c4b383d9651"
+    },
+    {
+      "command": "node scripts/rekvisit_ordning_15_test.mjs",
+      "exit": 0,
+      "seconds": 2.17,
+      "combinedOutputSHA256": "a7e5ef01168de155ce9107bef50105902dd061cb1dc2e61b088231c539aaaf0e"
+    },
+    {
+      "command": "node scripts/rekvisit_polisiara_15_test.mjs",
+      "exit": 0,
+      "seconds": 3.5,
+      "combinedOutputSHA256": "e3ba90641106bba293667cb0dad4059e178381c5211289dc003ffad379595bc6"
+    },
+    {
+      "command": "node scripts/rekvisit_riket_15_test.mjs",
+      "exit": 0,
+      "seconds": 1.67,
+      "combinedOutputSHA256": "b10ef34974f86918fcfe50916af0d7d013188625a06a0883859eab3225cc694c"
+    },
+    {
+      "command": "node scripts/rekvisit_sexualbrott_15_test.mjs",
+      "exit": 0,
+      "seconds": 2.12,
+      "combinedOutputSHA256": "7c17824e86344568954cdd70182985728258f8817a76091dd440a9fc2f3e75ec"
+    },
+    {
+      "command": "node scripts/rekvisit_simple_typecases_15_test.mjs",
+      "exit": 0,
+      "seconds": 2.92,
+      "combinedOutputSHA256": "6d5decd120b655b3f717fb32d8c96845c11815015b8b4b736bd110b9b0e0cc14"
+    },
+    {
+      "command": "node scripts/rekvisit_sista_15_test.mjs",
+      "exit": 0,
+      "seconds": 1.77,
+      "combinedOutputSHA256": "0cdd88c5b4c571c67ae066b848f31d58b130a4e24710c7f242a0834c85647e40"
+    },
+    {
+      "command": "node scripts/rekvisit_special_15_test.mjs",
+      "exit": 0,
+      "seconds": 3.65,
+      "combinedOutputSHA256": "8b974c5f22dc1c317acee507b6ed2c28d95d63e5e8b0c09f3e09175681c0241d"
+    },
+    {
+      "command": "node scripts/rekvisit_tjanst_15_test.mjs",
+      "exit": 0,
+      "seconds": 2.95,
+      "combinedOutputSHA256": "3b347d8d2fe5299293d7c98bc9c570a7f6852e676adb7bb1020246e6f4ead77e"
+    },
+    {
+      "command": "node scripts/rekvisit_typfall_15_test.mjs",
+      "exit": 0,
+      "seconds": 0.12,
+      "combinedOutputSHA256": "e8b607d0d5c188cc8af65ce98de94789d6dd999139a788fdb6dd44bcac5cf8a5"
+    },
+    {
+      "command": "node scripts/remaining_grade_review_15_test.mjs",
+      "exit": 0,
+      "seconds": 45.57,
+      "combinedOutputSHA256": "1dc882274bad0298d72d9d1c1847c2b9e485988d1c8b25992c27619695a63e1e"
+    },
+    {
+      "command": "node scripts/remaining_statutory_limits_review_15_test.mjs",
+      "exit": 0,
+      "seconds": 20.02,
+      "combinedOutputSHA256": "0259de6201f4ecd38dc1022d4dab3c5e2b0617486f155f82a1f3b315b6f9fe36"
+    },
+    {
+      "command": "node scripts/requisite_concepts_15_test.mjs",
+      "exit": 0,
+      "seconds": 2.49,
+      "combinedOutputSHA256": "688d69622c2d659d4ca58dd16f41c8a77aa2b873be6fc0382cec1e1be3c8ac62"
+    },
+    {
+      "command": "node scripts/smuggling_limits_15_test.mjs",
+      "exit": 0,
+      "seconds": 8.0,
+      "combinedOutputSHA256": "51d4462d83530bb62bd828613d85e445754680c4b95a6151c88b4d0f1e9ab868"
+    },
+    {
+      "command": "node scripts/smuggling_penalty_grades_15_test.mjs",
+      "exit": 0,
+      "seconds": 1.77,
+      "combinedOutputSHA256": "ccafcfaf30cfa22c16d2cbf09332187e7fdcadb8d64c465e0dfa56aa4fa30f45"
+    },
+    {
+      "command": "node scripts/special_bidrag_skatt_15_test.mjs",
+      "exit": 0,
+      "seconds": 9.94,
+      "combinedOutputSHA256": "69e80f1b657d70dfe3c639108b6f2ef8ef1c40b188a2dd7e4cacd46bc17f6b84"
+    },
+    {
+      "command": "node scripts/special_elements_audit_15_test.mjs",
+      "exit": 0,
+      "seconds": 8.57,
+      "combinedOutputSHA256": "3aa55d5027794835ffc39fc1e56129be49e8116a622d76e3a016e95883ebbada"
+    },
+    {
+      "command": "node scripts/special_limits_review_15_test.mjs",
+      "exit": 0,
+      "seconds": 19.18,
+      "combinedOutputSHA256": "a2e2cbe33e262eb50c7350061267b61ebb27b5ae585c61b78a698de9feb7cd37"
+    },
+    {
+      "command": "node scripts/special_negative_stage_scope_15_test.mjs",
+      "exit": 0,
+      "seconds": 1.92,
+      "combinedOutputSHA256": "dbe614cb569464369f6a2dace0fb54b5f6389ee41015d113c72aedbc8b5da09f"
+    },
+    {
+      "command": "node scripts/special_other22_fulltext_15_test.mjs",
+      "exit": 0,
+      "seconds": 11.15,
+      "combinedOutputSHA256": "50623e3a09f8e1d37cbc78a713841d83e3f6fe0a5ed51b527a182f2c28383d92"
+    },
+    {
+      "command": "node scripts/special_other_penalty_grades_15_test.mjs",
+      "exit": 0,
+      "seconds": 3.23,
+      "combinedOutputSHA256": "14ad9d5213fc327ea69930b1a11d0c30cc25a2383fbba7d7e58d2a41cbe69089"
+    },
+    {
+      "command": "node scripts/special_penalties_14_test.mjs",
+      "exit": 0,
+      "seconds": 0.12,
+      "combinedOutputSHA256": "64777752482b3567c1243f21b4d364762e4f17fda488c296bdad2adca0df22a5"
+    },
+    {
+      "command": "node scripts/special_penalty_grade_audit_15_test.mjs",
+      "exit": 0,
+      "seconds": 4.06,
+      "combinedOutputSHA256": "104e46c1586ce2c4f85f0e98c6ea61633b52c5cf46ae4c19cb2a60f82a222eee"
+    },
+    {
+      "command": "node scripts/special_positive_stage_scope_15_test.mjs",
+      "exit": 0,
+      "seconds": 4.53,
+      "combinedOutputSHA256": "0ef49cb69956d339d540b7073cdba8d48bb9f8468256613a77c81481efbff7ac"
+    },
+    {
+      "command": "node scripts/special_prosecution_audit_15_test.mjs",
+      "exit": 0,
+      "seconds": 15.19,
+      "combinedOutputSHA256": "89b50aa802f012a4774c72e1d98cf31245b02bbf223513556ad9fd8491766065"
+    },
+    {
+      "command": "node scripts/special_remaining_55_requisites_15_test.mjs",
+      "exit": 0,
+      "seconds": 1.89,
+      "combinedOutputSHA256": "1edd898c78a1c7da101006776795ae8ccb6e8c60748260ee60af8d3eb32cb637"
+    },
+    {
+      "command": "node scripts/special_smuggling_money_lbe_fulltext_15_test.mjs",
+      "exit": 0,
+      "seconds": 3.98,
+      "combinedOutputSHA256": "8b6d5f34c56b58cb2f30c4797e48bb013b49d4f8c53b331e25551a6c6c449ddd"
+    },
+    {
+      "command": "node scripts/special_stage_enumeration_15_test.mjs",
+      "exit": 0,
+      "seconds": 2.54,
+      "combinedOutputSHA256": "bea77e16925e107c1fd5c6a03ffcc1830f09c83532ee1dc82bedbdba2c861a05"
+    },
+    {
+      "command": "node scripts/stage_rules_test.mjs",
+      "exit": 0,
+      "seconds": 0.27,
+      "combinedOutputSHA256": "54930be0c034ba775baf8f6af9a9f90d8d2e616edb41387957fc2b8f5446a130"
+    },
+    {
+      "command": "node scripts/statutory_grade_review_15_test.mjs",
+      "exit": 0,
+      "seconds": 41.89,
+      "combinedOutputSHA256": "c577b2c432bc8d19fdb8e835522fb62cc8e3c02f5bffeb63db629ba312946876"
+    },
+    {
+      "command": "node scripts/statutory_limits_review_15_test.mjs",
+      "exit": 0,
+      "seconds": 15.84,
+      "combinedOutputSHA256": "d8c02f9b605ee9421e5ed63d5184af4f24138b8056e36bc6a0637fb208b690ad"
+    },
+    {
+      "command": "node scripts/urkund_gransdragning_15_test.mjs",
+      "exit": 0,
+      "seconds": 3.63,
+      "combinedOutputSHA256": "8b92837aaac7acde08f6c00cc1d58338641bc33d4d6ba7bd32405c6ab5e4cc8b"
+    },
+    {
+      "command": "node scripts/v15_age14_candidate_inventory.mjs",
+      "exit": 0,
+      "seconds": 2.09,
+      "combinedOutputSHA256": "64733c39690e4688227c1dbac4d17542e5bf72e1e08243561f1403ba6ebba6a2"
+    },
+    {
+      "command": "node scripts/v15_brb_stage_chapter_queue.mjs",
+      "exit": 0,
+      "seconds": 1.72,
+      "combinedOutputSHA256": "51515c5cf6e6c34f0b26695b6979af4428f468aabfb00fdbbd2b7d36dd854521"
+    },
+    {
+      "command": "node scripts/v15_penalty_audit_queue.mjs",
+      "exit": 0,
+      "seconds": 6.36,
+      "combinedOutputSHA256": "92444ad0b03a348fb212d8c28db272f6a5d1100271bf23673ea9bbdb4c0f927b"
+    },
+    {
+      "command": "node scripts/v15_penalty_direct_evidence_queue.mjs",
+      "exit": 0,
+      "seconds": 2.87,
+      "combinedOutputSHA256": "ac15952a300a5c977ee92a0afa7c0be6a5dfe42939ce77a08cd90b39fd7b2d61"
+    },
+    {
+      "command": "node scripts/v15_priority_legal_dossiers_test.mjs",
+      "exit": 0,
+      "seconds": 2.98,
+      "combinedOutputSHA256": "1449cffd1a26ed455f8cb3cb7e883bf2d63d99581315cee62ac253240307a628"
+    },
+    {
+      "command": "node scripts/v15_publication_progress_test.mjs",
+      "exit": 0,
+      "seconds": 5.79,
+      "combinedOutputSHA256": "402ad17ea86313b975d43e5d060b878db12c76c6ad1f3de8899529875a8a5406"
+    },
+    {
+      "command": "node scripts/v15_release_queue_15_test.mjs",
+      "exit": 0,
+      "seconds": 5.25,
+      "combinedOutputSHA256": "1357d6fc60bfb93e7a1c8eb552fe0ba006a1bab328a5b80c55c76423be4e7744"
+    },
+    {
+      "command": "node scripts/v15_release_readiness.mjs",
+      "exit": 0,
+      "seconds": 2.29,
+      "combinedOutputSHA256": "2b23aeb54bd263c74d04227ae78f7eea11fc856ac55b7c5f5eb6be2ab19c8287"
+    },
+    {
+      "command": "node scripts/v15_scoped_source_progress_15_test.mjs",
+      "exit": 0,
+      "seconds": 4.15,
+      "combinedOutputSHA256": "4aa2db6f8c3afbbde7a8727cc5d2b1ceb0599105d957d4b40f76e249821424e3"
+    },
+    {
+      "command": "node scripts/v15_stage_evidence_gaps.mjs",
+      "exit": 0,
+      "seconds": 3.26,
+      "combinedOutputSHA256": "e8b59ee90197a7df28adae48e65e5d104a0a400da9e3a3e3e88830a7af9f91b9"
+    },
+    {
+      "command": "node scripts/v15_stage_final_gaps_15.mjs",
+      "exit": 0,
+      "seconds": 2.22,
+      "combinedOutputSHA256": "c7aba058fe4d731b49b4a167badfc4beb6f0845df4ffb59075847948281ac422"
+    }
+  ],
+  "actions": {
+    "id": 39647518407,
+    "url": "https://github.com/Deashi03/Brottskatalog/actions/runs/39647518407",
+    "conclusion": "success",
+    "iphoneViewportAndInteractions": "success"
+  },
+  "fullLegalApprovals": 0,
+  "progressCredit": 0
+}
