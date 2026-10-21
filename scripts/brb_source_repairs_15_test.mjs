@@ -18,7 +18,7 @@ assert.ok(report.restored>=1,'At least one known machine-import truncation shoul
 // A refreshed Riksdag import may rewrap paragraphs but may not change their meaning.
 const upstream=vm.createContext({window:{}});
 vm.runInContext(fs.readFileSync(path.join(root,'data/provisions-generated.js'),'utf8'),upstream);
-const normalized=s=>String(s).replace(/\\s+/g,' ').trim().replace(/\\s+\\./g,'.');
+const normalized=s=>String(s).replace(/\s+/g,' ').trim().replace(/\s+\./g,'.');
 for(const key of ['BrB:4:3','BrB:6:6','BrB:6:10a','BrB:6:12']){
  assert.equal(normalized(upstream.window.BK_STATUTES[key].text),
   normalized(ctx.window.BK_STATUTES[key].text),'Imported SFS wording changed materially: '+key);

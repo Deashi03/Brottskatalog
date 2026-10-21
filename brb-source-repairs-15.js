@@ -16,7 +16,7 @@ for(const [key,full] of Object.entries(current)){
  if(!full.replace(/\s+/g,' ').startsWith(currentHead(item.text).slice(0,35)))throw Error('Unexpected statute start '+key);
  // Compare statutory wording, ignoring only line wrapping and spacing before
  // the final SFS full stop. Any substantive divergence remains a hard stop.
- const canonical=s=>String(s).replace(/\\s+/g,' ').trim().replace(/\\s+\\./g,'.');
+ const canonical=s=>String(s).replace(/\s+/g,' ').trim().replace(/\s+\./g,'.');
  if(canonical(item.text)===canonical(full)){
    if(item.text!==full)restored++;
  }else if(item.text.length<full.length){
