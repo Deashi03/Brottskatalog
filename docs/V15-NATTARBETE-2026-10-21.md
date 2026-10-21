@@ -53,3 +53,11 @@ Arbetskatalog kan behöva återställas från GitHub; anta inte att tidigare scr
 Workflow `.github/workflows/ui-tests.yml` anger alla kontrollkommandon. Kör relevanta saktester och efter genomförda kodändringar hela lämpliga sviten samt GitHub-mobilregressionen. Dokumentationsändringar behöver inte skapa extra speglingstester. Testutskrifter och `audit/` är genererade arbetsfiler och ska inte rutinmässigt committas. Spara en tydlig status i denna fil och rapporten innan körningen avslutas.
 
 Om arbete inte kan slutföras med tillräckligt underlag, skriv exakt vad som är öppet och vilken källa eller oberoende prövning som saknas. Fortsätt andra oberoende uppgifter. Beskriv inte nästa schemalagda körning som en garanti om 100 % färdigställande.
+
+## Överlämning efter fortsättning den 21 oktober
+
+Tolv tidsfrågor lösta med sju nya originalkällor; 357 kontroller, 90 källposter, 185 egna BrB-paragrafpinnar och 33 öppna tidsfrågor. Nya källor/kort har checked 2026-10-21 och asOf 2026-10-21; gamla kontroller behåller datumet 2026-10-20. Delmoment 11 515/11 957 = 96,3 %, 442 kvar (33 tid, 390 förarbeten/praxis, ett åtalsfilter, 18 publicering). Inga nya fullständiga juridiska godkännanden. Rapporten innehåller exakt lista på de tolv korten.
+
+Original SFS 1970:225 har lästs: 16:11 omfattas av grundlagsanknutet ikraftträdande, inte datumet 1970-07-01 för andra paragrafer. Fortsatt öppen tills primär bekräftelse på grundlagsändringens verkan hämtats. Original SFS 1962:700 finns på https://www.lagboken.se/documentfile/getfile?docId=2683604&download=1&portalId=56&propId=5 men OCR-texten är mycket skadad. De 32 kvarvarande kortens originalparagrafer måste jämföras visuellt och följas genom ändringsregistret; frånvaro av Lag-fotnot räcker fortfarande inte.
+
+Lokal Playwright finns, men Chromium-nedladdningen gav ogiltigt zip-innehåll. Mobilregression måste därför verifieras genom GitHub Actions i detta pass. Ingen publicering eller merge är tillåten.

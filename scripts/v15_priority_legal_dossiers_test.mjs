@@ -22,9 +22,9 @@ for(const c of f.remainingBrB){
 assert.equal(f.counts.unverifiedStageCases,0);
 assert.equal(f.counts.policeCardsWithCompleteStatute,37);
 assert.equal(f.counts.policeCardsFullyLegallyApproved,0);
-assert.equal(f.counts.individuallySourceCheckedLegalChecklistSteps,2535);
+assert.equal(f.counts.individuallySourceCheckedLegalChecklistSteps,2542);
 assert.equal(f.counts.cardsWithPartiallyCheckedLegalChecklist,322);
-assert.equal([...f.policePriority,...f.remainingBrB].reduce((n,d)=>n+d.legalChecklist.filter(x=>x.status==='APPROVED').length,0),2535);
+assert.equal([...f.policePriority,...f.remainingBrB].reduce((n,d)=>n+d.legalChecklist.filter(x=>x.status==='APPROVED').length,0),2542);
 assert.equal(f.releaseReady,false);
 assert.equal(f.automaticCustodyAuthorization,false);
 assert.equal(new Set(f.policePriority.map(x=>x.id)).size,37);

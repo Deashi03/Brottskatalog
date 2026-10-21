@@ -48,7 +48,7 @@ Nya förklaringar ligger i expanderbara delar under Rekvisit. Ett stort antal te
 
 **Lagtext:** 390 grundkort har nu en dokumenterad individuell fulltextjämförelse. 252 av de 299 befintliga grundkortens `law`-fält har ändrats. Detta omfattar kompletterade/trunkerade texter, uppdaterade lydelser och rättelser; det är inte 252 nya kriminaliseringar. Maskinimporterad text får inte automatiskt ärva en manuell granskningsmarkering.
 
-**Gärningstidpunkt:** 345 grundkort har fått särskilda anteckningar om den återgivna paragrafens ändringslag, ikraftträdande och publicerade övergångsbestämmelser. 45 tidsfrågor hålls öppna. Ett datum för en ändringslag är inte automatiskt dagen då brottstypen först infördes, och appen väljer inte lagversion för en konkret gärning. För 7 kap. 4 § hålls den kommande lydelsen från 2027 isär från den nu återgivna lydelsen.
+**Gärningstidpunkt:** 357 grundkort har fått särskilda anteckningar om den återgivna paragrafens ändringslag, ikraftträdande och publicerade övergångsbestämmelser. 33 tidsfrågor hålls öppna. Ett datum för en ändringslag är inte automatiskt dagen då brottstypen först infördes, och appen väljer inte lagversion för en konkret gärning. För 7 kap. 4 § hålls den kommande lydelsen från 2027 isär från den nu återgivna lydelsen.
 
 **Straffskalor:** 376 grundkort har kontrollerade numeriska intervall. Ytterligare 14 grundkort har villkorade eller härledda skalor vars grenar beskrivs utan ett påhittat gemensamt numeriskt intervall. De 14 fallen är inte färdigbedömda för konkret grenval.
 
@@ -107,19 +107,44 @@ Publiceringsflödet innehåller en releasekontroll som ska stoppa ofärdig 1.5. 
 
 ## Vad som faktiskt återstår
 
-**Den rapporterade arbetsstatusen är 11 503/11 957 = 96,2 %.** Måttet avser den befintliga arbetsinventeringen och inkluderar många avgränsade delkontroller. Det betyder inte att 96,2 % av brottskorten är fullständigt juridiskt godkända. Antalet fullständiga juridiska slutgodkännanden är fortfarande noll.
+**Den rapporterade arbetsstatusen är 11 515/11 957 = 96,3 %.** Måttet avser den befintliga arbetsinventeringen och inkluderar många avgränsade delkontroller. Det betyder inte att 96,2 % av brottskorten är fullständigt juridiskt godkända. Antalet fullständiga juridiska slutgodkännanden är fortfarande noll.
 
 | Kvarstående räknat område | Antal |
 |---|---:|
-| Tids-/ikraftträdandefrågor | 45 |
+| Tids-/ikraftträdandefrågor | 33 |
 | Individuella förarbets-/praxisfrågor | 390 |
 | Åtalsfilter | 1 |
 | Release-, publicerings- och efterkontroller | 18 |
-| Summa kvar i den befintliga räkningen | 454 |
+| Summa kvar i den befintliga räkningen | 442 |
 
 Därutöver ska de 56 olösta individuella förstadiestraffskalorna och de 14 villkorade grundskalorna fortsatt behandlas som verkliga begränsningar. De får inte döljas bakom att andra avgränsade förstadie- eller gradkontroller är räknemässigt klara.
 
 Användarens nya mål är att färdigställa utvecklingen och avvakta med publicering. De delar av den befintliga 100-procentsräkningen som uttryckligen gäller merge, publicering och produktionskontroll ska därför förbli öppna. En framtida separat status för färdigutvecklad men opublicerad version måste redovisas öppet och får inte ersätta den nuvarande nämnaren i tysthet.
+
+## Fortsatt källgranskning den 21 oktober: tolv tidsfrågor lösta
+
+Originaltryck har tillförts för sju författningar. Fem kort har kontrollerats mot både originalförfattning, aktuell konsolidering och ändringsregistrets omfattningsuppgifter. De övriga sju korten har en uttrycklig ändringshänvisning som nu har fått ett kontrollerat ikraftträdande. Totalt finns 357 daterade paragrafkontroller och 90 tidskällor. Alla sju nya källposter och tolv kortkontroller är daterade 2026-10-21; äldre kontroller behåller sina tidigare datum.
+
+| Kort | Kontrollerad egen paragraf | Lydelsen gäller från | Originaltryck |
+|---|---|---|---|
+| Olovlig avlyssning | BrB 4:9 a | 1975-07-01 | SFS 1975:239 |
+| Egenmäktighet vid förhandling med främmande makt | BrB 19:4 | 1976-07-01 | SFS 1976:509 |
+| Oredligt förfarande | BrB 9:8 | 1971-01-01 | SFS 1970:414 |
+| Osann utsaga inför nordisk domstol | BrB 15:4 a | 1976-01-01 | SFS 1975:1292 |
+| Ovarsam utsaga inför nordisk domstol | BrB 15:4 a | 1976-01-01 | SFS 1975:1292 |
+| Överträdelse av myndighets bud | BrB 17:13 | 1982-01-01 | SFS 1981:827 |
+| Hindrande av förrättning | BrB 17:13 | 1982-01-01 | SFS 1981:827 |
+| Ringa smuggling | Smugglingslagen 4 § | 2001-01-01 | SFS 2000:1225 |
+| Ringa tullbrott | Smugglingslagen 9 § | 2001-01-01 | SFS 2000:1225 |
+| Vårdslös tullredovisning | Smugglingslagen 11 § | 2001-01-01 | SFS 2000:1225 |
+| Penningtvättsbrott | Penningtvättsbrottslagen 3–4 §§ | 2014-07-01 | SFS 2014:307 |
+| Penningtvättsförseelse | Penningtvättsbrottslagen 6 § | 2014-07-01 | SFS 2014:307 |
+
+SFS 1976:509 har ett särskilt datum för 19:4; andra delar började gälla 1978-01-01. Källposten är därför uttryckligen begränsad till 19:4. SFS 1975:1292 föreskriver äldre bestämmelser för tidigare gärningar. SFS 1981:827 har särskilda övergångsregler för andra paragrafer som inte får behandlas som egna undantag i 17:13. Smugglingslagens fem ursprungliga övergångspunkter återges med avgränsning mot dagens befogenheter.
+
+Regressionen omfattar dagen före, själva ikraftträdandedagen, källkontrolldagen och dagen efter samt ändrad källtext, övergångstext, originaladress och paragraftext. Ingen automatisk lagversions-, ansvars- eller tvångsmedelsbedömning tillkommer.
+
+Otillåtet förfarande med pornografisk bild hålls öppet. Originalet till SFS 1970:225 knyter 16:11 till att en grundlagsändring får kraft; datumet 1 juli 1970 gäller andra uttryckligen uppräknade paragrafer. 32 återstående kort saknar fortfarande självständigt verifierad koppling till originallydelsen. Originaltrycket till SFS 1962:700 har lokaliserats, men dess OCR är kraftigt skadad och har inte använts för automatiska godkännanden.
 
 ## Bilaga: samtliga 91 nya grundkort
 

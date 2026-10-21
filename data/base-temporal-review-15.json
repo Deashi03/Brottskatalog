@@ -909,6 +909,89 @@
       "transitionURL": "https://www.riksdagen.se/sv/dokument-och-lagar/dokument/svensk-forfattningssamling/brottsbalk-1962700_sfs-1962-700/",
       "checked": "2026-10-20",
       "dateOnly": true
+    },
+    "1975:239": {
+      "base": "1962:700",
+      "text": "SFS 1975:239, s. 1: nya 4 kap. 9 a och 9 b §§ samt ändrad 4 kap. 11 §. Denna lag träder i kraft den 1 juli 1975.",
+      "url": "https://www.lagboken.se/documentfile/getfile?docId=2590635&download=1&portalId=56&propId=5",
+      "commencement": "1975-07-01",
+      "transitionText": "Denna lag träder i kraft den 1 juli 1975.",
+      "law": "1975:239",
+      "checked": "2026-10-21",
+      "dateOnly": false,
+      "transitionURL": "https://www.lagboken.se/documentfile/getfile?docId=2590635&download=1&portalId=56&propId=5"
+    },
+    "1976:509": {
+      "base": "1962:700",
+      "text": "SFS 1976:509, s. 1012–1013: i 19 kap. 4 § byts han mot regeringen. Denna lag träder i kraft, såvitt avser 19 kap. 4 §, den 1 juli 1976 och i övrigt den 1 januari 1978.",
+      "url": "https://www.lagboken.se/documentfile/getfile?docId=2593299&download=1&portalId=56&propId=5",
+      "commencement": "1976-07-01",
+      "transitionText": "Denna lag träder i kraft, såvitt avser 19 kap. 4 §, den 1 juli 1976 och i övrigt den 1 januari 1978.",
+      "commencementScope": [
+        "BrB:19:4"
+      ],
+      "otherProvisionsCommencement": "1978-01-01",
+      "law": "1976:509",
+      "checked": "2026-10-21",
+      "dateOnly": false,
+      "transitionURL": "https://www.lagboken.se/documentfile/getfile?docId=2593299&download=1&portalId=56&propId=5"
+    },
+    "2000:1225": {
+      "base": "2000:1225",
+      "text": "Originaltryck SFS 2000:1225: 4 § s. 2, 9 § s. 3 och 11 § s. 4 överensstämmer med återgiven aktuell paragraftext. Ikraftträdande och fem övergångspunkter s. 9–10. Ändringsregistret till och med 2026:1321 innehåller ingen ändring av 4, 9 eller 11 §.",
+      "url": "https://rkrattsbaser.gov.se/sfsr?bet=2000:1225",
+      "commencement": "2001-01-01",
+      "transitionText": "1. Denna lag träder i kraft den 1 januari 2001, då lagen (1960:418) om straff för varusmuggling skall upphöra att gälla. 2. Den som efter lagens ikraftträdande tar sådan befattning som anges i 12 eller 13 § med en vara som varit föremål för varusmuggling enligt lagen (1960:418) om straff för varusmuggling skall fällas till ansvar enligt 12 eller 13 §. 3. Beträffande varor som varit föremål för varusmuggling eller försök till varusmuggling enligt lagen (1960:418) om straff för varusmuggling skall tillämpas vad som i den lagen är föreskrivet om förverkande. Vad som är föreskrivet i denna lag om förverkande skall dock tillämpas om det leder till en lindrigare bedömning. 4. Vad som föreskrivs i 19–22 och 24–27 §§ om åtgärder vid brott enligt denna lag skall tillämpas även beträffande brott enligt lagen (1960:418) om straff för varusmuggling. 5. I fråga om åtal för brott mot lagen (1960:418) om straff för varusmuggling och i fråga om förverkande till följd av sådant brott skall 20, 23 a och 24 §§ den lagen fortfarande tillämpas.",
+      "originalURL": "https://rkrattsdb.gov.se/SFSdoc/00/001225.PDF",
+      "law": "2000:1225",
+      "checked": "2026-10-21",
+      "dateOnly": false,
+      "transitionURL": "https://rkrattsdb.gov.se/SFSdoc/00/001225.PDF"
+    },
+    "2014:307": {
+      "base": "2014:307",
+      "text": "Originaltryck SFS 2014:307: 3–4 §§ s. 1 och 6 § s. 2 överensstämmer med återgiven aktuell paragraftext. Ikraftträdande s. 3: Denna lag träder i kraft den 1 juli 2014. Ändringsregistret till och med 2026:1323 innehåller ingen ändring av 3, 4 eller 6 §.",
+      "url": "https://rkrattsbaser.gov.se/sfsr?bet=2014:307",
+      "commencement": "2014-07-01",
+      "transitionText": "Denna lag träder i kraft den 1 juli 2014.",
+      "originalURL": "https://rkrattsdb.gov.se/SFSdoc/14/140307.PDF",
+      "law": "2014:307",
+      "checked": "2026-10-21",
+      "dateOnly": false,
+      "transitionURL": "https://rkrattsdb.gov.se/SFSdoc/14/140307.PDF"
+    },
+    "1970:414": {
+      "base": "1962:700",
+      "text": "SFS 1970:414, s. 976–977: ändrad 9 kap. 8 §. Denna lag träder i kraft den 1 januari 1971.",
+      "commencement": "1971-01-01",
+      "transitionText": "Denna lag träder i kraft den 1 januari 1971.",
+      "url": "https://www.lagboken.se/documentfile/getfile?docId=2664136&download=1&portalId=56&propId=5",
+      "law": "1970:414",
+      "checked": "2026-10-21",
+      "dateOnly": false,
+      "transitionURL": "https://www.lagboken.se/documentfile/getfile?docId=2664136&download=1&portalId=56&propId=5"
+    },
+    "1975:1292": {
+      "base": "1962:700",
+      "text": "SFS 1975:1292, s. 2356–2357: ändrade 15 kap. 1 och 4 a §§. Ikraftträdande 1 januari 1976, äldre bestämmelser gäller gärningar före ikraftträdandet.",
+      "commencement": "1976-01-01",
+      "transitionText": "Denna lag träder i kraft den 1 januari 1976. I fråga om gärning som begåtts före ikraftträdandet gäller äldre bestämmelser.",
+      "url": "https://www.lagboken.se/documentfile/getfile?docId=2592665&download=1&portalId=56&propId=5",
+      "law": "1975:1292",
+      "checked": "2026-10-21",
+      "dateOnly": false,
+      "transitionURL": "https://www.lagboken.se/documentfile/getfile?docId=2592665&download=1&portalId=56&propId=5"
+    },
+    "1981:827": {
+      "base": "1962:700",
+      "text": "SFS 1981:827, s. 1609–1611: ändrade 11 kap. 1 och 3 §§, 17 kap. 13 § och 36 kap. 4 §. Ikraftträdande 1 januari 1982; de särskilda äldre-lydelsebestämmelserna avser 11 kap. 1 och 3 §§ samt 36 kap. 4 § fjärde stycket.",
+      "commencement": "1982-01-01",
+      "transitionText": "Denna lag träder i kraft den 1 januari 1982. 11 kap. 1 och 3 §§ i sin äldre lydelse gäller fortfarande i fråga om oriktiga uppgifter som en gäldenär före ikraftträdandet har lämnat eller därefter lämnar i en förteckning till utmätningsed eller till betalningssäkringsed. Bestämmelsen i 36 kap. 4 § fjärde stycket gäller inte, när fråga är om brott som har begåtts före ikraftträdandet.",
+      "url": "https://www.lagboken.se/documentfile/getfile?docId=2599711&download=1&portalId=56&propId=5",
+      "law": "1981:827",
+      "checked": "2026-10-21",
+      "dateOnly": false,
+      "transitionURL": "https://www.lagboken.se/documentfile/getfile?docId=2599711&download=1&portalId=56&propId=5"
     }
   },
   "offencePins": {
@@ -1630,6 +1713,26 @@
     },
     "BrB:19:9": {
       "text": "9 §\n\nDen som av grov oaktsamhet begår en gärning som avses i 7 § döms, om gärningen består i att personen obehörigen befordrar, lämnar eller röjer en uppgift, för vårdslöshet med hemlig uppgift till böter eller fängelse i högst ett år eller, om Sverige var i krig, till böter eller fängelse i högst två år.\n\nEn gärning ska inte utgöra brott, om den är sådan som avses i 7 § andra stycket och den med hänsyn till syftet och övriga omständigheter är försvarlig. Lag (2022:1519).",
+      "url": "https://www.riksdagen.se/sv/dokument-och-lagar/dokument/svensk-forfattningssamling/brottsbalk-1962700_sfs-1962-700/"
+    },
+    "BrB:4:9a": {
+      "text": "9 a §\nDen som i annat fall än som sägs i 8 § olovligen medelst tekniskt hjälpmedel för återgivning av ljud i hemlighet avlyssnar eller upptager tal i enrum, samtal mellan andra eller förhandlingar vid sammanträde eller annan sammankomst, vartill allmänheten icke äger tillträde och som han själv icke deltager i eller som han obehörigen berett sig tillträde till, dömes för olovlig avlyssning till böter eller fängelse i högst två år. Lag (1975:239).",
+      "url": "https://www.riksdagen.se/sv/dokument-och-lagar/dokument/svensk-forfattningssamling/brottsbalk-1962700_sfs-1962-700/"
+    },
+    "BrB:19:4": {
+      "text": "4 §\nSvensk medborgare, som utan tillstånd av regeringen eller den regeringen bemyndigat låter bruka sig såsom ombud för främmande makt i diplomatisk angelägenhet som rör riket, så ock envar, som i föregiven egenskap av behörigt ombud inlåter sig i underhandling om sådan angelägenhet med någon som före-\nträder främmande makts intresse, dömes för egenmäktighet vid förhandling med främmande makt till fängelse i högst två år eller, om riket var i krig, högst fyra år.\nInnebar brottet fara för rikets självbestämningsrätt eller dess fredliga förhållande till främmande makt, dömes till fängelse, lägst ett och högst sex år, eller, om riket var i krig, till fängelse på viss tid, lägst fyra och högst tio år, eller på livstid.\nLag (1976:509).",
+      "url": "https://www.riksdagen.se/sv/dokument-och-lagar/dokument/svensk-forfattningssamling/brottsbalk-1962700_sfs-1962-700/"
+    },
+    "BrB:9:8": {
+      "text": "8 §\nDen som, i annat fall än förut i detta kapitel är sagt, förfar oredligt i det han medelst vilseledande förmår någon till handling eller underlåtenhet och därigenom skadar den vilseledde eller någon i vars ställe denne är, dömes för oredligt förfarande till böter eller fängelse i högst två år. Lag (1970:414).",
+      "url": "https://www.riksdagen.se/sv/dokument-och-lagar/dokument/svensk-forfattningssamling/brottsbalk-1962700_sfs-1962-700/"
+    },
+    "BrB:17:13": {
+      "text": "13 §\nDen som olovligen rubbar, skadar eller annars förfogar över egendom som är föremål för utmätning, kvarstad, betalningssäkring, beslag eller annan liknande åtgärd skadar eller borttager myndighets anslag eller försegling eller eljest olovligen öppnar vad myndighet tillslutit eller ock överträder annat dylikt av myndighet meddelat förbud, dömes för överträdelse av myndig-\nhets bud till böter eller fängelse i högst ett år.\nVägrar någon inträde som förrättningsman äger fordra, dömes för hindrande av förrättning till böter.\nLag (1981:827).",
+      "url": "https://www.riksdagen.se/sv/dokument-och-lagar/dokument/svensk-forfattningssamling/brottsbalk-1962700_sfs-1962-700/"
+    },
+    "BrB:15:4a": {
+      "text": "4 a §\nOm någon under straffansvar inför domstol i Danmark, Finland, Island eller Norge lämnar osann uppgift eller förtiger sanningen, dömes han för osann utsaga inför nordisk domstol till påföljd enligt 1 §, om utsagan här i riket skulle ha avgivits under laga ed, och enligt 2 §, när fråga är om utsaga av part i tvistemål. Begås gärningen av grov oaktsamhet, dömes för ovarsam utsaga inför nordisk domstol till påföljd enligt 3 §.\nBestämmelserna i 4, 14 och 15 §§ äger motsvarande tillämpning på gärning som avses i första stycket.\nLag (1975:1292).",
       "url": "https://www.riksdagen.se/sv/dokument-och-lagar/dokument/svensk-forfattningssamling/brottsbalk-1962700_sfs-1962-700/"
     }
   },
@@ -9797,6 +9900,296 @@
       "future": null,
       "finding": "Vårdslöshet med hemlig uppgift: den återgivna paragraftextens angivna ändringslag(ar) 2022:1519 trädde i kraft 2023-01-01.",
       "note": "Dateringen avser den återgivna paragraftextens angivna ändringslag, inte när brottstypen först infördes eller när en viss gärning blev straffbar. Hänvisade bestämmelser, grader, förstadier, åtal och processuella regler kan ha egna tidsgränser. Villkorad/hänvisad straffskala måste fortfarande väljas och tidsprövas separat; ingen enhetlig straffskala är fastställd."
+    },
+    {
+      "id": "v03-olovlig-avlyssning",
+      "title": "Olovlig avlyssning",
+      "statute": "BrB:4:9a",
+      "ownText": "9 a §\nDen som i annat fall än som sägs i 8 § olovligen medelst tekniskt hjälpmedel för återgivning av ljud i hemlighet avlyssnar eller upptager tal i enrum, samtal mellan andra eller förhandlingar vid sammanträde eller annan sammankomst, vartill allmänheten icke äger tillträde och som han själv icke deltager i eller som han obehörigen berett sig tillträde till, dömes för olovlig avlyssning till böter eller fängelse i högst två år. Lag (1975:239).",
+      "sourceURL": "https://www.riksdagen.se/sv/dokument-och-lagar/dokument/svensk-forfattningssamling/brottsbalk-1962700_sfs-1962-700/",
+      "lawVersion": null,
+      "ownSourceRefs": [
+        "BrB:4:9a"
+      ],
+      "amendments": [
+        "1975:239"
+      ],
+      "sourceRefs": [
+        "BrP:5",
+        "BrP:7",
+        "1975:239"
+      ],
+      "wordingFrom": "1975-07-01",
+      "asOf": "2026-10-21",
+      "checked": "2026-10-21",
+      "future": null,
+      "finding": "Olovlig avlyssning: den återgivna paragraflydelsens ikraftträdande är verifierat till 1975-07-01 med originaltrycket till SFS 1975:239.",
+      "note": "Dateringen gäller endast den återgivna egna paragraftexten. Hänvisade paragrafer, förstadier, åtalsregler och processuella regler kan ha andra tidsgränser. Gärningsdag och senare lindrigare lag måste prövas separat."
+    },
+    {
+      "id": "v09-ringa-smuggling",
+      "title": "Ringa smuggling",
+      "statute": null,
+      "ownText": "4 §\nOm ett brott som avses i 3 § är att anse som ringa, döms till penningböter.",
+      "sourceURL": "https://www.riksdagen.se/sv/dokument-och-lagar/dokument/svensk-forfattningssamling/lag-20001225-om-straff-for-smuggling_sfs-2000-1225/",
+      "lawVersion": "2026:1321",
+      "ownSourceRefs": [],
+      "amendments": [
+        "2000:1225"
+      ],
+      "sourceRefs": [
+        "BrP:5",
+        "BrP:7",
+        "2000:1225"
+      ],
+      "wordingFrom": "2001-01-01",
+      "asOf": "2026-10-21",
+      "checked": "2026-10-21",
+      "future": null,
+      "finding": "Ringa smuggling: den återgivna paragraflydelsens ikraftträdande är verifierat till 2001-01-01 med originaltrycket till SFS 2000:1225.",
+      "note": "Dateringen gäller endast den återgivna egna paragraftexten. Hänvisade paragrafer, förstadier, åtalsregler och processuella regler kan ha andra tidsgränser. Gärningsdag och senare lindrigare lag måste prövas separat. Originaltrycket har jämförts med den återgivna texten och ändringsregistrets omfattningsuppgifter. Avsaknad av Lag-fotnot har inte ensam använts som bevis för originallydelse. De fem övergångspunkterna avser även äldre varusmuggling, förverkande, process och åtal; de är inte ett godkännande av dagens befogenheter för äldre gärningar."
+    },
+    {
+      "id": "v09-ringa-tullbrott",
+      "title": "Ringa tullbrott",
+      "statute": null,
+      "ownText": "9 §\nOm ett brott som avses i 8 § är att anse som ringa, döms till penningböter.",
+      "sourceURL": "https://www.riksdagen.se/sv/dokument-och-lagar/dokument/svensk-forfattningssamling/lag-20001225-om-straff-for-smuggling_sfs-2000-1225/",
+      "lawVersion": "2026:1321",
+      "ownSourceRefs": [],
+      "amendments": [
+        "2000:1225"
+      ],
+      "sourceRefs": [
+        "BrP:5",
+        "BrP:7",
+        "2000:1225"
+      ],
+      "wordingFrom": "2001-01-01",
+      "asOf": "2026-10-21",
+      "checked": "2026-10-21",
+      "future": null,
+      "finding": "Ringa tullbrott: den återgivna paragraflydelsens ikraftträdande är verifierat till 2001-01-01 med originaltrycket till SFS 2000:1225.",
+      "note": "Dateringen gäller endast den återgivna egna paragraftexten. Hänvisade paragrafer, förstadier, åtalsregler och processuella regler kan ha andra tidsgränser. Gärningsdag och senare lindrigare lag måste prövas separat. Originaltrycket har jämförts med den återgivna texten och ändringsregistrets omfattningsuppgifter. Avsaknad av Lag-fotnot har inte ensam använts som bevis för originallydelse. De fem övergångspunkterna avser även äldre varusmuggling, förverkande, process och åtal; de är inte ett godkännande av dagens befogenheter för äldre gärningar."
+    },
+    {
+      "id": "v09-vardslos-tullredovisning",
+      "title": "Vårdslös tullredovisning",
+      "statute": null,
+      "ownText": "11 §\nDen som av grov oaktsamhet begår gärning som avses i 8 §, döms för vårdslös tullredovisning till böter eller fängelse i högst två år.\nOm gärningen är ringa, skall den inte medföra ansvar.",
+      "sourceURL": "https://www.riksdagen.se/sv/dokument-och-lagar/dokument/svensk-forfattningssamling/lag-20001225-om-straff-for-smuggling_sfs-2000-1225/",
+      "lawVersion": "2026:1321",
+      "ownSourceRefs": [],
+      "amendments": [
+        "2000:1225"
+      ],
+      "sourceRefs": [
+        "BrP:5",
+        "BrP:7",
+        "2000:1225"
+      ],
+      "wordingFrom": "2001-01-01",
+      "asOf": "2026-10-21",
+      "checked": "2026-10-21",
+      "future": null,
+      "finding": "Vårdslös tullredovisning: den återgivna paragraflydelsens ikraftträdande är verifierat till 2001-01-01 med originaltrycket till SFS 2000:1225.",
+      "note": "Dateringen gäller endast den återgivna egna paragraftexten. Hänvisade paragrafer, förstadier, åtalsregler och processuella regler kan ha andra tidsgränser. Gärningsdag och senare lindrigare lag måste prövas separat. Originaltrycket har jämförts med den återgivna texten och ändringsregistrets omfattningsuppgifter. Avsaknad av Lag-fotnot har inte ensam använts som bevis för originallydelse. De fem övergångspunkterna avser även äldre varusmuggling, förverkande, process och åtal; de är inte ett godkännande av dagens befogenheter för äldre gärningar."
+    },
+    {
+      "id": "v09-penningtvattsbrott",
+      "title": "Penningtvättsbrott",
+      "statute": null,
+      "ownText": "3 §\nFör penningtvättsbrott döms, om åtgärden syftar till att dölja att pengar eller annan egendom härrör från brott eller brottslig verksamhet eller till att främja möjligheterna för någon att tillgodogöra sig egendomen eller dess värde, den som\n1. överlåter, förvärvar, omsätter, förvarar eller vidtar annan sådan åtgärd med egendomen, eller\n2. tillhandahåller, förvärvar eller upprättar en handling som kan ge en skenbar förklaring till innehavet av egendomen, deltar i transaktioner som utförs för skens skull, uppträder som bulvan eller vidtar annan sådan åtgärd.\nStraffet är fängelse i högst två år.\n\n4 §\nFör penningtvättsbrott döms även den som, utan att åtgärden har ett sådant syfte som anges i 3 §, otillbörligen främjar möjligheterna för någon att omsätta pengar eller annan egendom som härrör från brott eller brottslig verksamhet.",
+      "sourceURL": "https://www.riksdagen.se/sv/dokument-och-lagar/dokument/svensk-forfattningssamling/lag-2014307-om-straff-for-penningtvattsbrott_sfs-2014-307/",
+      "lawVersion": "2026:1323",
+      "ownSourceRefs": [],
+      "amendments": [
+        "2014:307"
+      ],
+      "sourceRefs": [
+        "BrP:5",
+        "BrP:7",
+        "2014:307"
+      ],
+      "wordingFrom": "2014-07-01",
+      "asOf": "2026-10-21",
+      "checked": "2026-10-21",
+      "future": null,
+      "finding": "Penningtvättsbrott: den återgivna paragraflydelsens ikraftträdande är verifierat till 2014-07-01 med originaltrycket till SFS 2014:307.",
+      "note": "Dateringen gäller endast den återgivna egna paragraftexten. Hänvisade paragrafer, förstadier, åtalsregler och processuella regler kan ha andra tidsgränser. Gärningsdag och senare lindrigare lag måste prövas separat. Originaltrycket har jämförts med den återgivna texten och ändringsregistrets omfattningsuppgifter. Avsaknad av Lag-fotnot har inte ensam använts som bevis för originallydelse."
+    },
+    {
+      "id": "v09-penningtvattsforseelse",
+      "title": "Penningtvättsförseelse",
+      "statute": null,
+      "ownText": "6 §\nÄr brott som avses i 3 eller 4 § ringa, döms för penningtvättsförseelse till böter eller fängelse i högst sex månader.\nFör penningtvättsförseelse döms även den som i fall som avses i 3 eller 4 § inte insåg men hade skälig anledning att anta att egendomen härrörde från brott eller brottslig verksamhet.",
+      "sourceURL": "https://www.riksdagen.se/sv/dokument-och-lagar/dokument/svensk-forfattningssamling/lag-2014307-om-straff-for-penningtvattsbrott_sfs-2014-307/",
+      "lawVersion": "2026:1323",
+      "ownSourceRefs": [],
+      "amendments": [
+        "2014:307"
+      ],
+      "sourceRefs": [
+        "BrP:5",
+        "BrP:7",
+        "2014:307"
+      ],
+      "wordingFrom": "2014-07-01",
+      "asOf": "2026-10-21",
+      "checked": "2026-10-21",
+      "future": null,
+      "finding": "Penningtvättsförseelse: den återgivna paragraflydelsens ikraftträdande är verifierat till 2014-07-01 med originaltrycket till SFS 2014:307.",
+      "note": "Dateringen gäller endast den återgivna egna paragraftexten. Hänvisade paragrafer, förstadier, åtalsregler och processuella regler kan ha andra tidsgränser. Gärningsdag och senare lindrigare lag måste prövas separat. Originaltrycket har jämförts med den återgivna texten och ändringsregistrets omfattningsuppgifter. Avsaknad av Lag-fotnot har inte ensam använts som bevis för originallydelse."
+    },
+    {
+      "id": "v15-cover-egenmaktighet-vid-forhandling-med-frammande-makt",
+      "title": "Egenmäktighet vid förhandling med främmande makt",
+      "statute": "BrB:19:4",
+      "ownText": "4 §\nSvensk medborgare, som utan tillstånd av regeringen eller den regeringen bemyndigat låter bruka sig såsom ombud för främmande makt i diplomatisk angelägenhet som rör riket, så ock envar, som i föregiven egenskap av behörigt ombud inlåter sig i underhandling om sådan angelägenhet med någon som före-\nträder främmande makts intresse, dömes för egenmäktighet vid förhandling med främmande makt till fängelse i högst två år eller, om riket var i krig, högst fyra år.\nInnebar brottet fara för rikets självbestämningsrätt eller dess fredliga förhållande till främmande makt, dömes till fängelse, lägst ett och högst sex år, eller, om riket var i krig, till fängelse på viss tid, lägst fyra och högst tio år, eller på livstid.\nLag (1976:509).",
+      "sourceURL": "https://www.riksdagen.se/sv/dokument-och-lagar/dokument/svensk-forfattningssamling/brottsbalk-1962700_sfs-1962-700/",
+      "lawVersion": null,
+      "ownSourceRefs": [
+        "BrB:19:4"
+      ],
+      "amendments": [
+        "1976:509"
+      ],
+      "sourceRefs": [
+        "BrP:5",
+        "BrP:7",
+        "1976:509"
+      ],
+      "wordingFrom": "1976-07-01",
+      "asOf": "2026-10-21",
+      "checked": "2026-10-21",
+      "future": null,
+      "finding": "Egenmäktighet vid förhandling med främmande makt: den återgivna paragraflydelsens ikraftträdande är verifierat till 1976-07-01 med originaltrycket till SFS 1976:509.",
+      "note": "Dateringen gäller endast den återgivna egna paragraftexten. Hänvisade paragrafer, förstadier, åtalsregler och processuella regler kan ha andra tidsgränser. Gärningsdag och senare lindrigare lag måste prövas separat. Särdatumet den 1 juli 1976 gäller enbart 19 kap. 4 §; övriga delar av samma ändringslag trädde i kraft den 1 januari 1978."
+    },
+    {
+      "id": "v05-oredligt-forfarande",
+      "title": "Oredligt förfarande",
+      "statute": "BrB:9:8",
+      "ownText": "8 §\nDen som, i annat fall än förut i detta kapitel är sagt, förfar oredligt i det han medelst vilseledande förmår någon till handling eller underlåtenhet och därigenom skadar den vilseledde eller någon i vars ställe denne är, dömes för oredligt förfarande till böter eller fängelse i högst två år. Lag (1970:414).",
+      "sourceURL": "https://www.riksdagen.se/sv/dokument-och-lagar/dokument/svensk-forfattningssamling/brottsbalk-1962700_sfs-1962-700/",
+      "lawVersion": null,
+      "ownSourceRefs": [
+        "BrB:9:8"
+      ],
+      "amendments": [
+        "1970:414"
+      ],
+      "sourceRefs": [
+        "BrP:5",
+        "BrP:7",
+        "1970:414"
+      ],
+      "wordingFrom": "1971-01-01",
+      "asOf": "2026-10-21",
+      "checked": "2026-10-21",
+      "future": null,
+      "finding": "Oredligt förfarande: återgiven paragraflydelses ikraftträdande är verifierat till 1971-01-01 genom originaltrycket till SFS 1970:414.",
+      "note": "Originaltryckets paragraf och ikraftträdandebestämmelse har kontrollerats. Dateringen avser endast återgiven egen paragraflydelse. Hänvisade bestämmelser kan ha ändrats senare. Ingen historisk eller konkret lagversion väljs automatiskt."
+    },
+    {
+      "id": "v15-cover-overtradelse-av-myndighets-bud",
+      "title": "Överträdelse av myndighets bud",
+      "statute": "BrB:17:13",
+      "ownText": "13 §\nDen som olovligen rubbar, skadar eller annars förfogar över egendom som är föremål för utmätning, kvarstad, betalningssäkring, beslag eller annan liknande åtgärd skadar eller borttager myndighets anslag eller försegling eller eljest olovligen öppnar vad myndighet tillslutit eller ock överträder annat dylikt av myndighet meddelat förbud, dömes för överträdelse av myndig-\nhets bud till böter eller fängelse i högst ett år.\nVägrar någon inträde som förrättningsman äger fordra, dömes för hindrande av förrättning till böter.\nLag (1981:827).",
+      "sourceURL": "https://www.riksdagen.se/sv/dokument-och-lagar/dokument/svensk-forfattningssamling/brottsbalk-1962700_sfs-1962-700/",
+      "lawVersion": null,
+      "ownSourceRefs": [
+        "BrB:17:13"
+      ],
+      "amendments": [
+        "1981:827"
+      ],
+      "sourceRefs": [
+        "BrP:5",
+        "BrP:7",
+        "1981:827"
+      ],
+      "wordingFrom": "1982-01-01",
+      "asOf": "2026-10-21",
+      "checked": "2026-10-21",
+      "future": null,
+      "finding": "Överträdelse av myndighets bud: återgiven paragraflydelses ikraftträdande är verifierat till 1982-01-01 genom originaltrycket till SFS 1981:827.",
+      "note": "Originaltryckets paragraf och ikraftträdandebestämmelse har kontrollerats. Dateringen avser endast återgiven egen paragraflydelse. Hänvisade bestämmelser kan ha ändrats senare. Ingen historisk eller konkret lagversion väljs automatiskt. De särskilda övergångsreglerna för 11 kap. 1 och 3 §§ och 36 kap. 4 § fjärde stycket ska inte beskrivas som egna undantag i 17 kap. 13 §."
+    },
+    {
+      "id": "v15-cover-hindrande-av-forrattning",
+      "title": "Hindrande av förrättning",
+      "statute": "BrB:17:13",
+      "ownText": "13 §\nDen som olovligen rubbar, skadar eller annars förfogar över egendom som är föremål för utmätning, kvarstad, betalningssäkring, beslag eller annan liknande åtgärd skadar eller borttager myndighets anslag eller försegling eller eljest olovligen öppnar vad myndighet tillslutit eller ock överträder annat dylikt av myndighet meddelat förbud, dömes för överträdelse av myndig-\nhets bud till böter eller fängelse i högst ett år.\nVägrar någon inträde som förrättningsman äger fordra, dömes för hindrande av förrättning till böter.\nLag (1981:827).",
+      "sourceURL": "https://www.riksdagen.se/sv/dokument-och-lagar/dokument/svensk-forfattningssamling/brottsbalk-1962700_sfs-1962-700/",
+      "lawVersion": null,
+      "ownSourceRefs": [
+        "BrB:17:13"
+      ],
+      "amendments": [
+        "1981:827"
+      ],
+      "sourceRefs": [
+        "BrP:5",
+        "BrP:7",
+        "1981:827"
+      ],
+      "wordingFrom": "1982-01-01",
+      "asOf": "2026-10-21",
+      "checked": "2026-10-21",
+      "future": null,
+      "finding": "Hindrande av förrättning: återgiven paragraflydelses ikraftträdande är verifierat till 1982-01-01 genom originaltrycket till SFS 1981:827.",
+      "note": "Originaltryckets paragraf och ikraftträdandebestämmelse har kontrollerats. Dateringen avser endast återgiven egen paragraflydelse. Hänvisade bestämmelser kan ha ändrats senare. Ingen historisk eller konkret lagversion väljs automatiskt. De särskilda övergångsreglerna för 11 kap. 1 och 3 §§ och 36 kap. 4 § fjärde stycket ska inte beskrivas som egna undantag i 17 kap. 13 §."
+    },
+    {
+      "id": "v15-family-osann-utsaga-infor-nordisk-domstol",
+      "title": "Osann utsaga inför nordisk domstol",
+      "statute": "BrB:15:4a",
+      "ownText": "4 a §\nOm någon under straffansvar inför domstol i Danmark, Finland, Island eller Norge lämnar osann uppgift eller förtiger sanningen, dömes han för osann utsaga inför nordisk domstol till påföljd enligt 1 §, om utsagan här i riket skulle ha avgivits under laga ed, och enligt 2 §, när fråga är om utsaga av part i tvistemål. Begås gärningen av grov oaktsamhet, dömes för ovarsam utsaga inför nordisk domstol till påföljd enligt 3 §.\nBestämmelserna i 4, 14 och 15 §§ äger motsvarande tillämpning på gärning som avses i första stycket.\nLag (1975:1292).",
+      "sourceURL": "https://www.riksdagen.se/sv/dokument-och-lagar/dokument/svensk-forfattningssamling/brottsbalk-1962700_sfs-1962-700/",
+      "lawVersion": null,
+      "ownSourceRefs": [
+        "BrB:15:4a"
+      ],
+      "amendments": [
+        "1975:1292"
+      ],
+      "sourceRefs": [
+        "BrP:5",
+        "BrP:7",
+        "1975:1292"
+      ],
+      "wordingFrom": "1976-01-01",
+      "asOf": "2026-10-21",
+      "checked": "2026-10-21",
+      "future": null,
+      "finding": "Osann utsaga inför nordisk domstol: återgiven paragraflydelses ikraftträdande är verifierat till 1976-01-01 genom originaltrycket till SFS 1975:1292.",
+      "note": "Originaltryckets paragraf och ikraftträdandebestämmelse har kontrollerats. Dateringen avser endast återgiven egen paragraflydelse. Hänvisade bestämmelser kan ha ändrats senare. Ingen historisk eller konkret lagversion väljs automatiskt. Ändringslagen föreskriver uttryckligen att äldre bestämmelser gäller gärningar före ikraftträdandet. Ändringar av påföljdshänvisningarna i 15 kap. 1–3 §§ måste kontrolleras separat."
+    },
+    {
+      "id": "v15-family-ovarsam-utsaga-infor-nordisk-domstol",
+      "title": "Ovarsam utsaga inför nordisk domstol",
+      "statute": "BrB:15:4a",
+      "ownText": "4 a §\nOm någon under straffansvar inför domstol i Danmark, Finland, Island eller Norge lämnar osann uppgift eller förtiger sanningen, dömes han för osann utsaga inför nordisk domstol till påföljd enligt 1 §, om utsagan här i riket skulle ha avgivits under laga ed, och enligt 2 §, när fråga är om utsaga av part i tvistemål. Begås gärningen av grov oaktsamhet, dömes för ovarsam utsaga inför nordisk domstol till påföljd enligt 3 §.\nBestämmelserna i 4, 14 och 15 §§ äger motsvarande tillämpning på gärning som avses i första stycket.\nLag (1975:1292).",
+      "sourceURL": "https://www.riksdagen.se/sv/dokument-och-lagar/dokument/svensk-forfattningssamling/brottsbalk-1962700_sfs-1962-700/",
+      "lawVersion": null,
+      "ownSourceRefs": [
+        "BrB:15:4a"
+      ],
+      "amendments": [
+        "1975:1292"
+      ],
+      "sourceRefs": [
+        "BrP:5",
+        "BrP:7",
+        "1975:1292"
+      ],
+      "wordingFrom": "1976-01-01",
+      "asOf": "2026-10-21",
+      "checked": "2026-10-21",
+      "future": null,
+      "finding": "Ovarsam utsaga inför nordisk domstol: återgiven paragraflydelses ikraftträdande är verifierat till 1976-01-01 genom originaltrycket till SFS 1975:1292.",
+      "note": "Originaltryckets paragraf och ikraftträdandebestämmelse har kontrollerats. Dateringen avser endast återgiven egen paragraflydelse. Hänvisade bestämmelser kan ha ändrats senare. Ingen historisk eller konkret lagversion väljs automatiskt. Ändringslagen föreskriver uttryckligen att äldre bestämmelser gäller gärningar före ikraftträdandet. Ändringar av påföljdshänvisningarna i 15 kap. 1–3 §§ måste kontrolleras separat."
     }
   ],
   "unresolved": [
@@ -9819,11 +10212,6 @@
       "id": "v03-intrang-i-forvar",
       "title": "Intrång i förvar",
       "reason": "No independently mapped amendment identifier in the own text"
-    },
-    {
-      "id": "v03-olovlig-avlyssning",
-      "title": "Olovlig avlyssning",
-      "reason": "Primary commencement date not yet established for 1975:239"
     },
     {
       "id": "v03-fortal",
@@ -9849,11 +10237,6 @@
       "id": "v05-forvanskande-av-familjestallning",
       "title": "Förvanskande av familjeställning",
       "reason": "No independently mapped amendment identifier in the own text"
-    },
-    {
-      "id": "v05-oredligt-forfarande",
-      "title": "Oredligt förfarande",
-      "reason": "Primary commencement date not yet established for 1970:414"
     },
     {
       "id": "v05-ockerpantning",
@@ -9913,7 +10296,7 @@
     {
       "id": "v06-otillatet-forfarande-med-pornografisk-bild",
       "title": "Otillåtet förfarande med pornografisk bild",
-      "reason": "Primary commencement date not yet established for 1970:225"
+      "reason": "Original SFS 1970:225 read: 16:11 commencement depends on adopted TF amendment taking constitutional effect; exact operative date still needs independent primary verification (not the 1 July 1970 date for other listed provisions)."
     },
     {
       "id": "v06-osann-partsutsaga",
@@ -9931,31 +10314,6 @@
       "reason": "No independently mapped amendment identifier in the own text"
     },
     {
-      "id": "v09-ringa-smuggling",
-      "title": "Ringa smuggling",
-      "reason": "No independently mapped amendment identifier in the own text"
-    },
-    {
-      "id": "v09-ringa-tullbrott",
-      "title": "Ringa tullbrott",
-      "reason": "No independently mapped amendment identifier in the own text"
-    },
-    {
-      "id": "v09-vardslos-tullredovisning",
-      "title": "Vårdslös tullredovisning",
-      "reason": "No independently mapped amendment identifier in the own text"
-    },
-    {
-      "id": "v09-penningtvattsbrott",
-      "title": "Penningtvättsbrott",
-      "reason": "No independently mapped amendment identifier in the own text"
-    },
-    {
-      "id": "v09-penningtvattsforseelse",
-      "title": "Penningtvättsförseelse",
-      "reason": "No independently mapped amendment identifier in the own text"
-    },
-    {
       "id": "v15-cover-upplopp",
       "title": "Upplopp",
       "reason": "No independently mapped amendment identifier in the own text"
@@ -9964,16 +10322,6 @@
       "id": "v15-cover-valdsamt-upplopp",
       "title": "Våldsamt upplopp",
       "reason": "No independently mapped amendment identifier in the own text"
-    },
-    {
-      "id": "v15-cover-overtradelse-av-myndighets-bud",
-      "title": "Överträdelse av myndighets bud",
-      "reason": "Primary commencement date not yet established for 1981:827"
-    },
-    {
-      "id": "v15-cover-hindrande-av-forrattning",
-      "title": "Hindrande av förrättning",
-      "reason": "Primary commencement date not yet established for 1981:827"
     },
     {
       "id": "v15-cover-vapnat-hot-mot-laglig-ordning",
@@ -9999,21 +10347,6 @@
       "id": "v15-cover-krigsanstiftan",
       "title": "Krigsanstiftan",
       "reason": "No independently mapped amendment identifier in the own text"
-    },
-    {
-      "id": "v15-cover-egenmaktighet-vid-forhandling-med-frammande-makt",
-      "title": "Egenmäktighet vid förhandling med främmande makt",
-      "reason": "Primary commencement date not yet established for 1976:509"
-    },
-    {
-      "id": "v15-family-osann-utsaga-infor-nordisk-domstol",
-      "title": "Osann utsaga inför nordisk domstol",
-      "reason": "Primary commencement date not yet established for 1975:1292"
-    },
-    {
-      "id": "v15-family-ovarsam-utsaga-infor-nordisk-domstol",
-      "title": "Ovarsam utsaga inför nordisk domstol",
-      "reason": "Primary commencement date not yet established for 1975:1292"
     },
     {
       "id": "v15-beho-righetsmissbrk",
