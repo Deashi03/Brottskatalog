@@ -25,6 +25,8 @@ on:
       - "life-property-limits-review-15.js"
       - "remaining-statutory-limits-review-15.js"
       - "preparatory-reform-notes-15.js"
+      - "case-law-boundaries-15.js"
+      - "data/case-law-boundaries-15.json"
       - "data/base-temporal-review-15.json"
       - "data/life-property-limits-review-15.json"
       - "data/remaining-statutory-limits-review-15.json"
@@ -352,6 +354,8 @@ on:
       - "life-property-limits-review-15.js"
       - "remaining-statutory-limits-review-15.js"
       - "preparatory-reform-notes-15.js"
+      - "case-law-boundaries-15.js"
+      - "data/case-law-boundaries-15.json"
       - "data/base-temporal-review-15.json"
       - "data/life-property-limits-review-15.json"
       - "data/remaining-statutory-limits-review-15.json"
@@ -837,7 +841,7 @@ jobs:
         run: node scripts/special_limits_review_15_test.mjs
       - name: Verify 390 independent current statutory threshold reviews
         run: node scripts/base_coercion_review_15_test.mjs
-      - name: Verify 357 individually mapped commencement dates and transition boundaries
+      - name: Verify 390 individually mapped commencement dates and transition boundaries
         run: node scripts/base_temporal_review_15_test.mjs
       - name: Verify 18 BrB life and property statutory limit reviews
         run: node scripts/life_property_limits_review_15_test.mjs

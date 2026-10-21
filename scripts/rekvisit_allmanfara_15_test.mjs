@@ -30,7 +30,14 @@ for(const name of [...report.added,...report.already]){
  assert.equal(c.rekvisit15.legalReviewApproved,false,'No unearned complete legal certification');
  assert.equal(c.rekvisit15.scope,'lagtext-jamford');
  assert.ok(c.rekvisit15.sourceURL.includes('riksdagen.se'));
- assert.ok(!c.typexempel15?.length,'High-stakes chapter 13 offences should not have invented case descriptions');
+ const expectedHD=['Sabotage mot blåljusverksamhet','Grovt sabotage mot blåljusverksamhet'].includes(name);
+ assert.equal(c.typexempel15?.length||0,expectedHD?1:0,'Chapter 13 permits only individually checked authentic HD examples');
+ for(const example of c.typexempel15||[]){
+  assert.equal(example.status,'cited-supreme-court-example');
+  assert.equal(example.sourceURL,'https://www.domstol.se/globalassets/filer/domstol/hogstadomstolen/avgoranden/2023/b-6185-22.pdf');
+  assert.equal(example.fullLegalReviewApproved,false);
+  assert.equal(example.fullJurisprudenceReviewApproved,false);
+ }
 }
 assert.equal(by('Kapning').rekvisit15.routes.length,2);
 assert.equal(by('Sjö- eller luftfartssabotage').rekvisit15.routes.length,2);

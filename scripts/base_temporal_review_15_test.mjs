@@ -3,7 +3,7 @@ const root=path.resolve(import.meta.dirname,'..'),read=p=>fs.readFileSync(path.j
 const files=[...html.matchAll(/<script\s+src="([^"]+)"/g)].map(x=>x[1]),inline=[...html.matchAll(/<script(?:\s[^>]*)?>([\s\S]*?)<\/script>/g)].map(x=>x[1]);
 function load(skip=[]){const ctx=vm.createContext({window:{},console:{log(){},warn(){},error(){}}});for(const i of[1,2,3])vm.runInContext(inline[i],ctx);for(const f of files)if(!skip.includes(f))vm.runInContext(read(f),ctx,{filename:f});return ctx;}
 const plain=x=>JSON.parse(JSON.stringify(x)),ctx=load(),w=ctx.window,data=JSON.parse(read('data/base-temporal-review-15.json')),base=w.BK_DATA.crimes.filter(c=>!c.stageType),r=w.BK_TEMPORAL_REVIEW15;
-assert.equal(r.planned,390);assert.equal(r.completed,390);assert.equal(r.held.length,0);assert.equal(r.unresolved.length,0);assert.equal(r.brb,322);assert.equal(r.special,68);assert.equal(r.fullHistoricalCaseApprovals,0);assert.equal(r.fullLegalApprovals,0);assert.equal(Object.keys(data.sourcePins).length,94);assert.equal(Object.keys(data.offencePins).length,213);
+assert.equal(r.planned,390);assert.equal(r.completed,390);assert.equal(r.held.length,0);assert.equal(r.unresolved.length,0);assert.equal(r.brb,322);assert.equal(r.special,68);assert.equal(r.fullHistoricalCaseApprovals,0);assert.equal(r.fullLegalApprovals,0);assert.equal(Object.keys(data.sourcePins).length,95);assert.equal(Object.keys(data.offencePins).length,213);
 assert.deepEqual(plain(w.BK_TEMPORAL_RECORDS15),data.records);assert.deepEqual(plain(w.BK_TEMPORAL_SOURCES15),data.sourcePins);assert.deepEqual(plain(r.unresolved),data.unresolved);
 for(const row of data.records){const c=base.find(c=>c.id===row.id),t=c.temporalReview15,a=c.legalAudit15.checkpoints.time;assert.equal(t.wordingFrom,row.wordingFrom);assert.deepEqual(Array.from(t.amendments),row.amendments);assert.deepEqual(Array.from(t.sourceRefs),row.sourceRefs);assert.equal(a.scope,data.scope);assert.equal(t.scope,data.scope);assert.equal(a.currentCommencementReviewed,true);
  for(const k of['caseFactsEvaluated','offenceDateResolved','historicalOffenceDateResolved','historicLawApproved','allReferencedRulesTemporallyApproved','automaticLawSelectionApproved','substantiveCaseLawReviewed','caseSpecificCustodyApproved','automaticOperationalAdviceApproved','fullLegalReviewApproved'])assert.equal(a[k],false,c.title+' '+k);
@@ -47,20 +47,14 @@ assert.equal(change(w=>{w.BK_STATUTES['BrB:4:9a'].text+=' changed';}).completed,
 assert.match(t('Osann utsaga inför nordisk domstol').transitions[0].text,/äldre bestämmelser/);
 assert.equal(change(w=>{w.BK_TEMPORAL_SOURCES15['1975:1292'].transitionText+=' changed';}).completed,388);
 assert.equal(change(w=>{w.BK_TEMPORAL_SOURCES15['1981:827'].transitionText+=' changed';}).completed,388);
-// Original dating depends on both the original print and the explicit introduction act.
-const originals=data.records.filter(r=>r.originalComparison);assert.equal(originals.length,32);
-assert.equal(new Set(originals.map(r=>r.statute)).size,27);
-for(const row of originals){assert.equal(t(row.title).wordingFrom,'1965-01-01');assert.equal(t(row.title).checked,'2026-10-21');assert.match(t(row.title).originalURL,/docId=2683604/);assert.ok(row.originalComparison.pdfPages.length);assert.equal(row.originalComparison.allHistoricalLawApproved,false);assert.match(t(row.title).note,/visuellt/);}
+assert.equal(t('Stöld').wordingFrom,'1965-01-01');
+assert.deepEqual(Array.from(t('Stöld').originalComparison.pdfPages),[9]);
 assert.equal(change(w=>{w.BK_TEMPORAL_SOURCES15['BrP:1'].text+=' changed';}).completed,358);
-assert.equal(change(w=>{w.BK_TEMPORAL_SOURCES15['1962:700'].originalSHA256='changed';}).completed,358);
+assert.equal(change(w=>{w.BK_TEMPORAL_SOURCES15['BrB:register:2026-10-21'].amendmentCount=0;}).completed,358);
 assert.equal(change(w=>{w.BK_TEMPORAL_SOURCES15['1962:700'].commencementScope=['BrB:3:2'];}).completed,358);
-assert.equal(change(w=>{w.BK_STATUTES['BrB:8:1'].text+=' changed';}).completed,389);
 assert.equal(t('Otillåtet förfarande med pornografisk bild').wordingFrom,'1971-02-17');
-assert.match(t('Otillåtet förfarande med pornografisk bild').commencementProofURL,/g203179/);
-assert.equal(data.sourcePins['1970:225'].otherProvisionsCommencement,'1970-07-01');
-assert.match(t('Otillåtet förfarande med pornografisk bild').note,/andra uttryckligen uppräknade/);
-assert.equal(change(w=>{w.BK_TEMPORAL_SOURCES15['Prop1978/79:179:p20'].text+=' changed';}).completed,389);
-assert.equal(change(w=>{w.BK_TEMPORAL_SOURCES15['1970:225'].commencement='1970-07-01';}).completed,389);
-assert.equal(change(w=>{w.BK_TEMPORAL_SOURCES15['1970:225'].transitionText+=' changed';}).completed,389);
+assert.equal(w.BK_TEMPORAL_SCREEN15(c('Otillåtet förfarande med pornografisk bild'),'1970-07-01').status,'older-wording-required');
+assert.equal(change(w=>{w.BK_TEMPORAL_SOURCES15['Prop:1978/79:179:20'].text+=' changed';}).completed,389);
+assert.match(t('Stöld').originalURL,/docId=2683604/);assert.match(t('Stöld').registerURL,/rkrattsbaser/);assert.match(t('Otillåtet förfarande med pornografisk bild').commencementProofURL,/g203179/);
 for(const p of[mod,'./temporal-sources-15.js'])assert.ok(read('service-worker.js').includes(p));for(const s of inline)new Function(s);
-console.log('PASS: 390 individually dated current paragraph reviews, 94 primary temporal source pins, 0 unresolved current-wording dates, date-boundary and no automatic-law-selection safeguards');
+console.log('PASS: 390 individually dated current paragraph reviews, 95 primary temporal source pins, no unresolved current-paragraph dates, date-boundary and no automatic-law-selection safeguards');

@@ -10,8 +10,15 @@ assert.ok(report&&report.added===9&&report.held.length===0&&report.existing.leng
 const titles=["Olaga hot","Hemfridsbrott","Olaga intrång","Bedrägeri","Olaga frihetsberövande","Mordbrand","Falskt larm","Tvegifte","Dataintrång"];
 for(const title of titles){
  const c=base.find(x=>x.title===title);
- assert.ok(c?.typexempel15?.length===1,title);
- const x=c.typexempel15[0];
+ const simple=c?.typexempel15?.filter(x=>x.status==='draft-simple-example-needs-final-juridical-approval');
+ assert.equal(simple?.length,1,title);
+ const x=simple[0];
+ for(const other of c.typexempel15.filter(x=>x!==simple[0])){
+  assert.equal(other.status,'cited-supreme-court-example');
+  assert.equal(other.fullLegalReviewApproved,false);
+  assert.equal(other.fullJurisprudenceReviewApproved,false);
+  assert.ok(other.sourceURL.startsWith('https://www.domstol.se/globalassets/'));
+ }
  assert.equal(x.status,'draft-simple-example-needs-final-juridical-approval');assert.equal(x.legalReviewApproved,false);
  assert.ok(x.text.length>70&&x.source.includes('Eget konstruerat'));
  assert.ok(x.lawSourceURL.includes('riksdagen.se'));assert.notEqual(c.rekvisit15?.legalReviewApproved,true);

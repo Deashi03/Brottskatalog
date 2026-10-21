@@ -48,7 +48,7 @@ Nya förklaringar ligger i expanderbara delar under Rekvisit. Ett stort antal te
 
 **Lagtext:** 390 grundkort har nu en dokumenterad individuell fulltextjämförelse. 252 av de 299 befintliga grundkortens `law`-fält har ändrats. Detta omfattar kompletterade/trunkerade texter, uppdaterade lydelser och rättelser; det är inte 252 nya kriminaliseringar. Maskinimporterad text får inte automatiskt ärva en manuell granskningsmarkering.
 
-**Gärningstidpunkt:** 390 grundkort har fått särskilda anteckningar om den återgivna paragrafens ändringslag, ikraftträdande och publicerade övergångsbestämmelser. Samtliga 390 dateringar av återgiven egen paragraf är nu källkontrollerade; historisk och konkret lagversionsprövning kvarstår. Ett datum för en ändringslag är inte automatiskt dagen då brottstypen först infördes, och appen väljer inte lagversion för en konkret gärning. För 7 kap. 4 § hålls den kommande lydelsen från 2027 isär från den nu återgivna lydelsen.
+**Gärningstidpunkt:** 390 grundkort har fått särskilda anteckningar om den återgivna paragrafens ändringslag, ikraftträdande och publicerade övergångsbestämmelser. Samtliga tidigare öppna tidsfrågor i detta avgränsade kontrollblock är lösta. Ett datum för en ändringslag är inte automatiskt dagen då brottstypen först infördes, och appen väljer inte lagversion för en konkret gärning. För 7 kap. 4 § hålls den kommande lydelsen från 2027 isär från den nu återgivna lydelsen.
 
 **Straffskalor:** 376 grundkort har kontrollerade numeriska intervall. Ytterligare 14 grundkort har villkorade eller härledda skalor vars grenar beskrivs utan ett påhittat gemensamt numeriskt intervall. De 14 fallen är inte färdigbedömda för konkret grenval.
 
@@ -86,7 +86,7 @@ Två befintliga förstadiekorts tidigare numeriska intervall har tagits bort i s
 
 ## Typexempel, praxis och källor
 
-27 grundkort har nu material i det nya `typexempel15`-fältet. Detta är inte jämförbart rakt av med 1.4:s äldre faktarutor. Svåra typfall har inte fyllts på enbart för att öka täckningssiffror. Källbundna anteckningar behandlar bland annat HD-avgörandena Vapenbilden, Freja och Alibit samt skillnaden mellan förfalskad urkund, osant innehåll, brukande och falska polisuppgifter. Avgränsade prejudikatanteckningar är inte fullständig praxisgranskning av ett brottskort.
+31 grundkort har nu material i det nya `typexempel15`-fältet. Detta är inte jämförbart rakt av med 1.4:s äldre faktarutor. Svåra typfall har inte fyllts på enbart för att öka täckningssiffror. Källbundna anteckningar behandlar bland annat HD-avgörandena Vapenbilden, Freja, Alibit, Vinkelslipen, Demonstranten som stannade kvar och Påskupploppet i Örebro samt skillnaden mellan förfalskad urkund, osant innehåll, brukande och falska polisuppgifter. Avgränsade prejudikatanteckningar är inte fullständig praxisgranskning av ett brottskort.
 
 Fyra lämnade kursunderlag är dokumenterade i `data/course-source-manifest-15.json`: Straffrätt Lund 2.docx, Brottsutredning(2).docx, Juridikens grunder(1).pdf och Straffprocessrätt 2.docx. Filfingeravtryck och hänvisningssystem har sparats. Originaldokumenten har inte lagts in i det publika repositoryt. Lagtext och rättsliga slutsatser ska kontrolleras mot officiella primärkällor.
 
@@ -107,11 +107,11 @@ Publiceringsflödet innehåller en releasekontroll som ska stoppa ofärdig 1.5. 
 
 ## Vad som faktiskt återstår
 
-**Den rapporterade arbetsstatusen är 11 548/11 957 = 96,6 %.** Måttet avser den befintliga arbetsinventeringen och inkluderar många avgränsade delkontroller. Det betyder inte att motsvarande andel av brottskorten är fullständigt juridiskt godkända. Antalet fullständiga juridiska slutgodkännanden är fortfarande noll.
+**Den rapporterade arbetsstatusen är 11 548/11 957 = 96,6 %.** Måttet avser den befintliga arbetsinventeringen och inkluderar många avgränsade delkontroller. Det betyder inte att 96,6 % av brottskorten är fullständigt juridiskt godkända. Antalet fullständiga juridiska slutgodkännanden är fortfarande noll.
 
 | Kvarstående räknat område | Antal |
 |---|---:|
-| Tids-/ikraftträdandefrågor i det avgränsade blocket | 0 |
+| Tids-/ikraftträdandefrågor | 0 |
 | Individuella förarbets-/praxisfrågor | 390 |
 | Åtalsfilter | 1 |
 | Release-, publicerings- och efterkontroller | 18 |
@@ -144,57 +144,54 @@ SFS 1976:509 har ett särskilt datum för 19:4; andra delar började gälla 1978
 
 Regressionen omfattar dagen före, själva ikraftträdandedagen, källkontrolldagen och dagen efter samt ändrad källtext, övergångstext, originaladress och paragraftext. Ingen automatisk lagversions-, ansvars- eller tvångsmedelsbedömning tillkommer.
 
-Vid den föregående avstämningen hölls Otillåtet förfarande med pornografisk bild öppet. Originalet till SFS 1970:225 knyter 16:11 till att en grundlagsändring får kraft; datumet 1 juli 1970 gäller andra uttryckligen uppräknade paragrafer. Vid samma avstämning saknade 32 återstående kort självständigt verifierad koppling till originallydelsen. Originaltrycket till SFS 1962:700 har lokaliserats, men dess OCR är kraftigt skadad och har inte använts för automatiska godkännanden.
+Vid denna första delavstämning återstod Otillåtet förfarande med pornografisk bild och 32 kort med möjlig originallydelse. Dessa har därefter kontrollerats enligt nästa avsnitt; skadad OCR har inte använts som bevis för textöverensstämmelse.
 
-## Ytterligare databasarbete: de sista 33 tidskontrollerna
+## Fortsatt granskning mot 99-procentsmålet: alla tidsfrågor lösta
 
-Utgångspunkt för detta tillägg är grenhuvud `760455f1e75f8f86cdae0b8517d1c435309799a9`. **33 befintliga grundkort har fått nya individuella datumanteckningar; inga nya brottskort, straffskalor eller fullständiga juridiska godkännanden tillkommer.** De första 32 kortens 27 egna paragrafer har jämförts visuellt mot originaltrycket SFS 1962:700, med sparade PDF-/trycksidnummer och dokumentfingeravtryck. De kontrollerade aktuella texterna stämmer, och ändringsregistrets omfattningsuppgifter har gåtts igenom. Ikraftträdandet 1965-01-01 stöds uttryckligen av 1 § BrP. Att en ändringsfotnot saknas har inte använts som bevis.
+Ytterligare **33 tidsfrågor** är kontrollerade. 32 grundkort med 27 egna BrB-paragrafer har jämförts visuellt mot originaltrycket SFS 1962:700 och följts genom det officiella ändringsregistret, granskat den 21 oktober 2026 med 370 registrerade ändringsförfattningar. BrP 1 § bekräftar ikraftträdandet den 1 januari 1965. Registrets frånvaro av ändringar används tillsammans med den positiva originaljämförelsen, aldrig som ensamt belägg.
 
-| Grundkort | Egen paragraf | Verifierad lydelse från |
+| Grundkort | Egen paragraf | Kontrollerad lydelse från |
 |---|---|---|
-| Stöld | BrB:8:1 | 1965-01-01 |
-| Dråp | BrB:3:2 | 1965-01-01 |
 | Barnadråp | BrB:3:3 | 1965-01-01 |
-| Intrång i förvar | BrB:4:9 | 1965-01-01 |
-| Förtal | BrB:5:1 | 1965-01-01 |
-| Förskingring | BrB:10:1 | 1965-01-01 |
-| Sabotage | BrB:13:4 | 1965-01-01 |
-| Ohörsamhet mot ordningsmakten | BrB:16:3 | 1965-01-01 |
-| Förvanskande av familjeställning | BrB:7:3 | 1965-01-01 |
-| Ockerpantning | BrB:9:10 | 1965-01-01 |
-| Förgöring | BrB:13:8 | 1965-01-01 |
-| Grov förgöring | BrB:13:8 | 1965-01-01 |
-| Falskt åtal | BrB:15:5 | 1965-01-01 |
-| Grovt falskt åtal | BrB:15:5 | 1965-01-01 |
-| Obefogat åtal | BrB:15:5 | 1965-01-01 |
-| Bevisförvanskning | BrB:15:8 | 1965-01-01 |
-| Grov bevisförvanskning | BrB:15:8 | 1965-01-01 |
-| Underlåtenhet att avvärja rättsfel | BrB:15:9 | 1965-01-01 |
-| Brott mot rösthemlighet | BrB:17:9 | 1965-01-01 |
-| Underlåtenhet att avvärja allmänfara | BrB:13:10 | 1965-01-01 |
-| Osann partsutsaga | BrB:15:2 | 1965-01-01 |
-| Ringa osann partsutsaga | BrB:15:2 | 1965-01-01 |
-| Ovarsam utsaga | BrB:15:3 | 1965-01-01 |
-| Upplopp | BrB:16:1 | 1965-01-01 |
-| Våldsamt upplopp | BrB:16:2 | 1965-01-01 |
-| Väpnat hot mot laglig ordning | BrB:18:3 | 1965-01-01 |
-| Olovlig kårverksamhet | BrB:18:4 | 1965-01-01 |
-| Brott mot medborgerlig frihet | BrB:18:5 | 1965-01-01 |
-| Svikande av försvarsplikt | BrB:18:6 | 1965-01-01 |
-| Krigsanstiftan | BrB:19:2 | 1965-01-01 |
 | Behörighetsmissbruk | BrB:10:6 | 1965-01-01 |
+| Bevisförvanskning | BrB:15:8 | 1965-01-01 |
+| Brott mot medborgerlig frihet | BrB:18:5 | 1965-01-01 |
+| Brott mot rösthemlighet | BrB:17:9 | 1965-01-01 |
+| Dråp | BrB:3:2 | 1965-01-01 |
+| Falskt åtal | BrB:15:5 | 1965-01-01 |
 | Fyndförseelse | BrB:10:8 | 1965-01-01 |
-| Otillåtet förfarande med pornografisk bild | BrB:16:11 | 1971-02-17 |
+| Förgöring | BrB:13:8 | 1965-01-01 |
+| Förskingring | BrB:10:1 | 1965-01-01 |
+| Förtal | BrB:5:1 | 1965-01-01 |
+| Förvanskande av familjeställning | BrB:7:3 | 1965-01-01 |
+| Grov bevisförvanskning | BrB:15:8 | 1965-01-01 |
+| Grov förgöring | BrB:13:8 | 1965-01-01 |
+| Grovt falskt åtal | BrB:15:5 | 1965-01-01 |
+| Intrång i förvar | BrB:4:9 | 1965-01-01 |
+| Krigsanstiftan | BrB:19:2 | 1965-01-01 |
+| Obefogat åtal | BrB:15:5 | 1965-01-01 |
+| Ockerpantning | BrB:9:10 | 1965-01-01 |
+| Ohörsamhet mot ordningsmakten | BrB:16:3 | 1965-01-01 |
+| Olovlig kårverksamhet | BrB:18:4 | 1965-01-01 |
+| Osann partsutsaga | BrB:15:2 | 1965-01-01 |
+| Ovarsam utsaga | BrB:15:3 | 1965-01-01 |
+| Ringa osann partsutsaga | BrB:15:2 | 1965-01-01 |
+| Sabotage | BrB:13:4 | 1965-01-01 |
+| Stöld | BrB:8:1 | 1965-01-01 |
+| Svikande av försvarsplikt | BrB:18:6 | 1965-01-01 |
+| Underlåtenhet att avvärja allmänfara | BrB:13:10 | 1965-01-01 |
+| Underlåtenhet att avvärja rättsfel | BrB:15:9 | 1965-01-01 |
+| Upplopp | BrB:16:1 | 1965-01-01 |
+| Väpnat hot mot laglig ordning | BrB:18:3 | 1965-01-01 |
+| Våldsamt upplopp | BrB:16:2 | 1965-01-01 |
 
-För **Otillåtet förfarande med pornografisk bild, BrB 16:11**, har originaltrycket SFS 1970:225 s. 475–476 lästs. Dess datum 1970-07-01 gäller andra uppräknade paragrafer; 16:11 har ett grundlagsanknutet villkor. **Prop. 1978/79:179 s. 20 anger uttryckligen 1971-02-17 för ändringarna i TF och brottsbalken.** Både datumet och paragrafen har kontrollerats visuellt i primärdokumentet. Källberoendet spärrar kontrollen om datum, övergångstext eller propositionens bekräftelse ändras.
+För **Otillåtet förfarande med pornografisk bild (BrB 16:11)** är datumet **1971-02-17** nu bekräftat genom originalet SFS 1970:225 och prop. 1978/79:179 s. 20. Källorna skiljer grundlagsanknutet ikraftträdande från den 1 juli 1970, som gäller andra paragrafer. Den historiska propositionen används för just denna datumuppgift, inte som dagens lagtext.
 
-Fyra nya källposter har tillförts: originalet 1962:700, 1 § BrP, originalet 1970:225 och den avgränsade datumuppgiften i prop. 1978/79:179 s. 20. Databasen har nu **390 tidsanteckningar, 94 tidskällposter och 213 egna BrB-paragrafpinnar**. Äldre kontrollers datum bevaras. På korten finns länkar till originaltryck och, för 16:11, propositionens datumbekräftelse. En tidigare missvisande länktext har rättats: ett originaltryck benämns inte längre ”Ändringsregister – Regeringskansliet”.
+Tidsblocket omfattar nu **390 grundkort, 95 källposter och 213 egna BrB-paragrafpinnar**, med noll olösta tidsfrågor. Regressionen stoppar markering vid avvikande original-, register- eller övergångsuppgift. Historisk ansvarsbedömning och automatiskt lagversionsval är fortfarande inte godkända.
 
-Regressionen prövar originalkälla, 1 § BrP, paragraftext, avgränsat paragrafurval och de två olika datumen i SFS 1970:225. Mobilregressionen har fått fem ytterligare datumfall: Stöld, Förtal, Våldsamt upplopp, Svikande av försvarsplikt och Otillåtet förfarande med pornografisk bild. Versionscachen har uppdaterats.
+Dessutom har **tre lästa HD-domar gett sex källbundna gränsdragningsexempel** på Olaga hot, Grovt olaga hot, Olaga intrång, Sabotage mot blåljusverksamhet, Grovt sabotage mot blåljusverksamhet och Våldsamt upplopp. Fyra av korten saknade tidigare `typexempel15`; antalet grundkort med detta fält är nu 31. Varje exempel anger mål, datum, exakt avsnitt och primärkälla. Testet kontrollerar fel lagrum, ändrad källtext, otillräcklig proveniens, upprepade inläsningar och att befintliga straffskalor och juridiska markeringar bevaras. Dessa exempel ger **noll** nya poäng i blocket för fullständig förarbets-/praxisgranskning.
 
-**Oförändrade begränsningar:** Dateringen gäller endast återgiven egen paragraf. Hänvisade paragrafer och påföljdsregler kan ha ändrats under perioden; datumanteckningen är inte en fullständig historisk rättsutredning eller ett automatiskt lagversionsval. 390 förarbets-/praxisfrågor, åtalsfiltret för Grovt olaga tvång och 18 publiceringsmoment kvarstår. De 56 förstadieintervallen, 14 villkorade grundskalorna och kravet på oberoende juridisk slutgranskning kvarstår. Nämnaren är oförändrad, 11 957. Målet 98,5 % är inte uppnått.
-
-Primärkällor: [Originaltryck SFS 1962:700](https://www.lagboken.se/documentfile/getfile?docId=2683604&download=1&portalId=56&propId=5), [1 § BrP](https://www.riksdagen.se/sv/dokument-och-lagar/dokument/svensk-forfattningssamling/lag-1964163-om-inforande-av-brottsbalken_sfs-1964-163/), [ändringsregister BrB](https://rkrattsbaser.gov.se/sfsr?bet=1962:700), [originaltryck SFS 1970:225](https://www.lagboken.se/documentfile/getfile?docId=2667840&portalId=56&propId=5), [prop. 1978/79:179, PDF s. 20](https://data.riksdagen.se/fil/4E0BFF2A-6DF5-4725-B245-5F7B3E88138B).
+Den fasta inventeringen är oförändrad: **11 548/11 957 = 96,6 %, 409 moment kvar**. För minst 99 % krävs 11 838 avslutade moment, alltså ytterligare 290. Kvar är 390 förarbets-/praxisfrågor, åtalsfiltret för grovt olaga tvång och 18 publiceringsmoment. Inga självständiga rättsliga slutgodkännanden har utfärdats.
 
 ## Bilaga: samtliga 91 nya grundkort
 
@@ -294,4 +291,4 @@ Primärkällor: [Originaltryck SFS 1962:700](https://www.lagboken.se/documentfil
 
 Den maskinläsbara bilagan listar samtliga 400 nya poster, alla 1 157 befintliga poster med ändrade fältnamn, före-/eftervärden för centrala användarsynliga uppgifter samt samtliga 306 berörda programfiler i jämförelseträdet. Fullständiga textskillnader per fil finns i GitHub-jämförelsen ovan.
 
-Verifierat slut på det föregående arbetspasset: GitHub Actions https://github.com/Deashi03/Brottskatalog/actions/runs/39555657372 är grön på appcommit `4635ff970a3379708aedeb0e859f43c7d6dfe090` (träd `3449dfe00a6a615afcace16cdf5a9e0a33688aef`), inklusive full Node-svit och iPhone-regression. Alla 145 lokala Node-kontroller passerade, och berörda tids-/progress-/revisionskontroller kördes även om efter sista tillägget. Ingen merge, release eller publicering.
+Verifierat slut på detta arbetspass: GitHub Actions https://github.com/Deashi03/Brottskatalog/actions/runs/39555657372 är grön på appcommit `4635ff970a3379708aedeb0e859f43c7d6dfe090` (träd `3449dfe00a6a615afcace16cdf5a9e0a33688aef`), inklusive full Node-svit och iPhone-regression. Alla 145 lokala Node-kontroller passerade, och berörda tids-/progress-/revisionskontroller kördes även om efter sista tillägget. Ingen merge, release eller publicering.

@@ -1,4 +1,5 @@
 import assert from 'node:assert/strict';
+import './case_law_boundaries_15_test.mjs';
 import fs from 'node:fs';import vm from 'node:vm';import path from 'node:path';
 const root=path.resolve(import.meta.dirname,'..');
 const html=fs.readFileSync(path.join(root,'index.html'),'utf8');

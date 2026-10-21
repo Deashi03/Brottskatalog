@@ -993,23 +993,16 @@
       "dateOnly": false,
       "transitionURL": "https://www.lagboken.se/documentfile/getfile?docId=2599711&download=1&portalId=56&propId=5"
     },
-    "BrP:1": {
-      "law": "BrP:1",
-      "text": "1 § Den av riksdagen år 1962 antagna och den 21 december samma år (nr 700) utfärdade brottsbalken skall jämte vad nedan stadgas träda i kraft den 1 januari 1965; dock må dessförinnan bestämmelser meddelas av Konungen enligt vad i balken och denna lag är för vissa fall stadgat.",
-      "url": "https://www.riksdagen.se/sv/dokument-och-lagar/dokument/svensk-forfattningssamling/lag-1964163-om-inforande-av-brottsbalken_sfs-1964-163/",
-      "checked": "2026-10-21",
-      "commencement": "1965-01-01",
-      "transitionText": null
-    },
     "1962:700": {
       "law": "1962:700",
       "base": "1962:700",
-      "text": "Brottsbalk (1962:700), originaltryck den 21 december 1962. Ikraftträdande den 1 januari 1965 enligt 1 § lagen (1964:163) om införande av brottsbalken. Egna paragrafer visuellt jämförda; datum hämtas inte från frånvaro av Lag-fotnot.",
+      "text": "Original SFS 1962:700. 27 namngivna paragrafer har jämförts visuellt, på PDF-sidorna 3, 4, 6, 9, 13, 14, 17, 18, 20, 21, 22, 23, 25, 27 och 28 (trycksidor 1839–1864). Matchningen avser återgiven egen paragraf, inte hänvisade regler. Ikraftträdande följer av 1 § BrP.",
       "url": "https://rkrattsbaser.gov.se/sfsr?bet=1962:700",
-      "originalURL": "https://www.lagboken.se/documentfile/getfile?docId=2683604&download=1&portalId=56&propId=5",
-      "originalSHA256": "557aed0ccaac9bf88d91d6f5ac76501ba01a5627d7662ba21bd7311f9db40a82",
       "commencement": "1965-01-01",
-      "commencementSource": "BrP:1",
+      "transitionText": null,
+      "transitionURL": "https://www.riksdagen.se/sv/dokument-och-lagar/dokument/svensk-forfattningssamling/lag-1964163-om-inforande-av-brottsbalken_sfs-1964-163/",
+      "checked": "2026-10-21",
+      "dateOnly": true,
       "commencementScope": [
         "BrB:3:2",
         "BrB:3:3",
@@ -1039,37 +1032,89 @@
         "BrB:18:6",
         "BrB:19:2"
       ],
-      "transitionText": "1 § Den av riksdagen år 1962 antagna och den 21 december samma år (nr 700) utfärdade brottsbalken skall jämte vad nedan stadgas träda i kraft den 1 januari 1965; dock må dessförinnan bestämmelser meddelas av Konungen enligt vad i balken och denna lag är för vissa fall stadgat.",
-      "transitionURL": "https://www.riksdagen.se/sv/dokument-och-lagar/dokument/svensk-forfattningssamling/lag-1964163-om-inforande-av-brottsbalken_sfs-1964-163/",
-      "checked": "2026-10-21",
-      "dateOnly": false
+      "originalPDFSHA256": "557aed0ccaac9bf88d91d6f5ac76501ba01a5627d7662ba21bd7311f9db40a82",
+      "originalURL": "https://www.lagboken.se/documentfile/getfile?docId=2683604&download=1&portalId=56&propId=5",
+      "originalSHA256": "557aed0ccaac9bf88d91d6f5ac76501ba01a5627d7662ba21bd7311f9db40a82",
+      "commencementSource": "BrP:1"
     },
-    "Prop1978/79:179:p20": {
-      "law": "Prop1978/79:179:p20",
-      "text": "Ändringarna i TF och brottsbalken trädde i kraft den 17 februari 1971 (SFS 1971:29 och 1970:225).",
-      "url": "https://www.riksdagen.se/sv/dokument-och-lagar/dokument/proposition/om-andring-i-tryckfrihetsforordningen-m-m_g203179/html/",
-      "pdfURL": "https://data.riksdagen.se/fil/4E0BFF2A-6DF5-4725-B245-5F7B3E88138B",
-      "pdfPage": 20,
+    "BrP:1": {
+      "law": "BrP:1",
+      "base": "1964:163",
+      "text": "1 § Den av riksdagen år 1962 antagna och den 21 december samma år (nr 700) utfärdade brottsbalken skall jämte vad nedan stadgas träda i kraft den 1 januari 1965; dock må dessförinnan bestämmelser meddelas av Konungen enligt vad i balken och denna lag är för vissa fall stadgat.",
+      "url": "https://www.riksdagen.se/sv/dokument-och-lagar/dokument/svensk-forfattningssamling/lag-1964163-om-inforande-av-brottsbalken_sfs-1964-163/",
+      "commencement": null,
+      "transitionText": null,
+      "transitionURL": null,
+      "checked": "2026-10-21"
+    },
+    "BrB:register:2026-10-21": {
+      "law": "BrB:register:2026-10-21",
+      "base": "1962:700",
+      "text": "Kontrollerat fullständigt ändringsregister: 370 ändringsposter, senast SFS 2026:1656. Ingen omfattningsuppgift anger ändring, upphävande eller ny lydelse av de 27 visuellt jämförda paragraferna. Registerfrånvaro är endast stöd till originaljämförelsen och ersätter inte den.",
+      "url": "https://rkrattsbaser.gov.se/sfsr?bet=1962:700",
+      "commencement": null,
+      "transitionText": null,
+      "transitionURL": null,
       "checked": "2026-10-21",
-      "commencement": "1971-02-17",
-      "transitionText": null
+      "registerTextSHA256": "a500578c05fdee7a028c0ca313bf7aa7769c58ad309a06117df90886fe9e2ddd",
+      "amendmentCount": 370,
+      "latestAmendment": "2026:1656",
+      "originalProvisionScope": [
+        "BrB:3:2",
+        "BrB:3:3",
+        "BrB:4:9",
+        "BrB:5:1",
+        "BrB:7:3",
+        "BrB:8:1",
+        "BrB:9:10",
+        "BrB:10:1",
+        "BrB:10:6",
+        "BrB:10:8",
+        "BrB:13:4",
+        "BrB:13:8",
+        "BrB:13:10",
+        "BrB:15:2",
+        "BrB:15:3",
+        "BrB:15:5",
+        "BrB:15:8",
+        "BrB:15:9",
+        "BrB:16:1",
+        "BrB:16:2",
+        "BrB:16:3",
+        "BrB:17:9",
+        "BrB:18:3",
+        "BrB:18:4",
+        "BrB:18:5",
+        "BrB:18:6",
+        "BrB:19:2"
+      ]
     },
     "1970:225": {
       "law": "1970:225",
       "base": "1962:700",
-      "text": "Originaltryck SFS 1970:225, s. 475–476: 16 kap. 11 § och grundlagsanknuten ikraftträdandebestämmelse. Prop. 1978/79:179 s. 20 bekräftar den 17 februari 1971 för ändringarna i TF och brottsbalken.",
-      "url": "https://www.lagboken.se/documentfile/getfile?docId=2667840&portalId=56&propId=5",
-      "originalSHA256": "8c8f7d8b7fdf21b90432a73b29aec7a5b4fe19d4e71732fcfd1a37e390d2d317",
+      "text": "Originaltryck SFS 1970:225, s. 475–476: 16 kap. 11 § får ny lydelse. Ikraftträdande i denna del är knutet till att TF-förslaget slutligt antagits och fått kraft av grundlag. Prop. 1978/79:179 s. 20 bekräftar uttryckligen datumet 17 februari 1971 för ändringarna i TF och BrB. Datumet 1 juli 1970 avser andra uppräknade bestämmelser.",
+      "url": "https://www.lagboken.se/documentfile/getfile?docId=2667840&download=1&portalId=56&propId=5",
       "commencement": "1971-02-17",
       "commencementScope": [
         "BrB:16:11"
       ],
-      "commencementSource": "Prop1978/79:179:p20",
-      "otherProvisionsCommencement": "1970-07-01",
       "transitionText": "Denna lag träder i kraft, såvitt avser 5 kap. 5 §, 16 kap. 5 § samt 19 kap. 11 § och 16 § andra stycket den 1 juli 1970 och i övrigt, när det förslag till ändring i tryckfrihetsförordningen som riksdagen antagit såsom vilande med anledning av Kungl. Maj:ts proposition nr 125 till 1970 års riksdag slutligt har antagits och erhållit kraft av grundlag.",
-      "transitionURL": "https://www.lagboken.se/documentfile/getfile?docId=2667840&portalId=56&propId=5",
+      "transitionURL": "https://www.lagboken.se/documentfile/getfile?docId=2667840&download=1&portalId=56&propId=5",
       "checked": "2026-10-21",
-      "dateOnly": false
+      "dateOnly": false,
+      "originalSHA256": "8c8f7d8b7fdf21b90432a73b29aec7a5b4fe19d4e71732fcfd1a37e390d2d317",
+      "commencementSource": "Prop:1978/79:179:20",
+      "otherProvisionsCommencement": "1970-07-01"
+    },
+    "Prop:1978/79:179:20": {
+      "law": "Prop:1978/79:179:20",
+      "text": "Prop. 1978/79:179 s. 20: Ändringarna i TF och brottsbalken trädde i kraft den 17 februari 1971 (SFS 1971:29 och 1970:225). Därefter återges 16 kap. 11 § med skyltnings- och tillställandealternativen.",
+      "url": "https://www.riksdagen.se/sv/dokument-och-lagar/dokument/proposition/om-andring-i-tryckfrihetsforordningen-m-m_g203179/html/",
+      "commencement": null,
+      "transitionText": null,
+      "transitionURL": null,
+      "checked": "2026-10-21",
+      "scope": "historical-commencement-confirmation-only-not-current-substantive-case-law-approval"
     }
   },
   "offencePins": {
@@ -10398,26 +10443,28 @@
         "BrP:5",
         "BrP:7",
         "BrP:1",
-        "1962:700"
+        "1962:700",
+        "BrB:register:2026-10-21"
       ],
       "wordingFrom": "1965-01-01",
       "asOf": "2026-10-21",
       "checked": "2026-10-21",
       "future": null,
-      "finding": "Stöld: återgiven egen paragraflydelse är verifierad mot originaltrycket; brottsbalken trädde i kraft 1965-01-01 enligt 1 § BrP.",
-      "note": "Den återgivna egna paragrafen har jämförts visuellt med originaltrycket SFS 1962:700, trycksida 1845 (PDF-sida 9). Aktuell konsolidering och ändringsregistrets omfattningsuppgifter har kontrollerats separat. Ikraftträdandet följer av 1 § BrP, inte av avsaknad av ändringsfotnot. Hänvisade paragrafer, påföljdsregler, åtal och förstadier kan ha andra tidsgränser; full historik och konkret lagversion är inte slutgodkända.",
+      "finding": "Stöld: egen paragraf har jämförts visuellt med originaltrycket SFS 1962:700; 1 § BrP anger ikraftträdande den 1 januari 1965. Ändringsregistret anger ingen senare ändring av denna paragraf.",
+      "note": "Originaljämförelse: PDF-sida 9; trycksida 1845. Endast tryckavstavning, radbrytning och styckeplacering har bortsetts från. Att Lag-fotnot saknas har inte ensamt använts som bevis. Dateringen avser egen paragraflydelse. Hänvisade regler, tolkning i praxis, allmänna straffbestämmelser, åtal och förstadier kan ha ändrats efter 1965 och är inte historiskt slutgodkända.",
       "originalComparison": {
-        "source": "1962:700",
+        "sourceRef": "1962:700",
         "pdfPages": [
           9
         ],
         "printedPages": [
           1845
         ],
-        "method": "visual-own-paragraph-comparison-and-amendment-register-scope-review",
-        "currentOwnText": "1 §\nDen som olovligen tager vad annan tillhör med uppsåt att tillägna sig det, dömes, om tillgreppet innebär skada, för stöld till fängelse i högst två år.",
-        "reviewed": "2026-10-21",
-        "allHistoricalLawApproved": false
+        "method": "manual-visual-original-print-versus-current-own-paragraph",
+        "registrySourceRef": "BrB:register:2026-10-21",
+        "registryAmendmentsForOwnParagraph": [],
+        "checked": "2026-10-21",
+        "allHistoricalLiabilityApproved": false
       }
     },
     {
@@ -10437,26 +10484,28 @@
         "BrP:5",
         "BrP:7",
         "BrP:1",
-        "1962:700"
+        "1962:700",
+        "BrB:register:2026-10-21"
       ],
       "wordingFrom": "1965-01-01",
       "asOf": "2026-10-21",
       "checked": "2026-10-21",
       "future": null,
-      "finding": "Dråp: återgiven egen paragraflydelse är verifierad mot originaltrycket; brottsbalken trädde i kraft 1965-01-01 enligt 1 § BrP.",
-      "note": "Den återgivna egna paragrafen har jämförts visuellt med originaltrycket SFS 1962:700, trycksida 1839 (PDF-sida 3). Aktuell konsolidering och ändringsregistrets omfattningsuppgifter har kontrollerats separat. Ikraftträdandet följer av 1 § BrP, inte av avsaknad av ändringsfotnot. Hänvisade paragrafer, påföljdsregler, åtal och förstadier kan ha andra tidsgränser; full historik och konkret lagversion är inte slutgodkända.",
+      "finding": "Dråp: egen paragraf har jämförts visuellt med originaltrycket SFS 1962:700; 1 § BrP anger ikraftträdande den 1 januari 1965. Ändringsregistret anger ingen senare ändring av denna paragraf.",
+      "note": "Originaljämförelse: PDF-sida 3; trycksida 1839. Endast tryckavstavning, radbrytning och styckeplacering har bortsetts från. Att Lag-fotnot saknas har inte ensamt använts som bevis. Dateringen avser egen paragraflydelse. Hänvisade regler, tolkning i praxis, allmänna straffbestämmelser, åtal och förstadier kan ha ändrats efter 1965 och är inte historiskt slutgodkända.",
       "originalComparison": {
-        "source": "1962:700",
+        "sourceRef": "1962:700",
         "pdfPages": [
           3
         ],
         "printedPages": [
           1839
         ],
-        "method": "visual-own-paragraph-comparison-and-amendment-register-scope-review",
-        "currentOwnText": "2 §\nÄr brott som i 1 § sägs med hänsyn till de omständigheter som föranlett gärningen eller eljest att anse som mindre grovt, dömes för dråp till fängelse, lägst sex och högst tio år.",
-        "reviewed": "2026-10-21",
-        "allHistoricalLawApproved": false
+        "method": "manual-visual-original-print-versus-current-own-paragraph",
+        "registrySourceRef": "BrB:register:2026-10-21",
+        "registryAmendmentsForOwnParagraph": [],
+        "checked": "2026-10-21",
+        "allHistoricalLiabilityApproved": false
       }
     },
     {
@@ -10476,26 +10525,28 @@
         "BrP:5",
         "BrP:7",
         "BrP:1",
-        "1962:700"
+        "1962:700",
+        "BrB:register:2026-10-21"
       ],
       "wordingFrom": "1965-01-01",
       "asOf": "2026-10-21",
       "checked": "2026-10-21",
       "future": null,
-      "finding": "Barnadråp: återgiven egen paragraflydelse är verifierad mot originaltrycket; brottsbalken trädde i kraft 1965-01-01 enligt 1 § BrP.",
-      "note": "Den återgivna egna paragrafen har jämförts visuellt med originaltrycket SFS 1962:700, trycksida 1840 (PDF-sida 4). Aktuell konsolidering och ändringsregistrets omfattningsuppgifter har kontrollerats separat. Ikraftträdandet följer av 1 § BrP, inte av avsaknad av ändringsfotnot. Hänvisade paragrafer, påföljdsregler, åtal och förstadier kan ha andra tidsgränser; full historik och konkret lagversion är inte slutgodkända.",
+      "finding": "Barnadråp: egen paragraf har jämförts visuellt med originaltrycket SFS 1962:700; 1 § BrP anger ikraftträdande den 1 januari 1965. Ändringsregistret anger ingen senare ändring av denna paragraf.",
+      "note": "Originaljämförelse: PDF-sida 4; trycksida 1840. Endast tryckavstavning, radbrytning och styckeplacering har bortsetts från. Att Lag-fotnot saknas har inte ensamt använts som bevis. Dateringen avser egen paragraflydelse. Hänvisade regler, tolkning i praxis, allmänna straffbestämmelser, åtal och förstadier kan ha ändrats efter 1965 och är inte historiskt slutgodkända.",
       "originalComparison": {
-        "source": "1962:700",
+        "sourceRef": "1962:700",
         "pdfPages": [
           4
         ],
         "printedPages": [
           1840
         ],
-        "method": "visual-own-paragraph-comparison-and-amendment-register-scope-review",
-        "currentOwnText": "3 §\nDödar kvinna sitt barn vid födelsen eller eljest å tid då hon på grund av nedkomsten befinner sig i upprivet sinnestillstånd eller i svårt trångmål, dömes för barnadråp till fängelse i högst sex år.",
-        "reviewed": "2026-10-21",
-        "allHistoricalLawApproved": false
+        "method": "manual-visual-original-print-versus-current-own-paragraph",
+        "registrySourceRef": "BrB:register:2026-10-21",
+        "registryAmendmentsForOwnParagraph": [],
+        "checked": "2026-10-21",
+        "allHistoricalLiabilityApproved": false
       }
     },
     {
@@ -10515,26 +10566,28 @@
         "BrP:5",
         "BrP:7",
         "BrP:1",
-        "1962:700"
+        "1962:700",
+        "BrB:register:2026-10-21"
       ],
       "wordingFrom": "1965-01-01",
       "asOf": "2026-10-21",
       "checked": "2026-10-21",
       "future": null,
-      "finding": "Intrång i förvar: återgiven egen paragraflydelse är verifierad mot originaltrycket; brottsbalken trädde i kraft 1965-01-01 enligt 1 § BrP.",
-      "note": "Den återgivna egna paragrafen har jämförts visuellt med originaltrycket SFS 1962:700, trycksida 1842 (PDF-sida 6). Aktuell konsolidering och ändringsregistrets omfattningsuppgifter har kontrollerats separat. Ikraftträdandet följer av 1 § BrP, inte av avsaknad av ändringsfotnot. Hänvisade paragrafer, påföljdsregler, åtal och förstadier kan ha andra tidsgränser; full historik och konkret lagversion är inte slutgodkända.",
+      "finding": "Intrång i förvar: egen paragraf har jämförts visuellt med originaltrycket SFS 1962:700; 1 § BrP anger ikraftträdande den 1 januari 1965. Ändringsregistret anger ingen senare ändring av denna paragraf.",
+      "note": "Originaljämförelse: PDF-sida 6; trycksida 1842. Endast tryckavstavning, radbrytning och styckeplacering har bortsetts från. Att Lag-fotnot saknas har inte ensamt använts som bevis. Dateringen avser egen paragraflydelse. Hänvisade regler, tolkning i praxis, allmänna straffbestämmelser, åtal och förstadier kan ha ändrats efter 1965 och är inte historiskt slutgodkända.",
       "originalComparison": {
-        "source": "1962:700",
+        "sourceRef": "1962:700",
         "pdfPages": [
           6
         ],
         "printedPages": [
           1842
         ],
-        "method": "visual-own-paragraph-comparison-and-amendment-register-scope-review",
-        "currentOwnText": "9 §\nDen som, utan att fall är för handen som i 8 § sägs, olovligen bryter brev eller telegram eller eljest bereder sig tillgång till något som förvaras förseglat eller under lås eller eljest tillslutet, dömes för intrång i förvar till böter eller fängelse i högst två år.",
-        "reviewed": "2026-10-21",
-        "allHistoricalLawApproved": false
+        "method": "manual-visual-original-print-versus-current-own-paragraph",
+        "registrySourceRef": "BrB:register:2026-10-21",
+        "registryAmendmentsForOwnParagraph": [],
+        "checked": "2026-10-21",
+        "allHistoricalLiabilityApproved": false
       }
     },
     {
@@ -10554,26 +10607,28 @@
         "BrP:5",
         "BrP:7",
         "BrP:1",
-        "1962:700"
+        "1962:700",
+        "BrB:register:2026-10-21"
       ],
       "wordingFrom": "1965-01-01",
       "asOf": "2026-10-21",
       "checked": "2026-10-21",
       "future": null,
-      "finding": "Förtal: återgiven egen paragraflydelse är verifierad mot originaltrycket; brottsbalken trädde i kraft 1965-01-01 enligt 1 § BrP.",
-      "note": "Den återgivna egna paragrafen har jämförts visuellt med originaltrycket SFS 1962:700, trycksida 1842 (PDF-sida 6). Aktuell konsolidering och ändringsregistrets omfattningsuppgifter har kontrollerats separat. Ikraftträdandet följer av 1 § BrP, inte av avsaknad av ändringsfotnot. Hänvisade paragrafer, påföljdsregler, åtal och förstadier kan ha andra tidsgränser; full historik och konkret lagversion är inte slutgodkända.",
+      "finding": "Förtal: egen paragraf har jämförts visuellt med originaltrycket SFS 1962:700; 1 § BrP anger ikraftträdande den 1 januari 1965. Ändringsregistret anger ingen senare ändring av denna paragraf.",
+      "note": "Originaljämförelse: PDF-sida 6; trycksida 1842. Endast tryckavstavning, radbrytning och styckeplacering har bortsetts från. Att Lag-fotnot saknas har inte ensamt använts som bevis. Dateringen avser egen paragraflydelse. Hänvisade regler, tolkning i praxis, allmänna straffbestämmelser, åtal och förstadier kan ha ändrats efter 1965 och är inte historiskt slutgodkända.",
       "originalComparison": {
-        "source": "1962:700",
+        "sourceRef": "1962:700",
         "pdfPages": [
           6
         ],
         "printedPages": [
           1842
         ],
-        "method": "visual-own-paragraph-comparison-and-amendment-register-scope-review",
-        "currentOwnText": "1 §\nDen som utpekar någon såsom brottslig eller klandervärd i sitt levnadssätt eller eljest lämnar uppgift som är ägnad att utsätta denne för andras missaktning, dömes för förtal till böter.\n\nVar han skyldig att uttala sig eller var det eljest med hänsyn till omständigheterna försvarligt att lämna uppgift i saken, och visar han att uppgiften var sann eller att han hade skälig grund för den, skall ej dömas till ansvar.",
-        "reviewed": "2026-10-21",
-        "allHistoricalLawApproved": false
+        "method": "manual-visual-original-print-versus-current-own-paragraph",
+        "registrySourceRef": "BrB:register:2026-10-21",
+        "registryAmendmentsForOwnParagraph": [],
+        "checked": "2026-10-21",
+        "allHistoricalLiabilityApproved": false
       }
     },
     {
@@ -10593,26 +10648,28 @@
         "BrP:5",
         "BrP:7",
         "BrP:1",
-        "1962:700"
+        "1962:700",
+        "BrB:register:2026-10-21"
       ],
       "wordingFrom": "1965-01-01",
       "asOf": "2026-10-21",
       "checked": "2026-10-21",
       "future": null,
-      "finding": "Förskingring: återgiven egen paragraflydelse är verifierad mot originaltrycket; brottsbalken trädde i kraft 1965-01-01 enligt 1 § BrP.",
-      "note": "Den återgivna egna paragrafen har jämförts visuellt med originaltrycket SFS 1962:700, trycksida 1849 (PDF-sida 13). Aktuell konsolidering och ändringsregistrets omfattningsuppgifter har kontrollerats separat. Ikraftträdandet följer av 1 § BrP, inte av avsaknad av ändringsfotnot. Hänvisade paragrafer, påföljdsregler, åtal och förstadier kan ha andra tidsgränser; full historik och konkret lagversion är inte slutgodkända.",
+      "finding": "Förskingring: egen paragraf har jämförts visuellt med originaltrycket SFS 1962:700; 1 § BrP anger ikraftträdande den 1 januari 1965. Ändringsregistret anger ingen senare ändring av denna paragraf.",
+      "note": "Originaljämförelse: PDF-sida 13; trycksida 1849. Endast tryckavstavning, radbrytning och styckeplacering har bortsetts från. Att Lag-fotnot saknas har inte ensamt använts som bevis. Dateringen avser egen paragraflydelse. Hänvisade regler, tolkning i praxis, allmänna straffbestämmelser, åtal och förstadier kan ha ändrats efter 1965 och är inte historiskt slutgodkända.",
       "originalComparison": {
-        "source": "1962:700",
+        "sourceRef": "1962:700",
         "pdfPages": [
           13
         ],
         "printedPages": [
           1849
         ],
-        "method": "visual-own-paragraph-comparison-and-amendment-register-scope-review",
-        "currentOwnText": "1 §\nOm någon, som på grund av avtal, allmän eller enskild tjänst eller dylik ställning fått egendom i besittning för annan med skyldighet att utgiva egendomen eller redovisa för denna, genom att tillägna sig egendomen eller annorledes åsidosätter vad han har att iakttaga för att kunna fullgöra sin skyldighet, dömes, om gärningen innebär vinning för honom och skada för den berättigade, för förskingring till fängelse i högst två år.",
-        "reviewed": "2026-10-21",
-        "allHistoricalLawApproved": false
+        "method": "manual-visual-original-print-versus-current-own-paragraph",
+        "registrySourceRef": "BrB:register:2026-10-21",
+        "registryAmendmentsForOwnParagraph": [],
+        "checked": "2026-10-21",
+        "allHistoricalLiabilityApproved": false
       }
     },
     {
@@ -10632,26 +10689,28 @@
         "BrP:5",
         "BrP:7",
         "BrP:1",
-        "1962:700"
+        "1962:700",
+        "BrB:register:2026-10-21"
       ],
       "wordingFrom": "1965-01-01",
       "asOf": "2026-10-21",
       "checked": "2026-10-21",
       "future": null,
-      "finding": "Sabotage: återgiven egen paragraflydelse är verifierad mot originaltrycket; brottsbalken trädde i kraft 1965-01-01 enligt 1 § BrP.",
-      "note": "Den återgivna egna paragrafen har jämförts visuellt med originaltrycket SFS 1962:700, trycksida 1853 (PDF-sida 17). Aktuell konsolidering och ändringsregistrets omfattningsuppgifter har kontrollerats separat. Ikraftträdandet följer av 1 § BrP, inte av avsaknad av ändringsfotnot. Hänvisade paragrafer, påföljdsregler, åtal och förstadier kan ha andra tidsgränser; full historik och konkret lagversion är inte slutgodkända.",
+      "finding": "Sabotage: egen paragraf har jämförts visuellt med originaltrycket SFS 1962:700; 1 § BrP anger ikraftträdande den 1 januari 1965. Ändringsregistret anger ingen senare ändring av denna paragraf.",
+      "note": "Originaljämförelse: PDF-sida 17; trycksida 1853. Endast tryckavstavning, radbrytning och styckeplacering har bortsetts från. Att Lag-fotnot saknas har inte ensamt använts som bevis. Dateringen avser egen paragraflydelse. Hänvisade regler, tolkning i praxis, allmänna straffbestämmelser, åtal och förstadier kan ha ändrats efter 1965 och är inte historiskt slutgodkända.",
       "originalComparison": {
-        "source": "1962:700",
+        "sourceRef": "1962:700",
         "pdfPages": [
           17
         ],
         "printedPages": [
           1853
         ],
-        "method": "visual-own-paragraph-comparison-and-amendment-register-scope-review",
-        "currentOwnText": "4 §\nOm någon förstör eller skadar egendom, som har avsevärd betydelse för rikets försvar, folkförsörjning, rättsskipning eller förvaltning eller för upprätthållande av allmän ordning och säkerhet i riket, eller genom annan åtgärd, som ej innefattar allenast undanhållande av arbetskraft eller uppmaning därtill, allvarligt stör eller hindrar användningen av sådan egendom, dömes för sabotage till fängelse i högst fyra år. Detsamma skall gälla, om någon eljest, genom skadegörelse eller annan åtgärd som nyss sagts, allvarligt stör eller hindrar den allmänna samfärdseln eller användningen av telegraf, telefon, radio eller dylikt allmänt hjälpmedel eller av anläggning för allmänhetens förseende med vatten, ljus, värme eller kraft.",
-        "reviewed": "2026-10-21",
-        "allHistoricalLawApproved": false
+        "method": "manual-visual-original-print-versus-current-own-paragraph",
+        "registrySourceRef": "BrB:register:2026-10-21",
+        "registryAmendmentsForOwnParagraph": [],
+        "checked": "2026-10-21",
+        "allHistoricalLiabilityApproved": false
       }
     },
     {
@@ -10671,16 +10730,17 @@
         "BrP:5",
         "BrP:7",
         "BrP:1",
-        "1962:700"
+        "1962:700",
+        "BrB:register:2026-10-21"
       ],
       "wordingFrom": "1965-01-01",
       "asOf": "2026-10-21",
       "checked": "2026-10-21",
       "future": null,
-      "finding": "Ohörsamhet mot ordningsmakten: återgiven egen paragraflydelse är verifierad mot originaltrycket; brottsbalken trädde i kraft 1965-01-01 enligt 1 § BrP.",
-      "note": "Den återgivna egna paragrafen har jämförts visuellt med originaltrycket SFS 1962:700, trycksida 1858, 1859 (PDF-sida 22, 23). Aktuell konsolidering och ändringsregistrets omfattningsuppgifter har kontrollerats separat. Ikraftträdandet följer av 1 § BrP, inte av avsaknad av ändringsfotnot. Hänvisade paragrafer, påföljdsregler, åtal och förstadier kan ha andra tidsgränser; full historik och konkret lagversion är inte slutgodkända.",
+      "finding": "Ohörsamhet mot ordningsmakten: egen paragraf har jämförts visuellt med originaltrycket SFS 1962:700; 1 § BrP anger ikraftträdande den 1 januari 1965. Ändringsregistret anger ingen senare ändring av denna paragraf.",
+      "note": "Originaljämförelse: PDF-sida 22, 23; trycksida 1858, 1859. Endast tryckavstavning, radbrytning och styckeplacering har bortsetts från. Att Lag-fotnot saknas har inte ensamt använts som bevis. Dateringen avser egen paragraflydelse. Hänvisade regler, tolkning i praxis, allmänna straffbestämmelser, åtal och förstadier kan ha ändrats efter 1965 och är inte historiskt slutgodkända.",
       "originalComparison": {
-        "source": "1962:700",
+        "sourceRef": "1962:700",
         "pdfPages": [
           22,
           23
@@ -10689,10 +10749,11 @@
           1858,
           1859
         ],
-        "method": "visual-own-paragraph-comparison-and-amendment-register-scope-review",
-        "currentOwnText": "3 §\nUnderlåter deltagare i folksamling som stör allmän ordning att efterkomma för ordningens upprätthållande meddelad befallning eller intränger han på område som blivit för sådant ändamål fridlyst eller avspärrat, dömes, om ej upplopp föreligger, för ohörsamhet mot ordningsmakten till böter eller fängelse i högst sex månader.",
-        "reviewed": "2026-10-21",
-        "allHistoricalLawApproved": false
+        "method": "manual-visual-original-print-versus-current-own-paragraph",
+        "registrySourceRef": "BrB:register:2026-10-21",
+        "registryAmendmentsForOwnParagraph": [],
+        "checked": "2026-10-21",
+        "allHistoricalLiabilityApproved": false
       }
     },
     {
@@ -10712,26 +10773,28 @@
         "BrP:5",
         "BrP:7",
         "BrP:1",
-        "1962:700"
+        "1962:700",
+        "BrB:register:2026-10-21"
       ],
       "wordingFrom": "1965-01-01",
       "asOf": "2026-10-21",
       "checked": "2026-10-21",
       "future": null,
-      "finding": "Förvanskande av familjeställning: återgiven egen paragraflydelse är verifierad mot originaltrycket; brottsbalken trädde i kraft 1965-01-01 enligt 1 § BrP.",
-      "note": "Den återgivna egna paragrafen har jämförts visuellt med originaltrycket SFS 1962:700, trycksida 1845 (PDF-sida 9). Aktuell konsolidering och ändringsregistrets omfattningsuppgifter har kontrollerats separat. Ikraftträdandet följer av 1 § BrP, inte av avsaknad av ändringsfotnot. Hänvisade paragrafer, påföljdsregler, åtal och förstadier kan ha andra tidsgränser; full historik och konkret lagversion är inte slutgodkända.",
+      "finding": "Förvanskande av familjeställning: egen paragraf har jämförts visuellt med originaltrycket SFS 1962:700; 1 § BrP anger ikraftträdande den 1 januari 1965. Ändringsregistret anger ingen senare ändring av denna paragraf.",
+      "note": "Originaljämförelse: PDF-sida 9; trycksida 1845. Endast tryckavstavning, radbrytning och styckeplacering har bortsetts från. Att Lag-fotnot saknas har inte ensamt använts som bevis. Dateringen avser egen paragraflydelse. Hänvisade regler, tolkning i praxis, allmänna straffbestämmelser, åtal och förstadier kan ha ändrats efter 1965 och är inte historiskt slutgodkända.",
       "originalComparison": {
-        "source": "1962:700",
+        "sourceRef": "1962:700",
         "pdfPages": [
           9
         ],
         "printedPages": [
           1845
         ],
-        "method": "visual-own-paragraph-comparison-and-amendment-register-scope-review",
-        "currentOwnText": "3 §\nDen som understicker eller förbyter barn eller eljest genom att avgiva oriktig anmälan till myndighet eller underlåta anmälan tillvällar sig eller annan falsk familjeställning eller berövar annan hans rätta familjeställning, dömes för förvanskande av familjeställning till böter eller fängelse i högst två år.",
-        "reviewed": "2026-10-21",
-        "allHistoricalLawApproved": false
+        "method": "manual-visual-original-print-versus-current-own-paragraph",
+        "registrySourceRef": "BrB:register:2026-10-21",
+        "registryAmendmentsForOwnParagraph": [],
+        "checked": "2026-10-21",
+        "allHistoricalLiabilityApproved": false
       }
     },
     {
@@ -10751,26 +10814,28 @@
         "BrP:5",
         "BrP:7",
         "BrP:1",
-        "1962:700"
+        "1962:700",
+        "BrB:register:2026-10-21"
       ],
       "wordingFrom": "1965-01-01",
       "asOf": "2026-10-21",
       "checked": "2026-10-21",
       "future": null,
-      "finding": "Ockerpantning: återgiven egen paragraflydelse är verifierad mot originaltrycket; brottsbalken trädde i kraft 1965-01-01 enligt 1 § BrP.",
-      "note": "Den återgivna egna paragrafen har jämförts visuellt med originaltrycket SFS 1962:700, trycksida 1849 (PDF-sida 13). Aktuell konsolidering och ändringsregistrets omfattningsuppgifter har kontrollerats separat. Ikraftträdandet följer av 1 § BrP, inte av avsaknad av ändringsfotnot. Hänvisade paragrafer, påföljdsregler, åtal och förstadier kan ha andra tidsgränser; full historik och konkret lagversion är inte slutgodkända.",
+      "finding": "Ockerpantning: egen paragraf har jämförts visuellt med originaltrycket SFS 1962:700; 1 § BrP anger ikraftträdande den 1 januari 1965. Ändringsregistret anger ingen senare ändring av denna paragraf.",
+      "note": "Originaljämförelse: PDF-sida 13; trycksida 1849. Endast tryckavstavning, radbrytning och styckeplacering har bortsetts från. Att Lag-fotnot saknas har inte ensamt använts som bevis. Dateringen avser egen paragraflydelse. Hänvisade regler, tolkning i praxis, allmänna straffbestämmelser, åtal och förstadier kan ha ändrats efter 1965 och är inte historiskt slutgodkända.",
       "originalComparison": {
-        "source": "1962:700",
+        "sourceRef": "1962:700",
         "pdfPages": [
           13
         ],
         "printedPages": [
           1849
         ],
-        "method": "visual-own-paragraph-comparison-and-amendment-register-scope-review",
-        "currentOwnText": "10 §\nMottager någon, för användning såsom påtryckningsmedel vid krav, handling som är falsk, upprättad för skens skull eller eljest oriktig eller ock check utan täckning, dömes för ockerpantning till böter eller fängelse i högst två år.",
-        "reviewed": "2026-10-21",
-        "allHistoricalLawApproved": false
+        "method": "manual-visual-original-print-versus-current-own-paragraph",
+        "registrySourceRef": "BrB:register:2026-10-21",
+        "registryAmendmentsForOwnParagraph": [],
+        "checked": "2026-10-21",
+        "allHistoricalLiabilityApproved": false
       }
     },
     {
@@ -10790,26 +10855,28 @@
         "BrP:5",
         "BrP:7",
         "BrP:1",
-        "1962:700"
+        "1962:700",
+        "BrB:register:2026-10-21"
       ],
       "wordingFrom": "1965-01-01",
       "asOf": "2026-10-21",
       "checked": "2026-10-21",
       "future": null,
-      "finding": "Förgöring: återgiven egen paragraflydelse är verifierad mot originaltrycket; brottsbalken trädde i kraft 1965-01-01 enligt 1 § BrP.",
-      "note": "Den återgivna egna paragrafen har jämförts visuellt med originaltrycket SFS 1962:700, trycksida 1854 (PDF-sida 18). Aktuell konsolidering och ändringsregistrets omfattningsuppgifter har kontrollerats separat. Ikraftträdandet följer av 1 § BrP, inte av avsaknad av ändringsfotnot. Hänvisade paragrafer, påföljdsregler, åtal och förstadier kan ha andra tidsgränser; full historik och konkret lagversion är inte slutgodkända.",
+      "finding": "Förgöring: egen paragraf har jämförts visuellt med originaltrycket SFS 1962:700; 1 § BrP anger ikraftträdande den 1 januari 1965. Ändringsregistret anger ingen senare ändring av denna paragraf.",
+      "note": "Originaljämförelse: PDF-sida 18; trycksida 1854. Endast tryckavstavning, radbrytning och styckeplacering har bortsetts från. Att Lag-fotnot saknas har inte ensamt använts som bevis. Dateringen avser egen paragraflydelse. Hänvisade regler, tolkning i praxis, allmänna straffbestämmelser, åtal och förstadier kan ha ändrats efter 1965 och är inte historiskt slutgodkända.",
       "originalComparison": {
-        "source": "1962:700",
+        "sourceRef": "1962:700",
         "pdfPages": [
           18
         ],
         "printedPages": [
           1854
         ],
-        "method": "visual-own-paragraph-comparison-and-amendment-register-scope-review",
-        "currentOwnText": "8 §\nFramkallar någon allmän fara för djur eller växter medelst gift eller genom att överföra eller sprida elakartad sjukdom eller genom att sprida skadedjur eller ogräs eller på annat dylikt sätt, dömes för förgöring till böter eller fängelse i högst två år.\nÄr brottet grovt, skall dömas till fängelse, lägst sex månader och högst sex år. Vid bedömande huruvida brottet är grovt skall särskilt beaktas, om det skett med uppsåt att skada eller om egendom av betydande värde utsatts för fara.",
-        "reviewed": "2026-10-21",
-        "allHistoricalLawApproved": false
+        "method": "manual-visual-original-print-versus-current-own-paragraph",
+        "registrySourceRef": "BrB:register:2026-10-21",
+        "registryAmendmentsForOwnParagraph": [],
+        "checked": "2026-10-21",
+        "allHistoricalLiabilityApproved": false
       }
     },
     {
@@ -10829,26 +10896,28 @@
         "BrP:5",
         "BrP:7",
         "BrP:1",
-        "1962:700"
+        "1962:700",
+        "BrB:register:2026-10-21"
       ],
       "wordingFrom": "1965-01-01",
       "asOf": "2026-10-21",
       "checked": "2026-10-21",
       "future": null,
-      "finding": "Grov förgöring: återgiven egen paragraflydelse är verifierad mot originaltrycket; brottsbalken trädde i kraft 1965-01-01 enligt 1 § BrP.",
-      "note": "Den återgivna egna paragrafen har jämförts visuellt med originaltrycket SFS 1962:700, trycksida 1854 (PDF-sida 18). Aktuell konsolidering och ändringsregistrets omfattningsuppgifter har kontrollerats separat. Ikraftträdandet följer av 1 § BrP, inte av avsaknad av ändringsfotnot. Hänvisade paragrafer, påföljdsregler, åtal och förstadier kan ha andra tidsgränser; full historik och konkret lagversion är inte slutgodkända.",
+      "finding": "Grov förgöring: egen paragraf har jämförts visuellt med originaltrycket SFS 1962:700; 1 § BrP anger ikraftträdande den 1 januari 1965. Ändringsregistret anger ingen senare ändring av denna paragraf.",
+      "note": "Originaljämförelse: PDF-sida 18; trycksida 1854. Endast tryckavstavning, radbrytning och styckeplacering har bortsetts från. Att Lag-fotnot saknas har inte ensamt använts som bevis. Dateringen avser egen paragraflydelse. Hänvisade regler, tolkning i praxis, allmänna straffbestämmelser, åtal och förstadier kan ha ändrats efter 1965 och är inte historiskt slutgodkända.",
       "originalComparison": {
-        "source": "1962:700",
+        "sourceRef": "1962:700",
         "pdfPages": [
           18
         ],
         "printedPages": [
           1854
         ],
-        "method": "visual-own-paragraph-comparison-and-amendment-register-scope-review",
-        "currentOwnText": "8 §\nFramkallar någon allmän fara för djur eller växter medelst gift eller genom att överföra eller sprida elakartad sjukdom eller genom att sprida skadedjur eller ogräs eller på annat dylikt sätt, dömes för förgöring till böter eller fängelse i högst två år.\nÄr brottet grovt, skall dömas till fängelse, lägst sex månader och högst sex år. Vid bedömande huruvida brottet är grovt skall särskilt beaktas, om det skett med uppsåt att skada eller om egendom av betydande värde utsatts för fara.",
-        "reviewed": "2026-10-21",
-        "allHistoricalLawApproved": false
+        "method": "manual-visual-original-print-versus-current-own-paragraph",
+        "registrySourceRef": "BrB:register:2026-10-21",
+        "registryAmendmentsForOwnParagraph": [],
+        "checked": "2026-10-21",
+        "allHistoricalLiabilityApproved": false
       }
     },
     {
@@ -10868,26 +10937,28 @@
         "BrP:5",
         "BrP:7",
         "BrP:1",
-        "1962:700"
+        "1962:700",
+        "BrB:register:2026-10-21"
       ],
       "wordingFrom": "1965-01-01",
       "asOf": "2026-10-21",
       "checked": "2026-10-21",
       "future": null,
-      "finding": "Falskt åtal: återgiven egen paragraflydelse är verifierad mot originaltrycket; brottsbalken trädde i kraft 1965-01-01 enligt 1 § BrP.",
-      "note": "Den återgivna egna paragrafen har jämförts visuellt med originaltrycket SFS 1962:700, trycksida 1857 (PDF-sida 21). Aktuell konsolidering och ändringsregistrets omfattningsuppgifter har kontrollerats separat. Ikraftträdandet följer av 1 § BrP, inte av avsaknad av ändringsfotnot. Hänvisade paragrafer, påföljdsregler, åtal och förstadier kan ha andra tidsgränser; full historik och konkret lagversion är inte slutgodkända.",
+      "finding": "Falskt åtal: egen paragraf har jämförts visuellt med originaltrycket SFS 1962:700; 1 § BrP anger ikraftträdande den 1 januari 1965. Ändringsregistret anger ingen senare ändring av denna paragraf.",
+      "note": "Originaljämförelse: PDF-sida 21; trycksida 1857. Endast tryckavstavning, radbrytning och styckeplacering har bortsetts från. Att Lag-fotnot saknas har inte ensamt använts som bevis. Dateringen avser egen paragraflydelse. Hänvisade regler, tolkning i praxis, allmänna straffbestämmelser, åtal och förstadier kan ha ändrats efter 1965 och är inte historiskt slutgodkända.",
       "originalComparison": {
-        "source": "1962:700",
+        "sourceRef": "1962:700",
         "pdfPages": [
           21
         ],
         "printedPages": [
           1857
         ],
-        "method": "visual-own-paragraph-comparison-and-amendment-register-scope-review",
-        "currentOwnText": "5 §\nVäcker någon åtal mot oskyldig med uppsåt att denne må bliva fälld till ansvar, dömes för falskt åtal till fängelse i högst två år eller, om brottet är ringa, till böter eller fängelse i högst sex månader.\n\nÄr brottet grovt, skall dömas till fängelse, lägst sex månader och högst fyra år. Vid bedömande huruvida brottet är grovt skall särskilt beaktas, om åtalet avsett allvarligt brott eller innefattat missbruk av tjänsteställning.\nDen som väcker åtal ehuru han icke har sannolika skäl därtill, dömes för obefogat åtal till böter eller fängelse i högst sex månader.",
-        "reviewed": "2026-10-21",
-        "allHistoricalLawApproved": false
+        "method": "manual-visual-original-print-versus-current-own-paragraph",
+        "registrySourceRef": "BrB:register:2026-10-21",
+        "registryAmendmentsForOwnParagraph": [],
+        "checked": "2026-10-21",
+        "allHistoricalLiabilityApproved": false
       }
     },
     {
@@ -10907,26 +10978,28 @@
         "BrP:5",
         "BrP:7",
         "BrP:1",
-        "1962:700"
+        "1962:700",
+        "BrB:register:2026-10-21"
       ],
       "wordingFrom": "1965-01-01",
       "asOf": "2026-10-21",
       "checked": "2026-10-21",
       "future": null,
-      "finding": "Grovt falskt åtal: återgiven egen paragraflydelse är verifierad mot originaltrycket; brottsbalken trädde i kraft 1965-01-01 enligt 1 § BrP.",
-      "note": "Den återgivna egna paragrafen har jämförts visuellt med originaltrycket SFS 1962:700, trycksida 1857 (PDF-sida 21). Aktuell konsolidering och ändringsregistrets omfattningsuppgifter har kontrollerats separat. Ikraftträdandet följer av 1 § BrP, inte av avsaknad av ändringsfotnot. Hänvisade paragrafer, påföljdsregler, åtal och förstadier kan ha andra tidsgränser; full historik och konkret lagversion är inte slutgodkända.",
+      "finding": "Grovt falskt åtal: egen paragraf har jämförts visuellt med originaltrycket SFS 1962:700; 1 § BrP anger ikraftträdande den 1 januari 1965. Ändringsregistret anger ingen senare ändring av denna paragraf.",
+      "note": "Originaljämförelse: PDF-sida 21; trycksida 1857. Endast tryckavstavning, radbrytning och styckeplacering har bortsetts från. Att Lag-fotnot saknas har inte ensamt använts som bevis. Dateringen avser egen paragraflydelse. Hänvisade regler, tolkning i praxis, allmänna straffbestämmelser, åtal och förstadier kan ha ändrats efter 1965 och är inte historiskt slutgodkända.",
       "originalComparison": {
-        "source": "1962:700",
+        "sourceRef": "1962:700",
         "pdfPages": [
           21
         ],
         "printedPages": [
           1857
         ],
-        "method": "visual-own-paragraph-comparison-and-amendment-register-scope-review",
-        "currentOwnText": "5 §\nVäcker någon åtal mot oskyldig med uppsåt att denne må bliva fälld till ansvar, dömes för falskt åtal till fängelse i högst två år eller, om brottet är ringa, till böter eller fängelse i högst sex månader.\n\nÄr brottet grovt, skall dömas till fängelse, lägst sex månader och högst fyra år. Vid bedömande huruvida brottet är grovt skall särskilt beaktas, om åtalet avsett allvarligt brott eller innefattat missbruk av tjänsteställning.\nDen som väcker åtal ehuru han icke har sannolika skäl därtill, dömes för obefogat åtal till böter eller fängelse i högst sex månader.",
-        "reviewed": "2026-10-21",
-        "allHistoricalLawApproved": false
+        "method": "manual-visual-original-print-versus-current-own-paragraph",
+        "registrySourceRef": "BrB:register:2026-10-21",
+        "registryAmendmentsForOwnParagraph": [],
+        "checked": "2026-10-21",
+        "allHistoricalLiabilityApproved": false
       }
     },
     {
@@ -10946,26 +11019,28 @@
         "BrP:5",
         "BrP:7",
         "BrP:1",
-        "1962:700"
+        "1962:700",
+        "BrB:register:2026-10-21"
       ],
       "wordingFrom": "1965-01-01",
       "asOf": "2026-10-21",
       "checked": "2026-10-21",
       "future": null,
-      "finding": "Obefogat åtal: återgiven egen paragraflydelse är verifierad mot originaltrycket; brottsbalken trädde i kraft 1965-01-01 enligt 1 § BrP.",
-      "note": "Den återgivna egna paragrafen har jämförts visuellt med originaltrycket SFS 1962:700, trycksida 1857 (PDF-sida 21). Aktuell konsolidering och ändringsregistrets omfattningsuppgifter har kontrollerats separat. Ikraftträdandet följer av 1 § BrP, inte av avsaknad av ändringsfotnot. Hänvisade paragrafer, påföljdsregler, åtal och förstadier kan ha andra tidsgränser; full historik och konkret lagversion är inte slutgodkända.",
+      "finding": "Obefogat åtal: egen paragraf har jämförts visuellt med originaltrycket SFS 1962:700; 1 § BrP anger ikraftträdande den 1 januari 1965. Ändringsregistret anger ingen senare ändring av denna paragraf.",
+      "note": "Originaljämförelse: PDF-sida 21; trycksida 1857. Endast tryckavstavning, radbrytning och styckeplacering har bortsetts från. Att Lag-fotnot saknas har inte ensamt använts som bevis. Dateringen avser egen paragraflydelse. Hänvisade regler, tolkning i praxis, allmänna straffbestämmelser, åtal och förstadier kan ha ändrats efter 1965 och är inte historiskt slutgodkända.",
       "originalComparison": {
-        "source": "1962:700",
+        "sourceRef": "1962:700",
         "pdfPages": [
           21
         ],
         "printedPages": [
           1857
         ],
-        "method": "visual-own-paragraph-comparison-and-amendment-register-scope-review",
-        "currentOwnText": "5 §\nVäcker någon åtal mot oskyldig med uppsåt att denne må bliva fälld till ansvar, dömes för falskt åtal till fängelse i högst två år eller, om brottet är ringa, till böter eller fängelse i högst sex månader.\n\nÄr brottet grovt, skall dömas till fängelse, lägst sex månader och högst fyra år. Vid bedömande huruvida brottet är grovt skall särskilt beaktas, om åtalet avsett allvarligt brott eller innefattat missbruk av tjänsteställning.\nDen som väcker åtal ehuru han icke har sannolika skäl därtill, dömes för obefogat åtal till böter eller fängelse i högst sex månader.",
-        "reviewed": "2026-10-21",
-        "allHistoricalLawApproved": false
+        "method": "manual-visual-original-print-versus-current-own-paragraph",
+        "registrySourceRef": "BrB:register:2026-10-21",
+        "registryAmendmentsForOwnParagraph": [],
+        "checked": "2026-10-21",
+        "allHistoricalLiabilityApproved": false
       }
     },
     {
@@ -10985,26 +11060,28 @@
         "BrP:5",
         "BrP:7",
         "BrP:1",
-        "1962:700"
+        "1962:700",
+        "BrB:register:2026-10-21"
       ],
       "wordingFrom": "1965-01-01",
       "asOf": "2026-10-21",
       "checked": "2026-10-21",
       "future": null,
-      "finding": "Bevisförvanskning: återgiven egen paragraflydelse är verifierad mot originaltrycket; brottsbalken trädde i kraft 1965-01-01 enligt 1 § BrP.",
-      "note": "Den återgivna egna paragrafen har jämförts visuellt med originaltrycket SFS 1962:700, trycksida 1857 (PDF-sida 21). Aktuell konsolidering och ändringsregistrets omfattningsuppgifter har kontrollerats separat. Ikraftträdandet följer av 1 § BrP, inte av avsaknad av ändringsfotnot. Hänvisade paragrafer, påföljdsregler, åtal och förstadier kan ha andra tidsgränser; full historik och konkret lagversion är inte slutgodkända.",
+      "finding": "Bevisförvanskning: egen paragraf har jämförts visuellt med originaltrycket SFS 1962:700; 1 § BrP anger ikraftträdande den 1 januari 1965. Ändringsregistret anger ingen senare ändring av denna paragraf.",
+      "note": "Originaljämförelse: PDF-sida 21; trycksida 1857. Endast tryckavstavning, radbrytning och styckeplacering har bortsetts från. Att Lag-fotnot saknas har inte ensamt använts som bevis. Dateringen avser egen paragraflydelse. Hänvisade regler, tolkning i praxis, allmänna straffbestämmelser, åtal och förstadier kan ha ändrats efter 1965 och är inte historiskt slutgodkända.",
       "originalComparison": {
-        "source": "1962:700",
+        "sourceRef": "1962:700",
         "pdfPages": [
           21
         ],
         "printedPages": [
           1857
         ],
-        "method": "visual-own-paragraph-comparison-and-amendment-register-scope-review",
-        "currentOwnText": "8 §\nFörvanskar eller undanröjer någon bevis med uppsåt att oskyldig må bliva fälld till ansvar eller åberopar någon med sådant uppsåt falskt bevis, dömes för bevisförvanskning till fängelse i högst två år eller, om brottet är ringa, till böter eller fängelse i högst sex månader.\n\nÄr brottet grovt, dömes till fängelse, lägst sex månader och högst fyra år.",
-        "reviewed": "2026-10-21",
-        "allHistoricalLawApproved": false
+        "method": "manual-visual-original-print-versus-current-own-paragraph",
+        "registrySourceRef": "BrB:register:2026-10-21",
+        "registryAmendmentsForOwnParagraph": [],
+        "checked": "2026-10-21",
+        "allHistoricalLiabilityApproved": false
       }
     },
     {
@@ -11024,26 +11101,28 @@
         "BrP:5",
         "BrP:7",
         "BrP:1",
-        "1962:700"
+        "1962:700",
+        "BrB:register:2026-10-21"
       ],
       "wordingFrom": "1965-01-01",
       "asOf": "2026-10-21",
       "checked": "2026-10-21",
       "future": null,
-      "finding": "Grov bevisförvanskning: återgiven egen paragraflydelse är verifierad mot originaltrycket; brottsbalken trädde i kraft 1965-01-01 enligt 1 § BrP.",
-      "note": "Den återgivna egna paragrafen har jämförts visuellt med originaltrycket SFS 1962:700, trycksida 1857 (PDF-sida 21). Aktuell konsolidering och ändringsregistrets omfattningsuppgifter har kontrollerats separat. Ikraftträdandet följer av 1 § BrP, inte av avsaknad av ändringsfotnot. Hänvisade paragrafer, påföljdsregler, åtal och förstadier kan ha andra tidsgränser; full historik och konkret lagversion är inte slutgodkända.",
+      "finding": "Grov bevisförvanskning: egen paragraf har jämförts visuellt med originaltrycket SFS 1962:700; 1 § BrP anger ikraftträdande den 1 januari 1965. Ändringsregistret anger ingen senare ändring av denna paragraf.",
+      "note": "Originaljämförelse: PDF-sida 21; trycksida 1857. Endast tryckavstavning, radbrytning och styckeplacering har bortsetts från. Att Lag-fotnot saknas har inte ensamt använts som bevis. Dateringen avser egen paragraflydelse. Hänvisade regler, tolkning i praxis, allmänna straffbestämmelser, åtal och förstadier kan ha ändrats efter 1965 och är inte historiskt slutgodkända.",
       "originalComparison": {
-        "source": "1962:700",
+        "sourceRef": "1962:700",
         "pdfPages": [
           21
         ],
         "printedPages": [
           1857
         ],
-        "method": "visual-own-paragraph-comparison-and-amendment-register-scope-review",
-        "currentOwnText": "8 §\nFörvanskar eller undanröjer någon bevis med uppsåt att oskyldig må bliva fälld till ansvar eller åberopar någon med sådant uppsåt falskt bevis, dömes för bevisförvanskning till fängelse i högst två år eller, om brottet är ringa, till böter eller fängelse i högst sex månader.\n\nÄr brottet grovt, dömes till fängelse, lägst sex månader och högst fyra år.",
-        "reviewed": "2026-10-21",
-        "allHistoricalLawApproved": false
+        "method": "manual-visual-original-print-versus-current-own-paragraph",
+        "registrySourceRef": "BrB:register:2026-10-21",
+        "registryAmendmentsForOwnParagraph": [],
+        "checked": "2026-10-21",
+        "allHistoricalLiabilityApproved": false
       }
     },
     {
@@ -11063,26 +11142,28 @@
         "BrP:5",
         "BrP:7",
         "BrP:1",
-        "1962:700"
+        "1962:700",
+        "BrB:register:2026-10-21"
       ],
       "wordingFrom": "1965-01-01",
       "asOf": "2026-10-21",
       "checked": "2026-10-21",
       "future": null,
-      "finding": "Underlåtenhet att avvärja rättsfel: återgiven egen paragraflydelse är verifierad mot originaltrycket; brottsbalken trädde i kraft 1965-01-01 enligt 1 § BrP.",
-      "note": "Den återgivna egna paragrafen har jämförts visuellt med originaltrycket SFS 1962:700, trycksida 1857 (PDF-sida 21). Aktuell konsolidering och ändringsregistrets omfattningsuppgifter har kontrollerats separat. Ikraftträdandet följer av 1 § BrP, inte av avsaknad av ändringsfotnot. Hänvisade paragrafer, påföljdsregler, åtal och förstadier kan ha andra tidsgränser; full historik och konkret lagversion är inte slutgodkända.",
+      "finding": "Underlåtenhet att avvärja rättsfel: egen paragraf har jämförts visuellt med originaltrycket SFS 1962:700; 1 § BrP anger ikraftträdande den 1 januari 1965. Ändringsregistret anger ingen senare ändring av denna paragraf.",
+      "note": "Originaljämförelse: PDF-sida 21; trycksida 1857. Endast tryckavstavning, radbrytning och styckeplacering har bortsetts från. Att Lag-fotnot saknas har inte ensamt använts som bevis. Dateringen avser egen paragraflydelse. Hänvisade regler, tolkning i praxis, allmänna straffbestämmelser, åtal och förstadier kan ha ändrats efter 1965 och är inte historiskt slutgodkända.",
       "originalComparison": {
-        "source": "1962:700",
+        "sourceRef": "1962:700",
         "pdfPages": [
           21
         ],
         "printedPages": [
           1857
         ],
-        "method": "visual-own-paragraph-comparison-and-amendment-register-scope-review",
-        "currentOwnText": "9 §\nHar någon, utan att vara förfallen till ansvar enligt vad förut i detta kapitel är sagt, genom åtgärd, varom där förmäles, framkallat fara för att annan skall bliva utan laga skäl dömd eller eljest lida avsevärt förfång, och underlåter han, efter att hava kommit till insikt därom, att till farans avvärjande göra vad skäligen kan begäras, dömes för underlåtenhet att avvärja rättsfel till böter eller fängelse i högst sex månader.",
-        "reviewed": "2026-10-21",
-        "allHistoricalLawApproved": false
+        "method": "manual-visual-original-print-versus-current-own-paragraph",
+        "registrySourceRef": "BrB:register:2026-10-21",
+        "registryAmendmentsForOwnParagraph": [],
+        "checked": "2026-10-21",
+        "allHistoricalLiabilityApproved": false
       }
     },
     {
@@ -11102,26 +11183,28 @@
         "BrP:5",
         "BrP:7",
         "BrP:1",
-        "1962:700"
+        "1962:700",
+        "BrB:register:2026-10-21"
       ],
       "wordingFrom": "1965-01-01",
       "asOf": "2026-10-21",
       "checked": "2026-10-21",
       "future": null,
-      "finding": "Brott mot rösthemlighet: återgiven egen paragraflydelse är verifierad mot originaltrycket; brottsbalken trädde i kraft 1965-01-01 enligt 1 § BrP.",
-      "note": "Den återgivna egna paragrafen har jämförts visuellt med originaltrycket SFS 1962:700, trycksida 1861 (PDF-sida 25). Aktuell konsolidering och ändringsregistrets omfattningsuppgifter har kontrollerats separat. Ikraftträdandet följer av 1 § BrP, inte av avsaknad av ändringsfotnot. Hänvisade paragrafer, påföljdsregler, åtal och förstadier kan ha andra tidsgränser; full historik och konkret lagversion är inte slutgodkända.",
+      "finding": "Brott mot rösthemlighet: egen paragraf har jämförts visuellt med originaltrycket SFS 1962:700; 1 § BrP anger ikraftträdande den 1 januari 1965. Ändringsregistret anger ingen senare ändring av denna paragraf.",
+      "note": "Originaljämförelse: PDF-sida 25; trycksida 1861. Endast tryckavstavning, radbrytning och styckeplacering har bortsetts från. Att Lag-fotnot saknas har inte ensamt använts som bevis. Dateringen avser egen paragraflydelse. Hänvisade regler, tolkning i praxis, allmänna straffbestämmelser, åtal och förstadier kan ha ändrats efter 1965 och är inte historiskt slutgodkända.",
       "originalComparison": {
-        "source": "1962:700",
+        "sourceRef": "1962:700",
         "pdfPages": [
           25
         ],
         "printedPages": [
           1861
         ],
-        "method": "visual-own-paragraph-comparison-and-amendment-register-scope-review",
-        "currentOwnText": "9 §\nSöker någon obehörigen skaffa sig kännedom om vad som angående utövning av rösträtt i allmänt ärende skall hållas hemligt, dömes för brott mot rösthemlighet till böter eller fängelse i högst sex månader.",
-        "reviewed": "2026-10-21",
-        "allHistoricalLawApproved": false
+        "method": "manual-visual-original-print-versus-current-own-paragraph",
+        "registrySourceRef": "BrB:register:2026-10-21",
+        "registryAmendmentsForOwnParagraph": [],
+        "checked": "2026-10-21",
+        "allHistoricalLiabilityApproved": false
       }
     },
     {
@@ -11141,26 +11224,28 @@
         "BrP:5",
         "BrP:7",
         "BrP:1",
-        "1962:700"
+        "1962:700",
+        "BrB:register:2026-10-21"
       ],
       "wordingFrom": "1965-01-01",
       "asOf": "2026-10-21",
       "checked": "2026-10-21",
       "future": null,
-      "finding": "Underlåtenhet att avvärja allmänfara: återgiven egen paragraflydelse är verifierad mot originaltrycket; brottsbalken trädde i kraft 1965-01-01 enligt 1 § BrP.",
-      "note": "Den återgivna egna paragrafen har jämförts visuellt med originaltrycket SFS 1962:700, trycksida 1854 (PDF-sida 18). Aktuell konsolidering och ändringsregistrets omfattningsuppgifter har kontrollerats separat. Ikraftträdandet följer av 1 § BrP, inte av avsaknad av ändringsfotnot. Hänvisade paragrafer, påföljdsregler, åtal och förstadier kan ha andra tidsgränser; full historik och konkret lagversion är inte slutgodkända.",
+      "finding": "Underlåtenhet att avvärja allmänfara: egen paragraf har jämförts visuellt med originaltrycket SFS 1962:700; 1 § BrP anger ikraftträdande den 1 januari 1965. Ändringsregistret anger ingen senare ändring av denna paragraf.",
+      "note": "Originaljämförelse: PDF-sida 18; trycksida 1854. Endast tryckavstavning, radbrytning och styckeplacering har bortsetts från. Att Lag-fotnot saknas har inte ensamt använts som bevis. Dateringen avser egen paragraflydelse. Hänvisade regler, tolkning i praxis, allmänna straffbestämmelser, åtal och förstadier kan ha ändrats efter 1965 och är inte historiskt slutgodkända.",
       "originalComparison": {
-        "source": "1962:700",
+        "sourceRef": "1962:700",
         "pdfPages": [
           18
         ],
         "printedPages": [
           1854
         ],
-        "method": "visual-own-paragraph-comparison-and-amendment-register-scope-review",
-        "currentOwnText": "10 §\nHar någon, utan att vara förfallen till ansvar enligt vad förut i detta kapitel är sagt, vid handhavande av eld, sprängämne eller gift eller annorledes framkallat fara för brand eller ofärd som i 1, 2 eller 3 § sägs eller allmän fara som avses i 7 eller 8 § och underlåter han, efter att hava kommit till insikt därom, att till farans avvärjande göra vad skäligen kan begäras, dömes för underlåtenhet att avvärja allmänfara till böter eller fängelse i högst ett år.",
-        "reviewed": "2026-10-21",
-        "allHistoricalLawApproved": false
+        "method": "manual-visual-original-print-versus-current-own-paragraph",
+        "registrySourceRef": "BrB:register:2026-10-21",
+        "registryAmendmentsForOwnParagraph": [],
+        "checked": "2026-10-21",
+        "allHistoricalLiabilityApproved": false
       }
     },
     {
@@ -11180,26 +11265,28 @@
         "BrP:5",
         "BrP:7",
         "BrP:1",
-        "1962:700"
+        "1962:700",
+        "BrB:register:2026-10-21"
       ],
       "wordingFrom": "1965-01-01",
       "asOf": "2026-10-21",
       "checked": "2026-10-21",
       "future": null,
-      "finding": "Osann partsutsaga: återgiven egen paragraflydelse är verifierad mot originaltrycket; brottsbalken trädde i kraft 1965-01-01 enligt 1 § BrP.",
-      "note": "Den återgivna egna paragrafen har jämförts visuellt med originaltrycket SFS 1962:700, trycksida 1856 (PDF-sida 20). Aktuell konsolidering och ändringsregistrets omfattningsuppgifter har kontrollerats separat. Ikraftträdandet följer av 1 § BrP, inte av avsaknad av ändringsfotnot. Hänvisade paragrafer, påföljdsregler, åtal och förstadier kan ha andra tidsgränser; full historik och konkret lagversion är inte slutgodkända.",
+      "finding": "Osann partsutsaga: egen paragraf har jämförts visuellt med originaltrycket SFS 1962:700; 1 § BrP anger ikraftträdande den 1 januari 1965. Ändringsregistret anger ingen senare ändring av denna paragraf.",
+      "note": "Originaljämförelse: PDF-sida 20; trycksida 1856. Endast tryckavstavning, radbrytning och styckeplacering har bortsetts från. Att Lag-fotnot saknas har inte ensamt använts som bevis. Dateringen avser egen paragraflydelse. Hänvisade regler, tolkning i praxis, allmänna straffbestämmelser, åtal och förstadier kan ha ändrats efter 1965 och är inte historiskt slutgodkända.",
       "originalComparison": {
-        "source": "1962:700",
+        "sourceRef": "1962:700",
         "pdfPages": [
           20
         ],
         "printedPages": [
           1856
         ],
-        "method": "visual-own-paragraph-comparison-and-amendment-register-scope-review",
-        "currentOwnText": "2 §\nDen som vid förhör under sanningsförsäkran i rättegång lämnar osann uppgift eller förtiger sanningen, dömes för osann partsutsaga till fängelse i högst två år eller, om brottet är ringa, till böter eller fängelse i högst sex månader.",
-        "reviewed": "2026-10-21",
-        "allHistoricalLawApproved": false
+        "method": "manual-visual-original-print-versus-current-own-paragraph",
+        "registrySourceRef": "BrB:register:2026-10-21",
+        "registryAmendmentsForOwnParagraph": [],
+        "checked": "2026-10-21",
+        "allHistoricalLiabilityApproved": false
       }
     },
     {
@@ -11219,26 +11306,28 @@
         "BrP:5",
         "BrP:7",
         "BrP:1",
-        "1962:700"
+        "1962:700",
+        "BrB:register:2026-10-21"
       ],
       "wordingFrom": "1965-01-01",
       "asOf": "2026-10-21",
       "checked": "2026-10-21",
       "future": null,
-      "finding": "Ringa osann partsutsaga: återgiven egen paragraflydelse är verifierad mot originaltrycket; brottsbalken trädde i kraft 1965-01-01 enligt 1 § BrP.",
-      "note": "Den återgivna egna paragrafen har jämförts visuellt med originaltrycket SFS 1962:700, trycksida 1856 (PDF-sida 20). Aktuell konsolidering och ändringsregistrets omfattningsuppgifter har kontrollerats separat. Ikraftträdandet följer av 1 § BrP, inte av avsaknad av ändringsfotnot. Hänvisade paragrafer, påföljdsregler, åtal och förstadier kan ha andra tidsgränser; full historik och konkret lagversion är inte slutgodkända.",
+      "finding": "Ringa osann partsutsaga: egen paragraf har jämförts visuellt med originaltrycket SFS 1962:700; 1 § BrP anger ikraftträdande den 1 januari 1965. Ändringsregistret anger ingen senare ändring av denna paragraf.",
+      "note": "Originaljämförelse: PDF-sida 20; trycksida 1856. Endast tryckavstavning, radbrytning och styckeplacering har bortsetts från. Att Lag-fotnot saknas har inte ensamt använts som bevis. Dateringen avser egen paragraflydelse. Hänvisade regler, tolkning i praxis, allmänna straffbestämmelser, åtal och förstadier kan ha ändrats efter 1965 och är inte historiskt slutgodkända.",
       "originalComparison": {
-        "source": "1962:700",
+        "sourceRef": "1962:700",
         "pdfPages": [
           20
         ],
         "printedPages": [
           1856
         ],
-        "method": "visual-own-paragraph-comparison-and-amendment-register-scope-review",
-        "currentOwnText": "2 §\nDen som vid förhör under sanningsförsäkran i rättegång lämnar osann uppgift eller förtiger sanningen, dömes för osann partsutsaga till fängelse i högst två år eller, om brottet är ringa, till böter eller fängelse i högst sex månader.",
-        "reviewed": "2026-10-21",
-        "allHistoricalLawApproved": false
+        "method": "manual-visual-original-print-versus-current-own-paragraph",
+        "registrySourceRef": "BrB:register:2026-10-21",
+        "registryAmendmentsForOwnParagraph": [],
+        "checked": "2026-10-21",
+        "allHistoricalLiabilityApproved": false
       }
     },
     {
@@ -11258,26 +11347,28 @@
         "BrP:5",
         "BrP:7",
         "BrP:1",
-        "1962:700"
+        "1962:700",
+        "BrB:register:2026-10-21"
       ],
       "wordingFrom": "1965-01-01",
       "asOf": "2026-10-21",
       "checked": "2026-10-21",
       "future": null,
-      "finding": "Ovarsam utsaga: återgiven egen paragraflydelse är verifierad mot originaltrycket; brottsbalken trädde i kraft 1965-01-01 enligt 1 § BrP.",
-      "note": "Den återgivna egna paragrafen har jämförts visuellt med originaltrycket SFS 1962:700, trycksida 1856 (PDF-sida 20). Aktuell konsolidering och ändringsregistrets omfattningsuppgifter har kontrollerats separat. Ikraftträdandet följer av 1 § BrP, inte av avsaknad av ändringsfotnot. Hänvisade paragrafer, påföljdsregler, åtal och förstadier kan ha andra tidsgränser; full historik och konkret lagversion är inte slutgodkända.",
+      "finding": "Ovarsam utsaga: egen paragraf har jämförts visuellt med originaltrycket SFS 1962:700; 1 § BrP anger ikraftträdande den 1 januari 1965. Ändringsregistret anger ingen senare ändring av denna paragraf.",
+      "note": "Originaljämförelse: PDF-sida 20; trycksida 1856. Endast tryckavstavning, radbrytning och styckeplacering har bortsetts från. Att Lag-fotnot saknas har inte ensamt använts som bevis. Dateringen avser egen paragraflydelse. Hänvisade regler, tolkning i praxis, allmänna straffbestämmelser, åtal och förstadier kan ha ändrats efter 1965 och är inte historiskt slutgodkända.",
       "originalComparison": {
-        "source": "1962:700",
+        "sourceRef": "1962:700",
         "pdfPages": [
           20
         ],
         "printedPages": [
           1856
         ],
-        "method": "visual-own-paragraph-comparison-and-amendment-register-scope-review",
-        "currentOwnText": "3 §\nBegår någon av grov oaktsamhet gärning som i 1 eller 2 § sägs, dömes för ovarsam utsaga till böter eller fängelse i högst sex månader.",
-        "reviewed": "2026-10-21",
-        "allHistoricalLawApproved": false
+        "method": "manual-visual-original-print-versus-current-own-paragraph",
+        "registrySourceRef": "BrB:register:2026-10-21",
+        "registryAmendmentsForOwnParagraph": [],
+        "checked": "2026-10-21",
+        "allHistoricalLiabilityApproved": false
       }
     },
     {
@@ -11297,26 +11388,28 @@
         "BrP:5",
         "BrP:7",
         "BrP:1",
-        "1962:700"
+        "1962:700",
+        "BrB:register:2026-10-21"
       ],
       "wordingFrom": "1965-01-01",
       "asOf": "2026-10-21",
       "checked": "2026-10-21",
       "future": null,
-      "finding": "Upplopp: återgiven egen paragraflydelse är verifierad mot originaltrycket; brottsbalken trädde i kraft 1965-01-01 enligt 1 § BrP.",
-      "note": "Den återgivna egna paragrafen har jämförts visuellt med originaltrycket SFS 1962:700, trycksida 1858 (PDF-sida 22). Aktuell konsolidering och ändringsregistrets omfattningsuppgifter har kontrollerats separat. Ikraftträdandet följer av 1 § BrP, inte av avsaknad av ändringsfotnot. Hänvisade paragrafer, påföljdsregler, åtal och förstadier kan ha andra tidsgränser; full historik och konkret lagversion är inte slutgodkända. Villkorad straffskala och konkret grenval kvarstår.",
+      "finding": "Upplopp: egen paragraf har jämförts visuellt med originaltrycket SFS 1962:700; 1 § BrP anger ikraftträdande den 1 januari 1965. Ändringsregistret anger ingen senare ändring av denna paragraf.",
+      "note": "Originaljämförelse: PDF-sida 22; trycksida 1858. Endast tryckavstavning, radbrytning och styckeplacering har bortsetts från. Att Lag-fotnot saknas har inte ensamt använts som bevis. Dateringen avser egen paragraflydelse. Hänvisade regler, tolkning i praxis, allmänna straffbestämmelser, åtal och förstadier kan ha ändrats efter 1965 och är inte historiskt slutgodkända.",
       "originalComparison": {
-        "source": "1962:700",
+        "sourceRef": "1962:700",
         "pdfPages": [
           22
         ],
         "printedPages": [
           1858
         ],
-        "method": "visual-own-paragraph-comparison-and-amendment-register-scope-review",
-        "currentOwnText": "1 §\nStör folksamling allmän ordning genom att ådagalägga uppsåt att med förenat våld sätta sig upp mot myndighet eller eljest framtvinga eller hindra viss åtgärd och skingrar den sig ej på myndighets befallning, dömes för upplopp, anstiftare och anförare till fängelse i högst fyra år och annan deltagare i folksamlingens förehavande till böter eller fängelse i högst två år.\nOm folksamlingen skingrar sig på myndighets befallning, dömes anstiftare och anförare för upplopp till böter eller fängelse i högst två år.",
-        "reviewed": "2026-10-21",
-        "allHistoricalLawApproved": false
+        "method": "manual-visual-original-print-versus-current-own-paragraph",
+        "registrySourceRef": "BrB:register:2026-10-21",
+        "registryAmendmentsForOwnParagraph": [],
+        "checked": "2026-10-21",
+        "allHistoricalLiabilityApproved": false
       }
     },
     {
@@ -11336,26 +11429,28 @@
         "BrP:5",
         "BrP:7",
         "BrP:1",
-        "1962:700"
+        "1962:700",
+        "BrB:register:2026-10-21"
       ],
       "wordingFrom": "1965-01-01",
       "asOf": "2026-10-21",
       "checked": "2026-10-21",
       "future": null,
-      "finding": "Våldsamt upplopp: återgiven egen paragraflydelse är verifierad mot originaltrycket; brottsbalken trädde i kraft 1965-01-01 enligt 1 § BrP.",
-      "note": "Den återgivna egna paragrafen har jämförts visuellt med originaltrycket SFS 1962:700, trycksida 1858 (PDF-sida 22). Aktuell konsolidering och ändringsregistrets omfattningsuppgifter har kontrollerats separat. Ikraftträdandet följer av 1 § BrP, inte av avsaknad av ändringsfotnot. Hänvisade paragrafer, påföljdsregler, åtal och förstadier kan ha andra tidsgränser; full historik och konkret lagversion är inte slutgodkända. Villkorad straffskala och konkret grenval kvarstår.",
+      "finding": "Våldsamt upplopp: egen paragraf har jämförts visuellt med originaltrycket SFS 1962:700; 1 § BrP anger ikraftträdande den 1 januari 1965. Ändringsregistret anger ingen senare ändring av denna paragraf.",
+      "note": "Originaljämförelse: PDF-sida 22; trycksida 1858. Endast tryckavstavning, radbrytning och styckeplacering har bortsetts från. Att Lag-fotnot saknas har inte ensamt använts som bevis. Dateringen avser egen paragraflydelse. Hänvisade regler, tolkning i praxis, allmänna straffbestämmelser, åtal och förstadier kan ha ändrats efter 1965 och är inte historiskt slutgodkända.",
       "originalComparison": {
-        "source": "1962:700",
+        "sourceRef": "1962:700",
         "pdfPages": [
           22
         ],
         "printedPages": [
           1858
         ],
-        "method": "visual-own-paragraph-comparison-and-amendment-register-scope-review",
-        "currentOwnText": "2 §\nHar folksamling, med uppsåt som i 1 § sägs, gått till förenat våld å person eller egendom, dömes vare sig myndighet var tillstädes eller ej, för våldsamt upplopp, anstiftare och anförare till fängelse i högst tio år och annan deltagare i folksamlingens förehavande till böter eller fängelse i högst fyra år.",
-        "reviewed": "2026-10-21",
-        "allHistoricalLawApproved": false
+        "method": "manual-visual-original-print-versus-current-own-paragraph",
+        "registrySourceRef": "BrB:register:2026-10-21",
+        "registryAmendmentsForOwnParagraph": [],
+        "checked": "2026-10-21",
+        "allHistoricalLiabilityApproved": false
       }
     },
     {
@@ -11375,26 +11470,28 @@
         "BrP:5",
         "BrP:7",
         "BrP:1",
-        "1962:700"
+        "1962:700",
+        "BrB:register:2026-10-21"
       ],
       "wordingFrom": "1965-01-01",
       "asOf": "2026-10-21",
       "checked": "2026-10-21",
       "future": null,
-      "finding": "Väpnat hot mot laglig ordning: återgiven egen paragraflydelse är verifierad mot originaltrycket; brottsbalken trädde i kraft 1965-01-01 enligt 1 § BrP.",
-      "note": "Den återgivna egna paragrafen har jämförts visuellt med originaltrycket SFS 1962:700, trycksida 1863 (PDF-sida 27). Aktuell konsolidering och ändringsregistrets omfattningsuppgifter har kontrollerats separat. Ikraftträdandet följer av 1 § BrP, inte av avsaknad av ändringsfotnot. Hänvisade paragrafer, påföljdsregler, åtal och förstadier kan ha andra tidsgränser; full historik och konkret lagversion är inte slutgodkända.",
+      "finding": "Väpnat hot mot laglig ordning: egen paragraf har jämförts visuellt med originaltrycket SFS 1962:700; 1 § BrP anger ikraftträdande den 1 januari 1965. Ändringsregistret anger ingen senare ändring av denna paragraf.",
+      "note": "Originaljämförelse: PDF-sida 27; trycksida 1863. Endast tryckavstavning, radbrytning och styckeplacering har bortsetts från. Att Lag-fotnot saknas har inte ensamt använts som bevis. Dateringen avser egen paragraflydelse. Hänvisade regler, tolkning i praxis, allmänna straffbestämmelser, åtal och förstadier kan ha ändrats efter 1965 och är inte historiskt slutgodkända.",
       "originalComparison": {
-        "source": "1962:700",
+        "sourceRef": "1962:700",
         "pdfPages": [
           27
         ],
         "printedPages": [
           1863
         ],
-        "method": "visual-own-paragraph-comparison-and-amendment-register-scope-review",
-        "currentOwnText": "3 §\nDen som, med uppsåt att brott skall förövas mot allmän säkerhet eller medborgares frihet, samlar eller anför väpnat manskap eller håller det samlat eller förser manskap med vapen, ammunition eller annan dylik utrustning eller övar det i vapens bruk, dömes för väpnat hot mot laglig ordning till fängelse, lägst sex och högst tio år.",
-        "reviewed": "2026-10-21",
-        "allHistoricalLawApproved": false
+        "method": "manual-visual-original-print-versus-current-own-paragraph",
+        "registrySourceRef": "BrB:register:2026-10-21",
+        "registryAmendmentsForOwnParagraph": [],
+        "checked": "2026-10-21",
+        "allHistoricalLiabilityApproved": false
       }
     },
     {
@@ -11414,26 +11511,28 @@
         "BrP:5",
         "BrP:7",
         "BrP:1",
-        "1962:700"
+        "1962:700",
+        "BrB:register:2026-10-21"
       ],
       "wordingFrom": "1965-01-01",
       "asOf": "2026-10-21",
       "checked": "2026-10-21",
       "future": null,
-      "finding": "Olovlig kårverksamhet: återgiven egen paragraflydelse är verifierad mot originaltrycket; brottsbalken trädde i kraft 1965-01-01 enligt 1 § BrP.",
-      "note": "Den återgivna egna paragrafen har jämförts visuellt med originaltrycket SFS 1962:700, trycksida 1863 (PDF-sida 27). Aktuell konsolidering och ändringsregistrets omfattningsuppgifter har kontrollerats separat. Ikraftträdandet följer av 1 § BrP, inte av avsaknad av ändringsfotnot. Hänvisade paragrafer, påföljdsregler, åtal och förstadier kan ha andra tidsgränser; full historik och konkret lagversion är inte slutgodkända.",
+      "finding": "Olovlig kårverksamhet: egen paragraf har jämförts visuellt med originaltrycket SFS 1962:700; 1 § BrP anger ikraftträdande den 1 januari 1965. Ändringsregistret anger ingen senare ändring av denna paragraf.",
+      "note": "Originaljämförelse: PDF-sida 27; trycksida 1863. Endast tryckavstavning, radbrytning och styckeplacering har bortsetts från. Att Lag-fotnot saknas har inte ensamt använts som bevis. Dateringen avser egen paragraflydelse. Hänvisade regler, tolkning i praxis, allmänna straffbestämmelser, åtal och förstadier kan ha ändrats efter 1965 och är inte historiskt slutgodkända.",
       "originalComparison": {
-        "source": "1962:700",
+        "sourceRef": "1962:700",
         "pdfPages": [
           27
         ],
         "printedPages": [
           1863
         ],
-        "method": "visual-own-paragraph-comparison-and-amendment-register-scope-review",
-        "currentOwnText": "4 §\nOm någon bildar eller deltager i sammanslutning, som måste anses vara avsedd att utgöra eller med hänsyn till sin beskaffenhet och det ändamål för vilket den är bildad lätt kan utvecklas till ett sådant maktmedel som militär trupp eller polisstyrka och som icke med vederbörligt tillstånd förstärker försvaret eller ordningsmakten, eller ock för sådan sammanslutning tager befattning med vapen, ammunition eller annan dylik utrustning, upplåter lokal eller mark för dess verksamhet eller understödjer den med penningar eller på annat sätt, dömes för olovlig kårverksamhet till böter eller fängelse i högst två år.",
-        "reviewed": "2026-10-21",
-        "allHistoricalLawApproved": false
+        "method": "manual-visual-original-print-versus-current-own-paragraph",
+        "registrySourceRef": "BrB:register:2026-10-21",
+        "registryAmendmentsForOwnParagraph": [],
+        "checked": "2026-10-21",
+        "allHistoricalLiabilityApproved": false
       }
     },
     {
@@ -11453,26 +11552,28 @@
         "BrP:5",
         "BrP:7",
         "BrP:1",
-        "1962:700"
+        "1962:700",
+        "BrB:register:2026-10-21"
       ],
       "wordingFrom": "1965-01-01",
       "asOf": "2026-10-21",
       "checked": "2026-10-21",
       "future": null,
-      "finding": "Brott mot medborgerlig frihet: återgiven egen paragraflydelse är verifierad mot originaltrycket; brottsbalken trädde i kraft 1965-01-01 enligt 1 § BrP.",
-      "note": "Den återgivna egna paragrafen har jämförts visuellt med originaltrycket SFS 1962:700, trycksida 1863 (PDF-sida 27). Aktuell konsolidering och ändringsregistrets omfattningsuppgifter har kontrollerats separat. Ikraftträdandet följer av 1 § BrP, inte av avsaknad av ändringsfotnot. Hänvisade paragrafer, påföljdsregler, åtal och förstadier kan ha andra tidsgränser; full historik och konkret lagversion är inte slutgodkända.",
+      "finding": "Brott mot medborgerlig frihet: egen paragraf har jämförts visuellt med originaltrycket SFS 1962:700; 1 § BrP anger ikraftträdande den 1 januari 1965. Ändringsregistret anger ingen senare ändring av denna paragraf.",
+      "note": "Originaljämförelse: PDF-sida 27; trycksida 1863. Endast tryckavstavning, radbrytning och styckeplacering har bortsetts från. Att Lag-fotnot saknas har inte ensamt använts som bevis. Dateringen avser egen paragraflydelse. Hänvisade regler, tolkning i praxis, allmänna straffbestämmelser, åtal och förstadier kan ha ändrats efter 1965 och är inte historiskt slutgodkända.",
       "originalComparison": {
-        "source": "1962:700",
+        "sourceRef": "1962:700",
         "pdfPages": [
           27
         ],
         "printedPages": [
           1863
         ],
-        "method": "visual-own-paragraph-comparison-and-amendment-register-scope-review",
-        "currentOwnText": "5 §\nDen som övar olaga tvång eller olaga hot med uppsåt att påverka den allmänna åsiktsbildningen eller inkräkta på handlingsfriheten inom politisk organisation eller yrkes- eller näringssammanslutning och därigenom sätter yttrande-, församlings- eller föreningsfriheten i fara, dömes för brott mot medborgerlig frihet till fängelse i högst sex år.",
-        "reviewed": "2026-10-21",
-        "allHistoricalLawApproved": false
+        "method": "manual-visual-original-print-versus-current-own-paragraph",
+        "registrySourceRef": "BrB:register:2026-10-21",
+        "registryAmendmentsForOwnParagraph": [],
+        "checked": "2026-10-21",
+        "allHistoricalLiabilityApproved": false
       }
     },
     {
@@ -11492,26 +11593,28 @@
         "BrP:5",
         "BrP:7",
         "BrP:1",
-        "1962:700"
+        "1962:700",
+        "BrB:register:2026-10-21"
       ],
       "wordingFrom": "1965-01-01",
       "asOf": "2026-10-21",
       "checked": "2026-10-21",
       "future": null,
-      "finding": "Svikande av försvarsplikt: återgiven egen paragraflydelse är verifierad mot originaltrycket; brottsbalken trädde i kraft 1965-01-01 enligt 1 § BrP.",
-      "note": "Den återgivna egna paragrafen har jämförts visuellt med originaltrycket SFS 1962:700, trycksida 1863 (PDF-sida 27). Aktuell konsolidering och ändringsregistrets omfattningsuppgifter har kontrollerats separat. Ikraftträdandet följer av 1 § BrP, inte av avsaknad av ändringsfotnot. Hänvisade paragrafer, påföljdsregler, åtal och förstadier kan ha andra tidsgränser; full historik och konkret lagversion är inte slutgodkända. Villkorad straffskala och konkret grenval kvarstår. Originaltryckets radavstavning och ordmellanrum (undandrager/tjänstgöringsskyldighet) har bedömts som typografiska; krigsvillkoret måste fortfarande prövas.",
+      "finding": "Svikande av försvarsplikt: egen paragraf har jämförts visuellt med originaltrycket SFS 1962:700; 1 § BrP anger ikraftträdande den 1 januari 1965. Ändringsregistret anger ingen senare ändring av denna paragraf.",
+      "note": "Originaljämförelse: PDF-sida 27; trycksida 1863. Endast tryckavstavning, radbrytning och styckeplacering har bortsetts från. Att Lag-fotnot saknas har inte ensamt använts som bevis. Dateringen avser egen paragraflydelse. Hänvisade regler, tolkning i praxis, allmänna straffbestämmelser, åtal och förstadier kan ha ändrats efter 1965 och är inte historiskt slutgodkända.",
       "originalComparison": {
-        "source": "1962:700",
+        "sourceRef": "1962:700",
         "pdfPages": [
           27
         ],
         "printedPages": [
           1863
         ],
-        "method": "visual-own-paragraph-comparison-and-amendment-register-scope-review",
-        "currentOwnText": "6 §\nOm någon genom stympning eller annorledes, för längre eller kortare tid, gör sig oduglig till tjänstgöring, som det ålegat honom att fullgöra vid krigsmakten eller eljest för rikets försvar, eller genom att föregiva sjukdom eller medelst annat vilseledande undan drager sig sådan tjänst-\ngöringsskyldighet, dömes för svikande av försvarsplikt till böter eller fängelse i högst två år eller, om riket var i krig, till böter eller fängelse i högst fyra år.",
-        "reviewed": "2026-10-21",
-        "allHistoricalLawApproved": false
+        "method": "manual-visual-original-print-versus-current-own-paragraph",
+        "registrySourceRef": "BrB:register:2026-10-21",
+        "registryAmendmentsForOwnParagraph": [],
+        "checked": "2026-10-21",
+        "allHistoricalLiabilityApproved": false
       }
     },
     {
@@ -11531,26 +11634,28 @@
         "BrP:5",
         "BrP:7",
         "BrP:1",
-        "1962:700"
+        "1962:700",
+        "BrB:register:2026-10-21"
       ],
       "wordingFrom": "1965-01-01",
       "asOf": "2026-10-21",
       "checked": "2026-10-21",
       "future": null,
-      "finding": "Krigsanstiftan: återgiven egen paragraflydelse är verifierad mot originaltrycket; brottsbalken trädde i kraft 1965-01-01 enligt 1 § BrP.",
-      "note": "Den återgivna egna paragrafen har jämförts visuellt med originaltrycket SFS 1962:700, trycksida 1864 (PDF-sida 28). Aktuell konsolidering och ändringsregistrets omfattningsuppgifter har kontrollerats separat. Ikraftträdandet följer av 1 § BrP, inte av avsaknad av ändringsfotnot. Hänvisade paragrafer, påföljdsregler, åtal och förstadier kan ha andra tidsgränser; full historik och konkret lagversion är inte slutgodkända.",
+      "finding": "Krigsanstiftan: egen paragraf har jämförts visuellt med originaltrycket SFS 1962:700; 1 § BrP anger ikraftträdande den 1 januari 1965. Ändringsregistret anger ingen senare ändring av denna paragraf.",
+      "note": "Originaljämförelse: PDF-sida 28; trycksida 1864. Endast tryckavstavning, radbrytning och styckeplacering har bortsetts från. Att Lag-fotnot saknas har inte ensamt använts som bevis. Dateringen avser egen paragraflydelse. Hänvisade regler, tolkning i praxis, allmänna straffbestämmelser, åtal och förstadier kan ha ändrats efter 1965 och är inte historiskt slutgodkända.",
       "originalComparison": {
-        "source": "1962:700",
+        "sourceRef": "1962:700",
         "pdfPages": [
           28
         ],
         "printedPages": [
           1864
         ],
-        "method": "visual-own-paragraph-comparison-and-amendment-register-scope-review",
-        "currentOwnText": "2 §\nDen som med våldsamma medel eller utländskt bistånd framkallar fara för att riket skall invecklas i krig eller andra fientligheter, dömes, om det ej är högförräderi, för krigsanstiftan till fängelse, lägst två och högst åtta år.",
-        "reviewed": "2026-10-21",
-        "allHistoricalLawApproved": false
+        "method": "manual-visual-original-print-versus-current-own-paragraph",
+        "registrySourceRef": "BrB:register:2026-10-21",
+        "registryAmendmentsForOwnParagraph": [],
+        "checked": "2026-10-21",
+        "allHistoricalLiabilityApproved": false
       }
     },
     {
@@ -11570,26 +11675,28 @@
         "BrP:5",
         "BrP:7",
         "BrP:1",
-        "1962:700"
+        "1962:700",
+        "BrB:register:2026-10-21"
       ],
       "wordingFrom": "1965-01-01",
       "asOf": "2026-10-21",
       "checked": "2026-10-21",
       "future": null,
-      "finding": "Behörighetsmissbruk: återgiven egen paragraflydelse är verifierad mot originaltrycket; brottsbalken trädde i kraft 1965-01-01 enligt 1 § BrP.",
-      "note": "Den återgivna egna paragrafen har jämförts visuellt med originaltrycket SFS 1962:700, trycksida 1850 (PDF-sida 14). Aktuell konsolidering och ändringsregistrets omfattningsuppgifter har kontrollerats separat. Ikraftträdandet följer av 1 § BrP, inte av avsaknad av ändringsfotnot. Hänvisade paragrafer, påföljdsregler, åtal och förstadier kan ha andra tidsgränser; full historik och konkret lagversion är inte slutgodkända.",
+      "finding": "Behörighetsmissbruk: egen paragraf har jämförts visuellt med originaltrycket SFS 1962:700; 1 § BrP anger ikraftträdande den 1 januari 1965. Ändringsregistret anger ingen senare ändring av denna paragraf.",
+      "note": "Originaljämförelse: PDF-sida 14; trycksida 1850. Endast tryckavstavning, radbrytning och styckeplacering har bortsetts från. Att Lag-fotnot saknas har inte ensamt använts som bevis. Dateringen avser egen paragraflydelse. Hänvisade regler, tolkning i praxis, allmänna straffbestämmelser, åtal och förstadier kan ha ändrats efter 1965 och är inte historiskt slutgodkända.",
       "originalComparison": {
-        "source": "1962:700",
+        "sourceRef": "1962:700",
         "pdfPages": [
           14
         ],
         "printedPages": [
           1850
         ],
-        "method": "visual-own-paragraph-comparison-and-amendment-register-scope-review",
-        "currentOwnText": "6 §\nDen som, i annat fall än förut i detta kapitel är sagt, genom missbruk av behörighet att i annans ställe företaga rättshandling skadar denne eller med missbruk av behörighet att göra gällande skuldebrev eller dylik handling kräver vad annan tillkommer, dömes för behörighetsmissbruk till böter eller fängelse i högst två år.\nDetsamma skall gälla, om någon fordrar betalning jämlikt handling som ej blivit utgiven eller för gäld som redan är gulden eller ock kräver att utfå gods som han redan bekommit eller mot krav åberopar kvitto som icke utgivits.",
-        "reviewed": "2026-10-21",
-        "allHistoricalLawApproved": false
+        "method": "manual-visual-original-print-versus-current-own-paragraph",
+        "registrySourceRef": "BrB:register:2026-10-21",
+        "registryAmendmentsForOwnParagraph": [],
+        "checked": "2026-10-21",
+        "allHistoricalLiabilityApproved": false
       }
     },
     {
@@ -11609,26 +11716,28 @@
         "BrP:5",
         "BrP:7",
         "BrP:1",
-        "1962:700"
+        "1962:700",
+        "BrB:register:2026-10-21"
       ],
       "wordingFrom": "1965-01-01",
       "asOf": "2026-10-21",
       "checked": "2026-10-21",
       "future": null,
-      "finding": "Fyndförseelse: återgiven egen paragraflydelse är verifierad mot originaltrycket; brottsbalken trädde i kraft 1965-01-01 enligt 1 § BrP.",
-      "note": "Den återgivna egna paragrafen har jämförts visuellt med originaltrycket SFS 1962:700, trycksida 1850 (PDF-sida 14). Aktuell konsolidering och ändringsregistrets omfattningsuppgifter har kontrollerats separat. Ikraftträdandet följer av 1 § BrP, inte av avsaknad av ändringsfotnot. Hänvisade paragrafer, påföljdsregler, åtal och förstadier kan ha andra tidsgränser; full historik och konkret lagversion är inte slutgodkända.",
+      "finding": "Fyndförseelse: egen paragraf har jämförts visuellt med originaltrycket SFS 1962:700; 1 § BrP anger ikraftträdande den 1 januari 1965. Ändringsregistret anger ingen senare ändring av denna paragraf.",
+      "note": "Originaljämförelse: PDF-sida 14; trycksida 1850. Endast tryckavstavning, radbrytning och styckeplacering har bortsetts från. Att Lag-fotnot saknas har inte ensamt använts som bevis. Dateringen avser egen paragraflydelse. Hänvisade regler, tolkning i praxis, allmänna straffbestämmelser, åtal och förstadier kan ha ändrats efter 1965 och är inte historiskt slutgodkända.",
       "originalComparison": {
-        "source": "1962:700",
+        "sourceRef": "1962:700",
         "pdfPages": [
           14
         ],
         "printedPages": [
           1850
         ],
-        "method": "visual-own-paragraph-comparison-and-amendment-register-scope-review",
-        "currentOwnText": "8 §\nFullgör man ej vad i lag är föreskrivet om skyldighet att tillkännagiva hittegods eller annans sak som man av misstag eller tillfällighet fått i besittning, dömes för fyndförseelse till böter.\nUnderlåter man att fullgöra sådan skyldighet med uppsåt att tillägna sig godset eller förfar man eljest med godset på sätt i 4 § sägs, skall gälla vad där är stadgat.",
-        "reviewed": "2026-10-21",
-        "allHistoricalLawApproved": false
+        "method": "manual-visual-original-print-versus-current-own-paragraph",
+        "registrySourceRef": "BrB:register:2026-10-21",
+        "registryAmendmentsForOwnParagraph": [],
+        "checked": "2026-10-21",
+        "allHistoricalLiabilityApproved": false
       }
     },
     {
@@ -11648,14 +11757,14 @@
         "BrP:5",
         "BrP:7",
         "1970:225",
-        "Prop1978/79:179:p20"
+        "Prop:1978/79:179:20"
       ],
       "wordingFrom": "1971-02-17",
       "asOf": "2026-10-21",
       "checked": "2026-10-21",
       "future": null,
-      "finding": "Otillåtet förfarande med pornografisk bild: den återgivna lydelsen i 16 kap. 11 § trädde i kraft 1971-02-17, enligt originaltryckets grundlagsvillkor och den uttryckliga bekräftelsen i prop. 1978/79:179 s. 20.",
-      "note": "Originaltrycket SFS 1970:225 s. 475–476 har jämförts med återgiven egen paragraf. Datumet 1 juli 1970 avser andra uttryckligen uppräknade paragrafer och får inte tillämpas på 16:11. Datumet 17 februari 1971 är uttryckligen bekräftat i propositionen; det har inte räknats fram från en antagen grundlagsdag. Full historisk bedömning, praxis och konkret lagversion är fortfarande öppna."
+      "finding": "Otillåtet förfarande med pornografisk bild: ikraftträdandet av 16 kap. 11 § enligt SFS 1970:225 är uttryckligen bekräftat till 17 februari 1971 i prop. 1978/79:179 s. 20.",
+      "note": "Originaltryckets grundlagsanknutna ikraftträdande har lästs tillsammans med regeringens uttryckliga historiska datumbekräftelse. Datumet 1 juli 1970 gäller andra paragrafer och används inte för 16:11. Äldre gärningar, senare ändringar i grundlagar, hänvisade regler och straffmätning kräver fortsatt egen prövning. Den historiska datumbekräftelsen innebär inget fullständigt godkännande av aktuell materiell praxis."
     }
   ],
   "unresolved": []
