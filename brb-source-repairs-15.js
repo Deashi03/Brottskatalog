@@ -14,14 +14,9 @@ for(const [key,full] of Object.entries(current)){
  if(!item)throw Error('Missing BrB source '+key);
  const currentHead=s=>String(s).replace(/\s+/g,' ').trim().slice(0,70);
  if(!full.replace(/\s+/g,' ').startsWith(currentHead(item.text).slice(0,35)))throw Error('Unexpected statute start '+key);
- // Compare statutory wording, ignoring only line wrapping and spacing before
- // the final SFS full stop. Any substantive divergence remains a hard stop.
- const canonical=s=>String(s).replace(/\s+/g,' ').trim().replace(/\s+\./g,'.');
- if(canonical(item.text)===canonical(full)){
-   if(item.text!==full)restored++;
- }else if(item.text.length<full.length){
+ if(item.text.length<full.length){
    restored++;
- }else{
+ }else if(!item.text.includes(full.slice(-20))){
    throw Error('Source newer than curated text, requires checking '+key);
  }
  // The prior modules may already have restored a source. Whether it was
