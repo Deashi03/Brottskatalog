@@ -20195,9 +20195,34 @@
         "applicabilityConditional": null,
         "penaltyAlternatives15": [
           {
-            "when": "Den konkreta tillämpliga undergärningen och dess grad har identifierats",
-            "scale": "Straff följer hänvisad brottstyp; ingen enhetlig straffskala",
-            "source": "BrB 3:10"
+            "when": "Vållande till annans död, normalgraden",
+            "scale": "Fängelse högst 3 år",
+            "source": "BrB 3:10 jämförd med 3:7 första stycket"
+          },
+          {
+            "when": "Vållande till annans död, ringa brott",
+            "scale": "Böter",
+            "source": "BrB 3:10 jämförd med 3:7 första stycket"
+          },
+          {
+            "when": "Vållande till annans död, grovt brott",
+            "scale": "Fängelse 2–6 år",
+            "source": "BrB 3:10 jämförd med 3:7 andra stycket"
+          },
+          {
+            "when": "Vållande till kroppsskada eller sjukdom, normalgraden; skadan eller sjukdomen är inte ringa",
+            "scale": "Böter eller fängelse högst 6 månader",
+            "source": "BrB 3:10 jämförd med 3:8 första stycket"
+          },
+          {
+            "when": "Vållande till kroppsskada eller sjukdom, grovt brott; skadan eller sjukdomen är inte ringa",
+            "scale": "Fängelse högst 4 år",
+            "source": "BrB 3:10 jämförd med 3:8 andra stycket"
+          },
+          {
+            "when": "Framkallande av fara för annan; grov oaktsamhet och konkret livsfara eller fara för svår kroppsskada eller allvarlig sjukdom",
+            "scale": "Böter eller fängelse högst 3 år",
+            "source": "BrB 3:10 jämförd med 3:9"
           }
         ]
       },
@@ -20271,7 +20296,8 @@
         "LUL:36",
         "LUL:36a",
         "LUL:36b"
-      ]
+      ],
+      "checked": "2026-10-21"
     },
     {
       "id": "v05-barnfridsbrott",

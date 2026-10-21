@@ -33,3 +33,5 @@ assert.equal(change(w=>{w.BK_DATA.crimes.find(c=>c.title==='Arbetsmiljöbrott').
 assert.equal(change(w=>{w.BK_DATA.crimes.find(c=>c.title==='Stöld').legalAudit15.checkpoints.coercion={status:'PENDING'};}).completed,389);
 for(const p of[mod,'./procedural-source-review-15.js'])assert.ok(read('service-worker.js').includes(p));for(const s of inline)new Function(s);
 console.log('PASS: 390 individual current threshold reviews; 30 unresolved branch/applicability cases retained, 55 procedure pins, unchanged indicators and no automatic power approval');
+
+const workplace=base.find(c=>c.title==='Arbetsmiljöbrott');assert.equal(workplace.coercionThresholdReview15.checked,'2026-10-21');assert.equal(workplace.penaltyAlternatives15.length,6);for(const key of['f','one','presumption','four','travel'])assert.equal(workplace.coercionThresholdReview15.screens[key],'requires-case-selection');
