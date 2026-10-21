@@ -337,3 +337,23 @@ Straffskaleberoende tvångsmedelskontroller har stämts av mot respektive nya al
 Överlämning efter grundkortens alternativarbete: utgå från faktiskt PR-huvud; bekräfta att alla 14 grundkort har sammanlagt 52 konkreta alternativ, att brukandets grundkort har 14 inklusive fem ringa, och att dess två positiva förstadier fortfarande har nio var utan ringa. Kontrollera full CI inklusive den nya mobilmenyn för grundkortet. Dossiern för arbetsmiljöbrott omfattar nu även hela B 3184-03, majoritet och skiljaktighet. Nästa källarbete gäller ännu olästa relevanta avgöranden och aktuellt föreskriftsstöd, samt den uttryckliga åtalsfrågan för grovt olaga tvång. Skapa inga fullständiga praxisgodkännanden genom att enbart räkna källor eller anteckningar. De villkorade korten är inte längre generella tomma hänvisningar, men faktisk tillämpning och juridisk slutrevision är fortfarande separata frågor.
 
 Senaste alternativpaketets aktuella runtimehash: `9ee8139fc2520e2c6e5a474a112b98729268677d8acfe5b611687631d44188c7`. Jämför alltid aktuell snapshot med faktiskt apphuvud; en senare dokumentationscommit ändrar inte appens runtimehash.
+
+
+## Verifierad avstämning efter de 52 grundkortsalternativen
+
+Appcommit **270cc55216a75ebfbb68f043f62f1a627d16f679**, Git-träd **c8bbcca51327b6c9527781317e81ad330e0bf06e**, har **145/145 passerade lokala Node-kommandon** efter den sista sakändringen. Den utökade källkontrollen prövar samtliga åtta ändrade förfalskningspinnar, bevarar 12/44 förstadiealternativ, skiljer fem ringa fullbordansalternativ från icke straffbara ringa förstadier och behåller den fasta nämnaren. Även hela [Actions 1038](https://github.com/Deashi03/Brottskatalog/actions/runs/39649121376) är avslutad grön, inklusive iPhone-vy och samtliga interaktioner. Testbeviset gäller denna appcommit med alla 52 grundkortsalternativ och 44 förstadiealternativ. Efter detta har endast rapporter och granskningsunderlag uppdaterats.
+
+Senaste direkta jämförelsen med publicerad main **0bbbe45d70d01a92a7874c74862cc7d21bae2355** bekräftar:
+
+| Mätpunkt | Publicerad 1.4 | Aktuell 1.5-arbetskod |
+|---|---:|---:|
+| Grundkort | 299 | 390 |
+| Förstadiekort | 858 | 1 167 |
+| Revisionsposter | 1 157 | 1 557 |
+| Synliga poster efter urval | 1 157 | 1 545 |
+
+**400 nya poster, inga borttagna ID:n och 1 157 ändrade tidigare poster.** Tolv poster med enbart penningböter ingår i revisionen men filtreras bort från användarurvalet. Tidigare grundkorts numeriska straffintervall och custody-huvudvärden är oförändrade. Kontrollen räknar genom båda versionernas verkliga scriptkedjor, inte genom att läsa en ofullständig grundfil. Runtimehashen för aktuell app är **9ee8139fc2520e2c6e5a474a112b98729268677d8acfe5b611687631d44188c7**; definition och jämförelsevärde finns i snapshotfilen.
+
+Samtliga ändringar finns på arbetsgrenen. PR förblir draft. **390 fullständiga förarbets-/praxischeckpunkter och åtalsfrågan för grovt olaga tvång återstår**, utöver **18 publiceringsmoment som avsiktligt inte har utförts**. De 14 villkorade grundkortens 52 alternativ och de 12 förstadiekortens 44 alternativ är avgränsat källkontrollerade beskrivningar, inte ett val för ett konkret fall eller ett fullständigt juridiskt slutgodkännande. Ingen merge, release, tagg, Pages-publicering eller deploy.
+
+Nästa körning: börja vid aktuellt PR-huvud och läs senaste testbeviset i `data/v15-workplace-verification-2026-10-21.json`. Ingen extra provning av oförändrad kod behövs efter ett godkänt fullständigt CI; gå då vidare med verklig juridisk källgranskning. Arbetsmiljödossiern omfattar fyra originaldomar och har nu även direkt läst delegationsförarbete i prop. 1976/77:149 s. 373–374. Kvarstående olästa äldre hänvisningar är bland annat NJA 1991 s. 247 och 1993 s. 245, därefter ska senare utveckling och aktuella föreskrifter prövas. Urkundsdossiern omfattar Freja, De upprepade förfalskningarna och De vita korten. Lägg inte tid på att återupptäcka redan lästa källor. Åtalsfrågan om grovt olaga tvång behöver fortsatt stöd som direkt behandlar den aktuella frågan; lästa jämförelseförarbeten räcker inte för en automatisk klassificering. Behåll nämnaren, inga fullständiga juridiska godkännanden och inga publiceringsåtgärder.

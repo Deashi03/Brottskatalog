@@ -1,5 +1,22 @@
 # Brottskatalog 1.5 jämfört med publicerad 1.4
 
+## Verifierad avstämning efter de 52 grundkortsalternativen
+
+Appcommit **270cc55216a75ebfbb68f043f62f1a627d16f679**, Git-träd **c8bbcca51327b6c9527781317e81ad330e0bf06e**, har **145/145 passerade lokala Node-kommandon** efter den sista sakändringen. Den utökade källkontrollen prövar samtliga åtta ändrade förfalskningspinnar, bevarar 12/44 förstadiealternativ, skiljer fem ringa fullbordansalternativ från icke straffbara ringa förstadier och behåller den fasta nämnaren. Även hela [Actions 1038](https://github.com/Deashi03/Brottskatalog/actions/runs/39649121376) är avslutad grön, inklusive iPhone-vy och samtliga interaktioner. Testbeviset gäller denna appcommit med alla 52 grundkortsalternativ och 44 förstadiealternativ. Efter detta har endast rapporter och granskningsunderlag uppdaterats.
+
+Senaste direkta jämförelsen med publicerad main **0bbbe45d70d01a92a7874c74862cc7d21bae2355** bekräftar:
+
+| Mätpunkt | Publicerad 1.4 | Aktuell 1.5-arbetskod |
+|---|---:|---:|
+| Grundkort | 299 | 390 |
+| Förstadiekort | 858 | 1 167 |
+| Revisionsposter | 1 157 | 1 557 |
+| Synliga poster efter urval | 1 157 | 1 545 |
+
+**400 nya poster, inga borttagna ID:n och 1 157 ändrade tidigare poster.** Tolv poster med enbart penningböter ingår i revisionen men filtreras bort från användarurvalet. Tidigare grundkorts numeriska straffintervall och custody-huvudvärden är oförändrade. Kontrollen räknar genom båda versionernas verkliga scriptkedjor, inte genom att läsa en ofullständig grundfil. Runtimehashen för aktuell app är **9ee8139fc2520e2c6e5a474a112b98729268677d8acfe5b611687631d44188c7**; definition och jämförelsevärde finns i snapshotfilen.
+
+Samtliga ändringar finns på arbetsgrenen. PR förblir draft. **390 fullständiga förarbets-/praxischeckpunkter och åtalsfrågan för grovt olaga tvång återstår**, utöver **18 publiceringsmoment som avsiktligt inte har utförts**. De 14 villkorade grundkortens 52 alternativ och de 12 förstadiekortens 44 alternativ är avgränsat källkontrollerade beskrivningar, inte ett val för ett konkret fall eller ett fullständigt juridiskt slutgodkännande. Ingen merge, release, tagg, Pages-publicering eller deploy.
+
 ## Alla 14 villkorade grundkort har nu konkreta alternativ
 
 Även grundkortet **Brukande av det förfalskade** har nu fått konkreta skalor. Den tidigare enda generella hänvisningen har ersatts med **14 alternativ** efter individuell kontroll av BrB 14:1–3, 5–6 och 8–10:

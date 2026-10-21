@@ -79,5 +79,12 @@
   "jurisprudenceCheckpointCompleted": false,
   "fullLegalApprovalGranted": false,
   "automaticCaseDeterminationAllowed": false,
-  "progressCredit": 0
+  "progressCredit": 0,
+  "additionalPreparatorySource": {
+    "reference": "Prop. 1976/77:149",
+    "url": "https://www.riksdagen.se/sv/dokument-och-lagar/dokument/proposition/om-arbetsmiljolag-m-m_g003149/html/",
+    "readLocator": "s. 373–374, avsnitt 20.10 om arbetsgivaransvarets placering",
+    "finding": "Den straffrättsliga ansvarsfördelningen ska bedömas i det enskilda fallet med hänsyn till reellt inflytande. Delegering kräver tydlighet, tillräckliga beslutsbefogenheter och behövligt kunnande. Val av person och tillsyn behöver prövas. Oklar ansvarsfördelning faller inom företagsledningens ansvar.",
+    "limit": "Historiskt förarbetsstöd, läst direkt i originalpropositionen; ersätter inte aktuell lag/föreskrift eller senare praxis och godkänner inte något faktiskt ansvarsöverlämnande."
+  }
 }
