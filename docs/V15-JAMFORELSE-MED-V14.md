@@ -292,3 +292,9 @@ Den fasta inventeringen är oförändrad: **11 548/11 957 = 96,6 %, 409 moment k
 Den maskinläsbara bilagan listar samtliga 400 nya poster, alla 1 157 befintliga poster med ändrade fältnamn, före-/eftervärden för centrala användarsynliga uppgifter samt samtliga 306 berörda programfiler i jämförelseträdet. Fullständiga textskillnader per fil finns i GitHub-jämförelsen ovan.
 
 Verifierat slut på detta arbetspass: GitHub Actions https://github.com/Deashi03/Brottskatalog/actions/runs/39555657372 är grön på appcommit `4635ff970a3379708aedeb0e859f43c7d6dfe090` (träd `3449dfe00a6a615afcace16cdf5a9e0a33688aef`), inklusive full Node-svit och iPhone-regression. Alla 145 lokala Node-kontroller passerade, och berörda tids-/progress-/revisionskontroller kördes även om efter sista tillägget. Ingen merge, release eller publicering.
+
+## Verifieringsnotering för de 33 sista tidskontrollerna
+
+Appcommit [`6c79fbd`](https://github.com/Deashi03/Brottskatalog/commit/6c79fbd2a7cf2447df6023d92e8ae2edad83ad8f) har **145/145 godkända lokala Node-kontroller och grön [Actions 1020](https://github.com/Deashi03/Brottskatalog/actions/runs/39558857264)**, inklusive automatiserad iPhone-regression. Alla 33 nya egna paragrafer matchar även en nyhämtad officiell fulltext; endast HTML-mellanrum före skiljetecken normaliserades i jämförelsen.
+
+Senare parallella ändringar, inklusive sex HD-exempel och separat registerpinne, har bevarats till `7c80def`. Deras [Actions 1022](https://github.com/Deashi03/Brottskatalog/actions/runs/39559455472) pågår vid denna notering. Den gröna körningen på 6c79fbd ska inte redovisas som slutverifiering av det senare appträdet. Arbetsräkningen är fortsatt 96,6 %; 98,5 % är inte uppnått. Ingen merge, tagg, deploy eller publicering har genomförts.

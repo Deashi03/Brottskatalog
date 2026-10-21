@@ -75,3 +75,11 @@ Status: 11 548/11 957 = 96,6 %, 409 kvar (390 förarbeten/praxis, ett åtalsfilt
 Källor för vidare arbete: Klimatblockaden, B 3626-24/NJA 2025 s. 761, har endast lästs i HD:s nyhet och sekundär återgivning; primärdomen har inte hämtats och har därför INTE integrerats. HD:s nyhet anger uttryckligen att endast sabotage prövades, inte ohörsamhet mot ordningsmakten. Sök rättspraxis nya post är f94bbaea-955a-4308-9eb8-2c384960ad31. Ge inte ett nytt prejudikatgodkännande från nyheten ensam.
 
 Parallell commit `6c79fbd2a7cf2447df6023d92e8ae2edad83ad8f` har sammanförts: dess källänkar i tidsvyn, utökade mobilkontroller och maskinläsbara jämförelseinventering bevaras. Den här versionen bevarar även den separata registerpinnen och originaljämförelsens stoppvillkor (95 källposter). Tidigare testkörning korsade sammanfogningen och används inte som slutbevis; hela sviten körs om på det sammanförda trädet. Inventeringsbilagan är den parallella tidsgranskningens ögonblicksbild; de sex HD-exemplen redovisas i jämförelserapporten.
+
+## Verifierad tidsgranskning och samtidiga ändringar
+
+Appcommit `6c79fbd2a7cf2447df6023d92e8ae2edad83ad8f` (träd `33fdaee23cf4c19cb11bc1f7c346619e1549429c`) verifierades med **145/145 godkända lokala Node-kommandon** och **grön GitHub Actions 1020**, inklusive iPhone-regression: https://github.com/Deashi03/Brottskatalog/actions/runs/39558857264 . Alla 33 nytillagda egna paragrafer matchar också nyhämtad officiell fulltext efter normalisering av HTML-mellanrum före skiljetecken.
+
+Vid sista kontrollen fanns senare appändringar till `7c80def9f66ea5d92f73e64b6650935c9330e030`, med HD-exempel, separat registerpinne och ytterligare mobiltester. Dessa ändringar bevaras helt. Ovanstående gröna körning gäller **6c79fbd**, inte automatiskt det senare appträdet. För 7c80def pågår Actions 1022: https://github.com/Deashi03/Brottskatalog/actions/runs/39559455472 . Hämta dess slutresultat innan den senare versionen betecknas som verifierad.
+
+Räkningen är fortsatt 11 548/11 957 = 96,6 %, med 409 moment öppna och noll fullständiga juridiska slutgodkännanden. Senare registerpinne innebär 95 tidskällposter. Inga publiceringsmoment stängs. Kontrollera faktiskt aktuellt huvud före nästa arbete och använd skyddad refuppdatering.
