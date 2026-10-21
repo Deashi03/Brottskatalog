@@ -55,7 +55,8 @@ assert.equal(negative.stageStatus,'not-criminalized','BrB 14:13 does not list co
 const money=get('Olovlig befattning med falska pengar','forsok');
 assert.equal(money.stageStatus,'punishable');
 assert.equal(money.custody,'unknown');
-assert.equal(money.penaltyRange,null);
+assert.deepEqual(JSON.parse(JSON.stringify(money.penaltyRange)),{min:0,max:2,fines:true,life:false});
+assert.equal(money.stageIntervalReview15.caseSpecificLiabilityApproved,false);
 assert.equal(money.forgeryStageScope15.limitedToAcquisitionOrReceipt,true);
 assert.ok(money.stageExplanation.includes('ANSKAFFA eller TA EMOT'));
 for(const kind of ['forberedelse','stampling'])

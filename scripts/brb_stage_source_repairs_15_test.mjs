@@ -56,6 +56,6 @@ for(const c of carried){
  assert.equal(c.individualLegalAudit15?.scope?.caseSpecificLiabilityApproved,false);
  assert.equal(c.individualLegalAudit15?.consequences?.punishmentRangeApproved,false);
  assert.equal(c.custody,'unknown','Never infer coercive authorization from current grade coverage');
- assert.equal(c.penaltyRange,null);
+ if(c.stageIntervalReview15){assert.equal(c.stageType,"forsok");assert.deepEqual(JSON.parse(JSON.stringify(c.penaltyRange)),{min:1/12,max:18,fines:false,life:true});assert.equal(c.stageIntervalReview15.fullLegalReviewApproved,false);}else assert.equal(c.penaltyRange,null);
 }
 console.log('PASS V1.5: 9:11 and 19:14 complete stage-support provisions, 19:9 exception and neutral conditional imprisonment');
