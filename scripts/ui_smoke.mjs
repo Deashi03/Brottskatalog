@@ -156,6 +156,8 @@ try{
     const overview=page.locator('#sec-stadier');await overview.locator(':scope > summary').click();await overview.locator('.stage-overview-link').filter({hasText:kind+' ·'}).click();await wait();
     const text=await page.locator('.penalty-panel').innerText();assert.ok(text.includes('Tillämpningen är villkorad'));assert.ok(text.includes(scale));assert.ok(text.includes('Krigs- eller beredskapsrelaterade'));
   }
+  await page.goto(url+'#sok',{waitUntil:'networkidle'});await search.fill('Arbetsmiljöbrott');await wait();await page.locator('.crime-card').filter({has:page.getByText('Arbetsmiljöbrott',{exact:true})}).click();
+  {const choices=page.locator('.penalty-alternative-details');assert.equal(await choices.getAttribute('open'),null);await choices.locator(':scope > summary').click();assert.equal(await choices.locator('li').count(),6);const text=await choices.innerText();assert.ok(text.includes('Fängelse högst 3 år')&&text.includes('Fängelse 2–6 år')&&text.includes('konkret arbetsmiljöskyldighet'));assert.equal(await page.locator('.penalty-panel .penalty-bounds').count(),0);assert.equal(await page.evaluate(()=>document.documentElement.scrollWidth<=innerWidth+1),true,'Workplace branches fit iPhone');}
   for(const [parent,kind,count,phrase]of[
     ['Brukande av det förfalskade','Försök',9,'Fängelse 1 mån – högst 8 år'],
     ['Myteri','Förberedelse',5,'Böter – fängelse högst 18 år'],

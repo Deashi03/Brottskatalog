@@ -1,7 +1,7 @@
 {
-  "sourceParentCommit": "4e6229ccee2ffb66a63ebcbe6db875974aafb482",
+  "sourceParentCommit": "1fad8d7b0ca5c466149f09bf29b6ff5b7eface34",
   "baselineCommit": "0bbbe45d70d01a92a7874c74862cc7d21bae2355",
-  "currentRuntimeSHA256": "976cca4d5d8af8555872cc7a64ae637e98763310304bbc2b771af5cec3a5231c",
+  "currentRuntimeSHA256": "24101ec44c04af2ce9b1ff43a28ceb00d6a11cf5415a0da18f32efe196dab03d",
   "baselineRuntimeSHA256": "b4059fb41c1da166a15f0baf2ced33551075cca206944b26fc17994f1f90700f",
   "hashMethod": "SHA-256: for index.html and then external runtime scripts in page order, normalized repository-relative path without ./, NUL, UTF-8 file content, NUL; recomputed from both actual load chains",
   "scope": "Recomputed complete runtime inventory; no legal approval and no publication credit",
@@ -1658,6 +1658,12 @@
     {
       "sourceParentCommit": "c6f17f3f0a106c7d696da304ce93f76a340c81e3",
       "currentRuntimeSHA256": "35a8391f9ebc457a7210fbc8a04c6d401e2eecbbaee3a78a0ec30028c08891bd",
+      "baselineRuntimeSHA256": "b4059fb41c1da166a15f0baf2ced33551075cca206944b26fc17994f1f90700f",
+      "hashMethod": "SHA-256: for index.html and then external runtime scripts in page order, normalized repository-relative path without ./, NUL, UTF-8 file content, NUL; recomputed from both actual load chains"
+    },
+    {
+      "sourceParentCommit": "4e6229ccee2ffb66a63ebcbe6db875974aafb482",
+      "currentRuntimeSHA256": "976cca4d5d8af8555872cc7a64ae637e98763310304bbc2b771af5cec3a5231c",
       "baselineRuntimeSHA256": "b4059fb41c1da166a15f0baf2ced33551075cca206944b26fc17994f1f90700f",
       "hashMethod": "SHA-256: for index.html and then external runtime scripts in page order, normalized repository-relative path without ./, NUL, UTF-8 file content, NUL; recomputed from both actual load chains"
     }
@@ -3352,6 +3358,39 @@
         "fullLegalReviewApproved": false,
         "note": "Endast de tillämpliga menedsalternativen enligt BrB 15:15 omfattas. Mindre allvarlig mened och ovarsam utsaga omfattas inte. Domstol, vittnes-/sakkunnigroll och ed ska uppfylla 15:4 b."
       }
+    }
+  ],
+  "currentConditionalBasePenaltyBranchDescriptions": 39,
+  "workplaceDerivedPenaltyBranches": [
+    {
+      "when": "Vållande till annans död, normalgraden",
+      "scale": "Fängelse högst 3 år",
+      "source": "BrB 3:10 jämförd med 3:7 första stycket"
+    },
+    {
+      "when": "Vållande till annans död, ringa brott",
+      "scale": "Böter",
+      "source": "BrB 3:10 jämförd med 3:7 första stycket"
+    },
+    {
+      "when": "Vållande till annans död, grovt brott",
+      "scale": "Fängelse 2–6 år",
+      "source": "BrB 3:10 jämförd med 3:7 andra stycket"
+    },
+    {
+      "when": "Vållande till kroppsskada eller sjukdom, normalgraden; skadan eller sjukdomen är inte ringa",
+      "scale": "Böter eller fängelse högst 6 månader",
+      "source": "BrB 3:10 jämförd med 3:8 första stycket"
+    },
+    {
+      "when": "Vållande till kroppsskada eller sjukdom, grovt brott; skadan eller sjukdomen är inte ringa",
+      "scale": "Fängelse högst 4 år",
+      "source": "BrB 3:10 jämförd med 3:8 andra stycket"
+    },
+    {
+      "when": "Framkallande av fara för annan; grov oaktsamhet och konkret livsfara eller fara för svår kroppsskada eller allvarlig sjukdom",
+      "scale": "Böter eller fängelse högst 3 år",
+      "source": "BrB 3:10 jämförd med 3:9"
     }
   ]
 }

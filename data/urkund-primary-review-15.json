@@ -86,6 +86,20 @@
       "allPagesRead": 13,
       "bytes": 189623,
       "sha256": "569df104afb7ede974fbe25f69d5e298cf309a03b420538c145e18d41b33740c"
+    },
+    {
+      "label": "De vita korten",
+      "case": "B 4608-07",
+      "judgmentDate": "2009-03-24",
+      "url": "https://www.domstol.se/globalassets/filer/domstol/hogstadomstolen/avgoranden/2009/b-4608-07.pdf",
+      "allPagesRead": 10,
+      "majorityRead": "s. 1–6",
+      "dissentRead": "bilaga 1, s. 7–9",
+      "separateOpinionRead": "bilaga 2, s. 10",
+      "finding": "Majoriteten bedömde magnetremskorten som urkunder trots avsaknad av tryckt utställartext. Två ledamöter var skiljaktiga och ansåg att originalkaraktär och skenbar äkthet saknades.",
+      "limit": "Gäller äldre lydelse före 2013. Den skiljaktiga meningen får inte återges som domslut. Avgörandet ger ingen automatisk slutsats om elektroniska handlingar enligt dagens 14:1 andra stycket 2 eller om annan brottslighet.",
+      "bytes": 52297,
+      "sha256": "3b1ecbded40849db65b444aa1d5d2f8530b0baae43847c623c507b931dce82f3"
     }
   ],
   "corrections": [
@@ -106,7 +120,7 @@
   "fullLegalApprovalGranted": false,
   "progressCredit": 0,
   "remainingQuestions": [
-    "Övrig relevant urkundspraxis, särskilt NJA 2009 s. 111 och senare rättsutveckling, kräver egen genomgång.",
+    "Äldre praxis som NJA 1991 s. 739 och senare rättsutveckling återstår att pröva mot 2013 års nya urkundsbegrepp; den gjorda genomgången är inte en uttömmande praxisinventering.",
     "Detta är inte en fullständig granskning av gärningstidpunkt, uppsåt, fara i bevishänseende, konkurrens eller alla aktuella kvalifikationsgrunder."
   ]
 }

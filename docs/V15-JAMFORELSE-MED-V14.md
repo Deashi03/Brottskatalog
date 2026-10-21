@@ -1,5 +1,26 @@
 # Brottskatalog 1.5 jämfört med publicerad 1.4
 
+## Arbetsmiljöbrott: sex kontrollerade härledda alternativ
+
+Grundkortet hade tidigare ett enda generellt alternativ: ”Straff följer hänvisad brottstyp; ingen enhetlig straffskala”. Det har nu ersatts med följande sex separata alternativ, kontrollerade mot aktuell BrB 3:7–10 den 21 oktober 2026:
+
+| Tillämplig undergärning | Straffskala som visas |
+|---|---|
+| Vållande till annans död, normalgrad | Fängelse högst 3 år |
+| Vållande till annans död, ringa | Böter |
+| Vållande till annans död, grovt | Fängelse 2–6 år |
+| Vållande till kroppsskada/sjukdom, normalgrad | Böter eller fängelse högst 6 månader |
+| Vållande till kroppsskada/sjukdom, grovt | Fängelse högst 4 år |
+| Framkallande av fara för annan | Böter eller fängelse högst 3 år |
+
+Detta ändrar inte grundkortets globala numeriska fält, väljer inte undergärning eller grad och ger inget positivt tvångsmedelsbesked. Alternativen ligger i en stängd expanderbar lista. En ny förklaring skiljer oaktsamhet/uppsåt till åsidosättandet av arbetsmiljöskyldigheten från vållandet av effekt respektive grov oaktsamhet till konkret fara. BrB 3:8:s krav att skadan/sjukdomen inte är ringa framgår i båda skadealternativen. Originalförarbetet prop. 1990/91:140 s. 129–131 har lästs; aktuella skalor hämtas från dagens lagtext, inte från propositionens historiska straffnivåer. Exakta textpinnar och alternativ finns i `data/workplace-derived-penalty-options-15.json`.
+
+Antalet villkorade grundkort är fortfarande **14**, nu med sammanlagt **39 alternativbeskrivningar** i stället för 34. Ett av de två generellt beskrivna härledningskorten har fått sex konkreta alternativ; brukande av det förfalskade har fortsatt ett generellt grundkortsalternativ och separat utvecklade förstadiealternativ. Ingen fullständig praxischeckpunkt eller juridisk slutgranskning godkänns genom denna förbättring. Nämnaren 11 957 och 409 kvarstående moment behålls.
+
+Urkundsdossiern har också kompletterats med hela originaldomen **De vita korten, NJA 2009 s. 111, B 4608-07, 24 mars 2009, tio sidor**. Majoritetens fällande bedömning hålls uttryckligen skild från den skiljaktiga meningen och det särskilda tillägget. Domen rör äldre lagtext före 2013 och ger inget automatiskt undantag eller automatiskt ansvar enligt dagens elektroniska urkundsbegrepp. Denna komplettering ändrar inga appklassificeringar.
+
+**Verifiering:** Riktade tester för de sex alternativen, varje ändrad källpinne, omladdning, 14 grundkorts källkontroll och bevarade krigsvillkor har passerat. Den fulla lokala Node-sviten för föregående apppaket genomfördes med 144/145 direkt godkända kommandon; det enda felet var en testhänvisning till Frejas tidigare nyhetssida och det testet passerade efter byte till originaldomen. Det är testbevis för föregående urkundspaket, inte för senare arbetsmiljökod. Ny full CI inklusive mobil kontrolleras separat.
+
 ## Fortsatt primärkällegranskning och visningsrättelse den 21 oktober
 
 Två fel i befintliga förklaringar har rättats efter jämförelse med aktuell BrB 15:11–12 och prop. 2012/13:74, författningskommentaren s. 74–76:
@@ -36,7 +57,7 @@ Exempel: förberedelse till högförräderi har en alternativskala med fängelse
 
 Ringa fullbordansfall enligt BrB 14:13 är inte med bland de positiva förfalskningsalternativen. För de två domstolsutsagefamiljerna utesluts mindre allvarlig mened, ovarsam utsaga och, i det nordiska fallet, partsutsaga. De får inte av misstag ärva en positiv förberedelse-/stämplingsskala från grundkortet.
 
-Alla tolv kort behåller `penaltyRange:null`; ingen global numerisk skala verifieras eller väljs. Befintliga åtalsbesked, häktningsfält, ansvarsvillkor och revisionsakter bevaras. De 14 villkorade **grundskalorna** ändras inte. Underlaget innehåller egen paragraf, särskilt förstadielagrum, aktuella 23:1/23:2 och, där en fängelseminimitid behövs, separat läst aktuell 26:1. Hela mappningen och de ordagranna textpinnarna finns i `data/stage-penalty-alternatives-15.json`.
+Alla tolv kort behåller `penaltyRange:null`; ingen global numerisk skala verifieras eller väljs. Befintliga åtalsbesked, häktningsfält, ansvarsvillkor och revisionsakter bevaras. De 14 villkorade **grundskalorna** behåller sin villkorade status. Underlaget innehåller egen paragraf, särskilt förstadielagrum, aktuella 23:1/23:2 och, där en fängelseminimitid behövs, separat läst aktuell 26:1. Hela mappningen och de ordagranna textpinnarna finns i `data/stage-penalty-alternatives-15.json`.
 
 Av de ursprungliga 56 luckorna har därmed **44 fasta eller uttryckligen tillämpningsvillkorade numeriska intervall och tolv alternativberoende kort med 44 beskrivna grenar** fått särskilt stöd. De tolv saknar fortfarande en enda gemensam numerisk skala av rättsliga skäl; detta omklassificeras inte till ett falskt numeriskt godkännande. Arbetsinventeringen är fortsatt **11 548/11 957 = 96,6 %**, med 390 förarbets-/praxisfrågor, ett åtalsfilter och 18 publiceringsmoment kvar. Inga fullständiga juridiska slutgodkännanden eller nya progresspoäng.
 

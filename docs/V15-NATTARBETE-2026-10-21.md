@@ -238,7 +238,7 @@ Exempel: förberedelse till högförräderi har en alternativskala med fängelse
 
 Ringa fullbordansfall enligt BrB 14:13 är inte med bland de positiva förfalskningsalternativen. För de två domstolsutsagefamiljerna utesluts mindre allvarlig mened, ovarsam utsaga och, i det nordiska fallet, partsutsaga. De får inte av misstag ärva en positiv förberedelse-/stämplingsskala från grundkortet.
 
-Alla tolv kort behåller `penaltyRange:null`; ingen global numerisk skala verifieras eller väljs. Befintliga åtalsbesked, häktningsfält, ansvarsvillkor och revisionsakter bevaras. De 14 villkorade **grundskalorna** ändras inte. Underlaget innehåller egen paragraf, särskilt förstadielagrum, aktuella 23:1/23:2 och, där en fängelseminimitid behövs, separat läst aktuell 26:1. Hela mappningen och de ordagranna textpinnarna finns i `data/stage-penalty-alternatives-15.json`.
+Alla tolv kort behåller `penaltyRange:null`; ingen global numerisk skala verifieras eller väljs. Befintliga åtalsbesked, häktningsfält, ansvarsvillkor och revisionsakter bevaras. De 14 villkorade **grundskalorna** behåller sin villkorade status. Underlaget innehåller egen paragraf, särskilt förstadielagrum, aktuella 23:1/23:2 och, där en fängelseminimitid behövs, separat läst aktuell 26:1. Hela mappningen och de ordagranna textpinnarna finns i `data/stage-penalty-alternatives-15.json`.
 
 Av de ursprungliga 56 luckorna har därmed **44 fasta eller uttryckligen tillämpningsvillkorade numeriska intervall och tolv alternativberoende kort med 44 beskrivna grenar** fått särskilt stöd. De tolv saknar fortfarande en enda gemensam numerisk skala av rättsliga skäl; detta omklassificeras inte till ett falskt numeriskt godkännande. Arbetsinventeringen är fortsatt **11 548/11 957 = 96,6 %**, med 390 förarbets-/praxisfrågor, ett åtalsfilter och 18 publiceringsmoment kvar. Inga fullständiga juridiska slutgodkännanden eller nya progresspoäng.
 
@@ -268,3 +268,27 @@ Arbetet ger **inga nya juridiska slutgodkännanden eller progresspoäng**. De 39
 **Testspår:** Actions 1032 på e6fc7f8 är avslutad grön inklusive mobil. Actions 1033 på c6f17f3 upptäckte det dolda alternativblocket i mobilvyn. Actions 1034 på 4e6229c avbröts på det äldre kodtexttestet för krigsvillkor. Båda orsakerna är rättade; de tidigare körningarna redovisas inte som gröna. Ny fullständig verifiering av rättelserna görs på nästa appcommit.
 
 Nästa körning ska börja från faktiskt PR-huvud och läsa det senaste testspåret. Bevara samtidiga ändringar med `expected_sha`. Kontrollera särskilt full CI inklusive de sex nya mobilfallen efter visningsrättelsen. Fortsätt därefter med individuellt källarbete: NJA 2009 s. 111 återstår i urkundsdossiern och åtalsfrågan behöver ett uttryckligt stöd om den grova tvångsgraden. Tilldela ingen komplett praxischeckpunkt enbart för att ett rättsfall har lästs. Använd inte 2018 års straffminima som 2026 års värden. De tolv alternativberoende korten ska fortsatt ha `penaltyRange:null` och aldrig välja en gren automatiskt. Nämnaren är kvar 11 957; de 18 publiceringsmomenten är separat avsiktligt ogjorda.
+
+
+## Arbetsmiljöbrott: sex kontrollerade härledda alternativ
+
+Grundkortet hade tidigare ett enda generellt alternativ: ”Straff följer hänvisad brottstyp; ingen enhetlig straffskala”. Det har nu ersatts med följande sex separata alternativ, kontrollerade mot aktuell BrB 3:7–10 den 21 oktober 2026:
+
+| Tillämplig undergärning | Straffskala som visas |
+|---|---|
+| Vållande till annans död, normalgrad | Fängelse högst 3 år |
+| Vållande till annans död, ringa | Böter |
+| Vållande till annans död, grovt | Fängelse 2–6 år |
+| Vållande till kroppsskada/sjukdom, normalgrad | Böter eller fängelse högst 6 månader |
+| Vållande till kroppsskada/sjukdom, grovt | Fängelse högst 4 år |
+| Framkallande av fara för annan | Böter eller fängelse högst 3 år |
+
+Detta ändrar inte grundkortets globala numeriska fält, väljer inte undergärning eller grad och ger inget positivt tvångsmedelsbesked. Alternativen ligger i en stängd expanderbar lista. En ny förklaring skiljer oaktsamhet/uppsåt till åsidosättandet av arbetsmiljöskyldigheten från vållandet av effekt respektive grov oaktsamhet till konkret fara. BrB 3:8:s krav att skadan/sjukdomen inte är ringa framgår i båda skadealternativen. Originalförarbetet prop. 1990/91:140 s. 129–131 har lästs; aktuella skalor hämtas från dagens lagtext, inte från propositionens historiska straffnivåer. Exakta textpinnar och alternativ finns i `data/workplace-derived-penalty-options-15.json`.
+
+Antalet villkorade grundkort är fortfarande **14**, nu med sammanlagt **39 alternativbeskrivningar** i stället för 34. Ett av de två generellt beskrivna härledningskorten har fått sex konkreta alternativ; brukande av det förfalskade har fortsatt ett generellt grundkortsalternativ och separat utvecklade förstadiealternativ. Ingen fullständig praxischeckpunkt eller juridisk slutgranskning godkänns genom denna förbättring. Nämnaren 11 957 och 409 kvarstående moment behålls.
+
+Urkundsdossiern har också kompletterats med hela originaldomen **De vita korten, NJA 2009 s. 111, B 4608-07, 24 mars 2009, tio sidor**. Majoritetens fällande bedömning hålls uttryckligen skild från den skiljaktiga meningen och det särskilda tillägget. Domen rör äldre lagtext före 2013 och ger inget automatiskt undantag eller automatiskt ansvar enligt dagens elektroniska urkundsbegrepp. Denna komplettering ändrar inga appklassificeringar.
+
+**Verifiering:** Riktade tester för de sex alternativen, varje ändrad källpinne, omladdning, 14 grundkorts källkontroll och bevarade krigsvillkor har passerat. Den fulla lokala Node-sviten för föregående apppaket genomfördes med 144/145 direkt godkända kommandon; det enda felet var en testhänvisning till Frejas tidigare nyhetssida och det testet passerade efter byte till originaldomen. Det är testbevis för föregående urkundspaket, inte för senare arbetsmiljökod. Ny full CI inklusive mobil kontrolleras separat.
+
+Nästa handläggning: utgå från aktuellt PR-huvud och verifiera full CI för arbetsmiljöpaktet, inklusive den nya sexalternativsmenyn på iPhone. Överskriv inte generella numeriska värden för att försöka lösa ett villkorat grundkort. Urkundsdossierns NJA 2009 s. 111 är nu läst, inklusive majoritet och skiljaktighet; den ska inte längre tas upp som oläst. Fortsatt urkundspraxis och arbetsmiljöfrågorna om ansvarsfördelning/delegering och kausalitet återstår. Åtalsfiltret för grovt olaga tvång är fortfarande öppet. Bevara 14 villkorade grundkort, 12 förstadier med alternativa skalor och inga nya progresspoäng utan självständig kontroll av den faktiska checkpunkten.
