@@ -42,7 +42,9 @@ class TextExtractor(HTMLParser):
     def text(self):
         return unescape("".join(self.parts))
 
-CHAPTER = re.compile(r"^\s*(\d{1,2})\s*kap\.\s*(?:[A-ZÅÄÖ].*)?$", re.I)
+# A chapter heading must contain its descriptive title. A bare "23 kap."
+# after an inline "enligt" is a statutory reference, NOT a chapter boundary.
+CHAPTER = re.compile(r"^\s*(\d{1,2})\s*kap\.\s+Om\s+.+$", re.I)
 PARAGRAPH = re.compile(r"^\s*(\d+)\s*([a-z]?)\s*§(?!§)\s*(.*)$", re.I)
 REVISION = re.compile(r"Ändrad\s*:\s*t\.?o\.?m\.?\s*SFS\s*(\d{4}:\d+)", re.I)
 
@@ -70,6 +72,33 @@ def parse_brb(html):
             chapter=int(ch.group(1));key=None;contents=[]
             continue
         m = PARAGRAPH.match(ln) if chapter is not None else None
+        # Split-line statutory citations such as "24 § lagen (1988:688)"
+        # are not paragraph headings. Do not create phantom BrB:4:24.
+        if m and re.match(r"(?i)^(?:lagen|förordningen|brottsbalken)\s*\(", m.group(3)):
+            m = None
+        # References to previously encountered paragraphs are commonly
+        # wrapped onto a new HTML text line. They must not terminate the
+        # active paragraph (for example BrB 6:6 referring to 4 §).
+        if m and key is not None:
+            # When the preceding line ends in an unfinished statutory
+            # cross-reference, preserve the current paragraph even when
+            # the cited section number is larger than the current number.
+            # Compare with section transitions: a completed paragraph
+            # ordinarily ends with punctuation or an SFS amendment marker.
+            tail = contents[-1].rstrip() if contents else ""
+            incomplete_cross_reference = bool(re.search(
+                r"(?i)\b(?:i|av|enligt|eller|samt|till|från|jämför|i\s+enlighet\s+med)\s*$", tail
+            ))
+            if incomplete_cross_reference:
+                m = None
+        if m and key is not None and not re.match(r"^/Träder i kraft\b", m.group(3)):
+            prev_sec = key.split(":")[-1]
+            old_order = re.fullmatch(r"(\d+)([a-z]?)", prev_sec)
+            if old_order:
+                previous_rank = (int(old_order.group(1)), old_order.group(2))
+                candidate_rank = (int(m.group(1)), m.group(2).lower())
+                if candidate_rank <= previous_rank:
+                    m = None
         if m:
             flush()
             sec = m.group(1) + m.group(2).lower()

@@ -1,0 +1,22 @@
+import assert from'node:assert/strict';import fs from'node:fs';import path from'node:path';import vm from'node:vm';
+const root=path.resolve(import.meta.dirname,'..'),read=p=>fs.readFileSync(path.join(root,p),'utf8'),html=read('index.html'),mod='./special-limits-review-15.js';
+const files=[...html.matchAll(/<script\s+src="([^"]+)"/g)].map(x=>x[1]),inline=[...html.matchAll(/<script(?:\s[^>]*)?>([\s\S]*?)<\/script>/g)].map(x=>x[1]);
+function load(skip=[]){const ctx=vm.createContext({window:{},console:{log(){},warn(){},error(){}}});for(const i of[1,2,3])vm.runInContext(inline[i],ctx);for(const f of files)if(!skip.includes(f))vm.runInContext(read(f),ctx,{filename:f});return ctx;}
+const plain=x=>JSON.parse(JSON.stringify(x)),ctx=load(),w=ctx.window,data=JSON.parse(read('data/special-limits-review-15.json')),r=w.BK_SPECIAL_LIMITS_REVIEW15,base=w.BK_DATA.crimes.filter(c=>!c.stageType);
+assert.equal(r.planned,68);assert.equal(r.completed,68);assert.equal(r.held.length,0);assert.equal(r.fullLegalApprovals,0);assert.equal(Object.keys(data.sourcePins).length,45);assert.deepEqual(plain(w.BK_SPECIAL_LIMITS_SOURCES15),data.sourcePins);assert.deepEqual(plain(w.BK_SPECIAL_LIMITS_RECORDS15),data.records);
+assert.deepEqual(plain(r.byFamily),{Nark:11,Vapen:5,TBL:4,Kniv:2,SmuglL:23,PTBL:6,SkBrL:9,BidrBrL:4,LBE:4});
+assert.equal(base.filter(c=>c.legalAudit15?.checkpoints?.exceptions?.status==='APPROVED').length,390);
+for(const row of data.records){const c=base.find(c=>c.id===row.id),g=c.statutoryLimitsReview15,a=c.legalAudit15.checkpoints.exceptions;assert.equal(g.scope,data.scope);assert.deepEqual(Array.from(g.sourceRefs),row.sourceRefs);assert.equal(g.sourceURL,row.sourceURL);assert.ok(a.finding.includes(c.title));for(const k of['caseSpecificExceptionApproved','fullCompetitionAnalysisApproved','generalChapter24AssessmentApproved','caseSpecificLiabilityApproved','historicLawApproved','jurisprudenceApproved','penaltyRangeApproved','caseSpecificCustodyApproved','automaticOperationalAdviceApproved'])assert.equal(a[k],false,c.title+' '+k);assert.equal(c.legalAudit15.fullLegalReviewApproved,false);}
+const txt=t=>JSON.stringify(base.find(c=>c.title===t).statutoryLimitsReview15);
+for(const[t,phrase]of[['Rattfylleri','utesluter inte tredje styckets'],['Grovt rattfylleri','endast första och andra'],['Brott mot knivlagen','inte samma prövning'],['Vapenbrott','inte generell ansvarsfrihet'],['Ringa narkotikabrott · bruk','endast gärning enligt 1 § första stycket'],['Smuggling','ANDRA STYCKET'],['Olovlig befattning med smuggelgods','ingen obegränsad subsidiaritet'],['Vårdslös skatteuppgift','Mindre allvarlig gärning'],['Försvårande av skattekontroll','12 § andra stycket'],['Vårdslöst bidragsbrott','FÖRE utbetalning'],['Näringspenningtvätt','Tredje styckets sista mening'],['Grovt brott mot tillståndsplikten för explosiva varor','till BrB endast för 28 och 29']])assert.ok(txt(t).includes(phrase),t);
+const before=load([mod]),old=plain(before.window.BK_DATA.crimes);vm.runInContext(read(mod),before);
+for(const [i,c]of before.window.BK_DATA.crimes.entries()){const copy=plain(c),prev=old[i];if(!prev.statutoryLimitsReview15)delete copy.statutoryLimitsReview15;if(!prev.legalAudit15?.checkpoints?.exceptions&&copy.legalAudit15?.checkpoints?.exceptions)delete copy.legalAudit15.checkpoints.exceptions;assert.deepEqual(copy,prev,'Preserve '+c.title);}
+function change(fn){const x=load([mod]);fn(x.window);vm.runInContext(read(mod),x);return x.window.BK_SPECIAL_LIMITS_REVIEW15;}
+assert.equal(change(w=>{w.BK_SPECIAL_LIMITS_SOURCES15['BidrBrL:5'].text+=' changed';}).completed,64);
+assert.equal(change(w=>{w.BK_SPECIAL_LIMITS_SOURCES15['Kniv:1'].url='https://example.com/';}).completed,66);
+assert.equal(change(w=>{w.BK_SPECIAL_LIMITS_SOURCES15['TBL:4'].checked='2099-01-01';}).completed,66);
+assert.equal(change(w=>{w.BK_SPECIAL_EXCERPTS.SmuglL.observedVersion='2099:1';}).completed,45);
+assert.equal(change(w=>{w.BK_DATA.crimes.find(c=>c.title==='Rattfylleri').law+=' changed';}).completed,67);
+assert.equal(change(w=>{w.BK_DATA.crimes.find(c=>c.title==='Rattfylleri').legalAudit15.checkpoints.exceptions={status:'PENDING'};}).completed,67);
+for(const p of[mod,'./special-limits-sources-15.js'])assert.ok(read('service-worker.js').includes(p));
+console.log('PASS: 68 independent special-law limits with 45 exact source paragraphs, defence/prosecution distinctions, nine laws and prior-data preservation');

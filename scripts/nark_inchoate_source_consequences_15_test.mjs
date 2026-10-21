@@ -1,0 +1,37 @@
+import assert from 'node:assert/strict';import fs from 'node:fs';import path from 'node:path';import vm from 'node:vm';
+const root=path.resolve(import.meta.dirname,'..');
+const html=fs.readFileSync(path.join(root,'index.html'),'utf8'),sw=fs.readFileSync(path.join(root,'service-worker.js'),'utf8');
+const scripts=[...html.matchAll(/<script\s+src="([^"]+)"/g)].map(x=>x[1]),mod='./nark-inchoate-source-consequences-15.js';
+assert.ok(scripts.includes(mod)&&sw.includes(mod));
+assert.ok(scripts.indexOf(mod)>scripts.indexOf('./brb-positive-stage-consequences-15.js'));
+assert.ok(scripts.indexOf(mod)<scripts.indexOf('./age14-offence-scope-15.js'));
+const inline=[...html.matchAll(/<script(?:\s[^>]*)?>([\s\S]*?)<\/script>/g)].map(x=>x[1]);
+const ctx=vm.createContext({window:{},console:{log:()=>{},warn:()=>{},error:()=>{}}});
+for(const i of [1,2,3])vm.runInContext(inline[i],ctx,{filename:'inline-'+i});
+for(const p of scripts)vm.runInContext(fs.readFileSync(path.join(root,p),'utf8'),ctx,{filename:p});
+const r=ctx.window.BK_NARK_INCHOATE_SOURCE_CONSEQUENCES15;
+console.log('V1.5 NSL4 SOURCE REVIEW '+JSON.stringify(r));
+assert.equal(r.planned,33);assert.equal(r.scopeApproved,33);assert.equal(r.consequencesApproved,33);assert.equal(r.held.length,0);
+assert.equal(r.stagePunishmentApproved,0);assert.equal(r.prosecutionApproved,0);assert.equal(r.coercionApproved,0);
+const stages=ctx.window.BK_DATA.crimes.filter(x=>x.stageType&&x.statute?.startsWith('Nark:'));
+assert.equal(stages.length,33);
+for(const c of stages){
+ const a=c.individualLegalAudit15;assert.equal(a.scope.status,'APPROVED');assert.equal(a.consequences.status,'APPROVED');
+ assert.equal(a.scope.caseSpecificLiabilityApproved,false);assert.equal(a.scope.historicApplicabilityApproved,false);
+ assert.equal(a.consequences.automaticCoercionApproved,false);assert.equal(a.consequences.punishmentRangeApproved,false);
+ assert.equal(c.custody,'unknown');assert.equal(a.consequences.prosecutionAuthorityApproved,false);
+}
+const parentTitles=new Map(ctx.window.BK_DATA.crimes.filter(x=>!x.stageType).map(x=>[x.id,x.title]));
+const bruk=stages.filter(c=>parentTitles.get(c.stageParentId)==='Ringa narkotikabrott · bruk');
+assert.equal(bruk.length,3);assert.ok(bruk.every(c=>c.stageStatus==='not-criminalized'));
+const ringaInnehav=stages.filter(c=>parentTitles.get(c.stageParentId)==='Ringa narkotikabrott · innehav');
+assert.equal(ringaInnehav.length,3);
+assert.equal(ringaInnehav.filter(c=>c.stageStatus==='not-criminalized').length,1);
+const clone=JSON.parse(JSON.stringify(ctx.window.BK_DATA.crimes));
+for(const c of clone)if(c.statute?.startsWith('Nark:'))delete c.individualLegalAudit15;
+const altered=clone.find(c=>c.stageType&&c.statute==='Nark:1');altered.stageSource='INVALID SOURCE';
+const iso=vm.createContext({window:{BK_DATA:{crimes:clone}}});
+vm.runInContext(fs.readFileSync(path.join(root,mod),'utf8'),iso);
+assert.equal(iso.window.BK_NARK_INCHOATE_SOURCE_CONSEQUENCES15.held.length,1);
+assert.equal(iso.window.BK_NARK_INCHOATE_SOURCE_CONSEQUENCES15.scopeApproved,32);
+console.log('PASS V1.5: 33 NSL 4 source reviews, no unsupported penalty/prosecution/coercion approvals');

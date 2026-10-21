@@ -70,6 +70,13 @@
  // Villkorad åtalsregel ärvs som riskmarkering och prövas utifrån aktuell gärningsform.
  for(const c of D.crimes){
   if(!c.stageType||c.stageStatus!=='punishable')continue;
+  // BrB 14:10/14:13: the underlying forgery and non-ringa prerequisite
+  // are unresolved. Do not turn that into unconditional general prosecution.
+  if(c.forgeryStageScope15?.finalCriminalityApproved===false){
+    c.prosecution='unknown';c.prosecutionLabel='Åtalsvillkor måste prövas';
+    c.prosecutionDetails=['Fastställ först lagstöd, icke-ringa gärning, konkret förfalskning och aktuell åtalsregel.'];
+    continue;
+  }
   const parent=map.get(c.stageParentId);if(!parent)continue;
   if(parent.prosecution==='general'){
     general(c,parent.prosecutionRule||rb,

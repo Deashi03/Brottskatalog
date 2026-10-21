@@ -1,0 +1,55 @@
+import assert from 'node:assert/strict';import fs from 'node:fs';import vm from 'node:vm';import path from 'node:path';
+const root=path.resolve(import.meta.dirname,'..'),html=fs.readFileSync(path.join(root,'index.html'),'utf8');
+const sw=fs.readFileSync(path.join(root,'service-worker.js'),'utf8');
+const scripts=[...html.matchAll(/<script\s+src="([^"]+)"/g)].map(m=>m[1]),mod='./brb-positive-stage-source-audit-15.js';
+assert.ok(scripts.includes(mod)&&sw.includes(mod));
+assert.ok(scripts.indexOf(mod)>scripts.indexOf('./brb-negative-stage-chapter-audit-15.js'));
+assert.ok(scripts.indexOf(mod)<scripts.indexOf('./age14-offence-scope-15.js'));
+const inline=[...html.matchAll(/<script(?:\s[^>]*)?>([\s\S]*?)<\/script>/g)].map(m=>m[1]);
+const ctx=vm.createContext({window:{},console:{log:()=>{},warn:()=>{},error:()=>{}}});
+for(const i of [1,2,3])vm.runInContext(inline[i],ctx);
+let restrictedId=null;
+for(const p of scripts){
+ if(p==='./brb-positive-stage-source-audit-15.js'){
+  const candidate=ctx.window.BK_DATA.crimes.find(c=>c.stageType&&c.stageStatus==='punishable'&&c.statute?.startsWith('BrB:9:'));
+  assert.ok(candidate,'Need a positive BrB 9 stage to verify restrictive prosecution preservation');
+  candidate.prosecution='conditional';candidate.prosecutionLabel='Särskild åtalsprövning enligt annan källa';
+  restrictedId=candidate.id;
+ }
+ vm.runInContext(fs.readFileSync(path.join(root,p),'utf8'),ctx,{filename:p});
+}
+assert.equal(ctx.window.BK_DATA.crimes.find(c=>c.id===restrictedId).prosecution,'conditional',
+ 'A stage-only source audit must not erase a more restrictive prosecution prerequisite');
+const r=ctx.window.BK_BRB_POSITIVE_STAGE_SOURCE_AUDIT15;
+console.log('V1.5 BRB POSITIVE STAGE SOURCE AUDIT '+JSON.stringify(r));
+assert.ok(r.approved>=80,'No mass source-validation of BrB positive stages');
+assert.ok(r.planned>=r.approved);
+assert.equal(r.approvedCaseLiabilityDecisions,0);
+assert.equal(r.approvedCustodyDecisions,0);
+const all=ctx.window.BK_DATA.crimes;
+const reviewed=all.filter(c=>c.individualLegalAudit15?.scope?.finding==='CURRENT_BRB_CHAPTER_EXPLICIT_INCHOATE_LISTING');
+assert.equal(reviewed.length,r.approved);
+assert.equal(all.filter(c=>c.stageStatus==='unverified').length,0);
+for(const c of reviewed){
+ const audit=c.individualLegalAudit15;
+ assert.equal(c.stageStatus,'punishable');
+ assert.equal(audit.scope.caseSpecificLiabilityApproved,false);
+ assert.equal(audit.scope.coercionApproved,false);
+ assert.equal(audit.scope.chapter23ConditionsReviewed,false);
+ assert.equal(audit.scope.historicApplicabilityApproved,false);
+ assert.equal(audit.consequences?.status,'APPROVED');
+ assert.equal(audit.consequences?.automaticCoercionApproved,false);
+ assert.equal(audit.consequences?.punishmentRangeApproved,false);
+ assert.equal(audit.consequences?.historicLawApproved,false);
+ assert.equal(c.custody,'unknown');
+ assert.equal(audit.scope.caseSpecificLiabilityApproved,false); // downstream prosecution metadata has its own source checks
+}
+const W=JSON.parse(JSON.stringify(ctx.window.BK_STATUTES));
+W['BrB:9:11'].text='MUTATED SOURCE';
+const cards=JSON.parse(JSON.stringify(all));
+for(const c of cards)if(c.individualLegalAudit15?.scope?.finding==='CURRENT_BRB_CHAPTER_EXPLICIT_INCHOATE_LISTING')delete c.individualLegalAudit15;
+const iso=vm.createContext({window:{BK_DATA:{crimes:cards},BK_STATUTES:W,
+ BK_BRB_NEGATIVE_STAGE_CHAPTER_AUDIT15:ctx.window.BK_BRB_NEGATIVE_STAGE_CHAPTER_AUDIT15}});
+vm.runInContext(fs.readFileSync(path.join(root,mod),'utf8'),iso);
+assert.equal(iso.window.BK_BRB_POSITIVE_STAGE_SOURCE_AUDIT15.byChapter['9'].approved,0);
+console.log('PASS V1.5: BrB current statutory positive stages source-matched; no added penalty, prosecution or custody power');

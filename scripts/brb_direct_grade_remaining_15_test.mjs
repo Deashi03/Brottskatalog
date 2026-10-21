@@ -1,0 +1,45 @@
+import assert from 'node:assert/strict';
+import fs from 'node:fs';import vm from 'node:vm';import path from 'node:path';
+const root=path.resolve(import.meta.dirname,'..');
+const html=fs.readFileSync(path.join(root,'index.html'),'utf8');
+const sw=fs.readFileSync(path.join(root,'service-worker.js'),'utf8');
+const scripts=[...html.matchAll(/<script\s+src="([^"]+)"/g)].map(m=>m[1]);
+const mod='./brb-direct-grade-remaining-15.js';
+assert.ok(scripts.includes(mod)&&sw.includes(mod));
+assert.ok(scripts.indexOf(mod)>scripts.indexOf('./brb-direct-grade-clauses-15.js'));
+assert.ok(scripts.indexOf(mod)<scripts.indexOf('./stages-08.js'));
+const inline=[...html.matchAll(/<script(?:\s[^>]*)?>([\s\S]*?)<\/script>/g)].map(m=>m[1]);
+const ctx=vm.createContext({window:{},console:{log:()=>{},warn:()=>{},error:()=>{}}});
+for(const i of [1,2,3])vm.runInContext(inline[i],ctx,{filename:'inline-'+i});
+for(const p of scripts)vm.runInContext(fs.readFileSync(path.join(root,p),'utf8'),ctx,{filename:p});
+const r=ctx.window.BK_REMAINING_DIRECT_GRADE_CLAUSES15;
+assert.equal(r.planned,33);
+assert.equal(r.checked,33,JSON.stringify(r));
+assert.equal(r.held.length,0);
+const all=ctx.window.BK_DATA.crimes,base=all.filter(c=>!c.stageType);
+const reviewed=base.filter(c=>c.penaltyGradeReviewScope15==='independently-source-matched-current-SFS-punishment-clause-only');
+assert.equal(reviewed.length,33);
+for(const c of reviewed){
+ assert.equal(c.penaltyGradeReviewDate,'2026-10-18');
+ assert.equal(c.penaltyGradeReviewLiabilityApproved,false);
+ assert.equal(c.penaltyGradeReviewCustodyApproved,false);
+ assert.equal(c.penaltyGradeReviewHistoricLawApproved,false);
+ assert.ok(c.penaltyGradeReviewSource.includes('riksdagen.se'));
+ assert.ok(c.penaltyGradeReviewProvision.includes(c.title));
+ assert.notEqual(c.rekvisit15?.legalReviewApproved,true);
+ if(c.statute.startsWith('BrB:21:')||c.statute.startsWith('BrB:22:'))
+  assert.equal(c.penaltyGradeReviewApplicabilityPending,true);
+}
+assert.equal(all.length,1557);
+assert.equal(all.filter(c=>c.stageStatus==='unverified').length,0);
+assert.equal(base.filter(c=>c.conditionalPenalty&&!c.penaltyRangeVerified).length,14);
+const original=JSON.parse(JSON.stringify(reviewed.find(c=>c.title==='Våldsamt motstånd')));
+delete original.penaltyGradeReviewDate;delete original.penaltyGradeReviewScope15;
+const W=JSON.parse(JSON.stringify(ctx.window.BK_STATUTES));
+W['BrB:17:4'].text='INVALID';
+const isolated=vm.createContext({window:{BK_DATA:{crimes:[original]},BK_STATUTES:W}});
+vm.runInContext(fs.readFileSync(path.join(root,mod),'utf8'),isolated);
+assert.equal(isolated.window.BK_REMAINING_DIRECT_GRADE_CLAUSES15.checked,0);
+assert.equal(isolated.window.BK_REMAINING_DIRECT_GRADE_CLAUSES15.held.length,33);
+assert.equal(original.penaltyGradeReviewDate,undefined);
+console.log('PASS V1.5: 33 remaining BrB ranges source-compared, 58/58 new direct source checks, case-specific legal controls all pending');

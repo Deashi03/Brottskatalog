@@ -1,0 +1,42 @@
+import assert from 'node:assert/strict';import fs from 'node:fs';import vm from 'node:vm';import path from 'node:path';
+const root=path.resolve(import.meta.dirname,'..');
+const html=fs.readFileSync(path.join(root,'index.html'),'utf8'),sw=fs.readFileSync(path.join(root,'service-worker.js'),'utf8');
+const scripts=[...html.matchAll(/<script\s+src="([^"]+)"/g)].map(m=>m[1]),mod='./special-positive-stage-scope-15.js';
+assert.ok(scripts.includes(mod)&&sw.includes(mod));
+assert.ok(scripts.indexOf(mod)>scripts.indexOf('./special-negative-stage-scope-15.js'));
+assert.ok(scripts.indexOf(mod)<scripts.indexOf('./age14-offence-scope-15.js'));
+const inline=[...html.matchAll(/<script(?:\s[^>]*)?>([\s\S]*?)<\/script>/g)].map(m=>m[1]);
+const ctx=vm.createContext({window:{},console:{log:()=>{},warn:()=>{},error:()=>{}}});
+for(const i of [1,2,3])vm.runInContext(inline[i],ctx,{filename:'inline-'+i});
+for(const src of scripts)vm.runInContext(fs.readFileSync(path.join(root,src),'utf8'),ctx,{filename:src});
+const r=ctx.window.BK_SPECIAL_POSITIVE_STAGE_AUDIT15;
+assert.equal(r.planned,66);
+assert.equal(r.scopeApproved,66,JSON.stringify(r));
+assert.equal(r.withheld.length,0);
+assert.deepEqual(Object.fromEntries(Object.entries(r.byLaw).map(([k,v])=>[k,v.approved])),
+ {SmuglL:46,PTBL:12,SkBrL:2,LBE:6});
+const all=ctx.window.BK_DATA.crimes,stages=all.filter(c=>c.stageType),checked=stages.filter(c=>c.individualLegalAudit15?.scope?.finding==='CURRENT_ACT_EXPLICIT_INCHOATE_ENUMERATION_CONFIRMED'&&!c.statute?.startsWith('Nark:'));
+assert.equal(all.length,1557);assert.equal(stages.length,1167);
+assert.equal(checked.length,66);
+assert.ok(stages.filter(c=>c.individualLegalAudit15?.scope?.status==='APPROVED').length>=138);
+assert.ok(stages.filter(c=>c.individualLegalAudit15?.consequences?.status==='APPROVED').length>=138);
+assert.equal(stages.filter(c=>c.stageStatus==='unverified').length,0);
+for(const c of checked){
+ const x=c.individualLegalAudit15.scope;
+ assert.equal(c.stageStatus,'punishable');
+ assert.equal(x.status,'APPROVED');assert.equal(x.chapter23ConditionsReviewed,false);
+ assert.equal(x.caseSpecificLiabilityApproved,false);
+ assert.equal(x.historicApplicabilityApproved,false);
+ assert.equal(x.coercionApproved,false);
+ assert.equal(c.custody,'unknown');
+ assert.equal(c.individualLegalAudit15.consequences?.punishmentRangeApproved,false);
+ assert.equal(c.individualLegalAudit15.consequences?.automaticCoercionApproved,false);
+}
+const d=JSON.parse(JSON.stringify(ctx.window.BK_SPECIAL_STAGE_ENUMERATION15));d.sourceOK.PTBL=false;
+const copy=all.filter(c=>c.stagePreliminaryScope15||(c.id?.startsWith('v09-')&&!c.stageType)).map(x=>{const v=JSON.parse(JSON.stringify(x));delete v.individualLegalAudit15;return v;});
+const iso=vm.createContext({window:{BK_DATA:{crimes:copy},BK_SPECIAL_EXCERPTS:JSON.parse(JSON.stringify(ctx.window.BK_SPECIAL_EXCERPTS)),BK_SPECIAL_STAGE_ENUMERATION15:d}});
+vm.runInContext(fs.readFileSync(path.join(root,mod),'utf8'),iso);
+assert.equal(iso.window.BK_SPECIAL_POSITIVE_STAGE_AUDIT15.byLaw.PTBL.approved,0);
+assert.equal(iso.window.BK_SPECIAL_POSITIVE_STAGE_AUDIT15.byLaw.PTBL.planned,12);
+assert.equal(iso.window.BK_SPECIAL_POSITIVE_STAGE_AUDIT15.scopeApproved,54);
+console.log('PASS V1.5: 66 current-statute positive stage listing reviews, 138 of 1167 stage source scopes; no automatic case-specific consequences');

@@ -1,0 +1,35 @@
+{
+  "schema": 1,
+  "sources": [
+    {
+      "filename": "Straffrätt Lund 2.docx",
+      "sha256": "a4825aa194183ee797bfcb86fd25149b8d28a7e4f65cb8ff0a83b85625d2e53f",
+      "role": "Kursanteckningar; pedagogiskt underlag, inte författning eller självständig rättskälla",
+      "received": "2026-10-20",
+      "paragraphCount": 2414
+    },
+    {
+      "filename": "Brottsutredning(2).docx",
+      "sha256": "e3dc65f1d1cbc8f3a7b4c0de88514723dedef41c5655024e8334e6ea7ba4b71b",
+      "role": "Kursanteckningar; pedagogiskt underlag, inte författning eller självständig rättskälla",
+      "received": "2026-10-20",
+      "paragraphCount": 1326
+    },
+    {
+      "filename": "Juridikens grunder(1).pdf",
+      "sha256": "eeafd2313de7a809863c05bc787e3c4f12fff9513d1a434f353f60cd987a13f5",
+      "role": "Kursanteckningar; pedagogiskt underlag, inte författning eller självständig rättskälla",
+      "received": "2026-10-20",
+      "pageCount": 69
+    },
+    {
+      "filename": "Straffprocessrätt 2.docx",
+      "sha256": "0e710ffd4fb6c7e671bee6f1e778e7762c8183f324941bfcaa1d2740fc959021",
+      "role": "Kursanteckningar; pedagogiskt underlag, inte författning eller självständig rättskälla",
+      "received": "2026-10-20",
+      "paragraphCount": 1512
+    }
+  ],
+  "locatorConvention": "DOCX: stycke räknat från 1 i dokumentets huvuddel, inklusive tomma stycken. PDF: fysisk sida räknad från 1.",
+  "publicationNote": "Endast filnamn, fingeravtryck och källhänvisningar ingår. De uppladdade dokumenten publiceras inte i repositoryt."
+}

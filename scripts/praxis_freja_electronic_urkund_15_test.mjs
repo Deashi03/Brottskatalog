@@ -1,0 +1,61 @@
+import assert from 'node:assert/strict';
+import fs from 'node:fs';import path from 'node:path';import vm from 'node:vm';
+const root=path.resolve(import.meta.dirname,'..');
+const html=fs.readFileSync(path.join(root,'index.html'),'utf8');
+const sw=fs.readFileSync(path.join(root,'service-worker.js'),'utf8');
+const mod='./praxis-freja-electronic-urkund-15.js';
+const scripts=[...html.matchAll(/<script\s+src="([^"]+)"/g)].map(x=>x[1]);
+assert.equal(scripts.filter(x=>x===mod).length,1,'HD Freja must be loaded exactly once');
+assert.ok(sw.includes(mod),'HD precedent must work offline');
+assert.ok(scripts.indexOf(mod)>scripts.indexOf('./brb-curated-lawtext-15.js'),'Current law must be available first');
+assert.ok(scripts.indexOf(mod)>scripts.indexOf('./praxis-vapenbilden-15.js'));
+assert.ok(scripts.indexOf(mod)<scripts.indexOf('./stages-08.js'));
+const inline=[...html.matchAll(/<script(?:\s[^>]*)?>([\s\S]*?)<\/script>/g)].map(x=>x[1]);
+const ctx=vm.createContext({window:{},console:{log:()=>{},warn:()=>{},error:()=>{}}});
+for(const i of [1,2,3])vm.runInContext(inline[i],ctx,{filename:'inline-'+i});
+for(const src of scripts)vm.runInContext(fs.readFileSync(path.join(root,src),'utf8'),ctx,{filename:src});
+const R=ctx.window.BK_HD_FREJA15;
+assert.ok(R,'Freja audit report absent');
+assert.equal(R.found,true,'BrB 14:10 card missing');
+assert.equal(R.foundUnderlying,true,'BrB 14:1 source card missing');
+assert.equal(R.sourceChecked,true,'Current complete SFS 14:1 and 14:10 must be independently checked');
+assert.equal(R.added,1,'Exactly one court-grounded typecase expected');
+assert.equal(R.duplicates,0);
+assert.equal(R.reference,'NJA 2025 s. 1029, B 920-25');
+assert.equal(R.legalApprovalGranted,false);
+assert.equal(R.stageEntriesModified,0);
+const base=ctx.window.BK_DATA.crimes.filter(c=>!c.stageType);
+const brug=base.find(c=>c.statute==='BrB:14:10');
+const forged=base.find(c=>c.statute==='BrB:14:1');
+const sources=brug.typexempel15.filter(x=>x.sourceURL===R.source);
+assert.equal(sources.length,1);
+const example=sources[0];
+assert.ok(example.text.includes('lagrade form')||example.text.includes('LAGRADE FORM'));
+assert.ok(example.text.includes('HD frikände'));
+assert.ok(example.text.includes('skärmbilden'));
+assert.ok(example.caution.includes('inte att alla skärmbilder'));
+assert.equal(example.status,'cited-supreme-court-acquittal');
+assert.ok(brug.rekvisit15.note.includes('NJA 2025 s. 1029'));
+assert.ok(forged.rekvisit15.note.includes('NJA 2025 s. 1029'));
+assert.equal(brug.digitalUrkundCaseReview15.allScreenshotsExempt,false);
+assert.equal(brug.digitalUrkundCaseReview15.noAutomaticCriminalityConclusion,true);
+assert.equal(brug.digitalUrkundCaseReview15.noAutomaticCustodyConclusion,true);
+assert.notEqual(brug.rekvisit15.legalReviewApproved,true);
+assert.notEqual(forged.rekvisit15.legalReviewApproved,true);
+assert.equal(ctx.window.BK_DATA.crimes.filter(c=>c.stageType&&c.stageStatus==='unverified').length,0);
+// A second import must be idempotent and must not duplicate the same HD reference.
+vm.runInContext(fs.readFileSync(path.join(root,mod),'utf8'),ctx,{filename:mod+' second evaluation'});
+assert.equal(ctx.window.BK_HD_FREJA15.duplicates,1);
+assert.equal(brug.typexempel15.filter(x=>x.sourceURL===R.source).length,1);
+// Simulated source drift may not attach a precedent or overwrite an existing assessment.
+const p={title:'Brukande av det förfalskade',shortRef:'BrB 14:10',statute:'BrB:14:10',rekvisit15:{legalReviewApproved:false,note:'Original'}};
+const one={title:'Urkundsförfalskning',shortRef:'BrB 14:1',statute:'BrB:14:1',rekvisit15:{legalReviewApproved:false,note:'Original'}};
+const simulated={window:{BK_DATA:{crimes:[p,one]},BK_STATUTES:{
+ 'BrB:14:1':{complete:false,completeTextProvenance:'machine'},
+ 'BrB:14:10':{complete:false,completeTextProvenance:'machine'}
+}},console};
+vm.runInNewContext(fs.readFileSync(path.join(root,mod),'utf8'),simulated,{filename:mod+' bad-source'});
+assert.equal(simulated.window.BK_HD_FREJA15.added,0);
+assert.equal(p.rekvisit15.note,'Original');
+assert.equal(one.rekvisit15.note,'Original');
+console.log('PASS V1.5: HD Freja authentic electronic-urkund acquittal, stored issuer test, no screenshot exemption, offline idempotence');

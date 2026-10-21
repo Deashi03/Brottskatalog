@@ -97,16 +97,35 @@ assert.equal(co.decisionGuide(measure('beslag')).brief,'Polisman beslutar');
 assert.equal(find('Grovt skattebrott').penaltyRange.min,1);
 assert.equal(find('Grovt penningtvättsbrott').penaltyRange.min,1);
 assert.equal(find('Grovt brott mot tillståndsplikten för explosiva varor').penaltyRange.min,4);
-// A downloaded statute may be displayed only as a MACHINE excerpt, never full verified text.
+// Machine-imported law remains unverified unless an independent SFS wording
+// comparison was completed for the SPECIFIC paragraph in V1.5.
 const imp=w.BK_SPECIAL_IMPORT12, generated=w.BK_SPECIAL_EXCERPTS;
 if(generated&&Object.keys(generated).length){
  assert.equal(imp?.linked,46,'All 46 special-law base entries must receive a source excerpt');
  assert.equal(imp?.missing,0,'No missing source excerpt in the verified extraction set');
+ const individuallyCompared=new Set([
+  'Bidragsbrott','Ringa bidragsbrott','Grovt bidragsbrott','Vårdslöst bidragsbrott',
+  'Skattebrott','Skatteförseelse','Grovt skattebrott','Vårdslös skatteuppgift',
+  'Skatteavdragsbrott','Skatteredovisningsbrott','Vårdslös skatteredovisning',
+  'Försvårande av skattekontroll','Grovt försvårande av skattekontroll'
+ ]);
+ let officiallyCompared=0;
  for(const c of cs.filter(x=>x.id.startsWith('v09-')&&!x.stageType)){
-  assert.equal(c.lawMode,'machine','Special-law extract must not be labeled full/verified: '+c.title);
-  assert.equal(c.lawCompletenessVerified,false,'Extract still requires legal review: '+c.title);
+  if(individuallyCompared.has(c.title)||c.lawProvenance==='current-official-SFS-direct-paragraph-review-with-locked-complete-extract-fingerprint'){
+   assert.equal(c.lawMode,'full','Independently compared paragraph must load: '+c.title);
+   assert.equal(c.lawCompletenessVerified,true);
+   assert.equal(c.lawCompletenessReviewScope,'current-paragraph-only');
+   assert.ok(['independently-transcribed-current-official-SFS-paragraph-compared-to-import','current-official-SFS-direct-paragraph-review-with-locked-complete-extract-fingerprint'].includes(c.lawProvenance),'Certified paragraph needs individually recorded provenance: '+c.title);
+   assert.ok(c.lawCompletenessSourceURL?.includes('riksdagen.se'));
+   assert.notEqual(c.rekvisit15?.legalReviewApproved,true);
+   officiallyCompared++;
+  }else{
+   assert.equal(c.lawMode,'machine','Unverified import cannot be promoted to fulltext: '+c.title);
+   assert.equal(c.lawCompletenessVerified,false,'Imported excerpt still needs direct SFS comparison: '+c.title);
+  }
   assert.ok(c.law?.length>=35,'Missing special-law paragraph: '+c.title);
  }
+ assert.equal(officiallyCompared,46,'Only the 46 individually source-reviewed special-law cards can be full text certified');
  const smuggling=generated.SmuglL.sections['6']?.text||'';
  const tax=generated.SkBrL.sections['8']?.text||'';
  assert.ok(smuggling.includes('narkotikasmuggling')&&smuggling.length>800,'Smuggling 6 § extraction corrupted');

@@ -43,13 +43,55 @@ for(const c of all){
   if(meta?.invalidReviewNote)flag(id,'high','invalid-review-date','Invalid legal verification date found');
  }else{
   if(!ids.has(c.stageParentId))flag(id,'critical','orphan-stage','Parent ID missing');
-  if(c.stageStatus==='punishable'&&!c.penaltyRange)flag(id,'high','punishable-no-penalty','Punishable stage has no structured penalty');
+  if(c.stageStatus==='punishable'&&!c.penaltyRange){
+   const boundedBySource=Boolean(c.forgeryStageScope15?.finalCriminalityApproved===false&&
+    c.forgeryStageScope15?.statutoryRingaExclusion===true&&
+    c.forgeryStageScope15?.caseSpecificCustodyApproved===false&&
+    c.custody==='unknown'&&c.penaltyShort==='Villkorad skala');
+   // A dated current-law grade enumeration can be certified WITHOUT
+   // certifying its penalty range. Do not force an invented numeric range,
+   // and do not silently downgrade a missing substantive legal review.
+   const gradeSourceBound=Boolean(
+    c.individualLegalAudit15?.scope?.finding==='CURRENT_BRB_SAME_SECTION_GRADE_COVERED_BY_NAMED_STAGE'&&
+    c.individualLegalAudit15?.scope?.caseSpecificLiabilityApproved===false&&
+    c.individualLegalAudit15?.scope?.historicApplicabilityApproved===false&&
+    c.individualLegalAudit15?.consequences?.punishmentRangeApproved===false&&
+    c.individualLegalAudit15?.consequences?.automaticCoercionApproved===false&&
+    c.individualLegalAudit15?.consequences?.specificPenaltyRange===null&&
+    c.custody==='unknown'
+   );
+   const restoredStageBound=Boolean(c.id.startsWith('stage-gap15-')
+    &&ctx.window.BK_MISSING_STAGE_RULES15?.some(r=>c.stageParentId===r.id&&r.allowed.includes(({forsok:'F',forberedelse:'P',stampling:'S'})[c.stageType]))
+    &&c.individualLegalAudit15?.scope?.finding==='CURRENT_MISSING_PARENT_STAGE_EXPRESSLY_LISTED'
+    &&c.individualLegalAudit15.scope.status==='APPROVED'
+    &&c.individualLegalAudit15.scope.checked==='2026-10-20'
+    &&c.individualLegalAudit15.scope.caseSpecificLiabilityApproved===false
+    &&c.individualLegalAudit15.scope.historicApplicabilityApproved===false
+    &&c.individualLegalAudit15.consequences?.status==='APPROVED'
+    &&c.individualLegalAudit15.consequences.punishmentRangeApproved===false
+    &&c.individualLegalAudit15.consequences.automaticCoercionApproved===false
+    &&c.individualLegalAudit15.consequences.specificPenaltyRange===null
+    &&c.penaltyRangeVerified===false&&c.custody==='unknown'
+    &&(c.prosecution==='unknown'||(
+      c.prosecutionFinalReview15?.scope==='current-statutory-prosecution-classification-only'
+      &&c.prosecutionFinalReview15.classification===c.prosecution
+      &&c.prosecutionFinalReview15.fullLegalApproval===false
+      &&c.prosecutionFinalReview15.caseSpecificChargingApproved===false
+      &&c.prosecutionFinalReview15.sourceRefs?.includes('RB:20:3')
+      &&c.prosecutionFinalReview15.checked==='2026-10-21')));
+   if(boundedBySource)flag(id,'medium','conditional-stage-penalty-review',
+    'BrB 14:13 covers this restricted stage route but the concrete non-ringa offence/derivative penalty and custody require individual review');
+   else if(gradeSourceBound)flag(id,'medium','grade-stage-penalty-still-pending',
+    'Statutory grade/stage listing was source-checked; do not infer a numeric 23 kap. penalty, offence-date applicability, prosecution or police authority');
+   else if(restoredStageBound)flag(id,'medium','restored-stage-penalty-still-pending','Expressly source-checked missing stage; penalty branch, historic applicability and coercive decision remain unresolved. Any statutory charging classification is a separate review, never a concrete charging approval');
+   else flag(id,'high','punishable-no-penalty','Punishable stage has no structured penalty');
+  }
   if(c.stageStatus!=='punishable'&&c.penaltyRange)flag(id,'critical','noncriminal-has-penalty','Stage without verified criminalization has penalty');
   if(!c.stageSource)flag(id,'medium','stage-source-missing','No linked stage-specific criminalization provision');
   if(c.stageStatus==='unverified')flag(id,'medium','stage-not-reviewed','Needs statute-specific status verification');
   if(c.stageStatus==='not-criminalized'&&!String(c.stageSource||'').match(/^(BrB|NSL|Narkotikastrafflagen|VapenL|PTBL|SmuglL|SkBrL|BidrBrL|LBE)/i))
     flag(id,'medium','noncriminal-source-weak','Noncriminal stage not tied to precise law');
-  if(c.stageStatus==='punishable'&&c.stageType==='forsok'&&c.stageParentMin>=2&&c.penaltyRange?.min!==1/12)
+  if(c.stageStatus==='punishable'&&c.stageType==='forsok'&&c.stageParentMin>=2&&c.penaltyRange&&c.penaltyRange.min!==1/12)
     flag(id,'high','attempt-minimum','Attempt with fängelse ≥ 2y parent should carry 1mo floor');
  }
 }

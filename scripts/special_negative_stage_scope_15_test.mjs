@@ -1,0 +1,52 @@
+import assert from 'node:assert/strict';import fs from 'node:fs';import vm from 'node:vm';import path from 'node:path';
+const root=path.resolve(import.meta.dirname,'..');
+const html=fs.readFileSync(path.join(root,'index.html'),'utf8'),sw=fs.readFileSync(path.join(root,'service-worker.js'),'utf8');
+const scripts=[...html.matchAll(/<script\s+src="([^"]+)"/g)].map(m=>m[1]);
+const mod='./special-negative-stage-scope-15.js';
+assert.ok(scripts.includes(mod)&&sw.includes(mod));
+assert.ok(scripts.indexOf(mod)>scripts.indexOf('./special-stage-enumeration-15.js'));
+assert.ok(scripts.indexOf(mod)<scripts.indexOf('./age14-offence-scope-15.js'));
+const inline=[...html.matchAll(/<script(?:\s[^>]*)?>([\s\S]*?)<\/script>/g)].map(m=>m[1]);
+const ctx=vm.createContext({window:{},console:{log:()=>{},warn:()=>{},error:()=>{}}});
+for(const i of [1,2,3])vm.runInContext(inline[i],ctx,{filename:'inline-'+i});
+for(const src of scripts)vm.runInContext(fs.readFileSync(path.join(root,src),'utf8'),ctx,{filename:src});
+const report=ctx.window.BK_SPECIAL_NEGATIVE_STAGE_AUDIT15;
+assert.equal(report.plannedParents,46);assert.equal(report.planned,72);
+assert.equal(report.scopeApproved,72,JSON.stringify(report));
+assert.equal(report.consequencesApproved,72);
+assert.equal(report.held.length,0);
+assert.deepEqual(Object.fromEntries(Object.entries(report.byFamily).map(([k,v])=>[k,v.completed])),
+ {SmuglL:23,PTBL:6,SkBrL:25,BidrBrL:12,LBE:6});
+const cards=ctx.window.BK_DATA.crimes,reviewed=cards.filter(c=>c.individualLegalAudit15?.scope?.finding==='NO_NAMED_STAGE_OFFENCE_IN_CURRENT_SPECIAL_ACT'&&!c.statute?.startsWith('Nark:'));
+assert.equal(reviewed.length,72);
+assert.equal(cards.length,1557);
+for(const c of reviewed){
+ const scope=c.individualLegalAudit15.scope,con=c.individualLegalAudit15.consequences;
+ assert.equal(c.stageStatus,'not-criminalized');
+ assert.equal(scope.finding,'NO_NAMED_STAGE_OFFENCE_IN_CURRENT_SPECIAL_ACT');
+ assert.equal(scope.offenceDateChecked,false);
+ assert.equal(scope.caseSpecificLiabilityApproved,false);
+ assert.equal(scope.excludesOtherOffences,false);
+ assert.equal(con.finding,'NO_INDEPENDENT_PENALTY_PROSECUTION_OR_COERCION_FOR_UNENUMERATED_STAGE');
+ assert.equal(con.namedOffenceOnly,true);
+ assert.equal(con.otherOffencesMayApply,true);
+ assert.equal(con.historicLawNotChecked,true);
+ assert.equal(con.noCaseSpecificCustodyDecision,true);
+ assert.equal(con.automaticCoercionApproved,false);
+ assert.equal(c.custody,'unknown');
+}
+const stages=cards.filter(c=>c.stageType);
+assert.equal(stages.length,1167);assert.equal(stages.filter(c=>c.stageStatus==='unverified').length,0);
+assert.ok(stages.filter(c=>c.individualLegalAudit15?.scope?.status==='APPROVED').length>=138);
+assert.ok(stages.filter(c=>c.individualLegalAudit15?.consequences?.status==='APPROVED').length>=138);
+assert.equal(stages.filter(c=>c.stageStatus==='punishable'&&c.individualLegalAudit15?.consequences?.punishmentRangeApproved===true).length,0);
+const r=JSON.parse(JSON.stringify(ctx.window.BK_SPECIAL_STAGE_ENUMERATION15));
+r.sourceOK.SmuglL=false;
+const isolatedCrimes=cards.filter(c=>c.stagePreliminaryScope15||(c.id?.startsWith('v09-')&&!c.stageType)).map(c=>{
+ const x=JSON.parse(JSON.stringify(c));delete x.individualLegalAudit15;return x;
+});
+const iso=vm.createContext({window:{BK_DATA:{crimes:isolatedCrimes},BK_SPECIAL_STAGE_ENUMERATION15:r}});
+vm.runInContext(fs.readFileSync(path.join(root,mod),'utf8'),iso);
+assert.equal(iso.window.BK_SPECIAL_NEGATIVE_STAGE_AUDIT15.byFamily.SmuglL.completed,0);
+assert.equal(iso.window.BK_SPECIAL_NEGATIVE_STAGE_AUDIT15.byFamily.SmuglL.planned,23);
+console.log('PASS V1.5: 72 independently scoped negative special-law stage statuses and 72 corresponding non-penalty consequence records; no approval of alternative offences or custody');

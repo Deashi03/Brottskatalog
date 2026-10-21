@@ -1,0 +1,90 @@
+{
+  "checked": "2026-10-21",
+  "title": "Arbetsmiljöbrott",
+  "statute": "BrB:3:10",
+  "scope": "Original judgments independently read, historical holdings distinguished from current statutory scales; no complete jurisprudence signoff",
+  "cases": [
+    {
+      "case": "B 4471-02",
+      "judgmentDate": "2004-02-05",
+      "reference": "NJA 2004 s. 34",
+      "pagesRead": 9,
+      "url": "https://www.domstol.se/globalassets/filer/domstol/hogstadomstolen/avgoranden/2004/b-4471-02.pdf",
+      "locators": [
+        "s. 3–5 ansvarsfördelning",
+        "s. 7 orsakssamband",
+        "s. 8–9 klandervärd oaktsamhet och domslut"
+      ],
+      "finding": "Övningsledarens uppgifter och ställning gav arbetsmiljöansvar. HD fann samband mellan bristande säkerhetsnivå och dödsfallet men ogillade åtalet eftersom underlåtenheten, mot bakgrund av etablerad övningspraxis och svårtolkade säkerhetsregler, inte var tillräckligt klandervärd.",
+      "avoidInference": "Frikännandet berodde inte på att allt ansvar saknades eller att orsakssamband generellt inte kunde visas. Det ger inte ett generellt undantag för övningsledare.",
+      "bytes": 28037,
+      "sha256": "45a76fe80918d2981964da6f75b4454b4033b0232a5ad7de8d8fecb513979bc6"
+    },
+    {
+      "case": "B 2011-03",
+      "judgmentDate": "2004-02-24",
+      "pagesRead": 7,
+      "url": "https://www.domstol.se/globalassets/filer/domstol/hogstadomstolen/avgoranden/2004/b-2011-03.pdf",
+      "locators": [
+        "s. 3 delegering",
+        "s. 4–5 verksamhetsområde och skyddsansvar",
+        "s. 6–7 individuell oaktsamhet"
+      ],
+      "finding": "Rektorns säkerhetsansvar omfattade även elever från en annan skola när den egna skolans lärare, lokaler och maskiner ställdes till förfogande. Detta medförde inte automatiskt straffansvar. HD fann inte styrkt sådan oaktsamhet som krävdes enligt 3:8 och fastställde frikännandet.",
+      "avoidInference": "Skyddsansvar, personlig oaktsamhet och kausalitet får inte sammanblandas. Att olyckor tidigare saknats är inte ett generellt frikort.",
+      "bytes": 26532,
+      "sha256": "23fa6e6f691b60d7a90e920afafea7db40495edc24b9e08fdd2fcc28ca648615"
+    },
+    {
+      "case": "B 1609-06",
+      "judgmentDate": "2007-05-31",
+      "reference": "NJA 2007 s. 369",
+      "pagesRead": 7,
+      "url": "https://www.domstol.se/globalassets/filer/domstol/hogstadomstolen/avgoranden/2007/b-1609-06.pdf",
+      "locators": [
+        "s. 4 rutiner för signalman och delegering",
+        "s. 5 hypotetiskt orsakssamband",
+        "s. 5–6 grad och historisk företagsbot"
+      ],
+      "finding": "VD hade inte ordnat tillräckliga rutiner för signalman. HD fann att dödsfallet med hög sannolikhet skulle ha uteblivit vid korrekt handlande och dömde för arbetsmiljöbrott av normalgraden. Det allvarliga utfallet gjorde inte automatiskt gärningen grov.",
+      "avoidInference": "Företagsbotsfrågan avgjordes enligt äldre, för bolaget mildare regler. Dessa regler, tidigare straffnivåer och dåvarande AFS-nummer importeras inte som gällande 2026.",
+      "bytes": 16632,
+      "sha256": "fb8781d5408c633f9e079d2c5fc906a95d42261e6bb9932f1e437674410fdfef"
+    },
+    {
+      "case": "B 3184-03",
+      "judgmentDate": "2004-03-23",
+      "pagesRead": 9,
+      "url": "https://www.domstol.se/globalassets/filer/domstol/hogstadomstolen/avgoranden/2004/b-3184-03.pdf",
+      "majorityRead": "s. 1–6",
+      "dissentRead": "s. 7–9",
+      "locators": [
+        "s. 3 befattningsgrundat ansvar",
+        "s. 4–6 delegering, tidigare olycka och instruktioner",
+        "s. 7–9 skiljaktig mening"
+      ],
+      "finding": "Majoriteten ansåg att platschefens befattning gav arbetsmiljöansvar. Oklarheten om vidaredelegering lämnade ansvaret för säkerhetsinstruktioner hos honom. Efter kännedom om en tidigare olycka underlät han att säkerställa tillräckliga åtgärder och dömdes för arbetsmiljöbrott.",
+      "avoidInference": "Två ledamöter ville frikänna eftersom platschefen enligt deras bedömning kunnat lita på den tekniske chefens ansvar. Den skiljaktiga bedömningen är inte domslutet. Domen ställer inte ett generellt krav på skriftlig delegering.",
+      "bytes": 27732,
+      "sha256": "5a6ef1a8cb9f7d6797c871cf5a3ecfc323c868227477b4687700171bbfa5f256"
+    }
+  ],
+  "relationToRuntimeChange": "De sex aktuella straffskalealternativen har lagtextstöd i den separata workplace-derived-penalty-options-manifestet. De historiska domarna används här till avgränsad analys av personligt ansvar, skuld, kausalitet och grad, inte som källa till dagens straffnivåer.",
+  "remainingQuestions": [
+    "Ytterligare relevant praxis, bland annat NJA 1991 s. 247 och 1993 s. 245, samt senare utveckling behöver egen granskning. B 3184-03 är nu läst inklusive skiljaktighet.",
+    "Kontrollera aktuellt regelsystem och aktuell föreskrift före specifika uppgifter om skyddsansvar eller tekniska säkerhetskrav. Återanvänd inte äldre AFS-nummer automatiskt.",
+    "En fullständig bedömning kräver konkret åliggande, personkrets, faktisk ansvarsfördelning, kausalitet, skuld och gärningstidpunkt."
+  ],
+  "runtimeMutation": false,
+  "jurisprudenceCheckpointCompleted": false,
+  "fullLegalApprovalGranted": false,
+  "automaticCaseDeterminationAllowed": false,
+  "progressCredit": 0,
+  "additionalPreparatorySource": {
+    "reference": "Prop. 1976/77:149",
+    "url": "https://www.riksdagen.se/sv/dokument-och-lagar/dokument/proposition/om-arbetsmiljolag-m-m_g003149/html/",
+    "readLocator": "s. 373–374, avsnitt 20.10 om arbetsgivaransvarets placering",
+    "finding": "Den straffrättsliga ansvarsfördelningen ska bedömas i det enskilda fallet med hänsyn till reellt inflytande. Delegering kräver tydlighet, tillräckliga beslutsbefogenheter och behövligt kunnande. Val av person och tillsyn behöver prövas. Oklar ansvarsfördelning faller inom företagsledningens ansvar.",
+    "limit": "Historiskt förarbetsstöd, läst direkt i originalpropositionen; ersätter inte aktuell lag/föreskrift eller senare praxis och godkänner inte något faktiskt ansvarsöverlämnande."
+  }
+}

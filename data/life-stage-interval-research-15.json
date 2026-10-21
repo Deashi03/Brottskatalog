@@ -1,0 +1,248 @@
+{
+  "checked": "2026-10-21",
+  "rules": [
+    {
+      "id": "stadium-08-forberedelse-v05-grovt-spridande-av-gift-eller-smitta",
+      "parentId": "v05-grovt-spridande-av-gift-eller-smitta",
+      "title": "Förberedelse till grovt spridande av gift eller smitta",
+      "stageType": "forberedelse",
+      "statute": "BrB:13:7",
+      "authorizer": "BrB:13:12",
+      "parentRange": {
+        "min": 4,
+        "max": 18,
+        "fines": false,
+        "life": true
+      },
+      "range": {
+        "min": 0,
+        "max": 18,
+        "fines": true,
+        "life": false
+      },
+      "scopeFinding": "CURRENT_BRB_SAME_SECTION_GRADE_COVERED_BY_NAMED_STAGE",
+      "label": "Böter – fängelse högst 18 år",
+      "upper": "18 år"
+    },
+    {
+      "id": "stadium-08-stampling-v05-grovt-spridande-av-gift-eller-smitta",
+      "parentId": "v05-grovt-spridande-av-gift-eller-smitta",
+      "title": "Stämpling till grovt spridande av gift eller smitta",
+      "stageType": "stampling",
+      "statute": "BrB:13:7",
+      "authorizer": "BrB:13:12",
+      "parentRange": {
+        "min": 4,
+        "max": 18,
+        "fines": false,
+        "life": true
+      },
+      "range": {
+        "min": 0,
+        "max": 18,
+        "fines": true,
+        "life": false
+      },
+      "scopeFinding": "CURRENT_BRB_SAME_SECTION_GRADE_COVERED_BY_NAMED_STAGE",
+      "label": "Böter – fängelse högst 18 år",
+      "upper": "18 år"
+    },
+    {
+      "id": "stadium-08-forberedelse-v15-additional-grov-kapning",
+      "parentId": "v15-additional-grov-kapning",
+      "title": "Förberedelse till grov kapning",
+      "stageType": "forberedelse",
+      "statute": "BrB:13:5a",
+      "authorizer": "BrB:13:12",
+      "parentRange": {
+        "min": 2,
+        "max": 18,
+        "fines": false,
+        "life": true
+      },
+      "range": {
+        "min": 0,
+        "max": 18,
+        "fines": true,
+        "life": false
+      },
+      "scopeFinding": "CURRENT_BRB_SAME_SECTION_GRADE_COVERED_BY_NAMED_STAGE",
+      "label": "Böter – fängelse högst 18 år",
+      "upper": "18 år"
+    },
+    {
+      "id": "stadium-08-stampling-v15-additional-grov-kapning",
+      "parentId": "v15-additional-grov-kapning",
+      "title": "Stämpling till grov kapning",
+      "stageType": "stampling",
+      "statute": "BrB:13:5a",
+      "authorizer": "BrB:13:12",
+      "parentRange": {
+        "min": 2,
+        "max": 18,
+        "fines": false,
+        "life": true
+      },
+      "range": {
+        "min": 0,
+        "max": 18,
+        "fines": true,
+        "life": false
+      },
+      "scopeFinding": "CURRENT_BRB_SAME_SECTION_GRADE_COVERED_BY_NAMED_STAGE",
+      "label": "Böter – fängelse högst 18 år",
+      "upper": "18 år"
+    },
+    {
+      "id": "stadium-08-forberedelse-v15-additional-grovt-sjo-eller-luftfartssabotage",
+      "parentId": "v15-additional-grovt-sjo-eller-luftfartssabotage",
+      "title": "Förberedelse till grovt sjö- eller luftfartssabotage",
+      "stageType": "forberedelse",
+      "statute": "BrB:13:5a",
+      "authorizer": "BrB:13:12",
+      "parentRange": {
+        "min": 2,
+        "max": 18,
+        "fines": false,
+        "life": true
+      },
+      "range": {
+        "min": 0,
+        "max": 18,
+        "fines": true,
+        "life": false
+      },
+      "scopeFinding": "CURRENT_BRB_SAME_SECTION_GRADE_COVERED_BY_NAMED_STAGE",
+      "label": "Böter – fängelse högst 18 år",
+      "upper": "18 år"
+    },
+    {
+      "id": "stadium-08-stampling-v15-additional-grovt-sjo-eller-luftfartssabotage",
+      "parentId": "v15-additional-grovt-sjo-eller-luftfartssabotage",
+      "title": "Stämpling till grovt sjö- eller luftfartssabotage",
+      "stageType": "stampling",
+      "statute": "BrB:13:5a",
+      "authorizer": "BrB:13:12",
+      "parentRange": {
+        "min": 2,
+        "max": 18,
+        "fines": false,
+        "life": true
+      },
+      "range": {
+        "min": 0,
+        "max": 18,
+        "fines": true,
+        "life": false
+      },
+      "scopeFinding": "CURRENT_BRB_SAME_SECTION_GRADE_COVERED_BY_NAMED_STAGE",
+      "label": "Böter – fängelse högst 18 år",
+      "upper": "18 år"
+    },
+    {
+      "id": "stadium-08-forberedelse-v15-additional-grovt-flygplatssabotage",
+      "parentId": "v15-additional-grovt-flygplatssabotage",
+      "title": "Förberedelse till grovt flygplatssabotage",
+      "stageType": "forberedelse",
+      "statute": "BrB:13:5b",
+      "authorizer": "BrB:13:12",
+      "parentRange": {
+        "min": 2,
+        "max": 18,
+        "fines": false,
+        "life": true
+      },
+      "range": {
+        "min": 0,
+        "max": 18,
+        "fines": true,
+        "life": false
+      },
+      "scopeFinding": "CURRENT_BRB_SAME_SECTION_GRADE_COVERED_BY_NAMED_STAGE",
+      "label": "Böter – fängelse högst 18 år",
+      "upper": "18 år"
+    },
+    {
+      "id": "stadium-08-stampling-v15-additional-grovt-flygplatssabotage",
+      "parentId": "v15-additional-grovt-flygplatssabotage",
+      "title": "Stämpling till grovt flygplatssabotage",
+      "stageType": "stampling",
+      "statute": "BrB:13:5b",
+      "authorizer": "BrB:13:12",
+      "parentRange": {
+        "min": 2,
+        "max": 18,
+        "fines": false,
+        "life": true
+      },
+      "range": {
+        "min": 0,
+        "max": 18,
+        "fines": true,
+        "life": false
+      },
+      "scopeFinding": "CURRENT_BRB_SAME_SECTION_GRADE_COVERED_BY_NAMED_STAGE",
+      "label": "Böter – fängelse högst 18 år",
+      "upper": "18 år"
+    }
+  ],
+  "pins": {
+    "BrB:13:7": {
+      "text": "7 §\nOm någon framkallar allmän fara för människors liv eller hälsa genom att förgifta eller infektera livsmedel, vatten eller annat, på annat sätt sprida gift eller dylikt eller överföra eller sprida allvarlig sjukdom, döms för spridande av gift eller smitta till fängelse i högst sex år.\nÄr brottet grovt, döms till fängelse på viss tid, lägst fyra och högst arton år, eller på livstid. Vid bedömande av om brottet är grovt ska särskilt beaktas om det skett med uppsåt att skada annan till liv eller hälsa eller om många människor utsatts för fara.\nLag (2009:396).",
+      "url": "https://www.riksdagen.se/sv/dokument-och-lagar/dokument/svensk-forfattningssamling/brottsbalk-1962700_sfs-1962-700/"
+    },
+    "BrB:13:12": {
+      "text": "12 §\nFör försök, förberedelse eller stämpling till mordbrand, grov mordbrand, allmänfarlig ödeläggelse, grov allmänfarlig ödeläggelse, sabotage, grovt sabotage, kapning, sjö- eller luftfartssabotage, flygplatssabotage, sabotage mot blåljusverksamhet, grovt sabotage mot blåljusverksamhet, spridande av gift eller smitta eller till förgöring och för underlåtenhet att avslöja eller förhindra sådant brott döms det till ansvar enligt 23 kap. Lag (2023:257).",
+      "url": "https://www.riksdagen.se/sv/dokument-och-lagar/dokument/svensk-forfattningssamling/brottsbalk-1962700_sfs-1962-700/"
+    },
+    "BrB:23:2": {
+      "text": "2 §\nDen som inte har gjort sig skyldig till fullbordat brott eller försök till brott döms, om sådant ansvar är särskilt föreskrivet, för förberedelse till brottet om han eller hon, med uppsåt att utföra eller främja brott,\n1. tar emot, lämnar, förmedlar eller utlovar betalningsmedel eller annat som betalning för ett brott eller för att täcka kostnader för utförande av ett brott, eller\n2. förvärvar, anskaffar, tillverkar, överlämnar, tar emot, förvarar, transporterar, sammanställer, överlåter eller tar annan liknande befattning med något som, med beaktande av dess beskaffenhet och omständigheterna i övrigt, är särskilt ägnat att komma till användning som hjälpmedel vid ett brott eller att möjliggöra utförandet av ett brott.\nFör stämpling till brott döms, om sådant ansvar är särskilt föreskrivet, den som\n1. kommer överens med någon annan om att en gärning ska utföras,\n2. försöker anstifta någon annan att utföra en gärning, eller\n3. åtar eller erbjuder sig att utföra en gärning.\nDet ska inte dömas till ansvar för förberedelse eller stämpling till brott om faran för att brottet skulle fullbordas var ringa, om inte faran var ringa eller utesluten till följd av en myndighets åtgärd för att bekämpa brott. Det ska inte heller dömas till ansvar om gärningen med hänsyn till omständigheterna är mindre allvarlig.\nStraffet för förberedelse eller stämpling till brott ska bestämmas under den högsta och får sättas under den lägsta gräns som gäller för fullbordat brott. Högre straff än fängelse i två år får bestämmas endast om fängelse i sex år eller mer kan följa på det fullbordade brottet.\nLag (2026:94).",
+      "url": "https://www.riksdagen.se/sv/dokument-och-lagar/dokument/svensk-forfattningssamling/brottsbalk-1962700_sfs-1962-700/"
+    },
+    "BrB:13:5a": {
+      "text": "5 a §\nDen som genom olaga tvång eller olovligen med tekniskt hjälpmedel bemäktigar sig eller ingriper i manövreringen av\n1. ett luftfartyg,\n2. ett fartyg, som används i civil yrkesmässig sjöfart för befordran av gods eller passagerare, bogsering, bärgning, fiske eller annan fångst, eller\n3. en buss, en lastbil eller ett maskindrivet spårfordon på järnväg, spårväg eller tunnelbana, som används i förvärvsverksamhet för befordran av gods eller passagerare,\ndöms för kapning till fängelse i högst fyra år. Detsamma gäller den som genom olaga tvång bemäktigar sig en plattform i havet som är avsedd för verksamhet för utforskning eller utvinning av naturtillgångar eller för något annat ekonomiskt ändamål.\nDen som i annat fall\n1. förstör eller allvarligt skadar ett sådant fartyg eller en sådan plattform som anges i första stycket eller ett luftfartyg i trafik, eller\n2. vidtar en åtgärd som är ägnad att framkalla fara för säkerheten för ett sådant fartyg eller en sådan plattform som anges i första stycket eller för ett luftfartygs säkerhet under flygning\ndöms för sjö- eller luftfartssabotage till fängelse i högst fyra år.\nÄr brott som avses i första eller andra stycket att anse som grovt, döms till fängelse på viss tid, lägst två och högst arton år, eller på livstid. Vid bedömande av om brottet är grovt ska särskilt beaktas om därigenom framkallats fara för flera människoliv eller om gärningen annars varit av särskilt farlig art.\nLag (2018:165).",
+      "url": "https://www.riksdagen.se/sv/dokument-och-lagar/dokument/svensk-forfattningssamling/brottsbalk-1962700_sfs-1962-700/"
+    },
+    "BrB:13:5b": {
+      "text": "5 b §\nDen som\n1. använder allvarligt våld eller hot om sådant våld mot någon som befinner sig på en flygplats som är öppen för internationell trafik,\n2. förstör eller allvarligt skadar en anordning, som hör till en sådan flygplats eller som används för flygplatsens trafik, eller ett luftfartyg, som inte är i trafik men är uppställt på flygplatsen, eller\n3. med användande av våld eller hot om våld omintetgör verksamhet som bedrivs på en sådan flygplats,\ndöms, om gärningen är ägnad att framkalla fara för flygplatsens funktion eller för säkerheten vid denna, för flygplatssabotage till fängelse i högst fyra år.\nÄr brottet att anse som grovt, döms till fängelse på viss tid, lägst två och högst arton år, eller på livstid. Vid bedömande av om brottet är grovt ska särskilt beaktas om därigenom framkallats fara för flera människoliv eller om gärningen annars varit av särskilt farlig art.\nLag (2009:396).",
+      "url": "https://www.riksdagen.se/sv/dokument-och-lagar/dokument/svensk-forfattningssamling/brottsbalk-1962700_sfs-1962-700/"
+    }
+  },
+  "reasoning": "Individual current SFS parents contain finite imprisonment up to 18 years or life, with minimum below six years. BrB 23:2 excludes life for these stages, allows lower punishment, and its six-year maximum threshold is met. Finite 18 years remains included, not an open bound under 18. This is an ordinary single-offence interval; general modifiers and historical versions remain separately assessed.",
+  "currentReformSource": {
+    "url": "https://www.riksdagen.se/sv/dokument-och-lagar/dokument/proposition/dubbla-straff-for-brott-i-kriminella-natverk-och_hd03218/html/",
+    "section": "5.3.1, pp. 64–65; pp. 120–121",
+    "finding": "The 18-year ceiling remains; removal of its repetition in BrB 26:1 leaves it expressed through individual scales. Preparation/conspiracy scales are not changed by the reform."
+  },
+  "historicalIllustration": {
+    "url": "https://www.aklagare.se/globalassets/dokument/verksamheten-i-hogsta-domstolen/svarsskrivelser-och-forklaringar/2020/amr-2540-20-forberedelse-till-mord.pdf",
+    "page": 4,
+    "role": "prosecutor submission, not precedent",
+    "finding": "Expressly explains preparation-to-murder statutory maximum as 18 years. Used only as an illustration alongside current law and reform analysis.",
+    "accessNote": "All six pages read via official PDF text extraction; direct binary download returned HTTP 403, so no binary fingerprint is claimed."
+  },
+  "notIntegrated": false,
+  "precedentRead": {
+    "url": "https://www.domstol.se/globalassets/filer/domstol/hogstadomstolen/avgoranden/2020/b-1371-20.pdf",
+    "courtPage": "https://www.domstol.se/hogsta-domstolen/avgoranden2/2020/81717/",
+    "caseNumber": "B 1371-20",
+    "decisionDate": "2020-09-23",
+    "citation": "NJA 2020 s. 703",
+    "relevantParagraphs": [
+      11,
+      12,
+      13,
+      14,
+      15,
+      16,
+      17,
+      29,
+      30
+    ],
+    "finding": "The one-third approach is a sentencing guideline, not the statutory maximum. The judgment did not establish that execution was imminent merely because GPS equipment, a weapon and a vehicle had been procured. Current ordinary intervals require independent comparison with the 2026 sources.",
+    "notACompletedIndividualCaseLawAudit": true,
+    "downloadedSHA256": "6c544b1fa4a8ff7e751843156c0f2f41b518a0f019d901b023566eb0eda0ac5c",
+    "downloadedBytes": 203729
+  },
+  "integrationScope": "Eight separately checked ordinary statutory preparation/conspiracy intervals only; no case-law checkpoint or legal final approval"
+}

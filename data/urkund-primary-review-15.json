@@ -1,0 +1,126 @@
+{
+  "checked": "2026-10-21",
+  "scope": "Independent documentary forgery source review; limited findings, no full jurisprudence checkpoint completion",
+  "statutoryPins": {
+    "BrB:14:1": {
+      "id": "BrB:14:1",
+      "ref": "BrB 14 kap. 1 §",
+      "text": "1 §\nDen som obehörigen, genom att skriva eller på liknande sätt ange en annan persons namn eller på annat sätt, framställer en falsk urkund eller ändrar eller fyller ut en äkta urkund döms, om åtgärden innebär fara i bevishänseende, för urkundsförfalskning till fängelse i högst två år.\nMed urkund avses\n1. en handling som upprättats till bevis eller annars är av betydelse som bevis och som har en utställarangivelse och originalkaraktär,\n2. en elektronisk handling som upprättats till bevis eller annars är av betydelse som bevis och som har en utställarangivelse som kan kontrolleras på ett tillförlitligt sätt, och\n3. ett märke som ställts ut till bevis om en persons identitet eller om en viss rättighet eller prestation och som har originalkaraktär (bevismärke). Lag (2013:425).",
+      "url": "https://www.riksdagen.se/sv/dokument-och-lagar/dokument/svensk-forfattningssamling/brottsbalk-1962700_sfs-1962-700/",
+      "complete": true,
+      "machine": false,
+      "checked": "2026-10-17",
+      "completeTextProvenance": "manual-crosscheck-current-SFS-paragraph-only"
+    },
+    "BrB:14:3": {
+      "id": "BrB:14:3",
+      "ref": "BrB 14 kap. 3 §",
+      "text": "3 §\nÄr brott som avses i 1 § att anse som grovt, döms för grov urkundsförfalskning till fängelse i lägst ett och högst sex år.\nVid bedömningen av om brottet är grovt ska det särskilt beaktas om förfalskningen avsett en myndighets arkivhandling av vikt eller en urkund som är särskilt betydelsefull i den allmänna omsättningen eller om gärningen annars varit av särskilt farlig art. Lag (2026:1318).",
+      "url": "https://www.riksdagen.se/sv/dokument-och-lagar/dokument/svensk-forfattningssamling/brottsbalk-1962700_sfs-1962-700/",
+      "complete": true,
+      "machine": false,
+      "checked": "2026-10-17",
+      "completeTextProvenance": "manual-crosscheck-current-SFS-paragraph-only"
+    },
+    "BrB:14:10": {
+      "id": "BrB:14:10",
+      "ref": "BrB 14 kap. 10 §",
+      "text": "10 §\nDen som åberopar falsk urkund, bjuder ut eller saluför verk med falsk signatur, prånglar ut falsk sedel eller falskt mynt, använder falskt värde- eller kontrollmärke, åberopar falskt fast märke eller annars brukar något som förfalskats på ett sätt som anges i detta kapitel, döms, om åtgärden innebär fara i bevishänseende, för brukande av det förfalskade som om han eller hon själv hade gjort förfalskningen. Lag (2013:425).",
+      "url": "https://www.riksdagen.se/sv/dokument-och-lagar/dokument/svensk-forfattningssamling/brottsbalk-1962700_sfs-1962-700/",
+      "complete": true,
+      "machine": false,
+      "checked": "2026-10-18",
+      "completeTextProvenance": "manual-crosscheck-current-SFS-paragraph-only"
+    },
+    "BrB:15:11": {
+      "id": "BrB:15:11",
+      "ref": "BrB 15 kap. 11 §",
+      "text": "11 §\nDen som i ett intyg eller en annan urkund lämnar osann uppgift om vem han eller hon är eller om annat än egna angelägenheter eller för skens skull upprättar en urkund rörande rättshandling döms, om åtgärden innebär fara i bevishänseende, för osant intygande till böter eller fängelse i högst sex månader.\nÄr brottet med hänsyn till att det innefattar missbruk av tjänsteställning eller annars att anse som grovt, döms till fängelse i högst två år.\n\nDen som åberopar eller på annat sätt använder en sådan osann urkund som avses i första stycket döms, om åtgärden innebär fara i bevishänseende, för brukande av osann urkund till straff som anges i första eller andra stycket.\nLag (2013:425).",
+      "url": "https://www.riksdagen.se/sv/dokument-och-lagar/dokument/svensk-forfattningssamling/brottsbalk-1962700_sfs-1962-700/",
+      "complete": true,
+      "machine": false,
+      "checked": "2026-10-18",
+      "completeTextProvenance": "manual-crosscheck-current-SFS-paragraph-only"
+    },
+    "BrB:15:12": {
+      "id": "BrB:15:12",
+      "ref": "BrB 15 kap. 12 §",
+      "text": "12 §\nDen som sanningslöst åberopar pass, betyg, identitetshandling eller annan sådan för enskild person utställd urkund såsom gällande för sig eller annan person eller lämnar ut sådan urkund för att missbrukas på det sättet döms, om åtgärden innebär fara i bevishänseende, för missbruk av urkund till böter eller fängelse i högst sex månader.\n\nÄr brottet grovt, döms till fängelse i högst två år.\nDen som sanningslöst utger en handling för att vara en riktig kopia av en viss urkund döms, om åtgärden innebär fara i bevishänseende, för missbruk av handling till straff som anges i första eller andra stycket. Lag (2013:425).",
+      "url": "https://www.riksdagen.se/sv/dokument-och-lagar/dokument/svensk-forfattningssamling/brottsbalk-1962700_sfs-1962-700/",
+      "complete": true,
+      "machine": false,
+      "checked": "2026-10-18",
+      "completeTextProvenance": "manual-crosscheck-current-SFS-paragraph-only"
+    }
+  },
+  "preparatorySource": {
+    "url": "https://www.riksdagen.se/sv/dokument-och-lagar/dokument/proposition/forfalsknings-och-sanningsbrotten_h00374/html/",
+    "reference": "Prop. 2012/13:74",
+    "readSections": [
+      "5.1, inledningen s. 42–43",
+      "10.1, kommentaren till 14:1 s. 68–70",
+      "10.1, kommentaren till 14:3 och 14:10 s. 71–73",
+      "10.1, kommentaren till 15:11–12 s. 74–76"
+    ],
+    "findings": [
+      "2013 års modernisering skiljer brukande av osann urkund i 15:11 tredje stycket från den grova graden av intygande i andra stycket.",
+      "15:12 tredje stycket har egen beteckning missbruk av handling; den får inte beskrivas som samma brott som missbruk av urkund.",
+      "Urkundsbegreppet omfattar traditionella handlingar, elektroniska handlingar och bevismärken med skilda krav."
+    ]
+  },
+  "courtSources": [
+    {
+      "label": "Freja",
+      "url": "https://www.domstol.se/globalassets/filer/domstol/hogstadomstolen/avgoranden/2025/b-920-25.pdf",
+      "case": "B 920-25",
+      "judgmentDate": "2025-11-04",
+      "allPagesRead": 6,
+      "bytes": 132215,
+      "sha256": "5b3f50200097a103034c748d56f9785fd79affb66253c195a6481565753b2d03"
+    },
+    {
+      "label": "De upprepade förfalskningarna",
+      "url": "https://www.domstol.se/globalassets/filer/domstol/hogstadomstolen/avgoranden/2018/b-3924-17.pdf",
+      "case": "B 3924-17",
+      "judgmentDate": "2018-06-11",
+      "allPagesRead": 13,
+      "bytes": 189623,
+      "sha256": "569df104afb7ede974fbe25f69d5e298cf309a03b420538c145e18d41b33740c"
+    },
+    {
+      "label": "De vita korten",
+      "case": "B 4608-07",
+      "judgmentDate": "2009-03-24",
+      "url": "https://www.domstol.se/globalassets/filer/domstol/hogstadomstolen/avgoranden/2009/b-4608-07.pdf",
+      "allPagesRead": 10,
+      "majorityRead": "s. 1–6",
+      "dissentRead": "bilaga 1, s. 7–9",
+      "separateOpinionRead": "bilaga 2, s. 10",
+      "finding": "Majoriteten bedömde magnetremskorten som urkunder trots avsaknad av tryckt utställartext. Två ledamöter var skiljaktiga och ansåg att originalkaraktär och skenbar äkthet saknades.",
+      "limit": "Gäller äldre lydelse före 2013. Den skiljaktiga meningen får inte återges som domslut. Avgörandet ger ingen automatisk slutsats om elektroniska handlingar enligt dagens 14:1 andra stycket 2 eller om annan brottslighet.",
+      "bytes": 52297,
+      "sha256": "3b1ecbded40849db65b444aa1d5d2f8530b0baae43847c623c507b931dce82f3"
+    }
+  ],
+  "corrections": [
+    {
+      "statute": "BrB:15:11",
+      "before": "Andra stycket gäller också brukande av sådan osann urkund.",
+      "after": "Tredje stycket gäller brukande av sådan osann urkund; andra stycket reglerar den grova graden av osant intygande."
+    },
+    {
+      "statute": "BrB:15:12",
+      "before": "Bestämmelsen omfattar också särskilt sanningslöst påstående om riktig kopia.",
+      "after": "Tredje stycket reglerar separat missbruk av handling: ett sanningslöst påstående om att en handling är en riktig kopia av en viss urkund."
+    }
+  ],
+  "gradeFinding": "Varje förfalskning är normalt ett eget brott. Upprepning ensam gör normalt inte brottet grovt; andra försvårande omständigheter kan ge annan grad. Serieframställning kan undantagsvis vara en brottsenhet. Rubricering och gemensamt straffvärde ska hållas isär.",
+  "historicalLimit": "2018 års doms fjortondagarsminimum och sexmånadersminimum för grov urkundsförfalskning används inte som aktuella 2026-skalor.",
+  "jurisprudenceCheckpointCompleted": false,
+  "fullLegalApprovalGranted": false,
+  "progressCredit": 0,
+  "remainingQuestions": [
+    "Äldre praxis som NJA 1991 s. 739 och senare rättsutveckling återstår att pröva mot 2013 års nya urkundsbegrepp; den gjorda genomgången är inte en uttömmande praxisinventering.",
+    "Detta är inte en fullständig granskning av gärningstidpunkt, uppsåt, fara i bevishänseende, konkurrens eller alla aktuella kvalifikationsgrunder."
+  ]
+}

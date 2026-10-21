@@ -1,0 +1,545 @@
+{
+  "schema": 1,
+  "scope": "specific-2026-amendment-preparatory-commentary-only",
+  "source": {
+    "id": "Prop.2025/26:218",
+    "url": "https://data.riksdagen.se/dokument/HD03218",
+    "title": "Dubbla straff för brott i kriminella nätverk och skärpta straffskalor",
+    "section": "10.1",
+    "checked": "2026-10-21",
+    "downloadTextSHA256": "e1e9c20a0d4679b35440d4cdda7364a3b39491791d932fe506f03342e199441c"
+  },
+  "sourcePins": {
+    "BrB:8:4": {
+      "text": "4 §\nÄr brott som avses i 1 § att anse som grovt, döms för grov stöld till fängelse i lägst ett och högst sex år.\nVid bedömningen av om brottet är grovt ska det särskilt beaktas om det avsett sak som någon bar på sig eller hade i sin omedelbara närhet, om gärningsmannen varit försedd med vapen, sprängämne eller annat dylikt hjälpmedel, om gärningen ingått som ett led i en brottslighet som utövats systematiskt eller om gärningen annars varit av särskilt farlig eller hänsynslös art, avsett betydande värde eller inneburit synnerligen kännbar skada. Lag (2026:1318).",
+      "url": "https://www.riksdagen.se/sv/dokument-och-lagar/dokument/svensk-forfattningssamling/brottsbalk-1962700_sfs-1962-700/"
+    },
+    "BrB:3:6": {
+      "text": "6 §\nÄr brott som avses i 5 § att anse som grovt, döms för grov misshandel till fängelse i lägst ett år och sex månader och högst sju år. Vid bedömningen av om brottet är grovt ska det särskilt beaktas om gärningen var livsfarlig eller om gärningsmannen har tillfogat en svår kroppsskada eller allvarlig sjukdom eller annars visat särskild hänsynslöshet eller råhet.\nÄr brottet att anse som synnerligen grovt, döms för synnerligen grov misshandel till fängelse i lägst sex och högst tolv år. Vid bedömningen av om brottet är synnerligen grovt ska det särskilt beaktas om kroppsskadan är bestående eller om gärningen har orsakat synnerligt lidande eller om gärningsmannen har visat synnerlig hänsynslöshet.\nLag (2026:1318).",
+      "url": "https://www.riksdagen.se/sv/dokument-och-lagar/dokument/svensk-forfattningssamling/brottsbalk-1962700_sfs-1962-700/"
+    },
+    "BrB:9:3": {
+      "text": "3 §\nÄr brott som avses i 1 § att anse som grovt, döms för grovt bedrägeri till fängelse i lägst ett och högst sex år.\nVid bedömningen av om brottet är grovt ska det särskilt beaktas om\n1. gärningsmannen har missbrukat allmänt förtroende eller använt urkund eller annat vars brukande är straffbart enligt 14 eller 15 kap. eller vilseledande bokföring,\n2. gärningsmannen på ett hänsynslöst sätt har utnyttjat offrets skyddslösa eller utsatta ställning,\n3. gärningen har avsett betydande värde eller inneburit synnerligen kännbar skada,\n4. gärningen har ingått i en brottslighet som utövats i organiserad form eller systematiskt, eller\n5. gärningen annars har varit av särskilt farlig art.\nLag (2026:1318).",
+      "url": "https://www.riksdagen.se/sv/dokument-och-lagar/dokument/svensk-forfattningssamling/brottsbalk-1962700_sfs-1962-700/"
+    },
+    "BrB:12:3": {
+      "text": "3 §\nOm brott som avses i 1 § är att anse som grovt, döms för grov skadegörelse till fängelse i lägst ett och högst sex år.\n\nVid bedömningen av om brottet är grovt ska det särskilt beaktas om gärningen har medfört betydande fara för någons liv eller hälsa, om skadan drabbat sak av stor kulturell eller ekonomisk betydelse eller annars är synnerligen kännbar eller om gärningen varit av särskilt hänsynslös art.\nLag (2026:1318).",
+      "url": "https://www.riksdagen.se/sv/dokument-och-lagar/dokument/svensk-forfattningssamling/brottsbalk-1962700_sfs-1962-700/"
+    },
+    "BrB:3:7": {
+      "text": "7 §\nDen som av oaktsamhet orsakar annans död, döms för vållande till annans död till fängelse i högst tre år eller, om brottet är ringa, till böter.\nÄr brottet grovt, döms till fängelse i lägst två och högst sex år. Vid bedömningen av om brottet är grovt ska det särskilt beaktas om\n1. gärningen har innefattat ett medvetet risktagande av allvarligt slag, eller\n2. gärningsmannen, när det krävts särskild uppmärksamhet eller skicklighet, har varit påverkad av alkohol eller något annat medel eller annars gjort sig skyldig till en försummelse av allvarligt slag. Lag (2026:1318).",
+      "url": "https://www.riksdagen.se/sv/dokument-och-lagar/dokument/svensk-forfattningssamling/brottsbalk-1962700_sfs-1962-700/"
+    },
+    "BrB:3:9": {
+      "text": "9 §\nDen som av grov oaktsamhet utsätter någon annan för livsfara eller fara för svår kroppsskada eller allvarlig sjukdom, döms för framkallande av fara för annan till böter eller fängelse i högst tre år. Lag (2026:1318).",
+      "url": "https://www.riksdagen.se/sv/dokument-och-lagar/dokument/svensk-forfattningssamling/brottsbalk-1962700_sfs-1962-700/"
+    },
+    "BrB:4:6d": {
+      "text": "6 d §\nOm brott som avses i 6 c § är grovt, döms för grovt olaga integritetsintrång till fängelse i lägst sex månader och högst sex år.\nVid bedömningen av om brottet är grovt ska det särskilt beaktas om gärningen med hänsyn till bildens eller uppgiftens innehåll eller sättet för eller omfattningen av spridningen var ägnad att medföra mycket allvarlig skada för den som bilden eller uppgiften rör. Lag (2026:1318).",
+      "url": "https://www.riksdagen.se/sv/dokument-och-lagar/dokument/svensk-forfattningssamling/brottsbalk-1962700_sfs-1962-700/"
+    },
+    "BrB:4:9c": {
+      "text": "9 c §\nDen som olovligen bereder sig tillgång till en uppgift som är avsedd för automatiserad behandling eller olovligen ändrar, utplånar, blockerar eller i register för in en sådan uppgift döms för dataintrång till böter eller fängelse i högst två år. Detsamma gäller den som olovligen genom någon annan liknande åtgärd allvarligt stör eller hindrar användningen av en sådan uppgift.\nÄr brottet grovt, döms för grovt dataintrång till fängelse i lägst ett och högst åtta år. Vid bedömningen av om brottet är grovt ska det särskilt beaktas om gärningen har orsakat allvarlig skada eller avsett ett stort antal uppgifter eller annars varit av särskilt farlig art. Lag (2026:1318).",
+      "url": "https://www.riksdagen.se/sv/dokument-och-lagar/dokument/svensk-forfattningssamling/brottsbalk-1962700_sfs-1962-700/"
+    },
+    "BrB:5:3": {
+      "text": "3 §\nDen som, i annat fall än som avses i 1 eller 2 §, riktar beskyllning, nedsättande uttalande eller förödmjukande beteende mot någon annan döms, om gärningen är ägnad att kränka den andres självkänsla eller värdighet, för förolämpning till böter eller fängelse i högst sex månader.\nLag (2026:1318).",
+      "url": "https://www.riksdagen.se/sv/dokument-och-lagar/dokument/svensk-forfattningssamling/brottsbalk-1962700_sfs-1962-700/"
+    },
+    "BrB:6:1": {
+      "text": "1 §\nDen som, med en person som inte deltar frivilligt, genomför ett vaginalt, analt eller oralt samlag eller en annan sexuell handling som med hänsyn till kränkningens allvar är jämförlig med samlag, döms för våldtäkt till fängelse i lägst tre och högst sex år. Detsamma gäller den som förmår en person som inte deltar frivilligt att företa eller tåla en sådan handling. Vid bedömningen av om ett deltagande är frivilligt eller inte ska det särskilt beaktas om frivillighet har kommit till uttryck genom ord eller handling eller på annat sätt. En person kan aldrig anses delta frivilligt om\n1. deltagandet är en följd av misshandel, annat våld eller hot om brottslig gärning, hot om att åtala eller ange någon annan för brott eller hot om att lämna ett menligt meddelande om någon annan,\n2. gärningsmannen otillbörligt utnyttjar att personen på grund av medvetslöshet, sömn, allvarlig rädsla, berusning eller annan drogpåverkan, sjukdom, kroppsskada, psykisk störning eller annars med hänsyn till omständigheterna befinner sig i en särskilt utsatt situation, eller\n3. gärningsmannen förmår personen att delta genom att allvarligt missbruka att personen står i beroendeställning till gärningsmannen.\nOm brottet är mindre grovt, döms till fängelse i lägst sex månader och högst fyra år.\nOm ett brott som avses i första stycket är grovt, döms för grov våldtäkt till fängelse i lägst fem och högst tolv år. Vid bedömningen av om brottet är grovt ska det särskilt beaktas om gärningsmannen har använt våld eller hot som varit av särskilt allvarlig art eller om fler än en förgripit sig på offret eller på annat sätt deltagit i övergreppet eller om gärningsmannen med hänsyn till tillvägagångssättet eller offrets låga ålder eller annars visat särskild hänsynslöshet eller råhet.\nLag (2026:1318).",
+      "url": "https://www.riksdagen.se/sv/dokument-och-lagar/dokument/svensk-forfattningssamling/brottsbalk-1962700_sfs-1962-700/"
+    },
+    "BrB:6:4": {
+      "text": "4 §\nDen som, med ett barn under femton år, genomför ett vaginalt, analt eller oralt samlag eller en annan sexuell handling som med hänsyn till kränkningens allvar är jämförlig med samlag, döms för våldtäkt mot barn till fängelse i lägst tre och högst sex år. Detsamma gäller den som på ett otillbörligt sätt förmår barnet att företa eller tåla en sådan handling.\nFörsta stycket gäller även den som begår en gärning som avses där\n1. mot ett barn som fyllt femton men inte arton år\na) som är avkomling till gärningsmannen,\nb) som står under fostran av eller har ett liknande förhållande till gärningsmannen, eller\nc) för vars vård eller tillsyn gärningsmannen ska svara på grund av en myndighets beslut, eller\n2. om gärningsmannen, i annat fall än som avses i 1, otillbörligt utnyttjar att ett barn under arton år på grund av psykisk ohälsa, funktionsnedsättning, missbruk, gärningsmannens auktoritet eller annars med hänsyn till omständigheterna har en nedsatt förmåga att värna sin sexuella integritet.\nOm ett brott som avses i första eller andra stycket är grovt, döms för grov våldtäkt mot barn till fängelse i lägst fem och högst tolv år. Vid bedömningen av om brottet är grovt ska det särskilt beaktas om gärningsmannen har använt våld eller hot om brottslig gärning eller om fler än en förgripit sig på barnet eller på annat sätt deltagit i övergreppet eller om gärningsmannen med hänsyn till tillvägagångssättet eller barnets låga ålder eller annars visat särskild hänsynslöshet eller råhet.\nLag (2026:1318).",
+      "url": "https://www.riksdagen.se/sv/dokument-och-lagar/dokument/svensk-forfattningssamling/brottsbalk-1962700_sfs-1962-700/"
+    },
+    "BrB:9:5": {
+      "text": "5 §\nDen som vid avtal eller någon annan rättshandling utnyttjar någons trångmål, oförstånd, lättsinne eller beroendeställning till att bereda sig förmån, som står i uppenbart missförhållande till motprestationen eller för vilken motprestation inte ska lämnas, döms för ocker till böter eller fängelse i högst två år.\nFör ocker döms också den som vid kreditgivning i näringsverksamhet eller i annan verksamhet, som bedrivs vanemässigt eller annars i större omfattning, bereder sig ränta eller annan ekonomisk förmån, som står i uppenbart missförhållande till motprestationen.\nÄr brottet grovt, döms för grovt ocker till fängelse i lägst ett och högst sex år. Vid bedömningen av om brottet är grovt ska det särskilt beaktas om gärningen har avsett betydande värde eller varit av särskilt farlig eller hänsynslös art.\nLag (2026:1318).",
+      "url": "https://www.riksdagen.se/sv/dokument-och-lagar/dokument/svensk-forfattningssamling/brottsbalk-1962700_sfs-1962-700/"
+    },
+    "BrB:9:6": {
+      "text": "6 §\nDen som\n1. på ett sätt som är ägnat att försvåra ett återställande tar befattning med något som är frånhänt annan genom brott,\n2. bereder sig otillbörlig vinning av annans brottsliga förvärv, eller\n3. genom krav, överlåtelse eller på annat liknande sätt hävdar genom brott tillkommen fordran\ndöms för häleri till fängelse i högst två år.\nFör häleri döms även den som i näringsverksamhet eller såsom led i en verksamhet, som bedrivs vanemässigt eller annars i större omfattning, på ett sätt som är ägnat att försvåra ett återställande förvärvar eller mottar något som skäligen kan antas vara frånhänt annan genom brott.\nÄr brott som avses i första eller andra stycket grovt, döms för grovt häleri till fängelse i lägst ett och högst sex år. Vid bedömningen av om brottet är grovt ska det särskilt beaktas om gärningen har avsett betydande värde, ingått som ett led i en brottslighet som utövats systematiskt eller annars varit av särskilt farlig art. Lag (2026:1318).",
+      "url": "https://www.riksdagen.se/sv/dokument-och-lagar/dokument/svensk-forfattningssamling/brottsbalk-1962700_sfs-1962-700/"
+    },
+    "BrB:10:3": {
+      "text": "3 §\nOm brott som avses i 1 § är att anse som grovt, döms för grov förskingring till fängelse i lägst ett och högst sex år.\nVid bedömningen av om brottet är grovt ska det särskilt beaktas om gärningsmannen har missbrukat ansvarsfull ställning eller använt urkund eller annat vars brukande är straffbart enligt 14 eller 15 kap. eller vilseledande bokföring eller om gärningen annars varit av särskilt farlig art, avsett betydande värde eller inneburit synnerligen kännbar skada.\nLag (2026:1318).",
+      "url": "https://www.riksdagen.se/sv/dokument-och-lagar/dokument/svensk-forfattningssamling/brottsbalk-1962700_sfs-1962-700/"
+    },
+    "BrB:10:5": {
+      "text": "5 §\nOm någon, som på grund av förtroendeställning fått till uppgift att för någon annan sköta en ekonomisk angelägenhet eller självständigt hantera en kvalificerad teknisk uppgift eller övervaka skötseln av en sådan angelägenhet eller uppgift, missbrukar sin förtroendeställning och därigenom skadar huvudmannen, döms han eller hon för trolöshet mot huvudman till böter eller fängelse i högst två år. Vad som har sagts nu gäller inte om gärningen är belagd med straff enligt 1-3 §§.\nOm brottet är grovt, döms för grov trolöshet mot huvudman till fängelse i lägst ett och högst sex år. Vid bedömningen av om brottet är grovt ska det särskilt beaktas om huvudmannen har tillfogats betydande eller synnerligen kännbar skada, om gärningsmannen har använt urkund eller annat vars brukande är straffbart enligt 14 eller 15 kap. eller vilseledande bokföring eller om gärningen annars har varit av särskilt farlig art.\nOm någon som har fått till uppgift att sköta en rättslig angelägenhet för någon annan missbrukar sin förtroendeställning till förfång för huvudmannen, döms han eller hon enligt första stycket, även om angelägenheten inte är av ekonomisk eller teknisk art. Lag (2026:1318).",
+      "url": "https://www.riksdagen.se/sv/dokument-och-lagar/dokument/svensk-forfattningssamling/brottsbalk-1962700_sfs-1962-700/"
+    },
+    "BrB:10:5a": {
+      "text": "5 a §\nDen som är arbetstagare eller utövar uppdrag och tar emot, godtar ett löfte om eller begär en otillbörlig förmån för utövningen av anställningen eller uppdraget döms för tagande av muta till fängelse i högst två år. Detsamma gäller den som är deltagare eller funktionär i en tävling som är föremål för allmänt anordnad vadhållning och det är fråga om en otillbörlig förmån för hans eller hennes fullgörande av uppgifter vid tävlingen.\nFörsta stycket gäller även om gärningen har begåtts innan gärningsmannen fått en sådan ställning som avses där eller efter det att den upphört.\nFör tagande av muta enligt första och andra styckena döms också den som tar emot, godtar ett löfte om eller begär förmånen för någon annan än sig själv. Lag (2026:1318).",
+      "url": "https://www.riksdagen.se/sv/dokument-och-lagar/dokument/svensk-forfattningssamling/brottsbalk-1962700_sfs-1962-700/"
+    },
+    "BrB:10:5b": {
+      "text": "5 b §\nDen som lämnar, utlovar eller erbjuder en otillbörlig förmån i fall som avses i 5 a § döms för givande av muta till fängelse i högst två år. Lag (2026:1318).",
+      "url": "https://www.riksdagen.se/sv/dokument-och-lagar/dokument/svensk-forfattningssamling/brottsbalk-1962700_sfs-1962-700/"
+    },
+    "BrB:10:5d": {
+      "text": "5 d §\nFör handel med inflytande döms till fängelse i högst två år den som i annat fall än som avses i 5 a eller 5 b §\n1. tar emot, godtar ett löfte om eller begär en otillbörlig förmån för att påverka annans beslut eller åtgärd vid myndighetsutövning eller offentlig upphandling, eller\n2. lämnar, utlovar eller erbjuder någon en otillbörlig förmån för att han eller hon ska påverka annans beslut eller åtgärd vid myndighetsutövning eller offentlig upphandling.\nLag (2026:1318).",
+      "url": "https://www.riksdagen.se/sv/dokument-och-lagar/dokument/svensk-forfattningssamling/brottsbalk-1962700_sfs-1962-700/"
+    },
+    "BrB:11:1": {
+      "text": "1 §\nDen som, när han eller hon är på obestånd eller när det finns en påtaglig fara för att han eller hon ska komma på obestånd, förstör eller genom gåva eller någon annan liknande åtgärd avhänder sig egendom av betydande värde, döms för oredlighet mot borgenärer till fängelse i högst två år. Detsamma gäller om någon genom sådant förfarande försätter sig på obestånd eller framkallar påtaglig fara för att han eller hon ska komma på obestånd.\nFör oredlighet mot borgenärer döms också en gäldenär som, då konkurs är förestående, ur riket bortför tillgång av betydande värde med uppsåt att hålla den undan konkursen, eller gäldenär som i konkurs undandrar eller undanhåller konkursförvaltningen tillgång.\nDetsamma gäller, om en gäldenär i otillbörligt syfte underlåter att, så långt möjligt, medverka till att tillgång i utlandet som ingår i konkursen ställs till konkursförvaltningens förfogande, trots att konkursförvaltaren uppmanat gäldenären att medverka.\nOm brottet är grovt, döms för grov oredlighet mot borgenärer till fängelse i lägst ett och högst sex år. Vid bedömningen av om brottet är grovt ska det särskilt beaktas om gärningsmannen beedigat oriktig uppgift eller använt falsk handling eller vilseledande bokföring eller om brottet varit av betydande omfattning eller om gärningen annars varit av särskilt farlig art. Lag (2026:1318).",
+      "url": "https://www.riksdagen.se/sv/dokument-och-lagar/dokument/svensk-forfattningssamling/brottsbalk-1962700_sfs-1962-700/"
+    },
+    "BrB:14:3": {
+      "text": "3 §\nÄr brott som avses i 1 § att anse som grovt, döms för grov urkundsförfalskning till fängelse i lägst ett och högst sex år.\nVid bedömningen av om brottet är grovt ska det särskilt beaktas om förfalskningen avsett en myndighets arkivhandling av vikt eller en urkund som är särskilt betydelsefull i den allmänna omsättningen eller om gärningen annars varit av särskilt farlig art. Lag (2026:1318).",
+      "url": "https://www.riksdagen.se/sv/dokument-och-lagar/dokument/svensk-forfattningssamling/brottsbalk-1962700_sfs-1962-700/"
+    },
+    "BrB:15:1": {
+      "text": "1 §\nDen som, efter att han eller hon har avlagt en ed som är föreskriven i lag, lämnar osann uppgift eller förtiger sanningen, döms för mened till fängelse i lägst sex månader och högst fyra år. Om brottet med hänsyn till omständigheterna är mindre allvarligt döms till fängelse i högst ett år.\nOm brottet är grovt döms för grov mened till fängelse i lägst två och högst åtta år. Vid bedömningen av om brottet är grovt ska det särskilt beaktas om det skett med uppsåt att\n1. försvåra eller förhindra utredningen av allvarlig brottslighet eller lagföringen av någon för sådan brottslighet,\n2. någon oskyldig ska dömas för allvarlig brottslighet, eller\n3. annars tillfoga någon annan synnerlig skada.\nLag (2026:1318).",
+      "url": "https://www.riksdagen.se/sv/dokument-och-lagar/dokument/svensk-forfattningssamling/brottsbalk-1962700_sfs-1962-700/"
+    },
+    "BrB:16:5": {
+      "text": "5 §\nDen som muntligen inför menighet eller folksamling, i skrift som sprids eller utlämnas för spridning eller i annat meddelande till allmänheten uppmanar eller annars söker förleda till brottslig gärning, svikande av medborgerlig skyl-\ndighet eller ohörsamhet mot myndighet, döms för uppvigling till böter eller fängelse i högst sex månader.\nFör uppvigling döms även den som muntligen inför en samling av krigsmän eller i annat meddelande till krigsmän uppmanar eller på annat sätt söker förleda dem till en handling eller underlåtenhet som innebär att de åsidosätter sina skyldigheter i tjänsten.\nI ringa fall ska det inte dömas till ansvar. Vid bedömningen av om det är fråga om ringa fall ska det särskilt beaktas om det funnits endast en obetydlig fara för att uppmaningen eller försöket skulle leda till efterföljd.\nOm brottet med hänsyn till att gärningsmannen sökt förleda till allvarligt brott eller annars är att anse som grovt, döms till fängelse i högst sex år.\nLag (2026:1318).",
+      "url": "https://www.riksdagen.se/sv/dokument-och-lagar/dokument/svensk-forfattningssamling/brottsbalk-1962700_sfs-1962-700/"
+    },
+    "BrB:20:3": {
+      "text": "3 §\nDen som röjer en uppgift som han eller hon är skyldig att hemlighålla enligt lag eller annan författning eller enligt förordnande eller förbehåll som har meddelats med stöd av lag eller annan författning, döms, om inte gärningen är belagd med straff enligt någon annan bestämmelse, för brott mot tystnadsplikt till böter eller fängelse i högst två år. Detsamma gäller den som olovligen utnyttjar sådan hemlighet.\nDen som av oaktsamhet begår en gärning som avses i första stycket, döms till böter. Om gärningen är ringa utgör den inte brott.\nOm ett brott som avses i första stycket är grovt, döms för grovt brott mot tystnadsplikt till fängelse i lägst ett och högst sex år. Vid bedömningen av om brottet är grovt ska det särskilt beaktas om gärningen kunnat medföra allvarlig skada, avsett ett stort antal uppgifter eller annars varit av särskilt farlig art.\nLag (2026:1318).",
+      "url": "https://www.riksdagen.se/sv/dokument-och-lagar/dokument/svensk-forfattningssamling/brottsbalk-1962700_sfs-1962-700/"
+    },
+    "BrB:6:10a": {
+      "text": "10 a §\nDen som, i syfte att mot ett barn under femton år begå en gärning för vilken straff föreskrivs i 4, 5, 6, 8 eller 10 §, föreslår en träff eller stämmer träff med barnet, döms för kontakt för att träffa ett barn i sexuellt syfte till fängelse i högst två år. Lag (2026:1318).",
+      "url": "https://www.riksdagen.se/sv/dokument-och-lagar/dokument/svensk-forfattningssamling/brottsbalk-1962700_sfs-1962-700/"
+    },
+    "BrB:9:6a": {
+      "text": "6 a §\nDen som, på ett sätt som är ägnat att försvåra ett återställande, tar befattning med något som skäligen kan antas vara frånhänt annan genom brott, i syfte att föra det ut ur landet, döms för utförselhäleri till fängelse i högst två år.\nOm brottet är grovt, döms för grovt utförselhäleri till fängelse i lägst ett och högst sex år. Vid bedömningen av om brottet är grovt ska det särskilt beaktas om gärningen har avsett betydande värde, ingått som ett led i en brottslighet som utövats systematiskt eller annars varit av särskilt farlig art. Lag (2026:1318).",
+      "url": "https://www.riksdagen.se/sv/dokument-och-lagar/dokument/svensk-forfattningssamling/brottsbalk-1962700_sfs-1962-700/"
+    },
+    "BrB:9:3a": {
+      "text": "3 a §\nDen som till en vidare krets riktar betalningsuppmaningar i syfte att vilseleda till handling som innebär vinning för gärningsmannen och skada för mottagaren eller någon i vars ställe denne är döms, om förfarandet har avsett betydande värde, för grovt fordringsbedrägeri till fängelse i lägst ett och högst sex år. Lag (2026:1318).",
+      "url": "https://www.riksdagen.se/sv/dokument-och-lagar/dokument/svensk-forfattningssamling/brottsbalk-1962700_sfs-1962-700/"
+    },
+    "BrB:10:5c": {
+      "text": "5 c §\nÄr brott som avses i 5 a eller 5 b § att anse som grovt, döms för grovt tagande av muta eller grovt givande av muta till fängelse i lägst ett år och sex månader och högst sex år. Vid bedömningen av om brottet är grovt ska det särskilt beaktas om gärningen innefattat missbruk av eller angrepp på särskilt ansvarsfull ställning, avsett betydande värde eller ingått i en brottslighet som utövats systematiskt eller i större omfattning eller annars varit av särskilt farlig art.\nLag (2026:1318).",
+      "url": "https://www.riksdagen.se/sv/dokument-och-lagar/dokument/svensk-forfattningssamling/brottsbalk-1962700_sfs-1962-700/"
+    },
+    "BrB:7:4": {
+      "text": "4 §\n/Upphör att gälla U:2027-01-01/\nDen som obehörigen skiljer ett barn under femton år från någon som har vårdnaden om barnet döms för egenmäktighet med barn till böter eller fängelse i högst två år, om gärningen inte utgör brott mot frihet. Detsamma gäller, om den som gemensamt med någon annan har vårdnaden om ett barn under femton år utan beaktansvärt skäl egenmäktigt skiljer barnet från den andra vårdnadshavaren eller om den som ska ha vårdnaden obehörigen bemäktigar sig barnet och därigenom själv tar sig rätt.\nTill ansvar enligt första stycket döms också den som\n1. obehörigen skiljer ett barn under femton år från någon som vårdar barnet med stöd av lagen (1990:52) med särskilda bestämmelser om vård av unga, om gärningen inte utgör brott mot frihet eller främjande av flykt, eller\n2. för bort eller annars undanhåller ett barn under femton år, om gärningen är ägnad att hindra att vård enligt lagen med särskilda bestämmelser om vård av unga påbörjas och gärningen inte utgör brott mot frihet.\nOm ett brott som avses i första eller andra stycket är grovt, döms till fängelse i lägst ett och högst sex år.\nLag (2026:1318).",
+      "url": "https://www.riksdagen.se/sv/dokument-och-lagar/dokument/svensk-forfattningssamling/brottsbalk-1962700_sfs-1962-700/"
+    },
+    "BrB:9:3c": {
+      "text": "3 c §\nDen som\n1. olovligen införskaffar ett betalningsverktyg,\n2. för bedräglig användning förvanskar ett betalningsverktyg eller framställer ett falskt betalningsverktyg, eller\n3. använder ett olovligen införskaffat eller förvanskat eller falskt betalningsverktyg eller på annat sätt tar befattning med ett sådant betalningsverktyg\ndöms för olovlig befattning med betalningsverktyg till böter eller fängelse i högst två år.\nMed betalningsverktyg avses skyddade verktyg, handlingar eller uppgifter som ger möjlighet att överföra pengar eller ett penningvärde.\nOm ett brott som avses i första stycket är grovt, döms för grov olovlig befattning med betalningsverktyg till fängelse i lägst ett och högst sex år. Vid bedömningen av om brottet är grovt ska det särskilt beaktas om\n1. gärningsmannen på ett hänsynslöst sätt har utnyttjat offrets skyddslösa eller utsatta ställning,\n2. gärningen har avsett betydande värde eller kunnat medföra synnerligen kännbar skada,\n3. gärningen har ingått i en brottslighet som utövats i organiserad form eller systematiskt, eller\n4. gärningen annars har varit av särskilt farlig art.\nDet ska inte dömas till ansvar enligt denna paragraf om gärningen är belagd med samma eller strängare straff enligt någon annan bestämmelse i denna balk. Lag (2026:1318).",
+      "url": "https://www.riksdagen.se/sv/dokument-och-lagar/dokument/svensk-forfattningssamling/brottsbalk-1962700_sfs-1962-700/"
+    },
+    "BrB:9:9": {
+      "text": "9 §\nDen som offentliggör eller på annat sätt bland allmänheten sprider vilseledande uppgift för att påverka priset på vara, värdepapper eller någon annan egendom döms för svindleri till fängelse i högst två år eller, om brottet är ringa, till böter eller fängelse i högst sex månader.\nFör svindleri döms det också om någon, som medverkar vid bildande av aktiebolag eller annat företag eller som på grund av sin ställning bör ha särskild kännedom om ett företag, uppsåtligen eller av grov oaktsamhet offentliggör eller på annat sätt bland allmänheten eller företagets intressenter sprider vilseledande uppgift som är ägnad att påverka bedömningen av företaget i ekonomiskt hänseende och därigenom medföra skada.\nÄr brott som avses i första eller andra stycket grovt, döms för grovt svindleri till fängelse i lägst ett och högst sex år. Vid bedömningen av om brottet är grovt ska det särskilt beaktas om gärningen har varit av större omfattning, kunnat medföra avsevärd skada eller annars varit av särskilt farlig art. Lag (2026:1318).",
+      "url": "https://www.riksdagen.se/sv/dokument-och-lagar/dokument/svensk-forfattningssamling/brottsbalk-1962700_sfs-1962-700/"
+    },
+    "BrB:16:5a": {
+      "text": "5 a §\nDen som för brott eller brottslig verksamhet anlitar, betalar, instruerar eller överlämnar egendom till någon som inte har fyllt arton år och därigenom, eller på annat liknande sätt, involverar honom eller henne i brottet eller den brottsliga verksamheten, döms för involverande av en underårig i brottslighet till fängelse i högst sex år. Detta gäller även om den som begår en sådan gärning inte haft uppsåt till men varit oaktsam beträffande omständigheten att den andra personen inte fyllt arton år.\nOm involverandet med hänsyn till den ringa skillnaden i ålder eller utveckling mellan den som har begått gärningen och den andra personen eller annars är uppenbart mindre allvarligt, ska inte dömas till ansvar.\nLag (2026:1318).",
+      "url": "https://www.riksdagen.se/sv/dokument-och-lagar/dokument/svensk-forfattningssamling/brottsbalk-1962700_sfs-1962-700/"
+    },
+    "BrB:11:2": {
+      "text": "2 §\nEn gäldenär som vid konkurs, skuldsanering eller F-\nskuldsanering, eller vid planförhandling under företagsrekonstruktion, uppsåtligen eller av grov oaktsamhet förtiger tillgång, uppger obefintlig skuld eller lämnar annan sådan oriktig uppgift, döms, om uppgiften inte rättas innan den beedigas eller annars läggs till grund för förfarandet, för försvårande av konkurs eller exekutiv förrättning till fängelse i högst två år.\nFör försvårande av exekutiv förrättning döms också en gäldenär som i samband med annan exekutiv förrättning uppsåtligen åberopar oriktig handling eller skenavtal och därigenom hindrar att erforderlig egendom genom förrättning tas i anspråk för att bereda borgenär betalning eller säkerhet.\nOm ett förtigande eller en oriktig uppgift enligt första stycket är utan betydelse för saken, eller om gäldenären vid konkurs hade rätt att vägra yttra sig och omständigheterna innebär en skälig ursäkt för honom eller henne, ska han eller hon inte dömas till ansvar.\nOm ett brott som avses i denna paragraf har begåtts uppsåtligen och är grovt, döms för grovt försvårande av konkurs eller exekutiv förrättning till fängelse i lägst ett och högst sex år. Vid bedömningen av om brottet är grovt ska det särskilt beaktas om gärningsmannen beedigat oriktig uppgift eller använt falsk handling eller vilseledande bokföring eller om brottet varit av betydande omfattning.\nLag (2026:1318).",
+      "url": "https://www.riksdagen.se/sv/dokument-och-lagar/dokument/svensk-forfattningssamling/brottsbalk-1962700_sfs-1962-700/"
+    }
+  },
+  "records": [
+    {
+      "id": "grov-stold",
+      "title": "Grov stöld",
+      "statute": "BrB:8:4",
+      "ownText": "4 §\nÄr brott som avses i 1 § att anse som grovt, döms för grov stöld till fängelse i lägst ett och högst sex år.\nVid bedömningen av om brottet är grovt ska det särskilt beaktas om det avsett sak som någon bar på sig eller hade i sin omedelbara närhet, om gärningsmannen varit försedd med vapen, sprängämne eller annat dylikt hjälpmedel, om gärningen ingått som ett led i en brottslighet som utövats systematiskt eller om gärningen annars varit av särskilt farlig eller hänsynslös art, avsett betydande värde eller inneburit synnerligen kännbar skada. Lag (2026:1318).",
+      "note": "Det höjda minimistraffet för grov stöld ska inte ändra gränsen mot stöld av normalgraden. Straffvärdeutrymmet för normalgraden ökar, men värde eller en kvalifikationsomständighet får inte automatiskt bestämma rubriceringen.",
+      "locator": "Prop. 2025/26:218, avsnitt 10.1, kommentaren till BrB 8 kap. 4 §"
+    },
+    {
+      "id": "grov-misshandel",
+      "title": "Grov misshandel",
+      "statute": "BrB:3:6",
+      "ownText": "6 §\nÄr brott som avses i 5 § att anse som grovt, döms för grov misshandel till fängelse i lägst ett år och sex månader och högst sju år. Vid bedömningen av om brottet är grovt ska det särskilt beaktas om gärningen var livsfarlig eller om gärningsmannen har tillfogat en svår kroppsskada eller allvarlig sjukdom eller annars visat särskild hänsynslöshet eller råhet.\nÄr brottet att anse som synnerligen grovt, döms för synnerligen grov misshandel till fängelse i lägst sex och högst tolv år. Vid bedömningen av om brottet är synnerligen grovt ska det särskilt beaktas om kroppsskadan är bestående eller om gärningen har orsakat synnerligt lidande eller om gärningsmannen har visat synnerlig hänsynslöshet.\nLag (2026:1318).",
+      "note": "Höjningen av minimistraffet för synnerligen grov misshandel ska höja straffnivån, utan att flytta gränsen mot grov misshandel. Höjda maximistraff ger större utrymme för straffmätning. Gärningen måste fortfarande gradbedömas utifrån rekvisiten och omständigheterna.",
+      "locator": "Prop. 2025/26:218, avsnitt 10.1, kommentaren till BrB 3 kap. 6 §"
+    },
+    {
+      "id": "synnerligen-grov-misshandel",
+      "title": "Synnerligen grov misshandel",
+      "statute": "BrB:3:6",
+      "ownText": "6 §\nÄr brott som avses i 5 § att anse som grovt, döms för grov misshandel till fängelse i lägst ett år och sex månader och högst sju år. Vid bedömningen av om brottet är grovt ska det särskilt beaktas om gärningen var livsfarlig eller om gärningsmannen har tillfogat en svår kroppsskada eller allvarlig sjukdom eller annars visat särskild hänsynslöshet eller råhet.\nÄr brottet att anse som synnerligen grovt, döms för synnerligen grov misshandel till fängelse i lägst sex och högst tolv år. Vid bedömningen av om brottet är synnerligen grovt ska det särskilt beaktas om kroppsskadan är bestående eller om gärningen har orsakat synnerligt lidande eller om gärningsmannen har visat synnerlig hänsynslöshet.\nLag (2026:1318).",
+      "note": "Höjningen av minimistraffet för synnerligen grov misshandel ska höja straffnivån, utan att flytta gränsen mot grov misshandel. Höjda maximistraff ger större utrymme för straffmätning. Gärningen måste fortfarande gradbedömas utifrån rekvisiten och omständigheterna.",
+      "locator": "Prop. 2025/26:218, avsnitt 10.1, kommentaren till BrB 3 kap. 6 §"
+    },
+    {
+      "id": "grovt-bedrageri",
+      "title": "Grovt bedrägeri",
+      "statute": "BrB:9:3",
+      "ownText": "3 §\nÄr brott som avses i 1 § att anse som grovt, döms för grovt bedrägeri till fängelse i lägst ett och högst sex år.\nVid bedömningen av om brottet är grovt ska det särskilt beaktas om\n1. gärningsmannen har missbrukat allmänt förtroende eller använt urkund eller annat vars brukande är straffbart enligt 14 eller 15 kap. eller vilseledande bokföring,\n2. gärningsmannen på ett hänsynslöst sätt har utnyttjat offrets skyddslösa eller utsatta ställning,\n3. gärningen har avsett betydande värde eller inneburit synnerligen kännbar skada,\n4. gärningen har ingått i en brottslighet som utövats i organiserad form eller systematiskt, eller\n5. gärningen annars har varit av särskilt farlig art.\nLag (2026:1318).",
+      "note": "Det höjda minimistraffet för grovt bedrägeri ska inte flytta gränsen mot normalgraden. Ett straffvärde som når det nya minimistraffet är inte i sig en ny kvalifikationsgrund.",
+      "locator": "Prop. 2025/26:218, avsnitt 10.1, kommentaren till BrB 9 kap. 3 §"
+    },
+    {
+      "id": "grov-skadegorelse",
+      "title": "Grov skadegörelse",
+      "statute": "BrB:12:3",
+      "ownText": "3 §\nOm brott som avses i 1 § är att anse som grovt, döms för grov skadegörelse till fängelse i lägst ett och högst sex år.\n\nVid bedömningen av om brottet är grovt ska det särskilt beaktas om gärningen har medfört betydande fara för någons liv eller hälsa, om skadan drabbat sak av stor kulturell eller ekonomisk betydelse eller annars är synnerligen kännbar eller om gärningen varit av särskilt hänsynslös art.\nLag (2026:1318).",
+      "note": "Det höjda minimistraffet för grov skadegörelse ska inte flytta gränsen mot normalgraden. Det större straffmätningsutrymmet ersätter inte de angivna kvalifikationsomständigheterna eller grundbrottet.",
+      "locator": "Prop. 2025/26:218, avsnitt 10.1, kommentaren till BrB 12 kap. 3 §"
+    },
+    {
+      "id": "v03-vallande-till-annans-dod",
+      "title": "Vållande till annans död",
+      "statute": "BrB:3:7",
+      "ownText": "7 §\nDen som av oaktsamhet orsakar annans död, döms för vållande till annans död till fängelse i högst tre år eller, om brottet är ringa, till böter.\nÄr brottet grovt, döms till fängelse i lägst två och högst sex år. Vid bedömningen av om brottet är grovt ska det särskilt beaktas om\n1. gärningen har innefattat ett medvetet risktagande av allvarligt slag, eller\n2. gärningsmannen, när det krävts särskild uppmärksamhet eller skicklighet, har varit påverkad av alkohol eller något annat medel eller annars gjort sig skyldig till en försummelse av allvarligt slag. Lag (2026:1318).",
+      "note": "Minimistraffet för grovt vållande höjs utan avsikt att ändra gränsen mot normalgraden. Normalgradens höjda maximum och det större utrymmet under det grova brottets minimum gäller straffmätning, inte ett nytt skuldkrav.",
+      "locator": "Prop. 2025/26:218, avsnitt 10.1, kommentaren till BrB 3 kap. 7 §"
+    },
+    {
+      "id": "v03-grovt-vallande-till-annans-dod",
+      "title": "Grovt vållande till annans död",
+      "statute": "BrB:3:7",
+      "ownText": "7 §\nDen som av oaktsamhet orsakar annans död, döms för vållande till annans död till fängelse i högst tre år eller, om brottet är ringa, till böter.\nÄr brottet grovt, döms till fängelse i lägst två och högst sex år. Vid bedömningen av om brottet är grovt ska det särskilt beaktas om\n1. gärningen har innefattat ett medvetet risktagande av allvarligt slag, eller\n2. gärningsmannen, när det krävts särskild uppmärksamhet eller skicklighet, har varit påverkad av alkohol eller något annat medel eller annars gjort sig skyldig till en försummelse av allvarligt slag. Lag (2026:1318).",
+      "note": "Minimistraffet för grovt vållande höjs utan avsikt att ändra gränsen mot normalgraden. Normalgradens höjda maximum och det större utrymmet under det grova brottets minimum gäller straffmätning, inte ett nytt skuldkrav.",
+      "locator": "Prop. 2025/26:218, avsnitt 10.1, kommentaren till BrB 3 kap. 7 §"
+    },
+    {
+      "id": "v03-framkallande-av-fara-for-annan",
+      "title": "Framkallande av fara för annan",
+      "statute": "BrB:3:9",
+      "ownText": "9 §\nDen som av grov oaktsamhet utsätter någon annan för livsfara eller fara för svår kroppsskada eller allvarlig sjukdom, döms för framkallande av fara för annan till böter eller fängelse i högst tre år. Lag (2026:1318).",
+      "note": "Ändringen höjer maximistraffet och ger större utrymme för straffmätning. Övriga ändringar beskrivs som språkliga och redaktionella; kravet på grov oaktsamhet får inte ersättas med vanlig oaktsamhet på grund av straffskaleändringen.",
+      "locator": "Prop. 2025/26:218, avsnitt 10.1, kommentaren till BrB 3 kap. 9 §"
+    },
+    {
+      "id": "v03-grovt-olaga-integritetsintrang",
+      "title": "Grovt olaga integritetsintrång",
+      "statute": "BrB:4:6d",
+      "ownText": "6 d §\nOm brott som avses i 6 c § är grovt, döms för grovt olaga integritetsintrång till fängelse i lägst sex månader och högst sex år.\nVid bedömningen av om brottet är grovt ska det särskilt beaktas om gärningen med hänsyn till bildens eller uppgiftens innehåll eller sättet för eller omfattningen av spridningen var ägnad att medföra mycket allvarlig skada för den som bilden eller uppgiften rör. Lag (2026:1318).",
+      "note": "2026 års ändring höjer maximistraffet för den grova graden. Kommentaren beskriver ett större utrymme för straffmätning, inte nya självständiga skaderekvisit.",
+      "locator": "Prop. 2025/26:218, avsnitt 10.1, kommentaren till BrB 4 kap. 6d §"
+    },
+    {
+      "id": "v03-dataintrang",
+      "title": "Dataintrång",
+      "statute": "BrB:4:9c",
+      "ownText": "9 c §\nDen som olovligen bereder sig tillgång till en uppgift som är avsedd för automatiserad behandling eller olovligen ändrar, utplånar, blockerar eller i register för in en sådan uppgift döms för dataintrång till böter eller fängelse i högst två år. Detsamma gäller den som olovligen genom någon annan liknande åtgärd allvarligt stör eller hindrar användningen av en sådan uppgift.\nÄr brottet grovt, döms för grovt dataintrång till fängelse i lägst ett och högst åtta år. Vid bedömningen av om brottet är grovt ska det särskilt beaktas om gärningen har orsakat allvarlig skada eller avsett ett stort antal uppgifter eller annars varit av särskilt farlig art. Lag (2026:1318).",
+      "note": "Straffskalan för grovt dataintrång skärps utan avsikt att flytta gränsen mot normalgraden. Därför avgör inte den nya straffnivån om ett konkret intrång är grovt; kvalifikationsomständigheterna ska fortfarande prövas.",
+      "locator": "Prop. 2025/26:218, avsnitt 10.1, kommentaren till BrB 4 kap. 9c §"
+    },
+    {
+      "id": "v03-grovt-dataintrang",
+      "title": "Grovt dataintrång",
+      "statute": "BrB:4:9c",
+      "ownText": "9 c §\nDen som olovligen bereder sig tillgång till en uppgift som är avsedd för automatiserad behandling eller olovligen ändrar, utplånar, blockerar eller i register för in en sådan uppgift döms för dataintrång till böter eller fängelse i högst två år. Detsamma gäller den som olovligen genom någon annan liknande åtgärd allvarligt stör eller hindrar användningen av en sådan uppgift.\nÄr brottet grovt, döms för grovt dataintrång till fängelse i lägst ett och högst åtta år. Vid bedömningen av om brottet är grovt ska det särskilt beaktas om gärningen har orsakat allvarlig skada eller avsett ett stort antal uppgifter eller annars varit av särskilt farlig art. Lag (2026:1318).",
+      "note": "Straffskalan för grovt dataintrång skärps utan avsikt att flytta gränsen mot normalgraden. Därför avgör inte den nya straffnivån om ett konkret intrång är grovt; kvalifikationsomständigheterna ska fortfarande prövas.",
+      "locator": "Prop. 2025/26:218, avsnitt 10.1, kommentaren till BrB 4 kap. 9c §"
+    },
+    {
+      "id": "v03-forolampning",
+      "title": "Förolämpning",
+      "statute": "BrB:5:3",
+      "ownText": "3 §\nDen som, i annat fall än som avses i 1 eller 2 §, riktar beskyllning, nedsättande uttalande eller förödmjukande beteende mot någon annan döms, om gärningen är ägnad att kränka den andres självkänsla eller värdighet, för förolämpning till böter eller fängelse i högst sex månader.\nLag (2026:1318).",
+      "note": "Den grova svårhetsgraden tas bort och en gemensam straffskala införs. Kommentaren anger att gärningarnas straffvärde inte ska ändras genom detta. En äldre beteckning som grov förolämpning ska inte visas som en aktuell separat brottsgrad.",
+      "locator": "Prop. 2025/26:218, avsnitt 10.1, kommentaren till BrB 5 kap. 3 §"
+    },
+    {
+      "id": "v03-valdtakt",
+      "title": "Våldtäkt",
+      "statute": "BrB:6:1",
+      "ownText": "1 §\nDen som, med en person som inte deltar frivilligt, genomför ett vaginalt, analt eller oralt samlag eller en annan sexuell handling som med hänsyn till kränkningens allvar är jämförlig med samlag, döms för våldtäkt till fängelse i lägst tre och högst sex år. Detsamma gäller den som förmår en person som inte deltar frivilligt att företa eller tåla en sådan handling. Vid bedömningen av om ett deltagande är frivilligt eller inte ska det särskilt beaktas om frivillighet har kommit till uttryck genom ord eller handling eller på annat sätt. En person kan aldrig anses delta frivilligt om\n1. deltagandet är en följd av misshandel, annat våld eller hot om brottslig gärning, hot om att åtala eller ange någon annan för brott eller hot om att lämna ett menligt meddelande om någon annan,\n2. gärningsmannen otillbörligt utnyttjar att personen på grund av medvetslöshet, sömn, allvarlig rädsla, berusning eller annan drogpåverkan, sjukdom, kroppsskada, psykisk störning eller annars med hänsyn till omständigheterna befinner sig i en särskilt utsatt situation, eller\n3. gärningsmannen förmår personen att delta genom att allvarligt missbruka att personen står i beroendeställning till gärningsmannen.\nOm brottet är mindre grovt, döms till fängelse i lägst sex månader och högst fyra år.\nOm ett brott som avses i första stycket är grovt, döms för grov våldtäkt till fängelse i lägst fem och högst tolv år. Vid bedömningen av om brottet är grovt ska det särskilt beaktas om gärningsmannen har använt våld eller hot som varit av särskilt allvarlig art eller om fler än en förgripit sig på offret eller på annat sätt deltagit i övergreppet eller om gärningsmannen med hänsyn till tillvägagångssättet eller offrets låga ålder eller annars visat särskild hänsynslöshet eller råhet.\nLag (2026:1318).",
+      "note": "Ändringen höjer maximistraffet för grov våldtäkt. Hänvisningen till möjlighet till ett gemensamt livstidsstraff gäller flerfaldig brottslighet enligt 26 kap. 2 §; den gör inte livstid till straffskala för varje enskild våldtäkt.",
+      "locator": "Prop. 2025/26:218, avsnitt 10.1, kommentaren till BrB 6 kap. 1 §"
+    },
+    {
+      "id": "v03-grov-valdtakt",
+      "title": "Grov våldtäkt",
+      "statute": "BrB:6:1",
+      "ownText": "1 §\nDen som, med en person som inte deltar frivilligt, genomför ett vaginalt, analt eller oralt samlag eller en annan sexuell handling som med hänsyn till kränkningens allvar är jämförlig med samlag, döms för våldtäkt till fängelse i lägst tre och högst sex år. Detsamma gäller den som förmår en person som inte deltar frivilligt att företa eller tåla en sådan handling. Vid bedömningen av om ett deltagande är frivilligt eller inte ska det särskilt beaktas om frivillighet har kommit till uttryck genom ord eller handling eller på annat sätt. En person kan aldrig anses delta frivilligt om\n1. deltagandet är en följd av misshandel, annat våld eller hot om brottslig gärning, hot om att åtala eller ange någon annan för brott eller hot om att lämna ett menligt meddelande om någon annan,\n2. gärningsmannen otillbörligt utnyttjar att personen på grund av medvetslöshet, sömn, allvarlig rädsla, berusning eller annan drogpåverkan, sjukdom, kroppsskada, psykisk störning eller annars med hänsyn till omständigheterna befinner sig i en särskilt utsatt situation, eller\n3. gärningsmannen förmår personen att delta genom att allvarligt missbruka att personen står i beroendeställning till gärningsmannen.\nOm brottet är mindre grovt, döms till fängelse i lägst sex månader och högst fyra år.\nOm ett brott som avses i första stycket är grovt, döms för grov våldtäkt till fängelse i lägst fem och högst tolv år. Vid bedömningen av om brottet är grovt ska det särskilt beaktas om gärningsmannen har använt våld eller hot som varit av särskilt allvarlig art eller om fler än en förgripit sig på offret eller på annat sätt deltagit i övergreppet eller om gärningsmannen med hänsyn till tillvägagångssättet eller offrets låga ålder eller annars visat särskild hänsynslöshet eller råhet.\nLag (2026:1318).",
+      "note": "Ändringen höjer maximistraffet för grov våldtäkt. Hänvisningen till möjlighet till ett gemensamt livstidsstraff gäller flerfaldig brottslighet enligt 26 kap. 2 §; den gör inte livstid till straffskala för varje enskild våldtäkt.",
+      "locator": "Prop. 2025/26:218, avsnitt 10.1, kommentaren till BrB 6 kap. 1 §"
+    },
+    {
+      "id": "v03-valdtakt-mot-barn",
+      "title": "Våldtäkt mot barn",
+      "statute": "BrB:6:4",
+      "ownText": "4 §\nDen som, med ett barn under femton år, genomför ett vaginalt, analt eller oralt samlag eller en annan sexuell handling som med hänsyn till kränkningens allvar är jämförlig med samlag, döms för våldtäkt mot barn till fängelse i lägst tre och högst sex år. Detsamma gäller den som på ett otillbörligt sätt förmår barnet att företa eller tåla en sådan handling.\nFörsta stycket gäller även den som begår en gärning som avses där\n1. mot ett barn som fyllt femton men inte arton år\na) som är avkomling till gärningsmannen,\nb) som står under fostran av eller har ett liknande förhållande till gärningsmannen, eller\nc) för vars vård eller tillsyn gärningsmannen ska svara på grund av en myndighets beslut, eller\n2. om gärningsmannen, i annat fall än som avses i 1, otillbörligt utnyttjar att ett barn under arton år på grund av psykisk ohälsa, funktionsnedsättning, missbruk, gärningsmannens auktoritet eller annars med hänsyn till omständigheterna har en nedsatt förmåga att värna sin sexuella integritet.\nOm ett brott som avses i första eller andra stycket är grovt, döms för grov våldtäkt mot barn till fängelse i lägst fem och högst tolv år. Vid bedömningen av om brottet är grovt ska det särskilt beaktas om gärningsmannen har använt våld eller hot om brottslig gärning eller om fler än en förgripit sig på barnet eller på annat sätt deltagit i övergreppet eller om gärningsmannen med hänsyn till tillvägagångssättet eller barnets låga ålder eller annars visat särskild hänsynslöshet eller råhet.\nLag (2026:1318).",
+      "note": "Ändringen höjer maximistraffet för grov våldtäkt mot barn. Möjligheten till gemensamt livstidsstraff för flerfaldig brottslighet ska hållas isär från det enskilda brottets straffskala och barnets ålders-/relationsrekvisit.",
+      "locator": "Prop. 2025/26:218, avsnitt 10.1, kommentaren till BrB 6 kap. 4 §"
+    },
+    {
+      "id": "v03-grov-valdtakt-mot-barn",
+      "title": "Grov våldtäkt mot barn",
+      "statute": "BrB:6:4",
+      "ownText": "4 §\nDen som, med ett barn under femton år, genomför ett vaginalt, analt eller oralt samlag eller en annan sexuell handling som med hänsyn till kränkningens allvar är jämförlig med samlag, döms för våldtäkt mot barn till fängelse i lägst tre och högst sex år. Detsamma gäller den som på ett otillbörligt sätt förmår barnet att företa eller tåla en sådan handling.\nFörsta stycket gäller även den som begår en gärning som avses där\n1. mot ett barn som fyllt femton men inte arton år\na) som är avkomling till gärningsmannen,\nb) som står under fostran av eller har ett liknande förhållande till gärningsmannen, eller\nc) för vars vård eller tillsyn gärningsmannen ska svara på grund av en myndighets beslut, eller\n2. om gärningsmannen, i annat fall än som avses i 1, otillbörligt utnyttjar att ett barn under arton år på grund av psykisk ohälsa, funktionsnedsättning, missbruk, gärningsmannens auktoritet eller annars med hänsyn till omständigheterna har en nedsatt förmåga att värna sin sexuella integritet.\nOm ett brott som avses i första eller andra stycket är grovt, döms för grov våldtäkt mot barn till fängelse i lägst fem och högst tolv år. Vid bedömningen av om brottet är grovt ska det särskilt beaktas om gärningsmannen har använt våld eller hot om brottslig gärning eller om fler än en förgripit sig på barnet eller på annat sätt deltagit i övergreppet eller om gärningsmannen med hänsyn till tillvägagångssättet eller barnets låga ålder eller annars visat särskild hänsynslöshet eller råhet.\nLag (2026:1318).",
+      "note": "Ändringen höjer maximistraffet för grov våldtäkt mot barn. Möjligheten till gemensamt livstidsstraff för flerfaldig brottslighet ska hållas isär från det enskilda brottets straffskala och barnets ålders-/relationsrekvisit.",
+      "locator": "Prop. 2025/26:218, avsnitt 10.1, kommentaren till BrB 6 kap. 4 §"
+    },
+    {
+      "id": "v03-ocker",
+      "title": "Ocker",
+      "statute": "BrB:9:5",
+      "ownText": "5 §\nDen som vid avtal eller någon annan rättshandling utnyttjar någons trångmål, oförstånd, lättsinne eller beroendeställning till att bereda sig förmån, som står i uppenbart missförhållande till motprestationen eller för vilken motprestation inte ska lämnas, döms för ocker till böter eller fängelse i högst två år.\nFör ocker döms också den som vid kreditgivning i näringsverksamhet eller i annan verksamhet, som bedrivs vanemässigt eller annars i större omfattning, bereder sig ränta eller annan ekonomisk förmån, som står i uppenbart missförhållande till motprestationen.\nÄr brottet grovt, döms för grovt ocker till fängelse i lägst ett och högst sex år. Vid bedömningen av om brottet är grovt ska det särskilt beaktas om gärningen har avsett betydande värde eller varit av särskilt farlig eller hänsynslös art.\nLag (2026:1318).",
+      "note": "Straffskalan för grovt ocker skärps men gränsen mot normalgraden ska bestå. Höjningen av maximum ger större utrymme för straffmätning; den ersätter inte prövningen av utnyttjande eller kreditocker.",
+      "locator": "Prop. 2025/26:218, avsnitt 10.1, kommentaren till BrB 9 kap. 5 §"
+    },
+    {
+      "id": "v03-haleri",
+      "title": "Häleri",
+      "statute": "BrB:9:6",
+      "ownText": "6 §\nDen som\n1. på ett sätt som är ägnat att försvåra ett återställande tar befattning med något som är frånhänt annan genom brott,\n2. bereder sig otillbörlig vinning av annans brottsliga förvärv, eller\n3. genom krav, överlåtelse eller på annat liknande sätt hävdar genom brott tillkommen fordran\ndöms för häleri till fängelse i högst två år.\nFör häleri döms även den som i näringsverksamhet eller såsom led i en verksamhet, som bedrivs vanemässigt eller annars i större omfattning, på ett sätt som är ägnat att försvåra ett återställande förvärvar eller mottar något som skäligen kan antas vara frånhänt annan genom brott.\nÄr brott som avses i första eller andra stycket grovt, döms för grovt häleri till fängelse i lägst ett och högst sex år. Vid bedömningen av om brottet är grovt ska det särskilt beaktas om gärningen har avsett betydande värde, ingått som ett led i en brottslighet som utövats systematiskt eller annars varit av särskilt farlig art. Lag (2026:1318).",
+      "note": "Höjningen av minimistraffet för grovt häleri ska inte påverka gränsen mot normalgraden. Ändringen i andra stycket anges vara språklig; mottagandefallets särskilda verksamhetskrav upphör inte genom reformen.",
+      "locator": "Prop. 2025/26:218, avsnitt 10.1, kommentaren till BrB 9 kap. 6 §"
+    },
+    {
+      "id": "v03-grovt-haleri",
+      "title": "Grovt häleri",
+      "statute": "BrB:9:6",
+      "ownText": "6 §\nDen som\n1. på ett sätt som är ägnat att försvåra ett återställande tar befattning med något som är frånhänt annan genom brott,\n2. bereder sig otillbörlig vinning av annans brottsliga förvärv, eller\n3. genom krav, överlåtelse eller på annat liknande sätt hävdar genom brott tillkommen fordran\ndöms för häleri till fängelse i högst två år.\nFör häleri döms även den som i näringsverksamhet eller såsom led i en verksamhet, som bedrivs vanemässigt eller annars i större omfattning, på ett sätt som är ägnat att försvåra ett återställande förvärvar eller mottar något som skäligen kan antas vara frånhänt annan genom brott.\nÄr brott som avses i första eller andra stycket grovt, döms för grovt häleri till fängelse i lägst ett och högst sex år. Vid bedömningen av om brottet är grovt ska det särskilt beaktas om gärningen har avsett betydande värde, ingått som ett led i en brottslighet som utövats systematiskt eller annars varit av särskilt farlig art. Lag (2026:1318).",
+      "note": "Höjningen av minimistraffet för grovt häleri ska inte påverka gränsen mot normalgraden. Ändringen i andra stycket anges vara språklig; mottagandefallets särskilda verksamhetskrav upphör inte genom reformen.",
+      "locator": "Prop. 2025/26:218, avsnitt 10.1, kommentaren till BrB 9 kap. 6 §"
+    },
+    {
+      "id": "v03-grov-forskingring",
+      "title": "Grov förskingring",
+      "statute": "BrB:10:3",
+      "ownText": "3 §\nOm brott som avses i 1 § är att anse som grovt, döms för grov förskingring till fängelse i lägst ett och högst sex år.\nVid bedömningen av om brottet är grovt ska det särskilt beaktas om gärningsmannen har missbrukat ansvarsfull ställning eller använt urkund eller annat vars brukande är straffbart enligt 14 eller 15 kap. eller vilseledande bokföring eller om gärningen annars varit av särskilt farlig art, avsett betydande värde eller inneburit synnerligen kännbar skada.\nLag (2026:1318).",
+      "note": "Höjt minimistraff för grov förskingring ska inte flytta gränsen mot normalgraden. De faktiska kvalifikationsomständigheterna, inte den nya straffnivån ensam, avgör graden.",
+      "locator": "Prop. 2025/26:218, avsnitt 10.1, kommentaren till BrB 10 kap. 3 §"
+    },
+    {
+      "id": "v03-troloshet-mot-huvudman",
+      "title": "Trolöshet mot huvudman",
+      "statute": "BrB:10:5",
+      "ownText": "5 §\nOm någon, som på grund av förtroendeställning fått till uppgift att för någon annan sköta en ekonomisk angelägenhet eller självständigt hantera en kvalificerad teknisk uppgift eller övervaka skötseln av en sådan angelägenhet eller uppgift, missbrukar sin förtroendeställning och därigenom skadar huvudmannen, döms han eller hon för trolöshet mot huvudman till böter eller fängelse i högst två år. Vad som har sagts nu gäller inte om gärningen är belagd med straff enligt 1-3 §§.\nOm brottet är grovt, döms för grov trolöshet mot huvudman till fängelse i lägst ett och högst sex år. Vid bedömningen av om brottet är grovt ska det särskilt beaktas om huvudmannen har tillfogats betydande eller synnerligen kännbar skada, om gärningsmannen har använt urkund eller annat vars brukande är straffbart enligt 14 eller 15 kap. eller vilseledande bokföring eller om gärningen annars har varit av särskilt farlig art.\nOm någon som har fått till uppgift att sköta en rättslig angelägenhet för någon annan missbrukar sin förtroendeställning till förfång för huvudmannen, döms han eller hon enligt första stycket, även om angelägenheten inte är av ekonomisk eller teknisk art. Lag (2026:1318).",
+      "note": "Det höjda minimistraffet för grov trolöshet ska inte ändra gränsen mot normalgraden. Kommentaren beskriver utrymme för straffmätning och ändrar inte kraven på förtroendeställning, missbruk och skada/förfång.",
+      "locator": "Prop. 2025/26:218, avsnitt 10.1, kommentaren till BrB 10 kap. 5 §"
+    },
+    {
+      "id": "v03-grov-troloshet-mot-huvudman",
+      "title": "Grov trolöshet mot huvudman",
+      "statute": "BrB:10:5",
+      "ownText": "5 §\nOm någon, som på grund av förtroendeställning fått till uppgift att för någon annan sköta en ekonomisk angelägenhet eller självständigt hantera en kvalificerad teknisk uppgift eller övervaka skötseln av en sådan angelägenhet eller uppgift, missbrukar sin förtroendeställning och därigenom skadar huvudmannen, döms han eller hon för trolöshet mot huvudman till böter eller fängelse i högst två år. Vad som har sagts nu gäller inte om gärningen är belagd med straff enligt 1-3 §§.\nOm brottet är grovt, döms för grov trolöshet mot huvudman till fängelse i lägst ett och högst sex år. Vid bedömningen av om brottet är grovt ska det särskilt beaktas om huvudmannen har tillfogats betydande eller synnerligen kännbar skada, om gärningsmannen har använt urkund eller annat vars brukande är straffbart enligt 14 eller 15 kap. eller vilseledande bokföring eller om gärningen annars har varit av särskilt farlig art.\nOm någon som har fått till uppgift att sköta en rättslig angelägenhet för någon annan missbrukar sin förtroendeställning till förfång för huvudmannen, döms han eller hon enligt första stycket, även om angelägenheten inte är av ekonomisk eller teknisk art. Lag (2026:1318).",
+      "note": "Det höjda minimistraffet för grov trolöshet ska inte ändra gränsen mot normalgraden. Kommentaren beskriver utrymme för straffmätning och ändrar inte kraven på förtroendeställning, missbruk och skada/förfång.",
+      "locator": "Prop. 2025/26:218, avsnitt 10.1, kommentaren till BrB 10 kap. 5 §"
+    },
+    {
+      "id": "v03-tagande-av-muta",
+      "title": "Tagande av muta",
+      "statute": "BrB:10:5a",
+      "ownText": "5 a §\nDen som är arbetstagare eller utövar uppdrag och tar emot, godtar ett löfte om eller begär en otillbörlig förmån för utövningen av anställningen eller uppdraget döms för tagande av muta till fängelse i högst två år. Detsamma gäller den som är deltagare eller funktionär i en tävling som är föremål för allmänt anordnad vadhållning och det är fråga om en otillbörlig förmån för hans eller hennes fullgörande av uppgifter vid tävlingen.\nFörsta stycket gäller även om gärningen har begåtts innan gärningsmannen fått en sådan ställning som avses där eller efter det att den upphört.\nFör tagande av muta enligt första och andra styckena döms också den som tar emot, godtar ett löfte om eller begär förmånen för någon annan än sig själv. Lag (2026:1318).",
+      "note": "Böter ersätts av allmänt fängelseminimum. Reformen höjer straffnivån för tagande av muta; den innebär inte att varje förmån har blivit otillbörlig.",
+      "locator": "Prop. 2025/26:218, avsnitt 10.1, kommentaren till BrB 10 kap. 5a §"
+    },
+    {
+      "id": "v03-givande-av-muta",
+      "title": "Givande av muta",
+      "statute": "BrB:10:5b",
+      "ownText": "5 b §\nDen som lämnar, utlovar eller erbjuder en otillbörlig förmån i fall som avses i 5 a § döms för givande av muta till fängelse i högst två år. Lag (2026:1318).",
+      "note": "Böter ersätts av allmänt fängelseminimum. Reformen höjer straffnivån för givande av muta utan att ta bort hänvisningen till de situationer som anges i 5 a §.",
+      "locator": "Prop. 2025/26:218, avsnitt 10.1, kommentaren till BrB 10 kap. 5b §"
+    },
+    {
+      "id": "v03-handel-med-inflytande",
+      "title": "Handel med inflytande",
+      "statute": "BrB:10:5d",
+      "ownText": "5 d §\nFör handel med inflytande döms till fängelse i högst två år den som i annat fall än som avses i 5 a eller 5 b §\n1. tar emot, godtar ett löfte om eller begär en otillbörlig förmån för att påverka annans beslut eller åtgärd vid myndighetsutövning eller offentlig upphandling, eller\n2. lämnar, utlovar eller erbjuder någon en otillbörlig förmån för att han eller hon ska påverka annans beslut eller åtgärd vid myndighetsutövning eller offentlig upphandling.\nLag (2026:1318).",
+      "note": "Böter ersätts av allmänt fängelseminimum. Kommentaren gäller höjd straffnivå och utvidgar inte bestämmelsen till all betald påverkan eller rådgivning.",
+      "locator": "Prop. 2025/26:218, avsnitt 10.1, kommentaren till BrB 10 kap. 5d §"
+    },
+    {
+      "id": "v03-oredlighet-mot-borgenarer",
+      "title": "Oredlighet mot borgenärer",
+      "statute": "BrB:11:1",
+      "ownText": "1 §\nDen som, när han eller hon är på obestånd eller när det finns en påtaglig fara för att han eller hon ska komma på obestånd, förstör eller genom gåva eller någon annan liknande åtgärd avhänder sig egendom av betydande värde, döms för oredlighet mot borgenärer till fängelse i högst två år. Detsamma gäller om någon genom sådant förfarande försätter sig på obestånd eller framkallar påtaglig fara för att han eller hon ska komma på obestånd.\nFör oredlighet mot borgenärer döms också en gäldenär som, då konkurs är förestående, ur riket bortför tillgång av betydande värde med uppsåt att hålla den undan konkursen, eller gäldenär som i konkurs undandrar eller undanhåller konkursförvaltningen tillgång.\nDetsamma gäller, om en gäldenär i otillbörligt syfte underlåter att, så långt möjligt, medverka till att tillgång i utlandet som ingår i konkursen ställs till konkursförvaltningens förfogande, trots att konkursförvaltaren uppmanat gäldenären att medverka.\nOm brottet är grovt, döms för grov oredlighet mot borgenärer till fängelse i lägst ett och högst sex år. Vid bedömningen av om brottet är grovt ska det särskilt beaktas om gärningsmannen beedigat oriktig uppgift eller använt falsk handling eller vilseledande bokföring eller om brottet varit av betydande omfattning eller om gärningen annars varit av särskilt farlig art. Lag (2026:1318).",
+      "note": "Det höjda minimistraffet för grov oredlighet mot borgenärer ska inte flytta gränsen mot normalgraden. Övriga ändringar beskrivs som språkliga och redaktionella; obestånds- och gärningskraven består.",
+      "locator": "Prop. 2025/26:218, avsnitt 10.1, kommentaren till BrB 11 kap. 1 §"
+    },
+    {
+      "id": "v03-grov-urkundsforfalskning",
+      "title": "Grov urkundsförfalskning",
+      "statute": "BrB:14:3",
+      "ownText": "3 §\nÄr brott som avses i 1 § att anse som grovt, döms för grov urkundsförfalskning till fängelse i lägst ett och högst sex år.\nVid bedömningen av om brottet är grovt ska det särskilt beaktas om förfalskningen avsett en myndighets arkivhandling av vikt eller en urkund som är särskilt betydelsefull i den allmänna omsättningen eller om gärningen annars varit av särskilt farlig art. Lag (2026:1318).",
+      "note": "Det höjda minimistraffet ska inte påverka gränsen mellan grov urkundsförfalskning och normalgraden. Övrig ändring anges vara språklig; urkunds- och bevishänseendekraven ska prövas separat.",
+      "locator": "Prop. 2025/26:218, avsnitt 10.1, kommentaren till BrB 14 kap. 3 §"
+    },
+    {
+      "id": "v03-mened",
+      "title": "Mened",
+      "statute": "BrB:15:1",
+      "ownText": "1 §\nDen som, efter att han eller hon har avlagt en ed som är föreskriven i lag, lämnar osann uppgift eller förtiger sanningen, döms för mened till fängelse i lägst sex månader och högst fyra år. Om brottet med hänsyn till omständigheterna är mindre allvarligt döms till fängelse i högst ett år.\nOm brottet är grovt döms för grov mened till fängelse i lägst två och högst åtta år. Vid bedömningen av om brottet är grovt ska det särskilt beaktas om det skett med uppsåt att\n1. försvåra eller förhindra utredningen av allvarlig brottslighet eller lagföringen av någon för sådan brottslighet,\n2. någon oskyldig ska dömas för allvarlig brottslighet, eller\n3. annars tillfoga någon annan synnerlig skada.\nLag (2026:1318).",
+      "note": "Normalgradens minimum höjs. Den tidigare beteckningen ringa mened ersätts av en mindre allvarlig form utan särskilt brottsnamn, med en strängare skala. Avsikten är inte att flytta gränsen mellan denna form och normalgraden. Grov meneds särskilda prövning består.",
+      "locator": "Prop. 2025/26:218, avsnitt 10.1, kommentaren till BrB 15 kap. 1 §"
+    },
+    {
+      "id": "v03-grov-mened",
+      "title": "Grov mened",
+      "statute": "BrB:15:1",
+      "ownText": "1 §\nDen som, efter att han eller hon har avlagt en ed som är föreskriven i lag, lämnar osann uppgift eller förtiger sanningen, döms för mened till fängelse i lägst sex månader och högst fyra år. Om brottet med hänsyn till omständigheterna är mindre allvarligt döms till fängelse i högst ett år.\nOm brottet är grovt döms för grov mened till fängelse i lägst två och högst åtta år. Vid bedömningen av om brottet är grovt ska det särskilt beaktas om det skett med uppsåt att\n1. försvåra eller förhindra utredningen av allvarlig brottslighet eller lagföringen av någon för sådan brottslighet,\n2. någon oskyldig ska dömas för allvarlig brottslighet, eller\n3. annars tillfoga någon annan synnerlig skada.\nLag (2026:1318).",
+      "note": "Normalgradens minimum höjs. Den tidigare beteckningen ringa mened ersätts av en mindre allvarlig form utan särskilt brottsnamn, med en strängare skala. Avsikten är inte att flytta gränsen mellan denna form och normalgraden. Grov meneds särskilda prövning består.",
+      "locator": "Prop. 2025/26:218, avsnitt 10.1, kommentaren till BrB 15 kap. 1 §"
+    },
+    {
+      "id": "v03-uppvigling",
+      "title": "Uppvigling",
+      "statute": "BrB:16:5",
+      "ownText": "5 §\nDen som muntligen inför menighet eller folksamling, i skrift som sprids eller utlämnas för spridning eller i annat meddelande till allmänheten uppmanar eller annars söker förleda till brottslig gärning, svikande av medborgerlig skyl-\ndighet eller ohörsamhet mot myndighet, döms för uppvigling till böter eller fängelse i högst sex månader.\nFör uppvigling döms även den som muntligen inför en samling av krigsmän eller i annat meddelande till krigsmän uppmanar eller på annat sätt söker förleda dem till en handling eller underlåtenhet som innebär att de åsidosätter sina skyldigheter i tjänsten.\nI ringa fall ska det inte dömas till ansvar. Vid bedömningen av om det är fråga om ringa fall ska det särskilt beaktas om det funnits endast en obetydlig fara för att uppmaningen eller försöket skulle leda till efterföljd.\nOm brottet med hänsyn till att gärningsmannen sökt förleda till allvarligt brott eller annars är att anse som grovt, döms till fängelse i högst sex år.\nLag (2026:1318).",
+      "note": "Ändringen höjer maximistraffet för grov uppvigling. Övriga ändringar anges vara språkliga och redaktionella; ansvarsfriheten för ringa fall består.",
+      "locator": "Prop. 2025/26:218, avsnitt 10.1, kommentaren till BrB 16 kap. 5 §"
+    },
+    {
+      "id": "v03-brott-mot-tystnadsplikt",
+      "title": "Brott mot tystnadsplikt",
+      "statute": "BrB:20:3",
+      "ownText": "3 §\nDen som röjer en uppgift som han eller hon är skyldig att hemlighålla enligt lag eller annan författning eller enligt förordnande eller förbehåll som har meddelats med stöd av lag eller annan författning, döms, om inte gärningen är belagd med straff enligt någon annan bestämmelse, för brott mot tystnadsplikt till böter eller fängelse i högst två år. Detsamma gäller den som olovligen utnyttjar sådan hemlighet.\nDen som av oaktsamhet begår en gärning som avses i första stycket, döms till böter. Om gärningen är ringa utgör den inte brott.\nOm ett brott som avses i första stycket är grovt, döms för grovt brott mot tystnadsplikt till fängelse i lägst ett och högst sex år. Vid bedömningen av om brottet är grovt ska det särskilt beaktas om gärningen kunnat medföra allvarlig skada, avsett ett stort antal uppgifter eller annars varit av särskilt farlig art.\nLag (2026:1318).",
+      "note": "Straffskalan för grovt brott mot tystnadsplikt skärps utan att gränsen mot normalgraden ska ändras. Den oaktsamma bötesvarianten och undantaget för ringa gärning ska fortsatt hållas isär från den uppsåtliga grova graden.",
+      "locator": "Prop. 2025/26:218, avsnitt 10.1, kommentaren till BrB 20 kap. 3 §"
+    },
+    {
+      "id": "v04-kontakt-for-att-traffa-ett-barn-i-sexuellt-syfte",
+      "title": "Kontakt för att träffa ett barn i sexuellt syfte",
+      "statute": "BrB:6:10a",
+      "ownText": "10 a §\nDen som, i syfte att mot ett barn under femton år begå en gärning för vilken straff föreskrivs i 4, 5, 6, 8 eller 10 §, föreslår en träff eller stämmer träff med barnet, döms för kontakt för att träffa ett barn i sexuellt syfte till fängelse i högst två år. Lag (2026:1318).",
+      "note": "Böter tas bort ur straffskalan och ersätts av allmänt fängelseminimum. Detta är en höjning av straffnivån; kontakten, träfförslaget och det särskilda sexuella syftet måste fortfarande styrkas självständigt.",
+      "locator": "Prop. 2025/26:218, avsnitt 10.1, kommentaren till BrB 6 kap. 10a §"
+    },
+    {
+      "id": "v04-grovt-ocker",
+      "title": "Grovt ocker",
+      "statute": "BrB:9:5",
+      "ownText": "5 §\nDen som vid avtal eller någon annan rättshandling utnyttjar någons trångmål, oförstånd, lättsinne eller beroendeställning till att bereda sig förmån, som står i uppenbart missförhållande till motprestationen eller för vilken motprestation inte ska lämnas, döms för ocker till böter eller fängelse i högst två år.\nFör ocker döms också den som vid kreditgivning i näringsverksamhet eller i annan verksamhet, som bedrivs vanemässigt eller annars i större omfattning, bereder sig ränta eller annan ekonomisk förmån, som står i uppenbart missförhållande till motprestationen.\nÄr brottet grovt, döms för grovt ocker till fängelse i lägst ett och högst sex år. Vid bedömningen av om brottet är grovt ska det särskilt beaktas om gärningen har avsett betydande värde eller varit av särskilt farlig eller hänsynslös art.\nLag (2026:1318).",
+      "note": "Straffskalan för grovt ocker skärps men gränsen mot normalgraden ska bestå. Höjningen av maximum ger större utrymme för straffmätning; den ersätter inte prövningen av utnyttjande eller kreditocker.",
+      "locator": "Prop. 2025/26:218, avsnitt 10.1, kommentaren till BrB 9 kap. 5 §"
+    },
+    {
+      "id": "v04-utforselhaleri",
+      "title": "Utförselhäleri",
+      "statute": "BrB:9:6a",
+      "ownText": "6 a §\nDen som, på ett sätt som är ägnat att försvåra ett återställande, tar befattning med något som skäligen kan antas vara frånhänt annan genom brott, i syfte att föra det ut ur landet, döms för utförselhäleri till fängelse i högst två år.\nOm brottet är grovt, döms för grovt utförselhäleri till fängelse i lägst ett och högst sex år. Vid bedömningen av om brottet är grovt ska det särskilt beaktas om gärningen har avsett betydande värde, ingått som ett led i en brottslighet som utövats systematiskt eller annars varit av särskilt farlig art. Lag (2026:1318).",
+      "note": "Minimistraffet för grovt utförselhäleri höjs utan avsikt att ändra gränsen mot normalgraden. Utförselsyftet och befattningen måste fortfarande prövas före gradbedömningen.",
+      "locator": "Prop. 2025/26:218, avsnitt 10.1, kommentaren till BrB 9 kap. 6a §"
+    },
+    {
+      "id": "v04-grovt-utforselhaleri",
+      "title": "Grovt utförselhäleri",
+      "statute": "BrB:9:6a",
+      "ownText": "6 a §\nDen som, på ett sätt som är ägnat att försvåra ett återställande, tar befattning med något som skäligen kan antas vara frånhänt annan genom brott, i syfte att föra det ut ur landet, döms för utförselhäleri till fängelse i högst två år.\nOm brottet är grovt, döms för grovt utförselhäleri till fängelse i lägst ett och högst sex år. Vid bedömningen av om brottet är grovt ska det särskilt beaktas om gärningen har avsett betydande värde, ingått som ett led i en brottslighet som utövats systematiskt eller annars varit av särskilt farlig art. Lag (2026:1318).",
+      "note": "Minimistraffet för grovt utförselhäleri höjs utan avsikt att ändra gränsen mot normalgraden. Utförselsyftet och befattningen måste fortfarande prövas före gradbedömningen.",
+      "locator": "Prop. 2025/26:218, avsnitt 10.1, kommentaren till BrB 9 kap. 6a §"
+    },
+    {
+      "id": "v04-grovt-fordringsbedrageri",
+      "title": "Grovt fordringsbedrägeri",
+      "statute": "BrB:9:3a",
+      "ownText": "3 a §\nDen som till en vidare krets riktar betalningsuppmaningar i syfte att vilseleda till handling som innebär vinning för gärningsmannen och skada för mottagaren eller någon i vars ställe denne är döms, om förfarandet har avsett betydande värde, för grovt fordringsbedrägeri till fängelse i lägst ett och högst sex år. Lag (2026:1318).",
+      "note": "Minimistraffet för grovt fordringsbedrägeri höjs. Brottet har de egna kraven på vidare krets, vilseledandesyfte och betydande värde; den särskilda beteckningen ska inte förväxlas med en automatisk gradprövning av varje enskild bedrägerigärning.",
+      "locator": "Prop. 2025/26:218, avsnitt 10.1, kommentaren till BrB 9 kap. 3a §"
+    },
+    {
+      "id": "v04-grovt-tagande-av-muta",
+      "title": "Grovt tagande av muta",
+      "statute": "BrB:10:5c",
+      "ownText": "5 c §\nÄr brott som avses i 5 a eller 5 b § att anse som grovt, döms för grovt tagande av muta eller grovt givande av muta till fängelse i lägst ett år och sex månader och högst sex år. Vid bedömningen av om brottet är grovt ska det särskilt beaktas om gärningen innefattat missbruk av eller angrepp på särskilt ansvarsfull ställning, avsett betydande värde eller ingått i en brottslighet som utövats systematiskt eller i större omfattning eller annars varit av särskilt farlig art.\nLag (2026:1318).",
+      "note": "Minimistraffet för båda de grova mutbrotten höjs till ett år och sex månader. Avsikten är inte att flytta gränsen mot normalgraden. Det krävs fortfarande ett grundbrott och en självständig gradbedömning.",
+      "locator": "Prop. 2025/26:218, avsnitt 10.1, kommentaren till BrB 10 kap. 5c §"
+    },
+    {
+      "id": "v04-grovt-givande-av-muta",
+      "title": "Grovt givande av muta",
+      "statute": "BrB:10:5c",
+      "ownText": "5 c §\nÄr brott som avses i 5 a eller 5 b § att anse som grovt, döms för grovt tagande av muta eller grovt givande av muta till fängelse i lägst ett år och sex månader och högst sex år. Vid bedömningen av om brottet är grovt ska det särskilt beaktas om gärningen innefattat missbruk av eller angrepp på särskilt ansvarsfull ställning, avsett betydande värde eller ingått i en brottslighet som utövats systematiskt eller i större omfattning eller annars varit av särskilt farlig art.\nLag (2026:1318).",
+      "note": "Minimistraffet för båda de grova mutbrotten höjs till ett år och sex månader. Avsikten är inte att flytta gränsen mot normalgraden. Det krävs fortfarande ett grundbrott och en självständig gradbedömning.",
+      "locator": "Prop. 2025/26:218, avsnitt 10.1, kommentaren till BrB 10 kap. 5c §"
+    },
+    {
+      "id": "v04-grovt-brott-mot-tystnadsplikt",
+      "title": "Grovt brott mot tystnadsplikt",
+      "statute": "BrB:20:3",
+      "ownText": "3 §\nDen som röjer en uppgift som han eller hon är skyldig att hemlighålla enligt lag eller annan författning eller enligt förordnande eller förbehåll som har meddelats med stöd av lag eller annan författning, döms, om inte gärningen är belagd med straff enligt någon annan bestämmelse, för brott mot tystnadsplikt till böter eller fängelse i högst två år. Detsamma gäller den som olovligen utnyttjar sådan hemlighet.\nDen som av oaktsamhet begår en gärning som avses i första stycket, döms till böter. Om gärningen är ringa utgör den inte brott.\nOm ett brott som avses i första stycket är grovt, döms för grovt brott mot tystnadsplikt till fängelse i lägst ett och högst sex år. Vid bedömningen av om brottet är grovt ska det särskilt beaktas om gärningen kunnat medföra allvarlig skada, avsett ett stort antal uppgifter eller annars varit av särskilt farlig art.\nLag (2026:1318).",
+      "note": "Straffskalan för grovt brott mot tystnadsplikt skärps utan att gränsen mot normalgraden ska ändras. Den oaktsamma bötesvarianten och undantaget för ringa gärning ska fortsatt hållas isär från den uppsåtliga grova graden.",
+      "locator": "Prop. 2025/26:218, avsnitt 10.1, kommentaren till BrB 20 kap. 3 §"
+    },
+    {
+      "id": "v05-egenmaktighet-med-barn",
+      "title": "Egenmäktighet med barn",
+      "statute": "BrB:7:4",
+      "ownText": "4 §\n/Upphör att gälla U:2027-01-01/\nDen som obehörigen skiljer ett barn under femton år från någon som har vårdnaden om barnet döms för egenmäktighet med barn till böter eller fängelse i högst två år, om gärningen inte utgör brott mot frihet. Detsamma gäller, om den som gemensamt med någon annan har vårdnaden om ett barn under femton år utan beaktansvärt skäl egenmäktigt skiljer barnet från den andra vårdnadshavaren eller om den som ska ha vårdnaden obehörigen bemäktigar sig barnet och därigenom själv tar sig rätt.\nTill ansvar enligt första stycket döms också den som\n1. obehörigen skiljer ett barn under femton år från någon som vårdar barnet med stöd av lagen (1990:52) med särskilda bestämmelser om vård av unga, om gärningen inte utgör brott mot frihet eller främjande av flykt, eller\n2. för bort eller annars undanhåller ett barn under femton år, om gärningen är ägnad att hindra att vård enligt lagen med särskilda bestämmelser om vård av unga påbörjas och gärningen inte utgör brott mot frihet.\nOm ett brott som avses i första eller andra stycket är grovt, döms till fängelse i lägst ett och högst sex år.\nLag (2026:1318).",
+      "note": "Både normalgradens maximum och den grova gradens straffskala skärps. Avsikten är uttryckligen inte att flytta gränsen mellan graderna. Kommentaren gäller 2026 års ändring och ersätter inte den separata kontrollen av den aviserade lydelsen från 2027.",
+      "locator": "Prop. 2025/26:218, avsnitt 10.1, kommentaren till BrB 7 kap. 4 §"
+    },
+    {
+      "id": "v05-grov-egenmaktighet-med-barn",
+      "title": "Grov egenmäktighet med barn",
+      "statute": "BrB:7:4",
+      "ownText": "4 §\n/Upphör att gälla U:2027-01-01/\nDen som obehörigen skiljer ett barn under femton år från någon som har vårdnaden om barnet döms för egenmäktighet med barn till böter eller fängelse i högst två år, om gärningen inte utgör brott mot frihet. Detsamma gäller, om den som gemensamt med någon annan har vårdnaden om ett barn under femton år utan beaktansvärt skäl egenmäktigt skiljer barnet från den andra vårdnadshavaren eller om den som ska ha vårdnaden obehörigen bemäktigar sig barnet och därigenom själv tar sig rätt.\nTill ansvar enligt första stycket döms också den som\n1. obehörigen skiljer ett barn under femton år från någon som vårdar barnet med stöd av lagen (1990:52) med särskilda bestämmelser om vård av unga, om gärningen inte utgör brott mot frihet eller främjande av flykt, eller\n2. för bort eller annars undanhåller ett barn under femton år, om gärningen är ägnad att hindra att vård enligt lagen med särskilda bestämmelser om vård av unga påbörjas och gärningen inte utgör brott mot frihet.\nOm ett brott som avses i första eller andra stycket är grovt, döms till fängelse i lägst ett och högst sex år.\nLag (2026:1318).",
+      "note": "Både normalgradens maximum och den grova gradens straffskala skärps. Avsikten är uttryckligen inte att flytta gränsen mellan graderna. Kommentaren gäller 2026 års ändring och ersätter inte den separata kontrollen av den aviserade lydelsen från 2027.",
+      "locator": "Prop. 2025/26:218, avsnitt 10.1, kommentaren till BrB 7 kap. 4 §"
+    },
+    {
+      "id": "v05-olovlig-befattning-med-betalningsverktyg",
+      "title": "Olovlig befattning med betalningsverktyg",
+      "statute": "BrB:9:3c",
+      "ownText": "3 c §\nDen som\n1. olovligen införskaffar ett betalningsverktyg,\n2. för bedräglig användning förvanskar ett betalningsverktyg eller framställer ett falskt betalningsverktyg, eller\n3. använder ett olovligen införskaffat eller förvanskat eller falskt betalningsverktyg eller på annat sätt tar befattning med ett sådant betalningsverktyg\ndöms för olovlig befattning med betalningsverktyg till böter eller fängelse i högst två år.\nMed betalningsverktyg avses skyddade verktyg, handlingar eller uppgifter som ger möjlighet att överföra pengar eller ett penningvärde.\nOm ett brott som avses i första stycket är grovt, döms för grov olovlig befattning med betalningsverktyg till fängelse i lägst ett och högst sex år. Vid bedömningen av om brottet är grovt ska det särskilt beaktas om\n1. gärningsmannen på ett hänsynslöst sätt har utnyttjat offrets skyddslösa eller utsatta ställning,\n2. gärningen har avsett betydande värde eller kunnat medföra synnerligen kännbar skada,\n3. gärningen har ingått i en brottslighet som utövats i organiserad form eller systematiskt, eller\n4. gärningen annars har varit av särskilt farlig art.\nDet ska inte dömas till ansvar enligt denna paragraf om gärningen är belagd med samma eller strängare straff enligt någon annan bestämmelse i denna balk. Lag (2026:1318).",
+      "note": "Minimistraffet för den grova graden höjs utan att gränsen mot normalgraden ska ändras. De befintliga gärningsformerna och paragrafens uttryckliga subsidiaritet måste fortfarande tillämpas.",
+      "locator": "Prop. 2025/26:218, avsnitt 10.1, kommentaren till BrB 9 kap. 3c §"
+    },
+    {
+      "id": "v05-grov-olovlig-befattning-med-betalningsverktyg",
+      "title": "Grov olovlig befattning med betalningsverktyg",
+      "statute": "BrB:9:3c",
+      "ownText": "3 c §\nDen som\n1. olovligen införskaffar ett betalningsverktyg,\n2. för bedräglig användning förvanskar ett betalningsverktyg eller framställer ett falskt betalningsverktyg, eller\n3. använder ett olovligen införskaffat eller förvanskat eller falskt betalningsverktyg eller på annat sätt tar befattning med ett sådant betalningsverktyg\ndöms för olovlig befattning med betalningsverktyg till böter eller fängelse i högst två år.\nMed betalningsverktyg avses skyddade verktyg, handlingar eller uppgifter som ger möjlighet att överföra pengar eller ett penningvärde.\nOm ett brott som avses i första stycket är grovt, döms för grov olovlig befattning med betalningsverktyg till fängelse i lägst ett och högst sex år. Vid bedömningen av om brottet är grovt ska det särskilt beaktas om\n1. gärningsmannen på ett hänsynslöst sätt har utnyttjat offrets skyddslösa eller utsatta ställning,\n2. gärningen har avsett betydande värde eller kunnat medföra synnerligen kännbar skada,\n3. gärningen har ingått i en brottslighet som utövats i organiserad form eller systematiskt, eller\n4. gärningen annars har varit av särskilt farlig art.\nDet ska inte dömas till ansvar enligt denna paragraf om gärningen är belagd med samma eller strängare straff enligt någon annan bestämmelse i denna balk. Lag (2026:1318).",
+      "note": "Minimistraffet för den grova graden höjs utan att gränsen mot normalgraden ska ändras. De befintliga gärningsformerna och paragrafens uttryckliga subsidiaritet måste fortfarande tillämpas.",
+      "locator": "Prop. 2025/26:218, avsnitt 10.1, kommentaren till BrB 9 kap. 3c §"
+    },
+    {
+      "id": "v05-svindleri",
+      "title": "Svindleri",
+      "statute": "BrB:9:9",
+      "ownText": "9 §\nDen som offentliggör eller på annat sätt bland allmänheten sprider vilseledande uppgift för att påverka priset på vara, värdepapper eller någon annan egendom döms för svindleri till fängelse i högst två år eller, om brottet är ringa, till böter eller fängelse i högst sex månader.\nFör svindleri döms det också om någon, som medverkar vid bildande av aktiebolag eller annat företag eller som på grund av sin ställning bör ha särskild kännedom om ett företag, uppsåtligen eller av grov oaktsamhet offentliggör eller på annat sätt bland allmänheten eller företagets intressenter sprider vilseledande uppgift som är ägnad att påverka bedömningen av företaget i ekonomiskt hänseende och därigenom medföra skada.\nÄr brott som avses i första eller andra stycket grovt, döms för grovt svindleri till fängelse i lägst ett och högst sex år. Vid bedömningen av om brottet är grovt ska det särskilt beaktas om gärningen har varit av större omfattning, kunnat medföra avsevärd skada eller annars varit av särskilt farlig art. Lag (2026:1318).",
+      "note": "Det höjda minimistraffet gäller grovt svindleri utan att gränsen mot normalgraden ska flyttas. Den särskilda ringa skalan och skillnaden mellan paragrafens två gärningsformer består.",
+      "locator": "Prop. 2025/26:218, avsnitt 10.1, kommentaren till BrB 9 kap. 9 §"
+    },
+    {
+      "id": "v05-ringa-svindleri",
+      "title": "Ringa svindleri",
+      "statute": "BrB:9:9",
+      "ownText": "9 §\nDen som offentliggör eller på annat sätt bland allmänheten sprider vilseledande uppgift för att påverka priset på vara, värdepapper eller någon annan egendom döms för svindleri till fängelse i högst två år eller, om brottet är ringa, till böter eller fängelse i högst sex månader.\nFör svindleri döms det också om någon, som medverkar vid bildande av aktiebolag eller annat företag eller som på grund av sin ställning bör ha särskild kännedom om ett företag, uppsåtligen eller av grov oaktsamhet offentliggör eller på annat sätt bland allmänheten eller företagets intressenter sprider vilseledande uppgift som är ägnad att påverka bedömningen av företaget i ekonomiskt hänseende och därigenom medföra skada.\nÄr brott som avses i första eller andra stycket grovt, döms för grovt svindleri till fängelse i lägst ett och högst sex år. Vid bedömningen av om brottet är grovt ska det särskilt beaktas om gärningen har varit av större omfattning, kunnat medföra avsevärd skada eller annars varit av särskilt farlig art. Lag (2026:1318).",
+      "note": "Det höjda minimistraffet gäller grovt svindleri utan att gränsen mot normalgraden ska flyttas. Den särskilda ringa skalan och skillnaden mellan paragrafens två gärningsformer består.",
+      "locator": "Prop. 2025/26:218, avsnitt 10.1, kommentaren till BrB 9 kap. 9 §"
+    },
+    {
+      "id": "v05-grovt-svindleri",
+      "title": "Grovt svindleri",
+      "statute": "BrB:9:9",
+      "ownText": "9 §\nDen som offentliggör eller på annat sätt bland allmänheten sprider vilseledande uppgift för att påverka priset på vara, värdepapper eller någon annan egendom döms för svindleri till fängelse i högst två år eller, om brottet är ringa, till böter eller fängelse i högst sex månader.\nFör svindleri döms det också om någon, som medverkar vid bildande av aktiebolag eller annat företag eller som på grund av sin ställning bör ha särskild kännedom om ett företag, uppsåtligen eller av grov oaktsamhet offentliggör eller på annat sätt bland allmänheten eller företagets intressenter sprider vilseledande uppgift som är ägnad att påverka bedömningen av företaget i ekonomiskt hänseende och därigenom medföra skada.\nÄr brott som avses i första eller andra stycket grovt, döms för grovt svindleri till fängelse i lägst ett och högst sex år. Vid bedömningen av om brottet är grovt ska det särskilt beaktas om gärningen har varit av större omfattning, kunnat medföra avsevärd skada eller annars varit av särskilt farlig art. Lag (2026:1318).",
+      "note": "Det höjda minimistraffet gäller grovt svindleri utan att gränsen mot normalgraden ska flyttas. Den särskilda ringa skalan och skillnaden mellan paragrafens två gärningsformer består.",
+      "locator": "Prop. 2025/26:218, avsnitt 10.1, kommentaren till BrB 9 kap. 9 §"
+    },
+    {
+      "id": "v15-cover-involverande-av-en-underarig-i-brottslighet",
+      "title": "Involverande av en underårig i brottslighet",
+      "statute": "BrB:16:5a",
+      "ownText": "5 a §\nDen som för brott eller brottslig verksamhet anlitar, betalar, instruerar eller överlämnar egendom till någon som inte har fyllt arton år och därigenom, eller på annat liknande sätt, involverar honom eller henne i brottet eller den brottsliga verksamheten, döms för involverande av en underårig i brottslighet till fängelse i högst sex år. Detta gäller även om den som begår en sådan gärning inte haft uppsåt till men varit oaktsam beträffande omständigheten att den andra personen inte fyllt arton år.\nOm involverandet med hänsyn till den ringa skillnaden i ålder eller utveckling mellan den som har begått gärningen och den andra personen eller annars är uppenbart mindre allvarligt, ska inte dömas till ansvar.\nLag (2026:1318).",
+      "note": "Ändringen höjer maximistraffet och ger större straffmätningsutrymme. Den upphäver inte undantaget för uppenbart mindre allvarligt involverande eller den särskilda åldersprövningen.",
+      "locator": "Prop. 2025/26:218, avsnitt 10.1, kommentaren till BrB 16 kap. 5a §"
+    },
+    {
+      "id": "v15-additional-forsvarande-av-konkurs-eller-exekutiv-forrattning",
+      "title": "Försvårande av konkurs eller exekutiv förrättning",
+      "statute": "BrB:11:2",
+      "ownText": "2 §\nEn gäldenär som vid konkurs, skuldsanering eller F-\nskuldsanering, eller vid planförhandling under företagsrekonstruktion, uppsåtligen eller av grov oaktsamhet förtiger tillgång, uppger obefintlig skuld eller lämnar annan sådan oriktig uppgift, döms, om uppgiften inte rättas innan den beedigas eller annars läggs till grund för förfarandet, för försvårande av konkurs eller exekutiv förrättning till fängelse i högst två år.\nFör försvårande av exekutiv förrättning döms också en gäldenär som i samband med annan exekutiv förrättning uppsåtligen åberopar oriktig handling eller skenavtal och därigenom hindrar att erforderlig egendom genom förrättning tas i anspråk för att bereda borgenär betalning eller säkerhet.\nOm ett förtigande eller en oriktig uppgift enligt första stycket är utan betydelse för saken, eller om gäldenären vid konkurs hade rätt att vägra yttra sig och omständigheterna innebär en skälig ursäkt för honom eller henne, ska han eller hon inte dömas till ansvar.\nOm ett brott som avses i denna paragraf har begåtts uppsåtligen och är grovt, döms för grovt försvårande av konkurs eller exekutiv förrättning till fängelse i lägst ett och högst sex år. Vid bedömningen av om brottet är grovt ska det särskilt beaktas om gärningsmannen beedigat oriktig uppgift eller använt falsk handling eller vilseledande bokföring eller om brottet varit av betydande omfattning.\nLag (2026:1318).",
+      "note": "Höjt minimistraff för den grova graden ska inte ändra gränsen mot normalgraden. Reformen tar inte bort rättelse- eller ursäktsreglerna och gör inte grovt oaktsamt handlande till den uppsåtliga grova graden.",
+      "locator": "Prop. 2025/26:218, avsnitt 10.1, kommentaren till BrB 11 kap. 2 §"
+    },
+    {
+      "id": "v15-additional-grovt-forsvarande-av-konkurs-eller-exekutiv-forrattning",
+      "title": "Grovt försvårande av konkurs eller exekutiv förrättning",
+      "statute": "BrB:11:2",
+      "ownText": "2 §\nEn gäldenär som vid konkurs, skuldsanering eller F-\nskuldsanering, eller vid planförhandling under företagsrekonstruktion, uppsåtligen eller av grov oaktsamhet förtiger tillgång, uppger obefintlig skuld eller lämnar annan sådan oriktig uppgift, döms, om uppgiften inte rättas innan den beedigas eller annars läggs till grund för förfarandet, för försvårande av konkurs eller exekutiv förrättning till fängelse i högst två år.\nFör försvårande av exekutiv förrättning döms också en gäldenär som i samband med annan exekutiv förrättning uppsåtligen åberopar oriktig handling eller skenavtal och därigenom hindrar att erforderlig egendom genom förrättning tas i anspråk för att bereda borgenär betalning eller säkerhet.\nOm ett förtigande eller en oriktig uppgift enligt första stycket är utan betydelse för saken, eller om gäldenären vid konkurs hade rätt att vägra yttra sig och omständigheterna innebär en skälig ursäkt för honom eller henne, ska han eller hon inte dömas till ansvar.\nOm ett brott som avses i denna paragraf har begåtts uppsåtligen och är grovt, döms för grovt försvårande av konkurs eller exekutiv förrättning till fängelse i lägst ett och högst sex år. Vid bedömningen av om brottet är grovt ska det särskilt beaktas om gärningsmannen beedigat oriktig uppgift eller använt falsk handling eller vilseledande bokföring eller om brottet varit av betydande omfattning.\nLag (2026:1318).",
+      "note": "Höjt minimistraff för den grova graden ska inte ändra gränsen mot normalgraden. Reformen tar inte bort rättelse- eller ursäktsreglerna och gör inte grovt oaktsamt handlande till den uppsåtliga grova graden.",
+      "locator": "Prop. 2025/26:218, avsnitt 10.1, kommentaren till BrB 11 kap. 2 §"
+    },
+    {
+      "id": "v15-grov-oredlighet-mot-borgenarer",
+      "title": "Grov oredlighet mot borgenärer",
+      "statute": "BrB:11:1",
+      "ownText": "1 §\nDen som, när han eller hon är på obestånd eller när det finns en påtaglig fara för att han eller hon ska komma på obestånd, förstör eller genom gåva eller någon annan liknande åtgärd avhänder sig egendom av betydande värde, döms för oredlighet mot borgenärer till fängelse i högst två år. Detsamma gäller om någon genom sådant förfarande försätter sig på obestånd eller framkallar påtaglig fara för att han eller hon ska komma på obestånd.\nFör oredlighet mot borgenärer döms också en gäldenär som, då konkurs är förestående, ur riket bortför tillgång av betydande värde med uppsåt att hålla den undan konkursen, eller gäldenär som i konkurs undandrar eller undanhåller konkursförvaltningen tillgång.\nDetsamma gäller, om en gäldenär i otillbörligt syfte underlåter att, så långt möjligt, medverka till att tillgång i utlandet som ingår i konkursen ställs till konkursförvaltningens förfogande, trots att konkursförvaltaren uppmanat gäldenären att medverka.\nOm brottet är grovt, döms för grov oredlighet mot borgenärer till fängelse i lägst ett och högst sex år. Vid bedömningen av om brottet är grovt ska det särskilt beaktas om gärningsmannen beedigat oriktig uppgift eller använt falsk handling eller vilseledande bokföring eller om brottet varit av betydande omfattning eller om gärningen annars varit av särskilt farlig art. Lag (2026:1318).",
+      "note": "Det höjda minimistraffet för grov oredlighet mot borgenärer ska inte flytta gränsen mot normalgraden. Övriga ändringar beskrivs som språkliga och redaktionella; obestånds- och gärningskraven består.",
+      "locator": "Prop. 2025/26:218, avsnitt 10.1, kommentaren till BrB 11 kap. 1 §"
+    }
+  ],
+  "jurisprudenceCheckpointsApproved": 0
+}

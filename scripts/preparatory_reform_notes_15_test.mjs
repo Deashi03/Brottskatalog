@@ -1,0 +1,17 @@
+import assert from'node:assert/strict';import fs from'node:fs';import path from'node:path';import vm from'node:vm';
+const root=path.resolve(import.meta.dirname,'..'),read=p=>fs.readFileSync(path.join(root,p),'utf8'),html=read('index.html'),mod='./preparatory-reform-notes-15.js';
+const files=[...html.matchAll(/<script\s+src="([^"]+)"/g)].map(x=>x[1]),inline=[...html.matchAll(/<script(?:\s[^>]*)?>([\s\S]*?)<\/script>/g)].map(x=>x[1]);
+function load(skip=[]){const ctx=vm.createContext({window:{},console:{log(){},warn(){},error(){}}});for(const i of[1,2,3])vm.runInContext(inline[i],ctx);for(const f of files)if(!skip.includes(f))vm.runInContext(read(f),ctx,{filename:f});return ctx;}
+const plain=x=>JSON.parse(JSON.stringify(x)),ctx=load(),w=ctx.window,data=JSON.parse(read('data/preparatory-reform-notes-15.json')),base=w.BK_DATA.crimes.filter(c=>!c.stageType),r=w.BK_PREPARATORY_REFORM_NOTES15;
+assert.equal(r.planned,50);assert.equal(r.annotated,50);assert.equal(r.held.length,0);assert.equal(r.fullLegalApprovals,0);assert.equal(r.jurisprudenceCheckpointsApproved,0);assert.equal(Object.keys(data.sourcePins).length,32);assert.match(data.source.downloadTextSHA256,/^[a-f0-9]{64}$/);assert.equal(data.source.url,'https://data.riksdagen.se/dokument/HD03218');assert.equal(data.source.section,'10.1');
+for(const row of data.records){const c=base.find(c=>c.id===row.id),g=c.preparatoryReformNote15;assert.equal(g.scope,data.scope);assert.equal(g.note,row.note);assert.ok(g.locator.includes(c.ref));assert.equal(g.fullJurisprudenceReviewApproved,false);assert.equal(g.fullLegalReviewApproved,false);assert.equal(g.automaticGradeSelectionApproved,false);assert.equal(c.legalAudit15?.checkpoints?.jurisprudence,undefined);}
+assert.equal(base.filter(c=>c.preparatoryReformNote15).length,50);assert.equal(w.BK_DATA.crimes.filter(c=>c.stageType&&c.preparatoryReformNote15).length,0);
+for(const[t,p]of[['Grov misshandel','utan att flytta gränsen'],['Förolämpning','grova svårhetsgraden tas bort'],['Grov våldtäkt','flerfaldig brottslighet'],['Mened','utan särskilt brottsnamn'],['Uppvigling','ansvarsfriheten för ringa fall består'],['Häleri','språklig'],['Tagande av muta','varje förmån']])assert.ok(base.find(c=>c.title===t).preparatoryReformNote15.note.includes(p),t);
+const before=load([mod]),old=plain(before.window.BK_DATA.crimes);vm.runInContext(read(mod),before);for(const[i,c]of before.window.BK_DATA.crimes.entries()){const copy=plain(c);delete copy.preparatoryReformNote15;assert.deepEqual(copy,old[i],'Preserve all fields '+c.title);}vm.runInContext(read(mod),before);assert.equal(before.window.BK_PREPARATORY_REFORM_NOTES15.annotated,0,'Do not overwrite a prior note or duplicate it');
+function change(fn){const x=load([mod]);fn(x.window);vm.runInContext(read(mod),x);return x.window.BK_PREPARATORY_REFORM_NOTES15;}
+assert.equal(change(w=>{w.BK_STATUTES['BrB:3:6'].text+=' changed';}).annotated,48);
+assert.equal(change(w=>{w.BK_STATUTES['BrB:9:9'].machine=true;}).annotated,47);
+assert.equal(change(w=>{w.BK_DATA.crimes.find(c=>c.title==='Grov stöld').law+=' changed';}).annotated,49);
+assert.equal(change(w=>{w.BK_STATUTES['BrB:7:4'].complete=false;}).annotated,48);
+assert.equal(change(w=>{delete w.BK_STATUTES['BrB:3:6'].checked;}).annotated,48);
+assert.ok(read('service-worker.js').includes(mod));assert.ok(html.includes('+reformNoteBody'));console.log('PASS: 50 specific preparatory notes, 32 current statutory guards, no legal/praxis signoffs or other changes');

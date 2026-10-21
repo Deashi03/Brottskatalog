@@ -1,0 +1,37 @@
+import assert from 'node:assert/strict';
+import fs from 'node:fs';
+import vm from 'node:vm';
+import path from 'node:path';
+const root=path.resolve(import.meta.dirname,'..');
+const html=fs.readFileSync(path.join(root,'index.html'),'utf8'),sw=fs.readFileSync(path.join(root,'service-worker.js'),'utf8');
+const scripts=[...html.matchAll(/<script\s+src="([^"]+)"/g)].map(x=>x[1]);
+const mod='./rekvisit-hogmal-15.js';
+assert.ok(scripts.includes(mod)&&sw.includes(mod),'BrB 18 module must load and be cached');
+assert.ok(scripts.indexOf(mod)<scripts.indexOf('./stages-08.js'));
+const inline=[...html.matchAll(/<script(?:\s[^>]*)?>([\s\S]*?)<\/script>/g)].map(x=>x[1]);
+const ctx=vm.createContext({window:{},console:{log:()=>{},warn:()=>{},error:()=>{}}});
+for(const i of [1,2,3])vm.runInContext(inline[i],ctx);
+for(const src of scripts)vm.runInContext(fs.readFileSync(path.join(root,src),'utf8'),ctx,{filename:src});
+const D=ctx.window.BK_DATA,report=ctx.window.BK_REKVISIT_HOGMAL15;
+assert.ok(report);
+assert.equal(report.missing.length,0,JSON.stringify(report.missing));
+assert.equal(report.mismatch.length,0,JSON.stringify(report.mismatch));
+assert.equal(report.added.length+report.already.length,4);
+const ch=D.crimes.filter(c=>!c.stageType&&c.statute?.startsWith('BrB:18:'));
+assert.equal(ch.length,5);
+assert.equal(ch.filter(c=>!c.rekvisit15?.groups?.length&&!c.rekvisit15?.routes?.length).length,0,'Missing structural BrB 18 checklist');
+const by=t=>ch.find(c=>c.title===t);
+assert.equal(by('Uppror').rekvisit15.routes.length,2);
+assert.equal(by('Svikande av försvarsplikt').rekvisit15.routes.length,2);
+assert.equal(by('Brott mot medborgerlig frihet').rekvisit15.routes.length,1);
+assert.ok(JSON.stringify(by('Väpnat hot mot laglig ordning').rekvisit15).includes('uppsåt'));
+for(const t of [...report.added,...report.already]){
+ const c=by(t);
+ assert.equal(c.rekvisit15.legalReviewApproved,false);
+ assert.ok(c.rekvisit15.sourceURL.includes('riksdagen.se'));
+ assert.equal(c.typexempel15?.length||0,0,'Do not fabricate high-crime typical cases');
+}
+const brb=D.crimes.filter(c=>!c.stageType&&c.statute?.startsWith('BrB:'));
+const structured=brb.filter(c=>c.rekvisit15?.groups?.length||c.rekvisit15?.routes?.length).length;
+assert.ok(structured>=279);
+console.log('PASS V1.5: BrB 18 complete source-scoped structure, '+structured+'/'+brb.length);

@@ -1,3 +1,18 @@
+# Brottskatalog V1.5 – avgränsad publiceringsversion (22 oktober 2026)
+
+**Webbapp:** https://deashi03.github.io/Brottskatalog/  
+**Kod och verifiering:** https://github.com/Deashi03/Brottskatalog
+
+V1.5 utökar 1.4 med 390 grundkort, 1 167 förstadiekort, totalt 1 557 revisionsposter (1 545 efter katalogurval), fördjupade rekvisit och källbundna åtalsregler. För förstadier med villkorade straffskalor redovisas egna alternativ i stället för en påhittad gemensam skala. Konkreta ärendefakta, aktuell lagversion och beslutsbehörighet prövas inte automatiskt.
+
+**Publiceringens uttryckliga avgränsning:** Godkända automatiserade kontroller gäller katalogens tekniska integritet och source-bundna kärnuppgifter. Den uttömmande genomgången av förarbeten och praxis för 390 grundkort skjuts till nästa version; inga fullständiga juridiska slutgodkännanden ges. Den systematiskt tolkade åtalsbegränsningen för grovt olaga tvång enligt BrB 4:11 redovisas med ett uttryckligt tolkningsförbehåll; stämpling omfattas inte av den begränsning som endast räknar upp försök och förberedelse. Vid konkret tjänsteutövning ska dessa frågor kontrolleras självständigt mot gällande rätt och vid behov med åklagare.
+
+Den tidigare strängare och avsiktligt fullständighetskrävande revisionen i `scripts/v15_release_readiness.mjs` kvarstår oförändrad och kan fortsatt rapportera att full juridisk granskning inte är färdig. För den överenskomna avgränsade versionen används `scripts/v15_scoped_release_gate.mjs --release`, som behåller käll- och regressionskontroller och vägrar att godkänna saknade kärnposter eller automatiska operativa godkännanden.
+
+Se [jämförelsen med 1.4](docs/V15-JAMFORELSE-MED-V14.md). Den äldre versionshistoriken följer nedan.
+
+---
+
 # Brottskatalog V1.4 – publiceringsversion (16 oktober 2026)
 
 **Öppna i Safari:** https://deashi03.github.io/Brottskatalog/  
@@ -206,3 +221,48 @@ Senaste **hela** godkända integrations-, data- och iPhone-körning: [GitHub Act
 - `coercive-07.js`, `coercive-09.js`: tvångsmedel och strukturerad beslutsbehörighet.
 - `index.html`: iPhone UI med kapitelindelning, filter och fyra häktningskort.
 - `service-worker.js`: versionshanterad offline-cache.
+
+
+### V1.5 arbetsavstämning 20 oktober – 83,6 %
+
+Arbetsgrenen har nu 9 984/11 948 avslutade moment, 1 964 återstår. Detta pass avslutar 326 befintliga grundbrottskontroller av aktuell förstadiekriminalisering och en ny regression. Fem grova brottsgrader hade felaktigt negativa förstadiebesked; 13 kombinationer är rättade mot grund- och kriminaliseringsparagrafen med bevarat ersättningsregister. Alla 452 positiva förstadiekombinationer har rekvisitöversikter. Grundkortens förstadieavsnitt visar daterade källförklaringar och uttryckliga undantag.
+
+56 positiva förstadier har fortfarande öppen individuell straffskaleprövning. 1 946 juridiska delmoment och 18 publiceringsmoment återstår; inga fullständiga juridiska slutgodkännanden har tillkommit. V1.5 är fortsatt utkast i PR #2. Se den senaste avstämningen i `docs/V15-PUBLICERINGSPROGRESS.md`.
+
+
+### V1.5 arbetsavstämning 20 oktober – 85,0 %
+
+174 individuella aktuella gradfrågor är källgranskade och visas som hopfälld fördjupning i rekvisitfunktionen. 101 fullständiga BrB-paragrafer ligger till grund för gradregler, uttryckliga indikatorer och gränser mot andra gärningsformer eller ansvarsfrihet. Hänvisningsbrott får separata källberoenden. Ändrad källtext eller en befintlig granskarspärr lämnar kontrollen öppen.
+
+10 159/11 949 arbetsmoment är avslutade, 1 790 återstår. Det nya blocket avslutar 174 befintliga moment och ett testkommando, utan ändrad brottsinventering. Samtliga grundrekvisit, straffskalor och övriga revisionsdimensioner är bevarade. Ingen konkret brottsgrad eller fullständigt juridiskt slutgodkännande har fastställts genom dessa lagtextskontroller. V1.5 förblir utkast i PR #2.
+
+
+### V1.5 arbetsavstämning 20 oktober – 95,1 %
+
+345 individuella kontroller kopplar paragraftextens angivna ändringslag till dess ikraftträdande och publicerade övergångsbestämmelser. Underlaget består av 83 primära register-/tidskällor. 45 kort utan säkert kartlagd ändringshänvisning eller ikraftträdandedag hålls öppna. En hopfälld fördjupning under lagtexten förklarar datum, äldre lydelse, senare lindrigare lag och aviserad framtida lydelse. Gärningstidpunkten och äldre lagversioner väljs inte automatiskt.
+
+18 ytterligare kontroller av uttryckliga begränsningar i BrB 3 och 12 kap. använder 17 källparagrafer. Rekvisitfunktionen har nu sådana förklaringar för 260 grundkort. Skillnaderna mellan ringa oaktsam personskada, straffbar ringa gärning, åverkan/tillgrepp och färd över mark hålls uttryckliga.
+
+11 371/11 955 arbetsmoment är avslutade, 584 återstår. Senaste passet avslutar 363 befintliga databasfrågor och två nya testkommandon. Inventeringen är oförändrad. Aktuell källavgränsad delgranskning ersätter inte praxis, full historisk lagjämförelse eller konkret tillämpning. Ingen brottspost är fullständigt juridiskt slutgodkänd. V1.5 är fortsatt utkast i PR #2.
+
+### 20 oktober 2026 – återstående uttryckliga begränsningar
+
+**96,2 %: 11 502 av 11 956 arbetsmoment.** Ökningen från 95,1 % består av **130 individuella lagtextbundna begränsningskontroller** och ett nytt regressionskommando. Målet 97,5 % är ännu inte uppnått; ytterligare 156 avslutade moment skulle krävas med denna nämnare. Inga förarbets-/praxisdelgranskningar räknas som färdiga slutmoment.
+
+`remaining-statutory-limits-review-15.js` omfattar 130 grundkort, 98 egna straffparagrafer och 110 låsta källparagrafer. Fördelning: BrB 8 kap. 14 kort, 9 kap. 22, 10 kap. 17, 11 kap. 9, 16 kap. 23, 18 kap. 5, 19 kap. 20, 21 kap. 12 och 22 kap. 8. Tillsammans med tidigare kontroller har alla **390 grundkort** nu lagtextbundna avgränsningsanteckningar i den expanderbara Rekvisitfunktionen.
+
+Särskilt kontrollerat: mindre allvarlig inbrottsstöld/rån leder till prövning av annat brott, inte automatisk straffrihet; betalningsverktygsbrottets uttryckliga subsidiaritet; rättelse och ursäkt i BrB 11:2; barnpornografibrottets hänvisning till 16:10 b; försvarlighetsregelns olika räckvidd i 19 kap.; krigsmannakrets och kapiteltillämplighet i 21:1–4; det utvidgade fiendebegreppet i 21:16; samt ockupationsundantaget i 22:4. 22:10:s utsträckning av krigsvillkor överförs inte automatiskt till 18 kap. Konventionsdefinitioner för kemiska vapen och minor lämnas uttryckligen till fortsatt självständig kontroll.
+
+Regressionen provar både sakliga gränser och att ändrad/inkomplett källa, fel källadress, maskintext eller en redan öppen kontroll stoppar nytt godkännande. Övriga uppgifter på samtliga 1 557 poster bevaras. Mobiltestet har ytterligare elva avgränsningsfall och datumförväntningen för egenmäktighet med barn följer appens svenska datumformat.
+
+**3 074/3 510 juridiska delmoment** är källavgränsat avslutade. **454 arbetsmoment återstår:** 45 tidsfrågor, 390 förarbets-/praxisfrågor, ett åtalsfilter och 18 frisläppningsmoment. Fullständig konkurrens, allmänna ansvarsfrihetsgrunder, historisk jämförelse och konkret rättslig tillämpning ingår inte i dessa begränsningskontroller. Inga fullständiga juridiska slutgodkännanden utfärdas; 56 individuella förstadiestraffskalor förblir releaseblockerande.
+
+### 21 oktober 2026 – författningskommentarer utan nya praxisgodkännanden
+
+50 grundkort har fått individuellt kopplade anteckningar till **prop. 2025/26:218, avsnitt 10.1**, i en egen expanderbar del av Rekvisit. Underlaget avser 32 egna straffparagrafer. Förklaringar om bibehållna gradgränser, borttagen grov förolämpning, mindre allvarlig mened och gemensamt livstidsstraff för flerfaldig brottslighet ska motverka att reformens straffnivåer uppfattas som nya automatiska rekvisit.
+
+Anteckningarna är kontrollerade mot respektive aktuella fullständiga SFS-paragraf och stoppas vid käll- eller textavvikelse. De ändrar inga befintliga rekvisit, straffskalor, förstadier, åtalsvillkor, tvångsmedelsstatus eller juridiska kontrollmarkeringar. **Ingen av de 390 förarbets-/praxisfrågorna avslutas genom dessa avgränsade anteckningar.**
+
+Ett nytt regressionskommando och fem ytterligare mobilfall ingår. Den räknade statusen är **11 503/11 957 = 96,2 %**, med **454 moment kvar**. Det är fortfarande 156 avslutade moment till avrundade 97,5 % enligt nuvarande nämnare; målet är inte uppnått. Fullständig juridisk acceptans och publicering kvarstår.
+
+Primärkälla: [Riksdagens proposition 2025/26:218](https://data.riksdagen.se/dokument/HD03218), respektive paragrafkommentar i avsnitt 10.1. Källans hämtade text har SHA-256 dokumenterad i `data/preparatory-reform-notes-15.json`.

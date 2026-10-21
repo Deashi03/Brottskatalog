@@ -1,0 +1,27 @@
+import assert from 'node:assert/strict';import fs from 'node:fs';import vm from 'node:vm';import path from 'node:path';
+const root=path.resolve(import.meta.dirname,'..'),read=x=>fs.readFileSync(path.join(root,x),'utf8'),name='./brb14-base-legal-checkpoints-15.js';
+const html=read('index.html'),sw=read('service-worker.js'),files=[...html.matchAll(/<script\s+src="([^"]+)"/g)].map(m=>m[1]);
+assert.ok(files.includes(name)&&sw.includes(name));
+const inline=[...html.matchAll(/<script(?:\s[^>]*)?>([\s\S]*?)<\/script>/g)].map(m=>m[1]);
+const ctx=vm.createContext({window:{},console:{log:()=>{},warn:()=>{},error:()=>{}}});
+for(const i of [1,2,3])vm.runInContext(inline[i],ctx);
+for(const file of files)vm.runInContext(read(file),ctx,{filename:file});
+const r=ctx.window.BK_BRB14_BASE_AUDIT15;
+assert.ok(r);assert.equal(r.planned,44);assert.equal(r.completed,44,JSON.stringify(r));
+assert.equal(r.held.length,0,JSON.stringify(r.held));
+assert.deepEqual(JSON.parse(JSON.stringify(r.byKind)),{objective:22,subjective:22});
+const cards=ctx.window.BK_DATA.crimes.filter(c=>!c.stageType&&c.legalAudit15?.sourceAudit==='BrB14-2026-10-20');
+assert.equal(cards.length,22);
+for(const c of cards){assert.equal(c.legalAudit15.fullLegalReviewApproved,false);
+ for(const k of ['objective','subjective']){const a=c.legalAudit15.checkpoints[k];assert.equal(a.status,'APPROVED');
+ assert.equal(a.checked,'2026-10-20');assert.ok(a.finding.length>=105);assert.equal(a.caseSpecificLiabilityApproved,false);
+ assert.equal(a.caseSpecificCustodyApproved,false);assert.equal(a.inchoateAuthorizationApproved,false);
+ assert.equal(a.offenceDateAndHistoricLawApproved,false);assert.equal(a.chargingAuthorityApproved,false);}}
+const clone=JSON.parse(JSON.stringify(ctx.window.BK_DATA.crimes)),W=JSON.parse(JSON.stringify(ctx.window.BK_STATUTES));
+for(const c of clone)if(c.legalAudit15?.sourceAudit==='BrB14-2026-10-20')delete c.legalAudit15;
+W['BrB:14:7'].text='ALTERED';const iso=vm.createContext({window:{BK_DATA:{crimes:clone},BK_STATUTES:W}});
+vm.runInContext(read(name),iso);
+assert.equal(iso.window.BK_BRB14_BASE_AUDIT15.byKind.objective,19);
+assert.equal(iso.window.BK_BRB14_BASE_AUDIT15.byKind.subjective,19);
+assert.equal(iso.window.BK_BRB14_BASE_AUDIT15.held.length,6);
+console.log('PASS: 44 separately source-gated BrB14 checks, all case-specific authorities blocked');

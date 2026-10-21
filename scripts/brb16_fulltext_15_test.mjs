@@ -1,0 +1,20 @@
+import assert from "node:assert/strict";
+import fs from "node:fs";import vm from "node:vm";import path from "node:path";
+const root=path.resolve(import.meta.dirname,"..");
+const html=fs.readFileSync(path.join(root,"index.html"),"utf8"),sw=fs.readFileSync(path.join(root,"service-worker.js"),"utf8");
+const sources=[...html.matchAll(/<script\s+src="([^"]+)"/g)].map(x=>x[1]);
+const mod="./brb16-fulltext-15.js";assert.ok(sources.includes(mod)&&sw.includes(mod));
+assert.ok(sources.indexOf(mod)>sources.indexOf("./brb-curated-lawtext-15.js")&&sources.indexOf(mod)<sources.indexOf("./stages-08.js"));
+const inlines=[...html.matchAll(/<script(?:\s[^>]*)?>([\s\S]*?)<\/script>/g)].map(x=>x[1]);
+const ctx=vm.createContext({window:{},console:{log:()=>{},warn:()=>{},error:()=>{}}});
+for(const i of [1,2,3])vm.runInContext(inlines[i],ctx);
+for(const src of sources)vm.runInContext(fs.readFileSync(path.join(root,src),"utf8"),ctx,{filename:src});
+const r=ctx.window.BK_BRB16_FULLTEXT15,source=ctx.window.BK_CURATED_LAWTEXT15;
+assert.ok(r&&r.sectionsChecked===16&&r.missing.length===0&&r.mismatch.length===0,JSON.stringify(r));
+assert.ok(source.sectionsChecked>=170);
+const base=ctx.window.BK_DATA.crimes.filter(c=>!c.stageType);
+assert.ok(source.linkedCardsChecked>=200);
+for(const k of ["BrB:16:5","BrB:16:5a","BrB:16:6","BrB:16:8","BrB:16:9","BrB:16:10","BrB:16:10a","BrB:16:10b","BrB:16:10c","BrB:16:10d","BrB:16:11","BrB:16:12","BrB:16:13","BrB:16:15","BrB:16:16","BrB:16:17"]){const s=ctx.window.BK_STATUTES[k];assert.equal(s.checked,"2026-10-18");assert.equal(s.complete,true);assert.equal(s.machine,false);assert.equal(s.completeTextProvenance,"manual-crosscheck-current-SFS-paragraph-only");for(const c of base.filter(c=>c.statute===k)){assert.equal(c.law,s.text);assert.equal(c.lawCompletenessVerified,true);assert.notEqual(c.rekvisit15?.legalReviewApproved,true);}}
+assert.equal(base.filter(c=>c.rekvisit15?.legalReviewApproved===true).length,0);
+assert.equal(ctx.window.BK_DATA.crimes.filter(c=>c.stageStatus==="unverified").length,0);
+console.log("PASS V1.5: 16 additional chapter-16 current paragraphs individually source checked, no false legal signoff");

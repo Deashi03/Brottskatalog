@@ -1,0 +1,24 @@
+import assert from 'node:assert/strict';import fs from 'node:fs';import vm from 'node:vm';import path from 'node:path';
+const root=path.resolve(import.meta.dirname,'..'),read=p=>fs.readFileSync(path.join(root,p),'utf8');
+const html=read('index.html'),mod='./brb-prosecution-sources-15.js',audit='./brb-prosecution-audit-15.js',code=read(mod);
+const sources=[...html.matchAll(/<script\s+src="([^"]+)"/g)].map(x=>x[1]);
+assert.ok(sources.indexOf(mod)<sources.indexOf(audit));assert.ok(read('service-worker.js').includes(mod));
+const inline=[...html.matchAll(/<script(?:\s[^>]*)?>([\s\S]*?)<\/script>/g)].map(x=>x[1]);
+const ctx=vm.createContext({window:{},console});for(const i of [1,2,3])vm.runInContext(inline[i],ctx);
+for(const s of sources)if(![mod,audit].includes(s))vm.runInContext(read(s),ctx);
+const before=JSON.stringify(ctx.window.BK_DATA),copy=x=>JSON.parse(JSON.stringify(x)),old=copy(ctx.window.BK_STATUTES);
+vm.runInContext(code,ctx);
+const w=ctx.window,W=w.BK_STATUTES,r=w.BK_PROSECUTION_SOURCE_TEXTS15;
+assert.equal(r.reviewed.length,9);assert.equal(r.offenceDateApplicabilityApproved,false);assert.equal(r.caseSpecificChargingApproved,false);
+assert.equal(JSON.stringify(w.BK_DATA),before,'Source repair cannot change offences or legal decisions');
+const allowed=new Set(['BrB:2:2','BrB:2:7','BrB:2:8','BrB:9:12','RB:20:2','RB:20:3','RB:20:4','RB:20:5','RB:20:6']);
+for(const key of Object.keys(W))if(!allowed.has(key))assert.deepEqual(copy(W[key]),old[key]);
+for(const key of allowed){const p=W[key];assert.equal(p.complete,true);assert.equal(p.machine,false);assert.equal(p.checked,'2026-10-20');assert.equal(p.completeTextProvenance,'manual-crosscheck-current-SFS-paragraph-only');assert.ok(p.url.startsWith('https://www.riksdagen.se/'));assert.ok(!/Allmänna grunder för behörighet|Betydelsen av en tidigare utländsk dom/.test(p.text));}
+assert.match(W['RB:20:3'].text,/ej uttryckligen äro undantagna/);assert.match(W['RB:20:3'].text,/särskilt villkor/);
+assert.match(W['RB:20:4'].text,/Innefattar en handling flera brott/);assert.match(W['RB:20:5'].text,/Polismyndigheten/);
+assert.match(W['BrB:2:2'].text,/första stycket 1-5 fattas av regeringen/);assert.match(W['BrB:2:8'].text,/Riksåklagaren beslutar/);
+assert.match(W['BrB:9:12'].text,/dock inte grovt bedrägeri och grov utpressning/);
+assert.match(w.BK_PROSECUTION_INTERPRETATIONS15.homeGross.locator,/s\. 43/);
+assert.match(w.BK_PROSECUTION_INTERPRETATIONS15.grossBribery.locator,/s\. 50/);
+vm.runInNewContext(code,{window:{}});
+console.log('PASS: nine complete current supporting prosecution paragraphs with official identities; offence data and unrelated source certificates preserved');

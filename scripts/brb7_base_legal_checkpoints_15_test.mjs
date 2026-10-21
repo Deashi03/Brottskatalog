@@ -1,0 +1,27 @@
+import assert from 'node:assert/strict';import fs from 'node:fs';import vm from 'node:vm';import path from 'node:path';
+const root=path.resolve(import.meta.dirname,'..'),read=p=>fs.readFileSync(path.join(root,p),'utf8'),mod='./brb7-base-legal-checkpoints-15.js';
+const html=read('index.html'),sw=read('service-worker.js'),scripts=[...html.matchAll(/<script\s+src="([^"]+)"/g)].map(x=>x[1]);assert.ok(scripts.includes(mod)&&sw.includes(mod));
+const inline=[...html.matchAll(/<script(?:\s[^>]*)?>([\s\S]*?)<\/script>/g)].map(x=>x[1]);
+const ctx=vm.createContext({window:{},console:{log:()=>{},warn:()=>{},error:()=>{}}});
+for(const i of [1,2,3])vm.runInContext(inline[i],ctx);
+for(const f of scripts)vm.runInContext(read(f),ctx,{filename:f});
+const r=ctx.window.BK_BRB7_BASE_AUDIT15;assert.ok(r);assert.equal(r.planned,12);
+assert.equal(r.completed,12,JSON.stringify(r));assert.equal(r.held.length,0,JSON.stringify(r.held));
+assert.deepEqual(JSON.parse(JSON.stringify(r.byType)),{objective:6,subjective:6});
+const cards=ctx.window.BK_DATA.crimes.filter(c=>!c.stageType&&c.legalAudit15?.sourceAudit==='BrB7-2026-10-20');
+assert.equal(cards.length,6);assert.equal(r.fullOffenceApprovals,0);assert.equal(r.prosecution7_6Approved,0);
+for(const c of cards){const a=c.legalAudit15;assert.equal(a.fullLegalReviewApproved,false);
+ assert.equal(a.legalTransition2027Pending,true);
+ assert.equal(a.specialProsecution7_6AndCoercionPending,true);
+ for(const k of ['objective','subjective']){const x=a.checkpoints[k];assert.equal(x.status,'APPROVED');
+ assert.equal(x.checked,'2026-10-20');assert.ok(x.finding.length>=110);
+ assert.equal(x.fullCriminalLiabilityForActApproved,false);
+ assert.equal(x.caseDateVerified,false);assert.equal(x.legislationAfter2027Reviewed,false);
+ assert.equal(x.allFamilyCustodyFactsReviewed,false);assert.equal(x.supremeCourtCaseLawApproved,false);
+ assert.equal(x.charging7_6Approved,false);assert.equal(x.inchoateStageApproved,false);assert.equal(x.caseSpecificPolicePowersApproved,false);}}
+const cloned=JSON.parse(JSON.stringify(ctx.window.BK_DATA.crimes)),W=JSON.parse(JSON.stringify(ctx.window.BK_STATUTES));
+for(const c of cloned)if(c.legalAudit15?.sourceAudit==='BrB7-2026-10-20')delete c.legalAudit15;
+W['BrB:7:4'].text='CHANGED';
+const iso=vm.createContext({window:{BK_DATA:{crimes:cloned},BK_STATUTES:W}});
+vm.runInContext(read(mod),iso);assert.equal(iso.window.BK_BRB7_BASE_AUDIT15.byType.objective,4);
+console.log('PASS: twelve family law offence/fault checks, transition 2027 and private prosecution safeguards');

@@ -1,0 +1,11 @@
+import assert from "node:assert/strict";import fs from "node:fs";import path from "node:path";import vm from "node:vm";
+const root=path.resolve(import.meta.dirname,".."),html=fs.readFileSync(path.join(root,"index.html"),"utf8"),sw=fs.readFileSync(path.join(root,"service-worker.js"),"utf8");
+const files=[...html.matchAll(/<script\s+src="([^"]+)"/g)].map(x=>x[1]),mod="./brb20-22-fulltext-15.js";assert.ok(files.includes(mod)&&sw.includes(mod));assert.ok(files.indexOf(mod)>files.indexOf("./brb19-fulltext-15.js")&&files.indexOf(mod)<files.indexOf("./stages-08.js"));
+const inlines=[...html.matchAll(/<script(?:\s[^>]*)?>([\s\S]*?)<\/script>/g)].map(x=>x[1]);const ctx=vm.createContext({window:{},console:{log:()=>{},warn:()=>{},error:()=>{}}});
+for(const i of [1,2,3])vm.runInContext(inlines[i],ctx);for(const src of files)vm.runInContext(fs.readFileSync(path.join(root,src),"utf8"),ctx,{filename:src});
+const out=ctx.window.BK_BRB202122_SOURCE15,report=ctx.window.BK_CURATED_LAWTEXT15,W=ctx.window.BK_STATUTES,base=ctx.window.BK_DATA.crimes.filter(c=>!c.stageType);
+assert.ok(out&&out.sectionsChecked===25&&out.held.length===0,JSON.stringify(out));assert.ok(report.sectionsChecked>=250);
+for(const key of ["BrB:20:3","BrB:20:4","BrB:21:1","BrB:21:2","BrB:21:3","BrB:21:4","BrB:21:5","BrB:21:6","BrB:21:8","BrB:21:9","BrB:21:10","BrB:21:11","BrB:21:12","BrB:21:13","BrB:21:14","BrB:21:16","BrB:22:1","BrB:22:2","BrB:22:3","BrB:22:4","BrB:22:5","BrB:22:7","BrB:22:9","BrB:22:10","BrB:22:11"]){const s=W[key];assert.equal(s.complete,true);assert.equal(s.machine,false);assert.equal(s.checked,"2026-10-18");for(const c of base.filter(x=>x.statute===key)){assert.equal(c.law,s.text);assert.equal(c.lawCompletenessVerified,true);assert.notEqual(c.rekvisit15?.legalReviewApproved,true);}}
+assert.notEqual(W["BrB:22:6c"]?.completeTextProvenance,"manual-crosscheck-current-SFS-paragraph-only", "noncommenced text must NOT be approved");
+assert.ok(W["BrB:22:7"].text.includes("Upphör att gälla"),"22:7 current and future versions require different dates");
+assert.equal(ctx.window.BK_DATA.crimes.filter(c=>c.stageStatus==="unverified").length,0);console.log("PASS V1.5: 25 current BrB 20-22 paragraphs reviewed; future nuclear section unapproved");
