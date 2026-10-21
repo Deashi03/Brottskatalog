@@ -83,3 +83,9 @@ Appcommit `6c79fbd2a7cf2447df6023d92e8ae2edad83ad8f` (träd `33fdaee23cf4c19cb11
 Vid sista kontrollen fanns senare appändringar till `7c80def9f66ea5d92f73e64b6650935c9330e030`, med HD-exempel, separat registerpinne och ytterligare mobiltester. Dessa ändringar bevaras helt. Ovanstående gröna körning gäller **6c79fbd**, inte automatiskt det senare appträdet. För 7c80def pågår Actions 1022: https://github.com/Deashi03/Brottskatalog/actions/runs/39559455472 . Hämta dess slutresultat innan den senare versionen betecknas som verifierad.
 
 Räkningen är fortsatt 11 548/11 957 = 96,6 %, med 409 moment öppna och noll fullständiga juridiska slutgodkännanden. Senare registerpinne innebär 95 tidskällposter. Inga publiceringsmoment stängs. Kontrollera faktiskt aktuellt huvud före nästa arbete och använd skyddad refuppdatering.
+
+## Slutverifiering av sammanförd version
+
+Datum: 21 oktober 2026. Appcommit `07683f8126a034e2651e0946df60d1356edd91f8` har **grön och avslutad GitHub Actions 1024**, inklusive hela Node-sviten och iPhone-regressionen: https://github.com/Deashi03/Brottskatalog/actions/runs/39596389485 . Körning 1022 hade ett testfel efter sammanfogningen: den sökte ISO-datum i svensk utskriven datumtext. Mobiltestet kontrollerar nu både den faktiska svenska texten och det exakta strukturerade ISO-datumet för de fem nya fallen. Databasens datum har inte ändrats av rättningen. De sex HD-exemplen, den separata registerpinnen och övriga parallella ändringar bevaras.
+
+Detta ersätter tidigare noteringar om att 1022 pågår. Aktuellt avgränsat arbetsläge är fortsatt **11 548/11 957 = 96,6 %**, 390 tidskontroller och 95 tidskällposter. **409 räknade moment kvar:** 390 förarbets-/praxisfrågor, ett åtalsfilter och 18 publiceringsmoment. 56 förstadieintervall, 14 villkorade grundskalor och oberoende juridisk slutgranskning kvarstår. Noll fullständiga juridiska slutgodkännanden. PR #2 förblir draft; ingen merge, tagg, deploy eller publicering har genomförts.
