@@ -167,6 +167,7 @@ try{
     await page.goto(url+'#sok',{waitUntil:'networkidle'});await search.fill(parent);await wait();await page.locator('.crime-card').filter({has:page.getByText(parent,{exact:true})}).click();
     const overview=page.locator('#sec-stadier');await overview.locator(':scope > summary').click();await overview.locator('.stage-overview-link').filter({hasText:kind+' ·'}).click();await wait();
     const details=page.locator('.penalty-alternative-details');assert.equal(await details.getAttribute('open'),null,'Alternatives start collapsed: '+parent);await details.locator(':scope > summary').click();
+    if(['Myteri','Svikande av försvarsplikt'].includes(parent)){const panel=await page.locator('.penalty-panel').innerText();assert.ok(panel.includes('Tillämpningen är villkorad'),'Applicability warning preserved: '+parent);assert.ok(panel.includes('Krigs- eller beredskapsrelaterade'),'Original applicability caveat preserved: '+parent);}
     assert.equal(await details.locator('li').count(),count);assert.ok((await details.innerText()).includes(phrase),'Specific stage alternatives: '+parent);
     assert.equal(await page.locator('.penalty-panel .penalty-bounds').count(),0,'No single synthetic range for alternative-dependent stage');
     assert.equal(await page.evaluate(()=>document.documentElement.scrollWidth<=innerWidth+1),true,'Stage alternatives fit iPhone: '+parent);
