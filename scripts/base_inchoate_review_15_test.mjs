@@ -16,7 +16,7 @@ assert.match(by('Mened').note,/mindre allvarlig/);assert.match(by('Oredlighet mo
 const standalone=base.find(c=>c.isStandaloneInchoate);assert.equal(standalone.baseInchoateReview15.standalone,true);assert.equal(st.filter(s=>s.stageParentId===standalone.id).length,0);
 const corrections=w.BK_STAGE_GRADE_CORRECTIONS15;assert.equal(corrections.corrected,13);assert.equal(corrections.held.length,0);assert.equal(corrections.superseded.length,13);
 assert.equal(st.filter(c=>c.stageStatus==='punishable').length,452);assert.equal(st.filter(c=>c.stageStatus==='not-criminalized').length,715);
-for(const old of corrections.superseded){const c=st.find(c=>c.id===old.id);assert.equal(old.scope.finding,'NO_NAMED_STAGE_OFFENCE_IN_CURRENT_BRB_CHAPTER');assert.equal(c.stageStatus,'punishable');assert.equal(c.individualLegalAudit15.scope.finding,'CURRENT_BRB_SAME_SECTION_GRADE_COVERED_BY_NAMED_STAGE');assert.ok(!c.law.includes('Det finns inte någon särskild föreskrift'));assert.match(c.prosecutionRule,/Ej individuellt/);assert.equal(c.penaltyRange,null);assert.equal(c.penaltyRangeVerified,false);assert.equal(c.custody,'unknown');assert.equal(c.prosecution,'unknown');assert.equal(w.BK_COERCIVE.score(c,{id:'husrannsakan',scale:'any'}).tone,'unknown');assert.ok(c.rekvisit15.groups.length>4);}
+for(const old of corrections.superseded){const c=st.find(c=>c.id===old.id);assert.equal(old.scope.finding,'NO_NAMED_STAGE_OFFENCE_IN_CURRENT_BRB_CHAPTER');assert.equal(c.stageStatus,'punishable');assert.equal(c.individualLegalAudit15.scope.finding,'CURRENT_BRB_SAME_SECTION_GRADE_COVERED_BY_NAMED_STAGE');assert.ok(!c.law.includes('Det finns inte någon särskild föreskrift'));assert.match(c.prosecutionRule,/Ej individuellt/);if(c.stageAttemptPenaltyReview15){assert.deepEqual(JSON.parse(JSON.stringify(c.penaltyRange)),{min:0,max:c.stageAttemptPenaltyReview15.range.max,fines:true,life:false});assert.equal(c.penaltyRangeVerified,true);}else{assert.equal(c.penaltyRange,null);assert.equal(c.penaltyRangeVerified,false);}assert.equal(c.custody,'unknown');assert.equal(c.prosecution,'unknown');assert.equal(w.BK_COERCIVE.score(c,{id:'husrannsakan',scale:'any'}).tone,'unknown');assert.ok(c.rekvisit15.groups.length>4);}
 for(const title of ['Stämpling till grovt hindrande av urkunds bevisfunktion','Stämpling till grov penningförfalskning'])assert.equal(st.find(c=>c.title===title).stageStatus,'not-criminalized');
 // Tampering with primary paragraphs, source versions, own text or a single
 // expected stage must keep affected base checkpoints OPEN.
@@ -33,3 +33,27 @@ for(const key of ['BrB:14:4','BrB:14:13']){const x=load([patch,mod,'./stage-requ
 for(const f of[mod,patch])assert.ok(read('service-worker.js').includes(f));for(const s of inline)new Function(s);
 assert.ok(html.includes('${inchoateSummary}${stageOverview}'));
 console.log('PASS: 326 source-bound base checks, 13 traced grade corrections, 452 stage outlines, explicit branch limits and mutation controls; no full legal signoffs');
+
+const rangeReport=w.BK_STAGE_ATTEMPT_PENALTY_REVIEW15;
+assert.equal(rangeReport.reviewed,3);assert.equal(rangeReport.held.length,0);
+const reviewed=st.filter(c=>c.stageAttemptPenaltyReview15);
+assert.equal(reviewed.length,3);
+for(const c of reviewed){assert.equal(c.stageType,'forsok');assert.equal(c.stageAttemptPenaltyReview15.coercionApproved,false);assert.equal(c.stageAttemptPenaltyReview15.caseSpecificLiabilityApproved,false);assert.equal(c.custody,'unknown');assert.equal(w.BK_COERCIVE.score(c,{id:'husrannsakan',scale:'any'}).tone,'unknown');}
+function attemptMutation(fn){const x=load();for(const c of x.window.BK_DATA.crimes.filter(c=>c.stageAttemptPenaltyReview15)){delete c.stageAttemptPenaltyReview15;c.penaltyRange=null;c.penaltyRangeVerified=false;}fn(x.window);vm.runInContext(read(mod),x);return x.window;}
+assert.equal(attemptMutation(w=>w.BK_STATUTES['BrB:23:1'].text+=' CHANGED').BK_STAGE_ATTEMPT_PENALTY_REVIEW15.reviewed,0);
+assert.equal(attemptMutation(w=>w.BK_STATUTES['BrB:14:13'].complete=false).BK_STAGE_ATTEMPT_PENALTY_REVIEW15.reviewed,2);
+assert.equal(attemptMutation(w=>w.BK_STATUTES['BrB:15:8'].url='https://example.invalid').BK_STAGE_ATTEMPT_PENALTY_REVIEW15.reviewed,2);
+assert.equal(attemptMutation(w=>w.BK_DATA.crimes.find(c=>c.id==='v05-grov-forgoring').penaltyRange.max=8).BK_STAGE_ATTEMPT_PENALTY_REVIEW15.reviewed,2);
+assert.equal(attemptMutation(w=>w.BK_DATA.crimes.find(c=>c.id==='v05-grov-bevisforvanskning').law+=' CHANGED').BK_STAGE_ATTEMPT_PENALTY_REVIEW15.reviewed,2);
+vm.runInContext(read(mod),ctx);assert.equal(w.BK_STAGE_ATTEMPT_PENALTY_REVIEW15.reviewed,0);assert.equal(w.BK_STAGE_ATTEMPT_PENALTY_REVIEW15.duplicates,3);
+console.log('PASS: three individually pinned ordinary attempt ranges, changed-source/grade holds and idempotence; no prosecution or coercion approval');
+
+// The added range review must preserve every non-range field, including the
+// existing prosecution classification, all legal checkpoints and all base cards.
+const isolated=load(),crimes=isolated.window.BK_DATA.crimes;
+for(const c of crimes.filter(c=>c.stageAttemptPenaltyReview15)){delete c.stageAttemptPenaltyReview15;c.penaltyRange=null;c.penaltyRangeVerified=false;}
+const previous=JSON.parse(JSON.stringify(crimes));
+const addedReview=read(mod).slice(read(mod).indexOf('/* Three separately checked ordinary attempt ranges.'));
+vm.runInContext(addedReview,isolated);
+const allowedRangeFields=['penaltyRange','penaltyRangeVerified','penalty','penaltyShort','stagePenaltyLower','stagePenaltyUpper','penaltyNote','stageConsequenceNote15','penaltyChecked','penaltyReviewScope','stageAttemptPenaltyReview15'];
+for(const[i,c]of crimes.entries()){const actual=JSON.parse(JSON.stringify(c)),prior=previous[i];if(c.stageAttemptPenaltyReview15)for(const key of allowedRangeFields){delete actual[key];delete prior[key];}assert.deepEqual(actual,prior,'Range review preserves every unrelated field: '+c.title);}

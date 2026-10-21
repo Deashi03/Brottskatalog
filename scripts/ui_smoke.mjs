@@ -100,6 +100,7 @@ try{
     ['Osann utsaga inför en internationell domstol','Förberedelse',true,'mindre allvarligt fall omfattas inte'],
     ['Högförräderi','Stämpling',true,'förbindelse med främmande makt'],
     ['Grov förgöring','Försök',true,'den grova graden definieras i samma paragraf'],
+    ['Grovt hindrande av urkunds bevisfunktion','Försök',true,'den grova graden definieras i samma paragraf'],
     ['Grov penningförfalskning','Förberedelse',true,'den grova graden definieras i samma paragraf'],
     ['Grov olovlig underrättelseverksamhet mot person','Stämpling',true,'den grova graden definieras i samma paragraf']
   ]){
@@ -117,6 +118,7 @@ try{
     const lawPhrase=parent==='Grovt vapenbrott'?'18:15 räknar uttryckligen':parent==='Myteri'&&punishable?'16:17 räknar upp förberedelse':phrase;
     assert.ok((await page.locator('#sec-lag').innerText()).includes(lawPhrase),'Specific statutory restriction visible: '+parent);
     if(parent==='Grovt vapenbrott'){assert.ok((await page.locator('#sec-lag').innerText()).includes('synnerligen grovt vapenbrott'));assert.ok((await page.locator('.penalty-panel').innerText()).includes('Individuell straffskaleprövning'));assert.equal(await page.locator('.penalty-panel .penalty-bounds').count(),0,'No invented fine minimum for attempted gross weapon offence');}
+    if(kind==='Försök'&&['Grov förgöring','Grovt hindrande av urkunds bevisfunktion'].includes(parent)){const panel=page.locator('.penalty-panel');assert.ok((await panel.innerText()).includes('Böter'));assert.ok((await panel.innerText()).includes(parent==='Grov förgöring'?'6 år':'4 år'));assert.ok((await panel.innerText()).includes('ordinära lagstadgade försöksskalan'));assert.equal(await panel.locator('.penalty-bounds').count(),1);}
     assert.equal(await page.evaluate(()=>document.documentElement.scrollWidth<=innerWidth+1),true,'Restored stage fits iPhone: '+parent);
   }
   await page.goto(url+'#sok',{waitUntil:'networkidle'});

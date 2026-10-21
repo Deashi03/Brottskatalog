@@ -34,8 +34,8 @@ assert.equal(stages.filter(c=>c.individualLegalAudit15?.scope?.status==='APPROVE
 for(const c of audited){
  const a=c.individualLegalAudit15,p=parents.get(c.stageParentId);
  assert.ok(p);assert.equal(c.stageStatus,'punishable');
- assert.equal(c.custody,'unknown');assert.equal(c.penaltyRange,null);
- assert.equal(c.stagePenaltyLower,null);assert.equal(c.stagePenaltyUpper,null);
+ assert.equal(c.custody,'unknown');
+ if(c.stageAttemptPenaltyReview15){assert.equal(c.title,'Försök till grov bevisförvanskning');assert.deepEqual(JSON.parse(JSON.stringify(c.penaltyRange)),{min:0,max:4,fines:true,life:false});assert.equal(c.penaltyRangeVerified,true);}else{assert.equal(c.penaltyRange,null);assert.equal(c.stagePenaltyLower,null);assert.equal(c.stagePenaltyUpper,null);}
  assert.equal(a.scope.parentStatute,p.statute);
  assert.equal(a.scope.caseSpecificLiabilityApproved,false);
  assert.equal(a.scope.historicApplicabilityApproved,false);

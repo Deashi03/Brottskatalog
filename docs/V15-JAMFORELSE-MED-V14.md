@@ -16,11 +16,25 @@ Sabotagekortet har fått ett sjunde avgränsat rättsfallsbaserat exempel i den 
 
 Exemplet visar att trafikstörning inte automatiskt innebär sabotage och avgränsar HD:s prövning från ohörsamhet mot ordningsmakten. Det ger ingen generell minutgräns, ingen allmän straffrihet för blockader och inga nya juridiska godkännanden. Straffskalor och förstadieklassificeringar är oförändrade. Regressionen omfattar förändrad lagtext, saknad fulltextverifiering, upprepad inläsning och bevarande av alla andra kortfält. Mobiltestet öppnar även det nya sabotageexemplet. Offlinecachens versionsnamn har uppdaterats.
 
+### Tre tidigare öppna försöksintervall har fått separat källkontroll
+
+| Försökskort | Tidigare visning | Nuvarande ordinarie skala | Individuellt kontrollerade paragrafer |
+|---|---|---|---|
+| Försök till grov förgöring | Individuell straffskaleprövning | Böter–fängelse högst 6 år | BrB 13:8, 13:12 och 23:1 |
+| Försök till grovt hindrande av urkunds bevisfunktion | Individuell straffskaleprövning | Böter–fängelse högst 4 år | BrB 14:4, 14:13 och 23:1 |
+| Försök till grov bevisförvanskning | Individuell straffskaleprövning | Böter–fängelse högst 4 år | BrB 15:8, 15:15 och 23:1 |
+
+Detta gäller den ordinära straffskalan för det aktuella försöksbrottet. Grundbrottens minimistraff är sex månader. BrB 23:1 sätter taket vid fullbordansbrottets straff och utesluter inte böter för dessa tre brott. Kontrollerna väljer ingen lagversion för en historisk gärning och avgör inte ansvar eller konkret påföljd. Allmänna straffskalemodifieringar kräver separat prövning.
+
+De tidigare kontrollerna av själva förstadieuppräkningen bevaras. En separat, källbunden straffskalegranskning tillkommer. Alla andra fält, inklusive befintliga åtalsklassificeringar, är oförändrade. Tvångsmedelskontrollen ger fortfarande inget positivt besked för dessa kort. Tester stoppar intervallen vid ändrad grundskala, ändrad eller ofullständig primärkälla och ändrad brottstext.
+
+Antalet positiva förstadiekort utan ett numeriskt intervall minskar **56 → 53**. Arbetsinventeringens nämnare och poäng är oförändrade; detta konkreta borttagande av en releasebegränsning räknas inte som nya poäng i den redan låsta räkningen.
+
 ### Nattens upplägg och faktisk begränsning
 
 16 fortsättningskörningar med en timmes mellanrum har bekräftats av schemaläggningstjänsten. Uppgiften börjar den 21 oktober kl. 15.34 svensk tid och omfattar natten till den 22 oktober. Skapad schemaläggning är inte bevis för att en framtida körning lyckas; utfallet ska kontrolleras separat. Varje körning ska hämta aktuellt GitHub-huvud, genomföra och testa verkliga ändringar, bevara parallellt arbete och uppdatera överlämningen. Ingen merge, tagg, release eller publicering är auktoriserad.
 
-Räkningen är fortsatt **11 548/11 957 = 96,6 %**, med 409 moment öppna. Det nya exemplet och rapportarbetet ger inga progresspoäng. Det återstår 390 förarbets-/praxisfrågor, ett åtalsfilter och 18 release-/publiceringsmoment. Dessutom kvarstår 56 olösta individuella förstadieintervall, 14 villkorade grundskalor och oberoende juridisk slutgranskning. Detta pass har **inte** uppnått 100 %.
+Räkningen är fortsatt **11 548/11 957 = 96,6 %**, med 409 moment öppna. Det nya exemplet och rapportarbetet ger inga progresspoäng. Det återstår 390 förarbets-/praxisfrågor, ett åtalsfilter och 18 release-/publiceringsmoment. Dessutom kvarstår 53 olösta individuella förstadieintervall, 14 villkorade grundskalor och oberoende juridisk slutgranskning. Detta pass har **inte** uppnått 100 %.
 
 ## Jämförelsens underlag
 
@@ -137,7 +151,7 @@ Publiceringsflödet innehåller en releasekontroll som ska stoppa ofärdig 1.5. 
 | Release-, publicerings- och efterkontroller | 18 |
 | Summa kvar i den befintliga räkningen | 409 |
 
-Därutöver ska de 56 olösta individuella förstadiestraffskalorna och de 14 villkorade grundskalorna fortsatt behandlas som verkliga begränsningar. De får inte döljas bakom att andra avgränsade förstadie- eller gradkontroller är räknemässigt klara.
+Därutöver ska de 53 olösta individuella förstadiestraffskalorna och de 14 villkorade grundskalorna fortsatt behandlas som verkliga begränsningar. De får inte döljas bakom att andra avgränsade förstadie- eller gradkontroller är räknemässigt klara.
 
 Användarens nya mål är att färdigställa utvecklingen och avvakta med publicering. De delar av den befintliga 100-procentsräkningen som uttryckligen gäller merge, publicering och produktionskontroll ska därför förbli öppna. En framtida separat status för färdigutvecklad men opublicerad version måste redovisas öppet och får inte ersätta den nuvarande nämnaren i tysthet.
 

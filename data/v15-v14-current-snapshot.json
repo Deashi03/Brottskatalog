@@ -1,7 +1,7 @@
 {
-  "sourceParentCommit": "4275666a08b66cace3b367e5d8f86f44fb63bfe4",
+  "sourceParentCommit": "c430b8f39e9522c9fd461984c3d2d3fbe18eb61c",
   "baselineCommit": "0bbbe45d70d01a92a7874c74862cc7d21bae2355",
-  "currentRuntimeSHA256": "acd5cd3bd1f8820fe86ec5c44fae12b249e112b3cbdf232a95336dc3a822f359",
+  "currentRuntimeSHA256": "0ab7d8dd04608faed802f2becf51f61cd0a895103ab4e45551f2acad05b0bfdd",
   "baselineRuntimeSHA256": "282a0e394b0c38e699dcea8d74906c1da86d779c47e6bac8c6660c9018256897",
   "hashMethod": "SHA-256 over index.html then each external runtime script path, NUL, contents, NUL in page order; files read from current working tree",
   "scope": "Recomputed complete runtime inventory; no legal approval and no publication credit",
@@ -476,5 +476,69 @@
   "changedExistingPostCount": 1157,
   "priorDetailedInventory": "data/v15-v14-change-inventory.json",
   "addedIdListMatchesPriorDetailedInventory": true,
-  "changedExistingIdListMatchesPriorDetailedInventory": true
+  "changedExistingIdListMatchesPriorDetailedInventory": true,
+  "individualAttemptRangeUpdates": [
+    {
+      "id": "stadium-08-forsok-v05-grov-forgoring",
+      "parentId": "v05-grov-forgoring",
+      "title": "Försök till grov förgöring",
+      "statute": "BrB:13:8",
+      "authorizer": "BrB:13:12",
+      "parentRange": {
+        "min": 0.5,
+        "max": 6,
+        "fines": false,
+        "life": false
+      },
+      "range": {
+        "min": 0,
+        "max": 6,
+        "fines": true,
+        "life": false
+      },
+      "label": "Böter – fängelse högst 6 år"
+    },
+    {
+      "id": "stadium-08-forsok-v05-grovt-hindrande-av-urkunds-bevisfunktion",
+      "parentId": "v05-grovt-hindrande-av-urkunds-bevisfunktion",
+      "title": "Försök till grovt hindrande av urkunds bevisfunktion",
+      "statute": "BrB:14:4",
+      "authorizer": "BrB:14:13",
+      "parentRange": {
+        "min": 0.5,
+        "max": 4,
+        "fines": false,
+        "life": false
+      },
+      "range": {
+        "min": 0,
+        "max": 4,
+        "fines": true,
+        "life": false
+      },
+      "label": "Böter – fängelse högst 4 år"
+    },
+    {
+      "id": "stadium-08-forsok-v05-grov-bevisforvanskning",
+      "parentId": "v05-grov-bevisforvanskning",
+      "title": "Försök till grov bevisförvanskning",
+      "statute": "BrB:15:8",
+      "authorizer": "BrB:15:15",
+      "parentRange": {
+        "min": 0.5,
+        "max": 4,
+        "fines": false,
+        "life": false
+      },
+      "range": {
+        "min": 0,
+        "max": 4,
+        "fines": true,
+        "life": false
+      },
+      "label": "Böter – fängelse högst 4 år"
+    }
+  ],
+  "currentUnresolvedPositiveStageIntervals": 53,
+  "fullLegalApprovalsAdded": 0
 }

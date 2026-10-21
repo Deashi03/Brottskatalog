@@ -102,3 +102,14 @@ Klimatblockaden har nu integrerats på Sabotagekortet från HD:s officiella enge
 Gränsdragningsmanifestet innehåller nu fyra domar (varav en officiell översättning), sju kortexempel och fem paragrafpinnar. 32 grundkort har typexempel15. Regression och mobilfall för sabotage är tillagda. Åtalsfrågan för grovt olaga tvång har sökts vidare i 2016 års reform; inget tillräckligt uttryckligt stöd för att stänga den hittades. Den är fortsatt öppen.
 
 Jämförelserapporten har en aktuell avstämning överst. data/v15-v14-current-snapshot.json dokumenterar en ny full runtimejämförelse mot den återhämtade 1.4-baslinjen 0bbbe45: 400 nya poster, 1 157 ändrade tidigare poster, inga borttagna ID:n, inga ändrade numeriska grundintervall eller custody-huvudvärden. Bevara äldre ögonblicksbilder som historik.
+
+
+### Fortsatt sakarbete: tre försöksintervall
+
+Efter c430b8f tillkommer tre separat primärkällkontrollerade ordinarie försöksintervall: grov förgöring (böter–fängelse högst sex år), grovt hindrande av urkunds bevisfunktion och grov bevisförvanskning (båda böter–fängelse högst fyra år). Varje fast ID mappas till egen paragraf, särskild förstadieparagraf och exakt fulltext i BrB 23:1. Grundminimistraff sex månader innebär att böter inte utesluts av tvåårsgränsen i 23:1. Underlag: aktuell officiell konsolidering läst den 21 oktober.
+
+Tillägget ligger som en separat IIFE sist i base-inchoate-review-15.js, efter den äldre återställningen av tretton korrigerade förstadiekort. Det får inte flyttas före den återställningen. Tre befintliga kort får penaltyRange och en avgränsad stageAttemptPenaltyReview15. Inga grundskalor, åtalsklassificeringar, ansvarsgodkännanden eller tvångsmedelsbesked ändras. Regressioner prövar ändrad primärkälla/grundskala, ofullständig källa, upprepad inläsning och bevarande av alla andra fält. Inga nya CI-kommandon eller progresspoäng tillkommer.
+
+**Aktuell konkret releasebegränsning: 53, inte 56, positiva förstadieintervall saknar numerisk skala.** 14 villkorade grundskalor kvarstår. Arbetsräkningen är fortsatt 11 548/11 957, 96,6 %. Förra avsnittens 56 är historiska före detta tillägg. 390 förarbeten/praxis, ett åtalsfilter och 18 release-/publiceringsmoment är fortsatt öppna.
+
+Appcommit c430b8f har grön avslutad Actions 1026 inklusive iPhone-regression: https://github.com/Deashi03/Brottskatalog/actions/runs/39601855925 . Dess 145 lokala Node-kontroller passerade också. Detta bevis gäller rättsfallstillägget och första jämförelsesnapshoten, inte automatiskt de senare tre försöksintervallen. Senare paket kräver egna tester.
