@@ -1,3 +1,18 @@
+# Brottskatalog V1.5 – avgränsad publiceringsversion (22 oktober 2026)
+
+**Webbapp:** https://deashi03.github.io/Brottskatalog/  
+**Kod och verifiering:** https://github.com/Deashi03/Brottskatalog
+
+V1.5 utökar 1.4 med 390 grundkort, 1 167 förstadiekort, totalt 1 557 revisionsposter (1 545 efter katalogurval), fördjupade rekvisit och källbundna åtalsregler. För förstadier med villkorade straffskalor redovisas egna alternativ i stället för en påhittad gemensam skala. Konkreta ärendefakta, aktuell lagversion och beslutsbehörighet prövas inte automatiskt.
+
+**Publiceringens uttryckliga avgränsning:** Godkända automatiserade kontroller gäller katalogens tekniska integritet och source-bundna kärnuppgifter. Den uttömmande genomgången av förarbeten och praxis för 390 grundkort skjuts till nästa version; inga fullständiga juridiska slutgodkännanden ges. Den systematiskt tolkade åtalsbegränsningen för grovt olaga tvång enligt BrB 4:11 redovisas med ett uttryckligt tolkningsförbehåll; stämpling omfattas inte av den begränsning som endast räknar upp försök och förberedelse. Vid konkret tjänsteutövning ska dessa frågor kontrolleras självständigt mot gällande rätt och vid behov med åklagare.
+
+Den tidigare strängare och avsiktligt fullständighetskrävande revisionen i `scripts/v15_release_readiness.mjs` kvarstår oförändrad och kan fortsatt rapportera att full juridisk granskning inte är färdig. För den överenskomna avgränsade versionen används `scripts/v15_scoped_release_gate.mjs --release`, som behåller käll- och regressionskontroller och vägrar att godkänna saknade kärnposter eller automatiska operativa godkännanden.
+
+Se [jämförelsen med 1.4](docs/V15-JAMFORELSE-MED-V14.md). Den äldre versionshistoriken följer nedan.
+
+---
+
 # Brottskatalog V1.4 – publiceringsversion (16 oktober 2026)
 
 **Öppna i Safari:** https://deashi03.github.io/Brottskatalog/  
