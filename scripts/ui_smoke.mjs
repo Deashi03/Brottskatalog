@@ -233,6 +233,24 @@ try{
     assert.equal(await review.evaluate(el=>el.scrollWidth<=el.clientWidth+1),true,'Threshold review fits iPhone: '+title);
     assert.equal(await page.evaluate(()=>document.documentElement.scrollWidth<=innerWidth+1),true);
   }
+  for(const [title,number,file]of[
+    ['Olaga hot','B 406-24','2024/b-406-24'],
+    ['Grovt olaga hot','B 406-24','2024/b-406-24'],
+    ['Olaga intrång','B 4926-23','2023/b-4926-23'],
+    ['Sabotage mot blåljusverksamhet','B 6185-22','2023/b-6185-22'],
+    ['Grovt sabotage mot blåljusverksamhet','B 6185-22','2023/b-6185-22'],
+    ['Våldsamt upplopp','B 6185-22','2023/b-6185-22']
+  ]){
+    await page.goto(url+'#sok',{waitUntil:'networkidle'});await search.fill(title);await wait();
+    await page.locator('.crime-card').filter({has:page.getByText(title,{exact:true})}).click();
+    await page.locator('#sec-rekvisit > summary').click();
+    const example=page.locator('#sec-rekvisit .fact-card').filter({hasText:number});
+    assert.equal(await example.count(),1,'One primary HD example: '+title);
+    assert.ok((await example.innerText()).includes('ingen fullständig förarbets- och praxisgranskning'));
+    assert.equal(await example.locator('a[href="https://www.domstol.se/globalassets/filer/domstol/hogstadomstolen/avgoranden/'+file+'.pdf"]').count(),1);
+    assert.equal(await example.evaluate(el=>el.scrollWidth<=el.clientWidth+1),true,'HD example fits iPhone: '+title);
+    assert.equal(await page.evaluate(()=>document.documentElement.scrollWidth<=innerWidth+1),true);
+  }
   await page.goto(url+'#sok',{waitUntil:'networkidle'});
   for(const [title,phrase]of[
     ['Otillåtet förfarande med pornografisk bild','1971-02-17'],
