@@ -243,3 +243,5 @@ Otillåtet förfarande med pornografisk bild hålls öppet. Originalet till SFS 
 | 22 | Ryktesspridning till fara för rikets säkerhet | BrB 22 kap. 5 § |
 
 Den maskinläsbara bilagan listar samtliga 400 nya poster, alla 1 157 befintliga poster med ändrade fältnamn, före-/eftervärden för centrala användarsynliga uppgifter samt samtliga 306 berörda programfiler i jämförelseträdet. Fullständiga textskillnader per fil finns i GitHub-jämförelsen ovan.
+
+Verifierat slut på detta arbetspass: GitHub Actions https://github.com/Deashi03/Brottskatalog/actions/runs/39555657372 är grön på appcommit `4635ff970a3379708aedeb0e859f43c7d6dfe090` (träd `3449dfe00a6a615afcace16cdf5a9e0a33688aef`), inklusive full Node-svit och iPhone-regression. Alla 145 lokala Node-kontroller passerade, och berörda tids-/progress-/revisionskontroller kördes även om efter sista tillägget. Ingen merge, release eller publicering.
