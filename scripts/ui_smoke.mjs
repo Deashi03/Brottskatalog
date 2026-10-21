@@ -252,12 +252,12 @@ try{
     assert.equal(await page.evaluate(()=>document.documentElement.scrollWidth<=innerWidth+1),true);
   }
   await page.goto(url+'#sok',{waitUntil:'networkidle'});
-  for(const [title,phrase]of[
-    ['Otillåtet förfarande med pornografisk bild','1971-02-17'],
-    ['Stöld','1965-01-01'],
-    ['Förtal','1965-01-01'],
-    ['Våldsamt upplopp','1965-01-01'],
-    ['Svikande av försvarsplikt','1965-01-01'],
+  for(const [title,phrase,date]of[
+    ['Otillåtet förfarande med pornografisk bild','17 februari 1971','1971-02-17'],
+    ['Stöld','1 januari 1965','1965-01-01'],
+    ['Förtal','1 januari 1965','1965-01-01'],
+    ['Våldsamt upplopp','1 januari 1965','1965-01-01'],
+    ['Svikande av försvarsplikt','1 januari 1965','1965-01-01'],
     ['Mord','2020-01-01'],
     ['Ofredande','2018-01-01'],
     ['Grov misshandel','2026-08-01'],
@@ -272,6 +272,7 @@ try{
     await page.locator('#sec-lag > summary').click();const temporal=page.locator('.law-temporal-review');
     assert.equal(await temporal.getAttribute('open'),null,'Temporal review starts collapsed: '+title);
     await temporal.locator(':scope > summary').click();assert.ok((await temporal.innerText()).includes(phrase),'Temporal distinction: '+title);
+    if(date)assert.equal(await page.evaluate(title=>window.BK_DATA.crimes.find(c=>!c.stageType&&c.title===title)?.temporalReview15?.wordingFrom,title),date,'Structured commencement remains exact: '+title);
     assert.ok((await temporal.innerText()).includes('Ingen lagversion väljs automatiskt'));
     assert.equal(await temporal.locator('a[href*="rkrattsbaser.gov.se"], a[href*="docId=2667840"]').count(),1);
     if(title==='Otillåtet förfarande med pornografisk bild'){assert.equal(await temporal.getByRole('link',{name:'Bekräftelse av ikraftträdandet'}).count(),1);assert.equal(await temporal.getByRole('link',{name:'Ikraftträdandekälla – originaltryck'}).count(),1);}
