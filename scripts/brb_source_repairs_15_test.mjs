@@ -15,6 +15,14 @@ const report=ctx.window.BK_TEXT_REPAIR15,base=ctx.window.BK_DATA.crimes.filter(c
 assert.ok(report);
 assert.equal(report.refs.length,4);
 assert.ok(report.restored>=1,'At least one known machine-import truncation should be repaired; earlier modules may have fixed others');
+// A refreshed Riksdag import may rewrap paragraphs but may not change their meaning.
+const upstream=vm.createContext({window:{}});
+vm.runInContext(fs.readFileSync(path.join(root,'data/provisions-generated.js'),'utf8'),upstream);
+const normalized=s=>String(s).replace(/\\s+/g,' ').trim().replace(/\\s+\\./g,'.');
+for(const key of ['BrB:4:3','BrB:6:6','BrB:6:10a','BrB:6:12']){
+ assert.equal(normalized(upstream.window.BK_STATUTES[key].text),
+  normalized(ctx.window.BK_STATUTES[key].text),'Imported SFS wording changed materially: '+key);
+}
 const expect={
  'BrB:4:3': ['5. straffbart försök','barnfridsbrott','Lag (2026:852)'],
  'BrB:6:6': ['sexuellt övergrepp mot barn','Om brottet är mindre grovt','Lag (2025:586)'],

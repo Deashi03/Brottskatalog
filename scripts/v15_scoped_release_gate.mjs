@@ -30,7 +30,7 @@ assert.equal(audit.releaseReady,false,'Full legal audit stays outstanding and mu
 const html=fs.readFileSync(path.join(root,'index.html'),'utf8');
 const sw=fs.readFileSync(path.join(root,'service-worker.js'),'utf8');
 assert.ok(html.includes('Version 1.5 · publicerad 2026-10-22'));
-assert.ok(sw.includes("brottskatalog-v15-release-headerfix-20261022"));
+assert.ok(sw.includes("brottskatalog-v15-release-headerfix2-20261022"));
 assert.match(html, /<strong>Brottskatalog<\/strong><span>1\.5<\/span>/, 'Search header must match published release');
 const manifest=JSON.parse(fs.readFileSync(path.join(root,'manifest.webmanifest'),'utf8'));
 assert.ok(manifest.description.startsWith('Brottskatalog 1.5'), 'PWA manifest version must agree with search header');
