@@ -1,5 +1,35 @@
 # Brottskatalog 1.5 jämfört med publicerad 1.4
 
+## Fortsatt granskning: ytterligare 13 individuella straffskaleintervall
+
+Den 21 oktober har ytterligare **nio försöksintervall och fyra förberedelse-/stämplingsintervall** integrerats. Tidigare saknades en individuellt kontrollerad numerisk skala för samtliga. Mappningarna, grundskalorna, hela textpinnarna och källornas ursprungliga kvalitetsflaggor finns i `data/additional-stage-intervals-15.json`.
+
+| Förstadiekort | Aktuell ordinär skala | Individuellt lästa specialparagrafer |
+|---|---|---|
+| Försök till grovt spridande av gift eller smitta | Fängelse 1 mån – högst 18 år eller livstid | BrB:13:7; BrB:13:12 |
+| Försök till grov penningförfalskning | Fängelse 1 mån – högst 8 år | BrB:14:6; BrB:14:13 |
+| Försök till olovlig befattning med falska pengar | Böter – fängelse högst 2 år | BrB:14:7; BrB:14:13 |
+| Försök till grov kapning | Fängelse 1 mån – högst 18 år eller livstid | BrB:13:5a; BrB:13:12 |
+| Försök till grovt sjö- eller luftfartssabotage | Fängelse 1 mån – högst 18 år eller livstid | BrB:13:5a; BrB:13:12 |
+| Försök till grovt flygplatssabotage | Fängelse 1 mån – högst 18 år eller livstid | BrB:13:5b; BrB:13:12 |
+| Försök till grovt vapenbrott | Fängelse 1 mån – högst 7 år | Vapen:18:2; Vapen:18:15 |
+| Förberedelse till grovt vapenbrott | Böter – fängelse under 7 år | Vapen:18:2; Vapen:18:15 |
+| Stämpling till grovt vapenbrott | Böter – fängelse under 7 år | Vapen:18:2; Vapen:18:15 |
+| Försök till synnerligen grovt vapenbrott | Fängelse 1 mån – högst 10 år | Vapen:18:2; Vapen:18:15 |
+| Förberedelse till synnerligen grovt vapenbrott | Fängelse 1 mån – under 10 år | Vapen:18:2; Vapen:18:15 |
+| Stämpling till synnerligen grovt vapenbrott | Fängelse 1 mån – under 10 år | Vapen:18:2; Vapen:18:15 |
+| Försök till olaga frihetsberövande (mindre grovt fall) | Böter – fängelse högst 2 år | BrB:4:2; BrB:4:10 |
+
+Försök följer BrB 23:1: högsta straff är samma som för fullbordat brott, och böter är uteslutna när fullbordansminimum är minst två år. Förberedelse och stämpling följer BrB 23:2: straffet ska ligga under fullbordansmaximum. Böter är möjliga för förberedelse till grovt vapenbrott, men inte till synnerligen grovt vapenbrott med fullbordansminimum sex år. De fyra vapenförberedelse-/stämplingsintervallen har därför öppna övre gränser, utan avrundning till inkluderade sju respektive tio år. Försöket till olovlig befattning med falska pengar är fortsatt begränsat till anskaffande eller mottagande; ringaundantaget består.
+
+BrB 26:1 har självständigt lästs i den aktuella lydelsen SFS 2026:1318, som trädde i kraft den 1 augusti 2026: allmän fängelseminimitid är en månad. Den samtidigt visade framtida lydelsen SFS 2026:1654 väljs inte. Den befintliga maskinimportens `complete:false` och `machine:true` har bevarats; en separat daterad manuell textjämförelse stöder endast dessa fasta intervall. Vapenlagen 18:2 och 18:15 är jämförda mot officiell konsolidering; 2026:1250 gäller från den 1 augusti 2026.
+
+En faktisk omladdningsrättelse ingår också: den äldre återställningen av 13 omklassificerade förstadiekort kunde tömma redan separat granskade intervall vid ny modulstart. De separata intervallgranskningarna återställer nu skalan efter förnyad validering av textpinnar, grad och grundskala. Ett regressionstest jämför samtliga kort före och efter fullständig omladdning. Inga åtalsbesked, häktningsmarkeringar, tvångsmedelsbesked eller övriga revisionsfält ändras av intervalltillägget.
+
+**33 av de ursprungliga 56 intervalluckorna är nu lösta; 23 återstår.** De återstående gäller åtta förberedelse-/stämplingsskalor med livstid i grundskalan, tre krigsvillkorade förstadier och tolv förstadier med alternativa eller härledda grundskalor. Dessa 23 är fortsatt öppna. De 14 villkorade grundskalorna består. Arbetsinventeringen är oförändrad **11 548/11 957 = 96,6 %**, med 390 förarbets-/praxisfrågor, ett åtalsfilter och 18 publiceringsmoment öppna. Inga nya juridiska slutgodkännanden eller progresspoäng.
+
+Teststatus för detta senare paket redovisas först när dess egna körningar är verifierade. Det föregående 17-intervallspaketet har **145/145 godkända lokala Node-kommandon och grön avslutad Actions 1029 inklusive iPhone-regression** på ce06764885938290684fd394b802f9443054baaa.
+
 Avstämning den 21 oktober 2026. **1.5 är sparad som utkast och är inte publicerad eller fullständigt juridiskt slutgodkänd.** Rapporten beskriver genomförda ändringar; kvarstående arbete redovisas separat.
 
 ## Fortsatt sakgranskning: ytterligare 17 förstadieintervall
@@ -27,7 +57,7 @@ Alla dessa tolv skalor kan omfatta böter. Fem har öppen övre gräns, uttryckt
 
 Hittills har alltså **20** av de ursprungliga 56 intervalluckorna lösts (tre i föregående pass och 17 i detta). **36 återstår.** Befintliga åtalsklassificeringar och rättsliga revisionsakter bevaras. Även efter en separat skalegranskning visar tvångsmedelsmenyn fortsatt att en självständig befogenhetsprövning behövs. Inga juridiska slutgodkännanden eller extra progresspoäng har tilldelats.
 
-Den senast avslutade fullständiga testkörningen i det äldre avsnittet nedan gäller appcommit 4e8f572. Den ska inte användas som testbevis för de 17 senare intervallen; deras riktade kontroller och nya fullständiga svit redovisas efter verifiering.
+Paketet med 17 intervall är verifierat på appcommit **ce06764885938290684fd394b802f9443054baaa**, träd **de9d035ff69b65cb27ed84a7119ec2d093ef5172**: [GitHub Actions 1029](https://github.com/Deashi03/Brottskatalog/actions/runs/39608510636) är avslutad och grön, inklusive samtliga Node-kontroller och iPhone-regressionen. Äldre testuppgifter nedan gäller sina uttryckligen angivna tidigare versioner.
 
 ## Aktuell avstämning inför nattens fortsättningar
 

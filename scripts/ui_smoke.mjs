@@ -117,7 +117,7 @@ try{
     await page.locator('#sec-lag > summary').click();
     const lawPhrase=parent==='Grovt vapenbrott'?'18:15 räknar uttryckligen':parent==='Myteri'&&punishable?'16:17 räknar upp förberedelse':phrase;
     assert.ok((await page.locator('#sec-lag').innerText()).includes(lawPhrase),'Specific statutory restriction visible: '+parent);
-    if(parent==='Grovt vapenbrott'){assert.ok((await page.locator('#sec-lag').innerText()).includes('synnerligen grovt vapenbrott'));assert.ok((await page.locator('.penalty-panel').innerText()).includes('Individuell straffskaleprövning'));assert.equal(await page.locator('.penalty-panel .penalty-bounds').count(),0,'No invented fine minimum for attempted gross weapon offence');}
+    if(parent==='Grovt vapenbrott'){assert.ok((await page.locator('#sec-lag').innerText()).includes('synnerligen grovt vapenbrott'));assert.ok((await page.locator('.penalty-panel').innerText()).includes('Fängelse 1 mån'));assert.equal(await page.locator('.penalty-panel .penalty-bounds').count(),1,'Individually checked attempted gross weapon range');assert.equal((await page.locator('.penalty-panel').innerText()).includes('Böter'),false,'No invented fine minimum for attempted gross weapon offence');}
     if(kind==='Försök'&&['Grov förgöring','Grovt hindrande av urkunds bevisfunktion'].includes(parent)){const panel=page.locator('.penalty-panel');assert.ok((await panel.innerText()).includes('Böter'));assert.ok((await panel.innerText()).includes(parent==='Grov förgöring'?'6 år':'4 år'));assert.ok((await panel.innerText()).includes('ordinära lagstadgade försöksskalan'));assert.equal(await panel.locator('.penalty-bounds').count(),1);}
     assert.equal(await page.evaluate(()=>document.documentElement.scrollWidth<=innerWidth+1),true,'Restored stage fits iPhone: '+parent);
   }
@@ -134,6 +134,19 @@ try{
     assert.equal(await bounds.last().locator('strong').innerText(),upper,'Exact open/closed upper endpoint: '+parent);
     assert.ok((await page.locator('.penalty-panel').innerText()).includes('ordinära lagstadgade skalan'));
     assert.equal(await page.evaluate(()=>document.documentElement.scrollWidth<=innerWidth+1),true,'Preparation bounds fit iPhone: '+parent);
+  }
+  for(const [parent,kind,lower,upper]of[
+    ['Grov kapning','Försök','Fängelse 1 mån','18 år eller livstid'],
+    ['Grov penningförfalskning','Försök','Fängelse 1 mån','8 år'],
+    ['Grovt vapenbrott','Förberedelse','Böter','Under 7 år'],
+    ['Synnerligen grovt vapenbrott','Stämpling','Fängelse 1 mån','Under 10 år']
+  ]){
+    await page.goto(url+'#sok',{waitUntil:'networkidle'});await search.fill(parent);await wait();
+    await page.locator('.crime-card').filter({has:page.getByText(parent,{exact:true})}).click();
+    const overview=page.locator('#sec-stadier');await overview.locator(':scope > summary').click();
+    await overview.locator('.stage-overview-link').filter({hasText:kind+' ·'}).click();await wait();
+    const bounds=page.locator('.penalty-panel .penalty-bound strong');assert.deepEqual(await bounds.allTextContents(),[lower,upper],'Individually reviewed interval: '+parent);
+    assert.equal(await page.evaluate(()=>document.documentElement.scrollWidth<=innerWidth+1),true,'Additional stage interval fits iPhone: '+parent);
   }
   await page.goto(url+'#sok',{waitUntil:'networkidle'});
   for(const [title,phrase,links]of[

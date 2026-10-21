@@ -1,9 +1,9 @@
 {
-  "sourceParentCommit": "0fd9b8eac4d70c54792237cdddced6bda95984fd",
+  "sourceParentCommit": "ce06764885938290684fd394b802f9443054baaa",
   "baselineCommit": "0bbbe45d70d01a92a7874c74862cc7d21bae2355",
-  "currentRuntimeSHA256": "648ac11c1b48906e260e000e4454a342594b5df8112e44a75c40c7afbd4e8e60",
-  "baselineRuntimeSHA256": "282a0e394b0c38e699dcea8d74906c1da86d779c47e6bac8c6660c9018256897",
-  "hashMethod": "SHA-256 over index.html then each external runtime script path, NUL, contents, NUL in page order; files read from current working tree",
+  "currentRuntimeSHA256": "85031e6a522c760b6e5412e73c046a8e88e0417973593c6a2a17f5159cf7ecf7",
+  "baselineRuntimeSHA256": "b4059fb41c1da166a15f0baf2ced33551075cca206944b26fc17994f1f90700f",
+  "hashMethod": "SHA-256: for index.html and then external runtime scripts in page order, normalized repository-relative path without ./, NUL, UTF-8 file content, NUL; recomputed from both actual load chains",
   "scope": "Recomputed complete runtime inventory; no legal approval and no publication credit",
   "counts": {
     "v14": {
@@ -639,7 +639,7 @@
       "label": "Böter – fängelse högst 4 år"
     }
   ],
-  "currentUnresolvedPositiveStageIntervals": 36,
+  "currentUnresolvedPositiveStageIntervals": 23,
   "fullLegalApprovalsAdded": 0,
   "individualPreparationIntervalUpdates": [
     {
@@ -924,5 +924,488 @@
       "label": "Böter eller fängelse under 2 år"
     }
   ],
-  "openPreparationUpperEndpoints": 5
+  "openPreparationUpperEndpoints": 5,
+  "previousRuntimeFingerprints": [
+    {
+      "sourceParentCommit": "0fd9b8eac4d70c54792237cdddced6bda95984fd",
+      "currentRuntimeSHA256": "648ac11c1b48906e260e000e4454a342594b5df8112e44a75c40c7afbd4e8e60",
+      "baselineRuntimeSHA256": "282a0e394b0c38e699dcea8d74906c1da86d779c47e6bac8c6660c9018256897",
+      "hashMethod": "SHA-256 over index.html then each external runtime script path, NUL, contents, NUL in page order; files read from current working tree"
+    }
+  ],
+  "additionalStageIntervalUpdates": [
+    {
+      "id": "stadium-08-forsok-v05-grovt-spridande-av-gift-eller-smitta",
+      "title": "Försök till grovt spridande av gift eller smitta",
+      "range": {
+        "min": 0.08333333333333333,
+        "max": 18,
+        "fines": false,
+        "life": true
+      },
+      "review": {
+        "checked": "2026-10-21",
+        "sourceURL": "https://www.riksdagen.se/sv/dokument-och-lagar/dokument/svensk-forfattningssamling/brottsbalk-1962700_sfs-1962-700/",
+        "sourceRefs": [
+          "BrB:13:7",
+          "BrB:13:12",
+          "BrB:23:1",
+          "BrB:26:1"
+        ],
+        "scope": "ordinary-current-statutory-stage-interval-only",
+        "range": {
+          "min": 0.08333333333333333,
+          "max": 18,
+          "fines": false,
+          "life": true
+        },
+        "upperEndpointIncluded": true,
+        "importedSourceQualityUnchanged": true,
+        "historicApplicabilityApproved": false,
+        "caseSpecificSentenceApproved": false,
+        "caseSpecificLiabilityApproved": false,
+        "prosecutionApproved": false,
+        "coercionApproved": false,
+        "fullLegalReviewApproved": false,
+        "note": "Separat källkontroll 2026-10-21: Fängelse 1 mån – högst 18 år eller livstid. BrB 23:1: högst fullbordansbrottets straff; böter är uteslutna när fullbordansminimum är två år eller mer. Den aktuella allmänna fängelseminimitiden är en månad enligt BrB 26:1, lydelse 2026:1318 från 1 augusti 2026. Ordinär aktuell lagstadgad skala. Gärningsdag, grad, särskilda straffskalemodifieringar, ansvar och konkret påföljd prövas separat. Tidigare begränsningar i förstadieansvaret består. Ingen åtals- eller tvångsmedelsbedömning tillkommer."
+      }
+    },
+    {
+      "id": "stadium-08-forsok-v05-grov-penningforfalskning",
+      "title": "Försök till grov penningförfalskning",
+      "range": {
+        "min": 0.08333333333333333,
+        "max": 8,
+        "fines": false,
+        "life": false
+      },
+      "review": {
+        "checked": "2026-10-21",
+        "sourceURL": "https://www.riksdagen.se/sv/dokument-och-lagar/dokument/svensk-forfattningssamling/brottsbalk-1962700_sfs-1962-700/",
+        "sourceRefs": [
+          "BrB:14:6",
+          "BrB:14:13",
+          "BrB:23:1",
+          "BrB:26:1"
+        ],
+        "scope": "ordinary-current-statutory-stage-interval-only",
+        "range": {
+          "min": 0.08333333333333333,
+          "max": 8,
+          "fines": false,
+          "life": false
+        },
+        "upperEndpointIncluded": true,
+        "importedSourceQualityUnchanged": true,
+        "historicApplicabilityApproved": false,
+        "caseSpecificSentenceApproved": false,
+        "caseSpecificLiabilityApproved": false,
+        "prosecutionApproved": false,
+        "coercionApproved": false,
+        "fullLegalReviewApproved": false,
+        "note": "Separat källkontroll 2026-10-21: Fängelse 1 mån – högst 8 år. BrB 23:1: högst fullbordansbrottets straff; böter är uteslutna när fullbordansminimum är två år eller mer. Den aktuella allmänna fängelseminimitiden är en månad enligt BrB 26:1, lydelse 2026:1318 från 1 augusti 2026. Ordinär aktuell lagstadgad skala. Gärningsdag, grad, särskilda straffskalemodifieringar, ansvar och konkret påföljd prövas separat. Tidigare begränsningar i förstadieansvaret består. Ingen åtals- eller tvångsmedelsbedömning tillkommer."
+      }
+    },
+    {
+      "id": "stadium-08-forsok-v05-olovlig-befattning-med-falska-pengar",
+      "title": "Försök till olovlig befattning med falska pengar",
+      "range": {
+        "min": 0,
+        "max": 2,
+        "fines": true,
+        "life": false
+      },
+      "review": {
+        "checked": "2026-10-21",
+        "sourceURL": "https://www.riksdagen.se/sv/dokument-och-lagar/dokument/svensk-forfattningssamling/brottsbalk-1962700_sfs-1962-700/",
+        "sourceRefs": [
+          "BrB:14:7",
+          "BrB:14:13",
+          "BrB:23:1"
+        ],
+        "scope": "ordinary-current-statutory-stage-interval-only",
+        "range": {
+          "min": 0,
+          "max": 2,
+          "fines": true,
+          "life": false
+        },
+        "upperEndpointIncluded": true,
+        "importedSourceQualityUnchanged": true,
+        "historicApplicabilityApproved": false,
+        "caseSpecificSentenceApproved": false,
+        "caseSpecificLiabilityApproved": false,
+        "prosecutionApproved": false,
+        "coercionApproved": false,
+        "fullLegalReviewApproved": false,
+        "note": "Separat källkontroll 2026-10-21: Böter – fängelse högst 2 år. BrB 23:1: högst fullbordansbrottets straff; böter är uteslutna när fullbordansminimum är två år eller mer. Ordinär aktuell lagstadgad skala. Gärningsdag, grad, särskilda straffskalemodifieringar, ansvar och konkret påföljd prövas separat. Tidigare begränsningar i förstadieansvaret består. Ingen åtals- eller tvångsmedelsbedömning tillkommer."
+      }
+    },
+    {
+      "id": "stadium-08-forsok-v15-additional-grov-kapning",
+      "title": "Försök till grov kapning",
+      "range": {
+        "min": 0.08333333333333333,
+        "max": 18,
+        "fines": false,
+        "life": true
+      },
+      "review": {
+        "checked": "2026-10-21",
+        "sourceURL": "https://www.riksdagen.se/sv/dokument-och-lagar/dokument/svensk-forfattningssamling/brottsbalk-1962700_sfs-1962-700/",
+        "sourceRefs": [
+          "BrB:13:5a",
+          "BrB:13:12",
+          "BrB:23:1",
+          "BrB:26:1"
+        ],
+        "scope": "ordinary-current-statutory-stage-interval-only",
+        "range": {
+          "min": 0.08333333333333333,
+          "max": 18,
+          "fines": false,
+          "life": true
+        },
+        "upperEndpointIncluded": true,
+        "importedSourceQualityUnchanged": true,
+        "historicApplicabilityApproved": false,
+        "caseSpecificSentenceApproved": false,
+        "caseSpecificLiabilityApproved": false,
+        "prosecutionApproved": false,
+        "coercionApproved": false,
+        "fullLegalReviewApproved": false,
+        "note": "Separat källkontroll 2026-10-21: Fängelse 1 mån – högst 18 år eller livstid. BrB 23:1: högst fullbordansbrottets straff; böter är uteslutna när fullbordansminimum är två år eller mer. Den aktuella allmänna fängelseminimitiden är en månad enligt BrB 26:1, lydelse 2026:1318 från 1 augusti 2026. Ordinär aktuell lagstadgad skala. Gärningsdag, grad, särskilda straffskalemodifieringar, ansvar och konkret påföljd prövas separat. Tidigare begränsningar i förstadieansvaret består. Ingen åtals- eller tvångsmedelsbedömning tillkommer."
+      }
+    },
+    {
+      "id": "stadium-08-forsok-v15-additional-grovt-sjo-eller-luftfartssabotage",
+      "title": "Försök till grovt sjö- eller luftfartssabotage",
+      "range": {
+        "min": 0.08333333333333333,
+        "max": 18,
+        "fines": false,
+        "life": true
+      },
+      "review": {
+        "checked": "2026-10-21",
+        "sourceURL": "https://www.riksdagen.se/sv/dokument-och-lagar/dokument/svensk-forfattningssamling/brottsbalk-1962700_sfs-1962-700/",
+        "sourceRefs": [
+          "BrB:13:5a",
+          "BrB:13:12",
+          "BrB:23:1",
+          "BrB:26:1"
+        ],
+        "scope": "ordinary-current-statutory-stage-interval-only",
+        "range": {
+          "min": 0.08333333333333333,
+          "max": 18,
+          "fines": false,
+          "life": true
+        },
+        "upperEndpointIncluded": true,
+        "importedSourceQualityUnchanged": true,
+        "historicApplicabilityApproved": false,
+        "caseSpecificSentenceApproved": false,
+        "caseSpecificLiabilityApproved": false,
+        "prosecutionApproved": false,
+        "coercionApproved": false,
+        "fullLegalReviewApproved": false,
+        "note": "Separat källkontroll 2026-10-21: Fängelse 1 mån – högst 18 år eller livstid. BrB 23:1: högst fullbordansbrottets straff; böter är uteslutna när fullbordansminimum är två år eller mer. Den aktuella allmänna fängelseminimitiden är en månad enligt BrB 26:1, lydelse 2026:1318 från 1 augusti 2026. Ordinär aktuell lagstadgad skala. Gärningsdag, grad, särskilda straffskalemodifieringar, ansvar och konkret påföljd prövas separat. Tidigare begränsningar i förstadieansvaret består. Ingen åtals- eller tvångsmedelsbedömning tillkommer."
+      }
+    },
+    {
+      "id": "stadium-08-forsok-v15-additional-grovt-flygplatssabotage",
+      "title": "Försök till grovt flygplatssabotage",
+      "range": {
+        "min": 0.08333333333333333,
+        "max": 18,
+        "fines": false,
+        "life": true
+      },
+      "review": {
+        "checked": "2026-10-21",
+        "sourceURL": "https://www.riksdagen.se/sv/dokument-och-lagar/dokument/svensk-forfattningssamling/brottsbalk-1962700_sfs-1962-700/",
+        "sourceRefs": [
+          "BrB:13:5b",
+          "BrB:13:12",
+          "BrB:23:1",
+          "BrB:26:1"
+        ],
+        "scope": "ordinary-current-statutory-stage-interval-only",
+        "range": {
+          "min": 0.08333333333333333,
+          "max": 18,
+          "fines": false,
+          "life": true
+        },
+        "upperEndpointIncluded": true,
+        "importedSourceQualityUnchanged": true,
+        "historicApplicabilityApproved": false,
+        "caseSpecificSentenceApproved": false,
+        "caseSpecificLiabilityApproved": false,
+        "prosecutionApproved": false,
+        "coercionApproved": false,
+        "fullLegalReviewApproved": false,
+        "note": "Separat källkontroll 2026-10-21: Fängelse 1 mån – högst 18 år eller livstid. BrB 23:1: högst fullbordansbrottets straff; böter är uteslutna när fullbordansminimum är två år eller mer. Den aktuella allmänna fängelseminimitiden är en månad enligt BrB 26:1, lydelse 2026:1318 från 1 augusti 2026. Ordinär aktuell lagstadgad skala. Gärningsdag, grad, särskilda straffskalemodifieringar, ansvar och konkret påföljd prövas separat. Tidigare begränsningar i förstadieansvaret består. Ingen åtals- eller tvångsmedelsbedömning tillkommer."
+      }
+    },
+    {
+      "id": "stage-gap15-forsok-grovt-vapenbrott",
+      "title": "Försök till grovt vapenbrott",
+      "range": {
+        "min": 0.08333333333333333,
+        "max": 7,
+        "fines": false,
+        "life": false
+      },
+      "review": {
+        "checked": "2026-10-21",
+        "sourceURL": "https://www.riksdagen.se/sv/dokument-och-lagar/dokument/svensk-forfattningssamling/vapenlag-2026408_sfs-2026-408/",
+        "sourceRefs": [
+          "Vapen:18:2",
+          "Vapen:18:15",
+          "BrB:23:1",
+          "BrB:26:1"
+        ],
+        "scope": "ordinary-current-statutory-stage-interval-only",
+        "range": {
+          "min": 0.08333333333333333,
+          "max": 7,
+          "fines": false,
+          "life": false
+        },
+        "upperEndpointIncluded": true,
+        "importedSourceQualityUnchanged": true,
+        "historicApplicabilityApproved": false,
+        "caseSpecificSentenceApproved": false,
+        "caseSpecificLiabilityApproved": false,
+        "prosecutionApproved": false,
+        "coercionApproved": false,
+        "fullLegalReviewApproved": false,
+        "note": "Separat källkontroll 2026-10-21: Fängelse 1 mån – högst 7 år. BrB 23:1: högst fullbordansbrottets straff; böter är uteslutna när fullbordansminimum är två år eller mer. Den aktuella allmänna fängelseminimitiden är en månad enligt BrB 26:1, lydelse 2026:1318 från 1 augusti 2026. Ordinär aktuell lagstadgad skala. Gärningsdag, grad, särskilda straffskalemodifieringar, ansvar och konkret påföljd prövas separat. Tidigare begränsningar i förstadieansvaret består. Ingen åtals- eller tvångsmedelsbedömning tillkommer."
+      }
+    },
+    {
+      "id": "stage-gap15-forberedelse-grovt-vapenbrott",
+      "title": "Förberedelse till grovt vapenbrott",
+      "range": {
+        "min": 0,
+        "max": 7,
+        "fines": true,
+        "life": false,
+        "maxExclusive": true
+      },
+      "review": {
+        "checked": "2026-10-21",
+        "sourceURL": "https://www.riksdagen.se/sv/dokument-och-lagar/dokument/svensk-forfattningssamling/vapenlag-2026408_sfs-2026-408/",
+        "sourceRefs": [
+          "Vapen:18:2",
+          "Vapen:18:15",
+          "BrB:23:2"
+        ],
+        "scope": "ordinary-current-statutory-stage-interval-only",
+        "range": {
+          "min": 0,
+          "max": 7,
+          "fines": true,
+          "life": false,
+          "maxExclusive": true
+        },
+        "upperEndpointIncluded": false,
+        "importedSourceQualityUnchanged": true,
+        "historicApplicabilityApproved": false,
+        "caseSpecificSentenceApproved": false,
+        "caseSpecificLiabilityApproved": false,
+        "prosecutionApproved": false,
+        "coercionApproved": false,
+        "fullLegalReviewApproved": false,
+        "note": "Separat källkontroll 2026-10-21: Böter – fängelse under 7 år. BrB 23:2: under fullbordansbrottets högsta straff; mer än två år förutsätter ett fullbordansmaximum på minst sex år. Böter är inte tillgängliga när fullbordansminimum är sex år eller mer. Den övre gränsen ingår inte i intervallet. Ordinär aktuell lagstadgad skala. Gärningsdag, grad, särskilda straffskalemodifieringar, ansvar och konkret påföljd prövas separat. Tidigare begränsningar i förstadieansvaret består. Ingen åtals- eller tvångsmedelsbedömning tillkommer."
+      }
+    },
+    {
+      "id": "stage-gap15-stampling-grovt-vapenbrott",
+      "title": "Stämpling till grovt vapenbrott",
+      "range": {
+        "min": 0,
+        "max": 7,
+        "fines": true,
+        "life": false,
+        "maxExclusive": true
+      },
+      "review": {
+        "checked": "2026-10-21",
+        "sourceURL": "https://www.riksdagen.se/sv/dokument-och-lagar/dokument/svensk-forfattningssamling/vapenlag-2026408_sfs-2026-408/",
+        "sourceRefs": [
+          "Vapen:18:2",
+          "Vapen:18:15",
+          "BrB:23:2"
+        ],
+        "scope": "ordinary-current-statutory-stage-interval-only",
+        "range": {
+          "min": 0,
+          "max": 7,
+          "fines": true,
+          "life": false,
+          "maxExclusive": true
+        },
+        "upperEndpointIncluded": false,
+        "importedSourceQualityUnchanged": true,
+        "historicApplicabilityApproved": false,
+        "caseSpecificSentenceApproved": false,
+        "caseSpecificLiabilityApproved": false,
+        "prosecutionApproved": false,
+        "coercionApproved": false,
+        "fullLegalReviewApproved": false,
+        "note": "Separat källkontroll 2026-10-21: Böter – fängelse under 7 år. BrB 23:2: under fullbordansbrottets högsta straff; mer än två år förutsätter ett fullbordansmaximum på minst sex år. Böter är inte tillgängliga när fullbordansminimum är sex år eller mer. Den övre gränsen ingår inte i intervallet. Ordinär aktuell lagstadgad skala. Gärningsdag, grad, särskilda straffskalemodifieringar, ansvar och konkret påföljd prövas separat. Tidigare begränsningar i förstadieansvaret består. Ingen åtals- eller tvångsmedelsbedömning tillkommer."
+      }
+    },
+    {
+      "id": "stage-gap15-forsok-synnerligen-grovt-vapenbrott",
+      "title": "Försök till synnerligen grovt vapenbrott",
+      "range": {
+        "min": 0.08333333333333333,
+        "max": 10,
+        "fines": false,
+        "life": false
+      },
+      "review": {
+        "checked": "2026-10-21",
+        "sourceURL": "https://www.riksdagen.se/sv/dokument-och-lagar/dokument/svensk-forfattningssamling/vapenlag-2026408_sfs-2026-408/",
+        "sourceRefs": [
+          "Vapen:18:2",
+          "Vapen:18:15",
+          "BrB:23:1",
+          "BrB:26:1"
+        ],
+        "scope": "ordinary-current-statutory-stage-interval-only",
+        "range": {
+          "min": 0.08333333333333333,
+          "max": 10,
+          "fines": false,
+          "life": false
+        },
+        "upperEndpointIncluded": true,
+        "importedSourceQualityUnchanged": true,
+        "historicApplicabilityApproved": false,
+        "caseSpecificSentenceApproved": false,
+        "caseSpecificLiabilityApproved": false,
+        "prosecutionApproved": false,
+        "coercionApproved": false,
+        "fullLegalReviewApproved": false,
+        "note": "Separat källkontroll 2026-10-21: Fängelse 1 mån – högst 10 år. BrB 23:1: högst fullbordansbrottets straff; böter är uteslutna när fullbordansminimum är två år eller mer. Den aktuella allmänna fängelseminimitiden är en månad enligt BrB 26:1, lydelse 2026:1318 från 1 augusti 2026. Ordinär aktuell lagstadgad skala. Gärningsdag, grad, särskilda straffskalemodifieringar, ansvar och konkret påföljd prövas separat. Tidigare begränsningar i förstadieansvaret består. Ingen åtals- eller tvångsmedelsbedömning tillkommer."
+      }
+    },
+    {
+      "id": "stage-gap15-forberedelse-synnerligen-grovt-vapenbrott",
+      "title": "Förberedelse till synnerligen grovt vapenbrott",
+      "range": {
+        "min": 0.08333333333333333,
+        "max": 10,
+        "fines": false,
+        "life": false,
+        "maxExclusive": true
+      },
+      "review": {
+        "checked": "2026-10-21",
+        "sourceURL": "https://www.riksdagen.se/sv/dokument-och-lagar/dokument/svensk-forfattningssamling/vapenlag-2026408_sfs-2026-408/",
+        "sourceRefs": [
+          "Vapen:18:2",
+          "Vapen:18:15",
+          "BrB:23:2",
+          "BrB:26:1"
+        ],
+        "scope": "ordinary-current-statutory-stage-interval-only",
+        "range": {
+          "min": 0.08333333333333333,
+          "max": 10,
+          "fines": false,
+          "life": false,
+          "maxExclusive": true
+        },
+        "upperEndpointIncluded": false,
+        "importedSourceQualityUnchanged": true,
+        "historicApplicabilityApproved": false,
+        "caseSpecificSentenceApproved": false,
+        "caseSpecificLiabilityApproved": false,
+        "prosecutionApproved": false,
+        "coercionApproved": false,
+        "fullLegalReviewApproved": false,
+        "note": "Separat källkontroll 2026-10-21: Fängelse 1 mån – under 10 år. BrB 23:2: under fullbordansbrottets högsta straff; mer än två år förutsätter ett fullbordansmaximum på minst sex år. Böter är inte tillgängliga när fullbordansminimum är sex år eller mer. Den aktuella allmänna fängelseminimitiden är en månad enligt BrB 26:1, lydelse 2026:1318 från 1 augusti 2026. Den övre gränsen ingår inte i intervallet. Ordinär aktuell lagstadgad skala. Gärningsdag, grad, särskilda straffskalemodifieringar, ansvar och konkret påföljd prövas separat. Tidigare begränsningar i förstadieansvaret består. Ingen åtals- eller tvångsmedelsbedömning tillkommer."
+      }
+    },
+    {
+      "id": "stage-gap15-stampling-synnerligen-grovt-vapenbrott",
+      "title": "Stämpling till synnerligen grovt vapenbrott",
+      "range": {
+        "min": 0.08333333333333333,
+        "max": 10,
+        "fines": false,
+        "life": false,
+        "maxExclusive": true
+      },
+      "review": {
+        "checked": "2026-10-21",
+        "sourceURL": "https://www.riksdagen.se/sv/dokument-och-lagar/dokument/svensk-forfattningssamling/vapenlag-2026408_sfs-2026-408/",
+        "sourceRefs": [
+          "Vapen:18:2",
+          "Vapen:18:15",
+          "BrB:23:2",
+          "BrB:26:1"
+        ],
+        "scope": "ordinary-current-statutory-stage-interval-only",
+        "range": {
+          "min": 0.08333333333333333,
+          "max": 10,
+          "fines": false,
+          "life": false,
+          "maxExclusive": true
+        },
+        "upperEndpointIncluded": false,
+        "importedSourceQualityUnchanged": true,
+        "historicApplicabilityApproved": false,
+        "caseSpecificSentenceApproved": false,
+        "caseSpecificLiabilityApproved": false,
+        "prosecutionApproved": false,
+        "coercionApproved": false,
+        "fullLegalReviewApproved": false,
+        "note": "Separat källkontroll 2026-10-21: Fängelse 1 mån – under 10 år. BrB 23:2: under fullbordansbrottets högsta straff; mer än två år förutsätter ett fullbordansmaximum på minst sex år. Böter är inte tillgängliga när fullbordansminimum är sex år eller mer. Den aktuella allmänna fängelseminimitiden är en månad enligt BrB 26:1, lydelse 2026:1318 från 1 augusti 2026. Den övre gränsen ingår inte i intervallet. Ordinär aktuell lagstadgad skala. Gärningsdag, grad, särskilda straffskalemodifieringar, ansvar och konkret påföljd prövas separat. Tidigare begränsningar i förstadieansvaret består. Ingen åtals- eller tvångsmedelsbedömning tillkommer."
+      }
+    },
+    {
+      "id": "stage-gap15-forsok-v15-olaga-frihetsberovande-mindre-grovt",
+      "title": "Försök till olaga frihetsberövande (mindre grovt fall)",
+      "range": {
+        "min": 0,
+        "max": 2,
+        "fines": true,
+        "life": false
+      },
+      "review": {
+        "checked": "2026-10-21",
+        "sourceURL": "https://www.riksdagen.se/sv/dokument-och-lagar/dokument/svensk-forfattningssamling/brottsbalk-1962700_sfs-1962-700/",
+        "sourceRefs": [
+          "BrB:4:2",
+          "BrB:4:10",
+          "BrB:23:1"
+        ],
+        "scope": "ordinary-current-statutory-stage-interval-only",
+        "range": {
+          "min": 0,
+          "max": 2,
+          "fines": true,
+          "life": false
+        },
+        "upperEndpointIncluded": true,
+        "importedSourceQualityUnchanged": true,
+        "historicApplicabilityApproved": false,
+        "caseSpecificSentenceApproved": false,
+        "caseSpecificLiabilityApproved": false,
+        "prosecutionApproved": false,
+        "coercionApproved": false,
+        "fullLegalReviewApproved": false,
+        "note": "Separat källkontroll 2026-10-21: Böter – fängelse högst 2 år. BrB 23:1: högst fullbordansbrottets straff; böter är uteslutna när fullbordansminimum är två år eller mer. Ordinär aktuell lagstadgad skala. Gärningsdag, grad, särskilda straffskalemodifieringar, ansvar och konkret påföljd prövas separat. Tidigare begränsningar i förstadieansvaret består. Ingen åtals- eller tvångsmedelsbedömning tillkommer."
+      }
+    }
+  ],
+  "currentOpenPreparationUpperEndpoints": 9
 }

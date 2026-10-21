@@ -3,7 +3,7 @@
  */
 (()=>{'use strict';const R=window.BK_COERCIVE;if(!R)return;
 const prevScore=R.score;
-const unresolved=c=>!c||Boolean(c.stageAttemptPenaltyReview15||c.stagePreparationPenaltyReview15||c.conditionalPenalty||c.applicabilityConditional||c.penaltyCrosscheckIssue||
+const unresolved=c=>!c||Boolean(c.stageAttemptPenaltyReview15||c.stagePreparationPenaltyReview15||c.stageIntervalReview15||c.conditionalPenalty||c.applicabilityConditional||c.penaltyCrosscheckIssue||
  (c.stageStatus&&c.stageStatus!=='punishable')||
  c.penaltyRangeVerified!==true||['source-penalty-range-conflict-hold','derivative-sfs-reference-conditional'].includes(c.penaltyReviewScope));
 const unknown={
@@ -24,7 +24,7 @@ R.score=(c,e)=>{
   return unknown;
  }
  // A separately described preparation interval does not approve powers.
- if(c?.stagePreparationPenaltyReview15)return unknown;
+ if(c?.stagePreparationPenaltyReview15||c?.stageIntervalReview15)return unknown;
  // RB 23:8 a–b expressly covers attempts to completed offences with
  // minimum four years. Here only a positively reviewed and criminalized
  // attempt may use its parent minimum as a *threshold*, not as a

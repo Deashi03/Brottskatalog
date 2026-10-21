@@ -136,3 +136,44 @@ Dessutom tolv förberedelse-/stämplingsintervall i en separat efterföljande II
 coercive-safety-15.js håller även separat granskade skalor öppna för självständig tvångsmedelsprövning. Befintliga åtalsklassificeringar och begränsade tidigare revisionsakter bevaras. Riktade källmutations-, databevarande- och gränsvärdestester är utökade; tre mobilfall prövar exakt Under 6 år, 2 år respektive Under 2 år. Alla senare uppgifter om testutfall ska gälla den nya appversionen, inte endast 4e8f572.
 
 **Aktuell återstående intervallkö är 36**, inte tidigare 53 eller 56. 14 villkorade grundskalor och 391 juridiska delmoment (390 förarbeten/praxis och åtalsfiltret för grovt olaga tvång) samt 18 publiceringssteg kvarstår. Arbetsräkningen är oförändrad 96,6 procent; inga poäng eller nämnare ändras för de nytillkomna intervallen. Inget publicerat.
+
+
+### Verifierat GitHub-resultat för 17-intervallspaketet
+
+Appcommit ce06764885938290684fd394b802f9443054baaa, träd de9d035ff69b65cb27ed84a7119ec2d093ef5172, har avslutad grön Actions 1029 inklusive hela Node-sviten och iPhone-regressionen: https://github.com/Deashi03/Brottskatalog/actions/runs/39608510636 . Den lokala fullständiga sviten körs separat; inget ännu obekräftat lokalt slutresultat räknas in här. Nästa förberedda block omfattar nio försöksintervall och fyra förstadieintervall till de två grova vapenbrottsgraderna, med självständigt läst aktuell BrB 26:1 (SFS 2026:1318 från 1 augusti 2026). Framtida lydelse 2026:1654 väljs inte automatiskt. Detta är en arbetsnotering, inte redan införd kod.
+
+
+## Nytt paket: 13 ytterligare intervall och omladdningsrättelse
+
+Den 21 oktober har ytterligare **nio försöksintervall och fyra förberedelse-/stämplingsintervall** integrerats. Tidigare saknades en individuellt kontrollerad numerisk skala för samtliga. Mappningarna, grundskalorna, hela textpinnarna och källornas ursprungliga kvalitetsflaggor finns i `data/additional-stage-intervals-15.json`.
+
+| Förstadiekort | Aktuell ordinär skala | Individuellt lästa specialparagrafer |
+|---|---|---|
+| Försök till grovt spridande av gift eller smitta | Fängelse 1 mån – högst 18 år eller livstid | BrB:13:7; BrB:13:12 |
+| Försök till grov penningförfalskning | Fängelse 1 mån – högst 8 år | BrB:14:6; BrB:14:13 |
+| Försök till olovlig befattning med falska pengar | Böter – fängelse högst 2 år | BrB:14:7; BrB:14:13 |
+| Försök till grov kapning | Fängelse 1 mån – högst 18 år eller livstid | BrB:13:5a; BrB:13:12 |
+| Försök till grovt sjö- eller luftfartssabotage | Fängelse 1 mån – högst 18 år eller livstid | BrB:13:5a; BrB:13:12 |
+| Försök till grovt flygplatssabotage | Fängelse 1 mån – högst 18 år eller livstid | BrB:13:5b; BrB:13:12 |
+| Försök till grovt vapenbrott | Fängelse 1 mån – högst 7 år | Vapen:18:2; Vapen:18:15 |
+| Förberedelse till grovt vapenbrott | Böter – fängelse under 7 år | Vapen:18:2; Vapen:18:15 |
+| Stämpling till grovt vapenbrott | Böter – fängelse under 7 år | Vapen:18:2; Vapen:18:15 |
+| Försök till synnerligen grovt vapenbrott | Fängelse 1 mån – högst 10 år | Vapen:18:2; Vapen:18:15 |
+| Förberedelse till synnerligen grovt vapenbrott | Fängelse 1 mån – under 10 år | Vapen:18:2; Vapen:18:15 |
+| Stämpling till synnerligen grovt vapenbrott | Fängelse 1 mån – under 10 år | Vapen:18:2; Vapen:18:15 |
+| Försök till olaga frihetsberövande (mindre grovt fall) | Böter – fängelse högst 2 år | BrB:4:2; BrB:4:10 |
+
+Försök följer BrB 23:1: högsta straff är samma som för fullbordat brott, och böter är uteslutna när fullbordansminimum är minst två år. Förberedelse och stämpling följer BrB 23:2: straffet ska ligga under fullbordansmaximum. Böter är möjliga för förberedelse till grovt vapenbrott, men inte till synnerligen grovt vapenbrott med fullbordansminimum sex år. De fyra vapenförberedelse-/stämplingsintervallen har därför öppna övre gränser, utan avrundning till inkluderade sju respektive tio år. Försöket till olovlig befattning med falska pengar är fortsatt begränsat till anskaffande eller mottagande; ringaundantaget består.
+
+BrB 26:1 har självständigt lästs i den aktuella lydelsen SFS 2026:1318, som trädde i kraft den 1 augusti 2026: allmän fängelseminimitid är en månad. Den samtidigt visade framtida lydelsen SFS 2026:1654 väljs inte. Den befintliga maskinimportens `complete:false` och `machine:true` har bevarats; en separat daterad manuell textjämförelse stöder endast dessa fasta intervall. Vapenlagen 18:2 och 18:15 är jämförda mot officiell konsolidering; 2026:1250 gäller från den 1 augusti 2026.
+
+En faktisk omladdningsrättelse ingår också: den äldre återställningen av 13 omklassificerade förstadiekort kunde tömma redan separat granskade intervall vid ny modulstart. De separata intervallgranskningarna återställer nu skalan efter förnyad validering av textpinnar, grad och grundskala. Ett regressionstest jämför samtliga kort före och efter fullständig omladdning. Inga åtalsbesked, häktningsmarkeringar, tvångsmedelsbesked eller övriga revisionsfält ändras av intervalltillägget.
+
+**33 av de ursprungliga 56 intervalluckorna är nu lösta; 23 återstår.** De återstående gäller åtta förberedelse-/stämplingsskalor med livstid i grundskalan, tre krigsvillkorade förstadier och tolv förstadier med alternativa eller härledda grundskalor. Dessa 23 är fortsatt öppna. De 14 villkorade grundskalorna består. Arbetsinventeringen är oförändrad **11 548/11 957 = 96,6 %**, med 390 förarbets-/praxisfrågor, ett åtalsfilter och 18 publiceringsmoment öppna. Inga nya juridiska slutgodkännanden eller progresspoäng.
+
+Teststatus för detta senare paket redovisas först när dess egna körningar är verifierade. Det föregående 17-intervallspaketet har **145/145 godkända lokala Node-kommandon och grön avslutad Actions 1029 inklusive iPhone-regression** på ce06764885938290684fd394b802f9443054baaa.
+
+
+Nästa arbetsblock: undersök åtta förberedelse-/stämplingsintervall med livstid i grundskalan. Primärkälla att läsa vidare: riksåklagarens svarsskrivelse 14 april 2020, ÅM 2020/2540, https://www.aklagare.se/globalassets/dokument/verksamheten-i-hogsta-domstolen/svarsskrivelser-och-forklaringar/2020/amr-2540-20-forberedelse-till-mord.pdf . Sökutdrag säger att förberedelse till mord har maximum arton år. Hela skrivelsen och aktuell lagändringspåverkan är ännu inte färdiglästa. Uppgiften ska inte behandlas som tillräckligt stöd för automatisk tillämpning på samtliga livstidsskalor. Tre förstadier till grovt våld/hot mot förman kräver bibehållet krigsvillkor enligt BrB 21:1. Tolv alternativ-/härledda förstadier måste granskas per rättsligt alternativ, inte få ett godtyckligt samlat maximum.
+
+Riktade tester för 13-intervallspaketet passerade: base_inchoate_review_15_test (inklusive källmutationer, samtliga 33 nya intervall, full omladdning och exakt manifest), brb_grade_stage_source_audit_15_test, missing_stage_cards_15_test, rekvisit_grader_15_test, coercive_safety_15_test och v15_release_queue_15_test. Den nya direkta runtimejämförelsen mot 1.4 bekräftar 400 tillagda och 1 157 ändrade tidigare poster, noll borttagna, noll ändrade tidigare grundintervall eller custody-huvudvärden. SHA-256 beräknas nu uttryckligen med samma normaliserade sökvägsalgoritm för båda versionerna; tidigare fingeravtryck sparas som historik. Föregående paket ce067 har även 145/145 lokala Node-kommandon. Full CI för det nya paketet ska kontrolleras efter sparning.
