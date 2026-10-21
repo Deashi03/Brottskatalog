@@ -2,6 +2,26 @@
 
 Avstämning den 21 oktober 2026. **1.5 är sparad som utkast och är inte publicerad eller fullständigt juridiskt slutgodkänd.** Rapporten beskriver genomförda ändringar; kvarstående arbete redovisas separat.
 
+## Aktuell avstämning inför nattens fortsättningar
+
+Den senaste direkta körningen av båda versionernas egna inläsningskedjor bekräftar **299 → 390 grundkort**, **858 → 1 167 förstadiekort** och **1 157 → 1 545 synliga poster**. Det är 91 nya grundkort och 309 nya förstadiekort; tolv revisionsposter hålls utanför visningsurvalet. Inga tidigare post-ID:n har tagits bort. Inga befintliga grundkorts numeriska `penaltyRange` eller huvudvärde `custody` har ändrats. Detta är en jämförelse av datafält, inte ett intyg om deras fullständiga juridiska korrekthet.
+
+Dagens aktualiserade inventering finns i `data/v15-v14-current-snapshot.json`. Den verifierar att den äldre fullständiga bilagans listor över samtliga 400 tillägg och samtliga 1 157 ändrade tidigare post-ID:n fortfarande gäller. Aktuella fullständiga fältskillnader finns i GitHub-jämförelsen. Den anger också SHA-256 över hela den inlästa appkoden och behåller tidigare ögonblicksbilder med deras egna jämförelsedatum. Baslinjen `0bbbe45` är på nytt hämtad från GitHub och dess README identifierar den som publicerad 1.4. Tekniska verifieringsflaggor beskrivs som flaggor, aldrig som juridiska slutgodkännanden.
+
+Aktuellt innehåll: 390 strukturerade rekvisitkort, 390 fulltextkontroller, 390 tidsanteckningar, 390 anteckningar om lagtextens begränsningar, 390 tvångsmedelströskelgenomgångar och **32 grundkort med det nya typexempelfältet**. 452 förstadier är markerade som särskilt kriminaliserade och 715 som utan särskilt kriminaliseringsstöd för just den rubriceringen. Negativa markeringar utesluter inte att en annan rubricering kan vara aktuell.
+
+### Nytillagt i detta arbetspass
+
+Sabotagekortet har fått ett sjunde avgränsat rättsfallsbaserat exempel i den nya gränsdragningsmodulen: **Klimatblockaden, NJA 2025 s. 761, B 3626-24, den 9 juli 2025**. Underlaget är [HD:s officiella engelska domsöversättning, s. 6–12](https://www.domstol.se/globalassets/filer/domstol/hogstadomstolen/avgoranden/engelska-oversattningar/b-3626-24-eng.pdf), vars nedladdade fil har fingeravtryck i manifestet. Den svenska originallydelsen av 13 kap. 4 § har samtidigt jämförts mot aktuell officiell konsolidering.
+
+Exemplet visar att trafikstörning inte automatiskt innebär sabotage och avgränsar HD:s prövning från ohörsamhet mot ordningsmakten. Det ger ingen generell minutgräns, ingen allmän straffrihet för blockader och inga nya juridiska godkännanden. Straffskalor och förstadieklassificeringar är oförändrade. Regressionen omfattar förändrad lagtext, saknad fulltextverifiering, upprepad inläsning och bevarande av alla andra kortfält. Mobiltestet öppnar även det nya sabotageexemplet. Offlinecachens versionsnamn har uppdaterats.
+
+### Nattens upplägg och faktisk begränsning
+
+16 fortsättningskörningar med en timmes mellanrum har bekräftats av schemaläggningstjänsten. Uppgiften börjar den 21 oktober kl. 15.34 svensk tid och omfattar natten till den 22 oktober. Skapad schemaläggning är inte bevis för att en framtida körning lyckas; utfallet ska kontrolleras separat. Varje körning ska hämta aktuellt GitHub-huvud, genomföra och testa verkliga ändringar, bevara parallellt arbete och uppdatera överlämningen. Ingen merge, tagg, release eller publicering är auktoriserad.
+
+Räkningen är fortsatt **11 548/11 957 = 96,6 %**, med 409 moment öppna. Det nya exemplet och rapportarbetet ger inga progresspoäng. Det återstår 390 förarbets-/praxisfrågor, ett åtalsfilter och 18 release-/publiceringsmoment. Dessutom kvarstår 56 olösta individuella förstadieintervall, 14 villkorade grundskalor och oberoende juridisk slutgranskning. Detta pass har **inte** uppnått 100 %.
+
 ## Jämförelsens underlag
 
 Baslinjen är `main` vid `0bbbe45d70d01a92a7874c74862cc7d21bae2355`, vars README anger **V1.4 – publiceringsversion**. Remote-huvudet har kontrollerats mot samma commit. Jämförelsen avser 1.5-trädet `19a2da43a86dfbd9f862c074409dc41ebbc3e7cb`, sparat i GitHub som `50e59cb01c9b0a02ae55dfd68a3a624f63af685f`. Rapporten och dess bilagor tillkommer efter detta jämförelseläge.
@@ -86,7 +106,7 @@ Två befintliga förstadiekorts tidigare numeriska intervall har tagits bort i s
 
 ## Typexempel, praxis och källor
 
-31 grundkort har nu material i det nya `typexempel15`-fältet. Detta är inte jämförbart rakt av med 1.4:s äldre faktarutor. Svåra typfall har inte fyllts på enbart för att öka täckningssiffror. Källbundna anteckningar behandlar bland annat HD-avgörandena Vapenbilden, Freja, Alibit, Vinkelslipen, Demonstranten som stannade kvar och Påskupploppet i Örebro samt skillnaden mellan förfalskad urkund, osant innehåll, brukande och falska polisuppgifter. Avgränsade prejudikatanteckningar är inte fullständig praxisgranskning av ett brottskort.
+32 grundkort har nu material i det nya `typexempel15`-fältet. Detta är inte jämförbart rakt av med 1.4:s äldre faktarutor. Svåra typfall har inte fyllts på enbart för att öka täckningssiffror. Källbundna anteckningar behandlar bland annat HD-avgörandena Vapenbilden, Freja, Alibit, Vinkelslipen, Demonstranten som stannade kvar och Påskupploppet i Örebro samt skillnaden mellan förfalskad urkund, osant innehåll, brukande och falska polisuppgifter. Avgränsade prejudikatanteckningar är inte fullständig praxisgranskning av ett brottskort.
 
 Fyra lämnade kursunderlag är dokumenterade i `data/course-source-manifest-15.json`: Straffrätt Lund 2.docx, Brottsutredning(2).docx, Juridikens grunder(1).pdf och Straffprocessrätt 2.docx. Filfingeravtryck och hänvisningssystem har sparats. Originaldokumenten har inte lagts in i det publika repositoryt. Lagtext och rättsliga slutsatser ska kontrolleras mot officiella primärkällor.
 
@@ -96,7 +116,7 @@ En befintlig rubrik har ändrats: **Brukande av falsk urkund → Brukande av det
 
 Det jämförda programträdet berör **306 filer**  med 100 628 tillagda och 45 borttagna rader. Många tillägg är datamanifest och tester; radantalet är inte ett kvalitetsmått eller antal juridiska bedömningar.
 
-CI har utökats från 10 till 146 Node-kommandon, där mobilkommandot ingår. Den senaste appändringen har **145 godkända lokala kontroller samt godkänd GitHub Actions-körning 1016**, inklusive det automatiserade mobiltestet. Körning 1015 verifierade föregående paket med de 130 sista lagtextavgränsningarna.
+CI har utökats från 10 till 146 Node-kommandon, där mobilkommandot ingår. Den äldre jämförelseversionen har **145 godkända lokala kontroller samt godkänd GitHub Actions-körning 1016**, inklusive det automatiserade mobiltestet. Körning 1015 verifierade föregående paket med de 130 sista lagtextavgränsningarna.
 
 - [Grön körning 1016](https://github.com/Deashi03/Brottskatalog/actions/runs/39506352021)
 - [Grön körning 1015](https://github.com/Deashi03/Brottskatalog/actions/runs/39505688856)

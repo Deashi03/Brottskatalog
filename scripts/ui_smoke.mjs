@@ -239,7 +239,8 @@ try{
     ['Olaga intrång','B 4926-23','2023/b-4926-23'],
     ['Sabotage mot blåljusverksamhet','B 6185-22','2023/b-6185-22'],
     ['Grovt sabotage mot blåljusverksamhet','B 6185-22','2023/b-6185-22'],
-    ['Våldsamt upplopp','B 6185-22','2023/b-6185-22']
+    ['Våldsamt upplopp','B 6185-22','2023/b-6185-22'],
+    ['Sabotage','B 3626-24','engelska-oversattningar/b-3626-24-eng']
   ]){
     await page.goto(url+'#sok',{waitUntil:'networkidle'});await search.fill(title);await wait();
     await page.locator('.crime-card').filter({has:page.getByText(title,{exact:true})}).click();

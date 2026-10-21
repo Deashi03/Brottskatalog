@@ -41,6 +41,21 @@
       "url": "https://www.domstol.se/globalassets/filer/domstol/hogstadomstolen/avgoranden/2023/b-6185-22.pdf",
       "downloadSHA256": "752f241eaa82d2be060932b74fb949febfd50bcd1226ba508425b56678d2b317",
       "checked": "2026-10-21"
+    },
+    {
+      "id": "klimatblockaden",
+      "reference": "NJA 2025 s. 761",
+      "name": "Klimatblockaden",
+      "number": "B 3626-24",
+      "date": "2025-07-09",
+      "locator": "HD:s officiella engelska översättning, s. 6–12, särskilt s. 10–12",
+      "text": "I Klimatblockaden blockerade demonstranter E4 helt i 20 minuter och delvis i ytterligare 30 minuter. HD frikände från sabotage. Den tidsbegränsade fredliga blockaden var inte kvalitativt jämförbar med de angrepp på vitala samhällsintressen som sabotagebestämmelsen avser, trots långa köer och en försenad ambulans.",
+      "note": "Trafikstörning innebär inte automatiskt sabotage. Domen ger ingen generell minutgräns eller straffrihet för vägblockader. HD prövade sabotagefrågan; hovrättens dom för ohörsamhet mot ordningsmakten omfattades inte av prövningstillståndet. Underlaget är domstolens officiella engelska översättning.",
+      "url": "https://www.domstol.se/globalassets/filer/domstol/hogstadomstolen/avgoranden/engelska-oversattningar/b-3626-24-eng.pdf",
+      "downloadSHA256": "588afa88646c118995588d110bfad6ae94a0ad3675f40d6c1fa5c2b739507bdb",
+      "checked": "2026-10-21",
+      "sourceLanguage": "en",
+      "sourceKind": "court-published-judgment-translation"
     }
   ],
   "sourcePins": {
@@ -58,6 +73,10 @@
     },
     "BrB:16:2": {
       "text": "2 §\nHar folksamling, med uppsåt som i 1 § sägs, gått till förenat våld å person eller egendom, dömes vare sig myndighet var tillstädes eller ej, för våldsamt upplopp, anstiftare och anförare till fängelse i högst tio år och annan deltagare i folksamlingens förehavande till böter eller fängelse i högst fyra år.",
+      "url": "https://www.riksdagen.se/sv/dokument-och-lagar/dokument/svensk-forfattningssamling/brottsbalk-1962700_sfs-1962-700/"
+    },
+    "BrB:13:4": {
+      "text": "4 §\nOm någon förstör eller skadar egendom, som har avsevärd betydelse för rikets försvar, folkförsörjning, rättsskipning eller förvaltning eller för upprätthållande av allmän ordning och säkerhet i riket, eller genom annan åtgärd, som ej innefattar allenast undanhållande av arbetskraft eller uppmaning därtill, allvarligt stör eller hindrar användningen av sådan egendom, dömes för sabotage till fängelse i högst fyra år. Detsamma skall gälla, om någon eljest, genom skadegörelse eller annan åtgärd som nyss sagts, allvarligt stör eller hindrar den allmänna samfärdseln eller användningen av telegraf, telefon, radio eller dylikt allmänt hjälpmedel eller av anläggning för allmänhetens förseende med vatten, ljus, värme eller kraft.",
       "url": "https://www.riksdagen.se/sv/dokument-och-lagar/dokument/svensk-forfattningssamling/brottsbalk-1962700_sfs-1962-700/"
     }
   },
@@ -103,6 +122,13 @@
       "statute": "BrB:16:2",
       "ownText": "2 §\nHar folksamling, med uppsåt som i 1 § sägs, gått till förenat våld å person eller egendom, dömes vare sig myndighet var tillstädes eller ej, för våldsamt upplopp, anstiftare och anförare till fängelse i högst tio år och annan deltagare i folksamlingens förehavande till böter eller fängelse i högst fyra år.",
       "case": "paskupploppet"
+    },
+    {
+      "id": "v03-sabotage",
+      "title": "Sabotage",
+      "statute": "BrB:13:4",
+      "ownText": "4 §\nOm någon förstör eller skadar egendom, som har avsevärd betydelse för rikets försvar, folkförsörjning, rättsskipning eller förvaltning eller för upprätthållande av allmän ordning och säkerhet i riket, eller genom annan åtgärd, som ej innefattar allenast undanhållande av arbetskraft eller uppmaning därtill, allvarligt stör eller hindrar användningen av sådan egendom, dömes för sabotage till fängelse i högst fyra år. Detsamma skall gälla, om någon eljest, genom skadegörelse eller annan åtgärd som nyss sagts, allvarligt stör eller hindrar den allmänna samfärdseln eller användningen av telegraf, telefon, radio eller dylikt allmänt hjälpmedel eller av anläggning för allmänhetens förseende med vatten, ljus, värme eller kraft.",
+      "case": "klimatblockaden"
     }
   ],
   "jurisprudenceCheckpointsApproved": 0
