@@ -10,7 +10,8 @@ const wait=async()=>{await page.waitForTimeout(400);};
 try{
   await page.goto(url,{waitUntil:'networkidle'});
   assert.ok(await page.locator('#crime-search').count(),'Search must exist');
-  assert.equal((await page.locator('.bk03-brand span').innerText()).trim(),'1.4','Search header must display current release 1.4');
+  assert.equal((await page.locator('.bk03-brand span').innerText()).trim(),'1.5','Search header must display current release 1.5');
+  assert.equal(await page.evaluate(()=>window.BK_DATA.crimes.length),1557,'The V1.5 full database must be loaded');
 
   const finalCharging=await page.evaluate(()=>({reviewed:window.BK_FINAL_PROSECUTION15?.completed,held:window.BK_FINAL_PROSECUTION15?.held.length,stampling:window.BK_DATA.crimes.find(c=>c.title==='Stämpling till grovt olaga tvång')?.prosecution,attempt:window.BK_DATA.crimes.find(c=>c.title==='Försök till grovt hemfridsbrott')?.prosecution}));
   assert.deepEqual(finalCharging,{reviewed:452,held:0,stampling:'general',attempt:'general'},'Final charging classifications must survive browser load order');

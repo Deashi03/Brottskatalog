@@ -11,7 +11,7 @@
   <link rel="manifest" href="./manifest.webmanifest">
   <link rel="icon" type="image/svg+xml" href="./icon.svg">
   <link rel="apple-touch-icon" href="./icon.svg">
-  <meta name="description" content="Brottskatalog 1.4: svenskt rättsligt uppslagsverk med brott, straffskalor, förstadier och tvångsmedel. Kontrollera gällande rätt.">
+  <meta name="description" content="Brottskatalog 1.5: svenskt rättsligt uppslagsverk med brott, straffskalor, förstadier och tvångsmedel. Kontrollera gällande rätt.">
 
 
 
@@ -1060,7 +1060,7 @@ function resultsFragment(){
 function updateResults(){const el=document.getElementById('results-area');if(el)el.innerHTML=resultsFragment();}
 function renderSearch(){
   app.className='app-shell nav-layout '+(state.density==='compact'?'compact':'');
-  app.innerHTML=`<main class="page"><div class="bk03-brand">${ic('scale')}<strong>Brottskatalog</strong><span>1.4</span></div>
+  app.innerHTML=`<main class="page"><div class="bk03-brand">${ic('scale')}<strong>Brottskatalog</strong><span>1.5</span></div>
   <label class="search-box" for="crime-search">${ic('search','lg')}<input id="crime-search" type="search" placeholder="T.ex. ringa stöld, BrB 8:2…" inputmode="search" enterkeyhint="search" autocapitalize="off" autocomplete="off" spellcheck="false" value="${escapeHtml(state.query)}"><button class="search-clear" data-action="clear-search" aria-label="Rensa sökning" style="${state.query?'':'display:none'}">${ic('x','sm')}</button></label>
   <div class="filter-strip" role="group" aria-label="Filtrera brott">${categories.map(cat=>`<button class="filter ${cat===state.category?'active':''}" data-category="${escapeHtml(cat)}" aria-pressed="${cat===state.category}">${escapeHtml(cat)}</button>`).join('')}</div>
   <div id="quick-area" ${state.query?'hidden':''}>${quickRow()}</div>
