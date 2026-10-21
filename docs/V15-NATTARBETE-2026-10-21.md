@@ -113,3 +113,15 @@ Tillägget ligger som en separat IIFE sist i base-inchoate-review-15.js, efter d
 **Aktuell konkret releasebegränsning: 53, inte 56, positiva förstadieintervall saknar numerisk skala.** 14 villkorade grundskalor kvarstår. Arbetsräkningen är fortsatt 11 548/11 957, 96,6 %. Förra avsnittens 56 är historiska före detta tillägg. 390 förarbeten/praxis, ett åtalsfilter och 18 release-/publiceringsmoment är fortsatt öppna.
 
 Appcommit c430b8f har grön avslutad Actions 1026 inklusive iPhone-regression: https://github.com/Deashi03/Brottskatalog/actions/runs/39601855925 . Dess 145 lokala Node-kontroller passerade också. Detta bevis gäller rättsfallstillägget och första jämförelsesnapshoten, inte automatiskt de senare tre försöksintervallen. Senare paket kräver egna tester.
+
+
+Nästa konkreta intervallblock att kontrollera individuellt: försök till grov signaturförfalskning (BrB 14:5), grov olovlig befattning med falska pengar (14:7), grov märkesförfalskning (14:8), grov olovlig underrättelseverksamhet mot främmande makt (19:10 a) och mot person (19:10 b). De egna grova skalorna har lästs i officiell konsolidering: minimistraff sex månader; maximum fyra år utom grov olovlig befattning med falska pengar, som har maximum sex år. Detta är endast en konkret fortsatt arbetskö, inga ännu godkända försöksintervall. Kontrollera aktuell fulltext och särskilt lagstöd igen innan integration. För falska pengar består 14:13:s begränsning till anskaffande eller mottagande; för 19 kap. måste särskilda åtalsvillkor hållas separata. Inga förberedelse-/stämplingsintervall eller generella numeriska schabloner godkänns av denna notering.
+
+
+### Slutverifiering för paketet med tre försöksintervall
+
+Appcommit **4e8f572accf6db3dbb5b45fd5b0b033a9a4f9734**, träd **1729fe4a41a855a9f04fe7a6781175610e7e0200**, har **145/145 passerade lokala Node-kommandon och avslutad grön Actions 1027, inklusive iPhone-regression**: https://github.com/Deashi03/Brottskatalog/actions/runs/39603170302 . Detta ersätter noteringen att paketet väntar på full testning. Alla tre straffskaleintervallen och sabotageexemplet ingår. Inga ändringar av appkoden efter denna testkörning.
+
+Nattuppgiften har återlästs och dess faktiska återkommande regel är nu uttryckligen begränsad med UNTIL till 2026-10-22T04:34:41Z (06.34 svensk tid), med första start den 21 oktober kl. 15.34. Den är aktiv. Uppgiftens instruktion har uppdaterats till 53 kvarstående intervall och kräver omräkning mot nästa aktuella grenhuvud. Körningshistorik var ännu tom vid återläsningen; inga framtida arbetsresultat eller 100 procent påstås.
+
+Slutstatus för detta pass: **96,6 % enligt oförändrad arbetsinventering; 409 räknade moment kvar. 53 olösta positiva förstadieintervall, 14 villkorade grundskalor och oberoende juridisk slutgranskning kvarstår. Inga nya fullständiga juridiska godkännanden. Ingen merge, tagg, release eller publicering.** Fortsätt med den individuella intervallkön ovan och faktisk förarbets-/praxisgranskning, inte med att flytta befintliga poäng eller nämnare.

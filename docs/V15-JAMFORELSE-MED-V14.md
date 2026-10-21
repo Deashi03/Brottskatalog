@@ -4,6 +4,8 @@ Avstämning den 21 oktober 2026. **1.5 är sparad som utkast och är inte public
 
 ## Aktuell avstämning inför nattens fortsättningar
 
+**Senaste verifierade appversion:** `4e8f572accf6db3dbb5b45fd5b0b033a9a4f9734` (träd `1729fe4a41a855a9f04fe7a6781175610e7e0200`). Alla **145/145 lokala Node-kommandon** passerade. [GitHub Actions 1027](https://github.com/Deashi03/Brottskatalog/actions/runs/39603170302) är avslutad och grön, inklusive iPhone-regressionen. Det gäller både Klimatblockaden och de tre nya försöksintervallen. Senare rapport-/överlämningsändringar ändrar inte appträdet. **Ingen publicering har genomförts.**
+
 Den senaste direkta körningen av båda versionernas egna inläsningskedjor bekräftar **299 → 390 grundkort**, **858 → 1 167 förstadiekort** och **1 157 → 1 545 synliga poster**. Det är 91 nya grundkort och 309 nya förstadiekort; tolv revisionsposter hålls utanför visningsurvalet. Inga tidigare post-ID:n har tagits bort. Inga befintliga grundkorts numeriska `penaltyRange` eller huvudvärde `custody` har ändrats. Detta är en jämförelse av datafält, inte ett intyg om deras fullständiga juridiska korrekthet.
 
 Dagens aktualiserade inventering finns i `data/v15-v14-current-snapshot.json`. Den verifierar att den äldre fullständiga bilagans listor över samtliga 400 tillägg och samtliga 1 157 ändrade tidigare post-ID:n fortfarande gäller. Aktuella fullständiga fältskillnader finns i GitHub-jämförelsen. Den anger också SHA-256 över hela den inlästa appkoden och behåller tidigare ögonblicksbilder med deras egna jämförelsedatum. Baslinjen `0bbbe45` är på nytt hämtad från GitHub och dess README identifierar den som publicerad 1.4. Tekniska verifieringsflaggor beskrivs som flaggor, aldrig som juridiska slutgodkännanden.
