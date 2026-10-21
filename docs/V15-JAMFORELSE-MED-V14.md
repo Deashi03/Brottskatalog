@@ -1,6 +1,37 @@
 # Brottskatalog 1.5 jämfört med publicerad 1.4
 
-## Fortsatt granskning: ytterligare 13 individuella straffskaleintervall
+## Senaste sakpaketet: åtta livstidsrelaterade och tre krigsvillkorade förstadieskalor
+
+Ytterligare **elva** tidigare öppna förstadieintervall har fått individuella textpinnar och avgränsad straffskalegranskning den 21 oktober. Dessa tillkommer efter det verifierade paketet med 13 intervall nedan.
+
+| Förstadiekort | Ordinär aktuell skala | Individuella lagrum |
+|---|---|---|
+| Förberedelse till grovt spridande av gift eller smitta | Böter – fängelse högst 18 år | BrB:13:7; BrB 13:12 och 23:2 |
+| Stämpling till grovt spridande av gift eller smitta | Böter – fängelse högst 18 år | BrB:13:7; BrB 13:12 och 23:2 |
+| Förberedelse till grov kapning | Böter – fängelse högst 18 år | BrB:13:5a; BrB 13:12 och 23:2 |
+| Stämpling till grov kapning | Böter – fängelse högst 18 år | BrB:13:5a; BrB 13:12 och 23:2 |
+| Förberedelse till grovt sjö- eller luftfartssabotage | Böter – fängelse högst 18 år | BrB:13:5a; BrB 13:12 och 23:2 |
+| Stämpling till grovt sjö- eller luftfartssabotage | Böter – fängelse högst 18 år | BrB:13:5a; BrB 13:12 och 23:2 |
+| Förberedelse till grovt flygplatssabotage | Böter – fängelse högst 18 år | BrB:13:5b; BrB 13:12 och 23:2 |
+| Stämpling till grovt flygplatssabotage | Böter – fängelse högst 18 år | BrB:13:5b; BrB 13:12 och 23:2 |
+
+För dessa åtta kort är fullbordansmaximum livstid. Förberedelse och stämpling ska ligga under detta maximum. Det tidsbestämda maximistraffet är **18 år, med inkluderad gräns**, och livstid ingår inte. Fullbordansminimistraffen understiger sex år, vilket medger böter i förstadieskalan. Egen paragraf, BrB 13:12 och aktuell 23:2 är jämförda var för sig. Prop. 2025/26:218, avsnitt 5.3.1 s. 64–65 och s. 120–121, behåller 18-årsgränsen och förstadieskalornas grundkonstruktion. Förarbetsanalysen och de exakta källpinnarna finns i `data/life-stage-interval-research-15.json`.
+
+Den lästa originaldomen GPS-puckarna (NJA 2020 s. 703, B 1371-20) skiljs från riksåklagarens tidigare partsinlaga. Domens tredjedelsriktlinje för straffvärde är inget lagstadgat maximum och används inte som en automatisk beräkning. Inga praxischeckpoints eller fullständiga juridiska godkännanden stängs genom detta tillägg.
+
+| Krigsvillkorat förstadiekort | Skala endast om 21 kap. BrB är tillämpligt |
+|---|---|
+| Försök till grovt våld eller hot mot förman | Böter – fängelse högst 6 år |
+| Förberedelse till grovt våld eller hot mot förman | Böter – fängelse under 6 år |
+| Stämpling till grovt våld eller hot mot förman | Böter – fängelse under 6 år |
+
+Här behålls uttryckligen villkoret i BrB 21:1 och kortens befintliga varning. Ingen bedömning görs att kapitlet faktiskt är tillämpligt eller att personen omfattas av dess personkrets. Mobilvyn visar fortfarande **Tillämpningen är villkorad**, följt av skalan och tillämpningsvarningen. Numerisk kontroll ger inga nya positiva tvångsmedelsmarkeringar och ändrar inga åtalsklassificeringar. Källpinnar och tre fasta ID:n finns i `data/war-stage-intervals-15.json`.
+
+**44 av de ursprungliga 56 intervalluckorna har nu fått individuellt kontrollerade skalor; tolv återstår.** Dessa tolv gäller brukande av det förfalskade, myteri, svikande av försvarsplikt, högförräderi samt osann utsaga inför nordisk respektive internationell domstol. De kräver alternativa eller härledda skalor och får inte fyllas med ett godtyckligt gemensamt maximum. Antalet villkorade grundskalor är fortfarande 14. Arbetsinventeringen är oförändrad **11 548/11 957 = 96,6 %**, med 390 förarbets-/praxisfrågor, ett åtalsfilter och 18 publiceringsmoment kvar. Ingen publicering har skett.
+
+**Testbevis för föregående paket:** appcommit `278ccfb316e08c499924f76027d92acd97f51661`, träd `46d7707d30e2ebb3a455d0fb1c59069a2afe9e33`, har **145/145 passerade lokala Node-kommandon och grön avslutad [Actions 1031 inklusive iPhone-regression](https://github.com/Deashi03/Brottskatalog/actions/runs/39611251207)**. Det gäller de tidigare 33 ifyllda intervallen och omladdningsrättelsen. De elva senaste tilläggen får eget fullständigt testbevis efter avslutad körning.
+
+## Föregående paket: 13 individuella straffskaleintervall
 
 Den 21 oktober har ytterligare **nio försöksintervall och fyra förberedelse-/stämplingsintervall** integrerats. Tidigare saknades en individuellt kontrollerad numerisk skala för samtliga. Mappningarna, grundskalorna, hela textpinnarna och källornas ursprungliga kvalitetsflaggor finns i `data/additional-stage-intervals-15.json`.
 
@@ -28,11 +59,11 @@ En faktisk omladdningsrättelse ingår också: den äldre återställningen av 1
 
 **33 av de ursprungliga 56 intervalluckorna är nu lösta; 23 återstår.** De återstående gäller åtta förberedelse-/stämplingsskalor med livstid i grundskalan, tre krigsvillkorade förstadier och tolv förstadier med alternativa eller härledda grundskalor. Dessa 23 är fortsatt öppna. De 14 villkorade grundskalorna består. Arbetsinventeringen är oförändrad **11 548/11 957 = 96,6 %**, med 390 förarbets-/praxisfrågor, ett åtalsfilter och 18 publiceringsmoment öppna. Inga nya juridiska slutgodkännanden eller progresspoäng.
 
-Teststatus för detta senare paket redovisas först när dess egna körningar är verifierade. Det föregående 17-intervallspaketet har **145/145 godkända lokala Node-kommandon och grön avslutad Actions 1029 inklusive iPhone-regression** på ce06764885938290684fd394b802f9443054baaa.
+Detta paket är verifierat på 278ccfb316e08c499924f76027d92acd97f51661 med 145/145 lokala Node-kommandon och grön avslutad Actions 1031 inklusive iPhone-regression. Det föregående 17-intervallspaketet har **145/145 godkända lokala Node-kommandon och grön avslutad Actions 1029 inklusive iPhone-regression** på ce06764885938290684fd394b802f9443054baaa.
 
 Avstämning den 21 oktober 2026. **1.5 är sparad som utkast och är inte publicerad eller fullständigt juridiskt slutgodkänd.** Rapporten beskriver genomförda ändringar; kvarstående arbete redovisas separat.
 
-## Fortsatt sakgranskning: ytterligare 17 förstadieintervall
+## Tidigare paket: 17 förstadieintervall
 
 Fem ytterligare försök har fått individuell källkontroll: grov signaturförfalskning, grov märkesförfalskning, grov olovlig befattning med falska pengar samt grov olovlig underrättelseverksamhet mot främmande makt respektive mot person. Den ordinära skalan är böter–fängelse högst fyra år, utom befattningen med falska pengar som har högst sex år. Den sistnämnda försöksformen är fortfarande begränsad till anskaffande eller mottagande enligt 14:13.
 
@@ -55,13 +86,13 @@ Tolv förberedelse-/stämplingskort har därutöver fått separat prövade inter
 
 Alla dessa tolv skalor kan omfatta böter. Fem har öppen övre gräns, uttryckt med `maxExclusive: true` i data och **Under** i visningen. En gräns under två år får därmed inte förväxlas med högst två år. Samtliga egna paragrafer, särskilda förstadieparagrafer och 23:2 har individuella textpinnar. Aktuell lagtext jämförs med förarbetsbeskrivningen i SOU 2024:55 och prop. 2025/26:218 avsnittet om oförändrade förstadiestraffskalor. Utredningens föreslagna sänkning av sexårsgränsen behandlas inte som gällande rätt.
 
-Hittills har alltså **20** av de ursprungliga 56 intervalluckorna lösts (tre i föregående pass och 17 i detta). **36 återstår.** Befintliga åtalsklassificeringar och rättsliga revisionsakter bevaras. Även efter en separat skalegranskning visar tvångsmedelsmenyn fortsatt att en självständig befogenhetsprövning behövs. Inga juridiska slutgodkännanden eller extra progresspoäng har tilldelats.
+Hittills har alltså **20** av de ursprungliga 56 intervalluckorna lösts (tre i föregående pass och 17 i detta). **Då återstod 36.** Befintliga åtalsklassificeringar och rättsliga revisionsakter bevaras. Även efter en separat skalegranskning visar tvångsmedelsmenyn fortsatt att en självständig befogenhetsprövning behövs. Inga juridiska slutgodkännanden eller extra progresspoäng har tilldelats.
 
 Paketet med 17 intervall är verifierat på appcommit **ce06764885938290684fd394b802f9443054baaa**, träd **de9d035ff69b65cb27ed84a7119ec2d093ef5172**: [GitHub Actions 1029](https://github.com/Deashi03/Brottskatalog/actions/runs/39608510636) är avslutad och grön, inklusive samtliga Node-kontroller och iPhone-regressionen. Äldre testuppgifter nedan gäller sina uttryckligen angivna tidigare versioner.
 
-## Aktuell avstämning inför nattens fortsättningar
+## Tidigare avstämning före de följande intervalltilläggen
 
-**Senaste verifierade appversion:** `4e8f572accf6db3dbb5b45fd5b0b033a9a4f9734` (träd `1729fe4a41a855a9f04fe7a6781175610e7e0200`). Alla **145/145 lokala Node-kommandon** passerade. [GitHub Actions 1027](https://github.com/Deashi03/Brottskatalog/actions/runs/39603170302) är avslutad och grön, inklusive iPhone-regressionen. Det gäller både Klimatblockaden och de tre nya försöksintervallen. Senare rapport-/överlämningsändringar ändrar inte appträdet. **Ingen publicering har genomförts.**
+**Tidigare verifierad appversion:** `4e8f572accf6db3dbb5b45fd5b0b033a9a4f9734` (träd `1729fe4a41a855a9f04fe7a6781175610e7e0200`). Alla **145/145 lokala Node-kommandon** passerade. [GitHub Actions 1027](https://github.com/Deashi03/Brottskatalog/actions/runs/39603170302) är avslutad och grön, inklusive iPhone-regressionen. Det gäller både Klimatblockaden och de tre nya försöksintervallen. Senare rapport-/överlämningsändringar ändrar inte appträdet. **Ingen publicering har genomförts.**
 
 Den senaste direkta körningen av båda versionernas egna inläsningskedjor bekräftar **299 → 390 grundkort**, **858 → 1 167 förstadiekort** och **1 157 → 1 545 synliga poster**. Det är 91 nya grundkort och 309 nya förstadiekort; tolv revisionsposter hålls utanför visningsurvalet. Inga tidigare post-ID:n har tagits bort. Inga befintliga grundkorts numeriska `penaltyRange` eller huvudvärde `custody` har ändrats. Detta är en jämförelse av datafält, inte ett intyg om deras fullständiga juridiska korrekthet.
 

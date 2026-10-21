@@ -19,7 +19,7 @@ assert.ok(parent);
 for(const type of ['forsok','forberedelse','stampling']){
  const c=stages.find(x=>x.stageType===type&&x.stageParentId===parent.id);
  assert.equal(c.stageStatus,'punishable');assert.equal(c.custody,'unknown');
- if(type==='forsok'){assert.deepEqual(JSON.parse(JSON.stringify(c.penaltyRange)),{min:1/12,max:18,fines:false,life:true});assert.equal(c.stageIntervalReview15.fullLegalReviewApproved,false);}else assert.equal(c.penaltyRange,null);assert.equal(c.stageReviewDate,'2026-10-19');
+ if(type==='forsok'){assert.deepEqual(JSON.parse(JSON.stringify(c.penaltyRange)),{min:1/12,max:18,fines:false,life:true});assert.equal(c.stageIntervalReview15.fullLegalReviewApproved,false);}else{assert.deepEqual(JSON.parse(JSON.stringify(c.penaltyRange)),{min:0,max:18,fines:true,life:false});assert.equal(c.stagePreparationPenaltyReview15.fullLegalReviewApproved,false);}assert.equal(c.stageReviewDate,'2026-10-19');
  assert.equal(c.stageEvidence15.finalLegalConclusionApproved,false);
  assert.equal(c.age14Exception15?.status,'minimum-threshold-met');
  assert.ok(!c.stageExplanation.includes('inte straffbar enligt'));

@@ -1,7 +1,7 @@
 {
-  "sourceParentCommit": "ce06764885938290684fd394b802f9443054baaa",
+  "sourceParentCommit": "278ccfb316e08c499924f76027d92acd97f51661",
   "baselineCommit": "0bbbe45d70d01a92a7874c74862cc7d21bae2355",
-  "currentRuntimeSHA256": "85031e6a522c760b6e5412e73c046a8e88e0417973593c6a2a17f5159cf7ecf7",
+  "currentRuntimeSHA256": "74c0bbdf65b40de18dd7d62cf145236053cc597b4685e82ad07324c60c932458",
   "baselineRuntimeSHA256": "b4059fb41c1da166a15f0baf2ced33551075cca206944b26fc17994f1f90700f",
   "hashMethod": "SHA-256: for index.html and then external runtime scripts in page order, normalized repository-relative path without ./, NUL, UTF-8 file content, NUL; recomputed from both actual load chains",
   "scope": "Recomputed complete runtime inventory; no legal approval and no publication credit",
@@ -639,23 +639,154 @@
       "label": "Böter – fängelse högst 4 år"
     }
   ],
-  "currentUnresolvedPositiveStageIntervals": 23,
+  "currentUnresolvedPositiveStageIntervals": 12,
   "fullLegalApprovalsAdded": 0,
   "individualPreparationIntervalUpdates": [
     {
-      "id": "stadium-08-forberedelse-v05-grov-forgoring",
-      "parentId": "v05-grov-forgoring",
-      "title": "Förberedelse till grov förgöring",
-      "statute": "BrB:13:8",
-      "authorizer": "BrB:13:12",
-      "stageType": "forberedelse",
-      "scopeFinding": "CURRENT_BRB_SAME_SECTION_GRADE_COVERED_BY_NAMED_STAGE",
-      "parentRange": {
-        "min": 0.5,
-        "max": 6,
-        "fines": false,
+      "id": "stadium-08-forberedelse-v05-grovt-spridande-av-gift-eller-smitta",
+      "title": "Förberedelse till grovt spridande av gift eller smitta",
+      "range": {
+        "min": 0,
+        "max": 18,
+        "fines": true,
         "life": false
       },
+      "review": {
+        "checked": "2026-10-21",
+        "sourceURL": "https://www.riksdagen.se/sv/dokument-och-lagar/dokument/svensk-forfattningssamling/brottsbalk-1962700_sfs-1962-700/",
+        "sourceRefs": [
+          "BrB:13:7",
+          "BrB:13:12",
+          "BrB:23:2"
+        ],
+        "scope": "ordinary-current-statutory-stage-interval-only",
+        "range": {
+          "min": 0,
+          "max": 18,
+          "fines": true,
+          "life": false
+        },
+        "upperEndpointIncluded": true,
+        "lifeMaximumAnalysis": {
+          "reasoning": "Individual current SFS parents contain finite imprisonment up to 18 years or life, with minimum below six years. BrB 23:2 excludes life for these stages, allows lower punishment, and its six-year maximum threshold is met. Finite 18 years remains included, not an open bound under 18. This is an ordinary single-offence interval; general modifiers and historical versions remain separately assessed.",
+          "currentReformSource": {
+            "url": "https://www.riksdagen.se/sv/dokument-och-lagar/dokument/proposition/dubbla-straff-for-brott-i-kriminella-natverk-och_hd03218/html/",
+            "section": "5.3.1, pp. 64–65; pp. 120–121",
+            "finding": "The 18-year ceiling remains; removal of its repetition in BrB 26:1 leaves it expressed through individual scales. Preparation/conspiracy scales are not changed by the reform."
+          },
+          "historicalIllustration": {
+            "url": "https://www.aklagare.se/globalassets/dokument/verksamheten-i-hogsta-domstolen/svarsskrivelser-och-forklaringar/2020/amr-2540-20-forberedelse-till-mord.pdf",
+            "page": 4,
+            "role": "prosecutor submission, not precedent",
+            "finding": "Expressly explains preparation-to-murder statutory maximum as 18 years. Used only as an illustration alongside current law and reform analysis.",
+            "accessNote": "All six pages read via official PDF text extraction; direct binary download returned HTTP 403, so no binary fingerprint is claimed."
+          },
+          "precedentRead": {
+            "url": "https://www.domstol.se/globalassets/filer/domstol/hogstadomstolen/avgoranden/2020/b-1371-20.pdf",
+            "courtPage": "https://www.domstol.se/hogsta-domstolen/avgoranden2/2020/81717/",
+            "caseNumber": "B 1371-20",
+            "decisionDate": "2020-09-23",
+            "citation": "NJA 2020 s. 703",
+            "relevantParagraphs": [
+              11,
+              12,
+              13,
+              14,
+              15,
+              16,
+              17,
+              29,
+              30
+            ],
+            "finding": "The one-third approach is a sentencing guideline, not the statutory maximum. The judgment did not establish that execution was imminent merely because GPS equipment, a weapon and a vehicle had been procured. Current ordinary intervals require independent comparison with the 2026 sources.",
+            "notACompletedIndividualCaseLawAudit": true,
+            "downloadedSHA256": "6c544b1fa4a8ff7e751843156c0f2f41b518a0f019d901b023566eb0eda0ac5c",
+            "downloadedBytes": 203729
+          }
+        },
+        "historicApplicabilityApproved": false,
+        "caseSpecificSentenceApproved": false,
+        "caseSpecificLiabilityApproved": false,
+        "prosecutionApproved": false,
+        "coercionApproved": false,
+        "fullLegalReviewApproved": false,
+        "note": "Separat källkontroll 2026-10-21: Böter – fängelse högst 18 år. Enligt BrB 23:2 ska straffet ligga under fullbordansbrottets högsta straff. Mer än två års fängelse förutsätter att sex år eller mer kan följa på det fullbordade brottet. Arton år ingår i intervallet, men livstid kan inte dömas ut för detta förstadium. Detta är den ordinära lagstadgade skalan. Gärningsdag, brottsgrad, ansvar, allmänna straffskalemodifieringar och konkret påföljd prövas separat. Ingen ny åtals- eller tvångsmedelsbedömning görs."
+      }
+    },
+    {
+      "id": "stadium-08-stampling-v05-grovt-spridande-av-gift-eller-smitta",
+      "title": "Stämpling till grovt spridande av gift eller smitta",
+      "range": {
+        "min": 0,
+        "max": 18,
+        "fines": true,
+        "life": false
+      },
+      "review": {
+        "checked": "2026-10-21",
+        "sourceURL": "https://www.riksdagen.se/sv/dokument-och-lagar/dokument/svensk-forfattningssamling/brottsbalk-1962700_sfs-1962-700/",
+        "sourceRefs": [
+          "BrB:13:7",
+          "BrB:13:12",
+          "BrB:23:2"
+        ],
+        "scope": "ordinary-current-statutory-stage-interval-only",
+        "range": {
+          "min": 0,
+          "max": 18,
+          "fines": true,
+          "life": false
+        },
+        "upperEndpointIncluded": true,
+        "lifeMaximumAnalysis": {
+          "reasoning": "Individual current SFS parents contain finite imprisonment up to 18 years or life, with minimum below six years. BrB 23:2 excludes life for these stages, allows lower punishment, and its six-year maximum threshold is met. Finite 18 years remains included, not an open bound under 18. This is an ordinary single-offence interval; general modifiers and historical versions remain separately assessed.",
+          "currentReformSource": {
+            "url": "https://www.riksdagen.se/sv/dokument-och-lagar/dokument/proposition/dubbla-straff-for-brott-i-kriminella-natverk-och_hd03218/html/",
+            "section": "5.3.1, pp. 64–65; pp. 120–121",
+            "finding": "The 18-year ceiling remains; removal of its repetition in BrB 26:1 leaves it expressed through individual scales. Preparation/conspiracy scales are not changed by the reform."
+          },
+          "historicalIllustration": {
+            "url": "https://www.aklagare.se/globalassets/dokument/verksamheten-i-hogsta-domstolen/svarsskrivelser-och-forklaringar/2020/amr-2540-20-forberedelse-till-mord.pdf",
+            "page": 4,
+            "role": "prosecutor submission, not precedent",
+            "finding": "Expressly explains preparation-to-murder statutory maximum as 18 years. Used only as an illustration alongside current law and reform analysis.",
+            "accessNote": "All six pages read via official PDF text extraction; direct binary download returned HTTP 403, so no binary fingerprint is claimed."
+          },
+          "precedentRead": {
+            "url": "https://www.domstol.se/globalassets/filer/domstol/hogstadomstolen/avgoranden/2020/b-1371-20.pdf",
+            "courtPage": "https://www.domstol.se/hogsta-domstolen/avgoranden2/2020/81717/",
+            "caseNumber": "B 1371-20",
+            "decisionDate": "2020-09-23",
+            "citation": "NJA 2020 s. 703",
+            "relevantParagraphs": [
+              11,
+              12,
+              13,
+              14,
+              15,
+              16,
+              17,
+              29,
+              30
+            ],
+            "finding": "The one-third approach is a sentencing guideline, not the statutory maximum. The judgment did not establish that execution was imminent merely because GPS equipment, a weapon and a vehicle had been procured. Current ordinary intervals require independent comparison with the 2026 sources.",
+            "notACompletedIndividualCaseLawAudit": true,
+            "downloadedSHA256": "6c544b1fa4a8ff7e751843156c0f2f41b518a0f019d901b023566eb0eda0ac5c",
+            "downloadedBytes": 203729
+          }
+        },
+        "historicApplicabilityApproved": false,
+        "caseSpecificSentenceApproved": false,
+        "caseSpecificLiabilityApproved": false,
+        "prosecutionApproved": false,
+        "coercionApproved": false,
+        "fullLegalReviewApproved": false,
+        "note": "Separat källkontroll 2026-10-21: Böter – fängelse högst 18 år. Enligt BrB 23:2 ska straffet ligga under fullbordansbrottets högsta straff. Mer än två års fängelse förutsätter att sex år eller mer kan följa på det fullbordade brottet. Arton år ingår i intervallet, men livstid kan inte dömas ut för detta förstadium. Detta är den ordinära lagstadgade skalan. Gärningsdag, brottsgrad, ansvar, allmänna straffskalemodifieringar och konkret påföljd prövas separat. Ingen ny åtals- eller tvångsmedelsbedömning görs."
+      }
+    },
+    {
+      "id": "stadium-08-forberedelse-v05-grov-forgoring",
+      "title": "Förberedelse till grov förgöring",
       "range": {
         "min": 0,
         "max": 6,
@@ -663,23 +794,35 @@
         "life": false,
         "maxExclusive": true
       },
-      "upper": "Under 6 år",
-      "label": "Böter eller fängelse under 6 år"
+      "review": {
+        "checked": "2026-10-21",
+        "sourceURL": "https://www.riksdagen.se/sv/dokument-och-lagar/dokument/svensk-forfattningssamling/brottsbalk-1962700_sfs-1962-700/",
+        "sourceRefs": [
+          "BrB:13:8",
+          "BrB:13:12",
+          "BrB:23:2"
+        ],
+        "scope": "ordinary-current-statutory-stage-interval-only",
+        "range": {
+          "min": 0,
+          "max": 6,
+          "fines": true,
+          "life": false,
+          "maxExclusive": true
+        },
+        "upperEndpointIncluded": false,
+        "historicApplicabilityApproved": false,
+        "caseSpecificSentenceApproved": false,
+        "caseSpecificLiabilityApproved": false,
+        "prosecutionApproved": false,
+        "coercionApproved": false,
+        "fullLegalReviewApproved": false,
+        "note": "Separat källkontroll 2026-10-21: Böter eller fängelse under 6 år. Enligt BrB 23:2 ska straffet ligga under fullbordansbrottets högsta straff. Mer än två års fängelse förutsätter att sex år eller mer kan följa på det fullbordade brottet. Den angivna övre gränsen ingår inte i intervallet. Detta är den ordinära lagstadgade skalan. Gärningsdag, brottsgrad, ansvar, allmänna straffskalemodifieringar och konkret påföljd prövas separat. Ingen ny åtals- eller tvångsmedelsbedömning görs."
+      }
     },
     {
       "id": "stadium-08-stampling-v05-grov-forgoring",
-      "parentId": "v05-grov-forgoring",
       "title": "Stämpling till grov förgöring",
-      "statute": "BrB:13:8",
-      "authorizer": "BrB:13:12",
-      "stageType": "stampling",
-      "scopeFinding": "CURRENT_BRB_SAME_SECTION_GRADE_COVERED_BY_NAMED_STAGE",
-      "parentRange": {
-        "min": 0.5,
-        "max": 6,
-        "fines": false,
-        "life": false
-      },
       "range": {
         "min": 0,
         "max": 6,
@@ -687,46 +830,69 @@
         "life": false,
         "maxExclusive": true
       },
-      "upper": "Under 6 år",
-      "label": "Böter eller fängelse under 6 år"
+      "review": {
+        "checked": "2026-10-21",
+        "sourceURL": "https://www.riksdagen.se/sv/dokument-och-lagar/dokument/svensk-forfattningssamling/brottsbalk-1962700_sfs-1962-700/",
+        "sourceRefs": [
+          "BrB:13:8",
+          "BrB:13:12",
+          "BrB:23:2"
+        ],
+        "scope": "ordinary-current-statutory-stage-interval-only",
+        "range": {
+          "min": 0,
+          "max": 6,
+          "fines": true,
+          "life": false,
+          "maxExclusive": true
+        },
+        "upperEndpointIncluded": false,
+        "historicApplicabilityApproved": false,
+        "caseSpecificSentenceApproved": false,
+        "caseSpecificLiabilityApproved": false,
+        "prosecutionApproved": false,
+        "coercionApproved": false,
+        "fullLegalReviewApproved": false,
+        "note": "Separat källkontroll 2026-10-21: Böter eller fängelse under 6 år. Enligt BrB 23:2 ska straffet ligga under fullbordansbrottets högsta straff. Mer än två års fängelse förutsätter att sex år eller mer kan följa på det fullbordade brottet. Den angivna övre gränsen ingår inte i intervallet. Detta är den ordinära lagstadgade skalan. Gärningsdag, brottsgrad, ansvar, allmänna straffskalemodifieringar och konkret påföljd prövas separat. Ingen ny åtals- eller tvångsmedelsbedömning görs."
+      }
     },
     {
       "id": "stadium-08-forberedelse-v05-grovt-hindrande-av-urkunds-bevisfunktion",
-      "parentId": "v05-grovt-hindrande-av-urkunds-bevisfunktion",
       "title": "Förberedelse till grovt hindrande av urkunds bevisfunktion",
-      "statute": "BrB:14:4",
-      "authorizer": "BrB:14:13",
-      "stageType": "forberedelse",
-      "scopeFinding": "CURRENT_BRB_SAME_SECTION_GRADE_COVERED_BY_NAMED_STAGE",
-      "parentRange": {
-        "min": 0.5,
-        "max": 4,
-        "fines": false,
-        "life": false
-      },
       "range": {
         "min": 0,
         "max": 2,
         "fines": true,
         "life": false
       },
-      "upper": "2 år",
-      "label": "Böter eller fängelse högst 2 år"
+      "review": {
+        "checked": "2026-10-21",
+        "sourceURL": "https://www.riksdagen.se/sv/dokument-och-lagar/dokument/svensk-forfattningssamling/brottsbalk-1962700_sfs-1962-700/",
+        "sourceRefs": [
+          "BrB:14:4",
+          "BrB:14:13",
+          "BrB:23:2"
+        ],
+        "scope": "ordinary-current-statutory-stage-interval-only",
+        "range": {
+          "min": 0,
+          "max": 2,
+          "fines": true,
+          "life": false
+        },
+        "upperEndpointIncluded": true,
+        "historicApplicabilityApproved": false,
+        "caseSpecificSentenceApproved": false,
+        "caseSpecificLiabilityApproved": false,
+        "prosecutionApproved": false,
+        "coercionApproved": false,
+        "fullLegalReviewApproved": false,
+        "note": "Separat källkontroll 2026-10-21: Böter eller fängelse högst 2 år. Enligt BrB 23:2 ska straffet ligga under fullbordansbrottets högsta straff. Mer än två års fängelse förutsätter att sex år eller mer kan följa på det fullbordade brottet. Tvåårsgränsen får nås i denna skala. Detta är den ordinära lagstadgade skalan. Gärningsdag, brottsgrad, ansvar, allmänna straffskalemodifieringar och konkret påföljd prövas separat. Ingen ny åtals- eller tvångsmedelsbedömning görs."
+      }
     },
     {
       "id": "stadium-08-forberedelse-v05-grov-penningforfalskning",
-      "parentId": "v05-grov-penningforfalskning",
       "title": "Förberedelse till grov penningförfalskning",
-      "statute": "BrB:14:6",
-      "authorizer": "BrB:14:13",
-      "stageType": "forberedelse",
-      "scopeFinding": "CURRENT_BRB_SAME_SECTION_GRADE_COVERED_BY_NAMED_STAGE",
-      "parentRange": {
-        "min": 2,
-        "max": 8,
-        "fines": false,
-        "life": false
-      },
       "range": {
         "min": 0,
         "max": 8,
@@ -734,161 +900,665 @@
         "life": false,
         "maxExclusive": true
       },
-      "upper": "Under 8 år",
-      "label": "Böter eller fängelse under 8 år"
+      "review": {
+        "checked": "2026-10-21",
+        "sourceURL": "https://www.riksdagen.se/sv/dokument-och-lagar/dokument/svensk-forfattningssamling/brottsbalk-1962700_sfs-1962-700/",
+        "sourceRefs": [
+          "BrB:14:6",
+          "BrB:14:13",
+          "BrB:23:2"
+        ],
+        "scope": "ordinary-current-statutory-stage-interval-only",
+        "range": {
+          "min": 0,
+          "max": 8,
+          "fines": true,
+          "life": false,
+          "maxExclusive": true
+        },
+        "upperEndpointIncluded": false,
+        "historicApplicabilityApproved": false,
+        "caseSpecificSentenceApproved": false,
+        "caseSpecificLiabilityApproved": false,
+        "prosecutionApproved": false,
+        "coercionApproved": false,
+        "fullLegalReviewApproved": false,
+        "note": "Separat källkontroll 2026-10-21: Böter eller fängelse under 8 år. Enligt BrB 23:2 ska straffet ligga under fullbordansbrottets högsta straff. Mer än två års fängelse förutsätter att sex år eller mer kan följa på det fullbordade brottet. Den angivna övre gränsen ingår inte i intervallet. Detta är den ordinära lagstadgade skalan. Gärningsdag, brottsgrad, ansvar, allmänna straffskalemodifieringar och konkret påföljd prövas separat. Ingen ny åtals- eller tvångsmedelsbedömning görs."
+      }
     },
     {
       "id": "stadium-08-forberedelse-v15-cover-grov-olovlig-underrattelseverksamhet-mot-frammande-makt",
-      "parentId": "v15-cover-grov-olovlig-underrattelseverksamhet-mot-frammande-makt",
       "title": "Förberedelse till grov olovlig underrättelseverksamhet mot främmande makt",
-      "statute": "BrB:19:10a",
-      "authorizer": "BrB:19:14",
-      "stageType": "forberedelse",
-      "scopeFinding": "CURRENT_BRB_SAME_SECTION_GRADE_COVERED_BY_NAMED_STAGE",
-      "parentRange": {
-        "min": 0.5,
-        "max": 4,
-        "fines": false,
-        "life": false
-      },
       "range": {
         "min": 0,
         "max": 2,
         "fines": true,
         "life": false
       },
-      "upper": "2 år",
-      "label": "Böter eller fängelse högst 2 år"
+      "review": {
+        "checked": "2026-10-21",
+        "sourceURL": "https://www.riksdagen.se/sv/dokument-och-lagar/dokument/svensk-forfattningssamling/brottsbalk-1962700_sfs-1962-700/",
+        "sourceRefs": [
+          "BrB:19:10a",
+          "BrB:19:14",
+          "BrB:23:2"
+        ],
+        "scope": "ordinary-current-statutory-stage-interval-only",
+        "range": {
+          "min": 0,
+          "max": 2,
+          "fines": true,
+          "life": false
+        },
+        "upperEndpointIncluded": true,
+        "historicApplicabilityApproved": false,
+        "caseSpecificSentenceApproved": false,
+        "caseSpecificLiabilityApproved": false,
+        "prosecutionApproved": false,
+        "coercionApproved": false,
+        "fullLegalReviewApproved": false,
+        "note": "Separat källkontroll 2026-10-21: Böter eller fängelse högst 2 år. Enligt BrB 23:2 ska straffet ligga under fullbordansbrottets högsta straff. Mer än två års fängelse förutsätter att sex år eller mer kan följa på det fullbordade brottet. Tvåårsgränsen får nås i denna skala. Detta är den ordinära lagstadgade skalan. Gärningsdag, brottsgrad, ansvar, allmänna straffskalemodifieringar och konkret påföljd prövas separat. Ingen ny åtals- eller tvångsmedelsbedömning görs."
+      }
     },
     {
       "id": "stadium-08-stampling-v15-cover-grov-olovlig-underrattelseverksamhet-mot-frammande-makt",
-      "parentId": "v15-cover-grov-olovlig-underrattelseverksamhet-mot-frammande-makt",
       "title": "Stämpling till grov olovlig underrättelseverksamhet mot främmande makt",
-      "statute": "BrB:19:10a",
-      "authorizer": "BrB:19:14",
-      "stageType": "stampling",
-      "scopeFinding": "CURRENT_BRB_SAME_SECTION_GRADE_COVERED_BY_NAMED_STAGE",
-      "parentRange": {
-        "min": 0.5,
-        "max": 4,
-        "fines": false,
-        "life": false
-      },
       "range": {
         "min": 0,
         "max": 2,
         "fines": true,
         "life": false
       },
-      "upper": "2 år",
-      "label": "Böter eller fängelse högst 2 år"
+      "review": {
+        "checked": "2026-10-21",
+        "sourceURL": "https://www.riksdagen.se/sv/dokument-och-lagar/dokument/svensk-forfattningssamling/brottsbalk-1962700_sfs-1962-700/",
+        "sourceRefs": [
+          "BrB:19:10a",
+          "BrB:19:14",
+          "BrB:23:2"
+        ],
+        "scope": "ordinary-current-statutory-stage-interval-only",
+        "range": {
+          "min": 0,
+          "max": 2,
+          "fines": true,
+          "life": false
+        },
+        "upperEndpointIncluded": true,
+        "historicApplicabilityApproved": false,
+        "caseSpecificSentenceApproved": false,
+        "caseSpecificLiabilityApproved": false,
+        "prosecutionApproved": false,
+        "coercionApproved": false,
+        "fullLegalReviewApproved": false,
+        "note": "Separat källkontroll 2026-10-21: Böter eller fängelse högst 2 år. Enligt BrB 23:2 ska straffet ligga under fullbordansbrottets högsta straff. Mer än två års fängelse förutsätter att sex år eller mer kan följa på det fullbordade brottet. Tvåårsgränsen får nås i denna skala. Detta är den ordinära lagstadgade skalan. Gärningsdag, brottsgrad, ansvar, allmänna straffskalemodifieringar och konkret påföljd prövas separat. Ingen ny åtals- eller tvångsmedelsbedömning görs."
+      }
     },
     {
       "id": "stadium-08-forberedelse-v15-cover-grov-olovlig-underrattelseverksamhet-mot-person",
-      "parentId": "v15-cover-grov-olovlig-underrattelseverksamhet-mot-person",
       "title": "Förberedelse till grov olovlig underrättelseverksamhet mot person",
-      "statute": "BrB:19:10b",
-      "authorizer": "BrB:19:14",
-      "stageType": "forberedelse",
-      "scopeFinding": "CURRENT_BRB_SAME_SECTION_GRADE_COVERED_BY_NAMED_STAGE",
-      "parentRange": {
-        "min": 0.5,
-        "max": 4,
-        "fines": false,
-        "life": false
-      },
       "range": {
         "min": 0,
         "max": 2,
         "fines": true,
         "life": false
       },
-      "upper": "2 år",
-      "label": "Böter eller fängelse högst 2 år"
+      "review": {
+        "checked": "2026-10-21",
+        "sourceURL": "https://www.riksdagen.se/sv/dokument-och-lagar/dokument/svensk-forfattningssamling/brottsbalk-1962700_sfs-1962-700/",
+        "sourceRefs": [
+          "BrB:19:10b",
+          "BrB:19:14",
+          "BrB:23:2"
+        ],
+        "scope": "ordinary-current-statutory-stage-interval-only",
+        "range": {
+          "min": 0,
+          "max": 2,
+          "fines": true,
+          "life": false
+        },
+        "upperEndpointIncluded": true,
+        "historicApplicabilityApproved": false,
+        "caseSpecificSentenceApproved": false,
+        "caseSpecificLiabilityApproved": false,
+        "prosecutionApproved": false,
+        "coercionApproved": false,
+        "fullLegalReviewApproved": false,
+        "note": "Separat källkontroll 2026-10-21: Böter eller fängelse högst 2 år. Enligt BrB 23:2 ska straffet ligga under fullbordansbrottets högsta straff. Mer än två års fängelse förutsätter att sex år eller mer kan följa på det fullbordade brottet. Tvåårsgränsen får nås i denna skala. Detta är den ordinära lagstadgade skalan. Gärningsdag, brottsgrad, ansvar, allmänna straffskalemodifieringar och konkret påföljd prövas separat. Ingen ny åtals- eller tvångsmedelsbedömning görs."
+      }
     },
     {
       "id": "stadium-08-stampling-v15-cover-grov-olovlig-underrattelseverksamhet-mot-person",
-      "parentId": "v15-cover-grov-olovlig-underrattelseverksamhet-mot-person",
       "title": "Stämpling till grov olovlig underrättelseverksamhet mot person",
-      "statute": "BrB:19:10b",
-      "authorizer": "BrB:19:14",
-      "stageType": "stampling",
-      "scopeFinding": "CURRENT_BRB_SAME_SECTION_GRADE_COVERED_BY_NAMED_STAGE",
-      "parentRange": {
-        "min": 0.5,
-        "max": 4,
-        "fines": false,
-        "life": false
-      },
       "range": {
         "min": 0,
         "max": 2,
         "fines": true,
         "life": false
       },
-      "upper": "2 år",
-      "label": "Böter eller fängelse högst 2 år"
+      "review": {
+        "checked": "2026-10-21",
+        "sourceURL": "https://www.riksdagen.se/sv/dokument-och-lagar/dokument/svensk-forfattningssamling/brottsbalk-1962700_sfs-1962-700/",
+        "sourceRefs": [
+          "BrB:19:10b",
+          "BrB:19:14",
+          "BrB:23:2"
+        ],
+        "scope": "ordinary-current-statutory-stage-interval-only",
+        "range": {
+          "min": 0,
+          "max": 2,
+          "fines": true,
+          "life": false
+        },
+        "upperEndpointIncluded": true,
+        "historicApplicabilityApproved": false,
+        "caseSpecificSentenceApproved": false,
+        "caseSpecificLiabilityApproved": false,
+        "prosecutionApproved": false,
+        "coercionApproved": false,
+        "fullLegalReviewApproved": false,
+        "note": "Separat källkontroll 2026-10-21: Böter eller fängelse högst 2 år. Enligt BrB 23:2 ska straffet ligga under fullbordansbrottets högsta straff. Mer än två års fängelse förutsätter att sex år eller mer kan följa på det fullbordade brottet. Tvåårsgränsen får nås i denna skala. Detta är den ordinära lagstadgade skalan. Gärningsdag, brottsgrad, ansvar, allmänna straffskalemodifieringar och konkret påföljd prövas separat. Ingen ny åtals- eller tvångsmedelsbedömning görs."
+      }
+    },
+    {
+      "id": "stadium-08-forberedelse-v15-additional-grov-kapning",
+      "title": "Förberedelse till grov kapning",
+      "range": {
+        "min": 0,
+        "max": 18,
+        "fines": true,
+        "life": false
+      },
+      "review": {
+        "checked": "2026-10-21",
+        "sourceURL": "https://www.riksdagen.se/sv/dokument-och-lagar/dokument/svensk-forfattningssamling/brottsbalk-1962700_sfs-1962-700/",
+        "sourceRefs": [
+          "BrB:13:5a",
+          "BrB:13:12",
+          "BrB:23:2"
+        ],
+        "scope": "ordinary-current-statutory-stage-interval-only",
+        "range": {
+          "min": 0,
+          "max": 18,
+          "fines": true,
+          "life": false
+        },
+        "upperEndpointIncluded": true,
+        "lifeMaximumAnalysis": {
+          "reasoning": "Individual current SFS parents contain finite imprisonment up to 18 years or life, with minimum below six years. BrB 23:2 excludes life for these stages, allows lower punishment, and its six-year maximum threshold is met. Finite 18 years remains included, not an open bound under 18. This is an ordinary single-offence interval; general modifiers and historical versions remain separately assessed.",
+          "currentReformSource": {
+            "url": "https://www.riksdagen.se/sv/dokument-och-lagar/dokument/proposition/dubbla-straff-for-brott-i-kriminella-natverk-och_hd03218/html/",
+            "section": "5.3.1, pp. 64–65; pp. 120–121",
+            "finding": "The 18-year ceiling remains; removal of its repetition in BrB 26:1 leaves it expressed through individual scales. Preparation/conspiracy scales are not changed by the reform."
+          },
+          "historicalIllustration": {
+            "url": "https://www.aklagare.se/globalassets/dokument/verksamheten-i-hogsta-domstolen/svarsskrivelser-och-forklaringar/2020/amr-2540-20-forberedelse-till-mord.pdf",
+            "page": 4,
+            "role": "prosecutor submission, not precedent",
+            "finding": "Expressly explains preparation-to-murder statutory maximum as 18 years. Used only as an illustration alongside current law and reform analysis.",
+            "accessNote": "All six pages read via official PDF text extraction; direct binary download returned HTTP 403, so no binary fingerprint is claimed."
+          },
+          "precedentRead": {
+            "url": "https://www.domstol.se/globalassets/filer/domstol/hogstadomstolen/avgoranden/2020/b-1371-20.pdf",
+            "courtPage": "https://www.domstol.se/hogsta-domstolen/avgoranden2/2020/81717/",
+            "caseNumber": "B 1371-20",
+            "decisionDate": "2020-09-23",
+            "citation": "NJA 2020 s. 703",
+            "relevantParagraphs": [
+              11,
+              12,
+              13,
+              14,
+              15,
+              16,
+              17,
+              29,
+              30
+            ],
+            "finding": "The one-third approach is a sentencing guideline, not the statutory maximum. The judgment did not establish that execution was imminent merely because GPS equipment, a weapon and a vehicle had been procured. Current ordinary intervals require independent comparison with the 2026 sources.",
+            "notACompletedIndividualCaseLawAudit": true,
+            "downloadedSHA256": "6c544b1fa4a8ff7e751843156c0f2f41b518a0f019d901b023566eb0eda0ac5c",
+            "downloadedBytes": 203729
+          }
+        },
+        "historicApplicabilityApproved": false,
+        "caseSpecificSentenceApproved": false,
+        "caseSpecificLiabilityApproved": false,
+        "prosecutionApproved": false,
+        "coercionApproved": false,
+        "fullLegalReviewApproved": false,
+        "note": "Separat källkontroll 2026-10-21: Böter – fängelse högst 18 år. Enligt BrB 23:2 ska straffet ligga under fullbordansbrottets högsta straff. Mer än två års fängelse förutsätter att sex år eller mer kan följa på det fullbordade brottet. Arton år ingår i intervallet, men livstid kan inte dömas ut för detta förstadium. Detta är den ordinära lagstadgade skalan. Gärningsdag, brottsgrad, ansvar, allmänna straffskalemodifieringar och konkret påföljd prövas separat. Ingen ny åtals- eller tvångsmedelsbedömning görs."
+      }
+    },
+    {
+      "id": "stadium-08-stampling-v15-additional-grov-kapning",
+      "title": "Stämpling till grov kapning",
+      "range": {
+        "min": 0,
+        "max": 18,
+        "fines": true,
+        "life": false
+      },
+      "review": {
+        "checked": "2026-10-21",
+        "sourceURL": "https://www.riksdagen.se/sv/dokument-och-lagar/dokument/svensk-forfattningssamling/brottsbalk-1962700_sfs-1962-700/",
+        "sourceRefs": [
+          "BrB:13:5a",
+          "BrB:13:12",
+          "BrB:23:2"
+        ],
+        "scope": "ordinary-current-statutory-stage-interval-only",
+        "range": {
+          "min": 0,
+          "max": 18,
+          "fines": true,
+          "life": false
+        },
+        "upperEndpointIncluded": true,
+        "lifeMaximumAnalysis": {
+          "reasoning": "Individual current SFS parents contain finite imprisonment up to 18 years or life, with minimum below six years. BrB 23:2 excludes life for these stages, allows lower punishment, and its six-year maximum threshold is met. Finite 18 years remains included, not an open bound under 18. This is an ordinary single-offence interval; general modifiers and historical versions remain separately assessed.",
+          "currentReformSource": {
+            "url": "https://www.riksdagen.se/sv/dokument-och-lagar/dokument/proposition/dubbla-straff-for-brott-i-kriminella-natverk-och_hd03218/html/",
+            "section": "5.3.1, pp. 64–65; pp. 120–121",
+            "finding": "The 18-year ceiling remains; removal of its repetition in BrB 26:1 leaves it expressed through individual scales. Preparation/conspiracy scales are not changed by the reform."
+          },
+          "historicalIllustration": {
+            "url": "https://www.aklagare.se/globalassets/dokument/verksamheten-i-hogsta-domstolen/svarsskrivelser-och-forklaringar/2020/amr-2540-20-forberedelse-till-mord.pdf",
+            "page": 4,
+            "role": "prosecutor submission, not precedent",
+            "finding": "Expressly explains preparation-to-murder statutory maximum as 18 years. Used only as an illustration alongside current law and reform analysis.",
+            "accessNote": "All six pages read via official PDF text extraction; direct binary download returned HTTP 403, so no binary fingerprint is claimed."
+          },
+          "precedentRead": {
+            "url": "https://www.domstol.se/globalassets/filer/domstol/hogstadomstolen/avgoranden/2020/b-1371-20.pdf",
+            "courtPage": "https://www.domstol.se/hogsta-domstolen/avgoranden2/2020/81717/",
+            "caseNumber": "B 1371-20",
+            "decisionDate": "2020-09-23",
+            "citation": "NJA 2020 s. 703",
+            "relevantParagraphs": [
+              11,
+              12,
+              13,
+              14,
+              15,
+              16,
+              17,
+              29,
+              30
+            ],
+            "finding": "The one-third approach is a sentencing guideline, not the statutory maximum. The judgment did not establish that execution was imminent merely because GPS equipment, a weapon and a vehicle had been procured. Current ordinary intervals require independent comparison with the 2026 sources.",
+            "notACompletedIndividualCaseLawAudit": true,
+            "downloadedSHA256": "6c544b1fa4a8ff7e751843156c0f2f41b518a0f019d901b023566eb0eda0ac5c",
+            "downloadedBytes": 203729
+          }
+        },
+        "historicApplicabilityApproved": false,
+        "caseSpecificSentenceApproved": false,
+        "caseSpecificLiabilityApproved": false,
+        "prosecutionApproved": false,
+        "coercionApproved": false,
+        "fullLegalReviewApproved": false,
+        "note": "Separat källkontroll 2026-10-21: Böter – fängelse högst 18 år. Enligt BrB 23:2 ska straffet ligga under fullbordansbrottets högsta straff. Mer än två års fängelse förutsätter att sex år eller mer kan följa på det fullbordade brottet. Arton år ingår i intervallet, men livstid kan inte dömas ut för detta förstadium. Detta är den ordinära lagstadgade skalan. Gärningsdag, brottsgrad, ansvar, allmänna straffskalemodifieringar och konkret påföljd prövas separat. Ingen ny åtals- eller tvångsmedelsbedömning görs."
+      }
+    },
+    {
+      "id": "stadium-08-forberedelse-v15-additional-grovt-sjo-eller-luftfartssabotage",
+      "title": "Förberedelse till grovt sjö- eller luftfartssabotage",
+      "range": {
+        "min": 0,
+        "max": 18,
+        "fines": true,
+        "life": false
+      },
+      "review": {
+        "checked": "2026-10-21",
+        "sourceURL": "https://www.riksdagen.se/sv/dokument-och-lagar/dokument/svensk-forfattningssamling/brottsbalk-1962700_sfs-1962-700/",
+        "sourceRefs": [
+          "BrB:13:5a",
+          "BrB:13:12",
+          "BrB:23:2"
+        ],
+        "scope": "ordinary-current-statutory-stage-interval-only",
+        "range": {
+          "min": 0,
+          "max": 18,
+          "fines": true,
+          "life": false
+        },
+        "upperEndpointIncluded": true,
+        "lifeMaximumAnalysis": {
+          "reasoning": "Individual current SFS parents contain finite imprisonment up to 18 years or life, with minimum below six years. BrB 23:2 excludes life for these stages, allows lower punishment, and its six-year maximum threshold is met. Finite 18 years remains included, not an open bound under 18. This is an ordinary single-offence interval; general modifiers and historical versions remain separately assessed.",
+          "currentReformSource": {
+            "url": "https://www.riksdagen.se/sv/dokument-och-lagar/dokument/proposition/dubbla-straff-for-brott-i-kriminella-natverk-och_hd03218/html/",
+            "section": "5.3.1, pp. 64–65; pp. 120–121",
+            "finding": "The 18-year ceiling remains; removal of its repetition in BrB 26:1 leaves it expressed through individual scales. Preparation/conspiracy scales are not changed by the reform."
+          },
+          "historicalIllustration": {
+            "url": "https://www.aklagare.se/globalassets/dokument/verksamheten-i-hogsta-domstolen/svarsskrivelser-och-forklaringar/2020/amr-2540-20-forberedelse-till-mord.pdf",
+            "page": 4,
+            "role": "prosecutor submission, not precedent",
+            "finding": "Expressly explains preparation-to-murder statutory maximum as 18 years. Used only as an illustration alongside current law and reform analysis.",
+            "accessNote": "All six pages read via official PDF text extraction; direct binary download returned HTTP 403, so no binary fingerprint is claimed."
+          },
+          "precedentRead": {
+            "url": "https://www.domstol.se/globalassets/filer/domstol/hogstadomstolen/avgoranden/2020/b-1371-20.pdf",
+            "courtPage": "https://www.domstol.se/hogsta-domstolen/avgoranden2/2020/81717/",
+            "caseNumber": "B 1371-20",
+            "decisionDate": "2020-09-23",
+            "citation": "NJA 2020 s. 703",
+            "relevantParagraphs": [
+              11,
+              12,
+              13,
+              14,
+              15,
+              16,
+              17,
+              29,
+              30
+            ],
+            "finding": "The one-third approach is a sentencing guideline, not the statutory maximum. The judgment did not establish that execution was imminent merely because GPS equipment, a weapon and a vehicle had been procured. Current ordinary intervals require independent comparison with the 2026 sources.",
+            "notACompletedIndividualCaseLawAudit": true,
+            "downloadedSHA256": "6c544b1fa4a8ff7e751843156c0f2f41b518a0f019d901b023566eb0eda0ac5c",
+            "downloadedBytes": 203729
+          }
+        },
+        "historicApplicabilityApproved": false,
+        "caseSpecificSentenceApproved": false,
+        "caseSpecificLiabilityApproved": false,
+        "prosecutionApproved": false,
+        "coercionApproved": false,
+        "fullLegalReviewApproved": false,
+        "note": "Separat källkontroll 2026-10-21: Böter – fängelse högst 18 år. Enligt BrB 23:2 ska straffet ligga under fullbordansbrottets högsta straff. Mer än två års fängelse förutsätter att sex år eller mer kan följa på det fullbordade brottet. Arton år ingår i intervallet, men livstid kan inte dömas ut för detta förstadium. Detta är den ordinära lagstadgade skalan. Gärningsdag, brottsgrad, ansvar, allmänna straffskalemodifieringar och konkret påföljd prövas separat. Ingen ny åtals- eller tvångsmedelsbedömning görs."
+      }
+    },
+    {
+      "id": "stadium-08-stampling-v15-additional-grovt-sjo-eller-luftfartssabotage",
+      "title": "Stämpling till grovt sjö- eller luftfartssabotage",
+      "range": {
+        "min": 0,
+        "max": 18,
+        "fines": true,
+        "life": false
+      },
+      "review": {
+        "checked": "2026-10-21",
+        "sourceURL": "https://www.riksdagen.se/sv/dokument-och-lagar/dokument/svensk-forfattningssamling/brottsbalk-1962700_sfs-1962-700/",
+        "sourceRefs": [
+          "BrB:13:5a",
+          "BrB:13:12",
+          "BrB:23:2"
+        ],
+        "scope": "ordinary-current-statutory-stage-interval-only",
+        "range": {
+          "min": 0,
+          "max": 18,
+          "fines": true,
+          "life": false
+        },
+        "upperEndpointIncluded": true,
+        "lifeMaximumAnalysis": {
+          "reasoning": "Individual current SFS parents contain finite imprisonment up to 18 years or life, with minimum below six years. BrB 23:2 excludes life for these stages, allows lower punishment, and its six-year maximum threshold is met. Finite 18 years remains included, not an open bound under 18. This is an ordinary single-offence interval; general modifiers and historical versions remain separately assessed.",
+          "currentReformSource": {
+            "url": "https://www.riksdagen.se/sv/dokument-och-lagar/dokument/proposition/dubbla-straff-for-brott-i-kriminella-natverk-och_hd03218/html/",
+            "section": "5.3.1, pp. 64–65; pp. 120–121",
+            "finding": "The 18-year ceiling remains; removal of its repetition in BrB 26:1 leaves it expressed through individual scales. Preparation/conspiracy scales are not changed by the reform."
+          },
+          "historicalIllustration": {
+            "url": "https://www.aklagare.se/globalassets/dokument/verksamheten-i-hogsta-domstolen/svarsskrivelser-och-forklaringar/2020/amr-2540-20-forberedelse-till-mord.pdf",
+            "page": 4,
+            "role": "prosecutor submission, not precedent",
+            "finding": "Expressly explains preparation-to-murder statutory maximum as 18 years. Used only as an illustration alongside current law and reform analysis.",
+            "accessNote": "All six pages read via official PDF text extraction; direct binary download returned HTTP 403, so no binary fingerprint is claimed."
+          },
+          "precedentRead": {
+            "url": "https://www.domstol.se/globalassets/filer/domstol/hogstadomstolen/avgoranden/2020/b-1371-20.pdf",
+            "courtPage": "https://www.domstol.se/hogsta-domstolen/avgoranden2/2020/81717/",
+            "caseNumber": "B 1371-20",
+            "decisionDate": "2020-09-23",
+            "citation": "NJA 2020 s. 703",
+            "relevantParagraphs": [
+              11,
+              12,
+              13,
+              14,
+              15,
+              16,
+              17,
+              29,
+              30
+            ],
+            "finding": "The one-third approach is a sentencing guideline, not the statutory maximum. The judgment did not establish that execution was imminent merely because GPS equipment, a weapon and a vehicle had been procured. Current ordinary intervals require independent comparison with the 2026 sources.",
+            "notACompletedIndividualCaseLawAudit": true,
+            "downloadedSHA256": "6c544b1fa4a8ff7e751843156c0f2f41b518a0f019d901b023566eb0eda0ac5c",
+            "downloadedBytes": 203729
+          }
+        },
+        "historicApplicabilityApproved": false,
+        "caseSpecificSentenceApproved": false,
+        "caseSpecificLiabilityApproved": false,
+        "prosecutionApproved": false,
+        "coercionApproved": false,
+        "fullLegalReviewApproved": false,
+        "note": "Separat källkontroll 2026-10-21: Böter – fängelse högst 18 år. Enligt BrB 23:2 ska straffet ligga under fullbordansbrottets högsta straff. Mer än två års fängelse förutsätter att sex år eller mer kan följa på det fullbordade brottet. Arton år ingår i intervallet, men livstid kan inte dömas ut för detta förstadium. Detta är den ordinära lagstadgade skalan. Gärningsdag, brottsgrad, ansvar, allmänna straffskalemodifieringar och konkret påföljd prövas separat. Ingen ny åtals- eller tvångsmedelsbedömning görs."
+      }
+    },
+    {
+      "id": "stadium-08-forberedelse-v15-additional-grovt-flygplatssabotage",
+      "title": "Förberedelse till grovt flygplatssabotage",
+      "range": {
+        "min": 0,
+        "max": 18,
+        "fines": true,
+        "life": false
+      },
+      "review": {
+        "checked": "2026-10-21",
+        "sourceURL": "https://www.riksdagen.se/sv/dokument-och-lagar/dokument/svensk-forfattningssamling/brottsbalk-1962700_sfs-1962-700/",
+        "sourceRefs": [
+          "BrB:13:5b",
+          "BrB:13:12",
+          "BrB:23:2"
+        ],
+        "scope": "ordinary-current-statutory-stage-interval-only",
+        "range": {
+          "min": 0,
+          "max": 18,
+          "fines": true,
+          "life": false
+        },
+        "upperEndpointIncluded": true,
+        "lifeMaximumAnalysis": {
+          "reasoning": "Individual current SFS parents contain finite imprisonment up to 18 years or life, with minimum below six years. BrB 23:2 excludes life for these stages, allows lower punishment, and its six-year maximum threshold is met. Finite 18 years remains included, not an open bound under 18. This is an ordinary single-offence interval; general modifiers and historical versions remain separately assessed.",
+          "currentReformSource": {
+            "url": "https://www.riksdagen.se/sv/dokument-och-lagar/dokument/proposition/dubbla-straff-for-brott-i-kriminella-natverk-och_hd03218/html/",
+            "section": "5.3.1, pp. 64–65; pp. 120–121",
+            "finding": "The 18-year ceiling remains; removal of its repetition in BrB 26:1 leaves it expressed through individual scales. Preparation/conspiracy scales are not changed by the reform."
+          },
+          "historicalIllustration": {
+            "url": "https://www.aklagare.se/globalassets/dokument/verksamheten-i-hogsta-domstolen/svarsskrivelser-och-forklaringar/2020/amr-2540-20-forberedelse-till-mord.pdf",
+            "page": 4,
+            "role": "prosecutor submission, not precedent",
+            "finding": "Expressly explains preparation-to-murder statutory maximum as 18 years. Used only as an illustration alongside current law and reform analysis.",
+            "accessNote": "All six pages read via official PDF text extraction; direct binary download returned HTTP 403, so no binary fingerprint is claimed."
+          },
+          "precedentRead": {
+            "url": "https://www.domstol.se/globalassets/filer/domstol/hogstadomstolen/avgoranden/2020/b-1371-20.pdf",
+            "courtPage": "https://www.domstol.se/hogsta-domstolen/avgoranden2/2020/81717/",
+            "caseNumber": "B 1371-20",
+            "decisionDate": "2020-09-23",
+            "citation": "NJA 2020 s. 703",
+            "relevantParagraphs": [
+              11,
+              12,
+              13,
+              14,
+              15,
+              16,
+              17,
+              29,
+              30
+            ],
+            "finding": "The one-third approach is a sentencing guideline, not the statutory maximum. The judgment did not establish that execution was imminent merely because GPS equipment, a weapon and a vehicle had been procured. Current ordinary intervals require independent comparison with the 2026 sources.",
+            "notACompletedIndividualCaseLawAudit": true,
+            "downloadedSHA256": "6c544b1fa4a8ff7e751843156c0f2f41b518a0f019d901b023566eb0eda0ac5c",
+            "downloadedBytes": 203729
+          }
+        },
+        "historicApplicabilityApproved": false,
+        "caseSpecificSentenceApproved": false,
+        "caseSpecificLiabilityApproved": false,
+        "prosecutionApproved": false,
+        "coercionApproved": false,
+        "fullLegalReviewApproved": false,
+        "note": "Separat källkontroll 2026-10-21: Böter – fängelse högst 18 år. Enligt BrB 23:2 ska straffet ligga under fullbordansbrottets högsta straff. Mer än två års fängelse förutsätter att sex år eller mer kan följa på det fullbordade brottet. Arton år ingår i intervallet, men livstid kan inte dömas ut för detta förstadium. Detta är den ordinära lagstadgade skalan. Gärningsdag, brottsgrad, ansvar, allmänna straffskalemodifieringar och konkret påföljd prövas separat. Ingen ny åtals- eller tvångsmedelsbedömning görs."
+      }
+    },
+    {
+      "id": "stadium-08-stampling-v15-additional-grovt-flygplatssabotage",
+      "title": "Stämpling till grovt flygplatssabotage",
+      "range": {
+        "min": 0,
+        "max": 18,
+        "fines": true,
+        "life": false
+      },
+      "review": {
+        "checked": "2026-10-21",
+        "sourceURL": "https://www.riksdagen.se/sv/dokument-och-lagar/dokument/svensk-forfattningssamling/brottsbalk-1962700_sfs-1962-700/",
+        "sourceRefs": [
+          "BrB:13:5b",
+          "BrB:13:12",
+          "BrB:23:2"
+        ],
+        "scope": "ordinary-current-statutory-stage-interval-only",
+        "range": {
+          "min": 0,
+          "max": 18,
+          "fines": true,
+          "life": false
+        },
+        "upperEndpointIncluded": true,
+        "lifeMaximumAnalysis": {
+          "reasoning": "Individual current SFS parents contain finite imprisonment up to 18 years or life, with minimum below six years. BrB 23:2 excludes life for these stages, allows lower punishment, and its six-year maximum threshold is met. Finite 18 years remains included, not an open bound under 18. This is an ordinary single-offence interval; general modifiers and historical versions remain separately assessed.",
+          "currentReformSource": {
+            "url": "https://www.riksdagen.se/sv/dokument-och-lagar/dokument/proposition/dubbla-straff-for-brott-i-kriminella-natverk-och_hd03218/html/",
+            "section": "5.3.1, pp. 64–65; pp. 120–121",
+            "finding": "The 18-year ceiling remains; removal of its repetition in BrB 26:1 leaves it expressed through individual scales. Preparation/conspiracy scales are not changed by the reform."
+          },
+          "historicalIllustration": {
+            "url": "https://www.aklagare.se/globalassets/dokument/verksamheten-i-hogsta-domstolen/svarsskrivelser-och-forklaringar/2020/amr-2540-20-forberedelse-till-mord.pdf",
+            "page": 4,
+            "role": "prosecutor submission, not precedent",
+            "finding": "Expressly explains preparation-to-murder statutory maximum as 18 years. Used only as an illustration alongside current law and reform analysis.",
+            "accessNote": "All six pages read via official PDF text extraction; direct binary download returned HTTP 403, so no binary fingerprint is claimed."
+          },
+          "precedentRead": {
+            "url": "https://www.domstol.se/globalassets/filer/domstol/hogstadomstolen/avgoranden/2020/b-1371-20.pdf",
+            "courtPage": "https://www.domstol.se/hogsta-domstolen/avgoranden2/2020/81717/",
+            "caseNumber": "B 1371-20",
+            "decisionDate": "2020-09-23",
+            "citation": "NJA 2020 s. 703",
+            "relevantParagraphs": [
+              11,
+              12,
+              13,
+              14,
+              15,
+              16,
+              17,
+              29,
+              30
+            ],
+            "finding": "The one-third approach is a sentencing guideline, not the statutory maximum. The judgment did not establish that execution was imminent merely because GPS equipment, a weapon and a vehicle had been procured. Current ordinary intervals require independent comparison with the 2026 sources.",
+            "notACompletedIndividualCaseLawAudit": true,
+            "downloadedSHA256": "6c544b1fa4a8ff7e751843156c0f2f41b518a0f019d901b023566eb0eda0ac5c",
+            "downloadedBytes": 203729
+          }
+        },
+        "historicApplicabilityApproved": false,
+        "caseSpecificSentenceApproved": false,
+        "caseSpecificLiabilityApproved": false,
+        "prosecutionApproved": false,
+        "coercionApproved": false,
+        "fullLegalReviewApproved": false,
+        "note": "Separat källkontroll 2026-10-21: Böter – fängelse högst 18 år. Enligt BrB 23:2 ska straffet ligga under fullbordansbrottets högsta straff. Mer än två års fängelse förutsätter att sex år eller mer kan följa på det fullbordade brottet. Arton år ingår i intervallet, men livstid kan inte dömas ut för detta förstadium. Detta är den ordinära lagstadgade skalan. Gärningsdag, brottsgrad, ansvar, allmänna straffskalemodifieringar och konkret påföljd prövas separat. Ingen ny åtals- eller tvångsmedelsbedömning görs."
+      }
     },
     {
       "id": "stadium-08-forberedelse-v15-grov-signaturforfalskning",
-      "parentId": "v15-grov-signaturforfalskning",
       "title": "Förberedelse till grov signaturförfalskning",
-      "statute": "BrB:14:5",
-      "authorizer": "BrB:14:13",
-      "stageType": "forberedelse",
-      "scopeFinding": "CURRENT_BRB_SAME_SECTION_GRADE_COVERED_BY_NAMED_STAGE",
-      "parentRange": {
-        "min": 0.5,
-        "max": 4,
-        "fines": false,
-        "life": false
-      },
       "range": {
         "min": 0,
         "max": 2,
         "fines": true,
         "life": false
       },
-      "upper": "2 år",
-      "label": "Böter eller fängelse högst 2 år"
+      "review": {
+        "checked": "2026-10-21",
+        "sourceURL": "https://www.riksdagen.se/sv/dokument-och-lagar/dokument/svensk-forfattningssamling/brottsbalk-1962700_sfs-1962-700/",
+        "sourceRefs": [
+          "BrB:14:5",
+          "BrB:14:13",
+          "BrB:23:2"
+        ],
+        "scope": "ordinary-current-statutory-stage-interval-only",
+        "range": {
+          "min": 0,
+          "max": 2,
+          "fines": true,
+          "life": false
+        },
+        "upperEndpointIncluded": true,
+        "historicApplicabilityApproved": false,
+        "caseSpecificSentenceApproved": false,
+        "caseSpecificLiabilityApproved": false,
+        "prosecutionApproved": false,
+        "coercionApproved": false,
+        "fullLegalReviewApproved": false,
+        "note": "Separat källkontroll 2026-10-21: Böter eller fängelse högst 2 år. Enligt BrB 23:2 ska straffet ligga under fullbordansbrottets högsta straff. Mer än två års fängelse förutsätter att sex år eller mer kan följa på det fullbordade brottet. Tvåårsgränsen får nås i denna skala. Detta är den ordinära lagstadgade skalan. Gärningsdag, brottsgrad, ansvar, allmänna straffskalemodifieringar och konkret påföljd prövas separat. Ingen ny åtals- eller tvångsmedelsbedömning görs."
+      }
     },
     {
       "id": "stadium-08-forberedelse-v15-grov-markesforfalskning",
-      "parentId": "v15-grov-markesforfalskning",
       "title": "Förberedelse till grov märkesförfalskning",
-      "statute": "BrB:14:8",
-      "authorizer": "BrB:14:13",
-      "stageType": "forberedelse",
-      "scopeFinding": "CURRENT_BRB_SAME_SECTION_GRADE_COVERED_BY_NAMED_STAGE",
-      "parentRange": {
-        "min": 0.5,
-        "max": 4,
-        "fines": false,
-        "life": false
-      },
       "range": {
         "min": 0,
         "max": 2,
         "fines": true,
         "life": false
       },
-      "upper": "2 år",
-      "label": "Böter eller fängelse högst 2 år"
+      "review": {
+        "checked": "2026-10-21",
+        "sourceURL": "https://www.riksdagen.se/sv/dokument-och-lagar/dokument/svensk-forfattningssamling/brottsbalk-1962700_sfs-1962-700/",
+        "sourceRefs": [
+          "BrB:14:8",
+          "BrB:14:13",
+          "BrB:23:2"
+        ],
+        "scope": "ordinary-current-statutory-stage-interval-only",
+        "range": {
+          "min": 0,
+          "max": 2,
+          "fines": true,
+          "life": false
+        },
+        "upperEndpointIncluded": true,
+        "historicApplicabilityApproved": false,
+        "caseSpecificSentenceApproved": false,
+        "caseSpecificLiabilityApproved": false,
+        "prosecutionApproved": false,
+        "coercionApproved": false,
+        "fullLegalReviewApproved": false,
+        "note": "Separat källkontroll 2026-10-21: Böter eller fängelse högst 2 år. Enligt BrB 23:2 ska straffet ligga under fullbordansbrottets högsta straff. Mer än två års fängelse förutsätter att sex år eller mer kan följa på det fullbordade brottet. Tvåårsgränsen får nås i denna skala. Detta är den ordinära lagstadgade skalan. Gärningsdag, brottsgrad, ansvar, allmänna straffskalemodifieringar och konkret påföljd prövas separat. Ingen ny åtals- eller tvångsmedelsbedömning görs."
+      }
     },
     {
       "id": "stage-gap15-forberedelse-v15-olaga-frihetsberovande-mindre-grovt",
-      "parentId": "v15-olaga-frihetsberovande-mindre-grovt",
       "title": "Förberedelse till olaga frihetsberövande (mindre grovt fall)",
-      "statute": "BrB:4:2",
-      "authorizer": "BrB:4:10",
-      "stageType": "forberedelse",
-      "scopeFinding": "CURRENT_MISSING_PARENT_STAGE_EXPRESSLY_LISTED",
-      "parentRange": {
-        "min": 0,
-        "max": 2,
-        "fines": true,
-        "life": false
-      },
       "range": {
         "min": 0,
         "max": 2,
@@ -896,23 +1566,35 @@
         "life": false,
         "maxExclusive": true
       },
-      "upper": "Under 2 år",
-      "label": "Böter eller fängelse under 2 år"
+      "review": {
+        "checked": "2026-10-21",
+        "sourceURL": "https://www.riksdagen.se/sv/dokument-och-lagar/dokument/svensk-forfattningssamling/brottsbalk-1962700_sfs-1962-700/",
+        "sourceRefs": [
+          "BrB:4:2",
+          "BrB:4:10",
+          "BrB:23:2"
+        ],
+        "scope": "ordinary-current-statutory-stage-interval-only",
+        "range": {
+          "min": 0,
+          "max": 2,
+          "fines": true,
+          "life": false,
+          "maxExclusive": true
+        },
+        "upperEndpointIncluded": false,
+        "historicApplicabilityApproved": false,
+        "caseSpecificSentenceApproved": false,
+        "caseSpecificLiabilityApproved": false,
+        "prosecutionApproved": false,
+        "coercionApproved": false,
+        "fullLegalReviewApproved": false,
+        "note": "Separat källkontroll 2026-10-21: Böter eller fängelse under 2 år. Enligt BrB 23:2 ska straffet ligga under fullbordansbrottets högsta straff. Mer än två års fängelse förutsätter att sex år eller mer kan följa på det fullbordade brottet. Den angivna övre gränsen ingår inte i intervallet. Detta är den ordinära lagstadgade skalan. Gärningsdag, brottsgrad, ansvar, allmänna straffskalemodifieringar och konkret påföljd prövas separat. Ingen ny åtals- eller tvångsmedelsbedömning görs."
+      }
     },
     {
       "id": "stage-gap15-stampling-v15-olaga-frihetsberovande-mindre-grovt",
-      "parentId": "v15-olaga-frihetsberovande-mindre-grovt",
       "title": "Stämpling till olaga frihetsberövande (mindre grovt fall)",
-      "statute": "BrB:4:2",
-      "authorizer": "BrB:4:10",
-      "stageType": "stampling",
-      "scopeFinding": "CURRENT_MISSING_PARENT_STAGE_EXPRESSLY_LISTED",
-      "parentRange": {
-        "min": 0,
-        "max": 2,
-        "fines": true,
-        "life": false
-      },
       "range": {
         "min": 0,
         "max": 2,
@@ -920,8 +1602,31 @@
         "life": false,
         "maxExclusive": true
       },
-      "upper": "Under 2 år",
-      "label": "Böter eller fängelse under 2 år"
+      "review": {
+        "checked": "2026-10-21",
+        "sourceURL": "https://www.riksdagen.se/sv/dokument-och-lagar/dokument/svensk-forfattningssamling/brottsbalk-1962700_sfs-1962-700/",
+        "sourceRefs": [
+          "BrB:4:2",
+          "BrB:4:10",
+          "BrB:23:2"
+        ],
+        "scope": "ordinary-current-statutory-stage-interval-only",
+        "range": {
+          "min": 0,
+          "max": 2,
+          "fines": true,
+          "life": false,
+          "maxExclusive": true
+        },
+        "upperEndpointIncluded": false,
+        "historicApplicabilityApproved": false,
+        "caseSpecificSentenceApproved": false,
+        "caseSpecificLiabilityApproved": false,
+        "prosecutionApproved": false,
+        "coercionApproved": false,
+        "fullLegalReviewApproved": false,
+        "note": "Separat källkontroll 2026-10-21: Böter eller fängelse under 2 år. Enligt BrB 23:2 ska straffet ligga under fullbordansbrottets högsta straff. Mer än två års fängelse förutsätter att sex år eller mer kan följa på det fullbordade brottet. Den angivna övre gränsen ingår inte i intervallet. Detta är den ordinära lagstadgade skalan. Gärningsdag, brottsgrad, ansvar, allmänna straffskalemodifieringar och konkret påföljd prövas separat. Ingen ny åtals- eller tvångsmedelsbedömning görs."
+      }
     }
   ],
   "openPreparationUpperEndpoints": 5,
@@ -931,6 +1636,12 @@
       "currentRuntimeSHA256": "648ac11c1b48906e260e000e4454a342594b5df8112e44a75c40c7afbd4e8e60",
       "baselineRuntimeSHA256": "282a0e394b0c38e699dcea8d74906c1da86d779c47e6bac8c6660c9018256897",
       "hashMethod": "SHA-256 over index.html then each external runtime script path, NUL, contents, NUL in page order; files read from current working tree"
+    },
+    {
+      "sourceParentCommit": "ce06764885938290684fd394b802f9443054baaa",
+      "currentRuntimeSHA256": "85031e6a522c760b6e5412e73c046a8e88e0417973593c6a2a17f5159cf7ecf7",
+      "baselineRuntimeSHA256": "b4059fb41c1da166a15f0baf2ced33551075cca206944b26fc17994f1f90700f",
+      "hashMethod": "SHA-256: for index.html and then external runtime scripts in page order, normalized repository-relative path without ./, NUL, UTF-8 file content, NUL; recomputed from both actual load chains"
     }
   ],
   "additionalStageIntervalUpdates": [
@@ -1407,5 +2118,122 @@
       }
     }
   ],
-  "currentOpenPreparationUpperEndpoints": 9
+  "currentOpenPreparationUpperEndpoints": 9,
+  "wartimeConditionalStageUpdates": [
+    {
+      "id": "stadium-08-forsok-v15-war-grovt-vald-eller-hot-mot-forman",
+      "title": "Försök till grovt våld eller hot mot förman",
+      "range": {
+        "min": 0,
+        "max": 6,
+        "fines": true,
+        "life": false
+      },
+      "applicabilityConditional": true,
+      "review": {
+        "checked": "2026-10-21",
+        "sourceURL": "https://www.riksdagen.se/sv/dokument-och-lagar/dokument/svensk-forfattningssamling/brottsbalk-1962700_sfs-1962-700/",
+        "sourceRefs": [
+          "BrB:21:1",
+          "BrB:21:8",
+          "BrB:21:15",
+          "BrB:23:1"
+        ],
+        "scope": "Ordinary statutory stage scale only if BrB chapter 21 applies; no activation or personal-scope finding",
+        "range": {
+          "min": 0,
+          "max": 6,
+          "fines": true,
+          "life": false
+        },
+        "applicabilityApproved": false,
+        "personalScopeApproved": false,
+        "historicApplicabilityApproved": false,
+        "caseSpecificLiabilityApproved": false,
+        "caseSpecificSentenceApproved": false,
+        "prosecutionApproved": false,
+        "coercionApproved": false,
+        "fullLegalReviewApproved": false,
+        "note": "Separat källkontroll 2026-10-21: Böter – fängelse högst 6 år, endast om 21 kap. BrB är tillämpligt. BrB 21:1 kräver krig eller föreskriven tillämpning enligt paragrafens andra stycke. Personkrets, förmansställning och konkreta tillämpningsförutsättningar är inte godkända här. BrB 21:15 omfattar förstadiet till den grova graden i 21:8. BrB 23:1 medger högst sex år och utesluter inte böter. Gärningsdag, ansvar, allmänna straffskalemodifieringar, åtal och tvångsmedel prövas separat."
+      }
+    },
+    {
+      "id": "stadium-08-forberedelse-v15-war-grovt-vald-eller-hot-mot-forman",
+      "title": "Förberedelse till grovt våld eller hot mot förman",
+      "range": {
+        "min": 0,
+        "max": 6,
+        "fines": true,
+        "life": false,
+        "maxExclusive": true
+      },
+      "applicabilityConditional": true,
+      "review": {
+        "checked": "2026-10-21",
+        "sourceURL": "https://www.riksdagen.se/sv/dokument-och-lagar/dokument/svensk-forfattningssamling/brottsbalk-1962700_sfs-1962-700/",
+        "sourceRefs": [
+          "BrB:21:1",
+          "BrB:21:8",
+          "BrB:21:15",
+          "BrB:23:2"
+        ],
+        "scope": "Ordinary statutory stage scale only if BrB chapter 21 applies; no activation or personal-scope finding",
+        "range": {
+          "min": 0,
+          "max": 6,
+          "fines": true,
+          "life": false,
+          "maxExclusive": true
+        },
+        "applicabilityApproved": false,
+        "personalScopeApproved": false,
+        "historicApplicabilityApproved": false,
+        "caseSpecificLiabilityApproved": false,
+        "caseSpecificSentenceApproved": false,
+        "prosecutionApproved": false,
+        "coercionApproved": false,
+        "fullLegalReviewApproved": false,
+        "note": "Separat källkontroll 2026-10-21: Böter – fängelse under 6 år, endast om 21 kap. BrB är tillämpligt. BrB 21:1 kräver krig eller föreskriven tillämpning enligt paragrafens andra stycke. Personkrets, förmansställning och konkreta tillämpningsförutsättningar är inte godkända här. BrB 21:15 omfattar förstadiet till den grova graden i 21:8. BrB 23:2 kräver straff under sex år; sexårsgränsen för fullbordansmaximum medger mer än två år. Den övre gränsen ingår inte. Gärningsdag, ansvar, allmänna straffskalemodifieringar, åtal och tvångsmedel prövas separat."
+      }
+    },
+    {
+      "id": "stadium-08-stampling-v15-war-grovt-vald-eller-hot-mot-forman",
+      "title": "Stämpling till grovt våld eller hot mot förman",
+      "range": {
+        "min": 0,
+        "max": 6,
+        "fines": true,
+        "life": false,
+        "maxExclusive": true
+      },
+      "applicabilityConditional": true,
+      "review": {
+        "checked": "2026-10-21",
+        "sourceURL": "https://www.riksdagen.se/sv/dokument-och-lagar/dokument/svensk-forfattningssamling/brottsbalk-1962700_sfs-1962-700/",
+        "sourceRefs": [
+          "BrB:21:1",
+          "BrB:21:8",
+          "BrB:21:15",
+          "BrB:23:2"
+        ],
+        "scope": "Ordinary statutory stage scale only if BrB chapter 21 applies; no activation or personal-scope finding",
+        "range": {
+          "min": 0,
+          "max": 6,
+          "fines": true,
+          "life": false,
+          "maxExclusive": true
+        },
+        "applicabilityApproved": false,
+        "personalScopeApproved": false,
+        "historicApplicabilityApproved": false,
+        "caseSpecificLiabilityApproved": false,
+        "caseSpecificSentenceApproved": false,
+        "prosecutionApproved": false,
+        "coercionApproved": false,
+        "fullLegalReviewApproved": false,
+        "note": "Separat källkontroll 2026-10-21: Böter – fängelse under 6 år, endast om 21 kap. BrB är tillämpligt. BrB 21:1 kräver krig eller föreskriven tillämpning enligt paragrafens andra stycke. Personkrets, förmansställning och konkreta tillämpningsförutsättningar är inte godkända här. BrB 21:15 omfattar förstadiet till den grova graden i 21:8. BrB 23:2 kräver straff under sex år; sexårsgränsen för fullbordansmaximum medger mer än två år. Den övre gränsen ingår inte. Gärningsdag, ansvar, allmänna straffskalemodifieringar, åtal och tvångsmedel prövas separat."
+      }
+    }
+  ]
 }

@@ -1,0 +1,93 @@
+{
+  "checked": "2026-10-21",
+  "scope": "Ordinary statutory stage scale only if BrB chapter 21 applies; no activation or personal-scope finding",
+  "rules": [
+    {
+      "id": "stadium-08-forsok-v15-war-grovt-vald-eller-hot-mot-forman",
+      "parentId": "v15-war-grovt-vald-eller-hot-mot-forman",
+      "title": "Försök till grovt våld eller hot mot förman",
+      "stageType": "forsok",
+      "scopeFinding": "CURRENT_BRB_SAME_SECTION_GRADE_COVERED_BY_NAMED_STAGE",
+      "parentRange": {
+        "min": 0,
+        "max": 6,
+        "fines": false,
+        "life": false
+      },
+      "range": {
+        "min": 0,
+        "max": 6,
+        "fines": true,
+        "life": false
+      },
+      "label": "Böter – fängelse högst 6 år",
+      "upper": "6 år"
+    },
+    {
+      "id": "stadium-08-forberedelse-v15-war-grovt-vald-eller-hot-mot-forman",
+      "parentId": "v15-war-grovt-vald-eller-hot-mot-forman",
+      "title": "Förberedelse till grovt våld eller hot mot förman",
+      "stageType": "forberedelse",
+      "scopeFinding": "CURRENT_BRB_SAME_SECTION_GRADE_COVERED_BY_NAMED_STAGE",
+      "parentRange": {
+        "min": 0,
+        "max": 6,
+        "fines": false,
+        "life": false
+      },
+      "range": {
+        "min": 0,
+        "max": 6,
+        "fines": true,
+        "life": false,
+        "maxExclusive": true
+      },
+      "label": "Böter – fängelse under 6 år",
+      "upper": "Under 6 år"
+    },
+    {
+      "id": "stadium-08-stampling-v15-war-grovt-vald-eller-hot-mot-forman",
+      "parentId": "v15-war-grovt-vald-eller-hot-mot-forman",
+      "title": "Stämpling till grovt våld eller hot mot förman",
+      "stageType": "stampling",
+      "scopeFinding": "CURRENT_BRB_SAME_SECTION_GRADE_COVERED_BY_NAMED_STAGE",
+      "parentRange": {
+        "min": 0,
+        "max": 6,
+        "fines": false,
+        "life": false
+      },
+      "range": {
+        "min": 0,
+        "max": 6,
+        "fines": true,
+        "life": false,
+        "maxExclusive": true
+      },
+      "label": "Böter – fängelse under 6 år",
+      "upper": "Under 6 år"
+    }
+  ],
+  "pins": {
+    "BrB:21:1": {
+      "text": "1 §\nDetta kapitel träder i tillämpning när riket kommer i krig.\nOm riket är i krigsfara eller om det råder sådana utomordentliga förhållanden som är föranledda av krig eller av krigsfara som riket har befunnit sig i, får regeringen föreskriva att kapitlet skall tillämpas.\nLag (1986:645).",
+      "url": "https://www.riksdagen.se/sv/dokument-och-lagar/dokument/svensk-forfattningssamling/brottsbalk-1962700_sfs-1962-700/"
+    },
+    "BrB:21:8": {
+      "text": "8 §\nFörgriper sig en krigsman med våld eller hot om våld mot en förman i dennes tjänsteutövning eller för att tvinga honom till eller hindra honom från att utföra en tjänsteåtgärd eller annars med anledning av hans tjänst, skall dömas för våld eller hot mot förman till böter eller fängelse i högst två år.\nMed förmän likställs vaktposter och andra krigsmän som tjänstgör för bevakning eller upprätthållande av ordning.\nÄr brottet att anse som grovt, skall dömas till fängelse i högst sex år.\nVid bedömande om brottet är grovt skall särskilt beaktas, om gärningen har begåtts under strid eller då brott mot krigslydnaden annars medför särskild fara.\nLag (1986:645).",
+      "url": "https://www.riksdagen.se/sv/dokument-och-lagar/dokument/svensk-forfattningssamling/brottsbalk-1962700_sfs-1962-700/"
+    },
+    "BrB:21:15": {
+      "text": "15 §\nFör försök, förberedelse eller stämpling till eller underlåtenhet att avslöja eller förhindra olovlig avvikelse av krigsman eller grov olovlig avvikelse av krigsman samt för försök, förberedelse eller stämpling till våld eller hot mot förman döms det till ansvar enligt 23 kap.\n\nFör medverkan till tjänstebrott får dömas endast den som därigenom åsidosatt tjänsteplikt. Lag (2026:924).",
+      "url": "https://www.riksdagen.se/sv/dokument-och-lagar/dokument/svensk-forfattningssamling/brottsbalk-1962700_sfs-1962-700/"
+    },
+    "BrB:23:1": {
+      "text": "1 §\nDen som har påbörjat utförandet av ett visst brott, utan att brottet fullbordats, döms för försök till brottet om sådant ansvar är särskilt föreskrivet och det har funnits fara för att handlingen skulle leda till att brottet fullbordas eller sådan fara varit utesluten endast på grund av tillfälliga omständigheter.\nOavsett vad som föreskrivs om fara i första stycket, ska det dömas till ansvar för försök till brott om fara för brottets fullbordan varit utesluten till följd av en myndighets åtgärd för att bekämpa brott. Detta gäller dock inte om gärningen med hänsyn till omständigheterna är uppenbart mindre allvarlig.\nStraffet för försök till brott bestäms högst till vad som gäller för fullbordat brott och får inte bestämmas till böter, om lägsta straff för det fullbordade brottet är fängelse i två år eller mer.\nLag (2026:93).",
+      "url": "https://www.riksdagen.se/sv/dokument-och-lagar/dokument/svensk-forfattningssamling/brottsbalk-1962700_sfs-1962-700/"
+    },
+    "BrB:23:2": {
+      "text": "2 §\nDen som inte har gjort sig skyldig till fullbordat brott eller försök till brott döms, om sådant ansvar är särskilt föreskrivet, för förberedelse till brottet om han eller hon, med uppsåt att utföra eller främja brott,\n1. tar emot, lämnar, förmedlar eller utlovar betalningsmedel eller annat som betalning för ett brott eller för att täcka kostnader för utförande av ett brott, eller\n2. förvärvar, anskaffar, tillverkar, överlämnar, tar emot, förvarar, transporterar, sammanställer, överlåter eller tar annan liknande befattning med något som, med beaktande av dess beskaffenhet och omständigheterna i övrigt, är särskilt ägnat att komma till användning som hjälpmedel vid ett brott eller att möjliggöra utförandet av ett brott.\nFör stämpling till brott döms, om sådant ansvar är särskilt föreskrivet, den som\n1. kommer överens med någon annan om att en gärning ska utföras,\n2. försöker anstifta någon annan att utföra en gärning, eller\n3. åtar eller erbjuder sig att utföra en gärning.\nDet ska inte dömas till ansvar för förberedelse eller stämpling till brott om faran för att brottet skulle fullbordas var ringa, om inte faran var ringa eller utesluten till följd av en myndighets åtgärd för att bekämpa brott. Det ska inte heller dömas till ansvar om gärningen med hänsyn till omständigheterna är mindre allvarlig.\nStraffet för förberedelse eller stämpling till brott ska bestämmas under den högsta och får sättas under den lägsta gräns som gäller för fullbordat brott. Högre straff än fängelse i två år får bestämmas endast om fängelse i sex år eller mer kan följa på det fullbordade brottet.\nLag (2026:94).",
+      "url": "https://www.riksdagen.se/sv/dokument-och-lagar/dokument/svensk-forfattningssamling/brottsbalk-1962700_sfs-1962-700/"
+    }
+  }
+}

@@ -66,22 +66,22 @@ assert.ok(moneyAttempt.rekvisit15.groups.some(g=>(g.label||'').includes('ANSKAFF
 
 const prepContext=load(),prepWindow=prepContext.window;
 const prepReport=prepWindow.BK_STAGE_PREPARATION_PENALTY_REVIEW15;
-assert.equal(prepReport.reviewed,12);assert.equal(prepReport.held.length,0);
-const prep=st.filter(c=>c.stagePreparationPenaltyReview15);assert.equal(prep.length,12);assert.equal(prep.filter(c=>c.penaltyRange.maxExclusive).length,5);
+assert.equal(prepReport.reviewed,20);assert.equal(prepReport.held.length,0);
+const prep=st.filter(c=>c.stagePreparationPenaltyReview15);assert.equal(prep.length,20);assert.equal(prep.filter(c=>c.penaltyRange.maxExclusive).length,5);
 for(const c of prep){const r=c.stagePreparationPenaltyReview15;assert.equal(r.upperEndpointIncluded,!c.penaltyRange.maxExclusive);assert.equal(r.coercionApproved,false);assert.equal(c.individualLegalAudit15.consequences.punishmentRangeApproved,false);assert.equal(w.BK_COERCIVE.score(c,{id:'husrannsakan',scale:'any'}).tone,'unknown');assert.equal(c.stagePenaltyUpper.startsWith('Under '),!!c.penaltyRange.maxExclusive);}
 function prepMutation(fn){const x=load();for(const c of x.window.BK_DATA.crimes.filter(c=>c.stagePreparationPenaltyReview15)){delete c.stagePreparationPenaltyReview15;c.penaltyRange=null;c.penaltyRangeVerified=false;}fn(x.window);vm.runInContext(read(mod),x);return x.window.BK_STAGE_PREPARATION_PENALTY_REVIEW15;}
 assert.equal(prepMutation(w=>w.BK_STATUTES['BrB:23:2'].text+=' CHANGED').reviewed,0);
-assert.equal(prepMutation(w=>w.BK_STATUTES['BrB:14:13'].complete=false).reviewed,8);
-assert.equal(prepMutation(w=>w.BK_STATUTES['BrB:19:14'].checked='2099-01-01').reviewed,8);
-assert.equal(prepMutation(w=>w.BK_STATUTES['BrB:4:10'].machine=true).reviewed,10);
-assert.equal(prepMutation(w=>w.BK_DATA.crimes.find(c=>c.id==='v05-grov-forgoring').penaltyRange.max=4).reviewed,10);
+assert.equal(prepMutation(w=>w.BK_STATUTES['BrB:14:13'].complete=false).reviewed,16);
+assert.equal(prepMutation(w=>w.BK_STATUTES['BrB:19:14'].checked='2099-01-01').reviewed,16);
+assert.equal(prepMutation(w=>w.BK_STATUTES['BrB:4:10'].machine=true).reviewed,18);
+assert.equal(prepMutation(w=>w.BK_DATA.crimes.find(c=>c.id==='v05-grov-forgoring').penaltyRange.max=4).reviewed,18);
 const pi=load(),pc=pi.window.BK_DATA.crimes;
 for(const c of pc.filter(c=>c.stagePreparationPenaltyReview15)){delete c.stagePreparationPenaltyReview15;c.penaltyRange=null;c.penaltyRangeVerified=false;}
-const pb=JSON.parse(JSON.stringify(pc)),prepCode=read(mod).slice(read(mod).indexOf('/* Twelve individually pinned preparation/conspiracy intervals;'));
+const pb=JSON.parse(JSON.stringify(pc)),prepCode=read(mod).slice(read(mod).indexOf('/* Twelve original plus eight life-maximum preparation/conspiracy intervals;'));
 vm.runInContext(prepCode,pi);
 for(const[i,c]of pc.entries()){const current=JSON.parse(JSON.stringify(c)),prior=pb[i];if(c.stagePreparationPenaltyReview15)for(const key of [...allowedRangeFields,'stagePreparationPenaltyReview15']){delete current[key];delete prior[key];}assert.deepEqual(current,prior,'Preparation review preserves all unrelated fields: '+c.title);}
-vm.runInContext(prepCode,pi);assert.equal(pi.window.BK_STAGE_PREPARATION_PENALTY_REVIEW15.reviewed,0);assert.equal(pi.window.BK_STAGE_PREPARATION_PENALTY_REVIEW15.duplicates,12);
-console.log('PASS: twelve individually pinned preparation/conspiracy intervals, five open endpoints, source mutation guards, idempotence and unchanged powers');
+vm.runInContext(prepCode,pi);assert.equal(pi.window.BK_STAGE_PREPARATION_PENALTY_REVIEW15.reviewed,0);assert.equal(pi.window.BK_STAGE_PREPARATION_PENALTY_REVIEW15.duplicates,20);
+console.log('PASS: twenty individually pinned preparation/conspiracy intervals, five open endpoints, source mutation guards, idempotence and unchanged powers');
 
 // Thirteen further source-pinned intervals: nine attempts and four weapon
 // preparations/conspiracies, with different fine thresholds and open maxima.
@@ -114,3 +114,22 @@ console.log('PASS: thirteen additional fixed stage intervals, one-month minima, 
 const reloadCtx=load(),reloadBefore=JSON.stringify(reloadCtx.window.BK_DATA.crimes);vm.runInContext(read(mod),reloadCtx);assert.equal(JSON.stringify(reloadCtx.window.BK_DATA.crimes),reloadBefore,"Complete module reload preserves every reviewed range, including the thirteen originally reclassified cards");
 
 assert.deepEqual(JSON.parse(JSON.stringify(extraW.BK_STAGE_INTERVAL_REVIEW_DATA15)),JSON.parse(read("data/additional-stage-intervals-15.json")),"Source pins and individual fixed-ID manifest match runtime");
+
+const lifePrep=prep.filter(c=>c.stagePreparationPenaltyReview15.lifeMaximumAnalysis);assert.equal(lifePrep.length,8);for(const c of lifePrep){assert.deepEqual(JSON.parse(JSON.stringify(c.penaltyRange)),{min:0,max:18,fines:true,life:false});assert.equal(c.stagePenaltyUpper,"18 år");assert.equal(c.stagePreparationPenaltyReview15.upperEndpointIncluded,true);assert.equal(c.stagePreparationPenaltyReview15.fullLegalReviewApproved,false);}
+assert.equal(prepMutation(w=>w.BK_STATUTES["BrB:13:5a"].text+=" CHANGED").reviewed,16);
+assert.equal(prepMutation(w=>w.BK_STATUTES["BrB:13:7"].machine=true).reviewed,18);
+
+const wartimeCtx=load(),wartimeW=wartimeCtx.window,warRows=wartimeW.BK_DATA.crimes.filter(c=>c.stageWartimePenaltyReview15);
+assert.equal(wartimeW.BK_STAGE_WARTIME_PENALTY_REVIEW15.reviewed,3);assert.equal(wartimeW.BK_STAGE_WARTIME_PENALTY_REVIEW15.held.length,0);
+assert.deepEqual(JSON.parse(JSON.stringify(wartimeW.BK_STAGE_WARTIME_PENALTY_DATA15)),JSON.parse(read('data/war-stage-intervals-15.json')));
+for(const c of warRows){assert.equal(c.applicabilityConditional,true);assert.ok(c.applicabilityWarning);assert.equal(c.stageWartimePenaltyReview15.applicabilityApproved,false);assert.equal(c.stageWartimePenaltyReview15.personalScopeApproved,false);assert.equal(c.custody,'unknown');assert.equal(wartimeW.BK_COERCIVE.score(c,{id:'husrannsakan',scale:'any'}).tone,'unknown');const expected={min:0,max:6,fines:true,life:false};if(c.stageType!=='forsok')expected.maxExclusive=true;assert.deepEqual(JSON.parse(JSON.stringify(c.penaltyRange)),expected);}
+function warMutation(fn){const x=load();for(const c of x.window.BK_DATA.crimes.filter(c=>c.stageWartimePenaltyReview15)){delete c.stageWartimePenaltyReview15;c.penaltyRange=null;c.penaltyRangeVerified=false;}fn(x.window);vm.runInContext(read(mod),x);return x.window.BK_STAGE_WARTIME_PENALTY_REVIEW15;}
+assert.equal(warMutation(w=>w.BK_STATUTES['BrB:21:1'].text+=' CHANGED').reviewed,0);
+assert.equal(warMutation(w=>w.BK_STATUTES['BrB:21:15'].complete=false).reviewed,0);
+assert.equal(warMutation(w=>w.BK_DATA.crimes.find(c=>c.id==='v15-war-grovt-vald-eller-hot-mot-forman').applicabilityConditional=false).reviewed,0);
+const warIso=load(),warCrimes=warIso.window.BK_DATA.crimes;for(const c of warCrimes.filter(c=>c.stageWartimePenaltyReview15)){delete c.stageWartimePenaltyReview15;c.penaltyRange=null;c.penaltyRangeVerified=false;}
+const warBefore=JSON.parse(JSON.stringify(warCrimes)),warCode=read(mod).slice(read(mod).indexOf('/* Three statutory ranges conditional on BrB 21 applicability,'));vm.runInContext(warCode,warIso);
+for(const[i,c]of warCrimes.entries()){const actual=JSON.parse(JSON.stringify(c)),prior=warBefore[i];if(c.stageWartimePenaltyReview15)for(const key of [...allowedRangeFields,'stageWartimePenaltyReview15']){delete actual[key];delete prior[key];}assert.deepEqual(actual,prior,'Wartime scales preserve applicability and all other legal fields: '+c.title);}
+vm.runInContext(warCode,warIso);assert.equal(warIso.window.BK_STAGE_WARTIME_PENALTY_REVIEW15.duplicates,3);
+const warReload=load(),warFullBefore=JSON.stringify(warReload.window.BK_DATA.crimes);vm.runInContext(read(mod),warReload);assert.equal(JSON.stringify(warReload.window.BK_DATA.crimes),warFullBefore);
+console.log('PASS: three conditionally applicable wartime stage scales; no activation, personal-scope or coercion approvals; source and condition mutation guards');

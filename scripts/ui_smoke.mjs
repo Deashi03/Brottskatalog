@@ -124,7 +124,9 @@ try{
   for(const [parent,kind,upper]of[
     ['Grov förgöring','Förberedelse','Under 6 år'],
     ['Grovt hindrande av urkunds bevisfunktion','Förberedelse','2 år'],
-    ['Olaga frihetsberövande (mindre grovt fall)','Stämpling','Under 2 år']
+    ['Olaga frihetsberövande (mindre grovt fall)','Stämpling','Under 2 år'],
+    ['Grovt spridande av gift eller smitta','Förberedelse','18 år'],
+    ['Grov kapning','Stämpling','18 år']
   ]){
     await page.goto(url+'#sok',{waitUntil:'networkidle'});await search.fill(parent);await wait();
     await page.locator('.crime-card').filter({has:page.getByText(parent,{exact:true})}).click();
@@ -147,6 +149,12 @@ try{
     await overview.locator('.stage-overview-link').filter({hasText:kind+' ·'}).click();await wait();
     const bounds=page.locator('.penalty-panel .penalty-bound strong');assert.deepEqual(await bounds.allTextContents(),[lower,upper],'Individually reviewed interval: '+parent);
     assert.equal(await page.evaluate(()=>document.documentElement.scrollWidth<=innerWidth+1),true,'Additional stage interval fits iPhone: '+parent);
+  }
+  for(const [kind,scale]of[['Försök','högst 6 år'],['Förberedelse','under 6 år']]){
+    await page.goto(url+'#sok',{waitUntil:'networkidle'});await search.fill('Grovt våld eller hot mot förman');await wait();
+    await page.locator('.crime-card').filter({has:page.getByText('Grovt våld eller hot mot förman',{exact:true})}).click();
+    const overview=page.locator('#sec-stadier');await overview.locator(':scope > summary').click();await overview.locator('.stage-overview-link').filter({hasText:kind+' ·'}).click();await wait();
+    const text=await page.locator('.penalty-panel').innerText();assert.ok(text.includes('Tillämpningen är villkorad'));assert.ok(text.includes(scale));assert.ok(text.includes('Krigs- eller beredskapsrelaterade'));
   }
   await page.goto(url+'#sok',{waitUntil:'networkidle'});
   for(const [title,phrase,links]of[

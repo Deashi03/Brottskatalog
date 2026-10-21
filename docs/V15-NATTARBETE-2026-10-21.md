@@ -184,3 +184,38 @@ Riktade tester för 13-intervallspaketet passerade: base_inchoate_review_15_test
 Intervallpaketet sparades som fadf73377a9e5db0dc5aa0b7c43fe910c2acbb07 (träd 8a6a0b2c0851c62dac8344ab1d26cfa7929b2f21). Actions 1030 stannade vid brb14_stage_scope_15_test, som fortfarande krävde nullskala för det nu separat granskade penningförsöket. Det testet och två liknande äldre källhistoriktester (brb13_poison_stage_scope_hold_15_test och brb_stage_source_repairs_15_test) jämför nu de exakta nya intervallen, utan att godkänna ansvar eller tvångsmedel. Alla tre passerar lokalt. Ny fullständig lokal svit och CI krävs; 1030 är inte grönt. Appkoden ändras inte av denna testanpassning.
 
 Riksåklagarens hela sexsidiga svarsskrivelse AMR-2540-20 har nu lästs, särskilt sidan 4. Den anger högst arton år för förberedelse till mord, men är en partsinlaga från 2020, inte ett prejudikat eller en självständig kontroll av 2026 års generella straffskaleändringar. Ingen av de åtta livstidsrelaterade luckorna stängs enbart med den källan. Tidigare notering att endast sökutdrag lästs är därmed historisk.
+
+
+## Fortsatt sakarbete: elva ytterligare intervall
+
+Ytterligare **elva** tidigare öppna förstadieintervall har fått individuella textpinnar och avgränsad straffskalegranskning den 21 oktober. Dessa tillkommer efter det verifierade paketet med 13 intervall nedan.
+
+| Förstadiekort | Ordinär aktuell skala | Individuella lagrum |
+|---|---|---|
+| Förberedelse till grovt spridande av gift eller smitta | Böter – fängelse högst 18 år | BrB:13:7; BrB 13:12 och 23:2 |
+| Stämpling till grovt spridande av gift eller smitta | Böter – fängelse högst 18 år | BrB:13:7; BrB 13:12 och 23:2 |
+| Förberedelse till grov kapning | Böter – fängelse högst 18 år | BrB:13:5a; BrB 13:12 och 23:2 |
+| Stämpling till grov kapning | Böter – fängelse högst 18 år | BrB:13:5a; BrB 13:12 och 23:2 |
+| Förberedelse till grovt sjö- eller luftfartssabotage | Böter – fängelse högst 18 år | BrB:13:5a; BrB 13:12 och 23:2 |
+| Stämpling till grovt sjö- eller luftfartssabotage | Böter – fängelse högst 18 år | BrB:13:5a; BrB 13:12 och 23:2 |
+| Förberedelse till grovt flygplatssabotage | Böter – fängelse högst 18 år | BrB:13:5b; BrB 13:12 och 23:2 |
+| Stämpling till grovt flygplatssabotage | Böter – fängelse högst 18 år | BrB:13:5b; BrB 13:12 och 23:2 |
+
+För dessa åtta kort är fullbordansmaximum livstid. Förberedelse och stämpling ska ligga under detta maximum. Det tidsbestämda maximistraffet är **18 år, med inkluderad gräns**, och livstid ingår inte. Fullbordansminimistraffen understiger sex år, vilket medger böter i förstadieskalan. Egen paragraf, BrB 13:12 och aktuell 23:2 är jämförda var för sig. Prop. 2025/26:218, avsnitt 5.3.1 s. 64–65 och s. 120–121, behåller 18-årsgränsen och förstadieskalornas grundkonstruktion. Förarbetsanalysen och de exakta källpinnarna finns i `data/life-stage-interval-research-15.json`.
+
+Den lästa originaldomen GPS-puckarna (NJA 2020 s. 703, B 1371-20) skiljs från riksåklagarens tidigare partsinlaga. Domens tredjedelsriktlinje för straffvärde är inget lagstadgat maximum och används inte som en automatisk beräkning. Inga praxischeckpoints eller fullständiga juridiska godkännanden stängs genom detta tillägg.
+
+| Krigsvillkorat förstadiekort | Skala endast om 21 kap. BrB är tillämpligt |
+|---|---|
+| Försök till grovt våld eller hot mot förman | Böter – fängelse högst 6 år |
+| Förberedelse till grovt våld eller hot mot förman | Böter – fängelse under 6 år |
+| Stämpling till grovt våld eller hot mot förman | Böter – fängelse under 6 år |
+
+Här behålls uttryckligen villkoret i BrB 21:1 och kortens befintliga varning. Ingen bedömning görs att kapitlet faktiskt är tillämpligt eller att personen omfattas av dess personkrets. Mobilvyn visar fortfarande **Tillämpningen är villkorad**, följt av skalan och tillämpningsvarningen. Numerisk kontroll ger inga nya positiva tvångsmedelsmarkeringar och ändrar inga åtalsklassificeringar. Källpinnar och tre fasta ID:n finns i `data/war-stage-intervals-15.json`.
+
+**44 av de ursprungliga 56 intervalluckorna har nu fått individuellt kontrollerade skalor; tolv återstår.** Dessa tolv gäller brukande av det förfalskade, myteri, svikande av försvarsplikt, högförräderi samt osann utsaga inför nordisk respektive internationell domstol. De kräver alternativa eller härledda skalor och får inte fyllas med ett godtyckligt gemensamt maximum. Antalet villkorade grundskalor är fortfarande 14. Arbetsinventeringen är oförändrad **11 548/11 957 = 96,6 %**, med 390 förarbets-/praxisfrågor, ett åtalsfilter och 18 publiceringsmoment kvar. Ingen publicering har skett.
+
+**Testbevis för föregående paket:** appcommit `278ccfb316e08c499924f76027d92acd97f51661`, träd `46d7707d30e2ebb3a455d0fb1c59069a2afe9e33`, har **145/145 passerade lokala Node-kommandon och grön avslutad [Actions 1031 inklusive iPhone-regression](https://github.com/Deashi03/Brottskatalog/actions/runs/39611251207)**. Det gäller de tidigare 33 ifyllda intervallen och omladdningsrättelsen. De elva senaste tilläggen får eget fullständigt testbevis efter avslutad körning.
+
+
+Nästa konkret återstående kö: tolv alternativ-/härledda förstadier. BrB 15:4 a omfattar både menedsalternativ och partsutsaga, men 15:15 omfattar bara mened som inte är mindre allvarlig och grov mened. Partsutsaga och mindre allvarligt menedsfall får inte få förberedelse-/stämplingsskala. BrB 15:4 b har motsvarande begränsning till de tillämpliga menedsalternativen. Kontrollera även 14:13:s ringaundantag för brukande. Använd inte en maxskala som täcker flera rättsligt olika alternativ. Bevara numeriska luckor tills alternativen är särskilt genomgångna. Övriga 390 praxisfrågor och åtalsfrågan kvarstår; inga progresspoäng för intervallpaketen.
