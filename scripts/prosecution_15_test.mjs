@@ -18,3 +18,6 @@ for(const c of crimes.slice(0,5))assert.equal(c.prosecution,'general');
 for(const c of crimes.slice(5))assert.equal(c.prosecution,'conditional');
 assert.ok(crimes.find(c=>c.title==='Olovligt brukande').prosecutionDetails.some(x=>x.includes('hyra')));
 console.log('PASS V1.5: all eight new BrB4/10 prosecution rules, relative exception and source date');
+
+// Final classification must follow all later base-card and stage source reviews.
+await import('./final_prosecution_review_15_test.mjs');

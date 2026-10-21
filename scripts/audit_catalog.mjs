@@ -71,12 +71,19 @@ for(const c of all){
     &&c.individualLegalAudit15.consequences.punishmentRangeApproved===false
     &&c.individualLegalAudit15.consequences.automaticCoercionApproved===false
     &&c.individualLegalAudit15.consequences.specificPenaltyRange===null
-    &&c.penaltyRangeVerified===false&&c.custody==='unknown'&&c.prosecution==='unknown');
+    &&c.penaltyRangeVerified===false&&c.custody==='unknown'
+    &&(c.prosecution==='unknown'||(
+      c.prosecutionFinalReview15?.scope==='current-statutory-prosecution-classification-only'
+      &&c.prosecutionFinalReview15.classification===c.prosecution
+      &&c.prosecutionFinalReview15.fullLegalApproval===false
+      &&c.prosecutionFinalReview15.caseSpecificChargingApproved===false
+      &&c.prosecutionFinalReview15.sourceRefs?.includes('RB:20:3')
+      &&c.prosecutionFinalReview15.checked==='2026-10-21')));
    if(boundedBySource)flag(id,'medium','conditional-stage-penalty-review',
     'BrB 14:13 covers this restricted stage route but the concrete non-ringa offence/derivative penalty and custody require individual review');
    else if(gradeSourceBound)flag(id,'medium','grade-stage-penalty-still-pending',
     'Statutory grade/stage listing was source-checked; do not infer a numeric 23 kap. penalty, offence-date applicability, prosecution or police authority');
-   else if(restoredStageBound)flag(id,'medium','restored-stage-penalty-still-pending','Expressly source-checked missing stage; no numerical range, prosecution, historical or coercive approval has been granted');
+   else if(restoredStageBound)flag(id,'medium','restored-stage-penalty-still-pending','Expressly source-checked missing stage; penalty branch, historic applicability and coercive decision remain unresolved. Any statutory charging classification is a separate review, never a concrete charging approval');
    else flag(id,'high','punishable-no-penalty','Punishable stage has no structured penalty');
   }
   if(c.stageStatus!=='punishable'&&c.penaltyRange)flag(id,'critical','noncriminal-has-penalty','Stage without verified criminalization has penalty');

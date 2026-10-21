@@ -45,7 +45,9 @@ for(const type of ['forsok','forberedelse']){
  assert.equal(c.custody,'unknown','No automatic police custody when underlying forgery grade is unknown');
  assert.equal(c.penaltyRange,null,'Statutory derivative penalty must not be a fabricated fixed range');
  assert.equal(c.penaltyShort,'Villkorad skala');
- assert.equal(c.prosecution,'unknown');
+ assert.equal(c.prosecution,'general','Current statutory charging class is separate from proof of non-ringa forgery and branch selection');
+ assert.equal(c.prosecutionFinalReview15.fullLegalApproval,false);
+ assert.equal(c.forgeryStageScope15.finalCriminalityApproved,false);
  assert.equal(c.forgeryStageScope15.underlingForgeryGradeMustBeEstablished,true);
  assert.equal(c.forgeryStageScope15.statutoryRingaExclusion,true);
  assert.ok(c.stageExplanation.includes('FÖRSÖK eller FÖRBEREDELSE'));

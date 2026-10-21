@@ -44,5 +44,28 @@
     ],
     "finding": "För hemfridsbrott och olaga intrång tas orden som inte är grovt bort när grova grader får egna namn, utan att åtalsbegränsningen utvidgas till dem. Dokumentet nämner grovt olaga tvång som exempel på tidigare införda egna beteckningar.",
     "limit": "Detta är jämförelsestöd för betydelsen av brottsbeteckningar, inte ett uttryckligt uttalande om tvångsformen i 4:11 andra meningen. Ingen automatisk överföring av utfallet till grovt olaga tvång görs."
+  },
+  "additionalSystematicAnalysis": {
+    "checked": "2026-10-21",
+    "status": "PROVISIONAL_CLASSIFICATION_RETAINED_NO_CHECKPOINT_CREDIT",
+    "sources": [
+      {
+        "url": "https://data.riksdagen.se/dokument/H2B318",
+        "locator": "SOU 2014:18 s. 177–178, 6.6.3",
+        "finding": "Den särskilda hotformen styr åtalsbegränsningen; resonemanget redovisas i jämförelse med grov utpressning."
+      },
+      {
+        "url": "https://data.riksdagen.se/dokument/H303113",
+        "locator": "Prop. 2015/16:113 s. 41–42, 79–80 och 85",
+        "finding": "Försök och förberedelse till den grova graden var redan straffbara. Stämpling tillkommer 2016. Namnändringen beskrivs som tydliggörande; 4:11 ändras inte."
+      }
+    ],
+    "reasoning": [
+      "Nuvarande 4:10 straffbelägger försök och förberedelse endast till den grova tvångsgraden.",
+      "4:11 andra meningen nämner försök och förberedelse till tvång med den särskilda hotformen. En läsning som utan vidare utesluter grov grad skulle göra just denna del utan nuvarande tillämpningsområde.",
+      "Systematiskt stöd finns därför för att behålla villkorad klassning vid den särskilda hotformen också på grovt olaga tvång och dess försök/förberedelse.",
+      "Stämpling nämns däremot inte i 4:11 och får inte ärva begränsningen automatiskt."
+    ],
+    "limit": "Varken det historiska SOU-uttalandet eller 2016 års proposition innehåller ett uttryckligt avgörande av namnändringens betydelse för 4:11. Direkt efterföljande auktoritativt tolkningsstöd saknas fortfarande i det lästa materialet. Därför inget nytt APPROVED-checkpoint och ingen publiceringsklartecken."
   }
 }

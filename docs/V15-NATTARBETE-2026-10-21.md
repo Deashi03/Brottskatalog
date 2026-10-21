@@ -357,3 +357,38 @@ Senaste direkta jämförelsen med publicerad main **0bbbe45d70d01a92a7874c74862c
 Samtliga ändringar finns på arbetsgrenen. PR förblir draft. **390 fullständiga förarbets-/praxischeckpunkter och åtalsfrågan för grovt olaga tvång återstår**, utöver **18 publiceringsmoment som avsiktligt inte har utförts**. De 14 villkorade grundkortens 52 alternativ och de 12 förstadiekortens 44 alternativ är avgränsat källkontrollerade beskrivningar, inte ett val för ett konkret fall eller ett fullständigt juridiskt slutgodkännande. Ingen merge, release, tagg, Pages-publicering eller deploy.
 
 Nästa körning: börja vid aktuellt PR-huvud och läs senaste testbeviset i `data/v15-workplace-verification-2026-10-21.json`. Ingen extra provning av oförändrad kod behövs efter ett godkänt fullständigt CI; gå då vidare med verklig juridisk källgranskning. Arbetsmiljödossiern omfattar fyra originaldomar och har nu även direkt läst delegationsförarbete i prop. 1976/77:149 s. 373–374. Kvarstående olästa äldre hänvisningar är bland annat NJA 1991 s. 247 och 1993 s. 245, därefter ska senare utveckling och aktuella föreskrifter prövas. Urkundsdossiern omfattar Freja, De upprepade förfalskningarna och De vita korten. Lägg inte tid på att återupptäcka redan lästa källor. Åtalsfrågan om grovt olaga tvång behöver fortsatt stöd som direkt behandlar den aktuella frågan; lästa jämförelseförarbeten räcker inte för en automatisk klassificering. Behåll nämnaren, inga fullständiga juridiska godkännanden och inga publiceringsåtgärder.
+
+
+## Konkret överlämning efter åtalsavstämningen
+
+## Åtalsavstämning den 21 oktober 2026: 43 korrigerade förstadieklassningar
+
+Nytt paket efter appcommit `270cc55216a75ebfbb68f043f62f1a627d16f679`. Inget publiceringsbesked ges av denna notering.
+
+En slutmodul körs efter de individuella grundkorts- och förstadiegranskningarna, före katalogurvalet. Den jämför 452 positiva förstadiekort mot en explicit matris med föräldra-ID, titel, gärningsstadium, föräldralagtext och exakta åtalskällor. Källavvikelse ger okänd åtalsklassning. Den tillför inga straffbara förstadier, straffskalor, konkreta åtalsbeslut eller tvångsmedelsgodkännanden.
+
+| Före detta paket | Efter | Antal |
+|---|---|---:|
+| Grovt hemfridsbrotts och grovt olaga intrångs förstadier hade ärvt normalgradens villkor | Allmänt åtal; normalgradens begränsning ärvs inte | 6 |
+| Stämpling till grovt olaga tvång hade ärvt 4:11:s försöks-/förberedelsevillkor | Allmänt åtal; stämpling räknas inte upp i andra meningen | 1 |
+| Förberedelse till grovt fordringsbedrägeri hade äldre allmän klassning | Villkorad, med närståenderegeln i 9:12 jämförd med 8:13 | 1 |
+| 35 positiva förstadier saknade uppdaterad åtalsklassning efter senare källgranskningar | 32 allmänna och 3 villkorade klassningar | 35 |
+| Summa ändrade klassningar | Samtliga före-/eftervärden finns i manifestet | 43 |
+
+De 35 tidigare okända omfattar bland annat förfalskningsförstadier, sex vapenförstadier, myteri, högförräderi, nordiska/internationella utsagor och underrättelseverksamhet. Regeringens förordnande behålls för de tre förstadierna till grov olovlig underrättelseverksamhet mot främmande makt. VapenL 18:14 om olovligt innehav vid frivillig inlämning ärvs inte till de sex förstadierna enligt 18:15. Straffskalans gren, gärningsdag, icke-ringa förfalskning och krigsförutsättningar måste fortfarande prövas separat. Ingen tidigare straffskala eller custody-status ändras.
+
+**Grovt olaga tvång är fortfarande inte slutligt godkänt.** Nuvarande 4:10, 4:11, SOU 2014:18 s. 177–178 samt prop. 2015/16:113 s. 41–42, 79–80 och 85 har lästs tillsammans. Att 4:11 uttryckligen nämner försök/förberedelse, vilka enligt 4:10 endast är straffbara till grov tvångsgrad, ger ett systematiskt stöd för att behålla villkorad klassning vid den särskilda hotformen. Men läst material ger fortfarande inget uttryckligt senare tolkningsavgörande om 2016 års egna brottsbeteckning. Detta skiljs från den säkra iakttagelsen att stämpling inte nämns i åtalsbegränsningen. Granskningspunkten för grundkortet lämnas öppen och villkoret markeras som inte slutligt verifierat i kortets detaljer.
+
+Matris och före-/efterdata: `data/final-prosecution-stage-review-15.json`. Tolkningsunderlag: `data/grovt-olaga-tvang-prosecution-research-15.json`. Ny regression: `scripts/final_prosecution_review_15_test.mjs`, som ingår i det befintliga åtalskommandot. Den gamla inventeringens nämnare ändras därför inte. Arbetsräkningen är fortsatt **11 548/11 957 = 96,6 %**, 409 moment kvar; noll fullständiga juridiska slutgodkännanden.
+
+Den överenskomna avgränsningen för en kommande 1.5-release skiljer kontrollerade kärnuppgifter från uppskjuten heltäckande förarbets-/praxisgranskning. De 390 fördjupningspunkterna ska inte markeras som utförda. Alla åtalsregler, inklusive den öppna frågan ovan, måste ändå vara korrekt implementerade före ett publiceringsbesked. Publiceringsmoment redovisas separat.
+
+Nästa steg:
+
+1. Hämta faktiskt grenhuvud och kontrollera testbeviset för det nya runtimepaketet. Äldre grön körning 1038 gäller föregående appkod.
+2. Lös den uttryckliga tolkningsfrågan för grovt olaga tvång utan att ersätta sakstöd med testframgång. Nuvarande villkorade klassning behålls; stämplingskortets felaktiga arv är separat rättat.
+3. Kontrollera särskilt att slutmodulen fortsätter ligga efter samtliga sakmoduler och före `catalog-selection-15.js`. Om källor eller grundkort ändras ska förstadiekorten falla tillbaka till okänd klassning.
+4. Fortsätt enligt avgränsningen för 1.5: kärnuppgifter och samtliga åtalsregler är obligatoriska; uttömmande fördjupning kan redovisas som uppskjuten. Ändra inte den gamla nämnaren eller kalla uppskjutna moment godkända.
+5. Ingen merge, tagg, release eller deploy har gjorts i detta paket.
+
+Lokal verifiering: samtliga 145 nu registrerade Node-kommandon passerar efter riktade omkörningar. Den första körningen hade fem fel: tre äldre tester kopplade åtalsklassning till olöst straffskala, katalogurvalet krävde att ligga sist och helkatalogauditen hade samma koppling. Modulordningen är rättad; kontrollerna skiljer nu åtalsklassning från straffskala utan att lätta på ansvar-, intervall- eller tvångsmedelskraven. Den nya regressionskontrollen passerar också separat. Testbevis: `data/final-prosecution-verification-2026-10-21.json`. Ny GitHub-/iPhone-körning återstår på appcommit.

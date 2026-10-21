@@ -1,7 +1,7 @@
 {
-  "sourceParentCommit": "f1e63d46e07b10347dd22f24b97dab2abd1fade7",
+  "sourceParentCommit": "8b497267d024c480029c78ff255429cb085f20b2",
   "baselineCommit": "0bbbe45d70d01a92a7874c74862cc7d21bae2355",
-  "currentRuntimeSHA256": "9ee8139fc2520e2c6e5a474a112b98729268677d8acfe5b611687631d44188c7",
+  "currentRuntimeSHA256": "3a449345f11bfb3918c46cdfaf15f7a262994788aa3366d3ff433979d898a448",
   "baselineRuntimeSHA256": "b4059fb41c1da166a15f0baf2ced33551075cca206944b26fc17994f1f90700f",
   "hashMethod": "SHA-256: for index.html and then external runtime scripts in page order, normalized repository-relative path without ./, NUL, UTF-8 file content, NUL; recomputed from both actual load chains",
   "scope": "Recomputed complete runtime inventory; no legal approval and no publication credit",
@@ -43,7 +43,7 @@
       "coercionThresholdNotes": 390,
       "preparatoryReformNotes": 50,
       "baseWithTypeExamples": 32,
-      "externalRuntimeScripts": 174,
+      "externalRuntimeScripts": 175,
       "ciNodeCommands": 146,
       "positiveStages": 452,
       "negativeStages": 715,
@@ -1676,6 +1676,12 @@
     {
       "sourceParentCommit": "5645ab1f7277e769b87ca793ae81a169f966107f",
       "currentRuntimeSHA256": "8d2ef40a75a7674c63ce35ce573ecf5c82cf26b27d65699077f67589603b8e4c",
+      "baselineRuntimeSHA256": "b4059fb41c1da166a15f0baf2ced33551075cca206944b26fc17994f1f90700f",
+      "hashMethod": "SHA-256: for index.html and then external runtime scripts in page order, normalized repository-relative path without ./, NUL, UTF-8 file content, NUL; recomputed from both actual load chains"
+    },
+    {
+      "sourceParentCommit": "f1e63d46e07b10347dd22f24b97dab2abd1fade7",
+      "currentRuntimeSHA256": "9ee8139fc2520e2c6e5a474a112b98729268677d8acfe5b611687631d44188c7",
       "baselineRuntimeSHA256": "b4059fb41c1da166a15f0baf2ced33551075cca206944b26fc17994f1f90700f",
       "hashMethod": "SHA-256: for index.html and then external runtime scripts in page order, normalized repository-relative path without ./, NUL, UTF-8 file content, NUL; recomputed from both actual load chains"
     }

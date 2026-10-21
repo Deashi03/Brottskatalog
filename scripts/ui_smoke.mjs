@@ -12,6 +12,9 @@ try{
   assert.ok(await page.locator('#crime-search').count(),'Search must exist');
   assert.equal((await page.locator('.bk03-brand span').innerText()).trim(),'1.4','Search header must display current release 1.4');
 
+  const finalCharging=await page.evaluate(()=>({reviewed:window.BK_FINAL_PROSECUTION15?.completed,held:window.BK_FINAL_PROSECUTION15?.held.length,stampling:window.BK_DATA.crimes.find(c=>c.title==='Stämpling till grovt olaga tvång')?.prosecution,attempt:window.BK_DATA.crimes.find(c=>c.title==='Försök till grovt hemfridsbrott')?.prosecution}));
+  assert.deepEqual(finalCharging,{reviewed:452,held:0,stampling:'general',attempt:'general'},'Final charging classifications must survive browser load order');
+
   // Measure settled layout, after the page's translateY entrance animation.
   await page.locator('.app-shell.nav-layout > main.page').evaluate(el=>Promise.all(el.getAnimations().map(a=>a.finished)));
   // v0.9.1: Sök/Sparat/Mer do not cover the scrolling content on iPhone.

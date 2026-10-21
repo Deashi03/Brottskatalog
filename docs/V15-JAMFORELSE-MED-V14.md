@@ -1,5 +1,28 @@
 # Brottskatalog 1.5 jämfört med publicerad 1.4
 
+## Åtalsavstämning den 21 oktober 2026: 43 korrigerade förstadieklassningar
+
+Nytt paket efter appcommit `270cc55216a75ebfbb68f043f62f1a627d16f679`. Inget publiceringsbesked ges av denna notering.
+
+En slutmodul körs efter de individuella grundkorts- och förstadiegranskningarna, före katalogurvalet. Den jämför 452 positiva förstadiekort mot en explicit matris med föräldra-ID, titel, gärningsstadium, föräldralagtext och exakta åtalskällor. Källavvikelse ger okänd åtalsklassning. Den tillför inga straffbara förstadier, straffskalor, konkreta åtalsbeslut eller tvångsmedelsgodkännanden.
+
+| Före detta paket | Efter | Antal |
+|---|---|---:|
+| Grovt hemfridsbrotts och grovt olaga intrångs förstadier hade ärvt normalgradens villkor | Allmänt åtal; normalgradens begränsning ärvs inte | 6 |
+| Stämpling till grovt olaga tvång hade ärvt 4:11:s försöks-/förberedelsevillkor | Allmänt åtal; stämpling räknas inte upp i andra meningen | 1 |
+| Förberedelse till grovt fordringsbedrägeri hade äldre allmän klassning | Villkorad, med närståenderegeln i 9:12 jämförd med 8:13 | 1 |
+| 35 positiva förstadier saknade uppdaterad åtalsklassning efter senare källgranskningar | 32 allmänna och 3 villkorade klassningar | 35 |
+| Summa ändrade klassningar | Samtliga före-/eftervärden finns i manifestet | 43 |
+
+De 35 tidigare okända omfattar bland annat förfalskningsförstadier, sex vapenförstadier, myteri, högförräderi, nordiska/internationella utsagor och underrättelseverksamhet. Regeringens förordnande behålls för de tre förstadierna till grov olovlig underrättelseverksamhet mot främmande makt. VapenL 18:14 om olovligt innehav vid frivillig inlämning ärvs inte till de sex förstadierna enligt 18:15. Straffskalans gren, gärningsdag, icke-ringa förfalskning och krigsförutsättningar måste fortfarande prövas separat. Ingen tidigare straffskala eller custody-status ändras.
+
+**Grovt olaga tvång är fortfarande inte slutligt godkänt.** Nuvarande 4:10, 4:11, SOU 2014:18 s. 177–178 samt prop. 2015/16:113 s. 41–42, 79–80 och 85 har lästs tillsammans. Att 4:11 uttryckligen nämner försök/förberedelse, vilka enligt 4:10 endast är straffbara till grov tvångsgrad, ger ett systematiskt stöd för att behålla villkorad klassning vid den särskilda hotformen. Men läst material ger fortfarande inget uttryckligt senare tolkningsavgörande om 2016 års egna brottsbeteckning. Detta skiljs från den säkra iakttagelsen att stämpling inte nämns i åtalsbegränsningen. Granskningspunkten för grundkortet lämnas öppen och villkoret markeras som inte slutligt verifierat i kortets detaljer.
+
+Matris och före-/efterdata: `data/final-prosecution-stage-review-15.json`. Tolkningsunderlag: `data/grovt-olaga-tvang-prosecution-research-15.json`. Ny regression: `scripts/final_prosecution_review_15_test.mjs`, som ingår i det befintliga åtalskommandot. Den gamla inventeringens nämnare ändras därför inte. Arbetsräkningen är fortsatt **11 548/11 957 = 96,6 %**, 409 moment kvar; noll fullständiga juridiska slutgodkännanden.
+
+Den överenskomna avgränsningen för en kommande 1.5-release skiljer kontrollerade kärnuppgifter från uppskjuten heltäckande förarbets-/praxisgranskning. De 390 fördjupningspunkterna ska inte markeras som utförda. Alla åtalsregler, inklusive den öppna frågan ovan, måste ändå vara korrekt implementerade före ett publiceringsbesked. Publiceringsmoment redovisas separat.
+
+
 ## Verifierad avstämning efter de 52 grundkortsalternativen
 
 Appcommit **270cc55216a75ebfbb68f043f62f1a627d16f679**, Git-träd **c8bbcca51327b6c9527781317e81ad330e0bf06e**, har **145/145 passerade lokala Node-kommandon** efter den sista sakändringen. Den utökade källkontrollen prövar samtliga åtta ändrade förfalskningspinnar, bevarar 12/44 förstadiealternativ, skiljer fem ringa fullbordansalternativ från icke straffbara ringa förstadier och behåller den fasta nämnaren. Även hela [Actions 1038](https://github.com/Deashi03/Brottskatalog/actions/runs/39649121376) är avslutad grön, inklusive iPhone-vy och samtliga interaktioner. Testbeviset gäller denna appcommit med alla 52 grundkortsalternativ och 44 förstadiealternativ. Efter detta har endast rapporter och granskningsunderlag uppdaterats.
@@ -545,3 +568,5 @@ Senare parallella ändringar, inklusive sex HD-exempel och separat registerpinne
 Datum: 21 oktober 2026. Appcommit `07683f8126a034e2651e0946df60d1356edd91f8` har **grön och avslutad GitHub Actions 1024**, inklusive hela Node-sviten och iPhone-regressionen: https://github.com/Deashi03/Brottskatalog/actions/runs/39596389485 . Körning 1022 hade ett testfel efter sammanfogningen: den sökte ISO-datum i svensk utskriven datumtext. Mobiltestet kontrollerar nu både den faktiska svenska texten och det exakta strukturerade ISO-datumet för de fem nya fallen. Databasens datum har inte ändrats av rättningen. De sex HD-exemplen, den separata registerpinnen och övriga parallella ändringar bevaras.
 
 Detta ersätter tidigare noteringar om att 1022 pågår. Aktuellt avgränsat arbetsläge är fortsatt **11 548/11 957 = 96,6 %**, 390 tidskontroller och 95 tidskällposter. **409 räknade moment kvar:** 390 förarbets-/praxisfrågor, ett åtalsfilter och 18 publiceringsmoment. 56 förstadieintervall, 14 villkorade grundskalor och oberoende juridisk slutgranskning kvarstår. Noll fullständiga juridiska slutgodkännanden. PR #2 förblir draft; ingen merge, tagg, deploy eller publicering har genomförts.
+
+Lokal verifiering: samtliga 145 nu registrerade Node-kommandon passerar efter riktade omkörningar. Den första körningen hade fem fel: tre äldre tester kopplade åtalsklassning till olöst straffskala, katalogurvalet krävde att ligga sist och helkatalogauditen hade samma koppling. Modulordningen är rättad; kontrollerna skiljer nu åtalsklassning från straffskala utan att lätta på ansvar-, intervall- eller tvångsmedelskraven. Den nya regressionskontrollen passerar också separat. Testbevis: `data/final-prosecution-verification-2026-10-21.json`. Ny GitHub-/iPhone-körning återstår på appcommit.
