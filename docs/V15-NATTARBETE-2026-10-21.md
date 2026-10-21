@@ -63,3 +63,17 @@ Original SFS 1970:225 har lästs: 16:11 omfattas av grundlagsanknutet ikraftträ
 Lokal Playwright finns, men Chromium-nedladdningen gav ogiltigt zip-innehåll. Mobilregression måste därför verifieras genom GitHub Actions i detta pass. Ingen publicering eller merge är tillåten.
 
 Verifierat slut på detta arbetspass: GitHub Actions https://github.com/Deashi03/Brottskatalog/actions/runs/39555657372 är grön på appcommit `4635ff970a3379708aedeb0e859f43c7d6dfe090` (träd `3449dfe00a6a615afcace16cdf5a9e0a33688aef`), inklusive full Node-svit och iPhone-regression. Alla 145 lokala Node-kontroller passerade, och berörda tids-/progress-/revisionskontroller kördes även om efter sista tillägget. Ingen merge, release eller publicering.
+
+## Senaste övertagandet: originalparagrafer och grundlagsanknutet datum
+
+Arbetet började från det då verifierade GitHub-huvudet `760455f1e75f8f86cdae0b8517d1c435309799a9`. Föregående appcommit och gröna CI ovan bevaras som historik; hämta alltid aktuellt huvud på nytt.
+
+33 ytterligare individuella tidskontroller har införts. 32 kort/27 egna paragrafer har visuellt jämförts med originaltrycket 1962:700, aktuell fulltext och ändringsregistrets omfattning. 1 § BrP ger uttryckligen 1965-01-01. Originalets PDF-/trycksidor och SHA256 finns i manifestet. Originalets dåliga OCR har inte använts för att godkänna paragrafer automatiskt.
+
+Den sista posten, BrB 16:11, har datum **1971-02-17**, verifierat i originalet 1970:225 och **prop. 1978/79:179 s. 20** (PDF: https://data.riksdagen.se/fil/4E0BFF2A-6DF5-4725-B245-5F7B3E88138B). Datumet 1970-07-01 gäller andra paragrafer i samma ändringslag. Kontrollens beroenden omfattar båda källorna. Full praxisgranskning har inte godkänts genom denna historiska datumuppgift.
+
+Aktuellt avgränsat läge: **390/390 tidskontroller, 94 källposter, 213 egna BrB-paragrafpinnar**. Juridiska delkontroller 3 119/3 510. Total **11 548/11 957 = 96,6 %**, 409 räknade moment kvar: 390 förarbets-/praxisfrågor, ett åtalsfilter (Grovt olaga tvång), 18 publiceringsmoment. Nämnaren är oförändrad. 56 förstadieintervall, 14 villkorade grundskalor och oberoende juridisk slutgranskning är fortsatt spärrar; noll fullständiga slutgodkännanden.
+
+Originaltryck och bekräftande datumkälla länkas i appen. Källtexten skiljer register från originaltryck. Fem nya mobila datumfall har lagts till. Full test- och CI-status fylls i efter verifiering.
+
+Nästa prioritet är verklig individvis förarbets-/praxisanalys och åtalsfrågan för Grovt olaga tvång. Läs källorna och dra inte slutsatsen enbart från brottsnamnet. Att tidsblocket är klart gör inte helhetsgranskningen klar. Arbeta vidare utan publicering, merge, tagg eller deploy; PR #2 ska fortsatt vara draft. Rapportens nya tabell anger exakt vilka 33 kort som ändrats, och JSON-bilagan har ett separat tillägg utan att skriva om jämförelsesnapshoten mot 1.4.

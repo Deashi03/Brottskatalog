@@ -992,6 +992,84 @@
       "checked": "2026-10-21",
       "dateOnly": false,
       "transitionURL": "https://www.lagboken.se/documentfile/getfile?docId=2599711&download=1&portalId=56&propId=5"
+    },
+    "BrP:1": {
+      "law": "BrP:1",
+      "text": "1 § Den av riksdagen år 1962 antagna och den 21 december samma år (nr 700) utfärdade brottsbalken skall jämte vad nedan stadgas träda i kraft den 1 januari 1965; dock må dessförinnan bestämmelser meddelas av Konungen enligt vad i balken och denna lag är för vissa fall stadgat.",
+      "url": "https://www.riksdagen.se/sv/dokument-och-lagar/dokument/svensk-forfattningssamling/lag-1964163-om-inforande-av-brottsbalken_sfs-1964-163/",
+      "checked": "2026-10-21",
+      "commencement": "1965-01-01",
+      "transitionText": null
+    },
+    "1962:700": {
+      "law": "1962:700",
+      "base": "1962:700",
+      "text": "Brottsbalk (1962:700), originaltryck den 21 december 1962. Ikraftträdande den 1 januari 1965 enligt 1 § lagen (1964:163) om införande av brottsbalken. Egna paragrafer visuellt jämförda; datum hämtas inte från frånvaro av Lag-fotnot.",
+      "url": "https://rkrattsbaser.gov.se/sfsr?bet=1962:700",
+      "originalURL": "https://www.lagboken.se/documentfile/getfile?docId=2683604&download=1&portalId=56&propId=5",
+      "originalSHA256": "557aed0ccaac9bf88d91d6f5ac76501ba01a5627d7662ba21bd7311f9db40a82",
+      "commencement": "1965-01-01",
+      "commencementSource": "BrP:1",
+      "commencementScope": [
+        "BrB:3:2",
+        "BrB:3:3",
+        "BrB:4:9",
+        "BrB:5:1",
+        "BrB:7:3",
+        "BrB:8:1",
+        "BrB:9:10",
+        "BrB:10:1",
+        "BrB:10:6",
+        "BrB:10:8",
+        "BrB:13:4",
+        "BrB:13:8",
+        "BrB:13:10",
+        "BrB:15:2",
+        "BrB:15:3",
+        "BrB:15:5",
+        "BrB:15:8",
+        "BrB:15:9",
+        "BrB:16:1",
+        "BrB:16:2",
+        "BrB:16:3",
+        "BrB:17:9",
+        "BrB:18:3",
+        "BrB:18:4",
+        "BrB:18:5",
+        "BrB:18:6",
+        "BrB:19:2"
+      ],
+      "transitionText": "1 § Den av riksdagen år 1962 antagna och den 21 december samma år (nr 700) utfärdade brottsbalken skall jämte vad nedan stadgas träda i kraft den 1 januari 1965; dock må dessförinnan bestämmelser meddelas av Konungen enligt vad i balken och denna lag är för vissa fall stadgat.",
+      "transitionURL": "https://www.riksdagen.se/sv/dokument-och-lagar/dokument/svensk-forfattningssamling/lag-1964163-om-inforande-av-brottsbalken_sfs-1964-163/",
+      "checked": "2026-10-21",
+      "dateOnly": false
+    },
+    "Prop1978/79:179:p20": {
+      "law": "Prop1978/79:179:p20",
+      "text": "Ändringarna i TF och brottsbalken trädde i kraft den 17 februari 1971 (SFS 1971:29 och 1970:225).",
+      "url": "https://www.riksdagen.se/sv/dokument-och-lagar/dokument/proposition/om-andring-i-tryckfrihetsforordningen-m-m_g203179/html/",
+      "pdfURL": "https://data.riksdagen.se/fil/4E0BFF2A-6DF5-4725-B245-5F7B3E88138B",
+      "pdfPage": 20,
+      "checked": "2026-10-21",
+      "commencement": "1971-02-17",
+      "transitionText": null
+    },
+    "1970:225": {
+      "law": "1970:225",
+      "base": "1962:700",
+      "text": "Originaltryck SFS 1970:225, s. 475–476: 16 kap. 11 § och grundlagsanknuten ikraftträdandebestämmelse. Prop. 1978/79:179 s. 20 bekräftar den 17 februari 1971 för ändringarna i TF och brottsbalken.",
+      "url": "https://www.lagboken.se/documentfile/getfile?docId=2667840&portalId=56&propId=5",
+      "originalSHA256": "8c8f7d8b7fdf21b90432a73b29aec7a5b4fe19d4e71732fcfd1a37e390d2d317",
+      "commencement": "1971-02-17",
+      "commencementScope": [
+        "BrB:16:11"
+      ],
+      "commencementSource": "Prop1978/79:179:p20",
+      "otherProvisionsCommencement": "1970-07-01",
+      "transitionText": "Denna lag träder i kraft, såvitt avser 5 kap. 5 §, 16 kap. 5 § samt 19 kap. 11 § och 16 § andra stycket den 1 juli 1970 och i övrigt, när det förslag till ändring i tryckfrihetsförordningen som riksdagen antagit såsom vilande med anledning av Kungl. Maj:ts proposition nr 125 till 1970 års riksdag slutligt har antagits och erhållit kraft av grundlag.",
+      "transitionURL": "https://www.lagboken.se/documentfile/getfile?docId=2667840&portalId=56&propId=5",
+      "checked": "2026-10-21",
+      "dateOnly": false
     }
   },
   "offencePins": {
@@ -1733,6 +1811,118 @@
     },
     "BrB:15:4a": {
       "text": "4 a §\nOm någon under straffansvar inför domstol i Danmark, Finland, Island eller Norge lämnar osann uppgift eller förtiger sanningen, dömes han för osann utsaga inför nordisk domstol till påföljd enligt 1 §, om utsagan här i riket skulle ha avgivits under laga ed, och enligt 2 §, när fråga är om utsaga av part i tvistemål. Begås gärningen av grov oaktsamhet, dömes för ovarsam utsaga inför nordisk domstol till påföljd enligt 3 §.\nBestämmelserna i 4, 14 och 15 §§ äger motsvarande tillämpning på gärning som avses i första stycket.\nLag (1975:1292).",
+      "url": "https://www.riksdagen.se/sv/dokument-och-lagar/dokument/svensk-forfattningssamling/brottsbalk-1962700_sfs-1962-700/"
+    },
+    "BrB:8:1": {
+      "text": "1 §\nDen som olovligen tager vad annan tillhör med uppsåt att tillägna sig det, dömes, om tillgreppet innebär skada, för stöld till fängelse i högst två år.",
+      "url": "https://www.riksdagen.se/sv/dokument-och-lagar/dokument/svensk-forfattningssamling/brottsbalk-1962700_sfs-1962-700/"
+    },
+    "BrB:3:2": {
+      "text": "2 §\nÄr brott som i 1 § sägs med hänsyn till de omständigheter som föranlett gärningen eller eljest att anse som mindre grovt, dömes för dråp till fängelse, lägst sex och högst tio år.",
+      "url": "https://www.riksdagen.se/sv/dokument-och-lagar/dokument/svensk-forfattningssamling/brottsbalk-1962700_sfs-1962-700/"
+    },
+    "BrB:3:3": {
+      "text": "3 §\nDödar kvinna sitt barn vid födelsen eller eljest å tid då hon på grund av nedkomsten befinner sig i upprivet sinnestillstånd eller i svårt trångmål, dömes för barnadråp till fängelse i högst sex år.",
+      "url": "https://www.riksdagen.se/sv/dokument-och-lagar/dokument/svensk-forfattningssamling/brottsbalk-1962700_sfs-1962-700/"
+    },
+    "BrB:4:9": {
+      "text": "9 §\nDen som, utan att fall är för handen som i 8 § sägs, olovligen bryter brev eller telegram eller eljest bereder sig tillgång till något som förvaras förseglat eller under lås eller eljest tillslutet, dömes för intrång i förvar till böter eller fängelse i högst två år.",
+      "url": "https://www.riksdagen.se/sv/dokument-och-lagar/dokument/svensk-forfattningssamling/brottsbalk-1962700_sfs-1962-700/"
+    },
+    "BrB:5:1": {
+      "text": "1 §\nDen som utpekar någon såsom brottslig eller klandervärd i sitt levnadssätt eller eljest lämnar uppgift som är ägnad att utsätta denne för andras missaktning, dömes för förtal till böter.\n\nVar han skyldig att uttala sig eller var det eljest med hänsyn till omständigheterna försvarligt att lämna uppgift i saken, och visar han att uppgiften var sann eller att han hade skälig grund för den, skall ej dömas till ansvar.",
+      "url": "https://www.riksdagen.se/sv/dokument-och-lagar/dokument/svensk-forfattningssamling/brottsbalk-1962700_sfs-1962-700/"
+    },
+    "BrB:10:1": {
+      "text": "1 §\nOm någon, som på grund av avtal, allmän eller enskild tjänst eller dylik ställning fått egendom i besittning för annan med skyldighet att utgiva egendomen eller redovisa för denna, genom att tillägna sig egendomen eller annorledes åsidosätter vad han har att iakttaga för att kunna fullgöra sin skyldighet, dömes, om gärningen innebär vinning för honom och skada för den berättigade, för förskingring till fängelse i högst två år.",
+      "url": "https://www.riksdagen.se/sv/dokument-och-lagar/dokument/svensk-forfattningssamling/brottsbalk-1962700_sfs-1962-700/"
+    },
+    "BrB:13:4": {
+      "text": "4 §\nOm någon förstör eller skadar egendom, som har avsevärd betydelse för rikets försvar, folkförsörjning, rättsskipning eller förvaltning eller för upprätthållande av allmän ordning och säkerhet i riket, eller genom annan åtgärd, som ej innefattar allenast undanhållande av arbetskraft eller uppmaning därtill, allvarligt stör eller hindrar användningen av sådan egendom, dömes för sabotage till fängelse i högst fyra år. Detsamma skall gälla, om någon eljest, genom skadegörelse eller annan åtgärd som nyss sagts, allvarligt stör eller hindrar den allmänna samfärdseln eller användningen av telegraf, telefon, radio eller dylikt allmänt hjälpmedel eller av anläggning för allmänhetens förseende med vatten, ljus, värme eller kraft.",
+      "url": "https://www.riksdagen.se/sv/dokument-och-lagar/dokument/svensk-forfattningssamling/brottsbalk-1962700_sfs-1962-700/"
+    },
+    "BrB:16:3": {
+      "text": "3 §\nUnderlåter deltagare i folksamling som stör allmän ordning att efterkomma för ordningens upprätthållande meddelad befallning eller intränger han på område som blivit för sådant ändamål fridlyst eller avspärrat, dömes, om ej upplopp föreligger, för ohörsamhet mot ordningsmakten till böter eller fängelse i högst sex månader.",
+      "url": "https://www.riksdagen.se/sv/dokument-och-lagar/dokument/svensk-forfattningssamling/brottsbalk-1962700_sfs-1962-700/"
+    },
+    "BrB:7:3": {
+      "text": "3 §\nDen som understicker eller förbyter barn eller eljest genom att avgiva oriktig anmälan till myndighet eller underlåta anmälan tillvällar sig eller annan falsk familjeställning eller berövar annan hans rätta familjeställning, dömes för förvanskande av familjeställning till böter eller fängelse i högst två år.",
+      "url": "https://www.riksdagen.se/sv/dokument-och-lagar/dokument/svensk-forfattningssamling/brottsbalk-1962700_sfs-1962-700/"
+    },
+    "BrB:9:10": {
+      "text": "10 §\nMottager någon, för användning såsom påtryckningsmedel vid krav, handling som är falsk, upprättad för skens skull eller eljest oriktig eller ock check utan täckning, dömes för ockerpantning till böter eller fängelse i högst två år.",
+      "url": "https://www.riksdagen.se/sv/dokument-och-lagar/dokument/svensk-forfattningssamling/brottsbalk-1962700_sfs-1962-700/"
+    },
+    "BrB:13:8": {
+      "text": "8 §\nFramkallar någon allmän fara för djur eller växter medelst gift eller genom att överföra eller sprida elakartad sjukdom eller genom att sprida skadedjur eller ogräs eller på annat dylikt sätt, dömes för förgöring till böter eller fängelse i högst två år.\nÄr brottet grovt, skall dömas till fängelse, lägst sex månader och högst sex år. Vid bedömande huruvida brottet är grovt skall särskilt beaktas, om det skett med uppsåt att skada eller om egendom av betydande värde utsatts för fara.",
+      "url": "https://www.riksdagen.se/sv/dokument-och-lagar/dokument/svensk-forfattningssamling/brottsbalk-1962700_sfs-1962-700/"
+    },
+    "BrB:15:5": {
+      "text": "5 §\nVäcker någon åtal mot oskyldig med uppsåt att denne må bliva fälld till ansvar, dömes för falskt åtal till fängelse i högst två år eller, om brottet är ringa, till böter eller fängelse i högst sex månader.\n\nÄr brottet grovt, skall dömas till fängelse, lägst sex månader och högst fyra år. Vid bedömande huruvida brottet är grovt skall särskilt beaktas, om åtalet avsett allvarligt brott eller innefattat missbruk av tjänsteställning.\nDen som väcker åtal ehuru han icke har sannolika skäl därtill, dömes för obefogat åtal till böter eller fängelse i högst sex månader.",
+      "url": "https://www.riksdagen.se/sv/dokument-och-lagar/dokument/svensk-forfattningssamling/brottsbalk-1962700_sfs-1962-700/"
+    },
+    "BrB:15:8": {
+      "text": "8 §\nFörvanskar eller undanröjer någon bevis med uppsåt att oskyldig må bliva fälld till ansvar eller åberopar någon med sådant uppsåt falskt bevis, dömes för bevisförvanskning till fängelse i högst två år eller, om brottet är ringa, till böter eller fängelse i högst sex månader.\n\nÄr brottet grovt, dömes till fängelse, lägst sex månader och högst fyra år.",
+      "url": "https://www.riksdagen.se/sv/dokument-och-lagar/dokument/svensk-forfattningssamling/brottsbalk-1962700_sfs-1962-700/"
+    },
+    "BrB:15:9": {
+      "text": "9 §\nHar någon, utan att vara förfallen till ansvar enligt vad förut i detta kapitel är sagt, genom åtgärd, varom där förmäles, framkallat fara för att annan skall bliva utan laga skäl dömd eller eljest lida avsevärt förfång, och underlåter han, efter att hava kommit till insikt därom, att till farans avvärjande göra vad skäligen kan begäras, dömes för underlåtenhet att avvärja rättsfel till böter eller fängelse i högst sex månader.",
+      "url": "https://www.riksdagen.se/sv/dokument-och-lagar/dokument/svensk-forfattningssamling/brottsbalk-1962700_sfs-1962-700/"
+    },
+    "BrB:17:9": {
+      "text": "9 §\nSöker någon obehörigen skaffa sig kännedom om vad som angående utövning av rösträtt i allmänt ärende skall hållas hemligt, dömes för brott mot rösthemlighet till böter eller fängelse i högst sex månader.",
+      "url": "https://www.riksdagen.se/sv/dokument-och-lagar/dokument/svensk-forfattningssamling/brottsbalk-1962700_sfs-1962-700/"
+    },
+    "BrB:13:10": {
+      "text": "10 §\nHar någon, utan att vara förfallen till ansvar enligt vad förut i detta kapitel är sagt, vid handhavande av eld, sprängämne eller gift eller annorledes framkallat fara för brand eller ofärd som i 1, 2 eller 3 § sägs eller allmän fara som avses i 7 eller 8 § och underlåter han, efter att hava kommit till insikt därom, att till farans avvärjande göra vad skäligen kan begäras, dömes för underlåtenhet att avvärja allmänfara till böter eller fängelse i högst ett år.",
+      "url": "https://www.riksdagen.se/sv/dokument-och-lagar/dokument/svensk-forfattningssamling/brottsbalk-1962700_sfs-1962-700/"
+    },
+    "BrB:15:2": {
+      "text": "2 §\nDen som vid förhör under sanningsförsäkran i rättegång lämnar osann uppgift eller förtiger sanningen, dömes för osann partsutsaga till fängelse i högst två år eller, om brottet är ringa, till böter eller fängelse i högst sex månader.",
+      "url": "https://www.riksdagen.se/sv/dokument-och-lagar/dokument/svensk-forfattningssamling/brottsbalk-1962700_sfs-1962-700/"
+    },
+    "BrB:15:3": {
+      "text": "3 §\nBegår någon av grov oaktsamhet gärning som i 1 eller 2 § sägs, dömes för ovarsam utsaga till böter eller fängelse i högst sex månader.",
+      "url": "https://www.riksdagen.se/sv/dokument-och-lagar/dokument/svensk-forfattningssamling/brottsbalk-1962700_sfs-1962-700/"
+    },
+    "BrB:16:1": {
+      "text": "1 §\nStör folksamling allmän ordning genom att ådagalägga uppsåt att med förenat våld sätta sig upp mot myndighet eller eljest framtvinga eller hindra viss åtgärd och skingrar den sig ej på myndighets befallning, dömes för upplopp, anstiftare och anförare till fängelse i högst fyra år och annan deltagare i folksamlingens förehavande till böter eller fängelse i högst två år.\nOm folksamlingen skingrar sig på myndighets befallning, dömes anstiftare och anförare för upplopp till böter eller fängelse i högst två år.",
+      "url": "https://www.riksdagen.se/sv/dokument-och-lagar/dokument/svensk-forfattningssamling/brottsbalk-1962700_sfs-1962-700/"
+    },
+    "BrB:16:2": {
+      "text": "2 §\nHar folksamling, med uppsåt som i 1 § sägs, gått till förenat våld å person eller egendom, dömes vare sig myndighet var tillstädes eller ej, för våldsamt upplopp, anstiftare och anförare till fängelse i högst tio år och annan deltagare i folksamlingens förehavande till böter eller fängelse i högst fyra år.",
+      "url": "https://www.riksdagen.se/sv/dokument-och-lagar/dokument/svensk-forfattningssamling/brottsbalk-1962700_sfs-1962-700/"
+    },
+    "BrB:18:3": {
+      "text": "3 §\nDen som, med uppsåt att brott skall förövas mot allmän säkerhet eller medborgares frihet, samlar eller anför väpnat manskap eller håller det samlat eller förser manskap med vapen, ammunition eller annan dylik utrustning eller övar det i vapens bruk, dömes för väpnat hot mot laglig ordning till fängelse, lägst sex och högst tio år.",
+      "url": "https://www.riksdagen.se/sv/dokument-och-lagar/dokument/svensk-forfattningssamling/brottsbalk-1962700_sfs-1962-700/"
+    },
+    "BrB:18:4": {
+      "text": "4 §\nOm någon bildar eller deltager i sammanslutning, som måste anses vara avsedd att utgöra eller med hänsyn till sin beskaffenhet och det ändamål för vilket den är bildad lätt kan utvecklas till ett sådant maktmedel som militär trupp eller polisstyrka och som icke med vederbörligt tillstånd förstärker försvaret eller ordningsmakten, eller ock för sådan sammanslutning tager befattning med vapen, ammunition eller annan dylik utrustning, upplåter lokal eller mark för dess verksamhet eller understödjer den med penningar eller på annat sätt, dömes för olovlig kårverksamhet till böter eller fängelse i högst två år.",
+      "url": "https://www.riksdagen.se/sv/dokument-och-lagar/dokument/svensk-forfattningssamling/brottsbalk-1962700_sfs-1962-700/"
+    },
+    "BrB:18:5": {
+      "text": "5 §\nDen som övar olaga tvång eller olaga hot med uppsåt att påverka den allmänna åsiktsbildningen eller inkräkta på handlingsfriheten inom politisk organisation eller yrkes- eller näringssammanslutning och därigenom sätter yttrande-, församlings- eller föreningsfriheten i fara, dömes för brott mot medborgerlig frihet till fängelse i högst sex år.",
+      "url": "https://www.riksdagen.se/sv/dokument-och-lagar/dokument/svensk-forfattningssamling/brottsbalk-1962700_sfs-1962-700/"
+    },
+    "BrB:18:6": {
+      "text": "6 §\nOm någon genom stympning eller annorledes, för längre eller kortare tid, gör sig oduglig till tjänstgöring, som det ålegat honom att fullgöra vid krigsmakten eller eljest för rikets försvar, eller genom att föregiva sjukdom eller medelst annat vilseledande undan drager sig sådan tjänst-\ngöringsskyldighet, dömes för svikande av försvarsplikt till böter eller fängelse i högst två år eller, om riket var i krig, till böter eller fängelse i högst fyra år.",
+      "url": "https://www.riksdagen.se/sv/dokument-och-lagar/dokument/svensk-forfattningssamling/brottsbalk-1962700_sfs-1962-700/"
+    },
+    "BrB:19:2": {
+      "text": "2 §\nDen som med våldsamma medel eller utländskt bistånd framkallar fara för att riket skall invecklas i krig eller andra fientligheter, dömes, om det ej är högförräderi, för krigsanstiftan till fängelse, lägst två och högst åtta år.",
+      "url": "https://www.riksdagen.se/sv/dokument-och-lagar/dokument/svensk-forfattningssamling/brottsbalk-1962700_sfs-1962-700/"
+    },
+    "BrB:10:6": {
+      "text": "6 §\nDen som, i annat fall än förut i detta kapitel är sagt, genom missbruk av behörighet att i annans ställe företaga rättshandling skadar denne eller med missbruk av behörighet att göra gällande skuldebrev eller dylik handling kräver vad annan tillkommer, dömes för behörighetsmissbruk till böter eller fängelse i högst två år.\nDetsamma skall gälla, om någon fordrar betalning jämlikt handling som ej blivit utgiven eller för gäld som redan är gulden eller ock kräver att utfå gods som han redan bekommit eller mot krav åberopar kvitto som icke utgivits.",
+      "url": "https://www.riksdagen.se/sv/dokument-och-lagar/dokument/svensk-forfattningssamling/brottsbalk-1962700_sfs-1962-700/"
+    },
+    "BrB:10:8": {
+      "text": "8 §\nFullgör man ej vad i lag är föreskrivet om skyldighet att tillkännagiva hittegods eller annans sak som man av misstag eller tillfällighet fått i besittning, dömes för fyndförseelse till böter.\nUnderlåter man att fullgöra sådan skyldighet med uppsåt att tillägna sig godset eller förfar man eljest med godset på sätt i 4 § sägs, skall gälla vad där är stadgat.",
+      "url": "https://www.riksdagen.se/sv/dokument-och-lagar/dokument/svensk-forfattningssamling/brottsbalk-1962700_sfs-1962-700/"
+    },
+    "BrB:16:11": {
+      "text": "11 §\nDen som på eller vid allmän plats genom skyltning eller annat liknande förfarande förevisar pornografisk bild på sätt som är ägnat att väcka allmän anstöt dömes för otillåtet förfarande med pornografisk bild till böter eller fängelse i högst sex månader. Det samma gäller den som med posten sänder eller på annat sätt tillställer någon pornografisk bild utan föregående beställning.\nLag (1970:225).",
       "url": "https://www.riksdagen.se/sv/dokument-och-lagar/dokument/svensk-forfattningssamling/brottsbalk-1962700_sfs-1962-700/"
     }
   },
@@ -10190,173 +10380,1283 @@
       "future": null,
       "finding": "Ovarsam utsaga inför nordisk domstol: återgiven paragraflydelses ikraftträdande är verifierat till 1976-01-01 genom originaltrycket till SFS 1975:1292.",
       "note": "Originaltryckets paragraf och ikraftträdandebestämmelse har kontrollerats. Dateringen avser endast återgiven egen paragraflydelse. Hänvisade bestämmelser kan ha ändrats senare. Ingen historisk eller konkret lagversion väljs automatiskt. Ändringslagen föreskriver uttryckligen att äldre bestämmelser gäller gärningar före ikraftträdandet. Ändringar av påföljdshänvisningarna i 15 kap. 1–3 §§ måste kontrolleras separat."
-    }
-  ],
-  "unresolved": [
+    },
     {
       "id": "stold",
       "title": "Stöld",
-      "reason": "No independently mapped amendment identifier in the own text"
+      "statute": "BrB:8:1",
+      "ownText": "1 §\nDen som olovligen tager vad annan tillhör med uppsåt att tillägna sig det, dömes, om tillgreppet innebär skada, för stöld till fängelse i högst två år.",
+      "sourceURL": "https://www.riksdagen.se/sv/dokument-och-lagar/dokument/svensk-forfattningssamling/brottsbalk-1962700_sfs-1962-700/",
+      "lawVersion": null,
+      "ownSourceRefs": [
+        "BrB:8:1"
+      ],
+      "amendments": [
+        "1962:700"
+      ],
+      "sourceRefs": [
+        "BrP:5",
+        "BrP:7",
+        "BrP:1",
+        "1962:700"
+      ],
+      "wordingFrom": "1965-01-01",
+      "asOf": "2026-10-21",
+      "checked": "2026-10-21",
+      "future": null,
+      "finding": "Stöld: återgiven egen paragraflydelse är verifierad mot originaltrycket; brottsbalken trädde i kraft 1965-01-01 enligt 1 § BrP.",
+      "note": "Den återgivna egna paragrafen har jämförts visuellt med originaltrycket SFS 1962:700, trycksida 1845 (PDF-sida 9). Aktuell konsolidering och ändringsregistrets omfattningsuppgifter har kontrollerats separat. Ikraftträdandet följer av 1 § BrP, inte av avsaknad av ändringsfotnot. Hänvisade paragrafer, påföljdsregler, åtal och förstadier kan ha andra tidsgränser; full historik och konkret lagversion är inte slutgodkända.",
+      "originalComparison": {
+        "source": "1962:700",
+        "pdfPages": [
+          9
+        ],
+        "printedPages": [
+          1845
+        ],
+        "method": "visual-own-paragraph-comparison-and-amendment-register-scope-review",
+        "currentOwnText": "1 §\nDen som olovligen tager vad annan tillhör med uppsåt att tillägna sig det, dömes, om tillgreppet innebär skada, för stöld till fängelse i högst två år.",
+        "reviewed": "2026-10-21",
+        "allHistoricalLawApproved": false
+      }
     },
     {
       "id": "v03-drap",
       "title": "Dråp",
-      "reason": "No independently mapped amendment identifier in the own text"
+      "statute": "BrB:3:2",
+      "ownText": "2 §\nÄr brott som i 1 § sägs med hänsyn till de omständigheter som föranlett gärningen eller eljest att anse som mindre grovt, dömes för dråp till fängelse, lägst sex och högst tio år.",
+      "sourceURL": "https://www.riksdagen.se/sv/dokument-och-lagar/dokument/svensk-forfattningssamling/brottsbalk-1962700_sfs-1962-700/",
+      "lawVersion": null,
+      "ownSourceRefs": [
+        "BrB:3:2"
+      ],
+      "amendments": [
+        "1962:700"
+      ],
+      "sourceRefs": [
+        "BrP:5",
+        "BrP:7",
+        "BrP:1",
+        "1962:700"
+      ],
+      "wordingFrom": "1965-01-01",
+      "asOf": "2026-10-21",
+      "checked": "2026-10-21",
+      "future": null,
+      "finding": "Dråp: återgiven egen paragraflydelse är verifierad mot originaltrycket; brottsbalken trädde i kraft 1965-01-01 enligt 1 § BrP.",
+      "note": "Den återgivna egna paragrafen har jämförts visuellt med originaltrycket SFS 1962:700, trycksida 1839 (PDF-sida 3). Aktuell konsolidering och ändringsregistrets omfattningsuppgifter har kontrollerats separat. Ikraftträdandet följer av 1 § BrP, inte av avsaknad av ändringsfotnot. Hänvisade paragrafer, påföljdsregler, åtal och förstadier kan ha andra tidsgränser; full historik och konkret lagversion är inte slutgodkända.",
+      "originalComparison": {
+        "source": "1962:700",
+        "pdfPages": [
+          3
+        ],
+        "printedPages": [
+          1839
+        ],
+        "method": "visual-own-paragraph-comparison-and-amendment-register-scope-review",
+        "currentOwnText": "2 §\nÄr brott som i 1 § sägs med hänsyn till de omständigheter som föranlett gärningen eller eljest att anse som mindre grovt, dömes för dråp till fängelse, lägst sex och högst tio år.",
+        "reviewed": "2026-10-21",
+        "allHistoricalLawApproved": false
+      }
     },
     {
       "id": "v03-barnadrap",
       "title": "Barnadråp",
-      "reason": "No independently mapped amendment identifier in the own text"
+      "statute": "BrB:3:3",
+      "ownText": "3 §\nDödar kvinna sitt barn vid födelsen eller eljest å tid då hon på grund av nedkomsten befinner sig i upprivet sinnestillstånd eller i svårt trångmål, dömes för barnadråp till fängelse i högst sex år.",
+      "sourceURL": "https://www.riksdagen.se/sv/dokument-och-lagar/dokument/svensk-forfattningssamling/brottsbalk-1962700_sfs-1962-700/",
+      "lawVersion": null,
+      "ownSourceRefs": [
+        "BrB:3:3"
+      ],
+      "amendments": [
+        "1962:700"
+      ],
+      "sourceRefs": [
+        "BrP:5",
+        "BrP:7",
+        "BrP:1",
+        "1962:700"
+      ],
+      "wordingFrom": "1965-01-01",
+      "asOf": "2026-10-21",
+      "checked": "2026-10-21",
+      "future": null,
+      "finding": "Barnadråp: återgiven egen paragraflydelse är verifierad mot originaltrycket; brottsbalken trädde i kraft 1965-01-01 enligt 1 § BrP.",
+      "note": "Den återgivna egna paragrafen har jämförts visuellt med originaltrycket SFS 1962:700, trycksida 1840 (PDF-sida 4). Aktuell konsolidering och ändringsregistrets omfattningsuppgifter har kontrollerats separat. Ikraftträdandet följer av 1 § BrP, inte av avsaknad av ändringsfotnot. Hänvisade paragrafer, påföljdsregler, åtal och förstadier kan ha andra tidsgränser; full historik och konkret lagversion är inte slutgodkända.",
+      "originalComparison": {
+        "source": "1962:700",
+        "pdfPages": [
+          4
+        ],
+        "printedPages": [
+          1840
+        ],
+        "method": "visual-own-paragraph-comparison-and-amendment-register-scope-review",
+        "currentOwnText": "3 §\nDödar kvinna sitt barn vid födelsen eller eljest å tid då hon på grund av nedkomsten befinner sig i upprivet sinnestillstånd eller i svårt trångmål, dömes för barnadråp till fängelse i högst sex år.",
+        "reviewed": "2026-10-21",
+        "allHistoricalLawApproved": false
+      }
     },
     {
       "id": "v03-intrang-i-forvar",
       "title": "Intrång i förvar",
-      "reason": "No independently mapped amendment identifier in the own text"
+      "statute": "BrB:4:9",
+      "ownText": "9 §\nDen som, utan att fall är för handen som i 8 § sägs, olovligen bryter brev eller telegram eller eljest bereder sig tillgång till något som förvaras förseglat eller under lås eller eljest tillslutet, dömes för intrång i förvar till böter eller fängelse i högst två år.",
+      "sourceURL": "https://www.riksdagen.se/sv/dokument-och-lagar/dokument/svensk-forfattningssamling/brottsbalk-1962700_sfs-1962-700/",
+      "lawVersion": null,
+      "ownSourceRefs": [
+        "BrB:4:9"
+      ],
+      "amendments": [
+        "1962:700"
+      ],
+      "sourceRefs": [
+        "BrP:5",
+        "BrP:7",
+        "BrP:1",
+        "1962:700"
+      ],
+      "wordingFrom": "1965-01-01",
+      "asOf": "2026-10-21",
+      "checked": "2026-10-21",
+      "future": null,
+      "finding": "Intrång i förvar: återgiven egen paragraflydelse är verifierad mot originaltrycket; brottsbalken trädde i kraft 1965-01-01 enligt 1 § BrP.",
+      "note": "Den återgivna egna paragrafen har jämförts visuellt med originaltrycket SFS 1962:700, trycksida 1842 (PDF-sida 6). Aktuell konsolidering och ändringsregistrets omfattningsuppgifter har kontrollerats separat. Ikraftträdandet följer av 1 § BrP, inte av avsaknad av ändringsfotnot. Hänvisade paragrafer, påföljdsregler, åtal och förstadier kan ha andra tidsgränser; full historik och konkret lagversion är inte slutgodkända.",
+      "originalComparison": {
+        "source": "1962:700",
+        "pdfPages": [
+          6
+        ],
+        "printedPages": [
+          1842
+        ],
+        "method": "visual-own-paragraph-comparison-and-amendment-register-scope-review",
+        "currentOwnText": "9 §\nDen som, utan att fall är för handen som i 8 § sägs, olovligen bryter brev eller telegram eller eljest bereder sig tillgång till något som förvaras förseglat eller under lås eller eljest tillslutet, dömes för intrång i förvar till böter eller fängelse i högst två år.",
+        "reviewed": "2026-10-21",
+        "allHistoricalLawApproved": false
+      }
     },
     {
       "id": "v03-fortal",
       "title": "Förtal",
-      "reason": "No independently mapped amendment identifier in the own text"
+      "statute": "BrB:5:1",
+      "ownText": "1 §\nDen som utpekar någon såsom brottslig eller klandervärd i sitt levnadssätt eller eljest lämnar uppgift som är ägnad att utsätta denne för andras missaktning, dömes för förtal till böter.\n\nVar han skyldig att uttala sig eller var det eljest med hänsyn till omständigheterna försvarligt att lämna uppgift i saken, och visar han att uppgiften var sann eller att han hade skälig grund för den, skall ej dömas till ansvar.",
+      "sourceURL": "https://www.riksdagen.se/sv/dokument-och-lagar/dokument/svensk-forfattningssamling/brottsbalk-1962700_sfs-1962-700/",
+      "lawVersion": null,
+      "ownSourceRefs": [
+        "BrB:5:1"
+      ],
+      "amendments": [
+        "1962:700"
+      ],
+      "sourceRefs": [
+        "BrP:5",
+        "BrP:7",
+        "BrP:1",
+        "1962:700"
+      ],
+      "wordingFrom": "1965-01-01",
+      "asOf": "2026-10-21",
+      "checked": "2026-10-21",
+      "future": null,
+      "finding": "Förtal: återgiven egen paragraflydelse är verifierad mot originaltrycket; brottsbalken trädde i kraft 1965-01-01 enligt 1 § BrP.",
+      "note": "Den återgivna egna paragrafen har jämförts visuellt med originaltrycket SFS 1962:700, trycksida 1842 (PDF-sida 6). Aktuell konsolidering och ändringsregistrets omfattningsuppgifter har kontrollerats separat. Ikraftträdandet följer av 1 § BrP, inte av avsaknad av ändringsfotnot. Hänvisade paragrafer, påföljdsregler, åtal och förstadier kan ha andra tidsgränser; full historik och konkret lagversion är inte slutgodkända.",
+      "originalComparison": {
+        "source": "1962:700",
+        "pdfPages": [
+          6
+        ],
+        "printedPages": [
+          1842
+        ],
+        "method": "visual-own-paragraph-comparison-and-amendment-register-scope-review",
+        "currentOwnText": "1 §\nDen som utpekar någon såsom brottslig eller klandervärd i sitt levnadssätt eller eljest lämnar uppgift som är ägnad att utsätta denne för andras missaktning, dömes för förtal till böter.\n\nVar han skyldig att uttala sig eller var det eljest med hänsyn till omständigheterna försvarligt att lämna uppgift i saken, och visar han att uppgiften var sann eller att han hade skälig grund för den, skall ej dömas till ansvar.",
+        "reviewed": "2026-10-21",
+        "allHistoricalLawApproved": false
+      }
     },
     {
       "id": "v03-forskingring",
       "title": "Förskingring",
-      "reason": "No independently mapped amendment identifier in the own text"
+      "statute": "BrB:10:1",
+      "ownText": "1 §\nOm någon, som på grund av avtal, allmän eller enskild tjänst eller dylik ställning fått egendom i besittning för annan med skyldighet att utgiva egendomen eller redovisa för denna, genom att tillägna sig egendomen eller annorledes åsidosätter vad han har att iakttaga för att kunna fullgöra sin skyldighet, dömes, om gärningen innebär vinning för honom och skada för den berättigade, för förskingring till fängelse i högst två år.",
+      "sourceURL": "https://www.riksdagen.se/sv/dokument-och-lagar/dokument/svensk-forfattningssamling/brottsbalk-1962700_sfs-1962-700/",
+      "lawVersion": null,
+      "ownSourceRefs": [
+        "BrB:10:1"
+      ],
+      "amendments": [
+        "1962:700"
+      ],
+      "sourceRefs": [
+        "BrP:5",
+        "BrP:7",
+        "BrP:1",
+        "1962:700"
+      ],
+      "wordingFrom": "1965-01-01",
+      "asOf": "2026-10-21",
+      "checked": "2026-10-21",
+      "future": null,
+      "finding": "Förskingring: återgiven egen paragraflydelse är verifierad mot originaltrycket; brottsbalken trädde i kraft 1965-01-01 enligt 1 § BrP.",
+      "note": "Den återgivna egna paragrafen har jämförts visuellt med originaltrycket SFS 1962:700, trycksida 1849 (PDF-sida 13). Aktuell konsolidering och ändringsregistrets omfattningsuppgifter har kontrollerats separat. Ikraftträdandet följer av 1 § BrP, inte av avsaknad av ändringsfotnot. Hänvisade paragrafer, påföljdsregler, åtal och förstadier kan ha andra tidsgränser; full historik och konkret lagversion är inte slutgodkända.",
+      "originalComparison": {
+        "source": "1962:700",
+        "pdfPages": [
+          13
+        ],
+        "printedPages": [
+          1849
+        ],
+        "method": "visual-own-paragraph-comparison-and-amendment-register-scope-review",
+        "currentOwnText": "1 §\nOm någon, som på grund av avtal, allmän eller enskild tjänst eller dylik ställning fått egendom i besittning för annan med skyldighet att utgiva egendomen eller redovisa för denna, genom att tillägna sig egendomen eller annorledes åsidosätter vad han har att iakttaga för att kunna fullgöra sin skyldighet, dömes, om gärningen innebär vinning för honom och skada för den berättigade, för förskingring till fängelse i högst två år.",
+        "reviewed": "2026-10-21",
+        "allHistoricalLawApproved": false
+      }
     },
     {
       "id": "v03-sabotage",
       "title": "Sabotage",
-      "reason": "No independently mapped amendment identifier in the own text"
+      "statute": "BrB:13:4",
+      "ownText": "4 §\nOm någon förstör eller skadar egendom, som har avsevärd betydelse för rikets försvar, folkförsörjning, rättsskipning eller förvaltning eller för upprätthållande av allmän ordning och säkerhet i riket, eller genom annan åtgärd, som ej innefattar allenast undanhållande av arbetskraft eller uppmaning därtill, allvarligt stör eller hindrar användningen av sådan egendom, dömes för sabotage till fängelse i högst fyra år. Detsamma skall gälla, om någon eljest, genom skadegörelse eller annan åtgärd som nyss sagts, allvarligt stör eller hindrar den allmänna samfärdseln eller användningen av telegraf, telefon, radio eller dylikt allmänt hjälpmedel eller av anläggning för allmänhetens förseende med vatten, ljus, värme eller kraft.",
+      "sourceURL": "https://www.riksdagen.se/sv/dokument-och-lagar/dokument/svensk-forfattningssamling/brottsbalk-1962700_sfs-1962-700/",
+      "lawVersion": null,
+      "ownSourceRefs": [
+        "BrB:13:4"
+      ],
+      "amendments": [
+        "1962:700"
+      ],
+      "sourceRefs": [
+        "BrP:5",
+        "BrP:7",
+        "BrP:1",
+        "1962:700"
+      ],
+      "wordingFrom": "1965-01-01",
+      "asOf": "2026-10-21",
+      "checked": "2026-10-21",
+      "future": null,
+      "finding": "Sabotage: återgiven egen paragraflydelse är verifierad mot originaltrycket; brottsbalken trädde i kraft 1965-01-01 enligt 1 § BrP.",
+      "note": "Den återgivna egna paragrafen har jämförts visuellt med originaltrycket SFS 1962:700, trycksida 1853 (PDF-sida 17). Aktuell konsolidering och ändringsregistrets omfattningsuppgifter har kontrollerats separat. Ikraftträdandet följer av 1 § BrP, inte av avsaknad av ändringsfotnot. Hänvisade paragrafer, påföljdsregler, åtal och förstadier kan ha andra tidsgränser; full historik och konkret lagversion är inte slutgodkända.",
+      "originalComparison": {
+        "source": "1962:700",
+        "pdfPages": [
+          17
+        ],
+        "printedPages": [
+          1853
+        ],
+        "method": "visual-own-paragraph-comparison-and-amendment-register-scope-review",
+        "currentOwnText": "4 §\nOm någon förstör eller skadar egendom, som har avsevärd betydelse för rikets försvar, folkförsörjning, rättsskipning eller förvaltning eller för upprätthållande av allmän ordning och säkerhet i riket, eller genom annan åtgärd, som ej innefattar allenast undanhållande av arbetskraft eller uppmaning därtill, allvarligt stör eller hindrar användningen av sådan egendom, dömes för sabotage till fängelse i högst fyra år. Detsamma skall gälla, om någon eljest, genom skadegörelse eller annan åtgärd som nyss sagts, allvarligt stör eller hindrar den allmänna samfärdseln eller användningen av telegraf, telefon, radio eller dylikt allmänt hjälpmedel eller av anläggning för allmänhetens förseende med vatten, ljus, värme eller kraft.",
+        "reviewed": "2026-10-21",
+        "allHistoricalLawApproved": false
+      }
     },
     {
       "id": "v03-ohorsamhet-mot-ordningsmakten",
       "title": "Ohörsamhet mot ordningsmakten",
-      "reason": "No independently mapped amendment identifier in the own text"
+      "statute": "BrB:16:3",
+      "ownText": "3 §\nUnderlåter deltagare i folksamling som stör allmän ordning att efterkomma för ordningens upprätthållande meddelad befallning eller intränger han på område som blivit för sådant ändamål fridlyst eller avspärrat, dömes, om ej upplopp föreligger, för ohörsamhet mot ordningsmakten till böter eller fängelse i högst sex månader.",
+      "sourceURL": "https://www.riksdagen.se/sv/dokument-och-lagar/dokument/svensk-forfattningssamling/brottsbalk-1962700_sfs-1962-700/",
+      "lawVersion": null,
+      "ownSourceRefs": [
+        "BrB:16:3"
+      ],
+      "amendments": [
+        "1962:700"
+      ],
+      "sourceRefs": [
+        "BrP:5",
+        "BrP:7",
+        "BrP:1",
+        "1962:700"
+      ],
+      "wordingFrom": "1965-01-01",
+      "asOf": "2026-10-21",
+      "checked": "2026-10-21",
+      "future": null,
+      "finding": "Ohörsamhet mot ordningsmakten: återgiven egen paragraflydelse är verifierad mot originaltrycket; brottsbalken trädde i kraft 1965-01-01 enligt 1 § BrP.",
+      "note": "Den återgivna egna paragrafen har jämförts visuellt med originaltrycket SFS 1962:700, trycksida 1858, 1859 (PDF-sida 22, 23). Aktuell konsolidering och ändringsregistrets omfattningsuppgifter har kontrollerats separat. Ikraftträdandet följer av 1 § BrP, inte av avsaknad av ändringsfotnot. Hänvisade paragrafer, påföljdsregler, åtal och förstadier kan ha andra tidsgränser; full historik och konkret lagversion är inte slutgodkända.",
+      "originalComparison": {
+        "source": "1962:700",
+        "pdfPages": [
+          22,
+          23
+        ],
+        "printedPages": [
+          1858,
+          1859
+        ],
+        "method": "visual-own-paragraph-comparison-and-amendment-register-scope-review",
+        "currentOwnText": "3 §\nUnderlåter deltagare i folksamling som stör allmän ordning att efterkomma för ordningens upprätthållande meddelad befallning eller intränger han på område som blivit för sådant ändamål fridlyst eller avspärrat, dömes, om ej upplopp föreligger, för ohörsamhet mot ordningsmakten till böter eller fängelse i högst sex månader.",
+        "reviewed": "2026-10-21",
+        "allHistoricalLawApproved": false
+      }
     },
     {
       "id": "v05-forvanskande-av-familjestallning",
       "title": "Förvanskande av familjeställning",
-      "reason": "No independently mapped amendment identifier in the own text"
+      "statute": "BrB:7:3",
+      "ownText": "3 §\nDen som understicker eller förbyter barn eller eljest genom att avgiva oriktig anmälan till myndighet eller underlåta anmälan tillvällar sig eller annan falsk familjeställning eller berövar annan hans rätta familjeställning, dömes för förvanskande av familjeställning till böter eller fängelse i högst två år.",
+      "sourceURL": "https://www.riksdagen.se/sv/dokument-och-lagar/dokument/svensk-forfattningssamling/brottsbalk-1962700_sfs-1962-700/",
+      "lawVersion": null,
+      "ownSourceRefs": [
+        "BrB:7:3"
+      ],
+      "amendments": [
+        "1962:700"
+      ],
+      "sourceRefs": [
+        "BrP:5",
+        "BrP:7",
+        "BrP:1",
+        "1962:700"
+      ],
+      "wordingFrom": "1965-01-01",
+      "asOf": "2026-10-21",
+      "checked": "2026-10-21",
+      "future": null,
+      "finding": "Förvanskande av familjeställning: återgiven egen paragraflydelse är verifierad mot originaltrycket; brottsbalken trädde i kraft 1965-01-01 enligt 1 § BrP.",
+      "note": "Den återgivna egna paragrafen har jämförts visuellt med originaltrycket SFS 1962:700, trycksida 1845 (PDF-sida 9). Aktuell konsolidering och ändringsregistrets omfattningsuppgifter har kontrollerats separat. Ikraftträdandet följer av 1 § BrP, inte av avsaknad av ändringsfotnot. Hänvisade paragrafer, påföljdsregler, åtal och förstadier kan ha andra tidsgränser; full historik och konkret lagversion är inte slutgodkända.",
+      "originalComparison": {
+        "source": "1962:700",
+        "pdfPages": [
+          9
+        ],
+        "printedPages": [
+          1845
+        ],
+        "method": "visual-own-paragraph-comparison-and-amendment-register-scope-review",
+        "currentOwnText": "3 §\nDen som understicker eller förbyter barn eller eljest genom att avgiva oriktig anmälan till myndighet eller underlåta anmälan tillvällar sig eller annan falsk familjeställning eller berövar annan hans rätta familjeställning, dömes för förvanskande av familjeställning till böter eller fängelse i högst två år.",
+        "reviewed": "2026-10-21",
+        "allHistoricalLawApproved": false
+      }
     },
     {
       "id": "v05-ockerpantning",
       "title": "Ockerpantning",
-      "reason": "No independently mapped amendment identifier in the own text"
+      "statute": "BrB:9:10",
+      "ownText": "10 §\nMottager någon, för användning såsom påtryckningsmedel vid krav, handling som är falsk, upprättad för skens skull eller eljest oriktig eller ock check utan täckning, dömes för ockerpantning till böter eller fängelse i högst två år.",
+      "sourceURL": "https://www.riksdagen.se/sv/dokument-och-lagar/dokument/svensk-forfattningssamling/brottsbalk-1962700_sfs-1962-700/",
+      "lawVersion": null,
+      "ownSourceRefs": [
+        "BrB:9:10"
+      ],
+      "amendments": [
+        "1962:700"
+      ],
+      "sourceRefs": [
+        "BrP:5",
+        "BrP:7",
+        "BrP:1",
+        "1962:700"
+      ],
+      "wordingFrom": "1965-01-01",
+      "asOf": "2026-10-21",
+      "checked": "2026-10-21",
+      "future": null,
+      "finding": "Ockerpantning: återgiven egen paragraflydelse är verifierad mot originaltrycket; brottsbalken trädde i kraft 1965-01-01 enligt 1 § BrP.",
+      "note": "Den återgivna egna paragrafen har jämförts visuellt med originaltrycket SFS 1962:700, trycksida 1849 (PDF-sida 13). Aktuell konsolidering och ändringsregistrets omfattningsuppgifter har kontrollerats separat. Ikraftträdandet följer av 1 § BrP, inte av avsaknad av ändringsfotnot. Hänvisade paragrafer, påföljdsregler, åtal och förstadier kan ha andra tidsgränser; full historik och konkret lagversion är inte slutgodkända.",
+      "originalComparison": {
+        "source": "1962:700",
+        "pdfPages": [
+          13
+        ],
+        "printedPages": [
+          1849
+        ],
+        "method": "visual-own-paragraph-comparison-and-amendment-register-scope-review",
+        "currentOwnText": "10 §\nMottager någon, för användning såsom påtryckningsmedel vid krav, handling som är falsk, upprättad för skens skull eller eljest oriktig eller ock check utan täckning, dömes för ockerpantning till böter eller fängelse i högst två år.",
+        "reviewed": "2026-10-21",
+        "allHistoricalLawApproved": false
+      }
     },
     {
       "id": "v05-forgoring",
       "title": "Förgöring",
-      "reason": "No independently mapped amendment identifier in the own text"
+      "statute": "BrB:13:8",
+      "ownText": "8 §\nFramkallar någon allmän fara för djur eller växter medelst gift eller genom att överföra eller sprida elakartad sjukdom eller genom att sprida skadedjur eller ogräs eller på annat dylikt sätt, dömes för förgöring till böter eller fängelse i högst två år.\nÄr brottet grovt, skall dömas till fängelse, lägst sex månader och högst sex år. Vid bedömande huruvida brottet är grovt skall särskilt beaktas, om det skett med uppsåt att skada eller om egendom av betydande värde utsatts för fara.",
+      "sourceURL": "https://www.riksdagen.se/sv/dokument-och-lagar/dokument/svensk-forfattningssamling/brottsbalk-1962700_sfs-1962-700/",
+      "lawVersion": null,
+      "ownSourceRefs": [
+        "BrB:13:8"
+      ],
+      "amendments": [
+        "1962:700"
+      ],
+      "sourceRefs": [
+        "BrP:5",
+        "BrP:7",
+        "BrP:1",
+        "1962:700"
+      ],
+      "wordingFrom": "1965-01-01",
+      "asOf": "2026-10-21",
+      "checked": "2026-10-21",
+      "future": null,
+      "finding": "Förgöring: återgiven egen paragraflydelse är verifierad mot originaltrycket; brottsbalken trädde i kraft 1965-01-01 enligt 1 § BrP.",
+      "note": "Den återgivna egna paragrafen har jämförts visuellt med originaltrycket SFS 1962:700, trycksida 1854 (PDF-sida 18). Aktuell konsolidering och ändringsregistrets omfattningsuppgifter har kontrollerats separat. Ikraftträdandet följer av 1 § BrP, inte av avsaknad av ändringsfotnot. Hänvisade paragrafer, påföljdsregler, åtal och förstadier kan ha andra tidsgränser; full historik och konkret lagversion är inte slutgodkända.",
+      "originalComparison": {
+        "source": "1962:700",
+        "pdfPages": [
+          18
+        ],
+        "printedPages": [
+          1854
+        ],
+        "method": "visual-own-paragraph-comparison-and-amendment-register-scope-review",
+        "currentOwnText": "8 §\nFramkallar någon allmän fara för djur eller växter medelst gift eller genom att överföra eller sprida elakartad sjukdom eller genom att sprida skadedjur eller ogräs eller på annat dylikt sätt, dömes för förgöring till böter eller fängelse i högst två år.\nÄr brottet grovt, skall dömas till fängelse, lägst sex månader och högst sex år. Vid bedömande huruvida brottet är grovt skall särskilt beaktas, om det skett med uppsåt att skada eller om egendom av betydande värde utsatts för fara.",
+        "reviewed": "2026-10-21",
+        "allHistoricalLawApproved": false
+      }
     },
     {
       "id": "v05-grov-forgoring",
       "title": "Grov förgöring",
-      "reason": "No independently mapped amendment identifier in the own text"
+      "statute": "BrB:13:8",
+      "ownText": "8 §\nFramkallar någon allmän fara för djur eller växter medelst gift eller genom att överföra eller sprida elakartad sjukdom eller genom att sprida skadedjur eller ogräs eller på annat dylikt sätt, dömes för förgöring till böter eller fängelse i högst två år.\nÄr brottet grovt, skall dömas till fängelse, lägst sex månader och högst sex år. Vid bedömande huruvida brottet är grovt skall särskilt beaktas, om det skett med uppsåt att skada eller om egendom av betydande värde utsatts för fara.",
+      "sourceURL": "https://www.riksdagen.se/sv/dokument-och-lagar/dokument/svensk-forfattningssamling/brottsbalk-1962700_sfs-1962-700/",
+      "lawVersion": null,
+      "ownSourceRefs": [
+        "BrB:13:8"
+      ],
+      "amendments": [
+        "1962:700"
+      ],
+      "sourceRefs": [
+        "BrP:5",
+        "BrP:7",
+        "BrP:1",
+        "1962:700"
+      ],
+      "wordingFrom": "1965-01-01",
+      "asOf": "2026-10-21",
+      "checked": "2026-10-21",
+      "future": null,
+      "finding": "Grov förgöring: återgiven egen paragraflydelse är verifierad mot originaltrycket; brottsbalken trädde i kraft 1965-01-01 enligt 1 § BrP.",
+      "note": "Den återgivna egna paragrafen har jämförts visuellt med originaltrycket SFS 1962:700, trycksida 1854 (PDF-sida 18). Aktuell konsolidering och ändringsregistrets omfattningsuppgifter har kontrollerats separat. Ikraftträdandet följer av 1 § BrP, inte av avsaknad av ändringsfotnot. Hänvisade paragrafer, påföljdsregler, åtal och förstadier kan ha andra tidsgränser; full historik och konkret lagversion är inte slutgodkända.",
+      "originalComparison": {
+        "source": "1962:700",
+        "pdfPages": [
+          18
+        ],
+        "printedPages": [
+          1854
+        ],
+        "method": "visual-own-paragraph-comparison-and-amendment-register-scope-review",
+        "currentOwnText": "8 §\nFramkallar någon allmän fara för djur eller växter medelst gift eller genom att överföra eller sprida elakartad sjukdom eller genom att sprida skadedjur eller ogräs eller på annat dylikt sätt, dömes för förgöring till böter eller fängelse i högst två år.\nÄr brottet grovt, skall dömas till fängelse, lägst sex månader och högst sex år. Vid bedömande huruvida brottet är grovt skall särskilt beaktas, om det skett med uppsåt att skada eller om egendom av betydande värde utsatts för fara.",
+        "reviewed": "2026-10-21",
+        "allHistoricalLawApproved": false
+      }
     },
     {
       "id": "v05-falskt-atal",
       "title": "Falskt åtal",
-      "reason": "No independently mapped amendment identifier in the own text"
+      "statute": "BrB:15:5",
+      "ownText": "5 §\nVäcker någon åtal mot oskyldig med uppsåt att denne må bliva fälld till ansvar, dömes för falskt åtal till fängelse i högst två år eller, om brottet är ringa, till böter eller fängelse i högst sex månader.\n\nÄr brottet grovt, skall dömas till fängelse, lägst sex månader och högst fyra år. Vid bedömande huruvida brottet är grovt skall särskilt beaktas, om åtalet avsett allvarligt brott eller innefattat missbruk av tjänsteställning.\nDen som väcker åtal ehuru han icke har sannolika skäl därtill, dömes för obefogat åtal till böter eller fängelse i högst sex månader.",
+      "sourceURL": "https://www.riksdagen.se/sv/dokument-och-lagar/dokument/svensk-forfattningssamling/brottsbalk-1962700_sfs-1962-700/",
+      "lawVersion": null,
+      "ownSourceRefs": [
+        "BrB:15:5"
+      ],
+      "amendments": [
+        "1962:700"
+      ],
+      "sourceRefs": [
+        "BrP:5",
+        "BrP:7",
+        "BrP:1",
+        "1962:700"
+      ],
+      "wordingFrom": "1965-01-01",
+      "asOf": "2026-10-21",
+      "checked": "2026-10-21",
+      "future": null,
+      "finding": "Falskt åtal: återgiven egen paragraflydelse är verifierad mot originaltrycket; brottsbalken trädde i kraft 1965-01-01 enligt 1 § BrP.",
+      "note": "Den återgivna egna paragrafen har jämförts visuellt med originaltrycket SFS 1962:700, trycksida 1857 (PDF-sida 21). Aktuell konsolidering och ändringsregistrets omfattningsuppgifter har kontrollerats separat. Ikraftträdandet följer av 1 § BrP, inte av avsaknad av ändringsfotnot. Hänvisade paragrafer, påföljdsregler, åtal och förstadier kan ha andra tidsgränser; full historik och konkret lagversion är inte slutgodkända.",
+      "originalComparison": {
+        "source": "1962:700",
+        "pdfPages": [
+          21
+        ],
+        "printedPages": [
+          1857
+        ],
+        "method": "visual-own-paragraph-comparison-and-amendment-register-scope-review",
+        "currentOwnText": "5 §\nVäcker någon åtal mot oskyldig med uppsåt att denne må bliva fälld till ansvar, dömes för falskt åtal till fängelse i högst två år eller, om brottet är ringa, till böter eller fängelse i högst sex månader.\n\nÄr brottet grovt, skall dömas till fängelse, lägst sex månader och högst fyra år. Vid bedömande huruvida brottet är grovt skall särskilt beaktas, om åtalet avsett allvarligt brott eller innefattat missbruk av tjänsteställning.\nDen som väcker åtal ehuru han icke har sannolika skäl därtill, dömes för obefogat åtal till böter eller fängelse i högst sex månader.",
+        "reviewed": "2026-10-21",
+        "allHistoricalLawApproved": false
+      }
     },
     {
       "id": "v05-grovt-falskt-atal",
       "title": "Grovt falskt åtal",
-      "reason": "No independently mapped amendment identifier in the own text"
+      "statute": "BrB:15:5",
+      "ownText": "5 §\nVäcker någon åtal mot oskyldig med uppsåt att denne må bliva fälld till ansvar, dömes för falskt åtal till fängelse i högst två år eller, om brottet är ringa, till böter eller fängelse i högst sex månader.\n\nÄr brottet grovt, skall dömas till fängelse, lägst sex månader och högst fyra år. Vid bedömande huruvida brottet är grovt skall särskilt beaktas, om åtalet avsett allvarligt brott eller innefattat missbruk av tjänsteställning.\nDen som väcker åtal ehuru han icke har sannolika skäl därtill, dömes för obefogat åtal till böter eller fängelse i högst sex månader.",
+      "sourceURL": "https://www.riksdagen.se/sv/dokument-och-lagar/dokument/svensk-forfattningssamling/brottsbalk-1962700_sfs-1962-700/",
+      "lawVersion": null,
+      "ownSourceRefs": [
+        "BrB:15:5"
+      ],
+      "amendments": [
+        "1962:700"
+      ],
+      "sourceRefs": [
+        "BrP:5",
+        "BrP:7",
+        "BrP:1",
+        "1962:700"
+      ],
+      "wordingFrom": "1965-01-01",
+      "asOf": "2026-10-21",
+      "checked": "2026-10-21",
+      "future": null,
+      "finding": "Grovt falskt åtal: återgiven egen paragraflydelse är verifierad mot originaltrycket; brottsbalken trädde i kraft 1965-01-01 enligt 1 § BrP.",
+      "note": "Den återgivna egna paragrafen har jämförts visuellt med originaltrycket SFS 1962:700, trycksida 1857 (PDF-sida 21). Aktuell konsolidering och ändringsregistrets omfattningsuppgifter har kontrollerats separat. Ikraftträdandet följer av 1 § BrP, inte av avsaknad av ändringsfotnot. Hänvisade paragrafer, påföljdsregler, åtal och förstadier kan ha andra tidsgränser; full historik och konkret lagversion är inte slutgodkända.",
+      "originalComparison": {
+        "source": "1962:700",
+        "pdfPages": [
+          21
+        ],
+        "printedPages": [
+          1857
+        ],
+        "method": "visual-own-paragraph-comparison-and-amendment-register-scope-review",
+        "currentOwnText": "5 §\nVäcker någon åtal mot oskyldig med uppsåt att denne må bliva fälld till ansvar, dömes för falskt åtal till fängelse i högst två år eller, om brottet är ringa, till böter eller fängelse i högst sex månader.\n\nÄr brottet grovt, skall dömas till fängelse, lägst sex månader och högst fyra år. Vid bedömande huruvida brottet är grovt skall särskilt beaktas, om åtalet avsett allvarligt brott eller innefattat missbruk av tjänsteställning.\nDen som väcker åtal ehuru han icke har sannolika skäl därtill, dömes för obefogat åtal till böter eller fängelse i högst sex månader.",
+        "reviewed": "2026-10-21",
+        "allHistoricalLawApproved": false
+      }
     },
     {
       "id": "v05-obefogat-atal",
       "title": "Obefogat åtal",
-      "reason": "No independently mapped amendment identifier in the own text"
+      "statute": "BrB:15:5",
+      "ownText": "5 §\nVäcker någon åtal mot oskyldig med uppsåt att denne må bliva fälld till ansvar, dömes för falskt åtal till fängelse i högst två år eller, om brottet är ringa, till böter eller fängelse i högst sex månader.\n\nÄr brottet grovt, skall dömas till fängelse, lägst sex månader och högst fyra år. Vid bedömande huruvida brottet är grovt skall särskilt beaktas, om åtalet avsett allvarligt brott eller innefattat missbruk av tjänsteställning.\nDen som väcker åtal ehuru han icke har sannolika skäl därtill, dömes för obefogat åtal till böter eller fängelse i högst sex månader.",
+      "sourceURL": "https://www.riksdagen.se/sv/dokument-och-lagar/dokument/svensk-forfattningssamling/brottsbalk-1962700_sfs-1962-700/",
+      "lawVersion": null,
+      "ownSourceRefs": [
+        "BrB:15:5"
+      ],
+      "amendments": [
+        "1962:700"
+      ],
+      "sourceRefs": [
+        "BrP:5",
+        "BrP:7",
+        "BrP:1",
+        "1962:700"
+      ],
+      "wordingFrom": "1965-01-01",
+      "asOf": "2026-10-21",
+      "checked": "2026-10-21",
+      "future": null,
+      "finding": "Obefogat åtal: återgiven egen paragraflydelse är verifierad mot originaltrycket; brottsbalken trädde i kraft 1965-01-01 enligt 1 § BrP.",
+      "note": "Den återgivna egna paragrafen har jämförts visuellt med originaltrycket SFS 1962:700, trycksida 1857 (PDF-sida 21). Aktuell konsolidering och ändringsregistrets omfattningsuppgifter har kontrollerats separat. Ikraftträdandet följer av 1 § BrP, inte av avsaknad av ändringsfotnot. Hänvisade paragrafer, påföljdsregler, åtal och förstadier kan ha andra tidsgränser; full historik och konkret lagversion är inte slutgodkända.",
+      "originalComparison": {
+        "source": "1962:700",
+        "pdfPages": [
+          21
+        ],
+        "printedPages": [
+          1857
+        ],
+        "method": "visual-own-paragraph-comparison-and-amendment-register-scope-review",
+        "currentOwnText": "5 §\nVäcker någon åtal mot oskyldig med uppsåt att denne må bliva fälld till ansvar, dömes för falskt åtal till fängelse i högst två år eller, om brottet är ringa, till böter eller fängelse i högst sex månader.\n\nÄr brottet grovt, skall dömas till fängelse, lägst sex månader och högst fyra år. Vid bedömande huruvida brottet är grovt skall särskilt beaktas, om åtalet avsett allvarligt brott eller innefattat missbruk av tjänsteställning.\nDen som väcker åtal ehuru han icke har sannolika skäl därtill, dömes för obefogat åtal till böter eller fängelse i högst sex månader.",
+        "reviewed": "2026-10-21",
+        "allHistoricalLawApproved": false
+      }
     },
     {
       "id": "v05-bevisforvanskning",
       "title": "Bevisförvanskning",
-      "reason": "No independently mapped amendment identifier in the own text"
+      "statute": "BrB:15:8",
+      "ownText": "8 §\nFörvanskar eller undanröjer någon bevis med uppsåt att oskyldig må bliva fälld till ansvar eller åberopar någon med sådant uppsåt falskt bevis, dömes för bevisförvanskning till fängelse i högst två år eller, om brottet är ringa, till böter eller fängelse i högst sex månader.\n\nÄr brottet grovt, dömes till fängelse, lägst sex månader och högst fyra år.",
+      "sourceURL": "https://www.riksdagen.se/sv/dokument-och-lagar/dokument/svensk-forfattningssamling/brottsbalk-1962700_sfs-1962-700/",
+      "lawVersion": null,
+      "ownSourceRefs": [
+        "BrB:15:8"
+      ],
+      "amendments": [
+        "1962:700"
+      ],
+      "sourceRefs": [
+        "BrP:5",
+        "BrP:7",
+        "BrP:1",
+        "1962:700"
+      ],
+      "wordingFrom": "1965-01-01",
+      "asOf": "2026-10-21",
+      "checked": "2026-10-21",
+      "future": null,
+      "finding": "Bevisförvanskning: återgiven egen paragraflydelse är verifierad mot originaltrycket; brottsbalken trädde i kraft 1965-01-01 enligt 1 § BrP.",
+      "note": "Den återgivna egna paragrafen har jämförts visuellt med originaltrycket SFS 1962:700, trycksida 1857 (PDF-sida 21). Aktuell konsolidering och ändringsregistrets omfattningsuppgifter har kontrollerats separat. Ikraftträdandet följer av 1 § BrP, inte av avsaknad av ändringsfotnot. Hänvisade paragrafer, påföljdsregler, åtal och förstadier kan ha andra tidsgränser; full historik och konkret lagversion är inte slutgodkända.",
+      "originalComparison": {
+        "source": "1962:700",
+        "pdfPages": [
+          21
+        ],
+        "printedPages": [
+          1857
+        ],
+        "method": "visual-own-paragraph-comparison-and-amendment-register-scope-review",
+        "currentOwnText": "8 §\nFörvanskar eller undanröjer någon bevis med uppsåt att oskyldig må bliva fälld till ansvar eller åberopar någon med sådant uppsåt falskt bevis, dömes för bevisförvanskning till fängelse i högst två år eller, om brottet är ringa, till böter eller fängelse i högst sex månader.\n\nÄr brottet grovt, dömes till fängelse, lägst sex månader och högst fyra år.",
+        "reviewed": "2026-10-21",
+        "allHistoricalLawApproved": false
+      }
     },
     {
       "id": "v05-grov-bevisforvanskning",
       "title": "Grov bevisförvanskning",
-      "reason": "No independently mapped amendment identifier in the own text"
+      "statute": "BrB:15:8",
+      "ownText": "8 §\nFörvanskar eller undanröjer någon bevis med uppsåt att oskyldig må bliva fälld till ansvar eller åberopar någon med sådant uppsåt falskt bevis, dömes för bevisförvanskning till fängelse i högst två år eller, om brottet är ringa, till böter eller fängelse i högst sex månader.\n\nÄr brottet grovt, dömes till fängelse, lägst sex månader och högst fyra år.",
+      "sourceURL": "https://www.riksdagen.se/sv/dokument-och-lagar/dokument/svensk-forfattningssamling/brottsbalk-1962700_sfs-1962-700/",
+      "lawVersion": null,
+      "ownSourceRefs": [
+        "BrB:15:8"
+      ],
+      "amendments": [
+        "1962:700"
+      ],
+      "sourceRefs": [
+        "BrP:5",
+        "BrP:7",
+        "BrP:1",
+        "1962:700"
+      ],
+      "wordingFrom": "1965-01-01",
+      "asOf": "2026-10-21",
+      "checked": "2026-10-21",
+      "future": null,
+      "finding": "Grov bevisförvanskning: återgiven egen paragraflydelse är verifierad mot originaltrycket; brottsbalken trädde i kraft 1965-01-01 enligt 1 § BrP.",
+      "note": "Den återgivna egna paragrafen har jämförts visuellt med originaltrycket SFS 1962:700, trycksida 1857 (PDF-sida 21). Aktuell konsolidering och ändringsregistrets omfattningsuppgifter har kontrollerats separat. Ikraftträdandet följer av 1 § BrP, inte av avsaknad av ändringsfotnot. Hänvisade paragrafer, påföljdsregler, åtal och förstadier kan ha andra tidsgränser; full historik och konkret lagversion är inte slutgodkända.",
+      "originalComparison": {
+        "source": "1962:700",
+        "pdfPages": [
+          21
+        ],
+        "printedPages": [
+          1857
+        ],
+        "method": "visual-own-paragraph-comparison-and-amendment-register-scope-review",
+        "currentOwnText": "8 §\nFörvanskar eller undanröjer någon bevis med uppsåt att oskyldig må bliva fälld till ansvar eller åberopar någon med sådant uppsåt falskt bevis, dömes för bevisförvanskning till fängelse i högst två år eller, om brottet är ringa, till böter eller fängelse i högst sex månader.\n\nÄr brottet grovt, dömes till fängelse, lägst sex månader och högst fyra år.",
+        "reviewed": "2026-10-21",
+        "allHistoricalLawApproved": false
+      }
     },
     {
       "id": "v05-underlatenhet-att-avvarja-rattsfel",
       "title": "Underlåtenhet att avvärja rättsfel",
-      "reason": "No independently mapped amendment identifier in the own text"
+      "statute": "BrB:15:9",
+      "ownText": "9 §\nHar någon, utan att vara förfallen till ansvar enligt vad förut i detta kapitel är sagt, genom åtgärd, varom där förmäles, framkallat fara för att annan skall bliva utan laga skäl dömd eller eljest lida avsevärt förfång, och underlåter han, efter att hava kommit till insikt därom, att till farans avvärjande göra vad skäligen kan begäras, dömes för underlåtenhet att avvärja rättsfel till böter eller fängelse i högst sex månader.",
+      "sourceURL": "https://www.riksdagen.se/sv/dokument-och-lagar/dokument/svensk-forfattningssamling/brottsbalk-1962700_sfs-1962-700/",
+      "lawVersion": null,
+      "ownSourceRefs": [
+        "BrB:15:9"
+      ],
+      "amendments": [
+        "1962:700"
+      ],
+      "sourceRefs": [
+        "BrP:5",
+        "BrP:7",
+        "BrP:1",
+        "1962:700"
+      ],
+      "wordingFrom": "1965-01-01",
+      "asOf": "2026-10-21",
+      "checked": "2026-10-21",
+      "future": null,
+      "finding": "Underlåtenhet att avvärja rättsfel: återgiven egen paragraflydelse är verifierad mot originaltrycket; brottsbalken trädde i kraft 1965-01-01 enligt 1 § BrP.",
+      "note": "Den återgivna egna paragrafen har jämförts visuellt med originaltrycket SFS 1962:700, trycksida 1857 (PDF-sida 21). Aktuell konsolidering och ändringsregistrets omfattningsuppgifter har kontrollerats separat. Ikraftträdandet följer av 1 § BrP, inte av avsaknad av ändringsfotnot. Hänvisade paragrafer, påföljdsregler, åtal och förstadier kan ha andra tidsgränser; full historik och konkret lagversion är inte slutgodkända.",
+      "originalComparison": {
+        "source": "1962:700",
+        "pdfPages": [
+          21
+        ],
+        "printedPages": [
+          1857
+        ],
+        "method": "visual-own-paragraph-comparison-and-amendment-register-scope-review",
+        "currentOwnText": "9 §\nHar någon, utan att vara förfallen till ansvar enligt vad förut i detta kapitel är sagt, genom åtgärd, varom där förmäles, framkallat fara för att annan skall bliva utan laga skäl dömd eller eljest lida avsevärt förfång, och underlåter han, efter att hava kommit till insikt därom, att till farans avvärjande göra vad skäligen kan begäras, dömes för underlåtenhet att avvärja rättsfel till böter eller fängelse i högst sex månader.",
+        "reviewed": "2026-10-21",
+        "allHistoricalLawApproved": false
+      }
     },
     {
       "id": "v06-brott-mot-rosthemlighet",
       "title": "Brott mot rösthemlighet",
-      "reason": "No independently mapped amendment identifier in the own text"
+      "statute": "BrB:17:9",
+      "ownText": "9 §\nSöker någon obehörigen skaffa sig kännedom om vad som angående utövning av rösträtt i allmänt ärende skall hållas hemligt, dömes för brott mot rösthemlighet till böter eller fängelse i högst sex månader.",
+      "sourceURL": "https://www.riksdagen.se/sv/dokument-och-lagar/dokument/svensk-forfattningssamling/brottsbalk-1962700_sfs-1962-700/",
+      "lawVersion": null,
+      "ownSourceRefs": [
+        "BrB:17:9"
+      ],
+      "amendments": [
+        "1962:700"
+      ],
+      "sourceRefs": [
+        "BrP:5",
+        "BrP:7",
+        "BrP:1",
+        "1962:700"
+      ],
+      "wordingFrom": "1965-01-01",
+      "asOf": "2026-10-21",
+      "checked": "2026-10-21",
+      "future": null,
+      "finding": "Brott mot rösthemlighet: återgiven egen paragraflydelse är verifierad mot originaltrycket; brottsbalken trädde i kraft 1965-01-01 enligt 1 § BrP.",
+      "note": "Den återgivna egna paragrafen har jämförts visuellt med originaltrycket SFS 1962:700, trycksida 1861 (PDF-sida 25). Aktuell konsolidering och ändringsregistrets omfattningsuppgifter har kontrollerats separat. Ikraftträdandet följer av 1 § BrP, inte av avsaknad av ändringsfotnot. Hänvisade paragrafer, påföljdsregler, åtal och förstadier kan ha andra tidsgränser; full historik och konkret lagversion är inte slutgodkända.",
+      "originalComparison": {
+        "source": "1962:700",
+        "pdfPages": [
+          25
+        ],
+        "printedPages": [
+          1861
+        ],
+        "method": "visual-own-paragraph-comparison-and-amendment-register-scope-review",
+        "currentOwnText": "9 §\nSöker någon obehörigen skaffa sig kännedom om vad som angående utövning av rösträtt i allmänt ärende skall hållas hemligt, dömes för brott mot rösthemlighet till böter eller fängelse i högst sex månader.",
+        "reviewed": "2026-10-21",
+        "allHistoricalLawApproved": false
+      }
     },
     {
       "id": "v06-underlatenhet-att-avvarja-allmanfara",
       "title": "Underlåtenhet att avvärja allmänfara",
-      "reason": "No independently mapped amendment identifier in the own text"
-    },
-    {
-      "id": "v06-otillatet-forfarande-med-pornografisk-bild",
-      "title": "Otillåtet förfarande med pornografisk bild",
-      "reason": "Original SFS 1970:225 read: 16:11 commencement depends on adopted TF amendment taking constitutional effect; exact operative date still needs independent primary verification (not the 1 July 1970 date for other listed provisions)."
+      "statute": "BrB:13:10",
+      "ownText": "10 §\nHar någon, utan att vara förfallen till ansvar enligt vad förut i detta kapitel är sagt, vid handhavande av eld, sprängämne eller gift eller annorledes framkallat fara för brand eller ofärd som i 1, 2 eller 3 § sägs eller allmän fara som avses i 7 eller 8 § och underlåter han, efter att hava kommit till insikt därom, att till farans avvärjande göra vad skäligen kan begäras, dömes för underlåtenhet att avvärja allmänfara till böter eller fängelse i högst ett år.",
+      "sourceURL": "https://www.riksdagen.se/sv/dokument-och-lagar/dokument/svensk-forfattningssamling/brottsbalk-1962700_sfs-1962-700/",
+      "lawVersion": null,
+      "ownSourceRefs": [
+        "BrB:13:10"
+      ],
+      "amendments": [
+        "1962:700"
+      ],
+      "sourceRefs": [
+        "BrP:5",
+        "BrP:7",
+        "BrP:1",
+        "1962:700"
+      ],
+      "wordingFrom": "1965-01-01",
+      "asOf": "2026-10-21",
+      "checked": "2026-10-21",
+      "future": null,
+      "finding": "Underlåtenhet att avvärja allmänfara: återgiven egen paragraflydelse är verifierad mot originaltrycket; brottsbalken trädde i kraft 1965-01-01 enligt 1 § BrP.",
+      "note": "Den återgivna egna paragrafen har jämförts visuellt med originaltrycket SFS 1962:700, trycksida 1854 (PDF-sida 18). Aktuell konsolidering och ändringsregistrets omfattningsuppgifter har kontrollerats separat. Ikraftträdandet följer av 1 § BrP, inte av avsaknad av ändringsfotnot. Hänvisade paragrafer, påföljdsregler, åtal och förstadier kan ha andra tidsgränser; full historik och konkret lagversion är inte slutgodkända.",
+      "originalComparison": {
+        "source": "1962:700",
+        "pdfPages": [
+          18
+        ],
+        "printedPages": [
+          1854
+        ],
+        "method": "visual-own-paragraph-comparison-and-amendment-register-scope-review",
+        "currentOwnText": "10 §\nHar någon, utan att vara förfallen till ansvar enligt vad förut i detta kapitel är sagt, vid handhavande av eld, sprängämne eller gift eller annorledes framkallat fara för brand eller ofärd som i 1, 2 eller 3 § sägs eller allmän fara som avses i 7 eller 8 § och underlåter han, efter att hava kommit till insikt därom, att till farans avvärjande göra vad skäligen kan begäras, dömes för underlåtenhet att avvärja allmänfara till böter eller fängelse i högst ett år.",
+        "reviewed": "2026-10-21",
+        "allHistoricalLawApproved": false
+      }
     },
     {
       "id": "v06-osann-partsutsaga",
       "title": "Osann partsutsaga",
-      "reason": "No independently mapped amendment identifier in the own text"
+      "statute": "BrB:15:2",
+      "ownText": "2 §\nDen som vid förhör under sanningsförsäkran i rättegång lämnar osann uppgift eller förtiger sanningen, dömes för osann partsutsaga till fängelse i högst två år eller, om brottet är ringa, till böter eller fängelse i högst sex månader.",
+      "sourceURL": "https://www.riksdagen.se/sv/dokument-och-lagar/dokument/svensk-forfattningssamling/brottsbalk-1962700_sfs-1962-700/",
+      "lawVersion": null,
+      "ownSourceRefs": [
+        "BrB:15:2"
+      ],
+      "amendments": [
+        "1962:700"
+      ],
+      "sourceRefs": [
+        "BrP:5",
+        "BrP:7",
+        "BrP:1",
+        "1962:700"
+      ],
+      "wordingFrom": "1965-01-01",
+      "asOf": "2026-10-21",
+      "checked": "2026-10-21",
+      "future": null,
+      "finding": "Osann partsutsaga: återgiven egen paragraflydelse är verifierad mot originaltrycket; brottsbalken trädde i kraft 1965-01-01 enligt 1 § BrP.",
+      "note": "Den återgivna egna paragrafen har jämförts visuellt med originaltrycket SFS 1962:700, trycksida 1856 (PDF-sida 20). Aktuell konsolidering och ändringsregistrets omfattningsuppgifter har kontrollerats separat. Ikraftträdandet följer av 1 § BrP, inte av avsaknad av ändringsfotnot. Hänvisade paragrafer, påföljdsregler, åtal och förstadier kan ha andra tidsgränser; full historik och konkret lagversion är inte slutgodkända.",
+      "originalComparison": {
+        "source": "1962:700",
+        "pdfPages": [
+          20
+        ],
+        "printedPages": [
+          1856
+        ],
+        "method": "visual-own-paragraph-comparison-and-amendment-register-scope-review",
+        "currentOwnText": "2 §\nDen som vid förhör under sanningsförsäkran i rättegång lämnar osann uppgift eller förtiger sanningen, dömes för osann partsutsaga till fängelse i högst två år eller, om brottet är ringa, till böter eller fängelse i högst sex månader.",
+        "reviewed": "2026-10-21",
+        "allHistoricalLawApproved": false
+      }
     },
     {
       "id": "v06-ringa-osann-partsutsaga",
       "title": "Ringa osann partsutsaga",
-      "reason": "No independently mapped amendment identifier in the own text"
+      "statute": "BrB:15:2",
+      "ownText": "2 §\nDen som vid förhör under sanningsförsäkran i rättegång lämnar osann uppgift eller förtiger sanningen, dömes för osann partsutsaga till fängelse i högst två år eller, om brottet är ringa, till böter eller fängelse i högst sex månader.",
+      "sourceURL": "https://www.riksdagen.se/sv/dokument-och-lagar/dokument/svensk-forfattningssamling/brottsbalk-1962700_sfs-1962-700/",
+      "lawVersion": null,
+      "ownSourceRefs": [
+        "BrB:15:2"
+      ],
+      "amendments": [
+        "1962:700"
+      ],
+      "sourceRefs": [
+        "BrP:5",
+        "BrP:7",
+        "BrP:1",
+        "1962:700"
+      ],
+      "wordingFrom": "1965-01-01",
+      "asOf": "2026-10-21",
+      "checked": "2026-10-21",
+      "future": null,
+      "finding": "Ringa osann partsutsaga: återgiven egen paragraflydelse är verifierad mot originaltrycket; brottsbalken trädde i kraft 1965-01-01 enligt 1 § BrP.",
+      "note": "Den återgivna egna paragrafen har jämförts visuellt med originaltrycket SFS 1962:700, trycksida 1856 (PDF-sida 20). Aktuell konsolidering och ändringsregistrets omfattningsuppgifter har kontrollerats separat. Ikraftträdandet följer av 1 § BrP, inte av avsaknad av ändringsfotnot. Hänvisade paragrafer, påföljdsregler, åtal och förstadier kan ha andra tidsgränser; full historik och konkret lagversion är inte slutgodkända.",
+      "originalComparison": {
+        "source": "1962:700",
+        "pdfPages": [
+          20
+        ],
+        "printedPages": [
+          1856
+        ],
+        "method": "visual-own-paragraph-comparison-and-amendment-register-scope-review",
+        "currentOwnText": "2 §\nDen som vid förhör under sanningsförsäkran i rättegång lämnar osann uppgift eller förtiger sanningen, dömes för osann partsutsaga till fängelse i högst två år eller, om brottet är ringa, till böter eller fängelse i högst sex månader.",
+        "reviewed": "2026-10-21",
+        "allHistoricalLawApproved": false
+      }
     },
     {
       "id": "v06-ovarsam-utsaga",
       "title": "Ovarsam utsaga",
-      "reason": "No independently mapped amendment identifier in the own text"
+      "statute": "BrB:15:3",
+      "ownText": "3 §\nBegår någon av grov oaktsamhet gärning som i 1 eller 2 § sägs, dömes för ovarsam utsaga till böter eller fängelse i högst sex månader.",
+      "sourceURL": "https://www.riksdagen.se/sv/dokument-och-lagar/dokument/svensk-forfattningssamling/brottsbalk-1962700_sfs-1962-700/",
+      "lawVersion": null,
+      "ownSourceRefs": [
+        "BrB:15:3"
+      ],
+      "amendments": [
+        "1962:700"
+      ],
+      "sourceRefs": [
+        "BrP:5",
+        "BrP:7",
+        "BrP:1",
+        "1962:700"
+      ],
+      "wordingFrom": "1965-01-01",
+      "asOf": "2026-10-21",
+      "checked": "2026-10-21",
+      "future": null,
+      "finding": "Ovarsam utsaga: återgiven egen paragraflydelse är verifierad mot originaltrycket; brottsbalken trädde i kraft 1965-01-01 enligt 1 § BrP.",
+      "note": "Den återgivna egna paragrafen har jämförts visuellt med originaltrycket SFS 1962:700, trycksida 1856 (PDF-sida 20). Aktuell konsolidering och ändringsregistrets omfattningsuppgifter har kontrollerats separat. Ikraftträdandet följer av 1 § BrP, inte av avsaknad av ändringsfotnot. Hänvisade paragrafer, påföljdsregler, åtal och förstadier kan ha andra tidsgränser; full historik och konkret lagversion är inte slutgodkända.",
+      "originalComparison": {
+        "source": "1962:700",
+        "pdfPages": [
+          20
+        ],
+        "printedPages": [
+          1856
+        ],
+        "method": "visual-own-paragraph-comparison-and-amendment-register-scope-review",
+        "currentOwnText": "3 §\nBegår någon av grov oaktsamhet gärning som i 1 eller 2 § sägs, dömes för ovarsam utsaga till böter eller fängelse i högst sex månader.",
+        "reviewed": "2026-10-21",
+        "allHistoricalLawApproved": false
+      }
     },
     {
       "id": "v15-cover-upplopp",
       "title": "Upplopp",
-      "reason": "No independently mapped amendment identifier in the own text"
+      "statute": "BrB:16:1",
+      "ownText": "1 §\nStör folksamling allmän ordning genom att ådagalägga uppsåt att med förenat våld sätta sig upp mot myndighet eller eljest framtvinga eller hindra viss åtgärd och skingrar den sig ej på myndighets befallning, dömes för upplopp, anstiftare och anförare till fängelse i högst fyra år och annan deltagare i folksamlingens förehavande till böter eller fängelse i högst två år.\nOm folksamlingen skingrar sig på myndighets befallning, dömes anstiftare och anförare för upplopp till böter eller fängelse i högst två år.",
+      "sourceURL": "https://www.riksdagen.se/sv/dokument-och-lagar/dokument/svensk-forfattningssamling/brottsbalk-1962700_sfs-1962-700/",
+      "lawVersion": null,
+      "ownSourceRefs": [
+        "BrB:16:1"
+      ],
+      "amendments": [
+        "1962:700"
+      ],
+      "sourceRefs": [
+        "BrP:5",
+        "BrP:7",
+        "BrP:1",
+        "1962:700"
+      ],
+      "wordingFrom": "1965-01-01",
+      "asOf": "2026-10-21",
+      "checked": "2026-10-21",
+      "future": null,
+      "finding": "Upplopp: återgiven egen paragraflydelse är verifierad mot originaltrycket; brottsbalken trädde i kraft 1965-01-01 enligt 1 § BrP.",
+      "note": "Den återgivna egna paragrafen har jämförts visuellt med originaltrycket SFS 1962:700, trycksida 1858 (PDF-sida 22). Aktuell konsolidering och ändringsregistrets omfattningsuppgifter har kontrollerats separat. Ikraftträdandet följer av 1 § BrP, inte av avsaknad av ändringsfotnot. Hänvisade paragrafer, påföljdsregler, åtal och förstadier kan ha andra tidsgränser; full historik och konkret lagversion är inte slutgodkända. Villkorad straffskala och konkret grenval kvarstår.",
+      "originalComparison": {
+        "source": "1962:700",
+        "pdfPages": [
+          22
+        ],
+        "printedPages": [
+          1858
+        ],
+        "method": "visual-own-paragraph-comparison-and-amendment-register-scope-review",
+        "currentOwnText": "1 §\nStör folksamling allmän ordning genom att ådagalägga uppsåt att med förenat våld sätta sig upp mot myndighet eller eljest framtvinga eller hindra viss åtgärd och skingrar den sig ej på myndighets befallning, dömes för upplopp, anstiftare och anförare till fängelse i högst fyra år och annan deltagare i folksamlingens förehavande till böter eller fängelse i högst två år.\nOm folksamlingen skingrar sig på myndighets befallning, dömes anstiftare och anförare för upplopp till böter eller fängelse i högst två år.",
+        "reviewed": "2026-10-21",
+        "allHistoricalLawApproved": false
+      }
     },
     {
       "id": "v15-cover-valdsamt-upplopp",
       "title": "Våldsamt upplopp",
-      "reason": "No independently mapped amendment identifier in the own text"
+      "statute": "BrB:16:2",
+      "ownText": "2 §\nHar folksamling, med uppsåt som i 1 § sägs, gått till förenat våld å person eller egendom, dömes vare sig myndighet var tillstädes eller ej, för våldsamt upplopp, anstiftare och anförare till fängelse i högst tio år och annan deltagare i folksamlingens förehavande till böter eller fängelse i högst fyra år.",
+      "sourceURL": "https://www.riksdagen.se/sv/dokument-och-lagar/dokument/svensk-forfattningssamling/brottsbalk-1962700_sfs-1962-700/",
+      "lawVersion": null,
+      "ownSourceRefs": [
+        "BrB:16:2"
+      ],
+      "amendments": [
+        "1962:700"
+      ],
+      "sourceRefs": [
+        "BrP:5",
+        "BrP:7",
+        "BrP:1",
+        "1962:700"
+      ],
+      "wordingFrom": "1965-01-01",
+      "asOf": "2026-10-21",
+      "checked": "2026-10-21",
+      "future": null,
+      "finding": "Våldsamt upplopp: återgiven egen paragraflydelse är verifierad mot originaltrycket; brottsbalken trädde i kraft 1965-01-01 enligt 1 § BrP.",
+      "note": "Den återgivna egna paragrafen har jämförts visuellt med originaltrycket SFS 1962:700, trycksida 1858 (PDF-sida 22). Aktuell konsolidering och ändringsregistrets omfattningsuppgifter har kontrollerats separat. Ikraftträdandet följer av 1 § BrP, inte av avsaknad av ändringsfotnot. Hänvisade paragrafer, påföljdsregler, åtal och förstadier kan ha andra tidsgränser; full historik och konkret lagversion är inte slutgodkända. Villkorad straffskala och konkret grenval kvarstår.",
+      "originalComparison": {
+        "source": "1962:700",
+        "pdfPages": [
+          22
+        ],
+        "printedPages": [
+          1858
+        ],
+        "method": "visual-own-paragraph-comparison-and-amendment-register-scope-review",
+        "currentOwnText": "2 §\nHar folksamling, med uppsåt som i 1 § sägs, gått till förenat våld å person eller egendom, dömes vare sig myndighet var tillstädes eller ej, för våldsamt upplopp, anstiftare och anförare till fängelse i högst tio år och annan deltagare i folksamlingens förehavande till böter eller fängelse i högst fyra år.",
+        "reviewed": "2026-10-21",
+        "allHistoricalLawApproved": false
+      }
     },
     {
       "id": "v15-cover-vapnat-hot-mot-laglig-ordning",
       "title": "Väpnat hot mot laglig ordning",
-      "reason": "No independently mapped amendment identifier in the own text"
+      "statute": "BrB:18:3",
+      "ownText": "3 §\nDen som, med uppsåt att brott skall förövas mot allmän säkerhet eller medborgares frihet, samlar eller anför väpnat manskap eller håller det samlat eller förser manskap med vapen, ammunition eller annan dylik utrustning eller övar det i vapens bruk, dömes för väpnat hot mot laglig ordning till fängelse, lägst sex och högst tio år.",
+      "sourceURL": "https://www.riksdagen.se/sv/dokument-och-lagar/dokument/svensk-forfattningssamling/brottsbalk-1962700_sfs-1962-700/",
+      "lawVersion": null,
+      "ownSourceRefs": [
+        "BrB:18:3"
+      ],
+      "amendments": [
+        "1962:700"
+      ],
+      "sourceRefs": [
+        "BrP:5",
+        "BrP:7",
+        "BrP:1",
+        "1962:700"
+      ],
+      "wordingFrom": "1965-01-01",
+      "asOf": "2026-10-21",
+      "checked": "2026-10-21",
+      "future": null,
+      "finding": "Väpnat hot mot laglig ordning: återgiven egen paragraflydelse är verifierad mot originaltrycket; brottsbalken trädde i kraft 1965-01-01 enligt 1 § BrP.",
+      "note": "Den återgivna egna paragrafen har jämförts visuellt med originaltrycket SFS 1962:700, trycksida 1863 (PDF-sida 27). Aktuell konsolidering och ändringsregistrets omfattningsuppgifter har kontrollerats separat. Ikraftträdandet följer av 1 § BrP, inte av avsaknad av ändringsfotnot. Hänvisade paragrafer, påföljdsregler, åtal och förstadier kan ha andra tidsgränser; full historik och konkret lagversion är inte slutgodkända.",
+      "originalComparison": {
+        "source": "1962:700",
+        "pdfPages": [
+          27
+        ],
+        "printedPages": [
+          1863
+        ],
+        "method": "visual-own-paragraph-comparison-and-amendment-register-scope-review",
+        "currentOwnText": "3 §\nDen som, med uppsåt att brott skall förövas mot allmän säkerhet eller medborgares frihet, samlar eller anför väpnat manskap eller håller det samlat eller förser manskap med vapen, ammunition eller annan dylik utrustning eller övar det i vapens bruk, dömes för väpnat hot mot laglig ordning till fängelse, lägst sex och högst tio år.",
+        "reviewed": "2026-10-21",
+        "allHistoricalLawApproved": false
+      }
     },
     {
       "id": "v15-cover-olovlig-karverksamhet",
       "title": "Olovlig kårverksamhet",
-      "reason": "No independently mapped amendment identifier in the own text"
+      "statute": "BrB:18:4",
+      "ownText": "4 §\nOm någon bildar eller deltager i sammanslutning, som måste anses vara avsedd att utgöra eller med hänsyn till sin beskaffenhet och det ändamål för vilket den är bildad lätt kan utvecklas till ett sådant maktmedel som militär trupp eller polisstyrka och som icke med vederbörligt tillstånd förstärker försvaret eller ordningsmakten, eller ock för sådan sammanslutning tager befattning med vapen, ammunition eller annan dylik utrustning, upplåter lokal eller mark för dess verksamhet eller understödjer den med penningar eller på annat sätt, dömes för olovlig kårverksamhet till böter eller fängelse i högst två år.",
+      "sourceURL": "https://www.riksdagen.se/sv/dokument-och-lagar/dokument/svensk-forfattningssamling/brottsbalk-1962700_sfs-1962-700/",
+      "lawVersion": null,
+      "ownSourceRefs": [
+        "BrB:18:4"
+      ],
+      "amendments": [
+        "1962:700"
+      ],
+      "sourceRefs": [
+        "BrP:5",
+        "BrP:7",
+        "BrP:1",
+        "1962:700"
+      ],
+      "wordingFrom": "1965-01-01",
+      "asOf": "2026-10-21",
+      "checked": "2026-10-21",
+      "future": null,
+      "finding": "Olovlig kårverksamhet: återgiven egen paragraflydelse är verifierad mot originaltrycket; brottsbalken trädde i kraft 1965-01-01 enligt 1 § BrP.",
+      "note": "Den återgivna egna paragrafen har jämförts visuellt med originaltrycket SFS 1962:700, trycksida 1863 (PDF-sida 27). Aktuell konsolidering och ändringsregistrets omfattningsuppgifter har kontrollerats separat. Ikraftträdandet följer av 1 § BrP, inte av avsaknad av ändringsfotnot. Hänvisade paragrafer, påföljdsregler, åtal och förstadier kan ha andra tidsgränser; full historik och konkret lagversion är inte slutgodkända.",
+      "originalComparison": {
+        "source": "1962:700",
+        "pdfPages": [
+          27
+        ],
+        "printedPages": [
+          1863
+        ],
+        "method": "visual-own-paragraph-comparison-and-amendment-register-scope-review",
+        "currentOwnText": "4 §\nOm någon bildar eller deltager i sammanslutning, som måste anses vara avsedd att utgöra eller med hänsyn till sin beskaffenhet och det ändamål för vilket den är bildad lätt kan utvecklas till ett sådant maktmedel som militär trupp eller polisstyrka och som icke med vederbörligt tillstånd förstärker försvaret eller ordningsmakten, eller ock för sådan sammanslutning tager befattning med vapen, ammunition eller annan dylik utrustning, upplåter lokal eller mark för dess verksamhet eller understödjer den med penningar eller på annat sätt, dömes för olovlig kårverksamhet till böter eller fängelse i högst två år.",
+        "reviewed": "2026-10-21",
+        "allHistoricalLawApproved": false
+      }
     },
     {
       "id": "v15-cover-brott-mot-medborgerlig-frihet",
       "title": "Brott mot medborgerlig frihet",
-      "reason": "No independently mapped amendment identifier in the own text"
+      "statute": "BrB:18:5",
+      "ownText": "5 §\nDen som övar olaga tvång eller olaga hot med uppsåt att påverka den allmänna åsiktsbildningen eller inkräkta på handlingsfriheten inom politisk organisation eller yrkes- eller näringssammanslutning och därigenom sätter yttrande-, församlings- eller föreningsfriheten i fara, dömes för brott mot medborgerlig frihet till fängelse i högst sex år.",
+      "sourceURL": "https://www.riksdagen.se/sv/dokument-och-lagar/dokument/svensk-forfattningssamling/brottsbalk-1962700_sfs-1962-700/",
+      "lawVersion": null,
+      "ownSourceRefs": [
+        "BrB:18:5"
+      ],
+      "amendments": [
+        "1962:700"
+      ],
+      "sourceRefs": [
+        "BrP:5",
+        "BrP:7",
+        "BrP:1",
+        "1962:700"
+      ],
+      "wordingFrom": "1965-01-01",
+      "asOf": "2026-10-21",
+      "checked": "2026-10-21",
+      "future": null,
+      "finding": "Brott mot medborgerlig frihet: återgiven egen paragraflydelse är verifierad mot originaltrycket; brottsbalken trädde i kraft 1965-01-01 enligt 1 § BrP.",
+      "note": "Den återgivna egna paragrafen har jämförts visuellt med originaltrycket SFS 1962:700, trycksida 1863 (PDF-sida 27). Aktuell konsolidering och ändringsregistrets omfattningsuppgifter har kontrollerats separat. Ikraftträdandet följer av 1 § BrP, inte av avsaknad av ändringsfotnot. Hänvisade paragrafer, påföljdsregler, åtal och förstadier kan ha andra tidsgränser; full historik och konkret lagversion är inte slutgodkända.",
+      "originalComparison": {
+        "source": "1962:700",
+        "pdfPages": [
+          27
+        ],
+        "printedPages": [
+          1863
+        ],
+        "method": "visual-own-paragraph-comparison-and-amendment-register-scope-review",
+        "currentOwnText": "5 §\nDen som övar olaga tvång eller olaga hot med uppsåt att påverka den allmänna åsiktsbildningen eller inkräkta på handlingsfriheten inom politisk organisation eller yrkes- eller näringssammanslutning och därigenom sätter yttrande-, församlings- eller föreningsfriheten i fara, dömes för brott mot medborgerlig frihet till fängelse i högst sex år.",
+        "reviewed": "2026-10-21",
+        "allHistoricalLawApproved": false
+      }
     },
     {
       "id": "v15-cover-svikande-av-forsvarsplikt",
       "title": "Svikande av försvarsplikt",
-      "reason": "No independently mapped amendment identifier in the own text"
+      "statute": "BrB:18:6",
+      "ownText": "6 §\nOm någon genom stympning eller annorledes, för längre eller kortare tid, gör sig oduglig till tjänstgöring, som det ålegat honom att fullgöra vid krigsmakten eller eljest för rikets försvar, eller genom att föregiva sjukdom eller medelst annat vilseledande undan drager sig sådan tjänst-\ngöringsskyldighet, dömes för svikande av försvarsplikt till böter eller fängelse i högst två år eller, om riket var i krig, till böter eller fängelse i högst fyra år.",
+      "sourceURL": "https://www.riksdagen.se/sv/dokument-och-lagar/dokument/svensk-forfattningssamling/brottsbalk-1962700_sfs-1962-700/",
+      "lawVersion": null,
+      "ownSourceRefs": [
+        "BrB:18:6"
+      ],
+      "amendments": [
+        "1962:700"
+      ],
+      "sourceRefs": [
+        "BrP:5",
+        "BrP:7",
+        "BrP:1",
+        "1962:700"
+      ],
+      "wordingFrom": "1965-01-01",
+      "asOf": "2026-10-21",
+      "checked": "2026-10-21",
+      "future": null,
+      "finding": "Svikande av försvarsplikt: återgiven egen paragraflydelse är verifierad mot originaltrycket; brottsbalken trädde i kraft 1965-01-01 enligt 1 § BrP.",
+      "note": "Den återgivna egna paragrafen har jämförts visuellt med originaltrycket SFS 1962:700, trycksida 1863 (PDF-sida 27). Aktuell konsolidering och ändringsregistrets omfattningsuppgifter har kontrollerats separat. Ikraftträdandet följer av 1 § BrP, inte av avsaknad av ändringsfotnot. Hänvisade paragrafer, påföljdsregler, åtal och förstadier kan ha andra tidsgränser; full historik och konkret lagversion är inte slutgodkända. Villkorad straffskala och konkret grenval kvarstår. Originaltryckets radavstavning och ordmellanrum (undandrager/tjänstgöringsskyldighet) har bedömts som typografiska; krigsvillkoret måste fortfarande prövas.",
+      "originalComparison": {
+        "source": "1962:700",
+        "pdfPages": [
+          27
+        ],
+        "printedPages": [
+          1863
+        ],
+        "method": "visual-own-paragraph-comparison-and-amendment-register-scope-review",
+        "currentOwnText": "6 §\nOm någon genom stympning eller annorledes, för längre eller kortare tid, gör sig oduglig till tjänstgöring, som det ålegat honom att fullgöra vid krigsmakten eller eljest för rikets försvar, eller genom att föregiva sjukdom eller medelst annat vilseledande undan drager sig sådan tjänst-\ngöringsskyldighet, dömes för svikande av försvarsplikt till böter eller fängelse i högst två år eller, om riket var i krig, till böter eller fängelse i högst fyra år.",
+        "reviewed": "2026-10-21",
+        "allHistoricalLawApproved": false
+      }
     },
     {
       "id": "v15-cover-krigsanstiftan",
       "title": "Krigsanstiftan",
-      "reason": "No independently mapped amendment identifier in the own text"
+      "statute": "BrB:19:2",
+      "ownText": "2 §\nDen som med våldsamma medel eller utländskt bistånd framkallar fara för att riket skall invecklas i krig eller andra fientligheter, dömes, om det ej är högförräderi, för krigsanstiftan till fängelse, lägst två och högst åtta år.",
+      "sourceURL": "https://www.riksdagen.se/sv/dokument-och-lagar/dokument/svensk-forfattningssamling/brottsbalk-1962700_sfs-1962-700/",
+      "lawVersion": null,
+      "ownSourceRefs": [
+        "BrB:19:2"
+      ],
+      "amendments": [
+        "1962:700"
+      ],
+      "sourceRefs": [
+        "BrP:5",
+        "BrP:7",
+        "BrP:1",
+        "1962:700"
+      ],
+      "wordingFrom": "1965-01-01",
+      "asOf": "2026-10-21",
+      "checked": "2026-10-21",
+      "future": null,
+      "finding": "Krigsanstiftan: återgiven egen paragraflydelse är verifierad mot originaltrycket; brottsbalken trädde i kraft 1965-01-01 enligt 1 § BrP.",
+      "note": "Den återgivna egna paragrafen har jämförts visuellt med originaltrycket SFS 1962:700, trycksida 1864 (PDF-sida 28). Aktuell konsolidering och ändringsregistrets omfattningsuppgifter har kontrollerats separat. Ikraftträdandet följer av 1 § BrP, inte av avsaknad av ändringsfotnot. Hänvisade paragrafer, påföljdsregler, åtal och förstadier kan ha andra tidsgränser; full historik och konkret lagversion är inte slutgodkända.",
+      "originalComparison": {
+        "source": "1962:700",
+        "pdfPages": [
+          28
+        ],
+        "printedPages": [
+          1864
+        ],
+        "method": "visual-own-paragraph-comparison-and-amendment-register-scope-review",
+        "currentOwnText": "2 §\nDen som med våldsamma medel eller utländskt bistånd framkallar fara för att riket skall invecklas i krig eller andra fientligheter, dömes, om det ej är högförräderi, för krigsanstiftan till fängelse, lägst två och högst åtta år.",
+        "reviewed": "2026-10-21",
+        "allHistoricalLawApproved": false
+      }
     },
     {
       "id": "v15-beho-righetsmissbrk",
       "title": "Behörighetsmissbruk",
-      "reason": "No independently mapped amendment identifier in the own text"
+      "statute": "BrB:10:6",
+      "ownText": "6 §\nDen som, i annat fall än förut i detta kapitel är sagt, genom missbruk av behörighet att i annans ställe företaga rättshandling skadar denne eller med missbruk av behörighet att göra gällande skuldebrev eller dylik handling kräver vad annan tillkommer, dömes för behörighetsmissbruk till böter eller fängelse i högst två år.\nDetsamma skall gälla, om någon fordrar betalning jämlikt handling som ej blivit utgiven eller för gäld som redan är gulden eller ock kräver att utfå gods som han redan bekommit eller mot krav åberopar kvitto som icke utgivits.",
+      "sourceURL": "https://www.riksdagen.se/sv/dokument-och-lagar/dokument/svensk-forfattningssamling/brottsbalk-1962700_sfs-1962-700/",
+      "lawVersion": null,
+      "ownSourceRefs": [
+        "BrB:10:6"
+      ],
+      "amendments": [
+        "1962:700"
+      ],
+      "sourceRefs": [
+        "BrP:5",
+        "BrP:7",
+        "BrP:1",
+        "1962:700"
+      ],
+      "wordingFrom": "1965-01-01",
+      "asOf": "2026-10-21",
+      "checked": "2026-10-21",
+      "future": null,
+      "finding": "Behörighetsmissbruk: återgiven egen paragraflydelse är verifierad mot originaltrycket; brottsbalken trädde i kraft 1965-01-01 enligt 1 § BrP.",
+      "note": "Den återgivna egna paragrafen har jämförts visuellt med originaltrycket SFS 1962:700, trycksida 1850 (PDF-sida 14). Aktuell konsolidering och ändringsregistrets omfattningsuppgifter har kontrollerats separat. Ikraftträdandet följer av 1 § BrP, inte av avsaknad av ändringsfotnot. Hänvisade paragrafer, påföljdsregler, åtal och förstadier kan ha andra tidsgränser; full historik och konkret lagversion är inte slutgodkända.",
+      "originalComparison": {
+        "source": "1962:700",
+        "pdfPages": [
+          14
+        ],
+        "printedPages": [
+          1850
+        ],
+        "method": "visual-own-paragraph-comparison-and-amendment-register-scope-review",
+        "currentOwnText": "6 §\nDen som, i annat fall än förut i detta kapitel är sagt, genom missbruk av behörighet att i annans ställe företaga rättshandling skadar denne eller med missbruk av behörighet att göra gällande skuldebrev eller dylik handling kräver vad annan tillkommer, dömes för behörighetsmissbruk till böter eller fängelse i högst två år.\nDetsamma skall gälla, om någon fordrar betalning jämlikt handling som ej blivit utgiven eller för gäld som redan är gulden eller ock kräver att utfå gods som han redan bekommit eller mot krav åberopar kvitto som icke utgivits.",
+        "reviewed": "2026-10-21",
+        "allHistoricalLawApproved": false
+      }
     },
     {
       "id": "v15-yndo-rseelse",
       "title": "Fyndförseelse",
-      "reason": "No independently mapped amendment identifier in the own text"
+      "statute": "BrB:10:8",
+      "ownText": "8 §\nFullgör man ej vad i lag är föreskrivet om skyldighet att tillkännagiva hittegods eller annans sak som man av misstag eller tillfällighet fått i besittning, dömes för fyndförseelse till böter.\nUnderlåter man att fullgöra sådan skyldighet med uppsåt att tillägna sig godset eller förfar man eljest med godset på sätt i 4 § sägs, skall gälla vad där är stadgat.",
+      "sourceURL": "https://www.riksdagen.se/sv/dokument-och-lagar/dokument/svensk-forfattningssamling/brottsbalk-1962700_sfs-1962-700/",
+      "lawVersion": null,
+      "ownSourceRefs": [
+        "BrB:10:8"
+      ],
+      "amendments": [
+        "1962:700"
+      ],
+      "sourceRefs": [
+        "BrP:5",
+        "BrP:7",
+        "BrP:1",
+        "1962:700"
+      ],
+      "wordingFrom": "1965-01-01",
+      "asOf": "2026-10-21",
+      "checked": "2026-10-21",
+      "future": null,
+      "finding": "Fyndförseelse: återgiven egen paragraflydelse är verifierad mot originaltrycket; brottsbalken trädde i kraft 1965-01-01 enligt 1 § BrP.",
+      "note": "Den återgivna egna paragrafen har jämförts visuellt med originaltrycket SFS 1962:700, trycksida 1850 (PDF-sida 14). Aktuell konsolidering och ändringsregistrets omfattningsuppgifter har kontrollerats separat. Ikraftträdandet följer av 1 § BrP, inte av avsaknad av ändringsfotnot. Hänvisade paragrafer, påföljdsregler, åtal och förstadier kan ha andra tidsgränser; full historik och konkret lagversion är inte slutgodkända.",
+      "originalComparison": {
+        "source": "1962:700",
+        "pdfPages": [
+          14
+        ],
+        "printedPages": [
+          1850
+        ],
+        "method": "visual-own-paragraph-comparison-and-amendment-register-scope-review",
+        "currentOwnText": "8 §\nFullgör man ej vad i lag är föreskrivet om skyldighet att tillkännagiva hittegods eller annans sak som man av misstag eller tillfällighet fått i besittning, dömes för fyndförseelse till böter.\nUnderlåter man att fullgöra sådan skyldighet med uppsåt att tillägna sig godset eller förfar man eljest med godset på sätt i 4 § sägs, skall gälla vad där är stadgat.",
+        "reviewed": "2026-10-21",
+        "allHistoricalLawApproved": false
+      }
+    },
+    {
+      "id": "v06-otillatet-forfarande-med-pornografisk-bild",
+      "title": "Otillåtet förfarande med pornografisk bild",
+      "statute": "BrB:16:11",
+      "ownText": "11 §\nDen som på eller vid allmän plats genom skyltning eller annat liknande förfarande förevisar pornografisk bild på sätt som är ägnat att väcka allmän anstöt dömes för otillåtet förfarande med pornografisk bild till böter eller fängelse i högst sex månader. Det samma gäller den som med posten sänder eller på annat sätt tillställer någon pornografisk bild utan föregående beställning.\nLag (1970:225).",
+      "sourceURL": "https://www.riksdagen.se/sv/dokument-och-lagar/dokument/svensk-forfattningssamling/brottsbalk-1962700_sfs-1962-700/",
+      "lawVersion": null,
+      "ownSourceRefs": [
+        "BrB:16:11"
+      ],
+      "amendments": [
+        "1970:225"
+      ],
+      "sourceRefs": [
+        "BrP:5",
+        "BrP:7",
+        "1970:225",
+        "Prop1978/79:179:p20"
+      ],
+      "wordingFrom": "1971-02-17",
+      "asOf": "2026-10-21",
+      "checked": "2026-10-21",
+      "future": null,
+      "finding": "Otillåtet förfarande med pornografisk bild: den återgivna lydelsen i 16 kap. 11 § trädde i kraft 1971-02-17, enligt originaltryckets grundlagsvillkor och den uttryckliga bekräftelsen i prop. 1978/79:179 s. 20.",
+      "note": "Originaltrycket SFS 1970:225 s. 475–476 har jämförts med återgiven egen paragraf. Datumet 1 juli 1970 avser andra uttryckligen uppräknade paragrafer och får inte tillämpas på 16:11. Datumet 17 februari 1971 är uttryckligen bekräftat i propositionen; det har inte räknats fram från en antagen grundlagsdag. Full historisk bedömning, praxis och konkret lagversion är fortfarande öppna."
     }
-  ]
+  ],
+  "unresolved": []
 }

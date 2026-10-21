@@ -235,6 +235,11 @@ try{
   }
   await page.goto(url+'#sok',{waitUntil:'networkidle'});
   for(const [title,phrase]of[
+    ['Otillåtet förfarande med pornografisk bild','1971-02-17'],
+    ['Stöld','1965-01-01'],
+    ['Förtal','1965-01-01'],
+    ['Våldsamt upplopp','1965-01-01'],
+    ['Svikande av försvarsplikt','1965-01-01'],
     ['Mord','2020-01-01'],
     ['Ofredande','2018-01-01'],
     ['Grov misshandel','2026-08-01'],
@@ -250,7 +255,9 @@ try{
     assert.equal(await temporal.getAttribute('open'),null,'Temporal review starts collapsed: '+title);
     await temporal.locator(':scope > summary').click();assert.ok((await temporal.innerText()).includes(phrase),'Temporal distinction: '+title);
     assert.ok((await temporal.innerText()).includes('Ingen lagversion väljs automatiskt'));
-    assert.equal(await temporal.locator('a[href*="rkrattsbaser.gov.se"]').count(),1);
+    assert.equal(await temporal.locator('a[href*="rkrattsbaser.gov.se"], a[href*="docId=2667840"]').count(),1);
+    if(title==='Otillåtet förfarande med pornografisk bild'){assert.equal(await temporal.getByRole('link',{name:'Bekräftelse av ikraftträdandet'}).count(),1);assert.equal(await temporal.getByRole('link',{name:'Ikraftträdandekälla – originaltryck'}).count(),1);}
+    if(title==='Stöld')assert.equal(await temporal.getByRole('link',{name:'Originaltryck – SFS'}).count(),1);
     assert.equal(await temporal.evaluate(el=>el.scrollWidth<=el.clientWidth+1),true,'Temporal review fits iPhone: '+title);
     assert.equal(await page.evaluate(()=>document.documentElement.scrollWidth<=innerWidth+1),true);
   }
@@ -298,10 +305,6 @@ try{
     assert.equal(await note.locator('a[href="https://data.riksdagen.se/dokument/HD03218"]').count(),1);
     assert.equal(await note.evaluate(el=>el.scrollWidth<=el.clientWidth+1),true,'Reform note fits iPhone: '+title);
   }
-  await page.goto(url+'#sok',{waitUntil:'networkidle'});await search.fill('Stöld');await wait();
-  await page.locator('.crime-card').filter({has:page.getByText('Stöld',{exact:true})}).click();
-  await page.locator('#sec-lag > summary').click();
-  assert.equal(await page.locator('.law-temporal-review').count(),0,'Do not invent commencement dates for unmapped original-wording cards');
   await page.goto(url+'#sok',{waitUntil:'networkidle'});
   await search.fill('stöld');
   await search.press('Enter');
