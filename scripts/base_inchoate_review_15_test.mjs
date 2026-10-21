@@ -133,3 +133,23 @@ for(const[i,c]of warCrimes.entries()){const actual=JSON.parse(JSON.stringify(c))
 vm.runInContext(warCode,warIso);assert.equal(warIso.window.BK_STAGE_WARTIME_PENALTY_REVIEW15.duplicates,3);
 const warReload=load(),warFullBefore=JSON.stringify(warReload.window.BK_DATA.crimes);vm.runInContext(read(mod),warReload);assert.equal(JSON.stringify(warReload.window.BK_DATA.crimes),warFullBefore);
 console.log('PASS: three conditionally applicable wartime stage scales; no activation, personal-scope or coercion approvals; source and condition mutation guards');
+
+const altCtx=load(),altW=altCtx.window,altRows=altW.BK_DATA.crimes.filter(c=>c.stagePenaltyAlternativeReview15);assert.equal(altRows.length,12);assert.equal(altW.BK_STAGE_PENALTY_ALTERNATIVES15.annotated,12);assert.equal(altW.BK_STAGE_PENALTY_ALTERNATIVES15.options,44);assert.equal(altW.BK_STAGE_PENALTY_ALTERNATIVES15.held.length,0);
+assert.deepEqual(JSON.parse(JSON.stringify(altW.BK_STAGE_PENALTY_ALTERNATIVES_DATA15)),JSON.parse(read('data/stage-penalty-alternatives-15.json')));
+for(const c of altRows){assert.equal(c.penaltyRange,null);assert.notEqual(c.penaltyRangeVerified,true);assert.equal(c.conditionalPenalty,true);assert.equal(c.stagePenaltyAlternativeReview15.automaticSelectionAllowed,false);assert.equal(c.stagePenaltyAlternativeReview15.fullLegalReviewApproved,false);assert.equal(altW.BK_COERCIVE.score(c,{id:'husrannsakan',scale:'any'}).tone,'unknown');}
+const altBy=t=>altRows.find(c=>c.title===t);
+assert.equal(altBy('Förberedelse till osann utsaga inför nordisk domstol').penaltyAlternatives15.length,2);
+assert.equal(altBy('Försök till brukande av det förfalskade').penaltyAlternatives15.length,9);
+assert.deepEqual(JSON.parse(JSON.stringify(altBy('Förberedelse till högförräderi').penaltyAlternatives15.map(a=>a.range))),[{min:1/12,max:18,fines:false,life:false},{min:0,max:10,fines:true,life:false,maxExclusive:true}]);
+assert.deepEqual(JSON.parse(JSON.stringify(altBy('Förberedelse till osann utsaga inför nordisk domstol').penaltyAlternatives15.map(a=>a.range))),[{min:0,max:2,fines:true,life:false},{min:0,max:8,fines:true,life:false,maxExclusive:true}]);
+function altMutation(fn){const x=load();for(const c of x.window.BK_DATA.crimes.filter(c=>c.stagePenaltyAlternativeReview15)){delete c.stagePenaltyAlternativeReview15;delete c.penaltyAlternatives15;delete c.conditionalPenalty;}fn(x.window);vm.runInContext(read(mod),x);return x.window.BK_STAGE_PENALTY_ALTERNATIVES15;}
+assert.equal(altMutation(w=>w.BK_STATUTES['BrB:15:15'].text+=' CHANGED').annotated,8);
+assert.equal(altMutation(w=>w.BK_STATUTES['BrB:14:10'].complete=false).annotated,10);
+assert.equal(altMutation(w=>w.BK_STATUTES['BrB:23:2'].text+=' CHANGED').annotated,3);
+assert.equal(altMutation(w=>w.BK_STATUTES['BrB:26:1'].text+=' CHANGED').annotated,8);
+const altIso=load(),altCrimes=altIso.window.BK_DATA.crimes;for(const c of altCrimes.filter(c=>c.stagePenaltyAlternativeReview15)){delete c.stagePenaltyAlternativeReview15;delete c.penaltyAlternatives15;delete c.conditionalPenalty;}
+const altBefore=JSON.parse(JSON.stringify(altCrimes)),altCode=read(mod).slice(read(mod).indexOf('/* Twelve individually described conditional stage scales,'));vm.runInContext(altCode,altIso);
+const altFields=['conditionalPenalty','penaltyAlternatives15','penalty','penaltyShort','penaltyNote','penaltyReviewScope','stagePenaltyAlternativeReview15'];
+for(const[i,c]of altCrimes.entries()){const actual=JSON.parse(JSON.stringify(c)),prior=altBefore[i];if(c.stagePenaltyAlternativeReview15)for(const key of altFields){delete actual[key];delete prior[key];}assert.deepEqual(actual,prior,'Alternative descriptions preserve other legal fields: '+c.title);}
+vm.runInContext(altCode,altIso);assert.equal(altIso.window.BK_STAGE_PENALTY_ALTERNATIVES15.duplicates,12);
+console.log('PASS: twelve conditional stage cards with 44 separately described branches, correct excluded alternatives, exact source holds and no automatic numeric selection');

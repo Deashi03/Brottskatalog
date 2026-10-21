@@ -219,3 +219,30 @@ Här behålls uttryckligen villkoret i BrB 21:1 och kortens befintliga varning. 
 
 
 Nästa konkret återstående kö: tolv alternativ-/härledda förstadier. BrB 15:4 a omfattar både menedsalternativ och partsutsaga, men 15:15 omfattar bara mened som inte är mindre allvarlig och grov mened. Partsutsaga och mindre allvarligt menedsfall får inte få förberedelse-/stämplingsskala. BrB 15:4 b har motsvarande begränsning till de tillämpliga menedsalternativen. Kontrollera även 14:13:s ringaundantag för brukande. Använd inte en maxskala som täcker flera rättsligt olika alternativ. Bevara numeriska luckor tills alternativen är särskilt genomgångna. Övriga 390 praxisfrågor och åtalsfrågan kvarstår; inga progresspoäng för intervallpaketen.
+
+
+## Fortsättning: individuella alternativ för de sista tolv korten
+
+De tolv återstående korten utan ett gemensamt numeriskt intervall har nu fått **44 förstadiespecifika alternativ**. Tidigare visades endast en allmän hänvisning till individuell straffskaleprövning. Nu kan användaren öppna en kompakt meny och läsa rätt alternativ efter egen rekvisitprövning.
+
+| Brottsfamilj | Förstadiekort | Alternativ per kort | Vad som särskiljs |
+|---|---:|---:|---|
+| Brukande av det förfalskade | 2 | 9 | Urkund, signatur, pengar, värde-/kontrollmärke eller fast märke samt tillämplig grad |
+| Myteri | 2 | 5 | Deltagare, anstiftare/anförare, gemensamt våld och annars grovt brott |
+| Svikande av försvarsplikt | 1 | 2 | Freds- respektive krigsalternativet |
+| Högförräderi | 3 | 2 | Faran ringa respektive inte ringa |
+| Osann utsaga inför nordisk domstol | 2 | 2 | Tillämplig normal mened respektive grov mened |
+| Osann utsaga inför en internationell domstol | 2 | 2 | Tillämplig normal mened respektive grov mened |
+
+Exempel: förberedelse till högförräderi har en alternativskala med fängelse från en månad till högst 18 år och en annan med böter–fängelse under tio år. Förberedelse till den menedsanknutna normalgraden har högst två år, medan den grova menedsgrenen har böter–fängelse under åtta år. Brukandealternativen skiljer bland annat försöket till brukande motsvarande grov penningförfalskning (fängelse en månad–åtta år) från dess förberedelseskala (böter–fängelse under åtta år).
+
+Ringa fullbordansfall enligt BrB 14:13 är inte med bland de positiva förfalskningsalternativen. För de två domstolsutsagefamiljerna utesluts mindre allvarlig mened, ovarsam utsaga och, i det nordiska fallet, partsutsaga. De får inte av misstag ärva en positiv förberedelse-/stämplingsskala från grundkortet.
+
+Alla tolv kort behåller `penaltyRange:null`; ingen global numerisk skala verifieras eller väljs. Befintliga åtalsbesked, häktningsfält, ansvarsvillkor och revisionsakter bevaras. De 14 villkorade **grundskalorna** ändras inte. Underlaget innehåller egen paragraf, särskilt förstadielagrum, aktuella 23:1/23:2 och, där en fängelseminimitid behövs, separat läst aktuell 26:1. Hela mappningen och de ordagranna textpinnarna finns i `data/stage-penalty-alternatives-15.json`.
+
+Av de ursprungliga 56 luckorna har därmed **44 fasta eller uttryckligen tillämpningsvillkorade numeriska intervall och tolv alternativberoende kort med 44 beskrivna grenar** fått särskilt stöd. De tolv saknar fortfarande en enda gemensam numerisk skala av rättsliga skäl; detta omklassificeras inte till ett falskt numeriskt godkännande. Arbetsinventeringen är fortsatt **11 548/11 957 = 96,6 %**, med 390 förarbets-/praxisfrågor, ett åtalsfilter och 18 publiceringsmoment kvar. Inga fullständiga juridiska slutgodkännanden eller nya progresspoäng.
+
+Det föregående elva-intervallspaketet finns på e6fc7f8fcce6ee0c6c859c41c61845c50a851421. Fullständiga testresultat för respektive paket redovisas när körningarna är avslutade; äldre gröna körningar används inte som bevis för senare appkod.
+
+
+Nästa arbete: verifiera aktuell CI för e6fc7f8 och det senare alternativpaketet; ta därefter itu med verkliga individuella förarbets-/praxisfrågor och åtalsfiltret, inte med att fylla de tolv korten med en falsk gemensam skala. De 44 alternativen måste alltid hållas skilda från automatisk faktisk tillämpning. Fullständiga juridiska godkännanden är fortsatt noll och publicering är inte tillåten.

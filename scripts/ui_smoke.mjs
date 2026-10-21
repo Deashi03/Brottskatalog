@@ -156,6 +156,21 @@ try{
     const overview=page.locator('#sec-stadier');await overview.locator(':scope > summary').click();await overview.locator('.stage-overview-link').filter({hasText:kind+' ·'}).click();await wait();
     const text=await page.locator('.penalty-panel').innerText();assert.ok(text.includes('Tillämpningen är villkorad'));assert.ok(text.includes(scale));assert.ok(text.includes('Krigs- eller beredskapsrelaterade'));
   }
+  for(const [parent,kind,count,phrase]of[
+    ['Brukande av det förfalskade','Försök',9,'Fängelse 1 mån – högst 8 år'],
+    ['Myteri','Förberedelse',5,'Böter – fängelse högst 18 år'],
+    ['Svikande av försvarsplikt','Försök',2,'högst 4 år'],
+    ['Högförräderi','Förberedelse',2,'fängelse under 10 år'],
+    ['Osann utsaga inför nordisk domstol','Förberedelse',2,'Partsutsaga i tvistemål enligt 15:2 omfattas inte'],
+    ['Osann utsaga inför en internationell domstol','Stämpling',2,'fängelse under 8 år']
+  ]){
+    await page.goto(url+'#sok',{waitUntil:'networkidle'});await search.fill(parent);await wait();await page.locator('.crime-card').filter({has:page.getByText(parent,{exact:true})}).click();
+    const overview=page.locator('#sec-stadier');await overview.locator(':scope > summary').click();await overview.locator('.stage-overview-link').filter({hasText:kind+' ·'}).click();await wait();
+    const details=page.locator('.penalty-alternative-details');assert.equal(await details.getAttribute('open'),null,'Alternatives start collapsed: '+parent);await details.locator(':scope > summary').click();
+    assert.equal(await details.locator('li').count(),count);assert.ok((await details.innerText()).includes(phrase),'Specific stage alternatives: '+parent);
+    assert.equal(await page.locator('.penalty-panel .penalty-bounds').count(),0,'No single synthetic range for alternative-dependent stage');
+    assert.equal(await page.evaluate(()=>document.documentElement.scrollWidth<=innerWidth+1),true,'Stage alternatives fit iPhone: '+parent);
+  }
   await page.goto(url+'#sok',{waitUntil:'networkidle'});
   for(const [title,phrase,links]of[
     ['Ringa narkotikabrott · bruk','undantar bruk av narkotika',3],
