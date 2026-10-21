@@ -5,7 +5,7 @@
  * This does not exempt all forged electronic IDs or ordinary documents.
  */
 (()=>{'use strict';const D=window.BK_DATA,W=window.BK_STATUTES;if(!D?.crimes||!W)return;
-const SOURCE='https://www.domstol.se/nyheter/2025/11/var-det-brukande-av-falsk-urkund-att-visa-upp-en-skarmbild-av-ett-falskt-freja-eid/';
+const SOURCE='https://www.domstol.se/globalassets/filer/domstol/hogstadomstolen/avgoranden/2025/b-920-25.pdf';
 const LAW='https://www.riksdagen.se/sv/dokument-och-lagar/dokument/svensk-forfattningssamling/brottsbalk-1962700_sfs-1962-700/';
 const card=D.crimes.find(x=>!x.stageType&&x.statute==='BrB:14:10');
 const one=D.crimes.find(x=>!x.stageType&&x.statute==='BrB:14:1');
@@ -39,7 +39,7 @@ if(card&&one&&sourceChecked){
   c.rekvisit15.legalReviewApproved=false;
  }
  card.digitalUrkundCaseReview15={
-  reference:outcome.reference,source:SOURCE,
+  reference:outcome.reference,source:SOURCE,originalJudgmentRead:'2026-10-21',paragraphs:'6–17',
   proofIssue:'reliable-looking verification of issuer on stored electronic document',
   independentOfPhysicalDocumentOriginality:true,
   allScreenshotsExempt:false,

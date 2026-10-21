@@ -1,7 +1,7 @@
 {
-  "sourceParentCommit": "c6f17f3f0a106c7d696da304ce93f76a340c81e3",
+  "sourceParentCommit": "4e6229ccee2ffb66a63ebcbe6db875974aafb482",
   "baselineCommit": "0bbbe45d70d01a92a7874c74862cc7d21bae2355",
-  "currentRuntimeSHA256": "35a8391f9ebc457a7210fbc8a04c6d401e2eecbbaee3a78a0ec30028c08891bd",
+  "currentRuntimeSHA256": "976cca4d5d8af8555872cc7a64ae637e98763310304bbc2b771af5cec3a5231c",
   "baselineRuntimeSHA256": "b4059fb41c1da166a15f0baf2ced33551075cca206944b26fc17994f1f90700f",
   "hashMethod": "SHA-256: for index.html and then external runtime scripts in page order, normalized repository-relative path without ./, NUL, UTF-8 file content, NUL; recomputed from both actual load chains",
   "scope": "Recomputed complete runtime inventory; no legal approval and no publication credit",
@@ -1652,6 +1652,12 @@
     {
       "sourceParentCommit": "e6fc7f8fcce6ee0c6c859c41c61845c50a851421",
       "currentRuntimeSHA256": "71aaaa127ae1691013aea8667d4db7d2520a5a548aab8a0778bf418464b698da",
+      "baselineRuntimeSHA256": "b4059fb41c1da166a15f0baf2ced33551075cca206944b26fc17994f1f90700f",
+      "hashMethod": "SHA-256: for index.html and then external runtime scripts in page order, normalized repository-relative path without ./, NUL, UTF-8 file content, NUL; recomputed from both actual load chains"
+    },
+    {
+      "sourceParentCommit": "c6f17f3f0a106c7d696da304ce93f76a340c81e3",
+      "currentRuntimeSHA256": "35a8391f9ebc457a7210fbc8a04c6d401e2eecbbaee3a78a0ec30028c08891bd",
       "baselineRuntimeSHA256": "b4059fb41c1da166a15f0baf2ced33551075cca206944b26fc17994f1f90700f",
       "hashMethod": "SHA-256: for index.html and then external runtime scripts in page order, normalized repository-relative path without ./, NUL, UTF-8 file content, NUL; recomputed from both actual load chains"
     }

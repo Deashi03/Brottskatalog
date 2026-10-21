@@ -44,5 +44,13 @@ for(const stage of stages.filter(c=>c.stageParentId===by('Grovt våld eller hot 
  assert.equal(stage.stageStatus,'unverified','Do not infer negative coverage for gross military superior assault');
 }
 assert.ok(html.includes("c.applicabilityConditional?{tone:'unknown'"),'Coercive menu must be neutral for contingent offences');
-assert.ok(html.indexOf("if(c.stageStatus&&c.stageStatus!=='punishable')")<html.indexOf('if(c.applicabilityConditional)return'),'Unpunishable stage override must precede war notice');
+const renderContext=vm.createContext({escapeHtml:value=>String(value).replaceAll('&','&amp;').replaceAll('<','&lt;').replaceAll('>','&gt;')});
+vm.runInContext(html.slice(html.indexOf('function punishmentBlock(c){'),html.indexOf('function punishmentBlock(c){')+html.slice(html.indexOf('function punishmentBlock(c){')).indexOf('\nfunction ',1)),renderContext);
+const render=c=>renderContext.punishmentBlock(c);
+assert.ok(render({stageStatus:'not-criminalized',applicabilityConditional:true}).includes('ej straffbart'),'Unpunishable stage must override conditional notice');
+assert.ok(!render({stageStatus:'not-criminalized',applicabilityConditional:true}).includes('Tillämpningen är villkorad'));
+assert.ok(render({applicabilityConditional:true,applicabilityWarning:'Specific applicability caveat'}).includes('Specific applicability caveat'));
+const alternate=render({stageStatus:'punishable',conditionalPenalty:true,applicabilityConditional:true,applicabilityWarning:'Specific applicability caveat',stagePenaltyAlternativeReview15:{},penaltyAlternatives15:[{when:'Role A',scale:'Böter',source:'BrB'}]});
+assert.ok(alternate.includes('Specific applicability caveat')&&alternate.includes('penalty-alternative-details')&&alternate.includes('Role A'),'Conditional applicability and alternative scales must both be visible');
+
 console.log('PASS V1.5: 18 BrB wartime/disarmament offences, legal applicability gating, 22:7 stages and uncommenced-law exclusion');

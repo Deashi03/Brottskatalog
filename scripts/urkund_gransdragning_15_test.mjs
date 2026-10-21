@@ -28,11 +28,13 @@ for(const [title,ref] of items){
  assert.equal(c.urkundDistinction15.individuallyCertified,false);
  assert.equal(c.urkundDistinction15.noAutomaticProsecutionAdvice,true);
  assert.equal(c.urkundDistinction15.noAutomaticCustodyAdvice,true);
- assert.equal(c.urkundDistinction15.checked,'2026-10-18');
+ assert.equal(c.urkundDistinction15.checked,'2026-10-21');
 }
 assert.ok(by('Urkundsförfalskning').urkundDistinction15.note.includes('Enbart ett osant sakpåstående'));
 assert.ok(by('Brukande av det förfalskade').urkundDistinction15.note.includes('ingen enda generell straffskala'));
 assert.ok(by('Osant intygande').urkundDistinction15.note.includes('ANNAT ÄN egna angelägenheter'));
+assert.ok(by('Osant intygande').urkundDistinction15.note.includes('Tredje stycket gäller brukande'));
+assert.ok(by('Missbruk av urkund').urkundDistinction15.note.includes('separat missbruk av handling'));
 assert.ok(by('Missbruk av urkund').urkundDistinction15.note.includes('pass, betyg eller identitetshandling'));
 assert.notEqual(by('Brukande av det förfalskade').penaltyRangeVerified,true,
  'General range for BrB 14:10 is impossible: underlying forgery controls the range');
@@ -45,3 +47,9 @@ assert.equal(o.window.BK_URKUND_DISTINCTION15.annotated,0);
 assert.equal(o.window.BK_URKUND_DISTINCTION15.held.length,4);
 assert.ok(fake.every(c=>c.rekvisit15.note==='untouched'),'Do not rewrite cards on missing current SFS evidence');
 console.log('PASS V1.5: true vs forged certificate, forged-use penalty reference and misleading screenshot cautions under BrB 14/15');
+
+assert.equal(ctx.window.BK_URKUND_GRADE_CASE15.annotated,2);
+for(const title of ["Urkundsförfalskning","Grov urkundsförfalskning"]){const c=by(title);assert.equal(c.urkundGradeCaseReview15.automaticGradingAllowed,false);assert.equal(c.urkundGradeCaseReview15.historicalPenaltyImported,false);assert.ok(c.rekvisit15.note.includes("Upprepning ensam gör normalt inte brottet grovt"));}
+const prior=JSON.stringify(ctx.window.BK_DATA.crimes);vm.runInContext(raw,ctx);assert.equal(JSON.stringify(ctx.window.BK_DATA.crimes),prior,"Source notes reload without duplicate annotations or changed crime fields");
+
+ctx.window.BK_STATUTES["BrB:14:3"].text+=" changed";vm.runInContext(raw,ctx);assert.equal(ctx.window.BK_URKUND_GRADE_CASE15.annotated,0);assert.equal(ctx.window.BK_URKUND_GRADE_CASE15.held.length,2);assert.equal(JSON.stringify(ctx.window.BK_DATA.crimes),prior,"Changed grade source cannot attach or rewrite the court assessment");

@@ -33,7 +33,7 @@ for(const name of [...report.added,...report.already]){
   assert.equal(examples.length,1,'One authentic HD Freja court case – no invented additional examples');
   assert.ok(examples.every(x=>x.kind==='praxisgrundat-typexempel'&&
    x.status==='cited-supreme-court-acquittal'&&
-   x.sourceURL==='https://www.domstol.se/nyheter/2025/11/var-det-brukande-av-falsk-urkund-att-visa-upp-en-skarmbild-av-ett-falskt-freja-eid/'&&
+   x.sourceURL==='https://www.domstol.se/globalassets/filer/domstol/hogstadomstolen/avgoranden/2025/b-920-25.pdf'&&
    x.source.includes('B 920-25')),
    'Only fully source-grounded authentic HD cases may override the no-invented-typecase rule');
  }else{

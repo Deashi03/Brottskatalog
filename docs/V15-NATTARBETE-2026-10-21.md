@@ -246,3 +246,25 @@ Det föregående elva-intervallspaketet finns på e6fc7f8fcce6ee0c6c859c41c61845
 
 
 Nästa arbete: verifiera aktuell CI för e6fc7f8 och det senare alternativpaketet; ta därefter itu med verkliga individuella förarbets-/praxisfrågor och åtalsfiltret, inte med att fylla de tolv korten med en falsk gemensam skala. De 44 alternativen måste alltid hållas skilda från automatisk faktisk tillämpning. Fullständiga juridiska godkännanden är fortsatt noll och publicering är inte tillåten.
+
+
+## Fortsatt primärkällegranskning och visningsrättelse den 21 oktober
+
+Två fel i befintliga förklaringar har rättats efter jämförelse med aktuell BrB 15:11–12 och prop. 2012/13:74, författningskommentaren s. 74–76:
+
+| Kort | Före | Efter |
+|---|---|---|
+| Osant intygande | Brukande av osann urkund hänfördes till andra stycket | Brukande regleras i tredje stycket; andra stycket avser den grova graden av intygande |
+| Missbruk av urkund | Påstådd riktig kopia beskrevs som del av samma brott | Tredje styckets särskilda brott missbruk av handling skiljs uttryckligen ut |
+
+Originaldomarna **NJA 2025 s. 1029, Freja (B 920-25, 4 november 2025, sex sidor)** och **NJA 2018 s. 378, De upprepade förfalskningarna (B 3924-17, 11 juni 2018, tretton sidor)** har lästs. Freja-exemplet länkar nu direkt till domen, med punktangivelse 6–17 i granskningsunderlaget. På korten urkundsförfalskning och grov urkundsförfalskning har en avgränsad förklaring tillkommit om brottsenhet, gradindelning och separat samlat straffvärde, med hänvisning till den senare domens p. 14–28. Upprepning ensam ger normalt inte grov grad; serieframställning och andra försvårande omständigheter kräver egen bedömning. Domens historiska fjortondagars- och sexmånadersminimum importeras inte som aktuella skalor. PDF-filerna har verifierbara SHA-256 i `data/urkund-primary-review-15.json`.
+
+**Visningsfel upptäckt och rättat:** den äldre tidiga returen för villkorad tillämpning dolde de nya alternativen för bland annat myteri. Nu visas både den befintliga tillämpningsvarningen och den expanderbara alternativlistan. Ett äldre test som letade efter exakt kodtext har ersatts med körning av den riktiga renderingsfunktionen: ej straffbart ska ha företräde, och villkor plus alternativ ska båda visas. Mobiltesterna kontrollerar fortsatt varningen och avsaknad av en påhittad gemensam skala.
+
+Åtalsfrågan för **grovt olaga tvång är fortfarande öppen**. Prop. 2015/16:113 s. 79–80 har kompletterats med jämförelsestöd från prop. 2021/22:194 s. 10 och 31: egna grova brottsbeteckningar kan påverka hur 4:11 ska läsas. Den senare propositionen avser dock hemfridsbrott och olaga intrång och avgör inte uttryckligen tvångsformen i andra meningen. Klassificeringen ändras därför inte genom en automatisk analogi. Exakt fråga och läst underlag sparas i `data/grovt-olaga-tvang-prosecution-research-15.json`.
+
+Arbetet ger **inga nya juridiska slutgodkännanden eller progresspoäng**. De 390 förarbets-/praxischeckpunkterna är inte slutgodkända genom dessa avgränsade noteringar. De 14 villkorade grundskalorna kvarstår; 12 förstadiekort saknar med rätta ett enda numeriskt intervall men har tillsammans 44 separata alternativ. Ingen publicering.
+
+**Testspår:** Actions 1032 på e6fc7f8 är avslutad grön inklusive mobil. Actions 1033 på c6f17f3 upptäckte det dolda alternativblocket i mobilvyn. Actions 1034 på 4e6229c avbröts på det äldre kodtexttestet för krigsvillkor. Båda orsakerna är rättade; de tidigare körningarna redovisas inte som gröna. Ny fullständig verifiering av rättelserna görs på nästa appcommit.
+
+Nästa körning ska börja från faktiskt PR-huvud och läsa det senaste testspåret. Bevara samtidiga ändringar med `expected_sha`. Kontrollera särskilt full CI inklusive de sex nya mobilfallen efter visningsrättelsen. Fortsätt därefter med individuellt källarbete: NJA 2009 s. 111 återstår i urkundsdossiern och åtalsfrågan behöver ett uttryckligt stöd om den grova tvångsgraden. Tilldela ingen komplett praxischeckpunkt enbart för att ett rättsfall har lästs. Använd inte 2018 års straffminima som 2026 års värden. De tolv alternativberoende korten ska fortsatt ha `penaltyRange:null` och aldrig välja en gren automatiskt. Nämnaren är kvar 11 957; de 18 publiceringsmomenten är separat avsiktligt ogjorda.
