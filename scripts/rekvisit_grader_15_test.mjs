@@ -37,7 +37,7 @@ assert.equal(less.penaltyRange.fines,true);
 assert.ok(less.skipStageGeneration);
 const lessStages=stages.filter(c=>c.stageParentId===less.id);
 assert.equal(lessStages.length,3,'Explicit 4:10 coverage of the same 4:2 offence, with its lesser penalty branch');
-for(const c of lessStages){assert.equal(c.stageStatus,'punishable');assert.equal(c.stageSource,'BrB 4:10');assert.equal(c.individualLegalAudit15.scope.checked,'2026-10-20');assert.equal(c.individualLegalAudit15.scope.caseSpecificLiabilityApproved,false);assert.equal(c.penaltyRange,null);}
+for(const c of lessStages){assert.equal(c.stageStatus,'punishable');assert.equal(c.stageSource,'BrB 4:10');assert.equal(c.individualLegalAudit15.scope.checked,'2026-10-20');assert.equal(c.individualLegalAudit15.scope.caseSpecificLiabilityApproved,false);if(c.stagePreparationPenaltyReview15)assert.deepEqual(JSON.parse(JSON.stringify(c.penaltyRange)),{min:0,max:2,fines:true,life:false,maxExclusive:true});else assert.equal(c.penaltyRange,null);}
 const parents=['Olaga tvång','Hemfridsbrott','Olaga intrång'];for(const p of parents)assert.ok(by(p)?.rekvisit15?.routes?.length,'Disjunctive form missing '+p);
 const structured=base.filter(c=>c.rekvisit15?.groups?.length||c.rekvisit15?.routes?.length).length;
 assert.ok(structured>=56,'Expected broader requisites coverage');

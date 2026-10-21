@@ -121,6 +121,20 @@ try{
     if(kind==='Försök'&&['Grov förgöring','Grovt hindrande av urkunds bevisfunktion'].includes(parent)){const panel=page.locator('.penalty-panel');assert.ok((await panel.innerText()).includes('Böter'));assert.ok((await panel.innerText()).includes(parent==='Grov förgöring'?'6 år':'4 år'));assert.ok((await panel.innerText()).includes('ordinära lagstadgade försöksskalan'));assert.equal(await panel.locator('.penalty-bounds').count(),1);}
     assert.equal(await page.evaluate(()=>document.documentElement.scrollWidth<=innerWidth+1),true,'Restored stage fits iPhone: '+parent);
   }
+  for(const [parent,kind,upper]of[
+    ['Grov förgöring','Förberedelse','Under 6 år'],
+    ['Grovt hindrande av urkunds bevisfunktion','Förberedelse','2 år'],
+    ['Olaga frihetsberövande (mindre grovt fall)','Stämpling','Under 2 år']
+  ]){
+    await page.goto(url+'#sok',{waitUntil:'networkidle'});await search.fill(parent);await wait();
+    await page.locator('.crime-card').filter({has:page.getByText(parent,{exact:true})}).click();
+    const overview=page.locator('#sec-stadier');await overview.locator(':scope > summary').click();
+    await overview.locator('.stage-overview-link').filter({hasText:kind+' ·'}).click();await wait();
+    const bounds=page.locator('.penalty-panel .penalty-bound');assert.equal(await bounds.count(),2);
+    assert.equal(await bounds.last().locator('strong').innerText(),upper,'Exact open/closed upper endpoint: '+parent);
+    assert.ok((await page.locator('.penalty-panel').innerText()).includes('ordinära lagstadgade skalan'));
+    assert.equal(await page.evaluate(()=>document.documentElement.scrollWidth<=innerWidth+1),true,'Preparation bounds fit iPhone: '+parent);
+  }
   await page.goto(url+'#sok',{waitUntil:'networkidle'});
   for(const [title,phrase,links]of[
     ['Ringa narkotikabrott · bruk','undantar bruk av narkotika',3],

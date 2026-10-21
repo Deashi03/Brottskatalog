@@ -1,7 +1,7 @@
 {
-  "sourceParentCommit": "c430b8f39e9522c9fd461984c3d2d3fbe18eb61c",
+  "sourceParentCommit": "0fd9b8eac4d70c54792237cdddced6bda95984fd",
   "baselineCommit": "0bbbe45d70d01a92a7874c74862cc7d21bae2355",
-  "currentRuntimeSHA256": "0ab7d8dd04608faed802f2becf51f61cd0a895103ab4e45551f2acad05b0bfdd",
+  "currentRuntimeSHA256": "648ac11c1b48906e260e000e4454a342594b5df8112e44a75c40c7afbd4e8e60",
   "baselineRuntimeSHA256": "282a0e394b0c38e699dcea8d74906c1da86d779c47e6bac8c6660c9018256897",
   "hashMethod": "SHA-256 over index.html then each external runtime script path, NUL, contents, NUL in page order; files read from current working tree",
   "scope": "Recomputed complete runtime inventory; no legal approval and no publication credit",
@@ -537,8 +537,392 @@
         "life": false
       },
       "label": "Böter – fängelse högst 4 år"
+    },
+    {
+      "id": "stadium-08-forsok-v15-grov-signaturforfalskning",
+      "parentId": "v15-grov-signaturforfalskning",
+      "title": "Försök till grov signaturförfalskning",
+      "statute": "BrB:14:5",
+      "authorizer": "BrB:14:13",
+      "parentRange": {
+        "min": 0.5,
+        "max": 4,
+        "fines": false,
+        "life": false
+      },
+      "range": {
+        "min": 0,
+        "max": 4,
+        "fines": true,
+        "life": false
+      },
+      "label": "Böter – fängelse högst 4 år"
+    },
+    {
+      "id": "stadium-08-forsok-v15-grov-olovlig-befattning-med-falska-pengar",
+      "parentId": "v15-grov-olovlig-befattning-med-falska-pengar",
+      "title": "Försök till grov olovlig befattning med falska pengar",
+      "statute": "BrB:14:7",
+      "authorizer": "BrB:14:13",
+      "parentRange": {
+        "min": 0.5,
+        "max": 6,
+        "fines": false,
+        "life": false
+      },
+      "range": {
+        "min": 0,
+        "max": 6,
+        "fines": true,
+        "life": false
+      },
+      "label": "Böter – fängelse högst 6 år"
+    },
+    {
+      "id": "stadium-08-forsok-v15-grov-markesforfalskning",
+      "parentId": "v15-grov-markesforfalskning",
+      "title": "Försök till grov märkesförfalskning",
+      "statute": "BrB:14:8",
+      "authorizer": "BrB:14:13",
+      "parentRange": {
+        "min": 0.5,
+        "max": 4,
+        "fines": false,
+        "life": false
+      },
+      "range": {
+        "min": 0,
+        "max": 4,
+        "fines": true,
+        "life": false
+      },
+      "label": "Böter – fängelse högst 4 år"
+    },
+    {
+      "id": "stadium-08-forsok-v15-cover-grov-olovlig-underrattelseverksamhet-mot-frammande-makt",
+      "parentId": "v15-cover-grov-olovlig-underrattelseverksamhet-mot-frammande-makt",
+      "title": "Försök till grov olovlig underrättelseverksamhet mot främmande makt",
+      "statute": "BrB:19:10a",
+      "authorizer": "BrB:19:14",
+      "parentRange": {
+        "min": 0.5,
+        "max": 4,
+        "fines": false,
+        "life": false
+      },
+      "range": {
+        "min": 0,
+        "max": 4,
+        "fines": true,
+        "life": false
+      },
+      "label": "Böter – fängelse högst 4 år"
+    },
+    {
+      "id": "stadium-08-forsok-v15-cover-grov-olovlig-underrattelseverksamhet-mot-person",
+      "parentId": "v15-cover-grov-olovlig-underrattelseverksamhet-mot-person",
+      "title": "Försök till grov olovlig underrättelseverksamhet mot person",
+      "statute": "BrB:19:10b",
+      "authorizer": "BrB:19:14",
+      "parentRange": {
+        "min": 0.5,
+        "max": 4,
+        "fines": false,
+        "life": false
+      },
+      "range": {
+        "min": 0,
+        "max": 4,
+        "fines": true,
+        "life": false
+      },
+      "label": "Böter – fängelse högst 4 år"
     }
   ],
-  "currentUnresolvedPositiveStageIntervals": 53,
-  "fullLegalApprovalsAdded": 0
+  "currentUnresolvedPositiveStageIntervals": 36,
+  "fullLegalApprovalsAdded": 0,
+  "individualPreparationIntervalUpdates": [
+    {
+      "id": "stadium-08-forberedelse-v05-grov-forgoring",
+      "parentId": "v05-grov-forgoring",
+      "title": "Förberedelse till grov förgöring",
+      "statute": "BrB:13:8",
+      "authorizer": "BrB:13:12",
+      "stageType": "forberedelse",
+      "scopeFinding": "CURRENT_BRB_SAME_SECTION_GRADE_COVERED_BY_NAMED_STAGE",
+      "parentRange": {
+        "min": 0.5,
+        "max": 6,
+        "fines": false,
+        "life": false
+      },
+      "range": {
+        "min": 0,
+        "max": 6,
+        "fines": true,
+        "life": false,
+        "maxExclusive": true
+      },
+      "upper": "Under 6 år",
+      "label": "Böter eller fängelse under 6 år"
+    },
+    {
+      "id": "stadium-08-stampling-v05-grov-forgoring",
+      "parentId": "v05-grov-forgoring",
+      "title": "Stämpling till grov förgöring",
+      "statute": "BrB:13:8",
+      "authorizer": "BrB:13:12",
+      "stageType": "stampling",
+      "scopeFinding": "CURRENT_BRB_SAME_SECTION_GRADE_COVERED_BY_NAMED_STAGE",
+      "parentRange": {
+        "min": 0.5,
+        "max": 6,
+        "fines": false,
+        "life": false
+      },
+      "range": {
+        "min": 0,
+        "max": 6,
+        "fines": true,
+        "life": false,
+        "maxExclusive": true
+      },
+      "upper": "Under 6 år",
+      "label": "Böter eller fängelse under 6 år"
+    },
+    {
+      "id": "stadium-08-forberedelse-v05-grovt-hindrande-av-urkunds-bevisfunktion",
+      "parentId": "v05-grovt-hindrande-av-urkunds-bevisfunktion",
+      "title": "Förberedelse till grovt hindrande av urkunds bevisfunktion",
+      "statute": "BrB:14:4",
+      "authorizer": "BrB:14:13",
+      "stageType": "forberedelse",
+      "scopeFinding": "CURRENT_BRB_SAME_SECTION_GRADE_COVERED_BY_NAMED_STAGE",
+      "parentRange": {
+        "min": 0.5,
+        "max": 4,
+        "fines": false,
+        "life": false
+      },
+      "range": {
+        "min": 0,
+        "max": 2,
+        "fines": true,
+        "life": false
+      },
+      "upper": "2 år",
+      "label": "Böter eller fängelse högst 2 år"
+    },
+    {
+      "id": "stadium-08-forberedelse-v05-grov-penningforfalskning",
+      "parentId": "v05-grov-penningforfalskning",
+      "title": "Förberedelse till grov penningförfalskning",
+      "statute": "BrB:14:6",
+      "authorizer": "BrB:14:13",
+      "stageType": "forberedelse",
+      "scopeFinding": "CURRENT_BRB_SAME_SECTION_GRADE_COVERED_BY_NAMED_STAGE",
+      "parentRange": {
+        "min": 2,
+        "max": 8,
+        "fines": false,
+        "life": false
+      },
+      "range": {
+        "min": 0,
+        "max": 8,
+        "fines": true,
+        "life": false,
+        "maxExclusive": true
+      },
+      "upper": "Under 8 år",
+      "label": "Böter eller fängelse under 8 år"
+    },
+    {
+      "id": "stadium-08-forberedelse-v15-cover-grov-olovlig-underrattelseverksamhet-mot-frammande-makt",
+      "parentId": "v15-cover-grov-olovlig-underrattelseverksamhet-mot-frammande-makt",
+      "title": "Förberedelse till grov olovlig underrättelseverksamhet mot främmande makt",
+      "statute": "BrB:19:10a",
+      "authorizer": "BrB:19:14",
+      "stageType": "forberedelse",
+      "scopeFinding": "CURRENT_BRB_SAME_SECTION_GRADE_COVERED_BY_NAMED_STAGE",
+      "parentRange": {
+        "min": 0.5,
+        "max": 4,
+        "fines": false,
+        "life": false
+      },
+      "range": {
+        "min": 0,
+        "max": 2,
+        "fines": true,
+        "life": false
+      },
+      "upper": "2 år",
+      "label": "Böter eller fängelse högst 2 år"
+    },
+    {
+      "id": "stadium-08-stampling-v15-cover-grov-olovlig-underrattelseverksamhet-mot-frammande-makt",
+      "parentId": "v15-cover-grov-olovlig-underrattelseverksamhet-mot-frammande-makt",
+      "title": "Stämpling till grov olovlig underrättelseverksamhet mot främmande makt",
+      "statute": "BrB:19:10a",
+      "authorizer": "BrB:19:14",
+      "stageType": "stampling",
+      "scopeFinding": "CURRENT_BRB_SAME_SECTION_GRADE_COVERED_BY_NAMED_STAGE",
+      "parentRange": {
+        "min": 0.5,
+        "max": 4,
+        "fines": false,
+        "life": false
+      },
+      "range": {
+        "min": 0,
+        "max": 2,
+        "fines": true,
+        "life": false
+      },
+      "upper": "2 år",
+      "label": "Böter eller fängelse högst 2 år"
+    },
+    {
+      "id": "stadium-08-forberedelse-v15-cover-grov-olovlig-underrattelseverksamhet-mot-person",
+      "parentId": "v15-cover-grov-olovlig-underrattelseverksamhet-mot-person",
+      "title": "Förberedelse till grov olovlig underrättelseverksamhet mot person",
+      "statute": "BrB:19:10b",
+      "authorizer": "BrB:19:14",
+      "stageType": "forberedelse",
+      "scopeFinding": "CURRENT_BRB_SAME_SECTION_GRADE_COVERED_BY_NAMED_STAGE",
+      "parentRange": {
+        "min": 0.5,
+        "max": 4,
+        "fines": false,
+        "life": false
+      },
+      "range": {
+        "min": 0,
+        "max": 2,
+        "fines": true,
+        "life": false
+      },
+      "upper": "2 år",
+      "label": "Böter eller fängelse högst 2 år"
+    },
+    {
+      "id": "stadium-08-stampling-v15-cover-grov-olovlig-underrattelseverksamhet-mot-person",
+      "parentId": "v15-cover-grov-olovlig-underrattelseverksamhet-mot-person",
+      "title": "Stämpling till grov olovlig underrättelseverksamhet mot person",
+      "statute": "BrB:19:10b",
+      "authorizer": "BrB:19:14",
+      "stageType": "stampling",
+      "scopeFinding": "CURRENT_BRB_SAME_SECTION_GRADE_COVERED_BY_NAMED_STAGE",
+      "parentRange": {
+        "min": 0.5,
+        "max": 4,
+        "fines": false,
+        "life": false
+      },
+      "range": {
+        "min": 0,
+        "max": 2,
+        "fines": true,
+        "life": false
+      },
+      "upper": "2 år",
+      "label": "Böter eller fängelse högst 2 år"
+    },
+    {
+      "id": "stadium-08-forberedelse-v15-grov-signaturforfalskning",
+      "parentId": "v15-grov-signaturforfalskning",
+      "title": "Förberedelse till grov signaturförfalskning",
+      "statute": "BrB:14:5",
+      "authorizer": "BrB:14:13",
+      "stageType": "forberedelse",
+      "scopeFinding": "CURRENT_BRB_SAME_SECTION_GRADE_COVERED_BY_NAMED_STAGE",
+      "parentRange": {
+        "min": 0.5,
+        "max": 4,
+        "fines": false,
+        "life": false
+      },
+      "range": {
+        "min": 0,
+        "max": 2,
+        "fines": true,
+        "life": false
+      },
+      "upper": "2 år",
+      "label": "Böter eller fängelse högst 2 år"
+    },
+    {
+      "id": "stadium-08-forberedelse-v15-grov-markesforfalskning",
+      "parentId": "v15-grov-markesforfalskning",
+      "title": "Förberedelse till grov märkesförfalskning",
+      "statute": "BrB:14:8",
+      "authorizer": "BrB:14:13",
+      "stageType": "forberedelse",
+      "scopeFinding": "CURRENT_BRB_SAME_SECTION_GRADE_COVERED_BY_NAMED_STAGE",
+      "parentRange": {
+        "min": 0.5,
+        "max": 4,
+        "fines": false,
+        "life": false
+      },
+      "range": {
+        "min": 0,
+        "max": 2,
+        "fines": true,
+        "life": false
+      },
+      "upper": "2 år",
+      "label": "Böter eller fängelse högst 2 år"
+    },
+    {
+      "id": "stage-gap15-forberedelse-v15-olaga-frihetsberovande-mindre-grovt",
+      "parentId": "v15-olaga-frihetsberovande-mindre-grovt",
+      "title": "Förberedelse till olaga frihetsberövande (mindre grovt fall)",
+      "statute": "BrB:4:2",
+      "authorizer": "BrB:4:10",
+      "stageType": "forberedelse",
+      "scopeFinding": "CURRENT_MISSING_PARENT_STAGE_EXPRESSLY_LISTED",
+      "parentRange": {
+        "min": 0,
+        "max": 2,
+        "fines": true,
+        "life": false
+      },
+      "range": {
+        "min": 0,
+        "max": 2,
+        "fines": true,
+        "life": false,
+        "maxExclusive": true
+      },
+      "upper": "Under 2 år",
+      "label": "Böter eller fängelse under 2 år"
+    },
+    {
+      "id": "stage-gap15-stampling-v15-olaga-frihetsberovande-mindre-grovt",
+      "parentId": "v15-olaga-frihetsberovande-mindre-grovt",
+      "title": "Stämpling till olaga frihetsberövande (mindre grovt fall)",
+      "statute": "BrB:4:2",
+      "authorizer": "BrB:4:10",
+      "stageType": "stampling",
+      "scopeFinding": "CURRENT_MISSING_PARENT_STAGE_EXPRESSLY_LISTED",
+      "parentRange": {
+        "min": 0,
+        "max": 2,
+        "fines": true,
+        "life": false
+      },
+      "range": {
+        "min": 0,
+        "max": 2,
+        "fines": true,
+        "life": false,
+        "maxExclusive": true
+      },
+      "upper": "Under 2 år",
+      "label": "Böter eller fängelse under 2 år"
+    }
+  ],
+  "openPreparationUpperEndpoints": 5
 }

@@ -2,6 +2,33 @@
 
 Avstämning den 21 oktober 2026. **1.5 är sparad som utkast och är inte publicerad eller fullständigt juridiskt slutgodkänd.** Rapporten beskriver genomförda ändringar; kvarstående arbete redovisas separat.
 
+## Fortsatt sakgranskning: ytterligare 17 förstadieintervall
+
+Fem ytterligare försök har fått individuell källkontroll: grov signaturförfalskning, grov märkesförfalskning, grov olovlig befattning med falska pengar samt grov olovlig underrättelseverksamhet mot främmande makt respektive mot person. Den ordinära skalan är böter–fängelse högst fyra år, utom befattningen med falska pengar som har högst sex år. Den sistnämnda försöksformen är fortfarande begränsad till anskaffande eller mottagande enligt 14:13.
+
+Tolv förberedelse-/stämplingskort har därutöver fått separat prövade intervall:
+
+| Kort | Övre gräns | Ingår gränsen? |
+|---|---|---|
+| Förberedelse till grov förgöring | 6 år | Nej |
+| Stämpling till grov förgöring | 6 år | Nej |
+| Förberedelse till grovt hindrande av urkunds bevisfunktion | 2 år | Ja |
+| Förberedelse till grov penningförfalskning | 8 år | Nej |
+| Förberedelse till grov olovlig underrättelseverksamhet mot främmande makt | 2 år | Ja |
+| Stämpling till grov olovlig underrättelseverksamhet mot främmande makt | 2 år | Ja |
+| Förberedelse till grov olovlig underrättelseverksamhet mot person | 2 år | Ja |
+| Stämpling till grov olovlig underrättelseverksamhet mot person | 2 år | Ja |
+| Förberedelse till grov signaturförfalskning | 2 år | Ja |
+| Förberedelse till grov märkesförfalskning | 2 år | Ja |
+| Förberedelse till olaga frihetsberövande (mindre grovt fall) | 2 år | Nej |
+| Stämpling till olaga frihetsberövande (mindre grovt fall) | 2 år | Nej |
+
+Alla dessa tolv skalor kan omfatta böter. Fem har öppen övre gräns, uttryckt med `maxExclusive: true` i data och **Under** i visningen. En gräns under två år får därmed inte förväxlas med högst två år. Samtliga egna paragrafer, särskilda förstadieparagrafer och 23:2 har individuella textpinnar. Aktuell lagtext jämförs med förarbetsbeskrivningen i SOU 2024:55 och prop. 2025/26:218 avsnittet om oförändrade förstadiestraffskalor. Utredningens föreslagna sänkning av sexårsgränsen behandlas inte som gällande rätt.
+
+Hittills har alltså **20** av de ursprungliga 56 intervalluckorna lösts (tre i föregående pass och 17 i detta). **36 återstår.** Befintliga åtalsklassificeringar och rättsliga revisionsakter bevaras. Även efter en separat skalegranskning visar tvångsmedelsmenyn fortsatt att en självständig befogenhetsprövning behövs. Inga juridiska slutgodkännanden eller extra progresspoäng har tilldelats.
+
+Den senast avslutade fullständiga testkörningen i det äldre avsnittet nedan gäller appcommit 4e8f572. Den ska inte användas som testbevis för de 17 senare intervallen; deras riktade kontroller och nya fullständiga svit redovisas efter verifiering.
+
 ## Aktuell avstämning inför nattens fortsättningar
 
 **Senaste verifierade appversion:** `4e8f572accf6db3dbb5b45fd5b0b033a9a4f9734` (träd `1729fe4a41a855a9f04fe7a6781175610e7e0200`). Alla **145/145 lokala Node-kommandon** passerade. [GitHub Actions 1027](https://github.com/Deashi03/Brottskatalog/actions/runs/39603170302) är avslutad och grön, inklusive iPhone-regressionen. Det gäller både Klimatblockaden och de tre nya försöksintervallen. Senare rapport-/överlämningsändringar ändrar inte appträdet. **Ingen publicering har genomförts.**
@@ -36,7 +63,7 @@ Antalet positiva förstadiekort utan ett numeriskt intervall minskar **56 → 53
 
 16 fortsättningskörningar med en timmes mellanrum har bekräftats av schemaläggningstjänsten. Uppgiften börjar den 21 oktober kl. 15.34 svensk tid och omfattar natten till den 22 oktober. Skapad schemaläggning är inte bevis för att en framtida körning lyckas; utfallet ska kontrolleras separat. Varje körning ska hämta aktuellt GitHub-huvud, genomföra och testa verkliga ändringar, bevara parallellt arbete och uppdatera överlämningen. Ingen merge, tagg, release eller publicering är auktoriserad.
 
-Räkningen är fortsatt **11 548/11 957 = 96,6 %**, med 409 moment öppna. Det nya exemplet och rapportarbetet ger inga progresspoäng. Det återstår 390 förarbets-/praxisfrågor, ett åtalsfilter och 18 release-/publiceringsmoment. Dessutom kvarstår 53 olösta individuella förstadieintervall, 14 villkorade grundskalor och oberoende juridisk slutgranskning. Detta pass har **inte** uppnått 100 %.
+Räkningen är fortsatt **11 548/11 957 = 96,6 %**, med 409 moment öppna. Det nya exemplet och rapportarbetet ger inga progresspoäng. Det återstår 390 förarbets-/praxisfrågor, ett åtalsfilter och 18 release-/publiceringsmoment. Dessutom kvarstår 36 olösta individuella förstadieintervall, 14 villkorade grundskalor och oberoende juridisk slutgranskning. Detta pass har **inte** uppnått 100 %.
 
 ## Jämförelsens underlag
 
@@ -153,7 +180,7 @@ Publiceringsflödet innehåller en releasekontroll som ska stoppa ofärdig 1.5. 
 | Release-, publicerings- och efterkontroller | 18 |
 | Summa kvar i den befintliga räkningen | 409 |
 
-Därutöver ska de 53 olösta individuella förstadiestraffskalorna och de 14 villkorade grundskalorna fortsatt behandlas som verkliga begränsningar. De får inte döljas bakom att andra avgränsade förstadie- eller gradkontroller är räknemässigt klara.
+Därutöver ska de 36 olösta individuella förstadiestraffskalorna och de 14 villkorade grundskalorna fortsatt behandlas som verkliga begränsningar. De får inte döljas bakom att andra avgränsade förstadie- eller gradkontroller är räknemässigt klara.
 
 Användarens nya mål är att färdigställa utvecklingen och avvakta med publicering. De delar av den befintliga 100-procentsräkningen som uttryckligen gäller merge, publicering och produktionskontroll ska därför förbli öppna. En framtida separat status för färdigutvecklad men opublicerad version måste redovisas öppet och får inte ersätta den nuvarande nämnaren i tysthet.
 

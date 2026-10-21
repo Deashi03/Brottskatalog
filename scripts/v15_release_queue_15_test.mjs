@@ -79,5 +79,5 @@ assert.equal(file.releaseReady,false);
 console.log('PASS V1.5: per-chapter legal review queue, truthful source scopes, '+file.counts.brbPostsWithoutStructuredRequisites+' still missing structures, Pages release blocked');
 assert.equal(file.blockers.knownActiveOffencesWithoutOwnCard,0);
 assert.equal(file.blockers.baseCardsWithoutExactlyThreeStageEntries,0);
-assert.equal(file.blockers.punishableStagesWithoutResolvedPenaltyRange,53);
+assert.equal(file.blockers.punishableStagesWithoutResolvedPenaltyRange,36);
 assert.deepEqual(file.knownCoverageGaps.map(x=>x.statute),[]);
