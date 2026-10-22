@@ -43,12 +43,9 @@ const unresolved=D.crimes.filter(c=>c.stageType&&c.stageStatus==='unverified');
 assert.equal(unresolved.length,0);
 assert.ok(unresolved.every(c=>c.age14Exception15.status==='inchoate-unverified'));
 assert.ok(unresolved.every(c=>c.custody==='unknown'));
-const panel=html.indexOf("accordion('age14','Särskild påföljdsregel vid 14 år'");
-const details=html.indexOf("accordion('relaterade','Relaterade brott'");
-const sources=html.indexOf("accordion('sources','Rättskällor");
-assert.ok(details<panel&&panel<sources,'Age law panel stays near bottom to preserve fast police UI');
-assert.ok(html.includes('Gärningsåldern, inte åldern vid rättegången'));
-assert.ok(html.includes('Ingen automatisk bedömning av gripande, anhållande eller häktning'));
+assert.ok(!html.includes("accordion('age14'"),'V1.6 removes the lengthy age-14 accordion');
+assert.ok(html.includes("age14Exception15?.status==='minimum-threshold-met'"),'Only verified potential candidates receive the short age-14 notice');
+assert.ok(html.includes('age14-inline16'),'Age-14 notice belongs below prosecution information');
 const source=fs.readFileSync(path.join(root,module),'utf8');
 // Synthetic edge cases: actual statute minimum, inchoate authorization,
 // conditional applicability, and missing legal penalty review are different.
