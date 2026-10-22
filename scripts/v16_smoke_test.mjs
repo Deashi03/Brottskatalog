@@ -16,6 +16,12 @@ assert.ok(legal.BK_PROCEDURAL_SOURCES15['RB:27:15']?.complete);
 assert.ok(legal.BK_PROCEDURAL_ADD16['RB:23:8']?.complete);
 assert.ok(legal.BK_PROCEDURAL_ADD16['RB:23:9']?.complete);
 assert.ok(html.includes('data-coercive-lt')&&html.includes('showCoerciveLaw16'));
+assert.ok(html.includes('function resetCrimeMenus161()'), 'Every old crime must reset its nested menu state when leaving');
+assert.ok(html.includes('resetCrimeMenus161();'), 'SPA route changes must invoke menu reset');
+assert.ok(!html.includes("(n===27?'open':'')"), 'RB 27 must not open by default in a newly visited crime');
+assert.ok(html.includes('prosecution-summary161'), 'Show the quick prosecution conclusion immediately');
+assert.ok(html.includes("relative8:['Huvudregel: Allmänt åtal."), 'Relative-theft summary must be short and legally meaningful');
+
 assert.ok(html.includes('coercive-entry')&&html.includes('addEventListener(\'toggle\''));
 assert.ok(html.includes("const s3=card('Särskilda grunder','RB 24:2',true,"));
 assert.ok(html.includes("const s4=card('Utredningshäktning','RB 24:3',true,"));
