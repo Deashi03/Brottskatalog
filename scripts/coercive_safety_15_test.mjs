@@ -39,9 +39,9 @@ assert.ok(html.includes('const verifiedInchoatePresumption=Boolean(c.stageType&&
 assert.ok(html.includes('Number(c.stageParentMin)>=4&&!c.conditionalPenalty'));
 assert.ok(html.includes('(!unresolved||verifiedInchoatePresumption)&&pr'));
 
-assert.ok(html.includes("card('Särskilda grunder','RB 24:2',null,'Oberoende av brottets straffskala'"));
-assert.ok(html.includes("card('Utredningshäktning','RB 24:3',null,'Enligt 24:1 eller 24:2'"));
-assert.ok(html.includes('yes===null?\'unknown\''),'Custody card needs three-state marker');
+assert.ok(html.includes("card('Särskilda grunder','RB 24:2',true,'Oberoende av brottets straffskala'"));
+assert.ok(html.includes("card('Utredningshäktning','RB 24:3',true,'Enligt 24:1 eller 24:2'"));
+assert.ok(html.includes("const main=Boolean(known&&pr.max>=1)"),'RB24:1 remains dependent on a verified statutory threshold');
 assert.ok(!html.includes("card('Särskilda grunder','RB 24:2',known&&pr.max>0"));
-assert.ok(html.includes('.custody-mark.unknown'));
+assert.ok(html.includes("card('Särskilda grunder','RB 24:2',true"),'RB24:2 has no offence-type threshold; personal conditions remain separate');
 console.log('PASS V1.5: conditional and unreviewed cases never show green coercion eligibility; RB 24:2 remains crime-scale independent');

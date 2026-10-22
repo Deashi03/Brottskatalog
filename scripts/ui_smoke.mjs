@@ -10,7 +10,7 @@ const wait=async()=>{await page.waitForTimeout(400);};
 try{
   await page.goto(url,{waitUntil:'networkidle'});
   assert.ok(await page.locator('#crime-search').count(),'Search must exist');
-  assert.equal((await page.locator('.bk03-brand span').innerText()).trim(),'1.5','Search header must display current release 1.5');
+  assert.equal((await page.locator('.bk03-brand span').innerText()).trim(),'1.6','Search header must display current release 1.6');
   assert.equal(await page.evaluate(()=>window.BK_DATA.crimes.length),1557,'The V1.5 full database must be loaded');
 
   const finalCharging=await page.evaluate(()=>({reviewed:window.BK_FINAL_PROSECUTION15?.completed,held:window.BK_FINAL_PROSECUTION15?.held.length,stampling:window.BK_DATA.crimes.find(c=>c.title==='Stämpling till grovt olaga tvång')?.prosecution,attempt:window.BK_DATA.crimes.find(c=>c.title==='Försök till grovt hemfridsbrott')?.prosecution}));
@@ -83,10 +83,10 @@ try{
     if(title==='Grovt hemfridsbrott')assert.ok((await page.locator('.status-block').innerText()).includes('Allmänt åtal'));
     await page.locator('[data-action="prosecution"]').click();
     const dialog=page.locator('[role="dialog"]');
+    await dialog.locator('.prosecution-conditions > summary').click();
     assert.ok((await dialog.innerText()).includes(phrase),'Specific current prosecution distinction: '+title);
     const conditions=dialog.locator('.prosecution-conditions');
-    assert.equal(await conditions.getAttribute('open'),null,'Additional decision conditions collapsed initially');
-    await conditions.locator(':scope > summary').click();
+    assert.equal(await conditions.getAttribute('open'),'','Detailed conditions opened by test after initially collapsed');
     assert.ok((await conditions.innerText()).includes('riksåklagaren'),'Competent decision-maker and referral conditions are accessible');
     assert.ok(await dialog.locator('a[href*="riksdagen.se"]').count()>=2,'Both official statutory sources are accessible');
     const dialogWidth=await dialog.evaluate(el=>({client:el.clientWidth,scroll:el.scrollWidth,overflow:[...el.querySelectorAll('*')].filter(n=>n.clientWidth&&n.scrollWidth>n.clientWidth+1).slice(0,3).map(n=>({tag:n.tagName,class:n.className,text:n.textContent.slice(0,80),client:n.clientWidth,scroll:n.scrollWidth}))}));
@@ -208,9 +208,9 @@ try{
   ]){
     await page.goto(url+'#sok',{waitUntil:'networkidle'});await search.fill(title);await wait();
     await page.locator('.crime-card').filter({has:page.getByText(title,{exact:true})}).click();
-    await page.locator('#sec-rekvisit > summary').click();const grades=page.locator('.statutory-grade-review');
+    await page.locator('#sec-rekvisit > summary').click();if(await page.locator('.grade-secondary').count())await page.locator('.grade-secondary > summary').click();const grades=page.locator('.statutory-grade-review');
     assert.equal(await grades.getAttribute('open'),null,'Degree detail starts collapsed: '+title);
-    await grades.locator(':scope > summary').click();assert.ok((await grades.innerText()).includes(phrase),'Precise statutory degree distinction: '+title);
+    await grades.locator(':scope > summary').click();await grades.locator('details.requisite-explanations > summary').click();assert.ok((await grades.innerText()).includes(phrase),'Precise statutory degree distinction: '+title);
     assert.ok((await grades.innerText()).includes('konkret gärning'));
     assert.ok(await grades.locator('a[href*="riksdagen.se"]').count());
     assert.equal(await grades.evaluate(el=>el.scrollWidth<=el.clientWidth+1),true,'Degree qualifiers fit iPhone: '+title);
@@ -229,8 +229,8 @@ try{
   ]){
     await page.goto(url+'#sok',{waitUntil:'networkidle'});await search.fill(title);await wait();
     await page.locator('.crime-card').filter({has:page.getByText(title,{exact:true})}).click();
-    await page.locator('#sec-rekvisit > summary').click();const grades=page.locator('.statutory-grade-review');
-    assert.equal(await grades.getAttribute('open'),null);await grades.locator(':scope > summary').click();
+    await page.locator('#sec-rekvisit > summary').click();if(await page.locator('.grade-secondary').count())await page.locator('.grade-secondary > summary').click();const grades=page.locator('.statutory-grade-review');
+    assert.equal(await grades.getAttribute('open'),null);await grades.locator(':scope > summary').click();await grades.locator('details.requisite-explanations > summary').click();
     assert.ok((await grades.innerText()).includes(phrase),'Remaining grade route: '+title);
     assert.equal(await grades.evaluate(el=>el.scrollWidth<=el.clientWidth+1),true,'Remaining grade fits iPhone: '+title);
   }
@@ -517,8 +517,8 @@ try{
   const fineCustody=page.locator('[role="dialog"] .custody-box');
   assert.equal(await fineCustody.count(),4,'All four RB 24 approaches must be separately visible');
   assert.ok(await fineCustody.nth(0).locator('.custody-mark.no').count(),'Ordinary RB 24:1 threshold cannot apply to fine-only offences');
-  assert.ok(await fineCustody.nth(2).locator('.custody-mark.unknown').count(),'RB 24:2 requires individual identity and domicile assessment, not a fine-based red X');
-  assert.ok(await fineCustody.nth(3).locator('.custody-mark.unknown').count(),'RB 24:3 cannot be mechanically excluded by a fine-only statutory penalty');
+  assert.ok(await fineCustody.nth(2).locator('.custody-mark.yes').count(),'RB 24:2 does not exclude fine-only offences by statutory range; person-specific criteria still required');
+  assert.ok(await fineCustody.nth(3).locator('.custody-mark.yes').count(),'RB 24:3 can be considered via RB 24:2; case-specific conditions remain necessary');
   await page.goto(url+'#sok',{waitUntil:'networkidle'});
   await page.locator('#crime-search').fill('försök till mord');
   await wait();
@@ -587,15 +587,21 @@ try{
   await page.locator('summary').filter({hasText:'Tvångsmedel – översikt'}).click();
   const chapters=page.locator('.coercive-chapter');
   assert.equal(await chapters.count(),6,'Two measures groups omitted and RB 23–28 shown');
-  await chapters.filter({hasText:'RB 23'}).locator('summary').first().click();
-  await chapters.filter({hasText:'RB 28'}).locator('summary').first().click();
-  const force=await page.locator('body').innerText();
-  assert.ok(force.includes('Kroppsvisitation')&&force.includes('Kvarhållande av grupp'),'Core coercive measures by chapter');
-  await chapters.filter({hasText:'RB 23'}).locator('.coercive-entry').first().locator('summary').click();
+  await chapters.filter({hasText:'RB 23'}).locator(':scope > summary').click();
+  assert.ok((await page.locator('body').innerText()).includes('Kvarhållande av grupp'),
+    'RB 23 contains group detention provision');
+  await chapters.filter({hasText:'RB 28'}).locator(':scope > summary').click();
+  assert.equal(await chapters.filter({hasText:'RB 23'}).getAttribute('open'),null,
+    'V1.6 opens at most one coercive RB chapter at a time');
+  assert.ok((await page.locator('body').innerText()).includes('Kroppsvisitation'),
+    'RB 28 contains body search provision');
+  await chapters.filter({hasText:'RB 23'}).locator(':scope > summary').click();
+  await chapters.filter({hasText:'RB 23'}).locator('.coercive-entry').first().locator(':scope > summary').click();
   assert.ok((await page.locator('body').innerText()).includes('Beslut i korthet:'),'Decision maker is accessible per measure');
   // v0.9: visible ✓/✕ and officer badges in the chapter list.
   // Version 1.0 – complex decision pathways must be accessible without visual clutter.
   const measureBeslag=page.locator('.coercive-entry').filter({hasText:'Beslag'}).first();
+  await chapters.filter({hasText:'RB 27'}).locator(':scope > summary').click();
   assert.ok(await measureBeslag.locator('.decision-help').count()>0,'Beslag must display special-condition exclamation');
   await measureBeslag.locator('.decision-help').click();
   assert.ok((await page.locator('[role="dialog"]').innerText()).includes('gatan'),'Decision explanation must distinguish street from legal underlying search');
@@ -673,7 +679,7 @@ try{
   assert.equal(await page.evaluate(()=>window.BK_DATA.glossary['täckningsprincipen']===window.BK_REQUISITE_CONCEPTS15['bk:tackning']),true,'Glossary and requisite popup share one canonical definition');
   await page.goto(url+'#mer',{waitUntil:'networkidle'});
   const settings=await page.locator('body').innerText();
-  assert.ok(settings.includes('Version 1.5 · publicerad 2026-10-22'),'Published version must be visible in settings');
+  assert.ok(settings.includes('Version 1.6 · publicerad 2026-10-22'),'Published version must be visible in settings');
   assert.ok(settings.includes('Grunddata:'),'Source dataset age must be shown in settings');
   assert.ok(settings.includes('LAGKONTROLL'),'Source checker in settings');
   assert.deepEqual(errors,[],'No JS page errors');

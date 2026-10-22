@@ -749,6 +749,8 @@ jobs:
         run: node scripts/prosecution_15_test.mjs
       - name: Three-year source verification UI safeguards
         run: node scripts/quality_11_test.mjs
+      - name: V1.6 traffic, custody and offline LT integrity
+        run: node scripts/v16_smoke_test.mjs
       - name: Scoped V1.5 release candidate checks
         run: node scripts/v15_scoped_release_gate.mjs --release
       - name: Full catalog integration and statutes test
