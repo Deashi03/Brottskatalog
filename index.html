@@ -1402,7 +1402,7 @@ function renderDetail(c){
   ${c.stageStatus==='not-criminalized'?'<div class="stage-alert no"><strong>✕ EJ STRAFFBART</strong><p>Förstadiet är inte särskilt kriminaliserat. Se lagrum och förklaring nedan.</p></div>':c.stageStatus==='unverified'?'<div class="stage-alert pending"><strong>STRAFFBARHET EJ VERIFIERAD</strong><p>Frånvaro av verifiering innebär inte att förstadiet är straffritt.</p></div>':''}
   <section class="penalty-panel" aria-label="Straffskala"><div class="penalty-label">Straffskala</div>${punishmentBlock(c)}</section>
   <section class="status-block" aria-label="Översikt"><button class="status-row" data-action="custody" data-id="${c.id}" ${c.stageStatus&&c.stageStatus!=='punishable'?'disabled aria-disabled="true"':''}><span class="status-icon">${ic(custodyIcons[c.custody])}</span><span class="status-copy"><div class="status-label">Häktning</div><div class="status-value">${escapeHtml(custodyLabel(c))}</div></span><span class="status-right">${ic('info','sm')}${ic('chevron-right','sm')}</span></button>
-  ${!c.stageStatus||c.stageStatus==='punishable'?'<button class="status-row" data-action="prosecution" data-id="'+escapeHtml(c.id)+'"><span class="status-icon '+(c.prosecution==='general'?'good':c.prosecution==='conditional'?'warn':'unknown')+'">'+ic(c.prosecution==='general'?'check-circle':c.prosecution==='conditional'?'alert-circle':'info')+'</span><span class="status-copy"><div class="status-label">Åtalsregel</div><div class="status-value">'+escapeHtml(c.prosecutionLabel||'Åtalsregel ej verifierad')+'</div></span><span class="status-right">'+ic('info','sm')+ic('chevron-right','sm')+'</span></button>':''}</section>
+  ${!c.stageStatus||c.stageStatus==='punishable'?'<button class="status-row" data-action="prosecution" data-id="'+escapeHtml(c.id)+'"><span class="status-icon '+(c.prosecution==='general'?'good':c.prosecution==='conditional'?'warn':'unknown')+'">'+ic(c.prosecution==='general'?'check-circle':c.prosecution==='conditional'?'alert-circle':'info')+'</span><span class="status-copy"><div class="status-label">Åtalsregel</div><div class="status-value">'+escapeHtml(c.prosecutionLabel||'Åtalsregel ej verifierad')+'</div></span><span class="status-right">'+ic('info','sm')+ic('chevron-right','sm')+'</span></button>':''}${c.age14Exception15?.status==='minimum-threshold-met'?'<p class="age14-inline16">Straffansvar från 14 år kan vara möjligt under undantagsperioden enligt BrB 1:6.</p>':''}</section>
   <section class="detail-body"><div class="accordions">
   ${accordion('lag','Lagtext', 'book-open',law)}
   ${accordion('rekvisit','Rekvisit','layers',requisitesBody)}
@@ -1465,18 +1465,30 @@ function showCustody(c){
  showSheet({kicker:'RB 24 KAP. · SNABBKOLL',title:'Häktning',body:s1+s2+s3+s4+'<p class="custody-note">Grönt = brottstypen utesluter inte grunden. Rött = formellt straffskalekrav har inte styrkts. Övriga rekvisit prövas i det enskilda ärendet.</p>',ref:'Rättegångsbalken 24:1–3.'});
 }
 function showProsecution(c){
-  const review=c.prosecutionStatutoryReview15;
-  if(review){
-    const links=[[review.sourceLabel||'Brottsbalkens åtalsregler',review.sourceURL],['Rättegångsbalken 20 kap.',review.supportingSourceURL],...(review.interpretation?[[review.interpretation.locator,review.interpretation.url]]:[])];
-    const body='<p>'+escapeHtml(review.finding)+'</p>'
-      +'<details class="prosecution-conditions"><summary>Övriga villkor och beslutsordning</summary>'
-      +review.notes.map(n=>'<p>'+escapeHtml(n)+'</p>').join('')+'</details>'
-      +'<p class="source-label">Lagtextens åtalsregler kontrollerade '+escapeHtml(review.checked)+'. Gärningsdag, ärendets omständigheter och övriga processhinder behöver prövas särskilt.</p>'
-      +links.map(([label,url])=>'<a class="source-link" target="_blank" rel="noopener noreferrer" href="'+escapeHtml(url)+'">'+escapeHtml(label)+' '+ic('external-link','sm')+'</a>').join('');
-    showSheet({kicker:'ÅTAL OCH ANGIVELSE',title:review.label,body,ref:'Lagtextsbaserat stöd – inget beslut om åtal i ett enskilt ärende.'});
-    return;
-  }
-  showSheet({kicker:'ÅTAL OCH ANGIVELSE',title:c.prosecutionLabel,body:c.prosecutionDetails||['Brottet hör som huvudregel under allmänt åtal. Ingen särskild angivelseförutsättning har lagts in för denna rubricering i prototypen.'],ref:c.prosecutionRule||'Huvudregel: allmänt åtal. Kontrollera alltid eventuella specialbestämmelser.'});
+ const review=c.prosecutionStatutoryReview15;
+ const age=c.age14Exception15?.status==='minimum-threshold-met'
+  ?'<p class="age14-short">Straffansvar från 14 år kan vara möjligt enligt BrB 1:6 under undantagsperioden.</p>':'';
+ if(review){
+  const links=[[review.sourceLabel||'Brottsbalkens åtalsregler',review.sourceURL],['Rättegångsbalken 20 kap.',review.supportingSourceURL],...(review.interpretation?[[review.interpretation.locator,review.interpretation.url]]:[])];
+  let brief=c.prosecution==='general'?'Allmänt åtal.':(review.finding.split(/(?<=[.!?])\s+/)[0]||review.label);
+  if(c.title==='Olovligt förfogande')brief='Närståendefall: angivelse eller allmän synpunkt krävs i angivna fall. Vissa hyres-/kreditköpsfall: särskilda skäl från allmän synpunkt krävs.';
+  if(c.title==='Förskingring')brief='Närståendefall: angivelse eller allmän synpunkt krävs i angivna fall. Grov förskingring undantas.';
+  if(brief.length>230)brief=(review.label||'Särskilda åtalsvillkor gäller')+'. Se villkor nedan.';
+  const body='<p class="prosecution-summary16">'+escapeHtml(brief)+'</p>'+age+
+   '<details class="prosecution-conditions"><summary>Fullständiga villkor och beslutsordning</summary>'+
+   '<p>'+escapeHtml(review.finding)+'</p>'+
+   (review.notes||[]).map(n=>'<p>'+escapeHtml(n)+'</p>').join('')+
+   '<p class="source-label">Lagtexten kontrollerad '+escapeHtml(review.checked)+'</p>'+
+   links.filter(([,url])=>url).map(([label,url])=>'<a class="source-link" target="_blank" rel="noopener noreferrer" href="'+escapeHtml(url)+'">'+escapeHtml(label)+' '+ic('external-link','sm')+'</a>').join('')+
+   '</details>';
+  showSheet({kicker:'ÅTAL OCH ANGIVELSE',title:review.label,body,ref:'Kontrollera villkor i det enskilda ärendet.'});return;
+ }
+ const brief=c.prosecution==='general'?'Allmänt åtal.':(c.prosecutionDetails||[])[0]||'Särskilda åtalsvillkor behöver kontrolleras.';
+ const details='<details class="prosecution-conditions"><summary>Fullständiga villkor</summary>'+
+  (c.prosecutionDetails||[]).map(x=>'<p>'+escapeHtml(x)+'</p>').join('')+'</details>';
+ showSheet({kicker:'ÅTAL OCH ANGIVELSE',title:c.prosecutionLabel||'Åtalsregel',
+ body:'<p class="prosecution-summary16">'+escapeHtml(brief)+'</p>'+age+details,
+ ref:c.prosecutionRule||'Kontrollera tillämplig lag.'});
 }
 function showTerm(term,ref=''){
  const key=term.toLocaleLowerCase('sv');
