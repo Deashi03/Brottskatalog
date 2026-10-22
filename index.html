@@ -1468,6 +1468,7 @@ function custodyAssessment162(c){
  return {ordinary,presumption,exceptional,investigation:ordinary||exceptional,
    onlyVia24_2:exceptional&&!ordinary,unknown:!known&&!fourYearStage};
 }
+window.BK_CUSTODY162 = {assess:custodyAssessment162};
 function showCustody(c){
  if(c.stageStatus&&c.stageStatus!=='punishable')return;
  const x=custodyAssessment162(c);
