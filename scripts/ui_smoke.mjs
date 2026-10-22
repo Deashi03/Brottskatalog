@@ -10,8 +10,24 @@ const wait=async()=>{await page.waitForTimeout(400);};
 try{
   await page.goto(url,{waitUntil:'networkidle'});
   assert.ok(await page.locator('#crime-search').count(),'Search must exist');
-  assert.equal((await page.locator('.bk03-brand span').innerText()).trim(),'1.6.1','Search header must display current release 1.6.1');
+  assert.equal((await page.locator('.bk03-brand span').innerText()).trim(),'1.6.2','Search header must display current release 1.6.2');
   assert.equal(await page.evaluate(()=>window.BK_DATA.crimes.length),1557,'The V1.5 full database must be loaded');
+
+  const custodyAudit=await page.evaluate(()=>{
+    const all=[...window.BK_DATA.crimes,...(window.BK_TRAFFIC16?.entries||[])];
+    const bad=[];
+    for(const c of all){
+      const x=window.BK_CUSTODY162.assess(c);
+      if(x.ordinary&&x.unknown)bad.push(c.title+': false ordinary');
+      if(x.presumption&&c.stageType&&!(Number(c.stageParentMin)>=4&&c.stageStatus==='punishable'&&c.stageSource&&c.stageReviewDate))bad.push(c.title+': false stage presumption');
+      if(x.onlyVia24_2&&x.ordinary)bad.push(c.title+': inconsistent investigative path');
+      if(c.stageStatus==='not-criminalized'&&(x.exceptional||x.investigation))bad.push(c.title+': noncriminalized custody');
+    }
+    return {length:all.length,bad:bad.slice(0,20)};
+  });
+  assert.ok(custodyAudit.length>=1557,'Every available base and stage card must be in the custody audit');
+  assert.deepEqual(custodyAudit.bad,[],'No false custody eligibility in the full catalogue: '+JSON.stringify(custodyAudit.bad));
+
 
   const finalCharging=await page.evaluate(()=>({reviewed:window.BK_FINAL_PROSECUTION15?.completed,held:window.BK_FINAL_PROSECUTION15?.held.length,stampling:window.BK_DATA.crimes.find(c=>c.title==='Stämpling till grovt olaga tvång')?.prosecution,attempt:window.BK_DATA.crimes.find(c=>c.title==='Försök till grovt hemfridsbrott')?.prosecution}));
   assert.deepEqual(finalCharging,{reviewed:452,held:0,stampling:'general',attempt:'general'},'Final charging classifications must survive browser load order');
@@ -633,7 +649,7 @@ try{
   await filter.check();
   assert.equal(await page.locator('.coercive-entry[data-eligible="false"]:visible').count(),0,'Only-check filter hides ineligible measures');
   await filter.uncheck();
-  // V1.6.1: a previously expanded RB chapter AND individual measure must
+  // V1.6.2: a previously expanded RB chapter AND individual measure must
   // be reset after returning to search and opening a new crime via SPA navigation.
   const rb27=chapters.filter({hasText:'RB 27'});
   if(await rb27.getAttribute('open')===null)await rb27.locator(':scope > summary').click();
@@ -704,7 +720,7 @@ try{
   assert.equal(await page.evaluate(()=>window.BK_DATA.glossary['täckningsprincipen']===window.BK_REQUISITE_CONCEPTS15['bk:tackning']),true,'Glossary and requisite popup share one canonical definition');
   await page.goto(url+'#mer',{waitUntil:'networkidle'});
   const settings=await page.locator('body').innerText();
-  assert.ok(settings.includes('Version 1.6.1 · publicerad 2026-10-22'),'Published version must be visible in settings');
+  assert.ok(settings.includes('Version 1.6.2 · publicerad 2026-10-22'),'Published version must be visible in settings');
   assert.ok(settings.includes('Grunddata:'),'Source dataset age must be shown in settings');
   assert.ok(settings.includes('LAGKONTROLL'),'Source checker in settings');
   assert.deepEqual(errors,[],'No JS page errors');

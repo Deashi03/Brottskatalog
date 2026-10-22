@@ -23,12 +23,12 @@ assert.ok(html.includes('prosecution-summary161'), 'Show the quick prosecution c
 assert.ok(html.includes("relative8:['Huvudregel: Allmänt åtal."), 'Relative-theft summary must be short and legally meaningful');
 
 assert.ok(html.includes('coercive-entry')&&html.includes('addEventListener(\'toggle\''));
-assert.ok(html.includes("const s3=card('Särskilda grunder','RB 24:2',true,"));
-assert.ok(html.includes("const s4=card('Utredningshäktning','RB 24:3',true,"));
+assert.ok(html.includes("card('Särskilda grunder','RB 24:2',x.exceptional,"));
+assert.ok(html.includes("card('Utredningshäktning','RB 24:3',x.investigation,"));
 assert.ok(!html.includes("accordion('age14'"));
 assert.ok(html.includes("age14Exception15?.status==='minimum-threshold-met'"));
-assert.match(html,/<strong>Brottskatalog<\/strong><span>1\.6\.1<\/span>/);
-assert.ok(sw.includes('brottskatalog-v161-menu-charging-20261022'));
+assert.match(html,/<strong>Brottskatalog<\/strong><span>1\.6\.2<\/span>/);
+assert.ok(sw.includes('brottskatalog-v162-custody-20261022'));
 for(const f of ['./traffic-16.js','./procedural-add16.js'])assert.ok(sw.includes(f),'LT/traffic asset omitted from offline cache');
 new vm.Script([...html.matchAll(/<script(?:\s[^>]*)?>([\s\S]*?)<\/script>/g)].at(-1)[1]);
 console.log('PASS V1.6: traffic search cards, source-bound LT, green/red custody form, abbreviated youth, and JS syntax');

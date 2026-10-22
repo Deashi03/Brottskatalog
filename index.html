@@ -11,7 +11,7 @@
   <link rel="manifest" href="./manifest.webmanifest">
   <link rel="icon" type="image/svg+xml" href="./icon.svg">
   <link rel="apple-touch-icon" href="./icon.svg">
-  <meta name="description" content="Brottskatalog 1.6.1: svenskt rättsligt uppslagsverk med brott, straffskalor, förstadier och tvångsmedel. Kontrollera gällande rätt.">
+  <meta name="description" content="Brottskatalog 1.6.2: svenskt rättsligt uppslagsverk med brott, straffskalor, förstadier och tvångsmedel. Kontrollera gällande rätt.">
 
 
 
@@ -1001,7 +1001,17 @@ const lawText=c=>{
 function actualTheme(){const h=new Date().getHours();return state.theme==='auto'?(h>=22||h<6?'dark':'light'):state.theme;}
 function applyTheme(){const dark=actualTheme()==='dark';document.documentElement.dataset.theme=dark?'dark':'light';document.querySelector('meta[name="theme-color"]')?.setAttribute('content',dark?'#07090c':'#f7f9fa');document.querySelector('meta[name="color-scheme"]')?.setAttribute('content',dark?'dark':'light');}
 const custodyLabels = {none:'Ej enligt huvudregeln',possible:'Häktning kan vara möjlig',presumption:'Häktningspresumtion',unknown:'Ej kontrollerad'};
-const custodyLabel=c=>c.stageStatus==='not-criminalized'?'Ej straffbart':c.stageStatus==='unverified'?'Ej verifierat':custodyLabels[c.custody]||'Ej kontrollerad';
+const custodyLabel=c=>{
+ if(c.stageStatus==='not-criminalized')return 'Ej straffbart';
+ if(c.stageStatus==='unverified')return 'Straffbarhet ej verifierad';
+ const v=custodyAssessment162(c);
+ return v.presumption?'Häktningspresumtion – pröva skäl':v.ordinary?'Häktning kan vara möjlig':
+  v.exceptional?'Endast särskild grund (RB 24:2)':'Straffskala/tillämpning kräver kontroll';
+};
+const custodyIcon162=c=>{
+ const v=custodyAssessment162(c);
+ return v.presumption||v.ordinary?'scale':v.exceptional?'minus-circle':'info';
+};
 const custodyIcons = {none:'minus-circle',possible:'scale',presumption:'scale',unknown:'info'};
 function sortedCrimes(){
   const stageQuery=/^(forsok|forberedelse|stampling)\b/.test(normalize(state.query));
@@ -1039,7 +1049,7 @@ function card(c){
 function brandTop(){
   return `<div class="topline"><div class="brand-wrap"><div class="brand-symbol">${ic('scale')}</div><div><div class="brand-name">Brottskatalog</div><div class="brand-desc">JURIDISKT REFERENSVERK</div></div></div><div class="online"><span class="dot"></span><span id="connection-state">Lokalt läge</span></div></div>`;
 }
-function note(){return `<div class="mode-note">${ic('info','sm')}<span><strong>Version 1.6.1 · publicerad 2026-10-22</strong> · ${crimes.length} sökingångar. Nya poster väntar delvis på juridisk granskning.</span></div>`;}
+function note(){return `<div class="mode-note">${ic('info','sm')}<span><strong>Version 1.6.2 · publicerad 2026-10-22</strong> · ${crimes.length} sökingångar. Nya poster väntar delvis på juridisk granskning.</span></div>`;}
 function bottomNav(active){
   return `<nav class="bottom-nav" aria-label="Huvudnavigering">
   <button class="nav-item ${active==='sok'?'active':''}" data-tab="sok" ${active==='sok'?'aria-current="page"':''}>${ic('search')}Sök</button>
@@ -1067,7 +1077,7 @@ function resultsFragment(){
 function updateResults(){const el=document.getElementById('results-area');if(el)el.innerHTML=resultsFragment();}
 function renderSearch(){
   app.className='app-shell nav-layout '+(state.density==='compact'?'compact':'');
-  app.innerHTML=`<main class="page"><div class="bk03-brand">${ic('scale')}<strong>Brottskatalog</strong><span>1.6.1</span></div>
+  app.innerHTML=`<main class="page"><div class="bk03-brand">${ic('scale')}<strong>Brottskatalog</strong><span>1.6.2</span></div>
   <label class="search-box" for="crime-search">${ic('search','lg')}<input id="crime-search" type="search" placeholder="T.ex. ringa stöld, BrB 8:2…" inputmode="search" enterkeyhint="search" autocapitalize="off" autocomplete="off" spellcheck="false" value="${escapeHtml(state.query)}"><button class="search-clear" data-action="clear-search" aria-label="Rensa sökning" style="${state.query?'':'display:none'}">${ic('x','sm')}</button></label>
   <div class="filter-strip" role="group" aria-label="Filtrera brott">${categories.map(cat=>`<button class="filter ${cat===state.category?'active':''}" data-category="${escapeHtml(cat)}" aria-pressed="${cat===state.category}">${escapeHtml(cat)}</button>`).join('')}</div>
   <div id="quick-area" ${state.query?'hidden':''}>${quickRow()}</div>
@@ -1106,7 +1116,7 @@ function renderMore(){
   <section class="settings-group"><h2 class="settings-h">TEKNISK INFORMATION</h2><div class="settings-card"><div class="setting-row"><div><h3>Utan inloggning eller konto</h3><p>All exempeldata finns i appens filer. Favoriter och inställningar sparas lokalt.</p></div>${ic('shield-check')}</div><div class="setting-row"><div><h3>Offline vid installation</h3><p>Den installerade webbappen använder lokal cache. iOS kan under vissa omständigheter rensa webbdata.</p></div>${ic('wifi-off')}</div></div></section>
   <section class="settings-group"><h2 class="settings-h">KÄLLOR OCH AVGRÄNSNING</h2><div class="settings-text"><p>${crimes.length} sökingångar är inlagda. Nya poster kan sakna juridisk granskning. Detta är ett urval – inte en komplett brottsförteckning. Lydelser, tolkningar och statusfält behöver slutlig juridisk kvalitetskontroll före användning i tjänsten.</p>
   <p>Rättskällor: <a href="https://www.riksdagen.se/sv/dokument-och-lagar/dokument/svensk-forfattningssamling/brottsbalk-1962700_sfs-1962-700/" target="_blank" rel="noopener noreferrer">Brottsbalken</a>, <a href="https://www.riksdagen.se/sv/dokument-och-lagar/dokument/svensk-forfattningssamling/narkotikastrafflag-196864_sfs-1968-64/" target="_blank" rel="noopener noreferrer">narkotikastrafflagen</a> och <a href="https://www.riksdagen.se/sv/dokument-och-lagar/dokument/svensk-forfattningssamling/rattegangsbalk-1942740_sfs-1942-740framtagen/" target="_blank" rel="noopener noreferrer">rättegångsbalken</a>.</p>
-  <p>Kursanteckningar: Brottsutredning, Straffprocessrätt och Straffrätt Lund. Dessa visas uttryckligen som kommentarer, aldrig som lagtext.</p><p><strong>Urval:</strong> Alla brottsbalksbrott ska ingå. Utanför brottsbalken utelämnas brott med endast penningböter i straffskalan; brott med dagsböter eller fängelse ska ingå. Katalogen är inte fullständigt juridiskt slutgranskad.</p><p>Version 1.6.1 · publicerad 2026-10-22 · Grunddata: ${escapeHtml(window.BK_DATA.date)} (${Math.max(0,Math.floor((new Date().setHours(0,0,0,0)-new Date(window.BK_DATA.date+'T00:00:00').getTime())/86400000))} dagar sedan). Datumet visar inte när varje lagregel ändrades eller sakgranskades.</p></div></section>
+  <p>Kursanteckningar: Brottsutredning, Straffprocessrätt och Straffrätt Lund. Dessa visas uttryckligen som kommentarer, aldrig som lagtext.</p><p><strong>Urval:</strong> Alla brottsbalksbrott ska ingå. Utanför brottsbalken utelämnas brott med endast penningböter i straffskalan; brott med dagsböter eller fängelse ska ingå. Katalogen är inte fullständigt juridiskt slutgranskad.</p><p>Version 1.6.2 · publicerad 2026-10-22 · Grunddata: ${escapeHtml(window.BK_DATA.date)} (${Math.max(0,Math.floor((new Date().setHours(0,0,0,0)-new Date(window.BK_DATA.date+'T00:00:00').getTime())/86400000))} dagar sedan). Datumet visar inte när varje lagregel ändrades eller sakgranskades.</p></div></section>
   </main>${bottomNav('mer')}`;
   const statusEl=document.getElementById('bk-source-check');
   if(statusEl){
@@ -1402,7 +1412,7 @@ function renderDetail(c){
   <div class="detail-kicker">BROTT OCH STRAFF</div><h1 class="detail-title ${c.title.length>21?'long':''}">${escapeHtml(c.title)}</h1><div class="detail-ref">${escapeHtml(c.ref)}</div>
   ${c.stageStatus==='not-criminalized'?'<div class="stage-alert no"><strong>✕ EJ STRAFFBART</strong><p>Förstadiet är inte särskilt kriminaliserat. Se lagrum och förklaring nedan.</p></div>':c.stageStatus==='unverified'?'<div class="stage-alert pending"><strong>STRAFFBARHET EJ VERIFIERAD</strong><p>Frånvaro av verifiering innebär inte att förstadiet är straffritt.</p></div>':''}
   <section class="penalty-panel" aria-label="Straffskala"><div class="penalty-label">Straffskala</div>${punishmentBlock(c)}</section>
-  <section class="status-block" aria-label="Översikt"><button class="status-row" data-action="custody" data-id="${c.id}" ${c.stageStatus&&c.stageStatus!=='punishable'?'disabled aria-disabled="true"':''}><span class="status-icon">${ic(custodyIcons[c.custody])}</span><span class="status-copy"><div class="status-label">Häktning</div><div class="status-value">${escapeHtml(custodyLabel(c))}</div></span><span class="status-right">${ic('info','sm')}${ic('chevron-right','sm')}</span></button>
+  <section class="status-block" aria-label="Översikt"><button class="status-row" data-action="custody" data-id="${c.id}" ${c.stageStatus&&c.stageStatus!=='punishable'?'disabled aria-disabled="true"':''}><span class="status-icon">${ic(custodyIcon162(c))}</span><span class="status-copy"><div class="status-label">Häktning</div><div class="status-value">${escapeHtml(custodyLabel(c))}</div></span><span class="status-right">${ic('info','sm')}${ic('chevron-right','sm')}</span></button>
   ${!c.stageStatus||c.stageStatus==='punishable'?'<button class="status-row" data-action="prosecution" data-id="'+escapeHtml(c.id)+'"><span class="status-icon '+(c.prosecution==='general'?'good':c.prosecution==='conditional'?'warn':'unknown')+'">'+ic(c.prosecution==='general'?'check-circle':c.prosecution==='conditional'?'alert-circle':'info')+'</span><span class="status-copy"><div class="status-label">Åtalsregel</div><div class="status-value">'+escapeHtml(c.prosecutionLabel||'Åtalsregel ej verifierad')+'</div></span><span class="status-right">'+ic('info','sm')+ic('chevron-right','sm')+'</span></button>':''}${c.age14Exception15?.status==='minimum-threshold-met'?'<p class="age14-inline16">Straffansvar från 14 år kan vara möjligt under undantagsperioden enligt BrB 1:6.</p>':''}</section>
   <section class="detail-body"><div class="accordions">
   ${accordion('lag','Lagtext', 'book-open',law)}
@@ -1419,7 +1429,7 @@ function renderDetail(c){
 
   ${accordion('relaterade','Relaterade brott','list',related||'<p>Inga relaterade exempel ännu.</p>')}
   ${accordion('sources','Rättskällor och källtyper','book-mark',`<p><strong>Lagtext:</strong> återgiven separat och utan omskrivningar. Kontrollera aktuellt rättsläge via källan.</p><p><strong>Tolkningsstöd:</strong> kursanteckningar och praktiska sammanfattningar är inte lagtext.</p>${links.map(([title,url])=>`<a class="source-link" href="${url}" target="_blank" rel="noopener noreferrer">${ic('external-link')} ${escapeHtml(title)}</a>`).join('')}`)}
-  </div></section>${qualityCard(c)}<p class="detail-footer">Version 1.6.1 · kontrollera aktuell lagtext vid operativa beslut.</p></main>`;
+  </div></section>${qualityCard(c)}<p class="detail-footer">Version 1.6.2 · kontrollera aktuell lagtext vid operativa beslut.</p></main>`;
 }
 function showSheet({kicker,title,body,ref,actionHtml='',fromProvision=false}){
   if(!fromProvision)sheetHistory.length=0;
@@ -1438,32 +1448,58 @@ function showProvision(key){
  if(close && sheetHistory.length){close.dataset.action='back-sheet';close.setAttribute('aria-label','Tillbaka till föregående ruta');close.innerHTML=ic('arrow-left');}
 }
 
+function custodyAssessment162(c){
+ const pr=window.BK_COERCIVE?.range?.(c)||c.penaltyRange;
+ const punishable=!!c&&(!c.stageStatus||c.stageStatus==='punishable');
+ const applicable=punishable&&!c.applicabilityConditional&&!c.penaltyCrosscheckIssue;
+ const uncertain=Boolean(c.conditionalPenalty||c.applicabilityConditional||c.penaltyCrosscheckIssue||
+  c.stagePreparationPenaltyReview15||c.stageIntervalReview15||c.stageWartimePenaltyReview15);
+ const known=Boolean(applicable&&!uncertain&&!window.BK_COERCIVE?.unresolvedForCoercion15?.(c)&&
+   c.penaltyRangeVerified===true&&pr&&Number.isFinite(pr.min)&&Number.isFinite(pr.max));
+ const stage=!!c.stageType;
+ const fourYearStage=Boolean(applicable&&!uncertain&&
+   ['forsok','forberedelse','stampling'].includes(c.stageType)&&
+   c.stageStatus==='punishable'&&c.stageSource&&c.stageReviewDate&&
+   Number(c.stageParentMin)>=4);
+ const ordinary=Boolean(known&&pr.max>=1);
+ const presumption=Boolean(applicable&&(stage?fourYearStage:(known&&(
+   pr.min>=1.5||['Grov fridskränkning','Grov kvinnofridskränkning','Hedersförtryck'].includes(c.title)))));
+ const exceptional=Boolean(applicable);
+ return {ordinary,presumption,exceptional,investigation:ordinary||exceptional,
+   onlyVia24_2:exceptional&&!ordinary,unknown:!known&&!fourYearStage};
+}
+window.BK_CUSTODY162 = {assess:custodyAssessment162};
 function showCustody(c){
  if(c.stageStatus&&c.stageStatus!=='punishable')return;
- const pr=window.BK_COERCIVE?.range?.(c)||c.penaltyRange;
- const unresolved=Boolean(window.BK_COERCIVE?.unresolvedForCoercion15?.(c));
- // Only a source-checked, explicitly punishable inchoate to an offence
- // with a minimum of four years may pass the special formal 24:1 gate.
- // This is NOT a full inchoate penalty-range verification or custody decision.
- const verifiedInchoatePresumption=Boolean(c.stageType&&
-  ['forsok','forberedelse','stampling'].includes(c.stageType)&&
-  c.stageStatus==='punishable'&&c.stageReviewDate&&c.stageSource&&
-  Number(c.stageParentMin)>=4&&!c.conditionalPenalty&&
-  !c.applicabilityConditional&&!c.penaltyCrosscheckIssue);
- const known=Boolean((!unresolved||verifiedInchoatePresumption)&&pr&&Number.isFinite(pr.min)&&Number.isFinite(pr.max));
- const main=Boolean(known&&pr.max>=1);
- const stage=!!c.stageType;
- const presum=Boolean(known&&(stage?(Number(c.stageParentMin)>=4&&c.stageStatus==='punishable'):(pr.min>=1.5||['Grov fridskränkning','Grov kvinnofridskränkning','Hedersförtryck'].includes(c.title))));
- const check=(yes)=>'<span class="custody-mark '+(yes===null?'unknown':yes?'yes':'no')+'">'+ic(yes===null?'info':yes?'check':'x','sm')+'</span>';
- const tags=(items)=>'<div class="custody-tags">'+items.map(t=>'<span>'+escapeHtml(t)+'</span>').join('')+'</div>';
- const card=(title,ref,ok,scale,susp,inner,note='')=>'<div class="custody-box"><div class="custody-head">'+check(ok)+'<div><small>'+escapeHtml(ref)+'</small><strong>'+escapeHtml(title)+'</strong></div></div>'+
+ const x=custodyAssessment162(c);
+ const mark=yes=>'<span class="custody-mark '+(yes?'yes':'no')+'">'+ic(yes?'check':'x','sm')+'</span>';
+ const tags=items=>'<div class="custody-tags">'+items.map(t=>'<span>'+escapeHtml(t)+'</span>').join('')+'</div>';
+ const card=(title,ref,yes,scale,susp,inner,note='')=>'<div class="custody-box"><div class="custody-head">'+mark(yes)+'<div><small>'+escapeHtml(ref)+'</small><strong>'+escapeHtml(title)+'</strong></div></div>'+
   '<div class="custody-facts"><div><small>STRAFFSKALA</small><b>'+escapeHtml(scale)+'</b></div><div><small>MISSTANKEGRAD</small><b>'+escapeHtml(susp)+'</b></div></div>'+
   '<div class="custody-requisites">'+inner+'</div>'+(note?'<p class="custody-note">'+escapeHtml(note)+'</p>':'')+'</div>';
- const s1=card('Huvudregel','RB 24:1',main,'Straffmax ≥ 1 år','Sannolika skäl','<small>MINST ETT HÄKTNINGSSKÄL</small>'+tags(['Flyktfara','Kollusionsfara','Recidivfara']),'Proportionalitet och förväntad påföljd beaktas.');
- const s2=card('Häktningspresumtion','RB 24:1 st. 2',presum,stage?'Fullbordat: straffmin ≥ 4 år':'Straffmin ≥ 1 år 6 mån*','Sannolika skäl','<small>PRESUMTIONSGRUND</small><p>'+(stage?'Straffbart försök, förberedelse eller stämpling till brott med minimum ≥ 4 år.':'Straffminimum ≥ 1 år 6 mån; alternativt särskilt angivna brott.')+'</p>','Gäller om det inte är uppenbart att häktningsskäl saknas.');
- const s3=card('Särskilda grunder','RB 24:2',true,'Oberoende av brottets straffskala','Sannolika skäl','<small>MINST EN GRUND</small><p><b>P. 1 · Identitet:</b> Okänd och vägrar ange namn/hemvist eller uppgifterna kan antas osanna.</p><div class="custody-or">ELLER</div><p><b>P. 2 · Hemvist:</b> Saknar hemvist i Sverige och riskerar att lämna landet för att undandra sig lagföring eller straff.</p>');
- const s4=card('Utredningshäktning','RB 24:3',true,'Enligt 24:1 eller 24:2','Skälig misstanke','<small>BÅDA KRÄVS</small><p>Övriga förutsättningar enligt 24:1 st. 1, 3–4 eller 24:2.</p><div class="custody-or">OCH</div><p>Synnerlig vikt att ta personen i förvar i avvaktan på ytterligare utredning.</p>');
- showSheet({kicker:'RB 24 KAP. · SNABBKOLL',title:'Häktning',body:s1+s2+s3+s4+'<p class="custody-note">Grönt = brottstypen utesluter inte grunden. Rött = formellt straffskalekrav har inte styrkts. Övriga rekvisit prövas i det enskilda ärendet.</p>',ref:'Rättegångsbalken 24:1–3.'});
+ const ordinaryNote=x.unknown?'Straffskalegränsen är inte verifierad för denna post. Röd markering betyder här endast att appen inte kan styrka villkoret.':
+   'Pröva häktningsskäl, proportionalitet och den förväntade påföljden. Häktning enligt 24:1 är förbjuden om endast böter kan förväntas.';
+ const a=card('Huvudregel','RB 24:1',x.ordinary,'Straffmax ≥ 1 år','Sannolika skäl',
+  '<small>MINST ETT HÄKTNINGSSKÄL</small>'+tags(['Flyktfara','Kollusionsfara','Recidivfara']),ordinaryNote);
+ const stage=!!c.stageType;
+ const b=card('Häktningspresumtion','RB 24:1 st. 2',x.presumption,
+  stage?'Huvudbrottets straffmin ≥ 4 år':'Straffmin ≥ 1 år 6 mån eller särskilt angivet brott',
+  'Sannolika skäl','<small>PRESUMTIONSGRUND</small><p>'+
+  (stage?'Straffbart försök, förberedelse eller stämpling till brott med minst fyra års fängelse som lägsta straff.':
+   'Brott med minimistraff ett år och sex månader, eller grov fridskränkning, grov kvinnofridskränkning eller hedersförtryck.')+'</p>',
+  'Gäller om det inte är uppenbart att skäl till häktning saknas. Proportionalitet och förväntad påföljd måste beaktas.');
+ const d=card('Särskilda grunder','RB 24:2',x.exceptional,'Ingen särskild straffskalegräns','Sannolika skäl',
+  '<small>MINST EN GRUND</small><p><b>P. 1 · Identitet:</b> Okänd och vägrar ange namn/hemvist eller uppgifterna kan antas osanna.</p><div class="custody-or">ELLER</div><p><b>P. 2 · Hemvist:</b> Saknar hemvist i Sverige och riskerar att lämna landet för att undandra sig lagföring eller straff.</p>',
+  'Grönt visar endast att brottstypen inte utesluter grunden. Identitet, hemvist och undandraganderisk måste kontrolleras.');
+ const route=x.onlyVia24_2?'Endast via RB 24:2':'Via RB 24:1 eller 24:2';
+ const e=card('Utredningshäktning','RB 24:3',x.investigation,route,'Skälig misstanke',
+  '<small>BÅDA KRÄVS</small><p>Övriga villkor enligt RB 24:1 första, tredje och fjärde styckena eller RB 24:2.</p><div class="custody-or">OCH</div><p>Synnerlig vikt att ta personen i förvar i avvaktan på ytterligare utredning.</p>',
+  (x.onlyVia24_2?'Endast via 24:2: den särskilda identitets- eller hemvistgrunden måste vara uppfylld.':'Övriga villkor enligt 24:1 eller 24:2 måste vara uppfyllda.')+
+  ' Ny häktningsprövning senast inom en vecka (RB 24:19).');
+ const note='Grönt = brottskortet utesluter inte prövning, aldrig ett häktningsbeslut. För RB 24:2 och 24:3 krävs faktiska omständigheter. Under 18 år krävs synnerliga skäl (LUL 23 §).';
+ showSheet({kicker:'RB 24 KAP. · SNABBKOLL',title:'Häktning',body:a+b+d+e+
+  '<p class="custody-note">'+escapeHtml(note)+'</p>',
+  ref:'RB 24:1–3, 19; LUL 23 § · Granskat 2026-10-22 (SFS 2026:1319).'});
 }
 function showProsecution(c){
  const review=c.prosecutionStatutoryReview15;
@@ -1596,7 +1632,7 @@ document.addEventListener('click', async e=>{
   const action=btn.dataset.action,id=btn.dataset.id;
   if(action==='report' && byId[id]){
     const c=byId[id];
-    const report='Brottskatalog '+(window.BK_DATA.release||'1.6.1')+'\nBrott: '+c.title+'\nLagrum: '+c.ref+'\nTyp av fel (lagtext/straffskala/åtal/begrepp/annat):\nVad bör rättas?\nKälla eller förslag:\n(Inga person- eller ärendeuppgifter.)';
+    const report='Brottskatalog '+(window.BK_DATA.release||'1.6.2')+'\nBrott: '+c.title+'\nLagrum: '+c.ref+'\nTyp av fel (lagtext/straffskala/åtal/begrepp/annat):\nVad bör rättas?\nKälla eller förslag:\n(Inga person- eller ärendeuppgifter.)';
     try{await navigator.clipboard.writeText(report);toast('Mall för felrapport kopierad');}
     catch{
       showSheet({kicker:'FELRAPPORT · INGEN DATA SKICKAS',title:'Kopiera denna mall',body:[report],ref:'Undvik uppgifter om verkliga ärenden. Skriv in rapporten i projektets GitHub Issues eller denna chatt.'});
