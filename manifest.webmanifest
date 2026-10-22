@@ -2,7 +2,7 @@
   "id": "./",
   "name": "Brottskatalog",
   "short_name": "Brottskatalog",
-  "description": "Brottskatalog 1.6 – sökbart uppslagsverk med brott, förstadier, straffskalor, lagtext och polisiärt tvångsmedelsstöd. Kontrollera gällande rätt.",
+  "description": "Brottskatalog 1.6.1 – sökbart uppslagsverk med brott, förstadier, straffskalor, lagtext och polisiärt tvångsmedelsstöd. Kontrollera gällande rätt.",
   "start_url": "./",
   "scope": "./",
   "display": "standalone",
