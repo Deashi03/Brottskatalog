@@ -587,15 +587,19 @@ try{
   await page.locator('summary').filter({hasText:'Tvångsmedel – översikt'}).click();
   const chapters=page.locator('.coercive-chapter');
   assert.equal(await chapters.count(),6,'Two measures groups omitted and RB 23–28 shown');
-  await chapters.filter({hasText:'RB 23'}).locator('summary').first().click();
-  await chapters.filter({hasText:'RB 28'}).locator('summary').first().click();
+  await chapters.filter({hasText:'RB 23'}).locator(':scope > summary').click();
+  await chapters.filter({hasText:'RB 28'}).locator(':scope > summary').click();
+  assert.equal(await chapters.filter({hasText:'RB 23'}).getAttribute('open'),null,
+    'V1.6 opens at most one coercive RB chapter at a time');
   const force=await page.locator('body').innerText();
   assert.ok(force.includes('Kroppsvisitation')&&force.includes('Kvarhållande av grupp'),'Core coercive measures by chapter');
-  await chapters.filter({hasText:'RB 23'}).locator('.coercive-entry').first().locator('summary').click();
+  await chapters.filter({hasText:'RB 23'}).locator(':scope > summary').click();
+  await chapters.filter({hasText:'RB 23'}).locator('.coercive-entry').first().locator(':scope > summary').click();
   assert.ok((await page.locator('body').innerText()).includes('Beslut i korthet:'),'Decision maker is accessible per measure');
   // v0.9: visible ✓/✕ and officer badges in the chapter list.
   // Version 1.0 – complex decision pathways must be accessible without visual clutter.
   const measureBeslag=page.locator('.coercive-entry').filter({hasText:'Beslag'}).first();
+  await chapters.filter({hasText:'RB 27'}).locator(':scope > summary').click();
   assert.ok(await measureBeslag.locator('.decision-help').count()>0,'Beslag must display special-condition exclamation');
   await measureBeslag.locator('.decision-help').click();
   assert.ok((await page.locator('[role="dialog"]').innerText()).includes('gatan'),'Decision explanation must distinguish street from legal underlying search');
