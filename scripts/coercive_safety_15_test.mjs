@@ -34,10 +34,10 @@ assert.equal(reg.score({...murderAttempt,stageReviewDate:null},group).tone,'unkn
  'No source-reviewed attempt should give a positive threshold');
 assert.equal(reg.score({...murderAttempt,stageStatus:'not-criminalized'},seized).tone,'no',
  'Confirmed noncriminalized attempts must show an explicit negative, not an unknown status');
-assert.ok(html.includes('const unresolved=Boolean(window.BK_COERCIVE?.unresolvedForCoercion15?.(c))'));
-assert.ok(html.includes('const verifiedInchoatePresumption=Boolean(c.stageType&&'));
-assert.ok(html.includes('Number(c.stageParentMin)>=4&&!c.conditionalPenalty'));
-assert.ok(html.includes('(!unresolved||verifiedInchoatePresumption)&&pr'));
+assert.ok(html.includes('window.BK_COERCIVE?.unresolvedForCoercion15?.(c)'),'Verified-scope guard remains active');
+assert.ok(html.includes('const fourYearStage=Boolean(applicable&&!uncertain&&'),'Four-year stage route remains separately reviewed');
+assert.ok(html.includes('Number(c.stageParentMin)>=4'),'Four-year parent threshold remains required');
+assert.ok(html.includes('const known=Boolean(applicable&&!uncertain&&'),'Uncertain statutory scales cannot get a green ordinary custody mark');
 
 assert.ok(html.includes("card('Särskilda grunder','RB 24:2',x.exceptional,'Ingen särskild straffskalegräns'"));
 assert.ok(html.includes("card('Utredningshäktning','RB 24:3',x.investigation,route,'Skälig misstanke'"));
