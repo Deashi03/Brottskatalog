@@ -633,6 +633,31 @@ try{
   await filter.check();
   assert.equal(await page.locator('.coercive-entry[data-eligible="false"]:visible').count(),0,'Only-check filter hides ineligible measures');
   await filter.uncheck();
+  // V1.6.1: a previously expanded RB chapter AND individual measure must
+  // be reset after returning to search and opening a new crime via SPA navigation.
+  const rb27=chapters.filter({hasText:'RB 27'});
+  if(await rb27.getAttribute('open')===null)await rb27.locator(':scope > summary').click();
+  const oldMeasure=rb27.locator('.coercive-entry').first();
+  if(await oldMeasure.getAttribute('open')===null)await oldMeasure.locator(':scope > summary').click();
+  assert.equal(await rb27.getAttribute('open'),'','Previous crime has an expanded RB chapter');
+  assert.equal(await oldMeasure.getAttribute('open'),'','Previous crime has an expanded coercive measure');
+  await page.locator('[data-action="back"]').first().click();
+  await page.locator('#crime-search').fill('stöld');await wait();
+  await page.locator('.crime-card').filter({has:page.getByText('Stöld',{exact:true})}).first().click();
+  await page.locator('#sec-tvang > summary').click();
+  assert.equal(await page.locator('.coercive-chapter[open]').count(),0,
+    'New crime does not inherit an expanded RB chapter, including former RB 27 default');
+  assert.equal(await page.locator('.coercive-entry[open]').count(),0,
+    'New crime does not inherit an expanded measure');
+  await page.locator('[data-action="prosecution"]').click();
+  const chargingDialog=page.locator('[role="dialog"]');
+  const quickCharging=await chargingDialog.locator('.prosecution-summary161').allTextContents();
+  assert.ok(quickCharging.some(t=>t.includes('Huvudregel: Allmänt åtal')),'Theft displays its simple general prosecution rule');
+  assert.ok(quickCharging.some(t=>t.includes('Närståendefall')&&t.includes('ELLER')),
+    'Theft displays the relative-case exception without needing an extra click');
+  assert.equal(await chargingDialog.locator('.prosecution-conditions').getAttribute('open'),null,
+    'Additional legal discussion stays collapsed beneath the clear charging answer');
+  await page.locator('[data-action="close-sheet"]').last().click();
   const mobileWidth=await page.evaluate(()=>({scroll:document.documentElement.scrollWidth,inner:innerWidth}));
   assert.ok(mobileWidth.scroll<=mobileWidth.inner+1,'No overflow after open coercive list');
   await page.goto(url+'#sok',{waitUntil:'networkidle'});
