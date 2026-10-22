@@ -588,11 +588,13 @@ try{
   const chapters=page.locator('.coercive-chapter');
   assert.equal(await chapters.count(),6,'Two measures groups omitted and RB 23–28 shown');
   await chapters.filter({hasText:'RB 23'}).locator(':scope > summary').click();
+  assert.ok((await page.locator('body').innerText()).includes('Kvarhållande av grupp'),
+    'RB 23 contains group detention provision');
   await chapters.filter({hasText:'RB 28'}).locator(':scope > summary').click();
   assert.equal(await chapters.filter({hasText:'RB 23'}).getAttribute('open'),null,
     'V1.6 opens at most one coercive RB chapter at a time');
-  const force=await page.locator('body').innerText();
-  assert.ok(force.includes('Kroppsvisitation')&&force.includes('Kvarhållande av grupp'),'Core coercive measures by chapter');
+  assert.ok((await page.locator('body').innerText()).includes('Kroppsvisitation'),
+    'RB 28 contains body search provision');
   await chapters.filter({hasText:'RB 23'}).locator(':scope > summary').click();
   await chapters.filter({hasText:'RB 23'}).locator('.coercive-entry').first().locator(':scope > summary').click();
   assert.ok((await page.locator('body').innerText()).includes('Beslut i korthet:'),'Decision maker is accessible per measure');
