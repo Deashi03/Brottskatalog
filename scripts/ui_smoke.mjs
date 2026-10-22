@@ -208,7 +208,7 @@ try{
   ]){
     await page.goto(url+'#sok',{waitUntil:'networkidle'});await search.fill(title);await wait();
     await page.locator('.crime-card').filter({has:page.getByText(title,{exact:true})}).click();
-    await page.locator('#sec-rekvisit > summary').click();const grades=page.locator('.statutory-grade-review');
+    await page.locator('#sec-rekvisit > summary').click();if(await page.locator('.grade-secondary').count())await page.locator('.grade-secondary > summary').click();const grades=page.locator('.statutory-grade-review');
     assert.equal(await grades.getAttribute('open'),null,'Degree detail starts collapsed: '+title);
     await grades.locator(':scope > summary').click();assert.ok((await grades.innerText()).includes(phrase),'Precise statutory degree distinction: '+title);
     assert.ok((await grades.innerText()).includes('konkret gärning'));
@@ -229,7 +229,7 @@ try{
   ]){
     await page.goto(url+'#sok',{waitUntil:'networkidle'});await search.fill(title);await wait();
     await page.locator('.crime-card').filter({has:page.getByText(title,{exact:true})}).click();
-    await page.locator('#sec-rekvisit > summary').click();const grades=page.locator('.statutory-grade-review');
+    await page.locator('#sec-rekvisit > summary').click();if(await page.locator('.grade-secondary').count())await page.locator('.grade-secondary > summary').click();const grades=page.locator('.statutory-grade-review');
     assert.equal(await grades.getAttribute('open'),null);await grades.locator(':scope > summary').click();
     assert.ok((await grades.innerText()).includes(phrase),'Remaining grade route: '+title);
     assert.equal(await grades.evaluate(el=>el.scrollWidth<=el.clientWidth+1),true,'Remaining grade fits iPhone: '+title);
@@ -517,7 +517,7 @@ try{
   const fineCustody=page.locator('[role="dialog"] .custody-box');
   assert.equal(await fineCustody.count(),4,'All four RB 24 approaches must be separately visible');
   assert.ok(await fineCustody.nth(0).locator('.custody-mark.no').count(),'Ordinary RB 24:1 threshold cannot apply to fine-only offences');
-  assert.ok(await fineCustody.nth(2).locator('.custody-mark.unknown').count(),'RB 24:2 requires individual identity and domicile assessment, not a fine-based red X');
+  assert.ok(await fineCustody.nth(2).locator('.custody-mark.yes').count(),'RB 24:2 does not exclude fine-only offences by statutory range; person-specific criteria still required');
   assert.ok(await fineCustody.nth(3).locator('.custody-mark.yes').count(),'RB 24:3 can be considered via RB 24:2; case-specific conditions remain necessary');
   await page.goto(url+'#sok',{waitUntil:'networkidle'});
   await page.locator('#crime-search').fill('försök till mord');
