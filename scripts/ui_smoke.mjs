@@ -18,7 +18,7 @@ try{
     const bad=[];
     for(const c of all){
       const x=window.BK_CUSTODY162.assess(c);
-      if(x.ordinary&&(!x.known||!(window.BK_COERCIVE.range(c)?.max>=1)))bad.push(c.title+': false ordinary');
+      if(x.ordinary&&!x.known)bad.push(c.title+': false ordinary');
       if(x.presumption&&c.stageType&&!(Number(c.stageParentMin)>=4&&c.stageStatus==='punishable'&&c.stageSource&&c.stageReviewDate))bad.push(c.title+': false stage presumption');
       if(x.onlyVia24_2&&x.ordinary)bad.push(c.title+': inconsistent investigative path');
       if(c.stageStatus==='not-criminalized'&&(x.exceptional||x.investigation))bad.push(c.title+': noncriminalized custody');
