@@ -1571,6 +1571,14 @@ document.addEventListener('click', async e=>{
   }
 });
 document.addEventListener('keydown', e=>{if(e.key==='Escape')closeSheet();});
+// Close sibling chapters/entries before a new native <details> opens.
+document.addEventListener('click',e=>{
+ if(e.target.closest('[data-coercive-lt], [data-decision-info]'))return;
+ const summary=e.target.closest('summary'),details=summary?.parentElement;
+ if(!(details instanceof HTMLDetailsElement)||details.open)return;
+ const cls=details.matches('.coercive-entry')?'coercive-entry':details.matches('.coercive-chapter')?'coercive-chapter':null;
+ if(cls)for(const peer of details.parentElement?.children||[])if(peer!==details&&peer.classList.contains(cls))peer.open=false;
+},true);
 document.addEventListener('toggle',e=>{
  const node=e.target;
  if(!(node instanceof HTMLDetailsElement)||!node.open)return;
