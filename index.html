@@ -157,6 +157,7 @@
 :root[data-theme="dark"] .app-shell{box-shadow:0 0 0 1px #19232c}
 
 
+.coercive-lt{flex:none;border:1px solid var(--line);border-radius:7px;padding:8px 10px;background:var(--surface);color:var(--primary);font-size:11px;font-weight:850;cursor:pointer}
 .bk03-brand{display:flex;align-items:center;gap:10px;padding:19px 0 14px;color:var(--ink);font-size:19px}.bk03-brand .ic{width:22px;height:22px;color:var(--primary)}.bk03-brand span{margin-left:auto;color:var(--muted);font-size:11px}.bk03-brand+.search-box{margin-top:0}
 
 .saved-item{display:flex;align-items:center;gap:6px}.saved-item>.crime-card{flex:1;min-width:0}.saved-actions{display:flex;flex-direction:column;gap:5px}.saved-actions button{width:36px;height:37px;border-radius:10px;border:1px solid var(--line);color:var(--ink);background:var(--surface);font-size:18px}.compare-table{width:100%;border-collapse:collapse;font-size:13px}.compare-table td,.compare-table th{padding:8px 6px;text-align:left;border-bottom:1px solid var(--line)}
@@ -884,13 +885,17 @@ D.date='2026-10-12';
 <script src="./preparatory-reform-notes-15.js"></script>
 <script src="./case-law-boundaries-15.js"></script>
 <script src="./final-prosecution-review-15.js"></script>
+<script src="./traffic-16.js"></script>
+<script src="./procedural-add16.js"></script>
 <script src="./catalog-selection-15.js"></script>
   <script>
 /* Brottskatalog – stage 1. No framework, no network request during use. */
 (() => {
 'use strict';
 const { glossary, categories } = window.BK_DATA;
-const crimes = window.BK_DATA.crimes.filter(window.BK_CATALOG_SELECTION15.included);
+const crimes = window.BK_DATA.crimes.filter(window.BK_CATALOG_SELECTION15.included).concat(
+ (window.BK_TRAFFIC16?.entries||[]).filter(c=>!window.BK_DATA.crimes.some(x=>x.title.toLocaleLowerCase('sv')===c.title.toLocaleLowerCase('sv')))
+);
 const provisions = window.BK_STATUTES || {};
 const sheetHistory=[];
 const byId = Object.fromEntries(crimes.map(c => [c.id,c]));
@@ -1205,6 +1210,19 @@ function investigationSection(c){
  const render=(x,i)=>'<article class="investigation-step"><span class="step-num">'+(i+1)+'</span><div><h3>'+escapeHtml(x.title)+'</h3><p>'+escapeHtml(x.how)+'</p></div></article>';
  return first.map(render).join('')+(later.length?'<details class="coercive-group"><summary>Fortsatt förundersökning</summary>'+later.map((x,i)=>render(x,i+first.length)).join('')+'</details>':'');
 }
+
+const coerciveLawRefs16={"medtagande-plats":["23:8"],"medtagande-omrade":["23:8"],"kvarstannande":["23:9"],"grupp":["23:8a","23:8b"],"telefon":["23:9a","23:9b"],"telefonvis":["23:9a"],"husrannsakan":["28:1","28:4","28:5"],"personell":["28:2","28:4","28:5"],"publik":["28:3","28:4","28:5"],"brottslokal":["28:3","28:4","28:5"],"transport":["28:2a","28:4","28:5"],"undersokning":["28:10"],"visitation":["28:11","28:13"],"besiktning":["28:12","28:13"],"dna":["28:12a","28:12b","28:13"],"daktning":["28:14","28:14a","28:14b"],"avsparrning":["27:15","27:4"],"beslag":["27:1","27:4"],"penningbeslag":["27:1a","27:4"],"postbeslag":["27:3","27:4"],"kopiera":["27:17a","27:17b"],"distans":["28:10a","28:10b","28:10c","28:10d"],"biometri":["27:17f"],"bevara":["27:16","27:16a"],"forvar":["26:3"],"kvarstad":["26:1","26:2"],"reseforbud":["25:1","25:2","25:3"]};
+function showCoerciveLaw16(id){
+ const e=window.BK_COERCIVE?.entries?.find(x=>x.id===id);
+ if(!e)return;
+ const texts=window.BK_PROCEDURAL_SOURCES15||{};
+ const body=(coerciveLawRefs16[id]||[]).map(k=>{
+  const key='RB:'+k,entry=texts[key]||window.BK_PROCEDURAL_ADD16?.[key];
+  return entry?.complete?'<h3>'+escapeHtml(key.replaceAll(':',' '))+'</h3><div class="law-paper">'+escapeHtml(entry.text)+'</div>':
+   '<p class="source-incomplete">'+escapeHtml(key)+' – lagtext ej införd i källunderlaget.</p>';
+ }).join('')+'<a class="source-link" target="_blank" rel="noopener noreferrer" href="https://www.riksdagen.se/sv/dokument-och-lagar/dokument/svensk-forfattningssamling/rattegangsbalk-1942740_sfs-1942-740framtagen/">Läs aktuell Rättegångsbalk hos Sveriges riksdag '+ic('external-link','sm')+'</a>';
+ showSheet({kicker:'LT · RÄTTEGÅNGSBALKEN',title:e.title,body,ref:'Lagtext källkontrollerad 2026-10-20; 23:8–9 kontrollerade 2026-10-22.'});
+}
 function coerciveSection(c){
  const reg=window.BK_COERCIVE;if(!reg)return '<p>Ingen tvångsmedelsöversikt tillgänglig.</p>';
  const all=reg.entries.filter(x=>x.id!=='hemlig'&&x.id!=='hemligo');
@@ -1217,6 +1235,7 @@ function coerciveSection(c){
   const route=guide.brief==='Polisman FID'?'fid':guide.brief==='Polisman beslutar'?'own':guide.brief==='FU-ledare'?'fu':'special';
   const pills='<span class="decision-pills" aria-label="Primär beslutsväg">'+
    '<span class="decision-pill '+route+'">'+escapeHtml(guide.brief)+'</span></span>';
+  const lt='<button type="button" class="coercive-lt" data-coercive-lt="'+escapeHtml(e.id)+'" aria-label="LT – lagtext för '+escapeHtml(e.title)+'">LT</button>';
   const help=guide.complex?'<button type="button" class="decision-help" data-decision-info="'+escapeHtml(e.id)+'" aria-label="Visa villkor för beslutsbehörigheten vid '+escapeHtml(e.title)+'" title="Beslutet har särskilda villkor">'+ic('alert-circle','sm')+'</button>':'';
   const detail=('<p><strong>Brottsrelaterat villkor:</strong> '+escapeHtml(v.label)+'</p>')+
    '<p><strong>Beslut i korthet:</strong> '+escapeHtml(guide.brief)+'</p>'+
@@ -1226,7 +1245,7 @@ function coerciveSection(c){
   return '<details class="coercive-entry" data-eligible="'+(pending?'unknown':String(eligible))+'"><summary>'+
     '<span class="measure-icon '+(pending?'unknown':eligible?'yes':'no')+'" aria-label="'+(pending?'Straffskalan är inte verifierad':eligible?'Brottskrav medger prövning':'Brottskrav ej uppfyllt')+'">'+ic(pending?'info':eligible?'check-circle':'x','sm')+'</span>'+
     '<span class="measure-info"><strong class="coercive-ref">'+escapeHtml(e.ref.split(' jfr ')[0].split(',')[0].replace('RB ','RB '))+'</strong>'+
-    '<span class="coercive-title">'+escapeHtml(e.title)+'</span>'+pills+'</span>'+help+ic('chevron-down','sm')+
+    '<span class="coercive-title">'+escapeHtml(e.title)+'</span>'+pills+'</span>'+lt+help+ic('chevron-down','sm')+
     '</summary><div class="coercive-entry-body">'+detail+'</div></details>';
  };
  const panel='<div class="coercive-overview"><p class="coercive-lead">✓ = brottets straffskala och brottstyp utesluter inte åtgärden. ✕ = villkor ej uppfyllt. Grå informationssymbol = uppgiften ej verifierad. Övriga rekvisit måste fortfarande prövas. FID = fara i dröjsmål.</p>'+
@@ -1493,6 +1512,8 @@ function refreshConnection(){
   if (el) el.textContent=navigator.onLine?'Lokalt läge':'Offline';
 }
 document.addEventListener('click', async e=>{
+  const lt=e.target.closest('[data-coercive-lt]');
+  if(lt){e.preventDefault();e.stopPropagation();showCoerciveLaw16(lt.dataset.coerciveLt);return;}
   const info=e.target.closest('[data-decision-info]');
   if(info){
    e.preventDefault();e.stopPropagation();
@@ -1542,6 +1563,12 @@ document.addEventListener('click', async e=>{
   }
 });
 document.addEventListener('keydown', e=>{if(e.key==='Escape')closeSheet();});
+document.addEventListener('toggle',e=>{
+ const node=e.target;
+ if(!(node instanceof HTMLDetailsElement)||!node.open)return;
+ const cls=node.matches('.coercive-entry')?'coercive-entry':node.matches('.coercive-chapter')?'coercive-chapter':null;
+ if(cls)for(const peer of node.parentElement?.children||[])if(peer!==node&&peer.classList.contains(cls))peer.open=false;
+},true);
 window.addEventListener('hashchange',renderRoute);
 window.addEventListener('online',refreshConnection);
 window.addEventListener('offline',refreshConnection);
