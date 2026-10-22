@@ -53,11 +53,11 @@ const sw=readFileSync(resolve(root,'service-worker.js'),'utf8');
 assert.ok(sw.includes('./special-penalties-review-14.js'),'Verified range module must be offline');
 // Published release must not regress to old prototype labels or return HTML to a JS request.
 assert.match(html,/Version 1\.6\.1 · publicerad 2026-10-22/);
-assert.match(html,/<strong>Brottskatalog<\/strong><span>1\.6\.1<\/span>/,'Search header must show V1.5');
+assert.match(html,/<strong>Brottskatalog<\/strong><span>1\.6\.1<\/span>/,'Search header must show V1.6.1');
 assert.match(html,/<meta name="description" content="Brottskatalog 1\.6\.1:/);
 assert.doesNotMatch(html,/Arbetsversion: 0\.6/);
-assert.match(sw,/const CACHE = 'brottskatalog-v(?:14|15|16)-[a-z0-9-]+-20[0-9]{6}'/,'Offline cache must use a dated, versioned release/draft key');
+assert.match(sw,/const CACHE = 'brottskatalog-v(?:14|15|16|161)-[a-z0-9-]+-20[0-9]{6}'/,'Offline cache must use a dated, versioned release/draft key');
 assert.ok(sw.includes("event.request.mode === 'navigate' ? await cache.match('./index.html') : null"));
 assert.ok(!sw.includes("return await cache.match('./index.html') || Response.error()"));
-console.log('PASS V1.5: matching search header, published labels and safe offline fallback');
+console.log('PASS V1.6.1: matching search header, published labels and safe offline fallback');
 console.log('PASS 1.4: twenty-two specialty penalty ranges, mismatch hold, official source provenance and stage load order');
