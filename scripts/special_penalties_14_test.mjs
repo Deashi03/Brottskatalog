@@ -56,7 +56,7 @@ assert.match(html,/Version 1\.6\.2 · publicerad 2026-10-22/);
 assert.match(html,/<strong>Brottskatalog<\/strong><span>1\.6\.2<\/span>/,'Search header must show V1.6.1');
 assert.match(html,/<meta name="description" content="Brottskatalog 1\.6\.2:/);
 assert.doesNotMatch(html,/Arbetsversion: 0\.6/);
-assert.match(sw,/const CACHE = 'brottskatalog-v(?:14|15|16|161)-[a-z0-9-]+-20[0-9]{6}'/,'Offline cache must use a dated, versioned release/draft key');
+assert.match(sw,/const CACHE = 'brottskatalog-v(?:14|15|16|161|162)-[a-z0-9-]+-20[0-9]{6}'/,'Offline cache must use a dated, versioned release/draft key');
 assert.ok(sw.includes("event.request.mode === 'navigate' ? await cache.match('./index.html') : null"));
 assert.ok(!sw.includes("return await cache.match('./index.html') || Response.error()"));
 console.log('PASS V1.6.1: matching search header, published labels and safe offline fallback');
