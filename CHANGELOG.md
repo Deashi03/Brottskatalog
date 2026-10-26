@@ -39,12 +39,15 @@ Bygger på granskningen i [docs/V17-PLAN.md](docs/V17-PLAN.md). Föregående ver
   - 6 påhittade paragrafnycklar, till exempel "BrB 23:12" som innehöll BrB 9:12, och "BrB 4:24" som egentligen var en hänvisning till 24 § lagen om kontaktförbud
   - 5 påföljdsparagrafer (BrB 26:3, 26:7, 28:21, 38:8 och 38:9) där fel text var lagrad
 
-  Alla 11 är borttagna från offline-texten i `statute-corrections-17.js`. Ingen av dem används av något brottskort. SFS 2026:1656 finns bara i dokumenthuvudet och ändrar ingen paragraf som appen använder.
+  Alla 11 tas bort från offline-texten i `statute-corrections-17.js`. Ingen av dem används av något brottskort. SFS 2026:1656 finns bara i dokumenthuvudet och ändrar ingen paragraf som appen använder.
 - **Specialstraffrätt:** de lagrade texterna ur narkotikastrafflagen (2024:797), vapenlagen 18 kap. (2026:1596), knivlagen (2026:413), trafikbrottslagen (2024:715) och smugglingslagen 20 § (2026:1321) är identiska med officiell lydelse.
 - `verifiedVersion` är ifylld i `data/law-sources.json` och `data/source-status.json`. Kontrollen gäller lagtexten, inte juridiska slutsatser.
 - **TBL 5 §:** appens text är ordagrant korrekt. Lagen har ingen egen brottsbeteckning för smitning, så både "Smitning från trafikolycksplats" och "Grov smitning från trafikolycksplats" är nu märkta som beskrivande sökbenämningar. Lagtexten är återställd som fullständig.
 - **RB 24:8:** gripandekortet följer nu officiell lydelse. Den gripne förhörs så snart som möjligt, åklagaren underrättas skyndsamt och beslutar sedan om anhållande, och polisen får häva gripandet om skäl uppenbart saknas.
 - **Häktningsregler:** texten i RB 24:1 (Lag 2026:1319) och de lindrigare straffskalorna i BrB 4:1, 4:1 a, 6:1, 13:1 och 13:3 är bekräftade.
+
+- **Automatisk omimport på `main` (220dc59, 2026-10-26):** sammanslagen, men **den nya lagtextfilen används inte i 1.7**. Den nya importen har fullständigare text på vissa ställen, till exempel BrB 4:3, men ändrar format och nycklar så att 38 av appens källkontroller underkänner den. På `main` stoppade den redan publiceringskontrollerna. 1.7 behåller därför den verifierade importen från 2026-10-19 med rättelserna ovan. Endast tidsstämplarna i `data/source-status.json` är övertagna. Att anpassa källkontrollerna till den nya importen är en uppgift för 1.7.1.
+- Vakten i `brb-source-repairs-15.js` bortser nu från blanksteg och radbrytningar, så att en omformaterad import inte i onödan stoppar reparationerna av BrB 4:3, 6:6, 6:10 a och 6:12.
 
 ### Kvar att kontrollera
 - Referensen NJA 2025 s. 1024 (1 500 kr) i ordlistan. Rättsfall publiceras inte hos riksdagen.
