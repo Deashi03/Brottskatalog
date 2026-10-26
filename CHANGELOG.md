@@ -27,13 +27,22 @@ Bygger på granskningen i [docs/V17-PLAN.md](docs/V17-PLAN.md). Föregående ver
 - Länken till rättegångsbalken är rättad: `…sfs-1942-740framtagen/` har ändrats till `…sfs-1942-740/`.
 - Nya tester: `scripts/v17_screen_test.mjs` (utan webbläsare) och `scripts/v17_catalog_test.mjs` (iPhone-vy, hela katalogen). `custody_162_test.mjs` är ersatt eftersom det krävde det felaktiga beteendet.
 
-### Kvar att kontrollera mot officiell källa
-Granskningsmiljön kunde inte nå riksdagen.se. Följande är därför inte slutverifierat:
-- lagändringen SFS 2026:1656 i brottsbalken (`data/source-status.json`, `requiresReview`)
-- ordalydelsen i TBL 5 § och brottsbeteckningen för grovt brott
-- referensen NJA 2025 s. 1024 (1 500 kr) i ordlistan
-- hur presumtionen tillämpas vid privilegierad skala (tolkningsfråga), och om bötesförbudet i RB 24:1 fjärde stycket påverkar 24:2
-- texten i RB 24:8, som inte finns i repots källunderlag (anhållande- och gripandekorten bygger på RB 24:6–7, som finns där)
+### Kontroll mot officiell källa (data.riksdagen.se, 2026-10-26)
+- **Brottsbalken (t.o.m. SFS 2026:1656) och rättegångsbalken (t.o.m. SFS 2026:1657):** 621 av 632 lagtexter som är lagrade i appen är ordagrant identiska med den officiella lydelsen, inklusive parallella framtida lydelser. De 11 avvikande var fel i den maskinimporterade offline-lagtexten:
+  - 6 påhittade paragrafnycklar, till exempel "BrB 23:12" som innehöll BrB 9:12, och "BrB 4:24" som egentligen var en hänvisning till 24 § lagen om kontaktförbud
+  - 5 påföljdsparagrafer (BrB 26:3, 26:7, 28:21, 38:8 och 38:9) där fel text var lagrad
+
+  Alla 11 är borttagna från offline-texten i `statute-corrections-17.js`. Ingen av dem används av något brottskort. SFS 2026:1656 finns bara i dokumenthuvudet och ändrar ingen paragraf som appen använder.
+- **Specialstraffrätt:** de lagrade texterna ur narkotikastrafflagen (2024:797), vapenlagen 18 kap. (2026:1596), knivlagen (2026:413), trafikbrottslagen (2024:715) och smugglingslagen 20 § (2026:1321) är identiska med officiell lydelse.
+- `verifiedVersion` är ifylld i `data/law-sources.json` och `data/source-status.json`. Kontrollen gäller lagtexten, inte juridiska slutsatser.
+- **TBL 5 §:** appens text är ordagrant korrekt. Lagen har ingen egen brottsbeteckning för smitning, så både "Smitning från trafikolycksplats" och "Grov smitning från trafikolycksplats" är nu märkta som beskrivande sökbenämningar. Lagtexten är återställd som fullständig.
+- **RB 24:8:** gripandekortet följer nu officiell lydelse. Den gripne förhörs så snart som möjligt, åklagaren underrättas skyndsamt och beslutar sedan om anhållande, och polisen får häva gripandet om skäl uppenbart saknas.
+- **Häktningsregler:** texten i RB 24:1 (Lag 2026:1319) och de lindrigare straffskalorna i BrB 4:1, 4:1 a, 6:1, 13:1 och 13:3 är bekräftade.
+
+### Kvar att kontrollera
+- Referensen NJA 2025 s. 1024 (1 500 kr) i ordlistan. Rättsfall publiceras inte hos riksdagen.
+- Tolkningsfrågorna: hur presumtionen tillämpas vid mindre grova fall, och om bötesförbudet i RB 24:1 fjärde stycket påverkar 24:2. Bör stämmas av med åklagare eller doktrin.
+- Om webblänkarna till www.riksdagen.se fungerar. Den adressen är fortfarande blockerad i granskningsmiljön.
 
 ## 1.6.2 – 2026-10-22
 Granskade häktningsgrunder enligt RB 24:1–3, inklusive utredningshäktning som bara är möjlig via 24:2.

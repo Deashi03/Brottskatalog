@@ -103,7 +103,13 @@ for(const f of fs.readdirSync(root).filter(f=>/\.(js|html)$/.test(f)))
  assert.ok(!read(f).includes('sfs-1942-740framtagen'),'Trasig RB-länk i '+f);
 const t={BK_DATA:{categories:['Alla'],crimes:[]}};vm.runInNewContext(read('traffic-16.js'),{window:t});
 for(const x of t.BK_TRAFFIC16.entries)assert.match(x.prosecutionRule,/RB 20:3/);
-for(const title of ['Onödigt hindrande av trafik','Tillåtande av olovlig körning','Grov smitning från trafikolycksplats']){
+for(const title of ['Onödigt hindrande av trafik','Tillåtande av olovlig körning','Smitning från trafikolycksplats','Grov smitning från trafikolycksplats']){
  const x=t.BK_TRAFFIC16.entries.find(e=>e.title===title);assert.ok(x.descriptiveTitle17&&/Beskrivande sökbenämning/.test(x.penaltyNote),title);
 }
+// Offline-lagtext: felaktiga maskinimporterade nycklar tas bort (kontrollerat mot data.riksdagen.se).
+const st={BK_STATUTES:{'BrB:23:12':{text:'x'},'BrB:4:24':{text:'x'},'BrB:8:1':{text:'1 §'}}};
+vm.runInNewContext(read('statute-corrections-17.js'),{window:st});
+assert.ok(!st.BK_STATUTES['BrB:23:12']&&!st.BK_STATUTES['BrB:4:24']&&st.BK_STATUTES['BrB:8:1']);
+assert.equal(st.BK_STATUTE_CORRECTIONS17.verified.BrB,'2026:1656');
+assert.ok(html.indexOf('statute-corrections-17.js')>html.indexOf('provisions-generated.js')&&sw.includes('./statute-corrections-17.js'));
 console.log('PASS 1.7: förstadier via fullbordat brott, ej verifierat ≠ nej, presumtion ⇒ huvudregel, privilegierade skalor, tvångsmedel, förstadietexter, trafik och version');

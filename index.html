@@ -717,6 +717,7 @@ D.date='2026-10-12';
 </script>
   <script src="./data/provisions-generated.js"></script>
   <script src="./data/provisions-reviewed-05.js"></script>
+  <script src="./statute-corrections-17.js"></script>
   <script src="./references-06.js"></script>
   <script src="./catalog-03.js"></script>
   <script src="./glossary-03.js"></script>
@@ -1489,7 +1490,7 @@ function showCustody(c){
   'Beslutas av åklagare. Anhållningsbeslutet ska ange brottet och grunden.');
  const g=card('Gripande av polisman','RB 24:7 första stycket',arrestState,'Som för anhållande','Som för anhållande',
   '<p>Finns det skäl att anhålla någon får en polisman i brådskande fall gripa honom eller henne utan anhållningsbeslut.</p>',
-  'Den gripne ska skyndsamt förhöras. Hävs inte gripandet ska anmälan skyndsamt göras till åklagaren, som omedelbart prövar om den gripne ska anhållas (RB 24:8).');
+  'Den gripne ska så snart som möjligt förhöras, och åklagaren ska skyndsamt underrättas. Efter förhöret beslutar åklagaren omedelbart om anhållande; annars hävs gripandet. Polisen får häva gripandet om det är uppenbart att skäl för fortsatt frihetsberövande saknas (RB 24:8).');
  const h=card('Envarsgripande','RB 24:7 andra stycket',x.arrestByAnyone,'Fängelse kan följa på brottet','Påträffad på bar gärning eller flyende fot',
   '<p>Den som har begått brott på vilket fängelse kan följa och påträffas på bar gärning eller flyende fot får gripas av envar.</p><div class="custody-or">ELLER</div><p>Den som är efterlyst för brott – oberoende av brottets straffskala.</p>',
   (x.arrestByAnyone===null?'Straffskalan är inte verifierad – kontrollera att fängelse ingår. ':'')+'Den gripne ska skyndsamt överlämnas till närmaste polisman.');

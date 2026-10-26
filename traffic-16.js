@@ -1,6 +1,6 @@
 /* V1.6: additional traffic offences absent from the existing catalogue.
    Statutory text and sentencing conditions: SFS 1951:649, current to 2024:715;
-   individually checked 2026-10-22. No offences punished by penningböter only. */
+   individually checked 2026-10-22; wording re-verified against data.riksdagen.se 2026-10-26. No offences punished by penningböter only. */
 (()=>{'use strict';
 const url='https://www.riksdagen.se/sv/dokument-och-lagar/dokument/svensk-forfattningssamling/lag-1951649-om-straff-for-vissa-trafikbrott_sfs-1951-649/';
 const section1=`1 § Brister vägtrafikant, den som för spårvagn eller den som någon annanstans än på väg för motordrivet fordon i väsentlig mån i den omsorg och varsamhet som till förekommande av trafikolycka betingas av omständigheterna, döms för vårdslöshet i trafik till dagsböter.
@@ -25,7 +25,8 @@ const rows=[
 const designations={
  'Onödigt hindrande av trafik':'Beskrivande sökbenämning – lagen saknar egen brottsbeteckning. Ange brottet som brott mot 2 § lagen (1951:649) om straff för vissa trafikbrott.',
  'Tillåtande av olovlig körning':'Beskrivande sökbenämning – lagen saknar egen brottsbeteckning. Ange brottet som brott mot 3 § tredje stycket lagen (1951:649) om straff för vissa trafikbrott.',
- 'Grov smitning från trafikolycksplats':'Beskrivande sökbenämning för grovt brott enligt 5 § andra stycket trafikbrottslagen – kontrollera brottsbeteckningen mot officiell lagtext.'
+ 'Smitning från trafikolycksplats':'Beskrivande sökbenämning – lagen saknar egen brottsbeteckning. Ange brottet som brott mot 5 § första stycket lagen (1951:649) om straff för vissa trafikbrott.',
+ 'Grov smitning från trafikolycksplats':'Beskrivande sökbenämning – lagen saknar egen brottsbeteckning. Ange brottet som grovt brott enligt 5 § andra stycket lagen (1951:649) om straff för vissa trafikbrott.'
 };
 const entries=rows.map(([title,section,min,max,penalty,penaltyShort,aliases,law,elements],i)=>({
  id:'traffic16-'+i,title,shortRef:'TBL '+section,ref:'Lag (1951:649) om straff för vissa trafikbrott '+section,
@@ -37,8 +38,8 @@ const entries=rows.map(([title,section,min,max,penalty,penaltyShort,aliases,law,
  custody:max>=1?'possible':'none',
  prosecution:'general',prosecutionLabel:'Allmänt åtal',prosecutionRule:'RB 20:3 – allmänt åtal, inget särskilt angivelsekrav i trafikbrottslagen',
  prosecutionDetails:['Allmänt åtal. Inget särskilt angivelsekrav i trafikbrottslagens aktuella bestämmelser.'],
- lawMode:i===3||i>=4?'excerpt':'full',law,lawSource:'Trafikbrottslagen '+section,lawCompletenessVerified:i!==3&&i<4,
- lawCompletenessChecked:i===3||i>=4?null:'2026-10-22',lawCompletenessSourceURL:url,sourceURL:url,
+ lawMode:i===3?'excerpt':'full',law,lawSource:'Trafikbrottslagen '+section,lawCompletenessVerified:i!==3,
+ lawCompletenessChecked:i===3?null:'2026-10-26',lawCompletenessSourceURL:url,sourceURL:url,
  elements,rekvisit15:{groups:elements.map(label=>({mode:'all',label})),scope:'statute-summary-only',sourceURL:url,note:'Lagtextsbaserad sammanfattning; inte självständigt komplett praxisgodkännande.'},
  qualifications:[],facts:[],stages:[],related:[],typexempel15:[],investigation:[],variants:[],
  reviewStatus:'traffic16-offence-statute-reviewed-no-case-approval'

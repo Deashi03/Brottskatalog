@@ -6,37 +6,37 @@
       "id": "BrB",
       "name": "Brottsbalken",
       "sfs": "1962-700",
-      "verifiedVersion": null
+      "verifiedVersion": "2026:1656"
     },
     {
       "id": "RB",
       "name": "Rättegångsbalken",
       "sfs": "1942-740",
-      "verifiedVersion": null
+      "verifiedVersion": "2026:1657"
     },
     {
       "id": "Nark",
       "name": "Narkotikastrafflagen",
       "sfs": "1968-64",
-      "verifiedVersion": null
+      "verifiedVersion": "2024:797"
     },
     {
       "id": "Vapen",
       "name": "Vapenlagen",
       "sfs": "2026-408",
-      "verifiedVersion": null
+      "verifiedVersion": "2026:1596"
     },
     {
       "id": "TBL",
       "name": "Trafikbrottslagen",
       "sfs": "1951-649",
-      "verifiedVersion": null
+      "verifiedVersion": "2024:715"
     },
     {
       "id": "Kniv",
       "name": "Knivlagen",
       "sfs": "1988-254",
-      "verifiedVersion": null
+      "verifiedVersion": "2026:413"
     }
   ],
   "dependentFields": [
@@ -50,5 +50,6 @@
     "osjälvständiga brottsformer",
     "brottskod",
     "begreppsförklaringar"
-  ]
+  ],
+  "verifiedScope": "2026-10-26: varje lagrad lagtext som appen använder har jämförts ordagrant med data.riksdagen.se i angiven version. Det är inte ett juridiskt slutgodkännande av tolkningar eller av rättsläget vid ett visst gärningsdatum."
 }
