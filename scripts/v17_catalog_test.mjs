@@ -7,7 +7,7 @@ const page=await browser.newPage({viewport:{width:390,height:844},isMobile:true,
 const errors=[];page.on('pageerror',e=>errors.push(e.message));
 try{
  await page.goto(url+'#sok',{waitUntil:'networkidle'});
- await page.waitForFunction(()=>window.BK_SCREEN17&&window.BK_CATALOG_SELECTION15&&document.getElementById('crime-search'),null,{timeout:60000});
+ await page.waitForFunction(()=>window.BK_BOOT17?.ready===true&&window.BK_SCREEN17&&window.BK_CATALOG_SELECTION15,null,{timeout:60000});
  const r=await page.evaluate(()=>{
   const D=window.BK_DATA,S=window.BK_SCREEN17,R=window.BK_COERCIVE;
   const crimes=D.crimes.filter(window.BK_CATALOG_SELECTION15.included).concat(window.BK_TRAFFIC16?.entries||[]);
@@ -63,5 +63,23 @@ try{
  for(const s of ['RB 24:1','RB 24:6','Envarsgripande','Fullbordat brotts max ≥ 1 år'])assert.ok(sheet.includes(s),'Häktningsvyn saknar '+s);
  assert.equal(await page.locator('#sheet-root .custody-mark.yes').count()>=4,true);
  assert.deepEqual(errors,[]);
+ // Snabbstart: med kraftigt strypt processor ska sökvyn synas och gå att söka i innan appen är klar,
+ // och ett tryck under laddningen ska öppna rätt brott när appen blivit klar.
+ const ctx2=await browser.newContext({viewport:{width:390,height:844},isMobile:true,hasTouch:true});
+ const quick=await ctx2.newPage();const cdp=await ctx2.newCDPSession(quick);
+ await cdp.send('Emulation.setCPUThrottlingRate',{rate:8});
+ const t0=Date.now();await quick.goto(url+'#sok',{waitUntil:'commit'});
+ await quick.waitForSelector('.crime-card',{timeout:20000});
+ const visibleMs=Date.now()-t0;
+ assert.equal(await quick.evaluate(()=>window.BK_BOOT17?.ready===true),false,'Startvyn ska synas innan appen är klar');
+ await quick.waitForFunction(()=>window.BK_SEARCH_INDEX17,null,{timeout:30000});
+ await quick.fill('#crime-search','grovt rån');
+ await quick.waitForFunction(()=>document.querySelector('#results-area .crime-title')?.textContent==='Grovt rån',null,{timeout:10000});
+ await quick.locator('.crime-card[data-open]').first().click();
+ await quick.waitForFunction(()=>window.BK_BOOT17?.ready===true,null,{timeout:120000});
+ await quick.waitForSelector('.detail-title',{timeout:20000});
+ assert.equal((await quick.locator('.detail-title').innerText()).trim(),'Grovt rån');
+ await ctx2.close();
+ console.log('PASS 1.7 snabbstart: sökvy synlig efter '+visibleMs+' ms vid 8× strypning; sök och tryck under laddning fungerar');
  console.log('PASS 1.7 katalog: '+r.total+' kort · '+JSON.stringify(r.counts));
 }finally{await browser.close();}

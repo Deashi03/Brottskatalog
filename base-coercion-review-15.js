@@ -8,10 +8,13 @@ const records=[{"id":"ringa-stold","title":"Ringa stöld","statute":"BrB:8:2","o
 const n=s=>String(s||'').normalize('NFC').replace(/\s+/g,' ').trim();
 const proc=window.BK_PROCEDURAL_SOURCES15,W=window.BK_STATUTES;
 const validDate=d=>/^2026-10-(12|13|14|15|16|17|18|19|20)$/.test(d||'');
-const procOK=k=>{const p=procedurePins[k],s=proc?.[k];return !!(p&&s&&s.complete===true&&s.machine===false&&s.checked==='2026-10-20'&&s.url===p.url&&n(s.text)===n(p.text));};
-const offenceOK=k=>{const p=offencePins[k],s=W?.[k];return !!(p&&s&&s.complete===true&&s.machine===false&&validDate(s.checked)&&s.url===p.url&&n(s.text)===n(p.text));};
+// 1.7: resultatet beror bara på nyckeln och statiska källtexter – beräknas en gång per nyckel.
+const procMemo=new Map(),offMemo=new Map();
+const procOK=k=>{if(procMemo.has(k))return procMemo.get(k);const p=procedurePins[k],s=proc?.[k];const v=!!(p&&s&&s.complete===true&&s.machine===false&&s.checked==='2026-10-20'&&s.url===p.url&&n(s.text)===n(p.text));procMemo.set(k,v);return v;};
+const offenceOK=k=>{if(offMemo.has(k))return offMemo.get(k);const p=offencePins[k],s=W?.[k];const v=!!(p&&s&&s.complete===true&&s.machine===false&&validDate(s.checked)&&s.url===p.url&&n(s.text)===n(p.text));offMemo.set(k,v);return v;};
 const report={planned:390,completed:0,held:[],checked:'2026-10-20',conditionalScreens:0,fullLegalApprovals:0,automaticPowerApprovals:0,penaltyChanges:0,stageChanges:0};
-for(const r of records){const c=D.crimes.find(c=>!c.stageType&&c.id===r.id);
+const baseById=new Map();for(const c of D.crimes)if(!c.stageType&&!baseById.has(c.id))baseById.set(c.id,c);
+for(const r of records){const c=baseById.get(r.id);
  const ready=!!(c&&c.title===r.title&&(c.statute??null)===r.statute&&c.lawMode==='full'&&c.lawCompletenessVerified===true&&validDate(c.lawCompletenessChecked)&&c.lawCompletenessSourceURL===r.sourceURL&&n(c.law)===n(r.ownText)&&(c.legalSourceVersion15??null)===r.lawVersion&&r.sourceRefs.every(procOK)&&r.offenceSourceRefs.every(offenceOK)&&Object.keys(r.penaltyPin).every(k=>JSON.stringify(c[k]??null)===JSON.stringify(r.penaltyPin[k]))&&!c.penaltyCrosscheckIssue);
  if(!ready||c.legalAudit15?.checkpoints?.coercion){report.held.push(r.id);continue;}
  const recordChecked=r.checked||report.checked;

@@ -6,6 +6,9 @@ const browser=await chromium.launch({headless:true,args:['--no-sandbox']});
 const page=await browser.newPage({viewport:{width:390,height:844},deviceScaleFactor:3,isMobile:true,hasTouch:true});
 page.on('pageerror',err=>errors.push(err.message));
 const url=process.env.BK_URL||'http://127.0.0.1:8765/';
+// 1.7 snabbstart: startvyn är förrenderad; vänta tills appens alla moduler har körts innan interaktion.
+const rawGoto=page.goto.bind(page);
+page.goto=async(...args)=>{const r=await rawGoto(...args);await page.waitForFunction(()=>window.BK_BOOT17?.ready===true,null,{timeout:60000});return r;};
 const wait=async()=>{await page.waitForTimeout(400);};
 try{
   await page.goto(url,{waitUntil:'networkidle'});

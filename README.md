@@ -6,6 +6,8 @@
 
 1.7 rättar häktnings- och tvångsmedelsvyerna för förstadier. Försök, förberedelse och stämpling prövas mot det fullbordade brottets straffskala (BrB 23:1–2). En uppgift som appen inte kan verifiera visas som **ej verifierad (ⓘ / grått)**, aldrig som ett nej. Häktningspresumtion visas med förbehåll för brott som har en lindrigare skala för mindre grova fall. Häktningsvyn har nu också kort för anhållande, gripande och envarsgripande (RB 24:6–7). Förstadiernas straffskaletexter är omskrivna så att de är entydiga, och trafikkorten är rättade.
 
+**Snabbstart:** sökvyn är förrenderad och visas direkt; resten av appen laddas i bakgrunden. Efter ändringar i data eller gränssnitt: kör `node scripts/build_shell_17.mjs` (kräver Playwright) innan du publicerar.
+
 **Tillbaka till 1.6.2:** den tidigare versionen finns oförändrad i grenen [`backup/v1.6.2`](https://github.com/Deashi03/Brottskatalog/tree/backup/v1.6.2) (commit `4eae461`).
 
 **Avgränsning:** grönt betyder att brottskortet inte utesluter en prövning, aldrig att ett beslut är fattat. Konkreta ärendefakta, gällande lagversion och beslutsbehörighet prövas inte automatiskt. Det som återstår att verifiera mot officiell källa står i CHANGELOG.

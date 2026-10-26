@@ -21,6 +21,13 @@ Bygger på granskningen i [docs/V17-PLAN.md](docs/V17-PLAN.md). Föregående ver
 - I häktningsvyn finns nu kort för **anhållande (RB 24:6)**, **gripande av polisman (RB 24:7 första stycket)** och **envarsgripande (RB 24:7 andra stycket)**. Envarsgripande kräver att fängelse kan följa på brottet, utom när personen är efterlyst.
 - Tvångsmedelslistan har en tredje markering, ⓘ (ej verifierat), och kapitlens räknare visar antalet ⓘ separat.
 
+### Snabbstart
+- **Sökvyn visas direkt.** Startvyn ligger förrenderad i `index.html` och målas upp omedelbart. Ett litet sökindex (`search-index-17.js`) gör att man kan söka och trycka på ett brott redan medan appen laddar. Brottskortet öppnas så snart laddningen är klar.
+- Appens cirka 180 moduler körs i oförändrad ordning, men först efter att vyn har visats (`type="bk-defer"`, startladdare i `<head>`).
+- Mätt med 4× processorstrypning: första vy efter cirka 0,3 s, mot cirka 5 s tidigare.
+- Den tyngsta modulen (`base-coercion-review-15.js`) gick från cirka 320 ms till under 20 ms, eftersom källkontrollen nu görs en gång per lagrum i stället för en gång per brott och lagrum. Resultatet är detsamma.
+- **Viktigt vid ändringar:** efter varje ändring av data eller gränssnitt måste du köra `node scripts/build_shell_17.mjs` (kräver Playwright). Testet `shell17_fresh_test.mjs` stoppar publiceringen om startvyn eller sökindexet är inaktuellt.
+
 ### Teknik
 - Ny modul `v17-legal-screen.js` med samlad screening (`window.BK_SCREEN17`). `window.BK_CUSTODY162.assess` finns kvar för bakåtkompatibilitet.
 - Versionsnumret anges på ett ställe (`window.BK_RELEASE`). Ny cache: `brottskatalog-v17-20261026`.
