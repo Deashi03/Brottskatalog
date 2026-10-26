@@ -5,12 +5,13 @@ const errors=[];
 const browser=await chromium.launch({headless:true,args:['--no-sandbox']});
 const page=await browser.newPage({viewport:{width:390,height:844},deviceScaleFactor:3,isMobile:true,hasTouch:true});
 page.on('pageerror',err=>errors.push(err.message));
-const url='http://127.0.0.1:8765/';
+const url=process.env.BK_URL||'http://127.0.0.1:8765/';
 const wait=async()=>{await page.waitForTimeout(400);};
 try{
   await page.goto(url,{waitUntil:'networkidle'});
+  await page.waitForSelector('#crime-search',{timeout:60000}).catch(()=>{});
   assert.ok(await page.locator('#crime-search').count(),'Search must exist');
-  assert.equal((await page.locator('.bk03-brand span').innerText()).trim(),'1.6.2','Search header must display current release 1.6.2');
+  assert.equal((await page.locator('.bk03-brand span').innerText()).trim(),'1.7','Search header must display current release 1.7');
   assert.equal(await page.evaluate(()=>window.BK_DATA.crimes.length),1557,'The V1.5 full database must be loaded');
 
   const custodyAudit=await page.evaluate(()=>{
@@ -531,7 +532,9 @@ try{
   await wait();
   await page.locator('[data-action="custody"]').first().click();
   const fineCustody=page.locator('[role="dialog"] .custody-box');
-  assert.equal(await fineCustody.count(),4,'All four RB 24 approaches must be separately visible');
+  // 1.7: fyra häktningskort plus anhållande, gripande och envarsgripande (RB 24:6–7).
+  assert.equal(await fineCustody.count(),7,'All four RB 24 approaches plus RB 24:6–7 must be separately visible');
+  assert.ok(await fineCustody.nth(6).locator('.custody-mark.no').count(),'Envarsgripande kräver att fängelse kan följa (RB 24:7 andra stycket)');
   assert.ok(await fineCustody.nth(0).locator('.custody-mark.no').count(),'Ordinary RB 24:1 threshold cannot apply to fine-only offences');
   assert.ok(await fineCustody.nth(2).locator('.custody-mark.yes').count(),'RB 24:2 does not exclude fine-only offences by statutory range; person-specific criteria still required');
   assert.ok(await fineCustody.nth(3).locator('.custody-mark.yes').count(),'RB 24:3 can be considered via RB 24:2; case-specific conditions remain necessary');
@@ -587,7 +590,8 @@ try{
   await page.locator('.status-block [data-action="custody"]').click();
   assert.ok((await page.locator('[role="dialog"]').innerText()).includes('24:2'),'Identification custody/urgent grip scenario');
   assert.ok((await page.locator('[role="dialog"]').innerText()).includes('Utredningshäktning'),'Custody includes investigative detention at end');
-  assert.equal((await page.locator('[role="dialog"]').innerText()).includes('24:7'),false,'No redundant arrest explanation');
+  // 1.7: anhållande och gripande (RB 24:6–7) visas i ett eget avsnitt efter häktningskorten.
+  assert.ok((await page.locator('[role="dialog"]').innerText()).includes('RB 24:7 andra stycket'),'Envarsgripande visas efter häktningskorten');
   await page.goto(url+'#sok',{waitUntil:'networkidle'});
   await page.locator('#crime-search').fill('grovt brott mot knivlagen');
   await wait();
@@ -720,7 +724,7 @@ try{
   assert.equal(await page.evaluate(()=>window.BK_DATA.glossary['täckningsprincipen']===window.BK_REQUISITE_CONCEPTS15['bk:tackning']),true,'Glossary and requisite popup share one canonical definition');
   await page.goto(url+'#mer',{waitUntil:'networkidle'});
   const settings=await page.locator('body').innerText();
-  assert.ok(settings.includes('Version 1.6.2 · publicerad 2026-10-22'),'Published version must be visible in settings');
+  assert.ok(settings.includes('Version 1.7 · publicerad 2026-10-26'),'Published version must be visible in settings');
   assert.ok(settings.includes('Grunddata:'),'Source dataset age must be shown in settings');
   assert.ok(settings.includes('LAGKONTROLL'),'Source checker in settings');
   assert.deepEqual(errors,[],'No JS page errors');

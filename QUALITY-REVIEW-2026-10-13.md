@@ -1,3 +1,5 @@
+> **Historiskt dokument.** Siffrorna nedan gäller version 1.3–1.4. Aktuell granskning finns i [docs/V17-PLAN.md](docs/V17-PLAN.md), och ändringarna står i [CHANGELOG.md](CHANGELOG.md).
+
 # Brottskatalog – kvalitetsgranskning 2026-10-13
 ## Kompletterande sakgranskning av 16 vanliga brott – 2026-10-13
 

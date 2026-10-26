@@ -34,14 +34,16 @@ assert.equal(reg.score({...murderAttempt,stageReviewDate:null},group).tone,'unkn
  'No source-reviewed attempt should give a positive threshold');
 assert.equal(reg.score({...murderAttempt,stageStatus:'not-criminalized'},seized).tone,'no',
  'Confirmed noncriminalized attempts must show an explicit negative, not an unknown status');
-assert.ok(html.includes('window.BK_COERCIVE?.unresolvedForCoercion15?.(c)'),'Verified-scope guard remains active');
-assert.ok(html.includes('const fourYearStage=Boolean(applicable&&!uncertain&&'),'Four-year stage route remains separately reviewed');
-assert.ok(html.includes('Number(c.stageParentMin)>=4'),'Four-year parent threshold remains required');
-assert.ok(html.includes('const known=Boolean(applicable&&!uncertain&&'),'Uncertain statutory scales cannot get a green ordinary custody mark');
+assert.ok(fs.readFileSync(path.join(root,'v17-legal-screen.js'),'utf8').includes('R?.unresolvedForCoercion15?.(c)'),'Verified-scope guard remains active (1.7: BK_SCREEN17)');
+const v17=fs.readFileSync(path.join(root,'v17-legal-screen.js'),'utf8');
+// 1.7: häktningsscreeningen ligger i v17-legal-screen.js.
+assert.ok(v17.includes('presumption=Boolean(c.stageSource&&c.stageReviewDate&&t.min>=4)'),'Four-year stage route remains separately reviewed');
+assert.ok(v17.includes('t.min>=4'),'Four-year parent threshold remains required');
+assert.ok(v17.includes('if(c.penaltyRangeVerified!==true||R?.unresolvedForCoercion15?.(c))return null;'),'Uncertain statutory scales cannot get a green ordinary custody mark');
 
 assert.ok(html.includes("card('Särskilda grunder','RB 24:2',x.exceptional,'Ingen särskild straffskalegräns'"));
 assert.ok(html.includes("card('Utredningshäktning','RB 24:3',x.investigation,route,'Skälig misstanke'"));
-assert.ok(html.includes('const ordinary=Boolean(known&&pr.max>=1)'),'RB24:1 remains dependent on a verified statutory threshold');
+assert.ok(v17.includes('let ordinary=t?t.oneYear:null;'),'RB24:1 remains dependent on a verified statutory threshold (null = ej verifierat)');
 assert.ok(!html.includes("card('Särskilda grunder','RB 24:2',known&&pr.max>0"));
 assert.ok(html.includes("const route=x.onlyVia24_2?'Endast via RB 24:2'"),'RB24:3 clearly identifies when RB24:2 is the only route');
 console.log('PASS V1.5: conditional and unreviewed cases never show green coercion eligibility; RB 24:2 remains crime-scale independent');

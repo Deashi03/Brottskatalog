@@ -48,8 +48,8 @@ jobs:
         run: node scripts/v15_scoped_release_gate.mjs --release
       - name: Verify V1.6 traffic entries and LT source coverage
         run: node scripts/v16_smoke_test.mjs
-      - name: Verify RB 24 2026 custody rules
-        run: node scripts/custody_162_test.mjs
+      - name: Verify 1.7 legal screening (custody, stages, coercive, traffic, version)
+        run: node scripts/v17_screen_test.mjs
 
   deploy:
     name: Deploy verified site

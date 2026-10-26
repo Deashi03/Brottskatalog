@@ -68,9 +68,9 @@ const stageScope={
   forsok:'BrB 8:12: försöksansvar gäller inte om tillgreppet, om det hade fullbordats, skulle ha varit ringa.',
   forberedelse:'BrB 8:12: kontrollera lagens särskilda avgränsningar och gärningsform.'
  },
- 'utpressning':{forsok:'BrB 9:11: det särskilda undantaget från reglerna om frivilligt tillbakaträdande i 23:3 gäller för försök till utpressning.'},
- 'ringa utpressning':{forsok:'BrB 9:11: kontrollera undantaget rörande frivilligt tillbakaträdande för försök till utpressning.'},
- 'grov utpressning':{forsok:'BrB 9:11: kontrollera undantaget rörande frivilligt tillbakaträdande för försök till utpressning.'},
+ 'utpressning':{forsok:'BrB 9:11: frivilligt tillbakaträdande (BrB 23:3) ger inte ansvarsfrihet vid försök till utpressning.'},
+ 'ringa utpressning':{forsok:'BrB 9:11: frivilligt tillbakaträdande (BrB 23:3) ger inte ansvarsfrihet vid försök till ringa utpressning.'},
+ 'grov utpressning':{forsok:'BrB 9:11: frivilligt tillbakaträdande (BrB 23:3) ger inte ansvarsfrihet vid försök till grov utpressning.'},
  'olovlig avvikelse av krigsman':{
   forsok:'BrB 21:1 och 21:15: kapitel 21 tillämpas vid krig eller efter särskilt regeringsbeslut vid krigsfara/utomordentliga förhållanden. Förstadieansvaret följer 21:15.',
   forberedelse:'BrB 21:1 och 21:15: kapitel 21 gäller endast under de särskilt föreskrivna förhållandena.',

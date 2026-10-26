@@ -29,11 +29,11 @@ assert.equal(counts.fullyLegallyApprovedBrbRequisites,0,'Do not forge complete l
 assert.equal(audit.releaseReady,false,'Full legal audit stays outstanding and must be disclosed');
 const html=fs.readFileSync(path.join(root,'index.html'),'utf8');
 const sw=fs.readFileSync(path.join(root,'service-worker.js'),'utf8');
-assert.ok(html.includes('Version 1.6.2 · publicerad 2026-10-22'));
-assert.ok(sw.includes("brottskatalog-v162-custody-20261022"));
-assert.match(html, /<strong>Brottskatalog<\/strong><span>1\.6\.2<\/span>/, 'Search header must match published release');
+assert.ok(html.includes("window.BK_RELEASE = '1.7';")&&html.includes("window.BK_RELEASE_DATE = '2026-10-26';"));
+assert.ok(sw.includes("brottskatalog-v17-20261026"));
+assert.match(html, /<strong>Brottskatalog<\/strong><span>\$\{window\.BK_RELEASE\}<\/span>/, 'Search header must match published release');
 const manifest=JSON.parse(fs.readFileSync(path.join(root,'manifest.webmanifest'),'utf8'));
-assert.ok(manifest.description.startsWith('Brottskatalog 1.6.2'), 'PWA manifest version must agree with search header');
+assert.ok(manifest.description.startsWith('Brottskatalog 1.7'), 'PWA manifest version must agree with search header');
 const research=JSON.parse(fs.readFileSync(path.join(root,'data/grovt-olaga-tvang-prosecution-research-15.json'),'utf8'));
 assert.equal(research.prosecutionCheckpointApproved,false,'Do not certify the unresolved interpretation');
 assert.equal(research.fullLegalApprovalGranted,false);

@@ -21,17 +21,24 @@ const rows=[
  ['Smitning från trafikolycksplats','5 § första stycket',0,.5,'Böter eller fängelse i högst sex månader','B–F 6 mån','smitning;obehörigt avvikande från trafikolycksplats',section5,['Har med eller utan skuld haft del i uppkomsten av en trafikolycka.','Undandrar sig skyldigheten att medverka, uppge identitet eller lämna upplysningar enligt 5 §.']],
  ['Grov smitning från trafikolycksplats','5 § andra stycket',0,1,'Fängelse i högst ett år','F 1 år','grov smitning;grovt obehörigt avvikande från trafikolycksplats',section5,['Gärning enligt 5 § första stycket.','Brottet är grovt med hänsyn till omständigheterna.']]
 ];
+// 1.7: söknamn som inte är lagens egen brottsbeteckning märks uttryckligen.
+const designations={
+ 'Onödigt hindrande av trafik':'Beskrivande sökbenämning – lagen saknar egen brottsbeteckning. Ange brottet som brott mot 2 § lagen (1951:649) om straff för vissa trafikbrott.',
+ 'Tillåtande av olovlig körning':'Beskrivande sökbenämning – lagen saknar egen brottsbeteckning. Ange brottet som brott mot 3 § tredje stycket lagen (1951:649) om straff för vissa trafikbrott.',
+ 'Grov smitning från trafikolycksplats':'Beskrivande sökbenämning för grovt brott enligt 5 § andra stycket trafikbrottslagen – kontrollera brottsbeteckningen mot officiell lagtext.'
+};
 const entries=rows.map(([title,section,min,max,penalty,penaltyShort,aliases,law,elements],i)=>({
  id:'traffic16-'+i,title,shortRef:'TBL '+section,ref:'Lag (1951:649) om straff för vissa trafikbrott '+section,
  category:'Trafik',statute:'TBL:'+section,aliases:aliases.split(';'),
  penalty,penaltyShort,penaltyRange:{min,max,fines:/böter/i.test(penalty),life:false},
- penaltyKind:'statutory',penaltyNote:'SFS 1951:649. Kontrollera tillämplig gärningsform och gärningsdatum.',
+ penaltyKind:'statutory',penaltyNote:(designations[title]?designations[title]+' ':'')+'SFS 1951:649. Kontrollera tillämplig gärningsform och gärningsdatum.',
+ descriptiveTitle17:!!designations[title],
  penaltyChecked:'2026-10-22',penaltySource:'1951:649 '+section,penaltyRangeVerified:true,
  custody:max>=1?'possible':'none',
- prosecution:'general',prosecutionLabel:'Allmänt åtal',prosecutionRule:'RB 20:2 – allmänt åtal, inget särskilt angivelsekrav i trafikbrottslagen',
+ prosecution:'general',prosecutionLabel:'Allmänt åtal',prosecutionRule:'RB 20:3 – allmänt åtal, inget särskilt angivelsekrav i trafikbrottslagen',
  prosecutionDetails:['Allmänt åtal. Inget särskilt angivelsekrav i trafikbrottslagens aktuella bestämmelser.'],
- lawMode:i===3?'excerpt':'full',law,lawSource:'Trafikbrottslagen '+section,lawCompletenessVerified:i!==3,
- lawCompletenessChecked:i===3?null:'2026-10-22',lawCompletenessSourceURL:url,sourceURL:url,
+ lawMode:i===3||i>=4?'excerpt':'full',law,lawSource:'Trafikbrottslagen '+section,lawCompletenessVerified:i!==3&&i<4,
+ lawCompletenessChecked:i===3||i>=4?null:'2026-10-22',lawCompletenessSourceURL:url,sourceURL:url,
  elements,rekvisit15:{groups:elements.map(label=>({mode:'all',label})),scope:'statute-summary-only',sourceURL:url,note:'Lagtextsbaserad sammanfattning; inte självständigt komplett praxisgodkännande.'},
  qualifications:[],facts:[],stages:[],related:[],typexempel15:[],investigation:[],variants:[],
  reviewStatus:'traffic16-offence-statute-reviewed-no-case-approval'

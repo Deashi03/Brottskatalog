@@ -1,5 +1,7 @@
 # Brottskatalog 1.7 – granskning av 1.6.2 och planerad uppdatering
 
+> **Genomförandestatus (2026-10-26):** AP1–AP5, AP7, AP8 och delar av AP9 är genomförda i 1.7, se [CHANGELOG.md](../CHANGELOG.md). Kvar finns AP6 (granskning av SFS 2026:1656 mot officiell källa, eftersom riksdagen.se inte gick att nå från granskningsmiljön) och konsolideringen och lazy loading i O5–O6, som skjuts till 1.8. Release-spärren som kräver `verifiedVersion` har inte införts, eftersom den skulle blockera publiceringen tills AP6 är klar. Landsförräderi visas som "ej verifierat" och inte som presumtion: brottet gäller bara i krig (villkorad tillämplighet). Säkerhetskopia av 1.6.2: grenen `backup/v1.6.2`.
+
 **Granskat:** `main` @ `4eae461` (Brottskatalog 1.6.2), 2026-10-26
 **Underlag:** hela katalogen (1 551 sökingångar: 393 grundkort, 1 158 förstadiekort) som den faktiskt laddas i webbläsaren, lagtexten som är lagrad i repot (`BK_STATUTES`, `data/procedural-source-review-15.json`, `brb-curated-lawtext-15.js`) samt de vyer användaren ser (detaljkort, häktningsvy, tvångsmedelslista).
 
@@ -123,7 +125,7 @@ BrB 3:7: om brottet är ringa döms till böter. Kortet visar "Fängelse högst 
 ### J10 – Verifiera
 
 - Ordlistan för "det tillgripnas värde" anger *"1 500 kr … enligt NJA 2025 s. 1024"*. Kontrollera referens och belopp.
-- Länken till rättegångsbalken slutar på `…sfs-1942-740framtagen/`. Den förekommer på cirka 160 ställen, bland annat i "Mer"-vyn i `index.html`, i `references-06.js` och i `procedural-*.js`. Den är troligen trasig; korrekt adress bör vara `…rattegangsbalk-1942740_sfs-1942-740/`. Testa länken.
+- Länken till rättegångsbalken slutar på `…sfs-1942-740` följt av `framtagen/`. Den förekommer på cirka 160 ställen, bland annat i "Mer"-vyn i `index.html`, i `references-06.js` och i `procedural-*.js`. Den är troligen trasig; korrekt adress bör vara `…rattegangsbalk-1942740_sfs-1942-740/`. Testa länken.
 - `data/source-status.json` anger för BrB `observedChange: true` (observerad version 2026:1656, 2026-10-19) och `verifiedVersion: null`. Lagändringen har inte granskats. Gå igenom 2026:1656 före 1.7.
 
 ---
