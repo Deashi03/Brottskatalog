@@ -16,7 +16,7 @@ for(const [key,full] of Object.entries(current)){
  if(!full.replace(/\s+/g,' ').startsWith(currentHead(item.text).slice(0,35)))throw Error('Unexpected statute start '+key);
  if(item.text.length<full.length){
    restored++;
- }else if(!item.text.includes(full.slice(-20))){
+ }else if(!item.text.replace(/\s+/g,'').includes(full.replace(/\s+/g,'').slice(-20))){ // 1.7: radbrytningar i nyare import är inte en innehållsändring
    throw Error('Source newer than curated text, requires checking '+key);
  }
  // The prior modules may already have restored a source. Whether it was

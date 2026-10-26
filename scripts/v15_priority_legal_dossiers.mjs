@@ -87,7 +87,7 @@ const toDossier=c=>{
   const a=c.legalAudit15?.checkpoints?.[x.id];
   // Reflect only individually dated, source-linked and unambiguously scoped
   // checkpoints; do not mistake a partial checklist for full legal certification.
-  if(a?.status==='APPROVED'&&/^2026-10-\d{2}$/.test(a.checked||'')&&(a.sourceURL===source||(x.id==='coercion'&&a.offenceSourceURL===source&&a.sourceURL==='https://www.riksdagen.se/sv/dokument-och-lagar/dokument/svensk-forfattningssamling/rattegangsbalk-1942740_sfs-1942-740framtagen/'&&a.scope==='current-statutory-penalty-thresholds-and-described-decision-paths-only'&&a.automaticOperationalAdviceApproved===false&&a.allCoerciveMeasuresApproved===false))
+  if(a?.status==='APPROVED'&&/^2026-10-\d{2}$/.test(a.checked||'')&&(a.sourceURL===source||(x.id==='coercion'&&a.offenceSourceURL===source&&a.sourceURL==='https://www.riksdagen.se/sv/dokument-och-lagar/dokument/svensk-forfattningssamling/rattegangsbalk-1942740_sfs-1942-740/'&&a.scope==='current-statutory-penalty-thresholds-and-described-decision-paths-only'&&a.automaticOperationalAdviceApproved===false&&a.allCoerciveMeasuresApproved===false))
     &&a.caseSpecificLiabilityApproved!==true&&a.caseSpecificCustodyApproved!==true)
    return {...x,status:'APPROVED',sourceURL:a.sourceURL,checked:a.checked,
     scope:a.scope,finding:a.finding,caseSpecificLegalConclusionApproved:false};

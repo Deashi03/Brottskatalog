@@ -751,8 +751,10 @@ jobs:
         run: node scripts/quality_11_test.mjs
       - name: V1.6 traffic, custody and offline LT integrity
         run: node scripts/v16_smoke_test.mjs
-      - name: Audit RB 24 custody screens in V1.6.2
-        run: node scripts/custody_162_test.mjs
+      - name: Verify 1.7 legal screening (custody, stages, coercive, traffic, version)
+        run: node scripts/v17_screen_test.mjs
+      - name: Verify 1.7 fast-start shell and search index are current
+        run: node scripts/shell17_fresh_test.mjs
       - name: Scoped V1.5 release candidate checks
         run: node scripts/v15_scoped_release_gate.mjs --release
       - name: Full catalog integration and statutes test
@@ -863,3 +865,5 @@ jobs:
         run: python3 -m http.server 8765 --bind 127.0.0.1 &
       - name: Test iPhone viewport and interactions
         run: node scripts/ui_smoke.mjs
+      - name: Verify 1.7 catalog-wide custody and coercive invariants on iPhone
+        run: node scripts/v17_catalog_test.mjs

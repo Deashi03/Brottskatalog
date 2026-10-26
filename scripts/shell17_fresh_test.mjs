@@ -1,0 +1,21 @@
+import assert from 'node:assert/strict';import fs from 'node:fs';import path from 'node:path';import vm from 'node:vm';
+import { shellSourceHash } from './shell17_hash.mjs';
+const root=path.resolve(import.meta.dirname,'..');
+const read=p=>fs.readFileSync(path.join(root,p),'utf8');
+const html=read('index.html'),sw=read('service-worker.js'),hash=shellSourceHash(root);
+const w={};vm.runInNewContext(read('search-index-17.js'),{window:w});
+const hint='Kör: node scripts/build_shell_17.mjs';
+assert.equal(w.BK_SEARCH_INDEX17.hash,hash,'Sökindexet är inaktuellt. '+hint);
+assert.ok(html.includes('data-bk17-hash="'+hash+'"'),'Den förrenderade startvyn är inaktuell. '+hint);
+assert.ok(w.BK_SEARCH_INDEX17.rows.length>=1550);
+// Alla appens skript körs via startladdaren, i oförändrad ordning; inga blockerande skript i <body>.
+const body=html.slice(html.indexOf('<body>'));
+const tplStart=body.indexOf('<template id="bk17-modules">'),tplEnd=body.indexOf('</template>',tplStart);
+const outside=body.slice(0,tplStart)+body.slice(tplEnd);
+assert.ok(tplStart>0&&[...body.slice(tplStart,tplEnd).matchAll(/<script/g)].length>=180,'Modulerna ska ligga i <template id="bk17-modules">');
+assert.equal([...outside.matchAll(/<script/g)].length,0,'Blockerande skript i body utanför modulmallen');
+assert.ok(html.indexOf('window.BK_BOOT17')<html.indexOf('<body>'),'Startladdaren ligger i <head>');
+for(const f of ['./search-index-17.js'])assert.ok(sw.includes(f),'Saknas i offline-cachen: '+f);
+const shell=html.slice(html.indexOf('<!--BK17-SHELL-->'),html.indexOf('<!--/BK17-SHELL-->'));
+assert.ok(shell.includes('id="crime-search"')&&shell.includes('class="crime-card"'),'Startvyn ska innehålla sökfält och brottslista');
+console.log('PASS 1.7 snabbstart: förrenderad vy och sökindex aktuella ('+hash+'), '+w.BK_SEARCH_INDEX17.rows.length+' sökposter');

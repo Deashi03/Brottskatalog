@@ -1,5 +1,5 @@
 /* Verified current RB 23:8–9 statutory wording from Riksdagen, 2026-10-22. */
-(()=>{'use strict';const url='https://www.riksdagen.se/sv/dokument-och-lagar/dokument/svensk-forfattningssamling/rattegangsbalk-1942740_sfs-1942-740framtagen/';
+(()=>{'use strict';const url='https://www.riksdagen.se/sv/dokument-och-lagar/dokument/svensk-forfattningssamling/rattegangsbalk-1942740_sfs-1942-740/';
 window.BK_PROCEDURAL_ADD16={
  'RB:23:8':{complete:true,checked:'2026-10-22',url,text:`8 § På tillsägelse av en polisman är den som befinner sig på den plats, där ett brott förövas, skyldig att medfölja till ett förhör som hålls omedelbart därefter. Vägrar han utan giltig orsak, får polismannen ta med honom till förhöret.
 Vad som sägs i första stycket gäller också den som befinner sig inom ett område i anslutning till den plats där ett brott nyligen förövats, om det för brottet inte är föreskrivet lindrigare straff än fängelse i fyra år. Detta gäller också vid försök till ett sådant brott.

@@ -66,7 +66,9 @@ fs.mkdirSync(path.join(root,'audit'),{recursive:true});
 fs.writeFileSync(path.join(root,'audit/brb-inventory-15.json'),JSON.stringify(report,null,2)+'\n');
 console.log('V1.5 BRB COVERAGE '+JSON.stringify({scannedParagraphs:report.scannedParagraphs,baseCrimes:report.baseCrimes,possibleUncoveredParagraphs:report.possibleUncoveredParagraphs,candidates:missing.slice(0,80).map(x=>x.ref)}));
 if(paragraphs.length<200)throw Error('Too few scanned BrB paragraphs; official import incomplete');
-for(const key of ['BrB:4:24','BrB:11:7','BrB:22:7','BrB:22:6c'])if(!paragraphs.find(p=>p.ref===key&&p.status!=='manual-inventory-needed'))throw Error('Manual legal exclusion not applied '+key);
+// 1.7: felaktiga importnycklar tas bort helt av statute-corrections-17.js (kontrollerat mot data.riksdagen.se).
+const removed17=ctx.window.BK_STATUTE_CORRECTIONS17?.removed||{};
+for(const key of ['BrB:4:24','BrB:11:7','BrB:22:7','BrB:22:6c'])if(!(key in removed17)&&!paragraphs.find(p=>p.ref===key&&p.status!=='manual-inventory-needed'))throw Error('Manual legal exclusion not applied '+key);
 for(const name of ['Märkesförfalskning','Förvanskning av urkund','Brukande av det förfalskade','Trolöshet mot huvudman'])if(!base.some(c=>c.title===name))throw Error('Core Brottsbalken rubricering missing: '+name);
 
 const requiredCoverage=JSON.parse(fs.readFileSync(path.join(root,'data/v15-required-offence-coverage.json'),'utf8')).records;

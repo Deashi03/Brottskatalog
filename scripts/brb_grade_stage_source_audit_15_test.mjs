@@ -54,7 +54,8 @@ const fourYear=audited.filter(c=>c.stageType==='forsok'&&Number(c.stageParentMin
 assert.ok(fourYear.length>=1);
 for(const c of audited){
  const baseline=ctx.window.BK_COERCIVE.score(c,{id:'husrannsakan',scale:'any'});
- assert.equal(baseline.tone,'unknown',c.title);
+ // 1.7: en åtgärd utan straffskalegräns beror inte på förstadiets straffskala.
+ assert.equal(baseline.tone,c.applicabilityConditional?'unknown':'neutral',c.title);
 }
 for(const c of fourYear){
  const threshold=ctx.window.BK_COERCIVE.score(c,{id:'medtagande-omrade',scale:'four'});
