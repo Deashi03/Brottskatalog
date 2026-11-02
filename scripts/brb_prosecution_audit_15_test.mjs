@@ -47,6 +47,6 @@ assert.equal(rerun(a=>{a.find(c=>c.title==='Mord').law+=' CHANGED';}).completed,
 assert.equal(rerun((a,w,i)=>{i.homeGross.finding+=' CHANGED';}).completed,311);
 assert.equal(rerun((a,w,i)=>{delete i.grossBribery;}).completed,311);
 assert.equal(rerun(a=>{a.find(c=>c.title==='Mord').prosecution='unknown';}).completed,312);
-assert.ok(read('service-worker.js').includes(mod));assert.ok(html.includes('prosecution-conditions'));
+assert.ok(read('service-worker.js').includes(mod));assert.ok(html.includes('pros171-more'));
 vm.runInNewContext(code,{window:{}});
 console.log('PASS: 313 individually identified current statutory prosecution findings; four classification repairs, eleven clarified cards, five preserved checks, one unresolved branch and no full legal/police-power approval');
