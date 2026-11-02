@@ -19,7 +19,9 @@ ROOT = Path(__file__).resolve().parent.parent
 DATA = ROOT / "data"
 SOURCES = json.loads((DATA / "law-sources.json").read_text("utf-8"))["sources"]
 STATUS = DATA / "source-status.json"
-OUT = DATA / "provisions-generated.js"
+# 1.7.1: maskinimporten skrivs som utkast. Appen laddar den verifierade data/provisions-generated.js,
+# som bara byts ut efter granskning mot officiell lydelse.
+OUT = DATA / "provisions-draft.js"
 
 class TextExtractor(HTMLParser):
     def __init__(self):
@@ -161,7 +163,7 @@ def main():
                                   ensure_ascii=False,indent=2)+"\n",encoding="utf-8")
     if generated:
         payload=json.dumps(generated,ensure_ascii=False,separators=(",",":"))
-        OUT.write_text("/* Maskinimporterat underlag från Sveriges riksdag. Ej granskat. */\n"
+        OUT.write_text("/* UTKAST – maskinimporterat underlag från Sveriges riksdag. Ej granskat och laddas inte av appen. */\n"
           +"(()=>{const docs="+payload+";window.BK_STATUTES=window.BK_STATUTES||{};"
           +"for(const [id,p] of Object.entries(docs)){if(!window.BK_STATUTES[id])window.BK_STATUTES[id]=p;}})();\n",
           encoding="utf-8")

@@ -19,8 +19,8 @@ assert.ok(html.includes('data-coercive-lt')&&html.includes('showCoerciveLaw16'))
 assert.ok(html.includes('function resetCrimeMenus161()'), 'Every old crime must reset its nested menu state when leaving');
 assert.ok(html.includes('resetCrimeMenus161();'), 'SPA route changes must invoke menu reset');
 assert.ok(!html.includes("(n===27?'open':'')"), 'RB 27 must not open by default in a newly visited crime');
-assert.ok(html.includes('prosecution-summary161'), 'Show the quick prosecution conclusion immediately');
-assert.ok(html.includes("relative8:['Huvudregel: Allmänt åtal."), 'Relative-theft summary must be short and legally meaningful');
+// 1.7.1: åtalsvyn ersatt av prosecution-171.js (kort besked, fördjupning, länk till lagrummet).
+assert.ok(html.includes('pros171-short')&&html.includes('pros171-law'), 'Show the short prosecution answer and the provision link');
 
 assert.ok(html.includes('coercive-entry')&&html.includes('addEventListener(\'toggle\''));
 assert.ok(html.includes("card('Särskilda grunder','RB 24:2',x.exceptional,"));
@@ -28,7 +28,7 @@ assert.ok(html.includes("card('Utredningshäktning','RB 24:3',x.investigation,")
 assert.ok(!html.includes("accordion('age14'"));
 assert.ok(html.includes("age14Exception15?.status==='minimum-threshold-met'"));
 assert.match(html,/<strong>Brottskatalog<\/strong><span>\$\{window\.BK_RELEASE\}<\/span>/);
-assert.ok(sw.includes('brottskatalog-v17-20261026'));
+assert.ok(sw.includes('brottskatalog-v171-20261102'));
 for(const f of ['./traffic-16.js','./procedural-add16.js'])assert.ok(sw.includes(f),'LT/traffic asset omitted from offline cache');
 new vm.Script([...html.matchAll(/<script(?:\s[^>]*)?>([\s\S]*?)<\/script>/g)].at(-1)[1]);
 console.log('PASS V1.6: traffic search cards, source-bound LT, green/red custody form, abbreviated youth, and JS syntax');

@@ -50,6 +50,7 @@ assert.equal(rerun(a=>{a.find(c=>c.title==='Vapenbrott').law+=' CHANGED';}).comp
 assert.equal(rerun(a=>{a.find(c=>c.title==='Vapenbrott').lawCompletenessChecked='2099-01-01';}).completed,67);
 assert.ok(sources.indexOf(support)<sources.indexOf(mod));assert.ok(sources.indexOf(mod)<sources.indexOf('./catalog-selection-15.js'));
 assert.ok(read('service-worker.js').includes(mod)&&read('service-worker.js').includes(support));
-assert.ok(html.includes("review.sourceLabel||'Brottsbalkens åtalsregler'"),'Special-law source links must have accurate labels');
+// 1.7.1: lagrumslänkarna namnges av prosecution-171.js.
+assert.ok(read('prosecution-171.js').includes("SmuglL:'Smugglingslagen'")&&read('prosecution-171.js').includes("SkBrL:'Skattebrottslagen'"),'Special-law source links must have accurate labels');
 vm.runInNewContext(code,{window:{}});vm.runInNewContext(read(support),{window:{}});
 console.log('PASS: 68 current statutory prosecution-filter reviews across nine special-law families, five weapon corrections, six complete supporting provisions and strict source mutation holds');

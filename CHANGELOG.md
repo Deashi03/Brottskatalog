@@ -1,5 +1,21 @@
 # Ändringslogg – Brottskatalog
 
+## 1.7.1 – 2026-11-02
+
+### Åtalsregler
+- **Två färger:** grönt betyder allmänt åtal, gult betyder att det finns en angivelseregel eller att brottet hör under enskilt åtal.
+- **Kort besked:** statusraden och rubriken säger samma sak, till exempel "Fråga om angivelse", "Angivelse vid närstående", "Angivelse krävs" eller "Enskilt åtal". Vid tryck visas en mening om vad som gäller.
+- **Fördjupning under "Mer":** bara det en polis behöver på plats, alltså när angivelse behövs, hur den tas upp (*"Vill du att brottet ska åtalas?"*) och vad som gäller om målsäganden säger nej. Texter om domsrätt, riksåklagaren och liknande är borttagna.
+- **Länk till lagrummet:** knappen "Lagtext: BrB 4:11" (osv.) öppnar paragrafen där regeln står, ordagrant och offline, med länk vidare till riksdagen.
+- Särskilda villkor som bara åklagaren prövar och som inte kräver angivelse visas gröna med en kort notis, till exempel mutbrott, skattebrott och frivillig vapeninlämning.
+- Förstadier med villkor följer huvudbrottets regel.
+
+### Lagtext
+- Den automatiska lagsynken skriver nu sin maskinimport till `data/provisions-draft.js`, som appen inte laddar. Den verifierade `data/provisions-generated.js` kan därför inte längre skrivas över automatiskt. Synken fortsätter att bevaka lagändringar i `data/source-status.json`.
+
+### Kvar att kontrollera
+- Formuleringen "Muntligt räcker – skriv in det i anmälan" bör stämmas av mot polisens rutin för angivelse.
+
 ## 1.7 – 2026-10-26
 
 Bygger på granskningen i [docs/V17-PLAN.md](docs/V17-PLAN.md). Föregående version finns oförändrad i grenen `backup/v1.6.2` (commit `4eae461`).

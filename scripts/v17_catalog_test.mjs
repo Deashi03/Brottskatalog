@@ -63,6 +63,13 @@ try{
  for(const s of ['RB 24:1','RB 24:6','Envarsgripande','Fullbordat brotts max ≥ 1 år'])assert.ok(sheet.includes(s),'Häktningsvyn saknar '+s);
  assert.equal(await page.locator('#sheet-root .custody-mark.yes').count()>=4,true);
  assert.deepEqual(errors,[]);
+ // 1.7.1: varje straffbart kort har en känd åtalsregel med lagrum som finns offline.
+ const pros=await page.evaluate(()=>{const P=window.BK_PROSECUTION171,crimes=window.BK_APP17.crimes,S=window.BK_STATUTES;
+  const by=id=>crimes.find(x=>x.id===id)||window.BK_DATA.crimes.find(x=>x.id===id);const t=new Set(crimes.map(x=>x.title.toLocaleLowerCase('sv')));
+  const bad=[];let n=0;for(const c of crimes){if(c.stageStatus&&c.stageStatus!=='punishable')continue;n++;const v=P.view(c,by,t);
+   if(!v.key)bad.push(c.title+': okänd regel');else if(!S[v.law])bad.push(c.title+': lagrum saknas offline '+v.law);}
+  return {n,bad};});
+ assert.deepEqual(pros.bad,[],'Åtalsregler över hela katalogen');
  // Snabbstart: med kraftigt strypt processor ska sökvyn synas och gå att söka i innan appen är klar,
  // och ett tryck under laddningen ska öppna rätt brott när appen blivit klar.
  const ctx2=await browser.newContext({viewport:{width:390,height:844},isMobile:true,hasTouch:true});

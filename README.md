@@ -1,4 +1,8 @@
-# Brottskatalog 1.7 (26 oktober 2026)
+# Brottskatalog 1.7.1 (2 november 2026)
+
+1.7.1 gör åtalsreglerna snabba att använda på plats. Grönt betyder allmänt åtal, gult betyder angivelseregel eller enskilt åtal. Vid tryck visas ett kort besked, en fördjupning om när och hur angivelse tas upp, och en länk till lagrummet. Se [CHANGELOG.md](CHANGELOG.md).
+
+## 1.7 (26 oktober 2026)
 
 **Webbapp:** https://deashi03.github.io/Brottskatalog/
 **Kod och verifiering:** https://github.com/Deashi03/Brottskatalog

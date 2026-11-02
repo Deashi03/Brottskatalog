@@ -14,7 +14,7 @@ try{
   await page.goto(url,{waitUntil:'networkidle'});
   await page.waitForSelector('#crime-search',{timeout:60000}).catch(()=>{});
   assert.ok(await page.locator('#crime-search').count(),'Search must exist');
-  assert.equal((await page.locator('.bk03-brand span').innerText()).trim(),'1.7','Search header must display current release 1.7');
+  assert.equal((await page.locator('.bk03-brand span').innerText()).trim(),'1.7.1','Search header must display current release 1.7.1');
   assert.equal(await page.evaluate(()=>window.BK_DATA.crimes.length),1557,'The V1.5 full database must be loaded');
 
   const custodyAudit=await page.evaluate(()=>{
@@ -80,37 +80,45 @@ try{
   assert.ok(await limits.locator('a[href*="riksdagen.se"]').count());
   assert.equal(await limits.evaluate(el=>el.scrollWidth<=el.clientWidth+1),true,'Expanded limits fit iPhone width');
   await page.locator('[data-action="back"]').click();await wait();
-  // Current statutory prosecution rules must distinguish grades and alternatives.
-  for(const [title,phrase] of [
-    ['Grovt hemfridsbrott','omfattas inte av normalgradernas begränsning'],
-    ['Grovt fordringsbedrägeri','bara grovt bedrägeri och grov utpressning'],
-    ['Förberedelse genom anbringande av tekniskt hjälpmedel','vilket av de tre brotten'],
-    ['Grovt tagande av muta','särskilda mutbrottsfilter inte omfattar'],
-    ['Grovt olovligt brukande','andra stycket inte tillämpas'],
-    ['Arbetsmiljöbrott','omfattas inte av 3:12'],
-    ['Vapenbrott','18:14 gäller när någon frivilligt'],
-    ['Skattebrott','OCH samma felaktighet'],
-    ['Skatteförseelse','inte först när ett visst belopp'],
-    ['Bidragsbrott','6 a § hindrar åtal'],
-    ['Vårdslöshet med gift eller smittämne','inget eget angivelse-'],
-    ['Landsförräderi','inget eget angivelse-'],
-    ['Ryktesspridning till fara för rikets säkerhet','inget eget angivelse-']
+  // 1.7.1: åtalsregeln ger ett kort besked (grönt/gult), länk till lagrummet och en kort fördjupning.
+  for(const [title,status,law,phrase] of [
+    ['Grovt hemfridsbrott','Allmänt åtal','BrB 4:11','normalgrad'],
+    ['Hemfridsbrott','Fråga om angivelse','BrB 4:11','Inte vid grov grad'],
+    ['Ofredande','Angivelse utanför allmän plats','BrB 4:11','allmän plats'],
+    ['Förolämpning','Enskilt åtal','BrB 5:5','Förolämpning mot tjänsteman'],
+    ['Vållande till kroppsskada eller sjukdom','Angivelse krävs','BrB 3:12','under 18 år'],
+    ['Grovt fordringsbedrägeri','Angivelse vid närstående','BrB 9:12','Sambo'],
+    ['Förberedelse genom anbringande av tekniskt hjälpmedel','Angivelse – beror på avsett brott','BrB 4:11','Vill du att brottet ska åtalas'],
+    ['Grovt tagande av muta','Angivelse vid närstående','BrB 10:10','Sambo'],
+    ['Arbetsmiljöbrott','Allmänt åtal','RB 20:3','Målsägandens vilja'],
+    ['Vapenbrott','Allmänt åtal','VapenL 18:14','frivilligt'],
+    ['Skattebrott','Allmänt åtal','Skattebrottslagen 13 §','skattetillägg'],
+    ['Bidragsbrott','Allmänt åtal','Bidragsbrottslagen 6 a §','sanktionsavgift'],
+    ['Landsförräderi','Allmänt åtal','RB 20:3','Målsägandens vilja']
   ]){
     await page.goto(url+'#sok',{waitUntil:'networkidle'});
     await page.locator('#crime-search').fill(title);await wait();
     await page.locator('.crime-card').filter({has:page.getByText(title,{exact:true})}).click();
     assert.equal(await page.evaluate(()=>document.documentElement.scrollWidth<=innerWidth+1),true,'Crime detail fits iPhone width: '+title);
-    if(title==='Grovt hemfridsbrott')assert.ok((await page.locator('.status-block').innerText()).includes('Allmänt åtal'));
-    await page.locator('[data-action="prosecution"]').click();
+    const row=page.locator('button.status-row[data-action="prosecution"]');
+    assert.equal((await row.locator('.status-value').innerText()).trim(),status,'Status row: '+title);
+    assert.equal(await row.getAttribute('data-pros-tone'),status==='Allmänt åtal'?'green':'yellow','Green only for general prosecution: '+title);
+    await row.click();
     const dialog=page.locator('[role="dialog"]');
-    await dialog.locator('.prosecution-conditions > summary').click();
-    assert.ok((await dialog.innerText()).includes(phrase),'Specific current prosecution distinction: '+title);
-    const conditions=dialog.locator('.prosecution-conditions');
-    assert.equal(await conditions.getAttribute('open'),'','Detailed conditions opened by test after initially collapsed');
-    assert.ok((await conditions.innerText()).includes('riksåklagaren'),'Competent decision-maker and referral conditions are accessible');
-    assert.ok(await dialog.locator('a[href*="riksdagen.se"]').count()>=2,'Both official statutory sources are accessible');
-    const dialogWidth=await dialog.evaluate(el=>({client:el.clientWidth,scroll:el.scrollWidth,overflow:[...el.querySelectorAll('*')].filter(n=>n.clientWidth&&n.scrollWidth>n.clientWidth+1).slice(0,3).map(n=>({tag:n.tagName,class:n.className,text:n.textContent.slice(0,80),client:n.clientWidth,scroll:n.scrollWidth}))}));
-    assert.ok(dialogWidth.scroll<=dialogWidth.client+1,'Prosecution explanation fits iPhone width: '+title+' '+JSON.stringify(dialogWidth));
+    assert.equal((await dialog.locator('h2,.sheet-title').first().innerText()).trim(),status,'Sheet title repeats the status: '+title);
+    assert.ok((await dialog.locator('.pros171-law').innerText()).includes('Lagtext: '+law),'Link to the provision: '+title);
+    assert.equal(await dialog.locator('.pros171-more').getAttribute('open'),null,'Explanation starts collapsed: '+title);
+    await dialog.locator('.pros171-more > summary').click();
+    assert.ok((await dialog.innerText()).includes(phrase),'Explanation content: '+title);
+    assert.ok(!/riksåklagaren|2:7|18:8/.test(await dialog.innerText()),'No irrelevant boilerplate: '+title);
+    const fits=await dialog.evaluate(el=>el.scrollWidth<=el.clientWidth+1);
+    assert.ok(fits,'Prosecution explanation fits iPhone width: '+title);
+    if(title==='Hemfridsbrott'){
+      await dialog.locator('.pros171-law').click();await wait();
+      assert.ok((await page.locator('[role="dialog"]').innerText()).includes('får åtalas av åklagare endast om målsäganden anger brottet'),'Law button opens BrB 4:11 offline');
+      await page.locator('[data-action="back-sheet"]').click();await wait();
+      assert.ok((await page.locator('[role="dialog"]').innerText()).includes('Fråga om angivelse'),'Back returns to the prosecution sheet');
+    }
     await page.getByRole('button',{name:'Stäng',exact:true}).click();
   }
   await page.goto(url+'#sok',{waitUntil:'networkidle'});
@@ -212,6 +220,8 @@ try{
     const section=page.locator('#sec-stadier');assert.equal(await section.getAttribute('open'),null);
     await section.locator(':scope > summary').click();assert.ok((await section.innerText()).includes(phrase),title);
     assert.equal(await section.locator('.stage-overview-link').count(),links);
+    // Mät efter att pilens rotation (transition .17s) är klar; en roterande ikon breddar rubriken tillfälligt.
+    await page.waitForFunction(()=>document.getAnimations().every(a=>a.playState!=='running'));
     assert.equal(await section.evaluate(el=>el.scrollWidth<=el.clientWidth+1),true,'Source-bound overview fits iPhone: '+title);
   }
   await page.goto(url+'#sok',{waitUntil:'networkidle'});
@@ -674,12 +684,10 @@ try{
     'New crime does not inherit an expanded measure');
   await page.locator('[data-action="prosecution"]').click();
   const chargingDialog=page.locator('[role="dialog"]');
-  const quickCharging=await chargingDialog.locator('.prosecution-summary161').allTextContents();
-  assert.ok(quickCharging.some(t=>t.includes('Huvudregel: Allmänt åtal')),'Theft displays its simple general prosecution rule');
-  assert.ok(quickCharging.some(t=>t.includes('Närståendefall')&&t.includes('ELLER')),
-    'Theft displays the relative-case exception without needing an extra click');
-  assert.equal(await chargingDialog.locator('.prosecution-conditions').getAttribute('open'),null,
-    'Additional legal discussion stays collapsed beneath the clear charging answer');
+  const quickCharging=await chargingDialog.locator('.pros171-short').innerText();
+  assert.ok(quickCharging.includes('Närstående gärningsman: fråga om angivelse. Annars allmänt åtal.'),'Theft shows the short relative-case rule without an extra click');
+  assert.equal(await chargingDialog.locator('.pros171-more').getAttribute('open'),null,
+    'Explanation stays collapsed beneath the short answer');
   await page.locator('[data-action="close-sheet"]').last().click();
   const mobileWidth=await page.evaluate(()=>({scroll:document.documentElement.scrollWidth,inner:innerWidth}));
   assert.ok(mobileWidth.scroll<=mobileWidth.inner+1,'No overflow after open coercive list');
@@ -716,7 +724,7 @@ try{
   await page.goto(url+'#sok',{waitUntil:'networkidle'});
   await page.locator('#crime-search').fill('brott mot tystnadsplikt');await wait();
   await page.locator('.crime-card').filter({has:page.locator('.crime-title:text-is("Brott mot tystnadsplikt")')}).first().click();
-  assert.ok((await page.locator('.status-block').innerText()).includes('Villkor för viss tystnadsplikt'),'Special BrB 20:5 prosecution rule must be visible');
+  assert.ok((await page.locator('.status-block').innerText()).includes('Angivelse vid skydd för enskild'),'Special BrB 20:5 prosecution rule must be visible');
   await page.goto(url+'#sok',{waitUntil:'networkidle'});
   await page.locator('#crime-search').fill('svindleri');await wait();
   await page.locator('.crime-card').filter({has:page.locator('.crime-title:text-is("Svindleri")')}).first().click();
@@ -727,7 +735,7 @@ try{
   assert.equal(await page.evaluate(()=>window.BK_DATA.glossary['täckningsprincipen']===window.BK_REQUISITE_CONCEPTS15['bk:tackning']),true,'Glossary and requisite popup share one canonical definition');
   await page.goto(url+'#mer',{waitUntil:'networkidle'});
   const settings=await page.locator('body').innerText();
-  assert.ok(settings.includes('Version 1.7 · publicerad 2026-10-26'),'Published version must be visible in settings');
+  assert.ok(settings.includes('Version 1.7.1 · publicerad 2026-11-02'),'Published version must be visible in settings');
   assert.ok(settings.includes('Grunddata:'),'Source dataset age must be shown in settings');
   assert.ok(settings.includes('LAGKONTROLL'),'Source checker in settings');
   assert.deepEqual(errors,[],'No JS page errors');
