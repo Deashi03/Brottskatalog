@@ -70,11 +70,13 @@ try{
    if(!v.key)bad.push(c.title+': okänd regel');else if(!S[v.law])bad.push(c.title+': lagrum saknas offline '+v.law);}
   return {n,bad};});
  assert.deepEqual(pros.bad,[],'Åtalsregler över hela katalogen');
- // Snabbstart: med kraftigt strypt processor ska sökvyn synas och gå att söka i innan appen är klar,
- // och ett tryck under laddningen ska öppna rätt brott när appen blivit klar.
+ // Snabbstart: sökvyn ska synas och gå att söka i innan appen är klar, och ett tryck under laddningen
+ // ska öppna rätt brott när appen blivit klar. En av appens moduler hålls tillbaka tills skalet är
+ // kontrollerat, så att testet inte beror på maskinens hastighet.
  const ctx2=await browser.newContext({viewport:{width:390,height:844},isMobile:true,hasTouch:true});
- const quick=await ctx2.newPage();const cdp=await ctx2.newCDPSession(quick);
- await cdp.send('Emulation.setCPUThrottlingRate',{rate:8});
+ const quick=await ctx2.newPage();
+ let release;const held=new Promise(r=>{release=r;});
+ await quick.route('**/catalog-selection-15.js',async route=>{await held;await route.continue();});
  const t0=Date.now();await quick.goto(url+'#sok',{waitUntil:'commit'});
  await quick.waitForSelector('.crime-card',{timeout:20000});
  const visibleMs=Date.now()-t0;
@@ -83,10 +85,12 @@ try{
  await quick.fill('#crime-search','grovt rån');
  await quick.waitForFunction(()=>document.querySelector('#results-area .crime-title')?.textContent==='Grovt rån',null,{timeout:10000});
  await quick.locator('.crime-card[data-open]').first().click();
+ assert.equal(await quick.evaluate(()=>window.BK_BOOT17?.ready===true),false,'Trycket sker medan appen fortfarande laddar');
+ release();
  await quick.waitForFunction(()=>window.BK_BOOT17?.ready===true,null,{timeout:120000});
  await quick.waitForSelector('.detail-title',{timeout:20000});
  assert.equal((await quick.locator('.detail-title').innerText()).trim(),'Grovt rån');
  await ctx2.close();
- console.log('PASS 1.7 snabbstart: sökvy synlig efter '+visibleMs+' ms vid 8× strypning; sök och tryck under laddning fungerar');
+ console.log('PASS 1.7 snabbstart: sökvy synlig efter '+visibleMs+' ms; sök och tryck under laddning fungerar');
  console.log('PASS 1.7 katalog: '+r.total+' kort · '+JSON.stringify(r.counts));
 }finally{await browser.close();}
