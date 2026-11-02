@@ -90,11 +90,11 @@ try{
     ['Grovt fordringsbedrägeri','Allmänt åtal – angivelseregel vid närstående','BrB 9:12','Sambo'],
     ['Förberedelse genom anbringande av tekniskt hjälpmedel','Allmänt åtal – angivelseregel i vissa fall','BrB 4:11','Vill du att brottet ska åtalas'],
     ['Grovt tagande av muta','Allmänt åtal – angivelseregel vid närstående','BrB 10:10','Sambo'],
-    ['Arbetsmiljöbrott','Allmänt åtal','RB 20:3','Målsägandens vilja'],
+    ['Arbetsmiljöbrott','Allmänt åtal','RB 20:3','oavsett vad målsäganden vill'],
     ['Vapenbrott','Allmänt åtal','VapenL 18:14','frivilligt'],
     ['Skattebrott','Allmänt åtal','Skattebrottslagen 13 §','skattetillägg'],
     ['Bidragsbrott','Allmänt åtal','Bidragsbrottslagen 6 a §','sanktionsavgift'],
-    ['Landsförräderi','Allmänt åtal','RB 20:3','Målsägandens vilja']
+    ['Landsförräderi','Allmänt åtal','RB 20:3','oavsett vad målsäganden vill']
   ]){
     await page.goto(url+'#sok',{waitUntil:'networkidle'});
     await page.locator('#crime-search').fill(title);await wait();
@@ -726,7 +726,7 @@ try{
   await page.goto(url+'#sok',{waitUntil:'networkidle'});
   await page.locator('#crime-search').fill('brott mot tystnadsplikt');await wait();
   await page.locator('.crime-card').filter({has:page.locator('.crime-title:text-is("Brott mot tystnadsplikt")')}).first().click();
-  assert.ok((await page.locator('.status-block').innerText()).includes('Angivelse vid skydd för enskild'),'Special BrB 20:5 prosecution rule must be visible');
+  assert.ok((await page.locator('.status-block').innerText()).includes('angivelseregel vid skydd för enskild'),'Special BrB 20:5 prosecution rule must be visible');
   await page.goto(url+'#sok',{waitUntil:'networkidle'});
   await page.locator('#crime-search').fill('svindleri');await wait();
   await page.locator('.crime-card').filter({has:page.locator('.crime-title:text-is("Svindleri")')}).first().click();
