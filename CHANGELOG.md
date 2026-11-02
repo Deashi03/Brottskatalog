@@ -1,5 +1,12 @@
 # Ändringslogg – Brottskatalog
 
+## 1.7.2 – 2026-11-02
+
+### Åtalsregler
+- **Ny ordning i rutan:** "Mer" ligger direkt under det korta beskedet, och lagtextknappen ligger sist i "Mer", under all annan information.
+- **Tydligare regler med villkor:** brott som normalt har allmänt åtal men en särskild angivelseregel säger nu det först, till exempel "Allmänt åtal – angivelseregel vid närstående" med beskedet *"Brottet hör under allmänt åtal. Är gärningsmannen närstående till målsäganden gäller en särskild angivelseregel: fråga om angivelse."* Detsamma gäller allmän plats (ofredande), vissa hot (olaga tvång), tystnadsplikt och förberedelse med tekniskt hjälpmedel.
+- **Inga dubbla negationer**, till exempel "Inget åtal, utom om …" och "Inte vid grov grad – där är det …". Ett test underkänner nu meningar med två negationer.
+
 ## 1.7.1 – 2026-11-02
 
 ### Åtalsregler

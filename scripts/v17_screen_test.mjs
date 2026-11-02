@@ -93,11 +93,11 @@ assert.match(crimes.at(-1).penaltyNote,/ringa döms till böter/);
 // Inkoppling, versioner, källor
 assert.ok(html.includes('<script src="./v17-legal-screen.js"></script>'));
 assert.ok(html.indexOf('v17-legal-screen.js')>html.indexOf('coercive-safety-15.js'));
-assert.ok(html.includes("window.BK_RELEASE = '1.7.1';"));
+assert.ok(html.includes("window.BK_RELEASE = '1.7.2';"));
 assert.ok(!html.includes('1.6.2'),'Ingen kvarglömd 1.6.2-version i index.html');
 assert.ok(html.includes("card('Envarsgripande','RB 24:7 andra stycket'"));
 assert.ok(html.includes('ⓘ = ej verifierat'));
-assert.ok(sw.includes("'brottskatalog-v171-20261102'")&&sw.includes('./v17-legal-screen.js'));
+assert.ok(sw.includes("'brottskatalog-v172-20261102'")&&sw.includes('./v17-legal-screen.js'));
 assert.match(manifest,/Brottskatalog 1\.7/);
 for(const f of fs.readdirSync(root).filter(f=>/\.(js|html)$/.test(f)))
  assert.ok(!read(f).includes('sfs-1942-740framtagen'),'Trasig RB-länk i '+f);

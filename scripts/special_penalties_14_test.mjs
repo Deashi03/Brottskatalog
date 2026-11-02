@@ -52,12 +52,12 @@ assert.ok(html.includes('m.penaltySpecificCaution?'));
 const sw=readFileSync(resolve(root,'service-worker.js'),'utf8');
 assert.ok(sw.includes('./special-penalties-review-14.js'),'Verified range module must be offline');
 // Published release must not regress to old prototype labels or return HTML to a JS request.
-assert.match(html,/window\.BK_RELEASE = '1\.7\.1';/);
+assert.match(html,/window\.BK_RELEASE = '1\.7\.2';/);
 assert.match(html,/Version \$\{window\.BK_RELEASE\} · publicerad \$\{window\.BK_RELEASE_DATE\}/);
 assert.match(html,/<strong>Brottskatalog<\/strong><span>\$\{window\.BK_RELEASE\}<\/span>/,'Search header must show the single release constant');
-assert.match(html,/<meta name="description" content="Brottskatalog 1\.7\.1:/);
+assert.match(html,/<meta name="description" content="Brottskatalog 1\.7\.2:/);
 assert.doesNotMatch(html,/Arbetsversion: 0\.6/);
-assert.match(sw,/const CACHE = 'brottskatalog-v(?:14|15|16|161|162|17|171)-(?:[a-z0-9-]+-)?20[0-9]{6}'/,'Offline cache must use a dated, versioned release/draft key');
+assert.match(sw,/const CACHE = 'brottskatalog-v(?:14|15|16|161|162|17|171|172)-(?:[a-z0-9-]+-)?20[0-9]{6}'/,'Offline cache must use a dated, versioned release/draft key');
 assert.ok(sw.includes("event.request.mode === 'navigate' ? await cache.match('./index.html') : null"));
 assert.ok(!sw.includes("return await cache.match('./index.html') || Response.error()"));
 console.log('PASS 1.7: matching search header, published labels and safe offline fallback');

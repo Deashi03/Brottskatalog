@@ -14,7 +14,7 @@ try{
   await page.goto(url,{waitUntil:'networkidle'});
   await page.waitForSelector('#crime-search',{timeout:60000}).catch(()=>{});
   assert.ok(await page.locator('#crime-search').count(),'Search must exist');
-  assert.equal((await page.locator('.bk03-brand span').innerText()).trim(),'1.7.1','Search header must display current release 1.7.1');
+  assert.equal((await page.locator('.bk03-brand span').innerText()).trim(),'1.7.2','Search header must display current release 1.7.2');
   assert.equal(await page.evaluate(()=>window.BK_DATA.crimes.length),1557,'The V1.5 full database must be loaded');
 
   const custodyAudit=await page.evaluate(()=>{
@@ -83,13 +83,13 @@ try{
   // 1.7.1: åtalsregeln ger ett kort besked (grönt/gult), länk till lagrummet och en kort fördjupning.
   for(const [title,status,law,phrase] of [
     ['Grovt hemfridsbrott','Allmänt åtal','BrB 4:11','normalgrad'],
-    ['Hemfridsbrott','Fråga om angivelse','BrB 4:11','Inte vid grov grad'],
-    ['Ofredande','Angivelse utanför allmän plats','BrB 4:11','allmän plats'],
+    ['Hemfridsbrott','Fråga om angivelse','BrB 4:11','grova graden hör under allmänt åtal'],
+    ['Ofredande','Allmänt åtal – angivelseregel utanför allmän plats','BrB 4:11','bostad'],
     ['Förolämpning','Enskilt åtal','BrB 5:5','Förolämpning mot tjänsteman'],
     ['Vållande till kroppsskada eller sjukdom','Angivelse krävs','BrB 3:12','under 18 år'],
-    ['Grovt fordringsbedrägeri','Angivelse vid närstående','BrB 9:12','Sambo'],
-    ['Förberedelse genom anbringande av tekniskt hjälpmedel','Angivelse – beror på avsett brott','BrB 4:11','Vill du att brottet ska åtalas'],
-    ['Grovt tagande av muta','Angivelse vid närstående','BrB 10:10','Sambo'],
+    ['Grovt fordringsbedrägeri','Allmänt åtal – angivelseregel vid närstående','BrB 9:12','Sambo'],
+    ['Förberedelse genom anbringande av tekniskt hjälpmedel','Allmänt åtal – angivelseregel i vissa fall','BrB 4:11','Vill du att brottet ska åtalas'],
+    ['Grovt tagande av muta','Allmänt åtal – angivelseregel vid närstående','BrB 10:10','Sambo'],
     ['Arbetsmiljöbrott','Allmänt åtal','RB 20:3','Målsägandens vilja'],
     ['Vapenbrott','Allmänt åtal','VapenL 18:14','frivilligt'],
     ['Skattebrott','Allmänt åtal','Skattebrottslagen 13 §','skattetillägg'],
@@ -106,9 +106,11 @@ try{
     await row.click();
     const dialog=page.locator('[role="dialog"]');
     assert.equal((await dialog.locator('h2,.sheet-title').first().innerText()).trim(),status,'Sheet title repeats the status: '+title);
-    assert.ok((await dialog.locator('.pros171-law').innerText()).includes('Lagtext: '+law),'Link to the provision: '+title);
     assert.equal(await dialog.locator('.pros171-more').getAttribute('open'),null,'Explanation starts collapsed: '+title);
+    assert.equal(await dialog.locator('.pros171-short + .pros171-more').count(),1,'Mer sits directly under the short answer: '+title);
     await dialog.locator('.pros171-more > summary').click();
+    assert.ok((await dialog.locator('.pros171-more > .pros171-law').innerText()).includes('Lagtext: '+law),'Provision link last inside Mer: '+title);
+    assert.equal(await dialog.locator('.pros171-more > :last-child').getAttribute('class'),'pros171-law','Provision link is the last item: '+title);
     assert.ok((await dialog.innerText()).includes(phrase),'Explanation content: '+title);
     assert.ok(!/riksåklagaren|2:7|18:8/.test(await dialog.innerText()),'No irrelevant boilerplate: '+title);
     const fits=await dialog.evaluate(el=>el.scrollWidth<=el.clientWidth+1);
@@ -685,7 +687,7 @@ try{
   await page.locator('[data-action="prosecution"]').click();
   const chargingDialog=page.locator('[role="dialog"]');
   const quickCharging=await chargingDialog.locator('.pros171-short').innerText();
-  assert.ok(quickCharging.includes('Närstående gärningsman: fråga om angivelse. Annars allmänt åtal.'),'Theft shows the short relative-case rule without an extra click');
+  assert.ok(quickCharging.includes('Brottet hör under allmänt åtal. Är gärningsmannen närstående till målsäganden gäller en särskild angivelseregel'),'Theft shows general prosecution first, then the relative-case rule');
   assert.equal(await chargingDialog.locator('.pros171-more').getAttribute('open'),null,
     'Explanation stays collapsed beneath the short answer');
   await page.locator('[data-action="close-sheet"]').last().click();
@@ -735,7 +737,7 @@ try{
   assert.equal(await page.evaluate(()=>window.BK_DATA.glossary['täckningsprincipen']===window.BK_REQUISITE_CONCEPTS15['bk:tackning']),true,'Glossary and requisite popup share one canonical definition');
   await page.goto(url+'#mer',{waitUntil:'networkidle'});
   const settings=await page.locator('body').innerText();
-  assert.ok(settings.includes('Version 1.7.1 · publicerad 2026-11-02'),'Published version must be visible in settings');
+  assert.ok(settings.includes('Version 1.7.2 · publicerad 2026-11-02'),'Published version must be visible in settings');
   assert.ok(settings.includes('Grunddata:'),'Source dataset age must be shown in settings');
   assert.ok(settings.includes('LAGKONTROLL'),'Source checker in settings');
   assert.deepEqual(errors,[],'No JS page errors');
