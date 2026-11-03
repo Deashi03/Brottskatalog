@@ -11,7 +11,7 @@
   <link rel="manifest" href="./manifest.webmanifest">
   <link rel="icon" type="image/svg+xml" href="./icon.svg">
   <link rel="apple-touch-icon" href="./icon.svg">
-  <meta name="description" content="Brottskatalog 1.7.2: svenskt rättsligt uppslagsverk med brott, straffskalor, förstadier och tvångsmedel. Kontrollera gällande rätt.">
+  <meta name="description" content="Brottskatalog 1.7.3: svenskt rättsligt uppslagsverk med brott, straffskalor, förstadier och tvångsmedel. Kontrollera gällande rätt.">
 
 
 
@@ -377,7 +377,7 @@ html,body{width:100%;max-width:100%;overflow-x:clip;overscroll-behavior-x:none;-
   <title>Brottskatalog · steg 2</title>
 </head>
 <body>
-  <div id="app" class="app-shell nav-layout " data-bk17-hash="4cdd7b746a036b56bae79335" aria-live="polite"><!--BK17-SHELL--><main class="page"><div class="bk03-brand"><svg class="ic " viewBox="0 0 24 24" aria-hidden="true"><path d="M12 3v18M5 7h14M7 7l-4 6h8L7 7Zm10 0-4 6h8l-4-6ZM6 21h12"></path></svg><strong>Brottskatalog</strong><span>1.7.2</span></div>
+  <div id="app" class="app-shell nav-layout " data-bk17-hash="78df7decfc55900023e88809" aria-live="polite"><!--BK17-SHELL--><main class="page"><div class="bk03-brand"><svg class="ic " viewBox="0 0 24 24" aria-hidden="true"><path d="M12 3v18M5 7h14M7 7l-4 6h8L7 7Zm10 0-4 6h8l-4-6ZM6 21h12"></path></svg><strong>Brottskatalog</strong><span>1.7.3</span></div>
   <label class="search-box" for="crime-search"><svg class="ic lg" viewBox="0 0 24 24" aria-hidden="true"><circle cx="10.8" cy="10.8" r="7"></circle><path d="m16 16 5 5"></path></svg><input id="crime-search" type="search" placeholder="T.ex. ringa stöld, BrB 8:2…" inputmode="search" enterkeyhint="search" autocapitalize="off" autocomplete="off" spellcheck="false" value=""><button class="search-clear" data-action="clear-search" aria-label="Rensa sökning" style="display:none"><svg class="ic sm" viewBox="0 0 24 24" aria-hidden="true"><path d="M18 6 6 18M6 6l12 12"></path></svg></button></label>
   <div class="filter-strip" role="group" aria-label="Filtrera brott"><button class="filter active" data-category="Alla" aria-pressed="true">Alla</button><button class="filter " data-category="Tillgrepp" aria-pressed="false">Tillgrepp</button><button class="filter " data-category="Person" aria-pressed="false">Person</button><button class="filter " data-category="Frid" aria-pressed="false">Frid</button><button class="filter " data-category="Narkotika" aria-pressed="false">Narkotika</button><button class="filter " data-category="Förmögenhet" aria-pressed="false">Förmögenhet</button><button class="filter " data-category="Egendom" aria-pressed="false">Egendom</button><button class="filter " data-category="Tjänsteman" aria-pressed="false">Tjänsteman</button><button class="filter " data-category="Vapen" aria-pressed="false">Vapen</button><button class="filter " data-category="Trafik" aria-pressed="false">Trafik</button><button class="filter " data-category="Sexualbrott" aria-pressed="false">Sexualbrott</button><button class="filter " data-category="Allmänfarliga" aria-pressed="false">Allmänfarliga</button><button class="filter " data-category="Urkund" aria-pressed="false">Urkund</button><button class="filter " data-category="Rättsväsende" aria-pressed="false">Rättsväsende</button><button class="filter " data-category="Allmän ordning" aria-pressed="false">Allmän ordning</button><button class="filter " data-category="Rikets säkerhet" aria-pressed="false">Rikets säkerhet</button><button class="filter " data-category="Familj" aria-pressed="false">Familj</button><button class="filter " data-category="Smuggling" aria-pressed="false">Smuggling</button><button class="filter " data-category="Ekonomisk brottslighet" aria-pressed="false">Ekonomisk brottslighet</button><button class="filter " data-category="Skattebrott" aria-pressed="false">Skattebrott</button><button class="filter " data-category="Bidragsbrott" aria-pressed="false">Bidragsbrott</button><button class="filter " data-category="Explosiva varor" aria-pressed="false">Explosiva varor</button><button class="filter " data-category="Allmän verksamhet" aria-pressed="false">Allmän verksamhet</button><button class="filter " data-category="Krigsmän" aria-pressed="false">Krigsmän</button><button class="filter " data-category="Allmänfarliga brott" aria-pressed="false">Allmänfarliga brott</button></div>
   <div id="quick-area"><div class="section-heading"><h2>Snabbval</h2></div><div class="quick-row"><button type="button" class="quick-chip" data-open="ringa-stold"><svg class="ic sm" viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="9"></circle><path d="M12 7v5l3 2"></path></svg>Ringa stöld</button><button type="button" class="quick-chip" data-open="misshandel"><svg class="ic sm" viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="9"></circle><path d="M12 7v5l3 2"></path></svg>Misshandel</button><button type="button" class="quick-chip" data-open="ofredande"><svg class="ic sm" viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="9"></circle><path d="M12 7v5l3 2"></path></svg>Ofredande</button></div></div>
@@ -572,8 +572,8 @@ window.BK_STATUTES = out;
 </script>
   <script>
 /* Brottskatalog – UI prototype data. No claim of complete coverage or legal verification. */
-window.BK_RELEASE = '1.7.2';
-window.BK_RELEASE_DATE = '2026-11-02';
+window.BK_RELEASE = '1.7.3';
+window.BK_RELEASE_DATE = '2026-11-03';
 window.BK_DATA = {
   date: '2026-10-12',
   categories: ['Alla', 'Tillgrepp', 'Person', 'Frid', 'Narkotika'],
@@ -1488,17 +1488,7 @@ function renderDetail(c){
   ${accordion('lag','Lagtext', 'book-open',law)}
   ${accordion('rekvisit','Rekvisit','layers',requisitesBody)}
   ${(!c.stageStatus||c.stageStatus==='punishable')?accordion('tvang','Tvångsmedel – översikt','shield-check',coerciveSection(c)):''}
-  ${variants?accordion('garningsvarianter','Gärningsvarianter','layers','<div class="var-chip-list">'+variants+'</div>'):''}
-  ${(c.qualifications||[]).length?accordion('kvalifikation','Kvalifikationsgrunder – fördjupning','layers',qualificationSection(c)):''}
-  ${((c.studyNotes||[]).length||c.detailedNote||c.caseNote)?accordion('anteckningar','Anteckningar – fördjupning','book-mark',studyNotesSection(c)):''}
-  ${accordion('praxis','Praxis och tolkningar','file-text',factsSection(c)||'<p>Inga kommentarer inlagda för denna sökingång ännu.</p>')}
-  ${accordion('stadier','Försök och andra stadier','scale',`${inchoateSummary}${stageOverview}${stages?`<ul>${stages}</ul>`:(stageEntries.length||inchoateReview)?'':'<p>Uppgift ännu inte granskad. Kontrollera särskild kriminalisering i tillämplig författning.</p>'}<p class="source-label">Se respektive bestämmelse om osjälvständiga brottsformer samt 23 kap. BrB.</p>`)}
-  ${(c.alternativeOffences||[]).length?accordion('alternativ','Alternativa rubriceringar – pröva skillnader','layers',alternativesSection(c)):''}
-  ${accordion('jamfor','Jämför rubriceringar','layers',comparison)}
-  ${accordion('utredning','Utredningsuppslag och beviskällor','list',investigationSection(c))}
-
-  ${accordion('relaterade','Relaterade brott','list',related||'<p>Inga relaterade exempel ännu.</p>')}
-  ${accordion('sources','Rättskällor och källtyper','book-mark',`<p><strong>Lagtext:</strong> återgiven separat och utan omskrivningar. Kontrollera aktuellt rättsläge via källan.</p><p><strong>Tolkningsstöd:</strong> kursanteckningar och praktiska sammanfattningar är inte lagtext.</p>${links.map(([title,url])=>`<a class="source-link" href="${url}" target="_blank" rel="noopener noreferrer">${ic('external-link')} ${escapeHtml(title)}</a>`).join('')}`)}
+  ${'' /* 1.7.3: avsnitten efter Tvångsmedel är borttagna för att fokusera på huvudfunktionerna. */}
   </div></section>${qualityCard(c)}<p class="detail-footer">Version ${window.BK_RELEASE} · kontrollera aktuell lagtext vid operativa beslut.</p></main>`;
 }
 function showSheet({kicker,title,body,ref,actionHtml='',fromProvision=false}){

@@ -10,11 +10,13 @@ const url=process.env.BK_URL||'http://127.0.0.1:8765/';
 const rawGoto=page.goto.bind(page);
 page.goto=async(...args)=>{const r=await rawGoto(...args);await page.waitForFunction(()=>window.BK_BOOT17?.ready===true,null,{timeout:60000});return r;};
 const wait=async()=>{await page.waitForTimeout(400);};
+// 1.7.3: översikten "Försök och andra stadier" är borttagen; förstadiekort öppnas via sökningen.
+const openStage17=async(parent,kind)=>{const title=kind+' till '+parent.toLocaleLowerCase('sv');await page.goto(url+'#sok',{waitUntil:'networkidle'});await page.locator('#crime-search').fill(title);await wait();await page.locator('.crime-card').filter({has:page.getByText(title,{exact:true})}).first().click();await wait();};
 try{
   await page.goto(url,{waitUntil:'networkidle'});
   await page.waitForSelector('#crime-search',{timeout:60000}).catch(()=>{});
   assert.ok(await page.locator('#crime-search').count(),'Search must exist');
-  assert.equal((await page.locator('.bk03-brand span').innerText()).trim(),'1.7.2','Search header must display current release 1.7.2');
+  assert.equal((await page.locator('.bk03-brand span').innerText()).trim(),'1.7.3','Search header must display current release 1.7.3');
   assert.equal(await page.evaluate(()=>window.BK_DATA.crimes.length),1557,'The V1.5 full database must be loaded');
 
   const custodyAudit=await page.evaluate(()=>{
@@ -140,11 +142,7 @@ try{
   ]){
     await page.goto(url+'#sok',{waitUntil:'networkidle'});await search.fill(parent);await wait();
     await page.locator('.crime-card').filter({has:page.getByText(parent,{exact:true})}).click();
-    const overview=page.locator('#sec-stadier');await overview.locator(':scope > summary').click();
-    assert.equal(await overview.locator('.stage-overview-link').count(),3,'Three direct stage links: '+parent);
-    const link=overview.locator('.stage-overview-link').filter({hasText:kind+' ·'});
-    if(parent.startsWith('Osann utsaga'))assert.ok((await link.innerText()).includes('i angivna fall'));
-    await link.click();await wait();
+    await openStage17(parent,kind);
     assert.ok((await page.locator('h1').innerText()).startsWith(kind+' till'));
     if(punishable){await page.locator('#sec-rekvisit > summary').click();assert.ok((await page.locator('#sec-rekvisit').innerText()).includes(phrase),'Stage-specific requisites: '+parent);}
     else assert.ok((await page.locator('.stage-alert').innerText()).includes('EJ STRAFFBART'));
@@ -164,8 +162,7 @@ try{
   ]){
     await page.goto(url+'#sok',{waitUntil:'networkidle'});await search.fill(parent);await wait();
     await page.locator('.crime-card').filter({has:page.getByText(parent,{exact:true})}).click();
-    const overview=page.locator('#sec-stadier');await overview.locator(':scope > summary').click();
-    await overview.locator('.stage-overview-link').filter({hasText:kind+' ·'}).click();await wait();
+    await openStage17(parent,kind);
     const bounds=page.locator('.penalty-panel .penalty-bound');assert.equal(await bounds.count(),2);
     assert.equal(await bounds.last().locator('strong').innerText(),upper,'Exact open/closed upper endpoint: '+parent);
     assert.ok((await page.locator('.penalty-panel').innerText()).includes('ordinära lagstadgade skalan'));
@@ -179,15 +176,14 @@ try{
   ]){
     await page.goto(url+'#sok',{waitUntil:'networkidle'});await search.fill(parent);await wait();
     await page.locator('.crime-card').filter({has:page.getByText(parent,{exact:true})}).click();
-    const overview=page.locator('#sec-stadier');await overview.locator(':scope > summary').click();
-    await overview.locator('.stage-overview-link').filter({hasText:kind+' ·'}).click();await wait();
+    await openStage17(parent,kind);
     const bounds=page.locator('.penalty-panel .penalty-bound strong');assert.deepEqual(await bounds.allTextContents(),[lower,upper],'Individually reviewed interval: '+parent);
     assert.equal(await page.evaluate(()=>document.documentElement.scrollWidth<=innerWidth+1),true,'Additional stage interval fits iPhone: '+parent);
   }
   for(const [kind,scale]of[['Försök','högst 6 år'],['Förberedelse','under 6 år']]){
     await page.goto(url+'#sok',{waitUntil:'networkidle'});await search.fill('Grovt våld eller hot mot förman');await wait();
     await page.locator('.crime-card').filter({has:page.getByText('Grovt våld eller hot mot förman',{exact:true})}).click();
-    const overview=page.locator('#sec-stadier');await overview.locator(':scope > summary').click();await overview.locator('.stage-overview-link').filter({hasText:kind+' ·'}).click();await wait();
+    await openStage17('Grovt våld eller hot mot förman',kind);
     const text=await page.locator('.penalty-panel').innerText();assert.ok(text.includes('Tillämpningen är villkorad'));assert.ok(text.includes(scale));assert.ok(text.includes('Krigs- eller beredskapsrelaterade'));
   }
   await page.goto(url+'#sok',{waitUntil:'networkidle'});await search.fill('Arbetsmiljöbrott');await wait();await page.locator('.crime-card').filter({has:page.getByText('Arbetsmiljöbrott',{exact:true})}).click();
@@ -203,7 +199,7 @@ try{
     ['Osann utsaga inför en internationell domstol','Stämpling',2,'fängelse under 8 år']
   ]){
     await page.goto(url+'#sok',{waitUntil:'networkidle'});await search.fill(parent);await wait();await page.locator('.crime-card').filter({has:page.getByText(parent,{exact:true})}).click();
-    const overview=page.locator('#sec-stadier');await overview.locator(':scope > summary').click();await overview.locator('.stage-overview-link').filter({hasText:kind+' ·'}).click();await wait();
+    await openStage17(parent,kind);
     const details=page.locator('.penalty-alternative-details');assert.equal(await details.getAttribute('open'),null,'Alternatives start collapsed: '+parent);await details.locator(':scope > summary').click();
     if(['Myteri','Svikande av försvarsplikt'].includes(parent)){const panel=await page.locator('.penalty-panel').innerText();assert.ok(panel.includes('Tillämpningen är villkorad'),'Applicability warning preserved: '+parent);assert.ok(panel.includes(parent==='Myteri'?'Pröva gärningsform och roll.':'18:7 kriminaliserar endast försök'),'Original applicability caveat preserved: '+parent);}
     assert.equal(await details.locator('li').count(),count);assert.ok((await details.innerText()).includes(phrase),'Specific stage alternatives: '+parent);
@@ -211,21 +207,7 @@ try{
     assert.equal(await page.evaluate(()=>document.documentElement.scrollWidth<=innerWidth+1),true,'Stage alternatives fit iPhone: '+parent);
   }
   await page.goto(url+'#sok',{waitUntil:'networkidle'});
-  for(const [title,phrase,links]of[
-    ['Ringa narkotikabrott · bruk','undantar bruk av narkotika',3],
-    ['Grovt skattebrott','endast förberedelse och stämpling',3],
-    ['Bidragsbrott','redan fullbordat brott',3],
-    ['Förberedelse genom anbringande av tekniskt hjälpmedel','självständigt förberedelsebrott',0]
-  ]){
-    await page.goto(url+'#sok',{waitUntil:'networkidle'});await search.fill(title);await wait();
-    await page.locator('.crime-card').filter({has:page.getByText(title,{exact:true})}).click();
-    const section=page.locator('#sec-stadier');assert.equal(await section.getAttribute('open'),null);
-    await section.locator(':scope > summary').click();assert.ok((await section.innerText()).includes(phrase),title);
-    assert.equal(await section.locator('.stage-overview-link').count(),links);
-    // Mät efter att pilens rotation (transition .17s) är klar; en roterande ikon breddar rubriken tillfälligt.
-    await page.waitForFunction(()=>document.getAnimations().every(a=>a.playState!=='running'));
-    assert.equal(await section.evaluate(el=>el.scrollWidth<=el.clientWidth+1),true,'Source-bound overview fits iPhone: '+title);
-  }
+  // 1.7.3: översiktsavsnittet "Försök och andra stadier" är borttaget; dess test likaså.
   await page.goto(url+'#sok',{waitUntil:'networkidle'});
   // Statutory degree guidance stays inside the expanded requisite section.
   for(const [title,phrase]of[
@@ -507,10 +489,8 @@ try{
   assert.equal(bounds.length,2,'All prison ranges must have exactly two visible bounds');
   assert.ok(bounds[0].includes('1 år 6 mån'),'Lower bound for gross assault');
   assert.ok(bounds[1].includes('7 år'),'Upper bound for gross assault');
-  await page.locator('#sec-kvalifikation > summary').click();
-  assert.ok((await page.locator('body').innerText()).includes('Livsfarlig gärning'),'Qualification notes exist');
-  await page.locator('summary').filter({hasText:'Anteckningar'}).click();
-  assert.ok((await page.locator('body').innerText()).includes('Samlad förklaring')||(await page.locator('body').innerText()).includes('Kursanteckning'),'Non-redundant course explanation available');
+  // 1.7.3: bara Lagtext, Rekvisit och Tvångsmedel finns kvar som avsnitt.
+  assert.deepEqual((await page.locator('.accordion > summary').allInnerTexts()).map(t=>t.trim()),['Lagtext','Rekvisit','Tvångsmedel – översikt'],'Only the main sections remain');
   await page.goto(url+'#sok',{waitUntil:'networkidle'});
   await page.locator('#crime-search').fill('Tvegifte');
   await wait();
@@ -593,12 +573,6 @@ try{
   await omission.first().click();
   assert.ok((await page.locator('[role="dialog"]').innerText()).includes('Underlåtenhet vid rån'),'Rån-specific definition');
   await page.goto(url+'#sok',{waitUntil:'networkidle'});
-  await page.locator('#crime-search').fill('olovlig energiavledning');
-  await wait();
-  await page.locator('.crime-card').first().click();
-  await page.locator('summary').filter({hasText:'Utredningsuppslag'}).click();
-  assert.ok((await page.locator('body').innerText()).includes('synliga spår'),'Energy field checklist focuses on observable evidence');
-  await page.goto(url+'#sok',{waitUntil:'networkidle'});
   await page.locator('#crime-search').fill('ringa stöld');
   await wait();
   await page.locator('.crime-card').first().click();
@@ -607,12 +581,6 @@ try{
   assert.ok((await page.locator('[role="dialog"]').innerText()).includes('Utredningshäktning'),'Custody includes investigative detention at end');
   // 1.7: anhållande och gripande (RB 24:6–7) visas i ett eget avsnitt efter häktningskorten.
   assert.ok((await page.locator('[role="dialog"]').innerText()).includes('RB 24:7 andra stycket'),'Envarsgripande visas efter häktningskorten');
-  await page.goto(url+'#sok',{waitUntil:'networkidle'});
-  await page.locator('#crime-search').fill('grovt brott mot knivlagen');
-  await wait();
-  await page.locator('.crime-card').first().click();
-  await page.locator('#sec-kvalifikation > summary').click();
-  assert.ok((await page.locator('body').innerText()).includes('Annan särskilt farlig art'),'Four knife crime factors explained');
 
   // v0.7: coercive-measures statuses are per crime, separate from actual case facts.
   await page.goto(url+'#sok',{waitUntil:'networkidle'});
@@ -737,7 +705,7 @@ try{
   assert.equal(await page.evaluate(()=>window.BK_DATA.glossary['täckningsprincipen']===window.BK_REQUISITE_CONCEPTS15['bk:tackning']),true,'Glossary and requisite popup share one canonical definition');
   await page.goto(url+'#mer',{waitUntil:'networkidle'});
   const settings=await page.locator('body').innerText();
-  assert.ok(settings.includes('Version 1.7.2 · publicerad 2026-11-02'),'Published version must be visible in settings');
+  assert.ok(settings.includes('Version 1.7.3 · publicerad 2026-11-03'),'Published version must be visible in settings');
   assert.ok(settings.includes('Grunddata:'),'Source dataset age must be shown in settings');
   assert.ok(settings.includes('LAGKONTROLL'),'Source checker in settings');
   assert.deepEqual(errors,[],'No JS page errors');
