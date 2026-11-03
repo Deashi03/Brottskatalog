@@ -1,5 +1,19 @@
 # Ändringslogg – Brottskatalog
 
+## 1.8.3 – 2026-11-03
+
+### FU-ledning och åklagarkontakt
+- Den otydliga notisen "Uppstår senare någon av omständigheterna i ÅFS 6–8 §§ …" är ersatt av rutan **Åklagaren tar över ledningen om**. Rutan listar bara det som kan inträffa för brottet och situationen, till exempel:
+  - någon blir skäligen misstänkt
+  - åklagaren anhåller den gripne
+  - kontaktförbud söks
+  - andra tvångsmedel behövs
+- Alla förklaringar (ⓘ) är omskrivna med egna ord:
+  - De börjar med vad regeln betyder i praktiken.
+  - Rubrikerna **Det kan bli aktuellt om**, **Tecken som kan tala för det** och **Exempel** följs av konkreta punkter.
+  - **Internationellt samarbete** förklarar när det blir aktuellt för polisen, till exempel när den misstänkte lämnat Sverige eller bevis finns utomlands, och att utländskt medborgarskap inte räcker.
+- Förordningar, föreskrifter och riktlinjer anges med fullständiga namn i stället för förkortningar.
+
 ## 1.8.2 – 2026-11-03
 
 ### FU-ledning och åklagarkontakt

@@ -4,7 +4,7 @@ const root=path.resolve(import.meta.dirname,'..');
 const read=p=>fs.readFileSync(path.join(root,p),'utf8');
 const html=read('index.html'),sw=read('service-worker.js');
 const w={};vm.runInNewContext(read('fu-ledning-18.js'),{window:w});
-const F=w.BK_FU18;assert.ok(F&&F.release==='1.8.2');
+const F=w.BK_FU18;assert.ok(F&&F.release==='1.8.3');
 
 const card=(id,title,shortRef,min,max,extra={})=>({id,title,shortRef,penaltyRange:{min,max},...extra});
 const C={
@@ -52,8 +52,9 @@ const G={gripen:true};
 let x=run(C.snatteri,G);
 assert.equal(x.lead,'polis');assert.equal(x.when,'Efter förhöret');
 assert.deepEqual(x.asked,['gripen','pol','psyk','tvm','svar','ung','forsvarare']);
-assert.ok(x.notes.some(n=>/ÅFS 8 § 4/.test(n)),'Anhållande ⇒ åklagaren tar över');
-assert.ok(x.sources.some(s=>s.label.startsWith('RB 24:8')));
+assert.ok(x.later.some(n=>/anhålla den gripne/.test(n)),'Anhållande ⇒ åklagaren tar över');
+assert.ok(!x.notes.some(n=>/Uppstår senare/.test(n)),'1.8.3: ingen otydlig ÅFS 6–8-notis');
+assert.ok(x.sources.some(s=>s.label.startsWith('Rättegångsbalken 24 kap. 8 §')));
 // 2) Försvararfråga eller ung ⇒ före förhöret.
 assert.equal(run(C.snatteri,{...G,forsvarare:true}).when,'Före förhöret');
 x=run(C.snatteri,{...G,ung:true});assert.equal(x.when,'Före förhöret');assert.ok(!x.asked.includes('forsvarare'),'Ung ⇒ försvararfrågan behövs inte');
@@ -139,4 +140,15 @@ assert.ok(qq.items.some(i=>/anhållande/.test(i.text)),'Gripen: tvångsmedelsfr�
 assert.ok(qq.info.t.some(t=>/Anhålls den gripne/.test(t)));
 qq=qOf(C.snatteri,{gripen:false,misstankt:true,pol:false,psyk:false});assert.ok(!qq.items.some(i=>/anhållande/.test(i.text)),'Inte gripen: inget om anhållande');
 assert.match(F.render(C.snatteri,{gripen:true,pol:false,psyk:false,tvm:false,svar:false,ung:false}),/class="fu18-help"/,'Försvararfrågan har förklaring');
-console.log('PASS 1.8.2 FU-ledning: klassning mot ÅFS-bilagan, frågeflöden, hoppregler, åklagarkontakt och inkoppling');
+// 1.8.3: "Åklagaren tar över om"-lista, egna ord och fullständiga källnamn.
+x=run(C.grovMiss,{gripen:false,misstankt:false});assert.equal(x.later[0],'Någon blir skäligen misstänkt för brottet.');
+assert.ok(x.later.some(l=>/Kontaktförbud/.test(l))&&x.later.some(l=>/SU/.test(l)));
+assert.ok(!run(C.ratt,G).later.some(l=>/Kontaktförbud|hatbrott|barn/.test(l)),'Rattfylleri: bara relevanta punkter');
+assert.equal(run(C.grovMiss,G).later.length,0,'Åklagarledd: ingen lista');
+assert.ok(F.render(C.snatteri,{gripen:true,pol:false,psyk:false,tvm:false,svar:false,ung:false,forsvarare:false}).includes('Åklagaren tar över ledningen om'));
+assert.ok(F.INFO.pol.t[0].includes('Förordning (2014:1106) om handläggning av ärenden om brott av anställda inom polisen'),'Förordningen namnges');
+const intl=F.SVAR_ITEMS.find(i=>i.text==='Internationellt samarbete').t.join(' ');
+assert.match(intl,/Det kan bli aktuellt om/);assert.match(intl,/utländsk medborgare räcker inte/);
+for(const i of [...Object.values(F.INFO),...F.SVAR_ITEMS])assert.ok(!/^ÅFS 2005:9 \d/.test(i.t[0]),'Förklaringen börjar med egna ord, inte lagtext');
+for(const s of Object.values(F.SOURCES))assert.ok(!/^ÅFS|^RB |^RåR|^LUL/.test(s.label),'Fullständigt källnamn: '+s.label);
+console.log('PASS 1.8.3 FU-ledning: klassning mot ÅFS-bilagan, frågeflöden, hoppregler, åklagarkontakt och inkoppling');
