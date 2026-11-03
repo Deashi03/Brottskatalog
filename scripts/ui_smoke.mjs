@@ -16,7 +16,7 @@ try{
   await page.goto(url,{waitUntil:'networkidle'});
   await page.waitForSelector('#crime-search',{timeout:60000}).catch(()=>{});
   assert.ok(await page.locator('#crime-search').count(),'Search must exist');
-  assert.equal((await page.locator('.bk03-brand span').innerText()).trim(),'1.8.2','Search header must display current release 1.8.2');
+  assert.equal((await page.locator('.bk03-brand span').innerText()).trim(),'1.8.3','Search header must display current release 1.8.3');
   assert.equal(await page.evaluate(()=>window.BK_DATA.crimes.length),1557,'The V1.5 full database must be loaded');
 
   const custodyAudit=await page.evaluate(()=>{
@@ -708,7 +708,7 @@ try{
   assert.equal(await page.evaluate(()=>window.BK_DATA.glossary['täckningsprincipen']===window.BK_REQUISITE_CONCEPTS15['bk:tackning']),true,'Glossary and requisite popup share one canonical definition');
   await page.goto(url+'#mer',{waitUntil:'networkidle'});
   const settings=await page.locator('body').innerText();
-  assert.ok(settings.includes('Version 1.8.2 · publicerad 2026-11-03'),'Published version must be visible in settings');
+  assert.ok(settings.includes('Version 1.8.3 · publicerad 2026-11-03'),'Published version must be visible in settings');
   assert.ok(settings.includes('Grunddata:'),'Source dataset age must be shown in settings');
   assert.ok(settings.includes('LAGKONTROLL'),'Source checker in settings');
   assert.deepEqual(errors,[],'No JS page errors');
