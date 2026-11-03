@@ -31,7 +31,8 @@ const before=load([mod]),preserve=JSON.parse(JSON.stringify(before.window.BK_DAT
 for(const r of preserve){const c=before.window.BK_DATA.crimes.find(c=>c.id===r.id);for(const [key,v]of Object.entries(r.checkpoints||{}))assert.deepEqual(JSON.parse(JSON.stringify(c.legalAudit15.checkpoints[key])),v,'Existing checkpoint preserved '+r.id+' '+key);}
 for(const key of ['BrB:14:4','BrB:14:13']){const x=load([patch,mod,'./stage-requisite-outlines-15.js']);x.window.BK_STATUTES[key].text+=' CHANGED';vm.runInContext(read(patch),x);assert.equal(x.window.BK_STAGE_GRADE_CORRECTIONS15.corrected,key==='BrB:14:4'?11:9);assert.ok(x.window.BK_STAGE_GRADE_CORRECTIONS15.held.length>0);}
 for(const f of[mod,patch])assert.ok(read('service-worker.js').includes(f));for(const s of inline)new Function(s);
-assert.ok(html.includes('${inchoateSummary}${stageOverview}'));
+// 1.7.3: översikten "Försök och andra stadier" är borttagen ur brottskortet; förstadiekorten nås via sökningen.
+assert.ok(!html.includes("accordion('stadier'"));
 console.log('PASS: 326 source-bound base checks, 13 traced grade corrections, 452 stage outlines, explicit branch limits and mutation controls; no full legal signoffs');
 
 const rangeReport=w.BK_STAGE_ATTEMPT_PENALTY_REVIEW15;

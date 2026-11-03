@@ -1,5 +1,22 @@
 # Ändringslogg – Brottskatalog
 
+## 1.7.3 – 2026-11-03
+
+### Enklare brottskort
+- Brottskortet visar nu bara huvudfunktionerna: straffskala, häktning, åtalsregel, **Lagtext**, **Rekvisit** och **Tvångsmedel – översikt**. "Rättslig kontroll" ligger kvar längst ner.
+- Borttagna avsnitt:
+  - Gärningsvarianter
+  - Kvalifikationsgrunder – fördjupning
+  - Anteckningar – fördjupning
+  - Praxis och tolkningar
+  - Försök och andra stadier
+  - Alternativa rubriceringar
+  - Jämför rubriceringar
+  - Utredningsuppslag och beviskällor
+  - Relaterade brott
+  - Rättskällor och källtyper
+- Förstadiekorten finns kvar. De nås via sökningen, till exempel "försök till stöld".
+
 ## 1.7.2 – 2026-11-02
 
 ### Åtalsregler

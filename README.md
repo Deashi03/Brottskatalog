@@ -1,4 +1,8 @@
-# Brottskatalog 1.7.2 (2 november 2026)
+# Brottskatalog 1.7.3 (3 november 2026)
+
+1.7.3 renodlar brottskortet till huvudfunktionerna: straffskala, häktning, åtalsregel, lagtext, rekvisit och tvångsmedel. Övriga fördjupningsavsnitt är borttagna. Se [CHANGELOG.md](CHANGELOG.md).
+
+## 1.7.2 (2 november 2026)
 
 1.7.2 flyttar "Mer" direkt under åtalsbeskedet och lagtexten sist i "Mer". Reglerna är omformulerade så att huvudregeln (allmänt åtal) kommer först, före en eventuell särskild angivelseregel. Se [CHANGELOG.md](CHANGELOG.md).
 

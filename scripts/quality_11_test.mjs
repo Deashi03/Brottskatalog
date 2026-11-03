@@ -61,7 +61,7 @@ assert.match(info.metadata(actualExcerpt).alternateVersionNote,/gärningsdagen/,
 
 const h=readFileSync(resolve(root,'index.html'),'utf8');
 assert.ok(h.includes('qualityCard(c)}'),'Card renders separate bottom quality section');
-assert.ok(h.indexOf("accordion('sources'")<h.indexOf('qualityCard(c)}'),'Quality follows sources');
+assert.ok(h.indexOf("accordion('tvang'")<h.indexOf('qualityCard(c)}')&&!h.includes("accordion('sources'"),'1.7.3: quality card follows the coercive overview; later sections removed');
 assert.ok(h.includes('<details class="quality-footer"'),'Quality starts collapsed');
 assert.ok(h.includes('m.stale?'),'Warning badge is conditioned on stale metadata');
 console.log('PASS quality 1.1: review-date integrity, 3-year threshold, bottom placement, collapsed state');
