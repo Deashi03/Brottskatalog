@@ -12,9 +12,13 @@ try{
  const r=await page.evaluate(()=>{
   const F=window.BK_FU18,crimes=window.BK_APP17.crimes.filter(c=>!c.stageType&&(!c.stageStatus||c.stageStatus==='punishable'));
   const bad=[],counts={};let maxQ=0;
-  const walk=(c,a,depth)=>{const r=F.assess(c,a);if(r.result){if(!r.result.when||!r.result.reasons.length)bad.push(c.title+': tomt resultat');return;}
-   if(depth>5){bad.push(c.title+': fler än 5 frågor');return;}maxQ=Math.max(maxQ,depth);
-   const q=r.question;const vals=q.kind==='multi'?[[],[q.options[0].id]]:[true,false];for(const v of vals)walk(c,{...a,[q.id]:v},depth+1);};
+  const sig=r=>r.lead+'|'+r.when+'|'+r.whenText;
+  const walk=(c,a,depth)=>{const r=F.assess(c,a);if(r.result){if(!r.result.when||!r.result.reasons.length)bad.push(c.title+': tomt resultat');return new Set([sig(r.result)]);}
+   if(depth>12){bad.push(c.title+': fler än 12 frågor');return new Set();}maxQ=Math.max(maxQ,depth);
+   const q=r.question.id;if(r.question.kind!=='yn')bad.push(c.title+': inte ja/nej');
+   const y=walk(c,{...a,[q]:true},depth+1),n=walk(c,{...a,[q]:false},depth+1);
+   if([...y].every(x=>n.has(x))&&[...n].every(x=>y.has(x)))bad.push(c.title+': onödig fråga '+q);
+   return new Set([...y,...n]);};
   for(const c of crimes){const k=F.classify(c);if(!k){bad.push(c.title+': ingen klassning');continue;}counts[k.cls]=(counts[k.cls]||0)+1;walk(c,{},1);}
   return {n:crimes.length,bad,counts,maxQ};
  });
@@ -24,22 +28,25 @@ try{
  // Gränssnitt: Ringa stöld → Tvångsmedel → Starta → fyra svar → resultat.
  await page.fill('#crime-search','Ringa stöld');await page.waitForTimeout(300);
  await page.locator('.crime-card').filter({has:page.getByText('Ringa stöld',{exact:true})}).first().click();
- await page.waitForSelector('#app #sec-tvang > summary');await page.locator('#app #sec-tvang > summary').click();
- const start=page.locator('#app #sec-tvang .fu18-start');
- assert.match(await start.innerText(),/FU-ledning och åklagarkontakt/);
+ await page.waitForSelector('#app #sec-fu18 > summary');
+ assert.equal(await page.locator('#app #sec-tvang .fu18-start').count(),0,'Inte inne i Tvångsmedel-menyn');
+ assert.equal(await page.locator('#app .accordion > summary').last().innerText().then(t=>t.trim()),'FU-ledning och åklagarkontakt','Egen meny under Tvångsmedel');
+ await page.locator('#app #sec-fu18 > summary').click();
+ const start=page.locator('#app #sec-fu18 .fu18-start');
  await start.click();
  const q=()=>page.locator('#sheet-root .fu18-q').innerText();
  assert.equal(await q(),'Är någon gripen?');
- await page.click('#sheet-root [data-fu18="yes"]');
- assert.equal(await q(),'Gäller något av följande?');
- await page.click('#sheet-root [data-fu18="none"]');
- assert.match(await q(),/under 18/);
+ const answer=async(v,expect)=>{await page.click('#sheet-root [data-fu18="'+v+'"]');if(expect)assert.match(await q(),expect);};
+ await answer('yes',/anställd inom polisen/);
+ await answer('no',/psykiska status/);
+ await answer('no',/tvångsmedel/);
  await page.click('#sheet-root [data-fu18="back"]');
- assert.equal(await q(),'Gäller något av följande?','Bakåt visar föregående fråga');
- await page.click('#sheet-root [data-fu18="none"]');
- await page.click('#sheet-root [data-fu18="no"]');
- assert.match(await q(),/försvarare/);
- await page.click('#sheet-root [data-fu18="no"]');
+ assert.match(await q(),/psykiska status/,'Bakåt visar föregående fråga');
+ await answer('no',/tvångsmedel/);
+ await answer('no',/svårbedömt/);
+ await answer('no',/under 18/);
+ await answer('no',/försvarare/);
+ await answer('no');
  const result=await page.locator('#sheet-root .fu18-result').innerText();
  for(const s of ['Polisledd','Efter förhöret','Inför kontakten','ÅFS 8 § 4'])assert.ok(result.includes(s),'Resultatet saknar '+s);
  await page.click('#sheet-root [data-fu18="restart"]');
@@ -49,8 +56,8 @@ try{
  await page.locator('[data-action="back"]').first().click();
  await page.fill('#crime-search','Grov misshandel');await page.waitForTimeout(300);
  await page.locator('.crime-card').filter({has:page.getByText('Grov misshandel',{exact:true})}).first().click();
- await page.waitForSelector('#app #sec-tvang > summary');await page.locator('#app #sec-tvang > summary').click();await page.locator('#app #sec-tvang .fu18-start').click();
- await page.click('#sheet-root [data-fu18="yes"]');
+ await page.waitForSelector('#app #sec-fu18 > summary');await page.locator('#app #sec-fu18 > summary').click();await page.locator('#app #sec-fu18 .fu18-start').click();
+ await page.click('#sheet-root [data-fu18="yes"]');await page.click('#sheet-root [data-fu18="no"]');
  const r2=await page.locator('#sheet-root .fu18-result').innerText();
  assert.ok(r2.includes('Åklagarledd')&&r2.includes('Före förhöret'),r2);
  // Förstadier visar inte verktyget.
@@ -58,8 +65,8 @@ try{
  await page.locator('[data-action="back"]').first().click();
  await page.fill('#crime-search','Försök till stöld');await page.waitForTimeout(300);
  await page.locator('.crime-card').filter({has:page.getByText('Försök till stöld',{exact:true})}).first().click();
- await page.waitForSelector('#app #sec-tvang > summary');
- assert.equal(await page.locator('.fu18-start').count(),0,'Förstadier ingår inte i 1.8');
+await page.waitForSelector('#app #sec-tvang > summary');
+ assert.equal(await page.locator('#app #sec-fu18').count(),0,'Förstadier ingår inte i 1.8');
  assert.deepEqual(errors,[]);
- console.log('PASS 1.8 FU-ledning i webbläsaren: '+r.n+' brott '+JSON.stringify(r.counts)+', högst '+r.maxQ+' frågor, gränssnittsflöde och förstadier');
+ console.log('PASS 1.8.1 FU-ledning i webbläsaren: '+r.n+' brott '+JSON.stringify(r.counts)+', högst '+r.maxQ+' frågor, ingen onödig fråga, gränssnittsflöde och förstadier');
 }finally{await browser.close();}

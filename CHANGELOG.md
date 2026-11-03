@@ -1,5 +1,18 @@
 # Ändringslogg – Brottskatalog
 
+## 1.8.1 – 2026-11-03
+
+### FU-ledning och åklagarkontakt
+- Verktyget är nu en **egen meny** direkt under Tvångsmedel – översikt.
+- Flervalslistan är borttagen. Varje omständighet är en egen **ja/nej-fråga**. En fråga ställs bara när svaret kan ändra resultatet, och frågorna slutar så fort svaret är klart.
+  - Exempel: grov misshandel, gripen → två frågor.
+- Ny fråga om den misstänkte är **anställd inom polisen, polisstudent, åklagare eller domare**. Den ställs alltid när någon är misstänkt, eftersom den ger ett eget resultat:
+  - Lämna ärendet omedelbart till Avdelningen för särskilda utredningar (SU).
+  - Håll inte förhöret själv. Förhöret hålls av åklagare eller polisman vid SU (förordning 2014:1106).
+  - Undantagen för vissa trafikbrott och för bötesbrott utan samband med anställningen ingår.
+- ÅFS 7 och 8 §§ (till exempel tvångsmedel, barn som ska höras, svårbedömt brott) prövas nu även när ingen är misstänkt.
+- Ett nytt test kontrollerar för hela katalogen att varje fråga kan ändra svaret.
+
 ## 1.8 – 2026-11-03
 
 ### Nytt verktyg: FU-ledning och åklagarkontakt
