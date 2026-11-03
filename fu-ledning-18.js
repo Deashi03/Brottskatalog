@@ -25,7 +25,7 @@ const SOURCES={
  rb233:{label:'RB 23:3',url:RB,quote:'Om förundersökningen har inletts av Polismyndigheten eller Säkerhetspolisen och saken inte är av enkel beskaffenhet, ska ledningen av förundersökningen om brottet övertas av åklagaren, så snart någon skäligen kan misstänkas för brottet. Åklagaren ska också i annat fall överta ledningen när det är motiverat av särskilda skäl.'},
  rb248:{label:'RB 24:8 andra och tredje styckena',url:RB,quote:'Har någon gripits enligt 7 §, ska han eller hon så snart som möjligt förhöras av en åklagare eller av en polisman eller annan anställd vid Polismyndigheten eller Ekobrottsmyndigheten som myndigheten har utsett. Har åklagaren inte redan underrättats om frihetsberövandet, ska det skyndsamt anmälas till honom eller henne. Åklagaren ska efter förhöret omedelbart besluta om den misstänkte ska anhållas. Anhålls inte den misstänkte, ska åklagaren omedelbart häva beslutet om gripande.\nInnan åklagaren har underrättats om frihetsberövandet, får beslutet om gripande hävas av Polismyndigheten, om det är uppenbart att det inte finns skäl för fortsatt frihetsberövande.'},
  afs4:{label:'ÅFS 2005:9 4 § och bilagan',url:AFS,quote:'Brott som tagits upp i bilagan ska som regel anses vara av enkel beskaffenhet. Förundersökningen ska då, med undantagen i 5–8 §§, ledas av Polismyndigheten.'},
- afs5:{label:'ÅFS 2005:9 5 § och förordning (2014:1106)',url:F1106,quote:'Förundersökning mot anställd inom polisen ska i allmänhet ledas av åklagare. Ärendet lämnas omedelbart till Avdelningen för särskilda utredningar. Förordningen gäller även åklagare, domare och vissa andra befattningshavare.'},
+ afs5:{label:'ÅFS 2005:9 5 § och förordning (2014:1106) 2–11 §§',url:F1106,quote:'Förundersökning mot anställd inom polisen ska i allmänhet ledas av åklagare. Ärenden om brott av anställda inom polisen, polisstudenter och vissa uppdragstagare ska omedelbart lämnas över till Avdelningen för särskilda utredningar, som genast lämnar ärendet vidare till åklagare. Förhör med den misstänkte ska hållas av åklagare eller polisman vid Avdelningen för särskilda utredningar. Förordningen gäller också ärenden om brott av åklagare, domare och vissa andra befattningshavare. Undantag: vissa trafikbrott (3 §) och brott med endast böter utan samband med anställningen (5 §), när polisen utfärdar ordningsbot eller inleder förundersökning.'},
  afs6:{label:'ÅFS 2005:9 6 §',url:AFS,quote:'Oavsett om någon är skäligen misstänkt eller inte ska åklagare leda förundersökningen när 1. brottet innefattar våld eller hot om våld mot närstående eller tidigare närstående person eller 2. brottet innefattar en sexuell handling mot någon som är under arton år. Har Polismyndigheten inlett förundersökning ska den snarast överlämnas till åklagaren. (Närstående: som i BrB 4:4 a. Sexuell handling avser inte gärning enligt BrB 6:10.)'},
  afs7:{label:'ÅFS 2005:9 7 §',url:AFS,quote:'Åklagare ska överta ledningen bl.a. när annan domstolsåtgärd än förordnande av offentlig försvarare eller målsägandebiträde krävs, vid internationellt samarbete, vid bevistalan, när brottet är svårbedömt, när någon är skäligen misstänkt för ett brott med straffmaximum fängelse två år eller mer mot målsägandens liv, hälsa, frihet eller frid och målsäganden inte har fyllt 15 år vid anmälan, vid sannolikt motiv enligt BrB 29:2 p. 7 och när talan om företagsbot kan bli aktuell.'},
  afs8:{label:'ÅFS 2005:9 8 §',url:AFS,quote:'Åklagare ska också överta ledningen när någon under 15 år ska höras och detta påkallar det, när den misstänktes psykiska status påtagligt kan antas avvika och svårare straff än böter kan följa, när kontaktförbud eller europeisk skyddsorder har sökts, och när annat tvångsmedel enligt RB 24–28 kap. blir aktuellt än mindre husrannsakan, avspärrning, kroppsvisitation, kroppsbesiktning, beslag och fotografi eller fingeravtryck.'},
@@ -158,36 +158,45 @@ function traits(c){
   sexual:sexual&&!childSexual,childSexual,
   lhff:!!x&&(x.ch===3||x.ch===4)&&max(c)>=2,
   hate:!!x&&[3,4,6,12,16,17].includes(x.ch),
+  person:!!x&&[3,4,6].includes(x.ch)&&!(x.ch===3&&['7','8','10'].includes(x.p)),
   finesOnly:max(c)===0,
   min4:min(c)>=4||!!c.penaltyRange?.life
  };
 }
 
-/* Rara omständigheter som gör att åklagaren tar över (ÅFS 5, 7, 8 och 11 §§). En skärm, flerval. */
-const RARE=[
- {id:'mal15',text:'Målsäganden var under 15 år när brottet anmäldes, och den misstänkte är 15 år eller äldre',src:'afs7',reason:'Brottet riktar sig mot ett barn under 15 år och har straffmaximum två år eller mer (ÅFS 7 § 5).',only:'lhff'},
- {id:'hat',text:'Det finns sannolikt ett hatbrottsmotiv (ras, hudfärg, ursprung, tro, sexuell läggning, kön, könsidentitet m.m.)',src:'afs7',reason:'Det finns sannolikt ett hatbrottsmotiv (ÅFS 7 § 6).',only:'hate'},
- {id:'pol',text:'Den misstänkte är polisanställd, polisstudent, åklagare eller domare',src:'afs5',reason:'Den misstänkte omfattas av förordning (2014:1106). Lämna omedelbart till Avdelningen för särskilda utredningar.'},
- {id:'kf',text:'Kontaktförbud eller europeisk skyddsorder har sökts eller ska sökas',src:'afs8',reason:'Kontaktförbud har sökts (ÅFS 8 § 3).'},
- {id:'tvm',text:'Andra tvångsmedel behövs än gripande, beslag, kroppsvisitation, kroppsbesiktning, foto och fingeravtryck, avspärrning och mindre husrannsakan',src:'afs8',reason:'Andra tvångsmedel blir aktuella (ÅFS 8 § 4).'},
- {id:'barn',text:'Ett barn under 15 år ska höras och åklagaren behöver ta ställning till förhöret',src:'afs8',reason:'Ett barn under 15 år ska höras (ÅFS 8 § 1).'},
- {id:'psyk',text:'Den misstänktes psykiska status avviker påtagligt från det normala',src:'afs8',reason:'Den misstänktes psykiska status avviker påtagligt (ÅFS 8 § 2).',hideIfFines:true},
- {id:'int',text:'Internationellt: utlämning, överlämnande, europeisk utredningsorder, rättslig hjälp eller samordning med annat land',src:'afs7',reason:'Internationellt samarbete kan bli aktuellt (ÅFS 7 § 2).'},
- {id:'dom',text:'Annan domstolsåtgärd än offentlig försvarare eller målsägandebiträde behövs, t.ex. särskild företrädare för barn',src:'afs7',reason:'En domstolsåtgärd behövs (ÅFS 7 § 1).'},
- {id:'bevis',text:'Bevistalan eller företagsbot kan bli aktuellt',src:'afs7',reason:'Bevistalan eller företagsbot kan bli aktuellt (ÅFS 7 § 3 och 7).'},
- {id:'svar',text:'Brottet är svårbedömt eller utredningen omfattande, t.ex. många brott eller misstänkta när den misstänkte är under 18 år',src:'afs7',reason:'Brottet är svårbedömt eller utredningen omfattande (ÅFS 7 § 4).'},
- {id:'fub',text:'Förundersökningsbegränsning som åklagaren beslutar om kan bli aktuell',src:'afs11',reason:'Förundersökningsbegränsning som åklagaren beslutar om kan bli aktuell (ÅFS 11 §).'}
+/* Omständigheter som gör att åklagaren ska överta ledningen (ÅFS 7 och 8 §§).
+ * Varje omständighet är en egen ja/nej-fråga. Frågan ställs bara när svaret kan ändra resultatet,
+ * det vill säga när förundersökningen annars skulle ledas av polis. needs = krav för att frågan ska ställas. */
+const TAKEOVER=[
+ {id:'mal15',needs:t=>t.suspect&&t.lhff,src:'afs7',reason:'Brottet riktar sig mot ett barn under 15 år och har straffmaximum fängelse två år eller mer (ÅFS 7 § 5).',
+  q:'Var målsäganden under 15 år när brottet anmäldes?',hint:'Gäller inte om även den misstänkte är under 15 år (ÅFS 1 §). Svara då nej.'},
+ {id:'hat',needs:t=>t.suspect&&t.hate,src:'afs7',reason:'Det finns sannolikt ett hatbrottsmotiv (ÅFS 7 § 6).',
+  q:'Finns det sannolikt ett hatbrottsmotiv?',hint:'Motiv att kränka någon på grund av ras, hudfärg, nationellt eller etniskt ursprung, trosbekännelse, sexuell läggning, kön, könsöverskridande identitet eller uttryck eller annan liknande omständighet (BrB 29:2 p. 7).'},
+ {id:'kf',needs:t=>t.suspect&&t.person,src:'afs8',reason:'Kontaktförbud eller europeisk skyddsorder har sökts (ÅFS 8 § 3).',
+  q:'Har kontaktförbud sökts, eller ska det sökas?'},
+ {id:'barn',needs:t=>t.violence,src:'afs8',reason:'Ett barn under 15 år ska höras och det påkallar att åklagaren leder förundersökningen (ÅFS 8 § 1).',
+  q:'Ska ett barn under 15 år höras?',hint:'Svara ja om åklagaren behöver närvara vid förhöret eller ta ställning till om och hur barnet ska höras.'},
+ {id:'psyk',needs:t=>t.suspect&&!t.finesOnly,src:'afs8',reason:'Den misstänktes psykiska status kan antas avvika påtagligt från det normala (ÅFS 8 § 2).',
+  q:'Avviker den misstänktes psykiska status påtagligt från det normala?'},
+ {id:'tvm',needs:()=>true,src:'afs8',reason:'Tvångsmedel utöver de som polisen får använda i en polisledd förundersökning behövs (ÅFS 8 § 4).',
+  q:'Behövs något annat tvångsmedel än beslag, kroppsvisitation, kroppsbesiktning, fotografering och fingeravtryck, avspärrning eller mindre husrannsakan?',hint:'Till exempel husrannsakan av större omfattning, reseförbud eller hemliga tvångsmedel. Anhållande prövar åklagaren när gripandet anmäls.'},
+ {id:'svar',needs:()=>true,src:'afs7',reason:'Brottet är svårbedömt eller utredningen kräver åklagarens ledning (ÅFS 7 och 11 §§).',
+  q:'Är brottet svårbedömt, eller kräver utredningen något utöver det vanliga?',hint:'Till exempel internationellt samarbete, särskild företrädare för barn eller sakkunnig, bevistalan, företagsbot, förundersökningsbegränsning, eller många brott eller misstänkta när den misstänkte är under 18 år.'}
 ];
+/* Trafikbrott som förordning (2014:1106) undantar (3 § och 5 §): TBL 1 § första stycket och 2 §, endast böter. */
+const SU_EXEMPT=new Set(['traffic16-0','traffic16-2']);
 
-/* Frågor. kind: 'yn' (ja/nej), 'pick' (val), 'multi' (flerval). */
 function Q(id,c,k,tr){
+ const t=TAKEOVER.find(x=>x.id===id);
+ if(t)return {id,kind:'yn',text:t.q,hint:t.hint||''};
  switch(id){
   case 'gripen':return {id,kind:'yn',text:'Är någon gripen?'};
-  case 'misstankt':return {id,kind:'yn',text:'Finns det någon som är skäligen misstänkt?'};
+  case 'misstankt':return {id,kind:'yn',text:'Är någon skäligen misstänkt?'};
+  case 'pol':return {id,kind:'yn',text:'Är den misstänkte anställd inom polisen, polisstudent, åklagare eller domare?',hint:'Även uppdragstagare som arbetar under ledning av en polisman och vissa andra offentliga befattningshavare.'};
+  case 'polTjanst':return {id,kind:'yn',text:'Har brottet samband med den misstänktes anställning?'};
   case 'villkor':return {id,kind:'yn',text:k.cond.q,hint:k.cond.hint||''};
-  case 'narstaende':return {id,kind:'yn',text:'Innefattar brottet våld eller hot om våld mot en närstående eller tidigare närstående?',hint:'Till exempel make, sambo, partner, barn, förälder eller en tidigare partner (som i BrB 4:4 a).'};
+  case 'narstaende':return {id,kind:'yn',text:'Har brottet riktats mot en närstående eller tidigare närstående, med våld eller hot om våld?',hint:'Till exempel make, sambo, partner, tidigare partner, barn eller förälder (som i BrB 4:4 a).'};
   case 'mal18':return {id,kind:'yn',text:'Är målsäganden under 18 år?'};
-  case 'rare':return {id,kind:'multi',text:'Gäller något av följande?',options:RARE.filter(o=>!(o.hideIfFines&&tr.finesOnly)&&(!o.only||tr[o.only]))};
   case 'ung':return {id,kind:'yn',text:'Är den gripne under 18 år, eller kan vara det?'};
   case 'forsvarare':return {id,kind:'yn',text:'Vill den gripne ha en försvarare, eller bedömer du att en försvarare behövs?'};
  }
@@ -201,15 +210,36 @@ function assess(c,ans={}){
  if(ans.gripen===undefined)return ask('gripen');
  if(!ans.gripen&&ans.misstankt===undefined)return ask('misstankt');
  const suspect=!!(ans.gripen||ans.misstankt);
+ if(k.note)notes.push(k.note);
+
+ // Förordning (2014:1106): ger alltid ett eget resultat (SU och förhör av åklagare eller SU). Frågas därför först.
+ if(suspect&&!SU_EXEMPT.has(c.id)){
+  if(ans.pol===undefined)return ask('pol');
+  let su=ans.pol;
+  if(su&&tr.finesOnly){ // 5 §: bötesbrott utan samband med anställningen omfattas inte.
+   if(ans.polTjanst===undefined)return ask('polTjanst');
+   if(!ans.polTjanst){su=false;notes.push('Förordning (2014:1106) gäller inte bötesbrott utan samband med anställningen när polisen utfärdar ordningsbot eller inleder förundersökning (5 §). Ett beslut att lägga ned en sådan förundersökning fattas av åklagare.');src.add('afs5');}
+  }
+  if(su){
+   src.add('afs5');
+   return {result:{lead:'su',leadText:'Åklagarledd – via Avdelningen för särskilda utredningar',
+    reasons:['Den misstänkte omfattas av förordning (2014:1106). Ärendet handläggs av Avdelningen för särskilda utredningar (SU) och åklagare (ÅFS 5 §).'],
+    when:'Omedelbart',
+    whenText:'Lämna ärendet omedelbart till SU, som genast lämnar det vidare till åklagare. Håll inte förhör med den misstänkte själv: förhöret ska hållas av åklagare eller av en polisman vid SU (förordning 2014:1106 9 och 11 §§).'+(ans.gripen?' Gripandet ska skyndsamt anmälas till åklagaren (RB 24:8).':''),
+    checklist:false,notes:[...new Set(notes)],sources:[...src,...(ans.gripen?['rb248']:[])].map(s=>SOURCES[s]),classification:k}};
+  }
+ }
+
  let enkel=k.cls==='enkel';
- if(k.cls==='villkor'){if(ans.villkor===undefined)return ask('villkor');enkel=ans.villkor===k.cond.yes;}
  let lead=null; // 'ak' | 'polis' | 'polis-tills'
- // ÅFS 6 §: gäller oavsett misstanke. Frågas bara när svaret annars skulle bli polisledning.
  if(tr.childSexual){lead='ak';reasons.push('Brottet innefattar en sexuell handling mot ett barn (ÅFS 6 § 2).');src.add('afs6');}
+ // Villkoret i bilagan avgör om brottet är enkelt. Det spelar ingen roll om åklagaren redan leder.
+ if(!lead&&k.cls==='villkor'){if(ans.villkor===undefined)return ask('villkor');enkel=ans.villkor===k.cond.yes;}
+ // ÅFS 6 §: gäller oavsett misstanke. Frågas bara när svaret annars skulle bli polisledning.
  const wouldBePolice=enkel||!suspect;
  if(!lead&&tr.violence&&wouldBePolice){
   if(ans.narstaende===undefined)return ask('narstaende');
-  if(ans.narstaende){lead='ak';reasons.push('Brottet innefattar våld eller hot mot en närstående (ÅFS 6 § 1).');src.add('afs6');}
+  if(ans.narstaende){lead='ak';reasons.push('Brottet innefattar våld eller hot om våld mot en närstående (ÅFS 6 § 1).');src.add('afs6');}
  }
  if(!lead&&tr.sexual&&!suspect){
   if(ans.mal18===undefined)return ask('mal18');
@@ -218,19 +248,19 @@ function assess(c,ans={}){
  if(!lead&&suspect&&!enkel){
   lead='ak';reasons.push(k.cls==='villkor'?'Villkoret i bilagan är inte uppfyllt, så brottet är inte av enkel beskaffenhet, och någon är skäligen misstänkt (RB 23:3).':'Brottet är inte av enkel beskaffenhet och någon är skäligen misstänkt (RB 23:3).');src.add('rb233');src.add('afs4');
  }
- if(!lead&&suspect&&enkel){
-  if(!lead){
-   if(ans.rare===undefined)return ask('rare');
-   const hit=RARE.filter(o=>(ans.rare||[]).includes(o.id));
-   if(hit.length){lead='ak';for(const o of hit){reasons.push(o.reason);src.add(o.src);}}
+ // ÅFS 7 och 8 §§: en fråga i taget, bara så länge förundersökningen annars skulle ledas av polis.
+ if(!lead){
+  const ctx={...tr,suspect};
+  for(const t of TAKEOVER){
+   if(!t.needs(ctx))continue;
+   if(ans[t.id]===undefined)return ask(t.id);
+   if(ans[t.id]){lead='ak';reasons.push(t.reason);src.add(t.src);if(t.id==='svar')src.add('afs11');break;}
   }
-  if(!lead){lead='polis';reasons.push('Brottet är av enkel beskaffenhet ('+k.row+') och inget av undantagen gäller (ÅFS 4 §).');src.add('afs4');}
  }
- if(!lead){ // ingen misstänkt
-  if(enkel){lead='polis';reasons.push('Brottet är av enkel beskaffenhet och ingen är skäligen misstänkt.');src.add('afs4');}
+ if(!lead){
+  if(enkel){lead='polis';reasons.push((suspect?'Brottet är av enkel beskaffenhet ('+k.row+') och inget undantag gäller':'Brottet är av enkel beskaffenhet ('+k.row+') och ingen är skäligen misstänkt')+' (ÅFS 4 §).');src.add('afs4');}
   else{lead='polis-tills';reasons.push('Brottet är inte av enkel beskaffenhet, men ingen är skäligen misstänkt ännu. Åklagaren tar över när någon blir skäligen misstänkt (RB 23:3).');src.add('rb233');}
  }
- if(k.note)notes.push(k.note);
 
  // ---- Åklagarkontakt ----
  let when,whenText,check=false;
@@ -241,7 +271,7 @@ function assess(c,ans={}){
   else{when='Snarast';whenText='Överlämna till åklagaren snarast. Åklagaren leder förundersökningen även om ingen är misstänkt.';}
  }else if(lead==='polis-tills'){
   if(tr.min4){check=true;when='Genast';whenText='Underrätta åklagaren genast. Brottet har minimistraff fängelse fyra år eller mer (ÅFS 10 §). Åklagaren beslutar om ledningen ska tas över redan nu.';src.add('afs10');}
-  else{when='När någon blir misstänkt';whenText='Ingen åklagarkontakt behövs nu. Kontakta åklagaren så snart någon blir skäligen misstänkt. Är det redan nu sannolikt att åklagaren tar över, underrätta genast (ÅFS 10 §).';src.add('afs10');}
+  else{when='När någon blir misstänkt';whenText='Ingen åklagarkontakt behövs nu. Kontakta åklagaren så snart någon blir skäligen misstänkt.';src.add('rb233');}
  }else if(ans.gripen){
   if(ans.ung===undefined)return ask('ung');
   if(ans.ung){check=true;when='Före förhöret';whenText='Kontakta åklagaren före förhöret. Den gripne är eller kan vara under 18 år.';src.add('overens');src.add('rar06');src.add('lul');}
@@ -257,11 +287,11 @@ function assess(c,ans={}){
   when='Ingen kontakt nu';whenText='Ingen åklagarkontakt behövs nu. Polisen leder förundersökningen.';
  }
  if(ans.gripen&&ans.ung!==false){
-  notes.push((ans.ung?'':'Är den gripne under 18 år: ')+'Försvarare ska i nästan alla fall närvara vid förhör i sak med en ung misstänkt. Kan försvarare inte komma hålls bara ett delgivningsförhör (RåR 2006:3).');src.add('rar06');
-  notes.push('Kan den gripne vara under 15 år? En 14-åring är straffmyndig bara för brott med minimistraff fängelse fyra år eller mer (BrB 1:6), annars inte alls, och gripandet ska då hävas.'+(c.age14Exception15?.status==='minimum-threshold-met'?' Detta brott når gränsen.':' Detta brott når inte gränsen.'));src.add('brb16');
+  notes.push((ans.ung?'':'Om den gripne är under 18 år: ')+'Försvarare ska i nästan alla fall närvara vid förhör i sak med en ung misstänkt. Kan försvarare inte komma hålls bara ett delgivningsförhör (RåR 2006:3).');src.add('rar06');
+  notes.push('Om den gripne kan vara under 15 år: en 14-åring är straffmyndig bara för brott med minimistraff fängelse fyra år eller mer (BrB 1:6). Yngre än så är ingen straffmyndig. Är den gripne inte straffmyndig ska gripandet hävas.'+(c.age14Exception15?.status==='minimum-threshold-met'?' Detta brott når fyraårsgränsen.':' Detta brott når inte fyraårsgränsen.'));src.add('brb16');
  }
- if(lead==='polis'&&suspect&&!ans.gripen)notes.push('Är den misstänkte under 18 år ska åklagaren hållas underrättad om förundersökningen (FUK 2 §) och undersökningsledaren vara förordnad för unga (LUL 2 §).'),src.add('fuk2'),src.add('lul');
- if(lead==='ak'&&!reasons.some(r=>/2014:1106/.test(r)))notes.push('Är den misstänkte polisanställd, polisstudent, åklagare eller domare lämnas ärendet omedelbart till Avdelningen för särskilda utredningar (förordning 2014:1106).');
+ if(lead==='polis'&&suspect&&!ans.gripen)notes.push('Om den misstänkte är under 18 år: åklagaren ska hållas underrättad om förundersökningen (FUK 2 §) och undersökningsledaren ska vara förordnad för unga (LUL 2 §).'),src.add('fuk2'),src.add('lul');
+ if(lead==='polis'||lead==='polis-tills')notes.push('Uppstår senare någon av omständigheterna i ÅFS 6–8 §§, till exempel att kontaktförbud söks eller att andra tvångsmedel behövs, tar åklagaren över.');
  const leadText={ak:'Åklagarledd',polis:'Polisledd','polis-tills':'Polisledd tills vidare'}[lead];
  return {result:{lead,leadText,reasons,when,whenText,checklist:check,notes:[...new Set(notes)],sources:[...src].map(s=>SOURCES[s]),classification:k}};
 }
@@ -275,18 +305,14 @@ function render(c,ans){
  const back=Object.keys(ans).length?'<button type="button" class="fu18-back" data-fu18="back">← Föregående fråga</button>':'';
  if(r.question){
   const q=r.question;
-  let body;
-  if(q.kind==='multi')body='<button type="button" class="fu18-btn fu18-none" data-fu18="none">Inget av detta</button>'+
-   '<div class="fu18-multi">'+q.options.map(o=>'<label class="fu18-opt"><input type="checkbox" value="'+esc(o.id)+'"><span>'+esc(o.text)+'</span></label>').join('')+'</div>'+
-   '<button type="button" class="fu18-btn fu18-go" data-fu18="multi">Fortsätt med markerade</button>';
-  else body='<div class="fu18-yn"><button type="button" class="fu18-btn" data-fu18="yes">Ja</button><button type="button" class="fu18-btn" data-fu18="no">Nej</button></div>';
+  const body='<div class="fu18-yn"><button type="button" class="fu18-btn" data-fu18="yes">Ja</button><button type="button" class="fu18-btn" data-fu18="no">Nej</button></div>';
   return '<div class="fu18" data-fu18-q="'+esc(q.id)+'"><p class="fu18-step">Fråga '+r.step+'</p><p class="fu18-q">'+esc(q.text)+'</p>'+(q.hint?'<p class="fu18-hint">'+esc(q.hint)+'</p>':'')+body+back+'</div>';
  }
  const x=r.result;
  const checklist=x.checklist?'<div class="fu18-check"><strong>Inför kontakten</strong><ul><li>Registrera brottsmisstanken och gör elektronisk lottning.</li><li>Kör MR/BR.</li><li>Var påläst om vilka beslut och tvångsmedel som redan har verkställts.</li></ul></div>':'';
  const src=x.sources.map(s=>'<div class="fu18-src"><strong>'+esc(s.label)+'</strong><p>'+esc(s.quote).replace(/\n/g,'</p><p>')+'</p><a class="source-link" href="'+esc(s.url)+'" target="_blank" rel="noopener noreferrer">Öppna källan</a></div>').join('');
  return '<div class="fu18 fu18-result" data-fu18-lead="'+esc(x.lead)+'">'+
-  '<div class="fu18-row '+(x.lead==='ak'?'ak':'pol')+'"><small>FÖRUNDERSÖKNINGSLEDARE</small><strong>'+esc(x.leadText)+'</strong><p>'+x.reasons.map(esc).join(' ')+'</p></div>'+
+  '<div class="fu18-row '+(x.lead==='ak'||x.lead==='su'?'ak':'pol')+'"><small>FÖRUNDERSÖKNINGSLEDARE</small><strong>'+esc(x.leadText)+'</strong><p>'+x.reasons.map(esc).join(' ')+'</p></div>'+
   '<div class="fu18-row when"><small>ÅKLAGARKONTAKT</small><strong>'+esc(x.when)+'</strong><p>'+esc(x.whenText)+'</p></div>'+
   checklist+
   (x.notes.length?'<ul class="fu18-notes">'+x.notes.map(n=>'<li>'+esc(n)+'</li>').join('')+'</ul>':'')+
@@ -294,5 +320,5 @@ function render(c,ans){
   '<div class="fu18-end">'+back+'<button type="button" class="fu18-btn fu18-restart" data-fu18="restart">Börja om</button></div></div>';
 }
 
-window.BK_FU18={release:'1.8',classify,traits,assess,render,RARE,SOURCES,ENKEL,VILLKOR};
+window.BK_FU18={release:'1.8.1',classify,traits,assess,render,TAKEOVER,SOURCES,ENKEL,VILLKOR};
 })();
