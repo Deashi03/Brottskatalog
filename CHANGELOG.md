@@ -1,5 +1,11 @@
 # Ändringslogg – Brottskatalog
 
+## 1.8.4 – 2026-11-04
+
+### FU-ledning och åklagarkontakt
+- När förundersökningen är polisledd och någon är gripen förklarar resultatet varför: gripandet gör inte förundersökningen åklagarledd. Gripandet anmäls till åklagaren, som beslutar om anhållande. Anhåller åklagaren tar åklagaren över ledningen (RB 24:8, ÅFS 8 § 4).
+- Är den gripne eller kan vara under 18 år framgår också att förundersökningen kan vara polisledd, men att undersökningsledaren ska vara särskilt förordnad för unga (LUL 2 §).
+
 ## 1.8.3 – 2026-11-03
 
 ### FU-ledning och åklagarkontakt

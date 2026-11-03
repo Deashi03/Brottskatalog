@@ -315,6 +315,9 @@ function assess(c,ans={}){
    else{when='Efter förhöret';whenText='Håll förhöret så snart som möjligt och anmäl därefter gripandet skyndsamt till åklagaren, som beslutar om anhållande. Polisen får häva gripandet innan åklagaren underrättats, om det är uppenbart att skäl för fortsatt frihetsberövande saknas.';src.add('overens');src.add('rar17');}
   }
   src.add('rb248');
+  // 1.8.4: förklara att gripandet inte i sig gör förundersökningen åklagarledd.
+  reasons.push('Att någon är gripen gör inte förundersökningen åklagarledd. Gripandet ska anmälas till åklagaren, som beslutar om anhållande (RB 24:8). Anhåller åklagaren den gripne tar åklagaren över ledningen.');
+  if(ans.ung){reasons.push('Att den gripne är eller kan vara under 18 år ändrar inte heller vem som leder. Förundersökningen kan vara polisledd, men undersökningsledaren ska vara särskilt förordnad för unga (LUL 2 §).');src.add('lul');}
  }else{
   when='Ingen kontakt nu';whenText='Ingen åklagarkontakt behövs nu. Polisen leder förundersökningen.';
  }
@@ -372,5 +375,5 @@ function render(c,ans){
   '<div class="fu18-end">'+back+'<button type="button" class="fu18-btn fu18-restart" data-fu18="restart">Börja om</button></div></div>';
 }
 
-window.BK_FU18={release:'1.8.3',classify,traits,assess,render,TAKEOVER,INFO,SVAR_ITEMS,SOURCES,ENKEL,VILLKOR};
+window.BK_FU18={release:'1.8.4',classify,traits,assess,render,TAKEOVER,INFO,SVAR_ITEMS,SOURCES,ENKEL,VILLKOR};
 })();
