@@ -4,7 +4,7 @@ const root=path.resolve(import.meta.dirname,'..');
 const read=p=>fs.readFileSync(path.join(root,p),'utf8');
 const html=read('index.html'),sw=read('service-worker.js');
 const w={};vm.runInNewContext(read('fu-ledning-18.js'),{window:w});
-const F=w.BK_FU18;assert.ok(F&&F.release==='1.8.3');
+const F=w.BK_FU18;assert.ok(F&&F.release==='1.8.4');
 
 const card=(id,title,shortRef,min,max,extra={})=>({id,title,shortRef,penaltyRange:{min,max},...extra});
 const C={
@@ -151,4 +151,10 @@ const intl=F.SVAR_ITEMS.find(i=>i.text==='Internationellt samarbete').t.join(' '
 assert.match(intl,/Det kan bli aktuellt om/);assert.match(intl,/utländsk medborgare räcker inte/);
 for(const i of [...Object.values(F.INFO),...F.SVAR_ITEMS])assert.ok(!/^ÅFS 2005:9 \d/.test(i.t[0]),'Förklaringen börjar med egna ord, inte lagtext');
 for(const s of Object.values(F.SOURCES))assert.ok(!/^ÅFS|^RB |^RåR|^LUL/.test(s.label),'Fullständigt källnamn: '+s.label);
-console.log('PASS 1.8.3 FU-ledning: klassning mot ÅFS-bilagan, frågeflöden, hoppregler, åklagarkontakt och inkoppling');
+// 1.8.4: polisledd + gripen förklarar varför gripandet inte gör förundersökningen åklagarledd.
+x=run(C.snatteri,G);assert.equal(x.lead,'polis');assert.ok(x.reasons.some(r=>/gripen gör inte förundersökningen åklagarledd/.test(r)));
+assert.ok(!x.reasons.some(r=>/LUL 2 §/.test(r)),'Vuxen: inget om unga');
+x=run(C.snatteri,{...G,ung:true});assert.equal(x.lead,'polis');assert.ok(x.reasons.some(r=>/förordnad för unga \(LUL 2 §\)/.test(r)));
+assert.ok(!run(C.snatteri,{gripen:false,misstankt:true}).reasons.some(r=>/gripen/.test(r)),'Inte gripen: ingen gripanderad');
+assert.ok(!run(C.grovMiss,G).reasons.some(r=>/gör inte förundersökningen åklagarledd/.test(r)),'Åklagarledd: ingen sådan rad');
+console.log('PASS 1.8.4 FU-ledning: klassning mot ÅFS-bilagan, frågeflöden, hoppregler, åklagarkontakt och inkoppling');

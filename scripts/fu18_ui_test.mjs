@@ -53,7 +53,7 @@ try{
  await answer('no',/försvarare/);
  await answer('no');
  const result=await page.locator('#sheet-root .fu18-result').innerText();
- for(const s of ['Polisledd','Efter förhöret','Inför kontakten','Åklagaren tar över ledningen om','anhålla den gripne'])assert.ok(result.includes(s),'Resultatet saknar '+s);
+ for(const s of ['Polisledd','Efter förhöret','Inför kontakten','Åklagaren tar över ledningen om','anhålla den gripne','gör inte förundersökningen åklagarledd'])assert.ok(result.includes(s),'Resultatet saknar '+s);
  await page.click('#sheet-root [data-fu18="restart"]');
  assert.equal(await q(),'Är någon gripen?');
  // Grov misshandel, gripen: ett tryck till svaret.
@@ -73,5 +73,5 @@ try{
 await page.waitForSelector('#app #sec-tvang > summary');
  assert.equal(await page.locator('#app #sec-fu18').count(),0,'Förstadier ingår inte i 1.8');
  assert.deepEqual(errors,[]);
- console.log('PASS 1.8.3 FU-ledning i webbläsaren: '+r.n+' brott '+JSON.stringify(r.counts)+', högst '+r.maxQ+' frågor, ingen onödig fråga, gränssnittsflöde och förstadier');
+ console.log('PASS 1.8.4 FU-ledning i webbläsaren: '+r.n+' brott '+JSON.stringify(r.counts)+', högst '+r.maxQ+' frågor, ingen onödig fråga, gränssnittsflöde och förstadier');
 }finally{await browser.close();}
