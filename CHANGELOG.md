@@ -1,5 +1,19 @@
 # Ändringslogg – Brottskatalog
 
+## 1.8 – 2026-11-03
+
+### Nytt verktyg: FU-ledning och åklagarkontakt
+- Under **Tvångsmedel – översikt** i brottskortet finns knappen **FU-ledning och åklagarkontakt**. Verktyget ger två konkreta svar för brottet:
+  1. **Förundersökningsledare:** åklagarledd, polisledd eller polisledd tills vidare (när ingen ännu är skäligen misstänkt).
+  2. **Åklagarkontakt:** före förhöret, efter förhöret, snarast, genast eller ingen kontakt nu.
+- Frågorna kommer en i taget och bara när de kan ändra svaret. Högst fem frågor. Exempel:
+  - Grov misshandel, gripen: ett tryck.
+  - Snatteri, gripen vuxen: fyra frågor.
+- Resultatet visar skälet, en checklista inför kontakten (lottning, MR/BR, verkställda beslut) och källorna med länkar.
+- Alla 393 grundbrott är klassade mot bilagan till ÅFS 2005:9 som enkla, enkla med villkor (till exempel "inte genom brand" eller "i samband med trafikolycka") eller inte enkla.
+- Bygger på RB 23:3 och 24:8, ÅFS 2005:9 (oförändrad sedan 2019 enligt regelförteckningen 2026-09-30), överenskommelsen om åklagarkontakt (Polisens PM 2018:5), RåR 2017:3, RåR 2006:3, LUL 2 och 24 §§, FUK 2 §, förordning 2014:1106 och BrB 1:6.
+- Förstadier (försök, förberedelse, stämpling) ingår inte ännu.
+
 ## 1.7.3 – 2026-11-03
 
 ### Enklare brottskort
