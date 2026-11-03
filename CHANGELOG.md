@@ -1,5 +1,25 @@
 # Ändringslogg – Brottskatalog
 
+## 1.8.2 – 2026-11-03
+
+### FU-ledning och åklagarkontakt
+- Menyraden **FU-ledning och åklagarkontakt** öppnar verktyget direkt. Den beskrivande texten och Starta-knappen är borttagna.
+- **ⓘ Förklaring** finns vid frågor som kräver juridisk bedömning, till exempel skäligen misstänkt, närstående, hatbrottsmotiv, kontaktförbud, psykisk status, tvångsmedel, ålder och försvarare. Förklaringen citerar lagtext eller ÅFS och anger källan.
+- Frågan om svårbedömda eller ovanliga omständigheter visas som en punktlista med en ⓘ-knapp efter varje punkt:
+  - internationellt samarbete
+  - domstolsåtgärd
+  - bevistalan
+  - företagsbot
+  - förundersökningsbegränsning
+  - svårbedömt brott
+  - flera brott eller misstänkta när den misstänkte är under 18 år
+- Förklaringen till domstolsåtgärd anger att målsägandebiträde och offentlig försvarare inte i sig gör att åklagaren tar över.
+- Tvångsmedelsfrågan visar som punktlista de tvångsmedel polisen får använda. När någon är gripen står också **gripandet och ett eventuellt anhållande** med.
+- Upplysningen om 14-åringar är borttagen.
+
+### Brottskortet
+- **Rättslig kontroll** är minimerad till en liten textlänk ovanför versionsraden.
+
 ## 1.8.1 – 2026-11-03
 
 ### FU-ledning och åklagarkontakt

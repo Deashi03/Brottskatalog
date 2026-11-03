@@ -4,7 +4,7 @@ const root=path.resolve(import.meta.dirname,'..');
 const read=p=>fs.readFileSync(path.join(root,p),'utf8');
 const html=read('index.html'),sw=read('service-worker.js');
 const w={};vm.runInNewContext(read('fu-ledning-18.js'),{window:w});
-const F=w.BK_FU18;assert.ok(F&&F.release==='1.8.1');
+const F=w.BK_FU18;assert.ok(F&&F.release==='1.8.2');
 
 const card=(id,title,shortRef,min,max,extra={})=>({id,title,shortRef,penaltyRange:{min,max},...extra});
 const C={
@@ -57,7 +57,8 @@ assert.ok(x.sources.some(s=>s.label.startsWith('RB 24:8')));
 // 2) Försvararfråga eller ung ⇒ före förhöret.
 assert.equal(run(C.snatteri,{...G,forsvarare:true}).when,'Före förhöret');
 x=run(C.snatteri,{...G,ung:true});assert.equal(x.when,'Före förhöret');assert.ok(!x.asked.includes('forsvarare'),'Ung ⇒ försvararfrågan behövs inte');
-assert.ok(x.notes.some(n=>/delgivningsförhör/.test(n))&&x.notes.some(n=>/14-åring/.test(n)&&/inte fyraårsgränsen/.test(n)));
+assert.ok(x.notes.some(n=>/delgivningsförhör/.test(n)));
+assert.ok(!x.notes.some(n=>/14-åring|straffmyndig/.test(n)),'1.8.2: ingen upplysning om 14-åringar');
 // 3) Inte enkel + gripen: åklagarledd, före förhöret. Bara gripen och SU-frågan.
 x=run(C.grovMiss,G);assert.equal(x.lead,'ak');assert.equal(x.when,'Före förhöret');assert.deepEqual(x.asked,['gripen','pol']);
 assert.equal(run(C.inbrott,G).lead,'ak');
@@ -119,7 +120,23 @@ assert.ok(Object.values(F.SOURCES).every(s=>/^https:\/\/(www\.aklagare\.se|data\
 // Inkoppling.
 assert.ok(html.includes('<script src="./fu-ledning-18.js"></script>')&&html.indexOf('fu-ledning-18.js')>html.indexOf('prosecution-171.js'));
 assert.ok(html.includes('data-action="fu18"')&&html.includes("if(action==='fu18'){showFu18(byId[id]);return;}"));
-assert.ok(html.includes("accordion('fu18','FU-ledning och åklagarkontakt'")&&html.indexOf("accordion('fu18'")>html.indexOf("accordion('tvang'"),'1.8.1: egen meny direkt under Tvångsmedel');
+assert.ok(html.includes('class="fu18-open" data-action="fu18"')&&html.indexOf('fu18-menu')>html.indexOf("accordion('tvang'"),'Egen menyrad direkt under Tvångsmedel som öppnar verktyget');
+assert.ok(!html.includes('fu18-intro'),'1.8.2: ingen beskrivande text före verktyget');
 assert.ok(!html.slice(html.indexOf('function coerciveSection'),html.indexOf('function alternativesSection')).includes('fu18'),'Inte inne i Tvångsmedel-menyn');
 assert.ok(sw.includes('./fu-ledning-18.js'));
-console.log('PASS 1.8.1 FU-ledning: klassning mot ÅFS-bilagan, frågeflöden, hoppregler, åklagarkontakt och inkoppling');
+// 1.8.2: förklaringar (ⓘ) och punktlistor.
+const qOf=(c,a)=>F.assess(c,a).question;
+for(const id of ['misstankt','pol','narstaende','mal15','hat','kf','barn','psyk','tvm','ung','forsvarare','mal18','polTjanst'])
+ assert.ok(F.INFO[id]&&F.INFO[id].t.length&&F.INFO[id].src,'Förklaring saknas: '+id);
+let qq=qOf(C.misshandel,{gripen:false,misstankt:true,pol:false,narstaende:false,mal15:false,hat:false,kf:false,barn:false,psyk:false,tvm:false});
+assert.equal(qq.id,'svar');assert.equal(qq.text,'Gäller något av följande?');
+assert.ok(qq.items.length>=6&&qq.items.every(i=>i.text&&i.t.length&&i.src),'Varje punkt har en egen förklaring');
+assert.ok(qq.items.some(i=>/målsägandebiträde/.test(i.t.join(' '))),'Förklaringen nämner att målsägandebiträde inte räcker');
+const rs=F.render(C.misshandel,{gripen:false,misstankt:true,pol:false,narstaende:false,mal15:false,hat:false,kf:false,barn:false,psyk:false,tvm:false});
+assert.equal((rs.match(/class="fu18-item"/g)||[]).length,qq.items.length,'ⓘ efter varje punkt');
+qq=qOf(C.snatteri,{gripen:true,pol:false,psyk:false});assert.equal(qq.id,'tvm');
+assert.ok(qq.items.some(i=>/anhållande/.test(i.text)),'Gripen: tvångsmedelsfrågan nämner anhållande');
+assert.ok(qq.info.t.some(t=>/Anhålls den gripne/.test(t)));
+qq=qOf(C.snatteri,{gripen:false,misstankt:true,pol:false,psyk:false});assert.ok(!qq.items.some(i=>/anhållande/.test(i.text)),'Inte gripen: inget om anhållande');
+assert.match(F.render(C.snatteri,{gripen:true,pol:false,psyk:false,tvm:false,svar:false,ung:false}),/class="fu18-help"/,'Försvararfrågan har förklaring');
+console.log('PASS 1.8.2 FU-ledning: klassning mot ÅFS-bilagan, frågeflöden, hoppregler, åklagarkontakt och inkoppling');

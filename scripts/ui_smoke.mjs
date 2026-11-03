@@ -16,7 +16,7 @@ try{
   await page.goto(url,{waitUntil:'networkidle'});
   await page.waitForSelector('#crime-search',{timeout:60000}).catch(()=>{});
   assert.ok(await page.locator('#crime-search').count(),'Search must exist');
-  assert.equal((await page.locator('.bk03-brand span').innerText()).trim(),'1.8.1','Search header must display current release 1.8.1');
+  assert.equal((await page.locator('.bk03-brand span').innerText()).trim(),'1.8.2','Search header must display current release 1.8.2');
   assert.equal(await page.evaluate(()=>window.BK_DATA.crimes.length),1557,'The V1.5 full database must be loaded');
 
   const custodyAudit=await page.evaluate(()=>{
@@ -490,7 +490,10 @@ try{
   assert.ok(bounds[0].includes('1 år 6 mån'),'Lower bound for gross assault');
   assert.ok(bounds[1].includes('7 år'),'Upper bound for gross assault');
   // 1.7.3: bara Lagtext, Rekvisit och Tvångsmedel finns kvar; 1.8.1: FU-ledning är en egen meny under Tvångsmedel.
-  assert.deepEqual((await page.locator('.accordion > summary').allInnerTexts()).map(t=>t.trim()),['Lagtext','Rekvisit','Tvångsmedel – översikt','FU-ledning och åklagarkontakt'],'Only the main sections remain');
+  assert.deepEqual((await page.locator('.accordion > summary').allInnerTexts()).map(t=>t.trim()),['Lagtext','Rekvisit','Tvångsmedel – översikt'],'Only the main sections remain');
+  // 1.8.2: FU-ledning är en egen menyrad direkt under Tvångsmedel som öppnar verktyget direkt.
+  assert.equal((await page.locator('#sec-fu18 .fu18-open').innerText()).trim(),'FU-ledning och åklagarkontakt');
+  assert.ok(await page.locator('#sec-fu18').evaluate(el=>el.previousElementSibling?.id==='sec-tvang'),'FU-menyn ligger direkt under Tvångsmedel');
   await page.goto(url+'#sok',{waitUntil:'networkidle'});
   await page.locator('#crime-search').fill('Tvegifte');
   await wait();
@@ -705,7 +708,7 @@ try{
   assert.equal(await page.evaluate(()=>window.BK_DATA.glossary['täckningsprincipen']===window.BK_REQUISITE_CONCEPTS15['bk:tackning']),true,'Glossary and requisite popup share one canonical definition');
   await page.goto(url+'#mer',{waitUntil:'networkidle'});
   const settings=await page.locator('body').innerText();
-  assert.ok(settings.includes('Version 1.8.1 · publicerad 2026-11-03'),'Published version must be visible in settings');
+  assert.ok(settings.includes('Version 1.8.2 · publicerad 2026-11-03'),'Published version must be visible in settings');
   assert.ok(settings.includes('Grunddata:'),'Source dataset age must be shown in settings');
   assert.ok(settings.includes('LAGKONTROLL'),'Source checker in settings');
   assert.deepEqual(errors,[],'No JS page errors');

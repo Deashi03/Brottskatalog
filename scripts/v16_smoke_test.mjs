@@ -28,7 +28,7 @@ assert.ok(html.includes("card('Utredningshäktning','RB 24:3',x.investigation,")
 assert.ok(!html.includes("accordion('age14'"));
 assert.ok(html.includes("age14Exception15?.status==='minimum-threshold-met'"));
 assert.match(html,/<strong>Brottskatalog<\/strong><span>\$\{window\.BK_RELEASE\}<\/span>/);
-assert.ok(sw.includes('brottskatalog-v181-20261103'));
+assert.ok(sw.includes('brottskatalog-v182-20261103'));
 for(const f of ['./traffic-16.js','./procedural-add16.js'])assert.ok(sw.includes(f),'LT/traffic asset omitted from offline cache');
 new vm.Script([...html.matchAll(/<script(?:\s[^>]*)?>([\s\S]*?)<\/script>/g)].at(-1)[1]);
 console.log('PASS V1.6: traffic search cards, source-bound LT, green/red custody form, abbreviated youth, and JS syntax');

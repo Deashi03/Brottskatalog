@@ -36,7 +36,6 @@ const SOURCES={
  rar06:{label:'RåR 2006:3 kap. 4 och bilaga 2',url:RAR06,quote:'Försvarare ska i nästan alla fall vara närvarande vid förhör i sak med en ung misstänkt. Kan försvarare inte närvara hålls bara ett delgivningsförhör (misstanke och inställning, samt personliga förhållanden som behövs för anhållandefrågan). Åklagaren prövar anhållande och häver gripandet om straffvärdet ligger på bötesnivå.'},
  lul:{label:'LUL 2 och 24 §§',url:LUL,quote:'En förundersökning mot den som inte har fyllt arton år ska ledas av en åklagare eller en anställd vid Polismyndigheten som myndigheten har förordnat. För en misstänkt som inte har fyllt arton år ska en offentlig försvarare förordnas, om det inte är uppenbart att han eller hon saknar behov av försvarare.'},
  fuk2:{label:'Förundersökningskungörelsen 2 §',url:FUK,quote:'Vid förundersökning mot någon som inte fyllt 18 år ska åklagaren alltid underrättas om förundersökningens gång, om det inte är obehövligt.'},
- brb16:{label:'BrB 1:6 andra stycket (SFS 2026:1528, t.o.m. 2031-09-09)',url:'https://data.riksdagen.se/dokument/sfs-1962-700.html',quote:'För brott som någon har begått när han eller hon var fjorton år får det dömas till påföljd om det för brottet inte är föreskrivet lindrigare straff än fängelse i fyra år, eller om det är fråga om försök, förberedelse eller stämpling till sådant brott.'}
 };
 
 /* ---------- Klassning mot bilagan till ÅFS 2005:9 ----------
@@ -164,6 +163,32 @@ function traits(c){
  };
 }
 
+/* Förklaringar bakom ⓘ-knapparna. Lagtext citeras ordagrant; riktlinjer och förarbeten anges som sådana. */
+const INFO={
+ misstankt:{t:['Lagen definierar inte "skäligen misstänkt". Enligt praxis och doktrin krävs konkreta omständigheter som med viss styrka talar för att personen har begått brottet. En allmän eller vag misstanke räcker inte.','Det är först när någon är skäligen misstänkt som åklagaren ska ta över ledningen av en förundersökning om ett brott som inte är av enkel beskaffenhet (RB 23:3).'],src:'RB 23:3'},
+ pol:{t:['Förordningen omfattar:','• alla anställda inom polisen, inte bara poliser (2 och 4 §§),','• uppdragstagare som med stöd av ett särskilt förordnande från Polismyndigheten utför arbete för myndigheten under ledning av en polisman (2 §),','• den som antagits till eller genomgår grundutbildning till polisman (4 §),','• ärenden om brott av åklagare, domare och vissa andra offentliga befattningshavare som handläggs av de särskilt avdelade åklagarna (6 §).','Förordningen gäller både brott med och utan samband med anställningen. Undantag finns för vissa trafikbrott (3 §) och för brott med endast böter i straffskalan utan samband med anställningen (5 §), när polisen utfärdar ordningsbot eller inleder förundersökning.'],src:'Förordning (2014:1106) 2–6 §§'},
+ polTjanst:{t:['Förordningen gäller brott som har samband med anställningen, till exempel ett brott i tjänsten eller vid myndighetsutövning (2 §). Brott utan sådant samband omfattas också (4 §), men inte om endast böter är föreskrivet för brottet och Polismyndigheten utfärdar ordningsbot eller inleder förundersökning (5 §). Ett beslut att lägga ned en sådan förundersökning fattas av åklagare.'],src:'Förordning (2014:1106) 2, 4 och 5 §§'},
+ narstaende:{t:['ÅFS 2005:9 6 § 1: åklagaren ska leda förundersökningen när brottet innefattar våld eller hot om våld mot närstående eller tidigare närstående person, oavsett om någon är skäligen misstänkt.','Enligt de allmänna råden avses med närstående detsamma som i BrB 4:4 a (grov fridskränkning). Lagen definierar inte begreppet. Enligt förarbetena avses främst make, sambo, partner, barn, föräldrar och syskon, men även andra som har en nära och förtroendefull relation till gärningsmannen, till exempel en pojkvän eller flickvän man inte bor med. Tidigare närstående omfattar till exempel en före detta partner.','Regeln gäller bara våld eller hot om våld. Andra brott mot en närstående, till exempel en stöld, omfattas inte.'],src:'ÅFS 2005:9 6 § med allmänna råd; BrB 4:4 a'},
+ mal18:{t:['ÅFS 2005:9 6 § 2: åklagaren ska leda förundersökningen när brottet innefattar en sexuell handling mot någon som är under arton år, oavsett om någon är skäligen misstänkt. Enligt de allmänna råden avses inte en gärning enligt BrB 6:10 (sexuellt ofredande).'],src:'ÅFS 2005:9 6 § med allmänna råd'},
+ mal15:{t:['ÅFS 2005:9 7 § 5: åklagaren ska överta ledningen när någon är skäligen misstänkt för ett brott för vilket det är föreskrivet fängelse två år eller mer och brottet riktats mot målsägandens liv, hälsa, frihet eller frid, om målsäganden vid tiden för anmälan inte har fyllt femton år.','Regeln gäller inte utredningar enligt LUL 31 §, det vill säga när även den misstänkte är under 15 år (ÅFS 1 §). Polisen leder då, om inte någon annan regel ger åklagarledning.'],src:'ÅFS 2005:9 1 och 7 §§'},
+ hat:{t:['ÅFS 2005:9 7 § 6: åklagaren ska överta ledningen när någon är skäligen misstänkt för ett brott där det är sannolikt att det finns ett motiv enligt BrB 29:2 p. 7.','BrB 29:2 p. 7 (ordagrant): "om ett motiv för brottet varit att kränka en person, en folkgrupp eller en annan sådan grupp av personer på grund av ras, hudfärg, nationellt eller etniskt ursprung, trosbekännelse, sexuell läggning, kön, könsidentitet eller könsuttryck eller annan liknande omständighet".','Motivet behöver inte vara det enda motivet ("ett motiv"), men det ska vara sannolikt.'],src:'ÅFS 2005:9 7 § 6; BrB 29:2 p. 7'},
+ kf:{t:['ÅFS 2005:9 8 § 3: åklagaren ska överta ledningen när en ansökan om kontaktförbud eller europeisk skyddsorder har gjorts.','Lag (1988:688) om kontaktförbud 1 §: ett kontaktförbud får meddelas om det på grund av särskilda omständigheter finns risk för att den som förbudet avses gälla mot kommer att begå brott mot, förfölja, otillbörligt övervaka eller på annat sätt allvarligt trakassera den som förbudet avses skydda, eller utsätta denne för påverkan för att hindra att han eller hon lämnar uppgifter till domstol eller brottsbekämpande myndighet.'],src:'ÅFS 2005:9 8 § 3; lag (1988:688) om kontaktförbud 1 §'},
+ barn:{t:['ÅFS 2005:9 8 § 1: åklagaren ska överta ledningen när någon som är under femton år ska höras under förundersökningen och detta påkallar att åklagare leder förundersökningen.','Enligt de allmänna råden bör bestämmelsen tillämpas om åklagarens närvaro krävs vid förhöret, åklagaren bör ta ställning till formerna för förhöret eller åklagaren bör ta ställning till om den unge över huvud taget ska höras.'],src:'ÅFS 2005:9 8 § 1 med allmänna råd'},
+ psyk:{t:['ÅFS 2005:9 8 § 2: åklagaren ska överta ledningen när den misstänktes psykiska status påtagligt kan antas avvika från det normala och svårare straff än böter kan följa på brottet.','Föreskriften ger ingen närmare vägledning om vad som är en påtaglig avvikelse. Är du osäker, kontakta åklagaren.'],src:'ÅFS 2005:9 8 § 2'},
+ tvm:{t:['ÅFS 2005:9 8 § 4: åklagaren ska överta ledningen när fråga uppkommer om användande av annat tvångsmedel enligt RB 24–28 kap. än husrannsakan som inte är av större omfattning, avspärrning, förbud m.m. för säkerställande av utredning om brott, kroppsvisitation, kroppsbesiktning, beslag samt tagande av fotografi, fingeravtryck och annan dylik åtgärd.','Föreskriften anger inte närmare var gränsen för en husrannsakan av större omfattning går.'],gripen:'Anhållande av den gripne prövas av åklagaren när gripandet anmäls (RB 24:8). Anhålls den gripne tar åklagaren över ledningen.',src:'ÅFS 2005:9 8 § 4'},
+ ung:{t:['Enligt överenskommelsen ska åklagaren kontaktas före förhöret om den misstänkte är under 18 år eller kan vara det. Är du osäker på åldern, svara ja.','För en misstänkt under 18 år ska offentlig försvarare förordnas, om det inte är uppenbart att han eller hon saknar behov av försvarare (LUL 24 §).'],src:'Överenskommelse ÅM2017-2028 (PM 2018:5); LUL 24 §'},
+ forsvarare:{t:['Enligt överenskommelsen ska åklagaren kontaktas före förhöret om den misstänkte begär försvarare eller om polisen bedömer att det finns behov av försvarare.','RB 21:3 a (ordagrant, i urval): "Offentlig försvarare ska också på begäran förordnas för den som är misstänkt för ett brott, för vilket det inte är stadgat lindrigare straff än fängelse i sex månader."','"Offentlig försvarare ska därutöver förordnas','1. om den misstänkte är i behov av försvarare med hänsyn till utredningen om brottet,','2. om försvarare behövs med hänsyn till att det är tveksamt vilken påföljd som ska väljas och det finns anledning att döma till en annan påföljd än böter eller villkorlig dom eller sådana påföljder i förening, eller','3. om det i övrigt finns särskilda skäl med hänsyn till den misstänktes personliga förhållanden eller till vad målet rör."','Är den misstänkte anhållen eller häktad ska offentlig försvarare förordnas om han eller hon begär det (RB 21:3 a första stycket).'],src:'RB 21:3 a; överenskommelse ÅM2017-2028 (PM 2018:5)'}
+};
+/* Punkterna i frågan om svårbedömt eller ovanligt. Var och en har en egen förklaring. */
+const SVAR_ITEMS=[
+ {text:'Internationellt samarbete',t:['ÅFS 2005:9 7 § 2: när det kan bli aktuellt att göra en framställning om utlämning eller överlämnande, att utfärda ett europeiskt frysningsbeslut, att utfärda en europeisk utredningsorder, att begära eller lämna internationell rättslig hjälp i brottmål, att överföra lagföringen till annat land eller annars när förundersökningen är av sådan art att samordning bör ske mellan svensk åklagare och åklagare eller motsvarande i ett annat land.'],src:'ÅFS 2005:9 7 § 2'},
+ {text:'En domstolsåtgärd behövs, t.ex. särskild företrädare för barn eller sakkunnig',t:['ÅFS 2005:9 7 § 1: när det under förundersökningen krävs annan åtgärd av domstol än förordnande av offentlig försvarare eller målsägandebiträde, till exempel förordnande av särskild företrädare för barn eller utseende av sakkunnig.','Att offentlig försvarare eller målsägandebiträde ska förordnas gör alltså inte i sig att åklagaren tar över.'],src:'ÅFS 2005:9 7 § 1'},
+ {text:'Bevistalan',only:'min4',t:['ÅFS 2005:9 7 § 3: när fråga om bevistalan aktualiseras.','LUL 38 §: åklagaren ska begära prövning i domstol av om den unge har begått ett brott (bevistalan) om brottet har begåtts innan den unge fyllt femton år, det inte är föreskrivet lindrigare straff än fängelse i fyra år för brottet (eller det är fråga om straffbelagt försök, förberedelse eller stämpling till ett sådant brott), en utredning enligt LUL 31 § har slutförts och det skulle ha funnits tillräckliga skäl för åtal om brottet hade begåtts efter femton års ålder.'],src:'ÅFS 2005:9 7 § 3; LUL 38 §'},
+ {text:'Företagsbot',t:['ÅFS 2005:9 7 § 7: när ett brott kan föranleda talan om företagsbot.','BrB 36:23 (i sammandrag): ett företag (enskild näringsidkare eller juridisk person) ska åläggas företagsbot för brott med strängare straff än penningböter som har begåtts i utövningen av näringsverksamhet, jämförbar offentlig verksamhet eller annan verksamhet som företaget bedriver om brottet varit ägnat att leda till ekonomisk fördel för företaget. Det krävs också att företaget inte gjort vad som skäligen kunnat krävas för att förebygga brottet, eller att brottet begåtts av en person i ledande ställning eller med särskilt ansvar för tillsyn eller kontroll. Gäller inte brott riktade mot företaget.'],src:'ÅFS 2005:9 7 § 7; BrB 36:23'},
+ {text:'Förundersökningsbegränsning som åklagaren beslutar om',t:['ÅFS 2005:9 11 §: kan förundersökningsbegränsning bli aktuell och beslutet ska fattas av åklagare, ska ärendet snarast överlämnas till åklagare.','RB 23:4 a: en förundersökning får läggas ned 1. om fortsatt utredning skulle kräva kostnader som inte står i rimligt förhållande till sakens betydelse och brottets straffvärde kan antas inte överstiga fängelse i tre månader, eller 2. om det kan antas att åtal inte skulle ske på grund av reglerna om åtalsunderlåtelse eller särskild åtalsprövning och inget väsentligt allmänt eller enskilt intresse åsidosätts. Polisen beslutar själv bara när beslutet grundas på åtalsunderlåtelse enligt RB 20:7 första stycket eller särskild åtalsprövning. Övriga beslut fattas av åklagare.'],src:'ÅFS 2005:9 11 §; RB 23:4 a'},
+ {text:'Brottet är svårbedömt',t:['ÅFS 2005:9 7 § 4: när brottet är svårbedömt eller det annars med hänsyn till utredningens art är påkallat att åklagaren leder förundersökningen.','Föreskriften definierar inte "svårbedömt". Enligt de allmänna råden till 10 § bör polisen underrätta åklagaren tidigt i ärenden som kräver komplicerade juridiska bedömningar, till exempel ekonomisk brottslighet eller svårbedömda specialstraffrättsliga brott.'],src:'ÅFS 2005:9 7 § 4 och allmänna råd till 10 §'},
+ {text:'Den misstänkte är under 18 år och utredningen gäller flera brott eller flera misstänkta',only:'suspect',t:['Enligt de allmänna råden till ÅFS 2005:9 7 § bör 7 § 4 tillämpas när den misstänkte är under arton år och utredningen är komplex med hänsyn till att den rör många brott eller många misstänkta.','Den bör också tillämpas när den misstänkte är under arton år och utredningen rör fler än ett brott eller fler än en misstänkt och särskilda avvägningar bör göras om utredning och lagföring ska ske successivt eller i ett sammanhang.'],src:'ÅFS 2005:9 7 § 4, allmänna råd'}
+];
 /* Omständigheter som gör att åklagaren ska överta ledningen (ÅFS 7 och 8 §§).
  * Varje omständighet är en egen ja/nej-fråga. Frågan ställs bara när svaret kan ändra resultatet,
  * det vill säga när förundersökningen annars skulle ledas av polis. needs = krav för att frågan ska ställas. */
@@ -179,16 +204,21 @@ const TAKEOVER=[
  {id:'psyk',needs:t=>t.suspect&&!t.finesOnly,src:'afs8',reason:'Den misstänktes psykiska status kan antas avvika påtagligt från det normala (ÅFS 8 § 2).',
   q:'Avviker den misstänktes psykiska status påtagligt från det normala?'},
  {id:'tvm',needs:()=>true,src:'afs8',reason:'Tvångsmedel utöver de som polisen får använda i en polisledd förundersökning behövs (ÅFS 8 § 4).',
-  q:'Behövs något annat tvångsmedel än beslag, kroppsvisitation, kroppsbesiktning, fotografering och fingeravtryck, avspärrning eller mindre husrannsakan?',hint:'Till exempel husrannsakan av större omfattning, reseförbud eller hemliga tvångsmedel. Anhållande prövar åklagaren när gripandet anmäls.'},
+  q:'Behövs något annat tvångsmedel än dessa?',items:g=>['Beslag','Kroppsvisitation','Kroppsbesiktning','Fotografering och fingeravtryck','Avspärrning','Husrannsakan av mindre omfattning'].concat(g?['Gripandet och ett eventuellt anhållande']:[]).map(text=>({text}))},
  {id:'svar',needs:()=>true,src:'afs7',reason:'Brottet är svårbedömt eller utredningen kräver åklagarens ledning (ÅFS 7 och 11 §§).',
-  q:'Är brottet svårbedömt, eller kräver utredningen något utöver det vanliga?',hint:'Till exempel internationellt samarbete, särskild företrädare för barn eller sakkunnig, bevistalan, företagsbot, förundersökningsbegränsning, eller många brott eller misstänkta när den misstänkte är under 18 år.'}
+  q:'Gäller något av följande?',items:(g,tr)=>SVAR_ITEMS.filter(i=>!i.only||tr[i.only])}
 ];
 /* Trafikbrott som förordning (2014:1106) undantar (3 § och 5 §): TBL 1 § första stycket och 2 §, endast böter. */
 const SU_EXEMPT=new Set(['traffic16-0','traffic16-2']);
 
-function Q(id,c,k,tr){
+function Q(id,c,k,tr,ans){
+ const q=Q0(id,c,k,tr,ans);const i=INFO[id];
+ if(i)q.info={t:i.t.concat(i.gripen&&ans.gripen?[i.gripen]:[]),src:i.src};
+ return q;
+}
+function Q0(id,c,k,tr,ans){
  const t=TAKEOVER.find(x=>x.id===id);
- if(t)return {id,kind:'yn',text:t.q,hint:t.hint||''};
+ if(t)return {id,kind:'yn',text:t.q,hint:t.hint||'',items:t.items?t.items(!!ans.gripen,{...tr,suspect:!!(ans.gripen||ans.misstankt)}):null};
  switch(id){
   case 'gripen':return {id,kind:'yn',text:'Är någon gripen?'};
   case 'misstankt':return {id,kind:'yn',text:'Är någon skäligen misstänkt?'};
@@ -206,7 +236,7 @@ function Q(id,c,k,tr){
 function assess(c,ans={}){
  const k=classify(c);if(!k)return {unsupported:true};
  const tr=traits(c),src=new Set(),reasons=[],notes=[];
- const ask=id=>({question:Q(id,c,k,tr),step:Object.keys(ans).length+1});
+ const ask=id=>({question:Q(id,c,k,tr,ans),step:Object.keys(ans).length+1});
  if(ans.gripen===undefined)return ask('gripen');
  if(!ans.gripen&&ans.misstankt===undefined)return ask('misstankt');
  const suspect=!!(ans.gripen||ans.misstankt);
@@ -288,7 +318,6 @@ function assess(c,ans={}){
  }
  if(ans.gripen&&ans.ung!==false){
   notes.push((ans.ung?'':'Om den gripne är under 18 år: ')+'Försvarare ska i nästan alla fall närvara vid förhör i sak med en ung misstänkt. Kan försvarare inte komma hålls bara ett delgivningsförhör (RåR 2006:3).');src.add('rar06');
-  notes.push('Om den gripne kan vara under 15 år: en 14-åring är straffmyndig bara för brott med minimistraff fängelse fyra år eller mer (BrB 1:6). Yngre än så är ingen straffmyndig. Är den gripne inte straffmyndig ska gripandet hävas.'+(c.age14Exception15?.status==='minimum-threshold-met'?' Detta brott når fyraårsgränsen.':' Detta brott når inte fyraårsgränsen.'));src.add('brb16');
  }
  if(lead==='polis'&&suspect&&!ans.gripen)notes.push('Om den misstänkte är under 18 år: åklagaren ska hållas underrättad om förundersökningen (FUK 2 §) och undersökningsledaren ska vara förordnad för unga (LUL 2 §).'),src.add('fuk2'),src.add('lul');
  if(lead==='polis'||lead==='polis-tills')notes.push('Uppstår senare någon av omständigheterna i ÅFS 6–8 §§, till exempel att kontaktförbud söks eller att andra tvångsmedel behövs, tar åklagaren över.');
@@ -305,8 +334,12 @@ function render(c,ans){
  const back=Object.keys(ans).length?'<button type="button" class="fu18-back" data-fu18="back">← Föregående fråga</button>':'';
  if(r.question){
   const q=r.question;
+  const infoBox=(i)=>'<div class="fu18-info">'+i.t.map(p=>'<p>'+esc(p)+'</p>').join('')+'<p class="fu18-info-src">'+esc(i.src)+'</p></div>';
+  const items=!q.items?'':q.items.some(it=>it.t)?'<ul class="fu18-items">'+q.items.map(it=>'<li><details class="fu18-item"><summary><span>'+esc(it.text)+'</span><span class="fu18-i" aria-label="Förklaring">i</span></summary>'+infoBox(it)+'</details></li>').join('')+'</ul>'
+   :'<ul class="fu18-plain">'+q.items.map(it=>'<li>'+esc(it.text)+'</li>').join('')+'</ul>';
+  const help=q.info?'<details class="fu18-help"><summary><span class="fu18-i" aria-hidden="true">i</span>Förklaring</summary>'+infoBox(q.info)+'</details>':'';
   const body='<div class="fu18-yn"><button type="button" class="fu18-btn" data-fu18="yes">Ja</button><button type="button" class="fu18-btn" data-fu18="no">Nej</button></div>';
-  return '<div class="fu18" data-fu18-q="'+esc(q.id)+'"><p class="fu18-step">Fråga '+r.step+'</p><p class="fu18-q">'+esc(q.text)+'</p>'+(q.hint?'<p class="fu18-hint">'+esc(q.hint)+'</p>':'')+body+back+'</div>';
+  return '<div class="fu18" data-fu18-q="'+esc(q.id)+'"><p class="fu18-step">Fråga '+r.step+'</p><p class="fu18-q">'+esc(q.text)+'</p>'+(q.hint?'<p class="fu18-hint">'+esc(q.hint)+'</p>':'')+items+help+body+back+'</div>';
  }
  const x=r.result;
  const checklist=x.checklist?'<div class="fu18-check"><strong>Inför kontakten</strong><ul><li>Registrera brottsmisstanken och gör elektronisk lottning.</li><li>Kör MR/BR.</li><li>Var påläst om vilka beslut och tvångsmedel som redan har verkställts.</li></ul></div>':'';
@@ -320,5 +353,5 @@ function render(c,ans){
   '<div class="fu18-end">'+back+'<button type="button" class="fu18-btn fu18-restart" data-fu18="restart">Börja om</button></div></div>';
 }
 
-window.BK_FU18={release:'1.8.1',classify,traits,assess,render,TAKEOVER,SOURCES,ENKEL,VILLKOR};
+window.BK_FU18={release:'1.8.2',classify,traits,assess,render,TAKEOVER,INFO,SVAR_ITEMS,SOURCES,ENKEL,VILLKOR};
 })();
