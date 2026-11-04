@@ -1,0 +1,116 @@
+@ v03-valdtakt
+T En person har samlag med en annan som säger nej och försöker ta sig därifrån.
+V En person har samlag med någon som sover eller är så berusad att hon inte kan ta ställning. Det är våldtäkt även utan våld, eftersom personen inte deltar frivilligt.
+@ v03-grov-valdtakt
+T Flera personer turas om att våldta en kvinna efter att ha drogat henne.
+@ v03-oaktsam-valdtakt
+T En person har samlag med en annan som ligger helt passiv och tyst. Han frågar inte och borde ha insett att hon inte deltog frivilligt.
+@ v03-sexuellt-overgrepp
+T En person tar på en annans könsorgan innanför kläderna utan att personen vill det.
+@ v03-grovt-sexuellt-overgrepp
+T Två personer håller fast en kvinna och tar henne på brösten och könsorganet medan hon försöker slita sig loss.
+@ v03-oaktsamt-sexuellt-overgrepp
+T En person smeker en annans könsorgan när den andre ligger stilla och inte svarar, och borde ha förstått att personen inte ville.
+@ v03-valdtakt-mot-barn
+T En vuxen har samlag med en 13-åring som han har lärt känna på internet.
+V En 19-åring har samlag med sin 14-åriga flickvän som säger att hon vill. Det är ändå brottsligt, eftersom barn under 15 år inte kan samtycka. Är omständigheterna mindre allvarliga kan det bedömas som sexuellt utnyttjande av barn.
+@ v03-grov-valdtakt-mot-barn
+T En styvfar våldtar sin 8-åriga styvdotter upprepade gånger.
+@ v03-sexuellt-utnyttjande-av-barn
+T En 18-åring har vid ett enstaka tillfälle samlag med sin 14-åriga flickvän, utan tvång och med hennes vilja. Domstolen bedömer brottet som mindre grovt än våldtäkt mot barn.
+@ v03-sexuellt-overgrepp-mot-barn
+T En vuxen tar på en 12-årings könsorgan utanpå kläderna.
+@ v04-grovt-sexuellt-overgrepp-mot-barn
+T En fotbollstränare utnyttjar sitt förtroende och tar upprepade gånger på könsorganen hos flera barn i laget.
+@ v15-family-samlag-med-avkomling
+T En pappa har frivilligt samlag med sin vuxna dotter.
+@ v15-family-samlag-med-syskon
+T Två vuxna helsyskon har frivilligt samlag med varandra.
+@ v03-utnyttjande-av-barn-for-sexuell-posering
+T En vuxen betalar en 14-åring för att posera i underkläder i sexuella poser framför en webbkamera.
+@ v04-grovt-utnyttjande-av-barn-for-sexuell-posering
+T En person driver en webbplats där barn mot betalning poserar sexuellt och tjänar stora summor på det.
+@ v04-utnyttjande-av-barn-genom-kop-av-sexuell-handling
+T En vuxen man ger en 16-årig flicka 500 kronor för att ha sex med honom.
+@ v03-sexuellt-ofredande
+T En person tar en främling på rumpan utanpå kläderna på en nattklubb.
+V En person blottar sitt könsorgan för en kvinna på en pendeltågsstation.
+@ v04-grovt-sexuellt-ofredande
+T Flera personer omringar en kvinna i en folksamling och tafsar på henne samtidigt.
+@ v04-sexuellt-ofredande-mot-barn
+T En vuxen skickar bilder på sitt könsorgan till en 12-åring i en chatt.
+V En vuxen förmår en 13-åring att visa sig naken framför webbkameran.
+@ v04-grovt-sexuellt-ofredande-mot-barn
+T En vuxen tafsar på en 7-årings könsorgan på ett badhus.
+@ v04-kontakt-for-att-traffa-ett-barn-i-sexuellt-syfte
+T En vuxen chattar med en 13-åring och bestämmer träff med henne för att ha sex.
+@ v03-kop-av-sexuell-tjanst
+T En person betalar en annan vuxen för sex på ett hotellrum.
+V En person betalar en annan för att utföra sexuella handlingar framför en webbkamera. Även det kan vara köp av sexuell handling.
+@ v03-koppleri
+T En person hyr ut lägenheter till kvinnor som säljer sex och tar en stor del av intäkterna.
+@ v03-grovt-koppleri
+T En person driver en organiserad verksamhet där ett tiotal kvinnor säljer sex och tjänar miljontals kronor.
+@ v03-tillgrepp-av-fortskaffningsmedel
+T Tonåringar tar en olåst moped, kör runt på den en kväll och lämnar den sedan på en parkering.
+@ v04-ringa-tillgrepp-av-fortskaffningsmedel
+T En person tar en grannes elsparkcykel med motor för en kort tur runt kvarteret och ställer tillbaka den.
+@ v03-grovt-tillgrepp-av-fortskaffningsmedel
+T En person tar en dyr bil och kör vårdslöst i hög hastighet så att bilen totalförstörs.
+@ v03-egenmaktigt-forfarande
+T En person tar grannens skottkärra utan lov för att använda den en dag, och lämnar sedan tillbaka den.
+V En hyresvärd byter lås till en hyresgästs lägenhet för att hyresgästen ligger efter med hyran.
+@ v03-grovt-egenmaktigt-forfarande
+T En person använder våld för att hindra en kronofogde från att ta med sig en bil.
+@ v03-sjalvtakt
+T En person som lånat ut sin cykel och inte fått tillbaka den hämtar den själv genom att klippa upp låntagarens lås.
+@ v03-olovlig-energiavledning
+T En person kopplar in sig på grannens elledning för att driva en odling utan att betala.
+@ v03-grov-olovlig-energiavledning
+T En person bygger en farlig förbikoppling i elcentralen och tar el för hundratusentals kronor till en cannabisodling.
+@ bedrageri
+T En person säljer en telefon på Blocket, tar emot betalning och skickar aldrig telefonen.
+V En person ringer en äldre person, utger sig för att vara från banken och får personen att logga in med BankID så att pengar kan föras över.
+@ ringa-bedrageri
+T En person lurar en kompis att låna ut 200 kronor genom att påstå att plånboken blivit stulen.
+V En person äter på en restaurang och smiter utan att betala (snyltning).
+@ grovt-bedrageri
+T En person lurar ett stort antal äldre att lämna ut sina bankkoder och tömmer deras konton på flera miljoner.
+@ v04-grovt-fordringsbedrageri
+T En person skickar falska fakturor för "katalogregistrering" till hundratals företag och samlar in stora belopp.
+@ v05-olovlig-befattning-med-betalningsverktyg
+T En person köper stulna kortuppgifter på internet och använder dem för att handla.
+@ v05-grov-olovlig-befattning-med-betalningsverktyg
+T En person ingår i ett nätverk som systematiskt skimmar bankkort vid uttagsautomater.
+@ v04-foretagskapning
+T En person anmäler sig själv som styrelseledamot i ett aktiebolag hos Bolagsverket utan att ha rätt till det, för att ta lån i bolagets namn.
+@ v03-utpressning
+T En person hotar att sprida nakenbilder på en annan om denne inte betalar 10 000 kronor, och personen betalar.
+@ v04-ringa-utpressning
+T En person hotar att berätta för en klasskamrats föräldrar att han rökt om han inte ger honom 50 kronor.
+@ v03-grov-utpressning
+T En person kräver pengar av en restaurangägare och hotar att gänget ska bränna ner restaurangen.
+@ v03-ocker
+T En person lånar ut pengar till en spelberoende i akut kris mot en ränta på 50 procent i månaden.
+@ v04-grovt-ocker
+T En person utnyttjar systematiskt nyanlända som inte förstår svenska och tar ut orimliga avgifter för hjälp med myndighetskontakter.
+@ v03-haleri
+T En person köper en ny mobiltelefon för 300 kronor av en okänd person på gatan och förstår att den är stulen.
+@ v03-grovt-haleri
+T En person driver en verksamhet där stulna båtmotorer köps upp och säljs vidare i stor skala.
+@ v04-utforselhaleri
+T En person lastar stulna bilar i en container i hamnen för att skicka dem utomlands.
+@ v04-grovt-utforselhaleri
+T En person organiserar export av ett stort antal stulna bilar och maskiner till länder utanför EU.
+@ v03-haleriforseelse
+T En person köper en begagnad cykel för 100 kronor av en okänd, utan att fråga, när det fanns skäl att misstänka att den var stulen.
+@ v05-oredligt-forfarande
+T En person lurar av hämnd en bekant att säga upp sitt hyreskontrakt genom att påstå att huset ska rivas. Bekanten skadas, men gärningspersonen tjänar själv inget på det.
+@ v05-svindleri
+T En person sprider falska rykten på ett aktieforum om att ett bolag ska köpas upp, för att höja kursen och sälja sina aktier.
+@ v05-ringa-svindleri
+T En person sprider en falsk uppgift i en liten grupp om ett bolag för att påverka priset på några aktier.
+@ v05-grovt-svindleri
+T En styrelse sprider falska siffror om ett bolags vinst i ett prospekt så att tusentals investerare köper aktier.
+@ v05-ockerpantning
+T En långivare kräver att låntagaren skriver på ett falskt skuldebrev på ett högre belopp, som långivaren använder för att pressa fram betalning.

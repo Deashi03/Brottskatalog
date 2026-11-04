@@ -1,0 +1,152 @@
+@ vapenbrott
+T En person förvarar en pistol i sin lägenhet utan licens.
+V En jägare lånar ut sitt licensierade gevär till en vän som saknar licens. Det är vapenbrott genom utlåning.
+@ vapenbrott-mindre
+T En person har ärvt ett gammalt jaktgevär och förvarat det i ett vapenskåp utan att söka licens, utan risk för brottslig användning.
+@ vapenbrott-oaktsamt
+T En jägare fortsätter att förvara sitt gevär efter att licensen har gått ut, eftersom han inte har kontrollerat giltighetstiden.
+@ grovt-vapenbrott
+T En person bär en laddad pistol i jackfickan på en gata i stan.
+@ synnerligen-grovt-vapenbrott
+T En person förvarar ett stort antal automatvapen i ett förråd åt ett kriminellt nätverk.
+@ knivbrott
+T En person har en kniv i fickan när han går på stan en fredagskväll, utan något befogat skäl.
+V En 19-åring har en springkniv hemma i sin bostad. Det är brott mot knivlagen eftersom personer under 21 år inte får inneha springknivar, var de än är.
+@ grovt-knivbrott
+T En person bär en machete under jackan i en folksamling i samband med en konflikt mellan två grupper.
+@ rattfylleri
+T En person kör bil hem från en fest efter att ha druckit några öl och blåser 0,4 promille vid en poliskontroll.
+V En person kör bil dagen efter att ha rökt cannabis. Det räcker att det finns spår av narkotika i blodet, även om personen inte känner sig påverkad.
+@ grovt-rattfylleri
+T En person kör bil med 1,5 promille alkohol i blodet och svänger mellan körfälten.
+@ olovlig-korning
+T En person vars körkort har återkallats kör ändå bil till jobbet.
+V En 16-åring kör sin förälders bil på en allmän väg utan körkort.
+@ grov-olovlig-korning
+T En person som fått sitt körkort återkallat kör bil varje dag till arbetet under flera månader.
+@ traffic16-0
+T En person kör 90 km/h på en 50-väg förbi en skola.
+@ traffic16-1
+T En person flyr från polisen i 180 km/h genom ett bostadsområde.
+@ traffic16-2
+T En bilist stannar mitt i en korsning i rusningstrafik och vägrar flytta bilen.
+@ traffic16-3
+T En person lånar ut sin bil till en kompis som han vet saknar körkort.
+@ traffic16-4
+T En person kör på en parkerad bil på en parkeringsplats och kör därifrån utan att lämna sina uppgifter.
+@ traffic16-5
+T En förare kör på en cyklist som skadas allvarligt och kör därifrån utan att hjälpa till.
+@ narkotikabrott-innehav
+T En person har tio gram cannabis och några ecstasytabletter i jackan.
+@ ringa-narkotikabrott-bruk
+T En person har rökt cannabis och det visar sig vid ett urinprov.
+@ ringa-narkotikabrott-innehav
+T En person har ett gram cannabis i fickan för eget bruk.
+@ narkotikabrott-overlatelse
+T En person säljer några gram kokain till en bekant.
+V En person ger bort en joint till en kompis på en fest. Även att ge bort narkotika är överlåtelse.
+@ narkotikabrott-framstallning
+T En person odlar cannabisplantor i sin lägenhet.
+@ narkotikabrott-forvarv
+T En person köper 200 gram cannabis för att sälja vidare i mindre portioner.
+@ narkotikabrott-transport
+T En person förvarar en väska med narkotika åt en bekant i sin lägenhet mot betalning.
+@ narkotikabrott-forsaljning
+T En person säljer narkotika till ungdomar via en app.
+@ narkotikabrott-framja
+T En person tar emot betalningar till sitt Swishkonto för en narkotikasäljares räkning.
+@ grovt-narkotikabrott
+T En person förvarar flera kilo amfetamin för vidare försäljning.
+@ synnerligen-grovt-narkotikabrott
+T En person leder ett nätverk som importerar och säljer hundratals kilo kokain.
+@ v09-smuggling
+T En person för in fyra liter sprit från ett land utanför EU och anmäler den inte i tullen, trots att mängden överstiger den tillåtna.
+V En person tar med sig en skyddad djurart som souvenir från en semester utan att anmäla den.
+@ v09-grov-smuggling
+T En person smugglar systematiskt in stora mängder sprit och cigaretter i lastbilar.
+@ v09-narkotikasmuggling
+T En person för in 300 gram cannabis från Danmark i bilen.
+@ v09-narkotikasmuggling-avsedd-att-saljas
+T En person smugglar in narkotika från Spanien som han tänker sälja i Sverige.
+@ v09-ringa-narkotikasmuggling
+T En person har med sig några tabletter narkotiska läkemedel utan recept vid inresa till Sverige.
+@ v09-grov-narkotikasmuggling
+T En person smugglar in flera kilo kokain gömt i en bil.
+@ v09-synnerligen-grov-narkotikasmuggling
+T Ett nätverk smugglar in hundratals kilo narkotika med lastbil som del av en organiserad verksamhet.
+@ v09-vapensmuggling
+T En person för in en pistol till Sverige gömd i bagaget.
+@ v09-ringa-vapensmuggling
+T En person för in ett obrukbart dekorationsvapen utan att anmäla det.
+@ v09-grov-vapensmuggling
+T En person smugglar in flera automatvapen i en bil.
+@ v09-synnerligen-grov-vapensmuggling
+T Ett nätverk smugglar in ett stort antal automatvapen och handgranater.
+@ v09-smuggling-av-explosiv-vara
+T En person för in kraftiga fyrverkeripjäser som kräver tillstånd från ett annat land utan att anmäla dem.
+@ v09-grov-smuggling-av-explosiv-vara
+T En person smugglar in ett flertal handgranater.
+@ v09-synnerligen-grov-smuggling-av-explosiv-vara
+T Ett nätverk smugglar in ett stort antal handgranater och sprängämnen.
+@ v09-olovlig-inforsel-eller-utforsel
+T En person för in en stor mängd tobak och missar av grov slarv att det kräver anmälan i tullen.
+@ v09-tullbrott
+T En person köper en dyr klocka i USA och undviker att betala tull och moms genom att inte anmäla den vid inresan.
+@ v09-grovt-tullbrott
+T Ett företag undervärderar systematiskt importerade varor med falska fakturor och undandrar miljonbelopp i tull och moms.
+@ v09-vardslos-tullredovisning
+T Ett företag uppger av grov slarv fel tullvärde på en import så att för lite tull betalas.
+@ v09-olovlig-befattning-med-smuggelgods
+T En person köper och säljer vidare smugglade cigaretter.
+@ v09-grov-olovlig-befattning-med-smuggelgods
+T En person lagrar och distribuerar stora mängder smuggelsprit i ett organiserat nätverk.
+@ v09-penningtvattsbrott
+T En person tar emot pengar från ett bedrägeri på sitt konto och för dem vidare till en annan person för att dölja var de kommer ifrån.
+V En person låter en bekant använda hans bankkonto för att ta emot och föra vidare pengar som kommer från brott (målvakt).
+@ v09-grovt-penningtvattsbrott
+T En person tvättar miljonbelopp från narkotikahandel genom olika bolag och utlandskonton.
+@ v09-penningtvattsforseelse
+T En person låter en bekant föra över 5 000 kronor via hans konto, trots att han borde ha förstått att pengarna kom från brott.
+@ v09-naringspenningtvatt
+T En bilhandlare säljer en bil mot kontant betalning av stora summor i sedlar och misstänker att pengarna kommer från brott, men frågar inte.
+@ v09-grov-naringspenningtvatt
+T En växlingskontorsägare hjälper systematiskt kriminella att växla miljonbelopp från brott.
+@ v09-ringa-naringspenningtvatt
+T En privatperson medverkar vid ett enstaka tillfälle till en betalning som skäligen kan antas ha syftat till att dölja brottspengar.
+@ v09-skattebrott
+T En hantverkare redovisar inte sina svarta inkomster i deklarationen och undandrar skatt.
+@ v09-skatteforseelse
+T En person lämnar en oriktig uppgift i deklarationen som undandrar ett mindre skattebelopp.
+@ v09-grovt-skattebrott
+T En företagsägare använder falska fakturor för att undandra skatt för flera miljoner.
+@ v09-vardslos-skatteuppgift
+T En person glömmer av grov slarv att deklarera intäkter från uthyrning av sin bostad.
+@ v09-skatteavdragsbrott
+T En arbetsgivare betalar ut löner utan att dra av preliminärskatt.
+@ v09-skatteredovisningsbrott
+T En person lämnar falska uppgifter till sin arbetsgivare om sin bostadsort för att få lägre skatteavdrag.
+@ v09-vardslos-skatteredovisning
+T En person lämnar av grov slarv en felaktig uppgift till sin arbetsgivare som påverkar skatteavdraget.
+@ v09-forsvarande-av-skattekontroll
+T En restaurangägare låter bli att använda ett kassaregister och bevarar inga kvitton, så att Skatteverket inte kan kontrollera försäljningen.
+@ v09-grovt-forsvarande-av-skattekontroll
+T Ett företag förstör systematiskt räkenskaper för att omöjliggöra kontroll av omsättning på flera miljoner.
+@ v09-bidragsbrott
+T En person tar ut föräldrapenning för dagar då hon i själva verket arbetar.
+V En person bor med en sambo men uppger att han bor ensam för att få högre bostadsbidrag.
+@ v09-ringa-bidragsbrott
+T En person anmäler inte en mindre inkomst och får därför lite för mycket i studiemedel.
+@ v09-grovt-bidragsbrott
+T En person använder falska läkarintyg för att få sjukpenning i flera år.
+@ v09-vardslost-bidragsbrott
+T En person missar av grov slarv att anmäla att hon har börjat arbeta och fortsätter att få a-kassa.
+@ v09-brott-mot-tillstandsplikten-for-brandfarliga-varor
+T Ett företag förvarar stora mängder gasol i ett lager utan tillstånd.
+@ v09-brott-mot-tillstandsplikten-for-explosiva-varor
+T En person förvarar en handgranat i sin lägenhet.
+@ v09-grovt-brott-mot-tillstandsplikten-for-explosiva-varor
+T En person förvarar flera handgranater i ett förråd i ett område där det pågår en gängkonflikt.
+@ v09-synnerligen-grovt-brott-mot-tillstandsplikten-for-explosiva-varor
+T En person förvarar ett stort antal handgranater och sprängämnen åt ett kriminellt nätverk.
+@ v04-arbetsmiljobrott
+T En arbetsgivare låter anställda arbeta på ett tak utan fallskydd och en arbetare faller och skadas allvarligt.
