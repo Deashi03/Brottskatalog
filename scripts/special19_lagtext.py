@@ -21,7 +21,7 @@ for f in sorted(glob.glob(os.path.join(ROOT,'data/special19/*.txt'))):
       for s in p[3].split(','):need[law].add(s.strip())
 def norm(block):
   return re.sub(r'[ \t]*\n[ \t]*',' ',block.strip())
-def sections(text):
+def sections(text,chaptered=True):
   """Returnerar {nyckel:[(status,text)]} där nyckel är 'kap:par' eller 'par'."""
   body=text.split('Källa: Regeringskansliet / Lagrummet',1)[-1]
   body=body.split('\nÖvergångsbestämmelser',1)[0]
@@ -32,6 +32,10 @@ def sections(text):
     paras=[p for p in re.split(r'\n\s*\n','\n'.join(buf)) if p.strip()]
     # rubriker mellan paragrafer saknar avslutande skiljetecken
     while len(paras)>1 and not re.search(r'[.:,;)]$',norm(paras[-1])):paras.pop()
+    if paras:
+      ls=[l for l in paras[-1].split('\n') if l.strip()]
+      while len(ls)>1 and not re.search(r'[.:,;)]$',ls[-1].strip()) and ls[-2].strip().endswith('.'):ls.pop()
+      paras[-1]='\n'.join(ls)
     t='\n\n'.join(norm(p) for p in paras)
     status='now'
     m=re.match(r'^(\S+ (?:[a-z] )?§) /Träder i kraft I:([^/]+)/',t)
@@ -42,13 +46,13 @@ def sections(text):
   prev=''
   for ln in lines:
     blank=not prev.strip();prev=ln
-    mc=re.match(r'^(\d+) kap\. [A-ZÅÄÖ]',ln)
-    if mc and blank and not ln.rstrip().endswith((',','och','eller')) and len(ln)<120:
-      flush();cur=None;buf=[];chap=mc.group(1);continue
+    mc=re.match(r'^(\d+(?: [a-z])?) kap\. [A-ZÅÄÖ]',ln)
+    if mc and blank and len(ln)<120:
+      flush();cur=None;buf=[];chap=mc.group(1).replace(' ','');continue
     mh=head.match(ln) if blank else None
     if mh:
       flush();num=mh.group(1).strip().replace(' ','')
-      cur=(chap+':' if chap else '')+num;buf=[ln];continue
+      cur=(chap+':' if chap and chaptered else '')+num;buf=[ln];continue
     if cur is not None:buf.append(ln)
   flush();return out
 result={}
@@ -56,7 +60,7 @@ for law,info in laws.items():
   path=os.path.join(SRC,'sfs-'+info['sfs'].replace(':','-')+'.text')
   txt=open(path,encoding='utf-8').read()
   m=re.search(r'Ändrad:\s*t\.o\.m\. SFS (\S+)',txt)
-  secs=sections(txt);got={}
+  secs=sections(txt,any(':' in x for x in need[law]));got={}
   for s in sorted(need[law]):
     key=s.replace(' ','')
     vers=[t for st,t in secs.get(key,[]) if st=='now']

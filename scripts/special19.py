@@ -19,14 +19,12 @@ CHECKED='2026-11-04'
 META=('LAW ','X ','PEN ','C ','A ','Q ','FU ','N ','T ','V ','TF ')
 
 # Åtalsregler för speciallagar med särskilda åtalsvillkor. Samma form som prosecution-171.js.
-HOW='Fråga: ”Vill du att brottet ska åtalas?” Ja = angivelse. Muntligt räcker – skriv in det i anmälan.'
-def angivelse(law,what):
-  return {'tone':'yellow','status':'Åtal kräver angivelse eller allmänt intresse','short':'Åklagaren får åtala om målsäganden anger brottet till åtal eller om åtal är påkallat från allmän synpunkt. Fråga om angivelse.',
-          'more':[{'label':'Vem är målsägande','text':what},{'label':'Hur','text':HOW},{'label':'Säger nej','text':'Ta ändå upp anmälan. Åklagaren kan åtala om det är påkallat från allmän synpunkt.'}],'law':law}
+def allman(law,what):
+  return {'tone':'yellow','status':'Allmänt åtal – bara om det är motiverat från allmän synpunkt','short':'Åklagaren får åtala bara om åtal är motiverat från allmän synpunkt. Angivelse krävs inte, men ta reda på vad rättighetshavaren vill.',
+          'more':[{'label':'Rättighetshavare','text':what},{'label':'Allmän synpunkt','text':'Till exempel vid omfattande eller organiserad brottslighet, risk för hälsa eller säkerhet, eller när rättighetshavaren vill att brottet ska lagföras.'},{'label':'Utred ändå','text':'Ta upp anmälan och säkra bevis. Åklagaren gör bedömningen.'}],'law':law}
 RULES={
- 'upphovsratt':angivelse('UpphL:59','Upphovspersonen eller den som har övertagit rätten, till exempel ett förlag, skivbolag eller filmbolag.'),
- 'varumarke':angivelse('VmL:8:7','Varumärkesinnehavaren eller den som har licens att använda varumärket.'),
- 'foretagshemlighet':angivelse('FHL:28','Näringsidkaren eller forskningsinstitutionen vars företagshemlighet har angripits.'),
+ 'upphovsratt':allman('UpphL:59','Upphovspersonen eller den som har övertagit rätten, till exempel ett förlag, skivbolag eller filmbolag.'),
+ 'varumarke':allman('VmL:8:1','Varumärkesinnehavaren eller den som har licens att använda varumärket.'),
  'miljo':{'tone':'green','status':'Allmänt åtal','short':'Ingen angivelse krävs.',
    'more':[{'label':'Miljösanktionsavgift','text':'Kan gärningen leda till miljösanktionsavgift och väntas den inte ge annat än böter, får åklagaren åtala bara om åtal är påkallat från allmän synpunkt (MB 29:11). Utred ändå som vanligt.'}],'law':'MB:29:11'},
  'internationella':{'tone':'green','status':'Allmänt åtal','short':'Ingen angivelse krävs.',
@@ -89,7 +87,7 @@ def write(root,S):
     e={'id':c['id'],'title':c['title'],'shortRef':short,'ref':info['name']+' '+c['ref'],'category':c['category'],
        'statute':c['law']+':'+c['sections'][0],'aliases':c['aliases'],
        'penalty':c['penalty'],'penaltyShort':c['penaltyShort'],
-       'penaltyRange':{'min':c['min'],'max':c['max'],'fines':bool(re.search(r'böter',c['penalty'],re.I)),'life':False},
+       'penaltyRange':{'min':c['min'],'max':c['max'],'fines':bool(re.search(r'böter',c['penalty'],re.I)),'life':bool(re.search(r'livstid',c['penalty'],re.I))},
        'penaltyKind':'statutory','penaltyNote':'Straffskalan enligt '+info['name']+' '+c['ref']+'. Kontrollerad mot aktuell SFS '+CHECKED+'.',
        'penaltyChecked':CHECKED,'penaltySource':info['sfs']+' '+c['ref'],'penaltyRangeVerified':True,
        'custody':'presumption' if c['min']>=1.5 else ('possible' if c['max']>=1 else 'none'),

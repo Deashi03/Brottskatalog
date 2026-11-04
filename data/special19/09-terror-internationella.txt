@@ -1,0 +1,286 @@
+LAW TerrL | Terroristbrottslagen (2022:666) | 2022:666 | TerrL
+X 2,3,11
+
+@ v19-terroristbrott | Terroristbrott | 4 § | 4,11
+PEN 4 | 18 | Fängelse lägst fyra och högst arton år eller på livstid | F 4–18 år / livstid
+C Rikets säkerhet
+A terrorism;terrorattack;terrordåd
+Q plain
+N Försök, förberedelse och stämpling samt underlåtenhet att avslöja eller förhindra terroristbrott är straffbara (11 §).
+G Gärningspersonen begår eller försöker begå ett uppsåtligt brott, till exempel mord, mordbrand eller allmänfarlig ödeläggelse.
+F Gärningen kan allvarligt skada ett land eller en mellanstatlig organisation.
+S Avsikt att minst ett av:
+  | Injaga allvarlig fruktan hos en befolkning eller en del av en befolkning.
+  | Otillbörligen tvinga ett offentligt organ eller en mellanstatlig organisation att vidta eller avstå från att vidta en åtgärd.
+  | Allvarligt destabilisera eller förstöra grundläggande politiska, konstitutionella, ekonomiska eller sociala strukturer i ett land eller en mellanstatlig organisation.
+T En person kör en lastbil in i en folkmassa på en gågata för att injaga skräck hos befolkningen.
+
+@ v19-terroristbrott-mindre-grovt | Terroristbrott, mindre grovt brott | 4 § tredje stycket | 4
+PEN 2 | 6 | Fängelse lägst två och högst sex år | F 2–6 år
+C Rikets säkerhet
+A mindre grovt terroristbrott
+Q plain
+B v19-terroristbrott
+R mindre*
+- Om det underliggande brottet är av mindre allvarligt slag.
+- Om skadan eller faran blev begränsad.
+T En person anlägger en brand i en tom offentlig byggnad nattetid i avsikt att skrämma befolkningen.
+
+@ v19-deltagande-terroristorganisation | Deltagande i en terroristorganisation | 4 a § | 3,4a
+PEN 0 | 4 | Fängelse i högst fyra år | F 4 år
+C Rikets säkerhet
+A terroristorganisation;IS;medlem i terrororganisation;delta i terrorgrupp
+Q plain
+N Försök är straffbart (11 §).
+O En terroristorganisation: en sammanslutning av personer som begår eller medverkar till terroristbrott, eller försök, förberedelse eller stämpling till terroristbrott.
+G Gärningspersonen deltar i organisationens verksamhet.
+F Deltagandet är ägnat att främja, stärka eller understödja organisationen.
+S Uppsåt till samtliga rekvisit.
+U Gärningen är ringa.
+U Gärningen är försvarlig med hänsyn till omständigheterna.
+T En person reser till ett konfliktområde och arbetar i en terroristorganisations logistik med att distribuera förnödenheter till stridande.
+
+@ v19-deltagande-terroristorganisation-grovt | Deltagande i en terroristorganisation, grovt brott | 4 a § andra stycket | 4a
+PEN 2 | 18 | Fängelse lägst två och högst åtta år, eller vid ledning av organisationen lägst två och högst arton år eller på livstid | F 2–8 år (ledare 2–18 år / livstid)
+C Rikets säkerhet
+A grovt deltagande i terroristorganisation;ledare terroristorganisation
+Q plain
+B v19-deltagande-terroristorganisation
+R grovt
+- Gärningspersonen har haft en central roll inom terroristorganisationen.
+- Gärningen har varit ägnad att påtagligt bidra till organisationens förmåga att begå terroristbrott.
+- Gärningen har på annat sätt varit av särskilt farlig art.
+- Har gärningspersonen lett organisationen gäller en strängare straffskala.
+T En person leder en cell som planerar attentat och rekryterar nya medlemmar.
+
+@ v19-samrore-terroristorganisation | Samröre med en terroristorganisation | 5 § | 3,5
+PEN 0 | 4 | Fängelse i högst fyra år | F 4 år
+C Rikets säkerhet
+A stöd till terroristorganisation;samröre
+Q plain
+N Försök är straffbart (11 §).
+G Gärningspersonen gör minst ett av följande för en terroristorganisation, i annat fall än deltagande i organisationen:
+  | Tar befattning med vapen, ammunition, brandfarliga eller explosiva varor eller transportmedel.
+  | Upplåter lokal eller mark.
+  | Lämnar annat liknande stöd.
+F Gärningen är ägnad att främja, stärka eller understödja organisationen.
+S Uppsåt till samtliga rekvisit.
+U Gärningen är ringa.
+U Gärningen är försvarlig med hänsyn till omständigheterna.
+T En person låter en terroristorganisation använda hans lägenhet som gömställe för vapen.
+
+@ v19-samrore-terroristorganisation-grovt | Samröre med en terroristorganisation, grovt brott | 5 § tredje stycket | 5
+PEN 1.5 | 7 | Fängelse lägst ett år och sex månader och högst sju år | F 1 år 6 mån–7 år
+C Rikets säkerhet
+A grovt samröre med terroristorganisation
+Q plain
+B v19-samrore-terroristorganisation
+R grovt
+- Gärningen har ingått som ett led i en verksamhet som har bedrivits i större omfattning.
+- Gärningen har på annat sätt varit av särskilt farlig art.
+T En person förser systematiskt en terroristorganisation med sprängmedel och fordon.
+
+@ v19-finansiering-terrorism | Finansiering av terrorism eller särskilt allvarlig brottslighet | 6 § | 2,6
+PEN 0 | 3 | Fängelse i högst tre år | F 3 år
+C Rikets säkerhet
+A terrorfinansiering;samla in pengar till terrorism;swisha till terrorgrupp
+Q plain
+N Försök är straffbart (11 §).
+G Gärningspersonen samlar in, tar emot eller tillhandahåller pengar eller annan egendom.
+S Avsikt att egendomen ska användas, eller vetskap om att den är avsedd att användas, minst ett av:
+  | För att begå eller medverka till terroristbrott, särskilt allvarlig brottslighet eller andra brott i terroristbrottslagen.
+  | Av en person som begår eller medverkar till terroristbrott eller särskilt allvarlig brottslighet.
+  | Av en terroristorganisation eller en sammanslutning som begår särskilt allvarlig brottslighet.
+U Fallet är ringa.
+T En person samlar in pengar i en moské under förespegling av välgörenhet och skickar dem till en terroristorganisation.
+
+@ v19-finansiering-terrorism-grovt | Finansiering av terrorism eller särskilt allvarlig brottslighet, grovt brott | 6 § tredje stycket | 6
+PEN 1 | 6 | Fängelse lägst ett och högst sex år | F 1–6 år
+C Rikets säkerhet
+A grov terrorfinansiering
+Q plain
+B v19-finansiering-terrorism
+R grovt
+- Gärningen har avsett brottslighet som innefattar fara för flera människoliv eller för egendom av särskild betydelse.
+- Gärningen har ingått som ett led i en verksamhet som har bedrivits i större omfattning.
+- Gärningen har avsett betydande värde.
+- Gärningen har på annat sätt varit av särskilt farlig art.
+T En person för över miljonbelopp till en terroristorganisation via ett nätverk av bulvaner.
+
+@ v19-offentlig-uppmaning-terrorism | Offentlig uppmaning till terrorism eller särskilt allvarlig brottslighet | 7 § | 2,7
+PEN 0 | 3 | Fängelse i högst tre år | F 3 år
+C Rikets säkerhet
+A uppmana till terror;terrorpropaganda;hylla terrordåd
+Q plain
+G Gärningspersonen uppmanar eller söker på annat sätt förleda till terroristbrott, särskilt allvarlig brottslighet eller andra brott i terroristbrottslagen.
+O Uppmaningen sker i ett meddelande till allmänheten, till exempel på sociala medier.
+S Uppsåt till samtliga rekvisit.
+U Fallet är ringa.
+T En person lägger ut en film på nätet där hon uppmanar andra att genomföra attentat mot kyrkor.
+
+@ v19-offentlig-uppmaning-terrorism-grovt | Offentlig uppmaning till terrorism eller särskilt allvarlig brottslighet, grovt brott | 7 § andra stycket | 7
+PEN 1 | 6 | Fängelse lägst ett och högst sex år | F 1–6 år
+C Rikets säkerhet
+A grov uppmaning till terrorism
+Q plain
+B v19-offentlig-uppmaning-terrorism
+R grovt
+- Gärningen har avsett brottslighet som innefattar fara för flera människoliv eller för egendom av särskild betydelse.
+- Gärningen har ingått som ett led i en verksamhet som har bedrivits i större omfattning.
+- Gärningen har på annat sätt varit av särskilt farlig art.
+T En person driver en kanal med tiotusentals följare som systematiskt uppmanar till massmord.
+
+@ v19-rekrytering-terrorism | Rekrytering till terrorism eller särskilt allvarlig brottslighet | 8 § | 2,8
+PEN 0 | 3 | Fängelse i högst tre år | F 3 år
+C Rikets säkerhet
+A rekrytera till terrorism;värva terrorister
+Q plain
+G Gärningspersonen söker förmå någon annan att begå eller medverka till terroristbrott, särskilt allvarlig brottslighet eller andra brott i terroristbrottslagen, i annat fall än genom offentlig uppmaning.
+S Uppsåt till samtliga rekvisit.
+U Fallet är ringa.
+T En person övertalar en tonåring i en chatt att resa och ansluta sig till en terroristorganisation.
+
+@ v19-rekrytering-terrorism-grovt | Rekrytering till terrorism eller särskilt allvarlig brottslighet, grovt brott | 8 § andra stycket | 8
+PEN 1 | 6 | Fängelse lägst ett och högst sex år | F 1–6 år
+C Rikets säkerhet
+A grov rekrytering till terrorism
+Q plain
+B v19-rekrytering-terrorism
+R grovt
+- Gärningen har avsett brottslighet som innefattar fara för flera människoliv eller för egendom av särskild betydelse.
+- Gärningen har ingått som ett led i en verksamhet som har bedrivits i större omfattning.
+- Gärningen har på annat sätt varit av särskilt farlig art.
+T En person rekryterar systematiskt unga personer till självmordsattentat.
+
+@ v19-utbildning-terrorism | Utbildning för terrorism eller särskilt allvarlig brottslighet | 9 § | 2,9
+PEN 0 | 3 | Fängelse i högst tre år | F 3 år
+C Rikets säkerhet
+A bombmanual;terrorutbildning;instruktioner sprängmedel
+Q plain
+G Gärningspersonen gör minst ett av:
+  | Meddelar eller söker meddela instruktioner om tillverkning eller användning av hjälpmedel, metoder eller tekniker som är särskilt ägnade att användas vid terroristbrott, särskilt allvarlig brottslighet eller finansiering av terrorism.
+  | Tar del av sådana instruktioner.
+S Den som meddelar: avsikt att instruktionerna ska användas för sådan brottslighet, eller vetskap om det. Den som tar del: avsikt att använda dem för sådan brottslighet.
+U Fallet är ringa.
+T En person skickar detaljerade instruktioner för att tillverka en rörbomb till någon som planerar ett attentat.
+
+@ v19-utbildning-terrorism-grovt | Utbildning för terrorism eller särskilt allvarlig brottslighet, grovt brott | 9 § andra stycket | 9
+PEN 1 | 6 | Fängelse lägst ett och högst sex år | F 1–6 år
+C Rikets säkerhet
+A grov utbildning för terrorism
+Q plain
+B v19-utbildning-terrorism
+R grovt
+- Gärningen har avsett brottslighet som innefattar fara för flera människoliv eller för egendom av särskild betydelse.
+- Gärningen har ingått som ett led i en verksamhet som har bedrivits i större omfattning.
+- Gärningen har på annat sätt varit av särskilt farlig art.
+T En person håller kurser i sprängämnestillverkning för flera personer som planerar attentat.
+
+@ v19-resa-terrorism | Resa för terrorism eller särskilt allvarlig brottslighet | 10 § | 2,10
+PEN 0 | 2 | Fängelse i högst två år | F 2 år
+C Rikets säkerhet
+A terrorresa;resa till IS;resa för att strida
+Q plain
+G Gärningspersonen reser eller påbörjar en resa till ett annat land.
+S Avsikt att begå eller medverka till terroristbrott, särskilt allvarlig brottslighet eller finansiering av terrorism (eller förberedelse eller stämpling till sådant), eller att delta i eller ha samröre med en terroristorganisation eller ta del av eller meddela utbildning för terrorism.
+U Fallet är ringa.
+U Gärningspersonen är svensk medborgare och reser till Sverige.
+T En person köper en flygbiljett och checkar in för att ta sig till ett konfliktområde och ansluta sig till en terroristorganisation.
+
+LAW IntBrL | Lagen (2014:406) om straff för vissa internationella brott | 2014:406 | IntBrL
+X 3,12,13,16,17
+
+@ v19-folkmord | Folkmord | 1 § | 1,16
+PEN 4 | 18 | Fängelse lägst fyra och högst arton år eller på livstid | F 4–18 år / livstid
+C Rikets säkerhet
+A folkmord;genocid
+Q internationella
+N Försök, förberedelse och stämpling samt underlåtenhet att avslöja eller förhindra brottet är straffbara (16 §). En förman som inte förhindrar brottet döms som gärningsman (13 §).
+S Syfte att helt eller delvis förinta en nationell, etnisk, rasmässigt bestämd eller religiös folkgrupp som sådan.
+G Gärningspersonen gör minst ett av:
+  | Dödar en medlem av folkgruppen.
+  | Tillfogar en medlem allvarlig smärta eller skada eller utsätter den för svårt lidande.
+  | Påtvingar folkgruppen levnadsvillkor som är ägnade att förinta den helt eller delvis.
+  | Vidtar åtgärder som är ägnade att förhindra att barn föds inom folkgruppen.
+  | För genom tvång över ett barn under 18 år från folkgruppen till en annan grupp.
+T En milisledare beordrar att alla män i en etnisk minoritets byar ska avrättas för att utplåna gruppen.
+
+@ v19-brott-mot-manskligheten | Brott mot mänskligheten | 2 § | 2,16
+PEN 4 | 18 | Fängelse lägst fyra och högst arton år eller på livstid | F 4–18 år / livstid
+C Rikets säkerhet
+A brott mot mänskligheten;crimes against humanity
+Q internationella
+N Försök, förberedelse och stämpling samt underlåtenhet att avslöja eller förhindra brottet är straffbara (16 §).
+O Gärningen utgör eller ingår som ett led i ett omfattande eller systematiskt angrepp riktat mot en grupp civila.
+G Gärningspersonen gör minst ett av följande mot en person i gruppen, till exempel:
+  | Dödar personen.
+  | Tillfogar allvarlig smärta, skada eller svårt lidande genom tortyr eller annan omänsklig behandling.
+  | Utsätter personen för allvarligt sexuellt övergrepp, sexuellt slaveri eller tvångsarbete.
+  | Deporterar eller tvångsförflyttar personen i strid med folkrätten.
+  | Frihetsberövar personen i strid med folkrätten, förföljer personen på grund av politiska, etniska, religiösa eller andra otillåtna motiv, eller låter personen försvinna.
+S Uppsåt till samtliga rekvisit.
+T En fängelsechef låter systematiskt tortera regimkritiker som ett led i en kampanj mot civila oppositionella.
+
+@ v19-krigsforbrytelse | Krigsförbrytelse | 4–10 §§ | 3,4,5,6,7,8,9,10
+PEN 0 | 6 | Fängelse i högst sex år | F 6 år
+C Rikets säkerhet
+A krigsbrott;krigsförbrytelse;plundring;barnsoldater;anfall mot civila
+Q internationella
+N Försök, förberedelse och stämpling samt underlåtenhet att avslöja eller förhindra brottet är straffbara (16 §). En förman som inte förhindrar brottet döms som gärningsman (13 §).
+O Gärningen ingår som ett led i eller står i samband med en väpnad konflikt eller ockupation.
+G Gärningspersonen gör minst ett av, till exempel:
+  | Dödar, torterar, våldtar eller på annat sätt allvarligt skadar eller förödmjukar en skyddad person, till exempel en civil, sårad eller krigsfånge.
+  | Tar gisslan, deporterar en skyddad person eller dömer ut straff utan rättvis rättegång.
+  | Rekryterar eller använder barn under 15 år i strid.
+  | Plundrar, eller förstör eller tar egendom i stor omfattning utan militär nödvändighet.
+  | Anfaller civila, civil egendom, sjukvård eller humanitär personal, eller genomför ett oproportionerligt anfall.
+  | Använder gift, kemiska eller biologiska vapen eller andra förbjudna stridsmedel, eller använder utsvältning som stridsmetod.
+S Uppsåt till samtliga rekvisit.
+T En soldat skjuter en tillfångatagen fiendesoldat som har gett upp.
+
+@ v19-grov-krigsforbrytelse | Grov krigsförbrytelse | 11 § | 11
+PEN 4 | 18 | Fängelse lägst fyra och högst arton år eller på livstid | F 4–18 år / livstid
+C Rikets säkerhet
+A grov krigsförbrytelse;grovt krigsbrott
+Q internationella
+N Försök, förberedelse och stämpling samt underlåtenhet att avslöja eller förhindra brottet är straffbara (16 §).
+B v19-krigsforbrytelse
+R grovt
+- Gärningen har ingått som ett led i en plan eller politik eller som en del av en omfattande brottslighet.
+- Gärningen har förorsakat död, allvarlig smärta eller skada eller svårt lidande.
+- Gärningen har förorsakat omfattande skada på egendom eller synnerligen allvarliga skador på den naturliga miljön.
+T En officer beordrar avrättning av ett tiotal civila fångar.
+
+@ v19-aggressionsbrott | Aggressionsbrott | 11 a § | 11a,16,17
+PEN 4 | 18 | Fängelse lägst fyra och högst arton år eller på livstid | F 4–18 år / livstid
+C Rikets säkerhet
+A anfallskrig;aggression
+Q internationella
+N Åtal för aggressionsbrott som har begåtts utanför Sverige får väckas endast efter förordnande av regeringen (17 §).
+K Gärningspersonen kan utöva kontroll eller styra över en stats politiska eller militära handlande.
+G Gärningspersonen planerar, förbereder, inleder eller utför en aggressionshandling, det vill säga en stats användning av väpnat våld mot en annan stats suveränitet, territoriella integritet eller politiska oberoende.
+F Aggressionshandlingen utgör till sin karaktär, svårhetsgrad och omfattning en uppenbar överträdelse av FN-stadgan.
+S Uppsåt till samtliga rekvisit.
+T En stats försvarsminister planerar och leder en invasion av ett grannland utan stöd i FN-stadgan.
+
+@ v19-underlatenhet-utova-kontroll | Underlåtenhet att utöva kontroll | 14 § | 14
+PEN 0 | 4 | Fängelse i högst fyra år | F 4 år
+C Rikets säkerhet
+A förmansansvar;befälsansvar
+Q internationella
+K Gärningspersonen är militär eller civil förman över en underlydande som står under hans eller hennes lydnad och effektiva kontroll.
+G Förmannen underlåter att utöva särskild tillsyn över den underlydande.
+F Den underlydande har begått folkmord, brott mot mänskligheten eller krigsförbrytelse som förmannen borde ha förutsett och hade kunnat förhindra.
+S Uppsåt eller grov oaktsamhet.
+T En bataljonschef bryr sig inte om att kontrollera en enhet som han vet har misshandlat fångar, och enheten avrättar senare civila.
+
+@ v19-underlatenhet-anmala-brott | Underlåtenhet att anmäla brott | 15 § | 15
+PEN 0 | 4 | Fängelse i högst fyra år | F 4 år
+C Rikets säkerhet
+A förman anmäla krigsbrott
+Q internationella
+K Gärningspersonen är militär eller civil förman över en underlydande som står under hans eller hennes lydnad och effektiva kontroll.
+G Förmannen underlåter att anmäla skälig misstanke om att den underlydande har begått folkmord, brott mot mänskligheten eller krigsförbrytelse för undersökning och lagföring.
+S Uppsåt till samtliga rekvisit.
+U En anmälan skulle innebära fara för att förmannen avslöjar egen brottslighet.
+T En officer får veta att hans soldater har dödat civila men låter bli att anmäla det.
