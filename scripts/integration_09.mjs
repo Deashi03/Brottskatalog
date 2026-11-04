@@ -49,7 +49,7 @@ const cases=[
 ];
 for(const [title,expected] of cases)assert.equal(find(title)?.stageStatus,expected,title);
 const coercive=co.entries.filter(e=>!['hemlig','hemligo'].includes(e.id));
-assert.equal(coercive.length,27,'27 visible RB23–28 measures');
+assert.equal(coercive.length,29,'29 visible RB23–28 measures (1.9: hämtning RB 23:7 och kvarhållande av försändelse RB 27:9)');
 for(const e of coercive){
  assert.ok(e.officerMode&&e.otherDecision&&e.decisionAuthority,'Officer authority missing: '+e.id);
  assert.ok(['direct','fid','both','none','special'].includes(e.officerMode),'Invalid decision code: '+e.id);

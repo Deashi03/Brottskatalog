@@ -811,6 +811,7 @@ D.date='2026-10-12';
   <script src="./coercive-09.js"></script>
   <script src="./coercive-safety-15.js"></script>
   <script src="./decisions-10.js"></script>
+  <script src="./coercive-19.js"></script>
   <script src="./brb20-13.js"></script>
   <script src="./brb4-review-14.js"></script>
   <script src="./brb17-review-14.js"></script>
@@ -970,6 +971,7 @@ D.date='2026-10-12';
 <script src="./definitioner-19.js"></script>
 <script src="./typexempel-19.js"></script>
 <script src="./rekvisit-19-view.js"></script>
+<script src="./rubricering-19.js"></script>
 <script src="./catalog-selection-15.js"></script>
   <script>
 /* Brottskatalog – stage 1. No framework, no network request during use. */
@@ -979,6 +981,7 @@ const { glossary, categories } = window.BK_DATA;
 const crimes = window.BK_DATA.crimes.filter(window.BK_CATALOG_SELECTION15.included).concat(
  (window.BK_TRAFFIC16?.entries||[]).filter(c=>!window.BK_DATA.crimes.some(x=>x.title.toLocaleLowerCase('sv')===c.title.toLocaleLowerCase('sv')))
 );
+if(window.BK_RUBRICERING19)crimes.forEach(window.BK_RUBRICERING19.apply);
 const provisions = window.BK_STATUTES || {};
 const sheetHistory=[];
 const byId = Object.fromEntries(crimes.map(c => [c.id,c]));
@@ -1377,57 +1380,12 @@ function qualityCard(c){
   (m.alternateVersionNote?'<p class="qa-effective">'+escapeHtml(m.alternateVersionNote)+'</p>':'')+(m.penaltySpecificCaution?'<p class="qa-effective">'+escapeHtml(m.penaltySpecificCaution)+'</p>':'')+(m.effectiveNote?'<p class="qa-effective">'+escapeHtml(m.effectiveNote)+'</p>':'')+'<p class="qa-muted">'+escapeHtml(m.versionStatus)+'</p><p class="qa-muted">'+escapeHtml(m.dateNotice)+'</p>'+source+'</div></details>';
 }
 
-function requisiteConceptButtons(c){
-  const refs=(c.requisiteConcepts15||[]).filter(r=>window.BK_REQUISITE_CONCEPTS15?.[r.conceptId]?.senseId===r.senseId);
-  if(!refs.length)return '';
-  return '<details class="requisite-explanations"><summary>Förklara rekvisiten</summary><p>Tryck på ett begrepp för förklaring och källa.</p><div class="var-chip-list">'+refs.map(r=>'<button type="button" class="quick-chip" data-requisite-concept="'+escapeHtml(r.conceptId)+'" data-requisite-sense="'+escapeHtml(r.senseId)+'">'+escapeHtml(r.displayTerm)+'</button>').join('')+'</div></details>';
-}
-function showRequisiteConcept(id,sense){
-  const c=window.BK_REQUISITE_CONCEPTS15?.[id];if(!c||c.senseId!==sense)return;
-  const course=c.courseSources.map(s=>s.file.normalize('NFC')+' · '+(s.pages?'s. '+s.pages.join('–'):'stycke '+s.paragraphs.join('–'))).join('; ');
-  showSheet({kicker:'REKVISIT · BEGREPPSFÖRKLARING',title:c.title,
-    body:'<p>'+escapeHtml(c.text)+'</p><p class="source-label">Rättslig anknytning: '+escapeHtml(c.lawRef)+'</p><p class="source-label">Kursunderlag: '+escapeHtml(course)+'</p><a class="source-link" href="'+escapeHtml(c.sourceURL)+'" target="_blank" rel="noopener noreferrer">Öppna rättskällan '+ic('external-link','sm')+'</a>',
-    ref:'Pedagogisk förklaring · '+c.checked});
-}
-
 function renderDetail(c){
   app.className='app-shell detail-mode '+(state.density==='compact'?'compact':'');
   const saved=state.favorites.includes(c.id);
   const prosecuting = c.prosecution==='general';
   const variants=(c.variants||[]).map(x=>`<span class="var-chip">${escapeHtml(x)}</span>`).join('');
   const elements=(c.elements||[]).map(x=>`<li>${escapeHtml(x)}</li>`).join('');
-  const groups15=c.rekvisit15?.groups||[];
-  const routes15=c.rekvisit15?.routes||[];
-  const renderRequisiteGroups=groups=>'<ul>'+groups.map(g=>g.mode==='any'
-    ?'<li><strong>Minst ett alternativ – '+escapeHtml(g.label)+'</strong><ul>'+g.options.map(v=>'<li>'+escapeHtml(v)+'</li>').join('')+'</ul></li>'
-    :'<li>'+escapeHtml(g.label)+'</li>').join('')+'</ul>';
-  const sourceCases=t=>t.sourceURL?'<a class="source-link" target="_blank" rel="noopener noreferrer" href="'+escapeHtml(t.sourceURL)+'">Rättsligt underlag '+ic('external-link','sm')+'</a>':'';
-  const exampleCards=(c.typexempel15||[]).map(t=>'<div class="fact-card"><div class="fact-eyebrow">Typexempel</div><div class="fact-body">'+escapeHtml(t.text)+'</div><div class="fact-source">'+escapeHtml(t.source||'')+'</div>'+sourceCases(t)+'</div>').join('');
-  const routeBody=routes15.map(p=>'<div class="subtle-label">'+escapeHtml(p.label)+'</div>'+renderRequisiteGroups(p.groups)).join('');
-  const isFullyReviewed=!!(c.rekvisit15?.legalReviewApproved===true&&c.rekvisit15?.scope==='full-legal-review');
-  const legalScope=(groups15.length||routes15.length)
-    ?'<p class="source-label">'+(isFullyReviewed?'Individuellt juridiskt slutgranskad rekvisitstruktur.':'Lagtextsbaserat rekvisitstöd. Fullständig juridisk kontroll av rättspraxis, undantag och lydelse återstår.')+'</p>'
-      +(c.rekvisit15?.source?'<p class="source-label">Rättslig grund: '+escapeHtml(c.rekvisit15.source)+'</p>':'')
-      +(c.rekvisit15?.sourceURL?'<a class="source-link" target="_blank" rel="noopener noreferrer" href="'+escapeHtml(c.rekvisit15.sourceURL)+'">Läs lagtexten hos Sveriges riksdag '+ic('external-link','sm')+'</a>':'')
-    :'';
-  const gradeReview=c.statutoryGradeReview15;
-  const gradeReviewBody=gradeReview?'<details class="requisite-explanations statutory-grade-review"><summary>Brottsgrad och kvalifikationsgrunder</summary>'
-    +'<p>'+escapeHtml(gradeReview.focus)+'</p><p>'+escapeHtml(gradeReview.summary)+'</p>'
-    +'<p><strong>Lagtextens alternativ:</strong> '+gradeReview.branches.map(escapeHtml).join(' · ')+'</p>'
-    +(gradeReview.indicators.length?'<p><strong>Omständigheter att särskilt beakta</strong></p><ul>'+gradeReview.indicators.map(x=>'<li>'+escapeHtml(x)+'</li>').join('')+'</ul>':'')
-    +'<details class="requisite-explanations"><summary>Ytterligare om gradbedömningen</summary><p>'+escapeHtml(gradeReview.assessmentNote)+'</p><ul>'+gradeReview.limits.map(x=>'<li>'+escapeHtml(x)+'</li>').join('')+'</ul></details>'
-    +'<p class="source-label">'+gradeReview.sourceRefs.map(escapeHtml).join('; ')+' · Kontrollerad '+escapeHtml(gradeReview.checked)+'</p>'
-    +'<a class="source-link" target="_blank" rel="noopener noreferrer" href="'+escapeHtml(gradeReview.sourceURL)+'">Läs lagtexten hos Sveriges riksdag '+ic('external-link','sm')+'</a></details>':'';
-  const limitsReview=c.statutoryLimitsReview15;
-  const limitsReviewBody=limitsReview?'<details class="requisite-explanations statutory-limits-review"><summary>Ansvarsbegränsningar och hänvisningar</summary>'
-    +'<p>'+escapeHtml(limitsReview.focus)+'</p><ul>'+limitsReview.limits.map(x=>'<li>'+escapeHtml(x)+'</li>').join('')+'</ul>'
-    +'<p>'+escapeHtml(limitsReview.assessmentNote)+'</p><p class="source-label">'+limitsReview.sourceRefs.map(escapeHtml).join('; ')+' · Kontrollerad '+escapeHtml(limitsReview.checked)+'</p>'
-    +'<a class="source-link" target="_blank" rel="noopener noreferrer" href="'+escapeHtml(limitsReview.sourceURL)+'">Läs lagtexten hos Sveriges riksdag '+ic('external-link','sm')+'</a></details>':'';
-  const reformNote=c.preparatoryReformNote15;
-  const reformNoteBody=reformNote?'<details class="requisite-explanations preparatory-reform-note"><summary>Förarbeten – 2026 års ändring</summary>'
-    +'<p>'+escapeHtml(reformNote.focus)+': '+escapeHtml(reformNote.note)+'</p><p>'+escapeHtml(reformNote.assessmentNote)+'</p>'
-    +'<p class="source-label">'+escapeHtml(reformNote.locator)+' · Kontrollerad '+escapeHtml(reformNote.checked)+'</p>'
-    +'<a class="source-link" target="_blank" rel="noopener noreferrer" href="'+escapeHtml(reformNote.sourceURL)+'">Läs författningskommentaren hos Sveriges riksdag '+ic('external-link','sm')+'</a></details>':'';
   // 1.9: ny rekvisitvy (rekvisit-19-view.js). Extramenyerna är borttagna.
   const requisitesBody=window.BK_RQ19?window.BK_RQ19.render(c,id=>byId[id]):'';
   const stages=(c.baseInchoateReview15?[]:c.stages||[]).map(x=>`<li>${escapeHtml(x)}</li>`).join('');
@@ -1649,7 +1607,6 @@ document.addEventListener('click', async e=>{
   const opener=e.target.closest('[data-open]');if(opener){const id=opener.dataset.open;if(byId[id]){state.navStack.push(location.hash||'#sok');goRoute('#brott/'+id);}return;}
   const provision=e.target.closest('[data-provision]');if(provision){showProvision(provision.dataset.provision);return;}
   const rqdef=e.target.closest('[data-rq-def]');if(rqdef){const d=(window.BK_DEF19||{})[rqdef.dataset.rqDef];if(d)showSheet({kicker:'DEFINITION · '+d.ref.toUpperCase(),title:d.term,body:'<div class="law-paper">'+escapeHtml(d.text)+'</div>'+(d.note?'<p>'+escapeHtml(d.note)+'</p>':''),ref:d.ref,actionHtml:d.url?'<a class="source-link" href="'+escapeHtml(d.url)+'" target="_blank" rel="noopener noreferrer">Lagtext hos Sveriges riksdag '+ic('external-link','sm')+'</a>':''});return;}
-  const concept=e.target.closest('[data-requisite-concept]');if(concept){showRequisiteConcept(concept.dataset.requisiteConcept,concept.dataset.requisiteSense);return;}
   const term=e.target.closest('[data-term]');if(term){showTerm(term.dataset.term,term.dataset.termContext);return;}
   const tab=e.target.closest('[data-tab]');if(tab){state.navStack=[];goRoute('#'+tab.dataset.tab);return;}
   const category=e.target.closest('[data-category]');if(category){state.category=category.dataset.category;renderSearch();return;}

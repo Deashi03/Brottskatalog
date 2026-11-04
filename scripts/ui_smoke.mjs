@@ -10,11 +10,15 @@ const url=process.env.BK_URL||'http://127.0.0.1:8765/';
 const rawGoto=page.goto.bind(page);
 page.goto=async(...args)=>{const r=await rawGoto(...args);await page.waitForFunction(()=>window.BK_BOOT17?.ready===true,null,{timeout:60000});return r;};
 const wait=async()=>{await page.waitForTimeout(400);};
+// 1.9: korten visas med domrubricering. Testfallen använder lagens äldre kortnamn och översätts här.
+let REN={};const T=t=>REN[t]||t;
 // 1.7.3: översikten "Försök och andra stadier" är borttagen; förstadiekort öppnas via sökningen.
-const openStage17=async(parent,kind)=>{const title=kind+' till '+parent.toLocaleLowerCase('sv');await page.goto(url+'#sok',{waitUntil:'networkidle'});await page.locator('#crime-search').fill(title);await wait();await page.locator('.crime-card').filter({has:page.getByText(title,{exact:true})}).first().click();await wait();};
+const openStage17=async(parent,kind)=>{const title=kind+' till '+parent.toLocaleLowerCase('sv');await page.goto(url+'#sok',{waitUntil:'networkidle'});await page.locator('#crime-search').fill(title);await wait();await page.locator('.crime-card').filter({has:page.getByText(T(title),{exact:true})}).first().click();await wait();};
 try{
   await page.goto(url,{waitUntil:'networkidle'});
   await page.waitForSelector('#crime-search',{timeout:60000}).catch(()=>{});
+  REN=await page.evaluate(()=>Object.fromEntries(window.BK_APP17.crimes.filter(c=>c.titleBefore19).map(c=>[c.titleBefore19,c.title])));
+  assert.ok(Object.keys(REN).length>=200,'1.9 domrubricering applied');
   assert.ok(await page.locator('#crime-search').count(),'Search must exist');
   assert.equal((await page.locator('.bk03-brand span').innerText()).trim(),'1.8.4','Search header must display current release 1.8.4');
   assert.equal(await page.evaluate(()=>window.BK_DATA.crimes.length),1557,'The V1.5 full database must be loaded');
@@ -72,15 +76,13 @@ try{
     assert.equal(titles.some(t=>t.trim().toLocaleLowerCase('sv')===title.toLocaleLowerCase('sv')),false,'Excluded family cannot reappear through search: '+title);
   }
   await search.fill('Tullbrott');await wait();
-  await page.locator('.crime-card').filter({has:page.getByText('Tullbrott',{exact:true})}).click();
+  await page.locator('.crime-card').filter({has:page.getByText(T('Tullbrott'),{exact:true})}).click();
   await page.locator('#sec-rekvisit > summary').click();
-  const limits=page.locator('.smuggling-limits');
-  assert.equal(await limits.getAttribute('open'),null,'Detailed statutory limits stay collapsed initially');
-  await limits.locator(':scope > summary').click();
-  assert.ok((await limits.innerText()).includes('5 kap. 5–10 §§'),'Exact customs surcharge condition is visible');
-  assert.ok((await limits.innerText()).includes('frivillig åtgärd'),'Rectification requires a voluntary effective action');
-  assert.ok(await limits.locator('a[href*="riksdagen.se"]').count());
-  assert.equal(await limits.evaluate(el=>el.scrollWidth<=el.clientWidth+1),true,'Expanded limits fit iPhone width');
+  // 1.9: frivillig rättelse (SmuglL 15 §) är ett "Inte brott om"-villkor i rekvisiten.
+  const unless=page.locator('#sec-rekvisit .rq-unless');
+  assert.ok((await unless.innerText()).includes('SmuglL 15 §'),'Voluntary rectification shown as exemption');
+  assert.ok((await unless.innerText()).includes('frivilligt vidtagit en åtgärd'),'Rectification requires a voluntary effective action');
+  assert.equal(await page.locator('#sec-rekvisit .rq').evaluate(el=>el.scrollWidth<=el.clientWidth+1),true,'Requisites fit iPhone width');
   await page.locator('[data-action="back"]').click();await wait();
   // 1.7.1: åtalsregeln ger ett kort besked (grönt/gult), länk till lagrummet och en kort fördjupning.
   for(const [title,status,law,phrase] of [
@@ -100,7 +102,7 @@ try{
   ]){
     await page.goto(url+'#sok',{waitUntil:'networkidle'});
     await page.locator('#crime-search').fill(title);await wait();
-    await page.locator('.crime-card').filter({has:page.getByText(title,{exact:true})}).click();
+    await page.locator('.crime-card').filter({has:page.getByText(T(title),{exact:true})}).click();
     assert.equal(await page.evaluate(()=>document.documentElement.scrollWidth<=innerWidth+1),true,'Crime detail fits iPhone width: '+title);
     const row=page.locator('button.status-row[data-action="prosecution"]');
     assert.equal((await row.locator('.status-value').innerText()).trim(),status,'Status row: '+title);
@@ -141,10 +143,10 @@ try{
     ['Grov olovlig underrättelseverksamhet mot person','Stämpling',true,'den grova graden definieras i samma paragraf']
   ]){
     await page.goto(url+'#sok',{waitUntil:'networkidle'});await search.fill(parent);await wait();
-    await page.locator('.crime-card').filter({has:page.getByText(parent,{exact:true})}).click();
+    await page.locator('.crime-card').filter({has:page.getByText(T(parent),{exact:true})}).click();
     await openStage17(parent,kind);
     assert.ok((await page.locator('h1').innerText()).startsWith(kind+' till'));
-    if(punishable){await page.locator('#sec-rekvisit > summary').click();assert.ok((await page.locator('#sec-rekvisit').innerText()).includes(phrase),'Stage-specific requisites: '+parent);}
+    if(punishable){await page.locator('#sec-rekvisit > summary').click();const stageText={Försök:'Utförandet av brottet har påbörjats',Förberedelse:'särskilt ägnat att användas som hjälpmedel',Stämpling:'Kommer överens med någon annan'}[kind];assert.ok((await page.locator('#sec-rekvisit').innerText()).includes(stageText),'Stage requisites per BrB 23: '+parent);assert.equal(await page.locator('#sec-rekvisit .rq-base').count(),1,'Stage shows completed crime as grundbrott: '+parent);}
     else assert.ok((await page.locator('.stage-alert').innerText()).includes('EJ STRAFFBART'));
     await page.locator('#sec-lag > summary').click();
     const lawPhrase=parent==='Grovt vapenbrott'?'18:15 räknar uttryckligen':parent==='Myteri'&&punishable?'16:17 räknar upp förberedelse':phrase;
@@ -161,7 +163,7 @@ try{
     ['Grov kapning','Stämpling','18 år']
   ]){
     await page.goto(url+'#sok',{waitUntil:'networkidle'});await search.fill(parent);await wait();
-    await page.locator('.crime-card').filter({has:page.getByText(parent,{exact:true})}).click();
+    await page.locator('.crime-card').filter({has:page.getByText(T(parent),{exact:true})}).click();
     await openStage17(parent,kind);
     const bounds=page.locator('.penalty-panel .penalty-bound');assert.equal(await bounds.count(),2);
     assert.equal(await bounds.last().locator('strong').innerText(),upper,'Exact open/closed upper endpoint: '+parent);
@@ -175,20 +177,20 @@ try{
     ['Synnerligen grovt vapenbrott','Stämpling','Fängelse 1 mån','Under 10 år']
   ]){
     await page.goto(url+'#sok',{waitUntil:'networkidle'});await search.fill(parent);await wait();
-    await page.locator('.crime-card').filter({has:page.getByText(parent,{exact:true})}).click();
+    await page.locator('.crime-card').filter({has:page.getByText(T(parent),{exact:true})}).click();
     await openStage17(parent,kind);
     const bounds=page.locator('.penalty-panel .penalty-bound strong');assert.deepEqual(await bounds.allTextContents(),[lower,upper],'Individually reviewed interval: '+parent);
     assert.equal(await page.evaluate(()=>document.documentElement.scrollWidth<=innerWidth+1),true,'Additional stage interval fits iPhone: '+parent);
   }
   for(const [kind,scale]of[['Försök','högst 6 år'],['Förberedelse','under 6 år']]){
     await page.goto(url+'#sok',{waitUntil:'networkidle'});await search.fill('Grovt våld eller hot mot förman');await wait();
-    await page.locator('.crime-card').filter({has:page.getByText('Grovt våld eller hot mot förman',{exact:true})}).click();
+    await page.locator('.crime-card').filter({has:page.getByText(T('Grovt våld eller hot mot förman'),{exact:true})}).click();
     await openStage17('Grovt våld eller hot mot förman',kind);
     const text=await page.locator('.penalty-panel').innerText();assert.ok(text.includes('Tillämpningen är villkorad'));assert.ok(text.includes(scale));assert.ok(text.includes('Krigs- eller beredskapsrelaterade'));
   }
-  await page.goto(url+'#sok',{waitUntil:'networkidle'});await search.fill('Arbetsmiljöbrott');await wait();await page.locator('.crime-card').filter({has:page.getByText('Arbetsmiljöbrott',{exact:true})}).click();
+  await page.goto(url+'#sok',{waitUntil:'networkidle'});await search.fill('Arbetsmiljöbrott');await wait();await page.locator('.crime-card').filter({has:page.getByText(T('Arbetsmiljöbrott'),{exact:true})}).click();
   {const choices=page.locator('.penalty-alternative-details');assert.equal(await choices.getAttribute('open'),null);await choices.locator(':scope > summary').click();assert.equal(await choices.locator('li').count(),6);const text=await choices.innerText();assert.ok(text.includes('Fängelse högst 3 år')&&text.includes('Fängelse 2–6 år')&&text.includes('konkret arbetsmiljöskyldighet'));assert.equal(await page.locator('.penalty-panel .penalty-bounds').count(),0);assert.equal(await page.evaluate(()=>document.documentElement.scrollWidth<=innerWidth+1),true,'Workplace branches fit iPhone');}
-  await page.goto(url+'#sok',{waitUntil:'networkidle'});await search.fill('Brukande av det förfalskade');await wait();await page.locator('.crime-card').filter({has:page.getByText('Brukande av det förfalskade',{exact:true})}).click();
+  await page.goto(url+'#sok',{waitUntil:'networkidle'});await search.fill('Brukande av det förfalskade');await wait();await page.locator('.crime-card').filter({has:page.getByText(T('Brukande av det förfalskade'),{exact:true})}).click();
   {const choices=page.locator('.penalty-alternative-details');assert.equal(await choices.getAttribute('open'),null);await choices.locator(':scope > summary').click();assert.equal(await choices.locator('li').count(),14);const text=await choices.innerText();assert.ok(text.includes('Fängelse 1–6 år')&&text.includes('14:13 undantar')&&text.includes('ringa brott'));assert.equal(await page.locator('.penalty-panel .penalty-bounds').count(),0);assert.equal(await page.evaluate(()=>document.documentElement.scrollWidth<=innerWidth+1),true,'Completed forged-use branches fit iPhone');}
   for(const [parent,kind,count,phrase]of[
     ['Brukande av det förfalskade','Försök',9,'Fängelse 1 mån – högst 8 år'],
@@ -198,7 +200,7 @@ try{
     ['Osann utsaga inför nordisk domstol','Förberedelse',2,'Partsutsaga i tvistemål enligt 15:2 omfattas inte'],
     ['Osann utsaga inför en internationell domstol','Stämpling',2,'fängelse under 8 år']
   ]){
-    await page.goto(url+'#sok',{waitUntil:'networkidle'});await search.fill(parent);await wait();await page.locator('.crime-card').filter({has:page.getByText(parent,{exact:true})}).click();
+    await page.goto(url+'#sok',{waitUntil:'networkidle'});await search.fill(parent);await wait();await page.locator('.crime-card').filter({has:page.getByText(T(parent),{exact:true})}).click();
     await openStage17(parent,kind);
     const details=page.locator('.penalty-alternative-details');assert.equal(await details.getAttribute('open'),null,'Alternatives start collapsed: '+parent);await details.locator(':scope > summary').click();
     if(['Myteri','Svikande av försvarsplikt'].includes(parent)){const panel=await page.locator('.penalty-panel').innerText();assert.ok(panel.includes('Tillämpningen är villkorad'),'Applicability warning preserved: '+parent);assert.ok(panel.includes(parent==='Myteri'?'Pröva gärningsform och roll.':'18:7 kriminaliserar endast försök'),'Original applicability caveat preserved: '+parent);}
@@ -209,82 +211,33 @@ try{
   await page.goto(url+'#sok',{waitUntil:'networkidle'});
   // 1.7.3: översiktsavsnittet "Försök och andra stadier" är borttaget; dess test likaså.
   await page.goto(url+'#sok',{waitUntil:'networkidle'});
-  // Statutory degree guidance stays inside the expanded requisite section.
-  for(const [title,phrase]of[
-    ['Grovt tjänstefel','kräver att brottet enligt första stycket har begåtts uppsåtligen'],
-    ['Brott mot tystnadsplikt','ringa-undantag hör till oaktsamhetsalternativet'],
-    ['Rymning','Ringa är ansvarsfrihet'],
-    ['Ovarsam utsaga','Grov oaktsamhet är skuldformen'],
-    ['Grov urkundsförfalskning','hjälpa någon till hans eller hennes rätt'],
-    ['Brukande av det förfalskade','Ingen enda automatisk brottsgrad'],
-    ['Grov våldtäkt mot barn','skiljer sig i ordalydelse från vuxenbrottets'],
-    ['Osann utsaga inför nordisk domstol','ingen grov menedsgrad']
+  // 1.9: en rekvisitvy. Inga extramenyer, aldrig "brott som anges i lagtexten".
+  for(const [title,checks]of[
+    ['Grov misshandel',{grade:'Grovt brott',base:'Misshandel',text:'livsfarlig'}],
+    ['Misshandel, ringa brott',{grade:'Ringa brott',base:'Misshandel'}],
+    ['Dråp',{grade:'Mindre grovt brott',base:'Mord'}],
+    ['Rymning',{unless:true}],
+    ['Brott mot knivlagen',{def:'allman-plats',unless:true}],
+    ['Narkotikabrott (innehav)',{def:'narkotika'}],
+    ['Rån',{tabs:true}],
+    ['Grovt rattfylleri',{grade:'Grovt brott',text:'1,0 promille'}]
   ]){
     await page.goto(url+'#sok',{waitUntil:'networkidle'});await search.fill(title);await wait();
-    await page.locator('.crime-card').filter({has:page.getByText(title,{exact:true})}).click();
-    await page.locator('#sec-rekvisit > summary').click();if(await page.locator('.grade-secondary').count())await page.locator('.grade-secondary > summary').click();const grades=page.locator('.statutory-grade-review');
-    assert.equal(await grades.getAttribute('open'),null,'Degree detail starts collapsed: '+title);
-    await grades.locator(':scope > summary').click();await grades.locator('details.requisite-explanations > summary').click();assert.ok((await grades.innerText()).includes(phrase),'Precise statutory degree distinction: '+title);
-    assert.ok((await grades.innerText()).includes('konkret gärning'));
-    assert.ok(await grades.locator('a[href*="riksdagen.se"]').count());
-    assert.equal(await grades.evaluate(el=>el.scrollWidth<=el.clientWidth+1),true,'Degree qualifiers fit iPhone: '+title);
-    assert.equal(await page.evaluate(()=>document.documentElement.scrollWidth<=innerWidth+1),true,'Degree detail fits viewport: '+title);
-  }
-  await page.goto(url+'#sok',{waitUntil:'networkidle'});
-  for(const [title,phrase]of[
-    ['Grov misshandel','synnerligt lidande'],
-    ['Arbetsmiljöbrott','en gemensam automatisk brottsgrad'],
-    ['Inbrottsstöld','inte för en ringa inbrottsstöld'],
-    ['Hets mot folkgrupp','OCH spridning'],
-    ['Grovt rattfylleri','1,0 promille'],
-    ['Vapenbrott av oaktsamhet','inte oaktsamhetsalternativet'],
-    ['Näringspenningtvätt','ska inte utan stöd kopieras'],
-    ['Grovt fordringsbedrägeri','Betydande värde är ett grundrekvisit']
-  ]){
-    await page.goto(url+'#sok',{waitUntil:'networkidle'});await search.fill(title);await wait();
-    await page.locator('.crime-card').filter({has:page.getByText(title,{exact:true})}).click();
-    await page.locator('#sec-rekvisit > summary').click();if(await page.locator('.grade-secondary').count())await page.locator('.grade-secondary > summary').click();const grades=page.locator('.statutory-grade-review');
-    assert.equal(await grades.getAttribute('open'),null);await grades.locator(':scope > summary').click();await grades.locator('details.requisite-explanations > summary').click();
-    assert.ok((await grades.innerText()).includes(phrase),'Remaining grade route: '+title);
-    assert.equal(await grades.evaluate(el=>el.scrollWidth<=el.clientWidth+1),true,'Remaining grade fits iPhone: '+title);
-  }
-  for(const [title,phrase]of[
-    ['Förtal','OCH att uppgiften visas sann'],
-    ['Kränkande fotografering','ett led i myndighets verksamhet'],
-    ['Sexuellt utnyttjande av barn','FÖRSTA MENINGEN'],
-    ['Kapning','endast 5 a § andra stycket 2'],
-    ['Förvanskning av urkund','sex månaders fängelse'],
-    ['Mened','betydelse för saken'],
-    ['Förolämpning mot tjänsteman','utvidgar 1–2 §§, inte 3 §'],
-    ['Osant intygande','falska identitetsuppgifter']
-  ]){
-    await page.goto(url+'#sok',{waitUntil:'networkidle'});await search.fill(title);await wait();
-    await page.locator('.crime-card').filter({has:page.getByText(title,{exact:true})}).click();
-    await page.locator('#sec-rekvisit > summary').click();const limits=page.locator('.statutory-limits-review');
-    assert.equal(await limits.getAttribute('open'),null,'Explicit limits start collapsed: '+title);
-    await limits.locator(':scope > summary').click();assert.ok((await limits.innerText()).includes(phrase),'Precise statutory limitation: '+title);
-    assert.ok((await limits.innerText()).includes('24 kap.'));assert.ok(await limits.locator('a[href*="riksdagen.se"]').count());
-    assert.equal(await limits.evaluate(el=>el.scrollWidth<=el.clientWidth+1),true,'Statutory limitation fits iPhone: '+title);
+    await page.locator('.crime-card').filter({has:page.getByText(T(title),{exact:true})}).first().click();
+    await page.locator('#sec-rekvisit > summary').click();
+    const rq=page.locator('#sec-rekvisit');const txt=await rq.innerText();
+    assert.equal(await rq.locator('details.requisite-explanations, .statutory-grade-review, .statutory-limits-review, .preparatory-reform-note').count(),0,'No extra menus: '+title);
+    assert.ok(!/brott som anges i lagtexten/i.test(txt),'Forbidden phrase: '+title);
+    assert.ok(await rq.locator('.rq-row').count()>=1||checks.base,'Requisite rows: '+title);
+    if(checks.grade)assert.ok((await rq.locator('.rq-grade').innerText()).includes(checks.grade),'Grade box: '+title);
+    if(checks.base){assert.equal(await rq.locator('.rq-base').getAttribute('open'),null,'Base collapsed: '+title);assert.ok((await rq.locator('.rq-base summary').innerText()).includes(checks.base));}
+    if(checks.text)assert.ok(txt.includes(checks.text),'Text '+checks.text+': '+title);
+    if(checks.unless)assert.ok(await rq.locator('.rq-unless').count()>=1,'Exemption box: '+title);
+    if(checks.tabs){const tabs=rq.locator('.rq-tab');assert.ok(await tabs.count()>=2,'Form tabs: '+title);await tabs.nth(1).click();assert.equal(await rq.locator('.rq-panel').nth(0).isHidden(),true);assert.equal(await rq.locator('.rq-panel').nth(1).isVisible(),true);}
+    if(checks.def){await rq.locator('[data-rq-def="'+checks.def+'"]').first().click();assert.ok(await page.locator('[role="dialog"]').isVisible(),'Definition sheet: '+title);await page.getByRole('button',{name:'Stäng',exact:true}).click();}
+    assert.ok(await rq.locator('.rq-ex-card').count()>=1&&await rq.locator('.rq-ex-card').count()<=2,'One or two examples: '+title);
+    assert.equal(await rq.locator('.rq').evaluate(el=>el.scrollWidth<=el.clientWidth+1),true,'Requisites fit iPhone: '+title);
     assert.equal(await page.evaluate(()=>document.documentElement.scrollWidth<=innerWidth+1),true);
-  }
-  await page.goto(url+'#sok',{waitUntil:'networkidle'});
-  for(const [title,phrase]of[
-    ['Rattfylleri','utesluter inte tredje styckets'],
-    ['Grovt rattfylleri','endast första och andra'],
-    ['Brott mot knivlagen','inte samma prövning'],
-    ['Vapenbrott','inte generell ansvarsfrihet'],
-    ['Smuggling','ANDRA STYCKET'],
-    ['Vårdslös skatteuppgift','Mindre allvarlig gärning'],
-    ['Vårdslöst bidragsbrott','FÖRE utbetalning'],
-    ['Grovt brott mot tillståndsplikten för explosiva varor','till BrB endast för 28 och 29']
-  ]){
-    await page.goto(url+'#sok',{waitUntil:'networkidle'});await search.fill(title);await wait();
-    await page.locator('.crime-card').filter({has:page.getByText(title,{exact:true})}).click();
-    await page.locator('#sec-rekvisit > summary').click();const limits=page.locator('.statutory-limits-review');
-    assert.equal(await limits.getAttribute('open'),null);await limits.locator(':scope > summary').click();
-    assert.ok((await limits.innerText()).includes(phrase),'Special-law limit: '+title);
-    assert.ok(await limits.locator('a[href*="riksdagen.se"]').count());
-    assert.equal(await limits.evaluate(el=>el.scrollWidth<=el.clientWidth+1),true,'Special-law limits fit iPhone: '+title);
   }
   for(const [title,rule,phrase]of[
     ['Förtal','Särskilda häktningsgrunder','ingen allmän straffskalegräns'],
@@ -297,7 +250,7 @@ try{
     ['Grovt bedrägeri','Hemlig avlyssning – särskild prövning','elektronisk kommunikation']
   ]){
     await page.goto(url+'#sok',{waitUntil:'networkidle'});await search.fill(title);await wait();
-    await page.locator('.crime-card').filter({has:page.getByText(title,{exact:true})}).click();
+    await page.locator('.crime-card').filter({has:page.getByText(T(title),{exact:true})}).click();
     await page.locator('#sec-tvang > summary').click();const review=page.locator('.coercion-threshold-review');
     assert.equal(await review.getAttribute('open'),null,'Threshold review starts collapsed: '+title);
     await review.locator(':scope > summary').click();
@@ -306,25 +259,6 @@ try{
     assert.ok((await review.innerText()).includes('Inget beslut om tvångsmedel'));
     assert.equal(await review.locator('a[href*="riksdagen.se"]').count(),2);
     assert.equal(await review.evaluate(el=>el.scrollWidth<=el.clientWidth+1),true,'Threshold review fits iPhone: '+title);
-    assert.equal(await page.evaluate(()=>document.documentElement.scrollWidth<=innerWidth+1),true);
-  }
-  for(const [title,number,file]of[
-    ['Olaga hot','B 406-24','2024/b-406-24'],
-    ['Grovt olaga hot','B 406-24','2024/b-406-24'],
-    ['Olaga intrång','B 4926-23','2023/b-4926-23'],
-    ['Sabotage mot blåljusverksamhet','B 6185-22','2023/b-6185-22'],
-    ['Grovt sabotage mot blåljusverksamhet','B 6185-22','2023/b-6185-22'],
-    ['Våldsamt upplopp','B 6185-22','2023/b-6185-22'],
-    ['Sabotage','B 3626-24','engelska-oversattningar/b-3626-24-eng']
-  ]){
-    await page.goto(url+'#sok',{waitUntil:'networkidle'});await search.fill(title);await wait();
-    await page.locator('.crime-card').filter({has:page.getByText(title,{exact:true})}).click();
-    await page.locator('#sec-rekvisit > summary').click();
-    const example=page.locator('#sec-rekvisit .fact-card').filter({hasText:number});
-    assert.equal(await example.count(),1,'One primary HD example: '+title);
-    assert.ok((await example.innerText()).includes('ingen fullständig förarbets- och praxisgranskning'));
-    assert.equal(await example.locator('a[href="https://www.domstol.se/globalassets/filer/domstol/hogstadomstolen/avgoranden/'+file+'.pdf"]').count(),1);
-    assert.equal(await example.evaluate(el=>el.scrollWidth<=el.clientWidth+1),true,'HD example fits iPhone: '+title);
     assert.equal(await page.evaluate(()=>document.documentElement.scrollWidth<=innerWidth+1),true);
   }
   await page.goto(url+'#sok',{waitUntil:'networkidle'});
@@ -344,7 +278,7 @@ try{
     ['Tullbrott','deklarationer']
   ]){
     await page.goto(url+'#sok',{waitUntil:'networkidle'});await search.fill(title);await wait();
-    await page.locator('.crime-card').filter({has:page.getByText(title,{exact:true})}).click();
+    await page.locator('.crime-card').filter({has:page.getByText(T(title),{exact:true})}).click();
     await page.locator('#sec-lag > summary').click();const temporal=page.locator('.law-temporal-review');
     assert.equal(await temporal.getAttribute('open'),null,'Temporal review starts collapsed: '+title);
     await temporal.locator(':scope > summary').click();assert.ok((await temporal.innerText()).includes(phrase),'Temporal distinction: '+title);
@@ -355,50 +289,6 @@ try{
     if(title==='Stöld')assert.equal(await temporal.getByRole('link',{name:'Originaltryck – SFS'}).count(),1);
     assert.equal(await temporal.evaluate(el=>el.scrollWidth<=el.clientWidth+1),true,'Temporal review fits iPhone: '+title);
     assert.equal(await page.evaluate(()=>document.documentElement.scrollWidth<=innerWidth+1),true);
-  }
-  for(const [title,phrase]of[
-    ['Mord','grundgärningen'],
-    ['Dråp','inte ansvarsfrihet'],
-    ['Barnadråp','sitt eget barn'],
-    ['Vållande till kroppsskada eller sjukdom','INTE är ringa'],
-    ['Arbetsmiljöbrott','krav på skada/sjukdom som inte är ringa'],
-    ['Skadegörelse','Äganderätten ensam avgör'],
-    ['Åverkan','8:11'],
-    ['Tagande av olovlig väg','faktisk skada'],
-    ['Inbrottsstöld','annat brott'],
-    ['Rån','bar gärning'],
-    ['Ringa bedrägeri','även utan vilseledande'],
-    ['Olovlig befattning med betalningsverktyg','samma eller strängare'],
-    ['Fyndförseelse','tillägnelseuppsåt'],
-    ['Bokföringsbrott','inte bedriver näringsverksamhet'],
-    ['Upplopp','skingras'],
-    ['Barnpornografibrott','10 b'],
-    ['Vårdslöshet med hemlig uppgift','Varje oaktsamt anskaffande'],
-    ['Lydnadsbrott','uppenbart att ordern inte angår tjänsten'],
-    ['Landsförräderi','22:4']
-  ]){
-    await page.goto(url+'#sok',{waitUntil:'networkidle'});await search.fill(title);await wait();
-    await page.locator('.crime-card').filter({has:page.getByText(title,{exact:true})}).click();
-    await page.locator('#sec-rekvisit > summary').click();const limits=page.locator('.statutory-limits-review');
-    assert.equal(await limits.getAttribute('open'),null);await limits.locator(':scope > summary').click();
-    assert.ok((await limits.innerText()).includes(phrase),'Life/property limitation: '+title);
-    assert.equal(await limits.evaluate(el=>el.scrollWidth<=el.clientWidth+1),true,'Life/property limits fit iPhone: '+title);
-  }
-  for(const [title,phrase]of[
-    ['Grov stöld','inte ändra gränsen'],
-    ['Förolämpning','grova svårhetsgraden tas bort'],
-    ['Mened','utan särskilt brottsnamn'],
-    ['Tagande av muta','varje förmån'],
-    ['Grov våldtäkt','flerfaldig brottslighet']
-  ]){
-    await page.goto(url+'#sok',{waitUntil:'networkidle'});await search.fill(title);await wait();
-    await page.locator('.crime-card').filter({has:page.getByText(title,{exact:true})}).click();
-    await page.locator('#sec-rekvisit > summary').click();const note=page.locator('.preparatory-reform-note');
-    assert.equal(await note.getAttribute('open'),null);await note.locator(':scope > summary').click();
-    assert.ok((await note.innerText()).includes(phrase),'Preparatory reform distinction: '+title);
-    assert.ok((await note.innerText()).includes('inget nytt juridiskt slutgodkännande'));
-    assert.equal(await note.locator('a[href="https://data.riksdagen.se/dokument/HD03218"]').count(),1);
-    assert.equal(await note.evaluate(el=>el.scrollWidth<=el.clientWidth+1),true,'Reform note fits iPhone: '+title);
   }
   await page.goto(url+'#sok',{waitUntil:'networkidle'});
   await search.fill('stöld');
@@ -417,19 +307,9 @@ try{
   assert.equal(await requisites.count(),1,'Rekvisit must be accessible from every offence card');
   await requisites.locator(':scope > summary').click();
   const requisiteText=await requisites.innerText();
-  assert.ok(requisiteText.includes('Lagtextsbaserat rekvisitstöd'),'An unapproved summary must never appear legally certified');
-  assert.ok(requisiteText.includes('Rättslig grund: BrB 3:1'),'Murder requisite summary must cite the actual penal provision');
+  assert.ok(requisiteText.includes('Källa: BrB 3:1'),'Murder requisites cite the actual penal provision');
   assert.ok(await requisites.locator('a[href*="riksdagen.se"]').count()>=1,'Requisite panel needs a direct official SFS link');
-  const explanations=requisites.locator('.requisite-explanations').filter({has:page.locator('[data-requisite-concept]')});
-  assert.equal(await explanations.getAttribute('open'),null,'Concept list collapsed initially');
-  await explanations.locator(':scope > summary').click();
-  await explanations.locator('[data-requisite-concept="bk:likgiltighet"]').click();
-  assert.ok((await page.locator('[role="dialog"]').innerText()).includes('faktiskt förverkligades'),'Concept explains indifference to outcome, not just risk');
-  assert.ok((await page.locator('[role="dialog"]').innerText()).includes('Straffrätt Lund 2.docx'),'Readable document locator is shown');
-  assert.ok(await page.locator('[role="dialog"] a[href*="domstol.se"]').count(),'Primary source opens from the explanation');
-  await page.getByRole('button',{name:'Stäng',exact:true}).click();
-  assert.equal(await page.locator('[role="dialog"]').count(),0);
-  assert.equal(await explanations.evaluate(el=>el.scrollWidth<=el.clientWidth+1),true,'Concept buttons wrap on iPhone');
+  assert.equal(await requisites.locator('.rq-tag').first().isVisible(),true,'Requisite types are labelled');
   await requisites.locator(':scope > summary').click();
   // v1.1: legal review is AFTER the ordinary details and never steals initial space.
   const quality=page.locator('#sec-quality');
@@ -649,7 +529,7 @@ try{
   assert.equal(await oldMeasure.getAttribute('open'),'','Previous crime has an expanded coercive measure');
   await page.locator('[data-action="back"]').first().click();
   await page.locator('#crime-search').fill('stöld');await wait();
-  await page.locator('.crime-card').filter({has:page.getByText('Stöld',{exact:true})}).first().click();
+  await page.locator('.crime-card').filter({has:page.getByText(T('Stöld'),{exact:true})}).first().click();
   await page.locator('#sec-tvang > summary').click();
   assert.equal(await page.locator('.coercive-chapter[open]').count(),0,
     'New crime does not inherit an expanded RB chapter, including former RB 27 default');
@@ -702,10 +582,9 @@ try{
   await page.locator('#crime-search').fill('svindleri');await wait();
   await page.locator('.crime-card').filter({has:page.locator('.crime-title:text-is("Svindleri")')}).first().click();
   await page.locator('#sec-rekvisit > summary').click();
+  await page.locator('#sec-rekvisit .rq-tab').filter({hasText:'Vilseledande om företag'}).click();
   const fraudPanel=await page.locator('#sec-rekvisit').innerText();
-  assert.ok(fraudPanel.toLocaleLowerCase('sv').includes('objektiva krav – förklaring')&&fraudPanel.toLocaleLowerCase('sv').includes('subjektiva krav – förklaring'),'Both reviewed explanation blocks render inside requisite panel');
-  assert.ok(fraudPanel.includes('Företagsalternativet straffbelägger uttryckligen både uppsåt och grov oaktsamhet'),'Alternative statutory fault forms are taught in actual UI');
-  assert.equal(await page.evaluate(()=>window.BK_DATA.glossary['täckningsprincipen']===window.BK_REQUISITE_CONCEPTS15['bk:tackning']),true,'Glossary and requisite popup share one canonical definition');
+  assert.ok(fraudPanel.includes('grov oaktsamhet'),'Alternative fault form for the company alternative is shown');
   await page.goto(url+'#mer',{waitUntil:'networkidle'});
   const settings=await page.locator('body').innerText();
   assert.ok(settings.includes('Version 1.8.4 · publicerad 2026-11-04'),'Published version must be visible in settings');

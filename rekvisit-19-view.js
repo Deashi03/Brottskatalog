@@ -86,7 +86,7 @@ function render(c,byId,provisionLink){
  h+='<p class="rq-src">Källa: '+esc(src)+(c.sourceURL?' · <a href="'+esc(c.sourceURL)+'" target="_blank" rel="noopener noreferrer">Lagtext</a>':'')+'</p>';
  return h+'</div>';
 }
-document.addEventListener('click',e=>{
+if(typeof document!=='undefined')document.addEventListener('click',e=>{
  const tab=e.target.closest('[data-rq-tab]');if(!tab)return;
  const box=tab.closest('[data-rq-tabs]');const i=Number(tab.dataset.rqTab);
  box.querySelectorAll(':scope > .rq-tabs > .rq-tab').forEach((b,j)=>{b.classList.toggle('on',j===i);b.setAttribute('aria-selected',String(j===i));});

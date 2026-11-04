@@ -20,5 +20,5 @@ assert.equal(change(w=>{w.BK_STATUTES['BrB:17:5'].complete=false;}).completed,16
 assert.equal(change(w=>{w.BK_STATUTES['BrB:13:11'].checked='2099-01-01';}).completed,152);
 assert.equal(change(w=>{w.BK_DATA.crimes.find(c=>c.title==='Förtal').law+=' CHANGED';}).completed,173);
 assert.equal(change(w=>{w.BK_DATA.crimes.find(c=>c.title==='Ofredande').legalAudit15.checkpoints.exceptions={status:'PENDING',finding:'Independent hold'};}).completed,173);
-assert.ok(read('service-worker.js').includes(mod));assert.ok(html.includes('statutory-limits-review'));assert.ok(html.includes('+limitsReviewBody'));for(const s of inline)new Function(s);
+assert.ok(read('service-worker.js').includes(mod));/* 1.9: extramenyn är borttagen; begränsningarna ligger i rekvisiten som "Inte brott om". */for(const s of inline)new Function(s);
 console.log('PASS: 174 explicit statutory limit reviews, precise defence boundaries and 109 source pins; no case-specific or full competition approval');

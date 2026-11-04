@@ -14,4 +14,4 @@ assert.equal(change(w=>{w.BK_STATUTES['BrB:9:9'].machine=true;}).annotated,47);
 assert.equal(change(w=>{w.BK_DATA.crimes.find(c=>c.title==='Grov stöld').law+=' changed';}).annotated,49);
 assert.equal(change(w=>{w.BK_STATUTES['BrB:7:4'].complete=false;}).annotated,48);
 assert.equal(change(w=>{delete w.BK_STATUTES['BrB:3:6'].checked;}).annotated,48);
-assert.ok(read('service-worker.js').includes(mod));assert.ok(html.includes('+reformNoteBody'));console.log('PASS: 50 specific preparatory notes, 32 current statutory guards, no legal/praxis signoffs or other changes');
+assert.ok(read('service-worker.js').includes(mod));console.log('PASS: 50 specific preparatory notes, 32 current statutory guards, no legal/praxis signoffs or other changes');

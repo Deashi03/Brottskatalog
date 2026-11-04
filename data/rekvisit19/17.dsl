@@ -9,6 +9,7 @@ G Gärningspersonen gör minst ett av:
   | Förfogar över varan i strid med villkor för införseln eller utförseln.
 S Uppsåt till samtliga rekvisit.
 U Fallet är ringa. Då är straffet bara penningböter (SmuglL 4 §).
+U Gärningspersonen har frivilligt undanröjt faran som en oriktig eller utelämnad uppgift vid tullbehandlingen har skapat (frivillig rättelse, SmuglL 15 §).
 
 @ v09-grov-smuggling | Grov smuggling | SmuglL 5 §
 B v09-smuggling
@@ -24,6 +25,7 @@ G Gärningspersonen gör minst ett av:
   | För ut narkotika från landet.
   | Förfogar över narkotika under pågående tullbehandling eller i strid med villkor för införseln eller utförseln.
 S Uppsåt till samtliga rekvisit.
+U Gärningspersonen har frivilligt undanröjt faran som en oriktig eller utelämnad uppgift vid tullbehandlingen har skapat (frivillig rättelse, SmuglL 15 §).
 
 @ v09-narkotikasmuggling-avsedd-att-saljas | Narkotikasmuggling – avsedd att säljas | SmuglL 6 § andra stycket
 B v09-narkotikasmuggling
@@ -57,6 +59,7 @@ G Gärningspersonen gör minst ett av:
   | För ut vapnet från landet i strid med förbud eller villkor.
   | Förfogar över vapnet under pågående tullbehandling eller i strid med villkor för införseln eller utförseln.
 S Uppsåt till samtliga rekvisit.
+U Gärningspersonen har frivilligt undanröjt faran som en oriktig eller utelämnad uppgift vid tullbehandlingen har skapat (frivillig rättelse, SmuglL 15 §).
 
 @ v09-ringa-vapensmuggling | Ringa vapensmuggling | SmuglL 6 a § andra stycket
 B v09-vapensmuggling
@@ -86,6 +89,7 @@ G Gärningspersonen gör minst ett av:
   | Förfogar över varan under pågående tullbehandling eller i strid med villkor för införseln eller utförseln.
 S Uppsåt till samtliga rekvisit.
 U Fallet är ringa. Då är straffet bara penningböter.
+U Gärningspersonen har frivilligt undanröjt faran som en oriktig eller utelämnad uppgift vid tullbehandlingen har skapat (frivillig rättelse, SmuglL 15 §).
 
 @ v09-grov-smuggling-av-explosiv-vara | Grov smuggling av explosiv vara | SmuglL 6 b § tredje stycket
 B v09-smuggling-av-explosiv-vara
@@ -108,6 +112,7 @@ G Gärningspersonen gör minst ett av:
   | Lämnar oriktig eller ofullständig uppgift vid ansökan om tillstånd, så att det uppstår fara för att varan förs in eller ut med stöd av tillståndet.
 S Grov oaktsamhet.
 U Gärningen är ringa.
+U Gärningspersonen har frivilligt undanröjt faran för att förbudet eller villkoret överträds (frivillig rättelse, SmuglL 15 §).
 
 @ v09-tullbrott | Tullbrott | SmuglL 8 §
 G Gärningspersonen gör minst ett av:
@@ -118,6 +123,7 @@ G Gärningspersonen gör minst ett av:
 F Gärningen ger upphov till fara för att tull, annan skatt eller avgift undandras det allmänna eller felaktigt tillgodoräknas eller återbetalas.
 S Uppsåt till samtliga rekvisit.
 U Fallet är ringa. Då är straffet bara penningböter (SmuglL 9 §).
+U Gärningspersonen har frivilligt vidtagit en åtgärd som leder till att tull, annan skatt eller avgift kan påföras, tillgodoräknas eller återbetalas med rätt belopp (frivillig rättelse, SmuglL 15 §).
 
 @ v09-grovt-tullbrott | Grovt tullbrott | SmuglL 10 §
 B v09-tullbrott
@@ -126,12 +132,14 @@ R grovt
 - Gärningspersonen har använt falska handlingar eller vilseledande bokföring.
 - Gärningen har ingått som ett led i en brottslighet som utövats systematiskt eller i större omfattning.
 - Gärningen har annars varit av särskilt farlig art.
+U Gärningspersonen har frivilligt vidtagit en åtgärd som leder till att tull, annan skatt eller avgift kan påföras, tillgodoräknas eller återbetalas med rätt belopp (frivillig rättelse, SmuglL 15 §).
 
 @ v09-vardslos-tullredovisning | Vårdslös tullredovisning | SmuglL 11 §
 G Gärningspersonen underlåter att anmäla en vara till tullbehandling, lämnar oriktig eller ofullständig uppgift vid tullbehandling, eller förfogar över en vara i strid med tullbehandlingen.
 F Gärningen ger upphov till fara för att tull, annan skatt eller avgift undandras det allmänna eller felaktigt tillgodoräknas eller återbetalas.
 S Grov oaktsamhet.
 U Gärningen är ringa.
+U Gärningspersonen har frivilligt vidtagit en åtgärd som leder till att tull, annan skatt eller avgift kan påföras, tillgodoräknas eller återbetalas med rätt belopp (frivillig rättelse, SmuglL 15 §).
 
 @ v09-olovlig-befattning-med-smuggelgods | Olovlig befattning med smuggelgods | SmuglL 12 §
 G Gärningspersonen emballerar, transporterar, förvarar, döljer, bearbetar, förvärvar, överlåter eller pantsätter en vara.
@@ -139,6 +147,7 @@ O Varan har varit föremål för smuggling, tullbrott eller annat brott enligt s
 S Uppsåt. Har gärningspersonen inte insett men haft skälig anledning att anta att varan smugglats, är straffet böter.
 U Gärningen är ringa med hänsyn till befattningen, egendomens art och värde och övriga omständigheter.
 U Gärningen är narkotikabrott (transport, förvaring eller liknande), vapenbrott eller brott mot tillståndsplikten för explosiva varor.
+U Gärningspersonen har frivilligt vidtagit en åtgärd som leder till att tull, annan skatt eller avgift kan påföras, tillgodoräknas eller återbetalas med rätt belopp (frivillig rättelse, SmuglL 15 §).
 
 @ v09-grov-olovlig-befattning-med-smuggelgods | Grov olovlig befattning med smuggelgods | SmuglL 13 §
 B v09-olovlig-befattning-med-smuggelgods
@@ -146,3 +155,4 @@ R grovt
 - Gärningen har ingått som ett led i en brottslighet som utövats systematiskt eller i större omfattning.
 - Gärningen har avsett varor där tull, skatt eller avgift till mycket betydande belopp undandragits det allmänna.
 - Gärningen har annars varit av särskilt farlig art.
+U Gärningspersonen har frivilligt vidtagit en åtgärd som leder till att tull, annan skatt eller avgift kan påföras, tillgodoräknas eller återbetalas med rätt belopp (frivillig rättelse, SmuglL 15 §).
