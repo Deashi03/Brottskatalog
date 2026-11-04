@@ -12,7 +12,7 @@ G Gärningspersonen gör minst ett av följande med {{narkotika}}:
   | Anskaffar, bearbetar, förpackar, transporterar, förvarar eller tar annan sådan befattning med narkotika som inte är avsedd för eget bruk.
   | Säljer narkotika eller befattar sig med narkotika som är avsedd att säljas.
   | Bjuder ut narkotika till försäljning, förvarar eller befordrar betalning för narkotika, förmedlar kontakter mellan säljare och köpare eller gör något annat som är ägnat att främja narkotikahandel.
-U Gärningen gäller bara eget innehav eller eget bruk. Det är inte vårdslöshet med narkotika.
+U Gärningen gäller bara innehav eller bruk av narkotika.
 S Grov oaktsamhet, till exempel att gärningspersonen borde ha förstått att det var narkotika.
 U Gärningen är ringa.
 T En person tar emot ett paket åt en bekant och förvarar det hemma, trots starka tecken på att det innehåller narkotika.

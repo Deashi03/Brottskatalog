@@ -20,7 +20,7 @@ O Barnet är minst ett av:
   | Under 15 år.
   | 15–17 år och gärningspersonens avkomling, under gärningspersonens fostran eller liknande, eller under gärningspersonens vård eller tillsyn enligt myndighetsbeslut.
   | Under 18 år med nedsatt förmåga att värna sin sexuella integritet, på grund av psykisk ohälsa, funktionsnedsättning, missbruk, gärningspersonens auktoritet eller annat, och gärningspersonen utnyttjar det otillbörligt.
-S Uppsåt till handlingen. Till barnets ålder räcker oaktsamhet (BrB 6:13). Frivillighet saknar betydelse.
+S Uppsåt till handlingen. När det gäller barnets ålder räcker oaktsamhet (BrB 6:13). Det spelar ingen roll om barnet deltog frivilligt.
 
 @ v03-grov-valdtakt-mot-barn | Grov våldtäkt mot barn | BrB 6:4 tredje stycket
 B v03-valdtakt-mot-barn
@@ -41,7 +41,7 @@ O Barnet är minst ett av:
   | Under 15 år.
   | 15–17 år och gärningspersonens avkomling, under gärningspersonens fostran eller liknande, eller under gärningspersonens vård eller tillsyn enligt myndighetsbeslut.
   | Under 18 år med nedsatt förmåga att värna sin sexuella integritet, och gärningspersonen utnyttjar det otillbörligt.
-S Uppsåt till handlingen. Till barnets ålder räcker oaktsamhet (BrB 6:13).
+S Uppsåt till handlingen. När det gäller barnets ålder räcker oaktsamhet (BrB 6:13).
 U Brottet är mindre grovt, barnet är under 15 år och det är uppenbart att gärningen inte inneburit något övergrepp, med hänsyn till den ringa skillnaden i ålder och utveckling och omständigheterna i övrigt (BrB 6:14).
 
 @ v03-sexuellt-ofredande | Sexuellt ofredande | BrB 6:10 andra stycket
@@ -82,7 +82,7 @@ G Gärningspersonen gör minst ett av:
 O Barnet är minst ett av:
   | Under 15 år.
   | 15–17 år, om poseringen är ägnad att skada barnets hälsa eller utveckling.
-S Uppsåt till handlingen. Till barnets ålder räcker oaktsamhet (BrB 6:13).
+S Uppsåt till handlingen. När det gäller barnets ålder räcker oaktsamhet (BrB 6:13).
 U Barnet är under 15 år och det är uppenbart att gärningen inte inneburit något övergrepp, med hänsyn till den ringa skillnaden i ålder och utveckling och omständigheterna i övrigt (BrB 6:14).
 
 @ v03-tillgrepp-av-fortskaffningsmedel | Tillgrepp av fortskaffningsmedel | BrB 8:7 första stycket

@@ -4,7 +4,7 @@ G Gärningspersonen gör minst ett av:
   | Förmår barnet att företa eller medverka i en handling med sexuell innebörd, till exempel att visa sig naken framför en kamera.
   | Blottar sig för barnet på ett sätt som är ägnat att väcka obehag, eller ofredar barnet genom ord eller handlande på ett sätt som är ägnat att kränka barnets sexuella integritet.
 O Barnet är under 15 år.
-S Uppsåt till handlingen. Till barnets ålder räcker oaktsamhet (BrB 6:13).
+S Uppsåt till handlingen. När det gäller barnets ålder räcker oaktsamhet (BrB 6:13).
 U Gärningen är ett annat sexualbrott enligt BrB 6 kap.
 U Det är uppenbart att gärningen inte inneburit något övergrepp, med hänsyn till den ringa skillnaden i ålder och utveckling och omständigheterna i övrigt (gäller sexuell beröring och förmående, BrB 6:14).
 
@@ -38,13 +38,13 @@ R grovt
 G Gärningspersonen förmår ett barn att företa eller tåla en sexuell handling.
 G Det sker mot ersättning, som har lämnats eller utlovats av gärningspersonen eller någon annan.
 O Barnet är under 18 år.
-S Uppsåt till handlingen och ersättningen. Till barnets ålder räcker oaktsamhet (BrB 6:13).
+S Uppsåt till handlingen och ersättningen. När det gäller barnets ålder räcker oaktsamhet (BrB 6:13).
 
 @ v04-kontakt-for-att-traffa-ett-barn-i-sexuellt-syfte | Kontakt för att träffa ett barn i sexuellt syfte | BrB 6:10 a
 G Gärningspersonen föreslår en träff eller stämmer träff med barnet.
 O Barnet är under 15 år.
 S Syfte att vid träffen begå våldtäkt mot barn, sexuellt utnyttjande av barn, sexuellt övergrepp mot barn, utnyttjande av barn för sexuell posering eller sexuellt ofredande mot barn.
-S Till barnets ålder räcker oaktsamhet (BrB 6:13).
+S När det gäller barnets ålder räcker oaktsamhet (BrB 6:13).
 U Den planerade gärningen skulle uppenbart inte ha inneburit något övergrepp, med hänsyn till den ringa skillnaden i ålder och utveckling (BrB 6:14).
 
 @ v05-tvegifte | Tvegifte | BrB 7:1 första stycket

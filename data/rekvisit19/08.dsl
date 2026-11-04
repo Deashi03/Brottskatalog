@@ -34,13 +34,13 @@ G Gärningspersonen uppmanar eller försöker på annat sätt förleda någon ti
   | Att krigsmän ska åsidosätta sina skyldigheter i tjänsten.
 P Det sker muntligen inför en menighet, folksamling eller samling krigsmän, i skrift som sprids, eller i annat meddelande till allmänheten eller till krigsmän.
 S Uppsåt till samtliga rekvisit.
-U Fallet är ringa. Det ska särskilt beaktas om det bara fanns en obetydlig fara för att uppmaningen skulle leda till efterföljd.
+U Fallet är ringa. Vid bedömningen ska det särskilt beaktas om det bara fanns en obetydlig fara för att någon skulle följa uppmaningen.
 
 @ v15-cover-involverande-av-en-underarig-i-brottslighet | Involverande av en underårig i brottslighet | BrB 16:5 a
 G Gärningspersonen anlitar, betalar, instruerar eller lämnar över egendom till någon, eller gör något annat liknande.
 O Den andra personen är under 18 år.
 F Personen involveras därigenom i ett brott eller i brottslig verksamhet.
-S Uppsåt till gärningen. Till åldern räcker oaktsamhet.
+S Uppsåt till gärningen. När det gäller personens ålder räcker oaktsamhet.
 U Involverandet är uppenbart mindre allvarligt, till exempel på grund av ringa skillnad i ålder eller utveckling.
 
 @ v15-cover-myteri | Myteri | BrB 16:6
@@ -86,7 +86,7 @@ G Gärningspersonen gör minst ett av:
   | Förmedlar kontakter mellan köpare och säljare, eller främjar på annat sätt handel med sådana bilder.
   | Innehar en sådan bild, eller betraktar en sådan bild som han eller hon berett sig tillgång till.
 O Barn är den vars pubertetsutveckling inte är fullbordad eller som är under 18 år. Är pubertetsutvecklingen fullbordad krävs (utom vid skildring) att det framgår av bilden och omständigheterna att personen är under 18 år.
-S Uppsåt. Vid skildring räcker oaktsamhet till åldern. Vid yrkesmässig spridning eller spridning i vinstsyfte räcker oaktsamhet.
+S Uppsåt. Vid skildring räcker oaktsamhet när det gäller barnets ålder. Vid yrkesmässig spridning eller spridning i vinstsyfte räcker oaktsamhet.
 U Gärningspersonen framställer en bild av sig själv eller en jämnårig, och skillnaden i ålder och utveckling är ringa och omständigheterna i övrigt inte påkallar ansvar (gäller skildring och innehav, BrB 16:10 b).
 U Bilden är tecknad, målad eller framställd på liknande hantverksmässigt sätt och är inte avsedd att spridas eller göras tillgänglig för andra (BrB 16:10 b).
 U Gärningen är med hänsyn till omständigheterna försvarlig (BrB 16:10 b).

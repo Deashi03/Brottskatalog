@@ -48,7 +48,7 @@ G Gärningspersonen gör minst ett av:
   | Inlåter sig på ett äventyrligt företag eller en lättsinnig ansvarsförbindelse.
   | Vidtar annan liknande åtgärd.
 F Gärningspersonen försämrar därigenom sin förmögenhetsställning i avsevärd mån.
-S Uppsåt eller grov oaktsamhet. Till obeståndet räcker att gärningspersonen hade skälig anledning att anta det.
+S Uppsåt eller grov oaktsamhet. När det gäller obeståndet räcker det att gärningspersonen hade skälig anledning att anta att det förelåg.
 
 @ v06-otillborligt-gynnande-av-borgenar | Otillbörligt gynnande av borgenär | BrB 11:4
 ## Gynnande vid obestånd
@@ -97,7 +97,7 @@ G Gärningspersonen tar olovligen minst ett av:
 S Uppsåt till samtliga rekvisit.
 R ringa
 - Det tagnas värde.
-- Övriga omständigheter. Är brottet inte ringa döms för stöld eller skadegörelse.
+- Övriga omständigheter. Om gärningen inte är ringa döms i stället för stöld eller skadegörelse.
 
 @ v03-tagande-av-olovlig-vag | Tagande av olovlig väg | BrB 12:4
 G Gärningspersonen färdas olovligen, och på annat än väg.

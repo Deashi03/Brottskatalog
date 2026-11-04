@@ -5,7 +5,7 @@ F Följden är minst ett av:
   | En annan människas död (vållande till annans död).
   | Kroppsskada eller sjukdom som inte är ringa (vållande till kroppsskada eller sjukdom).
   | Fara för liv, svår kroppsskada eller allvarlig sjukdom (framkallande av fara för annan).
-S Oaktsamhet i förhållande till följden. Vid framkallande av fara krävs grov oaktsamhet.
+S Oaktsamhet i förhållande till döden, kroppsskadan eller sjukdomen. När gärningen i stället framkallar fara för annan krävs uppsåt eller grov oaktsamhet.
 
 @ v04-grov-manniskoexploatering | Grov människoexploatering | BrB 4:1 b tredje stycket
 B v03-manniskoexploatering
@@ -56,7 +56,7 @@ G Gärningspersonen gör minst ett av:
   | Förmår genom olaga tvång, utnyttjande av utsatt belägenhet eller vilseledande ett barn att ingå ett äktenskap eller en äktenskapsliknande förbindelse.
   | Förmår eller tillåter i annat fall ett barn att ingå ett sådant äktenskap eller en sådan förbindelse.
 O Personen är under 18 år.
-S Uppsåt till gärningen. Till åldern räcker oaktsamhet.
+S Uppsåt till gärningen. När det gäller personens ålder räcker oaktsamhet.
 
 @ v15-family-aktenskapsresebrott | Äktenskapsresebrott | BrB 4:4 d första stycket
 G Gärningspersonen förmår en person att resa till en annan stat än den där personen bor.
@@ -68,7 +68,7 @@ U Gärningen är människohandel.
 G Gärningspersonen förmår eller tillåter ett barn att resa till en annan stat än den där barnet bor.
 O Barnet är under 18 år.
 S Syfte att barnet ska ingå ett äktenskap eller en äktenskapsliknande förbindelse (barnäktenskapsbrott).
-S Uppsåt till gärningen. Till åldern räcker oaktsamhet.
+S Uppsåt till gärningen. När det gäller personens ålder räcker oaktsamhet.
 
 @ v15-hedersfortryck | Hedersförtryck | BrB 4:4 e
 G Gärningspersonen begår eller medverkar till flera brottsliga gärningar mot en person, minst ett av:
@@ -100,7 +100,7 @@ U Gärningen är med hänsyn till omständigheterna mindre allvarlig.
 @ v15-oaktsam-uppmaning-till-sjalvmord | Oaktsam uppmaning till självmord | BrB 4:7 a andra stycket
 G Gärningspersonen uppmanar någon att begå självmord, eller utövar annan liknande psykisk påverkan mot personen.
 F Gärningen är ägnad att medföra en inte obetydlig fara för att personen begår självmord.
-S Uppsåt till uppmaningen. Oaktsamhet till de omständigheter som gör gärningen farlig.
+S Uppsåt till uppmaningen. När det gäller de omständigheter som gör gärningen farlig räcker oaktsamhet.
 U Gärningen är med hänsyn till omständigheterna mindre allvarlig.
 
 @ v15-brb4-9b | Förberedelse genom anbringande av tekniskt hjälpmedel | BrB 4:9 b

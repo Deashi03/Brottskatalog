@@ -70,7 +70,7 @@ R ringa
 @ v09-grov-vapensmuggling | Grov vapensmuggling | SmuglL 6 a § tredje stycket
 B v09-vapensmuggling
 R grovt
-- Gärningen har avsett ett vapen av särskilt farlig beskaffenhet. Ett enhandsvapen är det om det är kraftfullt eller har en särskilt farlig konstruktion eller utformning.
+- Gärningen har avsett ett vapen av särskilt farlig beskaffenhet, till exempel ett enhandsvapen (som en pistol) som är kraftfullt eller har en särskilt farlig konstruktion eller utformning.
 - Gärningen har avsett flera vapen.
 - Gärningen har ingått som ett led i en verksamhet som bedrivits i större omfattning eller yrkesmässigt.
 - Verksamheten eller gärningen har annars varit av särskilt farlig art.

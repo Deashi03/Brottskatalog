@@ -41,7 +41,7 @@ U Gärningen är försvarlig med hänsyn till omständigheterna.
 T En person reser till ett konfliktområde och arbetar i en terroristorganisations logistik med att distribuera förnödenheter till stridande.
 
 @ v19-deltagande-terroristorganisation-grovt | Deltagande i en terroristorganisation, grovt brott | 4 a § andra stycket | 4a
-PEN 2 | 18 | Fängelse lägst två och högst åtta år, eller vid ledning av organisationen lägst två och högst arton år eller på livstid | F 2–8 år (ledare 2–18 år / livstid)
+PEN 2 | 18 | Fängelse lägst två och högst åtta år, eller vid ledning av organisationen lägst två och högst arton år eller på livstid | F 2 år–livstid
 C Rikets säkerhet
 A grovt deltagande i terroristorganisation;ledare terroristorganisation
 Q plain
@@ -70,7 +70,7 @@ U Gärningen är försvarlig med hänsyn till omständigheterna.
 T En person låter en terroristorganisation använda hans lägenhet som gömställe för vapen.
 
 @ v19-samrore-terroristorganisation-grovt | Samröre med en terroristorganisation, grovt brott | 5 § tredje stycket | 5
-PEN 1.5 | 7 | Fängelse lägst ett år och sex månader och högst sju år | F 1 år 6 mån–7 år
+PEN 1.5 | 7 | Fängelse lägst ett år och sex månader och högst sju år | F 1,5–7 år
 C Rikets säkerhet
 A grovt samröre med terroristorganisation
 Q plain

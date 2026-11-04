@@ -31,6 +31,13 @@ RULES={
    'more':[{'label':'Brott utomlands','text':'Är brottet begånget utomlands kan åtal kräva särskilt förordnande enligt BrB 2:7 a. Det påverkar inte polisens utredning i Sverige.'}],'law':'RB:20:3'}
 }
 
+ORD={'första':'1','andra':'2','tredje':'3','fjärde':'4','femte':'5'}
+def compact(ref):
+  """Kort lagrum i listor, samma stil som övriga kort: 'BrB 15:11 st. 3 jfr st. 2'."""
+  r=re.sub(r'(första|andra|tredje|fjärde|femte)–(första|andra|tredje|fjärde|femte) styckena',lambda m:'st. '+ORD[m.group(1)]+'–'+ORD[m.group(2)],ref)
+  r=re.sub(r'(första|andra|tredje|fjärde|femte) stycket',lambda m:'st. '+ORD[m.group(1)],r)
+  return r.replace('jämfört med','jfr')
+
 def load(root):
   cards=[];dsl={};examples={};laws={};law=None
   for f in sorted(glob.glob(os.path.join(root,'data/special19/*.txt'))):
@@ -83,7 +90,7 @@ def write(root,S):
       ref=L['name']+' '+(parts[0]+' kap. '+re.sub(r'([0-9])([a-z])$',r'\1 \2',parts[1]) if len(parts)==2 else re.sub(r'([0-9])([a-z])$',r'\1 \2',parts[0]))+' §'
       statutes[c['law']+':'+s]={'id':c['law']+':'+s,'ref':ref,'text':t,'url':L['url'],'complete':True,'machine':False,'source':'Sveriges riksdag','checked':CHECKED}
     rule=c['rule'];general=rule=='plain' or rule=='internationella'
-    short=info['short']+' '+c['ref']
+    short=info['short']+' '+compact(c['ref'])
     e={'id':c['id'],'title':c['title'],'shortRef':short,'ref':info['name']+' '+c['ref'],'category':c['category'],
        'statute':c['law']+':'+c['sections'][0],'aliases':c['aliases'],
        'penalty':c['penalty'],'penaltyShort':c['penaltyShort'],

@@ -225,7 +225,7 @@ O En teknisk företagshemlighet: information som är ägnad att användas för a
 K Gärningspersonen har fått del av hemligheten genom anställning eller liknande deltagande i verksamheten, eller genom en affärsförbindelse.
 G Gärningspersonen utnyttjar eller röjer hemligheten olovligen.
 S Uppsåt till samtliga rekvisit.
-U Fallet är ringa. Det beaktas särskilt om gärningen begicks efter att anställningen eller deltagandet hade upphört.
+U Fallet är ringa. Vid bedömningen ska det särskilt beaktas om gärningen begicks efter att anställningen eller deltagandet hade upphört.
 T En ingenjör tar med sig källkod och tillverkningsritningar när han börjar hos en konkurrent och använder dem där.
 
 @ v19-olovligt-utnyttjande-teknisk-foretagshemlighet-grovt | Olovligt utnyttjande eller olovligt röjande av teknisk företagshemlighet, grovt brott | 26 a § andra stycket | 26a
