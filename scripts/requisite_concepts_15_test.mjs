@@ -49,8 +49,7 @@ for(const c of mapped){
  for(const r of c.requisiteConcepts15)assert.equal(r.senseId,R[r.conceptId]?.senseId);
 }
 assert.ok(read('service-worker.js').includes('./requisite-concepts-15.js'));
-assert.ok(html.includes('requisiteConceptButtons(c)'));
-assert.ok(html.includes('showRequisiteConcept(concept.dataset.requisiteConcept,concept.dataset.requisiteSense)'));
+/* 1.9: begreppen visas som understrukna definitioner i rekvisitvyn (definitioner-19.js). */
 // A missing data bundle must fail closed rather than breaking the app.
 vm.runInNewContext(code,{window:{}});
 console.log('PASS: '+Object.keys(R).length+' source-linked concepts across '+mapped.length+' base cards; distinct meanings, locator bounds, shared canonical glossary, unchanged legal state and offline integration');

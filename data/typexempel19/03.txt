@@ -1,0 +1,111 @@
+@ v03-forskingring
+T En kassörska tar 2 000 kronor ur kassan i butiken där hon arbetar och använder pengarna själv.
+V Det är förskingring och inte stöld, eftersom hon har pengarna i sin besittning för arbetsgivarens räkning. Samma sak gäller en person som hyr en bil och säljer den.
+@ v03-ringa-forskingring
+T En anställd tar 100 kronor ur en kaffekassa som han ansvarar för på jobbet.
+@ v03-grov-forskingring
+T En redovisningskonsult för under flera år över miljonbelopp från en klients konto till sitt eget och döljer det i bokföringen.
+@ v03-olovligt-forfogande
+T En person köper en soffa på avbetalning med äganderättsförbehåll och säljer den innan den är betald.
+@ v04-grovt-olovligt-forfogande
+T En person säljer flera leasade lastbilar och behåller pengarna.
+@ v03-troloshet-mot-huvudman
+T En inköpare på ett företag gör avsiktligt dyra inköp från en vän och skadar därigenom företaget.
+V En god man använder sin huvudmans pengar till egna resor. Det kan vara trolöshet mot huvudman eller förskingring.
+@ v03-grov-troloshet-mot-huvudman
+T En vd för ett företag köper med falska fakturor tjänster från sitt eget bolag för miljonbelopp.
+@ v15-beho-righetsmissbrk
+T En person som fått fullmakt att köpa en bil åt en vän köper i stället en dyrare bil på vännens bekostnad.
+@ v15-olovligt-brkande
+T En bilverkstad lånar ut en kunds bil till en anställd över helgen utan lov, och bilen får skador.
+@ v15-grovt-olovligt-brkande
+T En person använder en hyrd grävmaskin olovligen i flera månader i en egen verksamhet och sliter ut den.
+@ v15-yndo-rseelse
+T En person hittar en plånbok på gatan och behåller den i en vecka utan att anmäla fyndet till polisen, men lämnar sedan in den.
+@ v03-tagande-av-muta
+T En upphandlare på en kommun tar emot en resa till Thailand från en leverantör som vill få kontraktet.
+V En fotbollsspelare tar emot pengar för att se till att laget förlorar en match som det spelas på.
+@ v03-givande-av-muta
+T En leverantör erbjuder en kommunal upphandlare en resa för att få ett kontrakt.
+@ v04-grovt-tagande-av-muta
+T En chef på en myndighet tar under flera år emot stora summor för att ge vissa företag bygglov.
+@ v04-grovt-givande-av-muta
+T Ett byggföretag betalar systematiskt mutor till en kommuntjänsteman för att vinna stora upphandlingar.
+@ v03-handel-med-inflytande
+T En person tar emot pengar för att övertala en tjänsteman på Migrationsverket att bevilja ett uppehållstillstånd.
+@ v04-vardslos-finansiering-av-mutbrott
+T Ett företag ger en lokal agent i ett annat land pengar utan kontroll, och agenten använder dem för att muta en tjänsteman.
+@ v03-oredlighet-mot-borgenarer
+T En person med stora skulder ger bort sin sommarstuga till sin syster för att borgenärerna inte ska kunna få betalt ur den.
+@ v15-grov-oredlighet-mot-borgenarer
+T En företagare för över miljonbelopp till ett utländskt konto strax innan företaget går i konkurs och använder falska avtal för att dölja det.
+@ v15-additional-forsvarande-av-konkurs-eller-exekutiv-forrattning
+T En gäldenär i konkurs uppger inte för konkursförvaltaren att han har en båt.
+@ v15-additional-grovt-forsvarande-av-konkurs-eller-exekutiv-forrattning
+T En gäldenär beediger en bouppteckning där han medvetet har utelämnat tillgångar för flera miljoner.
+@ v03-vardsloshet-mot-borgenarer
+T En företagare som vet att bolaget är på obestånd fortsätter driva verksamheten med stora förluster i ett år och förbrukar bolagets kvarvarande medel.
+@ v06-otillborligt-gynnande-av-borgenar
+T En företagare på obestånd betalar tillbaka ett lån till sin bror före förfallodagen men struntar i övriga borgenärer.
+@ v03-bokforingsbrott
+T En restaurangägare slarvar så med bokföringen att det inte går att se hur verksamheten har gått.
+@ v04-ringa-bokforingsbrott
+T En liten enskild firma har mindre brister i bokföringen under en kort period.
+@ v03-grovt-bokforingsbrott
+T En företagare använder falska fakturor i bokföringen för att dölja svarta löner för miljonbelopp.
+@ skadegorelse
+T En person sprejar klotter på en husvägg.
+V En person punkterar däcken på grannens bil.
+@ ringa-skadegorelse
+T En person sparkar sönder en blomkruka utanför en butik.
+@ grov-skadegorelse
+T En person tänder eld på en skolbuss så att den förstörs helt. (Om branden innebär fara för andra är det mordbrand.)
+@ v03-averkan
+T En person tar ved från en skog som tillhör någon annan till sin brasa.
+V En person sågar ner en liten gran i någon annans skog som julgran.
+@ v03-tagande-av-olovlig-vag
+T En person kör sin moped tvärs över en nyanlagd gräsmatta i en villaträdgård.
+@ v03-mordbrand
+T En person tänder eld på en trappuppgång i ett flerfamiljshus där människor bor.
+@ v03-grov-mordbrand
+T En person sätter eld på ett hus i en tätbebyggd stadskärna där branden snabbt sprider sig till flera byggnader.
+@ v03-allmanfarlig-odelaggelse
+T En person spränger en bomb vid en entré till ett flerfamiljshus.
+@ v04-grov-allmanfarlig-odelaggelse
+T En person spränger en kraftig bomb i ett bostadsområde mitt i natten så att flera hus förstörs.
+@ v04-allmanfarlig-vardsloshet
+T En person grillar på en balkong med en engångsgrill som välter, och branden sprider sig till grannens balkong.
+@ v04-grovt-allmanfarlig-vardsloshet
+T En person kastar en brinnande cigarett i torr skog trots eldningsförbud och en stor skogsbrand uppstår.
+@ v03-sabotage
+T En person skär av en fiberkabel som försörjer ett helt område med internet och telefon.
+@ v03-grovt-sabotage
+T En person saboterar ett ställverk så att ett sjukhus blir utan ström.
+@ v04-sabotage-mot-blaljusverksamhet
+T Ungdomar kastar sten mot en brandbil och dess personal så att den inte kan släcka en brand.
+@ v04-grovt-sabotage-mot-blaljusverksamhet
+T En grupp sätter upp vägspärrar och angriper polis och ambulans med brandbomber under ett upplopp.
+@ v15-additional-kapning
+T En person hotar en busschaufför med kniv och tvingar honom att köra en annan väg.
+@ v15-additional-grov-kapning
+T En person kapar ett passagerarflygplan med vapen och hotar att spränga det.
+@ v15-additional-sjo-eller-luftfartssabotage
+T En person riktar en kraftig laser mot cockpit på ett flygplan under landning.
+@ v15-additional-grovt-sjo-eller-luftfartssabotage
+T En person placerar en sprängladdning på en passagerarfärja.
+@ v15-additional-flygplatssabotage
+T En person kör in en bil genom stängslet på en internationell flygplats och skadar navigationsutrustning.
+@ v15-additional-grovt-flygplatssabotage
+T En person skjuter mot människor i en flygplatsterminal.
+@ v05-spridande-av-gift-eller-smitta
+T En person häller gift i en vattenreservoar som försörjer en by.
+@ v05-grovt-spridande-av-gift-eller-smitta
+T En person förgiftar livsmedel i en matbutik med avsikt att skada kunder.
+@ v05-forgoring
+T En person sprider gift över en åker så att grannens betesdjur riskerar att dö.
+@ v05-grov-forgoring
+T En person sprider avsiktligt en smittsam djursjukdom till flera stora gårdar.
+@ v15-inventory-13-9
+T En lantbrukare hanterar bekämpningsmedel så slarvigt att det läcker ut i en bäck som används som dricksvatten.
+@ v06-underlatenhet-att-avvarja-allmanfara
+T En person som av misstag startat en gräsbrand märker branden men går därifrån utan att larma eller försöka släcka.

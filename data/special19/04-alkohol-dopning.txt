@@ -1,0 +1,229 @@
+LAW AlkL | Alkohollagen (2010:1622) | 2010:1622 | AlkL
+X 3:7,3:8,3:9,11:10,11:11
+
+@ v19-olovlig-befattning-med-sprit | Olovlig befattning med sprit | 11:1 | 11:1,11:10
+PEN 0 | 2 | Böter eller fängelse i högst två år | B–F 2 år
+C Alkohol
+A hembränning;hembränt;olovlig tillverkning av sprit;moonshine
+Q plain
+FU enkel|Alkohollagen (2010:1622)
+N Försök och förberedelse är straffbara, utom när gärningen bara gäller förvärv eller innehav för personligt bruk (11:11).
+## Tillverkning
+G Gärningspersonen tillverkar sprit eller spritdrycker.
+K Gärningspersonen har inte rätt att tillverka sprit enligt alkohollagen, till exempel genom att vara godkänd upplagshavare.
+S Uppsåt till samtliga rekvisit.
+U Gärningen är ringa.
+## Befattning med olovligt tillverkad sprit
+O Spriten eller spritdrycken är olovligt tillverkad.
+G Gärningspersonen förvärvar, innehar, forslar, döljer eller förvarar spriten.
+S Uppsåt till samtliga rekvisit.
+U Gärningen är ringa.
+T En person har en hemmagjord destillationsapparat i garaget och bränner sprit.
+V En person köper hembränt av en granne och förvarar flaskorna i källaren.
+
+@ v19-olovlig-befattning-med-sprit-grovt | Olovlig befattning med sprit, grovt brott | 11:4 | 11:1,11:4
+PEN 0.5 | 6 | Fängelse lägst sex månader och högst sex år | F 6 mån–6 år
+C Alkohol
+A grov hembränning;grov olovlig befattning med sprit
+Q plain
+FU enkel|Alkohollagen (2010:1622)|Bilagan undantar inte grova brott enligt alkohollagen. Åklagaren tar ändå över om något av villkoren i ÅFS 7 eller 8 § är uppfyllt.
+B v19-olovlig-befattning-med-sprit
+S Brottet har begåtts uppsåtligen.
+R grovt
+- Gärningen har utgjort ett led i en verksamhet som bedrivits yrkesmässigt eller i större omfattning.
+- Gärningen har varit inriktad mot ungdomar.
+T En person driver en större anläggning för hembränning och säljer spriten i stor skala.
+
+@ v19-alkl-destillationsapparat | Brott mot alkohollagen (destillationsapparat) | 11:2 | 11:2
+PEN 0 | 1 | Böter eller fängelse i högst ett år | B–F 1 år
+C Alkohol
+A destillationsapparat;bränningsapparat;hembränningsapparat
+Q plain
+FU enkel|Alkohollagen (2010:1622)
+O En destillationsapparat eller en del till en sådan apparat.
+G Gärningspersonen tillverkar, överlåter eller innehar apparaten eller apparatdelen.
+K Gärningspersonen har inte rätt till det enligt 2 kap. 1 § andra stycket alkohollagen.
+S Uppsåt till samtliga rekvisit.
+T Vid en husrannsakan hittas en hemmabyggd destillationsapparat i en förrådsbod.
+
+@ v19-olovlig-forsaljning-av-alkohol | Olovlig försäljning av alkohol | 11:3 | 11:3,11:10
+PEN 0 | 2 | Böter eller fängelse i högst två år | B–F 2 år
+C Alkohol
+A langning;sälja sprit;svartklubb;olovlig servering;sälja alkohol utan tillstånd
+Q plain
+FU enkel|Alkohollagen (2010:1622)
+N Försök och förberedelse är straffbara (11:11).
+G Gärningspersonen gör minst ett av:
+  | Säljer sprit, alkoholdrycker eller alkoholdrycksliknande preparat utan tillstånd eller annars i strid med alkohollagen.
+  | Serverar spritdrycker, vin, starköl eller andra jästa alkoholdrycker som har köpts in på annat sätt än lagen tillåter.
+  | Säljer sprit i strid med reglerna om försäljning av sprit och teknisk sprit.
+S Uppsåt eller oaktsamhet.
+U Gärningen är ringa.
+T En person säljer smuggelsprit till ungdomar ur bagageluckan på en parkering.
+V En lokal drivs som svartklubb där drinkar säljs utan serveringstillstånd.
+
+@ v19-olovlig-forsaljning-av-alkohol-grovt | Olovlig försäljning av alkohol, grovt brott | 11:4 | 11:3,11:4
+PEN 0.5 | 6 | Fängelse lägst sex månader och högst sex år | F 6 mån–6 år
+C Alkohol
+A grov langning;grov olovlig försäljning av alkohol
+Q plain
+FU enkel|Alkohollagen (2010:1622)|Bilagan undantar inte grova brott enligt alkohollagen. Åklagaren tar ändå över om något av villkoren i ÅFS 7 eller 8 § är uppfyllt.
+B v19-olovlig-forsaljning-av-alkohol
+S Brottet har begåtts uppsåtligen.
+R grovt
+- Gärningen har utgjort ett led i en verksamhet som bedrivits yrkesmässigt eller i större omfattning.
+- Gärningen har varit inriktad mot ungdomar.
+T En person säljer under lång tid stora mängder smuggelsprit till tonåringar via sociala medier.
+
+@ v19-alkl-tillverkning-jasta | Brott mot alkohollagen (olovlig tillverkning av jästa alkoholdrycker) | 11:5 | 11:5,11:10
+PEN 0 | 0.5 | Böter eller fängelse i högst sex månader | B–F 6 mån
+C Alkohol
+A tillverka öl;tillverka vin;hembryggning försäljning
+Q plain
+FU enkel|Alkohollagen (2010:1622)
+G Gärningspersonen tillverkar folköl, starköl, vin eller andra jästa alkoholdrycker i strid med alkohollagen, till exempel för försäljning utan att vara godkänd för det.
+S Uppsåt till samtliga rekvisit.
+U Gärningen är ringa.
+T En person tillverkar starköl i stor mängd i en lokal och säljer det vidare utan att vara godkänd som upplagshavare.
+
+@ v19-olovligt-innehav-av-alkohol | Olovligt innehav av alkohol | 11:6 | 11:6,11:10
+PEN 0 | 2 | Böter eller fängelse i högst två år | B–F 2 år
+C Alkohol
+A innehav för försäljning;langningslager;spritlager
+Q plain
+FU enkel|Alkohollagen (2010:1622)
+G Gärningspersonen innehar alkoholdrycker eller alkoholdrycksliknande preparat.
+S Syfte att olovligen sälja dryckerna.
+S Uppsåt till samtliga rekvisit.
+U Gärningen är ringa.
+T I en bil hittas ett tjugotal flaskor smuggelsprit och en lista med beställningar från köpare.
+
+@ v19-olovligt-anskaffande-av-alkohol | Olovligt anskaffande av alkohol | 11:7 | 11:7,3:9,11:10
+PEN 0 | 2 | Böter eller fängelse i högst två år | B–F 2 år
+C Alkohol
+A langning till ungdomar;köpa ut;bjuda minderårig på alkohol;ombud för underårig
+Q plain
+FU enkel|Alkohollagen (2010:1622)
+N Försök och förberedelse är straffbara (11:11).
+G Gärningspersonen gör minst ett av:
+  | Anskaffar alkohol som ombud eller på liknande sätt åt någon som inte har rätt att få den utlämnad, till exempel för att personen är under 20 år eller märkbart berusad.
+  | Hjälper i större omfattning någon annan att anskaffa alkohol.
+  | Ger, lånar ut eller bjuder alkohol till någon som inte har fyllt 20 år (18 år för folköl).
+S Uppsåt eller oaktsamhet.
+U Ungdomen bjuds på en mindre mängd som dricks på platsen under ordnade förhållanden, och det är försvarligt med hänsyn till ålder, utveckling och omständigheterna.
+U Gärningen är ringa.
+T En 22-åring köper ut vodka på Systembolaget åt en grupp 16-åringar.
+
+@ v19-olovligt-anskaffande-av-alkohol-grovt | Olovligt anskaffande av alkohol, grovt brott | 11:7 | 11:7
+PEN 0 | 4 | Fängelse i högst fyra år | F 4 år
+C Alkohol
+A grov langning till ungdomar;grovt olovligt anskaffande av alkohol
+Q plain
+FU enkel|Alkohollagen (2010:1622)|Bilagan undantar inte grova brott enligt alkohollagen. Åklagaren tar ändå över om något av villkoren i ÅFS 7 eller 8 § är uppfyllt.
+B v19-olovligt-anskaffande-av-alkohol
+R grovt*
+- Om anskaffandet skett i större omfattning eller systematiskt.
+- Om det riktats mot unga barn eller varit särskilt hänsynslöst.
+T En person köper regelbundet ut stora mängder alkohol till barn i 13–14-årsåldern mot betalning.
+
+@ v19-olovlig-hantering-av-alkohol | Olovlig hantering av alkohol | 11:9 | 11:9,3:7,3:8,11:10
+PEN 0 | 0.5 | Böter eller fängelse i högst sex månader | B–F 6 mån
+C Alkohol
+A sälja öl till minderårig;servera berusad;överservering;folköl till 17-åring;medhavd sprit krog
+Q plain
+FU enkel|Alkohollagen (2010:1622)
+G Gärningspersonen gör minst ett av:
+  | Säljer eller lämnar ut alkohol till någon som inte har uppnått åldersgränsen (20 år, 18 år för folköl och för servering) eller som är märkbart påverkad av alkohol eller annat berusningsmedel.
+  | Underlåter vid partihandel att kontrollera att köparen har rätt att köpa in eller återförsälja varan.
+  | Förvarar alkohol som inte får säljas där i en butikslokal, eller förvarar alkohol på ett serveringsställe där den inte får serveras.
+  | Tillåter att någon dricker medhavd alkohol på ett serveringsställe eller i en lokal där det inte är tillåtet.
+  | Säljer folköl eller serverar alkohol i strid med ett förbud från kommunen.
+S Uppsåt eller oaktsamhet.
+U Förvaringen var avsedd för annat än försäljning eller förtäring på platsen.
+U Gärningen är ringa.
+T En kassör i en livsmedelsbutik säljer folköl till en 16-åring utan att be om legitimation.
+V En bartender fortsätter att servera öl till en gäst som är märkbart berusad.
+
+LAW DopL | Lagen (1991:1969) om förbud mot vissa dopningsmedel | 1991:1969 | Dopningslagen
+X 1
+
+@ v19-dopningsbrott | Dopningsbrott | 3 § första stycket | 1,2,3
+PEN 0 | 2 | Fängelse i högst två år | F 2 år
+C Narkotika
+A anabola steroider;testosteron;tillväxthormon;dopning;doping
+Q plain
+FU villkor|3 § jämförd med 2 § 2, 6 och 7 lagen om förbud mot vissa dopningsmedel|Gäller brottet överlåtelse, innehav eller bruk?|ja|Inte framställning, förvärv i överlåtelsesyfte eller utbjudande.
+N Försök och förberedelse är straffbara om brottet inte är ringa och gäller annat än innehav eller bruk (4 §).
+O Dopningsmedel: syntetiska anabola steroider, testosteron och dess derivat, tillväxthormon eller ämnen som ökar produktionen eller frisättningen av testosteron eller tillväxthormon.
+## Överlåtelse
+G Gärningspersonen överlåter medlet, till exempel säljer eller ger bort det.
+## Framställning
+G Gärningspersonen framställer medlet.
+## Förvärv i överlåtelsesyfte
+G Gärningspersonen förvärvar medlet för att överlåta det vidare.
+## Utbjudande
+G Gärningspersonen bjuder ut medlet till försäljning.
+## Innehav
+G Gärningspersonen innehar medlet.
+## Bruk
+G Gärningspersonen använder medlet.
+## *
+S Uppsåt till samtliga rekvisit.
+U Hanteringen sker för medicinskt eller vetenskapligt ändamål.
+T Vid en kontroll på ett gym hittas ampuller med testosteron i en persons träningsväska.
+TF Bruk | Ett urinprov visar att en person har använt anabola steroider.
+
+@ v19-dopningsbrott-ringa | Dopningsbrott, ringa brott | 3 § andra stycket | 3
+PEN 0 | 0.5 | Böter eller fängelse i högst sex månader | B–F 6 mån
+C Narkotika
+A ringa dopningsbrott
+Q plain
+B v19-dopningsbrott
+R ringa
+- Mängden dopningsmedel.
+- Övriga omständigheter.
+T En person innehar några tabletter anabola steroider för eget bruk.
+
+@ v19-grovt-dopningsbrott | Grovt dopningsbrott | 3 a § | 3,3a
+PEN 0.5 | 6 | Fängelse lägst sex månader och högst sex år | F 6 mån–6 år
+C Narkotika
+A grovt dopningsbrott;storskalig steroidhandel
+Q plain
+N Försök och förberedelse är straffbara om gärningen gäller annat än innehav eller bruk (4 §).
+B v19-dopningsbrott
+R grovt
+- Gärningen har utgjort ett led i en verksamhet som har bedrivits i större omfattning eller yrkesmässigt.
+- Gärningen har avsett särskilt stor mängd dopningsmedel.
+- Gärningen har annars varit av särskilt farlig eller hänsynslös art.
+T En person säljer anabola steroider i stor skala via en webbshop.
+
+LAW HfvL | Lagen (1999:42) om förbud mot vissa hälsofarliga varor | 1999:42 | Hälsofarliga varor-lagen
+X 1,3
+
+@ v19-halsofarliga-varor | Brott mot lagen om förbud mot vissa hälsofarliga varor | 4 § första stycket | 3,4
+PEN 0 | 1 | Böter eller fängelse i högst ett år | B–F 1 år
+C Narkotika
+A hälsofarliga varor;designerdroger;lustgas;research chemicals;nätdroger
+Q plain
+FU villkor|4 § jämförd med 3 § 2 och 6 lagen om förbud mot vissa hälsofarliga varor|Gäller brottet överlåtelse eller utbjudande till försäljning?|ja|Inte till exempel innehav, framställning eller förvärv.
+O Varan omfattas av lagen: den är farlig för människors liv eller hälsa, används eller kan antas användas för berusning och har förts upp av regeringen i förordningen om förbud mot vissa hälsofarliga varor.
+G Gärningspersonen gör minst ett av följande utan tillstånd:
+  | Överlåter varan.
+  | Framställer varan.
+  | Förvärvar varan i överlåtelsesyfte.
+  | Anskaffar, bearbetar, förpackar, transporterar, förvarar eller hanterar varan på annat sätt, om den inte är avsedd för eget bruk.
+  | Bjuder ut varan till försäljning.
+  | Innehar varan.
+S Uppsåt till samtliga rekvisit.
+T En person säljer ett ämne som har förts upp som hälsofarlig vara via en webbplats.
+
+@ v19-halsofarliga-varor-oaktsamhet | Brott mot lagen om förbud mot vissa hälsofarliga varor (grov oaktsamhet) | 4 § andra stycket | 3,4
+PEN 0 | 0.5 | Böter eller fängelse i högst sex månader | B–F 6 mån
+C Narkotika
+A hälsofarliga varor oaktsamhet
+Q plain
+B v19-halsofarliga-varor
+G Gärningen gäller överlåtelse, framställning, förvärv i överlåtelsesyfte, hantering som inte är för eget bruk eller utbjudande till försäljning. Innehav omfattas inte.
+S Grov oaktsamhet.
+U Fallet är ringa.
+T En butiksägare säljer ett rökpreparat trots att Folkhälsomyndigheten har varnat för att ämnet är förbjudet.

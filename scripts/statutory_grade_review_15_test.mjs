@@ -36,5 +36,5 @@ assert.equal(changed(w=>{w.BK_DATA.crimes.find(c=>c.title==='Grov förgöring').
 assert.equal(changed(w=>{w.BK_STATUTES['BrB:17:12'].complete=false;}).completed,172);
 assert.equal(changed(w=>{w.BK_STATUTES['BrB:6:5'].url='https://example.invalid';}).completed,171,'All three child-rape family grades require current canonical source');
 assert.equal(changed(w=>{w.BK_DATA.crimes.find(c=>c.title==='Ofredande').legalAudit15.checkpoints.grade={status:'PENDING',finding:'Separate reviewer hold'};}).completed,173,'Never replace an existing grade hold');
-assert.ok(read('service-worker.js').includes(mod));assert.ok(html.includes('statutory-grade-review'));assert.ok(html.includes('+gradeReviewBody'));for(const s of inline)new Function(s);
+assert.ok(read('service-worker.js').includes(mod));/* 1.9: gradbedömningen visas i den nya rekvisitvyn (rekvisit-19-view.js). */for(const s of inline)new Function(s);
 console.log('PASS: 174 individual statutory grade reviews from 101 whole paragraphs; derivative branches, intent conditions, liability boundaries and unchanged other review dimensions');

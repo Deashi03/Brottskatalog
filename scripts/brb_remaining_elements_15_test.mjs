@@ -22,7 +22,7 @@ assert.match(note('Svindleri','subjective'),/grov oaktsamhet/);
 assert.match(note('Kontakt för att träffa ett barn i sexuellt syfte','objective'),/Varken att mötet faktiskt äger rum/);
 assert.match(note('Olovlig befattning med betalningsverktyg','subjective'),/inte okritiskt skrivas över/);
 assert.match(note('Vårdslöshet med hemlig uppgift','objective'),/Anskaffande ensamt omfattas inte/);
-assert.ok(html.includes('c.rekvisit15?.explanations15'),'Teach the reviewed distinctions inside the actual requisite panel');
+
 assert.ok(read('service-worker.js').includes(mod));
 const mutate=(key,patch)=>{const w=copy(W);Object.assign(w[key],patch);const x=vm.createContext({window:{BK_DATA:{crimes:copy(before)},BK_STATUTES:w}});vm.runInContext(code,x);return x.window.BK_REMAINING_ELEMENTS_AUDIT15;};
 assert.equal(mutate('BrB:6:13',{text:'CHANGED'}).completed,44,'Changes to referred age rule revoke all dependent approvals');

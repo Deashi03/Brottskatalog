@@ -1,0 +1,294 @@
+LAW SjöL | Sjölagen (1994:1009) | 1994:1009 | SjöL
+X 20:15
+
+@ v19-sjofylleri | Sjöfylleri | 20:4 | 20:4
+PEN 0 | 0.5 | Böter eller fängelse i högst sex månader | B–F 6 mån
+C Trafik
+A rattfylleri båt;sjöfylla;båtfylla;onykter båtförare
+Q plain
+## Promillegräns
+O Fartyget kan med motordrift framföras i minst 15 knop eller har ett skrov som är minst 10 meter långt.
+G Gärningspersonen framför fartyget, eller fullgör en annan uppgift ombord av väsentlig betydelse för säkerheten till sjöss.
+F Alkoholkoncentrationen uppgår under eller efter färden till minst 0,2 promille i blodet eller 0,10 milligram per liter i utandningsluften.
+## Påverkan
+O Gäller alla fartyg.
+G Gärningspersonen framför ett fartyg, eller fullgör en annan uppgift ombord av väsentlig betydelse för säkerheten till sjöss.
+F Gärningspersonen är så påverkad av alkohol eller något annat medel att det kan antas att uppgiften inte kan utföras på ett betryggande sätt.
+## *
+S Uppsåt till samtliga rekvisit.
+T En person kör en snabb motorbåt i skärgården efter att ha druckit vin, och utandningsprovet visar 0,4 promille.
+
+@ v19-grovt-sjofylleri | Grovt sjöfylleri | 20:5 | 20:4,20:5
+PEN 0 | 2 | Fängelse i högst två år | F 2 år
+C Trafik
+A grov sjöfylla;grov båtfylla
+Q plain
+FU enkel|20 kap. 5 § sjölagen (1994:1009)
+B v19-sjofylleri
+R grovt
+- Gärningspersonen har haft en alkoholkoncentration som uppgått till minst 1,0 promille i blodet eller 0,50 milligram per liter i utandningsluften.
+- Gärningspersonen har annars varit avsevärt påverkad av alkohol eller något annat medel.
+- Uppgiften har varit särskilt krävande med hänsyn till fartygets egenskaper eller andra omständigheter.
+- Framförandet av fartyget har inneburit en påtaglig fara för säkerheten till sjöss.
+T En kraftigt berusad person kör en snabb motorbåt i hög fart genom en gästhamn.
+
+@ v19-vardsloshet-i-sjotrafik | Vårdslöshet i sjötrafik | 20:2 första stycket | 20:2
+PEN 0 | 0.5 | Böter eller fängelse i högst sex månader | B–F 6 mån
+C Trafik
+A vårdslös båtkörning;sjöolycka;kollision båt
+Q plain
+G Gärningspersonen brister i gott sjömanskap.
+F Bristen gäller det som krävs för att förebygga en sjöolycka.
+S Oaktsamhet som inte är ringa.
+T En person kör vattenskoter i hög fart nära badande och en båt med barn.
+
+@ v19-vardsloshet-i-sjotrafik-grovt | Vårdslöshet i sjötrafik, grovt brott | 20:2 andra stycket | 20:2
+PEN 0 | 2 | Fängelse i högst två år | F 2 år
+C Trafik
+A grov vårdslöshet i sjötrafik
+Q plain
+B v19-vardsloshet-i-sjotrafik
+R grovt*
+- Om gärningen innefattat ett medvetet risktagande av allvarligt slag.
+- Om gärningspersonen visat uppenbar likgiltighet för andras liv eller egendom.
+T En båtförare kör i mörker i över 40 knop utan lanternor genom ett trångt sund med mycket båttrafik.
+
+@ v19-sjol-smitning | Brott mot sjölagen (smitning från sjöolycka) | 20:8 | 20:8
+PEN 0 | 1 | Böter eller fängelse i högst ett år | B–F 1 år
+C Trafik
+A smitning båt;smitning sjöolycka;lämna olycksplats sjön
+Q plain
+K Gärningspersonen har med eller utan skuld haft del i uppkomsten av en sjöolycka.
+G Gärningspersonen gör minst ett av:
+  | Lämnar olycksplatsen utan tvingande skäl, eller undandrar sig på annat sätt att vidta de åtgärder som skäligen kan krävas.
+  | Undandrar sig att uppge namn och hemvist eller att lämna upplysningar om händelsen.
+S Uppsåt till samtliga rekvisit.
+U Gärningen kan ge straff som befälhavarens försummelse vid kollision eller sjönöd (20:7).
+T En båtförare kör på en kanot och kör därifrån utan att kontrollera om någon skadats.
+
+@ v19-sjol-sjonod-kollision | Brott mot sjölagen (försummelse vid sjönöd eller kollision) | 20:7 | 20:7
+PEN 0 | 2 | Böter eller fängelse i högst två år | B–F 2 år
+C Trafik
+A sjöräddning;hjälpplikt till sjöss;kollision fartyg
+Q plain
+K Gärningspersonen är befälhavare.
+G Befälhavaren försummar att bistå någon som är i sjönöd, att agera när fara hotar sjötrafiken, eller att fullgöra skyldigheterna efter en kollision med ett annat fartyg.
+S Uppsåt eller oaktsamhet.
+T En befälhavare ser nödraketer men fortsätter färden utan att undersöka eller larma.
+
+@ v19-sjol-befalhavare-fara | Brott mot sjölagen (befälhavare som överger fartyget eller försummar det i fara) | 20:6 | 20:6
+PEN 0 | 2 | Böter eller fängelse i högst två år | B–F 2 år
+C Trafik
+A överge fartyget;befälhavare
+Q plain
+K Gärningspersonen är befälhavare.
+G Befälhavaren gör minst ett av:
+  | Avviker från tjänsten och överger fartyget (högst ett års fängelse).
+  | Försummar sina skyldigheter som god sjöman när fartyget är i fara (högst två års fängelse).
+S Uppsåt eller oaktsamhet.
+T En befälhavare lämnar fartyget i en livbåt när det börjar ta in vatten, utan att se till att passagerarna kommer i säkerhet.
+
+@ v19-sjol-sjovardighet | Brott mot sjölagen (sjövärdighet) | 20:1 | 20:1
+PEN 0 | 2 | Böter eller fängelse i högst två år | B–F 2 år
+C Trafik
+A sjövärdighet;osjövärdigt fartyg;redare
+Q plain
+K Gärningspersonen är befälhavare eller redare.
+G Gärningspersonen gör minst ett av:
+  | Befälhavaren försummar att se till att fartyget är sjövärdigt (högst sex månaders fängelse).
+  | Redaren försummar att avhjälpa ett fel eller en brist i sjövärdigheten som redaren känt till eller borde ha känt till (högst sex månaders fängelse).
+  | Redaren underlåter att hindra fartyget från att gå till sjöss trots att resan på grund av bristen kan bli förenad med allvarlig fara för de ombordvarande (högst två års fängelse).
+S Uppsåt eller oaktsamhet.
+T Ett passagerarfartyg går ut med kända fel på länspumparna och utan fungerande räddningsflottar.
+
+LAW LFL | Luftfartslagen (2010:500) | 2010:500 | LFL
+X 13:2a
+
+@ v19-flygfylleri | Flygfylleri | 13:2 | 13:2,13:2a
+PEN 0 | 0.5 | Böter eller fängelse i högst sex månader | B–F 6 mån
+C Trafik
+A onykter pilot;berusad flygledare;drönare berusad;flygfylla
+Q plain
+G Gärningspersonen gör minst ett av:
+  | Manövrerar ett luftfartyg, även ett obemannat (drönare).
+  | Fullgör ombord en uppgift av väsentlig betydelse för flygsäkerheten.
+  | Utövar tjänst som flygledare eller flygtekniker, eller tillhandahåller flyginformationstjänst i okontrollerat luftrum.
+  | Utför som observatör vid flygning med drönare en uppgift av väsentlig betydelse för flygsäkerheten.
+  | Fullgör i annan tjänst med samband med en flygning en uppgift av väsentlig betydelse för flygsäkerheten.
+F Gärningspersonen är alkohol- eller drogpåverkad, det vill säga minst ett av:
+  | Har minst 0,2 promille i blodet eller 0,10 milligram per liter i utandningsluften under eller efter uppgiften.
+  | Har något narkotiskt ämne kvar i blodet efter att ha intagit {{narkotika}}.
+  | Är så påverkad av alkohol eller annat medel att uppgiften inte kan antas fullgöras på ett betryggande sätt.
+S Uppsåt till samtliga rekvisit.
+U Narkotikan har intagits enligt läkares eller annan behörig receptutfärdares ordination.
+T En pilot flyger ett mindre privatplan dagen efter en fest och har 0,3 promille i utandningsprovet.
+
+@ v19-grovt-flygfylleri | Grovt flygfylleri | 13:3 | 13:2,13:3
+PEN 0 | 2 | Fängelse i högst två år | F 2 år
+C Trafik
+A grov flygfylla
+Q plain
+FU enkel|13 kap. 3 § luftfartslagen (2010:500)
+B v19-flygfylleri
+R grovt
+- Gärningspersonen har haft minst 1,0 promille i blodet eller 0,50 milligram per liter i utandningsluften.
+- Gärningspersonen har annars varit avsevärt påverkad av alkohol eller något annat medel.
+- Gärningspersonen har fullgjort sin uppgift på ett sätt som inneburit påtaglig fara för flygsäkerheten.
+T En kraftigt berusad person flyger en drönare över en flygplats inflygningsområde.
+
+@ v19-vardsloshet-i-flygtrafik | Vårdslöshet i flygtrafik | 13:1 första stycket | 13:1
+PEN 0 | 0.5 | Böter eller fängelse i högst sex månader | B–F 6 mån
+C Trafik
+A drönare farligt;flyga drönare över folk;vårdslös flygning
+Q plain
+G Gärningspersonen manövrerar ett luftfartyg, även en drönare, eller utför en uppgift som observatör vid flygning med drönare.
+F Andras liv eller egendom utsätts för fara.
+S Uppsåt eller oaktsamhet.
+T En person flyger en drönare lågt över en folksamling vid en konsert.
+
+@ v19-grov-vardsloshet-i-flygtrafik | Grov vårdslöshet i flygtrafik | 13:1 andra stycket | 13:1
+PEN 0 | 2 | Fängelse i högst två år | F 2 år
+C Trafik
+A grov vårdslöshet drönare;drönare flygplats
+Q plain
+B v19-vardsloshet-i-flygtrafik
+R grovt
+- Gärningen har innefattat ett medvetet risktagande av allvarligt slag.
+- Gärningspersonen har visat uppenbar likgiltighet för andra människors liv eller egendom.
+T En person flyger medvetet en drönare in i inflygningen till Arlanda så att ett passagerarplan måste väja.
+
+@ v19-lfl-13-4 | Brott mot luftfartslagen (13 kap. 4 §) | 13:4 | 13:4
+PEN 0 | 0.5 | Böter eller fängelse i högst sex månader | B–F 6 mån
+C Trafik
+A drönare restriktionsområde;flyga utan certifikat;bråkig passagerare;stökig flygpassagerare;drönare utan registrering
+Q plain
+G Gärningspersonen gör minst ett av, till exempel:
+  | Flyger i ett restriktionsområde i strid med föreskrifter eller beslut, till exempel med drönare.
+  | Framför ett luftfartyg utan gällande certifikat eller i strid med certifikatets behörigheter och villkor.
+  | Framför ett registrerat luftfartyg som inte är märkt enligt reglerna, eller använder ett luftfartyg som inte är luftvärdigt eller miljövärdigt.
+  | Lyder inte som passagerare det som befälhavaren bestämmer om ordningen ombord.
+  | Gör inte som befälhavare på ett luftfartyg i nöd det som rimligen kan krävas för att rädda ombordvarande, luftfartyg och gods.
+  | Lämnar oriktiga uppgifter vid registrering, flyger i överljudsfart utan tillstånd eller inrättar en flygplats utan tillstånd.
+S Uppsåt eller oaktsamhet.
+T En passagerare vägrar att sätta sig och spänna fast sig trots upprepade uppmaningar från kabinpersonalen på befälhavarens order.
+
+@ v19-lfl-ordervagran | Brott mot luftfartslagen (ordervägran i tjänst ombord) | 13:4 a | 13:4a
+PEN 0 | 0.5 | Böter eller fängelse i högst sex månader | B–F 6 mån
+C Trafik
+A ordervägran ombord;kabinpersonal
+Q plain
+K Gärningspersonen tjänstgör ombord på ett luftfartyg.
+G Gärningspersonen följer inte befälhavarens order.
+S Uppsåt till samtliga rekvisit.
+T En flygvärdinna vägrar att utföra en säkerhetskontroll som befälhavaren har beordrat.
+
+LAW TSL | Lagen (1990:1157) om säkerhet vid tunnelbana och spårväg | 1990:1157 | Tunnelbanelagen
+
+@ v19-tunnelbana-onykter-forare | Brott mot lagen om säkerhet vid tunnelbana och spårväg (onykter förare av tunnelbanetåg) | 30 § första–tredje styckena | 30
+PEN 0 | 0.5 | Böter eller fängelse i högst sex månader | B–F 6 mån
+C Trafik
+A tunnelbaneförare onykter;rattfylleri tunnelbana;tunnelbana alkohol
+Q plain
+N För den som för spårvagn gäller trafikbrottslagen (rattfylleri).
+G Gärningspersonen för ett maskindrivet spårfordon på tunnelbana.
+F Minst ett av:
+  | Alkoholkoncentrationen uppgår under eller efter färden till minst 0,2 promille i blodet eller 0,10 milligram per liter i utandningsluften.
+  | Det finns något narkotiskt ämne kvar i blodet efter att föraren har intagit {{narkotika}}.
+  | Föraren är så påverkad av alkohol eller annat medel att det kan antas att han eller hon inte kan framföra fordonet på ett betryggande sätt.
+S Uppsåt till samtliga rekvisit.
+U Narkotikan har intagits enligt läkares eller annan behörig receptutfärdares ordination.
+T En tunnelbaneförare kör tåget efter att ha druckit öl på lunchen och har 0,3 promille.
+
+@ v19-tunnelbana-onykter-forare-grovt | Brott mot lagen om säkerhet vid tunnelbana och spårväg, grovt brott (onykter förare av tunnelbanetåg) | 30 § fjärde stycket | 30
+PEN 0 | 2 | Fängelse i högst två år | F 2 år
+C Trafik
+A grovt onykter tunnelbaneförare
+Q plain
+B v19-tunnelbana-onykter-forare
+R grovt
+- Föraren har haft minst 1,0 promille i blodet eller 0,50 milligram per liter i utandningsluften.
+- Föraren har annars varit avsevärt påverkad av alkohol eller något annat medel.
+- Framförandet av fordonet har inneburit en påtaglig fara för trafiksäkerheten.
+T En tunnelbaneförare med 1,4 promille kör förbi en röd signal.
+
+@ v19-tunnelbana-sakerhetstjanst | Brott mot lagen om säkerhet vid tunnelbana och spårväg (onykterhet i säkerhetstjänst) | 30 § femte stycket | 30
+PEN 0 | 2 | Böter eller fängelse i högst två år | B–F 2 år
+C Trafik
+A trafikledare tunnelbana onykter;säkerhetstjänst tunnelbana
+Q plain
+G Gärningspersonen fullgör tjänst vid tunnelbana med uppgifter av väsentlig betydelse för säkerheten, utan att föra fordonet, till exempel som trafikledare eller banarbetare.
+F Gärningspersonen är så påverkad av alkohol eller annat medel att det kan antas att han eller hon inte kan utföra uppgifterna på ett betryggande sätt.
+S Uppsåt till samtliga rekvisit.
+T En trafikledare i tunnelbanans driftcentral arbetar kraftigt berusad.
+
+@ v19-tunnelbana-verksamhet | Brott mot lagen om säkerhet vid tunnelbana och spårväg (verksamhet och materiel) | 29 § | 29
+PEN 0 | 1 | Böter eller fängelse i högst ett år | B–F 1 år
+C Trafik
+A tunnelbana tillstånd;spårväg tillstånd;säkerhetsordning
+Q plain
+G Gärningspersonen gör minst ett av:
+  | Driver tillståndspliktig tunnelbane- eller spårvägsverksamhet utan tillstånd.
+  | Anlitar personal för säkerhetsuppgifter eller använder materiel som inte uppfyller säkerhetskraven, eller saknar föreskriven säkerhetsordning.
+  | Bryter mot villkor i tillståndet.
+  | Använder materiel som inte har godkänts.
+S Driva utan tillstånd: uppsåt. Personal, materiel och säkerhetsordning: uppsåt eller grov oaktsamhet. Villkor och ej godkänd materiel: uppsåt eller oaktsamhet.
+U Gärningen omfattas av ett vitesföreläggande eller vitesförbud som har överträtts.
+T Ett spårvägsbolag sätter in vagnar i trafik som inte har godkänts av Transportstyrelsen.
+
+LAW SkyddsL | Skyddslagen (2010:305) | 2010:305 | SkyddsL
+X 7
+
+@ v19-obehorigt-tilltrade-skyddsobjekt | Obehörigt tillträde till skyddsobjekt | 30 § första stycket | 7,30
+PEN 0 | 2 | Fängelse i högst två år | F 2 år
+C Rikets säkerhet
+A skyddsobjekt;militärt område;tillträde förbjudet;drönare över skyddsobjekt;kärnkraftverk
+Q plain
+O Ett skyddsobjekt, till exempel ett militärt område, ett kraftverk eller en annan anläggning som har beslutats vara skyddsobjekt.
+G Gärningspersonen gör minst ett av:
+  | Tar sig in på skyddsobjektet trots tillträdesförbudet, även med hjälp av en obemannad farkost som en drönare.
+  | Stannar olovligen kvar inom skyddsobjektet.
+K Gärningspersonen är obehörig.
+S Uppsåt eller oaktsamhet.
+T En person klättrar över stängslet till ett militärt förråd som är skyddsobjekt.
+V En person flyger en drönare in över ett kärnkraftverk som är skyddsobjekt.
+
+@ v19-obehorigt-tilltrade-skyddsobjekt-ringa | Obehörigt tillträde till skyddsobjekt, ringa brott | 30 § andra stycket | 30
+PEN 0 | 0.5 | Böter eller fängelse i högst sex månader | B–F 6 mån
+C Rikets säkerhet
+A ringa obehörigt tillträde till skyddsobjekt
+Q plain
+B v19-obehorigt-tilltrade-skyddsobjekt
+R ringa*
+- Om intrånget var kortvarigt och skedde av misstag eller ouppmärksamhet.
+- Om det inte fanns någon risk för skada på säkerhetsintressen.
+T En svampplockare går av misstag några meter in innanför en skylt om skyddsobjekt utan stängsel.
+
+@ v19-olovlig-avbildning-skyddsobjekt | Olovlig avbildning av skyddsobjekt | 30 a § | 7,30a
+PEN 0 | 1 | Böter eller fängelse i högst ett år | B–F 1 år
+C Rikets säkerhet
+A fotografera skyddsobjekt;filma militär anläggning;drönarfilm skyddsobjekt
+Q plain
+O Ett skyddsobjekt med förbud mot avbildning, beskrivning eller mätning.
+G Gärningspersonen avbildar, beskriver eller mäter skyddsobjektet eller något inom det, till exempel fotograferar eller filmar.
+S Uppsåt eller oaktsamhet.
+T En person fotograferar en marinbas trots skyltar om avbildningsförbud.
+
+@ v19-olovlig-vattenaktivitet-skyddsobjekt | Olovlig vattenaktivitet inom skyddsobjekt | 30 b § | 7,30b
+PEN 0 | 1 | Böter eller fängelse i högst ett år | B–F 1 år
+C Rikets säkerhet
+A ankra vid skyddsobjekt;dyka skyddsobjekt;fiska skyddsobjekt
+Q plain
+O Ett skyddsobjekt med förbud mot att bada, dyka, ankra eller fiska.
+G Gärningspersonen badar, dyker, ankrar eller fiskar inom skyddsobjektet.
+S Uppsåt eller oaktsamhet.
+T En båt ankrar i ett vattenområde vid en örlogsbas där det är förbjudet att ankra.
+
+@ v19-osann-uppgift-skyddsobjekt | Lämnande av osann uppgift vid skyddsobjekt | 31 § | 31
+PEN 0 | 0.5 | Böter eller fängelse i högst sex månader | B–F 6 mån
+C Rikets säkerhet
+A ljuga för vakt;falsk identitet skyddsobjekt
+Q plain
+G Gärningspersonen lämnar oriktiga eller vilseledande uppgifter.
+S Syfte att få tillträde till ett skyddsobjekt.
+U Gärningen kan ge straff enligt brottsbalken.
+T En person uppger falskt att han är tekniker från ett företag för att bli insläppt på ett skyddat elnätsområde.

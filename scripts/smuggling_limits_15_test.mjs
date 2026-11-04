@@ -29,5 +29,5 @@ assert.equal(rerun(d=>{d.sourceURL='https://example.invalid';}).explained,0);
 assert.equal(rerun((d,a)=>{a.find(c=>c.title==='Smuggling').lawCompletenessVerified=false;}).explained,22);
 assert.equal(rerun((d,a)=>{a.find(c=>c.title==='Smuggling').lawCompletenessChecked='2099-01-01';}).explained,22);
 assert.ok(read('service-worker.js').includes(mod));assert.ok(sources.indexOf(mod)<sources.indexOf('./catalog-selection-15.js'));
-assert.ok(html.includes('smuggling-limits'));assert.ok(html.includes('escapeHtml(c.smugglingLimits15.sourceURL)'));
+/* 1.9: frivillig rättelse visas i rekvisiten, åtalsvillkoret i åtalsavsnittet. */
 console.log('PASS: 23 source-pinned explanations distinguish voluntary rectification, ringa exceptions, subsidiarity and specific prosecution limits without full legal signoff');

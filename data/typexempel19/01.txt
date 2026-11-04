@@ -1,0 +1,133 @@
+@ stold
+T En person tar en cykel som står olåst utanför en affär och cyklar hem med den för att behålla den.
+V En person hittar en plånbok på en parkbänk där ägaren nyss suttit och tar den. Det är stöld och inte fyndförseelse om ägaren fortfarande har besittningen, till exempel för att plånboken nyss glömts kvar och ägaren vet var den finns.
+@ ringa-stold
+T En person stoppar en chokladkaka i fickan i en butik och passerar kassorna utan att betala (snatteri).
+@ grov-stold
+T En person rycker en väska från en äldre kvinna som går på gatan och springer därifrån.
+V En person tar en plånbok ur någons ficka på bussen (fickstöld). Att saken bars på kroppen talar för grov stöld, men bedömningen görs utifrån samtliga omständigheter.
+@ inbrottsstold
+T En person bryter upp ytterdörren till en lägenhet och tar smycken och en dator.
+V En person går in genom en olåst altandörr till en villa och tar en väska i hallen. Även det är intrång i bostad.
+@ ran
+T En person hotar en kassör med kniv och tvingar till sig pengarna i kassan.
+V En snattare ertappas av en butiksvakt och slår vakten för att få behålla varorna (motvärnsrån).
+@ grovt-ran
+T Två maskerade personer rånar en guldsmedsbutik med skjutvapen och hotar personalen till livet.
+@ misshandel
+T En person slår en annan i ansiktet med knytnäven så att personen får ont och en svullnad.
+@ ringa-misshandel
+T En person ger en annan en örfil under ett gräl, utan att det uppstår någon synlig skada.
+@ grov-misshandel
+T En person sparkar en annan i huvudet flera gånger när denne ligger ner på marken.
+@ synnerligen-grov-misshandel
+T En person misshandlar en annan med ett järnrör så att offret får bestående hjärnskador.
+@ v03-mord
+T En person skjuter en annan till döds med avsikt att döda.
+@ v03-drap
+T En person blir provocerad under ett kraftigt bråk i hemmet och sticker ihjäl sin partner med en kniv i affekt.
+@ v03-barnadrap
+T En kvinna föder i hemlighet ett barn och dödar det direkt efter födseln, i ett upprivet sinnestillstånd.
+@ v03-vallande-till-annans-dod
+T En bilförare tittar ner på mobilen, kör mot rött ljus och kör på en fotgängare som dör.
+V En arbetsgivare låter en anställd arbeta på hög höjd utan fallskydd och den anställde faller och dör. Det kan i stället vara arbetsmiljöbrott.
+@ v03-grovt-vallande-till-annans-dod
+T En berusad förare kör i mycket hög hastighet genom ett bostadsområde och kör ihjäl ett barn.
+@ v03-vallande-till-kroppsskada-eller-sjukdom
+T En hundägare släpper sin aggressiva hund lös i en park och hunden biter en förbipasserande så att personen behöver sys.
+@ v03-grovt-vallande-till-kroppsskada-eller-sjukdom
+T En drogpåverkad förare kör mot rött och skadar en cyklist allvarligt.
+@ v03-framkallande-av-fara-for-annan
+T En person kastar en tung sten från en motorvägsbro ner mot trafiken. Stenen missar bilarna med några meter.
+@ v03-manniskorov
+T En grupp för bort en person i en bil och håller honom inlåst för att få hans familj att betala en lösensumma.
+@ v03-manniskohandel
+T En person lockar en kvinna till Sverige med löfte om arbete och tvingar henne sedan att sälja sex.
+@ v03-manniskoexploatering
+T En arbetsgivare tar passen från utländska arbetare och låter dem arbeta tolv timmar om dagen för en bråkdel av normal lön.
+V En person tvingar en annan att tigga utanför en butik och tar pengarna.
+@ v04-grov-manniskoexploatering
+T En organiserad grupp utnyttjar ett stort antal utländska byggarbetare under slavliknande förhållanden och tjänar miljoner.
+@ v03-olaga-frihetsberovande
+T En person låser in sin partner i en lägenhet under flera dagar och tar hennes telefon.
+@ v15-olaga-frihetsberovande-mindre-grovt
+T En person håller fast en annan i en bil i några minuter och kör inte vidare förrän personen lovat att betala en skuld.
+@ v03-olaga-tvang
+T En person hotar att slå en annan om denne inte raderar en film från sin telefon, och personen raderar filmen.
+@ v03-grovt-olaga-tvang
+T En person tvingar en annan att köra honom till en annan stad genom att hålla en pistol mot hans huvud.
+@ v03-olaga-hot
+T En person säger till en granne "jag ska döda dig" och håller samtidigt upp en kniv.
+V Ett hot som skickas i ett sms eller i sociala medier räcker också, om det är ägnat att framkalla allvarlig rädsla.
+@ v03-grovt-olaga-hot
+T En person riktar en laddad pistol mot en annan och säger att han ska skjuta honom.
+@ v03-grov-fridskrankning
+T En pappa slår och hotar upprepade gånger sin tonårsson under ett halvår.
+@ v03-grov-kvinnofridskrankning
+T En man misshandlar, hotar och förolämpar upprepade gånger sin sambo under flera år.
+@ v03-olaga-forfoljelse
+T En person som inte accepterar att ett förhållande är slut skickar hotfulla sms, dyker upp vid den andres arbete och slår sönder hennes bil under flera månader.
+@ v05-barnfridsbrott
+T En man misshandlar sin sambo i köket medan deras gemensamma sexåriga barn står i dörröppningen och ser på.
+V Det räcker att barnet hör misshandeln från ett annat rum. Även det är att bevittna.
+@ v05-ringa-barnfridsbrott
+T En pappa slår sönder en tallrik i ilska mot mamman när deras barn ser på.
+@ v05-grovt-barnfridsbrott
+T Ett barn ser när den ena föräldern försöker strypa den andra.
+@ v15-family-aktenskapstvang
+T En familj hotar sin 22-åriga dotter med att stöta ut henne och skada henne om hon inte gifter sig med en kusin.
+@ v15-family-barnaktenskapsbrott
+T Föräldrar ordnar så att deras 15-åriga dotter gifts bort med en vuxen man vid en religiös ceremoni.
+@ v15-family-aktenskapsresebrott
+T En familj lurar sin vuxna son att följa med på semester utomlands, där de tänker tvinga honom att gifta sig.
+@ v15-family-aktenskapsresebrott-mot-barn
+T Föräldrar tar med sin 16-åriga dotter till hemlandet för att hon ska giftas bort där.
+@ v15-hedersfortryck
+T En bror kontrollerar sin syster i flera år, misshandlar henne och hotar henne för att hon har en pojkvän och "drar skam" över familjen.
+@ v15-oskuldskontroll
+T En person undersöker en ung kvinnas könsorgan på begäran av hennes familj för att se om hon är "oskuld".
+@ v15-intygande-av-sexuell-oskuld
+T En läkare skriver ett intyg om att en kvinna är "oskuld" efter att ha undersökt hennes könsorgan.
+@ v03-krankande-fotografering
+T En person monterar en dold kamera i ett omklädningsrum och filmar personer som byter om.
+@ v03-olovlig-identitetsanvandning
+T En person använder sin före detta partners namn och personnummer för att beställa varor på faktura.
+@ v03-olaga-integritetsintrang
+T En person sprider en nakenbild på sin före detta partner i en chattgrupp.
+@ v03-grovt-olaga-integritetsintrang
+T En person lägger ut en sexfilm med en annan person på en pornografisk webbplats där den ses av tusentals.
+@ v03-brytande-av-post-eller-telehemlighet
+T En person installerar ett program på sin partners telefon som vidarebefordrar alla sms som partnern tar emot.
+@ v03-intrang-i-forvar
+T En person bryter upp sin rumskamrats låsta skrivbordslåda och läser hans dagbok.
+@ v03-olovlig-avlyssning
+T En person gömmer en inspelningsapparat i grannens vardagsrum och spelar in samtalen där.
+@ v15-brb4-9b
+T En person monterar en dold kamera i ett omklädningsrum men åker fast innan kameran har filmat något.
+@ v03-dataintrang
+T En person loggar in på sin partners Instagramkonto utan lov och läser meddelandena.
+@ v03-grovt-dataintrang
+T En person hackar ett sjukhus datasystem och låser alla patientjournaler med utpressningsprogram.
+@ ofredande
+T En person ringer sin före detta partner tjugo gånger mitt i natten och lägger på när hon svarar.
+V En person knuffar till någon på gatan utan att det gör ont. Det är fysiskt antastande och kan vara ofredande även om det inte är misshandel.
+@ hemfridsbrott
+T En person går in i grannens lägenhet utan lov och vägrar gå när grannen ber honom.
+@ olaga-intrang
+T En person tar sig in i en låst industrilokal på natten för att sova där.
+@ grovt-hemfridsbrott
+T En person bryter sig in i en bostad och hotar de boende med kniv.
+@ grovt-olaga-intrang
+T En grupp bryter upp en dörr till en skola och vandaliserar lokalerna.
+@ psykiskt-vald
+T En person kallar under lång tid sin partner värdelös, kontrollerar hennes telefon och bestämmer vem hon får träffa.
+@ v15-uppmaning-till-sjalvmord
+T En person skriver upprepade gånger till en deprimerad bekant att hon borde ta livet av sig och förklarar hur.
+@ v15-oaktsam-uppmaning-till-sjalvmord
+T En person skriver till en kompis "gå och dö" i en chatt, utan att förstå att kompisen har allvarliga självmordstankar som han borde ha insett.
+@ v03-fortal
+T En person skriver i en lokal Facebookgrupp att grannen är pedofil, trots att det inte finns något som tyder på det.
+@ v03-grovt-fortal
+T En person sprider på internet att en namngiven lärare har våldtagit elever, och inlägget delas tusentals gånger.
+@ v03-forolampning
+T En person kallar en annan för ett grovt nedsättande glåpord direkt i ansiktet inför andra på en fest.

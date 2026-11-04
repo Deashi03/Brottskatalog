@@ -1,0 +1,140 @@
+LAW BrB | Brottsbalken | 1962:700 | BrB
+
+@ v19-grov-hets-mot-folkgrupp | Grov hets mot folkgrupp | 16:8 fjärde stycket | 16:8
+PEN 0.5 | 4 | Fängelse lägst sex månader och högst fyra år | F 6 mån–4 år
+C Allmän ordning
+A grov hets;hatbrott grovt;grovt hets mot folkgrupp
+Q plain
+B v03-hets-mot-folkgrupp
+R grovt
+- Meddelandet har haft ett särskilt hotfullt eller kränkande innehåll och spritts till ett stort antal personer på ett sätt som varit ägnat att väcka betydande uppmärksamhet.
+T En person publicerar en film med uppmaningar till våld mot judar på ett konto med hundratusentals följare, och filmen sprids vidare i stor omfattning.
+
+@ v19-ringa-hets-mot-folkgrupp | Ringa hets mot folkgrupp | 16:8 tredje stycket | 16:8
+PEN 0 | 0 | Böter | Böter
+C Allmän ordning
+A ringa hets;hets mot folkgrupp ringa
+Q plain
+B v03-hets-mot-folkgrupp
+R ringa*
+- Meddelandets innehåll och hur allvarligt det är.
+- Hur många som nåtts av meddelandet och i vilket sammanhang det spreds.
+T En person skriver en enstaka nedsättande kommentar om muslimer i en mindre diskussionstråd på nätet.
+
+@ v19-osann-forsakran-grovt | Osann försäkran, grovt brott | 15:10 andra stycket | 15:10
+PEN 0 | 2 | Fängelse i högst två år | F 2 år
+C Rättsväsende
+A grov osann försäkran
+Q plain
+B v03-osann-forsakran
+R grovt*
+- Uppgiftens betydelse och vilken skada eller fara den kunde orsaka.
+- Om uppgiften ingått i en planerad eller upprepad brottslighet.
+T En person intygar på heder och samvete osanna uppgifter i flera ansökningar till en myndighet som ett led i ett större bedrägeriupplägg.
+
+@ v19-vardslos-forsakran | Vårdslös försäkran | 15:10 tredje stycket | 15:10
+PEN 0 | 0.5 | Böter eller fängelse i högst sex månader | B–F 6 mån
+C Rättsväsende
+A vårdslös försäkran på heder och samvete;slarvig försäkran
+Q plain
+G Gärningspersonen lämnar på annat sätt än muntligen en osann uppgift eller förtiger sanningen.
+O Uppgiften lämnas på heder och samvete eller under annan liknande försäkran enligt lag eller annan författning.
+F Åtgärden innebär fara i bevishänseende.
+S Grov oaktsamhet.
+T En person skriver under en bouppteckning på heder och samvete utan att kontrollera uppgifterna, trots tydliga tecken på att tillgångar saknas.
+
+@ v19-osant-intygande-grovt | Osant intygande, grovt brott | 15:11 andra stycket | 15:11
+PEN 0 | 2 | Fängelse i högst två år | F 2 år
+C Rättsväsende
+A grovt osant intygande
+Q plain
+B v03-osant-intygande
+R grovt
+- Brottet innefattar missbruk av tjänsteställning.
+- Brottet är annars att anse som grovt.
+T En tjänsteman på en myndighet utfärdar ett intyg med osanna uppgifter för att hjälpa en bekant.
+
+@ v19-brukande-av-osann-urkund | Brukande av osann urkund | 15:11 tredje stycket | 15:11
+PEN 0 | 0.5 | Böter eller fängelse i högst sex månader | B–F 6 mån
+C Rättsväsende
+A använda osant intyg;falskt intyg;skenavtal
+Q plain
+FU enkel|15 kap. brukande av osann urkund
+O {{urkund|Urkunden}} innehåller en osann uppgift om vem utställaren är eller om annat än utställarens egna angelägenheter, eller har upprättats för skens skull rörande en rättshandling.
+G Gärningspersonen åberopar eller använder på annat sätt urkunden.
+F Åtgärden innebär fara i bevishänseende.
+S Uppsåt till samtliga rekvisit.
+T En person visar upp ett hyreskontrakt som upprättats för skens skull för att få bostadsbidrag.
+
+@ v19-brukande-av-osann-urkund-grovt | Brukande av osann urkund, grovt brott | 15:11 tredje stycket jämfört med andra stycket | 15:11
+PEN 0 | 2 | Fängelse i högst två år | F 2 år
+C Rättsväsende
+A grovt brukande av osann urkund
+Q plain
+B v19-brukande-av-osann-urkund
+R grovt
+- Brottet innefattar missbruk av tjänsteställning.
+- Brottet är annars att anse som grovt.
+T En person använder upprepade gånger skenavtal för att få stora utbetalningar från en myndighet.
+
+LAW RB | Rättegångsbalken | 1942:740 | RB
+X 5:9b
+
+@ v19-rb-fotoforbud | Brott mot rättegångsbalken (fotoförbud) | 9:5 a | 9:5a
+PEN 0 | 0.5 | Böter eller fängelse i högst sex månader | B–F 6 mån
+C Rättsväsende
+A brott mot fotoförbud;fotografering i rättssal;filma i rättssalen;sprida bild från rättegång
+Q plain
+## Tar upp bild
+P Vid rättens sammanträde, i eller in i rättssalen eller i en sidosal.
+G Gärningspersonen tar upp bild med tekniskt hjälpmedel, till exempel fotograferar eller filmar.
+S Uppsåt till samtliga rekvisit.
+U Annat följer av lag.
+U Fallet är ringa.
+## Sprider bild
+O Bilden har tagits upp i strid med fotoförbudet och någon syns på bilden.
+G Gärningspersonen sprider bilden.
+S Uppsåt till samtliga rekvisit.
+U Fallet är ringa.
+T En åhörare filmar med mobilen när ett vittne hörs i rättssalen.
+V En åhörare lägger ut en bild på den tilltalade i rättssalen på sociala medier.
+
+@ v19-rb-rattegang-mot-battre-vetande | Brott mot rättegångsbalken (rättegång mot bättre vetande) | 9:1 | 9:1
+PEN 0 | 0 | Böter | Böter
+C Rättsväsende
+A inleda rättegång mot bättre vetande;okynnesstämning
+Q plain
+K Gärningspersonen är part i ett tvistemål.
+G Parten inleder eller föranleder rättegång i tvistemålet.
+S Parten vet att talan saknar grund (mot bättre vetande).
+T En person stämmer en granne för en skuld som personen vet redan är betald.
+
+@ v19-rb-overklagande-mot-battre-vetande | Brott mot rättegångsbalken (överklagande mot bättre vetande) | 9:2 | 9:2
+PEN 0 | 0 | Böter | Böter
+C Rättsväsende
+A överklaga mot bättre vetande
+Q plain
+K Gärningspersonen är part.
+G Parten för talan mot en dom eller ett beslut.
+S Parten vet att talan saknar grund (mot bättre vetande).
+T En part överklagar en dom enbart för att skjuta upp betalningen, trots att parten vet att domen är riktig.
+
+@ v19-rb-forhalning | Brott mot rättegångsbalken (förhalning av rättegång) | 9:3 | 9:3
+PEN 0 | 0 | Böter | Böter
+C Rättsväsende
+A förhala rättegången;fördröja rättegång
+Q plain
+K Gärningspersonen är part i ett tvistemål, målsägande i ett brottmål eller intervenient.
+G Gärningspersonen försöker förhala rättegången genom uppenbart ogrundade påståenden eller invändningar, genom att hålla inne bevis eller genom någon annan otillbörlig åtgärd.
+S Uppsåt att förhala rättegången.
+T En part håller medvetet inne avgörande bevis till sista förhandlingsdagen för att huvudförhandlingen ska behöva ställas in.
+
+@ v19-rb-obehorig-advokat | Brott mot rättegångsbalken (obehörigt utgivande som advokat) | 8:10 | 8:10
+PEN 0 | 0 | Böter | Böter
+C Rättsväsende
+A falsk advokat;utger sig för advokat;advokattitel
+Q plain
+G Gärningspersonen utger sig för att vara auktoriserad som advokat i Sverige, i en annan stat inom EU eller EES eller i Schweiz.
+K Gärningspersonen är inte behörig att kalla sig advokat.
+S Uppsåt till samtliga rekvisit.
+T En jurist som inte är medlem i Advokatsamfundet skriver ”advokat” på sin webbplats och i brev till klienter.

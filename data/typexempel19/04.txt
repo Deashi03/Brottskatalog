@@ -1,0 +1,106 @@
+@ v03-urkundsforfalskning
+T En person ändrar datumet på ett läkarintyg för att få längre sjukledighet.
+V En person skriver under ett avtal med någon annans namn utan lov.
+@ v03-ringa-urkundsforfalskning
+T En person ändrar datumet på en gammal busskupong för att kunna åka en gång till.
+@ v03-grov-urkundsforfalskning
+T En person tillverkar falska pass och säljer dem.
+@ v03-brukande-av-falsk-urkund
+T En person visar upp ett falskt körkort vid en poliskontroll.
+V En person betalar i en butik med en falsk 500-lapp.
+@ v05-hindrande-av-urkunds-bevisfunktion
+T En person river sönder ett skuldebrev som han har fått låna av långivaren, för att slippa betala skulden.
+@ v05-ringa-hindrande-av-urkunds-bevisfunktion
+T En person slänger grannens kvitto på ett mindre köp för att grannen inte ska kunna reklamera varan.
+@ v05-grovt-hindrande-av-urkunds-bevisfunktion
+T En tjänsteman förstör viktiga handlingar ur en myndighets arkiv för att dölja oegentligheter.
+@ v05-signaturforfalskning
+T En person målar en tavla och signerar den med en känd konstnärs namn.
+@ v15-ringa-signaturforfalskning
+T En person sätter en känd formgivares signatur på en enkel lampa av lågt värde.
+@ v15-grov-signaturforfalskning
+T En konsthandlare sätter falska signaturer på flera målningar och säljer dem som originalverk för miljonbelopp.
+@ v05-penningforfalskning
+T En person skriver ut falska 200-lappar på en färgskrivare.
+@ v15-ringa-penningforfalskning
+T En person tillverkar en enstaka falsk 20-lapp av dålig kvalitet.
+@ v05-grov-penningforfalskning
+T En grupp trycker falska sedlar i stor skala i en verkstad.
+@ v05-olovlig-befattning-med-falska-pengar
+T En person förvarar en bunt falska sedlar hemma för att använda dem i butiker.
+@ v15-ringa-olovlig-befattning-med-falska-pengar
+T En person bär på en falsk 50-lapp för att försöka betala med den.
+@ v15-grov-olovlig-befattning-med-falska-pengar
+T En person transporterar ett stort antal falska sedlar för vidare spridning i landet.
+@ v15-markesforfalskning
+T En person sätter en stulen registreringsskylt på sin egen bil.
+V En person tillverkar falska parkeringstillstånd för rörelsehindrade.
+@ v15-ringa-markesforfalskning
+T En person förfalskar ett frimärke av lågt värde.
+@ v15-grov-markesforfalskning
+T En person tillverkar falska besiktningsmärken och säljer dem till ett stort antal bilägare.
+@ v15-forfalskning-av-fast-marke
+T En markägare flyttar ett gränsmärke för att få en större tomt.
+@ v15-ringa-forfalskning-av-fast-marke
+T En person flyttar en mätpunkt några centimeter när han gräver i trädgården.
+@ v15-olaga-spridande-av-efterbildning
+T En person delar ut leksakspengar som ser ut som riktiga sedlar på ett torg.
+@ v03-mened
+T Ett vittne ljuger under ed i tingsrätten och säger att den tilltalade var hemma vid tiden för brottet.
+@ v03-grov-mened
+T Ett vittne ljuger under ed i en mordrättegång för att den tilltalade ska frias.
+@ v06-osann-partsutsaga
+T En part i ett tvistemål ljuger under sanningsförsäkran om att han har betalat en skuld.
+@ v06-ringa-osann-partsutsaga
+T En part lämnar en osann uppgift av liten betydelse under förhör under sanningsförsäkran.
+@ v06-ovarsam-utsaga
+T Ett vittne påstår under ed med stor säkerhet att det var en röd bil, trots att vittnet inte såg färgen.
+@ v15-family-osann-utsaga-infor-nordisk-domstol
+T Ett vittne ljuger under straffansvar i en norsk domstol.
+@ v15-family-ovarsam-utsaga-infor-nordisk-domstol
+T Ett vittne lämnar av grov oaktsamhet en felaktig uppgift i en dansk domstol.
+@ v15-family-osann-utsaga-infor-en-internationell-domstol
+T En sakkunnig lämnar medvetet en falsk uppgift under ed inför EU-domstolen.
+@ v15-family-ovarsam-utsaga-infor-en-internationell-domstol
+T Ett vittne lämnar av grov oaktsamhet en felaktig uppgift under ed inför EFTA-domstolen.
+@ v05-falskt-atal
+T En person väcker enskilt åtal mot en granne för förtal, trots att han vet att grannen är oskyldig.
+@ v05-grovt-falskt-atal
+T En åklagare väcker medvetet åtal för ett allvarligt brott mot någon han vet är oskyldig.
+@ v05-obefogat-atal
+T En person väcker enskilt åtal mot en annan utan att ha sannolika skäl för det.
+@ v03-falsk-angivelse
+T En person anmäler sin före detta partner för misshandel som aldrig har inträffat, för att han ska dömas.
+@ v04-ringa-falsk-angivelse
+T En person anmäler falskt en granne för en olovlig körning för att han ska dömas.
+@ v04-grov-falsk-angivelse
+T En person anmäler falskt en man för våldtäkt och lämnar påhittade bevis.
+@ v04-obefogad-angivelse
+T En person anmäler en kollega för stöld trots att det fanns starka skäl att anta att kollegan var oskyldig.
+@ v05-falsk-beskyllning
+T En person som själv krockat med bilen säger till polisen att det var hans kompis som körde.
+@ v05-ringa-falsk-beskyllning
+T En person säger till polisen att en kompis slängt skräp på gatan, fast det var han själv.
+@ v05-grov-falsk-beskyllning
+T En person pekar falskt ut en annan som skytt vid en skottlossning.
+@ v05-vardslos-beskyllning
+T En person påstår för polisen att grannen har stulit hans cykel, utan att ha någon grund för det, när han hade skäl att förstå att påståendet var fel.
+@ v05-bevisforvanskning
+T En person lägger narkotika i en annans väska för att han ska bli dömd.
+@ v05-grov-bevisforvanskning
+T En person planterar ett mordvapen hos en oskyldig för att denne ska dömas för mord.
+@ v05-underlatenhet-att-avvarja-rattsfel
+T En person som i god tro lämnat en felaktig uppgift till polisen förstår senare att den kan leda till att en oskyldig döms, men gör ingenting för att rätta det.
+@ v03-osann-forsakran
+T En person skriver under en bouppteckning på heder och samvete och utelämnar medvetet en bil.
+@ v03-osant-intygande
+T En person skriver ett falskt intyg om att en bekant har arbetat hos honom i fem år.
+V Två personer upprättar ett skenavtal om att en bil har sålts, för att undgå utmätning.
+@ v06-missbruk-av-urkund
+T En 17-åring visar sin äldre brors körkort som sitt eget för att komma in på en krog.
+@ v06-grovt-missbruk-av-urkund
+T En person använder någon annans äkta pass för att resa in i landet.
+@ v06-missbruk-av-handling
+T En person visar en redigerad kopia av ett betyg och påstår att den är en riktig kopia.
+@ v05-fornekande-av-underskrift
+T En person förnekar att han har skrivit under ett skuldebrev, trots att det är hans namnteckning, för att slippa betala.

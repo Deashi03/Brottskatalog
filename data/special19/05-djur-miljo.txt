@@ -1,0 +1,320 @@
+LAW JaktL | Jaktlagen (1987:259) | 1987:259 | JaktL
+X 3,31
+
+@ v19-jaktbrott | Jaktbrott | 43 § | 43
+PEN 0 | 1 | Böter eller fängelse i högst ett år | B–F 1 år
+C Djur och natur
+A tjuvjakt;olovlig jakt;jakt på annans mark;skjuta fredat vilt;jakt från bil;jakt utanför jakttid
+Q plain
+FU enkel|Jaktlagen (1987:259), ej grovt jaktbrott
+G Gärningspersonen gör minst ett av:
+  | Jagar olovligen på annans jaktområde eller tillägnar sig vilt där.
+  | Bryter vid licensjakt mot en bestämmelse i licensen som är väsentlig för jakten.
+  | Jagar fredat vilt, eller tar dess ägg eller bon.
+  | Jagar från ett motordrivet fortskaffningsmedel eller använder ett sådant för att söka, spåra, förfölja eller genskjuta vilt.
+  | Bryter mot föreskrifter om jakttider eller om vilka vapen och jaktmedel som får användas.
+  | Jagar med drivande hund på ett område där drevet kan förutses gå huvudsakligen över annans jaktområde.
+S Olovlig jakt på annans område, licensbrott och jakt med drivande hund: uppsåt eller grov oaktsamhet. Fredat vilt, motorfordon, jakttider och jaktmedel: uppsåt eller oaktsamhet.
+T En person skjuter ett rådjur på grannens mark utan att ha jakträtt där.
+V En jägare skjuter en älg från bilen längs en skogsväg.
+
+@ v19-grovt-jaktbrott | Grovt jaktbrott | 44 § | 43,44
+PEN 0.5 | 4 | Fängelse lägst sex månader och högst fyra år | F 6 mån–4 år
+C Djur och natur
+A grov tjuvjakt;illegal jakt på varg;illegal jakt på lo;olaglig rovdjursjakt
+Q plain
+FU ej|Grovt jaktbrott är uttryckligen undantaget i bilagan till ÅFS 2005:9.
+N Försök och förberedelse är straffbara (46 a §).
+B v19-jaktbrott
+R grovt
+- Brottet avsåg ett hotat, sällsynt eller annars särskilt skyddsvärt vilt.
+- Brottet har utförts vanemässigt eller i större omfattning.
+- Brottet har utförts med otillåten hjälp av ett motordrivet fortskaffningsmedel eller annan motordriven anordning.
+- Brottet har utförts med en särskilt plågsam jaktmetod.
+T Två personer spårar en varg med snöskoter och skjuter den.
+
+@ v19-jakthaleri | Jakthäleri | 46 § första stycket | 46
+PEN 0 | 1 | Böter eller fängelse i högst ett år | B–F 1 år
+C Djur och natur
+A köpa tjuvskjutet vilt;tjuvskjutet kött;troféer
+Q plain
+FU enkel|Jaktlagen (1987:259), ej grovt jaktbrott
+O Vilt som har dödats eller åtkommits genom jaktbrott.
+G Gärningspersonen tar obehörigen befattning med viltet, till exempel köper, tar emot, förvarar eller säljer det.
+S Gärningspersonen vet eller har skälig anledning att anta att viltet kommer från jaktbrott.
+U Gärningen kan ge straff enligt miljöbalken.
+T En person köper älgkött billigt av någon som han har skälig anledning att anta har skjutit älgen olovligen.
+
+@ v19-jakthaleri-grovt | Jakthäleri, grovt brott | 46 § andra stycket | 46
+PEN 0.5 | 4 | Fängelse lägst sex månader och högst fyra år | F 6 mån–4 år
+C Djur och natur
+A grovt jakthäleri
+Q plain
+FU enkel|Jaktlagen (1987:259), ej grovt jaktbrott|Bilagan undantar bara grovt jaktbrott. Åklagaren tar ändå över om något av villkoren i ÅFS 7 eller 8 § är uppfyllt.
+N Försök och förberedelse är straffbara (46 a §).
+B v19-jakthaleri
+R grovt
+- Brottet avsåg ett hotat, sällsynt eller annars särskilt skyddsvärt vilt.
+- Brottet har utförts vanemässigt eller i större omfattning.
+T En person säljer upprepade gånger skinn och kranier från illegalt skjutna lodjur.
+
+LAW DjsL | Djurskyddslagen (2018:1192) | 2018:1192 | DjsL
+X 10:6
+
+@ v19-brott-mot-djurskyddslagen | Brott mot djurskyddslagen | 10:1 | 10:1,10:6
+PEN 0 | 2 | Böter eller fängelse i högst två år | B–F 2 år
+C Djur och natur
+A vanvård av djur;svälta djur;djurförbud;överge katt;misskötsel av djur;hund i varm bil
+Q plain
+N Djurplågeri enligt BrB 16:13 gäller när någon uppsåtligen eller av grov oaktsamhet, genom misshandel, överansträngning, vanvård eller på annat sätt, otillbörligt utsätter ett djur för lidande.
+G Gärningspersonen bryter mot minst en av djurskyddslagens grundläggande skyldigheter, till exempel:
+  | Ger inte djuret tillräcklig tillsyn eller tillräckligt med foder och vatten.
+  | Binder eller fixerar djuret på ett plågsamt sätt eller utan att det får behövlig rörelsefrihet, vila och skydd mot väder.
+  | Håller djuret i stall, förvaringsutrymme eller hägn som inte ger tillräckligt skydd, utrymme eller renlighet, eller med farlig inredning.
+  | Överger ett djur av tamdjursart.
+  | Agar, skadar eller överanstränger djuret, eller använder utrustning som kan orsaka lidande eller skada.
+  | Utför avel som kan medföra lidande, eller transporterar djur på ett sätt som kan skada dem.
+  | Utsätter djuret för lidande vid tävling, inspelning eller förevisning, eller dopar ett tävlingsdjur.
+  | Ger inte ett skadat eller sjukt djur nödvändig vård, eller avlivar det inte när det behövs.
+  | Gör operativa ingrepp eller ger injektioner utan veterinärmedicinska skäl.
+  | Slaktar eller avlivar djur utan föreskriven bedövning.
+  | Följer inte ett beslut om djurförbud eller ett föreläggande att avveckla ett djurinnehav.
+S Uppsåt eller oaktsamhet.
+U Gärningen är ringa, det vill säga av mindre betydelse med hänsyn till det intresse som straffbestämmelsen ska skydda.
+T En hundägare lämnar sin hund instängd i en bil i stark sol under flera timmar.
+V En person som har meddelats djurförbud skaffar en ny katt.
+
+@ v19-djurskydd-sexuella-handlingar | Brott mot djurskyddslagen (sexuella handlingar med djur) | 10:2 | 10:2
+PEN 0 | 2 | Böter eller fängelse i högst två år | B–F 2 år
+C Djur och natur
+A tidelag;sex med djur;zoofili;bestialitet
+Q plain
+G Gärningspersonen genomför en sexuell handling med ett djur.
+S Uppsåt till samtliga rekvisit.
+U Handlingen utförs av veterinärmedicinska skäl, i samband med avel eller av liknande berättigade skäl.
+T En person filmar sig själv när han genomför sexuella handlingar med en hund.
+
+@ v19-djurskydd-eu-transport-avlivning | Brott mot djurskyddslagen (EU-regler om transport och avlivning) | 10:3 | 10:3,10:6
+PEN 0 | 2 | Böter eller fängelse i högst två år | B–F 2 år
+C Djur och natur
+A djurtransport;slakteri bedövning;transportförordningen
+Q plain
+G Gärningspersonen bryter mot EU:s regler om skydd av djur under transport eller vid avlivning, till exempel:
+  | Transporterar djur i strid med de tekniska kraven i EU:s transportförordning.
+  | Ser inte till att djuren behandlas enligt kraven som djurhållare på avsändnings-, omlastnings- eller bestämmelseorten, eller som ansvarig för en uppsamlingscentral.
+  | Avlivar djur utan föreskriven bedövning, eller så att djuret återfår medvetandet innan det dör.
+  | Bryter mot reglerna om fixering av djur och driftsbestämmelser för slakterier.
+S Uppsåt eller oaktsamhet.
+U Gärningen är ringa.
+T En transportör kör grisar i en överlastad lastbil utan vatten under en lång resa.
+
+LAW MB | Miljöbalken (1998:808) | 1998:808 | MB
+X 29:11,29:14
+
+@ v19-miljobrott | Miljöbrott | 29:1 första stycket | 29:1
+PEN 0 | 2 | Böter eller fängelse i högst två år | B–F 2 år
+C Djur och natur
+A utsläpp;förorening;olja i vattnet;dumpa kemikalier;miljöförstöring
+Q miljo
+G Gärningspersonen gör minst ett av:
+  | Orsakar att ett ämne släpps ut i mark, vatten eller luft som medför eller kan medföra en förorening som är skadlig för människors hälsa, djur eller växter i en omfattning som inte har ringa betydelse, eller någon annan betydande olägenhet i miljön.
+  | Förvarar ett ämne eller hanterar avfall på ett sätt som kan medföra en sådan förorening eller olägenhet.
+  | Orsakar en betydande olägenhet i miljön genom buller, skakning eller strålning.
+  | Ändrar yt- eller grundvattennivån på ett sätt som skadar eller kan skada människors hälsa, djur eller växter i en omfattning som inte har ringa betydelse, eller som kan medföra annan betydande olägenhet.
+S Uppsåt eller oaktsamhet.
+U En behörig myndighet har tillåtit förfarandet, eller förfarandet är allmänt vedertaget eller kan anses försvarligt med hänsyn till omständigheterna.
+T Ett företag låter läckande oljefat stå direkt på marken så att oljan rinner ner i en bäck.
+
+@ v19-grovt-miljobrott | Grovt miljöbrott | 29:1 andra stycket | 29:1,29:14
+PEN 0.5 | 6 | Fängelse lägst sex månader och högst sex år | F 6 mån–6 år
+C Djur och natur
+A grovt miljöbrott;stort utsläpp
+Q miljo
+N Försök och förberedelse är straffbara (29:1 tredje stycket).
+B v19-miljobrott
+R grovt
+- Brottet har medfört eller kunnat medföra varaktiga skador av stor omfattning.
+- Gärningen har annars varit av särskilt farlig art eller innefattat ett medvetet risktagande av allvarligt slag.
+- Gärningspersonen har gjort sig skyldig till en allvarlig försummelse när det krävts särskild uppmärksamhet eller skicklighet.
+T Ett företag gräver under flera år ner stora mängder farligt avfall så att grundvattnet förorenas.
+
+@ v19-brott-mot-omradesskydd | Brott mot områdesskydd | 29:2 | 29:2
+PEN 0 | 2 | Böter eller fängelse i högst två år | B–F 2 år
+C Djur och natur
+A strandskydd;naturreservat;nationalpark;bygga i strandskyddat område;biotopskydd
+Q miljo
+G Gärningspersonen gör minst ett av:
+  | Bedriver en förbjuden verksamhet eller åtgärd i ett biotopskyddsområde som kan skada naturmiljön.
+  | Uppför en byggnad eller vidtar någon annan förbjuden åtgärd i ett strandskyddsområde.
+  | Skadar eller riskerar att skada miljövärdena i en nationalpark, ett naturreservat, ett kulturreservat, ett djur- och växtskyddsområde, ett vattenskyddsområde eller ett område med interimistiskt förbud, genom att olovligen uppehålla sig där, bygga, stängsla, schakta, muddra, avverka, jaga, fiska, använda bekämpningsmedel eller liknande.
+S Uppsåt eller oaktsamhet.
+U Gärningen är ringa.
+U Gärningen kan ge ansvar för miljöbrott eller artskyddsbrott.
+T En fastighetsägare bygger en brygga och ett förråd vid stranden i ett strandskyddat område utan dispens.
+
+@ v19-artskyddsbrott | Artskyddsbrott | 29:2 b första stycket | 29:2b
+PEN 0 | 2 | Böter eller fängelse i högst två år | B–F 2 år
+C Djur och natur
+A fredade fåglar;äggsamling;elfenben;skyddade arter;CITES;plocka orkidéer
+Q miljo
+G Gärningspersonen gör minst ett av:
+  | Dödar, skadar, fångar eller stör ett fridlyst djur, tar bort eller skadar ägg, rom eller bo, eller förstör djurets fortplantningsområde eller viloplats.
+  | Tar bort, skadar eller tar frö från en fridlyst växt.
+  | Sätter ut ett djur eller en växt i naturen i strid med förbud.
+  | Handlar med, transporterar, förvarar, förevisar, preparerar eller innehar för försäljning skyddade djur, växter eller produkter av dem i strid med EU:s handelsregler eller svenska förbud.
+  | Bryter mot villkor i ett tillstånd eller beslut om handel med skyddade arter.
+S Uppsåt eller oaktsamhet.
+U Gärningen är ringa.
+U Gärningen kan ge ansvar för miljöbrott.
+T En person tar ägg ur ett havsörnsbo för att sälja till samlare.
+
+@ v19-grovt-artskyddsbrott | Grovt artskyddsbrott | 29:2 b andra stycket | 29:2b
+PEN 0.5 | 4 | Fängelse lägst sex månader och högst fyra år | F 6 mån–4 år
+C Djur och natur
+A grovt artskyddsbrott;smuggling av skyddade arter
+Q miljo
+N Försök och förberedelse är straffbara (29:2 b tredje stycket).
+B v19-artskyddsbrott
+R grovt
+- Brottet har avsett en särskilt hotad, sällsynt eller annars skyddsvärd art.
+- Brottet har utgjort led i en brottslighet som utförts systematiskt och under lång tid, i stor omfattning eller i vinstsyfte.
+T En person förgiftar systematiskt kungsörnar och andra rovfåglar under flera år.
+
+@ v19-invasiv-frammande-art | Otillåten hantering av en invasiv främmande art | 29:2 c | 29:2c
+PEN 0 | 2 | Böter eller fängelse i högst två år | B–F 2 år
+C Djur och natur
+A invasiva arter;signalkräfta;jätteloka;sätta ut kräftor;rödörad vattensköldpadda
+Q miljo
+O En invasiv främmande art enligt EU:s förordning om invasiva främmande arter eller regeringens föreskrifter.
+G Gärningspersonen för in arten i EU eller Sverige, håller, föder upp, transporterar, säljer, använder, byter, låter den föröka sig eller odlas, eller släpper ut den i miljön.
+S Uppsåt eller grov oaktsamhet. Vid grov oaktsamhet krävs att gärningen har medfört skada eller olägenhet för människors hälsa eller miljön, eller risk för det.
+U Hanteringen är tillåten enligt barlastvattenlagen.
+U Gärningen är ringa.
+T En person köper signalkräftor och släpper ut dem i en sjö där de inte finns.
+
+@ v19-miljofarlig-kemikaliehantering | Miljöfarlig kemikaliehantering | 29:3 | 29:3
+PEN 0 | 2 | Böter eller fängelse i högst två år | B–F 2 år
+C Djur och natur
+A kemikalier;bekämpningsmedel;förbjudna ämnen;besprutning
+Q miljo
+## Bristande försiktighet
+O En kemisk produkt, bioteknisk organism eller en vara som innehåller eller har behandlats med en kemisk produkt.
+G Gärningspersonen tar befattning med produkten utan att vidta de skyddsåtgärder, produktval eller försiktighetsmått som behövs på grund av dess egenskaper.
+F Underlåtenheten orsakar eller riskerar att orsaka skada på människor eller i miljön.
+S Uppsåt eller grov oaktsamhet.
+## Brott mot förbud
+G Gärningspersonen bryter mot ett förbud att sprida bekämpningsmedel, mot regeringens föreskrifter om skyddsåtgärder och försiktighetsmått för kemikalier, eller mot EU-regler om tvättmedel, långlivade organiska föroreningar och liknande.
+S Uppsåt eller oaktsamhet.
+## *
+U Gärningen är ringa.
+U Gärningen kan ge ansvar för miljöbrott.
+T En lantbrukare sprutar bekämpningsmedel nära en brunn trots förbud, och medlet hamnar i dricksvattnet.
+
+@ v19-kemikalieregistreringsbrott | Kemikalieregistreringsbrott | 29:3 c första stycket | 29:3c
+PEN 0 | 2 | Böter eller fängelse i högst två år | B–F 2 år
+C Djur och natur
+A Reach;registrering av kemikalier
+Q miljo
+G Gärningspersonen gör minst ett av:
+  | Tillverkar eller importerar ett ämne, eller producerar eller importerar en vara, utan att registrera det enligt EU:s kemikalieförordning Reach.
+  | Lämnar inte eller uppdaterar inte information som krävs enligt Reach.
+  | Lämnar oriktig information i en registrering som har betydelse för riskbedömningen av ämnet.
+S Uppsåt eller oaktsamhet.
+U Gärningen är ringa.
+T Ett företag importerar flera ton av ett kemiskt ämne utan att registrera det hos Europeiska kemikaliemyndigheten.
+
+@ v19-grovt-kemikalieregistreringsbrott | Grovt kemikalieregistreringsbrott | 29:3 c andra stycket | 29:3c
+PEN 0.5 | 6 | Fängelse lägst sex månader och högst sex år | F 6 mån–6 år
+C Djur och natur
+A grovt kemikalieregistreringsbrott
+Q miljo
+B v19-kemikalieregistreringsbrott
+R grovt
+- Brottet har avsett stora mängder av ett ämne.
+- Brottet har medfört eller kunnat medföra skador av stor omfattning eller av allvarlig art.
+- Brottet har pågått under lång tid.
+T Ett företag släpper under flera år ut stora mängder av ett oregistrerat och hälsofarligt ämne på marknaden.
+
+@ v19-otillaten-miljoverksamhet | Otillåten miljöverksamhet | 29:4 | 29:4
+PEN 0 | 2 | Böter eller fängelse i högst två år | B–F 2 år
+C Djur och natur
+A miljöfarlig verksamhet utan tillstånd;vattenverksamhet utan tillstånd;anmälningspliktig verksamhet
+Q miljo
+G Gärningspersonen gör minst ett av:
+  | Påbörjar eller bedriver en tillstånds- eller anmälningspliktig verksamhet eller åtgärd utan tillstånd, godkännande eller anmälan, till exempel miljöfarlig verksamhet, vattenverksamhet eller hantering av kemikalier.
+  | Påbörjar verksamheten efter anmälan utan att följa en föreskriven tidsfrist.
+  | Bryter som innehavare av tillstånd mot villkor i tillståndet.
+S Uppsåt eller oaktsamhet.
+U Gärningen är ringa (gäller villkorsbrott).
+U Gärningen kan ge ansvar för miljöbrott.
+T Ett företag startar en asfaltsanläggning utan att ha sökt tillstånd.
+
+@ v19-otillaten-avfallstransport | Otillåten avfallstransport | 29:4 a | 29:4a
+PEN 0 | 2 | Böter eller fängelse i högst två år | B–F 2 år
+C Djur och natur
+A avfallstransport;skrotbilar export;elektronikavfall export;transport av avfall utan tillstånd
+Q miljo
+G Gärningspersonen gör minst ett av:
+  | Transporterar avfall yrkesmässigt utan tillstånd.
+  | Transporterar avfall inom EU utan föreskriven förhandsanmälan och godkännande.
+  | Anordnar eller genomför export av avfall från EU i strid med exportförbud eller utan godkännande som krävs.
+S Uppsåt eller oaktsamhet.
+U Gärningen är ringa.
+T Ett företag lastar uttjänta kylskåp i en container och skeppar dem till ett land utanför EU utan tillstånd.
+
+@ v19-forsvarande-av-miljokontroll | Försvårande av miljökontroll | 29:5 | 29:5
+PEN 0 | 2 | Böter eller fängelse i högst två år | B–F 2 år
+C Djur och natur
+A oriktig uppgift tillsynsmyndighet;miljörapport;driftsstörning inte anmäld
+Q miljo
+G Gärningspersonen gör minst ett av:
+  | Lämnar en oriktig uppgift som har betydelse från miljö- eller hälsoskyddssynpunkt i en ansökan, anmälan eller annan handling till en myndighet.
+  | Underrättar inte tillsynsmyndigheten om en driftsstörning, en förorening eller en allvarlig miljöskada när det krävs.
+  | Gör inte föreskrivna anmälningar om genetiskt modifierade organismer eller till produktregistret för kemikalier.
+S Uppsåt eller oaktsamhet.
+U Gärningen gäller oriktig uppgift och är ringa.
+T Ett företag uppger i sin miljörapport att utsläppen understiger gränsvärdena trots att mätningarna visar motsatsen.
+
+@ v19-bristfallig-miljoinformation | Bristfällig miljöinformation | 29:6 | 29:6
+PEN 0 | 2 | Böter eller fängelse i högst två år | B–F 2 år
+C Djur och natur
+A märkning av kemikalier;säkerhetsdatablad;farosymbol
+Q miljo
+G Gärningspersonen gör minst ett av:
+  | Klassificerar inte eller klassificerar fel en kemisk produkt eller bioteknisk organism.
+  | Märker inte produkten eller lämnar oriktig eller bristfällig produktinformation, varningstext eller farosymbol.
+  | Lämnar inte säkerhetsdatablad eller lämnar oriktiga uppgifter i det.
+S Uppsåt eller oaktsamhet.
+T En butik säljer frätande rengöringsmedel i flaskor utan varningsmärkning.
+
+@ v19-nedskrapning | Nedskräpning | 29:7 | 29:7
+PEN 0 | 1 | Böter eller fängelse i högst ett år | B–F 1 år
+C Djur och natur
+A skräpa ner;dumpa skräp;dumpa avfall i skogen;slänga skräp
+Q miljo
+FU enkel|Nedskräpning enligt 29 kap. 7 § miljöbalken
+P Utomhus, på en plats som allmänheten har tillträde eller insyn till.
+G Gärningspersonen skräpar ned.
+S Uppsåt eller oaktsamhet.
+U Nedskräpningen är mindre allvarlig. Då är det nedskräpningsförseelse med penningböter (29:7 a).
+T En person dumpar en släpvagn med byggavfall i ett skogsbryn.
+V En bilist slänger ut en full soppåse genom bilfönstret på en rastplats.
+
+@ v19-mb-29-8 | Brott mot miljöbalken (29 kap. 8 §) | 29:8 | 29:8
+PEN 0 | 2 | Böter eller fängelse i högst två år | B–F 2 år
+C Djur och natur
+A dumpning av avfall till havs;fiskeförbud;miljöskyddsområde;miljöriskområde
+Q miljo
+N Försök till dumpning eller förbränning av avfall till havs är straffbart (29:8 andra stycket).
+G Gärningspersonen gör minst ett av:
+  | Bryter mot föreskrifter om försiktighetsmått inom ett miljöskyddsområde eller vid miljöfarlig verksamhet, eller mot förbud mot utsläpp av avloppsvatten.
+  | Ökar belastningen av föroreningar i ett miljöriskområde eller försvårar avhjälpandet där.
+  | Underhåller inte en vattenanläggning trots skyldighet.
+  | Bryter mot förbud till skydd för naturmiljön eller mot regler om genteknisk verksamhet.
+  | Dumpar eller förbränner avfall till havs.
+  | Bryter mot ett förbud mot fiske som har beslutats i det enskilda fallet.
+  | Bryter mot vissa skyldigheter enligt EU:s kemikalieförordning Reach eller Nagoyaprotokollet om genetiska resurser.
+S Uppsåt eller oaktsamhet.
+U Gärningen är ringa.
+U Gärningen kan ge ansvar för miljöbrott.
+T Ett fartyg dumpar avfall i havet inom svensk ekonomisk zon.

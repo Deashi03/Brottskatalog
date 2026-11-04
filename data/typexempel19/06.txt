@@ -1,0 +1,105 @@
+@ v15-cover-hogforraderi
+T En person samarbetar med en främmande stat och förbereder ett väpnat övertagande av en del av Sverige.
+@ v15-cover-krigsanstiftan
+T En person utför sabotage mot en främmande stats ambassad med våld för att få landet att förklara krig mot Sverige.
+@ v15-cover-troloshet-vid-forhandling-med-frammande-makt
+T En svensk förhandlare i ett internationellt avtal ger medvetet bort viktiga svenska intressen och orsakar riket stor skada.
+@ v15-cover-egenmaktighet-vid-forhandling-med-frammande-makt
+T En person utger sig för att vara svensk diplomat och förhandlar med en främmande stat om svenska angelägenheter.
+@ v03-spioneri
+T En anställd på Försvarsmakten lämnar hemliga uppgifter om militära anläggningar till en främmande underrättelsetjänst.
+@ v03-grovt-spioneri
+T En officer med hög säkerhetsklass lämnar under lång tid ut uppgifter om Sveriges försvarsplaner till en främmande makt.
+@ v15-cover-utlandsspioneri
+T En person lämnar hemliga uppgifter från ett Nato-samarbete till en främmande stat.
+@ v15-cover-grovt-utlandsspioneri
+T En tjänsteman lämnar mycket känsliga uppgifter om ett internationellt försvarssamarbete till en främmande makt under pågående krig.
+@ v03-obehorig-befattning-med-hemlig-uppgift
+T En person tar med sig hemligstämplade handlingar om försvarsanläggningar hem och lägger ut dem på internet, utan syfte att hjälpa någon främmande makt.
+@ v15-cover-grov-obehorig-befattning-med-hemlig-uppgift
+T En anställd vid en myndighet sprider en stor mängd hemliga uppgifter om försvaret som anförtrotts honom i tjänsten.
+@ v15-vardsloshet-hemlig-uppgift
+T En tjänsteman glömmer en dator med hemliga uppgifter på ett tåg, så att uppgifterna kommer obehöriga till del.
+@ v15-cover-rojande-av-hemlig-uppgift-i-internationellt-samarbete
+T En svensk tjänsteman i en internationell organisation berättar för en journalist om hemliga uppgifter från samarbetet.
+@ v15-cover-olovlig-underrattelseverksamhet-mot-sverige
+T En person kartlägger i hemlighet svenska militära anläggningar åt en främmande stat.
+@ v15-cover-grov-olovlig-underrattelseverksamhet-mot-sverige
+T En person bygger upp ett nätverk av informatörer som under flera år samlar uppgifter om Sveriges säkerhet åt en främmande makt.
+@ v15-cover-olovlig-underrattelseverksamhet-mot-frammande-makt
+T En person kartlägger i Sverige en annan stats ambassadpersonal åt en främmande underrättelsetjänst.
+@ v15-cover-grov-olovlig-underrattelseverksamhet-mot-frammande-makt
+T En person driver under lång tid en omfattande underrättelseverksamhet i Sverige mot en annan stat.
+@ v15-cover-olovlig-underrattelseverksamhet-mot-person
+T En person kartlägger i hemlighet landsmän i Sverige som har flytt från en regim, och rapporterar till regimen (flyktingspionage).
+@ v15-cover-grov-olovlig-underrattelseverksamhet-mot-person
+T En person kartlägger under flera år ett stort antal flyktingar och deras familjer åt en regim.
+@ v15-cover-olovlig-varvning
+T En person värvar unga män i Sverige till en utländsk väpnad grupp.
+@ v15-cover-tagande-av-utlandskt-understod
+T En person tar emot pengar från en främmande stat för att driva en kampanj om Sveriges Natomedlemskap.
+@ v03-tjanstefel
+T En polis gör en husrannsakan utan beslut och utan att det är fara i dröjsmål.
+V En handläggare på en myndighet låter ärenden ligga orörda i flera månader så att enskilda drabbas.
+@ v03-grovt-tjanstefel
+T En chef på en myndighet fattar medvetet felaktiga beslut som ger en vän stora ekonomiska fördelar.
+@ v13-missbruk-offentlig-stallning
+T En bygglovshandläggare beviljar i strid med lagen ett bygglov till en vän för att vännen ska få en fördel.
+@ v13-grovt-missbruk-offentlig-stallning
+T En kommunchef ger systematiskt otillåtna kontrakt till sitt eget bolag till ett värde av flera miljoner.
+@ v03-brott-mot-tystnadsplikt
+T En sjuksköterska berättar för en vän att en känd person ligger inlagd på hennes avdelning.
+@ v04-grovt-brott-mot-tystnadsplikt
+T En polisanställd säljer uppgifter om skyddade personers adresser till kriminella.
+@ v15-war-lydnadsbrott
+T En soldat vägrar följa en order från sitt befäl under en övning.
+@ v15-war-grovt-lydnadsbrott
+T En soldat vägrar under strid att följa en order att försvara en ställning.
+@ v15-war-olovlig-avvikelse-av-krigsman
+T En värnpliktig lämnar förbandet utan tillstånd och kommer inte tillbaka.
+@ v15-war-grov-olovlig-avvikelse-av-krigsman
+T En soldat deserterar under strid och går över till fienden.
+@ v15-war-vald-eller-hot-mot-forman
+T En soldat slår sin gruppchef när denne ger en order.
+@ v15-war-grovt-vald-eller-hot-mot-forman
+T En soldat hotar sitt befäl med vapen under strid.
+@ v15-war-samrore-med-fienden
+T En soldat skickar meddelanden till en fiendesoldat under ett krig.
+@ v15-war-undergravande-av-stridsviljan
+T En soldat uppmanar under strid sina kamrater att ge upp och överlämna sig till fienden.
+@ v15-war-forsummande-av-krigsforberedelse
+T En officer underlåter att sätta sin avdelning i stridsberedskap trots order om höjd beredskap.
+@ v15-war-obehorig-kapitulation
+T En chef överlämnar utan tillstånd en viktig ställning till fienden.
+@ v15-war-stridsforsumlighet
+T En soldat gömmer sig under strid i stället för att delta i försvaret.
+@ v15-war-tjanstebrott
+T En vakt somnar på sin post och lämnar ett vapenförråd obevakat.
+@ v15-inventory-22-1
+T En person lämnar under krig uppgifter om svenska truppers positioner till fienden.
+@ v15-war-landssvek
+T En person säljer under krig mindre viktiga förnödenheter till fiendens styrkor.
+@ v15-war-landsskadlig-vardsloshet
+T En person lämnar under krig av oaktsamhet ut uppgifter som gynnar fienden.
+@ v15-inventory-22-5
+T En person sprider under krig falska rykten om att regeringen har flytt landet, för att skapa panik.
+@ v15-war-olovlig-befattning-med-kemiska-vapen
+T En person framställer nervgas i ett hemmalaboratorium.
+@ v15-war-grov-olovlig-befattning-med-kemiska-vapen
+T En person producerar och säljer kemiska vapen till en väpnad grupp.
+@ v15-war-olovlig-befattning-med-minor
+T En person förvarar truppminor i ett förråd.
+@ v15-war-grov-olovlig-befattning-med-minor
+T En person säljer stora mängder truppminor till en väpnad grupp i en konfliktzon.
+@ v05-tvegifte
+T En person som redan är gift gifter sig med en annan person utomlands.
+@ v05-olovligt-ingaende-av-aktenskap
+T En person som är registrerad partner ingår äktenskap med någon annan.
+@ v05-otillborligt-utverkande-av-samtycke-eller-tillstand-till-adoption-av-barn
+T En person betalar en mamma för att hon ska samtycka till att hennes barn adopteras av honom.
+@ v05-forvanskande-av-familjestallning
+T En person anmäler falskt till Skatteverket att han är far till ett barn för att barnet ska få uppehållstillstånd.
+@ v05-egenmaktighet-med-barn
+T En förälder med gemensam vårdnad tar med sig barnet och håller det gömt för den andra föräldern i flera veckor.
+@ v05-grov-egenmaktighet-med-barn
+T En förälder för ut barnet till ett annat land och håller det kvar där i flera år.

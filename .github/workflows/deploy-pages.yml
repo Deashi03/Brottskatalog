@@ -56,6 +56,8 @@ jobs:
         run: node scripts/prosecution_171_test.mjs
       - name: Verify 1.8 FU-ledning and prosecutor contact (ÅFS 2005:9 bilaga, question flow)
         run: node scripts/fu18_test.mjs
+      - name: Verify 1.9 requisites, court designations, coercive measures and new offence cards
+        run: node scripts/v19_test.mjs
 
   deploy:
     name: Deploy verified site

@@ -1,0 +1,102 @@
+@ v15-cover-upplopp
+T En stor folksamling försöker tränga sig in i ett möte och vägrar skingra sig när polisen beordrar det.
+@ v15-cover-valdsamt-upplopp
+T En folkmassa kastar sten mot polisen och tänder eld på bilar under en demonstration.
+@ v03-ohorsamhet-mot-ordningsmakten
+T En person i en orolig folksamling vägrar lämna ett avspärrat område när polisen beordrar det.
+@ v05-storande-av-forrattning-eller-av-allman-sammankomst
+T En person skriker och spelar hög musik under en begravning för att störa ceremonin.
+@ v03-uppvigling
+T En person uppmanar i en video på internet sina följare att attackera polisstationer.
+@ v15-cover-involverande-av-en-underarig-i-brottslighet
+T En vuxen betalar en 15-åring för att förvara narkotika och vapen åt honom.
+@ v15-cover-myteri
+T En grupp soldater hotar gemensamt att använda våld mot sitt befäl.
+@ v03-hets-mot-folkgrupp
+T En person skriver på sociala medier att alla från en viss etnisk grupp är kriminella och borde utvisas.
+V En person bär en armbinda med en hakkors-symbol på en offentlig plats. Även symboler kan uttrycka missaktning.
+@ v03-olaga-diskriminering
+T En krogvakt nekar en person inträde på grund av personens hudfärg.
+@ v03-brott-mot-griftefrid
+T En person sprejar nazistiska symboler på gravstenar på en kyrkogård.
+@ v04-grovt-gravfridsbrott
+T En grupp vandaliserar ett stort antal gravar på en judisk begravningsplats.
+@ v03-barnpornografibrott
+T En person laddar ner och sparar bilder på sin dator som visar sexuella övergrepp på barn.
+@ v03-grovt-barnpornografibrott
+T En person samlar och sprider tusentals bilder av mycket små barn som utsätts för grova övergrepp.
+@ v15-cover-olaga-valdsskildring
+T En person sprider en film på internet som närgånget visar hur en människa misshandlas till döds.
+@ v15-cover-otillaten-utlamning-av-teknisk-upptagning
+T En butik säljer en mycket våldsam skräckfilm till en 12-åring.
+@ v06-otillatet-forfarande-med-pornografisk-bild
+T En person skickar en pornografisk bild till en okänd vuxen som inte har bett om det.
+@ v05-forledande-av-ungdom
+T En person delar ut våldsförhärligande material till barn på en skolgård.
+@ v03-djurplageri
+T En hundägare lämnar sin hund i en het bil i flera timmar så att hunden lider.
+@ v03-grovt-djurplageri
+T En person misshandlar flera katter till döds.
+@ v06-falskt-larm
+T En person ringer in ett falskt bombhot mot en skola så att skolan evakueras.
+@ v06-grovt-falskt-larm
+T En person ringer in falska bombhot mot en flygplats så att hela flygplatsen stängs.
+@ v06-missbruk-av-larmanordning
+T En person ringer 112 flera gånger och påstår att det brinner, för att roa sig.
+@ v03-forargelsevackande-beteende
+T En berusad person skriker och svär högt på ett torg mitt på dagen.
+@ grovt-vald-hot-tjansteman
+T En person slår en polis i ansiktet med en flaska vid ett ingripande.
+@ vald-hot-tjansteman
+T En person som ska omhändertas sparkar en polis på benet.
+V En person hotar en socialsekreterare med att skada henne för att hon fattat ett beslut om försörjningsstöd.
+@ v05-angrepp-mot-tjansteman
+T En person som fått ett beslut från Kronofogden lägger ut tjänstemannens adress på internet tillsammans med kränkande bilder.
+@ v05-grovt-angrepp-mot-tjansteman
+T En person hotar en domares barn med vapen för att påverka ett avgörande.
+@ forolampning-tjansteman
+T En person kallar en parkeringsvakt för grova glåpord när vakten skriver en parkeringsanmärkning.
+@ valdsamt-motstand
+T En person som ska gripas spjärnar emot och sliter sig loss från polisen.
+@ v05-otillborligt-verkande-vid-rostning
+T En person tar ut valsedlar från ett vallokal och slänger dem för att hindra att ett parti får röster.
+@ v05-grovt-otillborligt-verkande-vid-rostning
+T En person hotar med våld väljare utanför en vallokal för att de ska rösta på ett visst parti.
+@ v06-tagande-av-otillborlig-forman-vid-rostning
+T En person tar emot pengar för att rösta på ett visst sätt i ett kommunval.
+@ v06-brott-mot-rosthemlighet
+T En person försöker se vilka valsedlar en annan väljare lägger i kuvertet.
+@ v03-overgrepp-i-rattssak
+T En person hotar att skada ett vittne om hon vittnar mot honom i rättegången.
+@ v03-grovt-overgrepp-i-rattssak
+T Ett gäng skjuter mot ett vittnes bostad för att få vittnet att ta tillbaka sina uppgifter.
+@ v03-skyddande-av-brottsling
+T En person gömmer en kompis i sin lägenhet när han vet att polisen söker kompisen för ett rån.
+V En person tar hand om och gömmer ett vapen som använts vid ett brott. Även det är att undanröja bevis.
+@ v04-grovt-skyddande-av-brottsling
+T En person förstör systematiskt bevis och hjälper en misstänkt mördare att fly utomlands.
+@ v04-rymning
+T En intagen på en anstalt klättrar över muren och försvinner.
+@ v04-grov-rymning
+T En intagen rymmer från en transport med hjälp av beväpnade medhjälpare enligt en noggrant planerad plan.
+@ v03-framjande-av-flykt
+T En person hämtar en rymling från en anstalt med bil och gömmer honom.
+@ v04-grovt-framjande-av-rymning-eller-flykt
+T En grupp planerar och genomför en fritagning av en häktad under en fångtransport.
+@ v15-cover-overtradelse-av-myndighets-bud
+T En person säljer en bil som Kronofogden har utmätt.
+V En person bryter en försegling som polisen satt på en dörr efter en husrannsakan.
+@ v15-cover-hindrande-av-forrattning
+T En person vägrar släppa in en kronofogde som ska förrätta utmätning i hans bostad.
+@ v03-foregivande-av-allman-stallning
+T En person utger sig för att vara polis för att få en annan att visa legitimation.
+@ v05-uppror
+T En grupp beväpnade personer försöker ta över riksdagshuset för att tvinga fram regeringens avgång.
+@ v15-cover-vapnat-hot-mot-laglig-ordning
+T En person samlar och tränar en beväpnad grupp i vapenhantering för att attackera myndigheter.
+@ v15-cover-olovlig-karverksamhet
+T En person bildar en uniformerad, militärt organiserad grupp som patrullerar gator utan tillstånd.
+@ v15-cover-brott-mot-medborgerlig-frihet
+T En person hotar en journalist till livet för att hon ska sluta skriva om en politisk fråga.
+@ v15-cover-svikande-av-forsvarsplikt
+T En värnpliktig skadar sig själv avsiktligt för att slippa göra tjänstgöringen.

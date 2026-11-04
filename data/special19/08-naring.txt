@@ -1,0 +1,397 @@
+LAW SpelL | Spellagen (2018:1138) | 2018:1138 | SpelL
+
+@ v19-olovlig-spelverksamhet | Olovlig spelverksamhet | 19:1 | 19:1
+PEN 0 | 2 | Böter eller fängelse i högst två år | B–F 2 år
+C Ekonomisk brottslighet
+A spelbolag utan licens;illegalt kasino;pokerklubb;spelautomater;olicensierat spel
+Q plain
+G Gärningspersonen tillhandahåller otillåtet spel, eller spel utan den licens som krävs enligt spellagen.
+S Uppsåt eller grov oaktsamhet.
+U Fallet är ringa.
+T En person driver ett illegalt pokerkasino i en källarlokal och tar en del av insatserna.
+
+@ v19-olovlig-spelverksamhet-grovt | Olovlig spelverksamhet, grovt brott | 19:3 | 19:1,19:3
+PEN 0.5 | 6 | Fängelse lägst sex månader och högst sex år | F 6 mån–6 år
+C Ekonomisk brottslighet
+A grov olovlig spelverksamhet;illegala spelautomater i stor skala
+Q plain
+B v19-olovlig-spelverksamhet
+S Brottet har begåtts uppsåtligen.
+R grovt
+- Gärningen har ingått i en brottslighet som utövats yrkesmässigt och systematiskt eller i större omfattning.
+- Gärningen har annars varit av särskilt farlig art.
+T Ett nätverk placerar ut ett hundratal olagliga spelautomater i pizzerior och kiosker.
+
+@ v19-framjande-av-olovligt-spel | Främjande av olovligt spel | 19:2 | 19:2
+PEN 0 | 2 | Böter eller fängelse i högst två år | B–F 2 år
+C Ekonomisk brottslighet
+A marknadsföra olicensierat spel;reklam för spelbolag utan licens;betalningsförmedling spel
+Q plain
+G Gärningspersonen främjar deltagande i otillåtet spel eller spel utan licens, till exempel genom att marknadsföra spelet eller förmedla betalningar till det.
+S Uppsåt eller grov oaktsamhet.
+U Fallet är ringa.
+T En influencer gör reklam mot betalning för ett utländskt spelbolag som saknar svensk licens.
+
+@ v19-framjande-av-olovligt-spel-grovt | Främjande av olovligt spel, grovt brott | 19:3 | 19:2,19:3
+PEN 0.5 | 6 | Fängelse lägst sex månader och högst sex år | F 6 mån–6 år
+C Ekonomisk brottslighet
+A grovt främjande av olovligt spel
+Q plain
+B v19-framjande-av-olovligt-spel
+S Brottet har begåtts uppsåtligen.
+R grovt
+- Gärningen har ingått i en brottslighet som utövats yrkesmässigt och systematiskt eller i större omfattning.
+- Gärningen har annars varit av särskilt farlig art.
+T Ett företag sköter systematiskt betalningar till olicensierade spelsajter för miljonbelopp.
+
+@ v19-spelfusk | Spelfusk | 19:4 | 19:4
+PEN 0 | 2 | Fängelse i högst två år | F 2 år
+C Ekonomisk brottslighet
+A matchfixning;uppgjord match;manipulera match;fixa match
+Q plain
+O Ett spel som omfattas av licenskrav enligt spellagen, till exempel vadslagning på en fotbollsmatch.
+G Gärningspersonen vidtar otillbörligen en åtgärd som är ägnad att påverka utgången av spelet.
+S Uppsåt till samtliga rekvisit.
+T En fotbollsspelare tar emot pengar för att se till att få ett gult kort i en viss minut, som någon har spelat på.
+
+@ v19-spelfusk-grovt | Spelfusk, grovt brott | 19:5 | 19:4,19:5
+PEN 0.5 | 6 | Fängelse lägst sex månader och högst sex år | F 6 mån–6 år
+C Ekonomisk brottslighet
+A grovt spelfusk;grov matchfixning
+Q plain
+B v19-spelfusk
+R grovt
+- Gärningen har ingått i en brottslighet som utövats systematiskt eller i större omfattning.
+- Gärningen har annars varit av särskilt farlig art.
+T Ett nätverk mutar flera spelare och domare för att fixa ett stort antal matcher.
+
+LAW TobL | Lagen (2018:2088) om tobak och liknande produkter | 2018:2088 | Tobakslagen
+X 5:17
+
+@ v19-olovlig-tobaksforsaljning | Olovlig tobaksförsäljning | 10:1 första stycket | 10:1
+PEN 0 | 2 | Böter eller fängelse i högst två år | B–F 2 år
+C Ekonomisk brottslighet
+A sälja cigaretter utan tillstånd;smuggelcigaretter;tobak utan tillstånd;snus försäljning
+Q plain
+G Gärningspersonen säljer tobaksvaror utan tillstånd.
+S Uppsåt eller oaktsamhet.
+U Försäljningen sker av ett dödsbo, en förvaltare eller ett konkursbo, eller vid utmätning eller avveckling, på det sätt som 5 kap. 8 eller 9 § tillåter.
+T En kiosk säljer cigaretter under disk trots att den saknar tillstånd för tobaksförsäljning.
+
+@ v19-olovlig-tobaksforsaljning-grovt | Olovlig tobaksförsäljning, grovt brott | 10:1 andra stycket | 10:1
+PEN 0.5 | 6 | Fängelse lägst sex månader och högst sex år | F 6 mån–6 år
+C Ekonomisk brottslighet
+A grov olovlig tobaksförsäljning
+Q plain
+B v19-olovlig-tobaksforsaljning
+S Brottet har begåtts uppsåtligen.
+R grovt
+- Gärningen har utgjort ett led i en verksamhet som bedrivits yrkesmässigt eller i större omfattning.
+- Gärningen har varit inriktad mot underåriga.
+T En person säljer under lång tid stora mängder smuggelcigaretter till högstadieelever.
+
+@ v19-olovlig-tobakshantering | Olovlig tobakshantering | 10:2 | 10:2,5:17
+PEN 0 | 0.5 | Böter eller fängelse i högst sex månader | B–F 6 mån
+C Ekonomisk brottslighet
+A sälja tobak till minderårig;cigaretter till 16-åring;snus till barn;tobak utan varningstext
+Q plain
+G Gärningspersonen gör minst ett av:
+  | Säljer eller lämnar i näringsverksamhet ut tobaksvaror till någon som inte har fyllt 18 år, eller när det finns särskild anledning att anta att varan ska lämnas över till någon under 18 år.
+  | Tillhandahåller tobaksvaror vars förpackning saknar föreskrivna hälsovarningar.
+S Försäljning till unga: uppsåt eller oaktsamhet. Saknade hälsovarningar: uppsåt.
+U Gärningen är ringa.
+T En kioskbiträde säljer snus till en 15-åring utan att fråga efter legitimation.
+
+@ v19-tobl-e-cigaretter | Brott mot lagen om tobak och liknande produkter (elektroniska cigaretter och registrering) | 10:3–4 | 10:3,10:4
+PEN 0 | 0.5 | Böter eller fängelse i högst sex månader | B–F 6 mån
+C Ekonomisk brottslighet
+A e-cigarett;vape;sälja vape till minderårig;e-cigaretter utan anmälan
+Q plain
+G Gärningspersonen gör minst ett av:
+  | Säljer eller lämnar i näringsverksamhet ut elektroniska cigaretter eller påfyllningsbehållare till någon som inte har fyllt 18 år.
+  | Bedriver detaljhandel med elektroniska cigaretter utan anmälan till kommunen, eller gränsöverskridande distansförsäljning utan registrering hos Folkhälsomyndigheten.
+  | Tillhandahåller elektroniska cigaretter eller påfyllningsbehållare utan hälsovarningar eller innehållsdeklaration, eller säljer dem i strid med ett förbud.
+  | Bedriver gränsöverskridande distansförsäljning av tobaksvaror till Sverige utan registrering hos Folkhälsomyndigheten.
+S Uppsåt eller oaktsamhet, utom för saknade varningar och innehållsdeklaration samt försäljning i strid med förbud, där uppsåt krävs.
+U Gärningen är ringa.
+T En butik säljer engångsvapes till 16-åringar.
+
+LAW UpphL | Lagen (1960:729) om upphovsrätt till litterära och konstnärliga verk | 1960:729 | URL
+X 59
+
+@ v19-upphovsrattsbrott | Upphovsrättsbrott | 53 § första stycket | 53
+PEN 0 | 2 | Böter eller fängelse i högst två år | B–F 2 år
+C Ekonomisk brottslighet
+A piratkopiering;illegal streaming;fildelning;sprida film olovligt;IPTV
+Q upphovsratt
+N Försök och förberedelse är straffbara (53 § femte stycket).
+O Ett litterärt eller konstnärligt verk, till exempel en film, musik, bok, bild eller ett datorprogram.
+G Gärningspersonen gör minst ett av:
+  | Vidtar en åtgärd som innebär intrång i upphovsrätten, till exempel framställer exemplar av verket eller gör det tillgängligt för allmänheten utan tillstånd.
+  | För in exemplar som har framställts utomlands till Sverige för att sprida dem till allmänheten, när framställningen hade varit straffbar här.
+S Uppsåt eller grov oaktsamhet.
+U Kopiering av datorprogram eller digital sammanställning för enskilt bruk i de fall som anges i 53 § tredje stycket.
+U Intrånget omfattas av ett vitesförbud som har överträtts.
+T En person laddar upp nya biofilmer på en strömningssajt så att vem som helst kan se dem gratis.
+
+@ v19-grovt-upphovsrattsbrott | Grovt upphovsrättsbrott | 53 § andra stycket | 53
+PEN 0.5 | 6 | Fängelse lägst sex månader och högst sex år | F 6 mån–6 år
+C Ekonomisk brottslighet
+A grov piratkopiering;illegal IPTV-tjänst;pirattjänst
+Q upphovsratt
+N Försök och förberedelse är straffbara (53 § femte stycket).
+B v19-upphovsrattsbrott
+S Brottet har begåtts uppsåtligen.
+R grovt
+- Gärningen har föregåtts av särskild planering.
+- Gärningen har utgjort ett led i en brottslighet som utövats i organiserad form.
+- Gärningen har varit av större omfattning.
+- Gärningen har annars varit av särskilt farlig art.
+T Ett nätverk driver en betald IPTV-tjänst med tusentals olovligt vidaresända kanaler och tiotusentals abonnenter.
+
+@ v19-url-tekniska-skyddsatgarder | Brott mot upphovsrättslagen (kringgående av tekniska skyddsåtgärder) | 57 b § första stycket | 57b
+PEN 0 | 0.5 | Böter eller fängelse i högst sex månader | B–F 6 mån
+C Ekonomisk brottslighet
+A knäcka kopieringsskydd;modchip;kringgå DRM
+Q upphovsratt
+G Gärningspersonen gör minst ett av:
+  | Tillverkar, importerar, sprider eller innehar i förvärvssyfte anordningar eller produkter, eller tillhandahåller tjänster, som är avsedda att kringgå tekniska skyddsåtgärder för upphovsrättsligt skyddade verk.
+  | Tar bort eller ändrar elektronisk information om rättighetsförvaltning, eller sprider verk där sådan information har tagits bort.
+S Uppsåt eller grov oaktsamhet.
+U Gärningen är upphovsrättsbrott enligt 53 §.
+T En person säljer chip som kringgår kopieringsskyddet i spelkonsoler.
+
+LAW VmL | Varumärkeslagen (2010:1877) | 2010:1877 | VmL
+
+@ v19-varumarkesbrott | Varumärkesbrott | 8:1 första stycket | 8:1
+PEN 0 | 2 | Böter eller fängelse i högst två år | B–F 2 år
+C Ekonomisk brottslighet
+A förfalskade märkesvaror;piratkopior kläder;fejkväskor;kopior av märkesvaror
+Q varumarke
+N Försök och förberedelse är straffbara (8:1 fjärde stycket).
+O Ett skyddat varukännetecken, till exempel ett registrerat varumärke.
+G Gärningspersonen gör intrång i rätten till varukännetecknet, till exempel genom att sälja, importera eller marknadsföra varor med ett identiskt eller förväxlingsbart märke utan tillstånd.
+S Uppsåt eller grov oaktsamhet.
+U Intrånget omfattas av ett vitesförbud som har överträtts.
+T En person säljer kopior av märkesväskor på en marknad.
+
+@ v19-grovt-varumarkesbrott | Grovt varumärkesbrott | 8:1 andra stycket | 8:1
+PEN 0.5 | 6 | Fängelse lägst sex månader och högst sex år | F 6 mån–6 år
+C Ekonomisk brottslighet
+A grovt varumärkesbrott;förfalskade läkemedel;förfalskade reservdelar
+Q varumarke
+N Försök och förberedelse är straffbara (8:1 fjärde stycket).
+B v19-varumarkesbrott
+S Brottet har begåtts uppsåtligen.
+R grovt
+- Gärningen har föregåtts av särskild planering.
+- Gärningen har utgjort ett led i en brottslighet som utövats i organiserad form.
+- Gärningen har varit av större omfattning.
+- Gärningen har annars varit av särskilt farlig art, till exempel förfalskade läkemedel eller bilreservdelar.
+T Ett företag importerar containrar med förfalskade bromsklossar under kända märken.
+
+LAW FHL | Lagen (2018:558) om företagshemligheter | 2018:558 | FHL
+X 2,4
+
+@ v19-foretagsspioneri | Företagsspioneri | 26 § första stycket | 26
+PEN 0 | 2 | Böter eller fängelse i högst två år | B–F 2 år
+C Ekonomisk brottslighet
+A industrispionage;stjäla företagshemligheter;dataintrång företagshemlighet
+Q plain
+O En företagshemlighet: information om affärs- eller driftförhållanden som inte är allmänt känd, som innehavaren har försökt hålla hemlig och vars röjande kan skada innehavaren i konkurrenshänseende.
+G Gärningspersonen bereder sig olovligen tillgång till företagshemligheten.
+S Uppsåt till samtliga rekvisit.
+U Angreppet sker för att avslöja brott med fängelse i straffskalan eller annat missförhållande till skydd för allmänintresset (4 §).
+T En person tar sig in i ett konkurrentföretags datorsystem och laddar ner ritningar till en ny produkt.
+
+@ v19-foretagsspioneri-grovt | Företagsspioneri, grovt brott | 26 § andra stycket | 26
+PEN 0.5 | 6 | Fängelse lägst sex månader och högst sex år | F 6 mån–6 år
+C Ekonomisk brottslighet
+A grovt företagsspioneri
+Q plain
+B v19-foretagsspioneri
+R grovt
+- Gärningen har varit av särskilt farlig art.
+- Gärningen har avsett betydande värde.
+- Gärningen har inneburit synnerligen kännbar skada.
+T En person kommer åt ett försvarsföretags hemliga konstruktionsunderlag och säljer det till en utländsk konkurrent.
+
+@ v19-olovligt-utnyttjande-teknisk-foretagshemlighet | Olovligt utnyttjande eller olovligt röjande av teknisk företagshemlighet | 26 a § första stycket | 26a
+PEN 0 | 2 | Böter eller fängelse i högst två år | B–F 2 år
+C Ekonomisk brottslighet
+A ta med sig ritningar till ny arbetsgivare;röja teknisk information;anställd läcker
+Q plain
+O En teknisk företagshemlighet: information som är ägnad att användas för att producera en vara, utföra en tjänst eller utveckla en vara eller tjänst.
+K Gärningspersonen har fått del av hemligheten genom anställning eller liknande deltagande i verksamheten, eller genom en affärsförbindelse.
+G Gärningspersonen utnyttjar eller röjer hemligheten olovligen.
+S Uppsåt till samtliga rekvisit.
+U Fallet är ringa. Det beaktas särskilt om gärningen begicks efter att anställningen eller deltagandet hade upphört.
+T En ingenjör tar med sig källkod och tillverkningsritningar när han börjar hos en konkurrent och använder dem där.
+
+@ v19-olovligt-utnyttjande-teknisk-foretagshemlighet-grovt | Olovligt utnyttjande eller olovligt röjande av teknisk företagshemlighet, grovt brott | 26 a § andra stycket | 26a
+PEN 0.5 | 6 | Fängelse lägst sex månader och högst sex år | F 6 mån–6 år
+C Ekonomisk brottslighet
+A grovt röjande av teknisk företagshemlighet
+Q plain
+B v19-olovligt-utnyttjande-teknisk-foretagshemlighet
+R grovt
+- Gärningen har varit av särskilt farlig art.
+- Gärningen har avsett betydande värde.
+- Gärningen har inneburit synnerligen kännbar skada.
+T En anställd säljer ett företags hela tekniska plattform för batteriproduktion till en utländsk aktör.
+
+@ v19-olovlig-befattning-foretagshemlighet | Olovlig befattning med företagshemlighet | 27 § | 27
+PEN 0 | 2 | Böter eller fängelse i högst två år | B–F 2 år
+C Ekonomisk brottslighet
+A köpa företagshemlighet;ta emot stulen information
+Q plain
+G Gärningspersonen anskaffar en företagshemlighet.
+O Den som lämnar över hemligheten, eller någon före den personen, har kommit åt den genom företagsspioneri, eller har röjt en teknisk företagshemlighet olovligen.
+S Uppsåt och vetskap om hur hemligheten har åtkommits eller röjts.
+T Ett företag köper en konkurrents kundregister av en person som har hackat sig in i konkurrentens system, och vet om det.
+
+@ v19-olovlig-befattning-foretagshemlighet-grovt | Olovlig befattning med företagshemlighet, grovt brott | 27 § | 27
+PEN 0 | 4 | Fängelse i högst fyra år | F 4 år
+C Ekonomisk brottslighet
+A grov olovlig befattning med företagshemlighet
+Q plain
+B v19-olovlig-befattning-foretagshemlighet
+R grovt*
+- Om gärningen avsett betydande värde eller inneburit synnerligen kännbar skada.
+- Om gärningen varit av särskilt farlig art.
+T Ett bolag köper medvetet stulna konstruktionsritningar och bygger hela sin produktion på dem.
+
+LAW NfL | Lagen (2014:836) om näringsförbud | 2014:836 | NfL
+
+@ v19-overtradelse-av-naringsforbud | Överträdelse av näringsförbud | 47 § | 47
+PEN 0 | 2 | Fängelse i högst två år | F 2 år
+C Ekonomisk brottslighet
+A näringsförbud;bulvan;driva företag trots näringsförbud;styrelseledamot trots förbud
+Q plain
+N Är brottet ringa döms till böter eller fängelse i högst sex månader.
+K Gärningspersonen har meddelats näringsförbud eller tillfälligt näringsförbud.
+G Gärningspersonen bryter mot förbudet, till exempel genom att driva näringsverksamhet, vara styrelseledamot eller i praktiken leda ett företag, eller bryter mot ett villkor som har meddelats i samband med förbudet.
+S Uppsåt till samtliga rekvisit.
+T En person med näringsförbud driver i praktiken ett städbolag där sambon står som formell ägare.
+
+@ v19-overtradelse-av-naringsforbud-ringa | Överträdelse av näringsförbud, ringa brott | 47 § | 47
+PEN 0 | 0.5 | Böter eller fängelse i högst sex månader | B–F 6 mån
+C Ekonomisk brottslighet
+A ringa överträdelse av näringsförbud
+Q plain
+B v19-overtradelse-av-naringsforbud
+R ringa*
+- Om överträdelsen var kortvarig och av begränsad omfattning.
+- Om verksamheten var av obetydlig ekonomisk betydelse.
+T En person med näringsförbud hjälper vid ett enstaka tillfälle till med att sköta en väns firma.
+
+LAW YtL | Yrkestrafiklagen (2012:210) | 2012:210 | YtL
+
+@ v19-olaga-yrkesmassig-trafik | Olaga yrkesmässig trafik | 5:1 | 5:1
+PEN 0 | 1 | Böter eller fängelse i högst ett år | B–F 1 år
+C Trafik
+A transport utan tillstånd;åkeri utan tillstånd;svarttransporter;yrkestrafiktillstånd;cabotage
+Q plain
+FU enkel|Yrkestrafiklagen (2012:210)
+G Gärningspersonen bedriver yrkesmässig trafik, det vill säga godstransport eller persontransport med buss mot betalning, enligt EU:s förordning eller yrkestrafiklagen.
+K Gärningspersonen saknar trafiktillstånd.
+S Uppsåt till samtliga rekvisit.
+T En person kör gods mot betalning åt flera företag med sin lastbil utan att ha trafiktillstånd.
+
+@ v19-ytl-bestallaransvar | Brott mot yrkestrafiklagen (beställaransvar) | 5:2 | 5:2
+PEN 0 | 1 | Böter eller fängelse i högst ett år | B–F 1 år
+C Trafik
+A beställaransvar;anlita åkeri utan tillstånd
+Q plain
+FU enkel|Yrkestrafiklagen (2012:210)
+O Yrkesmässig trafik har bedrivits utan tillstånd.
+G Gärningspersonen har yrkesmässigt, för egen eller annans räkning, beställt transporten.
+S Minst ett av:
+  | Gärningspersonen kände till eller hade skälig anledning att anta att tillstånd saknades.
+  | Gärningspersonen beställde transporten av trafikutövaren och kontrollerade uppsåtligen eller av oaktsamhet inte tillståndet på ett sätt som skäligen kan begäras.
+T Ett byggföretag anlitar regelbundet en åkare utan trafiktillstånd för att det är billigt, utan att kontrollera tillståndet.
+
+LAW TtL | Taxitrafiklagen (2012:211) | 2012:211 | TtL
+
+@ v19-olaga-taxitrafik | Olaga taxitrafik | 5:1 första stycket | 5:1
+PEN 0 | 1 | Böter eller fängelse i högst ett år | B–F 1 år
+C Trafik
+A svarttaxi;pirattaxi;taxi utan tillstånd;samåkning mot betalning
+Q plain
+FU enkel|Taxitrafiklagen (2012:211)
+G Gärningspersonen bedriver taxitrafik, det vill säga transporterar personer mot betalning med personbil eller lätt lastbil.
+K Gärningspersonen saknar taxitrafiktillstånd.
+S Uppsåt till samtliga rekvisit.
+T En person kör regelbundet hem festbesökare från stan mot kontant betalning med sin privatbil.
+
+@ v19-ttl-bestallaransvar | Brott mot taxitrafiklagen (beställaransvar) | 5:3 | 5:3
+PEN 0 | 1 | Böter eller fängelse i högst ett år | B–F 1 år
+C Trafik
+A beställaransvar taxi;beställningscentral
+Q plain
+FU enkel|Taxitrafiklagen (2012:211)
+O Taxitrafik har bedrivits utan tillstånd.
+G Gärningspersonen har yrkesmässigt, för egen eller annans räkning, beställt transporten.
+S Minst ett av:
+  | Gärningspersonen kände till eller hade skälig anledning att anta att tillstånd saknades.
+  | Gärningspersonen beställde transporten av trafikutövaren och kontrollerade uppsåtligen eller av oaktsamhet inte tillståndet på ett sätt som skäligen kan begäras.
+T En beställningscentral förmedlar körningar till förare som den vet saknar tillstånd.
+
+@ v19-ttl-taxiforarlegitimation | Brott mot taxitrafiklagen (taxiförarlegitimation) | 5:4 | 5:4
+PEN 0 | 0.5 | Böter eller fängelse i högst sex månader | B–F 6 mån
+C Trafik
+A taxi utan taxiförarlegitimation;taxileg
+Q plain
+FU enkel|Taxitrafiklagen (2012:211)
+G Gärningspersonen gör minst ett av:
+  | För ett fordon i taxitrafik utan taxiförarlegitimation eller rätt att tillfälligt utöva taxiföraryrket (uppsåt krävs).
+  | Anlitar som tillståndshavare en förare som saknar taxiförarlegitimation eller rätt att tillfälligt utöva yrket (uppsåt eller oaktsamhet).
+S Uppsåt eller oaktsamhet enligt respektive alternativ.
+T En taxiförare kör pass trots att hans taxiförarlegitimation har återkallats.
+
+LAW FgL | Lagen (2006:263) om transport av farligt gods | 2006:263 | Farligt gods-lagen
+
+@ v19-farligt-gods | Brott mot lagen om transport av farligt gods | 16 § första stycket | 2,16
+PEN 0 | 1 | Böter eller fängelse i högst ett år | B–F 1 år
+C Trafik
+A ADR;farligt gods;transport av gasol;transport av kemikalier;märkning farligt gods
+Q plain
+FU enkel|Lagen (2006:263) om transport av farligt gods
+G Gärningspersonen transporterar farligt gods, eller lämnar det till någon annan för transport.
+G Gärningspersonen vidtar inte de skyddsåtgärder och försiktighetsmått som behövs för att förebygga, hindra och begränsa skador på liv, hälsa, miljö eller egendom, till exempel genom olämpliga förpackningar, transportmedel eller fastsättning.
+S Uppsåt eller grov oaktsamhet.
+U Brottet är ringa med hänsyn till risken för skador. Då döms till penningböter.
+U Gärningen begås av en säkerhetsrådgivare och avser en uppgift som säkerhetsrådgivaren ska utföra.
+U Gärningen kan ge strängare straff enligt brottsbalken eller för miljöbrott eller brott mot områdesskydd, eller omfattas av ett vitesföreläggande.
+T En lastbil kör gasoltuber som inte är fastsurrade och utan föreskriven märkning.
+
+LAW TfpL | Lagen (1994:1809) om totalförsvarsplikt | 1994:1809 | TfpL
+
+@ v19-brott-mot-totalforsvarsplikten | Brott mot totalförsvarsplikten | 10:2 | 10:2
+PEN 0 | 1 | Böter eller fängelse i högst ett år | B–F 1 år
+C Krigsmän
+A värnplikt;utebli från mönstring;vapenvägran;utebli från repövning;civilplikt
+Q plain
+FU enkel|Lagen (1994:1809) om totalförsvarsplikt
+K Gärningspersonen är totalförsvarspliktig.
+G Gärningspersonen gör minst ett av:
+  | Avviker eller uteblir från värnplikt, civilplikt eller allmän tjänsteplikt.
+  | Vägrar eller underlåter att lyda en förmans eller annan chefs order.
+  | Åsidosätter på annat sätt sina skyldigheter under tjänstgöringen.
+F Gärningen är ägnad att medföra avsevärt men för utbildningen eller tjänsten i övrigt.
+S Uppsåt till samtliga rekvisit.
+U Gärningen är straffbar enligt BrB 21 kap. (brott av krigsmän).
+T En värnpliktig uteblir från grundutbildningen utan giltigt skäl.
+
+@ v19-brott-mot-totalforsvarsplikten-grovt | Brott mot totalförsvarsplikten, grovt brott | 10:3 | 10:2,10:3
+PEN 0.5 | 4 | Fängelse lägst sex månader och högst fyra år | F 6 mån–4 år
+C Krigsmän
+A grovt brott mot totalförsvarsplikten;höjd beredskap
+Q plain
+FU enkel|Lagen (1994:1809) om totalförsvarsplikt|Bilagan undantar inte den grova formen. Åklagaren tar ändå över om något av villkoren i ÅFS 7 eller 8 § är uppfyllt.
+B v19-brott-mot-totalforsvarsplikten
+P Under höjd beredskap.
+R grovt
+- Brottet medför avsevärt men för totalförsvaret.
+- Brottet är annars att anse som grovt.
+T Under höjd beredskap uteblir en krigsplacerad värnpliktig från inkallelsen.

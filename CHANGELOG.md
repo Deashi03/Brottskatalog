@@ -1,5 +1,49 @@
 # Ändringslogg – Brottskatalog
 
+## 1.9.0 – 2026-11-04
+
+### Rekvisit
+- Rekvisitmenyn är omgjord. Under rubriken **Rekvisit** finns bara en lista. Extramenyerna (till exempel Förklara rekvisiten, Ansvarsbegränsningar och Brottsgrad och kvalifikationsgrunder) är borttagna.
+- Varje rad har en typ med egen färg och etikett:
+  - Gärning, Objekt, Följd, Uppsåt, Krets och Plats
+  - **Inte brott om** visas i en egen streckad ruta
+- Alternativ visas som **Minst ett av**. Brott med flera gärningsformer får flikar. Rader som gäller alla former visas ovanför eller under flikarna.
+- Grova, ringa och mindre grova brott visar grundbrottet som en utfällbar rad och därefter bara det som skiljer graden. Det står om omständigheterna är lagens egna eller exempel på vad som brukar vägas in.
+- Förstadier (försök, förberedelse och stämpling) får rekvisit enligt BrB 23 kap., och det fullbordade brottet visas som grundbrott.
+- Alla 393 brott har nya rekvisit som är skrivna direkt mot lagtexten. Hänvisningar som ”brott som anges i lagtexten” är ersatta av vad lagen faktiskt säger. Definitioner (till exempel narkotika, skjutvapen, urkund, betalningsverktyg och allmän plats) är understrukna. Tryck på dem för att se lagtexten.
+- Varje brott har ett typexempel, och ibland en vanlig variant som inte är självklar.
+- Frivillig rättelse enligt smugglingslagen 15 § visas nu som ”Inte brott om”.
+
+### Rubricering som på domen
+- Grader som saknar egen brottsbeteckning skrivs som på domen, till exempel **Misshandel, ringa brott** och **Olovlig körning, grovt brott**.
+- För vissa specialstraffrättsliga brott står gärningsformen inom parentes, till exempel **Narkotikabrott (innehav)**.
+- Den gamla titeln finns kvar som sökord.
+
+### Tvångsmedel
+- Nytt: **hämtning till förhör** (RB 23:7) och **kvarhållande av försändelse** (RB 27:9).
+- **Fingeravtryck, foto, video, röst- och handstilsprov** följer RB 28:14–14 b i lydelsen från SFS 2025:128.
+- Kroppsvisitation och kroppsbesiktning visar tidsgränserna för kvarhållande i RB 28:13 a.
+
+### 168 nya brottskort
+- **BrB och RB:**
+  - grov och ringa hets mot folkgrupp, vårdslös försäkran, brukande av osann urkund samt grova grader av osann försäkran och osant intygande
+  - brott mot fotoförbud i rättssal (RB 9:5 a) och övriga brott i RB 8:10 och 9:1–3
+- **Narkotika och vapen:**
+  - vårdslöshet med narkotika och olovlig befattning med narkotikaprekursorer
+  - vapenlagens övriga brott i 18 kap. 3–9 §§
+- **Prioritet 1:**
+  - kontaktförbud, tillträdesförbud, maskering och ordningslagen
+  - alkohollagen, dopning, hälsofarliga varor och könsstympning
+  - jakt, djurskydd och miljöbalken
+  - sjölagen, luftfartslagen och tunnelbana
+  - skyddslagen, utlänningslagen och folkbokföring
+- **Prioritet 2:**
+  - spellagen, tobakslagen, upphovsrätt, varumärken och företagshemligheter
+  - näringsförbud, yrkes- och taxitrafik, farligt gods och totalförsvarsplikt
+  - terroristbrottslagen och lagen om internationella brott
+- Varje kort har ordagrann lagtext offline, straffskala, åtalsregel och klassning i FU-ledningsverktyget enligt bilagan till ÅFS 2005:9.
+- Åtal för upphovsrätts- och varumärkesbrott kräver att åtal är motiverat från allmän synpunkt. Miljöbrott visar åtalsvillkoret vid miljösanktionsavgift.
+
 ## 1.8.4 – 2026-11-04
 
 ### FU-ledning och åklagarkontakt

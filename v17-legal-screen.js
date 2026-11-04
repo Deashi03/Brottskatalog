@@ -19,7 +19,7 @@ const PRIVILEGED={
  'Mordbrand':'Mindre allvarligt brott: fängelse i lägst ett och högst tre år (BrB 13:1 andra stycket).',
  'Allmänfarlig ödeläggelse':'Mindre allvarligt brott: fängelse i lägst ett och högst tre år (BrB 13:3).'
 };
-const all=()=>D.crimes.concat(window.BK_TRAFFIC16?.entries||[]);
+const all=()=>D.crimes.concat(window.BK_TRAFFIC16?.entries||[],window.BK_SPECIAL19?.entries||[]);
 let index=null;
 const byId=id=>{if(!index)index=Object.fromEntries(all().map(c=>[c.id,c]));return index[id];};
 const punishable=c=>!!c&&(!c.stageStatus||c.stageStatus==='punishable');

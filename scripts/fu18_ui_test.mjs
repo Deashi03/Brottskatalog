@@ -24,7 +24,7 @@ try{
  });
  assert.ok(r.n>=390,'Alla grundbrott: '+r.n);
  assert.deepEqual(r.bad,[]);
- assert.ok(r.counts.enkel>=70&&r.counts.villkor===10&&r.counts.ej>=290,JSON.stringify(r.counts));
+ assert.ok(r.counts.enkel>=70&&r.counts.villkor===12&&r.counts.ej>=290,JSON.stringify(r.counts));
  // Gränssnitt: Ringa stöld → Tvångsmedel → Starta → fyra svar → resultat.
  await page.fill('#crime-search','Ringa stöld');await page.waitForTimeout(300);
  await page.locator('.crime-card').filter({has:page.getByText('Ringa stöld',{exact:true})}).first().click();
@@ -73,5 +73,5 @@ try{
 await page.waitForSelector('#app #sec-tvang > summary');
  assert.equal(await page.locator('#app #sec-fu18').count(),0,'Förstadier ingår inte i 1.8');
  assert.deepEqual(errors,[]);
- console.log('PASS 1.8.4 FU-ledning i webbläsaren: '+r.n+' brott '+JSON.stringify(r.counts)+', högst '+r.maxQ+' frågor, ingen onödig fråga, gränssnittsflöde och förstadier');
+ console.log('PASS 1.9.0 FU-ledning i webbläsaren: '+r.n+' brott '+JSON.stringify(r.counts)+', högst '+r.maxQ+' frågor, ingen onödig fråga, gränssnittsflöde och förstadier');
 }finally{await browser.close();}
