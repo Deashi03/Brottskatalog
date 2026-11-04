@@ -57,9 +57,10 @@ function formsHtml(forms){
 }
 function gradeHtml(r,title){
  if(!r||!r.f||!r.f.length)return '';
- const grov=r.t==='grovt',ringa=r.t==='ringa';
- const head=grov?(/^synnerligen/i.test(title)?'Synnerligen grovt brott':'Grovt brott'):ringa?(/^mindre/i.test(title)?'Mindre allvarligt brott':'Ringa brott'):'Gradbedömning';
- return '<div class="rq-grade '+(grov?'g-grov':ringa?'g-ringa':'g-grad')+'"><div class="rq-grade-h">'+head+' – helhetsbedömning</div><p>'+(grov?'Särskilt beaktas om':'Bedöms med hänsyn till')+':</p><ul>'+r.f.map(x=>'<li>'+rich(x)+'</li>').join('')+'</ul></div>';
+ const free=/\*$/.test(r.t);r={t:r.t.replace('*',''),f:r.f};
+ const grov=r.t==='grovt',ringa=r.t==='ringa'||r.t==='mindre';
+ const head=grov?(/^synnerligen/i.test(title)?'Synnerligen grovt brott':'Grovt brott'):r.t==='mindre'?'Mindre grovt brott':ringa?(/^mindre/i.test(title)?'Mindre allvarligt brott':'Ringa brott'):'Gradbedömning';
+ return '<div class="rq-grade '+(grov?'g-grov':ringa?'g-ringa':'g-grad')+'"><div class="rq-grade-h">'+head+' – helhetsbedömning</div><p>'+(free?'Lagen anger inga särskilda omständigheter. Exempel på vad som vägs in':grov?'Särskilt beaktas om':'Bedöms med hänsyn till')+':</p><ul>'+r.f.map(x=>'<li>'+rich(x)+'</li>').join('')+'</ul></div>';
 }
 function examplesHtml(c){
  const X=(window.BK_TYPEX19||{})[c.id];
