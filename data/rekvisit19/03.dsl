@@ -90,7 +90,7 @@ G Gärningspersonen gör minst ett av:
   | Genomför ett vaginalt, analt eller oralt samlag med personen.
   | Genomför en annan sexuell handling som med hänsyn till kränkningens allvar är jämförlig med samlag.
   | Förmår personen att företa eller tåla en sådan handling.
-O Personen deltar inte frivilligt. Om frivillighet har kommit till uttryck genom ord, handling eller på annat sätt ska särskilt beaktas.
+O Personen deltar inte frivilligt. Vid bedömningen ska det särskilt beaktas om frivilligheten har kommit till uttryck genom ord, handling eller på annat sätt.
 O En person deltar aldrig frivilligt om minst ett av:
   | Deltagandet är en följd av misshandel, annat våld, hot om brottslig gärning, hot om att åtala eller ange någon för brott eller hot om att lämna ett menligt meddelande om någon.
   | Gärningspersonen otillbörligt utnyttjar att personen befinner sig i en särskilt utsatt situation, till exempel på grund av medvetslöshet, sömn, allvarlig rädsla, berusning, drogpåverkan, sjukdom, kroppsskada eller psykisk störning.

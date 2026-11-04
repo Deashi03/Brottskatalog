@@ -40,7 +40,7 @@ G Gärningspersonen gör minst ett av:
   | Bereder sig otillbörlig vinning av någon annans brottsliga förvärv.
   | Hävdar en fordran som har tillkommit genom brott, genom krav, överlåtelse eller på liknande sätt.
   | I näringsverksamhet, eller i verksamhet som bedrivs vanemässigt eller i större omfattning, förvärvar eller tar emot något som skäligen kan antas vara frånhänt annan genom brott, på ett sätt som är ägnat att försvåra ett återställande.
-S Uppsåt till samtliga rekvisit, även till att egendomen kommer från brott. I näringsverksamhet räcker det att den skäligen kan antas komma från brott.
+S Uppsåt till samtliga rekvisit, även till att egendomen kommer från brott. I näringsverksamhet räcker det att egendomen skäligen kan antas komma från brott.
 
 @ v03-grovt-haleri | Grovt häleri | BrB 9:6 tredje stycket
 B v03-haleri
@@ -59,7 +59,9 @@ R ringa
 G Gärningspersonen förvärvar eller tar emot något som skäligen kan antas vara frånhänt annan genom brott, på ett sätt som är ägnat att försvåra ett återställande.
 S Uppsåt till förvärvet. Gärningspersonen behöver inte ha insett att egendomen kommer från brott.
 ## Oaktsamt häleri
-G Gärningspersonen tar befattning med något som är frånhänt annan genom brott, bereder sig vinning av annans brottsliga förvärv eller hävdar en fordran som tillkommit genom brott. Eller medverkar till själva brottet genom vilket egendomen togs.
+G Gärningspersonen gör minst ett av:
+  | Tar befattning med något som är frånhänt annan genom brott, bereder sig vinning av annans brottsliga förvärv eller hävdar en fordran som har tillkommit genom brott.
+  | Medverkar till det brott genom vilket egendomen togs från någon annan.
 S Gärningspersonen insåg inte men hade skälig anledning att anta att brott förelåg eller förövades.
 
 @ v03-forskingring | Förskingring | BrB 10:1

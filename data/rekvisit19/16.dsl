@@ -31,7 +31,7 @@ S Gärningspersonen insåg inte, men hade skälig anledning att anta, att egendo
 @ v09-naringspenningtvatt | Näringspenningtvätt | PTBL 7 § första stycket
 P I näringsverksamhet, eller i verksamhet som bedrivs vanemässigt eller annars i större omfattning, till exempel en bank eller växlingsfirma.
 G Gärningspersonen medverkar till en åtgärd som skäligen kan antas vara vidtagen i syfte att dölja att egendom härrör från brott, eller att främja möjligheterna att tillgodogöra sig den.
-S Uppsåt till medverkan. Det räcker att syftet skäligen kan antas.
+S Uppsåt till medverkan. När det gäller syftet räcker det att det skäligen kan antas.
 
 @ v09-grov-naringspenningtvatt | Grov näringspenningtvätt | PTBL 7 § andra stycket
 B v09-naringspenningtvatt
@@ -46,7 +46,7 @@ R ringa
 - Värdet av egendomen och övriga omständigheter.
 ## Medverkan utanför näringsverksamhet
 G Gärningspersonen medverkar, utanför näringsverksamhet, till en åtgärd som skäligen kan antas vara vidtagen i syfte att dölja att egendom härrör från brott, eller att främja möjligheterna att tillgodogöra sig den.
-S Uppsåt till medverkan. Det räcker att syftet skäligen kan antas.
+S Uppsåt till medverkan. När det gäller syftet räcker det att det skäligen kan antas.
 
 @ v09-bidragsbrott | Bidragsbrott | BidrBrL 2 §
 G Gärningspersonen gör minst ett av:

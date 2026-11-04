@@ -10,7 +10,7 @@ for(const f of ['./rekvisit-19.js','./definitioner-19.js','./typexempel-19.js','
 }
 assert.ok(scripts.indexOf('./special-19.js')>scripts.indexOf('./fu-ledning-18.js')&&scripts.indexOf('./special-19.js')>scripts.indexOf('./prosecution-171.js'));
 assert.ok(scripts.indexOf('./coercive-19.js')>scripts.indexOf('./decisions-10.js'));
-assert.ok(html.includes("window.BK_RELEASE = '1.9.0';")&&sw.includes("'brottskatalog-v190-20261104'"));
+assert.ok(html.includes("window.BK_RELEASE = '1.9.1';")&&sw.includes("'brottskatalog-v191-20261104'"));
 const ctx=vm.createContext({window:{},console:{log:()=>{},warn:()=>{},error:()=>{}}});
 for(const i of [1,2,3])vm.runInContext(inline[i],ctx);
 for(const s of scripts)vm.runInContext(read(s),ctx,{filename:s});
@@ -86,6 +86,9 @@ for(const i of [1,2,3])vm.runInContext(inline[i],fresh);for(const s of scripts)v
 assert.equal(fresh.window.BK_DATA.crimes.find(c=>c.id==='ringa-misshandel').title,'Ringa misshandel');
 
 // Vyn: inga extramenyer, flikar, gemensamma rader, grundbrott och förstadier enligt BrB 23 kap.
+assert.ok(html.includes('.crime-list{display:grid;gap:9px;grid-template-columns:minmax(0,1fr)}')&&html.includes('.crime-card>:first-child{min-width:0'),'1.9.1: kortlistan kan inte bli bredare än skärmen');
+assert.ok(S.every(c=>!/stycket|jämfört med/.test(c.shortRef)),'korta lagrum i listan');
+assert.ok(!/Ett enhandsvapen är det om/.test(JSON.stringify(R)),'1.9.1: tydligare formuleringar');
 assert.ok(!/gradeReviewBody|limitsReviewBody|reformNoteBody|requisiteConceptButtons|class=\"requisite-explanations smuggling-limits/.test(html),'gamla extramenyer borttagna');
 const V=W.BK_RQ19;
 const h1=V.render(byId['v19-dopningsbrott'],id=>byId[id]);

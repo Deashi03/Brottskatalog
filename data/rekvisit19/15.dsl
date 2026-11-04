@@ -27,7 +27,7 @@ F Gärningen ger upphov till skada eller olägenhet för den som uppgifterna gä
 @ v04-utforselhaleri | Utförselhäleri | BrB 9:6 a
 G Gärningspersonen tar befattning med något som skäligen kan antas vara frånhänt annan genom brott, på ett sätt som är ägnat att försvåra ett återställande.
 S Syfte att föra egendomen ut ur landet.
-S Uppsåt till befattningen. Det räcker att egendomen skäligen kan antas komma från brott.
+S Uppsåt till befattningen. När det gäller att egendomen kommer från brott räcker det att den skäligen kan antas vara frånhänd någon genom brott.
 
 @ v04-grovt-utforselhaleri | Grovt utförselhäleri | BrB 9:6 a
 B v04-utforselhaleri

@@ -223,7 +223,7 @@ C Narkotika
 A hälsofarliga varor oaktsamhet
 Q plain
 B v19-halsofarliga-varor
-G Gärningen gäller överlåtelse, framställning, förvärv i överlåtelsesyfte, hantering som inte är för eget bruk eller utbjudande till försäljning. Innehav omfattas inte.
+G Gärningen gäller överlåtelse, framställning, förvärv i överlåtelsesyfte, hantering som inte är för eget bruk eller utbjudande till försäljning. Oaktsamt innehav är inte straffbart.
 S Grov oaktsamhet.
 U Fallet är ringa.
 T En butiksägare säljer ett rökpreparat trots att Folkhälsomyndigheten har varnat för att ämnet är förbjudet.

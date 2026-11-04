@@ -20,7 +20,7 @@ S Oaktsamhet, till exempel att gärningspersonen borde ha förstått att tillst�
 B vapenbrott
 R grovt
 - Vapnet har innehafts på allmän plats eller annan plats där människor brukar samlas eller har samlats, eller i ett fordon på en sådan plats.
-- Vapnet har varit av särskilt farlig beskaffenhet. Ett enhandsvapen är det om det är kraftfullt eller har en särskilt farlig konstruktion eller utformning.
+- Vapnet har varit av särskilt farlig beskaffenhet, till exempel ett enhandsvapen (som en pistol) som är kraftfullt eller har en särskilt farlig konstruktion eller utformning.
 - Gärningen har avsett flera vapen.
 - Vapnet har innehafts eller tillverkats i en miljö där det typiskt sett kan befaras komma till brottslig användning.
 - Gärningen har annars varit av särskilt farlig art.
@@ -29,7 +29,7 @@ R grovt
 B vapenbrott
 R grovt
 - Gärningen har avsett ett stort antal vapen.
-- Gärningen har avsett flera vapen av särskilt farlig beskaffenhet. Ett enhandsvapen är det om det är kraftfullt eller har en särskilt farlig konstruktion eller utformning.
+- Gärningen har avsett flera vapen av särskilt farlig beskaffenhet, till exempel enhandsvapen (som pistoler) som är kraftfulla eller har en särskilt farlig konstruktion eller utformning.
 
 @ rattfylleri | Rattfylleri | TBL 4 §
 G Gärningspersonen för ett {{motordrivet-fordon|motordrivet fordon}} eller en spårvagn.
@@ -170,9 +170,9 @@ S Uppsåt till samtliga rekvisit.
 U Gärningen är människorov (BrB 4:1).
 ## Barn under 18 år
 G Gärningspersonen rekryterar, transporterar, överför, inhyser eller tar emot en person.
-O Personen är under 18 år. Något otillbörligt medel behövs inte.
+O Personen är under 18 år. Då krävs inte att gärningspersonen har använt något otillbörligt medel.
 S Syfte att personen ska exploateras för sexuella ändamål, avlägsnande av organ, krigstjänst, tvångsarbete eller annan verksamhet i en situation som innebär nödläge.
-S Uppsåt till gärningen. Till åldern räcker oaktsamhet.
+S Uppsåt till gärningen. När det gäller personens ålder räcker oaktsamhet.
 U Gärningen är människorov (BrB 4:1).
 
 @ v03-manniskoexploatering | Människoexploatering | BrB 4:1 b
@@ -189,8 +189,8 @@ S Uppsåt till samtliga rekvisit.
 U Gärningen är människorov eller människohandel (BrB 4:1 eller 1 a).
 ## Barn under 18 år
 G Gärningspersonen exploaterar en person i tvångsarbete, arbete under uppenbart orimliga villkor eller tiggeri.
-O Personen är under 18 år. Tvång, vilseledande eller utnyttjande behövs inte.
-S Uppsåt till gärningen. Till åldern räcker oaktsamhet.
+O Personen är under 18 år. Då krävs inte att gärningspersonen har använt tvång, vilseledande eller utnyttjande.
+S Uppsåt till gärningen. När det gäller personens ålder räcker oaktsamhet.
 U Gärningen är människorov eller människohandel (BrB 4:1 eller 1 a).
 
 @ v03-olaga-frihetsberovande | Olaga frihetsberövande | BrB 4:2

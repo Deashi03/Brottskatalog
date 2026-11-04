@@ -1,5 +1,18 @@
 # Ändringslogg – Brottskatalog
 
+## 1.9.1 – 2026-11-04
+
+### Brottslistan
+- Kortlistan på startsidan och i sökningen ryms åter i skärmbredden. Långa lagrum på de nya korten gjorde listan för bred, så att straffskalan hamnade utanför skärmen.
+- De nya korten visar korta lagrum i listan, i samma stil som övriga kort, till exempel **BrB 15:11 st. 3 jfr st. 2**.
+
+### Tydligare formuleringar
+- Ett tjugotal rekvisitrader är omformulerade så att andra meningen inte kommer plötsligt, till exempel:
+  - **Grovt vapenbrott:** ”Vapnet har varit av särskilt farlig beskaffenhet, till exempel ett enhandsvapen (som en pistol) som är kraftfullt eller har en särskilt farlig konstruktion eller utformning.”
+  - **Uppsåtskrav:** ”När det gäller barnets ålder räcker oaktsamhet” i stället för ”Till barnets ålder räcker oaktsamhet”.
+  - **Häleriförseelse:** alternativen är nu en punktlista.
+- Arbetsmiljöbrott anger att framkallande av fara kräver uppsåt eller grov oaktsamhet.
+
 ## 1.9.0 – 2026-11-04
 
 ### Rekvisit

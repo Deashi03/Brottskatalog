@@ -11,7 +11,7 @@ G Gärningspersonen bryter mot förbudet, till exempel genom att ringa, sms:a, s
 S Uppsåt till samtliga rekvisit, även till att förbudet gäller.
 U Fallet är ringa. Då är straffet böter (24 § tredje stycket).
 T En man som har kontaktförbud mot sin före detta sambo skickar sms till henne och ber att få träffas.
-V Den skyddade personen tar själv kontakt och de träffas. Mannen döms ändå, eftersom förbudet gäller honom oavsett hennes samtycke.
+V Den skyddade personen tar själv kontakt och de träffas. Mannen döms ändå, eftersom förbudet gäller honom även om hon samtycker.
 
 @ v19-overtradelse-av-kontaktforbud-ringa | Överträdelse av kontaktförbud, ringa brott | 24 § tredje stycket | 24
 PEN 0 | 0 | Böter | Böter

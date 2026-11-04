@@ -20,7 +20,10 @@ try{
   REN=await page.evaluate(()=>Object.fromEntries(window.BK_APP17.crimes.filter(c=>c.titleBefore19).map(c=>[c.titleBefore19,c.title])));
   assert.ok(Object.keys(REN).length>=200,'1.9 domrubricering applied');
   assert.ok(await page.locator('#crime-search').count(),'Search must exist');
-  assert.equal((await page.locator('.bk03-brand span').innerText()).trim(),'1.9.0','Search header must display current release 1.9.0');
+  // 1.9.1: listan får aldrig bli bredare än skärmen, även med långa lagrum på de nya korten.
+  await page.waitForSelector('.crime-card');
+  assert.equal(await page.evaluate(()=>{const l=document.querySelector('.crime-list');return l.scrollWidth<=l.clientWidth+1&&[...document.querySelectorAll('.crime-card')].every(c=>c.getBoundingClientRect().right<=innerWidth);}),true,'Hela kortlistan ryms i iPhone-bredd');
+  assert.equal((await page.locator('.bk03-brand span').innerText()).trim(),'1.9.1','Search header must display current release 1.9.1');
   assert.equal(await page.evaluate(()=>window.BK_DATA.crimes.length),1557,'The V1.5 full database must be loaded');
 
   const custodyAudit=await page.evaluate(()=>{
@@ -587,7 +590,7 @@ try{
   assert.ok(fraudPanel.includes('grov oaktsamhet'),'Alternative fault form for the company alternative is shown');
   await page.goto(url+'#mer',{waitUntil:'networkidle'});
   const settings=await page.locator('body').innerText();
-  assert.ok(settings.includes('Version 1.9.0 · publicerad 2026-11-04'),'Published version must be visible in settings');
+  assert.ok(settings.includes('Version 1.9.1 · publicerad 2026-11-04'),'Published version must be visible in settings');
   assert.ok(settings.includes('Grunddata:'),'Source dataset age must be shown in settings');
   assert.ok(settings.includes('LAGKONTROLL'),'Source checker in settings');
   assert.deepEqual(errors,[],'No JS page errors');

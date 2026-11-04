@@ -26,18 +26,18 @@ U Integritetskränkningen eller omständigheterna i övrigt är av mindre allvar
 
 @ ran | Rån | BrB 8:5
 ## Stöld
-G Gärningspersonen använder våld på person eller hot som innebär eller för den hotade framstår som trängande fara. Att försätta någon i vanmakt eller annat liknande tillstånd räknas som våld.
+G Gärningspersonen använder våld på person eller hot som innebär eller för den hotade framstår som trängande fara. Även att försätta någon i vanmakt eller ett liknande tillstånd räknas som våld.
 G Gärningspersonen begår stöld: tar olovligen något som tillhör någon annan, med tillägnelseuppsåt och till skada för ägaren.
 S Uppsåt till våldet eller hotet och till stölden.
 U Gärningen är med hänsyn till våldet, hotet eller omständigheterna i övrigt av mindre allvarlig art. Då döms för det andra brott som gärningen innefattar.
 ## Tvång till handling
-G Gärningspersonen använder våld på person eller hot som innebär eller för den hotade framstår som trängande fara. Att försätta någon i vanmakt eller annat liknande tillstånd räknas som våld.
+G Gärningspersonen använder våld på person eller hot som innebär eller för den hotade framstår som trängande fara. Även att försätta någon i vanmakt eller ett liknande tillstånd räknas som våld.
 G Gärningspersonen tvingar någon till en handling eller underlåtenhet.
 F Handlingen eller underlåtenheten innebär vinning för gärningspersonen och skada för den tvingade eller någon i vars ställe denne är.
 S Uppsåt till samtliga rekvisit.
 U Gärningen är med hänsyn till våldet, hotet eller omständigheterna i övrigt av mindre allvarlig art. Då döms för det andra brott som gärningen innefattar.
 ## Betalningsverktyg
-G Gärningspersonen använder våld på person eller hot som innebär eller för den hotade framstår som trängande fara. Att försätta någon i vanmakt eller annat liknande tillstånd räknas som våld.
+G Gärningspersonen använder våld på person eller hot som innebär eller för den hotade framstår som trängande fara. Även att försätta någon i vanmakt eller ett liknande tillstånd räknas som våld.
 G Gärningspersonen tar olovligen eller tvingar till sig ett betalningsverktyg, till exempel ett bankkort.
 S Avsikt att använda betalningsverktyget för att skaffa sig själv eller någon annan vinning.
 S Uppsåt till samtliga rekvisit.
