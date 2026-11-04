@@ -10,7 +10,7 @@ try{
  await page.waitForFunction(()=>window.BK_BOOT17?.ready===true&&window.BK_SCREEN17&&window.BK_CATALOG_SELECTION15,null,{timeout:60000});
  const r=await page.evaluate(()=>{
   const D=window.BK_DATA,S=window.BK_SCREEN17,R=window.BK_COERCIVE;
-  const crimes=D.crimes.filter(window.BK_CATALOG_SELECTION15.included).concat(window.BK_TRAFFIC16?.entries||[]);
+  const crimes=D.crimes.filter(window.BK_CATALOG_SELECTION15.included).concat(window.BK_TRAFFIC16?.entries||[],window.BK_SPECIAL19?.entries||[]);
   const byId=Object.fromEntries(crimes.map(c=>[c.id,c]));
   const out={total:crimes.length,stageNo:[],presNoOrd:[],unknownNo:[],anyUnknown:[],textConflict:[],ambiguous:[],privileged:[],counts:{}};
   const noLimit=R.entries.filter(e=>e.scale==='any'&&e.id!=='hemlig'&&e.id!=='hemligo');

@@ -759,6 +759,8 @@ jobs:
         run: node scripts/prosecution_171_test.mjs
       - name: Verify 1.8 FU-ledning and prosecutor contact (ÅFS 2005:9 bilaga, question flow)
         run: node scripts/fu18_test.mjs
+      - name: Verify 1.9 requisites, court designations, coercive measures and new offence cards
+        run: node scripts/v19_test.mjs
       - name: Scoped V1.5 release candidate checks
         run: node scripts/v15_scoped_release_gate.mjs --release
       - name: Full catalog integration and statutes test

@@ -62,7 +62,7 @@ const RULES={
  smuggleSurcharge:green('SmuglL:20','Särskilda åtalsvillkor kan gälla vid avgift eller tulltillägg – åklagaren prövar.'),
  plain:green('RB:20:3')
 };
-const NAMES={Vapen:'VapenL',SkBrL:'Skattebrottslagen',BidrBrL:'Bidragsbrottslagen',SmuglL:'Smugglingslagen'};
+const NAMES={Vapen:'VapenL',SkBrL:'Skattebrottslagen',BidrBrL:'Bidragsbrottslagen',SmuglL:'Smugglingslagen',UpphL:'Upphovsrättslagen',VmL:'Varumärkeslagen',MB:'Miljöbalken'};
 const label=k=>{const p=String(k||'').split(':');const n=NAMES[p[0]]||p[0];
  if(p.length===3)return n+' '+p[1]+':'+p[2].replace(/([0-9])([a-z])$/,'$1 $2');
  if(p.length===2)return n+' '+p[1].replace(/([0-9])([a-z])$/,'$1 $2')+' §';return n;};

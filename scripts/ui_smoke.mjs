@@ -20,7 +20,7 @@ try{
   REN=await page.evaluate(()=>Object.fromEntries(window.BK_APP17.crimes.filter(c=>c.titleBefore19).map(c=>[c.titleBefore19,c.title])));
   assert.ok(Object.keys(REN).length>=200,'1.9 domrubricering applied');
   assert.ok(await page.locator('#crime-search').count(),'Search must exist');
-  assert.equal((await page.locator('.bk03-brand span').innerText()).trim(),'1.8.4','Search header must display current release 1.8.4');
+  assert.equal((await page.locator('.bk03-brand span').innerText()).trim(),'1.9.0','Search header must display current release 1.9.0');
   assert.equal(await page.evaluate(()=>window.BK_DATA.crimes.length),1557,'The V1.5 full database must be loaded');
 
   const custodyAudit=await page.evaluate(()=>{
@@ -587,7 +587,7 @@ try{
   assert.ok(fraudPanel.includes('grov oaktsamhet'),'Alternative fault form for the company alternative is shown');
   await page.goto(url+'#mer',{waitUntil:'networkidle'});
   const settings=await page.locator('body').innerText();
-  assert.ok(settings.includes('Version 1.8.4 · publicerad 2026-11-04'),'Published version must be visible in settings');
+  assert.ok(settings.includes('Version 1.9.0 · publicerad 2026-11-04'),'Published version must be visible in settings');
   assert.ok(settings.includes('Grunddata:'),'Source dataset age must be shown in settings');
   assert.ok(settings.includes('LAGKONTROLL'),'Source checker in settings');
   assert.deepEqual(errors,[],'No JS page errors');

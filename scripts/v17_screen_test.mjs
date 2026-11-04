@@ -93,12 +93,12 @@ assert.match(crimes.at(-1).penaltyNote,/ringa döms till böter/);
 // Inkoppling, versioner, källor
 assert.ok(html.includes('<script src="./v17-legal-screen.js"></script>'));
 assert.ok(html.indexOf('v17-legal-screen.js')>html.indexOf('coercive-safety-15.js'));
-assert.ok(html.includes("window.BK_RELEASE = '1.8.4';"));
+assert.ok(html.includes("window.BK_RELEASE = '1.9.0';"));
 assert.ok(!html.includes('1.6.2'),'Ingen kvarglömd 1.6.2-version i index.html');
 assert.ok(html.includes("card('Envarsgripande','RB 24:7 andra stycket'"));
 assert.ok(html.includes('ⓘ = ej verifierat'));
-assert.ok(sw.includes("'brottskatalog-v184-20261104'")&&sw.includes('./v17-legal-screen.js'));
-assert.match(manifest,/Brottskatalog 1\.8/);
+assert.ok(sw.includes("'brottskatalog-v190-20261104'")&&sw.includes('./v17-legal-screen.js'));
+assert.match(manifest,/Brottskatalog 1\.9/);
 for(const f of fs.readdirSync(root).filter(f=>/\.(js|html)$/.test(f)))
  assert.ok(!read(f).includes('sfs-1942-740framtagen'),'Trasig RB-länk i '+f);
 const t={BK_DATA:{categories:['Alla'],crimes:[]}};vm.runInNewContext(read('traffic-16.js'),{window:t});
