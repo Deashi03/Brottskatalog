@@ -27,6 +27,8 @@ RULES={
  'upphovsratt':angivelse('UpphL:59','Upphovspersonen eller den som har övertagit rätten, till exempel ett förlag, skivbolag eller filmbolag.'),
  'varumarke':angivelse('VmL:8:7','Varumärkesinnehavaren eller den som har licens att använda varumärket.'),
  'foretagshemlighet':angivelse('FHL:28','Näringsidkaren eller forskningsinstitutionen vars företagshemlighet har angripits.'),
+ 'miljo':{'tone':'green','status':'Allmänt åtal','short':'Ingen angivelse krävs.',
+   'more':[{'label':'Miljösanktionsavgift','text':'Kan gärningen leda till miljösanktionsavgift och väntas den inte ge annat än böter, får åklagaren åtala bara om åtal är påkallat från allmän synpunkt (MB 29:11). Utred ändå som vanligt.'}],'law':'MB:29:11'},
  'internationella':{'tone':'green','status':'Allmänt åtal','short':'Ingen angivelse krävs.',
    'more':[{'label':'Brott utomlands','text':'Är brottet begånget utomlands kan åtal kräva särskilt förordnande enligt BrB 2:7 a. Det påverkar inte polisens utredning i Sverige.'}],'law':'RB:20:3'}
 }

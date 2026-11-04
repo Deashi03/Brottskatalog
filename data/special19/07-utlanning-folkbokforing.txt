@@ -1,0 +1,215 @@
+LAW UtlL | Utlänningslagen (2005:716) | 2005:716 | UtlL
+
+@ v19-utll-anmalningsskyldighet | Brott mot utlänningslagen (anmälningsskyldighet eller områdesbegränsning) | 20:1 a | 20:1a
+PEN 0 | 1 | Fängelse i högst ett år | F 1 år
+C Utlänningsbrott
+A anmälningsplikt;områdesbegränsning;uppsikt utlänning;bryta mot anmälningsplikt
+Q plain
+FU enkel|Utlänningslagen (2005:716), ej 20 kap. 7–9 §§
+N Är brottet ringa döms till böter. I ringa fall får åklagaren åtala bara om det är motiverat från allmän synpunkt.
+K Gärningspersonen är en utlänning som har ålagts anmälningsskyldighet eller en områdesbegränsning enligt 9 a kap. utlänningslagen.
+G Gärningspersonen bryter mot anmälningsskyldigheten eller områdesbegränsningen.
+S Uppsåt till samtliga rekvisit.
+T En person som ska anmäla sig hos polisen varje måndag uteblir flera veckor i rad.
+
+@ v19-utll-atervandande | Brott mot utlänningslagen (återvändande efter utvisning) | 20:2 | 20:2
+PEN 0.5 | 2 | Fängelse lägst sex månader och högst två år | F 6 mån–2 år
+C Utlänningsbrott
+A återvändandeförbud;olovligt återvändande;utvisad på grund av brott;återreseförbud
+Q plain
+FU enkel|Utlänningslagen (2005:716), ej 20 kap. 7–9 §§
+N Är brottet ringa döms till böter eller fängelse i högst sex månader.
+K Gärningspersonen är en utlänning som har utvisats genom ett verkställt beslut om utvisning på grund av brott (8 a kap.) och saknar rätt att återvända.
+G Gärningspersonen uppehåller sig i Sverige.
+S Uppsåt till samtliga rekvisit.
+U Utlänningen har flytt hit av sådana skäl som avses i artikel 3.5 eller 3.6 i skyddsgrundsförordningen.
+T En man som utvisades efter ett rån påträffas i Sverige två år senare trots tio års återreseförbud.
+
+@ v19-utll-yttre-grans | Brott mot utlänningslagen (otillåten passage av yttre gräns) | 20:4 | 20:4
+PEN 0 | 1 | Böter eller fängelse i högst ett år | B–F 1 år
+C Utlänningsbrott
+A yttre gräns;Schengengräns;passera gränsen olovligt
+Q plain
+FU enkel|Utlänningslagen (2005:716), ej 20 kap. 7–9 §§
+K Gärningspersonen är en utlänning.
+G Gärningspersonen passerar en yttre gräns enligt kodexen om Schengengränserna på ett otillåtet sätt, till exempel utanför ett gränsövergångsställe eller utanför öppettiderna.
+S Uppsåt till samtliga rekvisit.
+T En person tar sig i land i en hamn med en fritidsbåt från ett land utanför Schengen utan att passera gränskontroll.
+
+@ v19-utll-anstallning | Brott mot utlänningslagen (anställning av utlänning utan rätt att vistas eller arbeta) | 20:5 | 20:5
+PEN 0 | 2 | Fängelse i högst två år | F 2 år
+C Utlänningsbrott
+A svartarbete utlänning;anställa papperslös;arbetstillstånd saknas;illegal arbetskraft
+Q plain
+FU enkel|Utlänningslagen (2005:716), ej 20 kap. 7–9 §§
+N Är brottet ringa döms till böter. Arbetsgivaren kan dessutom få betala en särskild avgift (20:12).
+G Gärningspersonen har en utlänning anställd.
+O Utlänningen har inte rätt att vistas i Sverige, eller har rätt att vistas här men saknar arbetstillstånd.
+S Uppsåt eller oaktsamhet.
+T En restaurangägare anställer en person utan uppehållstillstånd i köket och betalar svart.
+
+@ v19-utll-oriktiga-uppgifter | Brott mot utlänningslagen (oriktiga uppgifter eller utebliven anmälan) | 20:6 | 20:6
+PEN 0 | 0.5 | Böter eller, när omständigheterna är försvårande, fängelse i högst sex månader | B–F 6 mån
+C Utlänningsbrott
+A ljuga i asylansökan;falska uppgifter Migrationsverket;utebliven anmälan
+Q plain
+FU enkel|Utlänningslagen (2005:716), ej 20 kap. 7–9 §§
+G Gärningspersonen gör minst ett av:
+  | Gör inte en anmälan som föreskrivs i en förordning med stöd av utlänningslagen.
+  | Lämnar medvetet en oriktig uppgift, eller underlåter medvetet att berätta något av betydelse, i en anmälan eller ett ansökningsärende enligt utlänningslagen.
+S Utebliven anmälan: uppsåt eller oaktsamhet. Oriktig uppgift: uppsåt (medvetet).
+T En person uppger falsk identitet och falskt hemland i en ansökan om uppehållstillstånd.
+
+@ v19-utll-hjalp-olovlig-vistelse | Brott mot utlänningslagen (hjälp till olovlig vistelse i vinstsyfte) | 20:7 | 20:7
+PEN 0 | 2 | Fängelse i högst två år | F 2 år
+C Utlänningsbrott
+A gömma papperslösa mot betalning;hyra ut till papperslösa;dölja utlänning
+Q plain
+N När omständigheterna är mildrande döms till böter. Försök är straffbart (BrB 23 kap.).
+G Gärningspersonen hjälper en utlänning att olovligen uppehålla sig i Sverige, en annan EU-stat, Island, Norge, Schweiz eller Liechtenstein, genom att dölja utlänningen eller genom någon annan liknande åtgärd.
+S Uppsåt och vinstsyfte.
+T En person tar betalt för att gömma personer som har fått avslag på asylansökan i en lägenhet.
+
+@ v19-manniskosmuggling | Människosmuggling | 20:8 första stycket | 20:8
+PEN 0 | 2 | Fängelse i högst två år | F 2 år
+C Utlänningsbrott
+A smuggla människor;flyktingsmuggling;köra över gränsen;smuggla in personer
+Q plain
+N Försök och förberedelse är straffbara (20:8 fjärde stycket).
+G Gärningspersonen hjälper en utlänning att olovligen komma in i eller passera genom Sverige, en annan EU-stat, Island, Norge, Schweiz eller Liechtenstein.
+S Uppsåt till samtliga rekvisit.
+T En person kör tre personer utan pass eller visum över Öresundsbron i bagageutrymmet.
+
+@ v19-manniskosmuggling-ringa | Människosmuggling, ringa brott | 20:8 tredje stycket | 20:8
+PEN 0 | 0.5 | Böter eller fängelse i högst sex månader | B–F 6 mån
+C Utlänningsbrott
+A ringa människosmuggling
+Q plain
+B v19-manniskosmuggling
+R ringa*
+- Om hjälpen gällde en nära anhörig och skedde utan ersättning.
+- Om hjälpen var av begränsad omfattning och inte innebar någon fara för utlänningen.
+T En person hjälper av medkänsla sin kusin över gränsen utan ersättning.
+
+@ v19-grov-manniskosmuggling | Grov människosmuggling | 20:8 andra stycket | 20:8
+PEN 0.5 | 6 | Fängelse lägst sex månader och högst sex år | F 6 mån–6 år
+C Utlänningsbrott
+A grov människosmuggling
+Q plain
+N Försök och förberedelse är straffbara (20:8 fjärde stycket).
+B v19-manniskosmuggling
+R grovt
+- Gärningen har utförts mot ersättning.
+- Gärningen har utgjort ett led i en verksamhet som avsett ett stort antal personer.
+- Gärningen har utförts under former som innebär livsfara för utlänningen eller annars under hänsynslösa former.
+T En person tar betalt för att smuggla in tolv personer gömda i en täckt lastbil utan ventilation.
+
+@ v19-organiserande-manniskosmuggling | Organiserande av människosmuggling | 20:9 första stycket | 20:9
+PEN 0 | 2 | Fängelse i högst två år | F 2 år
+C Utlänningsbrott
+A organiserad människosmuggling;slussning;falska visum
+Q plain
+N Den som hjälper en utlänning att resa till Sverige döms för medhjälp om resan har främjats inom verksamheten och medhjälparen insåg eller hade skälig anledning att anta det (20:9 fjärde stycket).
+G Gärningspersonen planlägger eller organiserar en verksamhet som är inriktad på att främja att utlänningar reser till Sverige utan pass eller de tillstånd som krävs för inresa.
+O Med avsaknad av tillstånd jämställs ett tillstånd som har utfärdats på grund av osanna uppgifter, om uppgiftslämnandet har främjats inom verksamheten.
+S Uppsåt och vinstsyfte.
+T En person ordnar mot betalning resor, falska inbjudningar och visum åt personer som ska ta sig till Sverige.
+
+@ v19-organiserande-manniskosmuggling-ringa | Organiserande av människosmuggling, ringa brott | 20:9 tredje stycket | 20:9
+PEN 0 | 0.5 | Böter eller fängelse i högst sex månader | B–F 6 mån
+C Utlänningsbrott
+A ringa organiserande av människosmuggling
+Q plain
+B v19-organiserande-manniskosmuggling
+R ringa*
+- Verksamhetens omfattning och hur många resor den gällde.
+- Hur stor vinst som eftersträvades.
+T En person ordnar mot en mindre ersättning resehandlingar åt en enda bekant.
+
+@ v19-grovt-organiserande-manniskosmuggling | Grovt organiserande av människosmuggling | 20:9 andra stycket | 20:9
+PEN 0.5 | 6 | Fängelse lägst sex månader och högst sex år | F 6 mån–6 år
+C Utlänningsbrott
+A grovt organiserande av människosmuggling
+Q plain
+B v19-organiserande-manniskosmuggling
+R grovt
+- Gärningen innefattar ett systematiskt utnyttjande av utlänningars utsatta situation.
+- Gärningen innefattar livsfara eller annan hänsynslöshet gentemot utlänningarna.
+T Ett nätverk tar stora summor av utsatta personer och ordnar farliga resor i överfulla båtar.
+
+@ v19-exploatering-utlandsk-arbetskraft | Exploatering av utländsk arbetskraft | 20:10 första stycket | 20:10
+PEN 0 | 2 | Fängelse i högst två år | F 2 år
+C Utlänningsbrott
+A utnyttja utländsk arbetskraft;slavlöner;arbetskraftsexploatering
+Q plain
+FU enkel|Utlänningslagen (2005:716), ej 20 kap. 7–9 §§
+K Gärningspersonen har en utlänning anställd eller har annars bestämmande inflytande över utlänningens arbetsförhållanden.
+G Gärningspersonen exploaterar utlänningen i arbete under uppenbart orimliga villkor.
+S Uppsåt till samtliga rekvisit.
+U Gärningen är människohandel eller människoexploatering (BrB 4:1 a eller 1 b).
+T En byggfirma låter utländska arbetare jobba tolv timmar om dagen för en bråkdel av avtalsenlig lön och bo i baracker på arbetsplatsen.
+
+@ v19-grov-exploatering-utlandsk-arbetskraft | Grov exploatering av utländsk arbetskraft | 20:10 andra stycket | 20:10
+PEN 0.5 | 4 | Fängelse lägst sex månader och högst fyra år | F 6 mån–4 år
+C Utlänningsbrott
+A grov exploatering av utländsk arbetskraft
+Q plain
+FU enkel|Utlänningslagen (2005:716), ej 20 kap. 7–9 §§|Bilagan undantar bara 20 kap. 7–9 §§. Åklagaren tar ändå över om något av villkoren i ÅFS 7 eller 8 § är uppfyllt.
+B v19-exploatering-utlandsk-arbetskraft
+R grovt
+- Gärningen har avsett en verksamhet som bedrivits i större omfattning.
+- Gärningen har medfört betydande vinning.
+- Gärningen har inneburit ett särskilt hänsynslöst utnyttjande av utlänningen.
+T Ett bemanningsföretag exploaterar systematiskt ett trettiotal bärplockare under flera säsonger.
+
+@ v19-handel-med-arbetstillstand | Handel med arbetstillstånd | 20:10 a första stycket | 20:10a
+PEN 0 | 2 | Fängelse i högst två år | F 2 år
+C Utlänningsbrott
+A sälja arbetstillstånd;köpa anställning;arbetstillstånd mot betalning
+Q plain
+FU enkel|Utlänningslagen (2005:716), ej 20 kap. 7–9 §§
+G Gärningspersonen anställer en utlänning eller hjälper en utlänning att ansöka om arbetstillstånd.
+G Gärningspersonen begär eller tar emot ersättning av utlänningen för det, eller träffar avtal med utlänningen om sådan ersättning.
+O Ersättningen står i uppenbart missförhållande till motprestationen.
+S Uppsåt till samtliga rekvisit.
+T En arbetsgivare tar 150 000 kronor av en person för att anställa honom så att han kan få arbetstillstånd.
+
+@ v19-handel-med-arbetstillstand-grovt | Handel med arbetstillstånd, grovt brott | 20:10 a tredje stycket | 20:10a
+PEN 0.5 | 4 | Fängelse lägst sex månader och högst fyra år | F 6 mån–4 år
+C Utlänningsbrott
+A grov handel med arbetstillstånd
+Q plain
+FU enkel|Utlänningslagen (2005:716), ej 20 kap. 7–9 §§|Bilagan undantar bara 20 kap. 7–9 §§. Åklagaren tar ändå över om något av villkoren i ÅFS 7 eller 8 § är uppfyllt.
+B v19-handel-med-arbetstillstand
+R grovt
+- Gärningen har avsett en verksamhet som bedrivits i större omfattning.
+- Gärningen har medfört betydande vinning.
+- Gärningen har inneburit ett särskilt hänsynslöst utnyttjande av utlänningen.
+T En person säljer systematiskt skenanställningar till ett stort antal personer för miljonbelopp.
+
+LAW FbfL | Folkbokföringslagen (1991:481) | 1991:481 | FbfL
+
+@ v19-folkbokforingsbrott | Folkbokföringsbrott | 42 § första stycket | 42
+PEN 0 | 0.5 | Böter eller fängelse i högst sex månader | B–F 6 mån
+C Bidragsbrott
+A felaktig folkbokföring;skenskrivning;fel adress;inte anmäla flytt;falsk adress
+Q plain
+N Den 1 december 2026 ändras 42 § och ett nytt brott införs: främjande av oriktig folkbokföring (42 a §, fängelse i högst två år). Kontrollera gärningsdagen.
+G Gärningspersonen gör minst ett av:
+  | Lämnar en oriktig uppgift som läggs till grund för beslut om folkbokföring.
+  | Fullgör inte sin skyldighet att anmäla flyttning eller annan ändring till Skatteverket.
+F Den oriktiga uppgiften innebär fara i bevishänseende.
+S Uppsåt till samtliga rekvisit.
+U Fallet är ringa.
+T En person anmäler att hon har flyttat till en kompis lägenhet för att barnen ska få gå i en viss skola, men bor kvar på den gamla adressen.
+
+@ v19-grovt-folkbokforingsbrott | Grovt folkbokföringsbrott | 42 § andra stycket | 42
+PEN 0 | 2 | Fängelse i högst två år | F 2 år
+C Bidragsbrott
+A grovt folkbokföringsbrott;adressfabrik;skenskrivningar i stor skala
+Q plain
+B v19-folkbokforingsbrott
+R grovt
+- Brottsligheten har utövats systematiskt eller i större omfattning.
+- Brottet är annars att anse som grovt.
+T En person tar betalt för att skriva in ett femtiotal personer på adresser där de aldrig har bott.
