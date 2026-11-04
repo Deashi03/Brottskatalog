@@ -128,6 +128,8 @@ const VILLKOR={
  'v03-haleri':V('9 kap. häleri avseende något som är frånhänt annan genom brott','Gäller häleriet egendom som någon har frånhänts genom brott?',true,'Inte till exempel penninghäleri eller näringshäleri.'),
  'v03-brukande-av-falsk-urkund':V('14 kap. brukande av falsk urkund','Gäller brukandet en falsk urkund?',true,'Inte till exempel falska pengar eller falsk signatur.')
 };
+/* 1.9: egna förklaringar för brott som inte är av enkel beskaffenhet (fylls av special-19.js). */
+const EJ={};
 const LISTED_SPECIAL=/^(TBL|KnivL|BidrBrL|LBE|VapenL|NSL)\b/;
 const ch=c=>{const m=String(c.shortRef||'').match(/^BrB (\d+):(\d+\s?[a-z]?)/);return m?{ch:Number(m[1]),p:m[2].replace(/\s/g,'')}:null;};
 const max=c=>Number(c.penaltyRange?.max);
@@ -137,6 +139,7 @@ function classify(c){
  if(!c||c.stageType)return null;
  if(ENKEL[c.id])return {...ENKEL[c.id]};
  if(VILLKOR[c.id])return {...VILLKOR[c.id],cond:{...VILLKOR[c.id].cond}};
+ if(EJ[c.id])return {...EJ[c.id]};
  const ref=String(c.shortRef||'');
  if(/^BrB\b/.test(ref))return {cls:'ej',row:'Brottet finns inte i bilagan till ÅFS 2005:9.'};
  const tull=/^SmuglL/.test(ref)?'Tullverket kan leda förundersökningen om smugglingsbrott (ÅFS 2013:3). Svaret här gäller när Polismyndigheten leder.':undefined;
@@ -375,5 +378,5 @@ function render(c,ans){
   '<div class="fu18-end">'+back+'<button type="button" class="fu18-btn fu18-restart" data-fu18="restart">Börja om</button></div></div>';
 }
 
-window.BK_FU18={release:'1.8.4',classify,traits,assess,render,TAKEOVER,INFO,SVAR_ITEMS,SOURCES,ENKEL,VILLKOR};
+window.BK_FU18={release:'1.8.4',classify,traits,assess,render,TAKEOVER,INFO,SVAR_ITEMS,SOURCES,ENKEL,VILLKOR,EJ};
 })();

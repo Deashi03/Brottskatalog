@@ -50,6 +50,10 @@ let tabSeq=0;
 function formsHtml(forms){
  if(!forms||!forms.length)return '';
  if(forms.length===1)return itemsHtml(forms[0].i);
+ /* Rader före första gärningsformen gäller alla former och visas ovanför flikarna. */
+ if(!forms[0].n)return itemsHtml(forms[0].i)+formsHtml(forms.slice(1));
+ /* "## *" efter formerna: rader som gäller alla former och visas under flikarna. */
+ if(forms[forms.length-1].n==='*')return formsHtml(forms.slice(0,-1))+'<div class="rq-common">'+itemsHtml(forms[forms.length-1].i)+'</div>';
  const id='rq'+(++tabSeq);
  return '<div class="rq-forms" data-rq-tabs="'+id+'"><p class="rq-forms-h">Gärningsform – välj en</p><div class="rq-tabs" role="tablist">'+
   forms.map((f,i)=>'<button type="button" role="tab" class="rq-tab'+(i?'':' on')+'" aria-selected="'+(!i)+'" data-rq-tab="'+i+'">'+esc(f.n||('Form '+(i+1)))+'</button>').join('')+'</div>'+

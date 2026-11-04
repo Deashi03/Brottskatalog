@@ -1,0 +1,156 @@
+LAW Nark | Narkotikastrafflagen (1968:64) | 1968:64 | NSL
+
+@ v19-vardsloshet-med-narkotika | Vårdslöshet med narkotika | 3 a § | 3a
+PEN 0 | 1 | Böter eller fängelse i högst ett år | B–F 1 år
+C Narkotika
+A oaktsamt narkotikabrott;grov oaktsamhet narkotika
+Q plain
+G Gärningspersonen gör minst ett av följande med {{narkotika}}:
+  | Överlåter narkotika.
+  | Framställer narkotika som är avsedd för missbruk.
+  | Förvärvar narkotika i överlåtelsesyfte.
+  | Anskaffar, bearbetar, förpackar, transporterar, förvarar eller tar annan sådan befattning med narkotika som inte är avsedd för eget bruk.
+  | Säljer narkotika eller befattar sig med narkotika som är avsedd att säljas.
+  | Bjuder ut narkotika till försäljning, förvarar eller befordrar betalning för narkotika, förmedlar kontakter mellan säljare och köpare eller gör något annat som är ägnat att främja narkotikahandel.
+U Gärningen gäller bara eget innehav eller eget bruk. Det är inte vårdslöshet med narkotika.
+S Grov oaktsamhet, till exempel att gärningspersonen borde ha förstått att det var narkotika.
+U Gärningen är ringa.
+T En person tar emot ett paket åt en bekant och förvarar det hemma, trots starka tecken på att det innehåller narkotika.
+
+@ v19-olovlig-befattning-narkotikaprekursorer | Olovlig befattning med narkotikaprekursorer | 3 b § första stycket | 3b
+PEN 0 | 2 | Fängelse i högst två år | F 2 år
+C Narkotika
+A prekursorer;narkotikaprekursorer;kemikalier för narkotikatillverkning
+Q plain
+O Narkotikaprekursorer, det vill säga ämnen som kan användas för att framställa narkotika.
+G Gärningspersonen gör minst ett av:
+  | Överlåter, framställer, förvärvar, anskaffar, bearbetar, förpackar, transporterar eller tar annan liknande befattning med prekursorerna, när de är avsedda för olovlig framställning av narkotika.
+  | Förvarar, innehar eller tar annan befattning med sådana prekursorer.
+S Uppsåt till samtliga rekvisit, även att prekursorerna är avsedda för olovlig framställning av narkotika.
+T En person köper in och förvarar kemikalier som ska användas i ett hemmalabb för att tillverka amfetamin.
+
+@ v19-olovlig-befattning-narkotikaprekursorer-ringa | Olovlig befattning med narkotikaprekursorer, ringa brott | 3 b § andra stycket | 3b
+PEN 0 | 0.5 | Böter eller fängelse i högst sex månader | B–F 6 mån
+C Narkotika
+A ringa prekursorbrott
+Q plain
+B v19-olovlig-befattning-narkotikaprekursorer
+R ringa
+- Arten och mängden narkotika som avses framställas.
+- Övriga omständigheter.
+T En person förvarar en liten mängd av ett prekursorämne avsett för att framställa narkotika för eget bruk.
+
+@ v19-olovlig-befattning-narkotikaprekursorer-grovt | Olovlig befattning med narkotikaprekursorer, grovt brott | 3 b § tredje stycket | 3b
+PEN 0.5 | 6 | Fängelse lägst sex månader och högst sex år | F 6 mån–6 år
+C Narkotika
+A grovt prekursorbrott
+Q plain
+B v19-olovlig-befattning-narkotikaprekursorer
+R grovt
+- Brottet har utgjort ett led i en verksamhet som bedrivits i större omfattning eller yrkesmässigt.
+- Brottet har avsett framställning av särskilt stor mängd narkotika.
+- Brottet har annars varit av särskilt farlig eller hänsynslös art.
+T En person förser ett kriminellt nätverk med fat av prekursorer för storskalig tillverkning av narkotika.
+
+LAW Vapen | Vapenlagen (2026:408) | 2026:408 | VapenL
+
+@ v19-vapenmarkningsbrott | Vapenmärkningsbrott | 18:3 | 18:3
+PEN 0 | 1 | Böter eller fängelse i högst ett år | B–F 1 år
+C Vapen
+A slipat tillverkningsnummer;borttaget vapennummer;märkning av vapen
+Q VapenL
+FU enkel|Vapenlagen (1996:67), ersatt av vapenlagen (2026:408)|Bilagan nämner den upphävda vapenlagen (1996:67). Appen behandlar motsvarande brott i nya vapenlagen som enkla.
+O Märkning av {{skjutvapen}} eller vapendelar enligt VapenL 15 kap. (tillverkarens namn, land eller plats, serienummer och tillverkningsår).
+G Gärningspersonen gör minst ett av:
+  | Tillverkar ett skjutvapen eller en vapendel utan föreskriven märkning, eller för in ett sådant föremål från ett land utanför EU utan att märka det inom en månad.
+  | Förfalskar märkningen.
+  | Utplånar, avlägsnar eller ändrar märkningen utan lov.
+S Uppsåt till samtliga rekvisit.
+T En person slipar bort tillverkningsnumret på en pistol.
+
+@ v19-missbruk-ratt-inneha-skjutvapen | Missbruk av rätt att inneha skjutvapen | 18:4 | 18:4
+PEN 0 | 0.5 | Böter eller fängelse i högst sex månader | B–F 6 mån
+C Vapen
+A använda jaktvapen fel;licensvapen annat ändamål
+Q VapenL
+K Gärningspersonen har rätt att inneha ett {{skjutvapen}}.
+G Gärningspersonen använder vapnet för något annat ändamål än det som han eller hon är berättigad till.
+S Uppsåt eller oaktsamhet.
+T En jägare med licens för ett jaktgevär använder det för att skjuta på burkar på en badplats.
+
+@ v19-olovlig-befattning-ammunition | Olovlig befattning med ammunition | 18:5 | 18:5
+PEN 0 | 0.5 | Böter eller fängelse i högst sex månader | B–F 6 mån
+C Vapen
+A ammunition utan licens;patroner;innehav av ammunition
+Q VapenL
+FU enkel|Vapenlagen (1996:67), ersatt av vapenlagen (2026:408)|Bilagan nämner den upphävda vapenlagen (1996:67). Appen behandlar motsvarande brott i nya vapenlagen som enkla.
+G Gärningspersonen gör minst ett av:
+  | Innehar ammunition utan att ha rätt till det.
+  | Överlåter eller yrkesmässigt förmedlar ammunition till någon som inte har rätt att inneha den.
+S Uppsåt eller oaktsamhet.
+U Ett otillåtet innehav är ringa.
+T Vid en husrannsakan hittas en ask pistolpatroner hos en person som saknar vapenlicens.
+
+@ v19-olovlig-befattning-vapentillbehor | Olovlig befattning med vapentillbehör | 18:6 | 18:6
+PEN 0 | 0.5 | Böter eller fängelse i högst sex månader | B–F 6 mån
+C Vapen
+A ljuddämpare;vapenmagasin;magasin utan licens
+Q VapenL
+FU enkel|Vapenlagen (1996:67), ersatt av vapenlagen (2026:408)|Bilagan nämner den upphävda vapenlagen (1996:67). Appen behandlar motsvarande brott i nya vapenlagen som enkla.
+O Ljuddämpare eller vapenmagasin.
+G Gärningspersonen gör minst ett av:
+  | Innehar föremålet utan att ha rätt till det.
+  | Överlåter eller yrkesmässigt förmedlar föremålet till någon som inte har rätt att inneha det.
+S Uppsåt eller oaktsamhet.
+U Ett otillåtet innehav är ringa.
+T En person förvarar en ljuddämpare hemma utan tillstånd.
+
+@ v19-olovlig-vapenhandel | Olovlig vapenhandel | 18:7 | 18:7
+PEN 0 | 0.5 | Böter eller fängelse i högst sex månader | B–F 6 mån
+C Vapen
+A vapenhandel utan tillstånd;sälja vapen
+Q VapenL
+FU enkel|Vapenlagen (1996:67), ersatt av vapenlagen (2026:408)|Bilagan nämner den upphävda vapenlagen (1996:67). Appen behandlar motsvarande brott i nya vapenlagen som enkla.
+G Gärningspersonen bedriver handel med {{skjutvapen}}.
+K Gärningspersonen saknar tillstånd till vapenhandel.
+S Uppsåt eller oaktsamhet.
+T En person köper och säljer regelbundet begagnade jaktvapen via nätet utan vapenhandlartillstånd.
+
+@ v19-olovlig-vapenformedling | Olovlig vapenförmedling | 18:8 första stycket | 18:8
+PEN 0 | 0.5 | Böter eller fängelse i högst sex månader | B–F 6 mån
+C Vapen
+A vapenförmedling utan tillstånd;vapenmäklare
+Q VapenL
+FU enkel|Vapenlagen (1996:67), ersatt av vapenlagen (2026:408)|Bilagan nämner den upphävda vapenlagen (1996:67). Appen behandlar motsvarande brott i nya vapenlagen som enkla.
+G Gärningspersonen förmedlar yrkesmässigt {{skjutvapen}}.
+K Gärningspersonen saknar tillstånd.
+S Uppsåt eller oaktsamhet.
+T En person tar betalt för att regelbundet förmedla kontakter och affärer mellan säljare och köpare av jaktvapen, utan tillstånd.
+
+@ v19-olovlig-formedling-ammunition | Olovlig förmedling av ammunition | 18:8 andra stycket | 18:8
+PEN 0 | 0.5 | Böter eller fängelse i högst sex månader | B–F 6 mån
+C Vapen
+A ammunitionsförmedling
+Q VapenL
+FU enkel|Vapenlagen (1996:67), ersatt av vapenlagen (2026:408)|Bilagan nämner den upphävda vapenlagen (1996:67). Appen behandlar motsvarande brott i nya vapenlagen som enkla.
+G Gärningspersonen förmedlar yrkesmässigt ammunition.
+K Gärningspersonen saknar tillstånd.
+S Uppsåt eller oaktsamhet.
+T En person förmedlar mot betalning större partier ammunition mellan köpare och säljare utan tillstånd.
+
+@ v19-brott-mot-vapenlagen-forvaring | Brott mot vapenlagen (förvaring, transport och medförande) | 18:9 | 18:9
+PEN 0 | 0.5 | Böter eller fängelse i högst sex månader | B–F 6 mån
+C Vapen
+A felaktig förvaring av vapen;vapenskåp;vapen i bilen;medföra vapen
+Q VapenL
+FU enkel|Vapenlagen (1996:67), ersatt av vapenlagen (2026:408)|Bilagan nämner den upphävda vapenlagen (1996:67). Appen behandlar motsvarande brott i nya vapenlagen som enkla.
+G Gärningspersonen gör minst ett av:
+  | Bryter mot reglerna om att lämna över {{skjutvapen}} till förvaring hos någon annan, om transport av skjutvapen eller mot villkor om förvaring.
+  | Bryter som skytteförening, museum, bevakningsföretag eller vapenhandlare mot reglerna om förvaring av skjutvapen, ammunition eller ljuddämpare.
+  | Förvarar ett skjutvapen eller en ljuddämpare åt någon annan utan tillstånd till förvaringen.
+  | Medför ett skjutvapen på {{allman-plats|allmän plats}}, inom ett skolområde eller i ett fordon på allmän plats, utan att det ingår i utrustning för tjänst eller uppdrag eller annars är befogat.
+  | Överför olovligen skjutvapen eller ammunition till ett annat land.
+S Uppsåt eller oaktsamhet.
+U Överträdelsen av reglerna om medförande är ringa.
+U Förvaringen åt någon annan är straffbar som vapenbrott enligt 18:1 eller 18:2.
+T En jägare lämnar jaktgeväret synligt i baksätet på bilen medan hen handlar.

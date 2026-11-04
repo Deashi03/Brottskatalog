@@ -1,0 +1,138 @@
+LAW KfL | Lagen (1988:688) om kontaktförbud | 1988:688 | Kontaktförbudslagen
+X 1,1b,2,2a
+
+@ v19-overtradelse-av-kontaktforbud | Överträdelse av kontaktförbud | 24 § första stycket | 24
+PEN 0 | 1 | Fängelse i högst ett år | F 1 år
+C Frid
+A bryta mot kontaktförbud;besöksförbud;kontaktförbud;överträdelse av besöksförbud
+Q plain
+O Ett kontaktförbud gäller mot gärningspersonen: förbud att besöka eller på annat sätt ta kontakt med en viss person eller att följa efter personen. Det kan också gälla förbud att uppehålla sig i en gemensam bostad.
+G Gärningspersonen bryter mot förbudet, till exempel genom att ringa, sms:a, skriva på sociala medier, besöka eller följa efter den skyddade personen.
+S Uppsåt till samtliga rekvisit, även till att förbudet gäller.
+U Fallet är ringa. Då är straffet böter (24 § tredje stycket).
+T En man som har kontaktförbud mot sin före detta sambo skickar sms till henne och ber att få träffas.
+V Den skyddade personen tar själv kontakt och de träffas. Mannen döms ändå, eftersom förbudet gäller honom oavsett hennes samtycke.
+
+@ v19-overtradelse-av-kontaktforbud-ringa | Överträdelse av kontaktförbud, ringa brott | 24 § tredje stycket | 24
+PEN 0 | 0 | Böter | Böter
+C Frid
+A ringa överträdelse av kontaktförbud
+Q plain
+B v19-overtradelse-av-kontaktforbud
+R ringa*
+- Kontaktens art och omfattning, till exempel en enstaka kort kontakt utan hotfullt innehåll.
+- Om kontakten var nödvändig av praktiska skäl, till exempel om gemensamma barn.
+T En person med kontaktförbud skickar ett enda kort sms till den skyddade personen om hämtning av ett gemensamt barn.
+
+@ v19-overtradelse-av-utvidgat-kontaktforbud | Överträdelse av utvidgat eller särskilt utvidgat kontaktförbud | 24 § andra stycket | 24
+PEN 0 | 2 | Fängelse i högst två år | F 2 år
+C Frid
+A utvidgat kontaktförbud;särskilt utvidgat kontaktförbud;fotboja kontaktförbud;områdesförbud
+Q plain
+O Ett utvidgat kontaktförbud gäller mot gärningspersonen: förbud att uppehålla sig inom ett eller flera områden kring den skyddade personens bostad, arbetsplats eller annat ställe där personen brukar vistas. Ett särskilt utvidgat kontaktförbud avser ett större område.
+G Gärningspersonen uppehåller sig inom det förbjudna området, eller bryter på annat sätt mot förbudet.
+S Uppsåt till samtliga rekvisit, även till att förbudet gäller och var området går.
+U Fallet är ringa. Då är straffet böter (24 § tredje stycket).
+T En person med utvidgat kontaktförbud larmar på den elektroniska övervakningen när han går in i området runt den skyddade personens bostad.
+
+@ v19-hindrande-elektronisk-overvakning | Hindrande eller försvårande av elektronisk övervakning | 25 § första stycket | 25
+PEN 0 | 1 | Fängelse i högst ett år | F 1 år
+C Frid
+A fotboja;elektronisk övervakning kontaktförbud;ta av fotbojan
+Q plain
+K Gärningspersonen har ett kontaktförbud med villkor om elektronisk övervakning.
+G Gärningspersonen gör minst ett av:
+  | Hindrar att den elektroniska övervakningen kommer till stånd eller kan fortgå.
+  | Hanterar den elektroniska utrustningen på ett sätt som är ägnat att försvåra övervakningen.
+S Uppsåt till samtliga rekvisit.
+T En person med kontaktförbud och fotboja klipper av bandet och lämnar fotbojan hemma.
+
+@ v19-oaktsamt-hindrande-elektronisk-overvakning | Oaktsamt hindrande eller försvårande av elektronisk övervakning | 25 § andra stycket | 25
+PEN 0 | 1 | Böter eller fängelse i högst ett år | B–F 1 år
+C Frid
+A fotboja laddning;oaktsam fotboja
+Q plain
+B v19-hindrande-elektronisk-overvakning
+S Grov oaktsamhet i stället för uppsåt.
+T En person med fotboja låter upprepade gånger bli att ladda utrustningen trots påminnelser, så att övervakningen avbryts.
+
+LAW TfL | Lagen (2005:321) om tillträdesförbud vid idrottsarrangemang | 2005:321 | Tillträdesförbudslagen
+
+@ v19-overtradelse-av-tilltradesforbud | Överträdelse av tillträdesförbud | 22 § | 22
+PEN 0 | 0.5 | Böter eller fängelse i högst sex månader | B–F 6 mån
+C Allmän ordning
+A tillträdesförbud;arenaförbud;matchförbud;huligan
+Q plain
+O Ett tillträdesförbud gäller mot gärningspersonen: förbud att få tillträde till ett eller flera idrottsarrangemang.
+G Gärningspersonen bryter mot förbudet, till exempel genom att gå in på arenan under en match som förbudet omfattar.
+S Uppsåt till samtliga rekvisit.
+T En supporter med tillträdesförbud tar sig in på läktaren under en allsvensk fotbollsmatch.
+
+LAW MaskL | Lagen (2005:900) om förbud mot maskering i vissa fall | 2005:900 | Maskeringslagen
+
+@ v19-brott-mot-maskeringslagen | Brott mot lagen om förbud mot maskering i vissa fall | 2 § | 1,2
+PEN 0 | 0.5 | Böter eller fängelse i högst sex månader | B–F 6 mån
+C Allmän ordning
+A maskering;maskeringsförbud;rånarluva demonstration;dölja ansiktet
+Q plain
+P På {{allman-plats|allmän plats}}.
+O Gärningspersonen deltar i minst ett av:
+  | En allmän sammankomst enligt ordningslagen som är en demonstration eller annars hålls för överläggning, opinionsyttring eller upplysning, där det uppkommer en störning av den allmänna ordningen eller en omedelbar fara för en sådan störning.
+  | En folksamling som genom sitt uppträdande stör den allmänna ordningen eller utgör en omedelbar fara för den.
+G Gärningspersonen täcker helt eller delvis ansiktet på ett sätt som försvårar identifiering.
+S Uppsåt till samtliga rekvisit.
+U Gärningspersonen täcker ansiktet av religiösa skäl.
+U Polisen har gett tillstånd att täcka ansiktet vid sammankomsten (ordningslagen 2 kap. 11 a §).
+U Fallet är ringa.
+T En demonstrant drar upp en halsduk över ansiktet när demonstrationen övergår i stenkastning mot polisen.
+
+LAW OL | Ordningslag (1993:1617) | 1993:1617 | OL
+
+@ v19-ol-sammankomst | Brott mot ordningslagen (allmän sammankomst eller offentlig tillställning) | 2:29 första stycket | 2:29
+PEN 0 | 0.5 | Böter eller fängelse i högst sex månader | B–F 6 mån
+C Allmän ordning
+A demonstration utan tillstånd;pornografisk föreställning;tillstånd ordningslagen;anordnare;olovlig demonstration;festival utan tillstånd
+Q plain
+G Gärningspersonen gör minst ett av:
+  | Anordnar en allmän sammankomst eller offentlig tillställning utan tillstånd eller anmälan som krävs, eller i strid med villkor eller förbud.
+  | Håller en allmän sammankomst trots att den har förbjudits, eller en offentlig tillställning trots att tillstånd har vägrats.
+  | Lämnar oriktig uppgift i en ansökan eller anmälan, eller om förhållanden som Polismyndigheten begär uppgift om.
+  | Anordnar sammankomsten eller tillställningen i ett tält eller med en tivolianordning som saknar godkännande, eller i strid med användningsförbud eller villkor.
+  | Anordnar en offentlig tillställning som är en pornografisk föreställning.
+  | Anordnar sammankomsten eller tillställningen med hypnotiska eller liknande experiment utan Socialstyrelsens tillstånd, eller använder pyrotekniska varor inomhus utan Polismyndighetens tillstånd.
+  | Anordnar eller fortsätter sammankomsten eller tillställningen trots att den har ställts in eller upplösts.
+S Uppsåt eller oaktsamhet.
+T En person anordnar en demonstration på ett torg utan att söka tillstånd hos Polismyndigheten.
+
+@ v19-ol-idrottsarrangemang | Brott mot ordningslagen (idrottsarrangemang) | 5:5 | 5:3,5:4,5:5
+PEN 0 | 0.5 | Böter eller fängelse i högst sex månader | B–F 6 mån
+C Allmän ordning
+A bengaler;pyroteknik arena;springa in på planen;kasta in föremål;maskering arena;planstormning
+Q plain
+P På en idrottsanläggning när ett idrottsarrangemang anordnas för allmänheten.
+## Pyrotekniska varor
+G Gärningspersonen innehar eller använder pyrotekniska varor, till exempel bengaler eller smällare.
+S Uppsåt.
+U Fallet är ringa.
+U Gärningen kan ge samma eller strängare straff enligt brottsbalken eller annan lag. Då döms enligt den bestämmelsen.
+U Polismyndigheten har gett tillstånd.
+## Spelplanen
+G Gärningspersonen beträder obehörigen spelplanen eller annat område som är avsett för idrottsutövningen, eller en angränsande plats där det framgår att allmänheten inte har tillträde.
+S Uppsåt.
+U Fallet är ringa.
+U Gärningen kan ge samma eller strängare straff enligt brottsbalken eller annan lag. Då döms enligt den bestämmelsen.
+## Inkastning
+G Gärningspersonen kastar in föremål på spelplanen eller annat område som är avsett för idrottsutövningen.
+U Åtgärden är befogad med hänsyn till idrottsarrangemangets genomförande.
+S Uppsåt.
+U Fallet är ringa.
+U Gärningen kan ge samma eller strängare straff enligt brottsbalken eller annan lag. Då döms enligt den bestämmelsen.
+## Maskering
+G Gärningspersonen täcker helt eller delvis ansiktet på ett sätt som försvårar identifiering.
+U Ansiktet täcks av religiösa skäl, i tjänsten eller för arrangemangets genomförande.
+U Det är befogat med hänsyn till väder, hälsa eller andra omständigheter.
+S Uppsåt.
+U Fallet är ringa.
+U Gärningen kan ge samma eller strängare straff enligt brottsbalken eller annan lag. Då döms enligt den bestämmelsen.
+T En supporter tänder en bengal på läktaren under en fotbollsmatch.
+V En åskådare springer in på planen och avbryter matchen.

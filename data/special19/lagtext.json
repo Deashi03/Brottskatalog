@@ -1,0 +1,165 @@
+{
+ "BrB": {
+  "name": "Brottsbalken",
+  "sfs": "1962:700",
+  "short": "BrB",
+  "amended": "2026:1656",
+  "url": "https://data.riksdagen.se/dokument/sfs-1962-700.html",
+  "sections": {
+   "15:10": "10 § Den som på annat sätt än muntligen lämnar osann uppgift eller förtiger sanningen, när uppgiften enligt lag eller annan författning lämnas på heder och samvete eller under annan liknande försäkran, döms, om åtgärden innebär fara i bevishänseende, för osann försäkran till böter eller fängelse i högst sex månader.\n\nÄr brottet grovt, döms till fängelse i högst två år.\n\nDen som av grov oaktsamhet begår en sådan gärning som avses i första stycket döms för vårdslös försäkran till böter eller fängelse i högst sex månader. Lag (2013:425).",
+   "15:11": "11 § Den som i ett intyg eller en annan urkund lämnar osann uppgift om vem han eller hon är eller om annat än egna angelägenheter eller för skens skull upprättar en urkund rörande rättshandling döms, om åtgärden innebär fara i bevishänseende, för osant intygande till böter eller fängelse i högst sex månader.\n\nÄr brottet med hänsyn till att det innefattar missbruk av tjänsteställning eller annars att anse som grovt, döms till fängelse i högst två år.\n\nDen som åberopar eller på annat sätt använder en sådan osann urkund som avses i första stycket döms, om åtgärden innebär fara i bevishänseende, för brukande av osann urkund till straff som anges i första eller andra stycket. Lag (2013:425).",
+   "16:8": "8 § Den som i ett uttalande eller i ett annat meddelande som sprids uppmanar till våld mot, hotar eller uttrycker missaktning för en folkgrupp, en annan sådan grupp av personer eller en enskild i någon av dessa grupper med anspelning på ras, hudfärg, nationellt eller etniskt ursprung, trosbekännelse, sexuell läggning eller könsöverskridande identitet eller uttryck, döms för hets mot folkgrupp till fängelse i högst två år.\n\nFör hets mot folkgrupp döms också den som i ett uttalande eller i ett annat meddelande som sprids förnekar, ursäktar eller uppenbart förringar ett brott som utgör eller motsvarar folkmord, brott mot mänskligheten, krigsförbrytelse eller aggressionsbrott enligt ett avgörande som har meddelats av en svensk domstol eller av en erkänd internationell domstol för brott mot folkrätten och som fått laga kraft, om gärningen är ägnad att uppmana till våld mot, hota eller uttrycka missaktning för en sådan grupp eller enskild som avses i första stycket.\n\nOm brottet är ringa döms för ringa hets mot folkgrupp till böter.\n\nOm brottet är grovt döms för grov hets mot folkgrupp till fängelse i lägst sex månader och högst fyra år. Vid bedömningen av om brottet är grovt ska det särskilt beaktas om meddelandet haft ett särskilt hotfullt eller kränkande innehåll och spritts till ett stort antal personer på ett sätt som varit ägnat att väcka betydande uppmärksamhet. Lag (2024:340)."
+  }
+ },
+ "RB": {
+  "name": "Rättegångsbalken",
+  "sfs": "1942:740",
+  "short": "RB",
+  "amended": "2026:1657",
+  "url": "https://data.riksdagen.se/dokument/sfs-1942-740.html",
+  "sections": {
+   "5:9b": "9 b § Vid rättens sammanträden är det förbjudet att med tekniskt hjälpmedel ta upp bild i eller in i rättssalen, om inte något annat följer av lag.\n\nFörbudet hindrar inte att domstolen tar upp bild i rättssalen när domstolens överfallslarm har utlösts.\n\nDet är förbjudet att sprida bild som har tagits upp i strid med första stycket, om någon syns på bilden. Lag (2020:318).",
+   "8:10": "10 § Den som utan att vara behörig till det utger sig för att vara auktoriserad som advokat i Sverige eller i en annan stat inom Europeiska unionen, Europeiska ekonomiska samarbetsområdet eller i Schweiz, döms till böter. Lag (2001:57).",
+   "9:1": "1 § En part, som mot bättre vetande inleder eller föranleder rättegång i tvistemål, döms till böter. Lag (1991:241).",
+   "9:2": "2 § Om en part mot bättre vetande för talan mot dom eller beslut, döms han till böter. Lag (1991:241).",
+   "9:3": "3 § Försöker en part i tvistemål eller en målsägande i brottmål förhala rättegången genom påståenden eller invändningar, som är uppenbart ogrundade, eller genom innehållande av bevis eller någon annan otillbörlig åtgärd, döms han till böter. Vad nu sagts om part gäller också intervenient, även om han inte har ställning som part. Lag (1991:241).",
+   "9:5a": "5 a § Den som tar upp eller sprider bild i strid med 5 kap. 9 b § döms till böter eller fängelse i högst sex månader.\n\nFörsta stycket ska tillämpas också i fråga om en sådan sidosal som avses i 5 kap. 12 eller 13 §.\n\nI ringa fall ska det inte dömas till ansvar. Lag (2020:318)."
+  }
+ },
+ "Nark": {
+  "name": "Narkotikastrafflagen (1968:64)",
+  "sfs": "1968:64",
+  "short": "NSL",
+  "amended": "2024:797",
+  "url": "https://data.riksdagen.se/dokument/sfs-1968-64.html",
+  "sections": {
+   "3a": "3 a § Den som av grov oaktsamhet begår gärning som avses i 1 § första stycket 1-4, andra eller tredje stycket döms för vårdslöshet med narkotika till böter eller fängelse i högst ett år.\n\nOm gärningen är att anse som ringa, utgör den inte brott. Lag (2023:258).",
+   "3b": "3 b § Den som\n\n1. överlåter, framställer, förvärvar, anskaffar, bearbetar, förpackar, transporterar eller tar annan liknande befattning med narkotikaprekursorer som är avsedda för olovlig framställning av narkotika, eller\n\n2. förvarar, innehar eller tar annan befattning med sådana narkotikaprekursorer\n\ndöms för olovlig befattning med narkotikaprekursorer till fängelse i högst två år.\n\nOm brottet med hänsyn till arten och mängden narkotika som avses framställas samt övriga omständigheter är att anse som ringa, döms till böter eller fängelse i högst sex månader.\n\nOm brottet är att anse som grovt, döms till fängelse i lägst sex månader och högst sex år. Vid bedömningen av om brottet är grovt ska det särskilt beaktas om brottet har utgjort ett led i en verksamhet som har bedrivits i större omfattning eller yrkesmässigt, avsett framställning av särskilt stor mängd narkotika eller annars varit av särskilt farlig eller hänsynslös art. Lag (2023:258)."
+  }
+ },
+ "Vapen": {
+  "name": "Vapenlagen (2026:408)",
+  "sfs": "2026:408",
+  "short": "VapenL",
+  "amended": "2026:1596",
+  "url": "https://data.riksdagen.se/dokument/sfs-2026-408.html",
+  "sections": {
+   "18:3": "3 § Den som uppsåtligen bryter mot någon av bestämmelserna om märkning i 15 kap. 2, 3, 4, 7 eller 8 § döms för vapenmärkningsbrott till böter eller fängelse i högst ett år. Detsamma gäller den som uppsåtligen förfalskar eller utan lov utplånar, avlägsnar eller ändrar sådan märkning.\n\nTill ansvar för brott mot någon av bestämmelserna om märkning i 15 kap. 7 eller 8 § döms det inte om gärningen är belagd med straff enligt 1 eller 2 §.",
+   "18:4": "4 § Den som uppsåtligen eller av oaktsamhet missbrukar rätten att inneha ett skjutvapen genom att använda det för något annat ändamål än det som han eller hon är berättigad till, döms för missbruk av rätt att inneha skjutvapen till böter eller fängelse i högst sex månader.",
+   "18:5": "5 § Den som uppsåtligen eller av oaktsamhet innehar ammunition utan att ha rätt till det döms för olovlig befattning med ammunition till böter eller fängelse i högst sex månader. Detsamma gäller den som överlåter eller yrkesmässigt förmedlar ammunition till någon som inte har rätt att inneha den.\n\nI ringa fall ska det inte dömas till ansvar för otillåtet innehav av ammunition.",
+   "18:6": "6 § Den som uppsåtligen eller av oaktsamhet innehar ljuddämpare eller vapenmagasin utan att ha rätt till det döms för olovlig befattning med vapentillbehör till böter eller fängelse i högst sex månader. Detsamma gäller den som överlåter eller yrkesmässigt förmedlar ljuddämpare eller vapenmagasin till någon som inte har rätt att inneha föremålen.\n\nI ringa fall ska det inte dömas till ansvar för otillåtet innehav av ljuddämpare eller vapenmagasin.",
+   "18:7": "7 § Den som uppsåtligen eller av oaktsamhet bedriver handel med skjutvapen utan tillstånd döms för olovlig vapenhandel till böter eller fängelse i högst sex månader.",
+   "18:8": "8 § Den som uppsåtligen eller av oaktsamhet yrkesmässigt förmedlar skjutvapen utan tillstånd döms för olovlig vapenförmedling till böter eller fängelse i högst sex månader.\n\nDen som uppsåtligen eller av oaktsamhet yrkesmässigt förmedlar ammunition utan tillstånd döms för olovlig förmedling av ammunition till böter eller fängelse i högst sex månader.",
+   "18:9": "9 § Till böter eller fängelse i högst sex månader döms den som uppsåtligen eller av oaktsamhet\n\n1. bryter mot någon av bestämmelserna om överlämnande till förvaring hos någon annan i 12 kap. 4 § första stycket eller om transport i 12 kap. 6 § eller mot villkor i fråga om förvaring av skjutvapen som meddelats med stöd av denna lag,\n\n2. bryter mot någon av bestämmelserna om förvaring i 12 kap. 1, 2 eller 4 § i fråga om skjutvapen, ammunition eller ljuddämpare som innehas av en sammanslutning för målskytte, en museihuvudman eller ett auktoriserat bevakningsföretag eller i fråga om skjutvapen som innehas av en vapenhandlare,\n\n3. förvarar ett skjutvapen eller en ljuddämpare åt någon annan utan att det finns ett tillstånd till förvaringen, eller bryter mot bestämmelserna om användning vid förvaring i 12 kap. 4 § andra stycket,\n\n4. medför ett skjutvapen i strid med bestämmelserna i 12 kap. 7 §, eller\n\n5. bryter mot föreskrifter som har meddelats med stöd av 20 kap. 7 § genom att olovligen överföra skjutvapen eller ammunition till ett annat land.\n\nI ringa fall ska det inte dömas till ansvar för överträdelse av bestämmelserna i 12 kap. 7 §.\n\nTill ansvar för otillåten förvaring av skjutvapen åt någon annan döms det inte om gärningen är belagd med straff enligt 1 eller 2 §."
+  }
+ },
+ "KfL": {
+  "name": "Lagen (1988:688) om kontaktförbud",
+  "sfs": "1988:688",
+  "short": "Kontaktförbudslagen",
+  "amended": "2026:1666",
+  "url": "https://data.riksdagen.se/dokument/sfs-1988-688.html",
+  "sections": {
+   "1": "1 § Enligt denna lag får förbud meddelas för en person att besöka eller på annat sätt ta kontakt med en annan person eller att följa efter denna person (kontaktförbud).\n\nEtt kontaktförbud får meddelas om det på grund av särskilda omständigheter finns risk för att den som förbudet avses gälla mot kommer att\n\n1. begå brott mot, förfölja, otillbörligt övervaka eller på annat sätt allvarligt trakassera den som förbudet avses skydda, eller\n\n2. utsätta den som förbudet avses skydda för påverkan i syfte att förhindra att han eller hon lämnar uppgifter till en domstol eller en brottsbekämpande myndighet.\n\nVid bedömningen av om det finns en sådan risk ska det särskilt beaktas\n\n1. om den som förbudet avses gälla mot har\n\na) begått brott mot någon persons liv, hälsa, frihet eller frid,\n\nb) förföljt, otillbörligt övervakat eller på annat sätt allvarligt trakasserat den som förbudet avses skydda, eller\n\nc) utsatt den som förbudet avses skydda för sådan påverkan som avses i andra stycket 2, eller\n\n2. om andra omständigheter som hänför sig till den som förbudet avses gälla mot innebär en ökad risk för sådant beteende som avses i andra stycket.\n\nEtt kontaktförbud omfattar inte kontakter som med hänsyn till särskilda omständigheter är uppenbart befogade. Lag (2025:561).",
+   "1b": "1 b § Ett kontaktförbud enligt 1 § får också avse förbud att uppehålla sig i en bostad som brukas gemensamt med någon annan, om det på grund av särskilda omständigheter finns risk för att den som förbudet avses gälla mot kommer att begå brott mot den sammanboendes liv, hälsa, frihet eller frid (kontaktförbud avseende gemensam bostad).\n\nEtt kontaktförbud avseende gemensam bostad får meddelas endast om den som förbudet avses skydda förbinder sig att medverka till att den som förbudet avses gälla mot i rimlig utsträckning får tillgång till sina personliga tillhörigheter. Lag (2025:561).",
+   "2": "2 § Om det kan antas att ett kontaktförbud enligt 1 § inte är tillräckligt, får förbudet utvidgas till att avse förbud att uppehålla sig inom ett eller flera områden kring en annan persons bostad eller arbetsplats eller annat ställe där den personen brukar vistas (utvidgat kontaktförbud).\n\nEtt beslut om utvidgat kontaktförbud får förenas med villkor om elektronisk övervakning. Har den som förbudet avses gälla mot överträtt ett kontaktförbud, ska beslutet förenas med villkor om elektronisk övervakning, om det inte finns särskilda skäl mot det. Lag (2025:561).",
+   "24": "24 § Den som bryter mot ett kontaktförbud döms för överträdelse av kontaktförbud till fängelse i högst ett år.\n\nOm en överträdelse enligt första stycket avser ett utvidgat eller särskilt utvidgat kontaktförbud, döms för överträdelse av utvidgat eller särskilt utvidgat kontaktförbud till fängelse i högst två år.\n\nOm ett brott som avses i första eller andra stycket är ringa, döms till böter. Lag (2025:561).",
+   "25": "25 § Den som har meddelats ett kontaktförbud med villkor om elektronisk övervakning och som hindrar att den elektroniska övervakningen kommer till stånd eller kan fortgå, eller som i övrigt hanterar den elektroniska utrustningen på ett sätt som är ägnat att försvåra övervakningen, döms för hindrande eller försvårande av elektronisk övervakning till fängelse i högst ett år.\n\nDen som av grov oaktsamhet begår en gärning som avses i första stycket, döms för oaktsamt hindrande eller försvårande av elektronisk övervakning till böter eller fängelse i högst ett år. Lag (2025:561).",
+   "2a": "2 a § Den som har överträtt ett utvidgat kontaktförbud får meddelas förbud att uppehålla sig inom ett större område än vad som följer av 2 § (särskilt utvidgat kontaktförbud). Ett sådant förbud får även meddelas om det på grund av särskilda omständigheter finns en påtaglig risk för att den som förbudet avses gälla mot kommer att begå brott som innebär ett allvarligt angrepp på den andra personens liv eller hälsa eller trygghet till person.\n\nFörbudet får omfatta ett eller flera områden i anslutning till sådana platser där den andra personen har sin bostad eller arbetsplats eller annars brukar vistas. När områdets storlek bestäms ska det särskilt beaktas att behovet av skydd för den som förbudet avses skydda tillgodoses.\n\nEtt beslut om särskilt utvidgat kontaktförbud ska förenas med villkor om elektronisk övervakning, om det inte finns särskilda skäl mot det. Lag (2025:561)."
+  }
+ },
+ "TfL": {
+  "name": "Lagen (2005:321) om tillträdesförbud vid idrottsarrangemang",
+  "sfs": "2005:321",
+  "short": "Tillträdesförbudslagen",
+  "amended": "2018:1706",
+  "url": "https://data.riksdagen.se/dokument/sfs-2005-321.html",
+  "sections": {
+   "22": "22 § Den som bryter mot ett tillträdesförbud döms för överträdelse av tillträdesförbud till böter eller fängelse i högst sex månader."
+  }
+ },
+ "MaskL": {
+  "name": "Lagen (2005:900) om förbud mot maskering i vissa fall",
+  "sfs": "2005:900",
+  "short": "Maskeringslagen",
+  "amended": "2024:848",
+  "url": "https://data.riksdagen.se/dokument/sfs-2005-900.html",
+  "sections": {
+   "1": "1 § Den som på allmän plats deltar i en allmän sammankomst enligt ordningslagen (1993:1617), som utgör demonstration eller som annars hålls för överläggning, opinionsyttring eller upplysning i allmän eller enskild angelägenhet, får inte helt eller delvis täcka ansiktet på ett sätt som försvårar identifikation, om det vid sammankomsten uppkommer en störning av den allmänna ordningen eller en omedelbar fara för en sådan störning. Detsamma gäller den som på allmän plats deltar i en folksamling, som inte utgör allmän sammankomst eller offentlig tillställning enligt ordningslagen, om folksamlingen genom sitt uppträdande stör den allmänna ordningen eller utgör en omedelbar fara för denna.\n\nFörbudet gäller inte den som täcker ansiktet av religiösa skäl. Det gäller inte heller i den utsträckning deltagare i en allmän sammankomst, som avses i första stycket, med stöd av 2 kap. 11 a § ordningslagen fått tillstånd att helt eller delvis täcka ansiktet.",
+   "2": "2 § Den som uppsåtligen bryter mot 1 § första stycket skall dömas till böter eller fängelse i högst sex månader. I ringa fall skall inte dömas till ansvar."
+  }
+ },
+ "OL": {
+  "name": "Ordningslag (1993:1617)",
+  "sfs": "1993:1617",
+  "short": "OL",
+  "amended": "2026:729",
+  "url": "https://data.riksdagen.se/dokument/sfs-1993-1617.html",
+  "sections": {
+   "2:29": "29 § Till böter eller fängelse i högst sex månader döms den som uppsåtligen eller av oaktsamhet\n\n1. i egenskap av anordnare\n\na) bryter mot kravet på tillstånd eller anmälan i 4 eller 5 §,\n\nb) håller en allmän sammankomst i strid med ett beslut enligt 10 § eller en offentlig tillställning trots att tillstånd vägrats, eller\n\nc) bryter mot ett villkor eller ett förbud som har meddelats enligt 4 § andra stycket, 5 § fjärde stycket, 15 §, 16 § andra stycket eller 25 §,\n\n2. lämnar oriktig uppgift om något förhållande som han eller hon enligt tillämpliga föreskrifter är skyldig att upplysa om i en ansökan eller en anmälan eller om sådana omständigheter som Polismyndigheten kan begära uppgift om med stöd av 9 § första stycket,\n\n3. anordnar en allmän sammankomst eller offentlig tillställning i ett tält som saknar föreskrivet godkännande eller bryter mot ett användnings-förbud eller mot ett villkor som har meddelats för användandet,\n\n4. anordnar en allmän sammankomst eller offentlig tillställning och då tillåter användning av en tivolianordning som saknar föreskrivet godkännande eller bryter mot ett användningsförbud eller mot ett villkor som har meddelats för användandet,\n\n5. anordnar en offentlig tillställning i strid med 14 §,\n\n6. anordnar en allmän sammankomst eller offentlig tillställning utan tillstånd enligt 19 eller 20 § i fall då sådant tillstånd behövs, eller\n\n7. anordnar eller fortsätter en allmän sammankomst eller offentlig tillställning trots att sammankomsten eller tillställningen har ställts in eller upplösts enligt 22, 22 a eller 23 §.\n\nDen som uppsåtligen eller av oaktsamhet bryter mot förbudet i 18 § första stycket mot intag eller förvaring av alkoholdrycker eller alkoholdrycksliknande preparat döms till penningböter, om inte gärningen är belagd med straff i någon annan författning.\n\nOm flera har medverkat till en gärning som avses i första stycket ska 23 kap. 4 och 5 §§ brottsbalken tillämpas. Lag (2026:729).",
+   "5:3": "3 § Pyrotekniska varor får inte utan tillstånd av Polismyndigheten innehas eller användas på en idrottsanläggning när idrottsarrangemang anordnas där.\n\nVid Polismyndighetens handläggning av frågor enligt första stycket tilllämpas 3 kap. 14 §, 16 § första stycket, 18 § första stycket 1, 3 och 4, 19 § första stycket samt 20, 21, 24, 26 och 28 §§. Lag (2014:590).",
+   "5:4": "4 § När idrottsarrangemang anordnas på en idrottsanläggning får inte någon\n\n1. obehörigen beträda spelplanen eller annat motsvarande område som är avsett för idrottsutövningen,\n\n2. kasta in föremål på spelplanen eller annat motsvarande område som är avsett för idrottsutövningen, om inte en sådan åtgärd är befogad med hänsyn till idrottsarrangemangets genomförande, eller\n\n3. på idrottsanläggningen helt eller delvis täcka ansiktet på ett sätt som försvårar identifikationen av personen.\n\nFörbuden i första stycket 1 och 2 gäller även för plats som gränsar till de där avsedda områdena, om det genom stängsel, skyltar eller på annat sätt framgår att allmänheten inte har tillträde dit.\n\nFörbudet i första stycket 3 gäller inte den som täcker ansiktet av religiösa skäl eller den som har skäl att täcka ansiktet i tjänsten eller för idrottsarrangemangets genomförande. Förbudet gäller inte heller om det med hänsyn till väderförhållanden, hälsoskäl eller övriga omständigheter är att anse som befogat att täcka ansiktet. Vid bedömningen av om det är befogat att täcka ansiktet ska risken för hot mot den allmänna ordningen och säkerheten särskilt beaktas. Lag (2017:12).",
+   "5:5": "5 § Den som uppsåtligen bryter mot 3 § första stycket eller 4 § döms till böter eller fängelse i högst sex månader. I ringa fall ska inte dömas till ansvar.\n\nAnsvar enligt första stycket ska inte dömas ut, om gärningen är belagd med samma eller strängare straff i brottsbalken eller i annan författning. Lag (2009:101)."
+  }
+ },
+ "AlkL": {
+  "name": "Alkohollagen (2010:1622)",
+  "sfs": "2010:1622",
+  "short": "AlkL",
+  "amended": "2026:511",
+  "url": "https://data.riksdagen.se/dokument/sfs-2010-1622.html",
+  "sections": {
+   "11:1": "1 § Den som\n\n1. tillverkar sprit eller spritdrycker utan att ha rätt till det enligt denna lag, eller\n\n2. förvärvar, innehar, forslar, döljer eller förvarar sprit eller spritdrycker som är olovligt tillverkade\n\ndöms för olovlig befattning med sprit till böter eller fängelse i högst två år.",
+   "11:10": "10 § Är gärning som avses i 1, 3 eller 5-9 § att anse som ringa ska inte dömas till ansvar. Lag (2011:1110).",
+   "11:11": "11 § För försök eller förberedelse till brott som avses i 1, 3 och 7 §§ döms till ansvar enligt 23 kap. brottsbalken. Detta gäller dock inte gärning som avses i 1 § 2 och som endast gäller förvärv eller innehav för personligt bruk.\n\nDen till vilken lagligen framställda alkoholdrycker eller alkoholdrycksliknande preparat har anskaffats för personligt bruk ska vara fri från ansvar för medverkan till brott som avses i detta kapitel. Lag (2019:345).",
+   "11:2": "2 § Den som tillverkar, överlåter eller innehar en destillationsapparat eller apparatdel i strid med 2 kap. 1 § andra stycket döms till böter eller fängelse i högst ett år.",
+   "11:3": "3 § Den som uppsåtligen eller av oaktsamhet\n\n1. säljer sprit, alkoholdrycker eller alkoholdrycksliknande preparat utan tillstånd eller annars i strid med denna lag,\n\n2. serverar spritdrycker, vin, starköl eller andra jästa alkoholdrycker eller alkoholdrycksliknande preparat som har anskaffats på annat sätt än som anges i 8 kap. 13 §, eller\n\n3. säljer sprit i strid med bestämmelserna i 6 kap. 4 § första stycket eller 5 § andra stycket\n\ndöms för olovlig försäljning av alkohol till böter eller fängelse i högst två år. Lag (2019:345).",
+   "11:4": "4 § Om ett brott som anges i 1 eller 3 § har begåtts uppsåtligen och är grovt, döms till fängelse i lägst sex månader och högst sex år. Vid bedömande av om brottet är grovt ska det särskilt beaktas om gärningen har utgjort ett led i en verksamhet som bedrivits yrkesmässigt eller i större omfattning, eller har varit inriktad mot ungdomar.",
+   "11:5": "5 § Den som tillverkar folköl, starköl, vin eller andra jästa alkoholdrycker i strid med denna lag döms till böter eller fängelse i högst sex månader.",
+   "11:6": "6 § Den som innehar alkoholdrycker eller alkoholdrycksliknande preparat i syfte att olovligen sälja dem döms för olovligt innehav av alkohol till böter eller fängelse i högst två år. Lag (2019:345).",
+   "11:7": "7 § Den som uppsåtligen eller av oaktsamhet anskaffar, överlämnar eller bjuder på alkoholdrycker eller alkoholdrycksliknande preparat i strid med 3 kap. 9 § döms för olovligt anskaffande av alkohol till böter eller fängelse i högst två år eller, om brottet är grovt, till fängelse i högst fyra år. Lag (2019:345).",
+   "11:9": "9 § Den som uppsåtligen eller av oaktsamhet säljer eller lämnar ut alkoholdrycker eller alkoholdrycksliknande preparat i strid med 3 kap. 7 eller 8 § till någon som inte har uppnått föreskriven ålder eller som är märkbart påverkad av alkohol eller annat berusningsmedel, eller vid partihandel underlåter att på sätt som föreskrivs i 4 kap. 3 § förvissa sig om att köparen har rätt att återförsälja eller köpa in varan döms för olovlig hantering av alkohol till böter eller fängelse i högst sex månader.\n\nFör olovlig hantering av alkohol döms också den som\n\n1. förvarar alkoholdryck eller alkoholdrycksliknande preparat i strid med 3 kap. 2 § första stycket eller 8 kap. 24 § tredje stycket,\n\n2. tillåter alkoholintag i strid med 8 kap. 24 § första eller andra stycket,\n\n3. säljer folköl i strid med förbud som meddelats enligt 9 kap. 19 §, eller\n\n4. serverar alkoholdrycker eller alkoholdrycksliknande preparat i strid med förbud som meddelats enligt 9 kap. 20 §.\n\nTill ansvar ska inte dömas den som i strid med 3 kap. 2 § första stycket eller 8 kap. 24 § tredje stycket förvarar alkoholdryck eller alkoholdrycksliknande preparat, om det av omständigheterna framgår att drycken var avsedd eller preparatet var avsett för annat än försäljning eller intag på platsen. Lag (2019:345).",
+   "3:7": "7 § Alkoholdrycker och alkoholdrycksliknande preparat får inte säljas eller annars lämnas ut till den som inte har fyllt 20 år. Beträffande folköl gäller motsvarande den som inte har fyllt 18 år.\n\nAlkoholdrycker och alkoholdrycksliknande preparat får serveras till den som har fyllt 18 år. Lag (2019:345).",
+   "3:8": "8 § Alkoholdrycker och alkoholdrycksliknande preparat får inte lämnas ut till den som är märkbart påverkad av alkohol eller andra berusningsmedel.\n\nAlkoholdrycker och alkoholdrycksliknande preparat får inte lämnas ut om det finns särskild anledning att anta att varan är avsedd att olovligen tillhandahållas någon.\n\nDen som lämnar ut alkoholdrycker eller alkoholdrycksliknande preparat ska förvissa sig om att mottagaren har uppnått den ålder som anges i 7 §. Lag (2019:345).",
+   "3:9": "9 § Det är förbjudet att som ombud eller på därmed jämförbart sätt anskaffa alkoholdrycker eller alkoholdrycksliknande preparat till den som enligt 7 eller 8 § inte har rätt att få sådan vara utlämnad till sig. Det är också förbjudet att i annat fall än som avses i 4 kap. 4 § andra stycket 1, 2 och 4- 7 i större omfattning tillhandagå annan med att anskaffa alkoholdrycker eller alkoholdrycksliknande preparat.\n\nAlkoholdrycker eller alkoholdrycksliknande preparat får inte lämnas som gåva eller lån till eller bjudas den som inte har fyllt 20 år. I fråga om folköl gäller dock motsvarande den som inte har fyllt 18 år.\n\nDet är dock tillåtet att bjuda den som inte har uppnått föreskriven ålder på en mindre mängd alkoholdryck eller alkoholdrycksliknande preparat under förutsättning att intag sker på platsen och under ordnade förhållanden samt det med hänsyn till den unges ålder och utveckling och omständigheterna i övrigt framstår som försvarligt. På serveringsställe gäller dock den åldersgräns som anges i 7 § andra stycket. Lag (2019:345)."
+  }
+ },
+ "DopL": {
+  "name": "Lagen (1991:1969) om förbud mot vissa dopningsmedel",
+  "sfs": "1991:1969",
+  "short": "Dopningslagen",
+  "amended": "2025:641",
+  "url": "https://data.riksdagen.se/dokument/sfs-1991-1969.html",
+  "sections": {
+   "1": "1 § Denna lag gäller\n\n1. syntetiska anabola steroider,\n\n2. testosteron och dess derivat,\n\n3. tillväxthormon, och\n\n4. kemiska substanser som ökar produktion eller frigörelse av testosteron och dess derivat eller av tillväxthormon. Lag (2011:112).",
+   "2": "2 § Medel som anges i 1 § får inte annat än för medicinskt eller vetenskapligt ändamål\n\n1. införas till landet,\n\n2. överlåtas,\n\n3. framställas,\n\n4. förvärvas i överlåtelsesyfte,\n\n5. bjudas ut till försäljning,\n\n6. innehas, eller\n\n7. brukas.\n\nDen myndighet som får behålla förverkad egendom med stöd av 5 a § lagen (1974:1066) om förfarande med förverkad egendom och hittegods m.m. får, trots första stycket, för utbildningsändamål eller för forensiska ändamål inneha sådana medel som anges i 1 §. Lag (2025:641).",
+   "3": "3 § Den som uppsåtligen bryter mot 2 § 2-7 döms för dopningsbrott till fängelse i högst två år.\n\nÄr ett brott som avses i första stycket med hänsyn till mängden dopningsmedel samt övriga omständigheter att anse som ringa, döms till böter eller fängelse i högst sex månader.\n\nOm straff för olovlig införsel m.m. finns bestämmelser i lagen (2000:1225) om straff för smuggling. Lag (2000:1245).",
+   "3a": "3 a § Är ett brott som avses i 3 § första stycket att anse som grovt döms för grovt dopningsbrott till fängelse, lägst sex månader och högst sex år. Vid bedömningen av om brottet är grovt ska särskilt beaktas om gärningen har utgjort led i en verksamhet som har bedrivits i större omfattning eller yrkesmässigt, avsett särskilt stor mängd dopningsmedel eller annars varit av särskilt farlig eller hänsynslös art. Lag (2011:112)."
+  }
+ },
+ "HfvL": {
+  "name": "Lagen (1999:42) om förbud mot vissa hälsofarliga varor",
+  "sfs": "1999:42",
+  "short": "Hälsofarliga varor-lagen",
+  "amended": "2024:835",
+  "url": "https://data.riksdagen.se/dokument/sfs-1999-42.html",
+  "sections": {
+   "1": "1 § Denna lag gäller varor som på grund av sina inneboende egenskaper medför fara för människors liv eller hälsa och som används eller kan antas användas i syfte att uppnå berusning eller annan påverkan.\n\nRegeringen föreskriver på vilka varor lagen skall tillämpas.",
+   "3": "3 § Varor som avses i denna lag får inte utan tillstånd\n\n1. införas till landet,\n\n2. överlåtas,\n\n3. framställas,\n\n4. förvärvas i överlåtelsesyfte,\n\n5. anskaffas, bearbetas, förpackas, transporteras, förvaras eller på annat sådant sätt hanteras om varorna inte är avsedda för eget bruk,\n\n6. bjudas ut till försäljning, eller\n\n7. innehas.\n\nRegeringen eller den myndighet som regeringen bestämmer får meddela tillstånd till hantering för ett vetenskapligt eller industriellt ändamål. Tillstånd får förenas med de villkor som behövs, såväl i samband med beslutet om tillstånd som senare under tillståndstiden.\n\nEtt tillstånd får återkallas, om\n\n1. tillståndet inte längre utnyttjas, eller\n\n2. tillståndshavaren i väsentlig mån brutit mot ett meddelat villkor eller inte följer bestämmelserna i denna lag.\n\nRegeringen eller den myndighet som regeringen bestämmer får meddela föreskrifter om införsel, överlåtelse, framställning, förvärv i överlåtelsesyfte, utbjudande till försäljning, innehav, anteckningar och märkning samt om undantag från kravet på tillstånd.\n\nDen myndighet som regeringen bestämmer har tillsyn över efterlevnaden av denna lag samt av de föreskrifter och villkor som har meddelats i anslutning till lagen. Lag (2018:1113).",
+   "4": "4 § Den som uppsåtligen bryter mot 3 § första stycket 2, 3, 4, 5, 6 eller 7 ska dömas till böter eller fängelse i högst ett år.\n\nDen som av grov oaktsamhet bryter mot 3 § första stycket 2, 3, 4, 5 eller 6 ska dömas till böter eller fängelse i högst sex månader. I ringa fall ska det inte dömas till ansvar enligt detta stycke.\n\nDen som uppsåtligen eller av oaktsamhet bryter mot 3 a eller 3 b § eller föreskrift som meddelats med stöd av denna lag ska dömas till böter.\n\nOm straff för olovlig införsel finns bestämmelser i lagen (2000:1225) om straff för smuggling. Lag (2018:1113)."
+  }
+ },
+ "KonsL": {
+  "name": "Lagen (1982:316) om förbud mot könsstympning av kvinnor och oskuldsingrepp på kvinnor",
+  "sfs": "1982:316",
+  "short": "Könsstympningslagen",
+  "amended": "2025:1010",
+  "url": "https://data.riksdagen.se/dokument/sfs-1982-316.html",
+  "sections": {
+   "1": "1 § Ingrepp i de kvinnliga yttre könsorganen i syfte att stympa dem eller åstadkomma andra bestående förändringar av dem (könsstympning) får inte utföras, oavsett om samtycke till ingreppet har lämnats eller inte. Lag (2025:1010).",
+   "1a": "1 a § Ingrepp i någon annans kvinnliga könsorgan i syfte att det ska framstå som att personen inte har haft vaginalt samlag eller deltagit i jämförbara penetrerande sexuella handlingar (oskuldsingrepp) får inte utföras, oavsett om samtycke till ingreppet har lämnats eller inte. Lag (2025:1010).",
+   "2": "2 § Den som bryter mot 1 § döms till fängelse i lägst två och högst sex år.\n\nÄr brottet med hänsyn till omständigheterna mindre grovt, döms till fängelse i högst fyra år.\n\nÄr brottet grovt, döms till fängelse i lägst fem och högst tio år. Vid bedömningen av om brottet är grovt ska det särskilt beaktas om könsstympningen är särskilt omfattande eller om gärningen har orsakat livsfara eller allvarlig sjukdom eller om gärningsmannen i annat fall har visat synnerlig hänsynslöshet.\n\nFör försök, förberedelse och stämpling samt för underlåtenhet att avslöja eller förhindra brott döms det till ansvar enligt 23 kap. brottsbalken. Lag (2017:333).",
+   "3": "3 § Den som bryter mot 1 a § döms till fängelse i högst ett år. Lag (2025:1010)."
+  }
+ }
+}
