@@ -7,7 +7,7 @@ S Uppsåt till samtliga rekvisit.
 
 @ v03-ringa-urkundsforfalskning | Förvanskning av urkund | BrB 14:2
 B v03-urkundsforfalskning
-R ringa
+R ringa*
 - Urkunden är av mindre vikt.
 - Gärningen har begåtts för att hjälpa någon till hans eller hennes rätt.
 
@@ -27,7 +27,7 @@ U Gärningen är bokföringsbrott.
 
 @ v05-ringa-hindrande-av-urkunds-bevisfunktion | Ringa hindrande av urkunds bevisfunktion | BrB 14:4
 B v05-hindrande-av-urkunds-bevisfunktion
-R ringa
+R ringa*
 - Urkundens vikt och faran i bevishänseende.
 - Övriga omständigheter.
 
@@ -44,7 +44,7 @@ S Uppsåt till samtliga rekvisit.
 
 @ v15-ringa-signaturforfalskning | Ringa signaturförfalskning | BrB 14:5
 B v05-signaturforfalskning
-R ringa
+R ringa*
 - Verkets värde och betydelse.
 - Övriga omständigheter.
 
@@ -61,7 +61,7 @@ S Uppsåt till samtliga rekvisit.
 
 @ v15-ringa-penningforfalskning | Ringa penningförfalskning | BrB 14:6
 B v05-penningforfalskning
-R ringa
+R ringa*
 - Antal och värde av de förfalskade sedlarna eller mynten.
 - Förfalskningens kvalitet och övriga omständigheter.
 
@@ -78,7 +78,7 @@ S Uppsåt till samtliga rekvisit.
 
 @ v15-ringa-olovlig-befattning-med-falska-pengar | Ringa olovlig befattning med falska pengar | BrB 14:7
 B v05-olovlig-befattning-med-falska-pengar
-R ringa
+R ringa*
 - Antal och värde av de falska pengarna.
 - Övriga omständigheter.
 
@@ -98,7 +98,7 @@ S Uppsåt till samtliga rekvisit.
 
 @ v15-ringa-markesforfalskning | Ringa märkesförfalskning | BrB 14:8
 B v15-markesforfalskning
-R ringa
+R ringa*
 - Märkets betydelse och värde.
 - Övriga omständigheter.
 
@@ -117,7 +117,7 @@ S Uppsåt till samtliga rekvisit.
 
 @ v15-ringa-forfalskning-av-fast-marke | Ringa förfalskning av fast märke | BrB 14:9
 B v15-forfalskning-av-fast-marke
-R ringa
+R ringa*
 - Märkets betydelse.
 - Övriga omständigheter.
 
@@ -157,7 +157,7 @@ U Uppgiften är utan betydelse för saken, eller gäller något som gärningsper
 
 @ v06-ringa-osann-partsutsaga | Ringa osann partsutsaga | BrB 15:2
 B v06-osann-partsutsaga
-R ringa
+R ringa*
 - Uppgiftens betydelse för saken.
 - Övriga omständigheter.
 
@@ -208,7 +208,7 @@ S Uppsåt att den oskyldige ska bli dömd.
 
 @ v04-ringa-falsk-angivelse | Ringa falsk angivelse | BrB 15:6
 B v03-falsk-angivelse
-R ringa
+R ringa*
 - Hur allvarligt det angivna brottet är.
 - Övriga omständigheter.
 
@@ -233,7 +233,7 @@ U Gärningen är falsk angivelse.
 
 @ v05-ringa-falsk-beskyllning | Ringa falsk beskyllning | BrB 15:7
 B v05-falsk-beskyllning
-R ringa
+R ringa*
 - Hur allvarlig den påstådda gärningen är.
 - Övriga omständigheter.
 

@@ -94,7 +94,7 @@ C Djur och natur
 A tidelag;sex med djur;zoofili;bestialitet
 Q plain
 G Gärningspersonen genomför en sexuell handling med ett djur.
-S Uppsåt till samtliga rekvisit.
+S Uppsåt till samtliga rekvisit. Lagen anger ingen skuldform. Utgångspunkten är då att uppsåt krävs.
 U Handlingen utförs av veterinärmedicinska skäl, i samband med avel eller av liknande berättigade skäl.
 T En person filmar sig själv när han genomför sexuella handlingar med en hund.
 

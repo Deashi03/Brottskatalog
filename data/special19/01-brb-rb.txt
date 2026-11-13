@@ -95,13 +95,13 @@ Q plain
 ## Tar upp bild
 P Vid rättens sammanträde, i eller in i rättssalen eller i en sidosal.
 G Gärningspersonen tar upp bild med tekniskt hjälpmedel, till exempel fotograferar eller filmar.
-S Uppsåt till samtliga rekvisit.
+S Uppsåt till samtliga rekvisit. Lagen anger ingen skuldform. Utgångspunkten är då att uppsåt krävs.
 U Annat följer av lag.
 U Fallet är ringa.
 ## Sprider bild
 O Bilden har tagits upp i strid med fotoförbudet och någon syns på bilden.
 G Gärningspersonen sprider bilden.
-S Uppsåt till samtliga rekvisit.
+S Uppsåt till samtliga rekvisit. Lagen anger ingen skuldform. Utgångspunkten är då att uppsåt krävs.
 U Fallet är ringa.
 T En åhörare filmar med mobilen när ett vittne hörs i rättssalen.
 V En åhörare lägger ut en bild på den tilltalade i rättssalen på sociala medier.
@@ -143,5 +143,5 @@ A falsk advokat;utger sig för advokat;advokattitel
 Q plain
 G Gärningspersonen utger sig för att vara auktoriserad som advokat i Sverige, i en annan stat inom EU eller EES eller i Schweiz.
 K Gärningspersonen är inte behörig att kalla sig advokat.
-S Uppsåt till samtliga rekvisit.
+S Uppsåt till samtliga rekvisit. Lagen anger ingen skuldform. Utgångspunkten är då att uppsåt krävs.
 T En jurist som inte är medlem i Advokatsamfundet skriver ”advokat” på sin webbplats och i brev till klienter.

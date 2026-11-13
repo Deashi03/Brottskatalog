@@ -10,7 +10,7 @@
    return Number.isFinite(stamp)&&new Date(stamp).toISOString().slice(0,10)===s;
  };
  const dateOf=(s)=>isDate(s)?s:null;
- const reviewLevels=new Set(['law-and-penalty-reviewed','penalty-and-stage-verified-lawtext-pending','penalty-reviewed-source-excerpt','penalty-reviewed','penalty-and-stage-reviewed']);
+ const reviewLevels=new Set(['v19-statute-checked','law-and-penalty-reviewed','penalty-and-stage-verified-lawtext-pending','penalty-reviewed-source-excerpt','penalty-reviewed','penalty-and-stage-reviewed']);
  const sourceURL=c=>c.sourceURL||(/^BrB\b/i.test(c.shortRef||'')?'https://www.riksdagen.se/sv/dokument-och-lagar/dokument/svensk-forfattningssamling/brottsbalk-1962700_sfs-1962-700/':null);
  const legalEditionMarkers=text=>{
    const raw=String(text||'');
@@ -43,13 +43,13 @@
      new Date(latest).getUTCMonth(),
      new Date(latest).getUTCDate()
    ));
-   let lawStatus=c.lawMode==='missing'?'Saknas offline':c.lawMode==='machine'?'Maskinimporterad – ej slutgranskad':c.lawMode==='full'?'Lagtext inlagd – kontrollera aktuell lydelse':c.lawMode==='stage-reference'?'Förstadium – särskilt lagstöd måste kontrolleras':'Utdrag – kontrollera fulltext';
+   let lawStatus=c.lawMode==='missing'?'Saknas offline':c.lawMode==='machine'?'Maskinimporterad – ej slutgranskad':c.lawMode==='full'?(c.lawCompletenessVerified&&c.lawCompletenessChecked?'Kontrollerad mot gällande lydelse '+c.lawCompletenessChecked:'Lagtext inlagd – kontrollera aktuell lydelse'):c.lawMode==='stage-reference'?'Förstadium – särskilt lagstöd måste kontrolleras':'Utdrag – kontrollera fulltext';
    if(c.reviewStatus==='source-changed')lawStatus='Källtext ändrad – kräver ny granskning';
    const editionMarkers=legalEditionMarkers(c.law);
    const parallelVersions=editionMarkers.length>0;
    const penaltyStatus=c.reviewStatus==='source-changed'?'Kontroll krävs efter lagändring':penaltyVerified?'Dokumenterad kontroll '+dateOf(c.penaltyChecked):c.penaltyRange?'Strukturerad, men ej individuellt verifierad':'Straffskala inte maskinellt verifierad';
    const prosecutionStatus=c.stageStatus&&c.stageStatus!=='punishable'?'Inte relevant som självständig straffbar rubricering':c.prosecution==='unknown'?'Ej verifierad':c.prosecutionSourceTier==='general-rule-only'?'Allmänt åtal enligt huvudregel – undantag ej individuellt kontrollerade':c.prosecution==='general'?'Allmänt åtal registrerat – kontrollera undantag':'Särskilda åtalsvillkor registrerade';
-   const stageStatus=!c.stageType?'Se särskilda förstadieposter':c.stageStatus==='punishable'?'Straffbart enligt registrerat lagstöd':c.stageStatus==='not-criminalized'?'Ej straffbart enligt registrerat lagstöd':'Ej verifierat – dra ingen slutsats om straffrihet';
+   const stageStatus=!c.stageType?'Se förstadiekorten (försök, förberedelse och stämpling)':c.stageStatus==='punishable'?'Straffbart enligt registrerat lagstöd':c.stageStatus==='not-criminalized'?'Ej straffbart enligt registrerat lagstöd':'Ej verifierat – dra ingen slutsats om straffrihet';
    return {
      stale,lastReview,
      sourceURL:sourceURL(c)||(c.stageType?sourceURL(D.crimes.find(x=>x.id===c.stageParentId)||{}):null),

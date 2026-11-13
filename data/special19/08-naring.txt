@@ -56,7 +56,7 @@ Q plain
 ST FP | SpelL 19:6
 O Ett spel som omfattas av licenskrav enligt spellagen, till exempel vadslagning på en fotbollsmatch.
 G Gärningspersonen vidtar otillbörligen en åtgärd som är ägnad att påverka utgången av spelet.
-S Uppsåt till samtliga rekvisit.
+S Uppsåt till samtliga rekvisit. Lagen anger ingen skuldform. Utgångspunkten är då att uppsåt krävs.
 T En fotbollsspelare tar emot pengar för att se till att få ett gult kort i en viss minut, som någon har spelat på.
 
 @ v19-spelfusk-grovt | Spelfusk, grovt brott | 19:5 | 19:4,19:5
@@ -288,7 +288,7 @@ Q plain
 N Är brottet ringa döms till böter eller fängelse i högst sex månader.
 K Gärningspersonen har meddelats näringsförbud eller tillfälligt näringsförbud.
 G Gärningspersonen bryter mot förbudet, till exempel genom att driva näringsverksamhet, vara styrelseledamot eller i praktiken leda ett företag, eller bryter mot ett villkor som har meddelats i samband med förbudet.
-S Uppsåt till samtliga rekvisit.
+S Uppsåt till samtliga rekvisit. Lagen anger ingen skuldform. Utgångspunkten är då att uppsåt krävs.
 T En person med näringsförbud driver i praktiken ett städbolag där sambon står som formell ägare.
 
 @ v19-overtradelse-av-naringsforbud-ringa | Överträdelse av näringsförbud, ringa brott | 47 § | 47

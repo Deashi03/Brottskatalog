@@ -12,12 +12,12 @@ N Försök och förberedelse är straffbara, utom när gärningen bara gäller f
 ## Tillverkning
 G Gärningspersonen tillverkar sprit eller spritdrycker.
 K Gärningspersonen har inte rätt att tillverka sprit enligt alkohollagen, till exempel genom att vara godkänd upplagshavare.
-S Uppsåt till samtliga rekvisit.
+S Uppsåt till samtliga rekvisit. Lagen anger ingen skuldform. Utgångspunkten är då att uppsåt krävs.
 U Gärningen är ringa.
 ## Befattning med olovligt tillverkad sprit
 O Spriten eller spritdrycken är olovligt tillverkad.
 G Gärningspersonen förvärvar, innehar, forslar, döljer eller förvarar spriten.
-S Uppsåt till samtliga rekvisit.
+S Uppsåt till samtliga rekvisit. Lagen anger ingen skuldform. Utgångspunkten är då att uppsåt krävs.
 U Gärningen är ringa.
 T En person har en hemmagjord destillationsapparat i garaget och bränner sprit.
 V En person köper hembränt av en granne och förvarar flaskorna i källaren.
@@ -46,7 +46,7 @@ FU enkel|Alkohollagen (2010:1622)
 O En destillationsapparat eller en del till en sådan apparat.
 G Gärningspersonen tillverkar, överlåter eller innehar apparaten eller apparatdelen.
 K Gärningspersonen har inte rätt till det enligt 2 kap. 1 § andra stycket alkohollagen.
-S Uppsåt till samtliga rekvisit.
+S Uppsåt till samtliga rekvisit. Lagen anger ingen skuldform. Utgångspunkten är då att uppsåt krävs.
 T Vid en husrannsakan hittas en hemmabyggd destillationsapparat i en förrådsbod.
 
 @ v19-olovlig-forsaljning-av-alkohol | Olovlig försäljning av alkohol | 11:3 | 11:3,11:10
@@ -88,7 +88,7 @@ Q plain
 ST - | AlkL 11:11
 FU enkel|Alkohollagen (2010:1622)
 G Gärningspersonen tillverkar folköl, starköl, vin eller andra jästa alkoholdrycker i strid med alkohollagen, till exempel för försäljning utan att vara godkänd för det.
-S Uppsåt till samtliga rekvisit.
+S Uppsåt till samtliga rekvisit. Lagen anger ingen skuldform. Utgångspunkten är då att uppsåt krävs.
 U Gärningen är ringa.
 T En person tillverkar starköl i stor mängd i en lokal och säljer det vidare utan att vara godkänd som upplagshavare.
 

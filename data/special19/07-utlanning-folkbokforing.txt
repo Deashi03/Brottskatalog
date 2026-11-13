@@ -9,7 +9,7 @@ FU enkel|Utlänningslagen (2005:716), ej 20 kap. 7–9 §§
 N Är brottet ringa döms till böter. I ringa fall får åklagaren åtala bara om det är motiverat från allmän synpunkt.
 K Gärningspersonen är en utlänning som har ålagts anmälningsskyldighet eller en områdesbegränsning enligt 9 a kap. utlänningslagen.
 G Gärningspersonen bryter mot anmälningsskyldigheten eller områdesbegränsningen.
-S Uppsåt till samtliga rekvisit.
+S Uppsåt till samtliga rekvisit. Lagen anger ingen skuldform. Utgångspunkten är då att uppsåt krävs.
 T En person som ska anmäla sig hos polisen varje måndag uteblir flera veckor i rad.
 
 @ v19-utll-atervandande | Brott mot utlänningslagen (återvändande efter utvisning) | 20:2 | 20:2
@@ -149,7 +149,7 @@ Q plain
 FU enkel|Utlänningslagen (2005:716), ej 20 kap. 7–9 §§
 K Gärningspersonen har en utlänning anställd eller har annars bestämmande inflytande över utlänningens arbetsförhållanden.
 G Gärningspersonen exploaterar utlänningen i arbete under uppenbart orimliga villkor.
-S Uppsåt till samtliga rekvisit.
+S Uppsåt till samtliga rekvisit. Lagen anger ingen skuldform. Utgångspunkten är då att uppsåt krävs.
 U Gärningen är människohandel eller människoexploatering (BrB 4:1 a eller 1 b).
 T En byggfirma låter utländska arbetare jobba tolv timmar om dagen för en bråkdel av avtalsenlig lön och bo i baracker på arbetsplatsen.
 
@@ -175,7 +175,7 @@ FU enkel|Utlänningslagen (2005:716), ej 20 kap. 7–9 §§
 G Gärningspersonen anställer en utlänning eller hjälper en utlänning att ansöka om arbetstillstånd.
 G Gärningspersonen begär eller tar emot ersättning av utlänningen för det, eller träffar avtal med utlänningen om sådan ersättning.
 O Ersättningen står i uppenbart missförhållande till motprestationen.
-S Uppsåt till samtliga rekvisit.
+S Uppsåt till samtliga rekvisit. Lagen anger ingen skuldform. Utgångspunkten är då att uppsåt krävs.
 T En arbetsgivare tar 150 000 kronor av en person för att anställa honom så att han kan få arbetstillstånd.
 
 @ v19-handel-med-arbetstillstand-grovt | Handel med arbetstillstånd, grovt brott | 20:10 a tredje stycket | 20:10a
@@ -203,7 +203,7 @@ G Gärningspersonen gör minst ett av:
   | Lämnar en oriktig uppgift som läggs till grund för beslut om folkbokföring.
   | Fullgör inte sin skyldighet att anmäla flyttning eller annan ändring till Skatteverket.
 F Den oriktiga uppgiften innebär fara i bevishänseende.
-S Uppsåt till samtliga rekvisit.
+S Uppsåt till samtliga rekvisit. Lagen anger ingen skuldform. Utgångspunkten är då att uppsåt krävs.
 U Fallet är ringa.
 T En person anmäler att hon har flyttat till en kompis lägenhet för att barnen ska få gå i en viss skola, men bor kvar på den gamla adressen.
 

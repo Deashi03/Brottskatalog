@@ -78,7 +78,7 @@ U Bokföringsskyldigheten gäller en ideell förening eller annan juridisk perso
 
 @ v04-ringa-bokforingsbrott | Ringa bokföringsbrott | BrB 11:5 första stycket
 B v03-bokforingsbrott
-R ringa
+R ringa*
 - Bristernas omfattning och betydelse.
 - Övriga omständigheter.
 

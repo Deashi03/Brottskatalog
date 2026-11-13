@@ -83,6 +83,7 @@ function label(c){
  const x=custody(c);
  if(x.presumption)return x.privileged?'Häktningspresumtion – ej vid mindre grovt fall':'Häktningspresumtion – pröva skäl';
  if(x.ordinary===true)return 'Häktning kan vara möjlig';
+ if(x.ordinary===null&&c.applicabilityConditional)return 'Gäller bara i krig – pröva tillämpligheten';
  if(x.ordinary===null)return 'Straffskala ej verifierad – kontrollera';
  return 'Endast särskild grund (RB 24:2)';
 }

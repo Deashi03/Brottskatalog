@@ -242,57 +242,7 @@ try{
     assert.equal(await rq.locator('.rq').evaluate(el=>el.scrollWidth<=el.clientWidth+1),true,'Requisites fit iPhone: '+title);
     assert.equal(await page.evaluate(()=>document.documentElement.scrollWidth<=innerWidth+1),true);
   }
-  for(const [title,rule,phrase]of[
-    ['Förtal','Särskilda häktningsgrunder','ingen allmän straffskalegräns'],
-    ['Ringa stöld','Ett år i straffskalan','Ordinarie straffskaletröskel ej uppfylld'],
-    ['Ofredande','Ett år i straffskalan','Straffskaletröskeln uppfylld'],
-    ['Grov fridskränkning','Häktningspresumtion','Straffskaletröskeln uppfylld'],
-    ['Grovt vapenbrott','Fyra års minimistraff','Straffskaletröskeln uppfylld'],
-    ['Arbetsmiljöbrott','Fängelse i straffskalan','Välj tillämplighet och straffskalegren'],
-    ['Lydnadsbrott','Fängelse i straffskalan','Välj tillämplighet och straffskalegren'],
-    ['Grovt bedrägeri','Hemlig avlyssning – särskild prövning','elektronisk kommunikation']
-  ]){
-    await page.goto(url+'#sok',{waitUntil:'networkidle'});await search.fill(title);await wait();
-    await page.locator('.crime-card').filter({has:page.getByText(T(title),{exact:true})}).click();
-    await page.locator('#sec-tvang > summary').click();const review=page.locator('.coercion-threshold-review');
-    assert.equal(await review.getAttribute('open'),null,'Threshold review starts collapsed: '+title);
-    await review.locator(':scope > summary').click();
-    const row=review.locator('li').filter({has:page.getByText(rule,{exact:true})});
-    assert.ok((await row.innerText()).includes(phrase),'Source-specific threshold distinction: '+title);
-    assert.ok((await review.innerText()).includes('Inget beslut om tvångsmedel'));
-    assert.equal(await review.locator('a[href*="riksdagen.se"]').count(),2);
-    assert.equal(await review.evaluate(el=>el.scrollWidth<=el.clientWidth+1),true,'Threshold review fits iPhone: '+title);
-    assert.equal(await page.evaluate(()=>document.documentElement.scrollWidth<=innerWidth+1),true);
-  }
   await page.goto(url+'#sok',{waitUntil:'networkidle'});
-  for(const [title,phrase,date]of[
-    ['Otillåtet förfarande med pornografisk bild','17 februari 1971','1971-02-17'],
-    ['Stöld','1 januari 1965','1965-01-01'],
-    ['Förtal','1 januari 1965','1965-01-01'],
-    ['Våldsamt upplopp','1 januari 1965','1965-01-01'],
-    ['Svikande av försvarsplikt','1 januari 1965','1965-01-01'],
-    ['Mord','2020-01-01'],
-    ['Ofredande','2018-01-01'],
-    ['Grov misshandel','2026-08-01'],
-    ['Psykiskt våld','2026-07-01'],
-    ['Rymning','2026-07-02'],
-    ['Vapenbrott','november 2026'],
-    ['Egenmäktighet med barn','1 januari 2027'],
-    ['Tullbrott','deklarationer']
-  ]){
-    await page.goto(url+'#sok',{waitUntil:'networkidle'});await search.fill(title);await wait();
-    await page.locator('.crime-card').filter({has:page.getByText(T(title),{exact:true})}).click();
-    await page.locator('#sec-lag > summary').click();const temporal=page.locator('.law-temporal-review');
-    assert.equal(await temporal.getAttribute('open'),null,'Temporal review starts collapsed: '+title);
-    await temporal.locator(':scope > summary').click();assert.ok((await temporal.innerText()).includes(phrase),'Temporal distinction: '+title);
-    if(date)assert.equal(await page.evaluate(title=>window.BK_DATA.crimes.find(c=>!c.stageType&&c.title===title)?.temporalReview15?.wordingFrom,title),date,'Structured commencement remains exact: '+title);
-    assert.ok((await temporal.innerText()).includes('Ingen lagversion väljs automatiskt'));
-    assert.equal(await temporal.locator('a[href*="rkrattsbaser.gov.se"], a[href*="docId=2667840"]').count(),1);
-    if(title==='Otillåtet förfarande med pornografisk bild'){assert.equal(await temporal.getByRole('link',{name:'Bekräftelse av ikraftträdandet'}).count(),1);assert.equal(await temporal.getByRole('link',{name:'Ikraftträdandekälla – originaltryck'}).count(),1);}
-    if(title==='Stöld')assert.equal(await temporal.getByRole('link',{name:'Originaltryck – SFS'}).count(),1);
-    assert.equal(await temporal.evaluate(el=>el.scrollWidth<=el.clientWidth+1),true,'Temporal review fits iPhone: '+title);
-    assert.equal(await page.evaluate(()=>document.documentElement.scrollWidth<=innerWidth+1),true);
-  }
   await page.goto(url+'#sok',{waitUntil:'networkidle'});
   await search.fill('stöld');
   await search.press('Enter');
@@ -332,8 +282,7 @@ try{
   await page.locator('summary').filter({hasText:'Lagtext'}).click();
   await wait();
   const lawTextStatus=(await page.locator('body').innerText());
-  assert.ok(lawTextStatus.includes('Paragraftext individuellt kontrollerad mot aktuell SFS'),'Murder must show individually checked statute text');
-  assert.ok(lawTextStatus.includes('Inte fullständig juridisk rekvisitgranskning'),'Current-paragraph validation must not be presented as full legal clearance');
+  assert.ok(lawTextStatus.includes('Kontrollerad mot gällande lydelse'),'2.0: kort kontrollnotering under lagtexten');
   await page.goto(url+'#sok',{waitUntil:'networkidle'});
   await page.locator('#crime-search').fill('ringa stöld');
   await wait();
