@@ -974,6 +974,7 @@ D.date='2026-10-12';
 <script src="./typexempel-19.js"></script>
 <script src="./rekvisit-19-view.js"></script>
 <script src="./special-19.js"></script>
+<script src="./stages-20.js"></script>
 <script src="./rubricering-19.js"></script>
 <script src="./catalog-selection-15.js"></script>
   <script>
@@ -983,8 +984,10 @@ D.date='2026-10-12';
 const { glossary, categories } = window.BK_DATA;
 const crimes = window.BK_DATA.crimes.filter(window.BK_CATALOG_SELECTION15.included).concat(
  (window.BK_TRAFFIC16?.entries||[]).filter(c=>!window.BK_DATA.crimes.some(x=>x.title.toLocaleLowerCase('sv')===c.title.toLocaleLowerCase('sv')))
-).concat(window.BK_SPECIAL19?.entries||[]);
+).concat(window.BK_SPECIAL19?.entries||[],window.BK_STAGES20?.entries||[]);
 if(window.BK_RUBRICERING19)crimes.forEach(window.BK_RUBRICERING19.apply);
+/* 2.0: förstadiekort känner sitt grundkort, så att FU-ledningen kan ärva klassningen. */
+{const _by=Object.fromEntries(crimes.map(c=>[c.id,c]));for(const c of crimes)if(c.stageType&&_by[c.stageParentId])Object.defineProperty(c,'fuParent20',{value:_by[c.stageParentId],enumerable:false,configurable:true});}
 const provisions = window.BK_STATUTES || {};
 const sheetHistory=[];
 const byId = Object.fromEntries(crimes.map(c => [c.id,c]));
@@ -1441,7 +1444,7 @@ function renderDetail(c){
   ${accordion('lag','Lagtext', 'book-open',law)}
   ${accordion('rekvisit','Rekvisit','layers',requisitesBody)}
   ${(!c.stageStatus||c.stageStatus==='punishable')?accordion('tvang','Tvångsmedel – översikt','shield-check',coerciveSection(c)):''}
-  ${(!c.stageStatus||c.stageStatus==='punishable')&&!c.stageType&&window.BK_FU18?'<div class="accordion fu18-menu" id="sec-fu18"><button type="button" class="fu18-open" data-action="fu18" data-id="'+escapeHtml(c.id)+'"><span class="summary-left">'+ic('clipboard')+'FU-ledning och åklagarkontakt</span>'+ic('chevron-right')+'</button></div>':''}
+  ${(!c.stageStatus||c.stageStatus==='punishable')&&window.BK_FU18&&window.BK_FU18.classify(c)?'<div class="accordion fu18-menu" id="sec-fu18"><button type="button" class="fu18-open" data-action="fu18" data-id="'+escapeHtml(c.id)+'"><span class="summary-left">'+ic('clipboard')+'FU-ledning och åklagarkontakt</span>'+ic('chevron-right')+'</button></div>':''}
   ${'' /* 1.7.3: avsnitten efter Tvångsmedel är borttagna för att fokusera på huvudfunktionerna. */}
   </div></section>${qualityCard(c)}<p class="detail-footer">Version ${window.BK_RELEASE} · kontrollera aktuell lagtext vid operativa beslut.</p></main>`;
 }

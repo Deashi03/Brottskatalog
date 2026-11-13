@@ -65,6 +65,7 @@ PEN 0 | 2 | Fängelse i högst två år | F 2 år
 C Utlänningsbrott
 A gömma papperslösa mot betalning;hyra ut till papperslösa;dölja utlänning
 Q plain
+ST F | UtlL 20:7 andra stycket
 N När omständigheterna är mildrande döms till böter. Försök är straffbart (BrB 23 kap.).
 G Gärningspersonen hjälper en utlänning att olovligen uppehålla sig i Sverige, en annan EU-stat, Island, Norge, Schweiz eller Liechtenstein, genom att dölja utlänningen eller genom någon annan liknande åtgärd.
 S Uppsåt och vinstsyfte.
@@ -75,6 +76,7 @@ PEN 0 | 2 | Fängelse i högst två år | F 2 år
 C Utlänningsbrott
 A smuggla människor;flyktingsmuggling;köra över gränsen;smuggla in personer
 Q plain
+ST FP | UtlL 20:8 fjärde stycket
 N Försök och förberedelse är straffbara (20:8 fjärde stycket).
 G Gärningspersonen hjälper en utlänning att olovligen komma in i eller passera genom Sverige, en annan EU-stat, Island, Norge, Schweiz eller Liechtenstein.
 S Uppsåt till samtliga rekvisit.
@@ -85,6 +87,7 @@ PEN 0 | 0.5 | Böter eller fängelse i högst sex månader | B–F 6 mån
 C Utlänningsbrott
 A ringa människosmuggling
 Q plain
+ST FP | UtlL 20:8 fjärde stycket
 B v19-manniskosmuggling
 R ringa*
 - Om hjälpen gällde en nära anhörig och skedde utan ersättning.
@@ -96,6 +99,7 @@ PEN 0.5 | 6 | Fängelse lägst sex månader och högst sex år | F 6 mån–6 å
 C Utlänningsbrott
 A grov människosmuggling
 Q plain
+ST FP | UtlL 20:8 fjärde stycket
 N Försök och förberedelse är straffbara (20:8 fjärde stycket).
 B v19-manniskosmuggling
 R grovt

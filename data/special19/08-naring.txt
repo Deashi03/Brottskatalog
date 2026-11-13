@@ -5,6 +5,7 @@ PEN 0 | 2 | Böter eller fängelse i högst två år | B–F 2 år
 C Ekonomisk brottslighet
 A spelbolag utan licens;illegalt kasino;pokerklubb;spelautomater;olicensierat spel
 Q plain
+ST - | SpelL 19:6
 G Gärningspersonen tillhandahåller otillåtet spel, eller spel utan den licens som krävs enligt spellagen.
 S Uppsåt eller grov oaktsamhet.
 U Fallet är ringa.
@@ -15,6 +16,7 @@ PEN 0.5 | 6 | Fängelse lägst sex månader och högst sex år | F 6 mån–6 å
 C Ekonomisk brottslighet
 A grov olovlig spelverksamhet;illegala spelautomater i stor skala
 Q plain
+ST FP | SpelL 19:6
 B v19-olovlig-spelverksamhet
 S Brottet har begåtts uppsåtligen.
 R grovt
@@ -27,6 +29,7 @@ PEN 0 | 2 | Böter eller fängelse i högst två år | B–F 2 år
 C Ekonomisk brottslighet
 A marknadsföra olicensierat spel;reklam för spelbolag utan licens;betalningsförmedling spel
 Q plain
+ST - | SpelL 19:6
 G Gärningspersonen främjar deltagande i otillåtet spel eller spel utan licens, till exempel genom att marknadsföra spelet eller förmedla betalningar till det.
 S Uppsåt eller grov oaktsamhet.
 U Fallet är ringa.
@@ -37,6 +40,7 @@ PEN 0.5 | 6 | Fängelse lägst sex månader och högst sex år | F 6 mån–6 å
 C Ekonomisk brottslighet
 A grovt främjande av olovligt spel
 Q plain
+ST - | SpelL 19:6
 B v19-framjande-av-olovligt-spel
 S Brottet har begåtts uppsåtligen.
 R grovt
@@ -49,6 +53,7 @@ PEN 0 | 2 | Fängelse i högst två år | F 2 år
 C Ekonomisk brottslighet
 A matchfixning;uppgjord match;manipulera match;fixa match
 Q plain
+ST FP | SpelL 19:6
 O Ett spel som omfattas av licenskrav enligt spellagen, till exempel vadslagning på en fotbollsmatch.
 G Gärningspersonen vidtar otillbörligen en åtgärd som är ägnad att påverka utgången av spelet.
 S Uppsåt till samtliga rekvisit.
@@ -59,6 +64,7 @@ PEN 0.5 | 6 | Fängelse lägst sex månader och högst sex år | F 6 mån–6 å
 C Ekonomisk brottslighet
 A grovt spelfusk;grov matchfixning
 Q plain
+ST FP | SpelL 19:6
 B v19-spelfusk
 R grovt
 - Gärningen har ingått i en brottslighet som utövats systematiskt eller i större omfattning.
@@ -124,6 +130,7 @@ PEN 0 | 2 | Böter eller fängelse i högst två år | B–F 2 år
 C Ekonomisk brottslighet
 A piratkopiering;illegal streaming;fildelning;sprida film olovligt;IPTV
 Q upphovsratt
+ST FP | URL 53 § femte stycket
 N Försök och förberedelse är straffbara (53 § femte stycket).
 O Ett litterärt eller konstnärligt verk, till exempel en film, musik, bok, bild eller ett datorprogram.
 G Gärningspersonen gör minst ett av:
@@ -139,6 +146,7 @@ PEN 0.5 | 6 | Fängelse lägst sex månader och högst sex år | F 6 mån–6 å
 C Ekonomisk brottslighet
 A grov piratkopiering;illegal IPTV-tjänst;pirattjänst
 Q upphovsratt
+ST FP | URL 53 § femte stycket
 N Försök och förberedelse är straffbara (53 § femte stycket).
 B v19-upphovsrattsbrott
 S Brottet har begåtts uppsåtligen.
@@ -154,6 +162,7 @@ PEN 0 | 0.5 | Böter eller fängelse i högst sex månader | B–F 6 mån
 C Ekonomisk brottslighet
 A knäcka kopieringsskydd;modchip;kringgå DRM
 Q upphovsratt
+ST - | URL 53 § femte stycket
 G Gärningspersonen gör minst ett av:
   | Tillverkar, importerar, sprider eller innehar i förvärvssyfte anordningar eller produkter, eller tillhandahåller tjänster, som är avsedda att kringgå tekniska skyddsåtgärder för upphovsrättsligt skyddade verk.
   | Tar bort eller ändrar elektronisk information om rättighetsförvaltning, eller sprider verk där sådan information har tagits bort.
@@ -168,6 +177,7 @@ PEN 0 | 2 | Böter eller fängelse i högst två år | B–F 2 år
 C Ekonomisk brottslighet
 A förfalskade märkesvaror;piratkopior kläder;fejkväskor;kopior av märkesvaror
 Q varumarke
+ST FP | VmL 8:1 fjärde stycket
 N Försök och förberedelse är straffbara (8:1 fjärde stycket).
 O Ett skyddat varukännetecken, till exempel ett registrerat varumärke.
 G Gärningspersonen gör intrång i rätten till varukännetecknet, till exempel genom att sälja, importera eller marknadsföra varor med ett identiskt eller förväxlingsbart märke utan tillstånd.
@@ -180,6 +190,7 @@ PEN 0.5 | 6 | Fängelse lägst sex månader och högst sex år | F 6 mån–6 å
 C Ekonomisk brottslighet
 A grovt varumärkesbrott;förfalskade läkemedel;förfalskade reservdelar
 Q varumarke
+ST FP | VmL 8:1 fjärde stycket
 N Försök och förberedelse är straffbara (8:1 fjärde stycket).
 B v19-varumarkesbrott
 S Brottet har begåtts uppsåtligen.
@@ -198,6 +209,7 @@ PEN 0 | 2 | Böter eller fängelse i högst två år | B–F 2 år
 C Ekonomisk brottslighet
 A industrispionage;stjäla företagshemligheter;dataintrång företagshemlighet
 Q plain
+ST FP | FHL 26 b §
 O En företagshemlighet: information om affärs- eller driftförhållanden som inte är allmänt känd, som innehavaren har försökt hålla hemlig och vars röjande kan skada innehavaren i konkurrenshänseende.
 G Gärningspersonen bereder sig olovligen tillgång till företagshemligheten.
 S Uppsåt till samtliga rekvisit.
@@ -209,6 +221,7 @@ PEN 0.5 | 6 | Fängelse lägst sex månader och högst sex år | F 6 mån–6 å
 C Ekonomisk brottslighet
 A grovt företagsspioneri
 Q plain
+ST FP | FHL 26 b §
 B v19-foretagsspioneri
 R grovt
 - Gärningen har varit av särskilt farlig art.
@@ -221,6 +234,7 @@ PEN 0 | 2 | Böter eller fängelse i högst två år | B–F 2 år
 C Ekonomisk brottslighet
 A ta med sig ritningar till ny arbetsgivare;röja teknisk information;anställd läcker
 Q plain
+ST FP | FHL 26 b §
 O En teknisk företagshemlighet: information som är ägnad att användas för att producera en vara, utföra en tjänst eller utveckla en vara eller tjänst.
 K Gärningspersonen har fått del av hemligheten genom anställning eller liknande deltagande i verksamheten, eller genom en affärsförbindelse.
 G Gärningspersonen utnyttjar eller röjer hemligheten olovligen.
@@ -233,6 +247,7 @@ PEN 0.5 | 6 | Fängelse lägst sex månader och högst sex år | F 6 mån–6 å
 C Ekonomisk brottslighet
 A grovt röjande av teknisk företagshemlighet
 Q plain
+ST FP | FHL 26 b §
 B v19-olovligt-utnyttjande-teknisk-foretagshemlighet
 R grovt
 - Gärningen har varit av särskilt farlig art.
@@ -245,6 +260,7 @@ PEN 0 | 2 | Böter eller fängelse i högst två år | B–F 2 år
 C Ekonomisk brottslighet
 A köpa företagshemlighet;ta emot stulen information
 Q plain
+ST - | FHL 26 b §
 G Gärningspersonen anskaffar en företagshemlighet.
 O Den som lämnar över hemligheten, eller någon före den personen, har kommit åt den genom företagsspioneri, eller har röjt en teknisk företagshemlighet olovligen.
 S Uppsåt och vetskap om hur hemligheten har åtkommits eller röjts.
@@ -255,6 +271,7 @@ PEN 0 | 4 | Fängelse i högst fyra år | F 4 år
 C Ekonomisk brottslighet
 A grov olovlig befattning med företagshemlighet
 Q plain
+ST - | FHL 26 b §
 B v19-olovlig-befattning-foretagshemlighet
 R grovt*
 - Om gärningen avsett betydande värde eller inneburit synnerligen kännbar skada.

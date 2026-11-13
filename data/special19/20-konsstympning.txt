@@ -5,6 +5,7 @@ PEN 2 | 6 | Fängelse lägst två och högst sex år | F 2–6 år
 C Liv och hälsa
 A könsstympning;kvinnlig omskärelse;omskärelse av flicka
 Q plain
+ST FPS | Könsstympningslagen 2 § fjärde stycket
 N Försök, förberedelse och stämpling samt underlåtenhet att avslöja eller förhindra brottet är straffbara (2 § fjärde stycket och BrB 23 kap.).
 G Gärningspersonen utför ett ingrepp i de kvinnliga yttre könsorganen.
 S Syfte att stympa könsorganen eller att åstadkomma andra bestående förändringar av dem.
@@ -17,6 +18,7 @@ PEN 0 | 4 | Fängelse i högst fyra år | F 4 år
 C Liv och hälsa
 A könsstympning mindre grovt
 Q plain
+ST FPS | Könsstympningslagen 2 § fjärde stycket
 B v19-konsstympning
 R mindre*
 - Ingreppets art och omfattning.
@@ -28,6 +30,7 @@ PEN 5 | 10 | Fängelse lägst fem och högst tio år | F 5–10 år
 C Liv och hälsa
 A grov könsstympning
 Q plain
+ST FPS | Könsstympningslagen 2 § fjärde stycket
 N Försök, förberedelse och stämpling samt underlåtenhet att avslöja eller förhindra brottet är straffbara (2 § fjärde stycket och BrB 23 kap.).
 B v19-konsstympning
 R grovt
