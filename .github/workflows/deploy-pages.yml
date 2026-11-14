@@ -60,6 +60,8 @@ jobs:
         run: node scripts/v19_test.mjs
       - name: Verify 2.0 stage cards, limitation periods and related offences
         run: node scripts/v20_test.mjs
+      - name: Verify 2.2 statute cross-references and offences committed abroad
+        run: node scripts/v22_test.mjs
 
   deploy:
     name: Deploy verified site

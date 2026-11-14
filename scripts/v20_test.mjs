@@ -8,7 +8,7 @@ const inline=[...html.matchAll(/<script(?:\s[^>]*)?>([\s\S]*?)<\/script>/g)].map
 for(const f of ['./stages-20.js','./enhetlighet-20.js','./preskription-20.js','./narliggande-20.js']){
  assert.ok(scripts.includes(f),'index laddar '+f);assert.ok(sw.includes(f),'service worker cachar '+f);
 }
-assert.ok(html.includes("window.BK_RELEASE = '2.1';")&&sw.includes("'brottskatalog-v210-20261114'"));
+assert.ok(html.includes("window.BK_RELEASE = '2.2';")&&sw.includes("'brottskatalog-v220-20261114'"));
 assert.ok(!/accordion\([^)]*(Lydelse och gärningstidpunkt|Straffskala och beslutsvillkor)/.test(html),'de två menyerna är borttagna');
 assert.ok(html.includes("accordion('preskription','Preskription'")&&html.includes("accordion('narliggande','Närliggande brott'"));
 assert.ok(html.indexOf('fu18-menu')<html.indexOf("accordion('preskription'")&&html.indexOf("accordion('preskription'")<html.indexOf("accordion('narliggande'"),'ordning: FU-ledning, preskription, närliggande brott');

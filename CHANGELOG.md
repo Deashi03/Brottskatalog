@@ -1,5 +1,23 @@
 # Ändringslogg – Brottskatalog
 
+## 2.2 – 2026-11-14
+
+### Hänvisningar i lagtexten går att öppna
+- När lagtexten hänvisar till en annan paragraf i samma lag går hänvisningen nu att trycka på, på samma sätt som i brottsbalken. Exempel: **Främjande av olovligt spel** hänvisar till ”spel som avses i 1 §”, och ett tryck visar spellagen 19 kap. 1 §.
+- De hänvisade paragraferna följer med offline: 733 paragrafer till, sammanlagt 2 361 i speciallagarna.
+- Uppräkningar som ”37 eller 40 §” och ”19, 20, 21, 22 eller 23 §” länkas paragraf för paragraf.
+- En hänvisning till en annan lag (till exempel ”23 kap. 3 § rättegångsbalken”) länkas inte längre av misstag till den egna lagen. Hänvisningar till brottsbalken och rättegångsbalken öppnar rätt balk.
+
+### Ny meny: Brott begånget utomlands
+- Menyn ligger under FU-ledning och åklagarkontakt och ställer en fråga i taget, på samma sätt som verktyget för FU-ledning.
+- Svaret visar:
+  - om svensk domstol är behörig och på vilken grund (BrB 2:1 och 2:3),
+  - om gärningen också måste vara straffbar där den begicks (dubbel straffbarhet, BrB 2:5),
+  - om åtal kräver åtalsförordnande och vem som beslutar (BrB 2:2, 2:7 och 2:8),
+  - brottets vanliga åtalsregel.
+- Verktyget känner av brottet: det frågar inte om dubbel straffbarhet när minimistraffet är fängelse i fyra år eller mer eller när brottet är undantaget, och det frågar om målsägandens ålder vid de sexualbrott där det har betydelse.
+- Lagar med egna regler om domsrätt utomlands, till exempel fiskelagen och miljöbalken, får en upplysning om det.
+
 ## 2.1 – 2026-11-14
 
 ### Nya brott

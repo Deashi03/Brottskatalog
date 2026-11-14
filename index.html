@@ -11,7 +11,7 @@
   <link rel="manifest" href="./manifest.webmanifest">
   <link rel="icon" type="image/svg+xml" href="./icon.svg">
   <link rel="apple-touch-icon" href="./icon.svg">
-  <meta name="description" content="Brottskatalog 2.1: svenskt rättsligt uppslagsverk med brott, straffskalor, förstadier och tvångsmedel. Kontrollera gällande rätt.">
+  <meta name="description" content="Brottskatalog 2.2: svenskt rättsligt uppslagsverk med brott, straffskalor, förstadier och tvångsmedel. Kontrollera gällande rätt.">
 
 
 
@@ -399,7 +399,7 @@ html,body{width:100%;max-width:100%;overflow-x:clip;overscroll-behavior-x:none;-
   <title>Brottskatalog · steg 2</title>
 </head>
 <body>
-  <div id="app" class="app-shell nav-layout " data-bk17-hash="246bd1fa1f80ab3dc3c4ca0e" aria-live="polite"><!--BK17-SHELL--><main class="page"><div class="bk03-brand"><svg class="ic " viewBox="0 0 24 24" aria-hidden="true"><path d="M12 3v18M5 7h14M7 7l-4 6h8L7 7Zm10 0-4 6h8l-4-6ZM6 21h12"></path></svg><strong>Brottskatalog</strong><span>2.1</span></div>
+  <div id="app" class="app-shell nav-layout " data-bk17-hash="94b9e1caea5bd20d2cc1f62e" aria-live="polite"><!--BK17-SHELL--><main class="page"><div class="bk03-brand"><svg class="ic " viewBox="0 0 24 24" aria-hidden="true"><path d="M12 3v18M5 7h14M7 7l-4 6h8L7 7Zm10 0-4 6h8l-4-6ZM6 21h12"></path></svg><strong>Brottskatalog</strong><span>2.2</span></div>
   <label class="search-box" for="crime-search"><svg class="ic lg" viewBox="0 0 24 24" aria-hidden="true"><circle cx="10.8" cy="10.8" r="7"></circle><path d="m16 16 5 5"></path></svg><input id="crime-search" type="search" placeholder="T.ex. ringa stöld, BrB 8:2…" inputmode="search" enterkeyhint="search" autocapitalize="off" autocomplete="off" spellcheck="false" value=""><button class="search-clear" data-action="clear-search" aria-label="Rensa sökning" style="display:none"><svg class="ic sm" viewBox="0 0 24 24" aria-hidden="true"><path d="M18 6 6 18M6 6l12 12"></path></svg></button></label>
   <div class="filter-strip" role="group" aria-label="Filtrera brott"><button class="filter active" data-category="Alla" aria-pressed="true">Alla</button><button class="filter " data-category="Tillgrepp" aria-pressed="false">Tillgrepp</button><button class="filter " data-category="Person" aria-pressed="false">Person</button><button class="filter " data-category="Frid" aria-pressed="false">Frid</button><button class="filter " data-category="Sexualbrott" aria-pressed="false">Sexualbrott</button><button class="filter " data-category="Narkotika och alkohol" aria-pressed="false">Narkotika och alkohol</button><button class="filter " data-category="Trafik" aria-pressed="false">Trafik</button><button class="filter " data-category="Förmögenhet" aria-pressed="false">Förmögenhet</button><button class="filter " data-category="Skadegörelse" aria-pressed="false">Skadegörelse</button><button class="filter " data-category="Vapen och explosiva varor" aria-pressed="false">Vapen och explosiva varor</button><button class="filter " data-category="Allmän ordning" aria-pressed="false">Allmän ordning</button><button class="filter " data-category="Allmän verksamhet" aria-pressed="false">Allmän verksamhet</button><button class="filter " data-category="Urkund" aria-pressed="false">Urkund</button><button class="filter " data-category="Rättsväsende" aria-pressed="false">Rättsväsende</button><button class="filter " data-category="Allmänfarliga" aria-pressed="false">Allmänfarliga</button><button class="filter " data-category="Ekonomisk brottslighet" aria-pressed="false">Ekonomisk brottslighet</button><button class="filter " data-category="Smuggling" aria-pressed="false">Smuggling</button><button class="filter " data-category="Utlänningsbrott" aria-pressed="false">Utlänningsbrott</button><button class="filter " data-category="Djur och natur" aria-pressed="false">Djur och natur</button><button class="filter " data-category="Rikets säkerhet" aria-pressed="false">Rikets säkerhet</button></div>
   <div id="quick-area"><div class="section-heading"><h2>Snabbval</h2></div><div class="quick-row"><button type="button" class="quick-chip" data-open="ringa-stold"><svg class="ic sm" viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="9"></circle><path d="M12 7v5l3 2"></path></svg>Ringa stöld</button><button type="button" class="quick-chip" data-open="misshandel"><svg class="ic sm" viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="9"></circle><path d="M12 7v5l3 2"></path></svg>Misshandel</button><button type="button" class="quick-chip" data-open="ofredande"><svg class="ic sm" viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="9"></circle><path d="M12 7v5l3 2"></path></svg>Ofredande</button></div></div>
@@ -594,7 +594,7 @@ window.BK_STATUTES = out;
 </script>
   <script>
 /* Brottskatalog – UI prototype data. No claim of complete coverage or legal verification. */
-window.BK_RELEASE = '2.1';
+window.BK_RELEASE = '2.2';
 window.BK_RELEASE_DATE = '2026-11-14';
 window.BK_DATA = {
   date: '2026-10-12',
@@ -997,6 +997,7 @@ D.date='2026-10-12';
 <script src="./stages-20.js"></script>
 <script src="./preskription-20.js"></script>
 <script src="./narliggande-20.js"></script>
+<script src="./utland-22.js"></script>
 <script src="./rubricering-19.js"></script>
 <script src="./enhetlighet-20.js"></script>
 <script src="./catalog-selection-15.js"></script>
@@ -1049,6 +1050,7 @@ const iconPaths = {
   'external-link':'<path d="M14 3h7v7M10 14 21 3M20 14v6H4V4h6"/>',
   'book-mark':'<path d="M4 5c0-1.1.9-2 2-2h14v18H6c-1.1 0-2-.9-2-2V5Zm0 14c0-1.1.9-2 2-2h14M14 3v8l-3-2-3 2V3"/>',
   'clock':'<circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/>',
+  'globe':'<circle cx="12" cy="12" r="9"/><path d="M3 12h18"/><path d="M12 3a14 14 0 0 1 0 18a14 14 0 0 1 0-18"/>',
   'shield-check':'<path d="M12 22s8-4 8-11V5l-8-3-8 3v6c0 7 8 11 8 11Z"/><path d="m8.5 12 2.2 2.3L16 9"/>',
   'clipboard':'<rect x="5" y="4" width="14" height="17" rx="2"/><path d="M9 4V3h6v1M9 10h6M9 14h6M9 18h3"/>',
   'wifi-off':'<path d="M2 7c6-5 14-5 20 0M5 11c2-2 4-3 7-3m5 1 2 2M9 15a5 5 0 0 1 6 0M12 19h.01M2 2l20 20"/>',
@@ -1063,33 +1065,42 @@ const escapeHtml = s => String(s ?? '').replace(/[&<>"']/g, c=>({'&':'&amp;','<'
 const normalize = s => String(s||'').toLowerCase().normalize('NFD').replace(/[\u0300-\u036f]/g,'').replace(/[^a-z0-9 §:.]+/g,' ').trim();
 // Resolve same-chapter paragraph references directly to the bundled, offline legal source.
 function provisionKey(fragment, current){
- const match=fragment.match(/(?:(\d+)\s*kap\.\s*)?(\d+)\s*([a-z]?)\s*§/i);
+ const match=fragment.match(/(?:(\d+)\s*([a-z]?)\s*kap\.\s*)?(\d+)\s*([a-z]?)\s*§/i);
  if(!match)return null;
  const prefix=current.split(':');
  const act=prefix[0];
- const chapter=match[1]||((act==='BrB'||act==='RB'||act==='Vapen')?prefix[1]:null);
- const para=match[2]+(match[3]||'');
+ // 2.2: en hänvisning utan kapitel gäller samma kapitel i alla lagar som har kapitel, inte bara i balkarna.
+ const chapter=match[1]?match[1]+(match[2]||''):(prefix.length===3?prefix[1]:null);
+ const para=match[3]+(match[4]||'');
  const key=chapter?`${act}:${chapter}:${para}`:`${act}:${para}`;
  return provisions[key]?key:null;
 }
+// 2.2: hänvisningar i lagtext. Uppräkningar ("37 eller 40 §", "3–5 §§") länkas paragraf för paragraf.
+// En hänvisning som följs av en annan författnings namn länkas inte till den egna lagen.
+const REF_GROUP22=/(?:(\d+(?:\s[a-z])?)\s*kap\.\s*)?((?:\d+(?:\s?[a-z](?![a-zåäö]))?\s*(?:,|eller|och|samt|[–-]+)\s*)*\d+(?:\s?[a-z](?![a-zåäö]))?)\s*§§?/gi;
+const REF_OTHER22=/^(?:\s*(?:första|andra|tredje|fjärde|femte|sjätte|sjunde)(?:\s*(?:,|eller|och|[–-]+)\s*(?:första|andra|tredje|fjärde|femte|sjätte|sjunde))*\s*(?:stycket|styckena)(?:\s*\d+(?:\s*[a-z]\b)?(?:\s*(?:,|eller|och|[–-]+)\s*\d+)*)?)?\s*(?:i\s+)?([a-zåäö]*balken|lagen\s*\(|förordningen\s*\(|kungörelsen\s*\(|[a-zåäö-]+(?:lagen|förordningen|kungörelsen|stadgan)(?![a-zåäö])|samma\s+(?:lag|förordning)|regeringsformen|tryckfrihetsförordningen|yttrandefrihetsgrundlagen)/i;
+const REF_ACT22={brottsbalken:'BrB','rättegångsbalken':'RB'};
+function lawRefs22(text,current){
+ const hits=[],cur=current||'',prefix=cur.split(':');
+ for(const m of text.matchAll(REF_GROUP22)){
+  const other=REF_OTHER22.exec(text.slice(m.index+m[0].length,m.index+m[0].length+140));
+  let act=prefix[0],chap=(m[1]||'').replace(/\s/g,'')||(prefix.length===3?prefix[1]:null);
+  if(other){const o=REF_ACT22[other[1].toLocaleLowerCase('sv')];if(!o||!m[1])continue;act=o;}
+  const rx=/\d+(?:\s?[a-z](?![a-zåäö]))?/gi;rx.lastIndex=0;
+  const body=m[2],off=m.index+m[0].indexOf(body,m[1]?m[0].indexOf('kap.')+4:0);
+  const nums=[...body.matchAll(rx)];
+  nums.forEach((n,i)=>{
+   const para=n[0].replace(/\s/g,''),key=chap?`${act}:${chap}:${para}`:`${act}:${para}`;
+   if(!provisions[key]||key===cur)return;
+   const s0=i===0?m.index:off+n.index,e0=i===nums.length-1?m.index+m[0].length:off+n.index+n[0].length;
+   hits.push({s:s0,e:e0,mode:'ref',key});
+  });
+ }
+ return hits;
+}
 function lawMarkup(text,current,terms=[]){
  const labels=[...(terms||[])].sort((a,b)=>b.length-a.length);
- const refRx=/(?:\b\d+\s*kap\.\s*)?\b\d+\s*[a-z]?\s*§/gi;
- const hits=[];
- for(const m of text.matchAll(refRx)){
-   const key=provisionKey(m[0],current||'');
-   if(key && key!==current) hits.push({s:m.index,e:m.index+m[0].length,mode:'ref',key});
- }
- // In "1 eller 2 §" both references are separate clickable paragraphs.
- for(const m of text.matchAll(/\b(\d+)\s+(?:eller|och)\s+(\d+)\s*§/gi)){
-   const first=provisionKey(m[1]+' §',current||'');
-   const second=provisionKey(m[2]+' §',current||'');
-   if(first && first!==current)hits.push({s:m.index,e:m.index+m[1].length,mode:'ref',key:first});
-   if(second && second!==current){
-     const i=m.index+m[0].lastIndexOf(m[2]);
-     hits.push({s:i,e:i+m[2].length+1+(m[0].slice(m[0].lastIndexOf(m[2])+m[2].length).length-1),mode:'ref',key:second});
-   }
- }
+ const hits=lawRefs22(text,current);
  for(const term of labels){
    const rx=new RegExp(term.replace(/[.*+?^${}()|[\]\\]/g,'\\$&'),'gi');
    for(const m of text.matchAll(rx)){
@@ -1464,6 +1475,7 @@ function renderDetail(c){
   ${accordion('rekvisit','Rekvisit','layers',requisitesBody)}
   ${(!c.stageStatus||c.stageStatus==='punishable')?accordion('tvang','Tvångsmedel – översikt','shield-check',coerciveSection(c)):''}
   ${(!c.stageStatus||c.stageStatus==='punishable')&&window.BK_FU18&&window.BK_FU18.classify(c)?'<div class="accordion fu18-menu" id="sec-fu18"><button type="button" class="fu18-open" data-action="fu18" data-id="'+escapeHtml(c.id)+'"><span class="summary-left">'+ic('clipboard')+'FU-ledning och åklagarkontakt</span>'+ic('chevron-right')+'</button></div>':''}
+  ${window.BK_UTLAND22&&window.BK_UTLAND22.available(c)?'<div class="accordion fu18-menu" id="sec-utland22"><button type="button" class="fu18-open" data-action="utland22" data-id="'+escapeHtml(c.id)+'"><span class="summary-left">'+ic('globe')+'Brott begånget utomlands</span>'+ic('chevron-right')+'</button></div>':''}
   ${(()=>{const h=window.BK_PRESK20?window.BK_PRESK20.html(c):'';return h?accordion('preskription','Preskription','clock',h):'';})()}
   ${(()=>{const h=window.BK_NEAR20?window.BK_NEAR20.html(c):'';return h?accordion('narliggande','Närliggande brott','split',h):'';})()}
   </div></section>${qualityCard(c)}<p class="detail-footer">Version ${window.BK_RELEASE} · kontrollera aktuell lagtext vid operativa beslut.</p></main>`;
@@ -1480,7 +1492,7 @@ function showProvision(key){
  const p=provisions[key];if(!p)return;
  if(sheetRoot.innerHTML)sheetHistory.push(sheetRoot.innerHTML);
  const link=`<a class="source-link" href="${escapeHtml(p.url)}" target="_blank" rel="noopener noreferrer">Visa källa hos Sveriges riksdag ${ic('external-link','sm')}</a>`;
- showSheet({kicker:'ORDAGRANN LAGTEXT · OFFLINE',title:p.ref,body:`<div class="law-paper">${lawMarkup(p.text,p.id,[])}</div>`,ref:'Lagtexten jämförd med data.riksdagen.se 26 oktober 2026. Vissa paragrafer visar även kommande lydelse.',actionHtml:link,fromProvision:true});
+ showSheet({kicker:'ORDAGRANN LAGTEXT · OFFLINE',title:p.ref,body:`<div class="law-paper">${lawMarkup(p.text,p.id,[])}</div>`,ref:p.checked&&!p.machine?'Lagtexten kontrollerad mot data.riksdagen.se '+p.checked+'.':'Lagtexten jämförd med data.riksdagen.se 26 oktober 2026. Vissa paragrafer visar även kommande lydelse.',actionHtml:link,fromProvision:true});
  const close=sheetRoot.querySelector('.sheet-close');
  if(close && sheetHistory.length){close.dataset.action='back-sheet';close.setAttribute('aria-label','Tillbaka till föregående ruta');close.innerHTML=ic('arrow-left');}
 }
@@ -1570,6 +1582,28 @@ document.addEventListener('click',e=>{
  else if(act==='restart'){S.ans={};S.hist=[];}
  fu18Draw();
 });
+// 2.2: brott begånget utomlands – svensk domsrätt och åtalsförordnande, en fråga i taget.
+let ut22State=null;
+function ut22Draw(){
+ const box=sheetRoot.querySelector('.sheet-copy');if(!box||!ut22State)return;
+ box.innerHTML=window.BK_UTLAND22.render(ut22State.c,ut22State.ans);
+ box.scrollTop=0;sheetRoot.querySelector('.sheet')?.scrollTo?.(0,0);
+ box.querySelector('.fu18-btn')?.focus({preventScroll:true});
+}
+function showUtland22(c){
+ if(!c||!window.BK_UTLAND22)return;
+ ut22State={c,ans:{},hist:[]};
+ showSheet({kicker:'BROTT BEGÅNGET UTOMLANDS',title:c.title,body:'',ref:'Bygger på brottsbalken 2 kap. om svensk domstols behörighet och åtalsförordnande. Kontrollerad mot gällande lydelse '+window.BK_UTLAND22.checked+'.'});
+ ut22Draw();
+}
+document.addEventListener('click',e=>{
+ const b=e.target.closest('[data-ut22]');if(!b||!ut22State||!sheetRoot.contains(b))return;
+ const q=b.closest('[data-ut22-q]')?.dataset.ut22Q,act=b.dataset.ut22,S=ut22State;
+ if(act==='yes'||act==='no'){S.hist.push(q);S.ans={...S.ans,[q]:act==='yes'};}
+ else if(act==='back'){const last=S.hist.pop();if(last){const a={...S.ans};delete a[last];S.ans=a;}}
+ else if(act==='restart'){S.ans={};S.hist=[];}
+ ut22Draw();
+});
 function showProsecution(c){
  const v=pros171(c);
  const law=v.law&&provisions[v.law]?'<button type="button" class="pros171-law" data-provision="'+escapeHtml(v.law)+'">'+ic('book-open','sm')+'<span>Lagtext: '+escapeHtml(v.lawLabel)+'</span>'+ic('chevron-right','sm')+'</button>':'';
@@ -1656,6 +1690,7 @@ document.addEventListener('click', async e=>{
   if(action==='custody'){showCustody(byId[id]);return;}
   if(action==='prosecution'){showProsecution(byId[id]);return;}
   if(action==='fu18'){showFu18(byId[id]);return;}
+  if(action==='utland22'){showUtland22(byId[id]);return;}
   if(action==='favorite'){
     if(state.favorites.includes(id)){state.favorites=state.favorites.filter(x=>x!==id);toast('Borttagen från sparade');}
     else{state.favorites.push(id);toast('Sparad i favoriter');}
