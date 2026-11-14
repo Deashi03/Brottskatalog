@@ -23,13 +23,13 @@ P Vid val till allmän befattning eller annan utövning av rösträtt i allmänt
 G Gärningspersonen försöker hindra omröstningen, förvanska dess utgång eller på annat sätt otillbörligt påverka omröstningen.
 S Uppsåt till samtliga rekvisit.
 
-@ v05-grovt-otillborligt-verkande-vid-rostning | Grovt otillbörligt verkande vid röstning | BrB 17:8 första stycket
+@ v05-grovt-otillborligt-verkande-vid-rostning | Grovt otillbörligt verkande vid röstning | BrB 17:8 andra stycket
 B v05-otillborligt-verkande-vid-rostning
 R grovt
 - Brottet har förövats med våld eller hot om våld.
 - Brottet har innefattat missbruk av tjänsteställning.
 
-@ v06-tagande-av-otillborlig-forman-vid-rostning | Tagande av otillbörlig förmån vid röstning | BrB 17:8 andra stycket
+@ v06-tagande-av-otillborlig-forman-vid-rostning | Tagande av otillbörlig förmån vid röstning | BrB 17:8 tredje stycket
 G Gärningspersonen tar emot, godtar ett löfte om eller begär en otillbörlig förmån.
 S Syfte att i ett allmänt ärende rösta på ett visst sätt eller inte rösta.
 S Uppsåt till samtliga rekvisit.

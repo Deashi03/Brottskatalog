@@ -1,0 +1,753 @@
+LAW S2024-114 | Lagen (2024:114) om clearing och avveckling av betalningar | 2024:114 | Lagen om clearing och avveckling av betalningar
+X 1:4
+
+@ v21-clearinglagen-meddelandeforbud | Brott mot lagen om clearing och avveckling av betalningar (meddelandeförbud) | 1:6 | 1:5,1:6
+PEN 0 | 0 | Böter | Böter
+C Ekonomisk brottslighet
+A meddelandeförbud;röja förundersökning för kund;clearingbolag;tipsa kund om utredning
+Q plain
+K Gärningspersonen är ett clearingbolag eller någon som är eller har varit knuten till bolaget.
+K En undersökningsledare eller åklagare har begärt uppgifter från clearingbolaget om enskildas förhållanden till bolaget och har beslutat om meddelandeförbud.
+G Gärningspersonen röjer för kunden eller för någon utomstående minst ett av:
+  | Att uppgifter har lämnats till undersökningsledaren eller åklagaren.
+  | Att det pågår en förundersökning, en utredning om självständigt förverkande, ett ärende om rättslig hjälp i brottmål eller ett ärende om erkännande och verkställighet av en europeisk utredningsorder.
+S Uppsåt eller grov oaktsamhet.
+T En anställd på ett clearingbolag berättar för en kund att åklagaren har begärt ut uppgifter om kundens betalningar, trots att åklagaren har beslutat om meddelandeförbud.
+
+LAW S2026-56 | Lagen (2026:56) om straff för olovlig finansiell verksamhet | 2026:56 | Lagen om straff för olovlig finansiell verksamhet
+X 4,6
+
+@ v21-olovlig-finansiell-verksamhet | Olovlig finansiell verksamhet | 2 § | 2
+PEN 0 | 2 | Böter eller fängelse i högst två år | B–F 2 år
+C Ekonomisk brottslighet
+A olovlig bankverksamhet;låna ut pengar utan tillstånd;växlingskontor utan registrering;betaltjänst utan tillstånd;saknar tillstånd Finansinspektionen;hawala
+Q villkor | Åtal får inte väckas för en gärning som omfattas av Finansinspektionens föreläggande om sanktionsavgift, beslut om sanktionsavgift eller ansökan om utdömande av vite. Då får åklagaren inte heller utfärda strafföreläggande eller besluta om åtalsunderlåtelse.
+N Finansinspektionen ska anmäla till åklagare när det finns anledning att anta att brott har begåtts. Åklagaren får anlita biträde av Finansinspektionen i utredningen.
+G Gärningspersonen bedriver finansiell verksamhet.
+K Verksamheten kräver tillstånd av eller registrering hos Finansinspektionen.
+K Gärningspersonen har inte något sådant tillstånd eller någon sådan registrering.
+S Uppsåt eller grov oaktsamhet.
+U Fallet är ringa.
+T En person förmedlar mot avgift betalningar till utlandet åt ett stort antal kunder utan att vara registrerad hos eller ha tillstånd av Finansinspektionen.
+T Ett företag lånar yrkesmässigt ut pengar till konsumenter utan det tillstånd som krävs.
+
+@ v21-olovlig-finansiell-verksamhet-grov | Grov olovlig finansiell verksamhet | 3 § | 2,3
+PEN 0.5 | 6 | Fängelse i lägst sex månader och högst sex år | F 6 mån–6 år
+C Ekonomisk brottslighet
+A grov olovlig finansiell verksamhet;olovlig bankverksamhet stor omfattning;hawala stora belopp
+Q villkor | Åtal får inte väckas för en gärning som omfattas av Finansinspektionens föreläggande om sanktionsavgift, beslut om sanktionsavgift eller ansökan om utdömande av vite. Då får åklagaren inte heller utfärda strafföreläggande eller besluta om åtalsunderlåtelse.
+B v21-olovlig-finansiell-verksamhet
+S Gärningen har begåtts uppsåtligen.
+R grovt
+- Verksamheten har bedrivits i större omfattning eller har avsett betydande värden.
+- Verksamheten har ingått som ett led i en brottslighet som har utövats systematiskt.
+- Gärningen har annars varit av särskilt farlig art.
+T En grupp driver under flera år ett oregistrerat betalningsförmedlingsnätverk som för över mångmiljonbelopp åt kriminella.
+
+LAW S1998-293 | Lagen (1998:293) om utländska försäkringsgivares och tjänstepensionsinstituts verksamhet i Sverige | 1998:293 | Lagen om utländska försäkringsgivares och tjänstepensionsinstituts verksamhet i Sverige
+
+@ v21-utlandska-forsakringsgivare-oriktiga-uppgifter | Brott mot lagen om utländska försäkringsgivares och tjänstepensionsinstituts verksamhet i Sverige (oriktiga uppgifter) | 10:6 | 10:6
+PEN 0 | 1 | Böter eller fängelse i högst ett år | B–F 1 år
+C Ekonomisk brottslighet
+A oriktiga uppgifter till Finansinspektionen;utländskt försäkringsbolag;vilseledande uppgifter tillsyn
+Q plain
+G Gärningspersonen lämnar oriktiga eller vilseledande uppgifter till Finansinspektionen.
+O Uppgifterna gäller omständigheter som gärningspersonen är skyldig att lämna uppgift om enligt lagen om utländska försäkringsgivares och tjänstepensionsinstituts verksamhet i Sverige.
+S Uppsåt eller oaktsamhet.
+T En företrädare för ett utländskt försäkringsbolags svenska filial lämnar felaktiga uppgifter om filialens tillgångar till Finansinspektionen.
+
+LAW S2010-2043 | Försäkringsrörelselagen (2010:2043) | 2010:2043 | FRL
+X 19:46
+
+@ v21-frl-utlamnande-formanstagare | Brott mot försäkringsrörelselagen (uppgift till förmånstagare) | 4:15 | 4:14,4:15
+PEN 0 | 1 | Böter eller fängelse i högst ett år | B–F 1 år
+C Ekonomisk brottslighet
+A förmånstagare;lämna ut försäkringsuppgift;förmånstagarförordnande;livförsäkring uppgift
+Q plain
+O En personuppgift som anger att en försäkringstagare har gjort dispositioner till förmån för någon annan om ett försäkringsbelopp som faller ut i framtiden.
+K Uppgiften behandlas enligt EU:s dataskyddsförordning.
+G Gärningspersonen lämnar ut uppgiften till förmånstagaren.
+S Uppsåt eller oaktsamhet.
+T En handläggare på ett försäkringsbolag berättar för en kvinna att hennes far har satt in henne som förmånstagare till sin livförsäkring.
+
+@ v21-frl-foretagsnamn-forsakringsforening | Brott mot försäkringsrörelselagen (företagsnamn) | 13:40 | 13:39,13:40
+PEN 0 | 0 | Böter | Böter
+C Ekonomisk brottslighet
+A försäkringsförening;företagsnamn;vilseledande firma
+Q plain
+G Gärningspersonen använder uttrycket försäkringsförening i sitt företagsnamn.
+K Företaget är inte en försäkringsförening.
+S Uppsåt eller oaktsamhet.
+T Ett aktiebolag som säljer hemlarm registrerar och använder ett företagsnamn som innehåller ordet försäkringsförening.
+
+@ v21-frl-meddelandeforbud | Brott mot försäkringsrörelselagen (meddelandeförbud) | 19:48 | 19:47,19:48
+PEN 0 | 0 | Böter | Böter
+C Ekonomisk brottslighet
+A meddelandeförbud;röja förundersökning för kund;försäkringsbolag;tipsa kund om utredning
+Q plain
+K Gärningspersonen är ett försäkringsföretag eller ett annat företag som omfattas av uppgiftsskyldigheten, eller en styrelseledamot eller anställd i företaget.
+K En undersökningsledare eller åklagare har begärt uppgifter från företaget om enskildas förhållanden till företaget och har beslutat om meddelandeförbud.
+G Gärningspersonen röjer för kunden eller för någon utomstående minst ett av:
+  | Att uppgifter har lämnats till undersökningsledaren eller åklagaren.
+  | Att det pågår en förundersökning, en utredning om självständigt förverkande, ett ärende om rättslig hjälp i brottmål eller ett ärende om erkännande och verkställighet av en europeisk utredningsorder.
+S Uppsåt eller grov oaktsamhet.
+T En anställd på ett försäkringsbolag ringer en kund och berättar att polisen har begärt ut uppgifter om kundens försäkringar, trots att meddelandeförbud gäller.
+
+LAW S2019-742 | Lagen (2019:742) om tjänstepensionsföretag | 2019:742 | Lagen om tjänstepensionsföretag
+X 16:37
+
+@ v21-tjanstepensionsforetag-foretagsnamn | Brott mot lagen om tjänstepensionsföretag (företagsnamn) | 10:66 | 10:65,10:66
+PEN 0 | 0 | Böter | Böter
+C Ekonomisk brottslighet
+A tjänstepensionsförening;företagsnamn;vilseledande firma
+Q plain
+G Gärningspersonen använder ordet tjänstepensionsförening i sitt företagsnamn.
+K Företaget är inte en tjänstepensionsförening.
+S Uppsåt eller oaktsamhet.
+T Ett konsultbolag som förmedlar pensionsrådgivning använder ett företagsnamn som innehåller ordet tjänstepensionsförening.
+
+@ v21-tjanstepensionsforetag-meddelandeforbud | Brott mot lagen om tjänstepensionsföretag (meddelandeförbud) | 16:39 | 16:38,16:39
+PEN 0 | 0 | Böter | Böter
+C Ekonomisk brottslighet
+A meddelandeförbud;röja förundersökning för kund;tjänstepensionsföretag;tipsa kund om utredning
+Q plain
+K Gärningspersonen är ett företag som omfattas av uppgiftsskyldigheten enligt lagen om tjänstepensionsföretag, eller en styrelseledamot eller anställd i företaget.
+K En undersökningsledare eller åklagare har begärt uppgifter från företaget om enskildas förhållanden till företaget och har beslutat om meddelandeförbud.
+G Gärningspersonen röjer för kunden eller för någon utomstående minst ett av:
+  | Att uppgifter har lämnats till undersökningsledaren eller åklagaren.
+  | Att det pågår en förundersökning, en utredning om självständigt förverkande, ett ärende om rättslig hjälp i brottmål eller ett ärende om erkännande och verkställighet av en europeisk utredningsorder.
+S Uppsåt eller grov oaktsamhet.
+T En anställd på ett tjänstepensionsföretag berättar för en kund att åklagaren har begärt ut uppgifter om kundens pensionsförsäkring, trots att meddelandeförbud gäller.
+
+LAW S2026-333 | Lagen (2026:333) om uppgiftsskyldighet för vissa e-legitimationsföretag | 2026:333 | Lagen om uppgiftsskyldighet för vissa e-legitimationsföretag
+X 2,4
+
+@ v21-e-legitimationsforetag-meddelandeforbud | Brott mot lagen om uppgiftsskyldighet för vissa e-legitimationsföretag (meddelandeförbud) | 6 § | 5,6
+PEN 0 | 0 | Böter | Böter
+C Ekonomisk brottslighet
+A meddelandeförbud;e-legitimation;röja förundersökning;tipsa om utredning;bank-id uppgifter
+Q plain
+K Gärningspersonen är ett e-legitimationsföretag eller någon som är eller har varit verksam i företaget.
+K En undersökningsledare eller åklagare har begärt uppgifter från företaget om enskildas förhållanden till finansiella företag och har beslutat om meddelandeförbud.
+G Gärningspersonen röjer för den enskilde eller för någon utomstående minst ett av:
+  | Att en myndighet har gjort en begäran om uppgifter.
+  | Att uppgifter har lämnats till undersökningsledaren eller åklagaren.
+  | Att det pågår en förundersökning, en utredning om självständigt förverkande, ett ärende om rättslig hjälp i brottmål eller ett ärende om erkännande och verkställighet av en europeisk utredningsorder.
+S Uppsåt eller grov oaktsamhet.
+T En tekniker på ett e-legitimationsföretag berättar för en bekant att åklagaren har begärt ut uppgifter om hur den bekante har använt sin e-legitimation hos banker, trots att meddelandeförbud gäller.
+
+LAW S1998-1479 | Lagen (1998:1479) om värdepapperscentraler och kontoföring av finansiella instrument | 1998:1479 | Lagen om värdepapperscentraler och kontoföring av finansiella instrument
+
+@ v21-vardepapperscentraler-meddelandeforbud | Brott mot lagen om värdepapperscentraler och kontoföring av finansiella instrument (meddelandeförbud) | 8:5 | 8:4,8:5
+PEN 0 | 0 | Böter | Böter
+C Ekonomisk brottslighet
+A meddelandeförbud;röja förundersökning för kund;värdepapperscentral;kontoförande institut
+Q plain
+K Gärningspersonen är en värdepapperscentral eller ett kontoförande institut, eller en styrelseledamot eller anställd där.
+K En undersökningsledare eller åklagare har begärt uppgifter från värdepapperscentralen eller institutet och har beslutat om meddelandeförbud.
+G Gärningspersonen röjer för kunden eller för någon utomstående minst ett av:
+  | Att uppgifter har lämnats till undersökningsledaren eller åklagaren.
+  | Att det pågår en förundersökning, en utredning om självständigt förverkande, ett ärende om rättslig hjälp i brottmål eller ett ärende om erkännande och verkställighet av en europeisk utredningsorder.
+S Uppsåt eller grov oaktsamhet.
+T En anställd på ett kontoförande institut berättar för en kontohavare att åklagaren har begärt ut uppgifter om kontohavarens aktieinnehav, trots att meddelandeförbud gäller.
+
+LAW S2004-46 | Lagen (2004:46) om värdepappersfonder | 2004:46 | LVF
+
+@ v21-vardepappersfonder-meddelandeforbud | Brott mot lagen om värdepappersfonder (meddelandeförbud) | 2:20 b | 2:20a,2:20b
+PEN 0 | 0 | Böter | Böter
+C Ekonomisk brottslighet
+A meddelandeförbud;röja förundersökning för kund;fondbolag;förvaringsinstitut
+Q plain
+K Gärningspersonen är ett fondbolag eller ett förvaringsinstitut, eller en styrelseledamot eller anställd där.
+K En undersökningsledare eller åklagare har begärt uppgifter från fondbolaget eller förvaringsinstitutet och har beslutat om meddelandeförbud.
+G Gärningspersonen röjer för kunden eller för någon utomstående minst ett av:
+  | Att uppgifter har lämnats till undersökningsledaren eller åklagaren.
+  | Att det pågår en förundersökning, en utredning om självständigt förverkande, ett ärende om rättslig hjälp i brottmål eller ett ärende om erkännande och verkställighet av en europeisk utredningsorder.
+S Uppsåt eller grov oaktsamhet.
+T En anställd på ett fondbolag berättar för en fondsparare att polisen har begärt ut uppgifter om spararens fondinnehav, trots att meddelandeförbud gäller.
+
+LAW S2007-528 | Lagen (2007:528) om värdepappersmarknaden | 2007:528 | LVM
+
+@ v21-vardepappersmarknaden-meddelandeforbud | Brott mot lagen om värdepappersmarknaden (meddelandeförbud) | 1:14 | 1:13,1:14
+PEN 0 | 0 | Böter | Böter
+C Ekonomisk brottslighet
+A meddelandeförbud;röja förundersökning för kund;värdepappersbolag;börs;aktiemäklare
+Q plain
+K Gärningspersonen är ett värdepappersbolag, en börs eller en central motpart, eller en styrelseledamot eller anställd där.
+K En undersökningsledare eller åklagare har begärt uppgifter från företaget och har beslutat om meddelandeförbud.
+G Gärningspersonen röjer för kunden eller för någon utomstående minst ett av:
+  | Att uppgifter har lämnats till undersökningsledaren eller åklagaren.
+  | Att det pågår en förundersökning, en utredning om självständigt förverkande, ett ärende om rättslig hjälp i brottmål eller ett ärende om erkännande och verkställighet av en europeisk utredningsorder.
+S Uppsåt eller grov oaktsamhet.
+T En mäklare på ett värdepappersbolag berättar för en kund att åklagaren har begärt ut uppgifter om kundens aktieaffärer, trots att meddelandeförbud gäller.
+
+LAW S2013-561 | Lagen (2013:561) om förvaltare av alternativa investeringsfonder | 2013:561 | LAIF
+
+@ v21-aif-forvaltare-meddelandeforbud | Brott mot lagen om förvaltare av alternativa investeringsfonder (meddelandeförbud) | 8:27 | 8:26,8:27
+PEN 0 | 0 | Böter | Böter
+C Ekonomisk brottslighet
+A meddelandeförbud;röja förundersökning för kund;fondförvaltare;AIF-förvaltare
+Q plain
+K Gärningspersonen är en förvaltare av alternativa investeringsfonder eller ett förvaringsinstitut, eller en styrelseledamot eller anställd där.
+K En undersökningsledare eller åklagare har begärt uppgifter från förvaltaren eller förvaringsinstitutet och har beslutat om meddelandeförbud.
+G Gärningspersonen röjer för kunden eller för någon utomstående minst ett av:
+  | Att uppgifter har lämnats till undersökningsledaren eller åklagaren.
+  | Att det pågår en förundersökning, en utredning om självständigt förverkande, ett ärende om rättslig hjälp i brottmål eller ett ärende om erkännande och verkställighet av en europeisk utredningsorder.
+S Uppsåt eller grov oaktsamhet.
+T En anställd hos en fondförvaltare berättar för en investerare att åklagaren har begärt ut uppgifter om investerarens andelar, trots att meddelandeförbud gäller.
+
+LAW S2016-1307 | Lagen (2016:1307) om straff för marknadsmissbruk på värdepappersmarknaden | 2016:1307 | Marknadsmissbrukslagen
+X 1:2,1:3,1:4,2:2,2:5,2:6,3:1,3:2
+
+@ v21-insiderbrott | Insiderbrott | 2:1 första och andra styckena | 2:1,2:2,2:7
+PEN 0 | 2 | Fängelse i högst två år | F 2 år
+C Ekonomisk brottslighet
+A insiderhandel;insiderinformation;köpa aktier före rapport;aktietips från insider;insideraffär
+Q plain
+ST F | Marknadsmissbrukslagen 2:7
+N Finansinspektionen ska anmäla till åklagare när det finns anledning att anta att brott har begåtts. Åklagaren får anlita biträde av Finansinspektionen i utredningen.
+O Finansiella instrument som handlas på en reglerad marknad eller en handelsplattform, eller instrument vars värde hänger samman med sådana instrument.
+## Egen handel
+K Gärningspersonen har insiderinformation, det vill säga icke offentliggjord, specifik information som sannolikt skulle påverka priset väsentligt om den blev offentlig.
+G Gärningspersonen gör för egen eller någon annans räkning minst ett av:
+  | Förvärvar eller avyttrar finansiella instrument som informationen rör genom handel på värdepappersmarknaden.
+  | Ändrar eller återkallar en order som avser sådana finansiella instrument.
+## Råd eller uppmaning
+K Gärningspersonen har insiderinformation.
+G Gärningspersonen råder eller uppmanar någon annan att förvärva eller avyttra finansiella instrument som informationen rör genom handel på värdepappersmarknaden, eller att ändra eller återkalla en order som avser sådana instrument.
+## Följer råd
+K Någon har gett gärningspersonen ett råd eller en uppmaning som grundar sig på insiderinformation.
+G Gärningspersonen följer rådet eller uppmaningen genom att förvärva eller avyttra finansiella instrument som informationen rör, eller genom att ändra eller återkalla en order.
+## *
+S Uppsåt till samtliga rekvisit. Lagen anger ingen skuldform. Utgångspunkten är då att uppsåt krävs.
+U Gärningen är ringa.
+U Förvärvet eller avyttringen är legitimt beteende enligt EU:s marknadsmissbruksförordning.
+U Affären går emot informationen: instrumentet förvärvas eller en säljorder återkallas fast priset sannolikt skulle sjunka om informationen offentliggjordes, eller instrumentet avyttras eller en köporder återkallas fast priset sannolikt skulle stiga.
+U Gärningspersonen visar att han eller hon inte har utnyttjat insiderinformationen.
+U Handeln avser återköp av egna aktier eller stabilisering av värdepapper i enlighet med marknadsmissbruksförordningen.
+T En ekonomichef vet att bolagets kommande kvartalsrapport är mycket bättre än väntat och köper aktier i bolaget dagen innan rapporten offentliggörs.
+T En styrelseledamot uppmanar sin bror att sälja sina aktier i bolaget innan en vinstvarning blir känd.
+
+@ v21-insiderbrott-grovt | Grovt insiderbrott | 2:1 tredje stycket | 2:1,2:2,2:7
+PEN 1 | 6 | Fängelse i lägst ett och högst sex år | F 1–6 år
+C Ekonomisk brottslighet
+A grov insiderhandel;insiderbrott stora belopp;insiderhärva
+Q plain
+ST FP | Marknadsmissbrukslagen 2:7
+B v21-insiderbrott
+R grovt
+- Gärningspersonens ställning.
+- Den vinning för gärningspersonen som brottet har medfört.
+- Övriga omständigheter.
+T En verkställande direktör handlar under flera år systematiskt i det egna bolagets aktier inför kurspåverkande pressmeddelanden och tjänar flera miljoner kronor.
+
+@ v21-obehorigt-rojande-av-insiderinformation | Obehörigt röjande av insiderinformation | 2:3 | 2:3
+PEN 0 | 2 | Böter eller fängelse i högst två år | B–F 2 år
+C Ekonomisk brottslighet
+A röja insiderinformation;läcka börsinformation;tipsa om uppköp;vidarebefordra aktietips
+Q villkor | Åtal ska väckas bara om det är motiverat från allmän synpunkt när någon utan att det har varit befogat har fått insiderinformation och har förts in på en insiderförteckning enligt EU:s marknadsmissbruksförordning. I övriga fall gäller allmänt åtal utan villkor.
+G Gärningspersonen gör minst ett av:
+  | Röjer insiderinformation.
+  | Vidarebefordrar ett råd eller en uppmaning om att förvärva eller avyttra finansiella instrument, eller om att ändra eller återkalla en order, när rådet eller uppmaningen grundar sig på insiderinformation.
+S Uppsåt till samtliga rekvisit. Lagen anger ingen skuldform. Utgångspunkten är då att uppsåt krävs.
+U Röjandet sker som ett normalt led i fullgörande av tjänst, verksamhet eller åliggande.
+U Informationen blir allmänt känd samtidigt med att den röjs.
+U Gärningen är ringa.
+T En anställd på ett börsbolag berättar på en middag för sina vänner att bolaget nästa vecka kommer att få ett uppköpserbjudande.
+
+@ v21-marknadsmanipulation | Marknadsmanipulation | 2:4 första och andra styckena | 2:4,2:5,2:6,2:7
+PEN 0 | 2 | Fängelse i högst två år | F 2 år
+C Ekonomisk brottslighet
+A kursmanipulation;handla med sig själv;pump and dump;falska rykten om aktie;kurspåverkan;manipulera aktiekurs
+Q villkor | Åtal ska väckas bara om det är motiverat från allmän synpunkt när marknadsmanipulationen består i enstaka transaktioner som inte leder till någon förändring av det verkliga ägandet av ett finansiellt instrument. I övriga fall gäller allmänt åtal utan villkor.
+ST F | Marknadsmissbrukslagen 2:7
+N Finansinspektionen ska anmäla till åklagare när det finns anledning att anta att brott har begåtts.
+O Finansiella instrument som handlas på en reglerad marknad eller en handelsplattform, spotavtal avseende råvaror som relaterar till instrumenten, eller ett referensvärde.
+G Gärningspersonen gör minst ett av:
+  | Genomför en transaktion, lägger en order eller agerar på annat sätt så att det ger falska eller vilseledande signaler om pris, tillgång eller efterfrågan.
+  | Genomför en transaktion, lägger en order eller agerar på annat sätt så att priset låses fast på en onormal eller konstlad nivå.
+  | Genomför en transaktion, lägger en order eller agerar på annat sätt så att priset påverkas genom falska förespeglingar eller andra slag av vilseledande eller manipulationer.
+  | Sprider information som ger falska eller vilseledande signaler om pris, tillgång eller efterfrågan eller som låser fast priset på en onormal eller konstlad nivå.
+  | Sprider falska eller vilseledande uppgifter, tillhandahåller oriktiga eller vilseledande ingångsvärden eller manipulerar på annat sätt beräkningen av ett referensvärde.
+S Uppsåt till samtliga rekvisit. Lagen anger ingen skuldform. Utgångspunkten är då att uppsåt krävs.
+U Gärningen är ringa.
+U Agerandet ger vilseledande signaler eller låser fast priset men stämmer överens med godtagen marknadspraxis och det finns legitima skäl för det.
+U Agerandet påverkar bara ett spotavtal avseende råvaror och avser inte ett finansiellt instrument som spotavtalet är relaterat till, eller avser en grossistenergiprodukt.
+U Handeln avser återköp av egna aktier eller stabilisering av värdepapper i enlighet med marknadsmissbruksförordningen.
+T En person köper och säljer samma aktie mellan två egna depåer till allt högre kurser för att få det att se ut som att efterfrågan på aktien ökar.
+T En person sprider i ett aktieforum påhittade uppgifter om ett bolags stororder och säljer sina egna aktier när kursen stiger.
+
+@ v21-marknadsmanipulation-grov | Grov marknadsmanipulation | 2:4 tredje stycket | 2:4,2:5,2:6,2:7
+PEN 1 | 6 | Fängelse i lägst ett och högst sex år | F 1–6 år
+C Ekonomisk brottslighet
+A grov kursmanipulation;omfattande kursmanipulation;manipulera börskurs systematiskt
+Q plain
+ST F | Marknadsmissbrukslagen 2:7
+B v21-marknadsmanipulation
+R grovt
+- Omfattningen av manipulationen.
+- Gärningspersonens ställning.
+- Övriga omständigheter.
+T En grupp personer driver under lång tid upp kursen i flera småbolag genom tusentals samordnade affärer och falska pressmeddelanden och säljer sedan sina innehav med mångmiljonvinst.
+
+LAW S2025-1267 | Subventionsbrottslagen (2025:1267) | 2025:1267 | Subventionsbrottslagen
+X 1,2,3,10,13,14
+
+@ v21-subventionsbrott | Subventionsbrott | 4 § | 4,10
+PEN 0 | 2 | Fängelse i högst två år | F 2 år
+C Ekonomisk brottslighet
+A företagsstöd fusk;oriktiga uppgifter stödansökan;bidragsfusk företag;fusk med statligt stöd;omställningsstöd
+Q plain
+N Myndigheter och enskilda organ som beslutar om statligt företagsstöd ska anmäla till åklagare när det finns anledning att anta att brott har begåtts.
+G Gärningspersonen gör minst ett av:
+  | Lämnar oriktiga uppgifter.
+  | Anmäler inte ändrade förhållanden som det finns en skyldighet att anmäla enligt lag eller förordning.
+O Ett statligt företagsstöd, det vill säga stöd, bidrag eller annan ersättning som en statlig myndighet eller ett enskilt organ på statens uppdrag beslutar om och som går till en enskild näringsidkare eller en juridisk person. Lån, garantier och stöd inom skatte- och avgiftssystemen räknas inte.
+F Gärningen orsakar fara för minst ett av:
+  | Att stödet betalas ut eller tillgodoräknas felaktigt eller med ett för högt belopp.
+  | Att stödet inte återkrävs trots att mottagaren helt eller delvis saknar rätt till det.
+S Uppsåt till samtliga rekvisit. Lagen anger ingen skuldform. Utgångspunkten är då att uppsåt krävs.
+U Gärningen är belagd med straff enligt bidragsbrottslagen.
+U Gärningspersonen vidtar frivilligt, innan stödet betalas ut eller tillgodoräknas, en åtgärd som leder till att ett korrekt beslut om stödet kan fattas.
+T En företagare anger i en ansökan om statligt stöd en betydligt lägre omsättning än den verkliga för att bolaget ska få stöd som det inte har rätt till.
+
+@ v21-subventionsbrott-ringa | Ringa subventionsbrott | 5 § | 4,5,10,12,14
+PEN 0 | 0.5 | Böter eller fängelse i högst sex månader | B–F 6 mån
+C Ekonomisk brottslighet
+A ringa fusk företagsstöd;litet belopp stöd;bidragsfusk företag ringa
+Q villkor | Åtal får väckas bara om det av särskilda skäl är motiverat från allmän synpunkt.
+N Brottet kan trots preskriptionsreglerna leda till påföljd om den misstänkte har häktats, fått del av åtal eller godkänt ett strafföreläggande inom fem år från brottet.
+B v21-subventionsbrott
+R ringa*
+- Stödbeloppet är litet.
+- Omständigheterna i övrigt gör att gärningen framstår som mindre allvarlig.
+T En enskild näringsidkare låter bli att anmäla en mindre ändring i verksamheten och får därför ett par tusen kronor för mycket i statligt stöd.
+
+@ v21-subventionsbrott-grovt | Grovt subventionsbrott | 6 § | 4,6,10
+PEN 1 | 6 | Fängelse i lägst ett och högst sex år | F 1–6 år
+C Ekonomisk brottslighet
+A grovt fusk företagsstöd;stödfusk miljonbelopp;falska fakturor stödansökan
+Q plain
+B v21-subventionsbrott
+R grovt
+- Brottet har rört betydande belopp.
+- Gärningspersonen har använt falska handlingar eller vilseledande bokföring.
+- Gärningen har ingått i en brottslighet som har utövats systematiskt eller i större omfattning.
+T En företagsledare ansöker med hjälp av falska fakturor och manipulerad bokföring om flera miljoner kronor i statligt stöd åt en rad bolag.
+
+@ v21-subventionsbrott-vardslost | Vårdslöst subventionsbrott | 7 § | 4,7,10,14
+PEN 0 | 1 | Böter eller fängelse i högst ett år | B–F 1 år
+C Ekonomisk brottslighet
+A slarv stödansökan;oaktsamt bidragsfusk företag;fel uppgifter företagsstöd
+Q plain
+N Brottet kan trots preskriptionsreglerna leda till påföljd om den misstänkte har häktats, fått del av åtal eller godkänt ett strafföreläggande inom fem år från brottet.
+G Gärningspersonen gör minst ett av:
+  | Lämnar oriktiga uppgifter.
+  | Anmäler inte ändrade förhållanden som det finns en skyldighet att anmäla enligt lag eller förordning.
+O Ett statligt företagsstöd.
+F Gärningen orsakar fara för att stödet betalas ut eller tillgodoräknas felaktigt eller med ett för högt belopp, eller för att stödet inte återkrävs trots att mottagaren helt eller delvis saknar rätt till det.
+S Grov oaktsamhet.
+U Gärningen är mindre allvarlig med hänsyn till beloppet, risken för slutlig ekonomisk skada och övriga omständigheter.
+U Gärningen är belagd med straff enligt bidragsbrottslagen.
+U Gärningspersonen vidtar frivilligt, innan stödet betalas ut eller tillgodoräknas, en åtgärd som leder till att ett korrekt beslut om stödet kan fattas.
+T En företagare skriver under en stödansökan med uppenbart felaktiga uppgifter om antalet anställda utan att göra någon som helst kontroll av siffrorna.
+
+@ v21-subventionsmissbruk | Subventionsmissbruk | 8 § | 8,11
+PEN 0 | 2 | Böter eller fängelse i högst två år | B–F 2 år
+C Ekonomisk brottslighet
+A använda stöd till annat;EU-bidrag fel ändamål;missbruk av EU-stöd;projektmedel privat bruk
+Q plain
+ST F | Subventionsbrottslagen 11 §
+O Statligt företagsstöd eller EU-stöd, det vill säga bidrag och förmåner som finansieras över eller på annat sätt påverkar Europeiska unionens eller Europeiska atomenergigemenskapens budgetar.
+G Gärningspersonen använder eller utnyttjar stödet för ett annat ändamål än det som stödet har beviljats för.
+K Användningen sker i strid med föreskrifter eller villkor.
+S Uppsåt till samtliga rekvisit. Lagen anger ingen skuldform. Utgångspunkten är då att uppsåt krävs.
+U Fallet är ringa.
+U Gärningen är belagd med straff enligt bidragsbrottslagen.
+T En förening som har fått EU-stöd för ett utbildningsprojekt använder pengarna till att renovera ordförandens sommarhus.
+
+@ v21-subventionsmissbruk-grovt | Grovt subventionsmissbruk | 9 § | 8,9,11
+PEN 1 | 6 | Fängelse i lägst ett och högst sex år | F 1–6 år
+C Ekonomisk brottslighet
+A grovt missbruk av EU-stöd;EU-bidrag miljoner fel ändamål
+Q plain
+ST F | Subventionsbrottslagen 11 §
+B v21-subventionsmissbruk
+R grovt
+- Brottet har avsett betydande värde.
+- Brottet har varit av särskilt farlig art.
+T Ett bolag som har beviljats tio miljoner kronor i EU-stöd för en ny produktionsanläggning för i stället över pengarna till ägarnas privata konton.
+
+LAW S1994-1776 | Lagen (1994:1776) om skatt på energi | 1994:1776 | LSE
+
+@ v21-lse-markt-olja | Brott mot lagen om skatt på energi (märkt olja) | 10:1 första stycket | 2:9,10:1
+PEN 0 | 0.5 | Böter eller fängelse i högst sex månader | B–F 6 mån
+C Ekonomisk brottslighet
+A märkt diesel;färgad diesel;rödfärgad diesel;eldningsolja i bilen;avfärga diesel;tvätta diesel
+Q plain
+N Att köra med märkt olja i tanken leder i sig till en särskild avgift och inte till straff. Straffbestämmelsen gäller den som avlägsnar märkämnet eller på annat sätt tar befattning med oljan i syfte att den ska användas i en bränsletank.
+G Gärningspersonen gör minst ett av:
+  | Avlägsnar märkämne från oljeprodukter.
+  | Tar på annat sätt befattning med oljeprodukter som den högre energiskatten för omärkt olja inte har betalats för.
+K Gärningspersonen har syftet att oljeprodukterna ska användas i en bränsletank som förser motorn på ett motordrivet fordon eller en båt med bränsle, trots att tanken inte får innehålla märkt olja eller olja som märkämnet har avlägsnats från.
+S Uppsåt till samtliga rekvisit. Lagen anger ingen skuldform. Utgångspunkten är då att uppsåt krävs.
+T En person filtrerar bort färg- och märkämnet ur lågbeskattad eldningsolja i ett garage för att sälja oljan som diesel till bilister.
+
+@ v21-lse-markt-olja-grovt | Brott mot lagen om skatt på energi, grovt brott | 10:1 andra stycket | 2:9,10:1,10:2
+PEN 0 | 2 | Fängelse i högst två år | F 2 år
+C Ekonomisk brottslighet
+A avfärga diesel stor skala;tvätta diesel;märkt olja stora mängder
+Q plain
+ST FP | LSE 10:2
+B v21-lse-markt-olja
+U Förfarandet är ett led i en gärning som är belagd med strängare straff enligt skattebrottslagen.
+R grovt
+- Brottet har rört betydande värden.
+- Brottet är i annat fall att anse som grovt.
+T En liga driver en anläggning där tiotusentals liter märkt eldningsolja avfärgas och sedan säljs som diesel till åkerier.
+
+LAW S1997-1137 | Lagen (1997:1137) om vägavgift för vissa tunga fordon | 1997:1137 | Lagen om vägavgift för vissa tunga fordon
+X 27,28
+
+@ v21-vagavgift-brukande-efter-omhandertagna-skyltar | Brott mot lagen om vägavgift för vissa tunga fordon (brukande efter omhändertagna skyltar) | 29 § första stycket | 25,29,30
+PEN 0 | 0.5 | Böter eller fängelse i högst sex månader | B–F 6 mån
+C Trafik
+A vägavgift obetald;eurovinjett;lastbil utan skyltar;omhändertagna registreringsskyltar;tung lastbil vägavgift
+Q plain
+N Brukas fordonet på annat sätt i strid mot förbudet, alltså utan att skyltarna har tagits om hand, döms ägaren till penningböter.
+K Ett avgiftspliktigt fordon brukas trots att föreskriven vägavgift inte har betalats.
+K En polisman eller bilinspektör har dessförinnan tagit hand om fordonets registreringsskyltar på grund av den obetalda vägavgiften.
+K Gärningspersonen är fordonets ägare. I ägarens ställe ansvarar den som brukar fordonet utan lov, och den som innehar fordonet med nyttjanderätt och får bestämma vem som ska föra det eller anlitar en annan förare än den ägaren har utsett.
+G Gärningspersonen låter bli att göra vad som ankommer på honom eller henne för att hindra att fordonet brukas.
+S Uppsåt eller oaktsamhet.
+U Ett betalningsuppdrag för vägavgiften har lämnats till en bank eller liknande betalningsförmedlare, även om avgiften inte har hunnit bokföras.
+T Ett åkeri låter en förare fortsätta köra en tung lastbil trots att polisen veckan innan tog hand om registreringsskyltarna för att vägavgiften inte var betald.
+
+LAW S1998-506 | Lagen (1998:506) om flyttning och kontroll av vissa punktskattepliktiga varor | 1998:506 | LPK
+X 1:2,5:5
+
+@ v21-olovlig-forflyttning-av-punktskattepliktiga-varor | Olovlig förflyttning av punktskattepliktiga varor | 5:1 | 1:6,5:1,5:6
+PEN 0 | 2 | Fängelse i högst två år | F 2 år
+C Smuggling
+A alkohol utan dokument;sprittransport utan papper;cigaretter lastbil;ölbuss;transport av alkohol inom EU;punktskatt
+Q villkor | Åtal får väckas bara om det är påkallat från allmän synpunkt.
+N Om brottet är att anse som ringa döms till böter.
+O Punktskattepliktiga varor, det vill säga alkoholvaror, tobaksvaror och energiprodukter.
+G Gärningspersonen gör minst ett av:
+  | Förflyttar varorna inom Sverige.
+  | För in varorna till Sverige från ett område som tillhör Europeiska unionens punktskatteområde.
+  | För ut varorna från Sverige.
+K Flyttningen sker utan att kraven är uppfyllda i fråga om elektroniskt administrativt dokument eller annat föreskrivet dokument, referenskod, säkerhet, anmälningsskyldighet och registrering. Smärre brister i dokumenten räknas inte.
+F Gärningen ger upphov till fara för att en myndighets kontrollverksamhet med avseende på varuförflyttningen allvarligt försvåras.
+S Uppsåt.
+U Gärningen är belagd med straff i lagen om straff för smuggling.
+U Gärningspersonen anmäler frivilligt varorna till Tullverket för kontroll.
+T En chaufför kör in en lastbil med flera pallar starköl från Tyskland till Sverige utan något elektroniskt administrativt dokument och utan att varorna har anmälts eller säkerhet har ställts.
+
+@ v21-olovlig-forflyttning-av-punktskattepliktiga-varor-grovt | Olovlig förflyttning av punktskattepliktiga varor, grovt brott | 5:1 första stycket | 1:6,5:1,5:4,5:6
+PEN 0.5 | 4 | Fängelse i lägst sex månader och högst fyra år | F 6 mån–4 år
+C Smuggling
+A storskalig alkoholtransport;cigaretter långtradare;organiserad spritinförsel
+Q villkor | Åtal får väckas bara om det är påkallat från allmän synpunkt.
+ST P | LPK 5:4
+B v21-olovlig-forflyttning-av-punktskattepliktiga-varor
+R grovt*
+- Förflyttningen avser mycket stora mängder varor eller skatt till betydande belopp.
+- Gärningen ingår i en brottslighet som utövas systematiskt eller i större omfattning.
+T En organiserad grupp kör varje vecka in långtradare fullastade med cigaretter från ett annat EU-land utan dokument, anmälan eller säkerhet.
+
+@ v21-olovlig-befattning-med-punktskattepliktiga-varor | Olovlig befattning med punktskattepliktiga varor | 5:2 första stycket | 5:2
+PEN 0 | 2 | Böter eller fängelse i högst två år | B–F 2 år
+C Smuggling
+A obeskattad alkohol;obeskattade cigaretter;lager med smuggelsprit;köpa obeskattad sprit;häleri punktskatt
+Q plain
+O Punktskattepliktiga varor som har varit föremål för skattebrott, skatteförseelse eller grovt skattebrott som rör energiskatt, tobaksskatt eller alkoholskatt.
+G Gärningspersonen emballerar, transporterar, förvarar, döljer, bearbetar, förvärvar eller överlåter varorna.
+S Uppsåt.
+U Gärningen är ringa.
+U Ansvar kan dömas ut för olovlig förflyttning av punktskattepliktiga varor eller enligt lagen om straff för smuggling.
+T En person förvarar i sitt garage flera hundra liter sprit som han vet har förts in i landet utan att alkoholskatt har redovisats.
+
+@ v21-olovlig-befattning-med-punktskattepliktiga-varor-oaktsam | Olovlig befattning med punktskattepliktiga varor (skälig anledning att anta) | 5:2 andra stycket | 5:2
+PEN 0 | 0 | Böter | Böter
+C Smuggling
+A obeskattad alkohol;billiga cigaretter;borde förstått obeskattat;köpa sprit ur bagagelucka
+Q plain
+O Punktskattepliktiga varor som har varit föremål för skattebrott, skatteförseelse eller grovt skattebrott som rör energiskatt, tobaksskatt eller alkoholskatt.
+G Gärningspersonen emballerar, transporterar, förvarar, döljer, bearbetar, förvärvar eller överlåter varorna.
+S Uppsåt till själva befattningen. Gärningspersonen inser inte men har skälig anledning att anta att varorna har varit föremål för brott.
+U Gärningen är ringa.
+U Ansvar kan dömas ut för olovlig förflyttning av punktskattepliktiga varor eller enligt lagen om straff för smuggling.
+T En kioskägare köper flera kartonger cigaretter utan svensk märkning till en bråkdel av normalt pris av en okänd man på en parkering.
+
+@ v21-olovlig-befattning-med-punktskattepliktiga-varor-grov | Grov olovlig befattning med punktskattepliktiga varor | 5:3 | 5:2,5:3,5:4
+PEN 0.5 | 4 | Fängelse i lägst sex månader och högst fyra år | F 6 mån–4 år
+C Smuggling
+A lager obeskattad sprit;storskalig handel obeskattade cigaretter;organiserad smuggelsprit
+Q plain
+ST FPS | LPK 5:4
+B v21-olovlig-befattning-med-punktskattepliktiga-varor
+R grovt
+- Gärningen har ingått som ett led i en brottslighet som har utövats systematiskt eller i större omfattning.
+- Gärningen har avsett varor som har varit föremål för brott där skatt eller avgift till mycket betydande belopp har undandragits det allmänna eller felaktigt återbetalats eller tillgodoräknats någon.
+T En person driver ett lager där obeskattad sprit och obeskattade cigaretter för mångmiljonbelopp tas emot, packas om och säljs vidare till restauranger.
+
+LAW S1996-701 | Inregränslagen (1996:701) | 1996:701 | Inregränslagen
+X 2,6
+
+@ v21-inregranslagen-anmalningsskyldighet | Brott mot inregränslagen (anmälningsskyldighet) | 5 § | 3,3a,3b,5,6
+PEN 0 | 0 | Böter | Böter
+C Smuggling
+A kontanter över gränsen;10 000 euro;anmäla vapen till tullen;vapen från EU-land;oanmälda kontanter;inte anmält till Tullverket
+Q plain
+G Gärningspersonen gör minst ett av:
+  | Låter bli att genast anmäla till Tullverket när skjutvapen, ammunition, ljuddämpare eller andra föremål som vapenlagen gäller för förs in till Sverige från ett annat EU-land.
+  | Låter bli att genast anmäla till Tullverket när tillståndspliktiga sprängämnesprekursorer förs in till Sverige från ett annat EU-land.
+  | Medför kontanta medel till ett värde av minst 10 000 euro mellan Sverige och ett annat EU-land utan att genast anmäla dem till Tullverket och göra dem tillgängliga för kontroll, eller lämnar oriktiga eller ofullständiga uppgifter i anmälan.
+  | Lämnar inte inom 30 dagar den redovisning som Tullverket har begärt om oledsagade kontanta medel till ett värde av minst 10 000 euro, lämnar oriktiga eller ofullständiga uppgifter eller gör inte medlen tillgängliga för kontroll.
+S Uppsåt eller oaktsamhet.
+U Fallet är ringa.
+U Gärningen är belagd med straff i brottsbalken, lagen om straff för smuggling, lagen om straff för penningtvättsbrott eller terroristbrottslagen.
+T En resenär kommer med färjan från Tyskland med 25 000 euro i kontanter i väskan och går förbi tullen utan att anmäla pengarna.
+T En jägare tar med sig sitt jaktgevär hem från en jaktresa i Polen utan att anmäla vapnet till Tullverket vid införseln.
+
+LAW S2016-253 | Tullagen (2016:253) | 2016:253 | Tullagen
+X 1:3,5:3,5:4,7:7
+
+@ v21-tullforseelse | Tullförseelse | 5:2 | 5:2,5:3,5:4
+PEN 0 | 0 | Böter | Böter
+C Smuggling
+A tullförseelse;kontanter 10 000 euro;inte anmäla till tullen;fel i tulldeklaration;tullager anteckningar
+Q villkor | Allmänt åtal får väckas bara efter medgivande av Tullverket.
+G Gärningspersonen gör minst ett av:
+  | Bryter mot en föreskrift i tullagstiftningen, det vill säga EU:s tullagstiftning eller svenska tullförfattningar.
+  | Anmäler inte kontanta medel till ett värde av minst 10 000 euro vid inresa till eller utresa från EU, eller fullgör inte redovisningsskyldigheten för oledsagade kontanta medel enligt EU:s förordning om kontroller av kontanta medel.
+  | Fullgör inte den rapporteringsskyldighet som enligt EU:s förordning om ömsesidigt bistånd i tullfrågor gäller för uppgifter om containrars förflyttningar.
+  | Bryter mot Tullverkets beslut om skyldighet att föra anteckningar och lämna uppgifter om varor som förvaras i en anläggning för tillfällig lagring, ett tullager eller en frizon eller som omfattas av förenklingar vid ett tullförfarande.
+  | Bryter mot Tullverkets beslut om skyldighet i övrigt att lämna uppgift eller handling till Tullverket.
+  | Bryter mot Tullverkets beslut om användningen eller förbrukningen av en icke-unionsvara.
+S Uppsåt eller oaktsamhet.
+U Fallet är ringa.
+U Gärningen är belagd med straff i brottsbalken, lagen om straff för smuggling, lagen om straff för penningtvättsbrott eller terroristbrottslagen.
+U Gärningen omfattas av ett vitesföreläggande som gärningspersonen har överträtt.
+T En resenär landar på Arlanda från Dubai med 40 000 euro i kontanter och går genom den gröna filen utan att anmäla pengarna.
+T Ett företag som driver ett tullager för inte de lageranteckningar som Tullverket har beslutat om.
+
+LAW S2024-710 | Tullbefogenhetslagen (2024:710) | 2024:710 | Tullbefogenhetslagen
+
+@ v21-tullbefogenhetslagen-forbud-och-uppgifter | Brott mot tullbefogenhetslagen (förbud och uppgiftsskyldighet) | 11:2 | 3:3,3:4,4:6,11:2
+PEN 0 | 0 | Böter | Böter
+C Smuggling
+A vägra visa handlingar för tullen;vägra svara tulltjänsteman;lämna fartyg trots förbud;tullkontroll;lasta trots förbud
+Q plain
+N Den som inte stannar på en tulltjänstemans uppmaning döms till penningböter enligt en annan bestämmelse.
+G Gärningspersonen gör minst ett av:
+  | Är förare av eller befälhavare på ett transportmedel under tullövervakning och gör trots Tullverkets förbud ett annat uppehåll under färden inom det svenska tullområdet än vad en myndighets åtgärd föranleder.
+  | Är förare av eller befälhavare på ett transportmedel under tullövervakning och ankommer eller avgår med transportmedlet utan Tullverkets medgivande trots förbud.
+  | Beträder, lämnar eller lastar ett transportmedel under tullövervakning trots en tulltjänstemans förbud.
+  | Är skyldig att stanna för tullkontroll och låter bli att på en tulltjänstemans begäran lämna de uppgifter och visa upp de handlingar som behövs för kontrollen.
+S Uppsåt eller oaktsamhet.
+U Gärningen är ringa.
+U Gärningen är belagd med straff i brottsbalken eller i lagen om straff för smuggling.
+T En lastbilschaufför som har stoppats för tullkontroll i hamnen vägrar att visa fraktsedlarna för lasten när tulltjänstemannen begär det.
+T En besättningsman går i land från ett fartyg trots att en tulltjänsteman har förbjudit någon att lämna fartyget under kontrollen.
+
+LAW S1976-295 | Lagen (1976:295) om skyldighet för näringsidkare att medverka vid lagring för försörjningsberedskap | 1976:295 | Lagen om lagring för försörjningsberedskap
+X 1,6
+
+@ v21-lagring-for-forsorjningsberedskap | Brott mot lagen om skyldighet för näringsidkare att medverka vid lagring för försörjningsberedskap | 8 § | 8
+PEN 0 | 0.5 | Böter eller fängelse i högst sex månader | B–F 6 mån
+C Rikets säkerhet
+A beredskapslager;försörjningsberedskap;statligt lager;vägra upplåta lagerutrymme
+Q plain
+K En föreskrift har meddelats enligt lagen, till exempel ett åläggande för en näringsidkare att upplåta lagerutrymme till staten för beredskapslagring eller att köpa varor från ett sådant lager.
+G Gärningspersonen underlåter att följa föreskriften.
+S Uppsåt eller oaktsamhet som inte är ringa.
+U Gärningen omfattas av ett vitesföreläggande som gärningspersonen har åsidosatt.
+T Ett industriföretag som har ålagts att upplåta en del av sitt lager till staten för beredskapslagring vägrar att släppa in varorna.
+
+LAW S1978-262 | Förfogandelagen (1978:262) | 1978:262 | Förfogandelagen
+X 1,2,4,5,6,11,12,13,45,46,47,48,53
+
+@ v21-forfogandelagen | Brott mot förfogandelagen | 52 § första stycket | 52,53
+PEN 0 | 0.5 | Böter eller fängelse i högst sex månader | B–F 6 mån
+C Rikets säkerhet
+A förfogande;rekvisition i krig;gömma undan fordon för försvaret;dispositionsförbud;vägra lämna egendom till Försvarsmakten
+Q plain
+N Lagens bestämmelser om förfogande gäller när Sverige är i krig eller när regeringen har föreskrivit att de ska tillämpas, till exempel vid krigsfara.
+N En näringsidkare ansvarar för en gärning som har begåtts i hans eller hennes rörelse, om han eller hon har haft eller borde ha haft vetskap om gärningen.
+G Gärningspersonen gör minst ett av:
+  | Överlåter, förbrukar, skadar, gömmer undan eller för bort egendom som omfattas av ett beslut om förfogande eller av ett dispositionsförbud.
+  | Bryter mot ett åläggande att framställa egendom, förvara egendom, utföra transporter eller utföra en tillfällig uppgift åt Försvarsmakten som vägvisare, budbärare, arbetsmanskap eller sjukvårdspersonal.
+  | Vårdar inte egendomen, sätter den inte i användbart skick eller avlämnar den inte på begäran.
+  | Fullgör inte skyldigheten att lämna uppgift om annans rätt till egendomen, om mängden egendom eller om egendom som kan komma att förberedas för förfogande.
+  | Lämnar oriktig uppgift när uppgiftsskyldigheten fullgörs, om uppgiften innebär fara i bevishänseende.
+  | Efterkommer inte en myndighets begäran att tillhandahålla handelsböcker och andra affärshandlingar för kontroll eller att hålla egendom tillgänglig för besiktning.
+S Uppsåt.
+U Gärningen är belagd med straff i brottsbalken.
+U Underlåtenheten omfattas av ett vitesföreläggande enligt förfogandelagen.
+T Under höjd beredskap gömmer en åkeriägare undan två lastbilar som Försvarsmakten har beslutat att ta i anspråk.
+
+@ v21-forfogandelagen-grovt | Brott mot förfogandelagen, grovt brott | 52 § andra stycket | 52,53
+PEN 0 | 2 | Fängelse i högst två år | F 2 år
+C Rikets säkerhet
+A grovt brott förfogande;sälja undan rekvirerad egendom;dispositionsförbud vinning
+Q plain
+B v21-forfogandelagen
+S Gärningen har begåtts uppsåtligen.
+R grovt
+- Brottet har skett i vinningssyfte.
+- Brottet har avsett en betydande mängd av egendom.
+- Brottet har annars varit av särskilt farlig art.
+T Under krig säljer en grossist för egen vinning ut ett helt drivmedelslager som har belagts med dispositionsförbud.
+
+@ v21-forfogandelagen-oaktsamhet | Brott mot förfogandelagen (oaktsamhet) | 52 § tredje stycket | 52,53
+PEN 0 | 0 | Böter | Böter
+C Rikets säkerhet
+A förfogande oaktsamhet;slarv med rekvirerad egendom;dispositionsförbud slarv
+Q plain
+N Om det oaktsamma brottet är grovt är straffet fängelse i högst sex månader.
+N En näringsidkare ansvarar för en gärning som har begåtts i hans eller hennes rörelse, om han eller hon har haft eller borde ha haft vetskap om gärningen.
+G Gärningspersonen gör minst ett av:
+  | Överlåter, förbrukar, skadar, gömmer undan eller för bort egendom som omfattas av ett beslut om förfogande eller av ett dispositionsförbud.
+  | Bryter mot ett åläggande att framställa egendom, förvara egendom, utföra transporter eller utföra en tillfällig uppgift åt Försvarsmakten.
+  | Vårdar inte egendomen, sätter den inte i användbart skick eller avlämnar den inte på begäran.
+  | Fullgör inte en uppgiftsskyldighet enligt förfogandelagen eller lämnar oriktig uppgift som innebär fara i bevishänseende.
+  | Efterkommer inte en myndighets begäran att tillhandahålla affärshandlingar för kontroll eller att hålla egendom tillgänglig för besiktning.
+S Oaktsamhet.
+U Fallet är ringa.
+U Gärningen är belagd med straff i brottsbalken.
+U Underlåtenheten omfattas av ett vitesföreläggande enligt förfogandelagen.
+T En lantbrukare som har fått ett dispositionsförbud för sin traktor glömmer bort förbudet och säljer traktorn till en granne.
+
+LAW S1978-268 | Ransoneringslagen (1978:268) | 1978:268 | Ransoneringslagen
+X 1,6,7,13,14,15,25,26,31,32,33,34,36,41,45,47,48,51
+
+@ v21-ransoneringslagen | Brott mot ransoneringslagen | 44 § första stycket | 44,45,48
+PEN 0 | 0.5 | Böter eller fängelse i högst sex månader | B–F 6 mån
+C Rikets säkerhet
+A ransonering;ransoneringskort;sälja ransoneringskuponger;svartabörshandel;hamstring;bensinransonering
+Q plain
+N Ransoneringsbestämmelserna gäller när Sverige är i krig eller när regeringen har föreskrivit att de ska tillämpas.
+N En näringsidkare ansvarar för en gärning som har begåtts i hans eller hennes rörelse, om han eller hon har haft eller borde ha haft vetskap om gärningen.
+G Gärningspersonen gör minst ett av:
+  | Säljer, köper eller använder en ransonerad förnödenhet i strid med ransoneringsföreskrifterna, eller framställer eller handlar yrkesmässigt med förnödenheten utan föreskrivet tillstånd.
+  | Bryter som näringsidkare mot ett beslut om förfogande, ett dispositionsförbud eller ett förbud att yrkesmässigt saluhålla, överlåta eller använda en förnödenhet.
+  | Bjuder ut eller överlåter ett ransoneringsbevis mot vederlag, eller överlåter eller lämnar över ett bevis i strid med föreskrifterna.
+  | Skaffar sig obehörigen ett äkta eller falskt ransoneringsbevis, eller använder obehörigen ett bevis som är utfärdat för någon annan eller är återkallat.
+  | Lämnar oriktig uppgift i ett ärende om ransoneringsbevis eller tillstånd, vid förvärv mot kvitto av en ransonerad förnödenhet eller när en uppgiftsskyldighet fullgörs, om åtgärden innebär fara i bevishänseende.
+  | Fullgör inte skyldigheten att lämna uppgifter om innehav eller rörelse, föra anteckningar, göra avläsningar, lämna tillträde eller tillhandahålla affärshandlingar för kontroll.
+  | För in oriktig uppgift i de anteckningar som ska föras för kontroll, om åtgärden innebär fara i bevishänseende.
+S Uppsåt.
+U Gärningen är belagd med straff i brottsbalken.
+U Underlåtenheten omfattas av ett vitesföreläggande enligt ransoneringslagen.
+U Gärningen är en överförbrukning som gärningspersonen har ålagts överförbrukningsavgift för.
+T Under en bensinransonering säljer en person sina ransoneringskuponger för kontanter till en granne.
+T En person använder sin avlidne fars ransoneringskort för att köpa ut dubbla ransoner.
+
+@ v21-ransoneringslagen-grovt | Brott mot ransoneringslagen, grovt brott | 44 § andra stycket | 44,45,48
+PEN 0 | 2 | Fängelse i högst två år | F 2 år
+C Rikets säkerhet
+A grovt ransoneringsbrott;svartabörshandel stor skala;falska ransoneringskort
+Q plain
+B v21-ransoneringslagen
+S Gärningen har begåtts uppsåtligen.
+R grovt
+- Brottet har skett i vinningssyfte.
+- Brottet har avsett en betydande mängd av egendom.
+- Brottet har annars varit av särskilt farlig art.
+T En grossist säljer under en ransonering stora mängder drivmedel vid sidan av ransoneringssystemet till överpris.
+
+@ v21-ransoneringslagen-oaktsamhet | Brott mot ransoneringslagen (oaktsamhet) | 44 § tredje stycket | 44,45,48
+PEN 0 | 0 | Böter | Böter
+C Rikets säkerhet
+A ransonering slarv;sälja ransonerad vara utan kupong av misstag
+Q plain
+N Om det oaktsamma brottet är grovt är straffet fängelse i högst sex månader.
+N En näringsidkare ansvarar för en gärning som har begåtts i hans eller hennes rörelse, om han eller hon har haft eller borde ha haft vetskap om gärningen.
+G Gärningspersonen gör minst ett av:
+  | Säljer, köper eller använder en ransonerad förnödenhet i strid med ransoneringsföreskrifterna, eller framställer eller handlar yrkesmässigt med förnödenheten utan föreskrivet tillstånd.
+  | Bryter som näringsidkare mot ett beslut om förfogande, ett dispositionsförbud eller ett förbud att yrkesmässigt saluhålla, överlåta eller använda en förnödenhet.
+  | Överlåter eller lämnar över ett ransoneringsbevis i strid med lagen eller föreskrifterna, eller använder obehörigen ett bevis som är utfärdat för någon annan eller är återkallat.
+  | Lämnar oriktig uppgift i ett ärende om ransoneringsbevis eller tillstånd eller när en uppgiftsskyldighet fullgörs, om åtgärden innebär fara i bevishänseende.
+  | Fullgör inte skyldigheten att lämna uppgifter, föra anteckningar, göra avläsningar, lämna tillträde eller tillhandahålla affärshandlingar för kontroll.
+S Oaktsamhet.
+U Fallet är ringa.
+U Gärningen är belagd med straff i brottsbalken.
+U Underlåtenheten omfattas av ett vitesföreläggande enligt ransoneringslagen.
+U Gärningen är en överförbrukning som gärningspersonen har ålagts överförbrukningsavgift för.
+T En butiksanställd säljer av slarv ransonerat kaffe till flera kunder utan att ta emot några ransoneringskuponger.
+
+@ v21-ransoneringslagen-bristande-redovisning | Brott mot ransoneringslagen (bristande omsorg om förråd och ransoneringsbevis) | 46 § | 46,51
+PEN 0 | 0 | Böter | Böter
+C Rikets säkerhet
+A ransonering redovisning;svinn ransonerade varor;borttappade ransoneringskuponger;butik kan inte redovisa lager
+Q villkor | Allmänt åtal får väckas bara efter medgivande av den myndighet som regeringen bestämmer.
+K Gärningspersonen är näringsidkare.
+G Gärningspersonen iakttar inte den omsorg som krävs när han eller hon har hand om minst ett av:
+  | Ett förråd av en förnödenhet som omfattas av ransonering eller tillståndskrav.
+  | Ransoneringsbevis som har tagits emot i eller för rörelsen.
+  | Anteckningar och andra handlingar som ska upprättas med anledning av regleringen.
+F Näringsidkaren kan till följd av detta inte redovisa förrådet, bevisen eller handlingarna i föreskriven ordning.
+S Oaktsamhet. Det räcker att näringsidkaren inte har iakttagit den omsorg som krävs.
+T En livsmedelshandlare förvarar mottagna ransoneringskuponger i en olåst låda i butiken och kan vid kontroll inte redovisa kuponger som motsvarar de sålda varorna.
+
+LAW S1992-1402 | Lagen (1992:1402) om undanförsel och förstöring | 1992:1402 | Lagen om undanförsel och förstöring
+X 1,2,5,6,7,8
+
+@ v21-undanforsel-och-forstoring | Brott mot lagen om undanförsel och förstöring | 17 § första stycket och 18 § | 17,18
+PEN 0 | 1 | Böter eller fängelse i högst ett år | B–F 1 år
+C Rikets säkerhet
+A undanförsel;förstöring av egendom i krig;vägra flytta egendom;egendom till angripare
+Q plain
+N Bestämmelserna gäller när Sverige är i krig eller när regeringen har föreskrivit att de ska tillämpas, till exempel vid krigsfara.
+G Gärningspersonen gör minst ett av:
+  | Följer inte ett föreläggande att föra undan eller förstöra egendom som han eller hon äger eller innehar.
+  | Anmäler inte genast till den som har meddelat föreläggandet att det inte kan följas.
+  | Lämnar inte den hjälp som behövs när en myndighet ska föra undan eller förstöra egendomen.
+  | Bryter mot föreskrifter eller beslut om att viss egendom inte får föras till en viss del av landet.
+S Uppsåt eller oaktsamhet.
+T Under krig vägrar en verkstadsägare att följa ett föreläggande om att flytta sina specialmaskiner från ett hotat område.
+
+@ v21-undanforsel-och-forstoring-grovt | Brott mot lagen om undanförsel och förstöring, grovt brott | 17 § | 17
+PEN 0.5 | 4 | Fängelse i lägst sex månader och högst fyra år | F 6 mån–4 år
+C Rikets säkerhet
+A grovt brott undanförsel;lämna kvar egendom åt fienden
+Q plain
+B v21-undanforsel-och-forstoring
+S Gärningen har begåtts uppsåtligen.
+R grovt
+- Gärningen har begåtts när Sverige är i krig.
+- Gärningen har avsett egendom som har stor betydelse för totalförsvaret.
+- Gärningen har avsett egendom som i angriparens händer väsentligt kan underlätta dennes krigsansträngningar.
+T Under krig låter ägaren till en drivmedelsdepå med avsikt bli att förstöra lagret trots föreläggande, så att det faller i angriparens händer.
+
+LAW S2006-546 | Lagen (2006:546) om utrymning och inkvartering m.m. under höjd beredskap | 2006:546 | Lagen om utrymning och inkvartering
+X 2:1,2:2
+
+@ v21-utrymning-och-inkvartering | Brott mot lagen om utrymning och inkvartering m.m. under höjd beredskap | 5:1 första stycket | 2:6,2:7,3:1,4:1,4:2,5:1
+PEN 0 | 1 | Böter eller fängelse i högst ett år | B–F 1 år
+C Rikets säkerhet
+A utrymning;inkvartering;utflyttningsförbud;inflyttningsförbud;vägra ta emot evakuerade;höjd beredskap
+Q plain
+G Gärningspersonen gör minst ett av:
+  | Lämnar ett område trots ett förbud att lämna det (utflyttningsförbud).
+  | Uppehåller sig annat än tillfälligt inom ett område trots ett förbud för dem som inte är bosatta där (inflyttningsförbud).
+  | Följer som innehavare av en byggnad eller bostadslägenhet inte kommunens föreläggande att upplåta bostad och utrustning åt den som behöver bostad på grund av utrymning eller krigshändelser.
+  | Följer inte ett annat föreläggande eller förbud som har meddelats med stöd av lagen.
+  | Förmedlar som fastighetsägare, nyttjanderättshavare, förvaltare eller arbetsgivare inte myndigheternas beslut och meddelanden till de boende, de verksamma eller de anställda.
+  | Anger inte på fråga av en statlig eller kommunal myndighet om han eller hon har egendom som kan behöva tas i anspråk, eller lämnar oriktiga uppgifter när skyldigheterna fullgörs.
+S Uppsåt eller oaktsamhet som inte är ringa.
+T Under höjd beredskap vägrar en villaägare att följa kommunens föreläggande att upplåta två rum åt en familj som har utrymts från ett stridsområde.
+T En person flyttar in i ett område där inflyttningsförbud gäller och stannar kvar trots förbudet.
+
+@ v21-utrymning-och-inkvartering-grovt | Brott mot lagen om utrymning och inkvartering m.m. under höjd beredskap, grovt brott | 5:1 andra stycket | 5:1
+PEN 0.5 | 4 | Fängelse i lägst sex månader och högst fyra år | F 6 mån–4 år
+C Rikets säkerhet
+A grovt brott utrymning;trotsa utflyttningsförbud;men för totalförsvaret
+Q plain
+B v21-utrymning-och-inkvartering
+R grovt
+- Gärningen har begåtts under höjd beredskap och har medfört avsevärt men för totalförsvaret.
+- Gärningen är av någon annan anledning att anse som grov.
+T Under krig organiserar en person en omfattande förflyttning av människor ut ur ett område med utflyttningsförbud, vilket allvarligt stör en pågående militär operation.

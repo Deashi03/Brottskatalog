@@ -7,7 +7,7 @@ S Uppsåt till samtliga rekvisit.
 
 @ v03-ringa-urkundsforfalskning | Förvanskning av urkund | BrB 14:2
 B v03-urkundsforfalskning
-R ringa*
+R ringa
 - Urkunden är av mindre vikt.
 - Gärningen har begåtts för att hjälpa någon till hans eller hennes rätt.
 
@@ -15,7 +15,7 @@ R ringa*
 B v03-urkundsforfalskning
 R grovt
 - Förfalskningen har avsett en myndighets arkivhandling av vikt.
-- Förfalskningen har avsett en urkund som är särskilt betydelsefull i den allmänna omsättningen, till exempel ett pass eller en sedel.
+- Förfalskningen har avsett en urkund som är särskilt betydelsefull i den allmänna omsättningen.
 - Gärningen har annars varit av särskilt farlig art.
 
 @ v05-hindrande-av-urkunds-bevisfunktion | Hindrande av urkunds bevisfunktion | BrB 14:4
@@ -90,7 +90,7 @@ R grovt*
 
 @ v15-markesforfalskning | Märkesförfalskning | BrB 14:8
 G Gärningspersonen gör minst ett av:
-  | Eftergör ett gällande frimärke, en beläggningsstämpel eller annat offentligt värdemärke.
+  | Eftergör ett gällande frimärke, en beläggningsstämpel eller annat offentligt eller för allmänheten avsett värdemärke, svenskt eller utländskt.
   | Eftergör en offentlig kontrollmärkning på mått, vikt, vara, handling eller annat.
   | Anbringar ett falskt sådant märke, anbringar obehörigen ett äkta märke eller förfalskar på annat sätt märket eller det märkta.
 F Åtgärden innebär fara i bevishänseende.
@@ -165,26 +165,34 @@ R ringa*
 G Gärningspersonen lämnar en osann uppgift eller förtiger sanningen under ed eller under sanningsförsäkran som part.
 S Grov oaktsamhet.
 U Uppgiften är utan betydelse för saken (BrB 15:4).
+U Uppgiften gäller något som gärningspersonen hade rätt att vägra yttra sig om, och omständigheterna innebär en skälig ursäkt (BrB 15:4).
 
 @ v15-family-osann-utsaga-infor-nordisk-domstol | Osann utsaga inför nordisk domstol | BrB 15:4 a
 G Gärningspersonen lämnar under straffansvar en osann uppgift eller förtiger sanningen inför domstol i Danmark, Finland, Island eller Norge.
 S Uppsåt till samtliga rekvisit.
 U Uppgiften är utan betydelse för saken, eller gäller något som gärningspersonen hade rätt att vägra yttra sig om och omständigheterna innebär skälig ursäkt (BrB 15:4).
+K Utsagan skulle i Sverige ha lämnats under laga ed, eller är en utsaga av part i tvistemål.
 
 @ v15-family-ovarsam-utsaga-infor-nordisk-domstol | Ovarsam utsaga inför nordisk domstol | BrB 15:4 a
 G Gärningspersonen lämnar under straffansvar en osann uppgift eller förtiger sanningen inför domstol i Danmark, Finland, Island eller Norge.
 S Grov oaktsamhet.
+K Utsagan skulle i Sverige ha lämnats under laga ed, eller är en utsaga av part i tvistemål.
+U Uppgiften är utan betydelse för saken, eller gäller något som gärningspersonen hade rätt att vägra yttra sig om och omständigheterna innebär skälig ursäkt (BrB 15:4).
 
 @ v15-family-osann-utsaga-infor-en-internationell-domstol | Osann utsaga inför en internationell domstol | BrB 15:4 b
 K Gärningspersonen är vittne eller sakkunnig och har avlagt ed inför EU-domstolen, tribunalen, EFTA-domstolen eller Internationella brottmålsdomstolen.
 G Gärningspersonen lämnar en osann uppgift eller förtiger sanningen.
 S Uppsåt till samtliga rekvisit.
+K Utsagan skulle i Sverige ha lämnats under laga ed.
+U Uppgiften är utan betydelse för saken, eller gäller något som gärningspersonen hade rätt att vägra yttra sig om och omständigheterna innebär skälig ursäkt (BrB 15:4).
 
 @ v15-family-ovarsam-utsaga-infor-en-internationell-domstol | Ovarsam utsaga inför en internationell domstol | BrB 15:4 b
 K Gärningspersonen är vittne eller sakkunnig och har avlagt ed inför EU-domstolen, tribunalen eller EFTA-domstolen.
 G Gärningspersonen lämnar en osann uppgift eller förtiger sanningen.
 S Grov oaktsamhet.
 U Utsagan lämnades inför Internationella brottmålsdomstolen.
+K Utsagan skulle i Sverige ha lämnats under laga ed.
+U Uppgiften är utan betydelse för saken, eller gäller något som gärningspersonen hade rätt att vägra yttra sig om och omständigheterna innebär skälig ursäkt (BrB 15:4).
 
 @ v05-falskt-atal | Falskt åtal | BrB 15:5
 G Gärningspersonen väcker åtal mot någon.
@@ -243,7 +251,8 @@ R grovt
 - Beskyllningen har avsett allvarlig brottslighet.
 
 @ v05-vardslos-beskyllning | Vårdslös beskyllning | BrB 15:7
-G Gärningspersonen beskyller hos myndighet någon för en brottslig gärning, påstår en besvärande omständighet eller förnekar en friande omständighet.
+G Gärningspersonen beskyller hos åklagare, polis eller annan myndighet någon för en brottslig gärning, påstår en besvärande omständighet eller förnekar en friande eller mildrande omständighet.
+K Myndigheten ska ta upp en anmälan i en sådan sak.
 F Utsagan är osann.
 S Gärningspersonen insåg inte, men hade skälig anledning att anta, att utsagan var osann.
 
@@ -285,13 +294,13 @@ G Gärningspersonen gör minst ett av:
 F Åtgärden innebär fara i bevishänseende.
 S Uppsåt till samtliga rekvisit.
 
-@ v06-grovt-missbruk-av-urkund | Grovt missbruk av urkund | BrB 15:12 första stycket
+@ v06-grovt-missbruk-av-urkund | Grovt missbruk av urkund | BrB 15:12 andra stycket
 B v06-missbruk-av-urkund
 R grovt*
 - Urkundens betydelse, till exempel ett pass.
 - Om missbruket ingick i annan brottslighet, till exempel bedrägerier.
 
-@ v06-missbruk-av-handling | Missbruk av handling | BrB 15:12 andra stycket
+@ v06-missbruk-av-handling | Missbruk av handling | BrB 15:12 tredje stycket
 G Gärningspersonen utger sanningslöst en handling för att vara en riktig kopia av en viss urkund.
 F Åtgärden innebär fara i bevishänseende.
 S Uppsåt till samtliga rekvisit.

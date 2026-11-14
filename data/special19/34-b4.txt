@@ -1,0 +1,690 @@
+LAW S2022-964 | Lagen (2022:964) om företagsrekonstruktion | 2022:964 | Lagen om företagsrekonstruktion
+X 4:3
+
+@ v21-foretagsrekonstruktion-forman-for-rost | Brott mot lagen om företagsrekonstruktion (förmån för röst) | 8:4 | 8:4,4:3
+PEN 0 | 1 | Böter eller fängelse i högst ett år | B–F 1 år
+C Ekonomisk brottslighet
+A sälja sin röst;rekonstruktionsplan;plansammanträde;särskild förmån;borgenär tar betalt för röst
+Q plain
+N Åtal får väckas vid den tingsrätt som handlägger eller har handlagt ärendet om företagsrekonstruktion.
+K Gärningspersonen är berörd part i en planförhandling, det vill säga en borgenär, aktieägare eller annan med ägarintresse vars fordran eller rättighet berörs direkt av rekonstruktionsplanen.
+G Gärningspersonen betingar sig en särskild förmån av gäldenären för sin röst vid ett plansammanträde.
+S Uppsåt till samtliga rekvisit. Lagen anger ingen skuldform. Utgångspunkten är då att uppsåt krävs.
+T En leverantör som är borgenär i en företagsrekonstruktion lovar att rösta ja till rekonstruktionsplanen om bolaget vid sidan av planen betalar hela leverantörens fordran.
+
+LAW S1918-163 | Lagen (1918:163) med vissa bestämmelser om sjöfynd | 1918:163 | Sjöfyndslagen
+X 1,2
+
+@ v21-sjofynd-oriktig-uppgift | Brott mot lagen om sjöfynd (oriktig uppgift eller underlåten avlämning) | 8 § andra stycket | 8,1,2
+PEN 0 | 0 | Böter | Böter
+C Förmögenhet
+A sjöfynd;bärgat gods;vrakfynd;bärgning;behålla bärgat gods;bärgarlön
+Q plain
+N Bärgare som inte anmäler fyndet till Polismyndigheten eller Kustbevakningen, och befälhavare eller redare som inte tillkännager vad som har bärgats eller som förskingrar eller döljer influtna medel, straffas enligt allmän lag (8 § första stycket). Rätten får förklara bärgarlönen förverkad eller sätta ned den.
+O Övergivet fartyg, fartygslämning, redskap eller gods som hör till fartyg och som har bärgats i saltsjön inom svensk skärgård, vid svensk kust eller i segelbara insjöar, floder eller kanaler, eller som ett fartyg har bärgat under resa.
+G Gärningspersonen gör minst ett av:
+  | Lämnar som bärgare, befälhavare eller redare i sviklig avsikt en oriktig uppgift om omständigheterna vid bärgningen.
+  | Vidtar som bärgare, befälhavare eller redare i sviklig avsikt en särskild åtgärd med det bärgade godset.
+  | Låter som befälhavare bli att lämna det som fartyget har bärgat under resan till Polismyndigheten.
+  | Låter som befälhavare eller redare bli att lämna de pengar som har flutit in när godset har sålts utomlands till redaren respektive Polismyndigheten.
+S Uppsåt. För oriktig uppgift och särskild åtgärd med godset krävs dessutom sviklig avsikt.
+U Gärningen är belagd med strängare straff i brottsbalken.
+T En fritidsdykare bärgar utrustning från ett övergivet fartyg och uppger för polisen att sakerna låg uppspolade på hans egen strand, för att ägaren inte ska kunna spåras.
+
+LAW S1970-485 | Mönsterskyddslagen (1970:485) | 1970:485 | Mönsterskyddslagen
+X 5,7
+
+@ v21-monsterskyddsbrott | Mönsterskyddsbrott | 35 § första stycket | 35,5,7
+PEN 0 | 2 | Böter eller fängelse i högst två år | B–F 2 år
+C Ekonomisk brottslighet
+A designkopior;kopierad design;piratkopierade möbler;mönsterintrång;designskydd
+Q villkor | Åklagaren får väcka åtal bara om åtal är motiverat från allmän synpunkt.
+ST FP | Mönsterskyddslagen 35 § fjärde stycket
+O Ett mönster (en design) som är skyddat genom mönsterrätt, eller ett mönster som inte gör ett annat helhetsintryck på en kunnig användare.
+G Gärningspersonen utnyttjar mönstret utan samtycke av mönsterhavaren, till exempel genom att tillverka, bjuda ut, marknadsföra, föra in till eller ut från Sverige, använda eller lagerhålla en produkt som mönstret ingår i eller används på.
+S Uppsåt eller grov oaktsamhet.
+U Intrånget omfattas av ett vitesförbud som gärningspersonen har överträtt.
+U Utnyttjandet sker för privat bruk och utan vinstsyfte, i experimentsyfte eller som återgivning för att citera eller undervisa.
+T Ett företag importerar och säljer lampor som är kopior av en lampa med registrerad design, trots att företaget vet att designen är skyddad.
+
+@ v21-monsterskyddsbrott-grovt | Grovt mönsterskyddsbrott | 35 § andra stycket | 35
+PEN 0.5 | 6 | Fängelse i lägst sex månader och högst sex år | F 6 mån–6 år
+C Ekonomisk brottslighet
+A grovt mönsterskyddsbrott;designkopior i stor skala;organiserad piratkopiering
+Q villkor | Åklagaren får väcka åtal bara om åtal är motiverat från allmän synpunkt.
+ST FP | Mönsterskyddslagen 35 § fjärde stycket
+B v21-monsterskyddsbrott
+S Brottet har begåtts uppsåtligen.
+R grovt
+- Gärningen har föregåtts av särskild planering.
+- Gärningen har utgjort ett led i en brottslighet som utövats i organiserad form.
+- Gärningen har varit av större omfattning.
+- Gärningen har annars varit av särskilt farlig art.
+T En grupp låter tillverka tusentals kopior av skyddade designmöbler i en fabrik utomlands och säljer dem systematiskt i Sverige genom flera bolag.
+
+@ v21-monsterskydd-upplysningsskyldighet | Brott mot mönsterskyddslagen (upplysningsskyldighet) | 40 § | 40,34
+PEN 0 | 0 | Böter | Böter
+C Ekonomisk brottslighet
+A mönsterregistrering;designskyddad utan nummer;falsk uppgift om mönsterskydd;registreringsnummer
+Q villkor | Allmänt åtal får väckas bara om målsäganden anger brottet till åtal och åtal av särskilda skäl är påkallat från allmän synpunkt.
+G Gärningspersonen gör minst ett av:
+  | Åberopar sin ansökan om mönsterregistrering mot någon annan innan handlingen som visar mönstret är allmänt tillgänglig, och vägrar samtycka till att den andre får ta del av handlingen.
+  | Har angett att registrering av mönster har sökts eller meddelats, till exempel i en annons eller på en förpackning, och lämnar inte på begäran utan dröjsmål upplysning om ansökningens eller registreringens nummer.
+  | Har gett intryck av att registrering har sökts eller meddelats och lämnar inte på begäran utan dröjsmål upplysning om huruvida det är så.
+  | Lämnar en felaktig upplysning i dessa fall.
+S Uppsåt eller oaktsamhet som inte är ringa.
+U Straff för att lämna den felaktiga upplysningen är föreskrivet i brottsbalken.
+T Ett företag märker sina produkter med texten "mönsterskyddad" och vägrar, när en konkurrent frågar, att uppge något registreringsnummer.
+
+LAW S1970-498 | Lagen (1970:498) om skydd för vapen och vissa andra officiella beteckningar | 1970:498 | Lagen om skydd för officiella beteckningar
+X 3
+
+@ v21-officiella-beteckningar-otillaten-anvandning | Brott mot lagen om skydd för vapen och vissa andra officiella beteckningar | 4 § | 4,1,2,3
+PEN 0 | 0 | Böter | Böter
+C Ekonomisk brottslighet
+A statsvapen i logga;tre kronor i varumärke;kommunvapen;FN-emblem;riksvapnet;officiell beteckning
+Q plain
+G Gärningspersonen gör minst ett av:
+  | Använder i näringsverksamhet utan tillstånd statsvapen, statsflagga, annat statsemblem eller en statlig kontroll- eller garantibeteckning i ett varumärke eller annat kännetecken för varor eller tjänster.
+  | Använder i näringsverksamhet utan tillstånd i ett sådant kännetecken en annan beteckning som syftar på svenska staten och ger kännetecknet en officiell karaktär, eller ett registrerat svenskt kommunalt vapen.
+  | Använder i näringsverksamhet utan tillstånd statsvapen på annat sätt än som kännetecken.
+  | Använder i näringsverksamhet en beteckning som lätt kan förväxlas med en sådan skyddad beteckning.
+  | Brukar offentligen som märke eller benämning Förenta nationernas emblem eller namn, en förkortning av namnet eller något förväxlingsbart, utan medgivande av FN:s generalsekreterare.
+  | Brukar offentligen som märke Internationella atomenergiorganets emblem eller något förväxlingsbart, utan medgivande av organets generaldirektör.
+  | Bryter mot ett förbud i föreskrifter om att skyddet också ska gälla en mellanstatlig organisations vapen, flagga, emblem, benämning eller förkortning.
+S Uppsåt eller oaktsamhet.
+T Ett vaktbolag använder utan tillstånd lilla riksvapnet i sin logotyp på bilar och uniformer.
+T En butik säljer egna produkter under ett märke som innehåller FN:s emblem utan medgivande.
+
+LAW S1971-1078 | Lagen (1971:1078) om försvarsuppfinningar | 1971:1078 | Lagen om försvarsuppfinningar
+X 1
+
+@ v21-forsvarsuppfinning-patentansokan-utomlands | Brott mot lagen om försvarsuppfinningar (ansökan utomlands) | 21 § första stycket | 21,10
+PEN 0 | 1 | Böter eller fängelse i högst ett år | B–F 1 år
+C Rikets säkerhet
+A försvarsuppfinning;hemlig uppfinning;patent utomlands;krigsmateriel uppfinning
+Q plain
+N Den som bryter mot tystnadsplikten för försvarsuppfinningar straffas enligt brottsbalken.
+O En svensk försvarsuppfinning som ska hållas hemlig. Med svensk försvarsuppfinning avses en uppfinning som särskilt avser krigsmateriel och som har kommit till i Sverige eller tillhör en här bosatt person eller en svensk juridisk person.
+G Gärningspersonen ansöker om patent eller annan skyddsrätt för uppfinningen i en annan stat utan att regeringen har godkänt det.
+S Uppsåt till samtliga rekvisit. Lagen anger ingen skuldform. Utgångspunkten är då att uppsåt krävs.
+U Gärningen är belagd med straff enligt brottsbalken.
+T En uppfinnare som har fått beslut om att hans uppfinning av ett vapensystem ska hållas hemlig lämnar ändå in en patentansökan i ett annat land utan regeringens godkännande.
+
+LAW S1975-1083 | Lagen (1975:1083) om uppgiftsskyldighet rörande mottagande av olja | 1975:1083 | Lagen om uppgiftsskyldighet rörande mottagande av olja
+X 2,3
+
+@ v21-oljemottagning-oriktig-uppgift | Brott mot lagen om uppgiftsskyldighet rörande mottagande av olja | 5 § första stycket | 5,2,3
+PEN 0 | 0 | Böter | Böter
+C Ekonomisk brottslighet
+A oljehamn;mottagen olja;oriktig uppgift till Sjöfartsverket;oljeskadefonden
+Q villkor | Allmänt åtal får väckas bara efter anmälan från Sjöfartsverket.
+K Gärningspersonen är skyldig att lämna Sjöfartsverket uppgift om hur mycket råolja eller eldningsolja som har tagits emot i en svensk hamn eller annan anläggning i Sverige efter sjötransport. Skyldigheten gäller den som under ett kalenderår har tagit emot mer än 150 000 ton, ensam eller tillsammans med dotterbolag eller annan gemensamt kontrollerad enhet.
+G Gärningspersonen lämnar en oriktig uppgift.
+S Uppsåt eller oaktsamhet.
+U Gärningen är belagd med straff i brottsbalken.
+T Ett raffinaderibolag redovisar till Sjöfartsverket en betydligt mindre mängd mottagen råolja än den som faktiskt har lossats i bolagets hamn.
+
+LAW S1982-963 | Lagen (1982:963) om rymdverksamhet | 1982:963 | Lagen om rymdverksamhet
+X 1,3
+
+@ v21-rymdverksamhet-utan-tillstand | Brott mot lagen om rymdverksamhet | 5 § | 5,2
+PEN 0 | 1 | Böter eller fängelse i högst ett år | B–F 1 år
+C Trafik
+A rymdverksamhet;skjuta upp satellit;raketuppskjutning utan tillstånd;satellit utan tillstånd
+Q villkor | Åtal får väckas bara efter regeringens medgivande.
+N Den som har begått brottet utomlands och finns i Sverige döms efter svensk lag och vid svensk domstol även om brottsbalkens vanliga regler om domsrätt inte är tillämpliga. Att bara ta emot signaler från rymdföremål och att sända upp sondraketer räknas inte som rymdverksamhet.
+G Gärningspersonen gör minst ett av:
+  | Bedriver rymdverksamhet från svenskt territorium utan tillstånd av regeringen, till exempel sänder ut ett rymdföremål eller manövrerar ett utsänt rymdföremål.
+  | Bedriver som svensk fysisk eller juridisk person rymdverksamhet någon annanstans utan tillstånd.
+  | Åsidosätter ett villkor som har ställts upp som förutsättning för tillståndet.
+S Uppsåt eller oaktsamhet.
+T Ett svenskt företag låter sända upp en egen satellit från ett annat land och styr den från Sverige utan att ha sökt tillstånd hos regeringen.
+
+LAW S1992-1685 | Lagen (1992:1685) om skydd för kretsmönster för halvledarprodukter | 1992:1685 | Kretsmönsterlagen
+X 2,5,6
+
+@ v21-kretsmonsterbrott | Kretsmönsterbrott | 9 § första stycket | 9,2
+PEN 0 | 2 | Böter eller fängelse i högst två år | B–F 2 år
+C Ekonomisk brottslighet
+A kopierade chip;halvledare;kretskort kopia;piratkopierade mikrochip
+Q villkor | Åklagaren får väcka åtal bara om åtal är motiverat från allmän synpunkt.
+ST FP | Kretsmönsterlagen 9 § fjärde stycket
+O Ett skyddat kretsmönster för en halvledarprodukt. Som exemplar av kretsmönstret räknas också en halvledarprodukt som har tillverkats med hjälp av kretsmönstret.
+G Gärningspersonen gör utan rättsinnehavarens samtycke minst ett av:
+  | Framställer exemplar av kretsmönstret.
+  | Importerar exemplar av kretsmönstret i kommersiellt syfte.
+  | Gör kretsmönstret tillgängligt för allmänheten genom att bjuda ut exemplar till försäljning, uthyrning eller utlåning eller sprida dem på annat sätt.
+S Uppsåt eller grov oaktsamhet.
+U Intrånget omfattas av ett vitesförbud som gärningspersonen har överträtt.
+U Exemplar framställs uteslutande för undervisning om eller analys av kretsmönstret, eller enstaka exemplar framställs för enskilt bruk.
+U Exemplaret har spritts till allmänheten inom Europeiska ekonomiska samarbetsområdet av rättsinnehavaren eller med dennes samtycke.
+T Ett företag kopierar en konkurrents mikrochip och importerar de kopierade kretsarna för att sälja dem vidare.
+
+@ v21-kretsmonsterbrott-grovt | Grovt kretsmönsterbrott | 9 § andra stycket | 9
+PEN 0.5 | 6 | Fängelse i lägst sex månader och högst sex år | F 6 mån–6 år
+C Ekonomisk brottslighet
+A grovt kretsmönsterbrott;kopierade chip i stor skala
+Q villkor | Åklagaren får väcka åtal bara om åtal är motiverat från allmän synpunkt.
+ST FP | Kretsmönsterlagen 9 § fjärde stycket
+B v21-kretsmonsterbrott
+S Brottet har begåtts uppsåtligen.
+R grovt
+- Gärningen har föregåtts av särskild planering.
+- Gärningen har utgjort ett led i en brottslighet som utövats i organiserad form.
+- Gärningen har varit av större omfattning.
+- Gärningen har annars varit av särskilt farlig art.
+T En organiserad grupp låter massproducera kopior av skyddade kretsar och säljer dem i stora partier till elektroniktillverkare.
+
+LAW S1997-306 | Växtförädlarrättslagen (1997:306) | 1997:306 | Växtförädlarrättslagen
+X 2:1,2:3
+
+@ v21-vaxtforadlarrattsbrott | Växtförädlarrättsbrott | 9:1 första stycket | 9:1,2:2
+PEN 0 | 2 | Böter eller fängelse i högst två år | B–F 2 år
+C Ekonomisk brottslighet
+A skyddad växtsort;utsäde;förökningsmaterial;sticklingar av skyddad sort;växtsort
+Q villkor | Åklagaren får väcka åtal bara om åtal är motiverat från allmän synpunkt.
+ST FP | Växtförädlarrättslagen 9:1 fjärde stycket
+O En växtsort eller annan samling växter som omfattas av en växtförädlarrätt.
+G Gärningspersonen utnyttjar växtsorten utan samtycke av innehavaren av växtförädlarrätten genom minst ett av:
+  | Producerar eller reproducerar förökningsmaterial eller bearbetar det för förökningsändamål.
+  | Bjuder ut förökningsmaterial till försäljning, säljer det eller tillhandahåller det på annat sätt.
+  | Exporterar förökningsmaterial från Sverige eller importerar det till Sverige.
+  | Lagerhåller förökningsmaterial för något av dessa ändamål.
+S Uppsåt eller grov oaktsamhet.
+U Intrånget omfattas av ett vitesförbud som gärningspersonen har överträtt.
+U Utnyttjandet sker privat och för icke-kommersiella ändamål, för experiment eller för framställning av nya växtsorter.
+T En plantskola förökar och säljer sticklingar av en skyddad äppelsort utan licens från den som innehar växtförädlarrätten.
+
+@ v21-vaxtforadlarrattsbrott-grovt | Grovt växtförädlarrättsbrott | 9:1 andra stycket | 9:1
+PEN 0.5 | 6 | Fängelse i lägst sex månader och högst sex år | F 6 mån–6 år
+C Ekonomisk brottslighet
+A grovt växtförädlarrättsbrott;utsäde i stor skala
+Q villkor | Åklagaren får väcka åtal bara om åtal är motiverat från allmän synpunkt.
+ST FP | Växtförädlarrättslagen 9:1 fjärde stycket
+B v21-vaxtforadlarrattsbrott
+S Brottet har begåtts uppsåtligen.
+R grovt
+- Gärningen har föregåtts av särskild planering.
+- Gärningen har utgjort ett led i en brottslighet som utövats i organiserad form.
+- Gärningen har varit av större omfattning.
+- Gärningen har annars varit av särskilt farlig art.
+T Ett bolag förökar under flera år utsäde av skyddade spannmålssorter i stor skala och säljer det planmässigt till lantbrukare utan licens.
+
+@ v21-vaxtforadlarratt-sortbenamning | Brott mot växtförädlarrättslagen (sortbenämning) | 9:11 | 9:11,4:2
+PEN 0 | 0 | Böter | Böter
+C Ekonomisk brottslighet
+A sortbenämning;fel sortnamn;utsäde under fel namn;växtsort namn
+Q plain
+G Gärningspersonen gör minst ett av:
+  | Bjuder ut förökningsmaterial av en registrerad växtsort till försäljning eller tillhandahåller det på annat sätt utan att använda den registrerade sortbenämningen. Detta gäller även när växtförädlarrätten har upphört.
+  | Använder en registrerad sortbenämning eller en förväxlingsbar benämning för en annan sort av samma eller närstående växtart, eller för material av en sådan sort, medan registreringen av benämningen består.
+S Uppsåt eller oaktsamhet.
+U Oaktsamheten är ringa.
+T En handlare säljer utsäde av en registrerad potatissort under ett eget påhittat sortnamn.
+
+LAW S2014-812 | Lagen (2014:812) om skydd för kännetecken i den internationella humanitära rätten | 2014:812 | Lagen om skydd för humanitära kännetecken
+X 3,4,5,6,7,8
+
+@ v21-otillaten-anvandning-humanitara-kannetecken | Otillåten användning av kännetecken i den internationella humanitära rätten | 9 § | 9,2
+PEN 0 | 0.5 | Böter eller fängelse i högst sex månader | B–F 6 mån
+C Allmän ordning
+A röda korset;rött kors på skylt;röda halvmånen;civilförsvarsmärke;genèvekorset;missbruk av rödakorsmärket
+Q plain
+O Ett skyddat kännetecken: rött kors, röd kristall, röd halvmåne eller rött lejon och röd sol mot vit bakgrund, benämningarna "röda korset", "Genèvekorset", "röda kristallen", "röda halvmånen" och "röda lejonet och solen", märket för civilförsvar (blå triangel mot orange bakgrund), märket för anläggningar med farliga krafter (tre orange cirklar) eller märket för kulturegendom (blåvit sköld). Detsamma gäller ett kännetecken som kan förväxlas med ett sådant.
+G Gärningspersonen gör i strid med lagen minst ett av:
+  | Använder kännetecknet för varor, tjänster eller verksamheter.
+  | Använder kännetecknet för utmärkning på skyltar, anslag eller liknande.
+  | Använder kännetecknet på annat sätt i näringsverksamhet.
+K Användningen är inte tillåten enligt lagen. Tillåten användning är förbehållen bland annat militär sjukvård och själavårdspersonal, rödakorsorganisationer och, efter tillstånd, civil sjukvård och andra.
+S Uppsåt till samtliga rekvisit. Lagen anger ingen skuldform. Utgångspunkten är då att uppsåt krävs.
+U Fallet är ringa.
+T Ett privat företag som säljer sjukvårdsmaterial sätter ett rött kors på vit botten på sina skyltar, bilar och förpackningar utan att ha rätt att använda märket.
+
+LAW S2018-1653 | Lagen (2018:1653) om företagsnamn | 2018:1653 | Lagen om företagsnamn
+X 1:1,1:2,1:5
+
+@ v21-foretagsnamnsbrott | Företagsnamnsbrott | 5:1 första stycket | 5:1,1:4
+PEN 0 | 2 | Böter eller fängelse i högst två år | B–F 2 år
+C Ekonomisk brottslighet
+A använda annans firmanamn;kopierat företagsnamn;förväxlingsbart bolagsnamn;firmaintrång
+Q villkor | Åklagaren får väcka åtal bara om åtal är motiverat från allmän synpunkt.
+ST FP | Lagen om företagsnamn 5:1 fjärde stycket
+O Ett näringskännetecken som någon annan har ensamrätt till, det vill säga ett företagsnamn eller ett annat kännetecken som en näringsidkare använder för sin verksamhet.
+G Gärningspersonen använder utan innehavarens tillstånd i näringsverksamhet ett tecken som är minst ett av:
+  | Identiskt med näringskännetecknet och använt för verksamhet av samma slag.
+  | Identiskt med eller likt näringskännetecknet och använt för verksamhet av samma eller liknande slag, så att det finns en risk för förväxling.
+  | Identiskt med eller likt ett näringskännetecken som är känt inom en betydande del av omsättningskretsen, när användningen utan skälig anledning drar otillbörlig fördel av eller skadar kännetecknets särskiljningsförmåga eller anseende.
+S Uppsåt eller grov oaktsamhet.
+U Intrånget omfattas av ett vitesförbud som gärningspersonen har överträtt.
+U Gärningspersonen använder i enlighet med god affärssed sitt personnamn, sin adress, uppgifter om verksamhetens eller varornas art eller ett allmänt använt ortsnamn.
+T En person startar en hantverksfirma under ett namn som är nästan identiskt med ett välkänt lokalt byggföretags namn för att locka över dess kunder.
+
+@ v21-foretagsnamnsbrott-grovt | Grovt företagsnamnsbrott | 5:1 andra stycket | 5:1
+PEN 0.5 | 6 | Fängelse i lägst sex månader och högst sex år | F 6 mån–6 år
+C Ekonomisk brottslighet
+A grovt företagsnamnsbrott;systematiskt utnyttjande av annans företagsnamn
+Q villkor | Åklagaren får väcka åtal bara om åtal är motiverat från allmän synpunkt.
+ST FP | Lagen om företagsnamn 5:1 fjärde stycket
+B v21-foretagsnamnsbrott
+S Brottet har begåtts uppsåtligen.
+R grovt
+- Gärningen har föregåtts av särskild planering.
+- Gärningen har utgjort ett led i en brottslighet som utövats i organiserad form.
+- Gärningen har varit av större omfattning.
+- Gärningen har annars varit av särskilt farlig art.
+T En organiserad grupp driver ett stort antal webbutiker under ett känt företags namn och tar emot betalningar från tusentals kunder.
+
+LAW S2018-1854 | Lagen (2018:1854) om den internationella fonden för farliga och skadliga ämnen | 2018:1854 | Lagen om den internationella fonden för farliga och skadliga ämnen
+X 7,8,9
+
+@ v21-hns-fonden-oriktig-uppgift | Brott mot lagen om den internationella fonden för farliga och skadliga ämnen | 10 § | 10,7
+PEN 0 | 0 | Böter | Böter
+C Ekonomisk brottslighet
+A farligt gods sjötransport;mottagen last;oriktig uppgift till Sjöfartsverket;gasolterminal;kemikalielast
+Q villkor | Allmänt åtal får väckas bara efter anmälan från Sjöfartsverket.
+K Gärningspersonen är skyldig att lämna Sjöfartsverket uppgift om hur mycket avgiftspliktig last av farliga och skadliga ämnen som har tagits emot i Sverige under ett kalenderår, till exempel olja, flytande petroleumgas, flytande naturgas eller fasta bulkvaror över vissa mängder, eller har uppmanats av Sjöfartsverket att lämna en sådan uppgift.
+G Gärningspersonen lämnar en oriktig uppgift när skyldigheten fullgörs.
+S Uppsåt eller oaktsamhet.
+U Gärningen är belagd med straff i brottsbalken.
+T Ett energibolag uppger för Sjöfartsverket att det har tagit emot 15 000 ton gasol under året trots att den verkliga mängden var mer än dubbelt så stor.
+
+LAW S2024-945 | Patentlagen (2024:945) | 2024:945 | Patentlagen
+X 3:2,3:4,15:2,15:3
+
+@ v21-patentbrott | Patentbrott | 15:1 första stycket | 15:1,3:1
+PEN 0 | 2 | Böter eller fängelse i högst två år | B–F 2 år
+C Ekonomisk brottslighet
+A patentintrång;kopierad uppfinning;piratkopierade läkemedel;patentskyddad produkt
+Q villkor | Åklagaren får väcka åtal bara om åtal är motiverat från allmän synpunkt.
+ST FP | Patentlagen 15:1 tredje stycket
+O En uppfinning som är skyddad av ett patent.
+G Gärningspersonen utnyttjar uppfinningen utan patenthavarens samtycke genom minst ett av:
+  | Tillverkar, bjuder ut, för ut på marknaden eller använder en patentskyddad produkt, eller för in eller innehar en sådan produkt för något av dessa ändamål.
+  | Använder ett patentskyddat förfarande.
+  | Bjuder ut, för ut på marknaden eller använder en produkt som har tillverkats enligt ett patentskyddat förfarande, eller för in eller innehar produkten för något av dessa ändamål.
+  | Erbjuder eller tillhandahåller någon som saknar rätt att utnyttja uppfinningen medel som avser något väsentligt i uppfinningen och som är lämpade och avsedda för att utöva den i Sverige.
+S Uppsåt eller grov oaktsamhet.
+U Intrånget omfattas av ett vitesförbud som gärningspersonen har överträtt.
+U Utnyttjandet sker inte yrkesmässigt.
+T Ett företag tillverkar och säljer en maskindel som är skyddad av en konkurrents patent, trots att företaget har fått ett varningsbrev om patentet.
+
+@ v21-patentbrott-grovt | Grovt patentbrott | 15:1 andra stycket | 15:1
+PEN 0.5 | 6 | Fängelse i lägst sex månader och högst sex år | F 6 mån–6 år
+C Ekonomisk brottslighet
+A grovt patentbrott;patentintrång i stor skala;kopierade läkemedel
+Q villkor | Åklagaren får väcka åtal bara om åtal är motiverat från allmän synpunkt.
+ST FP | Patentlagen 15:1 tredje stycket
+B v21-patentbrott
+S Brottet har begåtts uppsåtligen.
+R grovt
+- Gärningen har föregåtts av särskild planering.
+- Gärningen har utgjort ett led i en brottslighet som utövats i organiserad form.
+- Gärningen har varit av större omfattning.
+- Gärningen har annars varit av särskilt farlig art.
+T En grupp tillverkar i organiserad form stora mängder kopior av ett patentskyddat läkemedel och säljer dem som original.
+
+LAW S1932-242 | Lagen (1932:242) om skyldighet i vissa fall att tillhandahålla förnödenheter m.m. för ordningsmaktens behov | 1932:242 | Lagen om förnödenheter för ordningsmaktens behov
+X 2,3,4
+
+@ v21-fornodenheter-ordningsmakten-vagran | Brott mot lagen om skyldighet att tillhandahålla förnödenheter för ordningsmaktens behov | 5 § andra stycket | 5,1
+PEN 0 | 0 | Böter | Böter
+C Allmän ordning
+A vägra hjälpa polisen;rekvisition;polisen behöver lokal;förnödenheter till polisen;polisstyrka dras samman
+Q plain
+N Polisbefälet får låta ta ut det som har begärts om någon vägrar eller försummar att lämna det. Full ersättning ska betalas.
+K Polismyndigheten har, när polisstyrka dras samman för att upprätthålla ordningen, förordnat att ägare och innehavare av förnödenheter, transportmedel, rum för personal och annat som är absolut nödvändigt för polisverksamheten ska tillhandahålla det på begäran av polisbefäl. Förordnandet gäller för en viss ort och tid.
+G Gärningspersonen vägrar eller försummar att tillhandahålla det som ett behörigt polisbefäl har begärt.
+S Uppsåt till samtliga rekvisit. Lagen anger ingen skuldform. Utgångspunkten är då att uppsåt krävs.
+T Vid en stor polisinsats har Polismyndigheten förordnat om tillhandahållandeskyldighet på orten, och en bussägare vägrar trots polisbefälets begäran att ställa sina bussar till förfogande.
+
+LAW S1978-800 | Lagen (1978:800) om namn och bild i reklam | 1978:800 | Lagen om namn och bild i reklam
+
+@ v21-namn-och-bild-i-reklam | Brott mot lagen om namn och bild i reklam | 2 § | 2,1,5
+PEN 0 | 0 | Böter | Böter
+C Frid
+A bild i reklam utan samtycke;kändis i annons;namn i reklam;använda någons bild i marknadsföring
+Q villkor | Åklagare får väcka åtal bara om målsäganden anger brottet till åtal eller åtal är påkallat från allmän synpunkt.
+N Medverkan till brottet är straffbar enligt 23 kap. 4 och 5 §§ brottsbalken.
+K Gärningspersonen är näringsidkare, anställd hos en näringsidkare eller någon annan som handlar på en näringsidkares vägnar.
+G Gärningspersonen använder vid marknadsföring av en vara, tjänst eller annan nyttighet en framställning där någon annans namn eller bild utnyttjas utan dennes samtycke. Med namn jämställs en annan beteckning som klart pekar ut en viss person.
+S Uppsåt eller grov oaktsamhet.
+T Ett gym använder en bild på en känd idrottare i sin annonskampanj utan att ha frågat idrottaren om lov.
+
+LAW S1998-112 | Lagen (1998:112) om ansvar för elektroniska anslagstavlor | 1998:112 | BBS-lagen
+X 1,2,4
+
+@ v21-bbs-lagen-information | Brott mot lagen om ansvar för elektroniska anslagstavlor (information till användare) | 6 § | 6,3
+PEN 0 | 0 | Böter | Böter
+C Allmän ordning
+A internetforum;anonymt forum;kommentarsfält;vem driver sidan;BBS-lagen
+Q plain
+K Gärningspersonen tillhandahåller en elektronisk anslagstavla, det vill säga en tjänst för elektronisk förmedling av meddelanden, till exempel ett forum eller ett kommentarsfält.
+G Gärningspersonen informerar inte var och en som ansluter sig till tjänsten om sin identitet och om i vilken utsträckning inkomna meddelanden blir tillgängliga för andra användare.
+S Uppsåt eller oaktsamhet.
+U Tjänsten är undantagen från lagen, till exempel för att den skyddas av tryckfrihetsförordningen eller yttrandefrihetsgrundlagen eller bara avser e-post.
+T En person driver ett öppet diskussionsforum på nätet utan att någonstans tala om vem som står bakom tjänsten.
+
+@ v21-bbs-lagen-ta-bort-meddelande | Brott mot lagen om ansvar för elektroniska anslagstavlor (underlåtenhet att ta bort meddelande) | 7 § | 7,5
+PEN 0 | 0.5 | Böter eller fängelse i högst sex månader | B–F 6 mån
+C Allmän ordning
+A internetforum;ta bort inlägg;hets i kommentarsfält;moderator;barnpornografi på forum;BBS-lagen
+Q villkor | Om meddelandets innehåll utgör olaga integritetsintrång får åklagare väcka åtal bara om målsäganden anger brottet till åtal eller åtal är påkallat från allmän synpunkt. I övriga fall gäller inget åtalsvillkor.
+K Gärningspersonen tillhandahåller en elektronisk anslagstavla, till exempel ett forum eller ett kommentarsfält, eller har på tillhandahållarens uppdrag uppsikt över tjänsten.
+O Ett meddelande som en användare har sänt in och som uppfyller minst ett av:
+  | Innehållet är uppenbart olaga hot, olaga integritetsintrång, uppvigling, hets mot folkgrupp, barnpornografibrott eller olaga våldsskildring.
+  | Innehållet är uppenbart offentlig uppmaning till terrorism eller särskilt allvarlig brottslighet.
+  | Det är uppenbart att användaren har gjort intrång i upphovsrätt eller närstående rättigheter genom att sända in meddelandet.
+G Gärningspersonen tar inte bort meddelandet från tjänsten och förhindrar inte heller på annat sätt att det sprids vidare.
+S Uppsåt eller grov oaktsamhet.
+U Fallet är ringa.
+U Det kan dömas till ansvar för gärningen enligt brottsbalken, upphovsrättslagen eller terroristbrottslagen.
+T Ägaren till ett diskussionsforum får flera anmälningar om ett inlägg som uppenbart är hets mot folkgrupp men låter inlägget ligga kvar i veckor.
+
+@ v21-bbs-lagen-ta-bort-meddelande-grovt | Brott mot lagen om ansvar för elektroniska anslagstavlor, grovt brott | 7 § | 7
+PEN 0 | 2 | Fängelse i högst två år | F 2 år
+C Allmän ordning
+A grovt brott mot BBS-lagen;forum med barnpornografi;ta bort inlägg
+Q villkor | Om meddelandets innehåll utgör olaga integritetsintrång får åklagare väcka åtal bara om målsäganden anger brottet till åtal eller åtal är påkallat från allmän synpunkt. I övriga fall gäller inget åtalsvillkor.
+B v21-bbs-lagen-ta-bort-meddelande
+R grovt*
+- Underlåtenheten har avsett ett stort antal meddelanden eller pågått under lång tid.
+- Meddelandena har haft ett särskilt allvarligt innehåll eller fått stor spridning.
+- Underlåtenheten har varit systematisk.
+T Den som driver ett stort forum låter under lång tid medvetet hundratals uppenbart olagliga inlägg med hot och hets ligga kvar trots upprepade påpekanden.
+
+LAW S1991-1469 | Yttrandefrihetsgrundlagen (1991:1469) | 1991:1469 | YGL
+X 1:10,2:4,7:1
+
+@ v21-ygl-tystnadsplikt-kallskydd | Brott mot yttrandefrihetsgrundlagen (tystnadsplikt och felaktig uppgift om upphovsman) | 2:7 första stycket 1–2 | 2:7,2:3
+PEN 0 | 1 | Böter eller fängelse i högst ett år | B–F 1 år
+C Allmän verksamhet
+A källskydd;röja källa;avslöja uppgiftslämnare;journalist röjer källa;anonymitetsskydd
+Q villkor | Allmänt åtal får väckas bara om målsäganden har anmält brottet till åtal.
+N Justitiekanslern är ensam åklagare i mål om brott mot bestämmelser i yttrandefrihetsgrundlagen (YGL 7:1 och tryckfrihetsförordningen 9:3).
+## Brott mot tystnadsplikt
+K Gärningspersonen har tagit befattning med tillkomsten eller spridningen av en framställning som har utgjort eller varit avsedd att ingå i ett program eller en teknisk upptagning, eller har på annat sätt varit verksam inom ett företag som ger ut tekniska upptagningar eller sänder program eller på en nyhetsbyrå.
+G Gärningspersonen röjer vad han eller hon då har fått veta om vem som är upphovsman till framställningen, har tillhandahållit den för offentliggörande, har framträtt i den eller är meddelare.
+U Tystnadsplikten gäller inte, till exempel för att den som skyddas har samtyckt till att identiteten röjs eller för att en domstol har funnit att uppgiften måste lämnas.
+## Felaktig uppgift om upphovsman
+G Gärningspersonen lämnar i ett program eller en teknisk upptagning felaktiga uppgifter om vem som är framställningens upphovsman, vem som har tillhandahållit den för offentliggörande, vem som framträder i den eller vem som har lämnat uppgifter i den.
+## *
+S Uppsåt eller oaktsamhet.
+T En redaktör på ett tv-bolag berättar för en utomstående vem som var den anonyma källan till ett avslöjande reportage.
+
+@ v21-ygl-efterforskning-repressalier | Brott mot yttrandefrihetsgrundlagen (efterforskning och repressalier) | 2:7 första stycket 3–4 | 2:7,2:5,2:6
+PEN 0 | 1 | Böter eller fängelse i högst ett år | B–F 1 år
+C Allmän verksamhet
+A efterforskningsförbud;efterforska källa;repressalieförbud;meddelarfrihet;straffa visselblåsare;vem läckte
+Q plain
+N Justitiekanslern är ensam åklagare i mål om brott mot bestämmelser i yttrandefrihetsgrundlagen (YGL 7:1 och tryckfrihetsförordningen 9:3).
+K Gärningspersonen handlar för en myndighet eller ett annat allmänt organ.
+## Efterforskning
+G Gärningspersonen efterforskar vem som är upphovsman till en framställning som har offentliggjorts eller varit avsedd att offentliggöras i ett program eller en teknisk upptagning, vem som har framträtt i den, vem som har tillhandahållit eller avsett att tillhandahålla den för offentliggörande eller vem som har meddelat uppgifter för offentliggörande.
+U Efterforskningen behövs för åtal eller något annat ingripande mot personen som inte står i strid med yttrandefrihetsgrundlagen.
+## Repressalier
+G Gärningspersonen ingriper mot någon för att han eller hon i ett program eller en teknisk upptagning har brukat sin yttrandefrihet eller medverkat till ett sådant bruk.
+K Åtgärden utgör avskedande, uppsägning, meddelande av disciplinpåföljd eller en liknande åtgärd.
+## *
+S Uppsåt.
+T En kommunal förvaltningschef går igenom personalens telefonlistor och frågar ut de anställda för att ta reda på vem som har lämnat uppgifter till lokalradion.
+T En myndighetschef ger en anställd en varning för att den anställde har uttalat sig kritiskt om myndigheten i ett tv-inslag.
+
+@ v21-ygl-ursprungsuppgifter-teknisk-upptagning | Brott mot yttrandefrihetsgrundlagen (ursprungsuppgifter på teknisk upptagning) | 3:18 första stycket | 3:18,3:16
+PEN 0 | 1 | Böter eller fängelse i högst ett år | B–F 1 år
+C Allmän verksamhet
+A ursprungsuppgifter;dvd utan uppgift om framställare;cd-skiva utan uppgifter;teknisk upptagning
+Q plain
+N Den som bara sprider en teknisk upptagning som saknar föreskrivna uppgifter döms till penningböter (3:18 andra stycket). Justitiekanslern är ensam åklagare i mål om brott mot bestämmelser i yttrandefrihetsgrundlagen (YGL 7:1 och tryckfrihetsförordningen 9:3).
+K Gärningspersonen framställer en teknisk upptagning, till exempel en film eller ljudupptagning på skiva, vars exemplar framställs i Sverige och är avsedda för spridning här.
+G Gärningspersonen förser inte exemplaren med tydliga uppgifter om vem som har låtit framställa upptagningen och om när, var och av vem exemplaren har framställts.
+S Uppsåt eller oaktsamhet.
+T En organisation låter trycka upp tusentals dvd-skivor med propagandafilm för utdelning i Sverige utan någon uppgift om vem som har låtit framställa dem eller var de har framställts.
+
+@ v21-ygl-spridning-beslagtagen-upptagning | Brott mot yttrandefrihetsgrundlagen (spridning av beslagtagen upptagning) | 3:19 | 3:19
+PEN 0 | 1 | Böter eller fängelse i högst ett år | B–F 1 år
+C Allmän verksamhet
+A sprida beslagtagen film;konfiskerad upptagning;beslagtagen skiva
+Q plain
+N Justitiekanslern är ensam åklagare i mål om brott mot bestämmelser i yttrandefrihetsgrundlagen (YGL 7:1 och tryckfrihetsförordningen 9:3).
+O En teknisk upptagning som har tagits i beslag eller konfiskerats enligt yttrandefrihetsgrundlagen.
+G Gärningspersonen sprider upptagningen.
+S Uppsåt. Gärningspersonen ska ha vetskap om att upptagningen har tagits i beslag eller konfiskerats.
+T En person fortsätter att sälja exemplar av en film på skiva trots att han vet att upptagningen har konfiskerats av domstol.
+
+@ v21-ygl-ursprungsuppgifter-databas | Brott mot yttrandefrihetsgrundlagen (ursprungsuppgifter vid framställning ur databas) | 3:21 första stycket | 3:21,3:20
+PEN 0 | 1 | Böter eller fängelse i högst ett år | B–F 1 år
+C Allmän verksamhet
+A print on demand;utskrift ur databas;ursprungsuppgifter;databas med utgivningsbevis
+Q plain
+N Den som bara lämnar ut en sådan upptagning, skrift eller bild som saknar föreskrivna uppgifter döms till penningböter (3:21 andra stycket). Justitiekanslern är ensam åklagare i mål om brott mot bestämmelser i yttrandefrihetsgrundlagen (YGL 7:1 och tryckfrihetsförordningen 9:3).
+K Gärningspersonen driver en verksamhet där tekniska upptagningar, skrifter eller bilder framställs på särskild begäran ur en databas som omfattas av yttrandefrihetsgrundlagen.
+G Gärningspersonen ser inte till att upptagningen, skriften eller bilden har uppgift om databasens namn och om när, var och hur den har framställts.
+S Uppsåt eller oaktsamhet.
+T Ett medieföretag skriver på beställning ut artiklar ur sin databas och lämnar ut dem utan någon uppgift om databasens namn eller om när och var utskriften har gjorts.
+
+@ v21-ygl-utgivare-saknas | Brott mot yttrandefrihetsgrundlagen (utgivare saknas) | 4:7 första stycket | 4:7,4:1
+PEN 0 | 0 | Böter | Böter
+C Allmän verksamhet
+A ansvarig utgivare saknas;utgivare;radiosändning utan utgivare;webbsändning utan utgivare
+Q plain
+N Om omständigheterna är synnerligen försvårande är straffet fängelse i högst ett år. Den som låter bli att ange utgivaren på en teknisk upptagning döms till penningböter (4:7 andra stycket). Justitiekanslern är ensam åklagare i mål om brott mot bestämmelser i yttrandefrihetsgrundlagen (YGL 7:1 och tryckfrihetsförordningen 9:3).
+K Gärningspersonen bedriver sändningsverksamhet eller låter framställa en teknisk upptagning.
+G Gärningspersonen utser inte någon utgivare för programmen eller den tekniska upptagningen.
+S Uppsåt eller oaktsamhet.
+T En förening sänder närradio varje vecka utan att ha utsett någon utgivare för sändningarna.
+
+@ v21-ygl-utgivare-saknas-forsvarande | Brott mot yttrandefrihetsgrundlagen (utgivare saknas), synnerligen försvårande omständigheter | 4:7 första stycket | 4:7
+PEN 0 | 1 | Fängelse i högst ett år | F 1 år
+C Allmän verksamhet
+A ansvarig utgivare saknas;utgivare;synnerligen försvårande
+Q plain
+B v21-ygl-utgivare-saknas
+R grovt*
+- Omständigheterna är synnerligen försvårande. Lagen anger inte vilka omständigheter som avses.
+- Det kan till exempel vägas in att verksamheten har bedrivits utan utgivare i stor omfattning och under lång tid trots påpekanden.
+T Ett bolag sänder under flera år program till en stor publik och vägrar trots upprepade påpekanden från myndigheterna att utse en utgivare.
+
+LAW S2009-400 | Offentlighets- och sekretesslagen (2009:400) | 2009:400 | OSL
+X 13:1,2:3,2:4
+
+@ v21-osl-efterforskning-repressalier | Brott mot offentlighets- och sekretesslagen (efterforskning och repressalier i kommunala bolag m.m.) | 14:1 | 14:1,13:2
+PEN 0 | 1 | Böter eller fängelse i högst ett år | B–F 1 år
+C Allmän verksamhet
+A efterforskningsförbud;repressalieförbud;kommunalt bolag;meddelarfrihet;straffa visselblåsare;vem läckte
+Q plain
+K Gärningen begås i förhållandet mellan ett organ som jämställs med myndighet och organets anställda eller uppdragstagare. Sådana organ är aktiebolag, handelsbolag, ekonomiska föreningar och stiftelser där kommuner eller regioner har ett rättsligt bestämmande inflytande samt de organ som anges i bilagan till lagen, i den verksamhet som nämns där.
+K Skyddet gäller inte verkställande direktör, vice verkställande direktör, styrelseledamot eller styrelsesuppleant i organet.
+## Repressalier
+G Gärningspersonen ingriper mot någon för att han eller hon har brukat eller missbrukat tryckfriheten eller yttrandefriheten eller medverkat till det, i strid med det förbud som gäller enligt tryckfrihetsförordningen och yttrandefrihetsgrundlagen.
+K Åtgärden utgör avskedande, uppsägning, meddelande av disciplinpåföljd eller en liknande åtgärd.
+## Efterforskning
+G Gärningspersonen efterforskar i strid med förbudet vem som är upphovsman eller meddelare, vem som har gett ut eller avsett att ge ut en framställning i tryckt skrift, vem som har tillhandahållit eller avsett att tillhandahålla en framställning för offentliggörande i ett radioprogram eller en teknisk upptagning eller vem som har framträtt i en sådan framställning.
+## *
+S Uppsåt.
+T Vd:n för ett kommunalt bostadsbolag låter granska de anställdas mejl för att ta reda på vem som har tipsat lokaltidningen om missförhållanden i bolaget.
+T Chefen för ett kommunalt energibolag säger upp en anställd för att den anställde har låtit sig intervjuas i tidningen om bolagets ekonomi.
+
+LAW S2017-151 | Lagen (2017:151) om meddelarskydd i vissa enskilda verksamheter | 2017:151 | Meddelarskyddslagen
+X 1,2,3,5
+
+@ v21-meddelarskyddslagen-efterforskning-repressalier | Brott mot lagen om meddelarskydd i vissa enskilda verksamheter | 6 § | 6,4
+PEN 0 | 1 | Böter eller fängelse i högst ett år | B–F 1 år
+C Allmän verksamhet
+A meddelarskydd;friskola;privat vårdgivare;efterforska källa;straffa visselblåsare;privat äldreboende
+Q plain
+K Gärningen begås i förhållandet mellan en verksamhetsutövare och dem som deltar i verksamheten som anställda, uppdragstagare eller på liknande grund. Verksamheten är yrkesmässigt bedriven enskild verksamhet som till någon del är offentligt finansierad och som tillhör skolväsendet, hälso- och sjukvården, tandvården eller socialtjänstens område, till exempel en friskola, en privat vårdcentral eller ett privat äldreboende.
+## Repressalier
+G Gärningspersonen ingriper mot någon för att han eller hon har lämnat uppgifter om verksamheten för offentliggörande i medier som omfattas av tryckfrihetsförordningen eller yttrandefrihetsgrundlagen, eller på annat sätt har brukat eller missbrukat tryckfriheten eller yttrandefriheten eller medverkat till det.
+K Åtgärden utgör avskedande, uppsägning, meddelande av disciplinpåföljd eller en liknande åtgärd.
+## Efterforskning
+G Gärningspersonen efterforskar i strid med förbudet vem som är upphovsman eller meddelare, vem som har gett ut eller avsett att ge ut en framställning i tryckt skrift, vem som har tillhandahållit eller avsett att tillhandahålla en framställning för offentliggörande i ett radioprogram eller en teknisk upptagning eller vem som har framträtt i en sådan framställning.
+## *
+S Uppsåt.
+U Verksamheten är undantagen från lagen, till exempel kommunala bolag och andra organ som i stället omfattas av offentlighets- och sekretesslagen.
+T Rektorn på en friskola kallar lärarna en och en till möte för att få fram vem som har berättat för lokaltidningen om brister i skolans elevhälsa.
+T Chefen för ett privat äldreboende säger upp en undersköterska för att hon har berättat i tv om bemanningen på boendet.
+
+LAW S1984-3 | Lagen (1984:3) om kärnteknisk verksamhet | 1984:3 | Kärntekniklagen
+X 2,4,28,29
+
+@ v21-karnteknik-otillaten-verksamhet | Brott mot lagen om kärnteknisk verksamhet (otillåten verksamhet och säkerhetsbrister) | 25 § | 25,5,5a,7a,7b,7c,10
+PEN 0 | 2 | Böter eller fängelse i högst två år | B–F 2 år
+C Allmänfarliga
+A kärnämne;uran;kärnavfall;kärnkraftverk;radioaktivt material utan tillstånd;plutonium
+Q plain
+## Otillåten verksamhet
+G Gärningspersonen gör minst ett av:
+  | Bedriver kärnteknisk verksamhet utan tillstånd, till exempel förvärvar, innehar, överlåter, hanterar, transporterar eller för in kärnämne eller kärnavfall eller uppför, innehar eller driver en kärnteknisk anläggning.
+  | Slutförvarar eller mellanlagrar utan särskilt tillstånd utländskt kärnavfall eller kärnämne i Sverige, eller slutförvarar svenskt kärnavfall eller kärnämne utomlands.
+  | Anmäler inte forsknings- eller utvecklingsverksamhet som rör processer eller system för kärntekniska anläggningar, kärnämnen eller kärnavfall.
+  | Anmäler inte att han eller hon tillverkar, monterar eller på annat sätt framställer kärnteknisk utrustning, eller för in eller ut sådan utrustning.
+  | Åsidosätter villkor som har beslutats med stöd av lagen.
+  | Åsidosätter föreskrifter som regeringen har meddelat med stöd av lagen.
+S Uppsåt eller oaktsamhet.
+## Tillståndshavarens säkerhetsansvar
+K Gärningspersonen har tillstånd till kärnteknisk verksamhet.
+G Gärningspersonen låter bli minst ett av:
+  | Att fortlöpande och systematiskt värdera, verifiera och så långt det är möjligt och rimligt förbättra säkerheten i verksamheten.
+  | Att vidta de åtgärder som krävs för att förebygga fel, felaktigt handlande, sabotage och utsläpp av radioaktiva ämnen och för att förhindra olovlig befattning med kärnämne eller kärnavfall.
+  | Att vidta de åtgärder som behövs för att säkert hantera och slutförvara kärnavfall och kärnämne som har uppkommit i verksamheten.
+  | Att vidta de åtgärder som behövs för att säkert avveckla och riva anläggningar som inte längre ska användas.
+S Uppsåt eller grov oaktsamhet.
+## *
+U Gärningen är ringa.
+U Strängare straff för gärningen kan dömas ut enligt brottsbalken, eller ansvar kan dömas ut enligt lagen om straff för smuggling.
+U Ansvar för gärningen kan dömas ut enligt 57 § lagen om ansvar och ersättning vid radiologiska olyckor.
+U Gärningen omfattas av ett vitesföreläggande eller vitesförbud som har åsidosatts.
+T En person köper uranhaltigt kärnämne på nätet och förvarar det i sitt garage utan tillstånd.
+T Ett företag transporterar kärnavfall mellan två anläggningar utan att ha det tillstånd som krävs.
+
+@ v21-karnteknik-otillaten-verksamhet-grovt | Brott mot lagen om kärnteknisk verksamhet, grovt brott | 25 a § | 25a,25
+PEN 0.5 | 4 | Fängelse i lägst sex månader och högst fyra år | F 6 mån–4 år
+C Allmänfarliga
+A grovt brott kärnteknik;kärnämne;plutonium;kärnavfall;radioaktivt material
+Q plain
+B v21-karnteknik-otillaten-verksamhet
+S Brottet har begåtts med uppsåt.
+R grovt
+- Brottet har avsett en verksamhet, ett ämne eller en produkt av särskilt farligt slag.
+- Gärningen har annars varit av särskilt allvarlig art.
+T En person innehar och försöker sälja höganrikat uran utan tillstånd.
+
+@ v21-karnteknik-tillsyn | Brott mot lagen om kärnteknisk verksamhet (tillsyn och oriktiga uppgifter) | 27 § | 27,17,18,21
+PEN 0 | 0.5 | Böter eller fängelse i högst sex månader | B–F 6 mån
+C Allmänfarliga
+A vägra tillsyn;Strålsäkerhetsmyndigheten;oriktiga uppgifter kärnkraft;tillträde till anläggning;lokal säkerhetsnämnd
+Q plain
+## Inte fullgöra begäran eller beslut
+G Gärningspersonen fullgör inte minst ett av:
+  | Tillsynsmyndighetens begäran om upplysningar och handlingar som behövs för tillsynen.
+  | Tillsynsmyndighetens begäran om tillträde till en anläggning eller plats för undersökningar och provtagningar.
+  | Ett föreläggande som tillsynsmyndigheten har beslutat för att lagen, föreskrifter, villkor eller Euratoms kärnämneskontrollförordning ska följas.
+  | Den lokala säkerhetsnämndens begäran om upplysningar, handlingar eller tillträde till och förevisning av anläggningar.
+S Uppsåt till samtliga rekvisit. Lagen anger ingen skuldform. Utgångspunkten är då att uppsåt krävs.
+## Oriktiga uppgifter
+G Gärningspersonen lämnar tillsynsmyndigheten eller den lokala säkerhetsnämnden oriktiga uppgifter.
+S Uppsåt eller grov oaktsamhet.
+## *
+U Gärningen är ringa.
+U Strängare straff för gärningen kan dömas ut enligt brottsbalken, eller ansvar kan dömas ut enligt lagen om straff för smuggling.
+U Gärningen omfattas av ett vitesföreläggande eller vitesförbud som har åsidosatts.
+T En tillståndshavare vägrar släppa in tillsynsmyndighetens inspektörer på anläggningen när de ska göra provtagningar.
+T En driftchef lämnar medvetet felaktiga mätvärden till tillsynsmyndigheten för att dölja ett fel i anläggningen.
+
+@ v21-karnteknik-investeringsprojekt | Brott mot lagen om kärnteknisk verksamhet (anmälan av investeringsprojekt) | 27 a § | 27a
+PEN 0 | 0 | Böter | Böter
+C Allmänfarliga
+A investeringsprojekt kärnkraft;Euratom;anmälan till EU-kommissionen
+Q plain
+G Gärningspersonen bryter mot Euratomförordningen nr 2587/1999 om vilka investeringsprojekt som ska meddelas kommissionen genom minst ett av:
+  | Underrättar inte Europeiska kommissionen om ett investeringsprojekt på kärnenergiområdet som ska anmälas enligt förordningen.
+  | Lämnar oriktiga eller ofullständiga uppgifter när uppgifterna lämnas.
+S Uppsåt eller grov oaktsamhet.
+U Gärningen är ringa.
+U Strängare straff för gärningen kan dömas ut enligt brottsbalken.
+T Ett bolag påbörjar ett stort investeringsprojekt i en ny anläggning för kärnbränsle utan att underrätta Europeiska kommissionen.
+
+LAW S1992-1140 | Lagen (1992:1140) om Sveriges ekonomiska zon | 1992:1140 | Lagen om Sveriges ekonomiska zon
+X 5a,15,17
+
+@ v21-ekonomiska-zonen | Brott mot lagen om Sveriges ekonomiska zon | 16 § | 16,2,5,7,9,14
+PEN 0 | 0 | Böter | Böter
+C Djur och natur
+A ekonomiska zonen;vindkraft till havs;säkerhetszon;havsforskning utan tillstånd;utvinning till havs
+Q plain
+N Svensk domstol är behörig att döma över brottet även om det inte finns domsrätt enligt 2 kap. 3 § brottsbalken. Åtal får väckas vid den tingsrätt vars domkrets är närmast den plats där brottet begicks.
+P Sveriges ekonomiska zon.
+G Gärningspersonen gör minst ett av:
+  | Följer inte en föreskrift som har meddelats för att skydda och bevara den marina miljön.
+  | Följer inte en föreskrift om säkerhetszon runt en konstgjord ö, anläggning eller annan inrättning.
+  | Utforskar, utvinner eller utnyttjar på annat sätt naturtillgångar utan tillstånd.
+  | Uppför eller använder en konstgjord ö utan tillstånd, eller uppför eller använder i kommersiellt syfte en anläggning eller annan inrättning utan tillstånd.
+  | Bedriver som utländsk medborgare marinvetenskaplig forskning utan tillstånd.
+  | Åsidosätter ett villkor som har meddelats för ett sådant tillstånd.
+  | Fortsätter en verksamhet efter att tillsynsmyndigheten har förbjudit den.
+S Uppsåt eller oaktsamhet.
+T Ett utländskt forskningsfartyg tar bottenprover i Sveriges ekonomiska zon utan att ha tillstånd till marinvetenskaplig forskning.
+T Ett fartyg går in i säkerhetszonen runt en vindkraftsanläggning till havs i strid med föreskrifterna.
+
+LAW S1998-1707 | Lagen (1998:1707) om åtgärder mot buller och avgaser från mobila maskiner | 1998:1707 | Lagen om buller och avgaser från mobila maskiner
+X 1,6
+
+@ v21-mobila-maskiner-saluforing | Brott mot lagen om åtgärder mot buller och avgaser från mobila maskiner (saluföring) | 13 § | 13,4
+PEN 0 | 0.5 | Böter eller fängelse i högst sex månader | B–F 6 mån
+C Djur och natur
+A sälja maskiner utan typgodkännande;avgaskrav traktor;motorredskap;entreprenadmaskin;gräsklippare avgaser
+Q plain
+O Mobila maskiner eller motorer till dem. Mobila maskiner är traktorer, motorredskap, terrängmotorfordon, spårfordon, industriella maskiner och andra anordningar med förbränningsmotor som kan röra sig eller flyttas på marken, men inte motorfordon.
+G Gärningspersonen saluför yrkesmässigt maskinerna eller motorerna i strid med föreskrifter om minst ett av:
+  | Begränsning av buller och av utsläpp av avgaser och andra föroreningar.
+  | Motorers utrustning, hållbarhet, funktion, installation eller beskaffenhet i övrigt.
+  | Krav på EU-typgodkännande.
+  | Krav på försäkran om överensstämmelse.
+  | Krav på märkning.
+S Uppsåt eller oaktsamhet.
+U Motorerna är EU-typgodkända i en annan stat.
+T En maskinhandlare importerar och säljer minigrävare vars motorer saknar EU-typgodkännande och inte klarar avgaskraven.
+
+@ v21-mobila-maskiner-falsk-markning | Brott mot lagen om åtgärder mot buller och avgaser från mobila maskiner (oriktig märkning) | 14 § | 14
+PEN 0 | 0.5 | Böter eller fängelse i högst sex månader | B–F 6 mån
+C Djur och natur
+A falsk typgodkännandemärkning;typgodkännande motor;märkning motor;falsk märkskylt
+Q plain
+O En motor till en mobil maskin.
+G Gärningspersonen förser motorn med ett märke om att den överensstämmer med ett EU-typgodkännande trots att den inte gör det.
+S Uppsåt eller grov oaktsamhet.
+T En importör sätter typgodkännandeskyltar på motorer som aldrig har godkänts.
+
+@ v21-mobila-maskiner-manipulerad-avgasrening | Brott mot lagen om åtgärder mot buller och avgaser från mobila maskiner (ingrepp i avgasrening) | 15 § | 15
+PEN 0 | 0.5 | Böter eller fängelse i högst sex månader | B–F 6 mån
+C Djur och natur
+A manipulerad avgasrening;adblue-emulator;ta bort partikelfilter;chiptrimma traktor;avgasrening bortkopplad
+Q plain
+O En EU-typgodkänd motor till en mobil maskin.
+G Gärningspersonen ändrar eller gör ingrepp i utrustning som reglerar avgaser så att motorn inte längre uppfyller kraven för det typgodkända utförandet.
+S Uppsåt eller grov oaktsamhet.
+T En verkstad kopplar bort avgasreningen och monterar en emulator på en hjullastare så att motorn inte längre uppfyller kraven för typgodkännandet.
+
+LAW S1998-811 | Lagen (1998:811) om införande av miljöbalken | 1998:811 | Lagen om införande av miljöbalken
+
+@ v21-mb-inforande-villkor-aldre-dispens | Brott mot lagen om införande av miljöbalken (villkor för äldre dispens) | 5 § andra stycket | 5
+PEN 0 | 2 | Böter eller fängelse i högst två år | B–F 2 år
+C Djur och natur
+A äldre miljötillstånd;dispens miljöskyddslagen;villkor för utsläpp;gammal fabrik utsläpp
+Q plain
+O Ett villkor för en dispens från skyldigheten att söka tillstånd enligt miljöskyddslagen (1969:387) i dess lydelse före den 1 juli 1981. Villkoren gäller fortfarande till dess något annat bestäms.
+G Gärningspersonen bryter mot villkoret.
+S Uppsåt eller oaktsamhet.
+T Ett äldre industriföretag som driver sin verksamhet med stöd av en dispens från 1970-talet släpper ut mer förorenat vatten än dispensens villkor tillåter.
+
+@ v21-mb-inforande-villkor-lagligforklaring | Brott mot lagen om införande av miljöbalken (villkor i lagligförklaring) | 17 § femte stycket | 17
+PEN 0 | 2 | Böter eller fängelse i högst två år | B–F 2 år
+C Djur och natur
+A damm;vattenanläggning;lagligförklaring;gammal kraftverksdamm;villkor för damm
+Q plain
+O Ett villkor som mark- och miljödomstolen har förenat med en lagligförklaring av en vattenanläggning som har kommit till utan tillstånd enligt vattenlagen eller äldre lagstiftning.
+G Gärningspersonen bryter mot villkoret.
+S Uppsåt eller oaktsamhet.
+U Gärningen är ringa, det vill säga framstår som obetydlig med hänsyn till det intresse som straffbestämmelsen ska skydda.
+T Ägaren till en gammal kvarndamm som har lagligförklarats håller vattennivån betydligt högre än vad villkoren i lagligförklaringen tillåter.

@@ -47,7 +47,7 @@ G Genom minst ett av:
   | Olaga tvång.
   | Utnyttjande av personens utsatta belägenhet.
   | Vilseledande om att ett äktenskap ingås eller om förutsättningarna för att upplösa det.
-O Äktenskapet är giltigt i den stat där det ingås, enligt vars lag det ingås, eller där någon av makarna är medborgare eller har hemvist. Förbindelsen innebär enligt gruppens regler att parterna ses som makar.
+O Äktenskapet är giltigt i den stat där det ingås, enligt vars lag det ingås, eller där någon av makarna är medborgare eller har hemvist. Förbindelsen ingås enligt regler som gäller inom en grupp och som innebär att parterna ses som makar med rättigheter eller skyldigheter mot varandra, och som även reglerar hur förbindelsen upplöses.
 S Uppsåt till samtliga rekvisit.
 U Gärningen är människohandel.
 

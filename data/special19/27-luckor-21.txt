@@ -1,0 +1,74 @@
+LAW BrB | Brottsbalken | 1962:700 | BrB
+
+@ v21-forgripelse-mot-konungen | Brott mot Konungen eller konungahuset (straffskärpning) | 18:2 | 18:2
+PEN 0 | 6 | Fängelse i högst fyra eller sex år | F 4 eller 6 år
+C Rikets säkerhet
+A brott mot kungen;kungahuset;majestätsbrott;misshandel av kungen;förgripelse mot konungen
+Q plain
+N Bestämmelsen är en straffskärpningsregel. Brottet rubriceras som grundbrottet, till exempel misshandel eller olaga hot, med hänvisning till BrB 18:2.
+N Fängelse i högst fyra år om grundbrottet annars kan ge fängelse i högst sex månader. Fängelse i högst sex år om grundbrottet annars kan ge fängelse i mer än sex månader men högst fyra år.
+G Gärningspersonen begår ett brott enligt 3, 4 eller 5 kap. brottsbalken, till exempel misshandel, olaga hot, ofredande eller förtal.
+O Gärningen innebär en förgripelse mot Konungen, en annan medlem av konungahuset eller den som som riksföreståndare fullgör statschefens uppgifter.
+S Uppsåt till samtliga rekvisit, även till vem gärningen riktas mot. Lagen anger ingen skuldform. Utgångspunkten är då att uppsåt krävs.
+T En person kastar en tårta i ansiktet på en medlem av kungahuset vid ett officiellt besök.
+
+@ v21-krankning-av-frammande-makt | Brott mot främmande makts statsöverhuvud eller representation (straffskärpning) | 19:11 | 19:11
+PEN 0 | 4 | Fängelse i högst två eller fyra år | F 2 eller 4 år
+C Rikets säkerhet
+A ambassad intrång;angrepp på ambassadör;statsbesök;skadegörelse ambassad;diplomat
+Q plain
+N Bestämmelsen är en straffskärpningsregel. Brottet rubriceras som grundbrottet med hänvisning till BrB 19:11.
+N Fängelse i högst två år om grundbrottet annars kan ge fängelse i högst sex månader. Fängelse i högst fyra år om grundbrottet annars kan ge fängelse i mer än sex månader men högst två år.
+G Gärningspersonen gör minst ett av:
+  | Begår ett brott enligt 3 eller 4 kap. brottsbalken som innebär en förgripelse mot en främmande makts statsöverhuvud eller representant i Sverige.
+  | Gör intrång i en lokal som den främmande maktens representation innehar.
+  | Skadar lokalen eller egendom som finns där.
+F Gärningen kränker den främmande makten.
+S Uppsåt till samtliga rekvisit. Lagen anger ingen skuldform. Utgångspunkten är då att uppsåt krävs.
+T En person klättrar över staketet till en ambassad och slår sönder fönster i protest mot landets regering.
+
+@ v21-oaktsam-medverkan-brott-mot-rikets-sakerhet | Oaktsam medverkan till högförräderi, spioneri och liknande brott | 19:15 | 19:15
+PEN 0 | 2 | Fängelse i högst två år | F 2 år
+C Rikets säkerhet
+A oaktsam medhjälp spioneri;borde ha insett spioneri
+Q plain
+N Gärningspersonen döms för medhjälp till brottet. Straffet får inte överstiga fängelse i två år.
+O Högförräderi, trolöshet vid förhandling med främmande makt, spioneri, grovt spioneri, utlandsspioneri, grovt utlandsspioneri eller grov obehörig befattning med hemlig uppgift är förestående eller pågår.
+G Gärningspersonen medverkar till gärningen.
+S Oaktsamhet. Gärningspersonen borde ha insett att brottet var förestående eller pågick, på grund av vad han eller hon kände till, en varning eller någon annan anledning.
+T En anställd lämnar på begäran ut ritningar över en försvarsanläggning till en bekant, trots att en kollega har varnat för att den bekante arbetar för en främmande underrättelsetjänst.
+
+LAW TSL | Lagen (1990:1157) om säkerhet vid tunnelbana och spårväg | 1990:1157 | Tunnelbanelagen
+
+@ v21-tunnelbana-olycksrapportering | Brott mot lagen om säkerhet vid tunnelbana och spårväg (olycksrapportering) | 31 § | 24,31
+PEN 0 | 0 | Böter | Böter
+C Trafik
+A spårvagnsolycka rapport;tunnelbaneolycka rapportering
+Q plain
+K Gärningspersonen driver verksamhet med tunnelbana eller spårväg.
+G Gärningspersonen rapporterar inte till tillsynsmyndigheten minst ett av:
+  | En olycka där minst en person har avlidit eller minst fem har skadats allvarligt.
+  | En olycka med omfattande skador på fordonet, spåranläggningen, annan egendom eller miljön.
+  | En allvarlig fara för en sådan olycka, eller en händelse som tyder på ett väsentligt fel eller en väsentlig säkerhetsbrist.
+S Uppsåt till samtliga rekvisit. Lagen anger ingen skuldform. Utgångspunkten är då att uppsåt krävs.
+T Ett spårvägsbolag anmäler inte till Transportstyrelsen att två spårvagnar har varit nära att kollidera på grund av ett växelfel.
+
+LAW LBE | Lagen (2010:1011) om brandfarliga och explosiva varor | 2010:1011 | LBE
+X 9,11,15,24
+
+@ v21-lbe-hanteringskrav | Brott mot lagen om brandfarliga och explosiva varor (hanteringskrav och oriktiga uppgifter) | 28 § andra stycket | 9,11,15,24,28
+PEN 0 | 0 | Böter | Böter
+C Vapen och explosiva varor
+A föreståndare brandfarlig vara;samförvaring gasol;överlåta fyrverkerier;explosiva varor till obehörig
+Q plain
+G Gärningspersonen gör minst ett av:
+  | Bedriver tillståndspliktig verksamhet utan riskutredning, tillräcklig kompetens eller utsedd föreståndare.
+  | Hanterar varorna i byggnader, anläggningar eller anordningar som inte är betryggande inrättade.
+  | Förvarar eller förpackar olika brandfarliga eller explosiva varor tillsammans så att risken ökar.
+  | Släpper ut explosiva varor på marknaden utan godkännande, eller lämnar inte föreskriven märkning och information.
+  | Överlåter eller överlämnar explosiva varor till någon som inte har rätt att hantera dem.
+  | Lämnar oriktig uppgift i en ansökan eller annan handling enligt lagen.
+  | Lämnar inte tillsynsmyndigheten de upplysningar och handlingar som den begär.
+S Uppsåt eller oaktsamhet.
+U Gärningen ger straff enligt första stycket (brott mot aktsamhetskravet med uppsåt eller grov oaktsamhet).
+T En butik säljer sprängkapslar till en kund utan att kontrollera att kunden har tillstånd att hantera explosiva varor.
