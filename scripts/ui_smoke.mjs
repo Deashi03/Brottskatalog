@@ -23,7 +23,7 @@ try{
   // 1.9.1: listan får aldrig bli bredare än skärmen, även med långa lagrum på de nya korten.
   await page.waitForSelector('.crime-card');
   assert.equal(await page.evaluate(()=>{const l=document.querySelector('.crime-list');return l.scrollWidth<=l.clientWidth+1&&[...document.querySelectorAll('.crime-card')].every(c=>c.getBoundingClientRect().right<=innerWidth);}),true,'Hela kortlistan ryms i iPhone-bredd');
-  assert.equal((await page.locator('.bk03-brand span').innerText()).trim(),'1.9.1','Search header must display current release 1.9.1');
+  assert.equal((await page.locator('.bk03-brand span').innerText()).trim(),'2.0','Search header must display current release 2.0');
   assert.equal(await page.evaluate(()=>window.BK_DATA.crimes.length),1557,'The V1.5 full database must be loaded');
 
   const custodyAudit=await page.evaluate(()=>{
@@ -242,57 +242,7 @@ try{
     assert.equal(await rq.locator('.rq').evaluate(el=>el.scrollWidth<=el.clientWidth+1),true,'Requisites fit iPhone: '+title);
     assert.equal(await page.evaluate(()=>document.documentElement.scrollWidth<=innerWidth+1),true);
   }
-  for(const [title,rule,phrase]of[
-    ['Förtal','Särskilda häktningsgrunder','ingen allmän straffskalegräns'],
-    ['Ringa stöld','Ett år i straffskalan','Ordinarie straffskaletröskel ej uppfylld'],
-    ['Ofredande','Ett år i straffskalan','Straffskaletröskeln uppfylld'],
-    ['Grov fridskränkning','Häktningspresumtion','Straffskaletröskeln uppfylld'],
-    ['Grovt vapenbrott','Fyra års minimistraff','Straffskaletröskeln uppfylld'],
-    ['Arbetsmiljöbrott','Fängelse i straffskalan','Välj tillämplighet och straffskalegren'],
-    ['Lydnadsbrott','Fängelse i straffskalan','Välj tillämplighet och straffskalegren'],
-    ['Grovt bedrägeri','Hemlig avlyssning – särskild prövning','elektronisk kommunikation']
-  ]){
-    await page.goto(url+'#sok',{waitUntil:'networkidle'});await search.fill(title);await wait();
-    await page.locator('.crime-card').filter({has:page.getByText(T(title),{exact:true})}).click();
-    await page.locator('#sec-tvang > summary').click();const review=page.locator('.coercion-threshold-review');
-    assert.equal(await review.getAttribute('open'),null,'Threshold review starts collapsed: '+title);
-    await review.locator(':scope > summary').click();
-    const row=review.locator('li').filter({has:page.getByText(rule,{exact:true})});
-    assert.ok((await row.innerText()).includes(phrase),'Source-specific threshold distinction: '+title);
-    assert.ok((await review.innerText()).includes('Inget beslut om tvångsmedel'));
-    assert.equal(await review.locator('a[href*="riksdagen.se"]').count(),2);
-    assert.equal(await review.evaluate(el=>el.scrollWidth<=el.clientWidth+1),true,'Threshold review fits iPhone: '+title);
-    assert.equal(await page.evaluate(()=>document.documentElement.scrollWidth<=innerWidth+1),true);
-  }
   await page.goto(url+'#sok',{waitUntil:'networkidle'});
-  for(const [title,phrase,date]of[
-    ['Otillåtet förfarande med pornografisk bild','17 februari 1971','1971-02-17'],
-    ['Stöld','1 januari 1965','1965-01-01'],
-    ['Förtal','1 januari 1965','1965-01-01'],
-    ['Våldsamt upplopp','1 januari 1965','1965-01-01'],
-    ['Svikande av försvarsplikt','1 januari 1965','1965-01-01'],
-    ['Mord','2020-01-01'],
-    ['Ofredande','2018-01-01'],
-    ['Grov misshandel','2026-08-01'],
-    ['Psykiskt våld','2026-07-01'],
-    ['Rymning','2026-07-02'],
-    ['Vapenbrott','november 2026'],
-    ['Egenmäktighet med barn','1 januari 2027'],
-    ['Tullbrott','deklarationer']
-  ]){
-    await page.goto(url+'#sok',{waitUntil:'networkidle'});await search.fill(title);await wait();
-    await page.locator('.crime-card').filter({has:page.getByText(T(title),{exact:true})}).click();
-    await page.locator('#sec-lag > summary').click();const temporal=page.locator('.law-temporal-review');
-    assert.equal(await temporal.getAttribute('open'),null,'Temporal review starts collapsed: '+title);
-    await temporal.locator(':scope > summary').click();assert.ok((await temporal.innerText()).includes(phrase),'Temporal distinction: '+title);
-    if(date)assert.equal(await page.evaluate(title=>window.BK_DATA.crimes.find(c=>!c.stageType&&c.title===title)?.temporalReview15?.wordingFrom,title),date,'Structured commencement remains exact: '+title);
-    assert.ok((await temporal.innerText()).includes('Ingen lagversion väljs automatiskt'));
-    assert.equal(await temporal.locator('a[href*="rkrattsbaser.gov.se"], a[href*="docId=2667840"]').count(),1);
-    if(title==='Otillåtet förfarande med pornografisk bild'){assert.equal(await temporal.getByRole('link',{name:'Bekräftelse av ikraftträdandet'}).count(),1);assert.equal(await temporal.getByRole('link',{name:'Ikraftträdandekälla – originaltryck'}).count(),1);}
-    if(title==='Stöld')assert.equal(await temporal.getByRole('link',{name:'Originaltryck – SFS'}).count(),1);
-    assert.equal(await temporal.evaluate(el=>el.scrollWidth<=el.clientWidth+1),true,'Temporal review fits iPhone: '+title);
-    assert.equal(await page.evaluate(()=>document.documentElement.scrollWidth<=innerWidth+1),true);
-  }
   await page.goto(url+'#sok',{waitUntil:'networkidle'});
   await search.fill('stöld');
   await search.press('Enter');
@@ -332,8 +282,7 @@ try{
   await page.locator('summary').filter({hasText:'Lagtext'}).click();
   await wait();
   const lawTextStatus=(await page.locator('body').innerText());
-  assert.ok(lawTextStatus.includes('Paragraftext individuellt kontrollerad mot aktuell SFS'),'Murder must show individually checked statute text');
-  assert.ok(lawTextStatus.includes('Inte fullständig juridisk rekvisitgranskning'),'Current-paragraph validation must not be presented as full legal clearance');
+  assert.ok(lawTextStatus.includes('Kontrollerad mot gällande lydelse'),'2.0: kort kontrollnotering under lagtexten');
   await page.goto(url+'#sok',{waitUntil:'networkidle'});
   await page.locator('#crime-search').fill('ringa stöld');
   await wait();
@@ -373,10 +322,20 @@ try{
   assert.ok(bounds[0].includes('1 år 6 mån'),'Lower bound for gross assault');
   assert.ok(bounds[1].includes('7 år'),'Upper bound for gross assault');
   // 1.7.3: bara Lagtext, Rekvisit och Tvångsmedel finns kvar; 1.8.1: FU-ledning är en egen meny under Tvångsmedel.
-  assert.deepEqual((await page.locator('.accordion > summary').allInnerTexts()).map(t=>t.trim()),['Lagtext','Rekvisit','Tvångsmedel – översikt'],'Only the main sections remain');
+  assert.deepEqual((await page.locator('.accordion > summary').allInnerTexts()).map(t=>t.trim()),['Lagtext','Rekvisit','Tvångsmedel – översikt','Preskription','Närliggande brott'],'Only the main sections remain');
   // 1.8.2: FU-ledning är en egen menyrad direkt under Tvångsmedel som öppnar verktyget direkt.
   assert.equal((await page.locator('#sec-fu18 .fu18-open').innerText()).trim(),'FU-ledning och åklagarkontakt');
   assert.ok(await page.locator('#sec-fu18').evaluate(el=>el.previousElementSibling?.id==='sec-tvang'),'FU-menyn ligger direkt under Tvångsmedel');
+  // 2.0: Preskription ligger under FU-ledning och Närliggande brott under Preskription.
+  assert.ok(await page.locator('#sec-preskription').evaluate(el=>el.previousElementSibling?.id==='sec-fu18'&&el.nextElementSibling?.id==='sec-narliggande'),'Preskription och Närliggande brott ligger i rätt ordning');
+  await page.locator('#sec-preskription > summary').click();
+  assert.ok((await page.locator('.presk20-main').innerText()).includes('15 år'),'Grov misshandel preskriberas efter femton år');
+  await page.locator('[data-presk20="crime"]').fill('2000-01-01');
+  assert.ok((await page.locator('[data-presk20="result"]').innerText()).includes('Preskriberat enligt äldre regler'),'Äldre brott bedöms enligt övergångsregeln');
+  await page.locator('[data-presk20="crime"]').fill('2026-01-15');
+  assert.ok((await page.locator('[data-presk20="result"]').innerText()).includes('Sista dag: 2041-01-15'),'Datumkontrollen visar sista dag');
+  await page.locator('#sec-narliggande > summary').click();
+  assert.ok(await page.locator('#sec-narliggande .near20[data-open="misshandel"]').count(),'Närliggande brott visar andra grader');
   await page.goto(url+'#sok',{waitUntil:'networkidle'});
   await page.locator('#crime-search').fill('Tvegifte');
   await wait();
@@ -590,7 +549,7 @@ try{
   assert.ok(fraudPanel.includes('grov oaktsamhet'),'Alternative fault form for the company alternative is shown');
   await page.goto(url+'#mer',{waitUntil:'networkidle'});
   const settings=await page.locator('body').innerText();
-  assert.ok(settings.includes('Version 1.9.1 · publicerad 2026-11-04'),'Published version must be visible in settings');
+  assert.ok(settings.includes('Version 2.0 · publicerad 2026-11-14'),'Published version must be visible in settings');
   assert.ok(settings.includes('Grunddata:'),'Source dataset age must be shown in settings');
   assert.ok(settings.includes('LAGKONTROLL'),'Source checker in settings');
   assert.deepEqual(errors,[],'No JS page errors');

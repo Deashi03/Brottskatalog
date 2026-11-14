@@ -16,7 +16,7 @@ R grovt
 
 @ v15-olaga-frihetsberovande-mindre-grovt | Olaga frihetsberövande (mindre grovt fall) | BrB 4:2
 B v03-olaga-frihetsberovande
-R mindre
+R mindre*
 - Hur länge frihetsberövandet varade, till exempel en kort stund.
 - Hur det gick till och övriga omständigheter.
 
@@ -31,7 +31,7 @@ S Uppsåt till gärningen och till att barnet bevittnar den.
 
 @ v05-ringa-barnfridsbrott | Ringa barnfridsbrott | BrB 4:3
 B v05-barnfridsbrott
-R ringa
+R ringa*
 - Den bevittnade gärningen har varit av lindrig art, till exempel ringa skadegörelse.
 - Övriga omständigheter, till exempel hur barnet uppfattade gärningen.
 

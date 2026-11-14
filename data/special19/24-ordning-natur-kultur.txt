@@ -1,0 +1,231 @@
+LAW BevL | Lagen (1974:191) om bevakningsföretag | 1974:191 | Bevakningsföretagslagen
+X 1
+
+@ v20-bevakningsforetag-utan-auktorisation | Brott mot lagen om bevakningsföretag | 14 § | 1,14
+PEN 0 | 0.5 | Böter eller fängelse i högst sex månader | B–F 6 mån
+C Allmän ordning
+A väktare utan auktorisation;bevakningsföretag;svartväktare;oauktoriserad bevakning
+Q plain
+G Gärningspersonen gör minst ett av:
+  | Bedriver bevakningsverksamhet yrkesmässigt för någon annans räkning utan auktorisation.
+  | Lämnar osann uppgift i en ansökan om auktorisation eller godkännande eller vid tillsyn.
+S Uppsåt eller oaktsamhet.
+T Ett företag hyr ut vakter som bevakar byggarbetsplatser nattetid utan att företaget är auktoriserat.
+
+LAW OvL | Lagen (2023:421) om ordningsvakter | 2023:421 | Ordningsvaktslagen
+X 3,6
+
+@ v20-ordningsvakter-utan-tillstand | Brott mot lagen om ordningsvakter | 18 § | 3,6,18
+PEN 0 | 0.5 | Böter eller fängelse i högst sex månader | B–F 6 mån
+C Allmän ordning
+A ordningsvakt utan tillstånd;använda ordningsvakter;villkor ordningsvakter
+Q plain
+G Gärningspersonen gör minst ett av:
+  | Använder ordningsvakter utan att det finns tillstånd eller stöd i författning.
+  | Bryter mot ett villkor i tillståndet att använda ordningsvakter.
+S Uppsåt eller oaktsamhet.
+U Fallet är ringa. Då är gärningen inte brott.
+T En arrangör låter ordningsvakter tjänstgöra på en plats som tillståndet inte omfattar.
+
+LAW LarmL | Lagen (1983:1097) med vissa bestämmelser om larmanläggningar m.m. | 1983:1097 | Larmlagen
+X 2,4
+
+@ v20-larminstallation-utan-tillstand | Brott mot lagen om larmanläggningar | 11 § | 2,4,11
+PEN 0 | 0.5 | Böter eller fängelse i högst sex månader | B–F 6 mån
+C Allmän ordning
+A larminstallatör utan tillstånd;installera larm;larmfirma
+Q plain
+G Gärningspersonen gör minst ett av:
+  | Bedriver larminstallationsverksamhet utan tillstånd.
+  | Bedriver, som bevakningsföretag, larminstallationsverksamhet trots förbud.
+S Uppsåt till samtliga rekvisit. Lagen anger ingen skuldform. Utgångspunkten är då att uppsåt krävs.
+T En firma installerar inbrottslarm hos kunder yrkesmässigt utan tillstånd från Polismyndigheten.
+
+LAW BegL | Lagen (1999:271) om handel med begagnade varor | 1999:271 | Begagnatlagen
+X 5,7,8
+
+@ v20-handel-begagnade-varor | Brott mot lagen om handel med begagnade varor | 14 § | 5,14
+PEN 0 | 0.5 | Böter eller fängelse i högst sex månader | B–F 6 mån
+C Förmögenhet
+A begagnathandel;pantbank;guldhandlare;oregistrerad handel;skrothandel;köpa stöldgods
+Q plain
+K Gärningen sker i yrkesmässig handel med begagnade varor som lagen omfattar.
+G Gärningspersonen gör minst ett av:
+  | Driver handeln utan att vara registrerad hos Polismyndigheten.
+  | För inte anteckningar om mottagna varor eller visar inte upp dem för Polismyndigheten på begäran.
+  | Lämnar oriktig uppgift i anteckningarna.
+S Uppsåt eller oaktsamhet.
+U Överträdelsen är ringa.
+U Gärningen kan ge straff enligt brottsbalken, till exempel häleri.
+T En guldhandlare köper smycken av privatpersoner utan att vara registrerad och utan att anteckna vem som har sålt dem.
+
+@ v20-handel-begagnade-varor-mottagande | Brott mot lagen om handel med begagnade varor (mottagande och utlämnande) | 15 § | 7,8,15
+PEN 0 | 0 | Böter | Böter
+C Förmögenhet
+A begagnade varor utan legitimation;köpa av minderårig;enmånadsregeln
+Q plain
+K Gärningspersonen är handlare enligt lagen.
+G Gärningspersonen gör minst ett av:
+  | Tar emot begagnade varor av någon som inte styrker sin identitet och inte är känd.
+  | Tar emot begagnade varor av någon under 18 år som inte visar sin rätt att förfoga över varan, eller av någon som är märkbart påverkad.
+  | Lämnar ut eller bearbetar mottagna varor tidigare än en månad efter mottagandet, utan undantag från Polismyndigheten.
+S Uppsåt eller oaktsamhet.
+U Överträdelsen är ringa.
+U Gärningen kan ge straff enligt brottsbalken.
+T En handlare köper en cykel av en 15-åring utan att kontrollera att han får sälja den.
+
+LAW DyrkL | Lagen (1979:357) om yrkesmässig försäljning av dyrkverktyg | 1979:357 | Dyrkverktygslagen
+
+@ v20-forsaljning-dyrkverktyg | Brott mot lagen om yrkesmässig försäljning av dyrkverktyg | 7 § | 7
+PEN 0 | 0.5 | Böter eller fängelse i högst sex månader | B–F 6 mån
+C Tillgrepp
+A dyrkar;dyrkverktyg;sälja dyrkar;låsdyrkning
+Q plain
+G Gärningspersonen gör minst ett av:
+  | Säljer dyrkverktyg yrkesmässigt utan tillstånd eller utan godkänd föreståndare.
+  | Bryter mot föreskrifter eller villkor för försäljningen.
+  | För inte anteckningar om försäljningen eller lämnar oriktig uppgift i dem.
+S Uppsåt eller oaktsamhet.
+N Lagen straffbelägger bara yrkesmässig försäljning. Innehav av dyrkar kan i stället vara förberedelse till stöld.
+T En nätbutik säljer dyrkset till privatpersoner utan tillstånd från Polismyndigheten.
+
+LAW KampL | Lagen (2006:1006) om tillståndsplikt för vissa kampsportsmatcher | 2006:1006 | Kampsportslagen
+X 1
+
+@ v20-kampsportsmatch-utan-tillstand | Brott mot lagen om tillståndsplikt för vissa kampsportsmatcher (anordnande) | 13 § | 1,13
+PEN 0 | 0.5 | Böter eller fängelse i högst sex månader | B–F 6 mån
+C Allmän ordning
+A svartklubb fight;olaglig boxningsmatch;mma utan tillstånd;kampsportsgala;fight club
+Q plain
+O En kampsportsmatch, det vill säga en tävlings-, tränings- eller uppvisningsmatch där deltagarna avsiktligt får träffa motståndarens huvud med slag, sparkar eller annat våld.
+G Gärningspersonen anordnar matchen utan tillstånd eller i strid mot ett villkor i tillståndet.
+S Uppsåt eller oaktsamhet.
+U Gärningen är ringa.
+T En förening anordnar en MMA-gala med publik utan tillstånd från länsstyrelsen.
+
+@ v20-kampsportsmatch-deltagande | Brott mot lagen om tillståndsplikt för vissa kampsportsmatcher (deltagande och främjande) | 14 § | 1,14
+PEN 0 | 0 | Böter | Böter
+C Allmän ordning
+A delta i olaglig match;domare olaglig match;upplåta lokal fight
+Q plain
+O En kampsportsmatch som anordnas utan tillstånd.
+G Gärningspersonen gör minst ett av:
+  | Deltar i matchen.
+  | Understödjer matchen ekonomiskt eller upplåter lokal för den.
+  | Ingår som manager avtal om matchen eller främjar att ett sådant avtal kommer till.
+  | Tjänstgör som domare eller sekond vid matchen.
+S Uppsåt.
+U Gärningen är ringa.
+T En person går en match på en gala som han vet saknar tillstånd.
+
+LAW LSO | Lagen (2003:778) om skydd mot olyckor | 2003:778 | LSO
+X 10:1
+
+@ v20-brott-mot-eldningsforbud | Brott mot lagen om skydd mot olyckor (eldningsförbud) | 10:3 | 10:1,10:3
+PEN 0 | 0 | Böter | Böter
+C Allmänfarliga
+A eldningsförbud;grilla trots eldningsförbud;elda i skogen;engångsgrill
+Q plain
+O Ett förbud mot eldning utomhus som regeringen, länsstyrelsen eller kommunen har meddelat.
+G Gärningspersonen eldar utomhus i strid med förbudet.
+S Uppsåt eller oaktsamhet.
+N Om elden sprider sig kan allmänfarlig vårdslöshet eller mordbrand bli aktuellt.
+T En person tänder en engångsgrill i skogen trots att kommunen har meddelat eldningsförbud.
+
+LAW FiskeL | Fiskelagen (1993:787) | 1993:787 | Fiskelagen
+X 41
+
+@ v20-olovligt-fiske | Olovligt fiske | 37 § | 37,41
+PEN 0 | 1 | Böter eller fängelse i högst ett år | B–F 1 år
+C Djur och natur
+A tjuvfiske;fiska utan fiskekort;fiske i annans vatten;olaga fiske;nät i fredningszon
+Q plain
+G Gärningspersonen gör minst ett av:
+  | Fiskar utan lov i vatten där någon annan har enskild fiskerätt.
+  | Fiskar utan myndighets tillstånd där tillstånd behövs.
+  | Sätter ut eller använder fiskeredskap i strid med reglerna om fiskådra eller fredningszon.
+S Uppsåt eller oaktsamhet.
+U Fallet är ringa.
+N Brott i Sveriges ekonomiska zon ger bara böter (41 §).
+T En person lägger nät i en sjö där en fiskevårdsområdesförening har fiskerätten, utan fiskekort.
+
+@ v20-brott-mot-fiskeforeskrifter | Brott mot fiskelagen (fiskeföreskrifter) | 40 § | 40,41
+PEN 0 | 1 | Böter eller fängelse i högst ett år | B–F 1 år
+C Djur och natur
+A fredningstid;minimimått;otillåtet redskap;fiske under förbudstid;fiskeförbud;hummerfiske
+Q plain
+G Gärningspersonen gör minst ett av:
+  | Bryter mot föreskrifter om fisket, till exempel om fredningstider, minimimått, redskap eller fångstbegränsningar (uppsåt eller oaktsamhet).
+  | Bryter mot EU:s förordningar om den gemensamma fiskeripolitiken genom otillåtet fiske eller otillåten hantering av fångst (uppsåt eller grov oaktsamhet).
+S Uppsåt eller oaktsamhet. För brott mot EU-förordningarna krävs uppsåt eller grov oaktsamhet.
+U Gärningen är ringa.
+U Överträdelsen kan leda till sanktionsavgift.
+N Brott i Sveriges ekonomiska zon ger bara böter (41 §).
+T En person fiskar hummer med fler tinor än tillåtet och före premiären.
+
+@ v20-grovt-brott-mot-fiskelagen | Brott mot fiskelagen, grovt brott | 40 a § | 37,40,40a
+PEN 0 | 2 | Fängelse i högst två år | F 2 år
+C Djur och natur
+A grovt tjuvfiske;grovt olovligt fiske
+Q plain
+O Ett brott enligt 37 eller 40 § fiskelagen som inte har begåtts i Sveriges ekonomiska zon.
+R grovt
+- Brottet avsåg verksamhet av särskilt stor omfattning.
+- Brottet avsåg fångst av betydande värde.
+- Brottet avsåg fångst ur särskilt skyddsvärda bestånd.
+T En yrkesfiskare fångar systematiskt stora mängder ål under förbudstid och säljer fångsten.
+
+LAW KML | Kulturmiljölagen (1988:950) | 1988:950 | KML
+X 2:18
+
+@ v20-fornminnesbrott | Fornminnesbrott | 2:21 första stycket | 2:21
+PEN 0 | 0.5 | Böter eller fängelse i högst sex månader | B–F 6 mån
+C Djur och natur
+A fornlämning;fornfynd;gräva i gravhög;plundra fornlämning;runsten;skada fornminne
+Q plain
+G Gärningspersonen gör minst ett av:
+  | Tillägnar sig, förvärvar, gömmer, skadar, ändrar eller avyttrar ett fornfynd som ska tillfalla staten eller hembjudas till staten.
+  | Rubbar, tar bort, gräver ut, täcker över, ändrar eller skadar olovligen en fornlämning.
+S Uppsåt eller oaktsamhet.
+T En markägare schaktar bort en gravhög på sin åker utan tillstånd från länsstyrelsen.
+
+@ v20-grovt-fornminnesbrott | Grovt fornminnesbrott | 2:21 andra stycket | 2:21
+PEN 0 | 4 | Fängelse i högst fyra år | F 4 år
+C Djur och natur
+A plundring av fornlämning;grov fornminnesplundring;skattletare
+Q plain
+ST FP | KML 2:21 tredje stycket
+B v20-fornminnesbrott
+S Gärningen har begåtts uppsåtligen.
+R grovt
+- Gärningspersonen har använt särskild utrustning eller på annat sätt visat särskild förslagenhet.
+- Gärningen har utförts vanemässigt.
+- Gärningen har avsett fornfynd av större värde eller omfattning.
+- Gärningen har medfört en omfattande förstörelse av ett fornminne.
+T Två personer söker nattetid av en fornlämning med metallsökare och gräver upp silvermynt som de säljer.
+
+@ v20-brott-mot-kulturmiljolagen | Brott mot kulturmiljölagen (fornfynd och metallsökare) | 2:21 a | 2:18,2:21a
+PEN 0 | 0.5 | Böter eller fängelse i högst sex månader | B–F 6 mån
+C Djur och natur
+A metallsökare;metalldetektor utan tillstånd;inte anmäla fornfynd
+Q plain
+G Gärningspersonen gör minst ett av:
+  | Anmäler inte ett fornfynd som ska tillfalla staten eller hembjudas till staten.
+  | Anmäler inte en fornlämning som påträffas under ett arbete och avbryter inte arbetet.
+  | Använder metallsökare utan tillstånd, eller medför metallsökare på en fornlämning utan tillstånd.
+S Uppsåt eller oaktsamhet.
+T En person söker av en åker med metallsökare utan tillstånd från länsstyrelsen.
+
+LAW EstL | Lagen (1995:732) om skydd för gravfriden vid vraket efter passagerarfartyget Estonia | 1995:732 | Estonialagen
+X 2
+
+@ v20-brott-mot-estonialagen | Brott mot lagen om skydd för gravfriden vid vraket efter Estonia | 3 § | 2,3
+PEN 0 | 2 | Böter eller fängelse i högst två år | B–F 2 år
+C Frid
+A estonia;dyka vid estonia;gravfrid estonia
+Q plain
+ST F | Estonialagen 3 §
+G Gärningspersonen bedriver dykning eller annan undervattensverksamhet i vraket efter Estonia eller i det skyddade området runt vraket.
+S Uppsåt.
+U Verksamheten avser att utreda förlisningen, täcka över eller skydda vraket eller förhindra förorening, och bedrivs av eller med tillstånd av behörig myndighet.
+T En dokumentärfilmare skickar ner en undervattensrobot till vraket utan tillstånd.

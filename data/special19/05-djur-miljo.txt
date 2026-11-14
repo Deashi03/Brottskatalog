@@ -6,6 +6,7 @@ PEN 0 | 1 | Böter eller fängelse i högst ett år | B–F 1 år
 C Djur och natur
 A tjuvjakt;olovlig jakt;jakt på annans mark;skjuta fredat vilt;jakt från bil;jakt utanför jakttid
 Q plain
+ST - | JaktL 46 a §
 FU enkel|Jaktlagen (1987:259), ej grovt jaktbrott
 G Gärningspersonen gör minst ett av:
   | Jagar olovligen på annans jaktområde eller tillägnar sig vilt där.
@@ -23,6 +24,7 @@ PEN 0.5 | 4 | Fängelse lägst sex månader och högst fyra år | F 6 mån–4 �
 C Djur och natur
 A grov tjuvjakt;illegal jakt på varg;illegal jakt på lo;olaglig rovdjursjakt
 Q plain
+ST FP | JaktL 46 a §
 FU ej|Grovt jaktbrott är uttryckligen undantaget i bilagan till ÅFS 2005:9.
 N Försök och förberedelse är straffbara (46 a §).
 B v19-jaktbrott
@@ -38,6 +40,7 @@ PEN 0 | 1 | Böter eller fängelse i högst ett år | B–F 1 år
 C Djur och natur
 A köpa tjuvskjutet vilt;tjuvskjutet kött;troféer
 Q plain
+ST - | JaktL 46 a §
 FU enkel|Jaktlagen (1987:259), ej grovt jaktbrott
 O Vilt som har dödats eller åtkommits genom jaktbrott.
 G Gärningspersonen tar obehörigen befattning med viltet, till exempel köper, tar emot, förvarar eller säljer det.
@@ -50,6 +53,7 @@ PEN 0.5 | 4 | Fängelse lägst sex månader och högst fyra år | F 6 mån–4 �
 C Djur och natur
 A grovt jakthäleri
 Q plain
+ST FP | JaktL 46 a §
 FU enkel|Jaktlagen (1987:259), ej grovt jaktbrott|Bilagan undantar bara grovt jaktbrott. Åklagaren tar ändå över om något av villkoren i ÅFS 7 eller 8 § är uppfyllt.
 N Försök och förberedelse är straffbara (46 a §).
 B v19-jakthaleri
@@ -90,7 +94,7 @@ C Djur och natur
 A tidelag;sex med djur;zoofili;bestialitet
 Q plain
 G Gärningspersonen genomför en sexuell handling med ett djur.
-S Uppsåt till samtliga rekvisit.
+S Uppsåt till samtliga rekvisit. Lagen anger ingen skuldform. Utgångspunkten är då att uppsåt krävs.
 U Handlingen utförs av veterinärmedicinska skäl, i samband med avel eller av liknande berättigade skäl.
 T En person filmar sig själv när han genomför sexuella handlingar med en hund.
 
@@ -116,6 +120,7 @@ PEN 0 | 2 | Böter eller fängelse i högst två år | B–F 2 år
 C Djur och natur
 A utsläpp;förorening;olja i vattnet;dumpa kemikalier;miljöförstöring
 Q miljo
+ST - | MB 29:1 tredje stycket
 G Gärningspersonen gör minst ett av:
   | Orsakar att ett ämne släpps ut i mark, vatten eller luft som medför eller kan medföra en förorening som är skadlig för människors hälsa, djur eller växter i en omfattning som inte har ringa betydelse, eller någon annan betydande olägenhet i miljön.
   | Förvarar ett ämne eller hanterar avfall på ett sätt som kan medföra en sådan förorening eller olägenhet.
@@ -130,6 +135,7 @@ PEN 0.5 | 6 | Fängelse lägst sex månader och högst sex år | F 6 mån–6 å
 C Djur och natur
 A grovt miljöbrott;stort utsläpp
 Q miljo
+ST FP | MB 29:1 tredje stycket
 N Försök och förberedelse är straffbara (29:1 tredje stycket).
 B v19-miljobrott
 R grovt
@@ -157,6 +163,7 @@ PEN 0 | 2 | Böter eller fängelse i högst två år | B–F 2 år
 C Djur och natur
 A fredade fåglar;äggsamling;elfenben;skyddade arter;CITES;plocka orkidéer
 Q miljo
+ST - | MB 29:2 b tredje stycket
 G Gärningspersonen gör minst ett av:
   | Dödar, skadar, fångar eller stör ett fridlyst djur, tar bort eller skadar ägg, rom eller bo, eller förstör djurets fortplantningsområde eller viloplats.
   | Tar bort, skadar eller tar frö från en fridlyst växt.
@@ -173,6 +180,7 @@ PEN 0.5 | 4 | Fängelse lägst sex månader och högst fyra år | F 6 mån–4 �
 C Djur och natur
 A grovt artskyddsbrott;smuggling av skyddade arter
 Q miljo
+ST FP | MB 29:2 b tredje stycket
 N Försök och förberedelse är straffbara (29:2 b tredje stycket).
 B v19-artskyddsbrott
 R grovt
@@ -305,6 +313,7 @@ PEN 0 | 2 | Böter eller fängelse i högst två år | B–F 2 år
 C Djur och natur
 A dumpning av avfall till havs;fiskeförbud;miljöskyddsområde;miljöriskområde
 Q miljo
+ST F | MB 29:8 andra stycket | Försök är straffbart bara vid dumpning eller förbränning av avfall (första stycket 12).
 N Försök till dumpning eller förbränning av avfall till havs är straffbart (29:8 andra stycket).
 G Gärningspersonen gör minst ett av:
   | Bryter mot föreskrifter om försiktighetsmått inom ett miljöskyddsområde eller vid miljöfarlig verksamhet, eller mot förbud mot utsläpp av avloppsvatten.

@@ -1,0 +1,110 @@
+LAW LustgL | Lagen (2025:621) om lustgas | 2025:621 | Lustgaslagen
+X 4,5,6
+
+@ v20-olovlig-hantering-av-lustgas | Olovlig hantering av lustgas | 23 § | 4,5,6,23
+PEN 0 | 0.5 | Böter eller fängelse i högst sex månader | B–F 6 mån
+C Narkotika och alkohol
+A lustgas;lustgastuber;sälja lustgas;lustgas till minderårig;gräddpatroner
+Q plain
+K Gärningen sker i näringsverksamhet.
+G Gärningspersonen gör minst ett av:
+  | Säljer eller lämnar ut lustgas när det finns särskild anledning att anta att den ska användas som berusningsmedel.
+  | Säljer eller lämnar ut mer än 18 gram lustgas till en privatperson per tillfälle, eller fler än två behållare om högst 9 gram.
+  | Säljer eller lämnar ut lustgas till någon som inte har fyllt 18 år.
+  | Bedriver detaljhandel med lustgas utan att ha anmält försäljningen till kommunen.
+  | Säljer lustgas trots ett försäljningsförbud.
+S Uppsåt eller oaktsamhet.
+U Gärningen är ringa.
+T En kiosk säljer stora lustgastuber till ungdomar på kvällarna.
+
+LAW NikL | Lagen (2022:1257) om tobaksfria nikotinprodukter | 2022:1257 | Nikotinproduktlagen
+X 17,19
+
+@ v20-nikotinprodukter-forsaljning | Brott mot lagen om tobaksfria nikotinprodukter (försäljning till unga eller utan anmälan) | 45 § | 19,45
+PEN 0 | 0.5 | Böter eller fängelse i högst sex månader | B–F 6 mån
+C Narkotika och alkohol
+A vitt snus till minderårig;nikotinpåsar;nikotinsnus;sälja snus till barn
+Q plain
+K Gärningen sker i näringsverksamhet.
+G Gärningspersonen gör minst ett av:
+  | Säljer eller lämnar ut tobaksfria nikotinprodukter till någon som inte har fyllt 18 år, eller när det finns särskild anledning att anta att produkten ska lämnas över till någon under 18 år.
+  | Bedriver detaljhandel med tobaksfria nikotinprodukter utan att ha anmält försäljningen till kommunen.
+S Uppsåt eller oaktsamhet.
+U Gärningen är ringa.
+T En butik säljer nikotinpåsar till en 14-åring utan att kontrollera åldern.
+
+@ v20-olovlig-hantering-nikotinprodukter | Olovlig hantering av tobaksfria nikotinprodukter | 43 § | 43
+PEN 0 | 0.5 | Böter eller fängelse i högst sex månader | B–F 6 mån
+C Narkotika och alkohol
+A nikotinpåsar utan varningstext;omärkt vitt snus
+Q plain
+G Gärningspersonen tillhandahåller konsumenter tobaksfria nikotinprodukter som inte uppfyller kraven på innehållsdeklaration eller hälsovarning.
+S Uppsåt.
+U Gärningen är ringa.
+T En butik säljer importerade nikotinpåsar som saknar svensk hälsovarning och innehållsdeklaration.
+
+@ v20-olovlig-forsaljning-nikotinprodukter | Olovlig försäljning av tobaksfria nikotinprodukter | 44 § | 44
+PEN 0 | 0.5 | Böter eller fängelse i högst sex månader | B–F 6 mån
+C Narkotika och alkohol
+A försäljningsförbud nikotin
+Q plain
+O Kommunen har meddelat ett försäljningsförbud mot näringsidkaren.
+G Gärningspersonen säljer tobaksfria nikotinprodukter trots förbudet.
+S Uppsåt.
+U Gärningen är ringa.
+T En butik som har fått försäljningsförbud efter upprepad försäljning till minderåriga fortsätter att sälja nikotinpåsar.
+
+LAW LHL | Lagen (2009:366) om handel med läkemedel | 2009:366 | LHL
+
+@ v20-olovlig-lakemedelshandel | Brott mot lagen om handel med läkemedel (handel utan tillstånd) | 9:1 | 9:1
+PEN 0 | 1 | Böter eller fängelse i högst ett år | B–F 1 år
+C Narkotika och alkohol
+A sälja läkemedel olagligt;tabletter till salu;olovlig läkemedelsförsäljning;viagra;tramadol utan recept
+Q plain
+N Läkemedel som är narkotika eller dopningsmedel bedöms i första hand enligt narkotikastrafflagen eller dopningslagen.
+G Gärningspersonen gör minst ett av:
+  | Bedriver detaljhandel med läkemedel till konsument utan tillstånd.
+  | Bedriver partihandel med läkemedel utan tillstånd.
+  | Bedriver maskinell dosdispensering utan tillstånd.
+  | Innehar läkemedel i syfte att olovligen sälja dem (uppsåt krävs).
+S Uppsåt eller oaktsamhet.
+U Fallet är ringa.
+U Gärningen kan ge straff enligt brottsbalken.
+T En person säljer receptbelagda potensmedel och antibiotika via sociala medier.
+
+@ v20-olovlig-lakemedelshandel-grovt | Brott mot lagen om handel med läkemedel, grovt brott (handel utan tillstånd) | 9:1 fjärde stycket | 9:1
+PEN 0 | 2 | Fängelse i högst två år | F 2 år
+C Narkotika och alkohol
+A grov olovlig läkemedelsförsäljning
+Q plain
+B v20-olovlig-lakemedelshandel
+S Gärningen har begåtts uppsåtligen.
+R grovt
+- Gärningen har begåtts yrkesmässigt.
+- Gärningen har avsett betydande mängd eller värde.
+- Gärningen har annars varit av särskilt farlig art.
+T En person driver en webbshop som säljer tiotusentals receptbelagda tabletter utan tillstånd.
+
+LAW SprekL | Lagen (2014:799) om sprängämnesprekursorer | 2014:799 | Prekursorlagen
+
+@ v20-sprangamnesprekursorer | Brott mot lagen om sprängämnesprekursorer | 12 § första stycket | 12
+PEN 0 | 1 | Böter eller fängelse i högst ett år | B–F 1 år
+C Vapen och explosiva varor
+A sprängämnesprekursorer;väteperoxid;salpetersyra;aceton bomb;hemgjord bomb kemikalier
+Q plain
+O Sprängämnesprekursorer som omfattas av restriktioner enligt EU:s förordning, till exempel väteperoxid, salpetersyra och nitrometan i höga koncentrationer.
+G Gärningspersonen tillhandahåller, förvärvar, innehar eller använder ämnet utan tillstånd.
+S Uppsåt eller oaktsamhet.
+T En privatperson köper koncentrerad väteperoxid på nätet från utlandet utan tillstånd.
+
+@ v20-sprangamnesprekursorer-grovt | Brott mot lagen om sprängämnesprekursorer, grovt brott | 12 § andra stycket | 12
+PEN 0.5 | 4 | Fängelse lägst sex månader och högst fyra år | F 6 mån–4 år
+C Vapen och explosiva varor
+A grovt prekursorbrott sprängämnen
+Q plain
+B v20-sprangamnesprekursorer
+R grovt
+- Gärningen har avsett särskilt stor mängd.
+- Gärningen har annars varit av särskilt farlig art.
+- Gärningen har inneburit en betydande risk för att sprängämnesprekursorerna kunde komma till brottslig användning.
+T En person lagrar flera hundra liter salpetersyra och väteperoxid i ett garage tillsammans med instruktioner för sprängämnestillverkning.

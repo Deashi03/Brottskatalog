@@ -15,7 +15,7 @@ O Gäller alla fartyg.
 G Gärningspersonen framför ett fartyg, eller fullgör en annan uppgift ombord av väsentlig betydelse för säkerheten till sjöss.
 F Gärningspersonen är så påverkad av alkohol eller något annat medel att det kan antas att uppgiften inte kan utföras på ett betryggande sätt.
 ## *
-S Uppsåt till samtliga rekvisit.
+S Uppsåt till samtliga rekvisit. Lagen anger ingen skuldform. Utgångspunkten är då att uppsåt krävs.
 T En person kör en snabb motorbåt i skärgården efter att ha druckit vin, och utandningsprovet visar 0,4 promille.
 
 @ v19-grovt-sjofylleri | Grovt sjöfylleri | 20:5 | 20:4,20:5
@@ -62,7 +62,7 @@ K Gärningspersonen har med eller utan skuld haft del i uppkomsten av en sjöoly
 G Gärningspersonen gör minst ett av:
   | Lämnar olycksplatsen utan tvingande skäl, eller undandrar sig på annat sätt att vidta de åtgärder som skäligen kan krävas.
   | Undandrar sig att uppge namn och hemvist eller att lämna upplysningar om händelsen.
-S Uppsåt till samtliga rekvisit.
+S Uppsåt till samtliga rekvisit. Lagen anger ingen skuldform. Utgångspunkten är då att uppsåt krävs.
 U Gärningen kan ge straff som befälhavarens försummelse vid kollision eller sjönöd (20:7).
 T En båtförare kör på en kanot och kör därifrån utan att kontrollera om någon skadats.
 
@@ -73,7 +73,7 @@ A sjöräddning;hjälpplikt till sjöss;kollision fartyg
 Q plain
 K Gärningspersonen är befälhavare.
 G Befälhavaren försummar att bistå någon som är i sjönöd, att agera när fara hotar sjötrafiken, eller att fullgöra skyldigheterna efter en kollision med ett annat fartyg.
-S Uppsåt eller oaktsamhet.
+S Uppsåt eller oaktsamhet. Lagen anger ingen skuldform, men bestämmelsen avser försummelse.
 T En befälhavare ser nödraketer men fortsätter färden utan att undersöka eller larma.
 
 @ v19-sjol-befalhavare-fara | Brott mot sjölagen (befälhavare som överger fartyget eller försummar det i fara) | 20:6 | 20:6
@@ -85,7 +85,7 @@ K Gärningspersonen är befälhavare.
 G Befälhavaren gör minst ett av:
   | Avviker från tjänsten och överger fartyget (högst ett års fängelse).
   | Försummar sina skyldigheter som god sjöman när fartyget är i fara (högst två års fängelse).
-S Uppsåt eller oaktsamhet.
+S Uppsåt eller oaktsamhet. Lagen anger ingen skuldform, men bestämmelsen avser försummelse.
 T En befälhavare lämnar fartyget i en livbåt när det börjar ta in vatten, utan att se till att passagerarna kommer i säkerhet.
 
 @ v19-sjol-sjovardighet | Brott mot sjölagen (sjövärdighet) | 20:1 | 20:1
@@ -98,7 +98,7 @@ G Gärningspersonen gör minst ett av:
   | Befälhavaren försummar att se till att fartyget är sjövärdigt (högst sex månaders fängelse).
   | Redaren försummar att avhjälpa ett fel eller en brist i sjövärdigheten som redaren känt till eller borde ha känt till (högst sex månaders fängelse).
   | Redaren underlåter att hindra fartyget från att gå till sjöss trots att resan på grund av bristen kan bli förenad med allvarlig fara för de ombordvarande (högst två års fängelse).
-S Uppsåt eller oaktsamhet.
+S Uppsåt eller oaktsamhet. Lagen anger ingen skuldform, men bestämmelsen avser försummelse.
 T Ett passagerarfartyg går ut med kända fel på länspumparna och utan fungerande räddningsflottar.
 
 LAW LFL | Luftfartslagen (2010:500) | 2010:500 | LFL
@@ -119,7 +119,7 @@ F Gärningspersonen är alkohol- eller drogpåverkad, det vill säga minst ett a
   | Har minst 0,2 promille i blodet eller 0,10 milligram per liter i utandningsluften under eller efter uppgiften.
   | Har något narkotiskt ämne kvar i blodet efter att ha intagit {{narkotika}}.
   | Är så påverkad av alkohol eller annat medel att uppgiften inte kan antas fullgöras på ett betryggande sätt.
-S Uppsåt till samtliga rekvisit.
+S Uppsåt till samtliga rekvisit. Lagen anger ingen skuldform. Utgångspunkten är då att uppsåt krävs.
 U Narkotikan har intagits enligt läkares eller annan behörig receptutfärdares ordination.
 T En pilot flyger ett mindre privatplan dagen efter en fest och har 0,3 promille i utandningsprovet.
 
@@ -195,7 +195,7 @@ F Minst ett av:
   | Alkoholkoncentrationen uppgår under eller efter färden till minst 0,2 promille i blodet eller 0,10 milligram per liter i utandningsluften.
   | Det finns något narkotiskt ämne kvar i blodet efter att föraren har intagit {{narkotika}}.
   | Föraren är så påverkad av alkohol eller annat medel att det kan antas att han eller hon inte kan framföra fordonet på ett betryggande sätt.
-S Uppsåt till samtliga rekvisit.
+S Uppsåt till samtliga rekvisit. Lagen anger ingen skuldform. Utgångspunkten är då att uppsåt krävs.
 U Narkotikan har intagits enligt läkares eller annan behörig receptutfärdares ordination.
 T En tunnelbaneförare kör tåget efter att ha druckit öl på lunchen och har 0,3 promille.
 
@@ -218,7 +218,7 @@ A trafikledare tunnelbana onykter;säkerhetstjänst tunnelbana
 Q plain
 G Gärningspersonen fullgör tjänst vid tunnelbana med uppgifter av väsentlig betydelse för säkerheten, utan att föra fordonet, till exempel som trafikledare eller banarbetare.
 F Gärningspersonen är så påverkad av alkohol eller annat medel att det kan antas att han eller hon inte kan utföra uppgifterna på ett betryggande sätt.
-S Uppsåt till samtliga rekvisit.
+S Uppsåt till samtliga rekvisit. Lagen anger ingen skuldform. Utgångspunkten är då att uppsåt krävs.
 T En trafikledare i tunnelbanans driftcentral arbetar kraftigt berusad.
 
 @ v19-tunnelbana-verksamhet | Brott mot lagen om säkerhet vid tunnelbana och spårväg (verksamhet och materiel) | 29 § | 29

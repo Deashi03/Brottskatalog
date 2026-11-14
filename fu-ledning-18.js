@@ -135,8 +135,17 @@ const ch=c=>{const m=String(c.shortRef||'').match(/^BrB (\d+):(\d+\s?[a-z]?)/);r
 const max=c=>Number(c.penaltyRange?.max);
 const min=c=>Number(c.penaltyRange?.min);
 
+/* 2.0: förstadier ärver klassningen från det fullbordade brottet. Ett brott som är åklagarlett som
+ * fullbordat är åklagarlett också som försök, förberedelse eller stämpling, och ett brott i bilagan är
+ * polislett också som förstadium. Falska förstadiekort (ej straffbara) klassas inte. */
+const STAGE_WORD={forsok:'Försök',forberedelse:'Förberedelse',stampling:'Stämpling'};
 function classify(c){
- if(!c||c.stageType)return null;
+ if(!c)return null;
+ if(c.stageType){
+  if(c.stageStatus!=='punishable'||!c.fuParent20)return null;
+  const k=classify(c.fuParent20);if(!k)return null;
+  return {...k,row:STAGE_WORD[c.stageType]+' till: '+k.row,stage:true};
+ }
  if(ENKEL[c.id])return {...ENKEL[c.id]};
  if(VILLKOR[c.id])return {...VILLKOR[c.id],cond:{...VILLKOR[c.id].cond}};
  if(EJ[c.id])return {...EJ[c.id]};
@@ -162,7 +171,8 @@ function traits(c){
   hate:!!x&&[3,4,6,12,16,17].includes(x.ch),
   person:!!x&&[3,4,6].includes(x.ch)&&!(x.ch===3&&['7','8','10'].includes(x.p)),
   finesOnly:max(c)===0,
-  min4:min(c)>=4||!!c.penaltyRange?.life
+  // ÅFS 10 §: även försök, förberedelse och stämpling till brott med minst fyra års minimistraff.
+  min4:(c.stageType?Number(c.stageParentMin)>=4||!!c.stageParentLife:min(c)>=4||!!c.penaltyRange?.life)
  };
 }
 
@@ -378,5 +388,5 @@ function render(c,ans){
   '<div class="fu18-end">'+back+'<button type="button" class="fu18-btn fu18-restart" data-fu18="restart">Börja om</button></div></div>';
 }
 
-window.BK_FU18={release:'1.9.1',classify,traits,assess,render,TAKEOVER,INFO,SVAR_ITEMS,SOURCES,ENKEL,VILLKOR,EJ};
+window.BK_FU18={release:'2.0',classify,traits,assess,render,TAKEOVER,INFO,SVAR_ITEMS,SOURCES,ENKEL,VILLKOR,EJ};
 })();

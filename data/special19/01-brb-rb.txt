@@ -5,6 +5,7 @@ PEN 0.5 | 4 | Fängelse lägst sex månader och högst fyra år | F 6 mån–4 �
 C Allmän ordning
 A grov hets;hatbrott grovt;grovt hets mot folkgrupp
 Q plain
+ST - | BrB 16:17
 B v03-hets-mot-folkgrupp
 R grovt
 - Meddelandet har haft ett särskilt hotfullt eller kränkande innehåll och spritts till ett stort antal personer på ett sätt som varit ägnat att väcka betydande uppmärksamhet.
@@ -15,6 +16,7 @@ PEN 0 | 0 | Böter | Böter
 C Allmän ordning
 A ringa hets;hets mot folkgrupp ringa
 Q plain
+ST - | BrB 16:17
 B v03-hets-mot-folkgrupp
 R ringa*
 - Meddelandets innehåll och hur allvarligt det är.
@@ -26,6 +28,7 @@ PEN 0 | 2 | Fängelse i högst två år | F 2 år
 C Rättsväsende
 A grov osann försäkran
 Q plain
+ST - | BrB 15:15
 B v03-osann-forsakran
 R grovt*
 - Uppgiftens betydelse och vilken skada eller fara den kunde orsaka.
@@ -37,6 +40,7 @@ PEN 0 | 0.5 | Böter eller fängelse i högst sex månader | B–F 6 mån
 C Rättsväsende
 A vårdslös försäkran på heder och samvete;slarvig försäkran
 Q plain
+ST - | BrB 15:15
 G Gärningspersonen lämnar på annat sätt än muntligen en osann uppgift eller förtiger sanningen.
 O Uppgiften lämnas på heder och samvete eller under annan liknande försäkran enligt lag eller annan författning.
 F Åtgärden innebär fara i bevishänseende.
@@ -48,6 +52,7 @@ PEN 0 | 2 | Fängelse i högst två år | F 2 år
 C Rättsväsende
 A grovt osant intygande
 Q plain
+ST - | BrB 15:15
 B v03-osant-intygande
 R grovt
 - Brottet innefattar missbruk av tjänsteställning.
@@ -59,6 +64,7 @@ PEN 0 | 0.5 | Böter eller fängelse i högst sex månader | B–F 6 mån
 C Rättsväsende
 A använda osant intyg;falskt intyg;skenavtal
 Q plain
+ST - | BrB 15:15
 FU enkel|15 kap. brukande av osann urkund
 O {{urkund|Urkunden}} innehåller en osann uppgift om vem utställaren är eller om annat än utställarens egna angelägenheter, eller har upprättats för skens skull rörande en rättshandling.
 G Gärningspersonen åberopar eller använder på annat sätt urkunden.
@@ -71,6 +77,7 @@ PEN 0 | 2 | Fängelse i högst två år | F 2 år
 C Rättsväsende
 A grovt brukande av osann urkund
 Q plain
+ST - | BrB 15:15
 B v19-brukande-av-osann-urkund
 R grovt
 - Brottet innefattar missbruk av tjänsteställning.
@@ -88,13 +95,13 @@ Q plain
 ## Tar upp bild
 P Vid rättens sammanträde, i eller in i rättssalen eller i en sidosal.
 G Gärningspersonen tar upp bild med tekniskt hjälpmedel, till exempel fotograferar eller filmar.
-S Uppsåt till samtliga rekvisit.
+S Uppsåt till samtliga rekvisit. Lagen anger ingen skuldform. Utgångspunkten är då att uppsåt krävs.
 U Annat följer av lag.
 U Fallet är ringa.
 ## Sprider bild
 O Bilden har tagits upp i strid med fotoförbudet och någon syns på bilden.
 G Gärningspersonen sprider bilden.
-S Uppsåt till samtliga rekvisit.
+S Uppsåt till samtliga rekvisit. Lagen anger ingen skuldform. Utgångspunkten är då att uppsåt krävs.
 U Fallet är ringa.
 T En åhörare filmar med mobilen när ett vittne hörs i rättssalen.
 V En åhörare lägger ut en bild på den tilltalade i rättssalen på sociala medier.
@@ -136,5 +143,5 @@ A falsk advokat;utger sig för advokat;advokattitel
 Q plain
 G Gärningspersonen utger sig för att vara auktoriserad som advokat i Sverige, i en annan stat inom EU eller EES eller i Schweiz.
 K Gärningspersonen är inte behörig att kalla sig advokat.
-S Uppsåt till samtliga rekvisit.
+S Uppsåt till samtliga rekvisit. Lagen anger ingen skuldform. Utgångspunkten är då att uppsåt krävs.
 T En jurist som inte är medlem i Advokatsamfundet skriver ”advokat” på sin webbplats och i brev till klienter.

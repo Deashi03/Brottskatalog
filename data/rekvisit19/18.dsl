@@ -56,7 +56,7 @@ K Gärningspersonen är vägtrafikant, spårvagnsförare eller förare av motord
 G Gärningspersonen gör minst ett av:
   | Lämnar olycksplatsen och undandrar sig därigenom att efter förmåga medverka till de åtgärder som olyckan skäligen bör leda till, till exempel att hjälpa skadade.
   | Undandrar sig att uppge namn och adress eller att lämna upplysningar om händelsen.
-S Uppsåt till samtliga rekvisit.
+S Uppsåt till samtliga rekvisit. Lagen anger ingen skuldform. Utgångspunkten är då att uppsåt krävs.
 
 @ traffic16-5 | Grov smitning från trafikolycksplats | TBL 5 § andra stycket
 B traffic16-4

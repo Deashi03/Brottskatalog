@@ -58,6 +58,8 @@ jobs:
         run: node scripts/fu18_test.mjs
       - name: Verify 1.9 requisites, court designations, coercive measures and new offence cards
         run: node scripts/v19_test.mjs
+      - name: Verify 2.0 stage cards, limitation periods and related offences
+        run: node scripts/v20_test.mjs
 
   deploy:
     name: Deploy verified site

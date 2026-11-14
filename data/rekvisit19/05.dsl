@@ -7,7 +7,7 @@ U Gärningen är rån eller grovt rån.
 
 @ v04-ringa-utpressning | Ringa utpressning | BrB 9:4 första stycket
 B v03-utpressning
-R ringa
+R ringa*
 - Hur allvarligt tvånget var och värdet av det som framtvingades.
 - Övriga omständigheter vid brottet.
 
@@ -52,7 +52,7 @@ R grovt
 @ v03-haleriforseelse | Häleriförseelse | BrB 9:7
 ## Ringa häleri
 B v03-haleri
-R ringa
+R ringa*
 - Värdet av egendomen, i praxis ett lågt värde.
 - Övriga omständigheter vid brottet.
 ## Misstänkt stöldgods

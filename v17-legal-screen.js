@@ -19,7 +19,7 @@ const PRIVILEGED={
  'Mordbrand':'Mindre allvarligt brott: fängelse i lägst ett och högst tre år (BrB 13:1 andra stycket).',
  'Allmänfarlig ödeläggelse':'Mindre allvarligt brott: fängelse i lägst ett och högst tre år (BrB 13:3).'
 };
-const all=()=>D.crimes.concat(window.BK_TRAFFIC16?.entries||[],window.BK_SPECIAL19?.entries||[]);
+const all=()=>D.crimes.concat(window.BK_TRAFFIC16?.entries||[],window.BK_SPECIAL19?.entries||[],window.BK_STAGES20?.entries||[]);
 let index=null;
 const byId=id=>{if(!index)index=Object.fromEntries(all().map(c=>[c.id,c]));return index[id];};
 const punishable=c=>!!c&&(!c.stageStatus||c.stageStatus==='punishable');
@@ -83,6 +83,7 @@ function label(c){
  const x=custody(c);
  if(x.presumption)return x.privileged?'Häktningspresumtion – ej vid mindre grovt fall':'Häktningspresumtion – pröva skäl';
  if(x.ordinary===true)return 'Häktning kan vara möjlig';
+ if(x.ordinary===null&&c.applicabilityConditional)return 'Gäller bara i krig – pröva tillämpligheten';
  if(x.ordinary===null)return 'Straffskala ej verifierad – kontrollera';
  return 'Endast särskild grund (RB 24:2)';
 }

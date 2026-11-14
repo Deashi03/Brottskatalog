@@ -2,7 +2,7 @@
 G Gärningspersonen tar olovligen något.
 O Det som tas tillhör någon annan.
 F Tillgreppet innebär skada för ägaren eller innehavaren.
-S Tillägnelseuppsåt: avsikt att behålla det tagna eller på annat sätt behandla det som sitt eget.
+S Uppsåt att tillägna sig det tagna, det vill säga att behålla det eller förfoga över det som sitt eget.
 S Uppsåt till övriga rekvisit.
 
 @ ringa-stold | Ringa stöld | BrB 8:2
@@ -67,7 +67,7 @@ S Uppsåt till gärningen och följden.
 
 @ ringa-misshandel | Ringa misshandel | BrB 3:5
 B misshandel
-R ringa
+R ringa*
 - Våldets art och styrka, till exempel en örfil eller en knuff.
 - Följden, till exempel ingen eller lindrig smärta och ingen synlig skada.
 - Övriga omständigheter.

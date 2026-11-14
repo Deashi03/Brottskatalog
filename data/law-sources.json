@@ -37,6 +37,438 @@
       "name": "Knivlagen",
       "sfs": "1988-254",
       "verifiedVersion": "2026:413"
+    },
+    {
+      "id": "KfL",
+      "name": "Lagen (1988:688) om kontaktförbud",
+      "sfs": "1988-688",
+      "verifiedVersion": "2026:1666"
+    },
+    {
+      "id": "TfL",
+      "name": "Lagen (2005:321) om tillträdesförbud vid idrottsarrangemang",
+      "sfs": "2005-321",
+      "verifiedVersion": "2018:1706"
+    },
+    {
+      "id": "MaskL",
+      "name": "Lagen (2005:900) om förbud mot maskering i vissa fall",
+      "sfs": "2005-900",
+      "verifiedVersion": "2024:848"
+    },
+    {
+      "id": "OL",
+      "name": "Ordningslag (1993:1617)",
+      "sfs": "1993-1617",
+      "verifiedVersion": "2026:729"
+    },
+    {
+      "id": "AlkL",
+      "name": "Alkohollagen (2010:1622)",
+      "sfs": "2010-1622",
+      "verifiedVersion": "2026:511"
+    },
+    {
+      "id": "DopL",
+      "name": "Lagen (1991:1969) om förbud mot vissa dopningsmedel",
+      "sfs": "1991-1969",
+      "verifiedVersion": "2025:641"
+    },
+    {
+      "id": "HfvL",
+      "name": "Lagen (1999:42) om förbud mot vissa hälsofarliga varor",
+      "sfs": "1999-42",
+      "verifiedVersion": "2024:835"
+    },
+    {
+      "id": "JaktL",
+      "name": "Jaktlagen (1987:259)",
+      "sfs": "1987-259",
+      "verifiedVersion": "2026:832"
+    },
+    {
+      "id": "DjsL",
+      "name": "Djurskyddslagen (2018:1192)",
+      "sfs": "2018-1192",
+      "verifiedVersion": "2026:1107"
+    },
+    {
+      "id": "MB",
+      "name": "Miljöbalken (1998:808)",
+      "sfs": "1998-808",
+      "verifiedVersion": "2026:1442"
+    },
+    {
+      "id": "SjöL",
+      "name": "Sjölagen (1994:1009)",
+      "sfs": "1994-1009",
+      "verifiedVersion": "2025:985"
+    },
+    {
+      "id": "LFL",
+      "name": "Luftfartslagen (2010:500)",
+      "sfs": "2010-500",
+      "verifiedVersion": "2025:1061"
+    },
+    {
+      "id": "TSL",
+      "name": "Lagen (1990:1157) om säkerhet vid tunnelbana och spårväg",
+      "sfs": "1990-1157",
+      "verifiedVersion": "2026:1286"
+    },
+    {
+      "id": "SkyddsL",
+      "name": "Skyddslagen (2010:305)",
+      "sfs": "2010-305",
+      "verifiedVersion": "2026:1582"
+    },
+    {
+      "id": "UtlL",
+      "name": "Utlänningslagen (2005:716)",
+      "sfs": "2005-716",
+      "verifiedVersion": "2026:1752"
+    },
+    {
+      "id": "FbfL",
+      "name": "Folkbokföringslagen (1991:481)",
+      "sfs": "1991-481",
+      "verifiedVersion": "2026:1613"
+    },
+    {
+      "id": "SpelL",
+      "name": "Spellagen (2018:1138)",
+      "sfs": "2018-1138",
+      "verifiedVersion": "2026:1077"
+    },
+    {
+      "id": "TobL",
+      "name": "Lagen (2018:2088) om tobak och liknande produkter",
+      "sfs": "2018-2088",
+      "verifiedVersion": "2024:888"
+    },
+    {
+      "id": "UpphL",
+      "name": "Lagen (1960:729) om upphovsrätt till litterära och konstnärliga verk",
+      "sfs": "1960-729",
+      "verifiedVersion": "2026:1120"
+    },
+    {
+      "id": "VmL",
+      "name": "Varumärkeslagen (2010:1877)",
+      "sfs": "2010-1877",
+      "verifiedVersion": "2025:951"
+    },
+    {
+      "id": "FHL",
+      "name": "Lagen (2018:558) om företagshemligheter",
+      "sfs": "2018-558",
+      "verifiedVersion": "2025:1281"
+    },
+    {
+      "id": "NfL",
+      "name": "Lagen (2014:836) om näringsförbud",
+      "sfs": "2014-836",
+      "verifiedVersion": "2025:1344"
+    },
+    {
+      "id": "YtL",
+      "name": "Yrkestrafiklagen (2012:210)",
+      "sfs": "2012-210",
+      "verifiedVersion": "2024:1093"
+    },
+    {
+      "id": "TtL",
+      "name": "Taxitrafiklagen (2012:211)",
+      "sfs": "2012-211",
+      "verifiedVersion": "2024:1094"
+    },
+    {
+      "id": "FgL",
+      "name": "Lagen (2006:263) om transport av farligt gods",
+      "sfs": "2006-263",
+      "verifiedVersion": "2022:1119"
+    },
+    {
+      "id": "TfpL",
+      "name": "Lagen (1994:1809) om totalförsvarsplikt",
+      "sfs": "1994-1809",
+      "verifiedVersion": "2022:1574"
+    },
+    {
+      "id": "TerrL",
+      "name": "Terroristbrottslagen (2022:666)",
+      "sfs": "2022-666",
+      "verifiedVersion": "2024:896"
+    },
+    {
+      "id": "IntBrL",
+      "name": "Lagen (2014:406) om straff för vissa internationella brott",
+      "sfs": "2014-406",
+      "verifiedVersion": "2021:1016"
+    },
+    {
+      "id": "KonsL",
+      "name": "Lagen (1982:316) om förbud mot könsstympning av kvinnor och oskuldsingrepp på kvinnor",
+      "sfs": "1982-316",
+      "verifiedVersion": "2025:1010"
+    },
+    {
+      "id": "VistL",
+      "name": "Lagen (2024:7) om preventiva vistelseförbud",
+      "sfs": "2024-7",
+      "verifiedVersion": "2024:7"
+    },
+    {
+      "id": "EskL",
+      "name": "Lagen (2015:642) om europeisk skyddsorder",
+      "sfs": "2015-642",
+      "verifiedVersion": "2015:642"
+    },
+    {
+      "id": "TfbL",
+      "name": "Lagen (2021:34) om tillträdesförbud till butiker, badanläggningar och bibliotek",
+      "sfs": "2021-34",
+      "verifiedVersion": "2022:406"
+    },
+    {
+      "id": "HundL",
+      "name": "Lagen (2007:1150) om tillsyn över hundar och katter",
+      "sfs": "2007-1150",
+      "verifiedVersion": "2026:296"
+    },
+    {
+      "id": "FängL",
+      "name": "Fängelselagen (2010:610)",
+      "sfs": "2010-610",
+      "verifiedVersion": "2010:610"
+    },
+    {
+      "id": "LSU",
+      "name": "Lagen (2022:700) om särskild kontroll av vissa utlänningar",
+      "sfs": "2022-700",
+      "verifiedVersion": "2026:1432"
+    },
+    {
+      "id": "LVU",
+      "name": "Lagen (1990:52) med särskilda bestämmelser om vård av unga",
+      "sfs": "1990-52",
+      "verifiedVersion": "2026:1145"
+    },
+    {
+      "id": "JvSL",
+      "name": "Järnvägssäkerhetslagen (2022:367)",
+      "sfs": "2022-367",
+      "verifiedVersion": "2024:933"
+    },
+    {
+      "id": "KKL",
+      "name": "Körkortslagen (1998:488)",
+      "sfs": "1998-488",
+      "verifiedVersion": "2026:469"
+    },
+    {
+      "id": "TrskL",
+      "name": "Lagen (1998:493) om trafikskolor",
+      "sfs": "1998-493",
+      "verifiedVersion": "2022:1207"
+    },
+    {
+      "id": "FskL",
+      "name": "Lagen (2026:1274) om åtgärder mot manipulation och missbruk av färdskrivare",
+      "sfs": "2026-1274",
+      "verifiedVersion": "2026:1274"
+    },
+    {
+      "id": "VskL",
+      "name": "Lagen (2021:626) om förarbevis för vattenskoter",
+      "sfs": "2021-626",
+      "verifiedVersion": "2022:288"
+    },
+    {
+      "id": "BiluL",
+      "name": "Lagen (1998:492) om biluthyrning",
+      "sfs": "1998-492",
+      "verifiedVersion": "2013:317"
+    },
+    {
+      "id": "RadarL",
+      "name": "Lagen (1988:15) om förbud mot vissa radar- och laserinstrument",
+      "sfs": "1988-15",
+      "verifiedVersion": "2024:811"
+    },
+    {
+      "id": "VtsL",
+      "name": "Vägtrafikskattelagen (2006:227)",
+      "sfs": "2006-227",
+      "verifiedVersion": "2025:1369"
+    },
+    {
+      "id": "TerrkL",
+      "name": "Terrängkörningslagen (1975:1313)",
+      "sfs": "1975-1313",
+      "verifiedVersion": "2018:436"
+    },
+    {
+      "id": "LustgL",
+      "name": "Lagen (2025:621) om lustgas",
+      "sfs": "2025-621",
+      "verifiedVersion": "2025:621"
+    },
+    {
+      "id": "NikL",
+      "name": "Lagen (2022:1257) om tobaksfria nikotinprodukter",
+      "sfs": "2022-1257",
+      "verifiedVersion": "2024:897"
+    },
+    {
+      "id": "LHL",
+      "name": "Lagen (2009:366) om handel med läkemedel",
+      "sfs": "2009-366",
+      "verifiedVersion": "2026:1347"
+    },
+    {
+      "id": "SprekL",
+      "name": "Lagen (2014:799) om sprängämnesprekursorer",
+      "sfs": "2014-799",
+      "verifiedVersion": "2024:875"
+    },
+    {
+      "id": "BevL",
+      "name": "Lagen (1974:191) om bevakningsföretag",
+      "sfs": "1974-191",
+      "verifiedVersion": "2023:496"
+    },
+    {
+      "id": "OvL",
+      "name": "Lagen (2023:421) om ordningsvakter",
+      "sfs": "2023-421",
+      "verifiedVersion": "2026:1357"
+    },
+    {
+      "id": "LarmL",
+      "name": "Lagen (1983:1097) med vissa bestämmelser om larmanläggningar m.m.",
+      "sfs": "1983-1097",
+      "verifiedVersion": "2014:587"
+    },
+    {
+      "id": "BegL",
+      "name": "Lagen (1999:271) om handel med begagnade varor",
+      "sfs": "1999-271",
+      "verifiedVersion": "2014:730"
+    },
+    {
+      "id": "DyrkL",
+      "name": "Lagen (1979:357) om yrkesmässig försäljning av dyrkverktyg",
+      "sfs": "1979-357",
+      "verifiedVersion": "2014:585"
+    },
+    {
+      "id": "KampL",
+      "name": "Lagen (2006:1006) om tillståndsplikt för vissa kampsportsmatcher",
+      "sfs": "2006-1006",
+      "verifiedVersion": "2024:853"
+    },
+    {
+      "id": "LSO",
+      "name": "Lagen (2003:778) om skydd mot olyckor",
+      "sfs": "2003-778",
+      "verifiedVersion": "2025:1077"
+    },
+    {
+      "id": "FiskeL",
+      "name": "Fiskelagen (1993:787)",
+      "sfs": "1993-787",
+      "verifiedVersion": "2025:766"
+    },
+    {
+      "id": "KML",
+      "name": "Kulturmiljölagen (1988:950)",
+      "sfs": "1988-950",
+      "verifiedVersion": "2024:813"
+    },
+    {
+      "id": "EstL",
+      "name": "Lagen (1995:732) om skydd för gravfriden vid vraket efter passagerarfartyget Estonia",
+      "sfs": "1995-732",
+      "verifiedVersion": "2024:826"
+    },
+    {
+      "id": "AbortL",
+      "name": "Abortlagen (1974:595)",
+      "sfs": "1974-595",
+      "verifiedVersion": "2024:802"
+    },
+    {
+      "id": "OmskL",
+      "name": "Lagen (2001:499) om omskärelse av pojkar",
+      "sfs": "2001-499",
+      "verifiedVersion": "2017:48"
+    },
+    {
+      "id": "EstetL",
+      "name": "Lagen (2021:363) om estetiska kirurgiska ingrepp och estetiska injektionsbehandlingar",
+      "sfs": "2021-363",
+      "verifiedVersion": "2022:922"
+    },
+    {
+      "id": "PSL",
+      "name": "Patientsäkerhetslagen (2010:659)",
+      "sfs": "2010-659",
+      "verifiedVersion": "2026:1551"
+    },
+    {
+      "id": "GenL",
+      "name": "Lagen (2006:351) om genetisk integritet m.m.",
+      "sfs": "2006-351",
+      "verifiedVersion": "2024:849"
+    },
+    {
+      "id": "JB",
+      "name": "Jordabalken (1970:994)",
+      "sfs": "1970-994",
+      "verifiedVersion": "2026:1498"
+    },
+    {
+      "id": "BitrL",
+      "name": "Lagen (1985:354) om förbud mot juridiskt eller ekonomiskt biträde i vissa fall",
+      "sfs": "1985-354",
+      "verifiedVersion": "2016:1334"
+    },
+    {
+      "id": "BulvL",
+      "name": "Lagen (1985:277) om vissa bulvanförhållanden",
+      "sfs": "1985-277",
+      "verifiedVersion": "2010:28"
+    },
+    {
+      "id": "NkL",
+      "name": "Lagen (1992:860) om kontroll av narkotika",
+      "sfs": "1992-860",
+      "verifiedVersion": "2024:818"
+    },
+    {
+      "id": "LmL",
+      "name": "Läkemedelslagen (2015:315)",
+      "sfs": "2015-315",
+      "verifiedVersion": "2026:497"
+    },
+    {
+      "id": "YkL",
+      "name": "Lagen (2007:1157) om yrkesförarkompetens",
+      "sfs": "2007-1157",
+      "verifiedVersion": "2024:412"
+    },
+    {
+      "id": "MopL",
+      "name": "Lagen (2009:121) om utbildning till förare av mopeder, snöskotrar och terränghjulingar",
+      "sfs": "2009-121",
+      "verifiedVersion": "2022:1209"
+    },
+    {
+      "id": "LBE",
+      "name": "Lagen (2010:1011) om brandfarliga och explosiva varor",
+      "sfs": "2010-1011",
+      "verifiedVersion": "2026:1584"
     }
   ],
   "dependentFields": [

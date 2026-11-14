@@ -5,6 +5,7 @@ PEN 0 | 1 | Böter eller fängelse i högst ett år | B–F 1 år
 C Narkotika
 A oaktsamt narkotikabrott;grov oaktsamhet narkotika
 Q plain
+ST - | Narkotikastrafflagen 4 §
 G Gärningspersonen gör minst ett av följande med {{narkotika}}:
   | Överlåter narkotika.
   | Framställer narkotika som är avsedd för missbruk.
@@ -22,6 +23,7 @@ PEN 0 | 2 | Fängelse i högst två år | F 2 år
 C Narkotika
 A prekursorer;narkotikaprekursorer;kemikalier för narkotikatillverkning
 Q plain
+ST F | Narkotikastrafflagen 4 § andra stycket | Försök är inte straffbart när gärningen bara gäller förvaring, innehav eller annan befattning enligt 3 b § första stycket 2.
 O Narkotikaprekursorer, det vill säga ämnen som kan användas för att framställa narkotika.
 G Gärningspersonen gör minst ett av:
   | Överlåter, framställer, förvärvar, anskaffar, bearbetar, förpackar, transporterar eller tar annan liknande befattning med prekursorerna, när de är avsedda för olovlig framställning av narkotika.
@@ -34,6 +36,7 @@ PEN 0 | 0.5 | Böter eller fängelse i högst sex månader | B–F 6 mån
 C Narkotika
 A ringa prekursorbrott
 Q plain
+ST F | Narkotikastrafflagen 4 § andra stycket | Försök är inte straffbart när gärningen bara gäller förvaring, innehav eller annan befattning enligt 3 b § första stycket 2.
 B v19-olovlig-befattning-narkotikaprekursorer
 R ringa
 - Arten och mängden narkotika som avses framställas.
@@ -45,6 +48,7 @@ PEN 0.5 | 6 | Fängelse lägst sex månader och högst sex år | F 6 mån–6 å
 C Narkotika
 A grovt prekursorbrott
 Q plain
+ST F | Narkotikastrafflagen 4 § andra stycket | Försök är inte straffbart när gärningen bara gäller förvaring, innehav eller annan befattning enligt 3 b § första stycket 2.
 B v19-olovlig-befattning-narkotikaprekursorer
 R grovt
 - Brottet har utgjort ett led i en verksamhet som bedrivits i större omfattning eller yrkesmässigt.
@@ -59,6 +63,7 @@ PEN 0 | 1 | Böter eller fängelse i högst ett år | B–F 1 år
 C Vapen
 A slipat tillverkningsnummer;borttaget vapennummer;märkning av vapen
 Q VapenL
+ST - | VapenL 18:15
 FU enkel|Vapenlagen (1996:67), ersatt av vapenlagen (2026:408)|Bilagan nämner den upphävda vapenlagen (1996:67). Appen behandlar motsvarande brott i nya vapenlagen som enkla.
 O Märkning av {{skjutvapen}} eller vapendelar enligt VapenL 15 kap. (tillverkarens namn, land eller plats, serienummer och tillverkningsår).
 G Gärningspersonen gör minst ett av:
@@ -73,6 +78,7 @@ PEN 0 | 0.5 | Böter eller fängelse i högst sex månader | B–F 6 mån
 C Vapen
 A använda jaktvapen fel;licensvapen annat ändamål
 Q VapenL
+ST - | VapenL 18:15
 K Gärningspersonen har rätt att inneha ett {{skjutvapen}}.
 G Gärningspersonen använder vapnet för något annat ändamål än det som han eller hon är berättigad till.
 S Uppsåt eller oaktsamhet.
@@ -83,6 +89,7 @@ PEN 0 | 0.5 | Böter eller fängelse i högst sex månader | B–F 6 mån
 C Vapen
 A ammunition utan licens;patroner;innehav av ammunition
 Q VapenL
+ST - | VapenL 18:15
 FU enkel|Vapenlagen (1996:67), ersatt av vapenlagen (2026:408)|Bilagan nämner den upphävda vapenlagen (1996:67). Appen behandlar motsvarande brott i nya vapenlagen som enkla.
 G Gärningspersonen gör minst ett av:
   | Innehar ammunition utan att ha rätt till det.
@@ -96,6 +103,7 @@ PEN 0 | 0.5 | Böter eller fängelse i högst sex månader | B–F 6 mån
 C Vapen
 A ljuddämpare;vapenmagasin;magasin utan licens
 Q VapenL
+ST - | VapenL 18:15
 FU enkel|Vapenlagen (1996:67), ersatt av vapenlagen (2026:408)|Bilagan nämner den upphävda vapenlagen (1996:67). Appen behandlar motsvarande brott i nya vapenlagen som enkla.
 O Ljuddämpare eller vapenmagasin.
 G Gärningspersonen gör minst ett av:
@@ -110,6 +118,7 @@ PEN 0 | 0.5 | Böter eller fängelse i högst sex månader | B–F 6 mån
 C Vapen
 A vapenhandel utan tillstånd;sälja vapen
 Q VapenL
+ST - | VapenL 18:15
 FU enkel|Vapenlagen (1996:67), ersatt av vapenlagen (2026:408)|Bilagan nämner den upphävda vapenlagen (1996:67). Appen behandlar motsvarande brott i nya vapenlagen som enkla.
 G Gärningspersonen bedriver handel med {{skjutvapen}}.
 K Gärningspersonen saknar tillstånd till vapenhandel.
@@ -121,6 +130,7 @@ PEN 0 | 0.5 | Böter eller fängelse i högst sex månader | B–F 6 mån
 C Vapen
 A vapenförmedling utan tillstånd;vapenmäklare
 Q VapenL
+ST - | VapenL 18:15
 FU enkel|Vapenlagen (1996:67), ersatt av vapenlagen (2026:408)|Bilagan nämner den upphävda vapenlagen (1996:67). Appen behandlar motsvarande brott i nya vapenlagen som enkla.
 G Gärningspersonen förmedlar yrkesmässigt {{skjutvapen}}.
 K Gärningspersonen saknar tillstånd.
@@ -132,6 +142,7 @@ PEN 0 | 0.5 | Böter eller fängelse i högst sex månader | B–F 6 mån
 C Vapen
 A ammunitionsförmedling
 Q VapenL
+ST - | VapenL 18:15
 FU enkel|Vapenlagen (1996:67), ersatt av vapenlagen (2026:408)|Bilagan nämner den upphävda vapenlagen (1996:67). Appen behandlar motsvarande brott i nya vapenlagen som enkla.
 G Gärningspersonen förmedlar yrkesmässigt ammunition.
 K Gärningspersonen saknar tillstånd.
@@ -143,6 +154,7 @@ PEN 0 | 0.5 | Böter eller fängelse i högst sex månader | B–F 6 mån
 C Vapen
 A felaktig förvaring av vapen;vapenskåp;vapen i bilen;medföra vapen
 Q VapenL
+ST - | VapenL 18:15
 FU enkel|Vapenlagen (1996:67), ersatt av vapenlagen (2026:408)|Bilagan nämner den upphävda vapenlagen (1996:67). Appen behandlar motsvarande brott i nya vapenlagen som enkla.
 G Gärningspersonen gör minst ett av:
   | Bryter mot reglerna om att lämna över {{skjutvapen}} till förvaring hos någon annan, om transport av skjutvapen eller mot villkor om förvaring.

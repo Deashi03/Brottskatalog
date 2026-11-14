@@ -6,6 +6,7 @@ PEN 4 | 18 | Fängelse lägst fyra och högst arton år eller på livstid | F 4�
 C Rikets säkerhet
 A terrorism;terrorattack;terrordåd
 Q plain
+ST FPS | TerrL 11 § | Ett terroristbrott som inte fullbordas bara därför att gärningen inte allvarligt kan skada ett land eller en mellanstatlig organisation bedöms som försök.
 N Försök, förberedelse och stämpling samt underlåtenhet att avslöja eller förhindra terroristbrott är straffbara (11 §).
 G Gärningspersonen begår eller försöker begå ett uppsåtligt brott, till exempel mord, mordbrand eller allmänfarlig ödeläggelse.
 F Gärningen kan allvarligt skada ett land eller en mellanstatlig organisation.
@@ -20,6 +21,7 @@ PEN 2 | 6 | Fängelse lägst två och högst sex år | F 2–6 år
 C Rikets säkerhet
 A mindre grovt terroristbrott
 Q plain
+ST FPS | TerrL 11 § | Ett terroristbrott som inte fullbordas bara därför att gärningen inte allvarligt kan skada ett land eller en mellanstatlig organisation bedöms som försök.
 B v19-terroristbrott
 R mindre*
 - Om det underliggande brottet är av mindre allvarligt slag.
@@ -31,6 +33,7 @@ PEN 0 | 4 | Fängelse i högst fyra år | F 4 år
 C Rikets säkerhet
 A terroristorganisation;IS;medlem i terrororganisation;delta i terrorgrupp
 Q plain
+ST F | TerrL 11 §
 N Försök är straffbart (11 §).
 O En terroristorganisation: en sammanslutning av personer som begår eller medverkar till terroristbrott, eller försök, förberedelse eller stämpling till terroristbrott.
 G Gärningspersonen deltar i organisationens verksamhet.
@@ -45,6 +48,7 @@ PEN 2 | 18 | Fängelse lägst två och högst åtta år, eller vid ledning av or
 C Rikets säkerhet
 A grovt deltagande i terroristorganisation;ledare terroristorganisation
 Q plain
+ST F | TerrL 11 §
 B v19-deltagande-terroristorganisation
 R grovt
 - Gärningspersonen har haft en central roll inom terroristorganisationen.
@@ -58,6 +62,7 @@ PEN 0 | 4 | Fängelse i högst fyra år | F 4 år
 C Rikets säkerhet
 A stöd till terroristorganisation;samröre
 Q plain
+ST F | TerrL 11 §
 N Försök är straffbart (11 §).
 G Gärningspersonen gör minst ett av följande för en terroristorganisation, i annat fall än deltagande i organisationen:
   | Tar befattning med vapen, ammunition, brandfarliga eller explosiva varor eller transportmedel.
@@ -74,6 +79,7 @@ PEN 1.5 | 7 | Fängelse lägst ett år och sex månader och högst sju år | F 1
 C Rikets säkerhet
 A grovt samröre med terroristorganisation
 Q plain
+ST F | TerrL 11 §
 B v19-samrore-terroristorganisation
 R grovt
 - Gärningen har ingått som ett led i en verksamhet som har bedrivits i större omfattning.
@@ -85,6 +91,7 @@ PEN 0 | 3 | Fängelse i högst tre år | F 3 år
 C Rikets säkerhet
 A terrorfinansiering;samla in pengar till terrorism;swisha till terrorgrupp
 Q plain
+ST F | TerrL 11 §
 N Försök är straffbart (11 §).
 G Gärningspersonen samlar in, tar emot eller tillhandahåller pengar eller annan egendom.
 S Avsikt att egendomen ska användas, eller vetskap om att den är avsedd att användas, minst ett av:
@@ -99,6 +106,7 @@ PEN 1 | 6 | Fängelse lägst ett och högst sex år | F 1–6 år
 C Rikets säkerhet
 A grov terrorfinansiering
 Q plain
+ST F | TerrL 11 §
 B v19-finansiering-terrorism
 R grovt
 - Gärningen har avsett brottslighet som innefattar fara för flera människoliv eller för egendom av särskild betydelse.
@@ -112,6 +120,7 @@ PEN 0 | 3 | Fängelse i högst tre år | F 3 år
 C Rikets säkerhet
 A uppmana till terror;terrorpropaganda;hylla terrordåd
 Q plain
+ST - | TerrL 11 §
 G Gärningspersonen uppmanar eller söker på annat sätt förleda till terroristbrott, särskilt allvarlig brottslighet eller andra brott i terroristbrottslagen.
 O Uppmaningen sker i ett meddelande till allmänheten, till exempel på sociala medier.
 S Uppsåt till samtliga rekvisit.
@@ -123,6 +132,7 @@ PEN 1 | 6 | Fängelse lägst ett och högst sex år | F 1–6 år
 C Rikets säkerhet
 A grov uppmaning till terrorism
 Q plain
+ST - | TerrL 11 §
 B v19-offentlig-uppmaning-terrorism
 R grovt
 - Gärningen har avsett brottslighet som innefattar fara för flera människoliv eller för egendom av särskild betydelse.
@@ -135,6 +145,7 @@ PEN 0 | 3 | Fängelse i högst tre år | F 3 år
 C Rikets säkerhet
 A rekrytera till terrorism;värva terrorister
 Q plain
+ST - | TerrL 11 §
 G Gärningspersonen söker förmå någon annan att begå eller medverka till terroristbrott, särskilt allvarlig brottslighet eller andra brott i terroristbrottslagen, i annat fall än genom offentlig uppmaning.
 S Uppsåt till samtliga rekvisit.
 U Fallet är ringa.
@@ -145,6 +156,7 @@ PEN 1 | 6 | Fängelse lägst ett och högst sex år | F 1–6 år
 C Rikets säkerhet
 A grov rekrytering till terrorism
 Q plain
+ST - | TerrL 11 §
 B v19-rekrytering-terrorism
 R grovt
 - Gärningen har avsett brottslighet som innefattar fara för flera människoliv eller för egendom av särskild betydelse.
@@ -157,6 +169,7 @@ PEN 0 | 3 | Fängelse i högst tre år | F 3 år
 C Rikets säkerhet
 A bombmanual;terrorutbildning;instruktioner sprängmedel
 Q plain
+ST - | TerrL 11 §
 G Gärningspersonen gör minst ett av:
   | Meddelar eller söker meddela instruktioner om tillverkning eller användning av hjälpmedel, metoder eller tekniker som är särskilt ägnade att användas vid terroristbrott, särskilt allvarlig brottslighet eller finansiering av terrorism.
   | Tar del av sådana instruktioner.
@@ -169,6 +182,7 @@ PEN 1 | 6 | Fängelse lägst ett och högst sex år | F 1–6 år
 C Rikets säkerhet
 A grov utbildning för terrorism
 Q plain
+ST - | TerrL 11 §
 B v19-utbildning-terrorism
 R grovt
 - Gärningen har avsett brottslighet som innefattar fara för flera människoliv eller för egendom av särskild betydelse.
@@ -181,6 +195,7 @@ PEN 0 | 2 | Fängelse i högst två år | F 2 år
 C Rikets säkerhet
 A terrorresa;resa till IS;resa för att strida
 Q plain
+ST - | TerrL 11 §
 G Gärningspersonen reser eller påbörjar en resa till ett annat land.
 S Avsikt att begå eller medverka till terroristbrott, särskilt allvarlig brottslighet eller finansiering av terrorism (eller förberedelse eller stämpling till sådant), eller att delta i eller ha samröre med en terroristorganisation eller ta del av eller meddela utbildning för terrorism.
 U Fallet är ringa.
@@ -195,6 +210,7 @@ PEN 4 | 18 | Fängelse lägst fyra och högst arton år eller på livstid | F 4�
 C Rikets säkerhet
 A folkmord;genocid
 Q internationella
+ST FPS | IntBrL 16 §
 N Försök, förberedelse och stämpling samt underlåtenhet att avslöja eller förhindra brottet är straffbara (16 §). En förman som inte förhindrar brottet döms som gärningsman (13 §).
 S Syfte att helt eller delvis förinta en nationell, etnisk, rasmässigt bestämd eller religiös folkgrupp som sådan.
 G Gärningspersonen gör minst ett av:
@@ -210,6 +226,7 @@ PEN 4 | 18 | Fängelse lägst fyra och högst arton år eller på livstid | F 4�
 C Rikets säkerhet
 A brott mot mänskligheten;crimes against humanity
 Q internationella
+ST FPS | IntBrL 16 §
 N Försök, förberedelse och stämpling samt underlåtenhet att avslöja eller förhindra brottet är straffbara (16 §).
 O Gärningen utgör eller ingår som ett led i ett omfattande eller systematiskt angrepp riktat mot en grupp civila.
 G Gärningspersonen gör minst ett av följande mot en person i gruppen, till exempel:
@@ -226,6 +243,7 @@ PEN 0 | 6 | Fängelse i högst sex år | F 6 år
 C Rikets säkerhet
 A krigsbrott;krigsförbrytelse;plundring;barnsoldater;anfall mot civila
 Q internationella
+ST FPS | IntBrL 16 §
 N Försök, förberedelse och stämpling samt underlåtenhet att avslöja eller förhindra brottet är straffbara (16 §). En förman som inte förhindrar brottet döms som gärningsman (13 §).
 O Gärningen ingår som ett led i eller står i samband med en väpnad konflikt eller ockupation.
 G Gärningspersonen gör minst ett av, till exempel:
@@ -243,6 +261,7 @@ PEN 4 | 18 | Fängelse lägst fyra och högst arton år eller på livstid | F 4�
 C Rikets säkerhet
 A grov krigsförbrytelse;grovt krigsbrott
 Q internationella
+ST FPS | IntBrL 16 §
 N Försök, förberedelse och stämpling samt underlåtenhet att avslöja eller förhindra brottet är straffbara (16 §).
 B v19-krigsforbrytelse
 R grovt
@@ -256,6 +275,7 @@ PEN 4 | 18 | Fängelse lägst fyra och högst arton år eller på livstid | F 4�
 C Rikets säkerhet
 A anfallskrig;aggression
 Q internationella
+ST FPS | IntBrL 16 §
 N Åtal för aggressionsbrott som har begåtts utanför Sverige får väckas endast efter förordnande av regeringen (17 §).
 K Gärningspersonen kan utöva kontroll eller styra över en stats politiska eller militära handlande.
 G Gärningspersonen planerar, förbereder, inleder eller utför en aggressionshandling, det vill säga en stats användning av väpnat våld mot en annan stats suveränitet, territoriella integritet eller politiska oberoende.
@@ -268,6 +288,7 @@ PEN 0 | 4 | Fängelse i högst fyra år | F 4 år
 C Rikets säkerhet
 A förmansansvar;befälsansvar
 Q internationella
+ST - | IntBrL 16 §
 K Gärningspersonen är militär eller civil förman över en underlydande som står under hans eller hennes lydnad och effektiva kontroll.
 G Förmannen underlåter att utöva särskild tillsyn över den underlydande.
 F Den underlydande har begått folkmord, brott mot mänskligheten eller krigsförbrytelse som förmannen borde ha förutsett och hade kunnat förhindra.
@@ -279,6 +300,7 @@ PEN 0 | 4 | Fängelse i högst fyra år | F 4 år
 C Rikets säkerhet
 A förman anmäla krigsbrott
 Q internationella
+ST - | IntBrL 16 §
 K Gärningspersonen är militär eller civil förman över en underlydande som står under hans eller hennes lydnad och effektiva kontroll.
 G Förmannen underlåter att anmäla skälig misstanke om att den underlydande har begått folkmord, brott mot mänskligheten eller krigsförbrytelse för undersökning och lagföring.
 S Uppsåt till samtliga rekvisit.

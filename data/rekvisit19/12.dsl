@@ -79,7 +79,7 @@ S Uppsåt till samtliga rekvisit.
 
 @ v15-war-landssvek | Landssvek | BrB 22:2
 B v15-inventory-22-1
-R mindre
+R mindre*
 - Gärningen är bara i mindre mån ägnad att medföra men för totalförsvaret.
 - Gärningen innefattar ringare bistånd åt fienden.
 

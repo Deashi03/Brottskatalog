@@ -6,17 +6,18 @@ PEN 0 | 2 | Böter eller fängelse i högst två år | B–F 2 år
 C Alkohol
 A hembränning;hembränt;olovlig tillverkning av sprit;moonshine
 Q plain
+ST FP | AlkL 11:11 | Gäller inte förvärv eller innehav för personligt bruk av olovligt tillverkad sprit.
 FU enkel|Alkohollagen (2010:1622)
 N Försök och förberedelse är straffbara, utom när gärningen bara gäller förvärv eller innehav för personligt bruk (11:11).
 ## Tillverkning
 G Gärningspersonen tillverkar sprit eller spritdrycker.
 K Gärningspersonen har inte rätt att tillverka sprit enligt alkohollagen, till exempel genom att vara godkänd upplagshavare.
-S Uppsåt till samtliga rekvisit.
+S Uppsåt till samtliga rekvisit. Lagen anger ingen skuldform. Utgångspunkten är då att uppsåt krävs.
 U Gärningen är ringa.
 ## Befattning med olovligt tillverkad sprit
 O Spriten eller spritdrycken är olovligt tillverkad.
 G Gärningspersonen förvärvar, innehar, forslar, döljer eller förvarar spriten.
-S Uppsåt till samtliga rekvisit.
+S Uppsåt till samtliga rekvisit. Lagen anger ingen skuldform. Utgångspunkten är då att uppsåt krävs.
 U Gärningen är ringa.
 T En person har en hemmagjord destillationsapparat i garaget och bränner sprit.
 V En person köper hembränt av en granne och förvarar flaskorna i källaren.
@@ -26,6 +27,7 @@ PEN 0.5 | 6 | Fängelse lägst sex månader och högst sex år | F 6 mån–6 å
 C Alkohol
 A grov hembränning;grov olovlig befattning med sprit
 Q plain
+ST FP | AlkL 11:11 | Gäller inte förvärv eller innehav för personligt bruk av olovligt tillverkad sprit.
 FU enkel|Alkohollagen (2010:1622)|Bilagan undantar inte grova brott enligt alkohollagen. Åklagaren tar ändå över om något av villkoren i ÅFS 7 eller 8 § är uppfyllt.
 B v19-olovlig-befattning-med-sprit
 S Brottet har begåtts uppsåtligen.
@@ -39,11 +41,12 @@ PEN 0 | 1 | Böter eller fängelse i högst ett år | B–F 1 år
 C Alkohol
 A destillationsapparat;bränningsapparat;hembränningsapparat
 Q plain
+ST - | AlkL 11:11
 FU enkel|Alkohollagen (2010:1622)
 O En destillationsapparat eller en del till en sådan apparat.
 G Gärningspersonen tillverkar, överlåter eller innehar apparaten eller apparatdelen.
 K Gärningspersonen har inte rätt till det enligt 2 kap. 1 § andra stycket alkohollagen.
-S Uppsåt till samtliga rekvisit.
+S Uppsåt till samtliga rekvisit. Lagen anger ingen skuldform. Utgångspunkten är då att uppsåt krävs.
 T Vid en husrannsakan hittas en hemmabyggd destillationsapparat i en förrådsbod.
 
 @ v19-olovlig-forsaljning-av-alkohol | Olovlig försäljning av alkohol | 11:3 | 11:3,11:10
@@ -51,6 +54,7 @@ PEN 0 | 2 | Böter eller fängelse i högst två år | B–F 2 år
 C Alkohol
 A langning;sälja sprit;svartklubb;olovlig servering;sälja alkohol utan tillstånd
 Q plain
+ST FP | AlkL 11:11
 FU enkel|Alkohollagen (2010:1622)
 N Försök och förberedelse är straffbara (11:11).
 G Gärningspersonen gör minst ett av:
@@ -67,6 +71,7 @@ PEN 0.5 | 6 | Fängelse lägst sex månader och högst sex år | F 6 mån–6 å
 C Alkohol
 A grov langning;grov olovlig försäljning av alkohol
 Q plain
+ST FP | AlkL 11:11
 FU enkel|Alkohollagen (2010:1622)|Bilagan undantar inte grova brott enligt alkohollagen. Åklagaren tar ändå över om något av villkoren i ÅFS 7 eller 8 § är uppfyllt.
 B v19-olovlig-forsaljning-av-alkohol
 S Brottet har begåtts uppsåtligen.
@@ -80,9 +85,10 @@ PEN 0 | 0.5 | Böter eller fängelse i högst sex månader | B–F 6 mån
 C Alkohol
 A tillverka öl;tillverka vin;hembryggning försäljning
 Q plain
+ST - | AlkL 11:11
 FU enkel|Alkohollagen (2010:1622)
 G Gärningspersonen tillverkar folköl, starköl, vin eller andra jästa alkoholdrycker i strid med alkohollagen, till exempel för försäljning utan att vara godkänd för det.
-S Uppsåt till samtliga rekvisit.
+S Uppsåt till samtliga rekvisit. Lagen anger ingen skuldform. Utgångspunkten är då att uppsåt krävs.
 U Gärningen är ringa.
 T En person tillverkar starköl i stor mängd i en lokal och säljer det vidare utan att vara godkänd som upplagshavare.
 
@@ -91,6 +97,7 @@ PEN 0 | 2 | Böter eller fängelse i högst två år | B–F 2 år
 C Alkohol
 A innehav för försäljning;langningslager;spritlager
 Q plain
+ST - | AlkL 11:11
 FU enkel|Alkohollagen (2010:1622)
 G Gärningspersonen innehar alkoholdrycker eller alkoholdrycksliknande preparat.
 S Syfte att olovligen sälja dryckerna.
@@ -103,6 +110,7 @@ PEN 0 | 2 | Böter eller fängelse i högst två år | B–F 2 år
 C Alkohol
 A langning till ungdomar;köpa ut;bjuda minderårig på alkohol;ombud för underårig
 Q plain
+ST FP | AlkL 11:11
 FU enkel|Alkohollagen (2010:1622)
 N Försök och förberedelse är straffbara (11:11).
 G Gärningspersonen gör minst ett av:
@@ -119,6 +127,7 @@ PEN 0 | 4 | Fängelse i högst fyra år | F 4 år
 C Alkohol
 A grov langning till ungdomar;grovt olovligt anskaffande av alkohol
 Q plain
+ST FP | AlkL 11:11
 FU enkel|Alkohollagen (2010:1622)|Bilagan undantar inte grova brott enligt alkohollagen. Åklagaren tar ändå över om något av villkoren i ÅFS 7 eller 8 § är uppfyllt.
 B v19-olovligt-anskaffande-av-alkohol
 R grovt*
@@ -131,6 +140,7 @@ PEN 0 | 0.5 | Böter eller fängelse i högst sex månader | B–F 6 mån
 C Alkohol
 A sälja öl till minderårig;servera berusad;överservering;folköl till 17-åring;medhavd sprit krog
 Q plain
+ST - | AlkL 11:11
 FU enkel|Alkohollagen (2010:1622)
 G Gärningspersonen gör minst ett av:
   | Säljer eller lämnar ut alkohol till någon som inte har uppnått åldersgränsen (20 år, 18 år för folköl och för servering) eller som är märkbart påverkad av alkohol eller annat berusningsmedel.
@@ -152,6 +162,7 @@ PEN 0 | 2 | Fängelse i högst två år | F 2 år
 C Narkotika
 A anabola steroider;testosteron;tillväxthormon;dopning;doping
 Q plain
+ST FP | Dopningslagen 4 § | Gäller inte innehav eller bruk.
 FU villkor|3 § jämförd med 2 § 2, 6 och 7 lagen om förbud mot vissa dopningsmedel|Gäller brottet överlåtelse, innehav eller bruk?|ja|Inte framställning, förvärv i överlåtelsesyfte eller utbjudande.
 N Försök och förberedelse är straffbara om brottet inte är ringa och gäller annat än innehav eller bruk (4 §).
 O Dopningsmedel: syntetiska anabola steroider, testosteron och dess derivat, tillväxthormon eller ämnen som ökar produktionen eller frisättningen av testosteron eller tillväxthormon.
@@ -178,6 +189,7 @@ PEN 0 | 0.5 | Böter eller fängelse i högst sex månader | B–F 6 mån
 C Narkotika
 A ringa dopningsbrott
 Q plain
+ST - | Dopningslagen 4 §
 B v19-dopningsbrott
 R ringa
 - Mängden dopningsmedel.
@@ -189,6 +201,7 @@ PEN 0.5 | 6 | Fängelse lägst sex månader och högst sex år | F 6 mån–6 å
 C Narkotika
 A grovt dopningsbrott;storskalig steroidhandel
 Q plain
+ST FP | Dopningslagen 4 § | Gäller inte innehav eller bruk.
 N Försök och förberedelse är straffbara om gärningen gäller annat än innehav eller bruk (4 §).
 B v19-dopningsbrott
 R grovt

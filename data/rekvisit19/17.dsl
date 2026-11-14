@@ -34,7 +34,7 @@ S Uppsåt även till att narkotikan är avsedd att säljas.
 
 @ v09-ringa-narkotikasmuggling | Ringa narkotikasmuggling | SmuglL 6 § tredje stycket
 B v09-narkotikasmuggling
-R ringa
+R ringa*
 - Narkotikans art och mängd, till exempel en mindre mängd för eget bruk.
 - Övriga omständigheter.
 
@@ -63,7 +63,7 @@ U Gärningspersonen har frivilligt undanröjt faran som en oriktig eller uteläm
 
 @ v09-ringa-vapensmuggling | Ringa vapensmuggling | SmuglL 6 a § andra stycket
 B v09-vapensmuggling
-R ringa
+R ringa*
 - Vapnets art, till exempel ett obrukbart vapen eller en vapendel.
 - Övriga omständigheter.
 

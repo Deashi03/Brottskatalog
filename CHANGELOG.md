@@ -1,5 +1,46 @@
 # Ändringslogg – Brottskatalog
 
+## 2.0 – 2026-11-14
+
+### Nya brott
+- 98 nya brottskort, främst ur specialstraffrätten. Katalogen har nu 659 brott. Exempel:
+  - **Förbud och övervakning:** överträdelse av vistelseförbud, europeisk skyddsorder, tillträdesförbud till butik, hundförbud.
+  - **Frihetsberövade och utlänningar:** fängelselagen, lagen om särskild kontroll av vissa utlänningar, LVU, olovlig vistelse och arbete utan arbetstillstånd.
+  - **Trafik och fordon:** järnvägssäkerhetslagen, olovlig trafikskola, färdskrivarmanipulation, vattenskoter, biluthyrning, radarvarnare, terrängkörning, otillåten taxitrafik, yrkesförarkompetens.
+  - **Droger och farliga ämnen:** lustgas, tobaksfria nikotinprodukter, olovlig läkemedelshandel, sprängämnesprekursorer.
+  - **Ordning och säkerhetsbransch:** bevakningsföretag, ordningsvakter, larminstallation, handel med begagnade varor, dyrkverktyg, kampsportsmatcher, eldningsförbud, offentlig plats enligt ordningslagen.
+  - **Natur och kultur:** olovligt fiske, fornminnesbrott, metallsökare, Estonialagen, förseelse mot områdesskydd.
+  - **Vård och kropp:** illegal abort, omskärelse, estetiska ingrepp, kvacksalveri, handel med biologiskt material.
+  - **Bostad och ekonomi:** svarthandel med hyresrätter, otillåten andrahandsuthyrning, vårdslöst biträde, bulvanlagen.
+  - **Brottsbalken och rättegångsbalken:** underlåtenhet att avslöja eller förhindra brott (BrB 23:6) och brott mot yppandeförbud (RB 9:6).
+
+### Förstadier
+- Alla brott har nu kort för försök, förberedelse och stämpling. Ett kort är antingen **straffbart** eller säger uttryckligen **ej straffbart**, så att det går att kontrollera att till exempel försök till ringa stöld inte är brottsligt.
+- Straffbara förstadier har menyn **FU-ledning och åklagarkontakt**. Förstadiet följer det fullbordade brottet: är det fullbordade brottet åklagarlett är försöket också det, och försök till stöld är polislett under normala omständigheter.
+
+### Preskription
+- Ny meny **Preskription** under FU-ledning och åklagarkontakt. Den visar preskriptionstiden och den absoluta preskriptionstiden enligt BrB 35 kap. i den lydelse som gäller från den 1 april 2025.
+- Ange **datum för brottet** för att se om brottet är preskriberat, vilken dag som är den sista och hur många dagar som återstår.
+- Menyn tar hänsyn till brott som aldrig preskriberas, till att tiden räknas från målsägandens 18-årsdag vid vissa brott mot barn, till övergångsregeln för äldre brott och till särreglerna för skattebrott och bokföringsbrott.
+
+### Närliggande brott
+- Ny meny **Närliggande brott** under Preskription. Den visar andra grader av samma brott och brott som ofta förväxlas, med en rad om vad som skiljer dem, till exempel stöld, egenmäktigt förfarande, olovligt förfogande och förskingring.
+
+### Kommande lagändringar
+- Kort som berörs av en beslutad lagändring visar en rad med datum och vad som ändras.
+- Lagbevakningen omfattar nu alla lagar som har kort i katalogen.
+
+### Borttaget och förenklat
+- Menyerna **Lydelse och gärningstidpunkt** och **Straffskala och beslutsvillkor** är borttagna. Under lagtexten står när lydelsen kontrollerades.
+- Straffskalor, lagrum och kategorier skrivs på samma sätt på alla kort. Kategorierna är färre och tydligare.
+
+### Sökning
+- Fler vardagsord ger träff, till exempel snatteri, svartkontrakt, svarttaxi och fillers.
+- Exakt lagrum och träff i början av ett ord rangordnas högst.
+
+### Rättningar
+- Fel och otydligheter från genomgången av hela materialet är rättade, bland annat uppsåtskravet vid fyndförseelse, skuldformen på kort där lagen inte anger någon och en felaktig straffskala.
+
 ## 1.9.1 – 2026-11-04
 
 ### Brottslistan

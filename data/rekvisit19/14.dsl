@@ -86,6 +86,6 @@ R grovt*
 
 @ v04-ringa-tillgrepp-av-fortskaffningsmedel | Ringa tillgrepp av fortskaffningsmedel | BrB 8:7 första stycket
 B v03-tillgrepp-av-fortskaffningsmedel
-R ringa
+R ringa*
 - Fordonets art och värde, till exempel en cykel med hjälpmotor.
 - Hur länge och hur långt fordonet användes, och övriga omständigheter.

@@ -21,7 +21,7 @@ R grovt
 @ v09-penningtvattsforseelse | Penningtvättsförseelse | PTBL 6 §
 ## Ringa penningtvättsbrott
 B v09-penningtvattsbrott
-R ringa
+R ringa*
 - Egendomens värde, till exempel ett lågt belopp.
 - Övriga omständigheter.
 ## Oaktsam penningtvätt
@@ -42,7 +42,7 @@ R grovt*
 @ v09-ringa-naringspenningtvatt | Ringa näringspenningtvätt | PTBL 7 § tredje stycket
 ## Ringa brott
 B v09-naringspenningtvatt
-R ringa
+R ringa*
 - Värdet av egendomen och övriga omständigheter.
 ## Medverkan utanför näringsverksamhet
 G Gärningspersonen medverkar, utanför näringsverksamhet, till en åtgärd som skäligen kan antas vara vidtagen i syfte att dölja att egendom härrör från brott, eller att främja möjligheterna att tillgodogöra sig den.
@@ -57,7 +57,7 @@ S Uppsåt till samtliga rekvisit.
 
 @ v09-ringa-bidragsbrott | Ringa bidragsbrott | BidrBrL 2 §
 B v09-bidragsbrott
-R ringa
+R ringa*
 - Beloppet, till exempel ett lågt belopp.
 - Övriga omständigheter.
 
@@ -83,7 +83,7 @@ U Gärningspersonen har på eget initiativ vidtagit en åtgärd som leder till a
 
 @ v09-skatteforseelse | Skatteförseelse | SkBrL 3 §
 B v09-skattebrott
-R ringa
+R ringa*
 - Det undandragna skattebeloppet, till exempel ett lågt belopp.
 - Övriga omständigheter.
 

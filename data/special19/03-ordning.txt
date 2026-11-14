@@ -8,7 +8,7 @@ A bryta mot kontaktförbud;besöksförbud;kontaktförbud;överträdelse av besö
 Q plain
 O Ett kontaktförbud gäller mot gärningspersonen: förbud att besöka eller på annat sätt ta kontakt med en viss person eller att följa efter personen. Det kan också gälla förbud att uppehålla sig i en gemensam bostad.
 G Gärningspersonen bryter mot förbudet, till exempel genom att ringa, sms:a, skriva på sociala medier, besöka eller följa efter den skyddade personen.
-S Uppsåt till samtliga rekvisit, även till att förbudet gäller.
+S Uppsåt till samtliga rekvisit, även till att förbudet gäller. Lagen anger ingen skuldform. Utgångspunkten är då att uppsåt krävs.
 U Fallet är ringa. Då är straffet böter (24 § tredje stycket).
 T En man som har kontaktförbud mot sin före detta sambo skickar sms till henne och ber att få träffas.
 V Den skyddade personen tar själv kontakt och de träffas. Mannen döms ändå, eftersom förbudet gäller honom även om hon samtycker.
@@ -31,7 +31,7 @@ A utvidgat kontaktförbud;särskilt utvidgat kontaktförbud;fotboja kontaktförb
 Q plain
 O Ett utvidgat kontaktförbud gäller mot gärningspersonen: förbud att uppehålla sig inom ett eller flera områden kring den skyddade personens bostad, arbetsplats eller annat ställe där personen brukar vistas. Ett särskilt utvidgat kontaktförbud avser ett större område.
 G Gärningspersonen uppehåller sig inom det förbjudna området, eller bryter på annat sätt mot förbudet.
-S Uppsåt till samtliga rekvisit, även till att förbudet gäller och var området går.
+S Uppsåt till samtliga rekvisit, även till att förbudet gäller och var området går. Lagen anger ingen skuldform. Utgångspunkten är då att uppsåt krävs.
 U Fallet är ringa. Då är straffet böter (24 § tredje stycket).
 T En person med utvidgat kontaktförbud larmar på den elektroniska övervakningen när han går in i området runt den skyddade personens bostad.
 
@@ -65,7 +65,7 @@ A tillträdesförbud;arenaförbud;matchförbud;huligan
 Q plain
 O Ett tillträdesförbud gäller mot gärningspersonen: förbud att få tillträde till ett eller flera idrottsarrangemang.
 G Gärningspersonen bryter mot förbudet, till exempel genom att gå in på arenan under en match som förbudet omfattar.
-S Uppsåt till samtliga rekvisit.
+S Uppsåt till samtliga rekvisit. Lagen anger ingen skuldform. Utgångspunkten är då att uppsåt krävs.
 T En supporter med tillträdesförbud tar sig in på läktaren under en allsvensk fotbollsmatch.
 
 LAW MaskL | Lagen (2005:900) om förbud mot maskering i vissa fall | 2005:900 | Maskeringslagen

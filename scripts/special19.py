@@ -9,6 +9,7 @@ Källformat (en rad per uppgift):
   C  kategori
   A  sökord;sökord
   Q  åtalsregel (plain eller en nyckel i RULES nedan eller i prosecution-171.js)
+  ST förstadier (F, P, S eller -) | lagstöd | begränsning   (äkta och falska förstadiekort, se stages-20.js)
   FU enkel|bilagerad   eller   villkor|bilagerad|fråga|ja/nej|tips   eller   ej|förklaring
   N  upplysning om förstadier eller annat som visas på kortet
   Därefter rekvisit i samma DSL som data/rekvisit19 (B, R, -, ##, G, O, F, S, K, P, U, |)
@@ -59,7 +60,12 @@ def load(root):
         p=[x.strip() for x in line[4:].split('|')];cur['min']=float(p[0]);cur['max']=float(p[1]);cur['penalty']=p[2];cur['penaltyShort']=p[3];continue
       if line.startswith('C '):cur['category']=line[2:].strip();continue
       if line.startswith('A '):cur['aliases']=[a.strip() for a in line[2:].split(';') if a.strip()];continue
-      if line.startswith('Q '):cur['rule']=line[2:].strip();continue
+      if line.startswith('Q '):
+        q=[y.strip() for y in line[2:].split('|',1)];cur['rule']=q[0]
+        if len(q)>1:cur['ruleNote']=q[1]
+        continue
+      if line.startswith('ST '):
+        x=[y.strip() for y in line[3:].split('|')];cur['st']=x;continue
       if line.startswith('FU '):cur['fu']=[x.strip() for x in line[3:].split('|')];continue
       if line.startswith('N '):cur['notes'].append(line[2:].strip());continue
       if line.startswith('TF '):lab,txt=line[3:].split('|',1);examples[cur['id']].append(['form',txt.strip(),lab.strip()]);continue
@@ -89,7 +95,15 @@ def write(root,S):
       parts=s.split(':')
       ref=L['name']+' '+(parts[0]+' kap. '+re.sub(r'([0-9])([a-z])$',r'\1 \2',parts[1]) if len(parts)==2 else re.sub(r'([0-9])([a-z])$',r'\1 \2',parts[0]))+' §'
       statutes[c['law']+':'+s]={'id':c['law']+':'+s,'ref':ref,'text':t,'url':L['url'],'complete':True,'machine':False,'source':'Sveriges riksdag','checked':CHECKED}
-    rule=c['rule'];general=rule=='plain' or rule=='internationella'
+    rule=c['rule']
+    if c.get('ruleNote'):
+      # Eget åtalsvillkor på kortet: "Q plain | text" (grön) eller "Q villkor | text" (gul).
+      yellow=rule!='plain';key='x20_'+c['id'].replace('-','_')
+      RULES[key]={'tone':'yellow' if yellow else 'green','status':'Särskilt åtalsvillkor' if yellow else 'Allmänt åtal','short':c['ruleNote'] if yellow else 'Ingen angivelse krävs.',
+                  'more':[{'label':'Åtalsvillkor','text':c['ruleNote']}],'law':c['law']+':'+c['sections'][-1]}
+      rule=key if yellow else key
+      c['_custom']=key;c['_yellow']=yellow
+    general=rule=='plain' or rule=='internationella' or (c.get('_custom') and not c.get('_yellow'))
     short=info['short']+' '+compact(c['ref'])
     e={'id':c['id'],'title':c['title'],'shortRef':short,'ref':info['name']+' '+c['ref'],'category':c['category'],
        'statute':c['law']+':'+c['sections'][0],'aliases':c['aliases'],
@@ -107,6 +121,10 @@ def write(root,S):
        'elements':[],'qualifications':[],'facts':[],'stages':c['notes'],'related':[],'typexempel15':[],'investigation':[],'variants':[],
        'reviewStatus':'v19-statute-checked','added19':True}
     if rule!='plain':e['prosecutionStatutoryReview15']={'rule':rule}
+    if 'st' in c:
+      st=c['st'];e['stagePermissions']='' if st[0]=='-' else st[0]
+      if len(st)>1 and st[1]:e['stageSource']=st[1]
+      if len(st)>2 and st[2]:e['stageRestriction']=st[2]
     entries.append(e)
     if 'fu' in c:
       f=c['fu']

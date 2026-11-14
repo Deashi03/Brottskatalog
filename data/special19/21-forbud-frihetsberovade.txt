@@ -1,0 +1,185 @@
+LAW VistL | Lagen (2024:7) om preventiva vistelseförbud | 2024:7 | Vistelseförbudslagen
+X 1
+
+@ v20-overtradelse-av-vistelseforbud | Överträdelse av vistelseförbud | 29 § | 1,29
+PEN 0 | 1 | Fängelse i högst ett år | F 1 år
+C Allmän ordning
+A vistelseförbud;preventivt vistelseförbud;områdesförbud;zonförbud;bryta mot vistelseförbud
+Q plain
+O Ett vistelseförbud gäller mot gärningspersonen: förbud att inom ett avgränsat område vistas på allmän plats, på skolgårdar och liknande områden vid förskolor och fritidshem samt i fordon på allmän plats.
+G Gärningspersonen vistas inom området eller bryter på annat sätt mot förbudet.
+S Uppsåt till samtliga rekvisit. Lagen anger ingen skuldform. Utgångspunkten är då att uppsåt krävs.
+U Brottet är ringa. Då är straffet böter.
+T En man med vistelseförbud för ett torg och kvarteren runt det påträffas av en patrull på torget.
+
+@ v20-overtradelse-av-vistelseforbud-ringa | Överträdelse av vistelseförbud, ringa brott | 29 § | 29
+PEN 0 | 0 | Böter | Böter
+C Allmän ordning
+A ringa överträdelse av vistelseförbud
+Q plain
+B v20-overtradelse-av-vistelseforbud
+R ringa*
+- Om vistelsen var kortvarig, till exempel en snabb passage genom utkanten av området.
+- Om det fanns ett godtagbart skäl till vistelsen.
+T En person med vistelseförbud går en kort sträcka genom områdets utkant för att hinna till en buss.
+
+@ v20-hindrande-overvakning-vistelseforbud | Hindrande av elektronisk övervakning av vistelseförbud | 30 § | 30
+PEN 0 | 1 | Böter eller fängelse i högst ett år | B–F 1 år
+C Allmän ordning
+A fotboja vistelseförbud;klippa fotboja
+Q plain
+K Gärningspersonen har ett vistelseförbud med villkor om elektronisk övervakning.
+G Gärningspersonen hindrar att den elektroniska övervakningen kommer till stånd eller kan fortgå.
+S Uppsåt eller grov oaktsamhet.
+T En person med vistelseförbud och fotboja låter batteriet ta slut dag efter dag trots påminnelser.
+
+LAW EskL | Lagen (2015:642) om europeisk skyddsorder | 2015:642 | Lagen om europeisk skyddsorder
+
+@ v20-overtradelse-av-europeisk-skyddsorder | Överträdelse av europeisk skyddsorder | 3:14 | 3:14
+PEN 0 | 1 | Fängelse i högst ett år | F 1 år
+C Frid
+A europeisk skyddsorder;utländskt kontaktförbud;skyddsorder
+Q villkor | Åtal får väckas bara om det står klart att överträdelsen inte leder till att den andra medlemsstaten skärper eller upphäver skyddsåtgärden och i stället beslutar om frihetsberövande. Åklagaren prövar frågan.
+O Ett förbud som svensk åklagare har meddelat för att verkställa en europeisk skyddsorder från ett annat EU-land, till exempel förbud att kontakta eller närma sig den skyddade personen.
+G Gärningspersonen bryter mot förbudet.
+S Uppsåt till samtliga rekvisit. Lagen anger ingen skuldform. Utgångspunkten är då att uppsåt krävs.
+U Brottet är ringa. Då är straffet böter.
+T En man som har kontaktförbud i Finland följer efter sin före detta partner till Sverige och söker upp henne trots att förbudet verkställs här.
+
+LAW TfbL | Lagen (2021:34) om tillträdesförbud till butiker, badanläggningar och bibliotek | 2021:34 | Lagen om tillträdesförbud till butiker
+
+@ v20-overtradelse-av-tilltradesforbud-butik | Överträdelse av tillträdesförbud (butik, badanläggning eller bibliotek) | 22 § | 22
+PEN 0 | 0.5 | Böter eller fängelse i högst sex månader | B–F 6 mån
+C Allmän ordning
+A tillträdesförbud butik;butiksförbud;portad från butik;tillträdesförbud badhus;tillträdesförbud bibliotek
+Q plain
+O Ett tillträdesförbud gäller mot gärningspersonen: förbud att få tillträde till och vistas i en viss butik, badanläggning eller ett visst bibliotek.
+G Gärningspersonen går in i eller vistas på platsen trots förbudet.
+S Uppsåt till samtliga rekvisit. Lagen anger ingen skuldform. Utgångspunkten är då att uppsåt krävs.
+U Fallet är ringa.
+T En person som har tillträdesförbud till en livsmedelsbutik efter upprepade stölder går in i butiken igen.
+
+LAW HundL | Lagen (2007:1150) om tillsyn över hundar och katter | 2007:1150 | Hundlagen
+X 15
+
+@ v20-overtradelse-av-hundforbud | Överträdelse av hundförbud | 22 § | 15,22
+PEN 0 | 1 | Böter eller fängelse i högst ett år | B–F 1 år
+C Djur och natur
+A hundförbud;förbud att ha hund;kamphund
+Q plain
+O Ett hundförbud gäller mot gärningspersonen: länsstyrelsens förbud att ha hand om hund.
+G Gärningspersonen har hand om en hund trots förbudet.
+S Uppsåt till samtliga rekvisit. Lagen anger ingen skuldform. Utgångspunkten är då att uppsåt krävs.
+T En man med hundförbud rastar sin sambos hund ensam i en park.
+
+@ v20-hundlagen-forelaggande | Brott mot lagen om tillsyn över hundar och katter (föreläggande och anmälan) | 23–24 §§ | 23,24
+PEN 0 | 0 | Böter | Böter
+C Djur och natur
+A hund utan koppel föreläggande;munkorg föreläggande;farlig hund;hund jagar vilt
+Q plain
+G Gärningspersonen gör minst ett av:
+  | Följer inte polisens föreläggande om hur hunden ska hållas, till exempel koppel- eller munkorgstvång.
+  | Anmäler inte till Polismyndigheten när en omhändertagen hund ska säljas eller överlåtas, när det krävs.
+  | Hindrar inte hunden från att driva eller förfölja vilt under den tid då hundar ska hållas under sådan tillsyn (uppsåt eller grov oaktsamhet).
+S Uppsåt eller oaktsamhet.
+U Gärningen omfattas av ett vitesföreläggande som har överträtts.
+T En hundägare som har fått ett föreläggande om munkorg låter hunden gå utan munkorg i ett bostadsområde.
+
+LAW FängL | Fängelselagen (2010:610) | 2010:610 | FängL
+
+@ v20-fangelselagen-vapen | Brott mot fängelselagen (vapen eller farligt föremål till intagen) | 15:1 | 15:1
+PEN 0 | 1 | Böter eller fängelse i högst ett år | B–F 1 år
+C Allmän verksamhet
+A smuggla in vapen på anstalt;kniv till intagen;insmuggling anstalt
+Q plain
+N Försök att överlämna föremålet är straffbart som fullbordat brott enligt paragrafen själv.
+G Gärningspersonen överlämnar eller försöker överlämna ett vapen eller annat farligt föremål till en intagen i kriminalvårdsanstalt.
+G Överlämnandet är olovligt.
+S Uppsåt till samtliga rekvisit.
+U Gärningen kan ge strängare straff enligt brottsbalken.
+T En besökare försöker ge en intagen en kniv som är gömd i en sko.
+
+@ v20-fangelselagen-berusningsmedel | Brott mot fängelselagen (berusningsmedel till intagen) | 15:2 | 15:2
+PEN 0 | 0.5 | Böter eller fängelse i högst sex månader | B–F 6 mån
+C Allmän verksamhet
+A smuggla in alkohol på anstalt;narkotika till intagen;spruta till intagen
+Q plain
+G Gärningspersonen gör minst ett av:
+  | Lämnar alkohol eller annat berusningsmedel till en intagen.
+  | Lämnar en injektionsspruta eller kanyl som kan användas vid narkotikamissbruk till en intagen.
+  | Hjälper på annat sätt en intagen att få tillgång till sådant.
+S Uppsåt till samtliga rekvisit.
+U Gärningen kan ge strängare straff enligt annan lag, till exempel narkotikastrafflagen.
+T En besökare lämnar över en flaska sprit till en intagen under ett besök.
+
+LAW LSU | Lagen (2022:700) om särskild kontroll av vissa utlänningar | 2022:700 | LSU
+
+@ v20-lsu-atervandande | Brott mot lagen om särskild kontroll av vissa utlänningar (återvändande efter utvisning) | 8:1 | 8:1
+PEN 0 | 2 | Fängelse i högst två år | F 2 år
+C Utlänningsbrott
+A återreseförbud säkerhetsärende;kvalificerat säkerhetsärende;utvisad säkerhetshot
+Q plain
+N Är brottet ringa döms till böter. I ringa fall väcks åtal bara om det är motiverat från allmän synpunkt. Från 2027-03-01 skärps straffet till fängelse i lägst sex månader och högst två år.
+K Gärningspersonen är en utlänning som har utvisats genom ett verkställt beslut enligt lagen om särskild kontroll av vissa utlänningar och saknar rätt att återvända.
+G Gärningspersonen uppehåller sig i Sverige.
+S Uppsåt till samtliga rekvisit. Lagen anger ingen skuldform. Utgångspunkten är då att uppsåt krävs.
+U Utlänningen har flytt hit för att undgå förföljelse som avses i artikel 3.5 i skyddsgrundsförordningen.
+T En person som har utvisats som säkerhetshot påträffas i Sverige ett år senare.
+
+@ v20-lsu-hjalp-inresa | Brott mot lagen om särskild kontroll av vissa utlänningar (hjälp till inresa) | 8:2 | 8:2
+PEN 0 | 2 | Fängelse i högst två år | F 2 år
+C Utlänningsbrott
+A hjälpa utvisad in i landet
+Q plain
+ST FP | LSU 8:2 andra stycket
+N Från 2027-03-01 skärps straffet till fängelse i lägst sex månader och högst två år.
+G Gärningspersonen hjälper en utlänning att komma in i Sverige.
+O Utlänningen har återreseförbud enligt lagen om särskild kontroll av vissa utlänningar.
+S Uppsåt till samtliga rekvisit. Lagen anger ingen skuldform. Utgångspunkten är då att uppsåt krävs.
+T En person kör en utvisad släkting med återreseförbud över gränsen gömd i en skåpbil.
+
+@ v20-lsu-anmalningsskyldighet | Brott mot lagen om särskild kontroll av vissa utlänningar (anmälningsskyldighet eller vistelseområde) | 8:3 | 8:3
+PEN 0 | 2 | Fängelse i högst två år | F 2 år
+C Utlänningsbrott
+A anmälningsplikt säkerhetsärende;vistelseområde
+Q plain
+N Är brottet ringa döms till böter.
+K Gärningspersonen är en utlänning som har ålagts anmälningsskyldighet eller förbud att lämna ett vistelseområde enligt lagen.
+G Gärningspersonen bryter mot anmälningsskyldigheten eller förbudet.
+S Uppsåt till samtliga rekvisit. Lagen anger ingen skuldform. Utgångspunkten är då att uppsåt krävs.
+T En person som ska anmäla sig hos polisen tre gånger i veckan slutar komma och lämnar kommunen.
+
+@ v20-lsu-hindrande-verkstallighet | Brott mot lagen om särskild kontroll av vissa utlänningar (hindrande av utvisning) | 8:4 | 8:4
+PEN 0 | 1 | Fängelse i högst ett år | F 1 år
+C Utlänningsbrott
+A hindra utvisning;gömma utvisad
+Q plain
+N Försök att hindra verkställigheten är straffbart som fullbordat brott enligt paragrafen själv.
+G Gärningspersonen hindrar eller försöker hindra verkställigheten av ett beslut om utvisning enligt lagen.
+S Uppsåt till samtliga rekvisit. Lagen anger ingen skuldform. Utgångspunkten är då att uppsåt krävs.
+T En person gömmer en utvisad man i sin källare när polisen ska hämta honom.
+
+LAW LVU | Lagen (1990:52) med särskilda bestämmelser om vård av unga | 1990:52 | LVU
+
+@ v20-lvu-utreseforbud | Brott mot lagen med särskilda bestämmelser om vård av unga (utreseförbud) | 45 § | 45
+PEN 0 | 2 | Fängelse i högst två år | F 2 år
+C Person
+A utreseförbud;föra ut barn;könsstympning utomlands;barnäktenskap utomlands;uppfostringsresa
+Q plain
+ST F | LVU 45 §
+N Från 2027-01-01 finns bestämmelsen i 21 kap. 2 § lagen (2026:1600) om omhändertagande för vård av barn och unga, med samma innehåll.
+O Ett utreseförbud eller tillfälligt utreseförbud gäller för barnet.
+G Gärningspersonen för ut barnet ur Sverige.
+S Uppsåt till samtliga rekvisit. Lagen anger ingen skuldform. Utgångspunkten är då att uppsåt krävs.
+T En förälder tar med sin dotter på ett flyg ut ur landet trots att socialnämnden har ansökt om och fått ett utreseförbud för flickan.
+
+@ v20-lvu-flyttningsforbud | Brott mot lagen med särskilda bestämmelser om vård av unga (flyttningsförbud) | 44 § | 44
+PEN 0 | 0 | Böter | Böter
+C Person
+A flyttningsförbud;hämta barn från familjehem
+Q villkor | Allmänt åtal får väckas bara efter medgivande av socialnämnden eller Socialstyrelsen.
+N Från 2027-01-01 finns bestämmelsen i 21 kap. 1 § lagen (2026:1600) om omhändertagande för vård av barn och unga.
+O Ett flyttningsförbud eller tillfälligt flyttningsförbud gäller för barnet.
+G Gärningspersonen överträder förbudet, till exempel genom att ta barnet från familjehemmet.
+S Uppsåt till samtliga rekvisit. Lagen anger ingen skuldform. Utgångspunkten är då att uppsåt krävs.
+T En förälder hämtar sitt barn från familjehemmet och tar hem det trots flyttningsförbud.

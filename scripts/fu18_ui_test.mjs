@@ -65,13 +65,24 @@ try{
  await page.click('#sheet-root [data-fu18="yes"]');await page.click('#sheet-root [data-fu18="no"]');
  const r2=await page.locator('#sheet-root .fu18-result').innerText();
  assert.ok(r2.includes('Åklagarledd')&&r2.includes('Före förhöret'),r2);
- // Förstadier visar inte verktyget.
+ // 2.0: äkta förstadier ärver klassningen från det fullbordade brottet. Falska förstadier saknar verktyget.
  await page.click('#sheet-root .sheet-close');
  await page.locator('[data-action="back"]').first().click();
- await page.fill('#crime-search','Försök till stöld');await page.waitForTimeout(300);
- await page.locator('.crime-card').filter({has:page.getByText('Försök till stöld',{exact:true})}).first().click();
-await page.waitForSelector('#app #sec-tvang > summary');
- assert.equal(await page.locator('#app #sec-fu18').count(),0,'Förstadier ingår inte i 1.8');
+ const open=async t=>{await page.goto(url+'#sok',{waitUntil:'networkidle'});await page.waitForFunction(()=>window.BK_BOOT17?.ready===true);await page.fill('#crime-search',t);await page.waitForTimeout(300);await page.locator('.crime-card').filter({has:page.getByText(t,{exact:true})}).first().click();await page.waitForSelector('#app #sec-lag > summary');};
+ await open('Försök till stöld');
+ await page.locator('#app #sec-fu18 .fu18-open').click();
+ await page.click('#sheet-root [data-fu18="no"]');
+ const s1=await page.locator('#sheet-root').innerText();
+ assert.ok(s1.includes('Polisledd')||s1.includes('polisledd')||s1.includes('Polismyndigheten'),'Försök till stöld är polislett i normalfallet: '+s1.slice(0,300));
+ await page.click('#sheet-root .sheet-close');
+ await open('Försök till ringa stöld');
+ assert.equal(await page.locator('#app #sec-fu18').count(),0,'Falska förstadiekort har inget FU-verktyg');
+ const st=await page.evaluate(()=>{const C=window.BK_APP17.crimes,F=window.BK_FU18,by=Object.fromEntries(C.map(c=>[c.id,c]));const bad=[];let n=0;
+  for(const c of C){if(!c.stageType)continue;const k=F.classify(c);
+   if(c.stageStatus!=='punishable'){if(k)bad.push('falskt kort klassat: '+c.title);continue;}
+   n++;const pk=F.classify(by[c.stageParentId]);if(!k||!pk||k.cls!==pk.cls)bad.push('ärver inte: '+c.title);}
+  return {n,bad};});
+ assert.deepEqual(st.bad,[],'Förstadier ärver klassningen');assert.ok(st.n>=540,'äkta förstadier: '+st.n);
  assert.deepEqual(errors,[]);
  console.log('PASS 1.9.0 FU-ledning i webbläsaren: '+r.n+' brott '+JSON.stringify(r.counts)+', högst '+r.maxQ+' frågor, ingen onödig fråga, gränssnittsflöde och förstadier');
 }finally{await browser.close();}

@@ -54,7 +54,7 @@ S Uppsåt eller grov oaktsamhet.
 
 @ v05-ringa-svindleri | Ringa svindleri | BrB 9:9
 B v05-svindleri
-R ringa
+R ringa*
 - Spridningens omfattning och den möjliga påverkan.
 - Övriga omständigheter.
 
@@ -93,5 +93,5 @@ R grovt
 
 @ v15-yndo-rseelse | Fyndförseelse | BrB 10:8
 G Gärningspersonen fullgör inte sin skyldighet enligt lag att anmäla hittegods, eller någon annans sak som han eller hon av misstag eller tillfällighet fått i sin besittning.
-S Uppsåt eller oaktsamhet.
+S Uppsåt.
 U Gärningspersonen hade uppsåt att tillägna sig godset. Då är det förskingring eller annat brott i BrB 10 kap.
