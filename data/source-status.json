@@ -1,6 +1,6 @@
 {
   "schema": 1,
-  "lastChecked": "2026-11-09T14:01:46+00:00",
+  "lastChecked": "2026-11-14T09:36:40+00:00",
   "sourceChecks": [
     {
       "id": "BrB",
@@ -9,7 +9,7 @@
       "observedVersion": "2026:1656",
       "verifiedVersion": "2026:1656",
       "digest": "bd0bcf8a08c4d0a93f093f94bc4c05abb4a3a13880f6af2c5ae9670a2bb20d27",
-      "lastChecked": "2026-11-09T14:01:46+00:00",
+      "lastChecked": "2026-11-14T09:36:40+00:00",
       "observedChange": false,
       "requiresReview": false,
       "dependentFields": [
@@ -29,7 +29,7 @@
       "observedVersion": "2026:1657",
       "verifiedVersion": "2026:1657",
       "digest": "4e9ba98c02aaea60a9a4680da3d2515f1f77c5540485eb8b55e0eff7a4944ffa",
-      "lastChecked": "2026-11-09T14:01:46+00:00",
+      "lastChecked": "2026-11-14T09:36:40+00:00",
       "observedChange": false,
       "requiresReview": false,
       "dependentFields": [
@@ -49,7 +49,7 @@
       "observedVersion": "2024:797",
       "verifiedVersion": "2024:797",
       "digest": "ea3d5ca2deeb7966438e33bca867d01300962cc969d8b5626f882843bd395f56",
-      "lastChecked": "2026-11-09T14:01:46+00:00",
+      "lastChecked": "2026-11-14T09:36:40+00:00",
       "observedChange": false,
       "requiresReview": false,
       "dependentFields": [
@@ -69,7 +69,7 @@
       "observedVersion": "2026:1596",
       "verifiedVersion": "2026:1596",
       "digest": "0d1874957bfbeced4066106f974c6a797a309125d0465ddc20b68285d3e4560c",
-      "lastChecked": "2026-11-09T14:01:46+00:00",
+      "lastChecked": "2026-11-14T09:36:40+00:00",
       "observedChange": false,
       "requiresReview": false,
       "dependentFields": [
@@ -89,7 +89,7 @@
       "observedVersion": "2024:715",
       "verifiedVersion": "2024:715",
       "digest": "103140bff03b104b4e58936adfbb07101a0c44abe9b0184ebbc861b48f9941cb",
-      "lastChecked": "2026-11-09T14:01:46+00:00",
+      "lastChecked": "2026-11-14T09:36:40+00:00",
       "observedChange": false,
       "requiresReview": false,
       "dependentFields": [
@@ -109,7 +109,1447 @@
       "observedVersion": "2026:413",
       "verifiedVersion": "2026:413",
       "digest": "4815700b9e68a0633ca444361dd3a67141fffa7cdd2cc3937c013be139cc8c3b",
-      "lastChecked": "2026-11-09T14:01:46+00:00",
+      "lastChecked": "2026-11-14T09:36:40+00:00",
+      "observedChange": false,
+      "requiresReview": false,
+      "dependentFields": [
+        "lagtext",
+        "straffskala",
+        "häktning",
+        "åtalsregler",
+        "rubricering",
+        "kvalifikationsgrunder"
+      ],
+      "status": "ok"
+    },
+    {
+      "id": "KfL",
+      "name": "Lagen (1988:688) om kontaktförbud",
+      "sourceURL": "https://data.riksdagen.se/dokument/sfs-1988-688.html",
+      "observedVersion": "2026:1666",
+      "verifiedVersion": "2026:1666",
+      "digest": "a6e0fc6c4eba7489374a5de951bc1df8ded7ebb4c189930b0a134ac1e1db9e31",
+      "lastChecked": "2026-11-14T09:36:40+00:00",
+      "observedChange": false,
+      "requiresReview": false,
+      "dependentFields": [
+        "lagtext",
+        "straffskala",
+        "häktning",
+        "åtalsregler",
+        "rubricering",
+        "kvalifikationsgrunder"
+      ],
+      "status": "ok"
+    },
+    {
+      "id": "TfL",
+      "name": "Lagen (2005:321) om tillträdesförbud vid idrottsarrangemang",
+      "sourceURL": "https://data.riksdagen.se/dokument/sfs-2005-321.html",
+      "observedVersion": "2018:1706",
+      "verifiedVersion": "2018:1706",
+      "digest": "caedaaa3e6e7ff58f27e2ab6838ea5bf5246180ffe93c924316a79b119ed4840",
+      "lastChecked": "2026-11-14T09:36:40+00:00",
+      "observedChange": false,
+      "requiresReview": false,
+      "dependentFields": [
+        "lagtext",
+        "straffskala",
+        "häktning",
+        "åtalsregler",
+        "rubricering",
+        "kvalifikationsgrunder"
+      ],
+      "status": "ok"
+    },
+    {
+      "id": "MaskL",
+      "name": "Lagen (2005:900) om förbud mot maskering i vissa fall",
+      "sourceURL": "https://data.riksdagen.se/dokument/sfs-2005-900.html",
+      "observedVersion": "2024:848",
+      "verifiedVersion": "2024:848",
+      "digest": "ba3190f6efba7510284408e887bec0c47d7cec3c4e3b35f813e4cc35fe48712c",
+      "lastChecked": "2026-11-14T09:36:40+00:00",
+      "observedChange": false,
+      "requiresReview": false,
+      "dependentFields": [
+        "lagtext",
+        "straffskala",
+        "häktning",
+        "åtalsregler",
+        "rubricering",
+        "kvalifikationsgrunder"
+      ],
+      "status": "ok"
+    },
+    {
+      "id": "OL",
+      "name": "Ordningslag (1993:1617)",
+      "sourceURL": "https://data.riksdagen.se/dokument/sfs-1993-1617.html",
+      "observedVersion": "2026:729",
+      "verifiedVersion": "2026:729",
+      "digest": "ff42510531ea6db8ecbe8ad3582057687ffedce89489d962df1f2117f4168c7e",
+      "lastChecked": "2026-11-14T09:36:40+00:00",
+      "observedChange": false,
+      "requiresReview": false,
+      "dependentFields": [
+        "lagtext",
+        "straffskala",
+        "häktning",
+        "åtalsregler",
+        "rubricering",
+        "kvalifikationsgrunder"
+      ],
+      "status": "ok"
+    },
+    {
+      "id": "AlkL",
+      "name": "Alkohollagen (2010:1622)",
+      "sourceURL": "https://data.riksdagen.se/dokument/sfs-2010-1622.html",
+      "observedVersion": "2026:511",
+      "verifiedVersion": "2026:511",
+      "digest": "06860106b185417019004ebaf99cea9b4db4eeda20b273b09ae02f6e7b9eee9b",
+      "lastChecked": "2026-11-14T09:36:40+00:00",
+      "observedChange": false,
+      "requiresReview": false,
+      "dependentFields": [
+        "lagtext",
+        "straffskala",
+        "häktning",
+        "åtalsregler",
+        "rubricering",
+        "kvalifikationsgrunder"
+      ],
+      "status": "ok"
+    },
+    {
+      "id": "DopL",
+      "name": "Lagen (1991:1969) om förbud mot vissa dopningsmedel",
+      "sourceURL": "https://data.riksdagen.se/dokument/sfs-1991-1969.html",
+      "observedVersion": "2025:641",
+      "verifiedVersion": "2025:641",
+      "digest": "02ade68deb675d2223e71a97dd28b677a56c351034143068d14362ed47766cb0",
+      "lastChecked": "2026-11-14T09:36:40+00:00",
+      "observedChange": false,
+      "requiresReview": false,
+      "dependentFields": [
+        "lagtext",
+        "straffskala",
+        "häktning",
+        "åtalsregler",
+        "rubricering",
+        "kvalifikationsgrunder"
+      ],
+      "status": "ok"
+    },
+    {
+      "id": "HfvL",
+      "name": "Lagen (1999:42) om förbud mot vissa hälsofarliga varor",
+      "sourceURL": "https://data.riksdagen.se/dokument/sfs-1999-42.html",
+      "observedVersion": "2024:835",
+      "verifiedVersion": "2024:835",
+      "digest": "363e54844fad30159189cd43bcbf22e2437c7067e88f501cf0304f0deea6ac48",
+      "lastChecked": "2026-11-14T09:36:40+00:00",
+      "observedChange": false,
+      "requiresReview": false,
+      "dependentFields": [
+        "lagtext",
+        "straffskala",
+        "häktning",
+        "åtalsregler",
+        "rubricering",
+        "kvalifikationsgrunder"
+      ],
+      "status": "ok"
+    },
+    {
+      "id": "JaktL",
+      "name": "Jaktlagen (1987:259)",
+      "sourceURL": "https://data.riksdagen.se/dokument/sfs-1987-259.html",
+      "observedVersion": "2026:832",
+      "verifiedVersion": "2026:832",
+      "digest": "1e929540239274c4287d84d7ea6a413b78424fcff3ee8d5f3c4a2d7a4ef29a67",
+      "lastChecked": "2026-11-14T09:36:40+00:00",
+      "observedChange": false,
+      "requiresReview": false,
+      "dependentFields": [
+        "lagtext",
+        "straffskala",
+        "häktning",
+        "åtalsregler",
+        "rubricering",
+        "kvalifikationsgrunder"
+      ],
+      "status": "ok"
+    },
+    {
+      "id": "DjsL",
+      "name": "Djurskyddslagen (2018:1192)",
+      "sourceURL": "https://data.riksdagen.se/dokument/sfs-2018-1192.html",
+      "observedVersion": "2026:1107",
+      "verifiedVersion": "2026:1107",
+      "digest": "134d81117b80bd9baec1cab7918e2513524856088048b73c5bc6c8cb48920d68",
+      "lastChecked": "2026-11-14T09:36:40+00:00",
+      "observedChange": false,
+      "requiresReview": false,
+      "dependentFields": [
+        "lagtext",
+        "straffskala",
+        "häktning",
+        "åtalsregler",
+        "rubricering",
+        "kvalifikationsgrunder"
+      ],
+      "status": "ok"
+    },
+    {
+      "id": "MB",
+      "name": "Miljöbalken (1998:808)",
+      "sourceURL": "https://data.riksdagen.se/dokument/sfs-1998-808.html",
+      "observedVersion": "2026:1442",
+      "verifiedVersion": "2026:1442",
+      "digest": "096565c70c7cceea80208e7e57c1f917637290bf111fff59813767effc4bf702",
+      "lastChecked": "2026-11-14T09:36:40+00:00",
+      "observedChange": false,
+      "requiresReview": false,
+      "dependentFields": [
+        "lagtext",
+        "straffskala",
+        "häktning",
+        "åtalsregler",
+        "rubricering",
+        "kvalifikationsgrunder"
+      ],
+      "status": "ok"
+    },
+    {
+      "id": "SjöL",
+      "name": "Sjölagen (1994:1009)",
+      "sourceURL": "https://data.riksdagen.se/dokument/sfs-1994-1009.html",
+      "observedVersion": "2025:985",
+      "verifiedVersion": "2025:985",
+      "digest": "847ebd406cefd0d4569e6c790b72e78a59e1e3fd48c752b3701bfa5409e25cff",
+      "lastChecked": "2026-11-14T09:36:40+00:00",
+      "observedChange": false,
+      "requiresReview": false,
+      "dependentFields": [
+        "lagtext",
+        "straffskala",
+        "häktning",
+        "åtalsregler",
+        "rubricering",
+        "kvalifikationsgrunder"
+      ],
+      "status": "ok"
+    },
+    {
+      "id": "LFL",
+      "name": "Luftfartslagen (2010:500)",
+      "sourceURL": "https://data.riksdagen.se/dokument/sfs-2010-500.html",
+      "observedVersion": "2025:1061",
+      "verifiedVersion": "2025:1061",
+      "digest": "c4f832091753731911d34a932207af38b16dee75253bf3417f11d0016657dbab",
+      "lastChecked": "2026-11-14T09:36:40+00:00",
+      "observedChange": false,
+      "requiresReview": false,
+      "dependentFields": [
+        "lagtext",
+        "straffskala",
+        "häktning",
+        "åtalsregler",
+        "rubricering",
+        "kvalifikationsgrunder"
+      ],
+      "status": "ok"
+    },
+    {
+      "id": "TSL",
+      "name": "Lagen (1990:1157) om säkerhet vid tunnelbana och spårväg",
+      "sourceURL": "https://data.riksdagen.se/dokument/sfs-1990-1157.html",
+      "observedVersion": "2026:1286",
+      "verifiedVersion": "2026:1286",
+      "digest": "f57f1f526ed3a1cf46f39ced0112cdd0a9fab6891adbe2fa049c59cf76820790",
+      "lastChecked": "2026-11-14T09:36:40+00:00",
+      "observedChange": false,
+      "requiresReview": false,
+      "dependentFields": [
+        "lagtext",
+        "straffskala",
+        "häktning",
+        "åtalsregler",
+        "rubricering",
+        "kvalifikationsgrunder"
+      ],
+      "status": "ok"
+    },
+    {
+      "id": "SkyddsL",
+      "name": "Skyddslagen (2010:305)",
+      "sourceURL": "https://data.riksdagen.se/dokument/sfs-2010-305.html",
+      "observedVersion": "2026:1582",
+      "verifiedVersion": "2026:1582",
+      "digest": "c690894941a6a728d845727a407ebfb612aa49c70c5d7141311bf69305e52fbf",
+      "lastChecked": "2026-11-14T09:36:40+00:00",
+      "observedChange": false,
+      "requiresReview": false,
+      "dependentFields": [
+        "lagtext",
+        "straffskala",
+        "häktning",
+        "åtalsregler",
+        "rubricering",
+        "kvalifikationsgrunder"
+      ],
+      "status": "ok"
+    },
+    {
+      "id": "UtlL",
+      "name": "Utlänningslagen (2005:716)",
+      "sourceURL": "https://data.riksdagen.se/dokument/sfs-2005-716.html",
+      "observedVersion": "2026:1752",
+      "verifiedVersion": "2026:1752",
+      "digest": "4e90c9780bd89a6e334172a68a44a4c14a326cc73e1b7cbcd7e7b72dcf9341b7",
+      "lastChecked": "2026-11-14T09:36:40+00:00",
+      "observedChange": false,
+      "requiresReview": false,
+      "dependentFields": [
+        "lagtext",
+        "straffskala",
+        "häktning",
+        "åtalsregler",
+        "rubricering",
+        "kvalifikationsgrunder"
+      ],
+      "status": "ok"
+    },
+    {
+      "id": "FbfL",
+      "name": "Folkbokföringslagen (1991:481)",
+      "sourceURL": "https://data.riksdagen.se/dokument/sfs-1991-481.html",
+      "observedVersion": "2026:1613",
+      "verifiedVersion": "2026:1613",
+      "digest": "63f024c4e4761163112dea2573c3b11275ba8efb41e4a1019b6f7899c82f2ba6",
+      "lastChecked": "2026-11-14T09:36:40+00:00",
+      "observedChange": false,
+      "requiresReview": false,
+      "dependentFields": [
+        "lagtext",
+        "straffskala",
+        "häktning",
+        "åtalsregler",
+        "rubricering",
+        "kvalifikationsgrunder"
+      ],
+      "status": "ok"
+    },
+    {
+      "id": "SpelL",
+      "name": "Spellagen (2018:1138)",
+      "sourceURL": "https://data.riksdagen.se/dokument/sfs-2018-1138.html",
+      "observedVersion": "2026:1077",
+      "verifiedVersion": "2026:1077",
+      "digest": "69128fa990f1158bf1cc0b94ffab10ae0022def15bd30a79dc0e82227b204115",
+      "lastChecked": "2026-11-14T09:36:40+00:00",
+      "observedChange": false,
+      "requiresReview": false,
+      "dependentFields": [
+        "lagtext",
+        "straffskala",
+        "häktning",
+        "åtalsregler",
+        "rubricering",
+        "kvalifikationsgrunder"
+      ],
+      "status": "ok"
+    },
+    {
+      "id": "TobL",
+      "name": "Lagen (2018:2088) om tobak och liknande produkter",
+      "sourceURL": "https://data.riksdagen.se/dokument/sfs-2018-2088.html",
+      "observedVersion": "2024:888",
+      "verifiedVersion": "2024:888",
+      "digest": "babb21a144faf9cf785311f16ec775be7ef7b9b1a80dbaa45d456218c5415773",
+      "lastChecked": "2026-11-14T09:36:40+00:00",
+      "observedChange": false,
+      "requiresReview": false,
+      "dependentFields": [
+        "lagtext",
+        "straffskala",
+        "häktning",
+        "åtalsregler",
+        "rubricering",
+        "kvalifikationsgrunder"
+      ],
+      "status": "ok"
+    },
+    {
+      "id": "UpphL",
+      "name": "Lagen (1960:729) om upphovsrätt till litterära och konstnärliga verk",
+      "sourceURL": "https://data.riksdagen.se/dokument/sfs-1960-729.html",
+      "observedVersion": "2026:1120",
+      "verifiedVersion": "2026:1120",
+      "digest": "1f0309a9978ee245aaef61c3d770e4522f04c4577af32a26bddc0b8b7a9e9d48",
+      "lastChecked": "2026-11-14T09:36:40+00:00",
+      "observedChange": false,
+      "requiresReview": false,
+      "dependentFields": [
+        "lagtext",
+        "straffskala",
+        "häktning",
+        "åtalsregler",
+        "rubricering",
+        "kvalifikationsgrunder"
+      ],
+      "status": "ok"
+    },
+    {
+      "id": "VmL",
+      "name": "Varumärkeslagen (2010:1877)",
+      "sourceURL": "https://data.riksdagen.se/dokument/sfs-2010-1877.html",
+      "observedVersion": "2025:951",
+      "verifiedVersion": "2025:951",
+      "digest": "04c853a320c4e6c2f2b1ffa3b18f063bdfe737263f3f14f73582be40bba2a2c2",
+      "lastChecked": "2026-11-14T09:36:40+00:00",
+      "observedChange": false,
+      "requiresReview": false,
+      "dependentFields": [
+        "lagtext",
+        "straffskala",
+        "häktning",
+        "åtalsregler",
+        "rubricering",
+        "kvalifikationsgrunder"
+      ],
+      "status": "ok"
+    },
+    {
+      "id": "FHL",
+      "name": "Lagen (2018:558) om företagshemligheter",
+      "sourceURL": "https://data.riksdagen.se/dokument/sfs-2018-558.html",
+      "observedVersion": "2025:1281",
+      "verifiedVersion": "2025:1281",
+      "digest": "1421321efab39e3bfefbea5f71015d8edfba6806d38f18ab3b59c31b61e1750a",
+      "lastChecked": "2026-11-14T09:36:40+00:00",
+      "observedChange": false,
+      "requiresReview": false,
+      "dependentFields": [
+        "lagtext",
+        "straffskala",
+        "häktning",
+        "åtalsregler",
+        "rubricering",
+        "kvalifikationsgrunder"
+      ],
+      "status": "ok"
+    },
+    {
+      "id": "NfL",
+      "name": "Lagen (2014:836) om näringsförbud",
+      "sourceURL": "https://data.riksdagen.se/dokument/sfs-2014-836.html",
+      "observedVersion": "2025:1344",
+      "verifiedVersion": "2025:1344",
+      "digest": "4055b7b261dc0f44f1397e6b9d9b859c60c2916a87a1976a4e9f42d96385d4f5",
+      "lastChecked": "2026-11-14T09:36:40+00:00",
+      "observedChange": false,
+      "requiresReview": false,
+      "dependentFields": [
+        "lagtext",
+        "straffskala",
+        "häktning",
+        "åtalsregler",
+        "rubricering",
+        "kvalifikationsgrunder"
+      ],
+      "status": "ok"
+    },
+    {
+      "id": "YtL",
+      "name": "Yrkestrafiklagen (2012:210)",
+      "sourceURL": "https://data.riksdagen.se/dokument/sfs-2012-210.html",
+      "observedVersion": "2024:1093",
+      "verifiedVersion": "2024:1093",
+      "digest": "1e41fef19cf2acf902b1f230085bb95a4051cc36343ac7cdc72927a0f7317526",
+      "lastChecked": "2026-11-14T09:36:40+00:00",
+      "observedChange": false,
+      "requiresReview": false,
+      "dependentFields": [
+        "lagtext",
+        "straffskala",
+        "häktning",
+        "åtalsregler",
+        "rubricering",
+        "kvalifikationsgrunder"
+      ],
+      "status": "ok"
+    },
+    {
+      "id": "TtL",
+      "name": "Taxitrafiklagen (2012:211)",
+      "sourceURL": "https://data.riksdagen.se/dokument/sfs-2012-211.html",
+      "observedVersion": "2024:1094",
+      "verifiedVersion": "2024:1094",
+      "digest": "a7d748700f9a1094f0a684e198d2b584545dec8c2a7f1097c35ac356bedd1059",
+      "lastChecked": "2026-11-14T09:36:40+00:00",
+      "observedChange": false,
+      "requiresReview": false,
+      "dependentFields": [
+        "lagtext",
+        "straffskala",
+        "häktning",
+        "åtalsregler",
+        "rubricering",
+        "kvalifikationsgrunder"
+      ],
+      "status": "ok"
+    },
+    {
+      "id": "FgL",
+      "name": "Lagen (2006:263) om transport av farligt gods",
+      "sourceURL": "https://data.riksdagen.se/dokument/sfs-2006-263.html",
+      "observedVersion": "2022:1119",
+      "verifiedVersion": "2022:1119",
+      "digest": "e5518b5a0cc7a3c95874a8be8a4b5dc61b4cb999f04a3ebe5b4af0898990c5a0",
+      "lastChecked": "2026-11-14T09:36:40+00:00",
+      "observedChange": false,
+      "requiresReview": false,
+      "dependentFields": [
+        "lagtext",
+        "straffskala",
+        "häktning",
+        "åtalsregler",
+        "rubricering",
+        "kvalifikationsgrunder"
+      ],
+      "status": "ok"
+    },
+    {
+      "id": "TfpL",
+      "name": "Lagen (1994:1809) om totalförsvarsplikt",
+      "sourceURL": "https://data.riksdagen.se/dokument/sfs-1994-1809.html",
+      "observedVersion": "2022:1574",
+      "verifiedVersion": "2022:1574",
+      "digest": "1d07636b199cf577ebe3957502ebb61ddff883684ea8bfc7abe7ec30a6f2fa15",
+      "lastChecked": "2026-11-14T09:36:40+00:00",
+      "observedChange": false,
+      "requiresReview": false,
+      "dependentFields": [
+        "lagtext",
+        "straffskala",
+        "häktning",
+        "åtalsregler",
+        "rubricering",
+        "kvalifikationsgrunder"
+      ],
+      "status": "ok"
+    },
+    {
+      "id": "TerrL",
+      "name": "Terroristbrottslagen (2022:666)",
+      "sourceURL": "https://data.riksdagen.se/dokument/sfs-2022-666.html",
+      "observedVersion": "2024:896",
+      "verifiedVersion": "2024:896",
+      "digest": "409d60ef5b60d967f72d33522d3913737e57c543b7109c7422192147dec08922",
+      "lastChecked": "2026-11-14T09:36:40+00:00",
+      "observedChange": false,
+      "requiresReview": false,
+      "dependentFields": [
+        "lagtext",
+        "straffskala",
+        "häktning",
+        "åtalsregler",
+        "rubricering",
+        "kvalifikationsgrunder"
+      ],
+      "status": "ok"
+    },
+    {
+      "id": "IntBrL",
+      "name": "Lagen (2014:406) om straff för vissa internationella brott",
+      "sourceURL": "https://data.riksdagen.se/dokument/sfs-2014-406.html",
+      "observedVersion": "2021:1016",
+      "verifiedVersion": "2021:1016",
+      "digest": "2eff080cc5d81f1242315e7fa65ad783719ea242e0e7c41c9eec0e4edadcae8d",
+      "lastChecked": "2026-11-14T09:36:40+00:00",
+      "observedChange": false,
+      "requiresReview": false,
+      "dependentFields": [
+        "lagtext",
+        "straffskala",
+        "häktning",
+        "åtalsregler",
+        "rubricering",
+        "kvalifikationsgrunder"
+      ],
+      "status": "ok"
+    },
+    {
+      "id": "KonsL",
+      "name": "Lagen (1982:316) om förbud mot könsstympning av kvinnor och oskuldsingrepp på kvinnor",
+      "sourceURL": "https://data.riksdagen.se/dokument/sfs-1982-316.html",
+      "observedVersion": "2025:1010",
+      "verifiedVersion": "2025:1010",
+      "digest": "a4c54f7082d448af96ce1eb8a8dfaeaa183227220d93b0e6775554869cdbbc42",
+      "lastChecked": "2026-11-14T09:36:40+00:00",
+      "observedChange": false,
+      "requiresReview": false,
+      "dependentFields": [
+        "lagtext",
+        "straffskala",
+        "häktning",
+        "åtalsregler",
+        "rubricering",
+        "kvalifikationsgrunder"
+      ],
+      "status": "ok"
+    },
+    {
+      "id": "VistL",
+      "name": "Lagen (2024:7) om preventiva vistelseförbud",
+      "sourceURL": "https://data.riksdagen.se/dokument/sfs-2024-7.html",
+      "observedVersion": null,
+      "verifiedVersion": "2024:7",
+      "digest": "54836f68b5ac916c89e97394e84fe615cbe76fb13b7115e6b9c6385ca65c0213",
+      "lastChecked": "2026-11-14T09:36:40+00:00",
+      "observedChange": false,
+      "requiresReview": true,
+      "dependentFields": [
+        "lagtext",
+        "straffskala",
+        "häktning",
+        "åtalsregler",
+        "rubricering",
+        "kvalifikationsgrunder"
+      ],
+      "status": "ok"
+    },
+    {
+      "id": "EskL",
+      "name": "Lagen (2015:642) om europeisk skyddsorder",
+      "sourceURL": "https://data.riksdagen.se/dokument/sfs-2015-642.html",
+      "observedVersion": null,
+      "verifiedVersion": "2015:642",
+      "digest": "856452c6bfe408311e5f9c523c65a8773160204bb13c221601d9a0ea335d44f8",
+      "lastChecked": "2026-11-14T09:36:40+00:00",
+      "observedChange": false,
+      "requiresReview": true,
+      "dependentFields": [
+        "lagtext",
+        "straffskala",
+        "häktning",
+        "åtalsregler",
+        "rubricering",
+        "kvalifikationsgrunder"
+      ],
+      "status": "ok"
+    },
+    {
+      "id": "TfbL",
+      "name": "Lagen (2021:34) om tillträdesförbud till butiker, badanläggningar och bibliotek",
+      "sourceURL": "https://data.riksdagen.se/dokument/sfs-2021-34.html",
+      "observedVersion": "2022:406",
+      "verifiedVersion": "2022:406",
+      "digest": "d908329131dad9938d977069a2551e3b8cd6204a279682a1fcf09297e9d3a3f0",
+      "lastChecked": "2026-11-14T09:36:40+00:00",
+      "observedChange": false,
+      "requiresReview": false,
+      "dependentFields": [
+        "lagtext",
+        "straffskala",
+        "häktning",
+        "åtalsregler",
+        "rubricering",
+        "kvalifikationsgrunder"
+      ],
+      "status": "ok"
+    },
+    {
+      "id": "HundL",
+      "name": "Lagen (2007:1150) om tillsyn över hundar och katter",
+      "sourceURL": "https://data.riksdagen.se/dokument/sfs-2007-1150.html",
+      "observedVersion": "2026:296",
+      "verifiedVersion": "2026:296",
+      "digest": "3d8c9950c52d6e93dd0935852d1b9072162b34c4d2f15073c4f9c366be31391b",
+      "lastChecked": "2026-11-14T09:36:40+00:00",
+      "observedChange": false,
+      "requiresReview": false,
+      "dependentFields": [
+        "lagtext",
+        "straffskala",
+        "häktning",
+        "åtalsregler",
+        "rubricering",
+        "kvalifikationsgrunder"
+      ],
+      "status": "ok"
+    },
+    {
+      "id": "FängL",
+      "name": "Fängelselagen (2010:610)",
+      "sourceURL": "https://data.riksdagen.se/dokument/sfs-2010-610.html",
+      "observedVersion": null,
+      "verifiedVersion": "2010:610",
+      "digest": "8cdef0635bbc487c23db99c028bc92188e6fa25983cf8a2921b3fb1635aab2d0",
+      "lastChecked": "2026-11-14T09:36:40+00:00",
+      "observedChange": false,
+      "requiresReview": true,
+      "dependentFields": [
+        "lagtext",
+        "straffskala",
+        "häktning",
+        "åtalsregler",
+        "rubricering",
+        "kvalifikationsgrunder"
+      ],
+      "status": "ok"
+    },
+    {
+      "id": "LSU",
+      "name": "Lagen (2022:700) om särskild kontroll av vissa utlänningar",
+      "sourceURL": "https://data.riksdagen.se/dokument/sfs-2022-700.html",
+      "observedVersion": "2026:1432",
+      "verifiedVersion": "2026:1432",
+      "digest": "c161752e89f972b43289adf293e6fd870fa19c50bc37f44e7befc17cb45e1bb9",
+      "lastChecked": "2026-11-14T09:36:40+00:00",
+      "observedChange": false,
+      "requiresReview": false,
+      "dependentFields": [
+        "lagtext",
+        "straffskala",
+        "häktning",
+        "åtalsregler",
+        "rubricering",
+        "kvalifikationsgrunder"
+      ],
+      "status": "ok"
+    },
+    {
+      "id": "LVU",
+      "name": "Lagen (1990:52) med särskilda bestämmelser om vård av unga",
+      "sourceURL": "https://data.riksdagen.se/dokument/sfs-1990-52.html",
+      "observedVersion": "2026:1145",
+      "verifiedVersion": "2026:1145",
+      "digest": "3c58b23b673014ebc0bb1902fa5974884f7e1969aacdd441d3e645c070b76a9f",
+      "lastChecked": "2026-11-14T09:36:40+00:00",
+      "observedChange": false,
+      "requiresReview": false,
+      "dependentFields": [
+        "lagtext",
+        "straffskala",
+        "häktning",
+        "åtalsregler",
+        "rubricering",
+        "kvalifikationsgrunder"
+      ],
+      "status": "ok"
+    },
+    {
+      "id": "JvSL",
+      "name": "Järnvägssäkerhetslagen (2022:367)",
+      "sourceURL": "https://data.riksdagen.se/dokument/sfs-2022-367.html",
+      "observedVersion": "2024:933",
+      "verifiedVersion": "2024:933",
+      "digest": "5d50c4287d0b12da1d21e6450851d74d3295436ccdfffa7a8a3bf9f3acc2c522",
+      "lastChecked": "2026-11-14T09:36:40+00:00",
+      "observedChange": false,
+      "requiresReview": false,
+      "dependentFields": [
+        "lagtext",
+        "straffskala",
+        "häktning",
+        "åtalsregler",
+        "rubricering",
+        "kvalifikationsgrunder"
+      ],
+      "status": "ok"
+    },
+    {
+      "id": "KKL",
+      "name": "Körkortslagen (1998:488)",
+      "sourceURL": "https://data.riksdagen.se/dokument/sfs-1998-488.html",
+      "observedVersion": "2026:469",
+      "verifiedVersion": "2026:469",
+      "digest": "541c18fcea1480f0199549778df7932721b2b57e973eb1d09ca22cf8fac3096d",
+      "lastChecked": "2026-11-14T09:36:40+00:00",
+      "observedChange": false,
+      "requiresReview": false,
+      "dependentFields": [
+        "lagtext",
+        "straffskala",
+        "häktning",
+        "åtalsregler",
+        "rubricering",
+        "kvalifikationsgrunder"
+      ],
+      "status": "ok"
+    },
+    {
+      "id": "TrskL",
+      "name": "Lagen (1998:493) om trafikskolor",
+      "sourceURL": "https://data.riksdagen.se/dokument/sfs-1998-493.html",
+      "observedVersion": "2022:1207",
+      "verifiedVersion": "2022:1207",
+      "digest": "aab66a3ae678adf6e4bd30aee61d73df642ba7609f0042568872a6ba21aa7c50",
+      "lastChecked": "2026-11-14T09:36:40+00:00",
+      "observedChange": false,
+      "requiresReview": false,
+      "dependentFields": [
+        "lagtext",
+        "straffskala",
+        "häktning",
+        "åtalsregler",
+        "rubricering",
+        "kvalifikationsgrunder"
+      ],
+      "status": "ok"
+    },
+    {
+      "id": "FskL",
+      "name": "Lagen (2026:1274) om åtgärder mot manipulation och missbruk av färdskrivare",
+      "sourceURL": "https://data.riksdagen.se/dokument/sfs-2026-1274.html",
+      "observedVersion": null,
+      "verifiedVersion": "2026:1274",
+      "digest": "48114111461f5f2c42e2e888881f3263ab907d8a3c974dc1bb7f71c63e0873a6",
+      "lastChecked": "2026-11-14T09:36:40+00:00",
+      "observedChange": false,
+      "requiresReview": true,
+      "dependentFields": [
+        "lagtext",
+        "straffskala",
+        "häktning",
+        "åtalsregler",
+        "rubricering",
+        "kvalifikationsgrunder"
+      ],
+      "status": "ok"
+    },
+    {
+      "id": "VskL",
+      "name": "Lagen (2021:626) om förarbevis för vattenskoter",
+      "sourceURL": "https://data.riksdagen.se/dokument/sfs-2021-626.html",
+      "observedVersion": "2022:288",
+      "verifiedVersion": "2022:288",
+      "digest": "7418972e75f8daaed5ec8f298ad2386d053ce5ea47ce8d5748b4b52537f960bb",
+      "lastChecked": "2026-11-14T09:36:40+00:00",
+      "observedChange": false,
+      "requiresReview": false,
+      "dependentFields": [
+        "lagtext",
+        "straffskala",
+        "häktning",
+        "åtalsregler",
+        "rubricering",
+        "kvalifikationsgrunder"
+      ],
+      "status": "ok"
+    },
+    {
+      "id": "BiluL",
+      "name": "Lagen (1998:492) om biluthyrning",
+      "sourceURL": "https://data.riksdagen.se/dokument/sfs-1998-492.html",
+      "observedVersion": "2013:317",
+      "verifiedVersion": "2013:317",
+      "digest": "019c43101cd9ea8614f1117f35e63b0ae77eee627aa61b10b588d4e3a6b90ad9",
+      "lastChecked": "2026-11-14T09:36:40+00:00",
+      "observedChange": false,
+      "requiresReview": false,
+      "dependentFields": [
+        "lagtext",
+        "straffskala",
+        "häktning",
+        "åtalsregler",
+        "rubricering",
+        "kvalifikationsgrunder"
+      ],
+      "status": "ok"
+    },
+    {
+      "id": "RadarL",
+      "name": "Lagen (1988:15) om förbud mot vissa radar- och laserinstrument",
+      "sourceURL": "https://data.riksdagen.se/dokument/sfs-1988-15.html",
+      "observedVersion": "2024:811",
+      "verifiedVersion": "2024:811",
+      "digest": "36154957bc8c816d1f7b9b0338b1aa07872264b89403ee52d8ae30b15275eb97",
+      "lastChecked": "2026-11-14T09:36:40+00:00",
+      "observedChange": false,
+      "requiresReview": false,
+      "dependentFields": [
+        "lagtext",
+        "straffskala",
+        "häktning",
+        "åtalsregler",
+        "rubricering",
+        "kvalifikationsgrunder"
+      ],
+      "status": "ok"
+    },
+    {
+      "id": "VtsL",
+      "name": "Vägtrafikskattelagen (2006:227)",
+      "sourceURL": "https://data.riksdagen.se/dokument/sfs-2006-227.html",
+      "observedVersion": "2025:1369",
+      "verifiedVersion": "2025:1369",
+      "digest": "184025e4c88288238054962c4f39d158244800391ec051c0d93ebb9451e23f40",
+      "lastChecked": "2026-11-14T09:36:40+00:00",
+      "observedChange": false,
+      "requiresReview": false,
+      "dependentFields": [
+        "lagtext",
+        "straffskala",
+        "häktning",
+        "åtalsregler",
+        "rubricering",
+        "kvalifikationsgrunder"
+      ],
+      "status": "ok"
+    },
+    {
+      "id": "TerrkL",
+      "name": "Terrängkörningslagen (1975:1313)",
+      "sourceURL": "https://data.riksdagen.se/dokument/sfs-1975-1313.html",
+      "observedVersion": "2018:436",
+      "verifiedVersion": "2018:436",
+      "digest": "237b286c04373d124b886986e4a0f6d41a5b16f0b13f1b825071e7e5550f276b",
+      "lastChecked": "2026-11-14T09:36:40+00:00",
+      "observedChange": false,
+      "requiresReview": false,
+      "dependentFields": [
+        "lagtext",
+        "straffskala",
+        "häktning",
+        "åtalsregler",
+        "rubricering",
+        "kvalifikationsgrunder"
+      ],
+      "status": "ok"
+    },
+    {
+      "id": "LustgL",
+      "name": "Lagen (2025:621) om lustgas",
+      "sourceURL": "https://data.riksdagen.se/dokument/sfs-2025-621.html",
+      "observedVersion": null,
+      "verifiedVersion": "2025:621",
+      "digest": "ea2309ec2910ee6b2096f19fcd7bd58b152592cb57e003b1325b18e72196ada9",
+      "lastChecked": "2026-11-14T09:36:40+00:00",
+      "observedChange": false,
+      "requiresReview": true,
+      "dependentFields": [
+        "lagtext",
+        "straffskala",
+        "häktning",
+        "åtalsregler",
+        "rubricering",
+        "kvalifikationsgrunder"
+      ],
+      "status": "ok"
+    },
+    {
+      "id": "NikL",
+      "name": "Lagen (2022:1257) om tobaksfria nikotinprodukter",
+      "sourceURL": "https://data.riksdagen.se/dokument/sfs-2022-1257.html",
+      "observedVersion": "2024:897",
+      "verifiedVersion": "2024:897",
+      "digest": "1e259a028ee26dc5d7ef774218dc4ea26f3958b9d08cb77a564acf6a5f024a73",
+      "lastChecked": "2026-11-14T09:36:40+00:00",
+      "observedChange": false,
+      "requiresReview": false,
+      "dependentFields": [
+        "lagtext",
+        "straffskala",
+        "häktning",
+        "åtalsregler",
+        "rubricering",
+        "kvalifikationsgrunder"
+      ],
+      "status": "ok"
+    },
+    {
+      "id": "LHL",
+      "name": "Lagen (2009:366) om handel med läkemedel",
+      "sourceURL": "https://data.riksdagen.se/dokument/sfs-2009-366.html",
+      "observedVersion": "2026:1347",
+      "verifiedVersion": "2026:1347",
+      "digest": "cb2c4404d32ca2ebb4002d79217fc263e825626d5e6d63dbeae4c38f587daed9",
+      "lastChecked": "2026-11-14T09:36:40+00:00",
+      "observedChange": false,
+      "requiresReview": false,
+      "dependentFields": [
+        "lagtext",
+        "straffskala",
+        "häktning",
+        "åtalsregler",
+        "rubricering",
+        "kvalifikationsgrunder"
+      ],
+      "status": "ok"
+    },
+    {
+      "id": "SprekL",
+      "name": "Lagen (2014:799) om sprängämnesprekursorer",
+      "sourceURL": "https://data.riksdagen.se/dokument/sfs-2014-799.html",
+      "observedVersion": "2024:875",
+      "verifiedVersion": "2024:875",
+      "digest": "ebf9dead670babbf74b2c00cdbde765b1db0f5cd6be8a38f51e7259950d822ce",
+      "lastChecked": "2026-11-14T09:36:40+00:00",
+      "observedChange": false,
+      "requiresReview": false,
+      "dependentFields": [
+        "lagtext",
+        "straffskala",
+        "häktning",
+        "åtalsregler",
+        "rubricering",
+        "kvalifikationsgrunder"
+      ],
+      "status": "ok"
+    },
+    {
+      "id": "BevL",
+      "name": "Lagen (1974:191) om bevakningsföretag",
+      "sourceURL": "https://data.riksdagen.se/dokument/sfs-1974-191.html",
+      "observedVersion": "2023:496",
+      "verifiedVersion": "2023:496",
+      "digest": "ff5eb9c8dd567bcaa965c608bd5d03ad15ab5d5efcab3847db266e3f9ca7a6aa",
+      "lastChecked": "2026-11-14T09:36:40+00:00",
+      "observedChange": false,
+      "requiresReview": false,
+      "dependentFields": [
+        "lagtext",
+        "straffskala",
+        "häktning",
+        "åtalsregler",
+        "rubricering",
+        "kvalifikationsgrunder"
+      ],
+      "status": "ok"
+    },
+    {
+      "id": "OvL",
+      "name": "Lagen (2023:421) om ordningsvakter",
+      "sourceURL": "https://data.riksdagen.se/dokument/sfs-2023-421.html",
+      "observedVersion": "2026:1357",
+      "verifiedVersion": "2026:1357",
+      "digest": "051d585628201436028227646cbc337ed23345ca1c11fab933f4cd9bb8e7f757",
+      "lastChecked": "2026-11-14T09:36:40+00:00",
+      "observedChange": false,
+      "requiresReview": false,
+      "dependentFields": [
+        "lagtext",
+        "straffskala",
+        "häktning",
+        "åtalsregler",
+        "rubricering",
+        "kvalifikationsgrunder"
+      ],
+      "status": "ok"
+    },
+    {
+      "id": "LarmL",
+      "name": "Lagen (1983:1097) med vissa bestämmelser om larmanläggningar m.m.",
+      "sourceURL": "https://data.riksdagen.se/dokument/sfs-1983-1097.html",
+      "observedVersion": "2014:587",
+      "verifiedVersion": "2014:587",
+      "digest": "44c3aefd400b847e60b7abaa02c83fc8117164e56fe5c8354579060065d88cc3",
+      "lastChecked": "2026-11-14T09:36:40+00:00",
+      "observedChange": false,
+      "requiresReview": false,
+      "dependentFields": [
+        "lagtext",
+        "straffskala",
+        "häktning",
+        "åtalsregler",
+        "rubricering",
+        "kvalifikationsgrunder"
+      ],
+      "status": "ok"
+    },
+    {
+      "id": "BegL",
+      "name": "Lagen (1999:271) om handel med begagnade varor",
+      "sourceURL": "https://data.riksdagen.se/dokument/sfs-1999-271.html",
+      "observedVersion": "2014:730",
+      "verifiedVersion": "2014:730",
+      "digest": "3e38263feb9f1893211e82a0d6bfe2aee08b35687b38037c322e1d427ddbd479",
+      "lastChecked": "2026-11-14T09:36:40+00:00",
+      "observedChange": false,
+      "requiresReview": false,
+      "dependentFields": [
+        "lagtext",
+        "straffskala",
+        "häktning",
+        "åtalsregler",
+        "rubricering",
+        "kvalifikationsgrunder"
+      ],
+      "status": "ok"
+    },
+    {
+      "id": "DyrkL",
+      "name": "Lagen (1979:357) om yrkesmässig försäljning av dyrkverktyg",
+      "sourceURL": "https://data.riksdagen.se/dokument/sfs-1979-357.html",
+      "observedVersion": "2014:585",
+      "verifiedVersion": "2014:585",
+      "digest": "97dff9fb8b5d42904b8ade631e9522f8430c106db39a0e7f722858ff904c7909",
+      "lastChecked": "2026-11-14T09:36:40+00:00",
+      "observedChange": false,
+      "requiresReview": false,
+      "dependentFields": [
+        "lagtext",
+        "straffskala",
+        "häktning",
+        "åtalsregler",
+        "rubricering",
+        "kvalifikationsgrunder"
+      ],
+      "status": "ok"
+    },
+    {
+      "id": "KampL",
+      "name": "Lagen (2006:1006) om tillståndsplikt för vissa kampsportsmatcher",
+      "sourceURL": "https://data.riksdagen.se/dokument/sfs-2006-1006.html",
+      "observedVersion": "2024:853",
+      "verifiedVersion": "2024:853",
+      "digest": "ec202ad021e529562ef5333bc0f9d713b056599f18db1b2316b2bb85dd911263",
+      "lastChecked": "2026-11-14T09:36:40+00:00",
+      "observedChange": false,
+      "requiresReview": false,
+      "dependentFields": [
+        "lagtext",
+        "straffskala",
+        "häktning",
+        "åtalsregler",
+        "rubricering",
+        "kvalifikationsgrunder"
+      ],
+      "status": "ok"
+    },
+    {
+      "id": "LSO",
+      "name": "Lagen (2003:778) om skydd mot olyckor",
+      "sourceURL": "https://data.riksdagen.se/dokument/sfs-2003-778.html",
+      "observedVersion": "2025:1077",
+      "verifiedVersion": "2025:1077",
+      "digest": "091036b94eab0914fe15698365302f1ea4e25014d4dcf13a25dfe01d6eed2fd3",
+      "lastChecked": "2026-11-14T09:36:40+00:00",
+      "observedChange": false,
+      "requiresReview": false,
+      "dependentFields": [
+        "lagtext",
+        "straffskala",
+        "häktning",
+        "åtalsregler",
+        "rubricering",
+        "kvalifikationsgrunder"
+      ],
+      "status": "ok"
+    },
+    {
+      "id": "FiskeL",
+      "name": "Fiskelagen (1993:787)",
+      "sourceURL": "https://data.riksdagen.se/dokument/sfs-1993-787.html",
+      "observedVersion": "2025:766",
+      "verifiedVersion": "2025:766",
+      "digest": "453a810fa244efee7bb1ba63fc6db9d28bdfbfcbb38bdc68fc2a6b28cb3ac8b5",
+      "lastChecked": "2026-11-14T09:36:40+00:00",
+      "observedChange": false,
+      "requiresReview": false,
+      "dependentFields": [
+        "lagtext",
+        "straffskala",
+        "häktning",
+        "åtalsregler",
+        "rubricering",
+        "kvalifikationsgrunder"
+      ],
+      "status": "ok"
+    },
+    {
+      "id": "KML",
+      "name": "Kulturmiljölagen (1988:950)",
+      "sourceURL": "https://data.riksdagen.se/dokument/sfs-1988-950.html",
+      "observedVersion": "2024:813",
+      "verifiedVersion": "2024:813",
+      "digest": "1a2d87562a16ac8ea4da78f6e21b8f673dfb96111abf47a730336112de270694",
+      "lastChecked": "2026-11-14T09:36:40+00:00",
+      "observedChange": false,
+      "requiresReview": false,
+      "dependentFields": [
+        "lagtext",
+        "straffskala",
+        "häktning",
+        "åtalsregler",
+        "rubricering",
+        "kvalifikationsgrunder"
+      ],
+      "status": "ok"
+    },
+    {
+      "id": "EstL",
+      "name": "Lagen (1995:732) om skydd för gravfriden vid vraket efter passagerarfartyget Estonia",
+      "sourceURL": "https://data.riksdagen.se/dokument/sfs-1995-732.html",
+      "observedVersion": "2024:826",
+      "verifiedVersion": "2024:826",
+      "digest": "6db4f38061cfe790b9ac6bbdc453327d9b1feb2f0982dbc418e51805b214bb13",
+      "lastChecked": "2026-11-14T09:36:40+00:00",
+      "observedChange": false,
+      "requiresReview": false,
+      "dependentFields": [
+        "lagtext",
+        "straffskala",
+        "häktning",
+        "åtalsregler",
+        "rubricering",
+        "kvalifikationsgrunder"
+      ],
+      "status": "ok"
+    },
+    {
+      "id": "AbortL",
+      "name": "Abortlagen (1974:595)",
+      "sourceURL": "https://data.riksdagen.se/dokument/sfs-1974-595.html",
+      "observedVersion": "2024:802",
+      "verifiedVersion": "2024:802",
+      "digest": "65da024f2f03d00a05ea08330527fda98e0f97d2aef8a7c7b09cf9143daa52e0",
+      "lastChecked": "2026-11-14T09:36:40+00:00",
+      "observedChange": false,
+      "requiresReview": false,
+      "dependentFields": [
+        "lagtext",
+        "straffskala",
+        "häktning",
+        "åtalsregler",
+        "rubricering",
+        "kvalifikationsgrunder"
+      ],
+      "status": "ok"
+    },
+    {
+      "id": "OmskL",
+      "name": "Lagen (2001:499) om omskärelse av pojkar",
+      "sourceURL": "https://data.riksdagen.se/dokument/sfs-2001-499.html",
+      "observedVersion": "2017:48",
+      "verifiedVersion": "2017:48",
+      "digest": "d0f5cd16567276bd14d527aaf7e0edb05050bebceef1eb9ddad428e561747256",
+      "lastChecked": "2026-11-14T09:36:40+00:00",
+      "observedChange": false,
+      "requiresReview": false,
+      "dependentFields": [
+        "lagtext",
+        "straffskala",
+        "häktning",
+        "åtalsregler",
+        "rubricering",
+        "kvalifikationsgrunder"
+      ],
+      "status": "ok"
+    },
+    {
+      "id": "EstetL",
+      "name": "Lagen (2021:363) om estetiska kirurgiska ingrepp och estetiska injektionsbehandlingar",
+      "sourceURL": "https://data.riksdagen.se/dokument/sfs-2021-363.html",
+      "observedVersion": "2022:922",
+      "verifiedVersion": "2022:922",
+      "digest": "6bb7a9e507eb314a3021e8b4bf81ad883e84b67c7ae0c3fb7ab67298f18a76b8",
+      "lastChecked": "2026-11-14T09:36:40+00:00",
+      "observedChange": false,
+      "requiresReview": false,
+      "dependentFields": [
+        "lagtext",
+        "straffskala",
+        "häktning",
+        "åtalsregler",
+        "rubricering",
+        "kvalifikationsgrunder"
+      ],
+      "status": "ok"
+    },
+    {
+      "id": "PSL",
+      "name": "Patientsäkerhetslagen (2010:659)",
+      "sourceURL": "https://data.riksdagen.se/dokument/sfs-2010-659.html",
+      "observedVersion": "2026:1551",
+      "verifiedVersion": "2026:1551",
+      "digest": "adf930e394ee45a4e620198118eeca2d6a05ea413521ed3d719e694d0ea6bd03",
+      "lastChecked": "2026-11-14T09:36:40+00:00",
+      "observedChange": false,
+      "requiresReview": false,
+      "dependentFields": [
+        "lagtext",
+        "straffskala",
+        "häktning",
+        "åtalsregler",
+        "rubricering",
+        "kvalifikationsgrunder"
+      ],
+      "status": "ok"
+    },
+    {
+      "id": "GenL",
+      "name": "Lagen (2006:351) om genetisk integritet m.m.",
+      "sourceURL": "https://data.riksdagen.se/dokument/sfs-2006-351.html",
+      "observedVersion": "2024:849",
+      "verifiedVersion": "2024:849",
+      "digest": "eae3dd737130fc5240eb99c3b5053c703da714351523a0cf5f2d6b814aacd920",
+      "lastChecked": "2026-11-14T09:36:40+00:00",
+      "observedChange": false,
+      "requiresReview": false,
+      "dependentFields": [
+        "lagtext",
+        "straffskala",
+        "häktning",
+        "åtalsregler",
+        "rubricering",
+        "kvalifikationsgrunder"
+      ],
+      "status": "ok"
+    },
+    {
+      "id": "JB",
+      "name": "Jordabalken (1970:994)",
+      "sourceURL": "https://data.riksdagen.se/dokument/sfs-1970-994.html",
+      "observedVersion": "2026:1498",
+      "verifiedVersion": "2026:1498",
+      "digest": "0db7e30fb4e95309695010760ef53a29c7c31ce69249562bb1bf7407279bf692",
+      "lastChecked": "2026-11-14T09:36:40+00:00",
+      "observedChange": false,
+      "requiresReview": false,
+      "dependentFields": [
+        "lagtext",
+        "straffskala",
+        "häktning",
+        "åtalsregler",
+        "rubricering",
+        "kvalifikationsgrunder"
+      ],
+      "status": "ok"
+    },
+    {
+      "id": "BitrL",
+      "name": "Lagen (1985:354) om förbud mot juridiskt eller ekonomiskt biträde i vissa fall",
+      "sourceURL": "https://data.riksdagen.se/dokument/sfs-1985-354.html",
+      "observedVersion": "2016:1334",
+      "verifiedVersion": "2016:1334",
+      "digest": "31c744cc2728fb6bf5ca0cac1a78e728d95f0c54336273a201e25ca84ee74caa",
+      "lastChecked": "2026-11-14T09:36:40+00:00",
+      "observedChange": false,
+      "requiresReview": false,
+      "dependentFields": [
+        "lagtext",
+        "straffskala",
+        "häktning",
+        "åtalsregler",
+        "rubricering",
+        "kvalifikationsgrunder"
+      ],
+      "status": "ok"
+    },
+    {
+      "id": "BulvL",
+      "name": "Lagen (1985:277) om vissa bulvanförhållanden",
+      "sourceURL": "https://data.riksdagen.se/dokument/sfs-1985-277.html",
+      "observedVersion": "2010:28",
+      "verifiedVersion": "2010:28",
+      "digest": "00bc9927c8d0bc62c6ed09ee217e68bf97ec6e342e748f6293c64b4658d075a1",
+      "lastChecked": "2026-11-14T09:36:40+00:00",
+      "observedChange": false,
+      "requiresReview": false,
+      "dependentFields": [
+        "lagtext",
+        "straffskala",
+        "häktning",
+        "åtalsregler",
+        "rubricering",
+        "kvalifikationsgrunder"
+      ],
+      "status": "ok"
+    },
+    {
+      "id": "NkL",
+      "name": "Lagen (1992:860) om kontroll av narkotika",
+      "sourceURL": "https://data.riksdagen.se/dokument/sfs-1992-860.html",
+      "observedVersion": "2024:818",
+      "verifiedVersion": "2024:818",
+      "digest": "8bca563bf502ba2c648e0529c0b8052f66bfd3fbfc44d641f453386b1dc5e524",
+      "lastChecked": "2026-11-14T09:36:40+00:00",
+      "observedChange": false,
+      "requiresReview": false,
+      "dependentFields": [
+        "lagtext",
+        "straffskala",
+        "häktning",
+        "åtalsregler",
+        "rubricering",
+        "kvalifikationsgrunder"
+      ],
+      "status": "ok"
+    },
+    {
+      "id": "LmL",
+      "name": "Läkemedelslagen (2015:315)",
+      "sourceURL": "https://data.riksdagen.se/dokument/sfs-2015-315.html",
+      "observedVersion": "2026:497",
+      "verifiedVersion": "2026:497",
+      "digest": "23ae2283231c0a4d23ffaa70944c4be2d84ddca10b2c0b36b4aa55c3abe2f7b4",
+      "lastChecked": "2026-11-14T09:36:40+00:00",
+      "observedChange": false,
+      "requiresReview": false,
+      "dependentFields": [
+        "lagtext",
+        "straffskala",
+        "häktning",
+        "åtalsregler",
+        "rubricering",
+        "kvalifikationsgrunder"
+      ],
+      "status": "ok"
+    },
+    {
+      "id": "YkL",
+      "name": "Lagen (2007:1157) om yrkesförarkompetens",
+      "sourceURL": "https://data.riksdagen.se/dokument/sfs-2007-1157.html",
+      "observedVersion": "2024:412",
+      "verifiedVersion": "2024:412",
+      "digest": "99bd4a81e613cbaa475651af10df59edbb2bd08d2df400dbd2556c2d6ee7f81d",
+      "lastChecked": "2026-11-14T09:36:40+00:00",
+      "observedChange": false,
+      "requiresReview": false,
+      "dependentFields": [
+        "lagtext",
+        "straffskala",
+        "häktning",
+        "åtalsregler",
+        "rubricering",
+        "kvalifikationsgrunder"
+      ],
+      "status": "ok"
+    },
+    {
+      "id": "MopL",
+      "name": "Lagen (2009:121) om utbildning till förare av mopeder, snöskotrar och terränghjulingar",
+      "sourceURL": "https://data.riksdagen.se/dokument/sfs-2009-121.html",
+      "observedVersion": "2022:1209",
+      "verifiedVersion": "2022:1209",
+      "digest": "ccfd5c2f6e77e6083c31fdccb8e69de43ccbe241502c047514ea8964cb4860aa",
+      "lastChecked": "2026-11-14T09:36:40+00:00",
+      "observedChange": false,
+      "requiresReview": false,
+      "dependentFields": [
+        "lagtext",
+        "straffskala",
+        "häktning",
+        "åtalsregler",
+        "rubricering",
+        "kvalifikationsgrunder"
+      ],
+      "status": "ok"
+    },
+    {
+      "id": "LBE",
+      "name": "Lagen (2010:1011) om brandfarliga och explosiva varor",
+      "sourceURL": "https://data.riksdagen.se/dokument/sfs-2010-1011.html",
+      "observedVersion": "2026:1584",
+      "verifiedVersion": "2026:1584",
+      "digest": "8f91bf4427605992f1bdc312815fc3d4afae9c05814f88d5b08ffaf0a1738194",
+      "lastChecked": "2026-11-14T09:36:40+00:00",
       "observedChange": false,
       "requiresReview": false,
       "dependentFields": [
