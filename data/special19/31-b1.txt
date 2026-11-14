@@ -335,7 +335,7 @@ T En privatperson övertalar under ett prisstopp en handlare att sälja en begr�
 
 LAW S2001-99 | Lagen (2001:99) om den officiella statistiken | 2001:99 | Statistiklagen
 
-@ v21-olovlig-identifiering-statistik | Olovlig identifiering | 26 § | 26,6
+@ v21-olovlig-identifiering-statistik | Olovlig identifiering (lagen om den officiella statistiken) | 26 § | 26,6
 PEN 0 | 1 | Böter eller fängelse i högst ett år | B–F 1 år
 C Allmän verksamhet
 A bakvägsidentifiering;röja identitet i statistik;avidentifierade uppgifter;samköra register;SCB-data
@@ -350,7 +350,7 @@ T En forskare som har fått ut avidentifierade statistikuppgifter samkör dem me
 
 LAW S2019-508 | Lagen (2019:508) om behandling av personuppgifter i det fördelningsanalytiska statistiksystemet för inkomster och transfereringar | 2019:508 | Fasit-lagen
 
-@ v21-olovlig-identifiering-fasit | Olovlig identifiering | 11 § | 11
+@ v21-olovlig-identifiering-fasit | Olovlig identifiering (Fasit-lagen) | 11 § | 11
 PEN 0 | 1 | Böter eller fängelse i högst ett år | B–F 1 år
 C Allmän verksamhet
 A Fasit;bakvägsidentifiering;röja identitet i statistik;samköra register;inkomststatistik

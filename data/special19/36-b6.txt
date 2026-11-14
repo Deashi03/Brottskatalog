@@ -299,7 +299,7 @@ U Gärningen är belagd med strängare straff i annan lag.
 N Är brottet ringa döms till böter eller fängelse i högst sex månader. Med befälhavare jämställs den som har trätt i befälhavarens ställe.
 T En matros slår styrmannen i ansiktet när styrmannen beordrar honom att gå på sin vakt.
 
-@ v21-myteri | Myteri | 68 § första stycket | 68,69
+@ v21-myteri | Myteri (sjömanslagen) | 68 § första stycket | 68,69
 PEN 0 | 2 | Fängelse i högst två år | F 2 år
 C Trafik
 A myteri;uppror ombord;besättning sätter sig upp mot kapten;uppror mot befälhavare
@@ -312,7 +312,7 @@ U Gärningen är belagd med strängare straff i annan lag.
 N Fängelse i högst två år gäller anstiftare och anförare. Annan deltagare döms till böter eller fängelse i högst sex månader. Underlåtenhet att avslöja eller förhindra myteri är också straffbar. Med befälhavare jämställs den som har trätt i befälhavarens ställe.
 T Flera besättningsmän samlas på bryggan och förklarar under ledning av en av dem att de med våld kommer att ta över fartyget om befälhavaren inte vänder.
 
-@ v21-myteri-forenat-vald | Myteri (förenat våld på person eller egendom) | 68 § andra stycket | 68,69
+@ v21-myteri-forenat-vald | Myteri (sjömanslagen, förenat våld på person eller egendom) | 68 § andra stycket | 68,69
 PEN 0 | 6 | Fängelse i högst sex år | F 6 år
 C Trafik
 A myteri med våld;besättning tar över fartyg;uppror ombord våld;kapa eget fartyg
