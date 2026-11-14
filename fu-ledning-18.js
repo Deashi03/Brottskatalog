@@ -6,10 +6,11 @@
  *  - RB 23:3 och 24:8 (data.riksdagen.se, RB t.o.m. SFS 2026:1657).
  *  - ÅFS 2005:9, konsoliderad, senast ändrad ÅFS 2019:2. Regelförteckningen 2026-09-30 visar
  *    att ingen senare ändring finns. Bilagan är likalydande med Polisens PM 2019:11.
+ *    Kontrollerad på nytt 2026-11-14 mot den konsoliderade versionen på aklagare.se: senast ändrad genom ÅFS 2019:2.
  *  - Överenskommelse ÅM2017-2028 (Polisens PM 2018:5) om åklagarkontakt inför förhör med gripen.
  *  - RåR 2017:3 (konsoliderad 2020-09-01) och RåR 2006:3 (konsoliderad 2026-09-10).
  *  - LUL 2 och 24 §§, FUK 2 §, förordning (2014:1106), BrB 1:6 (SFS 2026:1528).
- * Förstadier (försök, förberedelse, stämpling) ingår inte i 1.8.
+ * Från 2.0 ärver straffbara förstadier klassningen från det fullbordade brottet.
  */
 (()=>{'use strict';
 const AFS='https://www.aklagare.se/globalassets/dokument/afs-forfattningssamling-enbart-konsoliderade/afs-2005-09.pdf';

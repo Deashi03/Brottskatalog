@@ -1,0 +1,577 @@
+LAW S2006-805 | Lagen (2006:805) om foder och animaliska biprodukter | 2006:805 | Foderlagen
+X 7,8,30
+
+@ v21-foder-fara-for-liv-eller-halsa | Brott mot lagen om foder och animaliska biprodukter (fara för liv eller hälsa m.m.) | 28 a § | 28a,30
+PEN 0 | 2 | Böter eller fängelse i högst två år | B–F 2 år
+C Djur och natur
+A farligt foder;djurfoder;slaktavfall;kadaver;animaliska biprodukter;vilseledande fodermärkning
+Q plain
+G Gärningspersonen gör minst ett av:
+  | Producerar, bearbetar, distribuerar, märker, marknadsför eller på annat sätt hanterar foder eller fodertillsatser, eller utfodrar djur, på ett sätt som orsakar eller kan orsaka fara för människors eller djurs liv eller hälsa.
+  | Samlar in, bearbetar eller på annat sätt hanterar animaliska biprodukter, eller produkter som har framställts av dem, på ett sätt som orsakar eller kan orsaka fara för människors eller djurs liv eller hälsa.
+  | Låter bli att vidta åtgärder vid hanteringen av foder eller animaliska biprodukter, så att fodret eller produkten utgör eller kan komma att utgöra en fara för människors eller djurs liv eller hälsa.
+  | Brister i märkningen, marknadsföringen eller presentationen av ett foder eller en fodertillsats, så att fodret eller tillsatsen utgör eller kan komma att utgöra en fara för människors eller djurs liv eller hälsa.
+  | Märker, marknadsför eller presenterar i större omfattning ett foder eller en fodertillsats på ett sätt som är eller kan vara vilseledande.
+  | Brister i åtgärder för identifiering och gör det därigenom, på ett omfattande eller annars särskilt allvarligt sätt, svårare att spåra ett foder, en fodertillsats eller en animalisk biprodukt.
+S Uppsåt eller oaktsamhet.
+U Gärningen är belagd med straff i brottsbalken eller i lagen om straff för smuggling.
+U Gärningen omfattas av ett vitesföreläggande och ligger till grund för en ansökan om att vitet ska dömas ut.
+T Ett foderföretag säljer djurfoder som företaget vet är förorenat med salmonella till lantbrukare.
+T Ett företag lagrar slaktavfall öppet så att smitta kan spridas till djur i närheten.
+
+@ v21-foder-forbud-och-foreskrifter | Brott mot lagen om foder och animaliska biprodukter (förbud och föreskrifter) | 29 § | 7,8,29,30
+PEN 0 | 0 | Böter | Böter
+C Djur och natur
+A foderföreskrifter;förbjudet foder;vilt som foder;djurfoder;kontroll foder
+Q plain
+G Gärningspersonen gör minst ett av:
+  | Använder eller släpper ut foder på marknaden som kan antas skada miljön.
+  | Använder eller säljer vilda djur som foder utan att djuren har avlivats, slaktats upp och veterinärbesiktigats.
+  | Använder eller släpper ut foder på marknaden som inte uppfyller föreskrivna krav på fodersäkerhet eller där föreskrivna upplysningar inte har lämnats.
+  | Bryter mot föreskrifter eller beslut om villkor eller förbud för införsel, tillverkning, försäljning, användning eller annan hantering av foder eller animaliska biprodukter.
+  | Lämnar inte upplysningar eller handlingar som kontrollmyndigheten begär.
+  | Bryter mot skyldigheter, villkor eller förbud i de EU-bestämmelser om foder och animaliska biprodukter som lagen kompletterar.
+S Uppsåt eller oaktsamhet.
+U Fallet är ringa.
+U Gärningen ska leda till ansvar enligt 28 a § eller är belagd med straff i brottsbalken eller i lagen om straff för smuggling.
+U Gärningen kan leda till sanktionsavgift.
+U Gärningen omfattas av ett vitesföreläggande och ligger till grund för en ansökan om att vitet ska dömas ut.
+U Överträdelsen avser EU-bestämmelser om myndighetsutövning eller andra bestämmelser i EU:s förordning om offentlig kontroll.
+T En lantbrukare gräver ner döda djur på gården i strid med föreskrifterna om hur kadaver ska tas om hand.
+
+LAW S2006-806 | Lagen (2006:806) om provtagning på djur, m.m. | 2006:806 | Provtagningslagen
+X 6,7,8,9
+
+@ v21-provtagning-pa-djur | Brott mot lagen om provtagning på djur | 21 § | 21,22
+PEN 0 | 0 | Böter | Böter
+C Djur och natur
+A märkning av djur;öronmärkning;djurregister;stalljournal;flytta djur;smittskydd djur
+Q plain
+G Gärningspersonen gör minst ett av:
+  | Bryter mot föreskrifter för djurhållare om anmälan av verksamheten, anteckningar, journaler över läkemedelsbehandling, hygien eller anmälan av misstänkt djursjukdom.
+  | Säljer eller flyttar djur i strid med föreskrifter eller beslut om att djuren ska vara fria från en viss sjukdom.
+  | Bryter mot föreskrifter eller beslut om avlivning eller isolering av djur eller om begränsningar i hanteringen av djur och djurprodukter för att hindra smittspridning.
+  | Bryter mot föreskrifter eller beslut om omhändertagande, märkning, flyttförbud eller avlivning av livsmedelsproducerande djur som kan innehålla skadliga ämnen eller restsubstanser.
+  | Bryter mot föreskrifter om märkning, journalföring och registrering av djur, om identitetshandlingar och flyttningsdokument eller om registrering av djurhållare och anläggningar.
+  | Lämnar inte den hjälp som behövs vid offentlig kontroll.
+  | Bryter mot skyldigheter, villkor eller förbud i de EU-bestämmelser som lagen kompletterar.
+S Uppsåt eller grov oaktsamhet.
+U Gärningen är ringa.
+U Gärningen omfattas av ett vitesföreläggande och ligger till grund för en ansökan om att vitet ska dömas ut.
+U Överträdelsen avser EU-bestämmelser om myndighetsutövning eller andra bestämmelser i EU:s förordning om offentlig kontroll.
+T En lantbrukare låter bli att öronmärka och registrera sina nötkreatur trots att han känner till kraven.
+
+LAW S2006-807 | Lagen (2006:807) om kontroll av husdjur, m.m. | 2006:807 | Husdjurskontrollagen
+X 3,5,7
+
+@ v21-kontroll-av-husdjur | Brott mot lagen om kontroll av husdjur | 17 § | 17,18
+PEN 0 | 0 | Böter | Böter
+C Djur och natur
+A seminverksamhet;inseminering djur;embryoöverföring;hjorthägn;avel
+Q plain
+G Gärningspersonen bryter mot minst en av följande föreskrifter:
+  | Föreskrifter om seminverksamhet, överföring av befruktade ägg mellan hondjur eller ägg för avelsändamål.
+  | Föreskrifter om att kontrollerade djur får överlåtas under en särskild beteckning som är förbehållen sådana djur.
+  | Föreskrifter om vad som gäller för att kronhjortar och dovhjortar som inte omfattas av hälsokontroll ska få flyttas till eller från ett hägn.
+S Uppsåt eller grov oaktsamhet.
+U Gärningen är belagd med straff i brottsbalken.
+U Gärningen omfattas av ett vitesföreläggande och ligger till grund för en ansökan om att vitet ska dömas ut.
+T En person seminerar andras kor yrkesmässigt utan att uppfylla Jordbruksverkets föreskrifter om seminverksamhet.
+
+LAW S2008-1049 | Lagen (2008:1049) om förbud mot utsläppande på marknaden av päls av katt och hund m.m. | 2008:1049 | Lagen om päls av katt och hund
+
+@ v21-pals-av-katt-och-hund | Brott mot lagen om förbud mot utsläppande på marknaden av päls av katt och hund | 9 § | 9
+PEN 0 | 0 | Böter | Böter
+C Djur och natur
+A kattpäls;hundpäls;sälja päls;pälsvaror
+Q plain
+G Gärningspersonen släpper ut päls av katt eller hund, eller varor som innehåller sådan päls, på marknaden i strid med EU:s förbud.
+S Uppsåt. I näringsverksamhet räcker oaktsamhet.
+U Gärningen är ringa. Den är ringa om den framstår som obetydlig med hänsyn till intresset av att skydda konsumenterna från att päls av katt och hund förekommer på marknaden.
+N Olovlig import och export av sådan päls bestraffas enligt lagen om straff för smuggling.
+T En butik säljer jackor med krage av hundpäls.
+
+LAW S2009-302 | Lagen (2009:302) om verksamhet inom djurens hälso- och sjukvård | 2009:302 | Lagen om djurens hälso- och sjukvård
+X 1:4,4:1,4:2
+
+@ v21-obehorig-utovning-av-veterinaryrket | Obehörig utövning av veterinäryrket | 8:1 | 8:1,8:5
+PEN 0 | 1 | Böter eller fängelse i högst ett år | B–F 1 år
+C Djur och natur
+A falsk veterinär;veterinär utan legitimation;återkallad legitimation;kvacksalveri djur
+Q plain
+## Upphörd behörighet
+K Gärningspersonens legitimation som veterinär har återkallats, eller behörigheten att utöva veterinäryrket har upphört av annan anledning.
+G Gärningspersonen utövar veterinäryrket obehörigen och mot ersättning.
+## Begränsad behörighet
+K Gärningspersonen är veterinär med begränsad behörighet.
+G Gärningspersonen bryter mot de villkor som gäller för behörigheten.
+## *
+S Uppsåt till samtliga rekvisit. Lagen anger ingen skuldform. Utgångspunkten är då att uppsåt krävs.
+U Gärningen är belagd med strängare straff i annan lag.
+T En veterinär som har fått sin legitimation återkallad fortsätter att ta emot och behandla hundar och katter mot betalning.
+
+@ v21-skyddad-yrkestitel-djursjukvard | Brott mot lagen om verksamhet inom djurens hälso- och sjukvård (skyddade titlar) | 8:2–3 | 8:2,8:3,3:2,3:4,3:4a,3:7,3:8,8:5
+PEN 0 | 0 | Böter | Böter
+C Djur och natur
+A kalla sig veterinär;falsk titel;djursjukskötare;hovslagare;legitimerad
+Q plain
+P Gärningen begås i verksamhet inom djurens hälso- och sjukvård.
+G Gärningspersonen gör minst ett av:
+  | Använder beteckningen legitimerad utan att ha legitimation.
+  | Använder yrkestiteln veterinär eller djursjukskötare, eller en titel som kan förväxlas med dem, utan att ha behörighet.
+  | Använder en yrkestitel som är skyddad enligt patientsäkerhetslagen, eller en titel som kan förväxlas med den, utan att ha behörighet.
+  | Använder yrkestiteln hovslagare eller beteckningen godkänd för verksamhet inom djurens hälso- och sjukvård utan att ha godkännande.
+  | Anger som veterinär att han eller hon är specialist inom en gren av veterinäryrket utan att vara godkänd som specialist.
+S Uppsåt till samtliga rekvisit. Lagen anger ingen skuldform. Utgångspunkten är då att uppsåt krävs.
+U Gärningen är belagd med strängare straff i annan lag.
+T En person utan utbildning marknadsför sin djurklinik med titeln legitimerad veterinär.
+
+@ v21-forbjuden-behandling-av-djur | Brott mot lagen om verksamhet inom djurens hälso- och sjukvård (förbjuden eller skadlig behandling) | 8:4 | 8:4,4:1,4:2,1:4,8:5
+PEN 0 | 1 | Böter eller fängelse i högst ett år | B–F 1 år
+C Djur och natur
+A kvacksalveri djur;hästmassör;operera djur;ge spruta till djur;hästtandvård;söva djur
+Q plain
+K Gärningspersonen tillhör inte djurhälsopersonalen.
+K Gärningen begås vid yrkesmässig verksamhet inom djurens hälso- och sjukvård.
+G Gärningspersonen gör minst ett av:
+  | Behandlar ett djur som kan misstänkas ha en sjukdom som omfattas av epizootilagen eller zoonoslagen.
+  | Utför operativa ingrepp, ger injektioner eller utför annan behandling som kan orsaka ett lidande som inte är obetydligt.
+  | Behandlar ett djur under allmän bedövning eller under lokal bedövning genom injektion.
+  | Tillfogar ett djur lidande eller skada som inte är ringa, eller framkallar fara för det, genom olämplig behandling eller genom avbrott i eller dröjsmål med veterinär vård.
+S Uppsåt eller oaktsamhet.
+U Ingreppet, injektionen eller bedövningen är en brådskande åtgärd för att rädda djurets liv eller lindra dess lidande.
+U Gärningen är belagd med straff som obehörig utövning av veterinäryrket eller med strängare straff i annan lag.
+N Den som på grund av bristande utbildning och erfarenhet inte har kunnat inse sjukdomens natur eller förutse lidandet, skadan eller faran är inte fri från ansvar.
+T En person utan utbildning driver en firma som söver hästar med injektion och slipar deras tänder.
+T En alternativbehandlare avråder mot betalning en djurägare från att söka veterinär, och hunden får därför lida av en obehandlad infektion.
+
+LAW S2011-1070 | Lagen (2011:1070) om handel med sälprodukter | 2011:1070 | Lagen om handel med sälprodukter
+
+@ v21-handel-med-salprodukter | Brott mot lagen om handel med sälprodukter | 8 § | 8
+PEN 0 | 0 | Böter | Böter
+C Djur och natur
+A sälskinn;sälolja;sälkött;sälja säl
+Q plain
+G Gärningspersonen saluför sälprodukter i strid med EU:s förordning om handel med sälprodukter.
+S Uppsåt eller grov oaktsamhet.
+U Gärningen är ringa.
+U Gärningen är belagd med straff i jaktlagen eller i lagen om straff för smuggling.
+T En person säljer handskar av sälskinn i en webbutik utan att något av EU-förordningens undantag gäller.
+
+LAW S2014-1009 | Lagen (2014:1009) om handel med timmer och trävaror | 2014:1009 | Timmerlagen
+
+@ v21-handel-med-olagligt-timmer | Brott mot lagen om handel med timmer och trävaror | 9 § | 9,10
+PEN 0 | 0.5 | Böter eller fängelse i högst sex månader | B–F 6 mån
+C Djur och natur
+A olagligt timmer;olaglig avverkning;virke;trävaror;timmerimport
+Q plain
+G Gärningspersonen släpper ut timmer från olaglig avverkning, eller trävaror som härrör från sådant timmer, på marknaden i strid med EU:s timmerförordning.
+K Avverkningen har skett i strid med avverkningslandets bestämmelser om minst ett av:
+  | Tillstånd eller godkännande.
+  | Anmälan eller underrättelse till en myndighet, eller föreskriven tidsfrist efter en sådan anmälan.
+  | Villkor i ett tillstånd eller i ett beslut om godkännande.
+  | Områdesskydd till skydd för särskilda miljöer eller arter.
+  | Tillstånd eller förbud som gäller export.
+S Uppsåt eller oaktsamhet.
+U Fallet är ringa.
+U Gärningen är belagd med samma eller strängare straff enligt brottsbalken eller som brott mot områdesskydd enligt miljöbalken.
+U Gärningspersonen har överträtt ett vitesföreläggande som omfattar gärningen.
+T Ett företag importerar och säljer virke som har avverkats utan avverkningstillstånd i ursprungslandet, utan att kontrollera varifrån virket kommer.
+
+LAW S2022-725 | Växtskyddslagen (2022:725) | 2022:725 | Växtskyddslagen
+X 5,6,7,41,42,43
+
+@ v21-vaxtskydd-karantanskadegorare | Brott mot växtskyddslagen (befattning med karantänskadegörare) | 34 § | 34,41,42,43
+PEN 0 | 2 | Böter eller fängelse i högst två år | B–F 2 år
+C Djur och natur
+A växtskadegörare;karantänskadegörare;skadeinsekter;växtsjukdom;införsel växter
+Q plain
+O En karantänskadegörare, det vill säga en växtskadegörare som omfattas av karantänsregler enligt EU:s växtskyddsförordning.
+K Gärningen sker utan tillstånd eller i strid med villkoren i ett tillstånd.
+G Gärningspersonen gör minst ett av:
+  | För in skadegöraren till Sverige eller till en skyddad zon inom Sverige.
+  | Förflyttar, innehar, uppförökar eller frisläpper skadegöraren inom Sverige eller inom en skyddad zon inom Sverige.
+  | För ut skadegöraren från Sverige till ett annat EU-land.
+S Uppsåt eller grov oaktsamhet. I näringsverksamhet räcker oaktsamhet.
+U Gärningen är ringa. Den är ringa om den framstår som obetydlig med hänsyn till det intresse som straffbestämmelsen ska skydda.
+U Gärningen är belagd med straff i brottsbalken.
+U Gärningen omfattas av ett vitesföreläggande och ligger till grund för en ansökan om att vitet ska dömas ut.
+T En forskare tar med sig levande skadeinsekter som är karantänskadegörare till Sverige för egna försök utan tillstånd.
+
+@ v21-vaxtskydd-riskfylld-hantering | Brott mot växtskyddslagen (risk för spridning av karantänskadegörare) | 35–36 §§ | 35,36,41,42,43
+PEN 0 | 2 | Böter eller fängelse i högst två år | B–F 2 år
+C Djur och natur
+A smittade växter;växtimport;plantor;växtskadegörare;träemballage;växtsjukdom
+Q plain
+G Gärningspersonen gör minst ett av:
+  | För in växter, växtprodukter eller andra föremål till Sverige eller till en skyddad zon inom Sverige på ett sätt som kan medföra risk för att karantänskadegörare introduceras, etableras eller sprids.
+  | Förflyttar växter, växtprodukter eller andra föremål inom Sverige eller inom en skyddad zon på ett sådant sätt.
+  | För ut växter, växtprodukter eller andra föremål från Sverige till ett annat EU-land på ett sådant sätt.
+  | Hanterar i andra fall växter, växtprodukter eller andra föremål på ett sådant sätt.
+  | Låter bli att vidta nödvändiga åtgärder för att förhindra att karantänskadegörare introduceras, etableras eller sprids.
+S Uppsåt eller grov oaktsamhet. I näringsverksamhet räcker oaktsamhet.
+U Gärningen är ringa. Den är ringa om den framstår som obetydlig med hänsyn till det intresse som straffbestämmelsen ska skydda.
+U Gärningen är belagd med straff i brottsbalken.
+U Gärningen omfattas av ett vitesföreläggande och ligger till grund för en ansökan om att vitet ska dömas ut.
+T En plantskola säljer vidare plantor från ett parti där en karantänskadegörare har upptäckts, i stället för att isolera partiet.
+
+@ v21-vaxtskydd-icke-karantanskadegorare | Brott mot växtskyddslagen (reglerade EU-icke-karantänskadegörare) | 37 § | 37,41,42,43
+PEN 0 | 0 | Böter | Böter
+C Djur och natur
+A plantor;växter för plantering;växtskadegörare;växtsjukdom
+Q plain
+O Reglerade EU-icke-karantänskadegörare på växter för plantering.
+G Gärningspersonen gör i strid med EU:s växtskyddsförordning minst ett av:
+  | För in skadegörarna till Sverige.
+  | För ut skadegörarna till ett annat EU-land.
+  | Förflyttar skadegörarna inom Sverige.
+S Uppsåt eller oaktsamhet.
+U Gärningen är ringa. Den är ringa om den framstår som obetydlig med hänsyn till det intresse som straffbestämmelsen ska skydda.
+U Gärningen är belagd med straff i brottsbalken.
+U Gärningen omfattas av ett vitesföreläggande och ligger till grund för en ansökan om att vitet ska dömas ut.
+T En handelsträdgård skickar fruktträdsplantor till kunder trots att plantorna är angripna av en reglerad skadegörare.
+
+@ v21-vaxtskydd-sparbarhet-och-certifikat | Brott mot växtskyddslagen (spårbarhet och sundhetscertifikat) | 38 § | 38,41,42,43
+PEN 0 | 0 | Böter | Böter
+C Djur och natur
+A sundhetscertifikat;växtexport;spårbarhet;felaktiga uppgifter;växtpass
+Q plain
+G Gärningspersonen gör minst ett av:
+  | Orsakar att möjligheten att spåra en karantänskadegörare försvåras eller kan komma att försvåras.
+  | Lämnar vilseledande eller felaktiga uppgifter i en ansökan om sundhetscertifikat för export.
+S Uppsåt eller grov oaktsamhet. I näringsverksamhet räcker oaktsamhet.
+U Gärningen är ringa. Den är ringa om den framstår som obetydlig med hänsyn till det intresse som straffbestämmelsen ska skydda.
+U Gärningen är belagd med straff i brottsbalken.
+U Den försvårade spårningen ska leda till ansvar enligt 34, 35 eller 36 § eller kan leda till sanktionsavgift.
+U Gärningen omfattas av ett vitesföreläggande och ligger till grund för en ansökan om att vitet ska dömas ut.
+T En exportör uppger i ansökan om sundhetscertifikat att ett virkesparti är behandlat mot skadegörare trots att det inte är det.
+
+@ v21-vaxtskydd-anmalan | Brott mot växtskyddslagen (utebliven anmälan av skadegörare) | 39 § | 39,41,42,43
+PEN 0 | 0 | Böter | Böter
+C Djur och natur
+A anmäla växtskadegörare;växtsjukdom;skadeinsekter;Jordbruksverket
+Q plain
+G Gärningspersonen anmäler inte förekomst, eller misstanke om förekomst, av en EU-karantänskadegörare eller en karantänskadegörare för skyddad zon, trots att EU:s växtskyddsförordning kräver det.
+S Uppsåt eller oaktsamhet om gärningen begås i näringsverksamhet. I andra fall krävs uppsåt.
+U Gärningen är ringa. Den är ringa om den framstår som obetydlig med hänsyn till det intresse som straffbestämmelsen ska skydda.
+U Gärningen är belagd med straff i brottsbalken.
+U Gärningen omfattas av ett vitesföreläggande och ligger till grund för en ansökan om att vitet ska dömas ut.
+N I näringsverksamhet gäller anmälningsplikten även skadegörare som omfattas av tillfälliga EU-åtgärder.
+T En plantskoleägare upptäcker tecken på en karantänskadegörare i sina odlingar men anmäler inte det för att slippa spärras.
+
+@ v21-vaxtskydd-foreskrifter | Brott mot växtskyddslagen (föreskrifter och beslut) | 40 § | 5,6,7,40,41,42,43
+PEN 0 | 0 | Böter | Böter
+C Djur och natur
+A granbarkborre;växtskadegörare;bekämpningsbeslut;virkeslagring;plantor
+Q plain
+G Gärningspersonen bryter mot föreskrifter eller beslut om förbud, begränsningar eller åtgärder som avser minst ett av:
+  | Att förhindra att karantänskadegörare introduceras, etableras och sprids.
+  | Att begränsa förekomsten av reglerade EU-icke-karantänskadegörare vid yrkesmässig odling av växter för plantering.
+  | Att begränsa förekomsten av andra växtskadegörare som angriper trädslag som används i virkesproduktion.
+S Uppsåt eller grov oaktsamhet. I näringsverksamhet räcker oaktsamhet.
+U Gärningen är ringa. Den är ringa om den framstår som obetydlig med hänsyn till det intresse som straffbestämmelsen ska skydda.
+U Gärningen ska leda till ansvar enligt 34, 35 eller 36 § eller är belagd med straff i brottsbalken.
+U Gärningen kan leda till sanktionsavgift.
+U Gärningen omfattas av ett vitesföreläggande och ligger till grund för en ansökan om att vitet ska dömas ut.
+T En markägare följer inte ett beslut om att avverka och föra bort träd som är angripna av en karantänskadegörare.
+
+LAW S1933-78 | Förordningen (1933:78) angående beteckning för vissa slag av vin | 1933:78 | Förordningen om beteckning för vissa slag av vin
+
+@ v21-beteckning-for-vin | Brott mot förordningen angående beteckning för vissa slag av vin | 2 § | 1,2
+PEN 0 | 0 | Böter | Böter
+C Narkotika och alkohol
+A fruktvin;vin märkning;falskt vin;beteckning vin
+Q plain
+O En dryck som räknas som vin men som inte är framställd av saft av färska druvor.
+G Gärningspersonen bjuder ut eller säljer drycken utan en beteckning som tydligt visar att den är framställd av annat än druvsaft, till exempel fruktvin, eller använder ordet vin ensamt som beteckning.
+S Uppsåt till samtliga rekvisit. Lagen anger ingen skuldform. Utgångspunkten är då att uppsåt krävs.
+N Den som fortsätter med samma förseelse medan han eller hon står under åtal döms till särskilt ansvar för varje gång åtal väcks.
+T En producent säljer en dryck gjord på äpplen och bär med etiketten vin utan att ange att det är ett fruktvin.
+
+LAW S1975-580 | Steriliseringslagen (1975:580) | 1975:580 | Steriliseringslagen
+X 1,2,3,5,6
+
+@ v21-olaglig-sterilisering | Brott mot steriliseringslagen | 8 § | 2,3,5,6,8
+PEN 0 | 0.5 | Böter eller fängelse i högst sex månader | B–F 6 mån
+C Person
+A sterilisering;olaglig sterilisering;vasektomi;sterilisera ung
+Q plain
+G Gärningspersonen utför en sterilisering och minst ett av följande gäller:
+  | Personen har fyllt 25 år men har inte själv begärt steriliseringen eller är inte bosatt i Sverige.
+  | Personen har fyllt 18 men inte 25 år och har inte tillstånd från Socialstyrelsen.
+  | Personen har inte noggrant informerats om ingreppets innebörd och följder.
+  | Den som utför ingreppet är inte behörig att utöva läkaryrket.
+  | En kvinna steriliseras på en annan plats än ett allmänt sjukhus eller en godkänd sjukvårdsinrättning.
+S Uppsåt.
+N Lagen gäller inte ingrepp som är ett led i behandlingen av en kroppslig sjukdom.
+T En läkare steriliserar en 22-åring som inte har något tillstånd från Socialstyrelsen.
+
+LAW S1990-1144 | Begravningslagen (1990:1144) | 1990:1144 | Begravningslagen
+X 3:3,5:5
+
+@ v21-olovlig-kremering-eller-gravsattning | Brott mot begravningslagen | 11:1 | 3:3,5:5,11:1
+PEN 0 | 0.5 | Böter eller fängelse i högst sex månader | B–F 6 mån
+C Allmän ordning
+A sprida aska;begrava på egen mark;gravsättning;kremering;urna hemma
+Q plain
+G Gärningspersonen gör minst ett av:
+  | Kremerar en avliden på en annan plats än i ett krematorium.
+  | Gravsätter stoft eller aska på en annan plats än en allmän eller enskild begravningsplats, utan länsstyrelsens tillstånd att förfara med askan på något annat sätt.
+S Uppsåt.
+U Gärningen är belagd med straff i brottsbalken.
+T En anhörig gräver ner urnan med askan efter en avliden i sin trädgård utan tillstånd från länsstyrelsen.
+
+LAW S1991-1047 | Lagen (1991:1047) om sjuklön | 1991:1047 | Sjuklönelagen
+X 12
+
+@ v21-sjuklon-anmalan | Brott mot lagen om sjuklön | 19 § | 12,19
+PEN 0 | 0 | Böter | Böter
+C Allmän verksamhet
+A sjukanmälan;arbetsgivare;Försäkringskassan;sjuklöneperiod
+Q plain
+K Gärningspersonen är arbetsgivare.
+G Gärningspersonen anmäler inte till Försäkringskassan, inom sju kalenderdagar från sjuklöneperiodens utgång, ett sjukdomsfall som har gett en arbetstagare rätt till sjuklön och där sjukperioden och anställningen fortsätter efter sjuklöneperioden.
+S Uppsåt till samtliga rekvisit. Lagen anger ingen skuldform. Utgångspunkten är då att uppsåt krävs.
+N Den som obehörigen röjer uppgifter om en anställds hälsotillstånd ur läkarintyg kan dömas för brott mot tystnadsplikt enligt brottsbalken.
+T En arbetsgivare låter bli att anmäla till Försäkringskassan att en anställd fortfarande är sjuk efter de två första sjukveckorna.
+
+LAW S1993-387 | Lagen (1993:387) om stöd och service till vissa funktionshindrade | 1993:387 | LSS
+X 6,9,23,26g
+
+@ v21-lss-verksamhet-utan-tillstand | Brott mot lagen om stöd och service till vissa funktionshindrade | 28 § | 6,23,26g,28
+PEN 0 | 0 | Böter | Böter
+C Person
+A assistansbolag utan tillstånd;personlig assistans;LSS-boende;undersköterska titel;IVO
+Q plain
+G Gärningspersonen gör minst ett av:
+  | Bedriver som enskild yrkesmässigt verksamhet med personlig assistans, ledsagarservice, kontaktperson, avlösarservice, korttidsvistelse, korttidstillsyn, boende med särskild service eller daglig verksamhet utan tillstånd av Inspektionen för vård och omsorg (uppsåt eller oaktsamhet).
+  | Fortsätter verksamheten trots att Inspektionen för vård och omsorg har förbjudit fortsatt verksamhet (uppsåt eller oaktsamhet).
+  | Använder i verksamhet enligt lagen yrkestiteln undersköterska, eller en titel som kan förväxlas med den, utan att ha bevis om rätt att använda titeln (uppsåt).
+S Uppsåt eller oaktsamhet. För användning av yrkestiteln undersköterska krävs uppsåt.
+T Ett bolag anordnar personlig assistans åt flera brukare mot betalning utan att ha tillstånd från Inspektionen för vård och omsorg.
+
+LAW S1995-831 | Lagen (1995:831) om transplantation m.m. | 1995:831 | Transplantationslagen
+X 3,4,5,6,7,8,9,11
+
+@ v21-olovligt-transplantationsingrepp | Brott mot lagen om transplantation | 14 § | 3,6,8,11,14
+PEN 0 | 0 | Böter | Böter
+C Person
+A organdonation;transplantation utan samtycke;ta organ;fostervävnad
+Q plain
+G Gärningspersonen gör minst ett av:
+  | Tar biologiskt material från en avliden trots att den avlidne har motsatt sig det eller att uppgifterna om den avlidnes inställning är motstridiga.
+  | Tar biologiskt material från en avliden innan någon närstående har underrättats.
+  | Tar biologiskt material från en levande människa utan hans eller hennes samtycke, eller trots att ingreppet kan befaras medföra allvarlig fara för givarens liv eller hälsa.
+  | Tar biologiskt material från ett barn eller från en person som på grund av psykisk störning inte kan samtycka, utan Socialstyrelsens tillstånd.
+  | Använder eller tar till vara vävnad från ett aborterat foster utan kvinnans samtycke eller utan Socialstyrelsens tillstånd.
+  | Utför på annat sätt ett ingrepp eller tar biologiskt material i strid med lagen.
+S Uppsåt.
+N Handel med biologiskt material bestraffas enligt lagen om genetisk integritet.
+T En läkare tar ut en njure för transplantation från en avliden som skriftligen har motsatt sig donation.
+
+LAW S1995-832 | Lagen (1995:832) om obduktion m.m. | 1995:832 | Obduktionslagen
+X 6,7,8,9,10,11,21,22,23
+
+@ v21-olovligt-ingrepp-pa-avliden | Brott mot lagen om obduktion | 25 § | 7,8,10,11,21,25
+PEN 0 | 0 | Böter | Böter
+C Person
+A obduktion utan tillstånd;ingrepp på död;dissektion;lik;balsamering
+Q plain
+O En avliden människa.
+G Gärningspersonen utför ett ingrepp på den avlidne i strid med lagen, till exempel minst ett av:
+  | Utför en klinisk obduktion utan att förutsättningarna är uppfyllda, till exempel mot den avlidnes inställning när det inte är av särskild betydelse att dödsorsaken fastställs.
+  | Utför en klinisk obduktion utan att närstående har underrättats och fått skälig tid att yttra sig.
+  | Utför en klinisk obduktion utan att vara läkare.
+  | Använder kroppen för dissektion i anatomiundervisning utan den avlidnes skriftliga samtycke.
+  | Gör ingrepp för att träna operationsteknik eller tar ut implantat utan att lagens förutsättningar är uppfyllda.
+S Uppsåt.
+T En läkare obducerar en avliden för forskningsändamål trots att de närstående har motsatt sig det och den avlidnes inställning är okänd.
+
+LAW S1997-192 | Lagen (1997:192) om internationell adoptionsförmedling | 1997:192 | Lagen om internationell adoptionsförmedling
+X 3,4
+
+@ v21-olovlig-adoptionsformedling | Brott mot lagen om internationell adoptionsförmedling | 15 § | 3,4,15
+PEN 0 | 0 | Böter | Böter
+C Person
+A adoption;adoptera från utlandet;privat adoption;adoptionsförmedling
+Q plain
+G Gärningspersonen gör minst ett av:
+  | Förmedlar en adoption av ett barn från utlandet utan att vara en auktoriserad sammanslutning.
+  | Låter, som den som vill adoptera, föra ut ett barn från det land där barnet har sitt hemvist utan att anlita en auktoriserad sammanslutning och utan att Myndigheten för familjerätt och föräldraskapsstöd har prövat om förfarandet är godtagbart.
+S Uppsåt till samtliga rekvisit. Lagen anger ingen skuldform. Utgångspunkten är då att uppsåt krävs.
+N Adoption utan auktoriserad sammanslutning kan godtas i enstaka fall som avser släktingbarn eller när det finns särskilda skäl. Myndigheten ska då pröva förfarandet innan barnet lämnar landet.
+T En privatperson ordnar mot betalning adoptioner av barn från ett annat land åt svenska par utan att vara auktoriserad.
+
+LAW S2006-1570 | Lagen (2006:1570) om skydd mot internationella hot mot människors hälsa | 2006:1570 | Lagen om skydd mot internationella hot mot människors hälsa
+X 2,16,19
+
+@ v21-halsodeklaration-fartyg-luftfartyg | Brott mot lagen om skydd mot internationella hot mot människors hälsa | 31 § | 16,19,31
+PEN 0 | 0 | Böter | Böter
+C Person
+A hälsodeklaration;smitta ombord;befälhavare;karantän;fartyg smitta;flygplan smitta
+Q plain
+K Gärningspersonen är befälhavare på ett fartyg eller luftfartyg som ankommer till Sverige.
+K Minst en av följande situationer föreligger:
+  | Befälhavaren har anledning att anta att smittämnen eller andra ämnen som kan utgöra ett internationellt hot mot människors hälsa finns ombord.
+  | Fartyget eller luftfartyget kommer från ett område som har förklarats drabbat av ett internationellt hot mot människors hälsa, och ankomsten sker inom inkubationstiden.
+  | Det finns en person ombord som har vistats i ett sådant område och inkubationstiden har inte gått ut vid ankomsten.
+G Gärningspersonen gör minst ett av:
+  | Lämnar inte information om hälsotillståndet ombord till Kustbevakningen (fartyg) eller Tullverket (luftfartyg) före eller senast vid ankomsten till första svenska hamn eller flygplats.
+  | Lämnar inte omedelbart sådan information till ansvarig myndighet när fartyget eller luftfartyget lägger till eller landar på en annan plats än en karantänshamn eller karantänsflygplats.
+  | Lämnar oriktig information om hälsotillståndet ombord.
+S Uppsåt till samtliga rekvisit. Lagen anger ingen skuldform. Utgångspunkten är då att uppsåt krävs.
+T En befälhavare på ett fartyg med flera insjuknade i en samhällsfarlig sjukdom uppger vid ankomsten till svensk hamn att alla ombord är friska.
+
+LAW S2006-496 | Lagen (2006:496) om blodsäkerhet | 2006:496 | Blodsäkerhetslagen
+X 6
+
+@ v21-blodverksamhet-utan-tillstand | Brott mot lagen om blodsäkerhet | 29 § | 6,29
+PEN 0 | 1 | Böter eller fängelse i högst ett år | B–F 1 år
+C Person
+A blodcentral utan tillstånd;blodgivning;blodtappning;blodverksamhet
+Q plain
+G Gärningspersonen bedriver blodverksamhet utan tillstånd.
+S Uppsåt.
+U Fallet är ringa.
+U Gärningen är belagd med strängare straff i annan lag.
+T En privat klinik samlar in och lagrar blod från givare för transfusion utan att ha tillstånd.
+
+LAW S2008-286 | Lagen (2008:286) om kvalitets- och säkerhetsnormer vid hantering av mänskliga vävnader och celler | 2008:286 | Vävnadslagen
+X 9
+
+@ v21-vavnadsinrattning-utan-tillstand | Brott mot lagen om kvalitets- och säkerhetsnormer vid hantering av mänskliga vävnader och celler | 34 § | 9,34
+PEN 0 | 1 | Böter eller fängelse i högst ett år | B–F 1 år
+C Person
+A vävnadsbank;stamceller;spermabank;äggbank;vävnadsinrättning utan tillstånd
+Q plain
+G Gärningspersonen bedriver en vävnadsinrättning utan tillstånd.
+S Uppsåt.
+U Fallet är ringa.
+T Ett företag tar emot och fryser in stamceller från navelsträngsblod åt betalande kunder utan att ha tillstånd.
+
+LAW S2009-730 | Lagen (2009:730) om handel med vissa receptfria läkemedel | 2009:730 | Lagen om handel med vissa receptfria läkemedel
+X 9,12
+
+@ v21-receptfria-lakemedel | Brott mot lagen om handel med vissa receptfria läkemedel | 24 § | 9,12,24,25
+PEN 0 | 0.5 | Böter eller fängelse i högst sex månader | B–F 6 mån
+C Person
+A receptfria läkemedel;värktabletter i butik;sälja till minderårig;nikotinläkemedel;Alvedon
+Q plain
+G Gärningspersonen gör minst ett av:
+  | Bedriver som näringsidkare detaljhandel med receptfria läkemedel utan att först ha anmält handeln till Läkemedelsverket.
+  | Säljer vid sådan detaljhandel läkemedel till någon som inte har fyllt 18 år.
+S Uppsåt eller oaktsamhet.
+U Fallet är ringa.
+U Gärningspersonen har överträtt ett vitesföreläggande eller vitesförbud som omfattar gärningen.
+T En kioskägare säljer värktabletter till en 15-åring utan att kontrollera åldern.
+T En butik börjar sälja receptfria läkemedel utan att ha anmält försäljningen till Läkemedelsverket.
+
+LAW S2010-110 | Socialförsäkringsbalken (2010:110) | 2010:110 | SFB
+X 42:10
+
+@ v21-arbetsskada-anmalan | Brott mot socialförsäkringsbalken (anmälan av arbetsskada) | 115:3 | 42:10,115:3
+PEN 0 | 0 | Böter | Böter
+C Allmän verksamhet
+A arbetsskada;arbetsplatsolycka;anmäla arbetsskada;arbetsgivare;Försäkringskassan
+Q plain
+K Gärningspersonen är arbetsgivare eller arbetsföreståndare och har fått kännedom om en inträffad arbetsskada.
+G Gärningspersonen låter bli att anmäla arbetsskadan till Försäkringskassan.
+S Uppsåt till samtliga rekvisit. Lagen anger ingen skuldform. Utgångspunkten är då att uppsåt krävs.
+N Anmälan ska göras omedelbart.
+T En byggfirma låter bli att anmäla att en anställd har fallit från en ställning och brutit benet.
+
+LAW S2012-595 | Lagen (2012:595) om införsel av och handel med sprutor och kanyler | 2012:595 | Lagen om sprutor och kanyler
+X 3,4
+
+@ v21-handel-med-sprutor-och-kanyler | Brott mot lagen om införsel av och handel med sprutor och kanyler | 9 § | 3,4,9
+PEN 0 | 0 | Böter | Böter
+C Narkotika och alkohol
+A sprutor;kanyler;sälja sprutor;injektionsverktyg;sprutor till minderårig
+Q plain
+G Gärningspersonen gör minst ett av:
+  | Bedriver handel med sprutor eller kanyler i Sverige utan att ha rätt att bedriva detaljhandel med läkemedel och utan att ha anmält handeln till ansvarig myndighet.
+  | Säljer sprutor eller kanyler till någon som inte har fyllt 20 år, utan att köparen styrker att de behövs för eget eller en familjemedlems medicinska bruk.
+S Uppsåt eller oaktsamhet.
+U Gärningspersonen har inte rättat sig efter ett vitesföreläggande som omfattar gärningen.
+N Olovlig införsel av sprutor eller kanyler bestraffas enligt lagen om straff för smuggling.
+T En butik säljer injektionssprutor till en 17-åring utan att fråga vad de ska användas till.
+
+LAW S2023-38 | Biobankslagen (2023:38) | 2023:38 | Biobankslagen
+X 2:5,2:8,2:9,4:13,5:6,5:12
+
+@ v21-brott-mot-biobankslagen | Brott mot biobankslagen | 8:1 | 2:5,2:8,2:9,4:2,4:13,5:6,5:12,8:1
+PEN 0 | 0 | Böter | Böter
+C Person
+A biobank;vävnadsprov;blodprov forskning;PKU-prov;prov utan samtycke
+Q plain
+G Gärningspersonen gör minst ett av:
+  | Använder ett prov ur en biobank eller ur PKU-biobanken för ett annat ändamål än lagen tillåter.
+  | Inrättar en biobank utan att anmäla det till Inspektionen för vård och omsorg.
+  | Förvarar prover så att de riskerar att förstöras eller så att obehöriga kan få tillgång till dem.
+  | Ger inte provgivaren föreskriven information eller hämtar inte in samtycke, till exempel inför ett nytt ändamål.
+  | Förstör eller avidentifierar inte ett prov när samtycket har återkallats.
+  | Lämnar ut eller skickar ett prov ur en biobank i strid med lagens villkor.
+  | Överlåter en provsamling utan godkännande av Inspektionen för vård och omsorg.
+  | Lämnar som vårdgivare inte ut prover till PKU-biobanken.
+S Uppsåt eller oaktsamhet.
+N Den som i vinstsyfte överlåter biologiskt material kan dömas enligt lagen om genetisk integritet.
+T En forskare använder sparade vävnadsprover ur en biobank för ett kommersiellt projekt som provgivarna aldrig har informerats om eller samtyckt till.
+
+LAW S2025-400 | Socialtjänstlagen (2025:400) | 2025:400 | SoL
+X 18:11,22:2,22:20,24:1,25:4,26:1
+
+@ v21-sol-forbud-ta-emot-barn | Brott mot socialtjänstlagen (förbud att ta emot andras barn) | 18:12 | 18:11,18:12
+PEN 0 | 0 | Böter | Böter
+C Person
+A förbud ta emot barn;barn i hemmet;socialnämnden förbud;olämpligt hem
+Q villkor | Allmänt åtal får väckas bara efter medgivande av Socialstyrelsen.
+K Socialnämnden har förbjudit gärningspersonen att i sitt hem ta emot någon annans barn, eller har begränsat möjligheterna till det.
+G Gärningspersonen överträder förbudet eller begränsningen.
+S Uppsåt till samtliga rekvisit. Lagen anger ingen skuldform. Utgångspunkten är då att uppsåt krävs.
+N Förbudet omfattar inte fall då det med hänsyn till särskilda omständigheter är uppenbart befogat att ett barn vistas i hemmet.
+T En man som socialnämnden har förbjudit att ta emot andras barn i hemmet låter en bekants barn bo hos sig över en helg.
+
+@ v21-sol-ta-emot-barn-utan-medgivande | Brott mot socialtjänstlagen (mottagande och förmedling av barn till enskilt hem) | 22:21 | 22:2,22:20,22:21
+PEN 0 | 0 | Böter | Böter
+C Person
+A familjehem utan medgivande;privatplacering;fosterbarn;förmedla barn;jourhem
+Q villkor | Allmänt åtal får väckas bara efter medgivande av Socialstyrelsen.
+G Gärningspersonen gör minst ett av:
+  | Tar emot ett barn för stadigvarande vård, omsorg och uppfostran i ett familjehem utan beslut om vård.
+  | Tar utan socialnämndens medgivande emot ett barn för stadigvarande vård, omsorg och uppfostran i ett annat enskilt hem som inte tillhör någon av föräldrarna eller någon annan vårdnadshavare.
+  | Bedriver utan stöd i lagen verksamhet som syftar till att förmedla barn till familjehem, jourhem eller andra enskilda hem.
+S Uppsåt till samtliga rekvisit. Lagen anger ingen skuldform. Utgångspunkten är då att uppsåt krävs.
+U Förmedlingen är belagd med straff enligt lagen om internationell adoptionsförmedling.
+T Ett par låter en bekants barn flytta in hos dem för att växa upp där utan att socialnämnden har lämnat medgivande.
+
+@ v21-sol-ta-emot-barn-for-adoption | Brott mot socialtjänstlagen (mottagande av barn för adoption) | 24:8 | 24:1,24:8
+PEN 0 | 0 | Böter | Böter
+C Person
+A adoption utan medgivande;adoptera från utlandet;adoptivbarn;privat adoption
+Q villkor | Allmänt åtal får väckas bara efter medgivande av Socialstyrelsen.
+G Gärningspersonen tar emot ett barn med hemvist utomlands i syfte att adoptera det, utan att socialnämnden har lämnat medgivande innan barnet lämnade sitt hemland.
+S Uppsåt till samtliga rekvisit. Lagen anger ingen skuldform. Utgångspunkten är då att uppsåt krävs.
+T Ett par hämtar hem ett barn från ett annat land för att adoptera det utan att ha ansökt om socialnämndens medgivande.
+
+@ v21-sol-yrkestitel-underskoterska | Brott mot socialtjänstlagen (yrkestiteln undersköterska) | 25:5 | 25:4,25:5
+PEN 0 | 0 | Böter | Böter
+C Person
+A undersköterska;falsk titel;skyddad yrkestitel;hemtjänst;äldreboende
+Q plain
+P Gärningen begås i verksamhet inom socialtjänsten.
+G Gärningspersonen använder yrkestiteln undersköterska, eller en titel som kan förväxlas med den, utan att ha bevis om rätt att använda titeln.
+S Uppsåt till samtliga rekvisit. Lagen anger ingen skuldform. Utgångspunkten är då att uppsåt krävs.
+T En anställd på ett äldreboende presenterar sig och skriver under som undersköterska utan att ha något bevis om rätt att använda titeln.
+
+@ v21-sol-verksamhet-utan-tillstand | Brott mot socialtjänstlagen (verksamhet utan tillstånd eller trots förbud) | 28:14 | 26:1,28:11,28:12,28:14
+PEN 0 | 0 | Böter | Böter
+C Person
+A HVB utan tillstånd;hemtjänst utan tillstånd;stödboende;skyddat boende;IVO;äldreboende utan tillstånd
+Q villkor | Allmänt åtal får väckas bara efter medgivande av Inspektionen för vård och omsorg.
+G Gärningspersonen gör minst ett av:
+  | Driver yrkesmässigt, som privat aktör, stödboende, skyddat boende, hem för vård eller boende, boende för äldre eller för personer med funktionsnedsättning, hem för annan heldygnsvård eller verksamhet för vård under del av dygnet utan tillstånd.
+  | Driver yrkesmässigt hemtjänst utan tillstånd.
+  | Driver yrkesmässigt utan tillstånd verksamhet som föreslår familjehem och jourhem till socialnämnden och ger stöd och handledning till sådana hem.
+  | Fortsätter verksamheten trots att Inspektionen för vård och omsorg har förbjudit fortsatt verksamhet.
+S Uppsåt till samtliga rekvisit. Lagen anger ingen skuldform. Utgångspunkten är då att uppsåt krävs.
+T Ett bolag tar emot placerade ungdomar i ett hem för vård eller boende utan att ha tillstånd från Inspektionen för vård och omsorg.
