@@ -1,0 +1,290 @@
+LAW AbortL | Abortlagen (1974:595) | 1974:595 | Abortlagen
+
+@ v20-illegal-abort | Illegal abort | 9 § första stycket | 9
+PEN 0 | 1 | Böter eller fängelse i högst ett år | B–F 1 år
+C Person
+A olaglig abort;abort utan läkare;fosterfördrivning
+Q plain
+ST F | Abortlagen 9 § tredje stycket
+G Gärningspersonen utför abort på en annan person.
+K Gärningspersonen är inte behörig att utöva läkaryrket.
+S Uppsåt.
+N Kvinnan själv kan inte dömas. Abort mot kvinnans vilja bedöms som grov misshandel eller annat brott enligt brottsbalken.
+T En person utan läkarutbildning utför en abort i en bostad mot betalning.
+
+@ v20-illegal-abort-grov | Illegal abort, grovt brott | 9 § andra stycket | 9
+PEN 0.5 | 4 | Fängelse i lägst sex månader och högst fyra år | F 6 mån–4 år
+C Person
+A grov illegal abort
+Q plain
+ST F | Abortlagen 9 § tredje stycket
+B v20-illegal-abort
+R grovt
+- Gärningen har skett vanemässigt.
+- Gärningen har skett för vinnings skull.
+- Gärningen har inneburit särskild fara för kvinnans liv eller hälsa.
+T En person utan behörighet utför återkommande aborter mot betalning under ohygieniska förhållanden.
+
+LAW OmskL | Lagen (2001:499) om omskärelse av pojkar | 2001:499 | Omskärelselagen
+
+@ v20-olovlig-omskarelse | Brott mot lagen om omskärelse av pojkar | 9 § | 9
+PEN 0 | 0.5 | Böter eller fängelse i högst sex månader | B–F 6 mån
+C Person
+A omskärelse utan läkare;olaglig omskärelse;köksbordsomskärelse
+Q plain
+G Gärningspersonen utför en omskärelse av en pojke.
+K Gärningspersonen är inte legitimerad läkare och har inte särskilt tillstånd.
+S Uppsåt till samtliga rekvisit. Lagen anger ingen skuldform. Utgångspunkten är då att uppsåt krävs.
+N Skadas pojken kan även misshandel eller vållande till kroppsskada bli aktuellt.
+T En person utan tillstånd omskär ett spädbarn i familjens hem.
+
+LAW EstetL | Lagen (2021:363) om estetiska kirurgiska ingrepp och estetiska injektionsbehandlingar | 2021:363 | Estetiklagen
+X 9
+
+@ v20-olovligt-estetiskt-ingrepp | Brott mot lagen om estetiska kirurgiska ingrepp och estetiska injektionsbehandlingar | 13 § | 9,13
+PEN 0 | 0.5 | Böter eller fängelse i högst sex månader | B–F 6 mån
+C Person
+A fillers;botox;läppförstoring;skönhetsingrepp;injektioner utan legitimation;fillers minderårig
+Q plain
+G Gärningspersonen gör minst ett av:
+  | Utför ett estetiskt kirurgiskt ingrepp eller en estetisk injektionsbehandling utan att uppfylla kompetenskraven (legitimerad läkare, tandläkare eller sjuksköterska beroende på åtgärd).
+  | Utför ett sådant ingrepp eller en sådan behandling på någon som inte har fyllt 18 år.
+S Uppsåt eller oaktsamhet.
+U Gärningen gäller bristande kompetens och är ringa.
+T En hudterapeut utan legitimation injicerar fillers i läpparna på kunder i en salong.
+
+LAW PSL | Patientsäkerhetslagen (2010:659) | 2010:659 | PSL
+X 5:1
+
+@ v20-kvacksalveri | Brott mot patientsäkerhetslagen (kvacksalveri) | 10:6 | 5:1,10:6
+PEN 0 | 1 | Böter eller fängelse i högst ett år | B–F 1 år
+C Person
+A kvacksalveri;kvacksalvare;alternativmedicin cancer;behandla barn alternativ;healing
+Q plain
+K Gärningspersonen tillhör inte hälso- och sjukvårdspersonalen och undersöker eller behandlar någon annan yrkesmässigt.
+G Gärningspersonen gör minst ett av:
+  | Behandlar anmälningspliktiga smittsamma sjukdomar, cancer, diabetes, epilepsi eller sjukliga tillstånd vid graviditet eller förlossning.
+  | Undersöker eller behandlar någon under allmän bedövning, lokalbedövning genom injektion eller hypnos.
+  | Behandlar någon med radiologiska metoder.
+  | Lämnar skriftliga råd eller anvisningar för behandling utan personlig undersökning.
+  | Undersöker eller behandlar barn under åtta år.
+  | Provar ut kontaktlinser.
+  | Tillfogar under verksamheten den behandlade en skada som inte är ringa, eller framkallar fara för en sådan skada (uppsåt eller oaktsamhet).
+S Uppsåt. För skada eller fara räcker oaktsamhet.
+N Bristande utbildning eller erfarenhet befriar inte från ansvar för skada eller fara.
+T En person som kallar sig naturläkare behandlar en cancersjuk kund med örtpreparat mot betalning.
+
+@ v20-obehorig-utovning-av-lakaryrket | Brott mot patientsäkerhetslagen (obehörig utövning av läkar- eller tandläkaryrket) | 10:3–4 | 10:3,10:4
+PEN 0 | 0.5 | Böter eller fängelse i högst sex månader | B–F 6 mån
+C Person
+A falsk läkare;återkallad legitimation;bluffläkare;olaglig tandläkare;svarttandläkare
+Q plain
+G Gärningspersonen gör minst ett av:
+  | Utövar läkaryrket obehörigen och mot ersättning efter att legitimationen har återkallats eller behörigheten har upphört eller begränsats.
+  | Utövar tandläkaryrket obehörigen och mot ersättning.
+S Uppsåt till samtliga rekvisit. Lagen anger ingen skuldform. Utgångspunkten är då att uppsåt krävs.
+N Den som aldrig har varit läkare men behandlar patienter bedöms i stället enligt reglerna om kvacksalveri eller brottsbalken.
+T En person utan tandläkarlegitimation lagar tänder mot betalning i en källarlokal.
+
+LAW GenL | Lagen (2006:351) om genetisk integritet m.m. | 2006:351 | Genetisk integritet-lagen
+
+@ v20-handel-med-biologiskt-material | Brott mot lagen om genetisk integritet (handel med biologiskt material) | 8:6 | 8:6
+PEN 0 | 2 | Böter eller fängelse i högst två år | B–F 2 år
+C Person
+A organhandel;sälja njure;köpa organ;handel med organ
+Q plain
+G Gärningspersonen gör minst ett av:
+  | Tar, överlämnar, tar emot eller förmedlar i vinstsyfte biologiskt material från en levande eller avliden människa eller vävnad från ett aborterat foster.
+  | Använder eller tar till vara sådant material med insikt om att det har hanterats i vinstsyfte.
+S Uppsåt.
+U Fallet är ringa.
+U Materialet är blod, hår, modersmjölk eller tänder.
+N Organhandel som innefattar utnyttjande av en människa kan vara människohandel (BrB 4:1 a).
+T En person förmedlar mot betalning en njure från en levande givare till en mottagare.
+
+LAW JB | Jordabalken (1970:994) | 1970:994 | JB
+
+@ v20-svarthandel-hyresratt | Brott mot hyreslagen (ersättning för hyresrätt) | 12:65 första stycket | 12:65
+PEN 0 | 2 | Fängelse i högst två år | F 2 år
+C Förmögenhet
+A svartkontrakt;sälja hyreskontrakt;svart lägenhet;köpa hyreskontrakt;hyresrätt svart
+Q plain
+N Är brottet ringa döms till böter eller fängelse i högst sex månader.
+O En bostadslägenhet som hyrs ut.
+G Gärningspersonen begär, träffar avtal om eller tar emot en särskild ersättning för att upplåta lägenheten eller överlåta hyresrätten.
+S Uppsåt till samtliga rekvisit. Lagen anger ingen skuldform. Utgångspunkten är då att uppsåt krävs.
+T En hyresgäst säljer sitt förstahandskontrakt för 300 000 kronor.
+
+@ v20-svarthandel-hyresratt-grovt | Brott mot hyreslagen, grovt brott (ersättning för hyresrätt) | 12:65 andra stycket | 12:65
+PEN 0.5 | 4 | Fängelse i lägst sex månader och högst fyra år | F 6 mån–4 år
+C Förmögenhet
+A grov svarthandel hyreskontrakt;lägenhetsmäklare svart
+Q plain
+B v20-svarthandel-hyresratt
+R grovt
+- Gärningen har avsett betydande värde.
+- Gärningen har varit ett led i en verksamhet som bedrivits yrkesmässigt eller i större omfattning.
+- Gärningspersonen har använt en falsk eller osann urkund eller lämnat osann uppgift inför myndighet.
+- Gärningspersonen har i avsevärd utsträckning missbrukat sin ställning som ägare eller förvaltare av en fastighet.
+T En fastighetsförvaltare säljer systematiskt förstahandskontrakt i bolagets hus mot kontant betalning.
+
+@ v20-otillaten-bostadsformedling | Brott mot hyreslagen (ersättning för bostadsförmedling) | 12:65 a | 12:65a
+PEN 0 | 2 | Fängelse i högst två år | F 2 år
+C Förmögenhet
+A förmedlingsavgift lägenhet;bostadsförmedling svart;betala för att få lägenhet
+Q plain
+N Är brottet ringa döms till böter eller fängelse i högst sex månader. Är brottet grovt är straffet fängelse i lägst sex månader och högst fyra år.
+G Gärningspersonen begär, träffar avtal om eller tar emot ersättning av en hyressökande för att förmedla en bostadslägenhet.
+U Lägenheten förmedlas för fritidsändamål.
+U Ersättningen tas ut vid yrkesmässig bostadsförmedling, håller sig inom lagens högsta belopp och förmedlingen har lett till ett hyresavtal.
+S Uppsåt till samtliga rekvisit. Lagen anger ingen skuldform. Utgångspunkten är då att uppsåt krävs.
+T En privatperson tar 40 000 kronor av bostadssökande för att ordna hyreskontrakt genom sina kontakter.
+
+@ v20-kop-av-hyresratt | Brott mot hyreslagen (köp av hyresrätt) | 12:65 b första stycket | 12:65b
+PEN 0 | 2 | Böter eller fängelse i högst två år | B–F 2 år
+C Förmögenhet
+A köpa svartkontrakt;betala för hyreskontrakt
+Q plain
+N Är brottet grovt är straffet fängelse i lägst sex månader och högst fyra år.
+G Gärningspersonen lämnar en särskild ersättning för att hyra en bostadslägenhet eller förvärva hyresrätten till den.
+S Uppsåt till samtliga rekvisit. Lagen anger ingen skuldform. Utgångspunkten är då att uppsåt krävs.
+U Fallet är ringa.
+T En bostadssökande betalar 200 000 kronor svart för att få ta över ett förstahandskontrakt.
+
+@ v20-olovlig-andrahandsuthyrning | Brott mot hyreslagen (otillåten andrahandsuthyrning) | 12:65 c | 12:65c
+PEN 0 | 2 | Böter eller fängelse i högst två år | B–F 2 år
+C Förmögenhet
+A andrahandsuthyrning utan tillstånd;överhyra;svart andrahand;ockerhyra
+Q plain
+K Gärningspersonen är hyresgäst till bostadslägenheten.
+G Gärningspersonen upplåter lägenheten i andra hand för självständigt brukande.
+K Hyresvärden har inte samtyckt och hyresnämnden har inte gett tillstånd.
+F Gärningspersonen tar emot en hyra som inte är skälig.
+S Uppsåt till samtliga rekvisit. Lagen anger ingen skuldform. Utgångspunkten är då att uppsåt krävs.
+U Fallet är ringa.
+T En hyresgäst hyr ut sin lägenhet i andra hand utan hyresvärdens samtycke för dubbla hyran.
+
+LAW BitrL | Lagen (1985:354) om förbud mot juridiskt eller ekonomiskt biträde i vissa fall | 1985:354 | Biträdeslagen
+X 3
+
+@ v20-vardslost-bitrade | Vårdslöst biträde | 2 § | 2
+PEN 0 | 2 | Böter eller fängelse i högst två år | B–F 2 år
+C Ekonomisk brottslighet
+A rådgivare ekobrott;revisor medhjälp;juridisk rådgivning brott
+Q plain
+G Gärningspersonen lämnar juridiskt eller ekonomiskt biträde.
+F Biträdet främjar en straffbelagd gärning.
+S Grov oaktsamhet i förhållande till att gärningen främjas.
+U Fallet är ringa.
+U Främjandet är medverkan till brott enligt BrB 23 kap.
+N Straffet får inte sättas högre än straffet för den gärning som har främjats.
+T En redovisningskonsult upprättar utan kontroll bokslut som döljer att klienten tömmer bolaget på tillgångar.
+
+@ v20-overtradelse-av-radgivningsforbud | Brott mot lagen om förbud mot juridiskt eller ekonomiskt biträde (överträdelse av rådgivningsförbud) | 8 § | 3,8
+PEN 0 | 2 | Fängelse i högst två år | F 2 år
+C Ekonomisk brottslighet
+A rådgivningsförbud;biträdesförbud
+Q plain
+N Är brottet ringa döms till böter eller fängelse i högst sex månader.
+O Domstol har meddelat gärningspersonen förbud att yrkesmässigt lämna juridiskt eller ekonomiskt biträde.
+G Gärningspersonen lämnar sådant biträde trots förbudet.
+S Uppsåt till samtliga rekvisit. Lagen anger ingen skuldform. Utgångspunkten är då att uppsåt krävs.
+T En person med rådgivningsförbud fortsätter att sälja bolagsupplägg till kunder.
+
+LAW BulvL | Lagen (1985:277) om vissa bulvanförhållanden | 1985:277 | Bulvanlagen
+X 1
+
+@ v20-bulvanbrott | Brott mot lagen om vissa bulvanförhållanden | 2 § | 1,2
+PEN 0 | 1 | Böter eller fängelse i högst ett år | B–F 1 år
+C Ekonomisk brottslighet
+A bulvan;bulvanförhållande;jordförvärv bulvan;köpa jordbruksmark genom bulvan
+Q plain
+O Ett hinder enligt jordförvärvslagen mot att förvärva eller behålla viss egendom, till exempel lantbruksegendom.
+G Huvudmannen eller bulvanen kringgår hindret genom att bulvanen utåt framstår som ägare men i verkligheten innehar egendomen huvudsakligen för huvudmannens räkning.
+S Uppsåt.
+N Lagen gäller bara hinder enligt jordförvärvslagen. Bulvaner i andra sammanhang bedöms enligt andra regler, till exempel om oriktiga uppgifter eller bokföringsbrott.
+T Ett bolag som inte får förvärvstillstånd låter en privatperson stå som köpare av en skogsfastighet som bolaget betalar och brukar.
+
+LAW NkL | Lagen (1992:860) om kontroll av narkotika | 1992:860 | Narkotikakontrollagen
+
+@ v20-brott-mot-narkotikakontrollagen | Brott mot lagen om kontroll av narkotika | 13 § | 13
+PEN 0 | 1 | Böter eller fängelse i högst ett år | B–F 1 år
+C Narkotika och alkohol
+A narkotikaprekursorer;prekursorer;kemikalier narkotikatillverkning
+Q plain
+G Gärningspersonen gör minst ett av:
+  | Bedriver verksamhet med narkotikaprekursorer utan tillstånd eller registrering.
+  | Bryter mot reglerna om hantering, dokumentation, märkning eller underrättelse om transaktioner.
+  | Lämnar oriktig uppgift i ett ärende om tillstånd eller registrering.
+S Uppsåt eller oaktsamhet.
+U Fallet är ringa.
+U Gärningen kan ge straff enligt narkotikastrafflagen eller smugglingslagen.
+N Den som bara åsidosätter en föreskrift som meddelats med stöd av lagen döms till böter.
+T Ett företag säljer stora mängder av en registrerad prekursor utan att vara registrerat och utan att dokumentera köparna.
+
+LAW LmL | Läkemedelslagen (2015:315) | 2015:315 | LmL
+
+@ v20-brott-mot-lakemedelslagen | Brott mot läkemedelslagen | 16:1 | 16:1
+PEN 0 | 1 | Böter eller fängelse i högst ett år | B–F 1 år
+C Narkotika och alkohol
+A olagliga läkemedel;icke godkända läkemedel;tillverka läkemedel;importera läkemedel
+Q plain
+G Gärningspersonen gör minst ett av:
+  | Säljer ett läkemedel som inte är godkänt eller registrerat.
+  | Tillverkar läkemedel yrkesmässigt utan tillstånd.
+  | Importerar läkemedel från ett land utanför EES utan tillstånd.
+  | Genomför en klinisk läkemedelsprövning utan tillstånd.
+  | Bryter mot kraven på hantering av läkemedel.
+S Uppsåt eller oaktsamhet.
+U Fallet är ringa.
+U Gärningen kan ge straff enligt brottsbalken eller smugglingslagen.
+T En person tillverkar bantningskapslar med läkemedelssubstans hemma och säljer dem på nätet.
+
+@ v20-falsk-forskrivare | Brott mot läkemedelslagen (falsk förskrivare) | 16:2 | 16:2
+PEN 0 | 0 | Böter | Böter
+C Narkotika och alkohol
+A ringa in recept;falskt recept telefon;utge sig för läkare apotek
+Q plain
+G Gärningspersonen gör minst ett av:
+  | Ger sig ut för att vara behörig att förordna läkemedel.
+  | Åberopar ett recept från en obehörig person.
+S Avsikt att få ett läkemedel utlämnat i strid med reglerna.
+U Gärningen kan ge strängare straff enligt brottsbalken (till exempel urkundsförfalskning) eller patientsäkerhetslagen.
+T En person ringer till ett apotek, uppger sig vara läkare och förskriver sömnmedel åt sig själv.
+
+LAW YkL | Lagen (2007:1157) om yrkesförarkompetens | 2007:1157 | YKB-lagen
+
+@ v20-transport-utan-yrkesforarkompetens | Brott mot lagen om yrkesförarkompetens | 11:1 | 11:1
+PEN 0 | 0 | Böter | Böter
+C Trafik
+A ykb;yrkeskompetensbevis;köra utan ykb;yrkesförarkompetens
+Q plain
+G Gärningspersonen gör minst ett av:
+  | Utför gods- eller persontransporter utan yrkesförarkompetens (föraren).
+  | Anlitar i sin transportverksamhet en förare som saknar yrkesförarkompetens (uppsåt eller oaktsamhet).
+S Uppsåt. För den som anlitar föraren räcker oaktsamhet.
+T En lastbilsförare kör godstransporter åt ett åkeri trots att yrkeskompetensbeviset gick ut för två år sedan.
+
+@ v20-olovlig-ykb-utbildning | Brott mot lagen om yrkesförarkompetens (utbildning utan tillstånd) | 11:3 | 11:3
+PEN 0 | 2 | Fängelse i högst två år | F 2 år
+C Trafik
+A ykb-utbildning utan tillstånd;falska ykb-intyg
+Q plain
+N Är brottet ringa döms till böter eller fängelse i högst sex månader. Den som har tillstånd men inte följer reglerna döms till böter.
+G Gärningspersonen bedriver tillståndspliktig utbildning för yrkesförarkompetens.
+K Gärningspersonen saknar tillstånd.
+S Uppsåt till samtliga rekvisit. Lagen anger ingen skuldform. Utgångspunkten är då att uppsåt krävs.
+T Ett företag säljer YKB-kurser och utfärdar intyg utan tillstånd från Transportstyrelsen.
+
+LAW MopL | Lagen (2009:121) om utbildning till förare av mopeder, snöskotrar och terränghjulingar | 2009:121 | Mopedutbildningslagen
+
+@ v20-olovlig-mopedutbildning | Brott mot lagen om utbildning till förare av mopeder, snöskotrar och terränghjulingar | 8 § | 8
+PEN 0 | 2 | Fängelse i högst två år | F 2 år
+C Trafik
+A am-utbildning utan tillstånd;mopedkurs svart;förarbevis snöskoter kurs
+Q plain
+N Är brottet ringa döms till böter eller fängelse i högst sex månader. Den som har tillstånd men inte följer reglerna döms till böter.
+G Gärningspersonen bedriver utbildning för körkort AM eller förarbevis för snöskoter eller terränghjuling.
+K Gärningspersonen saknar tillstånd.
+S Uppsåt till samtliga rekvisit. Lagen anger ingen skuldform. Utgångspunkten är då att uppsåt krävs.
+T En person håller AM-kurser för ungdomar mot betalning och skriver intyg utan att ha tillstånd.

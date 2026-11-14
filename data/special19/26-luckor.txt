@@ -1,0 +1,346 @@
+LAW BrB | Brottsbalken | 1962:700 | BrB
+
+@ v20-underlatenhet-att-avsloja-brott | Underlåtenhet att avslöja eller förhindra brott | 23:6 | 23:6
+PEN 0 | 2 | Böter eller fängelse i högst två år | B–F 2 år
+C Rättsväsende
+A inte anmäla brott;underlåtenhet att anmäla;förälder hindrar inte brott;underlåtenhet att förhindra brott;tiga om brott
+Q plain
+N Straffet bestäms som för den som har medverkat i mindre mån till brottet, men högst fängelse i två år. Åtalsregler och förundersökningsledning följer det brott som inte avslöjades eller förhindrades.
+## Underlåtenhet att avslöja brott
+O Ett förestående eller pågående brott där lagen särskilt föreskriver ansvar för underlåtenhet att avslöja brottet, till exempel mord, rån, våldtäkt, människorov och grov skadegörelse.
+G Gärningspersonen anmäler inte brottet i tid och avslöjar det inte på annat sätt.
+S Uppsåt. Där det är särskilt föreskrivet räcker det att gärningspersonen borde ha insett att brottet var förestående eller pågick.
+## Underlåtenhet att förhindra brott
+G Gärningspersonen gör minst ett av:
+  | Har ett bestämmande inflytande i en sammanslutning och förhindrar inte ett brott inom ramen för sammanslutningen, när det är särskilt föreskrivet.
+  | Är förälder, annan uppfostrare eller förmyndare och hindrar inte den som står under hans eller hennes vård eller lydnad från att begå brott.
+S Uppsåt.
+## *
+K Brottet har fortskridit så långt att det är straffbart.
+K Brottet kan avslöjas eller förhindras utan fara för gärningspersonen eller någon annan. En förälder eller annan uppfostrare ansvarar bara om brottet kan förhindras utan anmälan till myndighet.
+T En person får veta att en bekant samma kväll ska råna en butik men kontaktar varken polisen eller butiken.
+T En pappa ser sin 14-årige son gå ut för att tända eld på en skola och gör inget för att stoppa honom.
+
+LAW RB | Rättegångsbalken | 1942:740 | RB
+X 5:4,23:10
+
+@ v20-brott-mot-yppandeforbud | Brott mot rättegångsbalken (yppandeförbud) | 9:6 | 9:6
+PEN 0 | 0 | Böter | Böter
+C Rättsväsende
+A yppandeförbud;bryta yppandeförbud;berätta om förhör;stängda dörrar
+Q plain
+O Rätten eller undersökningsledaren har förordnat att något inte får uppenbaras, till exempel vad som har kommit fram vid ett förhör eller vid en förhandling inom stängda dörrar.
+G Gärningspersonen röjer uppgiften.
+K Giltigt skäl saknas.
+S Uppsåt till samtliga rekvisit. Lagen anger ingen skuldform. Utgångspunkten är då att uppsåt krävs.
+N Försvarare får inte meddelas yppandeförbud om det som har kommit fram vid förhör.
+T Ett vittne som har fått yppandeförbud berättar för den misstänktes vänner vilka frågor polisen ställde.
+
+LAW UtlL | Utlänningslagen (2005:716) | 2005:716 | UtlL
+
+@ v20-utll-olovlig-vistelse | Brott mot utlänningslagen (olovlig vistelse) | 20:1 | 20:1
+PEN 0 | 0 | Böter | Böter
+C Utlänningsbrott
+A olovlig vistelse;illegal vistelse;papperslös;uppehålla sig utan tillstånd;överstanna visum
+Q villkor | I ringa fall får åtal väckas bara om det är motiverat från allmän synpunkt.
+FU enkel|Utlänningslagen (2005:716), ej 20 kap. 7–9 §§
+K Gärningspersonen är utlänning.
+G Gärningspersonen uppehåller sig i Sverige utan föreskrivet tillstånd.
+K Gärningspersonen har inte ansökt om tillstånd, och ingen förundersökningsledare eller socialnämnd har ansökt om tidsbegränsat uppehållstillstånd för honom eller henne.
+S Uppsåt eller oaktsamhet.
+T En person stannar kvar i Sverige ett år efter att visumet gått ut utan att ansöka om uppehållstillstånd.
+
+@ v20-utll-arbete-utan-arbetstillstand | Brott mot utlänningslagen (arbete utan arbetstillstånd) | 20:3 | 20:3
+PEN 0 | 0 | Böter | Böter
+C Utlänningsbrott
+A arbeta utan arbetstillstånd;svartarbete utlänning;arbetstillstånd saknas
+Q plain
+FU enkel|Utlänningslagen (2005:716), ej 20 kap. 7–9 §§
+K Gärningspersonen är utlänning.
+G Gärningspersonen har en anställning eller bedriver en verksamhet som kräver arbetstillstånd.
+K Gärningspersonen har inget arbetstillstånd.
+S Uppsåt eller oaktsamhet.
+T En person med turistvisum arbetar på en biltvätt utan arbetstillstånd.
+
+LAW LBE | Lagen (2010:1011) om brandfarliga och explosiva varor | 2010:1011 | LBE
+X 6
+
+@ v20-lbe-aktsamhetskravet | Brott mot lagen om brandfarliga och explosiva varor (aktsamhetskravet) | 28 § första stycket | 6,28
+PEN 0 | 1 | Böter eller fängelse i högst ett år | B–F 1 år
+C Vapen och explosiva varor
+A vårdslös hantering fyrverkerier;gasol vårdslöst;bensin förvaring;skjuta raketer mot människor;aktsamhetskravet
+Q plain
+K Gärningspersonen hanterar, överför, importerar eller exporterar brandfarliga eller explosiva varor.
+G Gärningspersonen vidtar inte de åtgärder och försiktighetsmått som behövs för att hindra olyckor och skador genom brand eller explosion eller för att förebygga obehörigt förfarande med varorna.
+S Uppsåt eller grov oaktsamhet.
+N Den som av oaktsamhet som inte är grov bryter mot lagens krav döms till böter enligt andra stycket.
+T En person avfyrar fyrverkeripjäser horisontellt över ett torg där människor uppehåller sig.
+
+LAW MB | Miljöbalken (1998:808) | 1998:808 | MB
+
+@ v20-forseelse-mot-omradesskydd | Förseelse mot områdesskydd | 29:2 a | 29:2a
+PEN 0 | 0 | Böter | Böter
+C Djur och natur
+A naturreservat föreskrifter;tälta i naturreservat;elda i naturreservat;hund i naturreservat;strandskydd;nationalpark regler
+Q plain
+O Föreskrifter eller beslut till skydd för en nationalpark, ett naturreservat, ett kulturreservat, ett biotopskyddsområde, ett djur- och växtskyddsområde, ett strandskyddsområde eller ett vattenskyddsområde.
+G Gärningspersonen bryter mot föreskriften eller beslutet.
+S Uppsåt eller oaktsamhet.
+U Gärningen är ringa.
+U Gärningen kan ge straff som miljöbrott, brott mot områdesskydd eller artskyddsbrott.
+T En person kör fyrhjuling i ett naturreservat där motortrafik är förbjuden.
+
+@ v20-olovlig-kemikaliehantering | Olovlig kemikaliehantering | 29:3 b | 29:3b
+PEN 0 | 0 | Böter | Böter
+C Djur och natur
+A förbjuden kemikalie;förbjudet bekämpningsmedel
+Q plain
+G Gärningspersonen tar befattning med en kemisk produkt, en bioteknisk organism eller en vara i strid med ett förbud i myndighetsföreskrifter.
+S Uppsåt eller oaktsamhet.
+U Gärningen är ringa.
+U Gärningen kan ge straff som miljöbrott eller miljöfarlig kemikaliehantering.
+T En butik säljer en importerad produkt som innehåller ett ämne som är förbjudet enligt Kemikalieinspektionens föreskrifter.
+
+@ v20-otillaten-fartygsatervinning | Otillåten fartygsåtervinning | 29:4 b | 29:4b
+PEN 0 | 2 | Böter eller fängelse i högst två år | B–F 2 år
+C Djur och natur
+A skrota fartyg;fartygsskrotning;upphuggning av fartyg
+Q plain
+ST F | MB 29:4 b andra stycket | Försök är straffbart bara vid uppsåtligt brott.
+K Gärningspersonen är fartygsägare enligt EU:s förordning om återvinning av fartyg.
+G Gärningspersonen ser inte till att ett fartyg som ska återvinnas bara återvinns vid en godkänd fartygsåtervinningsanläggning.
+S Uppsåt eller oaktsamhet.
+U Gärningen kan ge straff som miljöbrott.
+T Ett rederi säljer ett uttjänt fartyg för upphuggning på en strand i Sydasien utanför de godkända anläggningarna.
+
+@ v20-mb-29-9 | Brott mot miljöbalken (29 kap. 9 §) | 29:9 | 29:9
+PEN 0 | 0 | Böter | Böter
+C Djur och natur
+A tomgångskörning;gatumusik;gödselspridning
+Q plain
+G Gärningspersonen bryter mot någon av de föreskrifter eller EU-bestämmelser som räknas upp i paragrafen, till exempel om tomgångskörning, gatumusik, skötsel av jordbruksmark, hantering av gödsel eller märkning av genetiskt modifierade organismer.
+S Uppsåt eller oaktsamhet.
+U Gärningen är ringa eller kan ge straff enligt en annan bestämmelse i 29 kap.
+T En lantbrukare sprider gödsel under den tid på året då spridning är förbjuden enligt föreskrifterna.
+
+LAW UpphL | Lagen (1960:729) om upphovsrätt till litterära och konstnärliga verk | 1960:729 | URL
+
+@ v20-url-kopieringsskydd-datorprogram | Brott mot upphovsrättslagen (hjälpmedel mot kopieringsskydd för datorprogram) | 57 a § | 57a
+PEN 0 | 0.5 | Böter eller fängelse i högst sex månader | B–F 6 mån
+C Förmögenhet
+A crack;piratkopiering hjälpmedel;kopieringsskydd;modchip
+Q plain
+O Ett hjälpmedel som bara är avsett för att underlätta olovligt borttagande eller kringgående av ett kopieringsskydd för datorprogram.
+G Gärningspersonen säljer eller hyr ut hjälpmedlet, eller innehar det för försäljning, uthyrning eller annat förvärvssyfte.
+S Uppsåt till samtliga rekvisit. Lagen anger ingen skuldform. Utgångspunkten är då att uppsåt krävs.
+U Gärningen är upphovsrättsbrott enligt 53 §.
+T En person säljer usb-enheter med ett program som bara tjänar till att kringgå licensspärren i ett dyrt konstruktionsprogram.
+
+LAW SjöL | Sjölagen (1994:1009) | 1994:1009 | SjöL
+
+@ v20-sjol-prejning | Brott mot sjölagen (prejning eller visitering) | 20:9 | 20:9
+PEN 0 | 0.5 | Böter eller fängelse i högst sex månader | B–F 6 mån
+C Trafik
+A prejning;stannar inte för kustbevakningen;vägrar visitering fartyg
+Q plain
+K Gärningspersonen är befälhavare på fartyget.
+G Gärningspersonen försummar vad befälhavaren ska göra när fartyget prejas eller ska visiteras, till exempel att stanna och visa skeppshandlingarna.
+S Uppsåt till samtliga rekvisit. Lagen anger ingen skuldform. Utgångspunkten är då att uppsåt krävs.
+T En befälhavare fortsätter i full fart trots att Kustbevakningen prejar fartyget för kontroll.
+
+@ v20-sjol-forsakringsplikt | Brott mot sjölagen (försäkringsplikt) | 20:13–14 a | 20:13,20:14,20:14a
+PEN 0 | 0.5 | Böter eller fängelse i högst sex månader | B–F 6 mån
+C Trafik
+A oförsäkrat fartyg;ansvarsförsäkring fartyg
+Q plain
+G Gärningspersonen gör minst ett av:
+  | Åsidosätter som redare skyldigheten att ha ansvarsförsäkring eller annan betryggande säkerhet för fartyget.
+  | Åsidosätter som fartygsägare försäkringsskyldigheten för oljeskada, bunkeroljeskada eller vrakborttagning.
+  | Låter som redare, befälhavare eller den som handhar driften fartyget användas för sjöfart trots insikt om, eller trots att han eller hon borde ha insett, att försäkringsskyldigheten inte är fullgjord.
+  | Åsidosätter som transportör skyldigheten att ha försäkring för passagerarbefordran.
+S Uppsåt eller oaktsamhet.
+N En befälhavare som inte medför försäkringsbevis eller certifikat ombord döms till böter.
+T Ett rederi låter ett lastfartyg gå i trafik utan ansvarsförsäkring.
+
+@ v20-sjol-befalhavarens-forsummelser | Brott mot sjölagen (rapporter, skeppshandlingar och dagbok) | 20:10–11 | 20:10,20:11
+PEN 0 | 0 | Böter | Böter
+C Trafik
+A skeppsdagbok;sjöförklaring;rapport sjöolycka;skeppshandlingar
+Q plain
+G Gärningspersonen gör minst ett av:
+  | Underrättar som befälhavare inte redaren om fel eller brister i sjövärdigheten.
+  | Medför som befälhavare inte skeppshandlingarna ombord.
+  | Avger som befälhavare inte föreskriven rapport om en olycka, eller lämnar oriktig eller vilseledande uppgift i rapporten.
+  | Gör som befälhavare eller redare inte anmälan om sjöförklaring.
+  | Försummar skyldigheten att föra dagbok eller lämnar oriktig eller vilseledande uppgift i dagboken.
+  | Vägrar som befälhavare eller redare obehörigen någon att ta del av dagboken.
+S Uppsåt. För oriktiga uppgifter räcker oaktsamhet.
+T En befälhavare rapporterar inte en grundstötning till Transportstyrelsen.
+
+LAW LFL | Luftfartslagen (2010:500) | 2010:500 | LFL
+
+@ v20-lfl-lufttransport-utan-licens | Brott mot luftfartslagen (lufttransport utan licens) | 13:5 | 13:5
+PEN 0 | 0.5 | Böter eller fängelse i högst sex månader | B–F 6 mån
+C Trafik
+A svartflyg;taxiflyg utan tillstånd;operativ licens
+Q plain
+G Gärningspersonen bryter mot EU:s lufttrafikförordning genom minst ett av:
+  | Utför lufttransport utan nödvändig operativ licens.
+  | Inhämtar inte föreskrivet förhandsgodkännande.
+  | Utför lufttransport på en flyglinje med allmän trafikplikt där någon annan har ensamrätt.
+S Uppsåt eller oaktsamhet.
+T En privatpilot flyger betalande passagerare mellan två flygplatser utan att ha operativ licens.
+
+@ v20-lfl-oriktiga-uppgifter-bemanning | Brott mot luftfartslagen (oriktiga uppgifter och bemanning) | 13:6 | 13:6
+PEN 0 | 0 | Böter | Böter
+C Trafik
+A certifikat oriktig uppgift;bemanning luftfartyg
+Q plain
+G Gärningspersonen gör minst ett av:
+  | Lämnar oriktiga uppgifter i ett ärende om certifikat, behörighetsbevis eller annan behörighet.
+  | Ser som ägare eller brukare inte till att luftfartyget är bemannat på föreskrivet sätt.
+  | Bryter mot föreskrifter om luftfartsskydd som meddelats med stöd av lagen.
+S Uppsåt eller oaktsamhet.
+T En pilot förtiger en sjukdom i ansökan om medicinskt intyg för sitt certifikat.
+
+LAW Vapen | Vapenlagen (2026:408) | 2026:408 | VapenL
+
+@ v20-vapenl-anmalan-utforsel-utlaning | Brott mot vapenlagen (anmälan om utförsel eller utlåning) | 18:10 | 18:10
+PEN 0 | 0 | Böter | Böter
+C Vapen och explosiva varor
+A låna ut vapen anmälan;utförsel av vapen anmälan
+Q plain
+G Gärningspersonen anmäler inte utförsel eller utlåning av skjutvapen på föreskrivet sätt.
+S Uppsåt eller oaktsamhet.
+T En jägare tar med sitt gevär till en annan EU-stat för en längre tid utan att anmäla utförseln till Polismyndigheten.
+
+LAW OL | Ordningslag (1993:1617) | 1993:1617 | OL
+X 3:1,3:3,3:4,3:6,3:17
+
+@ v20-ol-offentlig-plats | Brott mot ordningslagen (offentlig plats) | 3:22 första stycket | 3:1,3:3,3:4,3:6,3:22
+PEN 0 | 0 | Böter | Böter
+C Allmän ordning
+A uteservering utan tillstånd;container på gatan;byggställning utan tillstånd;snöras från tak;istappar;skjuta inom detaljplan;sprängning utan tillstånd;försäljning på torg utan tillstånd
+Q plain
+G Gärningspersonen gör minst ett av:
+  | Använder en offentlig plats inom detaljplanelagt område utan tillstånd på ett sätt som platsen inte är upplåten för, till exempel för uteservering, container, byggställning eller försäljning.
+  | Avhjälper inte brister på byggnader, ställningar eller skyltar som medför risk för skada på offentlig plats, eller tar inte bort snö och is som kan rasa ned.
+  | Vidtar inte skyddsåtgärder vid isränna, vak, grävning eller schaktning.
+  | Spränger eller skjuter med eldvapen inom detaljplanelagt område utan tillstånd.
+  | Bryter mot villkor i ett tillstånd eller mot ett förbud som Polismyndigheten har meddelat för en bad- eller campingplats, idrottsplats eller liknande.
+S Uppsåt eller oaktsamhet.
+N Brott mot lokala ordningsföreskrifter ger penningböter enligt andra stycket.
+T En fastighetsägare låter stora istappar hänga kvar över trottoaren trots påpekanden.
+T En person skjuter med hagelgevär mot fåglar i en villaträdgård inom detaljplan utan tillstånd.
+
+LAW AlkL | Alkohollagen (2010:1622) | 2010:1622 | AlkL
+
+@ v20-alkl-teknisk-sprit | Brott mot alkohollagen (teknisk sprit och alkoholhaltiga preparat) | 11:8 | 11:8
+PEN 0 | 0 | Böter | Böter
+C Narkotika och alkohol
+A teknisk sprit;t-sprit;handsprit;alkoholhaltiga preparat
+Q plain
+FU enkel|Alkohollagen (2010:1622)
+G Gärningspersonen gör minst ett av:
+  | Säljer teknisk sprit eller alkoholhaltiga preparat i strid med föreskrifter om denaturering (uppsåt eller oaktsamhet).
+  | Säljer eller lämnar ut alkoholhaltiga preparat när det finns särskild anledning att anta att de ska användas i berusningssyfte.
+  | Säljer eller hanterar teknisk sprit eller alkoholhaltiga preparat i strid med föreskrifter.
+S Uppsåt. För brott mot denatureringsföreskrifter räcker oaktsamhet.
+T En butik säljer handsprit till en märkbart berusad kund som tidigare har druckit preparatet utanför butiken.
+
+LAW JaktL | Jaktlagen (1987:259) | 1987:259 | JaktL
+X 5,27,28,34,35
+
+@ v20-jaktl-ovriga-bestammelser | Brott mot jaktlagen (hänsyn, eftersök och annans jaktområde) | 45 § | 5,27,28,34,35,45
+PEN 0 | 0 | Böter | Böter
+C Djur och natur
+A ofreda vilt;eftersök;skadeskjutet djur;vapen över annans mark;lös hund vilt;jaktförseelse
+Q plain
+FU enkel|Jaktlagen (1987:259), ej grovt jaktbrott
+G Gärningspersonen gör minst ett av:
+  | Ofredar eller förföljer vilt utan att det sker vid jakt.
+  | Bedriver jakten så att viltet utsätts för onödigt lidande eller så att människor eller egendom utsätts för fara.
+  | Vidtar inte åtgärder för att spåra upp och avliva vilt som har skadats vid jakten.
+  | Fullgör inte en anmälningsskyldighet, till exempel om fällt vilt.
+  | Tar med vapen eller fångstredskap vägen över någon annans jaktområde utan medgivande.
+  | Skrämmer, motar eller lockar vilt från någon annans jaktområde utan lov (uppsåt krävs).
+  | Bryter mot föreskrifter om jakten som anges i paragrafen.
+S Uppsåt eller grov oaktsamhet.
+U Gärningen är ringa.
+N Fara för människor kan i stället vara framkallande av fara för annan. Onödigt lidande kan vara djurplågeri.
+T En jägare skadskjuter ett rådjur och åker hem utan att ordna eftersök.
+
+LAW DjsL | Djurskyddslagen (2018:1192) | 2018:1192 | DjsL
+
+@ v20-djurskydd-foreskrifter | Brott mot djurskyddslagen (föreskrifter och EU-bestämmelser) | 10:4–5 | 10:4,10:5
+PEN 0 | 0 | Böter | Böter
+C Djur och natur
+A djurskyddsföreskrifter;hundhållning föreskrifter;för liten bur;rastning hund
+Q plain
+G Gärningspersonen gör minst ett av:
+  | Bryter mot föreskrifter som meddelats med stöd av djurskyddslagen, till exempel om hur djur ska hållas, skötas, transporteras eller avlivas.
+  | Bryter mot skyldigheter, krav eller förbud i de EU-bestämmelser som lagen kompletterar.
+S Uppsåt eller oaktsamhet.
+U Gärningen är ringa (10:6).
+U Gärningen kan ge samma eller strängare straff enligt brottsbalken, till exempel djurplågeri.
+T En hundägare håller sin hund i en rastgård som är mindre än vad Jordbruksverkets föreskrifter kräver.
+
+LAW YtL | Yrkestrafiklagen (2012:210) | 2012:210 | YtL
+X 2:10,2:11
+
+@ v20-ytl-forarbehorighet | Brott mot yrkestrafiklagen (förarbehörighet) | 5:3–4 | 2:10,2:11,5:3,5:4
+PEN 0 | 0 | Böter | Böter
+C Trafik
+A utländskt körkort yrkestrafik;traktortåg körkort
+Q plain
+FU enkel|Yrkestrafiklagen (2012:210)
+G Gärningspersonen gör minst ett av:
+  | Kör traktortåg eller tung terrängvagn i yrkesmässig godstransport utan körkort med behörighet C eller CE.
+  | Kör svenskregistrerat motordrivet fordon i yrkesmässig trafik med utländskt körkort utan att vara medborgare i en EES-stat.
+  | Överlämnar fordonet åt, eller tillåter, en förare som inte har rätt att köra det (uppsåt eller oaktsamhet).
+S Uppsåt. För den som överlämnar fordonet räcker oaktsamhet.
+T En åkare låter en förare från ett land utanför EES med enbart utländskt körkort köra en svenskregistrerad lastbil i yrkesmässig trafik.
+
+LAW TtL | Taxitrafiklagen (2012:211) | 2012:211 | TtL
+X 3:13
+
+@ v20-otillaten-taxitrafik | Otillåten taxitrafik | 5:2 | 5:2
+PEN 0 | 0 | Böter | Böter
+C Trafik
+A svarttaxi;taxi utan tillstånd;samåkning mot betalning;facebook-taxi;skjuts mot betalning
+Q plain
+FU enkel|Taxitrafiklagen (2012:211)
+G Gärningspersonen utför en persontransport med personbil eller lätt lastbil mot ersättning.
+K Körningen sker efter ett erbjudande till allmänheten.
+K Gärningspersonen saknar taxitrafiktillstånd.
+S Uppsåt.
+U Gärningen är olaga taxitrafik enligt 5:1, det vill säga yrkesmässig trafik.
+T En person erbjuder skjuts hem från krogen mot betalning i en öppen grupp på sociala medier och kör en kund.
+
+@ v20-ttl-utlandskt-korkort | Brott mot taxitrafiklagen (utländskt körkort) | 5:5–6 | 3:13,5:5,5:6
+PEN 0 | 0 | Böter | Böter
+C Trafik
+A taxi utländskt körkort
+Q plain
+FU enkel|Taxitrafiklagen (2012:211)
+G Gärningspersonen gör minst ett av:
+  | Kör svenskregistrerad personbil eller lätt lastbil i taxitrafik med utländskt körkort utan att vara medborgare i en EES-stat.
+  | Överlämnar fordonet åt, eller tillåter, en sådan förare (uppsåt eller oaktsamhet).
+S Uppsåt. För den som överlämnar fordonet räcker oaktsamhet.
+T En taxiägare låter en förare som bara har körkort från ett land utanför EES köra taxi.
+
+LAW TfpL | Lagen (1994:1809) om totalförsvarsplikt | 1994:1809 | TfpL
+
+@ v20-tfpl-oaktsam-utevaro | Brott mot lagen om totalförsvarsplikt (oaktsam utevaro och oriktiga uppgifter) | 10:4–5 | 10:4,10:5
+PEN 0 | 0 | Böter | Böter
+C Rikets säkerhet
+A missa inryckning;utebli från värnplikt;mönstring oriktig uppgift
+Q plain
+FU enkel|Lagen (1994:1809) om totalförsvarsplikt
+G Gärningspersonen gör minst ett av:
+  | Uteblir som totalförsvarspliktig av oaktsamhet från värnplikt eller civilplikt.
+  | Lämnar som totalförsvarspliktig, arbetsgivare eller uppdragsgivare oriktig uppgift när uppgiftsskyldigheten fullgörs (uppsåt eller grov oaktsamhet).
+S Oaktsamhet vid utevaro. Uppsåt eller grov oaktsamhet vid oriktig uppgift.
+U Gärningen med oriktig uppgift kan ge straff enligt brottsbalken.
+N Uppsåtlig utevaro är brott mot totalförsvarsplikten enligt 10:2.
+T En värnpliktig har läst fel på inryckningsordern och inställer sig inte på rätt dag.
