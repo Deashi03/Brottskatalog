@@ -2,6 +2,28 @@
 
 Framtagen 2026-11-13 mot version 1.9.1. Planen bygger på en genomgång av allt material i katalogen och av alla gällande författningar med straffbestämmelser hos Sveriges riksdag.
 
+## 0. Läget efter version 2.0 (2026-11-14)
+
+Besluten är fattade och arbetet är uppdelat på två uppdateringar.
+
+**Gjort i 2.0**
+
+- Rättningarna från granskningen (avsnitt 2), utom de punkter som står under 2.1 nedan.
+- Menyerna Lydelse och gärningstidpunkt samt Straffskala och beslutsvillkor är borttagna.
+- Alla kort har förstadiekort. Straffbara förstadier ärver FU-ledningen från det fullbordade brottet.
+- 98 nya kort: det polisnära paketet (paket A) och de flesta luckorna i avsnitt 3.3.
+- Preskriptionsmeny med datumkontroll, menyn Närliggande brott och raden Kommande lagändringar.
+- Lagbevakningen omfattar alla lagar med kort.
+
+**Kvar till 2.1**
+
+- Paket B–E i avsnitt 3.4, inklusive bötesbrotten i förordningar (trafikförordningen med flera).
+- Det som återstår av paket A: steriliseringslagen, transplantationslagen, skogsvårdslagen, begravningslagen, aktiebolagslagen 30 kap. och lagen om nationella järnvägssystem.
+- Luckor som återstår från avsnitt 3.3: BrB 18:2, 19:11 och 19:15, folkbokföringslagen 42 a § (gäller från 2026-12-01), tunnelbanelagen 31 § och bötesdelarna i lagen om brandfarliga och explosiva varor 28 § andra stycket.
+- Andra läsningen av rekvisiten på de äldre korten (AP2) och villkorade straffskalor (K3).
+- Kontroll av om ÅFS 2005:9 har ändrats efter ÅFS 2019:2 (K7). Åklagarmyndighetens webbplats gick inte att nå från arbetsmiljön.
+- Preskription saknas på 13 äldre kort som inte har en maskinläsbar straffskala.
+
 ## 1. Sammanfattning
 
 - **Granskningen** hittade två fel i sak, ett trettiotal kort där skuldformen måste kontrolleras och ett antal brister i enhetlighet, sökning och hjälptexter. Lagtexten på alla 561 kort stämmer mot dagens lydelse.

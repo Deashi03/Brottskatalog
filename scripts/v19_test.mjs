@@ -10,7 +10,7 @@ for(const f of ['./rekvisit-19.js','./definitioner-19.js','./typexempel-19.js','
 }
 assert.ok(scripts.indexOf('./special-19.js')>scripts.indexOf('./fu-ledning-18.js')&&scripts.indexOf('./special-19.js')>scripts.indexOf('./prosecution-171.js'));
 assert.ok(scripts.indexOf('./coercive-19.js')>scripts.indexOf('./decisions-10.js'));
-assert.ok(html.includes("window.BK_RELEASE = '1.9.1';")&&sw.includes("'brottskatalog-v191-20261104'"));
+assert.ok(html.includes("window.BK_RELEASE = '2.0';")&&sw.includes("'brottskatalog-v200-20261114'"));
 const ctx=vm.createContext({window:{},console:{log:()=>{},warn:()=>{},error:()=>{}}});
 for(const i of [1,2,3])vm.runInContext(inline[i],ctx);
 for(const s of scripts)vm.runInContext(read(s),ctx,{filename:s});

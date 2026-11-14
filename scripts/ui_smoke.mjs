@@ -23,7 +23,7 @@ try{
   // 1.9.1: listan får aldrig bli bredare än skärmen, även med långa lagrum på de nya korten.
   await page.waitForSelector('.crime-card');
   assert.equal(await page.evaluate(()=>{const l=document.querySelector('.crime-list');return l.scrollWidth<=l.clientWidth+1&&[...document.querySelectorAll('.crime-card')].every(c=>c.getBoundingClientRect().right<=innerWidth);}),true,'Hela kortlistan ryms i iPhone-bredd');
-  assert.equal((await page.locator('.bk03-brand span').innerText()).trim(),'1.9.1','Search header must display current release 1.9.1');
+  assert.equal((await page.locator('.bk03-brand span').innerText()).trim(),'2.0','Search header must display current release 2.0');
   assert.equal(await page.evaluate(()=>window.BK_DATA.crimes.length),1557,'The V1.5 full database must be loaded');
 
   const custodyAudit=await page.evaluate(()=>{
@@ -322,10 +322,20 @@ try{
   assert.ok(bounds[0].includes('1 år 6 mån'),'Lower bound for gross assault');
   assert.ok(bounds[1].includes('7 år'),'Upper bound for gross assault');
   // 1.7.3: bara Lagtext, Rekvisit och Tvångsmedel finns kvar; 1.8.1: FU-ledning är en egen meny under Tvångsmedel.
-  assert.deepEqual((await page.locator('.accordion > summary').allInnerTexts()).map(t=>t.trim()),['Lagtext','Rekvisit','Tvångsmedel – översikt'],'Only the main sections remain');
+  assert.deepEqual((await page.locator('.accordion > summary').allInnerTexts()).map(t=>t.trim()),['Lagtext','Rekvisit','Tvångsmedel – översikt','Preskription','Närliggande brott'],'Only the main sections remain');
   // 1.8.2: FU-ledning är en egen menyrad direkt under Tvångsmedel som öppnar verktyget direkt.
   assert.equal((await page.locator('#sec-fu18 .fu18-open').innerText()).trim(),'FU-ledning och åklagarkontakt');
   assert.ok(await page.locator('#sec-fu18').evaluate(el=>el.previousElementSibling?.id==='sec-tvang'),'FU-menyn ligger direkt under Tvångsmedel');
+  // 2.0: Preskription ligger under FU-ledning och Närliggande brott under Preskription.
+  assert.ok(await page.locator('#sec-preskription').evaluate(el=>el.previousElementSibling?.id==='sec-fu18'&&el.nextElementSibling?.id==='sec-narliggande'),'Preskription och Närliggande brott ligger i rätt ordning');
+  await page.locator('#sec-preskription > summary').click();
+  assert.ok((await page.locator('.presk20-main').innerText()).includes('15 år'),'Grov misshandel preskriberas efter femton år');
+  await page.locator('[data-presk20="crime"]').fill('2000-01-01');
+  assert.ok((await page.locator('[data-presk20="result"]').innerText()).includes('Preskriberat enligt äldre regler'),'Äldre brott bedöms enligt övergångsregeln');
+  await page.locator('[data-presk20="crime"]').fill('2026-01-15');
+  assert.ok((await page.locator('[data-presk20="result"]').innerText()).includes('Sista dag: 2041-01-15'),'Datumkontrollen visar sista dag');
+  await page.locator('#sec-narliggande > summary').click();
+  assert.ok(await page.locator('#sec-narliggande .near20[data-open="misshandel"]').count(),'Närliggande brott visar andra grader');
   await page.goto(url+'#sok',{waitUntil:'networkidle'});
   await page.locator('#crime-search').fill('Tvegifte');
   await wait();
@@ -539,7 +549,7 @@ try{
   assert.ok(fraudPanel.includes('grov oaktsamhet'),'Alternative fault form for the company alternative is shown');
   await page.goto(url+'#mer',{waitUntil:'networkidle'});
   const settings=await page.locator('body').innerText();
-  assert.ok(settings.includes('Version 1.9.1 · publicerad 2026-11-04'),'Published version must be visible in settings');
+  assert.ok(settings.includes('Version 2.0 · publicerad 2026-11-14'),'Published version must be visible in settings');
   assert.ok(settings.includes('Grunddata:'),'Source dataset age must be shown in settings');
   assert.ok(settings.includes('LAGKONTROLL'),'Source checker in settings');
   assert.deepEqual(errors,[],'No JS page errors');

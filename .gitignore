@@ -1,3 +1,4 @@
 # Tillfälliga filer från lokala testkörningar
 audit/
 node_modules
+__pycache__/
