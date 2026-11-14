@@ -1,0 +1,664 @@
+LAW S1998-814 | Lagen (1998:814) med särskilda bestämmelser om gaturenhållning och skyltning | 1998:814 | Gaturenhållningslagen
+
+@ v21-gaturenhallning-fastighetsinnehavare | Brott mot lagen med särskilda bestämmelser om gaturenhållning och skyltning (fastighetsinnehavares renhållning) | 14 § första stycket 1 | 14,2,3
+PEN 0 | 0 | Böter | Böter
+C Allmän ordning
+A snöröjning trottoar;sanda gångbana;fastighetsägare skottar inte;gaturenhållning;halka utanför fastighet
+Q plain
+K Gärningspersonen är fastighetsinnehavare.
+G Gärningspersonen gör minst ett av:
+  | Utför inte gaturenhållning, snöröjning och liknande åtgärder på kvartersmark som har iordningställts och används för allmän trafik.
+  | Utför inte de åtgärder som kommunen har ålagt fastighetsinnehavaren på gångbanor eller andra utrymmen utanför fastigheten som behövs för gångtrafiken.
+S Uppsåt eller oaktsamhet.
+U Gärningen kan ge straff enligt brottsbalken eller miljöbalken.
+U Gärningen omfattas av ett vitesföreläggande som gärningspersonen har överträtt.
+N Den som har begått gärningen får förpliktas att ersätta kommunen de kostnader som gärningen orsakar.
+T En fastighetsägare låter bli att skotta och sanda trottoaren utanför sitt hus under flera veckor, trots att kommunens föreskrifter lägger det ansvaret på fastighetsägaren.
+
+@ v21-gaturenhallning-skyltning | Brott mot lagen med särskilda bestämmelser om gaturenhållning och skyltning (skyltar och affischer) | 14 § första stycket 2 | 14,6,9
+PEN 0 | 0 | Böter | Böter
+C Allmän ordning
+A reklamskylt utan tillstånd;affischering;valaffisch kvar;olovlig skylt;reklamtavla
+Q plain
+G Gärningspersonen gör minst ett av:
+  | Har en tavla, skylt, inskrift eller jämförlig anordning för reklam, propaganda eller liknande ändamål varaktigt uppsatt utomhus utan tillstånd.
+  | Ansvarar för en affisch eller annan tillfällig anordning utomhus för reklam, propaganda eller liknande ändamål och tar inte bort den inom fyra veckor efter uppsättandet, utan att myndigheten har medgett något annat.
+  | Bryter mot en föreskrift som har meddelats i samband med ett medgivande att låta en affisch eller annan tillfällig anordning sitta kvar längre.
+S Uppsåt eller oaktsamhet.
+U Gärningen kan ge straff enligt brottsbalken eller miljöbalken.
+U Gärningen omfattas av ett vitesföreläggande som gärningspersonen har överträtt.
+N Den som har begått gärningen får förpliktas att ersätta kommunen de kostnader som gärningen orsakar.
+T Ett företag sätter upp en stor reklamskylt vid en åker intill landsvägen och låter den stå kvar i flera månader utan tillstånd.
+T En arrangör låter konsertaffischer sitta kvar på elskåp och plank i tre månader efter att de sattes upp.
+
+LAW S2006-647 | Lagen (2006:647) om finansiering av kärntekniska restprodukter | 2006:647 | Finansieringslagen
+
+@ v21-karnrestprodukter-oriktig-uppgift | Brott mot lagen om finansiering av kärntekniska restprodukter (oriktig uppgift) | 26 § | 26,21
+PEN 0 | 0 | Böter | Böter
+C Allmänfarliga
+A kärnavfallsfonden;kärnavfallsavgift;oriktig uppgift kärnkraft;kostnadsberäkning kärnavfall
+Q plain
+K Gärningspersonen är tillståndshavare och är därför skyldig att lämna de uppgifter och kostnadsberäkningar som regeringen och tillsynsmyndigheten behöver enligt lagen.
+G Gärningspersonen lämnar en oriktig uppgift till tillsynsmyndigheten.
+S Uppsåt eller grov oaktsamhet.
+U Gärningen kan ge straff enligt brottsbalken.
+T Ett bolag som driver en kärnteknisk anläggning uppger medvetet för låga framtida rivningskostnader i den kostnadsberäkning som lämnas till tillsynsmyndigheten.
+
+LAW S2006-924 | Lagen (2006:924) om Antarktis | 2006:924 | Antarktislagen
+
+@ v21-antarktis-brott | Brott mot lagen om Antarktis (förbud och skyldigheter i Antarktis) | 34 § första stycket | 34,3,6,11
+PEN 0 | 2 | Böter eller fängelse i högst två år | B–F 2 år
+C Djur och natur
+A Antarktis;expedition utan tillstånd;sydpolen;pingviner;utsläpp från fartyg Antarktis
+Q plain
+ST F | Antarktislagen 34 § tredje stycket
+K Gärningspersonen är svensk medborgare, svensk juridisk person, utländsk medborgare med hemvist i Sverige eller utländsk medborgare som deltar i en verksamhet med svenskt tillstånd.
+G Gärningspersonen gör minst ett av:
+  | Vistas eller bedriver verksamhet i Antarktis utan tillstånd.
+  | Genomför en atomexplosion eller placerar radioaktivt avfall i Antarktis.
+  | Letar efter, samlar in eller utvinner mineraltillgångar eller meteoriter, samlar in eller skadar naturligt förekommande växt- eller djurarter, för in främmande arter eller besöker särskilt skyddsvärda områden, utan att tillståndet uttryckligen medger det.
+  | Släpper från ett fartyg ut olja, andra skadliga ämnen, obehandlat toalettavfall eller fast avfall i havet i Antarktis.
+  | Befattar sig med en mineraltillgång, en meteorit, en växt eller ett djur som kan antas ha åtkommits i strid med lagen, på ett sätt som är ägnat att försvåra ett återställande.
+  | Fortsätter en verksamhet som skulle ha avbrutits på grund av en oförutsedd skada på miljön, låter bli att begränsa effekterna av en miljöfarlig olycka eller bryter mot ett villkor i tillståndet.
+  | Anordnar eller deltar yrkesmässigt i en vistelse eller verksamhet utan att förvissa sig om att huvudmannen har det utländska tillstånd som krävs.
+  | Låter bli att lämna en upplysning eller handling, lämnar en oriktig uppgift eller vägrar tillsynsmyndigheten eller en observatör tillträde eller tillsynsmyndigheten möjlighet att undersöka.
+S Uppsåt eller oaktsamhet.
+U Fallet är ringa.
+U Gärningen begås i en nödsituation som avser skyddet för miljön eller säkerheten för mänskligt liv, luftfartyg, fartyg eller egendom med stort ekonomiskt värde. Den som i en sådan nödsituation påverkar miljön mer än nödvändigt kan ändå dömas.
+U Gärningen gäller upplysningar, handlingar, tillträde eller undersökning och kan ge straff enligt brottsbalken.
+U Gärningen omfattas av ett vitesföreläggande eller vitesförbud som gärningspersonen inte har följt.
+N Förbudet mot att vistas i Antarktis utan tillstånd gäller inte överflygning eller fri sjöfart enligt folkrätten. Utsläppsförbudet gäller svenska fartyg och vissa utländska fartyg som används i en verksamhet med svensk huvudman.
+T En svensk researrangör tar en grupp turister i land i Antarktis utan att ha ansökt om tillstånd.
+T En deltagare i en svensk expedition tar med sig stenar och fågelägg hem från Antarktis trots att tillståndet inte medger det.
+
+@ v21-antarktis-brott-grovt | Brott mot lagen om Antarktis, grovt brott | 34 § andra stycket | 34
+PEN 0.5 | 6 | Fängelse i lägst sex månader och högst sex år | F 6 mån–6 år
+C Djur och natur
+A Antarktis grovt;miljöskada Antarktis;oljeutsläpp Antarktis
+Q plain
+ST F | Antarktislagen 34 § tredje stycket
+B v21-antarktis-brott
+R grovt
+- Brottet har medfört eller kunnat medföra varaktiga skador av stor omfattning.
+- Gärningen har annars varit av särskilt farlig art.
+- Gärningen har innefattat ett medvetet risktagande av allvarligt slag.
+- Gärningspersonen har gjort sig skyldig till en försummelse av allvarligt slag när det krävdes särskild uppmärksamhet eller skicklighet.
+T Befälhavaren på ett expeditionsfartyg låter medvetet pumpa ut stora mängder oljeslam i havet vid en pingvinkoloni för att slippa kostnaden för att lämna det i hamn.
+
+@ v21-antarktis-avfall-beredskap | Brott mot lagen om Antarktis (avfallshantering och beredskapsplaner) | 35 § | 35
+PEN 0 | 0 | Böter | Böter
+C Djur och natur
+A Antarktis avfall;sopor Antarktis;beredskapsplan expedition
+Q plain
+G Gärningspersonen gör minst ett av:
+  | Bryter mot en föreskrift om avfallshantering i Antarktis.
+  | Bryter mot en föreskrift om skyldighet att vidta förebyggande åtgärder eller att upprätta beredskapsplaner.
+S Uppsåt eller grov oaktsamhet.
+U Fallet är ringa.
+U Gärningen omfattas av ett vitesföreläggande eller vitesförbud som gärningspersonen inte har följt.
+T En svensk expedition lämnar kvar tomma bränslefat och annat avfall vid sitt läger i Antarktis i strid med föreskrifterna om avfallshantering.
+
+LAW S2010-950 | Lagen (2010:950) om ansvar och ersättning vid radiologiska olyckor | 2010:950 | LRO
+
+@ v21-radiologiska-olyckor-forsakring | Brott mot lagen om ansvar och ersättning vid radiologiska olyckor (ansvarsförsäkring saknas) | 57 § | 57,30
+PEN 0 | 0.5 | Böter eller fängelse i högst sex månader | B–F 6 mån
+C Allmänfarliga
+A kärnkraftverk utan försäkring;atomansvar;ansvarsförsäkring reaktor;ekonomisk säkerhet kärnanläggning
+Q plain
+K Gärningspersonen är enligt lagen skyldig att ha en ansvarsförsäkring eller annan ekonomisk säkerhet, till exempel som innehavare av en svensk kärnteknisk anläggning.
+G Gärningspersonen har inte en ansvarsförsäkring eller annan ekonomisk säkerhet upp till det belopp som lagen kräver. Beloppet är som huvudregel 700 miljoner euro och 1 200 miljoner euro för en kärnkraftsreaktor i drift, om regeringen inte har beslutat om ett lägre belopp.
+S Uppsåt eller oaktsamhet.
+T Ett bolag som driver en kärnkraftsreaktor låter ansvarsförsäkringen löpa ut och fortsätter driften i flera månader utan någon annan ekonomisk säkerhet.
+
+LAW S2011-318 | Avgasreningslagen (2011:318) | 2011:318 | Avgasreningslagen
+
+@ v21-avgasrening-brott | Brott mot avgasreningslagen (manipulation och oriktiga uppgifter) | 38 § | 38
+PEN 0 | 0 | Böter | Böter
+C Trafik
+A AdBlue-emulator;avgasfusk;manipulerad avgasrening;adblue avstängd;defeat device;typgodkännande fusk
+Q plain
+G Gärningspersonen gör minst ett av:
+  | Undanhåller en uppgift, lämnar en oriktig uppgift, förfalskar ett testresultat, använder en manipulationsanordning eller manipulerar ett system för begränsning av kväveoxidutsläpp i samband med ett typgodkännande, en åtgärdsplan eller ett återkallande, och bryter därigenom mot tillverkarens skyldigheter enligt EU:s förordningar om avgasutsläpp.
+  | Tillhandahåller inte den information om reparation och underhåll av fordon som har betydelse för fordonets avgasrening och som EU:s förordningar kräver.
+  | Manipulerar ett system där förbrukningsbart reagens används på ett tungt fordon.
+  | Använder ett tungt fordon utan förbrukningsbart reagens.
+S Uppsåt eller oaktsamhet.
+U Gärningen omfattas av ett vitesföreläggande som gärningspersonen inte har följt.
+N Förbrukningsbart reagens är till exempel urealösning (AdBlue) som används i avgasreningen på tunga dieselfordon.
+T En åkeriägare monterar en emulator som stänger av urealösningssystemet på en lastbil och kör sedan lastbilen utan urealösning.
+
+LAW S2011-319 | Drivmedelslagen (2011:319) | 2011:319 | Drivmedelslagen
+
+@ v21-drivmedel-saluforing | Brott mot drivmedelslagen (saluföring av otillåtet bränsle) | 33 § | 33,16
+PEN 0 | 2 | Böter eller fängelse i högst två år | B–F 2 år
+C Djur och natur
+A sälja dålig bensin;diesel miljöklass;otillåtet drivmedel;bensinmack bränslekvalitet;blyad bensin
+Q plain
+G Gärningspersonen saluför minst ett av:
+  | Bensin som inte uppfyller kraven för miljöklass 2.
+  | Dieselbränsle som inte uppfyller kraven för miljöklass 3.
+S Uppsåt eller oaktsamhet.
+U Gärningen omfattas av ett vitesföreläggande som gärningspersonen inte har följt.
+N Blyfri bensin med ett researchoktantal på lägst 91 och ett motoroktantal på lägst 81 får saluföras även om den inte uppfyller två av kraven för miljöklass 2.
+T Ägaren till en bensinstation köper in ett billigt parti dieselbränsle med för hög svavelhalt och säljer det till kunderna som vanlig diesel.
+
+LAW S2018-396 | Strålskyddslagen (2018:396) | 2018:396 | Strålskyddslagen
+
+@ v21-stralskydd-skyddsatgarder | Brott mot strålskyddslagen (strålskyddsåtgärder, information och avfall) | 9:1 | 9:1,3:10,5:3,7:1
+PEN 0 | 2 | Böter eller fängelse i högst två år | B–F 2 år
+C Allmänfarliga
+A röntgen strålskydd;radioaktivt avfall;laser;strålkälla;radioaktivt material märkning
+Q plain
+G Gärningspersonen gör minst ett av:
+  | Bedriver en verksamhet med joniserande strålning, eller sysselsätter någon i en sådan verksamhet, utan att kontrollera och upprätthålla strålskyddet, underhålla utrustningen, vidta de försiktighetsmått som behövs eller se till att personalen har den kunskap som behövs.
+  | Bedriver en verksamhet där det används en teknisk anordning som kan alstra icke-joniserande strålning, eller sysselsätter någon i ett sådant arbete, utan att vidta motsvarande strålskyddsåtgärder.
+  | Tillhandahåller ett radioaktivt material utan att genom märkning eller på annat lämpligt sätt lämna de uppgifter som har betydelse från strålskyddssynpunkt.
+  | Tillhandahåller eller i marknadsföringssyfte visar en teknisk anordning som kan alstra strålning eller innehåller ett radioaktivt ämne utan att lämna information om strålningsrisker och andra uppgifter som har betydelse från strålskyddssynpunkt.
+  | Tillverkar, för in till Sverige, tillhandahåller eller i marknadsföringssyfte visar en sådan anordning utan att se till att den har de funktioner som behövs från strålskyddssynpunkt.
+  | Installerar eller underhåller en sådan anordning utan att se till att den efter arbetet fungerar som avsett från strålskyddssynpunkt.
+  | Bedriver eller har bedrivit en verksamhet med joniserande strålning och ser inte till att det radioaktiva avfallet så snart som det är möjligt och rimligt hanteras och vid behov slutförvaras på ett godtagbart sätt.
+S Uppsåt eller grov oaktsamhet.
+U Fallet är ringa.
+U Ansvar för gärningen kan dömas ut enligt brottsbalken eller lagen om straff för smuggling.
+U Gärningen omfattas av ett vitesföreläggande som gärningspersonen har åsidosatt.
+T Ett industriföretag slänger en uttjänt nivåvakt med en radioaktiv strålkälla i en vanlig skrotcontainer i stället för att se till att den tas om hand som radioaktivt avfall.
+T En verkstad säljer en begagnad industriröntgenutrustning utan att kontrollera att strålskärmningen och säkerhetsbrytarna fungerar.
+
+@ v21-stralskydd-tillstand-forbud | Brott mot strålskyddslagen (tillståndsplikt, förbud och skydd av arbetstagare) | 9:2 | 9:2,6:1,3:1,4:1
+PEN 0 | 2 | Böter eller fängelse i högst två år | B–F 2 år
+C Allmänfarliga
+A röntgen utan tillstånd;strålning utan tillstånd;radioaktivt ämne;gravid strålning arbete;minderårig strålning;dosgräns
+Q plain
+G Gärningspersonen gör minst ett av:
+  | Bedriver en verksamhet med joniserande strålning utan tillstånd, eller bedriver en sådan verksamhet som inte är berättigad.
+  | Använder joniserande strålning för medicinsk exponering eller för att avbilda en människa utan att se till att metoden och exponeringen i det enskilda fallet är berättigad.
+  | Låter bli att i en verksamhet med joniserande strålning optimera strålskyddet eller att så långt som det är möjligt och rimligt begränsa radioaktivt avfall, utsläpp av radioaktiva ämnen och exponering av miljön.
+  | Sysselsätter någon under 18 år i en verksamhet med joniserande strålning där den unge kan få en stråldos över dosgränsen för allmänheten, eller för att utföra en åtgärd i en radiologisk nödsituation.
+  | Bryter som arbetsgivare mot reglerna till skydd för gravida och ammande arbetstagare, till exempel genom att sysselsätta en gravid arbetstagare i en radiologisk nödsituation eller inte erbjuda en gravid arbetstagare som begär det arbetsuppgifter utan exponering.
+  | Ser inte till att en teknisk anordning som kan alstra strålning oskadliggörs när den inte längre ska användas.
+  | Tillsätter avsiktligt eller bildar genom bestrålning ett radioaktivt ämne vid framställning av livsmedel, leksaker, smycken eller kosmetika, eller importerar eller exporterar sådana varor från eller till ett land utanför EU och EES.
+  | Bryter mot regeringens föreskrifter om dosgränser eller om tillstånds- eller anmälningsplikt för hantering av tekniska anordningar som kan alstra icke-joniserande strålning.
+S Uppsåt eller oaktsamhet.
+U Fallet är ringa.
+U Ansvar för gärningen kan dömas ut enligt brottsbalken eller lagen om straff för smuggling.
+U Gärningen omfattas av ett vitesföreläggande som gärningspersonen har åsidosatt.
+T En tandläkarmottagning tar en ny röntgenutrustning i bruk och röntgar patienter i flera månader utan att ha det tillstånd som krävs.
+T Ett företag importerar från ett land utanför EU smycken där ett radioaktivt ämne avsiktligt har tillsatts i materialet och säljer dem i Sverige.
+
+@ v21-stralskydd-solarium-under-18 | Brott mot strålskyddslagen (solarium för den som är under 18 år) | 9:3 | 9:3,7:6
+PEN 0 | 0.5 | Böter eller fängelse i högst sex månader | B–F 6 mån
+C Allmänfarliga
+A solarium minderårig;sola solarium under 18;solarium åldersgräns;solarium barn
+Q plain
+K Gärningen sker yrkesmässigt.
+G Gärningspersonen låter någon som inte har fyllt 18 år sola i ett kosmetiskt solarium.
+S Uppsåt eller oaktsamhet.
+U Fallet är ringa.
+U Ansvar för gärningen kan dömas ut enligt brottsbalken eller lagen om straff för smuggling.
+U Gärningen omfattas av ett vitesföreläggande som gärningspersonen har åsidosatt.
+T Ägaren till ett obemannat solarium ger en 16-åring en egen kod till dörren och låter henne sola där regelbundet.
+
+@ v21-stralskydd-villkor-tillsyn | Brott mot strålskyddslagen (läkarkontroll, villkor och tillsyn) | 9:4 | 9:4,4:3,4:5
+PEN 0 | 0 | Böter | Böter
+C Allmänfarliga
+A strålskydd tillsyn;villkor tillstånd strålning;oriktig uppgift strålsäkerhetsmyndigheten;läkarundersökning strålning
+Q plain
+G Gärningspersonen gör minst ett av:
+  | Sysselsätter i en verksamhet med joniserande strålning någon med arbetsuppgifter som kan medföra exponering, trots att personen inte har genomgått den medicinska kontroll som behövs eller har bedömts olämplig.
+  | Ser inte till att en arbetstagare snarast läkarundersöks när arbetstagaren har fått en stråldos över dosgränsen eller visar tecken på strålskada.
+  | Bryter mot ett villkor i ett tillstånd eller mot ett villkor som har beslutats för verksamheten i efterhand.
+  | Bryter mot ett föreläggande från tillsynsmyndigheten.
+  | Ger inte tillsynsmyndigheten de upplysningar eller handlingar som myndigheten har begärt för tillsynen.
+  | Lämnar oriktiga uppgifter om förhållanden av betydelse i en ansökan eller annan handling enligt lagen eller föreskrifter som har meddelats med stöd av lagen.
+S Uppsåt eller oaktsamhet.
+U Fallet är ringa.
+U Ansvar för gärningen kan dömas ut enligt brottsbalken eller lagen om straff för smuggling.
+U Gärningen omfattas av ett vitesföreläggande som gärningspersonen har åsidosatt.
+T Ett företag som utför industriell radiografering låter en nyanställd arbeta med strålkällor utan att han har genomgått den medicinska kontrollen.
+
+LAW S2020-1173 | Lagen (2020:1173) om vissa utsläpp av växthusgaser | 2020:1173 | Utsläppshandelslagen
+
+@ v21-otillatet-utslapp-av-vaxthusgaser | Otillåtet utsläpp av växthusgaser | 33 § | 33
+PEN 0 | 2 | Böter eller fängelse i högst två år | B–F 2 år
+C Djur och natur
+A utsläppsrätter;koldioxidutsläpp utan tillstånd;utsläppshandel;övervakningsplan flyg;växthusgaser
+Q plain
+## Verksamhet utan tillstånd
+G Gärningspersonen driver utan tillstånd en bränsleverksamhet eller en verksamhet som medför utsläpp av växthusgaser från en anläggning, och bryter därmed mot regeringens föreskrifter om tillståndsplikt.
+U Gärningen är ringa och har begåtts i en bränsleverksamhet.
+## Övervakningsplan saknas
+K Gärningspersonen är verksamhetsutövare för en flygverksamhet eller en sjötransportverksamhet.
+G Gärningspersonen fullgör inte ett krav på en övervakningsplan enligt regeringens föreskrifter eller EU:s förordning om övervakning, rapportering och verifiering av utsläpp från sjötransporter.
+## *
+S Uppsåt eller oaktsamhet.
+U Ansvar för gärningen kan dömas ut enligt brottsbalken.
+U Gärningen omfattas av ett vitesföreläggande som har överträtts, och överträdelsen ligger till grund för en ansökan om att döma ut vitet.
+T Ett företag tar en ny stor förbränningsanläggning i drift och släpper ut koldioxid i ett halvår utan att ha ansökt om tillstånd till utsläpp av växthusgaser.
+
+@ v21-forsvarande-av-tillstandsprovning-vaxthusgaser | Försvårande av tillståndsprövning | 34 § | 34
+PEN 0 | 2 | Böter eller fängelse i högst två år | B–F 2 år
+C Djur och natur
+A oriktig uppgift tillståndsansökan;utsläppstillstånd;växthusgaser ansökan;utsläppshandel
+Q plain
+G Gärningspersonen lämnar en oriktig eller vilseledande uppgift i en ansökan om tillstånd till utsläpp av växthusgaser.
+F Åtgärden innebär risk för att tillstånd ges på felaktiga grunder.
+S Uppsåt eller oaktsamhet.
+U Gärningen är ringa.
+U Ansvar för gärningen kan dömas ut enligt brottsbalken.
+U Gärningen omfattas av ett vitesföreläggande som har överträtts, och överträdelsen ligger till grund för en ansökan om att döma ut vitet.
+T Ett industriföretag utelämnar en av sina pannor i ansökan om utsläppstillstånd så att verksamheten framstår som mindre än den är.
+
+@ v21-forsvarande-av-kontroll-av-vaxthusgasutslapp | Försvårande av kontroll av växthusgasutsläpp | 35 § | 35
+PEN 0 | 2 | Böter eller fängelse i högst två år | B–F 2 år
+C Djur och natur
+A utsläppsrapport fusk;oriktig utsläppsrapport;utsläppsrätter;koldioxidrapport
+Q plain
+G Gärningspersonen lämnar en oriktig eller vilseledande uppgift i en utsläppsrapport.
+F Åtgärden innebär risk för att ett för litet antal utsläppsrätter överlämnas eller reduktionsenheter annulleras.
+S Uppsåt eller oaktsamhet.
+U Gärningen är ringa.
+U Ansvar för gärningen kan dömas ut enligt brottsbalken.
+U Gärningen omfattas av ett vitesföreläggande som har överträtts, och överträdelsen ligger till grund för en ansökan om att döma ut vitet.
+T Ett värmeverk redovisar i sin årliga utsläppsrapport en betydligt lägre bränsleförbrukning än den verkliga för att behöva överlämna färre utsläppsrätter.
+
+@ v21-brott-mot-anmalningsskyldighet-vaxthusgaser | Brott mot anmälningsskyldighet | 36 § | 36
+PEN 0 | 2 | Böter eller fängelse i högst två år | B–F 2 år
+C Djur och natur
+A anmäla ändring utsläppstillstånd;ändrad verksamhet utsläpp;utsläppshandel anmälan
+Q plain
+K Gärningspersonen är verksamhetsutövare och är enligt regeringens föreskrifter skyldig att anmäla ändringar av verksamheten.
+G Gärningspersonen anmäler inte ändringen.
+S Uppsåt eller oaktsamhet.
+U Gärningen är ringa.
+U Ansvar för gärningen kan dömas ut enligt brottsbalken.
+U Gärningen omfattas av ett vitesföreläggande som har överträtts, och överträdelsen ligger till grund för en ansökan om att döma ut vitet.
+T Ett bruk bygger ut sin anläggning med en ny produktionslinje som ökar utsläppen men anmäler inte ändringen.
+
+@ v21-forsvarande-av-utslappsrattstilldelning | Försvårande av utsläppsrättstilldelning | 37 § | 37
+PEN 0 | 2 | Böter eller fängelse i högst två år | B–F 2 år
+C Djur och natur
+A gratis utsläppsrätter;tilldelning utsläppsrätter fusk;verksamhetsnivå rapport;utsläppshandel
+Q plain
+G Gärningspersonen lämnar en oriktig eller uppenbart vilseledande uppgift i minst ett av:
+  | En ansökan om tilldelning av utsläppsrätter.
+  | En rapport om verksamhetsnivå.
+F Åtgärden innebär risk för att ett för stort antal utsläppsrätter tilldelas.
+S Uppsåt eller oaktsamhet.
+U Gärningen är ringa.
+U Ansvar för gärningen kan dömas ut enligt brottsbalken.
+U Gärningen omfattas av ett vitesföreläggande som har överträtts, och överträdelsen ligger till grund för en ansökan om att döma ut vitet.
+T Ett företag uppger en för hög produktionsvolym i sin rapport om verksamhetsnivå för att få fler gratis utsläppsrätter.
+
+LAW S1975-197 | Oljekrislagen (1975:197) | 1975:197 | Oljekrislagen
+
+@ v21-oljekrislagen-brott | Brott mot oljekrislagen | 19 § | 19
+PEN 0 | 0.5 | Böter eller fängelse i högst sex månader | B–F 6 mån
+C Allmän verksamhet
+A oljekris;ransonering olja;avstå olja till staten;oljelager;bränslekris
+Q plain
+G Gärningspersonen gör minst ett av:
+  | Följer inte ett beslut om att avstå råolja eller oljeprodukter till staten eller någon annan, eller om att utöva viss verksamhet med egendomen.
+  | Följer inte ett förbud mot att överlåta, förbruka, skada eller förflytta sådan egendom.
+  | Fullgör inte skyldigheten att lägga upp, förvara och vårda egendom som omfattas av ett sådant beslut och att avlämna den på föreskriven tid och plats.
+  | Följer inte en föreskrift om uppgiftsskyldighet om den internationella oljemarknaden.
+  | Lämnar osann uppgift när uppgiftsskyldighet fullgörs, om åtgärden innebär fara i bevishänseende.
+S Uppsåt eller oaktsamhet som inte är ringa.
+U Gärningen består i att inte följa ett beslut om avstående eller ett förfogandeförbud och kan ge straff enligt brottsbalken.
+N En företagare ansvarar för en gärning som begås i hans eller hennes rörelse, om företagaren har haft eller borde ha haft vetskap om gärningen. Domstolen får besluta om stängda dörrar om en offentlig handläggning kan skada någon genom att affärs- eller driftförhållanden röjs.
+T Ett oljebolag har under en oljekris fått ett förbud mot att förflytta ett lager av dieselolja men säljer ändå lagret vidare till en utländsk köpare.
+
+LAW S1978-160 | Lagen (1978:160) om vissa rörledningar | 1978:160 | Rörledningslagen
+
+@ v21-rorledningar-brott | Brott mot lagen om vissa rörledningar | 22 § | 22,1
+PEN 0 | 0.5 | Böter eller fängelse i högst sex månader | B–F 6 mån
+C Allmänfarliga
+A rörledning utan koncession;oljeledning;pipeline;bränsleledning;koldioxidledning
+Q plain
+## Ledning utan koncession
+G Gärningspersonen drar fram eller använder utan koncession en rörledning som kräver koncession. Koncession krävs för rörledningar för transport av råolja, oljeprodukter eller annan vätska eller gas som är ägnad att användas som bränsle och för rörledningar för koldioxid som ska lagras geologiskt.
+S Uppsåt eller oaktsamhet.
+N Koncession krävs inte för en ledning som är högst 20 kilometer lång, som huvudsakligen ska tillgodose enskilda hushålls behov eller som bara ska användas inom en hamn eller ett industriområde. För naturgasledningar gäller naturgaslagen.
+## Oriktig uppgift
+G Gärningspersonen lämnar en oriktig uppgift när han eller hon fullgör en uppgiftsskyldighet som är förbunden med koncessionen eller en skyldighet att lämna upplysningar och handlingar till tillsynsmyndigheten.
+S Uppsåt eller grov oaktsamhet.
+T Ett energibolag bygger en tre mil lång rörledning för flytande bränsle mellan en hamn och en depå och tar den i drift utan att ha fått koncession.
+
+LAW S1992-1512 | Lagen (1992:1512) om elektromagnetisk kompatibilitet | 1992:1512 | EMC-lagen
+
+@ v21-emc-brott | Brott mot lagen om elektromagnetisk kompatibilitet | 9 § | 9,1,10
+PEN 0 | 1 | Böter eller fängelse i högst ett år | B–F 1 år
+C Allmänfarliga
+A störande elektronik;radiostörning;elektromagnetisk störning;CE-märkning elektronik;störsändande utrustning
+Q plain
+G Gärningspersonen bryter mot regeringens föreskrifter om minst ett av:
+  | Krav på egenskaper hos eller användning av utrustning, för att den ska fungera i sin elektromagnetiska omgivning utan att orsaka oacceptabla elektromagnetiska störningar för annan utrustning.
+  | Kontroll och märkning av utrustning med avseende på dess elektromagnetiska kompatibilitet.
+  | Information som ska följa med utrustningen.
+  | Skyldighet att bedriva skadeförebyggande arbete och vidta åtgärder när utrustningen kan antas inte uppfylla kraven.
+S Uppsåt eller oaktsamhet.
+U Gärningen kan ge straff enligt brottsbalken.
+U Överträdelsen är ringa.
+U Gärningen omfattas av bestämmelser om sanktionsavgift.
+T En importör säljer ett parti billiga LED-drivdon som stör radiokommunikationen i omgivningen och som saknar den kontroll och märkning som föreskrifterna kräver.
+
+LAW S1997-288 | Elberedskapslagen (1997:288) | 1997:288 | Elberedskapslagen
+
+@ v21-elberedskap-anmalan | Brott mot elberedskapslagen (anmälningsskyldighet) | 18 § | 18,6
+PEN 0 | 0.5 | Böter eller fängelse i högst sex månader | B–F 6 mån
+C Rikets säkerhet
+A elberedskap;bygga kraftverk utan anmälan;ställverk ombyggnad;elförsörjning anmälan
+Q plain
+K Gärningspersonen driver verksamheten vid en anläggning som är av väsentlig betydelse för elförsörjningen i Sverige eller inom en ort eller ett område. Om ingen verksamhet drivs gäller skyldigheten ägaren eller nyttjanderättshavaren till anläggningen eller fastigheten.
+G Gärningspersonen gör inte en anmälan till elberedskapsmyndigheten innan anläggningen uppförs, byggs om eller på annat sätt ändras.
+S Uppsåt eller oaktsamhet.
+U Gärningen omfattas av ett vitesföreläggande som gärningspersonen har åsidosatt.
+T Ett elnätsföretag bygger om en stor transformatorstation som försörjer en hel stad utan att först anmäla ombyggnaden till elberedskapsmyndigheten.
+
+LAW S1997-857 | Ellagen (1997:857) | 1997:857 | Ellagen
+
+@ v21-ellagen-natkoncession | Brott mot ellagen (nätkoncession) | 13:1 första stycket | 13:1,2:1,2:3
+PEN 0 | 1 | Böter eller fängelse i högst ett år | B–F 1 år
+C Allmänfarliga
+A kraftledning utan tillstånd;nätkoncession;bygga elledning;starkströmsledning;transformatorstation
+Q plain
+G Gärningspersonen gör minst ett av:
+  | Bygger eller använder en starkströmsledning utan nätkoncession. Till byggandet räknas även schaktning, skogsavverkning och liknande åtgärder för att bereda plats för ledningen.
+  | Börjar bygga en transformator- eller kopplingsstation som ska anslutas till nya ledningar som kräver nätkoncession för linje, innan det finns nätkoncession för att bygga minst en av ledningarna.
+  | Bryter mot ett villkor som nätkoncessionen har förenats med.
+S Uppsåt eller oaktsamhet.
+U Fallet är ringa.
+U Gärningen kan ge straff enligt brottsbalken.
+U Gärningen omfattas av ett vitesföreläggande som gärningspersonen har åsidosatt.
+N Ellagen upphör att gälla den 1 januari 2027 och ersätts då av nya lagar.
+T Ett vindkraftsbolag avverkar skog och bygger en högspänningsledning från vindkraftsparken till stamnätet utan att ha fått nätkoncession.
+
+@ v21-ellagen-ledning-ur-bruk-driftsakerhet | Brott mot ellagen (ledning ur bruk och driftsäkerhet) | 13:1 andra stycket | 13:1,2:47
+PEN 0 | 0 | Böter | Böter
+C Allmänfarliga
+A kraftledning ur bruk;driftsäkerhet elsystemet;elnät besiktning;nätkoncession linje
+Q plain
+G Gärningspersonen gör minst ett av:
+  | Har som nätkoncessionshavare en ledning som omfattas av nätkoncession för linje ur bruk under en sammanhängande period som är längre än tre år utan tillstånd.
+  | Bryter mot föreskrifter om kontroll, provning, besiktning eller andra krav för att säkerställa driftsäkerheten hos det nationella elsystemet.
+S Uppsåt eller oaktsamhet.
+U Fallet är ringa.
+U Gärningen kan ge straff enligt brottsbalken.
+U Gärningen omfattas av ett vitesföreläggande som gärningspersonen har åsidosatt.
+N Ellagen upphör att gälla den 1 januari 2027 och ersätts då av nya lagar.
+T Ett elnätsföretag kopplar ur en kraftledning och låter den stå oanvänd i fem år utan att ansöka om tillstånd.
+
+LAW S2005-403 | Naturgaslagen (2005:403) | 2005:403 | Naturgaslagen
+
+@ v21-naturgaslagen-koncession | Brott mot naturgaslagen (koncession) | 12:1 | 12:1,2:1,2:2,2:3
+PEN 0 | 1 | Böter eller fängelse i högst ett år | B–F 1 år
+C Allmänfarliga
+A gasledning utan tillstånd;naturgasledning;gaslager;LNG-anläggning;koncession gas
+Q plain
+G Gärningspersonen gör minst ett av:
+  | Bygger eller använder en naturgasledning, en lagringsanläggning eller en förgasningsanläggning utan koncession.
+  | Spränger, schaktar, avverkar skog, markbereder eller vidtar liknande åtgärder för att bereda plats för en sådan ledning eller anläggning innan koncession har meddelats.
+  | Bryter mot ett villkor som koncessionen har förenats med.
+S Uppsåt eller oaktsamhet.
+U Gärningen är ringa.
+U Gärningen kan ge straff enligt brottsbalken.
+U Gärningen omfattas av ett vitesföreläggande som gärningspersonen har överträtt.
+N Koncession krävs inte för en naturgasledning som ligger efter en mät- och reglerstation.
+T Ett gasbolag börjar spränga och schakta för en ny naturgasledning innan regeringen har meddelat koncession.
+
+LAW S2011-1200 | Lagen (2011:1200) om elcertifikat | 2011:1200 | Elcertifikatslagen
+
+@ v21-elcertifikat-kvotplikt | Brott mot lagen om elcertifikat (kvotplikt) | 7:1 första stycket | 7:1,4:6,4:8,4:3
+PEN 0 | 0.5 | Böter eller fängelse i högst sex månader | B–F 6 mån
+C Ekonomisk brottslighet
+A elcertifikat;kvotplikt;elleverantör deklaration;kvotpliktsavgift
+Q plain
+G Gärningspersonen gör minst ett av:
+  | Anmäler inte skriftligen till tillsynsmyndigheten att han eller hon är kvotpliktig, senast två veckor efter att kvotplikten inträdde.
+  | Anmäler som elanvändare inte skriftligen till tillsynsmyndigheten att kvotplikten har upphört, senast två veckor efter att den upphörde.
+  | Lämnar i den årliga deklarationen om kvotplikt en oriktig eller vilseledande uppgift om mängden såld, använd eller producerad el.
+S Uppsåt.
+U Fallet är ringa.
+U Gärningen kan ge straff enligt brottsbalken.
+U Gärningen omfattas av ett vitesföreläggande som gärningspersonen inte har följt.
+N Kvotpliktiga är bland annat elleverantörer och vissa elanvändare och elproducenter.
+T En elleverantör redovisar medvetet en för låg mängd såld el i sin deklaration för att behöva annullera färre elcertifikat.
+
+@ v21-elcertifikat-kvotplikt-grovt | Brott mot lagen om elcertifikat, grovt brott | 7:1 andra stycket | 7:1
+PEN 0 | 2 | Fängelse i högst två år | F 2 år
+C Ekonomisk brottslighet
+A elcertifikat grovt;kvotplikt fusk;elleverantör deklaration
+Q plain
+B v21-elcertifikat-kvotplikt
+S Gärningen har begåtts uppsåtligen.
+R grovt*
+- Gärningen har avsett mycket stora mängder el eller betydande belopp.
+- Gärningen har ingått i ett systematiskt eller långvarigt förfarande.
+T En elleverantör lämnar under flera år systematiskt deklarationer där mer än hälften av den sålda elen har utelämnats.
+
+@ v21-elcertifikat-oriktig-prisuppgift | Brott mot lagen om elcertifikat (oriktig prisuppgift) | 7:2 | 7:2,3:3
+PEN 0 | 0 | Böter | Böter
+C Ekonomisk brottslighet
+A elcertifikat pris;oriktig uppgift elcertifikat;överlåtelse elcertifikat
+Q plain
+G Gärningspersonen lämnar till kontoföringsmyndigheten en oriktig uppgift om det pris som elcertifikat har överlåtits till, i en ansökan om registrering av överlåtelsen.
+S Uppsåt eller oaktsamhet.
+U Fallet är ringa.
+U Gärningen kan ge straff enligt brottsbalken.
+U Gärningen omfattas av ett vitesföreläggande som gärningspersonen inte har följt.
+T En elproducent som har sålt elcertifikat anger ett betydligt högre pris än det verkliga när överlåtelsen ska registreras.
+
+LAW S2013-385 | Lagen (2013:385) om ingripande mot marknadsmissbruk vid handel med grossistenergiprodukter | 2013:385 | REMIT-lagen
+
+@ v21-grossistenergi-insiderhandel | Brott mot lagen om ingripande mot marknadsmissbruk vid handel med grossistenergiprodukter (insiderhandel) | 3 § första stycket | 3
+PEN 0 | 2 | Fängelse i högst två år | F 2 år
+C Ekonomisk brottslighet
+A insiderhandel el;elbörsen insider;elhandel insiderinformation;REMIT;gashandel insider
+Q plain
+K Gärningspersonen har insiderinformation om en grossistenergiprodukt, det vill säga ett avtal eller derivat som avser el eller naturgas på grossistmarknaden.
+G Gärningspersonen bryter mot förbuden mot insiderhandel i EU:s förordning om integritet och öppenhet på grossistmarknaderna för energi genom minst ett av:
+  | Använder insiderinformationen genom att förvärva eller avyttra, eller försöka förvärva eller avyttra, grossistenergiprodukter som informationen rör, för egen eller annans räkning.
+  | Rekommenderar eller förmår någon annan, på grundval av insiderinformationen, att förvärva eller avyttra sådana grossistenergiprodukter.
+S Uppsåt till samtliga rekvisit. Lagen anger ingen skuldform. Utgångspunkten är då att uppsåt krävs.
+N Om brottet är ringa döms till böter eller fängelse i högst sex månader. Den som bryter mot förbuden av oaktsamhet döms enligt 4 §.
+T En elhandlare på ett kraftbolag får veta att bolagets största kraftverk ska stängas oplanerat och köper elterminer för egen räkning innan stoppet har offentliggjorts.
+
+@ v21-grossistenergi-insiderhandel-grovt | Brott mot lagen om ingripande mot marknadsmissbruk vid handel med grossistenergiprodukter, grovt brott (insiderhandel) | 3 § andra stycket | 3
+PEN 0.5 | 6 | Fängelse i lägst sex månader och högst sex år | F 6 mån–6 år
+C Ekonomisk brottslighet
+A grov insiderhandel el;elbörsen insider grovt;REMIT grovt
+Q plain
+B v21-grossistenergi-insiderhandel
+S Gärningen har begåtts uppsåtligen.
+R grovt
+- Gärningspersonens ställning.
+- Den vinning för gärningspersonen som brottet har medfört.
+- Övriga omständigheter.
+T En chef för krafthandeln på ett stort energibolag utnyttjar gång på gång hemlig information om produktionsstopp och tjänar tiotals miljoner kronor på egna affärer i elterminer.
+
+@ v21-grossistenergi-insiderhandel-oaktsam | Brott mot lagen om ingripande mot marknadsmissbruk vid handel med grossistenergiprodukter (oaktsam insiderhandel) | 4 § | 4
+PEN 0 | 1 | Böter eller fängelse i högst ett år | B–F 1 år
+C Ekonomisk brottslighet
+A oaktsam insiderhandel el;elbörsen insider;REMIT oaktsamhet
+Q plain
+K Gärningspersonen har insiderinformation om en grossistenergiprodukt, det vill säga ett avtal eller derivat som avser el eller naturgas på grossistmarknaden.
+G Gärningspersonen bryter mot förbuden mot insiderhandel i EU:s förordning om integritet och öppenhet på grossistmarknaderna för energi genom minst ett av:
+  | Använder insiderinformationen genom att förvärva eller avyttra, eller försöka förvärva eller avyttra, grossistenergiprodukter som informationen rör, för egen eller annans räkning.
+  | Rekommenderar eller förmår någon annan, på grundval av insiderinformationen, att förvärva eller avyttra sådana grossistenergiprodukter.
+S Oaktsamhet.
+U Fallet är ringa.
+T En handlare köper elterminer efter ett internt möte utan att tänka på att uppgifterna om ett kommande produktionsstopp som nämndes på mötet ännu inte är offentliga.
+
+@ v21-grossistenergi-rojande-av-insiderinformation | Brott mot lagen om ingripande mot marknadsmissbruk vid handel med grossistenergiprodukter (röjande av insiderinformation) | 5 § | 5
+PEN 0 | 2 | Böter eller fängelse i högst två år | B–F 2 år
+C Ekonomisk brottslighet
+A röja insiderinformation el;tipsa om produktionsstopp;insiderinformation energi;REMIT
+Q plain
+K Gärningspersonen har insiderinformation om en grossistenergiprodukt.
+G Gärningspersonen röjer insiderinformationen för någon annan i strid med förbudet i EU:s förordning om integritet och öppenhet på grossistmarknaderna för energi. Förbudet gäller inte när informationen röjs som ett normalt led i tjänsten, verksamheten eller åliggandena.
+S Uppsåt till samtliga rekvisit. Lagen anger ingen skuldform. Utgångspunkten är då att uppsåt krävs.
+U Informationen blir allmänt känd samtidigt med att den röjs.
+T En driftchef på ett kärnkraftverk berättar för en vän som handlar med el att reaktorn ska stängas av i tre veckor, innan stoppet har offentliggjorts.
+
+@ v21-grossistenergi-otillborlig-marknadspaverkan | Brott mot lagen om ingripande mot marknadsmissbruk vid handel med grossistenergiprodukter (otillbörlig marknadspåverkan) | 6 § första stycket | 6
+PEN 0 | 2 | Fängelse i högst två år | F 2 år
+C Ekonomisk brottslighet
+A marknadsmanipulation el;manipulera elpriset;elbörsen manipulation;skenaffärer elhandel;REMIT
+Q plain
+G Gärningspersonen bedriver eller försöker bedriva otillbörlig marknadspåverkan på grossistmarknaderna för energi i strid med förbudet i EU:s förordning om integritet och öppenhet på grossistmarknaderna för energi, till exempel genom transaktioner, handelsorder eller spridning av information som ger falska eller vilseledande signaler om tillgång, efterfrågan eller pris på grossistenergiprodukter.
+S Uppsåt till samtliga rekvisit. Lagen anger ingen skuldform. Utgångspunkten är då att uppsåt krävs.
+N Om brottet är ringa döms till böter eller fängelse i högst sex månader. Försök att bedriva otillbörlig marknadspåverkan omfattas av själva straffbestämmelsen. Den som bryter mot förbudet av oaktsamhet döms enligt 7 §.
+T En elproducent håller medvetet tillbaka produktion och lägger skenbud på elbörsen för att driva upp priset i ett elområde.
+
+@ v21-grossistenergi-otillborlig-marknadspaverkan-grovt | Brott mot lagen om ingripande mot marknadsmissbruk vid handel med grossistenergiprodukter, grovt brott (otillbörlig marknadspåverkan) | 6 § andra stycket | 6
+PEN 0.5 | 6 | Fängelse i lägst sex månader och högst sex år | F 6 mån–6 år
+C Ekonomisk brottslighet
+A grov marknadsmanipulation el;manipulera elpriset grovt;REMIT grovt
+Q plain
+B v21-grossistenergi-otillborlig-marknadspaverkan
+S Gärningen har begåtts uppsåtligen.
+R grovt
+- Omfattningen av marknadspåverkan.
+- Gärningspersonens ställning.
+- Övriga omständigheter.
+T Handelschefen på ett av landets största kraftbolag låter under en hel vinter bolaget lägga vilseledande bud som höjer elpriset för hela marknaden.
+
+@ v21-grossistenergi-otillborlig-marknadspaverkan-oaktsam | Brott mot lagen om ingripande mot marknadsmissbruk vid handel med grossistenergiprodukter (oaktsam otillbörlig marknadspåverkan) | 7 § | 7
+PEN 0 | 1 | Böter eller fängelse i högst ett år | B–F 1 år
+C Ekonomisk brottslighet
+A oaktsam marknadsmanipulation el;vilseledande bud elbörsen;REMIT oaktsamhet
+Q plain
+G Gärningspersonen bedriver otillbörlig marknadspåverkan på grossistmarknaderna för energi i strid med förbudet i EU:s förordning om integritet och öppenhet på grossistmarknaderna för energi, till exempel genom transaktioner, handelsorder eller spridning av information som ger falska eller vilseledande signaler om tillgång, efterfrågan eller pris på grossistenergiprodukter.
+S Oaktsamhet.
+U Fallet är ringa.
+T En handlare sprider i ett marknadsbrev obekräftade uppgifter om gasbrist utan att kontrollera dem, och uppgifterna ger en vilseledande bild av tillgången.
+
+@ v21-grossistenergi-rapportering-meddelandeforbud | Brott mot lagen om ingripande mot marknadsmissbruk vid handel med grossistenergiprodukter (rapporteringsskyldighet och meddelandeförbud) | 10 § | 10,8
+PEN 0 | 0 | Böter | Böter
+C Ekonomisk brottslighet
+A rapportera misstänkt marknadsmissbruk;meddelandeförbud;elbörs rapportering;REMIT
+Q plain
+G Gärningspersonen gör minst ett av:
+  | Åsidosätter sin skyldighet enligt EU:s förordning att rapportera misstänkta överträdelser av förbuden mot insiderhandel och otillbörlig marknadspåverkan till tillsynsmyndigheten. Skyldigheten gäller den som yrkesmässigt arrangerar transaktioner med grossistenergiprodukter.
+  | Har gjort en sådan rapport och röjer för den som rapporten avser eller för någon utomstående att rapportering har skett.
+S Uppsåt eller grov oaktsamhet.
+T En mäklare på en handelsplats för el har rapporterat en kunds misstänkta insiderhandel och berättar sedan för kunden att rapporten har gjorts.
+
+LAW S2016-732 | Elsäkerhetslagen (2016:732) | 2016:732 | Elsäkerhetslagen
+
+@ v21-elsakerhet-innehavare-installation | Brott mot elsäkerhetslagen (innehavarens kontroll och olovligt elinstallationsarbete) | 48 § | 48,6,19,27
+PEN 0 | 1 | Böter eller fängelse i högst ett år | B–F 1 år
+C Allmänfarliga
+A svartjobb el;elinstallation utan behörighet;dra el själv;obehörig elektriker;farlig elanläggning
+Q plain
+G Gärningspersonen gör minst ett av:
+  | Innehar en starkströmsanläggning, eller en elektrisk utrustning som är avsedd att anslutas till en sådan anläggning, och ser inte till att det fortlöpande kontrolleras att den ger betryggande säkerhet mot personskada och sakskada.
+  | Innehar en sådan anläggning eller utrustning och ser inte till att arbete på eller i anslutning till den utförs på ett säkert sätt och av eller under ledning av personer med tillräckliga kunskaper och färdigheter.
+  | Utför elinstallationsarbete utan att vara elinstallatör som är auktoriserad för arbetet och utan att omfattas av ett elinstallationsföretags egenkontrollprogram.
+  | Tillhandahåller elinstallationstjänster trots att tillsynsmyndigheten har förbjudit det.
+S Uppsåt eller oaktsamhet.
+U Fallet är ringa.
+U Gärningen kan ge straff enligt brottsbalken.
+U Gärningen omfattas av ett vitesföreläggande som gärningspersonen har åsidosatt.
+N Elinstallationsarbete är att utföra, ändra eller reparera en elektrisk starkströmsanläggning och att fast ansluta eller koppla loss en elektrisk utrustning.
+T En hantverkare utan auktorisation drar ny fast elinstallation med uttag och golvvärme i en kunds badrum.
+T En fastighetsägare låter elcentralen i ett flerbostadshus förfalla under flera år utan någon kontroll, trots tydliga brännskador på kablarna.
+
+@ v21-elsakerhet-foretag-sakerhetskrav | Brott mot elsäkerhetslagen (elinstallationsföretag och säkerhetskrav på utrustning) | 49 § | 49,16,17,18,23,25
+PEN 0 | 0 | Böter | Böter
+C Allmänfarliga
+A elfirma utan auktorisation;egenkontrollprogram;farlig elprodukt;laddare brandfarlig;elinstallationsföretag anmälan
+Q plain
+G Gärningspersonen gör minst ett av:
+  | Driver ett elinstallationsföretag som inte har minst en auktoriserad elinstallatör.
+  | Driver ett elinstallationsföretag som inte utövar egenkontroll över arbetet enligt ett egenkontrollprogram.
+  | Utför elinstallationsarbete på andras anläggningar utan att företaget har gjort anmälan till tillsynsmyndigheten.
+  | Tillverkar, importerar, distribuerar eller installerar en elektrisk utrustning utan att se till att den uppfyller gällande säkerhetskrav.
+  | Innehar en elektrisk utrustning och ser inte till att den underhålls på ett godtagbart sätt och används på ett sätt som inte riskerar säkerheten.
+  | Använder en elektrisk utrustning utan att försäkra sig om att den är säker för användning.
+  | Bryter mot föreskrifter om säkerhetskrav, om information som ska följa med elektrisk utrustning eller om skadeförebyggande arbete och åtgärder när utrustning kan antas inte uppfylla säkerhetskraven.
+S Uppsåt eller oaktsamhet.
+U Fallet är ringa.
+U Gärningen kan ge straff enligt brottsbalken.
+U Gärningen omfattas av ett vitesföreläggande som gärningspersonen har åsidosatt.
+T Ett företag importerar och säljer mobilladdare som saknar nödvändigt skydd mot elchock och överhettning.
+T En elfirma tar uppdrag hos privatkunder utan att ha anmält verksamheten till tillsynsmyndigheten.
+
+LAW S1966-314 | Lagen (1966:314) om kontinentalsockeln | 1966:314 | Kontinentalsockellagen
+
+@ v21-kontinentalsockeln-brott | Brott mot lagen om kontinentalsockeln (utforskning och utvinning) | 11 § första och andra styckena | 11,3
+PEN 0 | 0.5 | Böter eller fängelse i högst sex månader | B–F 6 mån
+C Djur och natur
+A sandtäkt till havs;borra i havsbotten;kontinentalsockeln;utvinna sand och grus havet;provborrning havsbotten
+Q plain
+## Utan lov eller i strid med villkor
+G Gärningspersonen gör minst ett av:
+  | Utforskar kontinentalsockeln utan lov, till exempel genom geofysiska mätningar eller borrning.
+  | Utvinner naturtillgångar från kontinentalsockeln utan lov.
+  | Vidtar en åtgärd för sådan utforskning eller utvinning utan lov.
+  | Bryter mot ett villkor som tillståndet har förenats med.
+  | Följer inte det som tillsynsmyndigheten begär eller föreskriver, till exempel att lämna upplysningar och handlingar eller ge tillträde till en anläggning eller ett fartyg.
+S Uppsåt till samtliga rekvisit. Lagen anger ingen skuldform. Utgångspunkten är då att uppsåt krävs.
+## Oriktig uppgift
+G Gärningspersonen lämnar en oriktig uppgift när han eller hon fullgör en uppgiftsskyldighet som är förbunden med tillståndet eller som gäller mot tillsynsmyndigheten.
+S Uppsåt eller grov oaktsamhet.
+T Ett företag suger upp sand och grus från havsbottnen på den svenska kontinentalsockeln och säljer materialet utan att ha tillstånd.
+
+@ v21-kontinentalsockeln-sakerhetszon | Brott mot lagen om kontinentalsockeln (säkerhetszon) | 11 § tredje stycket | 11,6
+PEN 0 | 0 | Böter | Böter
+C Djur och natur
+A säkerhetszon plattform;segla in i säkerhetszon;borrplattform avstånd;fartyg nära anläggning till havs
+Q plain
+O En säkerhetszon på högst 500 meter som har bestämts till skydd för en anläggning för utforskning av kontinentalsockeln eller utvinning av naturtillgångar från den.
+G Gärningspersonen gör minst ett av:
+  | Seglar in i säkerhetszonen med ett fartyg utan medgivande av anläggningens ägare.
+  | Bryter mot en föreskrift som har utfärdats för att trygga säkerhetszonen.
+S Uppsåt till samtliga rekvisit. Lagen anger ingen skuldform. Utgångspunkten är då att uppsåt krävs.
+T Befälhavaren på en fiskebåt styr medvetet in i säkerhetszonen runt en borrplattform för att fiska nära anläggningen.
+
+LAW S1975-424 | Lagen (1975:424) om uppgiftsskyldighet vid grundvattentäktsundersökning och brunnsborrning | 1975:424 | Brunnsborrningslagen
+
+@ v21-brunnsborrning-uppgiftsskyldighet | Brott mot lagen om uppgiftsskyldighet vid grundvattentäktsundersökning och brunnsborrning | 6 § | 6,1,2,4
+PEN 0 | 0 | Böter | Böter
+C Djur och natur
+A brunnsborrare;borra brunn;bergvärme borrning;brunnsprotokoll;SGU brunnsarkivet
+Q villkor | Allmänt åtal får väckas bara efter anmälan av Sveriges geologiska undersökning.
+K Gärningspersonen utför yrkesmässigt borrning, rördrivning, grävning eller liknande arbete för att undersöka eller ta till vara grundvatten eller värme ur berget, eller utför yrkesmässigt grundvattentäktsundersökningar.
+G Gärningspersonen gör minst ett av:
+  | Lämnar inte en skriftlig redogörelse för arbetet och dess resultat till Sveriges geologiska undersökning inom tre månader efter att arbetet avslutades.
+  | Lämnar inte en kopia av en skriftlig sammanställning av undersökningsresultat till Sveriges geologiska undersökning inom tre månader efter att sammanställningen färdigställdes.
+  | Lämnar en oriktig uppgift.
+S Uppsåt eller oaktsamhet.
+U Gärningen kan ge straff enligt brottsbalken.
+T En brunnsborrare borrar ett tjugotal bergvärmebrunnar under ett år men skickar aldrig in några redogörelser för borrningarna till Sveriges geologiska undersökning.
+
+LAW S1991-45 | Minerallagen (1991:45) | 1991:45 | Minerallagen
+
+@ v21-minerallagen-brott | Brott mot minerallagen (undersökning, bearbetning och gruvor) | 15:6 första och andra styckena | 15:6,1:4
+PEN 0 | 0.5 | Böter eller fängelse i högst sex månader | B–F 6 mån
+C Djur och natur
+A provborrning utan tillstånd;gruva utan koncession;prospektering;olovlig gruvbrytning;undersökningstillstånd
+Q plain
+## Otillåten verksamhet
+G Gärningspersonen gör minst ett av:
+  | Bedriver undersökningsarbete utan det undersökningstillstånd eller den bearbetningskoncession som krävs.
+  | Bearbetar en mineralfyndighet eller bedriver därmed sammanhängande verksamhet utan den bearbetningskoncession som krävs.
+  | Lägger igen en utfraktsväg eller ort som leder till en gruvas obrutna delar, eller ett borrhål till en saltfyndighet, utan tillstånd av bergmästaren.
+  | Lägger ned en gruva eller motsvarande anläggning utan tillstånd innan alla gruvarbeten har blivit inmätta och inlagda på karta.
+S Uppsåt eller oaktsamhet.
+## Oriktig uppgift
+G Gärningspersonen lämnar en oriktig uppgift när han eller hon fullgör en uppgiftsskyldighet enligt koncessionsvillkor eller lämnar upplysningar till bergmästaren för tillsynen.
+S Uppsåt eller grov oaktsamhet.
+T Ett prospekteringsbolag provborrar efter koppar på någon annans mark utan att ha undersökningstillstånd.
+T Ett gruvbolag fortsätter att bryta malm i ett område som ligger utanför den beviljade bearbetningskoncessionen.
+
+@ v21-minerallagen-sakerhet-arbetsplan | Brott mot minerallagen (undersökningsarbete utan säkerhet eller arbetsplan) | 15:6 första stycket 2 | 15:6,3:3,3:5c
+PEN 0 | 0.5 | Böter eller fängelse i högst sex månader | B–F 6 mån
+C Djur och natur
+A provborrning utan arbetsplan;prospektering markägare;undersökningsarbete säkerhet;gruvbolag borrar på min mark
+Q villkor | Om brottet berör enbart enskilds rätt får åklagare väcka åtal bara om målsäganden anger brottet till åtal.
+K Gärningspersonen har undersökningstillstånd.
+G Gärningspersonen påbörjar undersökningsarbete i minst en av följande situationer:
+  | Säkerhet för ersättning för skada och intrång har inte ställts.
+  | Det finns ingen gällande arbetsplan.
+S Uppsåt eller oaktsamhet.
+T Ett prospekteringsbolag med undersökningstillstånd kör in borriggar på en skogsfastighet och börjar provborra innan arbetsplanen har blivit gällande.

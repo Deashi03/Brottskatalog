@@ -76,10 +76,11 @@ G Gärningspersonen gör minst ett av:
   | Begår annan liknande förrädisk gärning.
 F Gärningen är ägnad att medföra avsevärt men för totalförsvaret eller innefattar avsevärt bistånd åt fienden.
 S Uppsåt till samtliga rekvisit.
+U Gärningen innefattar anskaffande av egendom eller tjänster åt fienden inom ett område som fienden har besatt, och kan med hänsyn till befolkningens behov, gärningspersonens försörjning eller andra särskilda förhållanden inte anses otillbörlig (BrB 22:4).
 
 @ v15-war-landssvek | Landssvek | BrB 22:2
 B v15-inventory-22-1
-R mindre*
+R mindre
 - Gärningen är bara i mindre mån ägnad att medföra men för totalförsvaret.
 - Gärningen innefattar ringare bistånd åt fienden.
 
@@ -87,6 +88,7 @@ R mindre*
 P Riket är i krig.
 G Gärningspersonen gör något som är landsförräderi eller landssvek, till exempel skadar egendom av betydelse för totalförsvaret.
 S Oaktsamhet.
+U Gärningen innefattar anskaffande av egendom eller tjänster åt fienden inom ett område som fienden har besatt, och kan med hänsyn till befolkningens behov, gärningspersonens försörjning eller andra särskilda förhållanden inte anses otillbörlig (BrB 22:4).
 
 @ v15-inventory-22-5 | Ryktesspridning till fara för rikets säkerhet | BrB 22:5
 P Riket är i krig.

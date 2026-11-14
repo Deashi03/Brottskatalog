@@ -1,0 +1,546 @@
+LAW S1949-105 | Tryckfrihetsförordningen (1949:105) | 1949:105 | TF
+X 3:1,3:4,9:3
+
+@ v21-tf-tystnadsplikt-namnutsattning | Brott mot tryckfrihetsförordningen (tystnadsplikt och anonymitet) | 3:7 första stycket 1–3 | 3:3,3:7
+PEN 0 | 1 | Böter eller fängelse i högst ett år | B–F 1 år
+C Allmän verksamhet
+A röja källa;källskydd;anonymitet;avslöja författare;falskt författarnamn;tystnadsplikt tidning
+Q villkor | Allmänt åtal får väckas bara om målsäganden har anmält brottet till åtal.
+N Justitiekanslern är ensam åklagare i mål om brott mot bestämmelser i tryckfrihetsförordningen.
+N Tystnadsplikten gäller inte bland annat om den skyddade har samtyckt till att identiteten röjs eller om en domstol i vissa fall finner att uppgiften måste lämnas.
+## Brott mot tystnadsplikt
+K Gärningspersonen har tagit befattning med tillkomsten eller utgivningen av en tryckt skrift eller med en framställning som var avsedd att införas i en tryckt skrift, eller har på annat sätt varit verksam inom ett företag för utgivning av tryckta skrifter eller inom ett företag för yrkesmässig förmedling av nyheter till periodiska skrifter.
+G Gärningspersonen röjer vad han eller hon då har fått veta om vem som är författare, meddelare eller utgivare av en skrift som inte är periodisk.
+## Namn utsatt mot någons vilja
+G Gärningspersonen sätter på en tryckt skrift ut namn, pseudonym eller signatur för en författare, en meddelare eller en utgivare av en skrift som inte är periodisk.
+K Det sker mot den personens vilja.
+## Falsk uppgift om upphovsperson
+G Gärningspersonen sätter på en tryckt skrift ut namn, pseudonym eller signatur för någon som uppges vara författare, utgivare eller meddelare.
+K Den som pekas ut är inte författare, utgivare eller meddelare.
+## *
+S Uppsåt eller oaktsamhet.
+T En redaktionsmedarbetare berättar för en utomstående vem som i hemlighet har lämnat uppgifter till tidningen för en publicerad artikel.
+T Ett förlag trycker en författares riktiga namn på en bok trots att författaren har krävt att få vara anonym.
+
+@ v21-tf-efterforskning-repressalier | Brott mot tryckfrihetsförordningen (efterforskning och repressalier) | 3:7 första stycket 4–5 | 3:5,3:6,3:7
+PEN 0 | 1 | Böter eller fängelse i högst ett år | B–F 1 år
+C Allmän verksamhet
+A efterforskningsförbud;repressalieförbud;jaga källa;meddelarfrihet;efterforska läcka;bestraffa visselblåsare
+Q plain
+N Justitiekanslern är ensam åklagare i mål om brott mot bestämmelser i tryckfrihetsförordningen.
+K Gärningspersonen handlar för en myndighet eller ett annat allmänt organ.
+## Efterforskning
+G Gärningspersonen efterforskar vem som är författare till en framställning som har införts eller varit avsedd att införas i en tryckt skrift, vem som har gett ut eller avsett att ge ut framställningen eller vem som har lämnat uppgifter för offentliggörande.
+U Efterforskningen behövs för åtal eller något annat ingripande mot personen som inte står i strid med tryckfrihetsförordningen.
+## Repressalier
+G Gärningspersonen ingriper mot någon för att han eller hon i en tryckt skrift har brukat sin tryckfrihet eller medverkat till ett sådant bruk.
+K Åtgärden utgör avskedande, uppsägning, meddelande av disciplinpåföljd eller en liknande åtgärd.
+## *
+S Uppsåt.
+T En kommunal chef försöker ta reda på vilken anställd som har tipsat lokaltidningen om missförhållanden på ett äldreboende.
+T En myndighetschef ger en anställd en varning för att den anställde har lämnat uppgifter till en tidning.
+
+@ v21-tf-tryckeriuppgifter | Brott mot tryckfrihetsförordningen (uppgifter om tryckningen) | 4:5 | 4:2,4:5
+PEN 0 | 1 | Böter eller fängelse i högst ett år | B–F 1 år
+C Allmän verksamhet
+A ursprungsuppgifter;tryckeri saknas;tryckort;tryckår;flygblad utan avsändare
+Q plain
+N Justitiekanslern är ensam åklagare i mål om brott mot bestämmelser i tryckfrihetsförordningen.
+N Den som sprider en skrift som saknar uppgifterna döms enligt en annan bestämmelse till penningböter.
+K Gärningspersonen framställer en skrift som är tryckt i Sverige och avsedd att ges ut här, eller en skrift med utgivningsbevis som mångfaldigas här genom fotokopiering eller någon liknande teknik.
+G Gärningspersonen framställer skriften utan att den innehåller tydliga uppgifter om vem som har tryckt eller mångfaldigat den och om ort och år för tryckningen eller mångfaldigandet.
+S Uppsåt till samtliga rekvisit. Lagen anger ingen skuldform. Utgångspunkten är då att uppsåt krävs.
+T Ett tryckeri trycker tusentals flygblad åt en kund och utelämnar med avsikt uppgift om tryckeriets namn, ort och tryckår.
+
+@ v21-tf-periodisk-skrift-utgivning | Brott mot tryckfrihetsförordningen (utgivning av periodisk skrift) | 5:16 första stycket och 5:17 | 5:6,5:8,5:16,5:17
+PEN 0 | 0 | Böter | Böter
+C Allmän verksamhet
+A utgivningsbevis saknas;ansvarig utgivare saknas;tidning utan utgivare;utgivningsförbud;falsk uppgift utgivningsbevis
+Q plain
+N Justitiekanslern är ensam åklagare i mål om brott mot bestämmelser i tryckfrihetsförordningen.
+N Om skriften har förklarats vara brottslig eller omständigheterna annars är synnerligen försvårande är straffet fängelse i högst ett år.
+G Gärningspersonen gör minst ett av:
+  | Äger en periodisk skrift som ges ut utan att det finns utgivningsbevis eller utan att ägaren uppfyller föreskrivna behörighetsvillkor.
+  | Äger en periodisk skrift och utser och anmäler inte genast en ny utgivare när utgivaren inte längre är behörig eller uppdraget upphör.
+  | Är utgivare och överlämnar inte uppdraget till en ställföreträdare när han eller hon av en tillfällig orsak inte kommer att utöva befogenheten under minst en månad.
+  | Ger ut en periodisk skrift som har utgivningsförbud eller som uppenbart är en fortsättning på en sådan skrift.
+  | Låter ange sitt namn som utgivare eller ställföreträdare på en periodisk skrift utan att vara behörig.
+  | Lämnar medvetet oriktiga uppgifter i en ansökan, anmälan eller förklaring om utgivningsbevis, utgivare eller ställföreträdare för en periodisk skrift.
+S Uppsåt till samtliga rekvisit. Lagen anger ingen skuldform utom för oriktiga uppgifter, som ska ha lämnats medvetet. Utgångspunkten är då att uppsåt krävs.
+T En person ger ut en tidskrift med fyra nummer om året utan att ha ansökt om utgivningsbevis.
+T Ägaren till en tidning låter tidningen fortsätta komma ut i flera månader efter att utgivaren har slutat, utan att utse någon ny.
+
+@ v21-tf-periodisk-skrift-utgivning-forsvarande | Brott mot tryckfrihetsförordningen (utgivning av periodisk skrift), synnerligen försvårande fall | 5:16 andra stycket | 5:16,5:17
+PEN 0 | 1 | Fängelse i högst ett år | F 1 år
+C Allmän verksamhet
+A utgivningsbevis saknas;brottslig skrift;tidning utan utgivare;utgivningsförbud
+Q plain
+N Justitiekanslern är ensam åklagare i mål om brott mot bestämmelser i tryckfrihetsförordningen.
+B v21-tf-periodisk-skrift-utgivning
+R grovt
+- Skriften har förklarats vara brottslig.
+- Omständigheterna är annars synnerligen försvårande.
+T En person ger utan utgivningsbevis ut en tidskrift som en domstol har förklarat vara brottslig.
+
+@ v21-tf-spridning-forbjuden-skrift | Brott mot tryckfrihetsförordningen (spridning av beslagtagen eller förbjuden skrift) | 6:6 | 6:6
+PEN 0 | 1 | Böter eller fängelse i högst ett år | B–F 1 år
+C Allmän verksamhet
+A sprida beslagtagen skrift;konfiskerad tidning;utgivningsförbud;sprida förbjuden skrift
+Q plain
+N Justitiekanslern är ensam åklagare i mål om brott mot bestämmelser i tryckfrihetsförordningen.
+G Gärningspersonen sprider en tryckt skrift.
+O Skriften uppfyller minst ett av:
+  | Den har tagits i beslag eller förklarats konfiskerad.
+  | Den har getts ut i strid med ett utgivningsförbud enligt tryckfrihetsförordningen.
+  | Den är uppenbart en fortsättning på en skrift som omfattas av ett sådant utgivningsförbud.
+S Uppsåt. Gärningspersonen ska ha vetskap om beslaget, konfiskeringen eller förbudet.
+T En person delar ut kvarvarande exemplar av en tidskrift trots att han vet att upplagan har förklarats konfiskerad.
+
+@ v21-tf-borttagande-ur-databas | Brott mot tryckfrihetsförordningen (beslut om borttagande ur databas) | 7:28 och 9:10 | 7:27,7:28,9:9,9:10
+PEN 0 | 1 | Böter eller fängelse i högst ett år | B–F 1 år
+C Allmän verksamhet
+A ta bort artikel;avpublicering;nättidning arkiv;borttagande ur databas;domstolsbeslut ta bort
+Q plain
+N Justitiekanslern är ensam åklagare i mål om brott mot bestämmelser i tryckfrihetsförordningen.
+K En domstol har beslutat att ett yttrande som innefattar tryckfrihetsbrott och som tillhandahålls ur en grundlagsskyddad databas ska tas bort ur databasen inom en viss tid. Beslutet kan ha fattats i samband med ett mål om tryckfrihetsbrott eller efter en särskild ansökan av Justitiekanslern eller målsäganden.
+G Gärningspersonen följer inte beslutet.
+S Uppsåt till samtliga rekvisit. Lagen anger ingen skuldform. Utgångspunkten är då att uppsåt krävs.
+T Utgivaren för en nättidning låter en artikel som har bedömts som förtal ligga kvar i tidningens arkiv efter den tid som domstolen har bestämt.
+
+LAW S1991-1559 | Lagen (1991:1559) med föreskrifter på tryckfrihetsförordningens och yttrandefrihetsgrundlagens områden | 1991:1559 | Tillämpningslagen
+X 3:19
+
+@ v21-tillampningslagen-utgivningsbevis-databas | Brott mot tillämpningslagen till tryckfrihetsförordningen och yttrandefrihetsgrundlagen (utgivningsbevis för databas) | 3:25 | 3:22,3:25
+PEN 0 | 1 | Böter eller fängelse i högst ett år | B–F 1 år
+C Allmän verksamhet
+A utgivningsbevis webbplats;oriktig uppgift utgivningsbevis;mediemyndigheten;ansvarig utgivare hemsida
+Q plain
+N Justitiekanslern är åklagare i mål om detta brott.
+G Gärningspersonen gör minst ett av:
+  | Lämnar oriktig uppgift i en ansökan om utgivningsbevis för en databas.
+  | Bedriver verksamheten och anmäler inte genast till Mediemyndigheten att förhållanden som har angetts i ansökan har ändrats, till exempel databasens namn, vem som bedriver verksamheten, utgivaren eller den tekniska beskrivningen.
+S Uppsåt eller oaktsamhet.
+T Ett företag som har utgivningsbevis för sin webbplats byter utgivare men anmäler inte bytet till Mediemyndigheten.
+
+@ v21-tillampningslagen-utgivare-program | Brott mot tillämpningslagen till tryckfrihetsförordningen och yttrandefrihetsgrundlagen (anteckning och anmälan av utgivare) | 3:30 första stycket | 3:1,3:3,3:13,3:30
+PEN 0 | 1 | Böter eller fängelse i högst ett år | B–F 1 år
+C Allmän verksamhet
+A ansvarig utgivare saknas;utgivare radio;närradio utgivare;anmäla utgivare;webbradio
+Q plain
+N Justitiekanslern är åklagare i mål om detta brott.
+N Den som inte lämnar uppgift om ställföreträdare eller inte anmäler namn på en databas döms i stället till penningböter.
+G Gärningspersonen gör minst ett av:
+  | Låter som programföretag bli att anteckna vem som är utgivare i sitt register innan ett program sänds.
+  | Anmäler inte till Mediemyndigheten vem som är utgivare för till exempel närradio, annan tillståndspliktig ljudradio eller trådsändningar.
+  | Anmäler inte till Myndigheten för tillgängliga medier vem som är utgivare för en sammanställd radiotidning.
+  | Bedriver verksamhet med utgivningsbevis för en databas och anmäler inte ny utgivare när det behövs.
+S Uppsåt eller oaktsamhet.
+T En förening som sänder närradio byter utgivare men anmäler aldrig den nya utgivaren till Mediemyndigheten.
+
+@ v21-tillampningslagen-bevarande | Brott mot tillämpningslagen till tryckfrihetsförordningen och yttrandefrihetsgrundlagen (bevarande av skrifter och program) | 5:9 | 5:1,5:2,5:3,5:4,5:5,5:6,5:9
+PEN 0 | 1 | Böter eller fängelse i högst ett år | B–F 1 år
+C Allmän verksamhet
+A spela in sändning;referensinspelning;bevara exemplar;lämna ut inspelning;radioprogram raderat
+Q plain
+N Justitiekanslern är åklagare i mål om detta brott.
+G Gärningspersonen gör minst ett av:
+  | Framställer en tryckt skrift i Sverige och bevarar inte ett exemplar under ett år från utgivningen.
+  | Bevarar inte ett exemplar av en tryckt skrift som har framställts utomlands och förts in för spridning här, under ett år från införandet.
+  | Sänder program till allmänheten eller tillhandahåller beställ-tv eller beställradio med ett public service-uppdrag och ser inte till att varje program spelas in och att inspelningen bevaras i minst sex månader.
+  | Ska utse utgivare för en teknisk upptagning och bevarar inte ett exemplar under ett år från det att upptagningen blev offentlig.
+  | Låter inte Justitiekanslern utan kostnad få del av en skrift, ett program eller en upptagning som har bevarats.
+  | Låter inte en enskild som anser sig utsatt för ett yttrandefrihetsbrott i ett program kostnadsfritt ta del av en inspelning av programmet.
+S Uppsåt eller oaktsamhet.
+U Gärningen är ringa.
+T Ett programföretag raderar inspelningen av en direktsändning efter två veckor, trots att den ska sparas i sex månader.
+
+LAW S1984-14 | Förordningen (1984:14) om kärnteknisk verksamhet | 1984:14 | Kärnteknikförordningen
+X 20a,21
+
+@ v21-karnteknikforordningen-foreskrifter | Brott mot förordningen om kärnteknisk verksamhet (Strålsäkerhetsmyndighetens föreskrifter) | 22 a § | 22a
+PEN 0 | 0 | Böter | Böter
+C Allmänfarliga
+A kärnkraftverk;strålsäkerhetsmyndigheten;kärnämne;kärnavfall;säkerhetsföreskrifter
+Q plain
+G Gärningspersonen åsidosätter föreskrifter som Strålsäkerhetsmyndigheten har meddelat med stöd av förordningen, till exempel om minst ett av:
+  | Åtgärder för att förhindra spridning av kärnvapen och obehörig befattning med kärnämne och använt kärnbränsle.
+  | Värdering, verifiering och förbättring av säkerheten i kärnteknisk verksamhet.
+  | Hantering av avfall och avveckling.
+  | Upplysningar och överföring av värden för processparametrar.
+  | Bedömning av överensstämmelse och krav på organ som gör sådana bedömningar.
+S Uppsåt eller oaktsamhet.
+T Ett företag som hanterar kärnämne låter bli att föra den redovisning av kärnämnet som Strålsäkerhetsmyndighetens föreskrifter kräver.
+
+LAW S2007-186 | Bilskrotningsförordningen (2007:186) | 2007:186 | Bilskrotningsförordningen
+X 2,12,13,20,21,36
+
+@ v21-bilskrotningsforordningen | Brott mot bilskrotningsförordningen | 52 § | 52
+PEN 0 | 0 | Böter | Böter
+C Djur och natur
+A svartskrot;bilskrot utan auktorisation;skrotningsintyg;mottagningsbevis;skrotbil
+Q plain
+G Gärningspersonen gör minst ett av:
+  | Bedriver yrkesmässig bilskrotning utan att vara auktoriserad.
+  | Utger sig obehörigen för att vara auktoriserad bilskrotare.
+  | Utfärdar ett mottagningsbevis utan att vara auktoriserad bilskrotare, producent eller den som enligt avtal tar emot uttjänta bilar på en producents vägnar.
+  | Förvärvar som behörig mottagare en uttjänt bil för skrotning utan att utfärda ett mottagningsbevis.
+  | Har utfärdat ett mottagningsbevis men ser inte till att en auktoriserad bilskrotare tar hand om bilen, eller ser som auktoriserad bilskrotare inte till att en mottagen bil behandlas så att ett skrotningsintyg kan utfärdas.
+  | Utfärdar ett skrotningsintyg utan att vara auktoriserad bilskrotare, eller utfärdar intyget innan de föreskrivna behandlande åtgärderna har vidtagits.
+  | Låter bli att göra en föreskriven anmälan till länsstyrelsen, till exempel om vilka personer som får underteckna mottagningsbevis eller skrotningsintyg.
+S Uppsåt eller oaktsamhet.
+U Gärningen omfattas av ett vitesföreläggande eller vitesförbud enligt miljöbalken som gärningspersonen har överträtt.
+U Ansvar för gärningen kan dömas ut enligt 29 kap. miljöbalken.
+T En person tar mot betalning emot uttjänta bilar på sin gård och plockar isär dem för försäljning av delar utan att vara auktoriserad bilskrotare.
+
+LAW S2022-1276 | Förordningen (2022:1276) om producentansvar för elutrustning | 2022:1276 | Förordningen om producentansvar för elutrustning
+X 38,39,40,41,79
+
+@ v21-producentansvar-elutrustning | Brott mot förordningen om producentansvar för elutrustning | 95 § | 95
+PEN 0 | 0 | Böter | Böter
+C Djur och natur
+A elavfall;elskrot;överkryssad soptunna;producentansvar;importera elektronik
+Q plain
+K Gärningspersonen är producent av elutrustning.
+G Gärningspersonen fullgör inte minst en av följande skyldigheter:
+  | Att märka elutrustningen med den föreskrivna symbolen och så att det framgår när den har släppts ut på marknaden, innan den släpps ut på unionsmarknaden.
+  | Att anlita eller själv tillhandahålla en godkänd producentansvarsorganisation innan konsumentelutrustning tillhandahålls på den svenska marknaden.
+  | Att ta emot annan elutrustning än konsumentelutrustning när den har blivit avfall, och ha beredskap och resurser för det.
+  | Att se till att den som behandlar elavfall gratis får information om komponenter, material och farliga ämnen i en ny sorts elutrustning.
+S Uppsåt eller oaktsamhet.
+U Gärningen omfattas av ett vitesföreläggande som har överträtts, och överträdelsen ligger till grund för en ansökan om att döma ut vitet.
+U Gärningen är belagd med straff enligt 29 kap. miljöbalken.
+T Ett företag importerar hushållsapparater från ett land utanför EU och säljer dem till svenska konsumenter utan att vara anslutet till någon producentansvarsorganisation.
+
+LAW S2023-132 | Förordningen (2023:132) om producentansvar för bilar | 2023:132 | Förordningen om producentansvar för bilar
+X 23
+
+@ v21-producentansvar-bilar | Brott mot förordningen om producentansvar för bilar | 35 § | 35
+PEN 0 | 0 | Böter | Böter
+C Djur och natur
+A bilproducent;demonteringsanvisningar;bilimportör;upplysningar om material
+Q plain
+K Gärningspersonen är producent av bilar.
+G Gärningspersonen fullgör inte sin skyldighet att inom sex månader från det att en ny biltyp har gjorts tillgänglig på marknaden tillhandahålla de upplysningar om material, komponenter och farliga ämnen i bilarna som behövs för att underlätta återanvändning och återvinning, eller de upplysningar som Naturvårdsverkets föreskrifter om detta kräver.
+S Uppsåt eller oaktsamhet.
+U Gärningen omfattas av ett vitesföreläggande som har överträtts, och överträdelsen ligger till grund för en ansökan om att döma ut vitet.
+U Ansvar för gärningen kan dömas ut enligt 29 kap. miljöbalken.
+T En bilimportör börjar sälja en ny bilmodell och lämnar aldrig de upplysningar om material och farliga ämnen som bilskrotare behöver.
+
+LAW S1994-795 | Förordningen (1994:795) om tillstånd för kraftverk avsedda att drivas med oljebränsle | 1994:795 | Förordningen om oljeeldade kraftverk
+X 2,3
+
+@ v21-oljekraftverk-utan-tillstand | Brott mot förordningen om tillstånd för kraftverk avsedda att drivas med oljebränsle | 7 § | 7
+PEN 0 | 0 | Böter | Böter
+C Allmänfarliga
+A oljekraftverk;oljeeldat kraftverk;kraftverk utan tillstånd;energimyndigheten
+Q plain
+G Gärningspersonen påbörjar utan tillstånd minst ett av:
+  | Uppförandet av ett kraftverk där ånga framställs för elproduktion och som huvudsakligen ska drivas med oljebränslen.
+  | Ändringen av ett sådant kraftverk till ett utförande för drift huvudsakligen med oljebränslen.
+S Uppsåt eller oaktsamhet.
+U Fallet är ringa.
+U Gärningen är belagd med straff enligt en annan författning.
+T Ett energibolag börjar bygga om ett kraftverk för eldning med olja innan Statens energimyndighet har gett tillstånd.
+
+LAW S1966-315 | Kontinentalsockelförordningen (1966:315) | 1966:315 | Kontinentalsockelförordningen
+X 3
+
+@ v21-kontinentalsockelforordningen-anmalan | Brott mot kontinentalsockelförordningen (anmälan av undersökning) | 8 § | 8
+PEN 0 | 0 | Böter | Böter
+C Djur och natur
+A havsbotten;undersökning av kontinentalsockeln;provtagning havsbotten;SGU
+Q plain
+K Gärningspersonen bedriver en undersökning av kontinentalsockeln som inte kräver tillstånd, till exempel en vetenskaplig undersökning som utförs av en svensk vetenskaplig institution.
+G Gärningspersonen låter bli att skriftligen anmäla undersökningen till Sveriges geologiska undersökning minst fjorton dagar innan arbetet börjar.
+S Uppsåt till samtliga rekvisit. Lagen anger ingen skuldform. Utgångspunkten är då att uppsåt krävs.
+T En svensk forskargrupp börjar ta bottenprover på kontinentalsockeln utan att först ha anmält undersökningen.
+
+LAW S1975-49 | Förordningen (1975:49) om gemensam kontrollstämpel m.m. för arbeten av guld, silver eller platina | 1975:49 | Kontrollstämpelförordningen
+X 1,2
+
+@ v21-kontrollstampel-adelmetall | Brott mot förordningen om gemensam kontrollstämpel för arbeten av guld, silver eller platina | 8 § | 8
+PEN 0 | 0 | Böter | Böter
+C Ekonomisk brottslighet
+A guldstämpel;finhaltsstämpel;ändra stämpel;guldsmed;silverstämpel
+Q plain
+O Ett arbete av guld, silver eller platina som har kontrollstämplats.
+G Gärningspersonen gör minst ett av:
+  | Ändrar eller utplånar tillverkarstämpeln eller finhaltsstämpeln.
+  | Sätter en tillverkarstämpel eller finhaltsstämpel på arbetet i form av reliefstämpel.
+S Uppsåt.
+U Gärningen är belagd med straff i brottsbalken.
+T En guldsmed slipar bort tillverkarstämpeln på ett kontrollstämplat guldarmband som en annan tillverkare har gjort.
+
+LAW S1992-285 | Mineralförordningen (1992:285) | 1992:285 | Mineralförordningen
+
+@ v21-mineralforordningen-anmalan-gruvarbete | Brott mot mineralförordningen (anmälan om gruvarbete) | 57 § | 57
+PEN 0 | 0 | Böter | Böter
+C Ekonomisk brottslighet
+A gruva;gruvdrift;bergmästaren;lägga ned gruva;bergsstaten
+Q plain
+K Gärningspersonen är innehavare av en gruva eller motsvarande anläggning.
+G Gärningspersonen låter bli att genast anmäla till bergmästaren att gruvarbete eller motsvarande arbete påbörjas, läggs ned, avbryts för längre tid än sex månader eller återupptas.
+S Uppsåt eller oaktsamhet.
+T Ett gruvbolag stänger en gruva tills vidare och anmäler inte det till bergmästaren trots att uppehållet varar i över ett år.
+
+LAW S1970-340 | Förordningen (1970:340) om skolskjutsning | 1970:340 | Skolskjutsförordningen
+X 1,5
+
+@ v21-skolskjutsforordningen | Brott mot förordningen om skolskjutsning | 7 § | 7
+PEN 0 | 0 | Böter | Böter
+C Trafik
+A skolskjuts;skolbuss;skolskjutsskylt;skolbarn bilbälte;skoltaxi
+Q plain
+N För fordon som ägs eller brukas av till exempel staten, en kommun eller ett bolag bestäms vem som ansvarar som anordnare enligt samma grunder som för fordonsägare i trafikförordningen.
+K Gärningspersonen är förare av fordonet eller den som bedriver skolskjutsningen.
+G Ett fordon används för skolskjutsning trots minst ett av:
+  | Fordonet saknar skylt eller liknande som visar att det används för skolskjutsning.
+  | Dörrar på fordonets vänstra sida kan öppnas av passagerare, eller andra dörrar kan öppnas ofrivilligt av passagerare.
+  | Sittplatserna i en personbil eller lätt lastbil saknar bilbälte.
+  | Användningen strider mot en föreskrift som har meddelats för tillämpningen av dessa krav.
+S Uppsåt eller oaktsamhet.
+U Det är ett undantagsfall. Då får även ett fordon utan skylt och utan de föreskrivna dörrspärrarna användas för skolskjutsning.
+T Ett taxibolag kör dagligen förskoleklassbarn till skolan i en bil som saknar skolskjutsskylt och där barnen kan öppna vänster bakdörr.
+
+LAW S1970-344 | Kungörelsen (1970:344) om kompetenskrav för förare av större fritidsbåtar | 1970:344 | Kungörelsen om kompetenskrav för större fritidsbåtar
+
+@ v21-fritidsbat-kompetenskrav | Brott mot kungörelsen om kompetenskrav för förare av större fritidsbåtar | 2 § | 1,2
+PEN 0 | 0 | Böter | Böter
+C Trafik
+A stor fritidsbåt;skepparexamen;fritidsskeppare;båt 12 meter;förarbevis båt
+Q plain
+O En fritidsbåt vars skrov har en största längd av minst tolv meter och en största bredd av minst fyra meter.
+G Gärningspersonen för båten utan att ha avlagt skepparexamen, ha examens- eller avgångsbetyg från nautisk linje vid sjöbefälsskola eller ha annan utbildning som Transportstyrelsen har bestämt.
+S Uppsåt eller oaktsamhet.
+U Transportstyrelsen har medgett undantag.
+T En person kör sin 14 meter långa och 4,3 meter breda motoryacht utan att ha någon nautisk utbildning.
+
+LAW S1974-235 | Förordningen (1974:235) om tillstånd till sjöfart i inrikes trafik med utländskt fartyg m.m. | 1974:235 | Förordningen om inrikes sjöfart med utländskt fartyg
+X 1,1a
+
+@ v21-inrikes-sjofart-utlandskt-fartyg | Brott mot förordningen om tillstånd till sjöfart i inrikes trafik med utländskt fartyg | 3 § | 3
+PEN 0 | 0 | Böter | Böter
+C Trafik
+A cabotage sjöfart;utländskt fartyg inrikes trafik;kustfart;inrikes sjöfart
+Q plain
+K Gärningspersonen är befälhavare, redare eller den som i redarens ställe brukar fartyget.
+G Ett utländskt fartyg används för sjöfart i inrikes trafik i strid mot det förbud som gäller enligt 1724 års förordning om främmandes fart på Sverige.
+U Transportstyrelsen har medgett undantag, eller fartyget omfattas av en särskild överenskommelse med det land där det är registrerat.
+U Fartyget omfattas av EU:s regler om frihet att utföra sjötransporter inom medlemsstaterna eller om inrikes transporter på inre vattenvägar.
+S Uppsåt eller oaktsamhet.
+T Ett fartyg som är registrerat i ett land utanför EES fraktar gods mot betalning mellan två svenska hamnar utan att Transportstyrelsen har medgett undantag.
+
+LAW S1979-1036 | Förordningen (1979:1036) om högsta pris för vissa lastbilstransporter | 1979:1036 | Förordningen om högsta pris för vissa lastbilstransporter
+X 1
+
+@ v21-hogsta-pris-lastbilstransporter | Brott mot förordningen om högsta pris för vissa lastbilstransporter | 3 § | 3
+PEN 0 | 0 | Böter | Böter
+C Trafik
+A gotlandstillägg;fraktpris Gotland;högsta pris transport;gotlandstrafik lastbil
+Q plain
+G Gärningspersonen bryter mot en föreskrift som Sjöfartsverket har beslutat med stöd av förordningen, till exempel genom minst ett av:
+  | Tar ut ett högre pris än det föreskrivna högsta priset för en inrikes fjärrtransport av gods med lastbil till eller från Gotland.
+  | Tar ut ett högre pristillägg i den inrikes fjärrtrafiken än det högsta som har föreskrivits.
+S Uppsåt till samtliga rekvisit. Lagen anger ingen skuldform. Utgångspunkten är då att uppsåt krävs.
+T Ett åkeri tar för en godstransport med lastbil till Gotland ut ett pris som överstiger det högsta pris som Sjöfartsverket har föreskrivit.
+
+LAW S1982-569 | Förordningen (1982:569) om lotsning m.m. | 1982:569 | Lotsförordningen
+X 2,12
+
+@ v21-lotsforordningen | Brott mot förordningen om lotsning | 11 § | 11
+PEN 0 | 0 | Böter | Böter
+C Trafik
+A lots;privat lots;lotsning;olaga lotsning;sjöfartsverket lots
+Q plain
+N Den som låter bli att anlita lots trots lotsplikt döms enligt fartygssäkerhetslagen.
+G Gärningspersonen gör minst ett av:
+  | Anlitar för lotsning eller annat biträde åt fartyg inom Sveriges sjöterritorium en annan lots än en som är anställd av Sjöfartsverket, utan att Sjöfartsverket har förklarat att lots inte tillhandahålls i området.
+  | Lotsar fartyg eller utför på annat sätt lotsuppgifter på svenskt sjöterritorium utan att vara lots anställd av Sjöfartsverket, när den som anlitar lots bara får anlita en sådan lots.
+  | Bryter mot en föreskrift som har meddelats med stöd av förordningen, till exempel om befälhavarens skyldighet att lämna lotsen uppgifter av betydelse för lotsningen, och förseelsen är inte ringa.
+S Uppsåt eller oaktsamhet.
+U Gärningen är belagd med straff i brottsbalken, sjölagen eller sjötrafikförordningen.
+T En före detta sjökapten åtar sig mot betalning att lotsa ett lastfartyg in till en svensk hamn utan att vara anställd som lots av Sjöfartsverket.
+
+LAW S1986-172 | Förordningen (1986:172) om luftfartygsregistret m.m. | 1986:172 | Luftfartygsregisterförordningen
+X 15,16,36
+
+@ v21-luftfartygsregistret | Brott mot förordningen om luftfartygsregistret | 39 § | 39
+PEN 0 | 0 | Böter | Böter
+C Trafik
+A flygplan ägarbyte;registrera flygplan;luftfartygsregistret;oriktig uppgift flygplan;avregistrera flygplan
+Q plain
+G Gärningspersonen gör i fråga om luftfartygsregistret minst ett av:
+  | Lämnar oriktiga uppgifter i samband med en ansökan eller anmälan om registrering.
+  | Fullgör inte en anmälningsskyldighet, till exempel att som tidigare eller ny ägare genast anmäla till Transportstyrelsen att ett registrerat luftfartyg har bytt ägare, att ägarens nationalitet har ändrats eller att luftfartyget har ändrats på ett sätt som har betydelse för identifieringen.
+  | Rättar sig inte efter ett föreläggande från Transportstyrelsen att lämna uppgifter eller ge in handlingar om avregistrering eller att komplettera en anmälan.
+S Uppsåt till samtliga rekvisit. Lagen anger ingen skuldform. Utgångspunkten är då att uppsåt krävs.
+T En person köper ett registrerat sportflygplan och anmäler aldrig ägarbytet till Transportstyrelsen.
+
+LAW S1986-300 | Sjötrafikförordningen (1986:300) | 1986:300 | Sjötrafikförordningen
+X 1:1,1:2,2:2,3:2,3:5,3:6
+
+@ v21-sjotrafikforordningen | Brott mot sjötrafikförordningen | 5:1 | 5:1
+PEN 0 | 0 | Böter | Böter
+C Trafik
+A sjövägsregler;lanternor;fartbegränsning till sjöss;trafikseparering;förtöja vid sjömärke;påkört sjömärke
+Q plain
+N Kortet gäller fartyg som är skepp, det vill säga har ett skrov som är längre än 24 meter. Begås gärningen vid framförande av en båt, alltså ett mindre fartyg, döms i stället till penningböter.
+G Gärningspersonen gör minst ett av:
+  | Bryter som befälhavare mot de internationella sjövägsreglernas bestämmelser om ljus eller signal (uppsåt eller oaktsamhet).
+  | Låter som befälhavare, eller som den som i befälhavarens ställe eller på befälhavarens uppdrag ansvarar för fartygets framförande, bli att följa sjövägsreglernas bestämmelser om trafikseparering (uppsåt eller oaktsamhet).
+  | Bryter mot föreskrifter som Transportstyrelsen eller länsstyrelsen har meddelat för sjötrafiken, till exempel om fartbegränsning, förbud mot ankring eller begränsning i rätten att använda ett vattenområde (uppsåt eller oaktsamhet).
+  | Inrättar, ändrar, flyttar eller drar in en sjösäkerhetsanordning för sjöfarten utan tillstånd (uppsåt eller oaktsamhet).
+  | Förtöjer ett fartyg vid en fyr, ett sjömärke eller en annan säkerhetsanordning.
+  | Har medverkat i en händelse som har lett till att en fyr, ett sjömärke eller en annan säkerhetsanordning har skadats eller rubbats och anmäler inte det till Sjöfartsverket eller den som svarar för anordningen.
+S Uppsåt eller oaktsamhet för de alternativ där det anges. För förtöjning vid säkerhetsanordning och utebliven anmälan anger förordningen ingen skuldform. Utgångspunkten är då att uppsåt krävs.
+U Gärningen är belagd med straff i brottsbalken, sjölagen eller skyddslagen.
+T Befälhavaren på ett lastfartyg kör i tio knop genom en farled där länsstyrelsen har föreskrivit en högsta fart på fem knop.
+T Befälhavaren på ett passagerarfartyg framför fartyget i mörker utan att föra de föreskrivna lanternorna.
+
+LAW S1986-305 | Svävarfartsförordningen (1986:305) | 1986:305 | Svävarfartsförordningen
+X 1,2,2a,10,14
+
+@ v21-svavarfartsforordningen | Brott mot svävarfartsförordningen | 15 § | 15
+PEN 0 | 0 | Böter | Böter
+C Trafik
+A svävare;svävare utan tillstånd;hovercraft;luftkuddefarkost
+Q plain
+G Gärningspersonen gör minst ett av:
+  | Använder en svävare utan föreskrivet tillstånd eller godkännande eller i strid mot ett meddelat villkor.
+  | Bryter mot Transportstyrelsens säkerhetsföreskrifter eller föreskrifter om besättning, tillsyn, dagbok, rapportering av sjöolyckor eller transport av farligt gods för svävare.
+  | Framför en svävare utan att anpassa färdväg, hastighet och färdsätt så att människor och djur inte störs i onödan och skador på mark och växtlighet undviks.
+  | Äger en svävare och låter bli att göra vad som ankommer på ägaren för att hindra att svävaren används utan föreskrivet tillstånd eller godkännande eller i strid mot ett meddelat villkor.
+S Uppsåt eller oaktsamhet.
+U Gärningen är belagd med straff i sjölagen.
+U Svävaren används i tjänsteutövning inom till exempel Polismyndigheten, Försvarsmakten, Kustbevakningen eller den kommunala räddningstjänsten, där tillstånd inte krävs.
+T En privatperson kör sin svävare över en sjö och längs stränderna utan att ha tillstånd från länsstyrelsen.
+
+LAW S1990-717 | Förordningen (1990:717) om undersökning av olyckor | 1990:717 | Förordningen om undersökning av olyckor
+X 20
+
+@ v21-olycksundersokning-rapportering | Brott mot förordningen om undersökning av olyckor (rapportering) | 27 § | 27
+PEN 0 | 0 | Böter | Böter
+C Trafik
+A rapportera olycka;tillbud;flygolycka;sjöolycka;järnvägsolycka;haverikommissionen
+Q plain
+G Gärningspersonen gör minst ett av:
+  | Rapporterar inte omedelbart till tillsynsmyndigheten en olycka eller ett tillbud som ska rapporteras enligt luftfartslagen eller sjölagen, eller följer inte upp en muntlig rapport med en skriftlig så snart som möjligt.
+  | Driver verksamhet på järnväg, tunnelbana eller spårväg och rapporterar inte omedelbart en olycka eller ett tillbud som ska rapporteras.
+  | Rapporterar inte på tillsynsmyndighetens begäran en annan olycka eller ett annat tillbud som kan ha betydelse för flygsäkerheten, sjösäkerheten eller säkerheten i spårtrafik, trots att gärningspersonen är befälhavare på ett luftfartyg eller fartyg eller driver spårverksamhet.
+  | Bryter mot tillsynsmyndighetens närmare föreskrifter om rapporteringen.
+S Uppsåt eller oaktsamhet.
+U Fallet är ringa.
+U Gärningen är en sådan utebliven rapportering som straffas enligt sjölagen.
+T Ett spårvägsbolag rapporterar inte till tillsynsmyndigheten att två spårvagnar har varit nära att kollidera.
+
+LAW S1993-185 | Förordningen (1993:185) om arbetsförhållanden vid vissa internationella vägtransporter | 1993:185 | AETR-förordningen
+X 10,30
+
+@ v21-aetr-hindra-kontroll | Brott mot förordningen om arbetsförhållanden vid vissa internationella vägtransporter (hindrande av kontroll) | 19 a § | 19a
+PEN 0 | 0 | Böter | Böter
+C Trafik
+A färdskrivare kontroll;kör- och vilotider;AETR;hindra kontroll;vägra visa färdskrivare
+Q plain
+G Gärningspersonen hindrar eller försvårar en kontroll enligt förordningen, till exempel en polismans eller bilinspektörs kontroll på väg av kör- och vilotider och färdskrivare eller Transportstyrelsens kontroll i ett företags lokaler.
+S Uppsåt.
+U Straff kan dömas ut enligt brottsbalken eller lagen om straff för vissa trafikbrott.
+U Sanktionsavgift kan påföras enligt förordningen.
+T En lastbilsförare på en internationell transport som omfattas av AETR vägrar vid en vägkontroll att lämna ut färdskrivarens diagramblad till bilinspektören.
+
+LAW S1994-1162 | Förordningen (1994:1162) om skeppsmätning | 1994:1162 | Skeppsmätningsförordningen
+X 10,11,12,23,24
+
+@ v21-skeppsmatning-anmalan | Brott mot förordningen om skeppsmätning (anmälan till mätning) | 37 § | 37
+PEN 0 | 0 | Böter | Böter
+C Trafik
+A skeppsmätning;mätbrev;ommätning fartyg;dräktighet;ombyggt fartyg
+Q plain
+G Gärningspersonen låter bli att anmäla ett fartyg till mätning eller ommätning hos Transportstyrelsen i minst en av följande situationer:
+  | Som varvsägare eller beställare, så snart byggnadsarbetet på ett mätningspliktigt fartyg har påbörjats.
+  | Som ägare eller befälhavare, senast när ett mätningspliktigt fartyg från utlandet kommer till den första svenska hamnen.
+  | Som ägare eller befälhavare, genast när fartyget i något annat fall ska mätas här i landet.
+  | Som ägare eller befälhavare, omedelbart när fartyget har ändrats så att brutto- eller nettodräktigheten kan öka.
+  | Som ägare eller befälhavare, genast när ett utländskt fartyg har övergått till en svensk ägare.
+S Uppsåt till samtliga rekvisit. Lagen anger ingen skuldform. Utgångspunkten är då att uppsåt krävs.
+T En redare bygger om ett fartyg med ett nytt däckshus som ökar dräktigheten och anmäler inte fartyget till ommätning.
+
+LAW S1998-1276 | Trafikförordningen (1998:1276) | 1998:1276 | TrF
+X 3:84
+
+@ v21-trafikforordningen-tavling-pa-vag | Brott mot trafikförordningen (tävling på väg) | 14:1 | 14:1,14:14
+PEN 0 | 0 | Böter | Böter
+C Trafik
+A tävling på väg;cykellopp utan tillstånd;billopp;rally;uppvisning med fordon;streetrace
+Q plain
+G Gärningspersonen anordnar en tävling eller uppvisning på väg med fordon, eller med till exempel ryttare, utan tillstånd av länsstyrelsen eller i strid mot ett sådant tillstånd.
+S Uppsåt eller oaktsamhet.
+U Straff kan dömas ut enligt brottsbalken eller lagen om straff för vissa trafikbrott.
+T En förening arrangerar ett cykellopp på allmän väg utan att ha sökt tillstånd hos länsstyrelsen.
+
+LAW S1998-1355 | Förordningen (1998:1355) om trafik med höghastighetsfartyg | 1998:1355 | Förordningen om höghastighetsfartyg
+X 1,2,4,5
+
+@ v21-hoghastighetsfartyg | Brott mot förordningen om trafik med höghastighetsfartyg | 7 § | 7
+PEN 0 | 0 | Böter | Böter
+C Trafik
+A höghastighetsfartyg;snabbfärja;katamaranfärja;svallvågor;trafikregler fartyg
+Q plain
+O Ett höghastighetsfartyg, det vill säga ett fartyg som är längre än 50 meter och kan uppnå en fart på minst 32 knop.
+G Gärningspersonen gör minst ett av:
+  | Sätter som ägare fartyget i trafik till eller från en svensk hamn utan att först anmäla det till Transportstyrelsen.
+  | Bryter mot de särskilda trafikregler som Transportstyrelsen har beslutat för användningen av fartyget.
+  | Framför fartyget utan att ha med en kopia av Transportstyrelsens beslut om de särskilda trafikreglerna ombord.
+S Uppsåt eller oaktsamhet.
+U Gärningen är belagd med straff i sjölagen.
+U Fartyget används för tjänsteutövning i till exempel Polismyndigheten, Försvarsmakten eller Kustbevakningen. Då krävs ingen anmälan.
+T Befälhavaren på en snabbfärja kör i högre fart genom skärgården än vad Transportstyrelsens särskilda trafikregler för fartyget tillåter.
+
+LAW S1998-786 | Förordningen (1998:786) om internationella vägtransporter inom Europeiska ekonomiska samarbetsområdet (EES) | 1998:786 | Förordningen om internationella vägtransporter inom EES
+X 2d,5b
+
+@ v21-ees-vagtransporter-utan-tillstand | Brott mot förordningen om internationella vägtransporter inom EES (trafik utan tillstånd) | 4 § | 4
+PEN 0 | 0 | Böter | Böter
+C Trafik
+A gemenskapstillstånd;olaga cabotage buss;utländsk buss;internationell trafik utan tillstånd;utländskt åkeri
+Q plain
+N Godstransporter som en innehavare av gemenskapstillstånd utför i strid med EU:s cabotageregler leder i stället till sanktionsavgift för transportföretaget. Fortsatt färd får hindras enligt klampningslagen.
+G Gärningspersonen gör minst ett av:
+  | Driver internationell persontrafik med buss utan det gemenskapstillstånd, det tillstånd för linjetrafik, det kontrolldokument eller det certifikat för transporter för egen räkning som EU:s förordning om tillträde till marknaden för persontransporter med buss kräver.
+  | Driver internationell godstrafik på väg utan något av de tillstånd som EU:s förordning om tillträde till marknaden för godstransporter på väg kräver, till exempel gemenskapstillstånd.
+  | Utför cabotagetrafik med buss, det vill säga inrikes persontransporter i ett annat land än hemlandet, i strid med EU:s förordning.
+  | Utför tillfällig internationell persontransport med buss utan det tillstånd eller kontrolldokument som Interbus-överenskommelsen kräver.
+S Uppsåt.
+U Den som har hemvist i Sverige, Danmark, Finland eller Norge behöver inget kontrolldokument för viss tillfällig persontrafik mellan dessa länder.
+T Ett åkeri kör gods med lastbil från Sverige till Tyskland mot betalning utan att ha gemenskapstillstånd.
+
+@ v21-ees-vagtransporter-bestallaransvar | Brott mot förordningen om internationella vägtransporter inom EES (beställaransvar) | 6 § och 6 a § | 6,6a
+PEN 0 | 0 | Böter | Böter
+C Trafik
+A beställaransvar;olaga cabotage;speditör;transportköpare;beställa svartåkeri
+Q plain
+K Gärningspersonen har yrkesmässigt, för egen eller annans räkning, beställt transporten.
+K Transporten uppfyller minst ett av:
+  | Internationell persontrafik eller godstrafik bedrivs utan tillstånd.
+  | Cabotagetrafik med buss utförs i strid med EU:s förordning om persontransporter med buss.
+  | En godstransport utförs i strid med EU:s regler om cabotagetransporter, det vill säga inrikes transporter som utförs av ett åkeri från ett annat land.
+G Gärningspersonen uppfyller minst ett av:
+  | Kände vid beställningen till, eller hade skälig anledning att anta, att tillstånd saknades eller att villkoren för cabotagetransporten inte var uppfyllda.
+  | Har beställt transporten av trafikutövaren och har inte kontrollerat innehavet av tillstånd vid tidpunkten för transporten på ett sätt som skäligen kan begäras.
+S Uppsåt eller oaktsamhet. Det räcker att beställaren hade skälig anledning att anta att tillstånd saknades, eller av oaktsamhet lät bli att kontrollera tillståndet.
+T En speditör anlitar ett utländskt åkeri för en serie inrikes körningar i Sverige trots att speditören vet att åkeriet redan har utfört fler cabotagetransporter än reglerna tillåter.
+
+LAW S2003-438 | Fartygssäkerhetsförordningen (2003:438) | 2003:438 | FSF
+
+@ v21-fartygssakerhetsforordningen-besattningslista | Brott mot fartygssäkerhetsförordningen (besättningslista) | 4:37 | 4:36,4:37
+PEN 0 | 0 | Böter | Böter
+C Trafik
+A besättningslista;besättning fartyg;ombordvarande personal;mönstring
+Q plain
+K Gärningspersonen är befälhavare eller redare.
+G Gärningspersonen gör minst ett av:
+  | Ser inte till att ombordvarande personal antecknas i en besättningslista.
+  | Ser inte till att listan förvaras ombord på fartyget och i land och sparas i minst tre år.
+  | Ser inte till att listan är ordnad så att den aktuella besättningen vid varje tidpunkt lätt kan utläsas, eller håller den inte tillgänglig för tillsynsmyndigheten.
+S Uppsåt eller oaktsamhet.
+U Transportstyrelsen har föreskrivit eller beslutat om undantag från kraven.
+T En redare låter ett passagerarfartyg gå i trafik en hel säsong utan att någon besättningslista förs.

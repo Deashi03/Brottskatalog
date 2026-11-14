@@ -8,7 +8,7 @@ const inline=[...html.matchAll(/<script(?:\s[^>]*)?>([\s\S]*?)<\/script>/g)].map
 for(const f of ['./stages-20.js','./enhetlighet-20.js','./preskription-20.js','./narliggande-20.js']){
  assert.ok(scripts.includes(f),'index laddar '+f);assert.ok(sw.includes(f),'service worker cachar '+f);
 }
-assert.ok(html.includes("window.BK_RELEASE = '2.0';")&&sw.includes("'brottskatalog-v200-20261114'"));
+assert.ok(html.includes("window.BK_RELEASE = '2.1';")&&sw.includes("'brottskatalog-v210-20261114'"));
 assert.ok(!/accordion\([^)]*(Lydelse och gärningstidpunkt|Straffskala och beslutsvillkor)/.test(html),'de två menyerna är borttagna');
 assert.ok(html.includes("accordion('preskription','Preskription'")&&html.includes("accordion('narliggande','Närliggande brott'"));
 assert.ok(html.indexOf('fu18-menu')<html.indexOf("accordion('preskription'")&&html.indexOf("accordion('preskription'")<html.indexOf("accordion('narliggande'"),'ordning: FU-ledning, preskription, närliggande brott');
@@ -89,3 +89,22 @@ const src=new Set(JSON.parse(read('data/law-sources.json')).sources.map(s=>s.sfs
 for(const f of fs.readdirSync(path.join(root,'data/special19')).filter(f=>f.endsWith('.txt')))
  for(const m of read('data/special19/'+f).matchAll(/^LAW [^|]+\|[^|]+\|\s*(\d{4}):(\d+)\s*\|/gm))assert.ok(src.has(m[1]+'-'+m[2]),'lagen bevakas inte: '+m[1]+':'+m[2]);
 console.log('v20_test OK',base.length,'grundkort',crimes.length,'kort');
+
+// 2.1: kort för alla återstående författningar, andra läsningen av rekvisiten och preskription för villkorade straffskalor.
+assert.ok(base.length>=1090,'2.1: minst 1 090 grundkort: '+base.length);
+assert.ok(base.filter(c=>c.id.startsWith('v21-')).length>=430,'nya 2.1-kort');
+for(const id of ['v21-insiderbrott','v21-marknadsmanipulation','v21-subventionsbrott','v21-tullforseelse','v21-forgripelse-mot-konungen'])assert.ok(byId[id],'kort saknas: '+id);
+for(const c of base)assert.ok(P.html(c),'preskription saknas: '+c.id);
+const up=byId['v15-cover-upplopp'],bu=P.branches(up);
+assert.equal(bu.length,3);assert.equal(bu.map(b=>P.compute(up,b.range).years).join(),'10,5,5');
+assert.equal(P.check(up,{crime:'2026-01-01',today:T}).status,'none','gren måste väljas');
+assert.equal(P.check(up,{crime:'2026-01-01',today:T,branch:'0'}).end,'2036-01-01');
+assert.equal(JSON.stringify(P.scaleRange('Fängelse 10–18 år eller livstid')),'{"max":18,"life":true}');
+assert.equal(JSON.stringify(P.scaleRange('Böter')),'{"max":0,"life":false}');
+const R=W.BK_REKVISIT19,flat=id=>JSON.stringify(R[id]);
+assert.ok(flat('v03-olaga-forfoljelse').includes('oaktsam uppmaning till självmord'),'AP2: olaga förföljelse');
+assert.ok(flat('v09-bidragsbrott').includes('frivillig rättelse'),'AP2: bidragsbrott');
+assert.ok(!flat('v03-grov-urkundsforfalskning').includes('sedel'),'AP2: sedel är inte urkund');
+assert.ok(flat('v15-inventory-22-1').includes('BrB 22:4'),'AP2: landsförräderi');
+assert.equal(N.upcoming(byId['v21-ellagen-natkoncession'],'2026-11-14').length,1);
+console.log('v21 OK',base.length,'grundkort');

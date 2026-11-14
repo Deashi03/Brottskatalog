@@ -45,10 +45,10 @@ U Involverandet är uppenbart mindre allvarligt, till exempel på grund av ringa
 
 @ v15-cover-myteri | Myteri | BrB 16:6
 K Gärningspersonen ingår i en samling krigsmän.
-G Samlingen hotar gemensamt att med våld sätta sig upp mot en förman, eller brukar gemensamt våld mot person eller egendom.
+G Samlingen hotar gemensamt att med våld sätta sig upp mot en förman. Straffet är strängare om deltagarna i myteriet gemensamt har brukat våld mot person eller egendom.
 S Uppsåt till samtliga rekvisit.
 
-@ v03-hets-mot-folkgrupp | Hets mot folkgrupp | BrB 16:8 första stycket
+@ v03-hets-mot-folkgrupp | Hets mot folkgrupp | BrB 16:8 första och andra stycket
 G I ett uttalande eller annat meddelande som sprids gör gärningspersonen minst ett av:
   | Uppmanar till våld mot, hotar eller uttrycker missaktning för en folkgrupp, annan sådan grupp eller en enskild i gruppen.
   | Förnekar, ursäktar eller uppenbart förringar ett lagakraftvunnet konstaterat folkmord, brott mot mänskligheten, krigsförbrytelse eller aggressionsbrott, på ett sätt som är ägnat att uppmana till våld mot, hota eller uttrycka missaktning för en sådan grupp.
@@ -104,7 +104,7 @@ G Gärningspersonen gör minst ett av:
   | Skildrar sexuellt våld eller tvång i bild.
   | Skildrar i rörliga bilder närgånget eller utdraget grovt våld mot människor eller djur.
   | Sprider en sådan skildring.
-S Uppsåt att bilderna sprids, eller uppsåt till spridningen. Vid spridning av sexuellt våld i yrkesmässig verksamhet eller i förvärvssyfte räcker oaktsamhet.
+S Uppsåt att bilderna sprids, eller uppsåt till spridningen. Vid spridning i yrkesmässig verksamhet eller annars i förvärvssyfte räcker oaktsamhet.
 U Gärningen är försvarlig med hänsyn till omständigheterna, till exempel i nyhetsrapportering.
 
 @ v15-cover-otillaten-utlamning-av-teknisk-upptagning | Otillåten utlämning av teknisk upptagning | BrB 16:10 d

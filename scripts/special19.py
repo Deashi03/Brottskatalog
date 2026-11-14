@@ -16,7 +16,7 @@ Källformat (en rad per uppgift):
   och typexempel: T text, V text, TF etikett | text.
 """
 import os,re,json,glob
-CHECKED='2026-11-04'
+CHECKED='2026-11-13'
 META=('LAW ','X ','PEN ','C ','A ','Q ','FU ','N ','T ','V ','TF ')
 
 # Åtalsregler för speciallagar med särskilda åtalsvillkor. Samma form som prosecution-171.js.

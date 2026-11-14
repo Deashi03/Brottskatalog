@@ -1,5 +1,43 @@
 # Ändringslogg – Brottskatalog
 
+## 2.1 – 2026-11-14
+
+### Nya brott
+- 437 nya brottskort. Katalogen har nu 1 096 brott och täcker alla gällande lagar och förordningar som har dagsböter eller fängelse i straffskalan, enligt inventeringen av Svensk författningssamling den 13 november 2026. Exempel:
+  - **Ekonomi och finans:** insiderbrott, marknadsmanipulation, obehörigt röjande av insiderinformation, subventionsbrott, olovlig finansiell verksamhet, sanktionsbrott, brott mot frysningsbeslut, meddelandeförbuden i finansmarknadslagarna, aktiebolagslagens straffbestämmelser (bland annat målvaktsförbudet).
+  - **Skatt och tull:** olovlig förflyttning och befattning med punktskattepliktiga varor, märkt olja, tullförseelse.
+  - **Immaterialrätt:** patentbrott, mönsterskyddsbrott, företagsnamnsbrott, kretsmönsterbrott, växtförädlarrättsbrott, avkodningsutrustning.
+  - **Säkerhet och försvar:** klusterammunition, krigsmateriel, produkter med dubbla användningsområden, kärnteknisk verksamhet, strålskydd, förfogande- och ransoneringslagarna, skyddsrum, skydd för geografisk information.
+  - **Yttrandefrihet och sekretess:** tryckfrihetsförordningen och yttrandefrihetsgrundlagen (efterforskning och repressalier, tystnadsplikt, spridning av beslagtagen skrift), offentlighets- och sekretesslagen, meddelarskydd.
+  - **Sjöfart, luftfart och väg:** förorening från fartyg, barlastvatten, fartygssäkerhet, sjöfartsskydd, hamnskydd, sjömanslagen (bland annat myteri), nationella järnvägssystem, väglagen, luftfartsförordningen, trafikförordningen 14:1, fordonsförordningen.
+  - **Miljö, livsmedel och djur:** utsläpp av växthusgaser, livsmedelslagen, foderlagen, växtskyddslagen, epizootilagen, zoonoslagen, skogsvårdslagen, rennäringslagen.
+  - **Vård och socialt:** steriliseringslagen, transplantationslagen, begravningslagen, socialtjänstlagen, biobankslagen, sprutor och kanyler.
+  - **Arbetsliv:** arbetsmiljölagen 8 kap., arbetstidslagen och arbetstidslagarna för transportsektorn.
+  - **Brottsbalken:** straffskärpning vid brott mot Konungen (18:2) och mot främmande makts representation (19:11) samt oaktsam medverkan till spioneri med flera brott (19:15).
+- Alla nya kort har förstadiekort, FU-ledning, preskription och typexempel.
+
+### Rättningar efter andra läsningen
+- Rekvisiten på alla 393 äldre kort är lästa en andra gång mot gällande lagtext. 38 fel i sak är rättade, bland annat:
+  - **Olaga förföljelse:** oaktsam uppmaning till självmord saknades i uppräkningen.
+  - **Bidragsbrott och vårdslöst bidragsbrott:** frivillig rättelse och ansvarsfrihet vid mindre allvarlig gärning saknades.
+  - **Grov urkundsförfalskning:** exemplet ”en sedel” är borttaget (det är penningförfalskning).
+  - **Brott mot tystnadsplikt:** ringa gärning är fri från ansvar bara vid oaktsamhet.
+  - **Kontakt för att träffa ett barn i sexuellt syfte:** undantaget gäller bara de mindre allvarliga brotten.
+  - **Utpressning:** hot om åtal eller angivelse är olaga tvång bara om tvånget är otillbörligt.
+  - **Landsförräderi och landsskadlig vårdslöshet:** ansvarsfriheten i BrB 22:4 saknades.
+  - **Osann och ovarsam utsaga inför nordisk eller internationell domstol:** kravet på motsvarande svensk ed och ansvarsfriheten i BrB 15:4 saknades.
+  - Åtta felaktiga styckehänvisningar, till exempel grovt ocker (BrB 9:5 tredje stycket).
+
+### Preskription
+- Brott med villkorad straffskala (till exempel upplopp, myteri, högförräderi, arbetsmiljöbrott och brukande av det förfalskade) visar nu preskriptionstiden för varje gren. Välj gren och datum för att se om brottet är preskriberat. Därmed har alla brott preskriptionsmenyn.
+
+### Kommande lagändringar
+- Raden visas nu också på korten för ellagen (upphör 2027-01-01), etikprövningslagen och lagen om idéburna organisationer (ny lydelse 2027-07-01).
+- Lagbevakningen omfattar alla 316 författningar med kort.
+
+### Kontroller
+- Åklagarmyndighetens föreskrifter om ledning av förundersökning (ÅFS 2005:9) är kontrollerade på nytt mot aklagare.se. Senaste ändringen är fortfarande ÅFS 2019:2, så verktyget för FU-ledning bygger på gällande version.
+
 ## 2.0 – 2026-11-14
 
 ### Nya brott

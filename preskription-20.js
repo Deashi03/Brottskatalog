@@ -35,9 +35,20 @@ function yearsFor(max,life){if(life||max>8)return 25;if(max>5)return 15;if(max>2
 function oldYearsFor(max,life){if(life)return 25;if(max>8)return 15;if(max>2)return 10;if(max>1)return 5;return 2;}
 function absoluteFor(max,life,years){if(max===0&&!life&&years===2)return 5;if(!life&&max<=2)return 15;return 30;}
 
-function compute(c){
+/* 2.1: villkorade straffskalor – varje gren i penaltyAlternatives15 får sin egen preskriptionstid. */
+function scaleRange(t){
+ t=String(t||'');const life=/livstid/i.test(t);let max=0;
+ for(const m of t.matchAll(/(\d+)\s*(år|månader|mån)/g)){const v=m[2]==='år'?+m[1]:+m[1]/12;if(v>max)max=v;}
+ if(!max&&!life&&!/böter/i.test(t))return null;
+ return {max,life};
+}
+function branches(c){
+ if(!c||c.stageType||(c.penaltyRange&&Number.isFinite(Number(c.penaltyRange.max))))return [];
+ return (c.penaltyAlternatives15||[]).map(a=>({when:a.when,scale:a.scale,range:scaleRange(a.scale)})).filter(a=>a.range);
+}
+function compute(c,range){
  if(!c||(c.stageStatus&&c.stageStatus!=='punishable'))return null;
- const r=c.penaltyRange;if(!r||!Number.isFinite(Number(r.max)))return null;
+ const r=range||c.penaltyRange;if(!r||!Number.isFinite(Number(r.max)))return null;
  const max=Number(r.max),life=!!r.life,b=base(c),stage=c.stageType||null;
  const par=stage?byId(c.stageParentId):null;
  const parentLife=stage?!!(c.stageParentLife||(par&&par.penaltyRange&&par.penaltyRange.life)):life;
@@ -73,7 +84,9 @@ function days(a,b){return Math.round((b-a)/86400000);}
 
 /* check(c,{crime,eighteen,child,today}) → resultat för datumkontrollen. */
 function check(c,o){
- const p=compute(c);if(!p)return null;
+ const br=branches(c);
+ if(br.length&&!(o&&o.branch!==''&&o.branch!=null&&br[+o.branch]))return {status:'none',text:'Välj vilken gren av brottet som gäller.'};
+ const p=compute(c,br.length?br[+o.branch].range:null);if(!p)return null;
  const crime=parse(o&&o.crime),today=parse(o&&o.today)||parse(iso(new Date()));
  if(!crime)return {status:'none',text:'Ange datum för brottet.'};
  if(crime>today)return {status:'none',text:'Datumet ligger i framtiden.'};
@@ -98,7 +111,19 @@ function check(c,o){
  return {status:left<=90?'soon':'ok',end:iso(end),abs:iso(abs),left,text:'Inte preskriberat. Sista dag: '+iso(end)+' ('+left+' '+(left===1?'dag':'dagar')+' kvar).',detail};
 }
 
+function branchHtml(c,br){
+ const rows=br.map(b=>{const p=compute(c,b.range);return '<tr><td>'+esc(b.when)+'<span>'+esc(b.scale)+'</span></td><td>'+(p.never?'Preskriberas inte':p.years+' år')+'</td><td>'+(p.never?'–':p.absolute+' år')+'</td></tr>';}).join('');
+ const opts='<option value="">Välj gren</option>'+br.map((b,i)=>'<option value="'+i+'">'+esc(b.when)+'</option>').join('');
+ return '<div class="presk20"><p class="presk20-text">Straffskalan beror på vilken gren av brottet som gäller. Preskriptionstiden följer grenens högsta straff.</p>'+
+  '<table class="presk20-table"><thead><tr><th>Gren</th><th>Preskription</th><th>Absolut</th></tr></thead><tbody>'+rows+'</tbody></table>'+
+  '<div class="presk20-tool" data-presk20-card="'+esc(c.id)+'"><div class="presk20-tool-title">Är brottet preskriberat?</div>'+
+  '<label class="presk20-field">Gren<select data-presk20="branch">'+opts+'</select></label>'+
+  '<label class="presk20-field">Datum för brottet<input type="date" data-presk20="crime" max="'+iso(new Date())+'"></label>'+
+  '<div class="presk20-result" data-presk20="result" role="status" aria-live="polite">Välj gren och ange datum för brottet.</div></div>'+
+  '<p class="source-label">Preskriptionstid enligt BrB 35:2 och absolut preskription enligt BrB 35:4. Kontrollerad mot gällande lydelse '+CHECKED+'.</p></div>';
+}
 function html(c){
+ const br=branches(c);if(br.length)return branchHtml(c,br);
  const p=compute(c);if(!p)return '';
  const id=esc(c.id);
  const head=p.never
@@ -122,7 +147,7 @@ function update(box){
  const q=n=>box.querySelector('[data-presk20="'+n+'"]');
  const child=!!(q('child')&&q('child').checked);
  const e18=box.querySelector('.presk20-e18');if(e18)e18.hidden=!child;
- const r=check(c,{crime:q('crime').value,child,eighteen:q('eighteen')?q('eighteen').value:''});
+ const r=check(c,{crime:q('crime').value,child,eighteen:q('eighteen')?q('eighteen').value:'',branch:q('branch')?q('branch').value:''});
  const out=q('result');if(!r||!out)return;
  out.className='presk20-result '+r.status;
  out.innerHTML='<strong>'+esc(r.text)+'</strong>'+((r.detail||[]).map(d=>'<span>'+esc(d)+'</span>').join(''));
@@ -131,5 +156,5 @@ if(typeof document!=='undefined'){
  const on=e=>{const t=e.target;if(!t||!t.getAttribute||!t.getAttribute('data-presk20'))return;const box=t.closest('[data-presk20-card]');if(box)update(box);};
  document.addEventListener('input',on);document.addEventListener('change',on);
 }
-window.BK_PRESK20={compute,check,html,checked:CHECKED,yearsFor,absoluteFor};
+window.BK_PRESK20={compute,check,html,branches,scaleRange,checked:CHECKED,yearsFor,absoluteFor};
 })();

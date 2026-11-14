@@ -125,7 +125,7 @@ G Gärningspersonen utsätter en annan person för upprepade kränkningar.
 G Kränkningarna består av minst ett av:
   | Beskyllningar, nedsättande uttalanden eller förödmjukande beteenden.
   | Otillbörliga hot, otillbörligt tvång eller otillbörlig övervakning.
-F Kränkningarna är var för sig eller tillsammans ägnade att allvarligt skada personens självkänsla.
+F Kränkningarna är sammantagna ägnade att allvarligt skada personens självkänsla.
 S Uppsåt till samtliga rekvisit.
 ## Varaktig övervakning
 G Gärningspersonen utsätter en annan person för varaktig otillbörlig övervakning.
@@ -157,6 +157,7 @@ R ringa
 G Gärningspersonen tar i anspråk husrum, förtäring, transport, tillträde till föreställning eller annan liknande tjänst som tillhandahålls mot kontant betalning.
 G Gärningspersonen gör inte rätt för sig.
 S Uppsåt att inte betala.
+U Gärningen avser ett värde som inte är ringa och är i övrigt ett bedrägeri enligt BrB 9:1. Då döms för bedrägeri.
 
 @ grovt-bedrageri | Grovt bedrägeri | BrB 9:3
 B bedrageri

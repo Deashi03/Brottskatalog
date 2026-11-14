@@ -1,0 +1,617 @@
+LAW S2004-487 | Lagen (2004:487) om sjöfartsskydd | 2004:487 | Sjöfartsskyddslagen
+X 9,26
+
+@ v21-sjofartsskydd-forbud-forelaggande | Brott mot lagen om sjöfartsskydd (förbud eller föreläggande) | 22 § | 9,22,26
+PEN 0 | 1 | Böter eller fängelse i högst ett år | B–F 1 år
+C Trafik
+A sjöfartsskydd;hamnanläggning förbud;ISPS;fartyg kvarhållet;föreläggande hamn
+Q plain
+G Gärningspersonen bryter mot minst ett av:
+  | Ett förbud eller föreläggande mot ett fartyg som har meddelats med stöd av EU:s förordning om sjöfartsskydd, till exempel ett beslut om att fartyget ska hållas kvar eller inte får gå in i hamn.
+  | Ett förbud för en hamnanläggningsinnehavare att låta hamnanläggningen betjäna fartyg på grund av väsentliga brister i sjöfartsskyddet.
+  | Ett föreläggande för hamnanläggningsinnehavaren att avhjälpa sådana brister.
+S Uppsåt eller oaktsamhet.
+U Förbudet eller föreläggandet är förenat med vite.
+U Gärningen är belagd med strängare straff i brottsbalken eller sjölagen.
+T En hamnanläggning fortsätter att ta emot internationella lastfartyg trots att Transportstyrelsen har förbjudit det på grund av allvarliga brister i skyddet.
+
+@ v21-sjofartsskydd-skyddsplan-certifikat | Brott mot lagen om sjöfartsskydd (skyddsplan, certifikat och tillsyn) | 23 § | 23,26
+PEN 0 | 0.5 | Böter eller fängelse i högst sex månader | B–F 6 mån
+C Trafik
+A sjöfartsskydd;skyddsplan fartyg;sjöfartsskyddscertifikat;ISPS;hamnanläggning skyddsplan;anlöp oriktig information
+Q plain
+G Gärningspersonen gör minst ett av:
+  | Lämnar oriktiga uppgifter för att få ett beslut om erkänd sjöfartsskyddsorganisation, få en skyddsplan godkänd eller få ett skyddscertifikat utfärdat eller förlängt.
+  | Använder som redare eller befälhavare ett fartyg till sjöfart utan att fartyget har det certifikat eller den skyddsplan som det ska ha.
+  | Betjänar som hamnanläggningsinnehavare ett fartyg som omfattas av EU:s förordning om sjöfartsskydd utan att ha en godkänd skyddsplan.
+  | Använder som redare, befälhavare eller hamnanläggningsinnehavare fartyget, hamnanläggningen eller utrustningen i strid med skyddsplanen eller, för fartyg, ett certifikat.
+  | Låter som redare eller ägare bli att se till att fartyget genomgår föreskriven tillsyn.
+  | Låter som hamnanläggningsinnehavare bli att hålla hamnanläggningen tillgänglig för tillsynsmyndigheten eller att på annat sätt biträda vid tillsynen.
+  | Lämnar som redare eller befälhavare felaktig eller ofullständig information som har begärts inför anlöp av hamn (här räcker oaktsamhet, men gärningen får inte vara ringa).
+  | Genomför som redare, befälhavare eller hamnanläggningsinnehavare inte kroppsvisitation eller annan undersökning i den omfattning som skyddsplanen anger eller som en myndighet har beslutat vid den högsta skyddsnivån.
+S Uppsåt. För felaktig eller ofullständig information inför anlöp av hamn räcker oaktsamhet.
+U Gärningen är belagd med strängare straff i brottsbalken eller sjölagen.
+T Ett rederi låter ett lastfartyg gå i internationell trafik trots att fartyget saknar internationellt sjöfartsskyddscertifikat.
+T En befälhavare uppger inför ankomsten till en svensk hamn att fartyget har giltigt certifikat trots att det har gått ut.
+
+@ v21-sjofartsskydd-skyddschef-handlingar | Brott mot lagen om sjöfartsskydd (skyddschef, handlingar och information) | 24 § | 11,24,26
+PEN 0 | 0 | Böter | Böter
+C Trafik
+A sjöfartsskydd;skyddschef;sjöfartsskyddsdeklaration;certifikat ombord;ISPS
+Q plain
+G Gärningspersonen gör minst ett av:
+  | Låter som redare eller hamnanläggningsinnehavare bli att utse en skyddschef.
+  | Upprättar inte en sjöfartsskyddsdeklaration när en sådan krävs.
+  | Förvarar som redare, befälhavare eller hamnanläggningsinnehavare skyddsplanen i strid med reglerna om hur den ska förvaras.
+  | Lämnar som redare eller befälhavare inte tillbaka ett sjöfartsskyddscertifikat som har upphört att gälla eller har förklarats ogiltigt.
+  | Medför som redare eller befälhavare inte en handling som ska finnas ombord på fartyget.
+  | Lämnar som befälhavare eller hamnanläggningsinnehavare inte den information som EU:s förordning om sjöfartsskydd kräver.
+S Uppsåt.
+U Gärningen är belagd med strängare straff i brottsbalken eller sjölagen.
+T Ett rederi har inte utsett någon skyddschef för sina fartyg trots att rederiet känner till kravet.
+
+LAW S2005-395 | Lagen (2005:395) om arbetstid vid visst vägtransportarbete | 2005:395 | Vägarbetstidslagen
+X 12,18,20,24
+
+@ v21-vagarbetstid-forelaggande | Brott mot lagen om arbetstid vid visst vägtransportarbete (föreläggande eller förbud) | 25 § | 24,25
+PEN 0 | 1 | Böter eller fängelse i högst ett år | B–F 1 år
+C Allmän verksamhet
+A arbetstid lastbilsförare;åkeri föreläggande;Transportstyrelsen förbud;arbetstid buss;vägarbetstid
+Q plain
+K Gärningspersonen är arbetsgivare eller egenföretagare inom vägtransporter som omfattas av EU:s regler om kör- och vilotider.
+G Gärningspersonen bryter mot ett föreläggande eller ett förbud som Transportstyrelsen har meddelat för att lagen ska följas.
+S Uppsåt eller oaktsamhet.
+U Föreläggandet eller förbudet är förenat med vite.
+T Ett åkeri fortsätter att schemalägga sina förare på över 60 timmar i veckan trots att Transportstyrelsen har förbjudit det i ett beslut utan vite.
+
+@ v21-vagarbetstid-arbetstid-raster | Brott mot lagen om arbetstid vid visst vägtransportarbete (arbetstid, raster och registrering) | 26 och 26 a §§ | 12,18,20,26,26a
+PEN 0 | 0 | Böter | Böter
+C Allmän verksamhet
+A arbetstid lastbilsförare;för lång arbetstid;rast förare;arbetstidsregistrering åkeri;egenföretagare åkare
+Q plain
+K Gärningspersonen är arbetsgivare eller egenföretagare inom vägtransporter som omfattas av EU:s regler om kör- och vilotider.
+G Gärningspersonen gör minst ett av:
+  | Förlägger arbetet så att arbetstiden överstiger vad lagen tillåter, till exempel mer än 60 timmar under en vecka eller mer än 48 timmar per vecka i genomsnitt.
+  | Förlägger arbetet så att raster inte kan tas, trots att arbete aldrig får utföras längre än sex timmar i följd utan rast.
+  | Registrerar inte all arbetstid eller bevarar inte registren i minst två år.
+  | Lämnar som arbetsgivare inte ut en kopia av den registrerade arbetstiden till en arbetstagare eller en facklig organisation som begär det.
+  | Informerar som arbetsgivare inte arbetstagarna i tid om ändringar i den ordinarie arbetstidens förläggning.
+  | Lämnar oriktiga uppgifter om förhållanden av vikt när Transportstyrelsen har begärt upplysningar eller handlingar.
+S Uppsåt eller oaktsamhet.
+N För otillåten övertid kan arbetsgivaren dessutom få betala övertidsavgift.
+T Ett åkeri för inget register över förarnas arbetstid och kan därför inte visa upp något vid Transportstyrelsens kontroll.
+T En åkare med egen firma lägger upp sitt arbete så att han regelbundet arbetar åtta timmar i sträck utan rast.
+
+LAW S2005-426 | Lagen (2005:426) om arbetstid m.m. för flygpersonal inom civilflyget | 2005:426 | Flygarbetstidslagen
+X 7
+
+@ v21-flygarbetstid-forelaggande | Brott mot lagen om arbetstid m.m. för flygpersonal inom civilflyget | 9 § | 7,9
+PEN 0 | 1 | Böter eller fängelse i högst ett år | B–F 1 år
+C Allmän verksamhet
+A arbetstid piloter;kabinpersonal arbetstid;flygbolag föreläggande;Transportstyrelsen förbud
+Q plain
+K Gärningspersonen är arbetsgivare för flygpersonal inom civilflyget.
+G Gärningspersonen bryter mot ett föreläggande eller ett förbud som Transportstyrelsen har meddelat för att lagens regler om årsarbetstid och lediga dagar ska följas.
+S Uppsåt eller oaktsamhet.
+U Föreläggandet eller förbudet är förenat med vite.
+T Ett flygbolag fortsätter att ge sina piloter färre lediga dagar än lagen kräver trots att Transportstyrelsen har förelagt bolaget, utan vite, att ändra schemaläggningen.
+
+LAW S2006-1209 | Lagen (2006:1209) om hamnskydd | 2006:1209 | Hamnskyddslagen
+X 3:3,3:5,7:4
+
+@ v21-hamnskydd-utan-hamnskyddsplan | Brott mot lagen om hamnskydd (verksamhet utan godkänd hamnskyddsplan) | 7:1 | 3:3,3:5,7:1,7:4
+PEN 0 | 0.5 | Böter eller fängelse i högst sex månader | B–F 6 mån
+C Trafik
+A hamnskydd;hamnskyddsplan saknas;hamn utan skyddsplan;hamninnehavare
+Q plain
+K Gärningspersonen är hamninnehavare eller hamnskyddsorgan.
+G Gärningspersonen utövar verksamhet i en hamn utan att ha en godkänd hamnskyddsplan.
+S Uppsåt.
+U Gärningen är belagd med strängare straff i brottsbalken.
+T Ett hamnbolag driver en hamn med internationell fartygstrafik trots att bolaget vet att hamnskyddsplanen aldrig har godkänts.
+
+@ v21-hamnskydd-kontroll-forelaggande | Brott mot lagen om hamnskydd (kontroller, föreläggande och förvaring av planen) | 7:2 | 3:6,4:2,5:4,7:2,7:4
+PEN 0 | 0 | Böter | Böter
+C Trafik
+A hamnskydd;identitetskontroll hamn;hamnskyddsplan förvaring;föreläggande hamn
+Q plain
+K Gärningspersonen är hamnskyddsorgan, det vill säga det organ som ansvarar för hamnskyddsfrågor i hamnen.
+G Gärningspersonen gör minst ett av:
+  | Låter bli att genomföra undersökningar eller identitetskontroller i den omfattning som hamnskyddsplanen anger eller som har beslutats särskilt vid förhöjd skyddsnivå.
+  | Bryter mot ett föreläggande från tillsynsmyndigheten om att hålla hamnen tillgänglig för tillsyn, lämna biträde vid tillsynen eller avhjälpa brister i hamnskyddet (här räcker oaktsamhet).
+  | Förvarar hamnskyddsplanen så att obehöriga får tillgång till den.
+S Uppsåt. För brott mot ett föreläggande räcker oaktsamhet.
+U Föreläggandet är förenat med vite.
+U Gärningen är belagd med strängare straff i brottsbalken.
+T Ett hamnbolag slutar medvetet att kontrollera identiteten på dem som passerar in i hamnen, trots att hamnskyddsplanen kräver det.
+
+LAW S2008-475 | Lagen (2008:475) om kör- och vilotid vid internationell järnvägstrafik | 2008:475 | Lagen om kör- och vilotid vid internationell järnvägstrafik
+X 14,15,25
+
+@ v21-kor-vilotid-jarnvag-forelaggande | Brott mot lagen om kör- och vilotid vid internationell järnvägstrafik (föreläggande eller förbud) | 26 § | 25,26
+PEN 0 | 1 | Böter eller fängelse i högst ett år | B–F 1 år
+C Allmän verksamhet
+A vilotid lokförare;tågpersonal arbetstid;järnvägsföretag föreläggande;körtid tåg
+Q plain
+K Gärningspersonen är arbetsgivare för tågpersonal i gränsöverskridande järnvägstrafik.
+G Gärningspersonen bryter mot ett föreläggande eller ett förbud som tillsynsmyndigheten har meddelat för att lagen eller föreskrifter enligt lagen ska följas.
+S Uppsåt eller oaktsamhet.
+U Föreläggandet eller förbudet är förenat med vite.
+T Ett järnvägsföretag fortsätter att ge sina förare i trafiken till Norge för kort dygnsvila trots att tillsynsmyndigheten har förbjudit det i ett beslut utan vite.
+
+@ v21-kor-vilotid-jarnvag-raster | Brott mot lagen om kör- och vilotid vid internationell järnvägstrafik (raster och oriktiga uppgifter) | 27 § | 14,15,17,22,27
+PEN 0 | 0 | Böter | Böter
+C Allmän verksamhet
+A rast lokförare;tågpersonal rast;oriktiga uppgifter tillsyn;järnvägsföretag arbetstid
+Q plain
+K Gärningspersonen är arbetsgivare för tågpersonal i gränsöverskridande järnvägstrafik.
+G Gärningspersonen gör minst ett av:
+  | Förlägger arbetet så att förare eller övriga arbetstagare inte kan ta de raster som lagen kräver.
+  | Lämnar oriktiga uppgifter om förhållanden av vikt när tillsynsmyndigheten har begärt upplysningar eller handlingar.
+S Uppsåt eller oaktsamhet.
+U Raster har anpassats under arbetsdagen på grund av en tågförsening.
+U Gärningen omfattas av ett föreläggande eller förbud från tillsynsmyndigheten.
+N Överträdelser av reglerna om dygnsvila, veckovila och körtid leder i stället till sanktionsavgift.
+T Ett järnvägsföretag lägger förarnas turer så att de kör nio timmar utan möjlighet till rast.
+
+LAW S2009-1165 | Barlastvattenlagen (2009:1165) | 2009:1165 | Barlastvattenlagen
+X 2:1,8:6,8:8
+
+@ v21-barlastvatten-utslapp | Brott mot barlastvattenlagen (otillåtet utsläpp av barlastvatten) | 8:1 | 2:1,6:1,8:1,8:6,8:8
+PEN 0 | 2 | Böter eller fängelse i högst två år | B–F 2 år
+C Djur och natur
+A barlastvatten;ballastvatten;utsläpp från fartyg;främmande arter;tömma barlasttankar
+Q plain
+G Gärningspersonen släpper ut barlastvatten från ett fartyg på minst ett av följande sätt:
+  | Vattnet har inte först behandlats ombord med ett godkänt system, skiftats, lämnats i en mottagningsanordning eller hanterats med någon annan godkänd metod.
+  | Utsläppet sker i ett område på svenskt inre vatten där regeringen har förbjudit utsläpp av barlastvatten.
+S Uppsåt eller oaktsamhet.
+U Gärningen är belagd med strängare straff i brottsbalken eller miljöbalken.
+N En ansvarig företrädare för fartygets redare döms som om han eller hon själv hade begått gärningen, om företrädaren inte har gjort vad som skäligen kunde krävas för att förhindra utsläppet.
+T Besättningen på ett lastfartyg tömmer obehandlat barlastvatten i en svensk hamn i stället för att köra det genom fartygets reningssystem.
+
+@ v21-barlastvatten-bristande-tillsyn | Brott mot barlastvattenlagen (befälets bristande tillsyn) | 8:2 | 2:1,8:2,8:8
+PEN 0 | 2 | Böter eller fängelse i högst två år | B–F 2 år
+C Djur och natur
+A barlastvatten;befälhavare tillsyn;ballastvatten;utsläpp från fartyg
+Q plain
+K Gärningspersonen är befälhavare på fartyget, eller ett annat befäl som har fått ansvaret för tillsynen över barlastvattnet delegerat till sig eller har det till följd av sin tjänst.
+G Gärningspersonen brister i den tillsyn som behövs för att barlastvatten ska hanteras på föreskrivet sätt före utsläpp eller för att utsläpp inte ska ske där det är förbjudet.
+S Uppsåt eller oaktsamhet.
+U Gärningen är belagd med strängare straff i brottsbalken eller miljöbalken.
+T En befälhavare kontrollerar aldrig att reningssystemet för barlastvatten används, och obehandlat vatten släpps därför ut vid lastning.
+
+@ v21-barlastvatten-forbud-forelaggande | Brott mot barlastvattenlagen (förbud eller föreläggande) | 8:3 | 6:2,8:3,8:6,8:7,8:8
+PEN 0 | 1 | Böter eller fängelse i högst ett år | B–F 1 år
+C Djur och natur
+A barlastvatten;avgångsförbud fartyg;ballastvatten;föreläggande fartyg
+Q plain
+G Gärningspersonen bryter mot ett förbud eller ett föreläggande som en myndighet har meddelat för att fartyget inte ska släppa ut barlastvatten som är en risk för miljön, människors hälsa, egendom eller resurser, till exempel ett förbud mot fartygets avgång eller ett förbud att släppa ut barlastvatten.
+S Uppsåt eller oaktsamhet.
+U Förbudet eller föreläggandet är förenat med vite.
+U Gärningen är belagd med strängare straff i brottsbalken eller miljöbalken.
+N En ansvarig företrädare för fartygets redare döms som om han eller hon själv hade begått gärningen, om företrädaren inte har gjort vad som skäligen kunde krävas för att förhindra överträdelsen.
+T Ett fartyg lämnar hamnen trots att Transportstyrelsen har förbjudit avgång tills fartygets system för barlastvatten har reparerats.
+
+@ v21-barlastvatten-plan-certifikat | Brott mot barlastvattenlagen (hanteringsplan, användningsförbud, dagbok och besiktning) | 8:4 | 4:1,4:4,5:2,5:5,8:4,8:6,8:8
+PEN 0 | 0.5 | Böter eller fängelse i högst sex månader | B–F 6 mån
+C Djur och natur
+A barlastvatten;barlastvattenhanteringsplan;barlastvattendagbok;certifikat saknas fartyg;ballastvatten
+Q plain
+G Gärningspersonen gör minst ett av:
+  | Framför som befälhavare ett fartyg som inte har en godkänd barlastvattenhanteringsplan.
+  | Följer inte fartygets godkända barlastvattenhanteringsplan, om gärningen inte är ett otillåtet utsläpp eller bristande tillsyn.
+  | Framför som befälhavare ett fartyg trots att tillsynsmyndigheten har beslutat att det inte får användas eftersom det saknar giltigt certifikat om hantering av barlastvatten.
+  | Ser som befälhavare inte till att barlastvattendagboken hålls tillgänglig för kontroll vid en inspektion (här krävs uppsåt).
+  | Låter som ansvarig företrädare för redaren bli att se till att fartyget genomgår föreskriven besiktning eller har en godkänd barlastvattenhanteringsplan.
+S Uppsåt eller oaktsamhet. För dagboken krävs uppsåt.
+U Gärningen är belagd med strängare straff i brottsbalken eller miljöbalken.
+N En ansvarig företrädare för redaren kan också dömas om ett användningsförbud överträds och företrädaren inte har gjort vad som skäligen kunde krävas för att förhindra det.
+T En befälhavare tar ut ett lastfartyg på en internationell resa trots att fartyget saknar godkänd plan för hur barlastvattnet ska hanteras.
+
+@ v21-barlastvatten-dagbok-avgift | Brott mot barlastvattenlagen (dagboksföreskrifter, avgift, oriktig uppgift och rapportering) | 8:5 | 3:3,4:2,8:5,8:8
+PEN 0 | 0 | Böter | Böter
+C Djur och natur
+A barlastvattendagbok;barlastvatten;sediment avgift;certifikat oriktig uppgift;ballastvatten
+Q plain
+G Gärningspersonen gör minst ett av:
+  | Bryter mot en föreskrift om barlastvattendagbok, till exempel genom att inte anteckna åtgärder som rör fartygets barlastvatten.
+  | Tar ut en särskild avgift för mottagning av sediment (här krävs uppsåt).
+  | Lämnar oriktig uppgift för att få ett certifikat om hantering av barlastvatten utfärdat eller förlängt (här krävs uppsåt).
+  | Bryter mot en föreskrift om skyldighet att rapportera olyckshändelser eller brister som påverkar fartygets möjlighet att hantera barlastvatten.
+S Uppsåt eller oaktsamhet. För avgift för sediment och för oriktig uppgift krävs uppsåt.
+U Gärningen är belagd med strängare straff i brottsbalken eller miljöbalken.
+T Ett fartygsbefäl låter bli att anteckna i barlastvattendagboken att barlasttankarna har fyllts och tömts under resan.
+
+LAW S2011-725 | Lagen (2011:725) om behörighet för lokförare | 2011:725 | Lokförarlagen
+X 2:1,6:2
+
+@ v21-lokforare-anlitande-utan-forarbevis | Brott mot lagen om behörighet för lokförare | 6:1 | 2:1,6:1,6:2
+PEN 0 | 1 | Böter eller fängelse i högst ett år | B–F 1 år
+C Trafik
+A lokförare utan förarbevis;obehörig lokförare;kompletterande intyg;tågförare utan behörighet;järnvägsföretag
+Q villkor | Åtal får inte väckas för en gärning som omfattas av ett föreläggande om vite om gärningen ligger till grund för en ansökan om att vitet ska dömas ut. Åtal får inte heller väckas om gärningen är belagd med straff i brottsbalken eller om en sanktionsavgift har beslutats enligt järnvägssäkerhetslagen eller lagen om nationella järnvägssystem.
+G Gärningspersonen anlitar i sin verksamhet en förare av järnvägsfordon som inte har ett giltigt förarbevis eller, när det krävs, ett giltigt kompletterande intyg.
+S Uppsåt eller grov oaktsamhet.
+U Fallet är ringa.
+N Straffansvaret gäller den som anlitar föraren, inte föraren själv.
+T Ett järnvägsföretag låter en nyanställd köra godståg på stambanan trots att företaget vet att hans förarbevis är återkallat.
+
+LAW S2013-283 | Lagen (2013:283) om bevakning ombord på svenskt fartyg | 2013:283 | Lagen om bevakning ombord på svenskt fartyg
+X 1,2,5
+
+@ v21-fartygsbevakning-utan-tillstand | Brott mot lagen om bevakning ombord på svenskt fartyg (anlitande utan tillstånd och osann uppgift) | 12 § | 1,2,8,12
+PEN 0 | 0.5 | Böter eller fängelse i högst sex månader | B–F 6 mån
+C Allmän ordning
+A beväpnade vakter fartyg;pirater bevakning;säkerhetspersonal ombord;redare utan tillstånd
+Q plain
+K Gärningspersonen är redare eller den som är i redarens ställe.
+G Gärningspersonen gör minst ett av:
+  | Anlitar utan tillstånd beväpnad säkerhetspersonal för bevakning ombord på ett svenskt fartyg utanför Europeiska ekonomiska samarbetsområdet.
+  | Lämnar osann uppgift när redaren lämnar upplysningar om bevakningen eller den årliga redogörelsen till tillståndsmyndigheten.
+S Uppsåt eller oaktsamhet.
+T Ett rederi tar ombord beväpnade vakter inför en resa genom Adenviken utan att ha sökt tillstånd.
+
+@ v21-fartygsbevakning-vapeninnehav | Brott mot lagen om bevakning ombord på svenskt fartyg (innehav av skjutvapen utan tillstånd) | 13 § första stycket | 1,5,13
+PEN 0 | 1 | Fängelse i högst ett år | F 1 år
+C Vapen och explosiva varor
+A beväpnade vakter fartyg;vapen ombord utan tillstånd;säkerhetspersonal skjutvapen;ammunition fartyg
+Q plain
+K Gärningspersonen tillhör säkerhetspersonalen och gärningen sker i samband med bevakning som lagen omfattar.
+G Gärningspersonen innehar skjutvapen eller ammunition ombord utan att tillstånd till detta har beviljats.
+S Uppsåt.
+N Vapenlagen tillämpas inte på innehav som kräver tillstånd enligt den här lagen.
+T En vakt i fartygets säkerhetsstyrka har med sig ett automatvapen av ett slag som tillståndet inte omfattar.
+
+@ v21-fartygsbevakning-vapeninnehav-grovt | Brott mot lagen om bevakning ombord på svenskt fartyg, grovt brott (innehav av skjutvapen utan tillstånd) | 13 § andra stycket | 1,5,13
+PEN 0.5 | 4 | Fängelse i lägst sex månader och högst fyra år | F 6 mån–4 år
+C Vapen och explosiva varor
+A grovt vapeninnehav fartyg;beväpnade vakter fartyg
+Q plain
+B v21-fartygsbevakning-vapeninnehav
+R grovt*
+- Antalet vapen och mängden ammunition.
+- Hur farliga vapnen är.
+- Övriga omständigheter kring innehavet.
+T En säkerhetsstyrka tar ombord ett större antal automatvapen med ammunition trots att något tillstånd aldrig har beviljats.
+
+@ v21-fartygsbevakning-vapenforvaring | Brott mot lagen om bevakning ombord på svenskt fartyg (förvaring av skjutvapen) | 14 § | 4,5,14
+PEN 0 | 0.5 | Böter eller fängelse i högst sex månader | B–F 6 mån
+C Vapen och explosiva varor
+A vapenförvaring fartyg;beväpnade vakter fartyg;ammunition förvaring ombord
+Q plain
+G Gärningspersonen bryter mot ett villkor i tillståndet om hur skjutvapen eller ammunition ska förvaras på fartyget.
+S Uppsåt eller oaktsamhet.
+T Säkerhetspersonalen lämnar vapnen olåsta i en hytt trots att tillståndet kräver att de förvaras i ett låst vapenskåp.
+
+@ v21-fartygsbevakning-skeppsdagbok | Brott mot lagen om bevakning ombord på svenskt fartyg (anteckningar i skeppsdagboken) | 15 § | 6,15
+PEN 0 | 0 | Böter | Böter
+C Trafik
+A skeppsdagbok vapen;befälhavare anteckning;beväpnade vakter fartyg
+Q plain
+K Gärningspersonen är befälhavare på ett fartyg som tar ombord beväpnad säkerhetspersonal.
+G Gärningspersonen låter bli att se till att uppgifterna om säkerhetspersonalens identitet, tiden ombord, skjutvapnen och mängden ammunition redovisas korrekt och fullständigt i skeppsdagboken.
+S Uppsåt eller oaktsamhet.
+T En befälhavare antecknar inte vilka vapen och hur mycket ammunition vakterna tar ombord i hamnen.
+
+LAW S2022-368 | Lagen (2022:368) om nationella järnvägssystem | 2022:368 | Lagen om nationella järnvägssystem
+X 8:1
+
+@ v21-nationella-jarnvagssystem-onykter-forare | Brott mot lagen om nationella järnvägssystem (onykter förare) | 8:2 | 8:1,8:2
+PEN 0 | 0.5 | Böter eller fängelse i högst sex månader | B–F 6 mån
+C Trafik
+A onykter förare museijärnväg;lokförare alkohol;rattfylleri tåg;lokförare narkotika;industrispår onykter
+Q plain
+G Gärningspersonen för ett maskindrivet fordon på järnväg inom ett järnvägssystem som lagen omfattar.
+F Minst ett av:
+  | Alkoholkoncentrationen uppgår under eller efter färden till minst 0,2 promille i blodet eller 0,10 milligram per liter i utandningsluften.
+  | Det finns något narkotiskt ämne kvar i blodet under eller efter färden efter att föraren har intagit narkotika.
+  | Föraren är så påverkad av alkohol eller något annat medel att det kan antas att han eller hon inte kan framföra fordonet på ett betryggande sätt.
+S Uppsåt till samtliga rekvisit. Lagen anger ingen skuldform. Utgångspunkten är då att uppsåt krävs.
+U Narkotikan har intagits enligt läkares eller annan behörig receptutfärdares ordination.
+U Gärningen är belagd med straff i brottsbalken eller i lagen om straff för vissa trafikbrott.
+N Lagen gäller järnvägssystem som inte omfattas av järnvägssäkerhetslagen, till exempel fristående lokala banor. Den gäller inte tunnelbana och spårväg.
+T En förare kör ett tåg på en museijärnväg och har 0,5 promille vid en kontroll efter färden.
+
+@ v21-nationella-jarnvagssystem-onykter-forare-grovt | Brott mot lagen om nationella järnvägssystem, grovt brott (onykter förare) | 8:3 | 8:1,8:2,8:3
+PEN 0 | 2 | Fängelse i högst två år | F 2 år
+C Trafik
+A grovt onykter förare tåg;lokförare kraftigt berusad;museijärnväg berusad förare
+Q plain
+B v21-nationella-jarnvagssystem-onykter-forare
+R grovt
+- Föraren har haft minst 1,0 promille i blodet eller 0,50 milligram per liter i utandningsluften.
+- Föraren har annars varit avsevärt påverkad av alkohol eller något annat medel.
+- Framförandet av fordonet har inneburit en påtaglig fara för trafiksäkerheten.
+T En förare med 1,4 promille kör ett fullsatt tåg förbi en stoppsignal.
+
+@ v21-nationella-jarnvagssystem-sakerhetstjanst | Brott mot lagen om nationella järnvägssystem (onykterhet i säkerhetstjänst) | 8:4 | 8:1,8:4
+PEN 0 | 2 | Böter eller fängelse i högst två år | B–F 2 år
+C Trafik
+A trafikledare onykter;säkerhetstjänst järnväg;tågvärd berusad;banarbetare onykter
+Q plain
+G Gärningspersonen fullgör, utan att föra ett maskindrivet fordon på järnväg, en tjänst där det ingår säkerhetskritiska arbetsuppgifter.
+F Gärningspersonen är så påverkad av alkohol eller något annat medel att det kan antas att han eller hon inte kan utföra uppgifterna på ett betryggande sätt.
+S Uppsåt till samtliga rekvisit. Lagen anger ingen skuldform. Utgångspunkten är då att uppsåt krävs.
+U Gärningen är belagd med straff i brottsbalken eller i lagen om straff för vissa trafikbrott.
+T En trafikledare som styr signaler och växlar på en lokal bana arbetar kraftigt berusad.
+
+LAW S1971-948 | Väglagen (1971:948) | 1971:948 | Väglagen
+X 43,46,47
+
+@ v21-vaglagen-atgarder-vid-allman-vag | Brott mot väglagen (otillåtna åtgärder vid allmän väg) | 71 § första stycket | 39,43,44,45,46,47,48,51,71
+PEN 0 | 0.5 | Böter eller fängelse i högst sex månader | B–F 6 mån
+C Trafik
+A reklamskylt vid väg;utfart utan tillstånd;bygga vid väg;gräva i vägområde;skylt längs vägen;ledning i väg
+Q plain
+G Gärningspersonen gör utan tillstånd minst ett av följande, eller bryter mot en föreskrift eller ett förbud som har meddelats i ett sådant tillståndsärende:
+  | Ansluter en enskild körväg eller en utfart till en allmän väg, eller ändrar en sådan anslutning.
+  | Uppför en byggnad eller annan anläggning inom vägområdet, eller vidtar där någon annan åtgärd som kan inverka menligt på trafiksäkerheten eller vara till olägenhet för vägen.
+  | Drar en ledning inom vägområdet eller utför arbete på en ledning där.
+  | Uppför intill vägområdet en anläggning eller vidtar en åtgärd som kan vara till olägenhet för vägen, eller har där ljusanordningar som försämrar ljusförhållandena för trafiken.
+  | Har en skylt eller liknande anordning för reklam, propaganda eller liknande uppsatt utomhus inom 50 meter från vägområdet.
+  | Uppför en byggnad eller annan anläggning inom tolv meter från vägområdet, eller vid en korsning, som kan inverka menligt på trafiksäkerheten.
+  | Bygger eller vidtar åtgärder inom ett område som enligt en fastställd vägplan ska bli väg, så att områdets användning för vägändamål väsentligt försvåras.
+S Uppsåt eller oaktsamhet.
+U Åtgärden intill vägområdet ligger inom ett område med detaljplan eller kräver bygglov. Tillståndskravet gäller då inte.
+U Skylten sitter på en byggnad och upplyser om verksamhet på stället, eller är en anslagstavla för lokala meddelanden.
+U Byggnaden, anläggningen eller åtgärden påbörjades lagligen innan förbudet började gälla.
+T En företagare sätter upp en stor reklamskylt på en åker tio meter från en länsväg utan tillstånd från länsstyrelsen.
+T En fastighetsägare gräver en ny utfart direkt ut på en allmän väg utan tillstånd från väghållningsmyndigheten.
+
+@ v21-vaglagen-trafikforeskrift-enskild-vag | Brott mot väglagen (trafikföreskrift för enskild väg) | 71 § andra stycket | 41,71
+PEN 0 | 0 | Böter | Böter
+C Trafik
+A enskild väg förbud motorfordon;trafikföreskrift enskild väg;köra på avstängd enskild väg
+Q plain
+G Gärningspersonen bryter mot en trafikföreskrift som väghållningsmyndigheten har meddelat och som förbjuder eller inskränker trafik med motordrivna fordon på en enskild väg som ansluter till en allmän väg.
+S Uppsåt till samtliga rekvisit. Lagen anger ingen skuldform. Utgångspunkten är då att uppsåt krävs.
+T En person kör med lastbil ut på en allmän väg från en enskild väg, trots att väghållningsmyndigheten har förbjudit tung motortrafik på den enskilda vägen.
+
+LAW S1933-269 | Lagen (1933:269) om ägofred | 1933:269 | Ägofredslagen
+X 3:10,3:11
+
+@ v21-agofred-olovligt-bete | Brott mot lagen om ägofred (bete i strid med lagen) | 59 § första och andra styckena | 3:10,3:11,3:13,4:59
+PEN 0 | 0 | Böter | Böter
+C Djur och natur
+A betesdjur på annans mark;kor på bete;betesförbud;gemensam betesmark;lösa kreatur
+Q plain
+G Gärningspersonen gör minst ett av:
+  | Släpper ut fler hemdjur på mark som är upplåten till gemensamt bete än vad som skäligen kan vinterfödas på den egna fastigheten.
+  | Bryter mot ett betesförbud som regeringen har meddelat för att skydda skogsåterväxten på ohägnad skogs- eller utmark.
+  | Använder egen mark inom ett område där betesreglering gäller till bete utan att hålla den hägnad som behövs omkring marken.
+S Uppsåt.
+U Gärningen är belagd med straff i brottsbalken.
+N Den som gör detsamma av oaktsamhet, eller som genom försummelse i vården av kreatur vållar att de olovligen kommer in på någon annans ägor, kan bara dömas till ett lågt bötesbelopp i kronor.
+T En djurägare släpper medvetet ut sina kor på ohägnad skogsmark där betesförbud gäller.
+
+LAW S1970-299 | Lagen (1970:299) om skydd mot flyghavre | 1970:299 | Flyghavrelagen
+X 1,3,4
+
+@ v21-flyghavre-spridning | Brott mot lagen om skydd mot flyghavre | 14 § | 3,4,5,6,7,8,14
+PEN 0 | 0 | Böter | Böter
+C Djur och natur
+A flyghavre;ogräs spridning;spannmål transport;halm flyghavre;utsäde smittat
+Q plain
+G Gärningspersonen gör minst ett av:
+  | Transporterar, förvarar eller hanterar spannmål, frö, halm eller en liknande växtodlingsprodukt på ett sätt som innebär fara för att flyghavre sprids.
+  | Lämnar en sådan produkt till utsäde, foder eller annan slutlig förbrukning när det kan antas att den kommer att användas så att flyghavre riskerar att spridas.
+  | Transporterar en införd växtodlingsprodukt med för hög halt flyghavre från införselorten utan medgivande av Jordbruksverket.
+  | Saluhåller eller överlåter viltfoder eller prydnadsvaror som innehåller flyghavre eller axade flyghavreplantor.
+  | Använder utanför brukningsenheten, eller överlåter, emballage eller fordon som har innehållit växtodlingsprodukter utan att det är fritt från flyghavre.
+  | Låter bli att bränna eller på annat sätt förstöra kasserat avrens eller annat avfall som innehåller flyghavre.
+  | Håller inte marken fri från axade plantor av flyghavre så långt det är möjligt, eller bryter mot en föreskrift i en bekämpningsplan.
+S Uppsåt eller oaktsamhet.
+U Lagen gäller inte produkter från en brukningsenhet där det inte har funnits axade plantor av flyghavre under vegetationsperioden.
+U Det är fråga om en enstaka överlåtelse utan offentligt utbud från en odlare till en djurhållare på samma ort, eller en transport inom en sammanhängande del av brukningsenheten.
+T En lantbrukare säljer halm från ett fält med mycket flyghavre till gårdar i en annan del av länet utan att bry sig om att ogräset följer med.
+
+LAW S1971-437 | Rennäringslagen (1971:437) | 1971:437 | Rennäringslagen
+X 93
+
+@ v21-rennaring-ofredande-av-renar | Brott mot rennäringslagen (flyttningsväg, ofredande av renar, hundar och renmärken) | 94 § | 65a,73,81,93,94
+PEN 0 | 0 | Böter | Böter
+C Djur och natur
+A lös hund renar;skrämma renar;skoter renar;renmärke;flyttled renar;jaga bort renar
+Q plain
+G Gärningspersonen gör minst ett av:
+  | Stänger av en flyttningsväg för renar eller vidtar åtgärder på eller invid vägen så att framkomligheten väsentligt försämras.
+  | Skrämmer eller ofredar på annat sätt renar som uppehåller sig på ett område där renskötsel då är tillåten.
+  | Driver obehörigen bort renar från ett sådant område eller hindrar renar från att beta där.
+  | Håller inte sin hund i band eller instängd i trakten när renar befinner sig inom ett betesområde där renskötsel då är tillåten, eller när renar flyttas och hundägaren har underrättats i förväg.
+  | Anmäler inte snarast till Polismyndigheten att han eller hon har dödat en hund som jagade eller ofredade renar.
+  | Märker egna renar med ett renmärke som inte är registrerat för honom eller henne, använder ett registrerat märke utanför den sameby som registreringen gäller eller märker renkalvar i strid med föreskrifter.
+  | Märker om en ren eller förser märket med avbrott utan de medgivanden och den insyn som lagen kräver.
+  | Följer inte ett föreläggande eller förbud från länsstyrelsen om hänsyn till naturvården och kulturmiljövården vid renskötsel.
+S Uppsåt eller oaktsamhet.
+U Länsstyrelsens föreläggande eller förbud är förenat med vite.
+U Hunden används i renskötseln eller länsstyrelsen har medgett att den får gå lös.
+T En hundägare låter sin hund springa lös i fjällen där en renhjord betar, och hunden jagar renarna.
+T En skoterförare kör upprepade gånger rakt mot en renhjord för att skingra den.
+
+@ v21-rennaring-samebymedlem | Brott mot rennäringslagen (virkestäkt och oriktig uppgift vid renräkning) | 95 § | 17,18,19,20,22,95
+PEN 0 | 0 | Böter | Böter
+C Djur och natur
+A renräkning oriktig uppgift;renlängd;sameby virke;avverkning sameby
+Q plain
+K Gärningspersonen är medlem i en sameby.
+G Gärningspersonen gör minst ett av:
+  | Avverkar skog eller tar virke, bränsle eller slöjdvirke i strid med lagens regler om samebymedlemmars rätt till skogsfång, till exempel avverkar växande barrträd utan anvisning av markens ägare eller brukare.
+  | Avverkar växande tall, gran eller björk i strid med ett tillfälligt avverkningsförbud.
+  | Lämnar oriktig uppgift vid renräkning eller när renlängden upprättas.
+S Uppsåt eller oaktsamhet.
+U Gärningen är belagd med straff i brottsbalken.
+T En renägare uppger vid renräkningen ett betydligt lägre antal renar än han faktiskt har.
+
+LAW S1974-211 | Bisjukdomslagen (1974:211) | 1974:211 | Bisjukdomslagen
+X 2,3,4
+
+@ v21-bisjukdom-anmalan-forelaggande | Brott mot bisjukdomslagen | 8 § | 2,3,4,8
+PEN 0 | 0 | Böter | Böter
+C Djur och natur
+A bisjukdom;yngelröta;biodlare anmälan;flytta bisamhällen;bitillsynsman;varroa
+Q plain
+G Gärningspersonen gör minst ett av:
+  | Låter bli att genast anmäla att det finns anledning att anta att ett eget bisamhälle har angripits av en bisjukdom som ska bekämpas.
+  | Följer inte ett föreläggande om att bekämpa sjukdom hos bisamhället.
+  | Bryter mot en föreskrift eller ett förbud om till exempel flyttning, införsel eller utförsel av levande bin, vaxkakor, begagnade bibostäder eller redskap, eller om hur tomma bibostäder, honung och vax ska förvaras.
+  | Vägrar som innehavare av mark eller byggnad att lämna tillträde för en undersökning eller åtgärd som behövs enligt lagen.
+S Uppsåt eller oaktsamhet.
+T En biodlare flyttar sina bisamhällen ut ur ett område som är förklarat smittat av amerikansk yngelröta utan tillstånd av bitillsynsmannen.
+
+LAW S1976-298 | Utsädeslagen (1976:298) | 1976:298 | Utsädeslagen
+X 1,2
+
+@ v21-utsade-oriktig-uppgift | Brott mot utsädeslagen (oriktig uppgift om slag eller sort) | 7 § | 7
+PEN 0 | 0 | Böter | Böter
+C Djur och natur
+A utsäde oriktig uppgift;fel sort utsäde;Jordbruksverket utsäde;certifiering utsäde
+Q plain
+G Gärningspersonen lämnar till Statens jordbruksverk oriktig uppgift om en varas slag eller sort.
+S Uppsåt eller grov oaktsamhet.
+U Fallet är ringa.
+T Ett utsädesföretag uppger inför certifieringen att ett parti är av en dyrare sort än det verkligen är.
+
+@ v21-utsade-saluforing | Brott mot utsädeslagen (saluföring och anmälningsskyldighet) | 8 § | 1,2,5,8
+PEN 0 | 0 | Böter | Böter
+C Djur och natur
+A ocertifierat utsäde;sälja utsäde;utsädespotatis;frö försäljning;utsädesfirma oanmäld
+Q plain
+G Gärningspersonen gör minst ett av:
+  | Saluför yrkesmässigt utsäde i strid med föreskrifter om att utsädet ska vara certifierat eller kvalitetskontrollerat på annat sätt.
+  | Bryter mot andra föreskrifter om villkor för eller förbud mot saluföring av utsäde.
+  | Låter bli att anmäla sin verksamhet till Statens jordbruksverk trots att det har föreskrivits för den som yrkesmässigt förpackar eller saluför utsäde.
+S Uppsåt eller oaktsamhet.
+U Fallet är ringa.
+U Gärningen är belagd med straff i lagen om straff för smuggling.
+N Den som döms ska också ersätta tillsynsmyndigheten för kostnaderna för undersökning av taget prov.
+T En handlare säljer ocertifierad utsädespotatis till odlare trots att sorten bara får saluföras som certifierat utsäde.
+
+LAW S1979-429 | Skogsvårdslagen (1979:429) | 1979:429 | Skogsvårdslagen
+X 10,15,38b
+
+@ v21-skogsvard-avverkning | Brott mot skogsvårdslagen (otillåten avverkning och andra åtgärder) | 38 § | 6b,10,10a,15,18b,25,27,36,38,38b
+PEN 0 | 0.5 | Böter eller fängelse i högst sex månader | B–F 6 mån
+C Djur och natur
+A olovlig avverkning;kalhygge utan tillstånd;fjällnära skog;ädellövskog avverkning;avverkning ungskog;skogsbolag
+Q plain
+G Gärningspersonen gör minst ett av:
+  | Avverkar på produktiv skogsmark på ett sätt som varken är ändamålsenligt för återväxt av ny skog eller främjar skogens utveckling.
+  | Avverkar i fjällnära skog utan Skogsstyrelsens tillstånd, eller bryter mot villkor i ett sådant tillstånd.
+  | Använder främmande trädarter som skogsodlingsmaterial i fjällnära skog.
+  | Påbörjar avverkning på en förvärvad fastighet innan det förvärvstillstånd som krävs har meddelats.
+  | Påbörjar avverkning innan en säkerhet som Skogsstyrelsen har krävt har ställts och godkänts, eller bryter mot ett avverkningsförbud som har meddelats för att säkerhet inte har ställts.
+  | Avverkar i ädellövskog utan tillstånd, bryter mot ett beslut om hur avverkningen ska genomföras eller vidtar åtgärder som leder till att beståndet upphör att vara ädellövskog.
+  | Följer inte ett föreläggande eller bryter mot ett förbud som har meddelats för att skogsbruket ska anpassas till rennäringen.
+S Uppsåt eller oaktsamhet.
+U Fallet är ringa.
+U Gärningen omfattas av ett vitesföreläggande eller ett vitesförbud som inte har följts.
+T En markägare kalavverkar ett bestånd av ek och bok utan att ha sökt tillstånd hos Skogsstyrelsen.
+T Ett skogsbolag avverkar i fjällnära skog utan tillstånd.
+
+@ v21-skogsvard-foreskrifter | Brott mot skogsvårdslagen (föreskrifter, avverkningsanmälan och förelägganden) | 38 a § | 7,10,11,14,20,30,38a,38b
+PEN 0 | 0 | Böter | Böter
+C Djur och natur
+A avverkningsanmälan;avverka utan anmälan;hygge utan anmälan;skogsplantor föreskrifter;naturhänsyn avverkning
+Q plain
+G Gärningspersonen gör minst ett av:
+  | Låter som ägare av produktiv skogsmark bli att underrätta Skogsstyrelsen enligt föreskrifterna om en avverkning som ska äga rum på marken (avverkningsanmälan).
+  | Bryter mot föreskrifter om hur avverkning ska bedrivas eller om att trädbestånd under en viss ålder inte får avverkas.
+  | Bryter mot föreskrifter om hur stor andel av en brukningsenhets skogsmark som får avverkas under en viss period.
+  | Bryter mot föreskrifter om användning av, handel med eller införsel av skogsodlingsmaterial.
+  | Bryter mot föreskrifter om samråd med berörd sameby före avverkning inom renskötselns året-runt-marker.
+  | Följer inte ett föreläggande eller bryter mot ett förbud som har meddelats för att föreskrifter om hänsyn till naturvården och kulturmiljövården ska följas.
+S Uppsåt eller oaktsamhet.
+U Fallet är ringa.
+U Gärningen omfattas av ett vitesföreläggande eller ett vitesförbud som inte har följts.
+T En skogsägare slutavverkar flera hektar skog utan att först ha anmält avverkningen till Skogsstyrelsen.
+
+LAW S1999-657 | Epizootilagen (1999:657) | 1999:657 | Epizootilagen
+X 1,2,4
+
+@ v21-epizooti-anmalan-sparr | Brott mot epizootilagen | 20 § | 2,4,4a,5,8,20
+PEN 0 | 1 | Böter eller fängelse i högst ett år | B–F 1 år
+C Djur och natur
+A mul- och klövsjuka;afrikansk svinpest;spärrförklaring;fågelinfluensa;smittad besättning;anmäla djursjukdom
+Q plain
+G Gärningspersonen gör minst ett av:
+  | Låter bli att omedelbart anmäla till veterinär att det finns anledning att misstänka att djur i hans eller hennes vård har drabbats av en epizootisk sjukdom.
+  | Bryter mot föreskrifter om vad den som har djuren i sin vård ska göra för att förhindra eller begränsa smittspridning i väntan på veterinärens besked.
+  | Bryter mot en spärrförklaring eller ett annat beslut om förbud mot att besöka, lämna eller utföra transporter till, från eller inom ett område där smitta kan antas förekomma eller spridas.
+  | Bryter mot en smittförklaring, ett tillträdesförbud eller ett beslut eller en föreskrift om begränsningar i hanteringen eller transporten av djur och varor.
+  | Bryter mot ett beslut eller en föreskrift om till exempel avlivning av djur, oskadliggörande av döda djur och annat material, smittrening, vaccination, djurhållning eller journalföring.
+  | Bryter mot EU:s bestämmelser om hantering av specificerat riskmaterial, om framställning eller användning av animaliska produkter eller om överlåtelse av djur eller andra produkter än livsmedel (EU:s förordning nr 999/2001 om smittsamma hjärnsjukdomar hos djur, till exempel galna ko-sjukan).
+S Uppsåt eller oaktsamhet.
+U Fallet är ringa.
+U Gärningen omfattas av ett föreläggande om vite och ligger till grund för en ansökan om att vitet ska dömas ut.
+T En grisbonde kör iväg djur till slakt från sin gård trots att veterinären har spärrförklarat gården vid misstanke om afrikansk svinpest.
+T En lantbrukare ser tydliga tecken på mul- och klövsjuka hos sina kor men låter bli att kontakta veterinär.
+
+LAW S1999-658 | Zoonoslagen (1999:658) | 1999:658 | Zoonoslagen
+X 1,2,5
+
+@ v21-zoonos-foreskrifter-beslut | Brott mot zoonoslagen (föreskrifter, beslut och oriktiga uppgifter) | 12 § | 2,5,12
+PEN 0 | 1 | Böter eller fängelse i högst ett år | B–F 1 år
+C Djur och natur
+A salmonella besättning;zoonos;spärrad gård salmonella;smittade höns;provtagning djur
+Q plain
+G Gärningspersonen gör minst ett av:
+  | Bryter som yrkesmässig djurhållare mot föreskrifter om att låta undersöka djuren eller om att föra anteckningar och lämna uppgifter om verksamheten.
+  | Bryter mot ett beslut eller en föreskrift om bekämpning av zoonoser, till exempel om avlivning av djur, smittrening, begränsningar i hanteringen eller transporten av djur och varor eller kontakter mellan djur och människor.
+  | Lämnar oriktiga uppgifter om något förhållande av betydelse när uppgifter om verksamheten ska lämnas, om gärningen inte är belagd med straff enligt brottsbalken.
+S Uppsåt eller oaktsamhet.
+U Fallet är ringa.
+U Gärningen omfattas av ett föreläggande om vite och ligger till grund för en ansökan om att vitet ska dömas ut.
+T En äggproducent säljer höns vidare från en besättning som länsstyrelsen har spärrat på grund av salmonella.
+
+@ v21-zoonos-eu-bestammelser | Brott mot zoonoslagen (EU-bestämmelser) | 12 a § | 1a,12a
+PEN 0 | 1 | Böter eller fängelse i högst ett år | B–F 1 år
+C Djur och natur
+A salmonella EU-regler;zoonos;salmonellakontroll fjäderfä
+Q plain
+G Gärningspersonen åsidosätter skyldigheter, villkor eller förbud som finns i de EU-bestämmelser om zoonoser som lagen kompletterar.
+S Uppsåt eller oaktsamhet.
+U Överträdelsen avser bestämmelser om myndighetsutövning eller andra bestämmelser i EU:s förordning om offentlig kontroll.
+U Fallet är ringa.
+U Gärningen omfattas av ett föreläggande om vite och ligger till grund för en ansökan om att vitet ska dömas ut.
+T Ett företag med slaktkycklingar låter bli att ta de salmonellaprover på flockarna som EU-reglerna kräver.
+
+LAW S2006-804 | Livsmedelslagen (2006:804) | 2006:804 | Livsmedelslagen
+X 3,10,30
+
+@ v21-livsmedel-fara-vilseledande | Brott mot livsmedelslagen (fara för liv eller hälsa, vilseledande och spårbarhet) | 28 a § | 28a,30
+PEN 0 | 2 | Böter eller fängelse i högst två år | B–F 2 år
+C Djur och natur
+A matfusk;farlig mat;hästkött som nötkött;livsmedelsfusk;ommärkt kött;allergen märkning;restaurang matförgiftning
+Q plain
+G Gärningspersonen gör minst ett av:
+  | Producerar, bearbetar, distribuerar eller på annat sätt handhar livsmedel, eller märker, marknadsför eller presenterar livsmedel, på ett sätt som orsakar eller kan orsaka fara för människors liv eller hälsa.
+  | Låter bli att vidta åtgärder vid hanteringen av livsmedel, eller brister i märkningen, marknadsföringen eller presentationen, så att ett livsmedel utgör eller kan komma att utgöra en fara för människors liv eller hälsa.
+  | Märker, marknadsför eller presenterar i större omfattning ett livsmedel på ett sätt som är eller kan vara vilseledande.
+  | Brister i åtgärder för identifiering och gör därigenom, på ett omfattande eller annars särskilt allvarligt sätt, att möjligheten att spåra ett livsmedel försvåras eller kan komma att försvåras.
+S Uppsåt eller oaktsamhet.
+U Gärningen är belagd med straff i brottsbalken eller i lagen om straff för smuggling.
+U Gärningen omfattas av ett föreläggande om vite och ligger till grund för en ansökan om att vitet ska dömas ut.
+N Med livsmedel jämställs dricksvatten samt snus, snusliknande produkter och tuggtobak.
+T Ett företag märker om stora partier gammalt kött med nya datum och säljer det till butiker.
+T En restaurang serverar en rätt med jordnötter till en gäst som har frågat om allergener och fått beskedet att rätten är nötfri.
+
+@ v21-livsmedel-foreskrifter-eu | Brott mot livsmedelslagen (föreskrifter, beslut och EU-bestämmelser) | 29 § | 10,10a,20,29,30
+PEN 0 | 0 | Böter | Böter
+C Djur och natur
+A livsmedelshygien;smutsig restaurang;otillåten tillsats;livsmedelskontroll vägra;sälja utgången mat;oregistrerad livsmedelsanläggning
+Q plain
+G Gärningspersonen gör minst ett av:
+  | Bryter mot en föreskrift eller ett beslut om till exempel förbud mot eller villkor för hantering, införsel eller försäljning av livsmedel, märkning, livsmedels beskaffenhet, personalhygien eller godkännande av anläggningar.
+  | Släpper ut livsmedel på marknaden som inte uppfyller föreskrivna krav, som kommer från en anläggning som inte är godkänd eller registrerad, som inte har godkänts eller anmälts eller som innehåller ämnen som är otillåtna eller överskrider gränsvärden.
+  | Släpper ut material och produkter avsedda att komma i kontakt med livsmedel på marknaden trots att de inte uppfyller EU:s krav.
+  | Låter bli att på begäran lämna upplysningar eller handlingar till kontrollmyndigheten.
+  | Bryter mot skyldigheter, villkor eller förbud i de EU-bestämmelser som lagen kompletterar, till exempel EU:s regler om livsmedelshygien.
+S Uppsåt eller oaktsamhet.
+U Gärningen ska leda till ansvar enligt den strängare bestämmelsen om fara för liv eller hälsa, vilseledande och spårbarhet.
+U Fallet är ringa.
+U Gärningen kan leda till sanktionsavgift, vilket gäller den som påbörjar en registreringspliktig verksamhet utan anmälan eller brister i journalföring eller annan dokumentation.
+U Överträdelsen avser bestämmelser om myndighetsutövning eller andra bestämmelser i EU:s förordning om offentlig kontroll.
+U Gärningen är belagd med straff i brottsbalken eller i lagen om straff för smuggling, eller omfattas av ett föreläggande om vite som ligger till grund för en ansökan om att vitet ska dömas ut.
+T En restaurang förvarar rå kyckling i rumstemperatur och har smutsiga beredningsytor trots att kontrollmyndigheten har påpekat bristerna.
+T En butik säljer kosttillskott som innehåller ett ämne som inte är godkänt i livsmedel.

@@ -256,11 +256,11 @@ G Gärningspersonen förföljer en person genom att begå eller medverka till fl
   | Olaga tvång eller olaga hot.
   | Hemfridsbrott eller olaga intrång.
   | Kränkande fotografering, olovlig identitetsanvändning eller olaga integritetsintrång.
-  | Ofredande, uppmaning till självmord eller psykiskt våld.
+  | Ofredande, uppmaning till självmord, oaktsam uppmaning till självmord eller psykiskt våld.
   | Förtal, grovt förtal eller förolämpning.
   | Sexuellt ofredande eller sexuellt ofredande mot barn.
   | Skadegörelse (även försök) eller ringa skadegörelse.
-  | Våld eller hot mot tjänsteman, angrepp mot tjänsteman (även försök) eller förolämpning mot tjänsteman.
+  | Våld eller hot mot tjänsteman eller angrepp mot tjänsteman (i båda fallen även försök), eller förolämpning mot tjänsteman.
   | Överträdelse av kontaktförbud, utvidgat eller särskilt utvidgat kontaktförbud.
 G Varje gärning har utgjort ett led i en upprepad kränkning av personens integritet.
 S Uppsåt till varje gärning.

@@ -469,6 +469,1434 @@
       "name": "Lagen (2010:1011) om brandfarliga och explosiva varor",
       "sfs": "2010-1011",
       "verifiedVersion": "2026:1584"
+    },
+    {
+      "id": "S1974-13",
+      "name": "Lagen (1974:13) om vissa anställningsfrämjande åtgärder",
+      "sfs": "1974-13",
+      "verifiedVersion": "2017:361"
+    },
+    {
+      "id": "S1982-1004",
+      "name": "Lagen (1982:1004) om skyldighet för näringsidkare, arbetsmarknadsorganisationer m.fl. att delta i totalförsvarsplaneringen",
+      "sfs": "1982-1004",
+      "verifiedVersion": "2019:859"
+    },
+    {
+      "id": "S1993-440",
+      "name": "Lagen (1993:440) om privat arbetsförmedling",
+      "sfs": "1993-440",
+      "verifiedVersion": "2012:856"
+    },
+    {
+      "id": "S1994-2077",
+      "name": "Lagen (1994:2077) om arbetsförmedlingstvång",
+      "sfs": "1994-2077",
+      "verifiedVersion": "1994:2077"
+    },
+    {
+      "id": "S1997-239",
+      "name": "Lagen (1997:239) om arbetslöshetskassor",
+      "sfs": "1997-239",
+      "verifiedVersion": "2024:510"
+    },
+    {
+      "id": "S1970-943",
+      "name": "Lagen (1970:943) om arbetstid m.m. i husligt arbete",
+      "sfs": "1970-943",
+      "verifiedVersion": "2022:449"
+    },
+    {
+      "id": "S1977-1160",
+      "name": "Arbetsmiljölagen (1977:1160)",
+      "sfs": "1977-1160",
+      "verifiedVersion": "2026:1001"
+    },
+    {
+      "id": "S1982-673",
+      "name": "Arbetstidslagen (1982:673)",
+      "sfs": "1982-673",
+      "verifiedVersion": "2022:450"
+    },
+    {
+      "id": "S1999-678",
+      "name": "Lagen (1999:678) om utstationering av arbetstagare",
+      "sfs": "1999-678",
+      "verifiedVersion": "2022:1296"
+    },
+    {
+      "id": "S2022-155",
+      "name": "Lagen (2022:155) om tobaksskatt",
+      "sfs": "2022-155",
+      "verifiedVersion": "2026:151"
+    },
+    {
+      "id": "S2022-900",
+      "name": "Lagen (2022:900) om registrering av idéburna organisationer",
+      "sfs": "2022-900",
+      "verifiedVersion": "2026:1635"
+    },
+    {
+      "id": "S2022-482",
+      "name": "Lagen (2022:482) om elektronisk kommunikation",
+      "sfs": "2022-482",
+      "verifiedVersion": "2026:1681"
+    },
+    {
+      "id": "S1989-978",
+      "name": "Prisregleringslagen (1989:978)",
+      "sfs": "1989-978",
+      "verifiedVersion": "2024:814"
+    },
+    {
+      "id": "S2001-99",
+      "name": "Lagen (2001:99) om den officiella statistiken",
+      "sfs": "2001-99",
+      "verifiedVersion": "2022:250"
+    },
+    {
+      "id": "S2019-508",
+      "name": "Lagen (2019:508) om behandling av personuppgifter i det fördelningsanalytiska statistiksystemet för inkomster och transfereringar",
+      "sfs": "2019-508",
+      "verifiedVersion": "2026:1383"
+    },
+    {
+      "id": "S1992-1602",
+      "name": "Lagen (1992:1602) om valuta- och kreditreglering",
+      "sfs": "1992-1602",
+      "verifiedVersion": "2024:821"
+    },
+    {
+      "id": "S2004-297",
+      "name": "Lagen (2004:297) om bank- och finansieringsrörelse",
+      "sfs": "2004-297",
+      "verifiedVersion": "2026:1080"
+    },
+    {
+      "id": "S2006-531",
+      "name": "Lagen (2006:531) om särskild tillsyn över finansiella konglomerat",
+      "sfs": "2006-531",
+      "verifiedVersion": "2026:633"
+    },
+    {
+      "id": "S2010-751",
+      "name": "Lagen (2010:751) om betaltjänster",
+      "sfs": "2010-751",
+      "verifiedVersion": "2026:1068"
+    },
+    {
+      "id": "S2011-755",
+      "name": "Lagen (2011:755) om elektroniska pengar",
+      "sfs": "2011-755",
+      "verifiedVersion": "2026:1069"
+    },
+    {
+      "id": "S2014-968",
+      "name": "Lagen (2014:968) om särskild tillsyn över kreditinstitut och värdepappersbolag",
+      "sfs": "2014-968",
+      "verifiedVersion": "2026:1081"
+    },
+    {
+      "id": "S2024-114",
+      "name": "Lagen (2024:114) om clearing och avveckling av betalningar",
+      "sfs": "2024-114",
+      "verifiedVersion": "2026:335"
+    },
+    {
+      "id": "S2026-56",
+      "name": "Lagen (2026:56) om straff för olovlig finansiell verksamhet",
+      "sfs": "2026-56",
+      "verifiedVersion": "2026:56"
+    },
+    {
+      "id": "S1998-293",
+      "name": "Lagen (1998:293) om utländska försäkringsgivares och tjänstepensionsinstituts verksamhet i Sverige",
+      "sfs": "1998-293",
+      "verifiedVersion": "2023:670"
+    },
+    {
+      "id": "S2010-2043",
+      "name": "Försäkringsrörelselagen (2010:2043)",
+      "sfs": "2010-2043",
+      "verifiedVersion": "2026:635"
+    },
+    {
+      "id": "S2019-742",
+      "name": "Lagen (2019:742) om tjänstepensionsföretag",
+      "sfs": "2019-742",
+      "verifiedVersion": "2026:641"
+    },
+    {
+      "id": "S2026-333",
+      "name": "Lagen (2026:333) om uppgiftsskyldighet för vissa e-legitimationsföretag",
+      "sfs": "2026-333",
+      "verifiedVersion": "2026:333"
+    },
+    {
+      "id": "S1998-1479",
+      "name": "Lagen (1998:1479) om värdepapperscentraler och kontoföring av finansiella instrument",
+      "sfs": "1998-1479",
+      "verifiedVersion": "2025:317"
+    },
+    {
+      "id": "S2004-46",
+      "name": "Lagen (2004:46) om värdepappersfonder",
+      "sfs": "2004-46",
+      "verifiedVersion": "2026:916"
+    },
+    {
+      "id": "S2007-528",
+      "name": "Lagen (2007:528) om värdepappersmarknaden",
+      "sfs": "2007-528",
+      "verifiedVersion": "2026:1066"
+    },
+    {
+      "id": "S2013-561",
+      "name": "Lagen (2013:561) om förvaltare av alternativa investeringsfonder",
+      "sfs": "2013-561",
+      "verifiedVersion": "2026:1070"
+    },
+    {
+      "id": "S2016-1307",
+      "name": "Lagen (2016:1307) om straff för marknadsmissbruk på värdepappersmarknaden",
+      "sfs": "2016-1307",
+      "verifiedVersion": "2026:1324"
+    },
+    {
+      "id": "S2025-1267",
+      "name": "Subventionsbrottslagen (2025:1267)",
+      "sfs": "2025-1267",
+      "verifiedVersion": "2026:1325"
+    },
+    {
+      "id": "S1994-1776",
+      "name": "Lagen (1994:1776) om skatt på energi",
+      "sfs": "1994-1776",
+      "verifiedVersion": "2026:1287"
+    },
+    {
+      "id": "S1997-1137",
+      "name": "Lagen (1997:1137) om vägavgift för vissa tunga fordon",
+      "sfs": "1997-1137",
+      "verifiedVersion": "2026:767"
+    },
+    {
+      "id": "S1998-506",
+      "name": "Lagen (1998:506) om flyttning och kontroll av vissa punktskattepliktiga varor",
+      "sfs": "1998-506",
+      "verifiedVersion": "2026:562"
+    },
+    {
+      "id": "S1996-701",
+      "name": "Inregränslagen (1996:701)",
+      "sfs": "1996-701",
+      "verifiedVersion": "2026:415"
+    },
+    {
+      "id": "S2016-253",
+      "name": "Tullagen (2016:253)",
+      "sfs": "2016-253",
+      "verifiedVersion": "2026:424"
+    },
+    {
+      "id": "S2024-710",
+      "name": "Tullbefogenhetslagen (2024:710)",
+      "sfs": "2024-710",
+      "verifiedVersion": "2026:1547"
+    },
+    {
+      "id": "S1976-295",
+      "name": "Lagen (1976:295) om skyldighet för näringsidkare att medverka vid lagring för försörjningsberedskap",
+      "sfs": "1976-295",
+      "verifiedVersion": "1980:234"
+    },
+    {
+      "id": "S1978-262",
+      "name": "Förfogandelagen (1978:262)",
+      "sfs": "1978-262",
+      "verifiedVersion": "2024:805"
+    },
+    {
+      "id": "S1978-268",
+      "name": "Ransoneringslagen (1978:268)",
+      "sfs": "1978-268",
+      "verifiedVersion": "2024:806"
+    },
+    {
+      "id": "S1992-1402",
+      "name": "Lagen (1992:1402) om undanförsel och förstöring",
+      "sfs": "1992-1402",
+      "verifiedVersion": "2024:820"
+    },
+    {
+      "id": "S2006-546",
+      "name": "Lagen (2006:546) om utrymning och inkvartering m.m. under höjd beredskap",
+      "sfs": "2006-546",
+      "verifiedVersion": "2026:1006"
+    },
+    {
+      "id": "S2016-319",
+      "name": "Lagen (2016:319) om skydd för geografisk information",
+      "sfs": "2016-319",
+      "verifiedVersion": "2026:1378"
+    },
+    {
+      "id": "S2026-440",
+      "name": "Lagen (2026:440) om skyddsrum och skyddade utrymmen",
+      "sfs": "2026-440",
+      "verifiedVersion": "2026:440"
+    },
+    {
+      "id": "S1971-291",
+      "name": "Förvaltningsprocesslagen (1971:291)",
+      "sfs": "1971-291",
+      "verifiedVersion": "2020:922"
+    },
+    {
+      "id": "S1999-988",
+      "name": "Lagen (1999:988) om förhör m.m. hos kommissionen för granskning av de svenska säkerhetstjänsternas författningsskyddande verksamhet",
+      "sfs": "1999-988",
+      "verifiedVersion": "2010:15"
+    },
+    {
+      "id": "S1919-426",
+      "name": "Lagen (1919:426) om flottning i allmän flottled",
+      "sfs": "1919-426",
+      "verifiedVersion": "2018:413"
+    },
+    {
+      "id": "S1967-531",
+      "name": "Lagen (1967:531) om tryggande av pensionsutfästelse m.m.",
+      "sfs": "1967-531",
+      "verifiedVersion": "2026:624"
+    },
+    {
+      "id": "S1970-988",
+      "name": "Fastighetsbildningslagen (1970:988)",
+      "sfs": "1970-988",
+      "verifiedVersion": "2020:921"
+    },
+    {
+      "id": "S1974-157",
+      "name": "Handelsregisterlagen (1974:157)",
+      "sfs": "1974-157",
+      "verifiedVersion": "2024:1112"
+    },
+    {
+      "id": "S1983-1046",
+      "name": "Lagen (1983:1046) om skyldighet för vissa bostadsföreningar och bostadsaktiebolag att föra lägenhetsförteckning m.m.",
+      "sfs": "1983-1046",
+      "verifiedVersion": "1983:1046"
+    },
+    {
+      "id": "S1983-293",
+      "name": "Lagen (1983:293) om inrättande, utvidgning och avlysning av allmän farled och allmän hamn",
+      "sfs": "1983-293",
+      "verifiedVersion": "2025:774"
+    },
+    {
+      "id": "S1983-294",
+      "name": "Lagen (1983:294) om inrättande, utvidgning och avlysning av allmän flottled",
+      "sfs": "1983-294",
+      "verifiedVersion": "1983:294"
+    },
+    {
+      "id": "S1991-614",
+      "name": "Bostadsrättslagen (1991:614)",
+      "sfs": "1991-614",
+      "verifiedVersion": "2026:847"
+    },
+    {
+      "id": "S1994-1220",
+      "name": "Stiftelselagen (1994:1220)",
+      "sfs": "1994-1220",
+      "verifiedVersion": "2025:801"
+    },
+    {
+      "id": "S2001-883",
+      "name": "Revisorslagen (2001:883)",
+      "sfs": "2001-883",
+      "verifiedVersion": "2024:355"
+    },
+    {
+      "id": "S2005-551",
+      "name": "Aktiebolagslagen (2005:551)",
+      "sfs": "2005-551",
+      "verifiedVersion": "2026:783"
+    },
+    {
+      "id": "S2011-914",
+      "name": "Lagen (2011:914) om konsumentskydd vid avtal om tidsdelat boende eller långfristig semesterprodukt",
+      "sfs": "2011-914",
+      "verifiedVersion": "2011:914"
+    },
+    {
+      "id": "S2018-672",
+      "name": "Lagen (2018:672) om ekonomiska föreningar",
+      "sfs": "2018-672",
+      "verifiedVersion": "2025:807"
+    },
+    {
+      "id": "S1963-583",
+      "name": "Lagen (1963:583) om avveckling av fideikommiss",
+      "sfs": "1963-583",
+      "verifiedVersion": "1999:1042"
+    },
+    {
+      "id": "S1973-1173",
+      "name": "Kreditupplysningslagen (1973:1173)",
+      "sfs": "1973-1173",
+      "verifiedVersion": "2026:1056"
+    },
+    {
+      "id": "S1974-182",
+      "name": "Inkassolagen (1974:182)",
+      "sfs": "1974-182",
+      "verifiedVersion": "2024:801"
+    },
+    {
+      "id": "S1976-357",
+      "name": "Lagen (1976:357) om motortävlingsförsäkring",
+      "sfs": "1976-357",
+      "verifiedVersion": "2023:667"
+    },
+    {
+      "id": "S1981-774",
+      "name": "Utsökningsbalken (1981:774)",
+      "sfs": "1981-774",
+      "verifiedVersion": "2026:1206"
+    },
+    {
+      "id": "S1987-672",
+      "name": "Konkurslagen (1987:672)",
+      "sfs": "1987-672",
+      "verifiedVersion": "2025:796"
+    },
+    {
+      "id": "S2021-516",
+      "name": "Fastighetsmäklarlagen (2021:516)",
+      "sfs": "2021-516",
+      "verifiedVersion": "2022:1030"
+    },
+    {
+      "id": "S2022-964",
+      "name": "Lagen (2022:964) om företagsrekonstruktion",
+      "sfs": "2022-964",
+      "verifiedVersion": "2022:964"
+    },
+    {
+      "id": "S1918-163",
+      "name": "Lagen (1918:163) med vissa bestämmelser om sjöfynd",
+      "sfs": "1918-163",
+      "verifiedVersion": "2024:714"
+    },
+    {
+      "id": "S1970-485",
+      "name": "Mönsterskyddslagen (1970:485)",
+      "sfs": "1970-485",
+      "verifiedVersion": "2025:307"
+    },
+    {
+      "id": "S1970-498",
+      "name": "Lagen (1970:498) om skydd för vapen och vissa andra officiella beteckningar",
+      "sfs": "1970-498",
+      "verifiedVersion": "2025:950"
+    },
+    {
+      "id": "S1971-1078",
+      "name": "Lagen (1971:1078) om försvarsuppfinningar",
+      "sfs": "1971-1078",
+      "verifiedVersion": "1971:1078"
+    },
+    {
+      "id": "S1975-1083",
+      "name": "Lagen (1975:1083) om uppgiftsskyldighet rörande mottagande av olja",
+      "sfs": "1975-1083",
+      "verifiedVersion": "2018:1858"
+    },
+    {
+      "id": "S1982-963",
+      "name": "Lagen (1982:963) om rymdverksamhet",
+      "sfs": "1982-963",
+      "verifiedVersion": "2021:1025"
+    },
+    {
+      "id": "S1992-1685",
+      "name": "Lagen (1992:1685) om skydd för kretsmönster för halvledarprodukter",
+      "sfs": "1992-1685",
+      "verifiedVersion": "2024:822"
+    },
+    {
+      "id": "S1997-306",
+      "name": "Växtförädlarrättslagen (1997:306)",
+      "sfs": "1997-306",
+      "verifiedVersion": "2024:947"
+    },
+    {
+      "id": "S2014-812",
+      "name": "Lagen (2014:812) om skydd för kännetecken i den internationella humanitära rätten",
+      "sfs": "2014-812",
+      "verifiedVersion": "2014:812"
+    },
+    {
+      "id": "S2018-1653",
+      "name": "Lagen (2018:1653) om företagsnamn",
+      "sfs": "2018-1653",
+      "verifiedVersion": "2024:887"
+    },
+    {
+      "id": "S2018-1854",
+      "name": "Lagen (2018:1854) om den internationella fonden för farliga och skadliga ämnen",
+      "sfs": "2018-1854",
+      "verifiedVersion": "2018:1854"
+    },
+    {
+      "id": "S2024-945",
+      "name": "Patentlagen (2024:945)",
+      "sfs": "2024-945",
+      "verifiedVersion": "2024:945"
+    },
+    {
+      "id": "S1932-242",
+      "name": "Lagen (1932:242) om skyldighet i vissa fall att tillhandahålla förnödenheter m.m. för ordningsmaktens behov",
+      "sfs": "1932-242",
+      "verifiedVersion": "1998:1553"
+    },
+    {
+      "id": "S1978-800",
+      "name": "Lagen (1978:800) om namn och bild i reklam",
+      "sfs": "1978-800",
+      "verifiedVersion": "1978:800"
+    },
+    {
+      "id": "S1998-112",
+      "name": "Lagen (1998:112) om ansvar för elektroniska anslagstavlor",
+      "sfs": "1998-112",
+      "verifiedVersion": "2024:956"
+    },
+    {
+      "id": "S1991-1469",
+      "name": "Yttrandefrihetsgrundlagen (1991:1469)",
+      "sfs": "1991-1469",
+      "verifiedVersion": "2022:1525"
+    },
+    {
+      "id": "S2009-400",
+      "name": "Offentlighets- och sekretesslagen (2009:400)",
+      "sfs": "2009-400",
+      "verifiedVersion": "2026:1648"
+    },
+    {
+      "id": "S2017-151",
+      "name": "Lagen (2017:151) om meddelarskydd i vissa enskilda verksamheter",
+      "sfs": "2017-151",
+      "verifiedVersion": "2026:1649"
+    },
+    {
+      "id": "S1984-3",
+      "name": "Lagen (1984:3) om kärnteknisk verksamhet",
+      "sfs": "1984-3",
+      "verifiedVersion": "2026:1365"
+    },
+    {
+      "id": "S1992-1140",
+      "name": "Lagen (1992:1140) om Sveriges ekonomiska zon",
+      "sfs": "1992-1140",
+      "verifiedVersion": "2026:833"
+    },
+    {
+      "id": "S1998-1707",
+      "name": "Lagen (1998:1707) om åtgärder mot buller och avgaser från mobila maskiner",
+      "sfs": "1998-1707",
+      "verifiedVersion": "2022:1115"
+    },
+    {
+      "id": "S1998-811",
+      "name": "Lagen (1998:811) om införande av miljöbalken",
+      "sfs": "1998-811",
+      "verifiedVersion": "2025:513"
+    },
+    {
+      "id": "S1998-814",
+      "name": "Lagen (1998:814) med särskilda bestämmelser om gaturenhållning och skyltning",
+      "sfs": "1998-814",
+      "verifiedVersion": "2025:977"
+    },
+    {
+      "id": "S2006-647",
+      "name": "Lagen (2006:647) om finansiering av kärntekniska restprodukter",
+      "sfs": "2006-647",
+      "verifiedVersion": "2026:1316"
+    },
+    {
+      "id": "S2006-924",
+      "name": "Lagen (2006:924) om Antarktis",
+      "sfs": "2006-924",
+      "verifiedVersion": "2024:852"
+    },
+    {
+      "id": "S2010-950",
+      "name": "Lagen (2010:950) om ansvar och ersättning vid radiologiska olyckor",
+      "sfs": "2010-950",
+      "verifiedVersion": "2026:1317"
+    },
+    {
+      "id": "S2011-318",
+      "name": "Avgasreningslagen (2011:318)",
+      "sfs": "2011-318",
+      "verifiedVersion": "2022:1124"
+    },
+    {
+      "id": "S2011-319",
+      "name": "Drivmedelslagen (2011:319)",
+      "sfs": "2011-319",
+      "verifiedVersion": "2025:574"
+    },
+    {
+      "id": "S2018-396",
+      "name": "Strålskyddslagen (2018:396)",
+      "sfs": "2018-396",
+      "verifiedVersion": "2026:1590"
+    },
+    {
+      "id": "S2020-1173",
+      "name": "Lagen (2020:1173) om vissa utsläpp av växthusgaser",
+      "sfs": "2020-1173",
+      "verifiedVersion": "2025:908"
+    },
+    {
+      "id": "S1975-197",
+      "name": "Oljekrislagen (1975:197)",
+      "sfs": "1975-197",
+      "verifiedVersion": "2014:718"
+    },
+    {
+      "id": "S1978-160",
+      "name": "Lagen (1978:160) om vissa rörledningar",
+      "sfs": "1978-160",
+      "verifiedVersion": "2026:402"
+    },
+    {
+      "id": "S1992-1512",
+      "name": "Lagen (1992:1512) om elektromagnetisk kompatibilitet",
+      "sfs": "1992-1512",
+      "verifiedVersion": "2022:1110"
+    },
+    {
+      "id": "S1997-288",
+      "name": "Elberedskapslagen (1997:288)",
+      "sfs": "1997-288",
+      "verifiedVersion": "2026:1288"
+    },
+    {
+      "id": "S1997-857",
+      "name": "Ellagen (1997:857)",
+      "sfs": "1997-857",
+      "verifiedVersion": "2026:1298"
+    },
+    {
+      "id": "S2005-403",
+      "name": "Naturgaslagen (2005:403)",
+      "sfs": "2005-403",
+      "verifiedVersion": "2026:1290"
+    },
+    {
+      "id": "S2011-1200",
+      "name": "Lagen (2011:1200) om elcertifikat",
+      "sfs": "2011-1200",
+      "verifiedVersion": "2026:1292"
+    },
+    {
+      "id": "S2013-385",
+      "name": "Lagen (2013:385) om ingripande mot marknadsmissbruk vid handel med grossistenergiprodukter",
+      "sfs": "2013-385",
+      "verifiedVersion": "2026:1293"
+    },
+    {
+      "id": "S2016-732",
+      "name": "Elsäkerhetslagen (2016:732)",
+      "sfs": "2016-732",
+      "verifiedVersion": "2026:1294"
+    },
+    {
+      "id": "S1966-314",
+      "name": "Lagen (1966:314) om kontinentalsockeln",
+      "sfs": "1966-314",
+      "verifiedVersion": "2026:401"
+    },
+    {
+      "id": "S1975-424",
+      "name": "Lagen (1975:424) om uppgiftsskyldighet vid grundvattentäktsundersökning och brunnsborrning",
+      "sfs": "1975-424",
+      "verifiedVersion": "1985:245"
+    },
+    {
+      "id": "S1991-45",
+      "name": "Minerallagen (1991:45)",
+      "sfs": "1991-45",
+      "verifiedVersion": "2025:1044"
+    },
+    {
+      "id": "S1992-160",
+      "name": "Lagen (1992:160) om utländska filialer m.m.",
+      "sfs": "1992-160",
+      "verifiedVersion": "2026:1059"
+    },
+    {
+      "id": "S2010-1052",
+      "name": "Lagen (2010:1052) om auktorisation av patentombud",
+      "sfs": "2010-1052",
+      "verifiedVersion": "2010:1052"
+    },
+    {
+      "id": "S1990-783",
+      "name": "Lagen (1990:783) om skydd för beteckningen svenskt arkiv",
+      "sfs": "1990-783",
+      "verifiedVersion": "2024:815"
+    },
+    {
+      "id": "S2000-171",
+      "name": "Lagen (2000:171) om förbud beträffande viss avkodningsutrustning",
+      "sfs": "2000-171",
+      "verifiedVersion": "2024:838"
+    },
+    {
+      "id": "S2010-1882",
+      "name": "Lagen (2010:1882) om åldersgränser för film som ska visas offentligt",
+      "sfs": "2010-1882",
+      "verifiedVersion": "2023:842"
+    },
+    {
+      "id": "S2010-696",
+      "name": "Radio- och tv-lagen (2010:696)",
+      "sfs": "2010-696",
+      "verifiedVersion": "2025:990"
+    },
+    {
+      "id": "S1932-55",
+      "name": "Lagen (1932:55) om viktmärkning i vissa fall av gods som skall inlastas å fartyg",
+      "sfs": "1932-55",
+      "verifiedVersion": "2000:768"
+    },
+    {
+      "id": "S1939-299",
+      "name": "Lagen (1939:299) om förbud i vissa fall mot överlåtelse eller upplåtelse av fartyg m.m.",
+      "sfs": "1939-299",
+      "verifiedVersion": "2024:789"
+    },
+    {
+      "id": "S1940-176",
+      "name": "Lagen (1940:176) med vissa bestämmelser om fraktfart med svenska fartyg",
+      "sfs": "1940-176",
+      "verifiedVersion": "2000:851"
+    },
+    {
+      "id": "S1973-282",
+      "name": "Sjömanslagen (1973:282)",
+      "sfs": "1973-282",
+      "verifiedVersion": "2025:982"
+    },
+    {
+      "id": "S1975-88",
+      "name": "Lagen (1975:88) med bemyndigande att meddela föreskrifter om trafik, transporter och kommunikationer",
+      "sfs": "1975-88",
+      "verifiedVersion": "2010:1556"
+    },
+    {
+      "id": "S1980-152",
+      "name": "Containerlagen (1980:152)",
+      "sfs": "1980-152",
+      "verifiedVersion": "2010:1557"
+    },
+    {
+      "id": "S1980-424",
+      "name": "Lagen (1980:424) om åtgärder mot förorening från fartyg",
+      "sfs": "1980-424",
+      "verifiedVersion": "2026:508"
+    },
+    {
+      "id": "S1983-929",
+      "name": "Mönstringslagen (1983:929)",
+      "sfs": "1983-929",
+      "verifiedVersion": "2025:984"
+    },
+    {
+      "id": "S1985-126",
+      "name": "Lagen (1985:126) om åtgärder till skydd för svensk sjöfart",
+      "sfs": "1985-126",
+      "verifiedVersion": "2000:853"
+    },
+    {
+      "id": "S1989-532",
+      "name": "Lagen (1989:532) om tillstånd för anställning på fartyg",
+      "sfs": "1989-532",
+      "verifiedVersion": "2010:1560"
+    },
+    {
+      "id": "S1990-712",
+      "name": "Lagen (1990:712) om undersökning av olyckor",
+      "sfs": "1990-712",
+      "verifiedVersion": "2014:725"
+    },
+    {
+      "id": "S1996-19",
+      "name": "Lagen (1996:19) om begränsning av rätten att bedriva linjesjöfart på Gotland",
+      "sfs": "1996-19",
+      "verifiedVersion": "1996:19"
+    },
+    {
+      "id": "S2002-574",
+      "name": "Fordonslagen (2002:574)",
+      "sfs": "2002-574",
+      "verifiedVersion": "2026:1275"
+    },
+    {
+      "id": "S2003-364",
+      "name": "Fartygssäkerhetslagen (2003:364)",
+      "sfs": "2003-364",
+      "verifiedVersion": "2024:843"
+    },
+    {
+      "id": "S2003-367",
+      "name": "Lagen (2003:367) om lastning och lossning av bulkfartyg",
+      "sfs": "2003-367",
+      "verifiedVersion": "2015:440"
+    },
+    {
+      "id": "S2004-487",
+      "name": "Lagen (2004:487) om sjöfartsskydd",
+      "sfs": "2004-487",
+      "verifiedVersion": "2018:1089"
+    },
+    {
+      "id": "S2005-395",
+      "name": "Lagen (2005:395) om arbetstid vid visst vägtransportarbete",
+      "sfs": "2005-395",
+      "verifiedVersion": "2005:395"
+    },
+    {
+      "id": "S2005-426",
+      "name": "Lagen (2005:426) om arbetstid m.m. för flygpersonal inom civilflyget",
+      "sfs": "2005-426",
+      "verifiedVersion": "2014:740"
+    },
+    {
+      "id": "S2006-1209",
+      "name": "Lagen (2006:1209) om hamnskydd",
+      "sfs": "2006-1209",
+      "verifiedVersion": "2025:545"
+    },
+    {
+      "id": "S2008-475",
+      "name": "Lagen (2008:475) om kör- och vilotid vid internationell järnvägstrafik",
+      "sfs": "2008-475",
+      "verifiedVersion": "2022:376"
+    },
+    {
+      "id": "S2009-1165",
+      "name": "Barlastvattenlagen (2009:1165)",
+      "sfs": "2009-1165",
+      "verifiedVersion": "2018:835"
+    },
+    {
+      "id": "S2011-725",
+      "name": "Lagen (2011:725) om behörighet för lokförare",
+      "sfs": "2011-725",
+      "verifiedVersion": "2022:379"
+    },
+    {
+      "id": "S2013-283",
+      "name": "Lagen (2013:283) om bevakning ombord på svenskt fartyg",
+      "sfs": "2013-283",
+      "verifiedVersion": "2026:422"
+    },
+    {
+      "id": "S2022-368",
+      "name": "Lagen (2022:368) om nationella järnvägssystem",
+      "sfs": "2022-368",
+      "verifiedVersion": "2022:368"
+    },
+    {
+      "id": "S1971-948",
+      "name": "Väglagen (1971:948)",
+      "sfs": "1971-948",
+      "verifiedVersion": "2025:772"
+    },
+    {
+      "id": "S1933-269",
+      "name": "Lagen (1933:269) om ägofred",
+      "sfs": "1933-269",
+      "verifiedVersion": "2019:844"
+    },
+    {
+      "id": "S1970-299",
+      "name": "Lagen (1970:299) om skydd mot flyghavre",
+      "sfs": "1970-299",
+      "verifiedVersion": "1991:384"
+    },
+    {
+      "id": "S1971-437",
+      "name": "Rennäringslagen (1971:437)",
+      "sfs": "1971-437",
+      "verifiedVersion": "2018:364"
+    },
+    {
+      "id": "S1974-211",
+      "name": "Bisjukdomslagen (1974:211)",
+      "sfs": "1974-211",
+      "verifiedVersion": "2012:80"
+    },
+    {
+      "id": "S1976-298",
+      "name": "Utsädeslagen (1976:298)",
+      "sfs": "1976-298",
+      "verifiedVersion": "2024:803"
+    },
+    {
+      "id": "S1979-429",
+      "name": "Skogsvårdslagen (1979:429)",
+      "sfs": "1979-429",
+      "verifiedVersion": "2026:1239"
+    },
+    {
+      "id": "S1999-657",
+      "name": "Epizootilagen (1999:657)",
+      "sfs": "1999-657",
+      "verifiedVersion": "2026:1099"
+    },
+    {
+      "id": "S1999-658",
+      "name": "Zoonoslagen (1999:658)",
+      "sfs": "1999-658",
+      "verifiedVersion": "2026:1100"
+    },
+    {
+      "id": "S2006-804",
+      "name": "Livsmedelslagen (2006:804)",
+      "sfs": "2006-804",
+      "verifiedVersion": "2026:1101"
+    },
+    {
+      "id": "S2006-805",
+      "name": "Lagen (2006:805) om foder och animaliska biprodukter",
+      "sfs": "2006-805",
+      "verifiedVersion": "2026:1102"
+    },
+    {
+      "id": "S2006-806",
+      "name": "Lagen (2006:806) om provtagning på djur, m.m.",
+      "sfs": "2006-806",
+      "verifiedVersion": "2026:1103"
+    },
+    {
+      "id": "S2006-807",
+      "name": "Lagen (2006:807) om kontroll av husdjur, m.m.",
+      "sfs": "2006-807",
+      "verifiedVersion": "2026:1104"
+    },
+    {
+      "id": "S2008-1049",
+      "name": "Lagen (2008:1049) om förbud mot utsläppande på marknaden av päls av katt och hund m.m.",
+      "sfs": "2008-1049",
+      "verifiedVersion": "2024:857"
+    },
+    {
+      "id": "S2009-302",
+      "name": "Lagen (2009:302) om verksamhet inom djurens hälso- och sjukvård",
+      "sfs": "2009-302",
+      "verifiedVersion": "2026:821"
+    },
+    {
+      "id": "S2011-1070",
+      "name": "Lagen (2011:1070) om handel med sälprodukter",
+      "sfs": "2011-1070",
+      "verifiedVersion": "2024:870"
+    },
+    {
+      "id": "S2014-1009",
+      "name": "Lagen (2014:1009) om handel med timmer och trävaror",
+      "sfs": "2014-1009",
+      "verifiedVersion": "2024:877"
+    },
+    {
+      "id": "S2022-725",
+      "name": "Växtskyddslagen (2022:725)",
+      "sfs": "2022-725",
+      "verifiedVersion": "2026:1108"
+    },
+    {
+      "id": "S1933-78",
+      "name": "Förordningen (1933:78) angående beteckning för vissa slag av vin",
+      "sfs": "1933-78",
+      "verifiedVersion": "1933:78"
+    },
+    {
+      "id": "S1975-580",
+      "name": "Steriliseringslagen (1975:580)",
+      "sfs": "1975-580",
+      "verifiedVersion": "2024:240"
+    },
+    {
+      "id": "S1990-1144",
+      "name": "Begravningslagen (1990:1144)",
+      "sfs": "1990-1144",
+      "verifiedVersion": "2023:447"
+    },
+    {
+      "id": "S1991-1047",
+      "name": "Lagen (1991:1047) om sjuklön",
+      "sfs": "1991-1047",
+      "verifiedVersion": "2025:938"
+    },
+    {
+      "id": "S1993-387",
+      "name": "Lagen (1993:387) om stöd och service till vissa funktionshindrade",
+      "sfs": "1993-387",
+      "verifiedVersion": "2026:676"
+    },
+    {
+      "id": "S1995-831",
+      "name": "Lagen (1995:831) om transplantation m.m.",
+      "sfs": "1995-831",
+      "verifiedVersion": "2024:827"
+    },
+    {
+      "id": "S1995-832",
+      "name": "Lagen (1995:832) om obduktion m.m.",
+      "sfs": "1995-832",
+      "verifiedVersion": "2014:760"
+    },
+    {
+      "id": "S1997-192",
+      "name": "Lagen (1997:192) om internationell adoptionsförmedling",
+      "sfs": "1997-192",
+      "verifiedVersion": "2025:419"
+    },
+    {
+      "id": "S2006-1570",
+      "name": "Lagen (2006:1570) om skydd mot internationella hot mot människors hälsa",
+      "sfs": "2006-1570",
+      "verifiedVersion": "2024:744"
+    },
+    {
+      "id": "S2006-496",
+      "name": "Lagen (2006:496) om blodsäkerhet",
+      "sfs": "2006-496",
+      "verifiedVersion": "2024:850"
+    },
+    {
+      "id": "S2008-286",
+      "name": "Lagen (2008:286) om kvalitets- och säkerhetsnormer vid hantering av mänskliga vävnader och celler",
+      "sfs": "2008-286",
+      "verifiedVersion": "2024:856"
+    },
+    {
+      "id": "S2009-730",
+      "name": "Lagen (2009:730) om handel med vissa receptfria läkemedel",
+      "sfs": "2009-730",
+      "verifiedVersion": "2024:859"
+    },
+    {
+      "id": "S2010-110",
+      "name": "Socialförsäkringsbalken (2010:110)",
+      "sfs": "2010-110",
+      "verifiedVersion": "2026:1658"
+    },
+    {
+      "id": "S2012-595",
+      "name": "Lagen (2012:595) om införsel av och handel med sprutor och kanyler",
+      "sfs": "2012-595",
+      "verifiedVersion": "2024:871"
+    },
+    {
+      "id": "S2023-38",
+      "name": "Biobankslagen (2023:38)",
+      "sfs": "2023-38",
+      "verifiedVersion": "2023:285"
+    },
+    {
+      "id": "S2025-400",
+      "name": "Socialtjänstlagen (2025:400)",
+      "sfs": "2025-400",
+      "verifiedVersion": "2026:1652"
+    },
+    {
+      "id": "S1993-1392",
+      "name": "Lagen (1993:1392) om pliktexemplar av dokument",
+      "sfs": "1993-1392",
+      "verifiedVersion": "2018:1914"
+    },
+    {
+      "id": "S2003-460",
+      "name": "Lagen (2003:460) om etikprövning av forskning som avser människor",
+      "sfs": "2003-460",
+      "verifiedVersion": "2026:1229"
+    },
+    {
+      "id": "S2006-449",
+      "name": "Lagen (2006:449) om skydd för störningskänslig forskning",
+      "sfs": "2006-449",
+      "verifiedVersion": "2022:493"
+    },
+    {
+      "id": "S1962-120",
+      "name": "Lagen (1962:120) om straff i vissa fall för oriktigt ursprungsintyg m.m.",
+      "sfs": "1962-120",
+      "verifiedVersion": "2024:716"
+    },
+    {
+      "id": "S1964-19",
+      "name": "Krigshandelslagen (1964:19)",
+      "sfs": "1964-19",
+      "verifiedVersion": "2024:793"
+    },
+    {
+      "id": "S1992-1300",
+      "name": "Lagen (1992:1300) om krigsmateriel",
+      "sfs": "1992-1300",
+      "verifiedVersion": "2026:1371"
+    },
+    {
+      "id": "S2000-1064",
+      "name": "Lagen (2000:1064) om kontroll av produkter med dubbla användningsområden och av tekniskt bistånd",
+      "sfs": "2000-1064",
+      "verifiedVersion": "2024:840"
+    },
+    {
+      "id": "S2006-1329",
+      "name": "Lagen (2006:1329) om handel med vissa varor som kan användas till dödsstraff eller tortyr, m.m.",
+      "sfs": "2006-1329",
+      "verifiedVersion": "2024:854"
+    },
+    {
+      "id": "S2011-791",
+      "name": "Lagen (2011:791) om ackreditering och teknisk kontroll",
+      "sfs": "2011-791",
+      "verifiedVersion": "2022:1127"
+    },
+    {
+      "id": "S2012-179",
+      "name": "Lagen (2012:179) om straff för olovlig befattning med klusterammunition",
+      "sfs": "2012-179",
+      "verifiedVersion": "2021:1039"
+    },
+    {
+      "id": "S2023-677",
+      "name": "Lagen (2023:677) om frysning av tillgångar",
+      "sfs": "2023-677",
+      "verifiedVersion": "2025:330"
+    },
+    {
+      "id": "S2025-327",
+      "name": "Lagen (2025:327) om internationella sanktioner",
+      "sfs": "2025-327",
+      "verifiedVersion": "2025:327"
+    },
+    {
+      "id": "S1985-613",
+      "name": "Förordningen (1985:613) om auktorisation av tolkar och översättare",
+      "sfs": "1985-613",
+      "verifiedVersion": "2018:946"
+    },
+    {
+      "id": "S2024-1159",
+      "name": "Lagen (2024:1159) med kompletterande bestämmelser till EU:s förordning om marknader för kryptotillgångar",
+      "sfs": "2024-1159",
+      "verifiedVersion": "2026:336"
+    },
+    {
+      "id": "S2022-1746",
+      "name": "Lagen (2022:1746) med kompletterande bestämmelser till EU:s förordning om en paneuropeisk privat pensionsprodukt (PEPP-produkt)",
+      "sfs": "2022-1746",
+      "verifiedVersion": "2025:192"
+    },
+    {
+      "id": "S2021-899",
+      "name": "Lagen (2021:899) med kompletterande bestämmelser till EU:s förordning om gräsrotsfinansiering",
+      "sfs": "2021-899",
+      "verifiedVersion": "2026:207"
+    },
+    {
+      "id": "S1975-927",
+      "name": "Fartygsregisterförordningen (1975:927)",
+      "sfs": "1975-927",
+      "verifiedVersion": "2026:1402"
+    },
+    {
+      "id": "S1975-929",
+      "name": "Förordningen (1975:929) med vissa bestämmelser om fartygs identifiering",
+      "sfs": "1975-929",
+      "verifiedVersion": "2024:764"
+    },
+    {
+      "id": "S1958-272",
+      "name": "Förordningen (1958:272) om tjänstekort",
+      "sfs": "1958-272",
+      "verifiedVersion": "2024:686"
+    },
+    {
+      "id": "S2026-409",
+      "name": "Vapenförordningen (2026:409)",
+      "sfs": "2026-409",
+      "verifiedVersion": "2026:1484"
+    },
+    {
+      "id": "S1949-105",
+      "name": "Tryckfrihetsförordningen (1949:105)",
+      "sfs": "1949-105",
+      "verifiedVersion": "2022:1524"
+    },
+    {
+      "id": "S1991-1559",
+      "name": "Lagen (1991:1559) med föreskrifter på tryckfrihetsförordningens och yttrandefrihetsgrundlagens områden",
+      "sfs": "1991-1559",
+      "verifiedVersion": "2025:988"
+    },
+    {
+      "id": "S1984-14",
+      "name": "Förordningen (1984:14) om kärnteknisk verksamhet",
+      "sfs": "1984-14",
+      "verifiedVersion": "2026:1782"
+    },
+    {
+      "id": "S2007-186",
+      "name": "Bilskrotningsförordningen (2007:186)",
+      "sfs": "2007-186",
+      "verifiedVersion": "2026:1698"
+    },
+    {
+      "id": "S2022-1276",
+      "name": "Förordningen (2022:1276) om producentansvar för elutrustning",
+      "sfs": "2022-1276",
+      "verifiedVersion": "2026:1446"
+    },
+    {
+      "id": "S2023-132",
+      "name": "Förordningen (2023:132) om producentansvar för bilar",
+      "sfs": "2023-132",
+      "verifiedVersion": "2026:697"
+    },
+    {
+      "id": "S1994-795",
+      "name": "Förordningen (1994:795) om tillstånd för kraftverk avsedda att drivas med oljebränsle",
+      "sfs": "1994-795",
+      "verifiedVersion": "1998:880"
+    },
+    {
+      "id": "S1966-315",
+      "name": "Kontinentalsockelförordningen (1966:315)",
+      "sfs": "1966-315",
+      "verifiedVersion": "2026:1040"
+    },
+    {
+      "id": "S1975-49",
+      "name": "Förordningen (1975:49) om gemensam kontrollstämpel m.m. för arbeten av guld, silver eller platina",
+      "sfs": "1975-49",
+      "verifiedVersion": "2025:1185"
+    },
+    {
+      "id": "S1992-285",
+      "name": "Mineralförordningen (1992:285)",
+      "sfs": "1992-285",
+      "verifiedVersion": "2025:1048"
+    },
+    {
+      "id": "S1970-340",
+      "name": "Förordningen (1970:340) om skolskjutsning",
+      "sfs": "1970-340",
+      "verifiedVersion": "2018:933"
+    },
+    {
+      "id": "S1970-344",
+      "name": "Kungörelsen (1970:344) om kompetenskrav för förare av större fritidsbåtar",
+      "sfs": "1970-344",
+      "verifiedVersion": "2010:1581"
+    },
+    {
+      "id": "S1974-235",
+      "name": "Förordningen (1974:235) om tillstånd till sjöfart i inrikes trafik med utländskt fartyg m.m.",
+      "sfs": "1974-235",
+      "verifiedVersion": "2014:1366"
+    },
+    {
+      "id": "S1979-1036",
+      "name": "Förordningen (1979:1036) om högsta pris för vissa lastbilstransporter",
+      "sfs": "1979-1036",
+      "verifiedVersion": "2000:1378"
+    },
+    {
+      "id": "S1982-569",
+      "name": "Förordningen (1982:569) om lotsning m.m.",
+      "sfs": "1982-569",
+      "verifiedVersion": "2008:1128"
+    },
+    {
+      "id": "S1986-172",
+      "name": "Förordningen (1986:172) om luftfartygsregistret m.m.",
+      "sfs": "1986-172",
+      "verifiedVersion": "2023:226"
+    },
+    {
+      "id": "S1986-300",
+      "name": "Sjötrafikförordningen (1986:300)",
+      "sfs": "1986-300",
+      "verifiedVersion": "2022:513"
+    },
+    {
+      "id": "S1986-305",
+      "name": "Svävarfartsförordningen (1986:305)",
+      "sfs": "1986-305",
+      "verifiedVersion": "2018:950"
+    },
+    {
+      "id": "S1990-717",
+      "name": "Förordningen (1990:717) om undersökning av olyckor",
+      "sfs": "1990-717",
+      "verifiedVersion": "2025:1090"
+    },
+    {
+      "id": "S1993-185",
+      "name": "Förordningen (1993:185) om arbetsförhållanden vid vissa internationella vägtransporter",
+      "sfs": "1993-185",
+      "verifiedVersion": "2026:1276"
+    },
+    {
+      "id": "S1994-1162",
+      "name": "Förordningen (1994:1162) om skeppsmätning",
+      "sfs": "1994-1162",
+      "verifiedVersion": "2025:1532"
+    },
+    {
+      "id": "S1998-1276",
+      "name": "Trafikförordningen (1998:1276)",
+      "sfs": "1998-1276",
+      "verifiedVersion": "2026:1052"
+    },
+    {
+      "id": "S1998-1355",
+      "name": "Förordningen (1998:1355) om trafik med höghastighetsfartyg",
+      "sfs": "1998-1355",
+      "verifiedVersion": "2018:979"
+    },
+    {
+      "id": "S1998-786",
+      "name": "Förordningen (1998:786) om internationella vägtransporter inom Europeiska ekonomiska samarbetsområdet (EES)",
+      "sfs": "1998-786",
+      "verifiedVersion": "2026:1738"
+    },
+    {
+      "id": "S2003-438",
+      "name": "Fartygssäkerhetsförordningen (2003:438)",
+      "sfs": "2003-438",
+      "verifiedVersion": "2025:1245"
+    },
+    {
+      "id": "S2004-865",
+      "name": "Förordningen (2004:865) om kör- och vilotider samt färdskrivare, m.m.",
+      "sfs": "2004-865",
+      "verifiedVersion": "2026:1278"
+    },
+    {
+      "id": "S2007-90",
+      "name": "Vägmärkesförordningen (2007:90)",
+      "sfs": "2007-90",
+      "verifiedVersion": "2025:268"
+    },
+    {
+      "id": "S2009-211",
+      "name": "Fordonsförordningen (2009:211)",
+      "sfs": "2009-211",
+      "verifiedVersion": "2025:1571"
+    },
+    {
+      "id": "S2010-770",
+      "name": "Luftfartsförordningen (2010:770)",
+      "sfs": "2010-770",
+      "verifiedVersion": "2026:1196"
+    },
+    {
+      "id": "S2017-309",
+      "name": "Förordningen (2017:309) om försöksverksamhet med automatiserade fordon",
+      "sfs": "2017-309",
+      "verifiedVersion": "2020:754"
+    },
+    {
+      "id": "S2019-383",
+      "name": "Förordningen (2019:383) om fordons registrering och användning",
+      "sfs": "2019-383",
+      "verifiedVersion": "2019:383"
+    },
+    {
+      "id": "S1997-1121",
+      "name": "Förordningen (1997:1121) om farledsavgift",
+      "sfs": "1997-1121",
+      "verifiedVersion": "2018:972"
+    },
+    {
+      "id": "S1956-413",
+      "name": "Förordningen (1956:413) om klassificering av kött",
+      "sfs": "1956-413",
+      "verifiedVersion": "2006:832"
+    },
+    {
+      "id": "S1974-661",
+      "name": "Kungörelsen (1974:661) om uppgifter för galt- och betäckningsstatistiken",
+      "sfs": "1974-661",
+      "verifiedVersion": "2018:934"
+    },
+    {
+      "id": "S1977-945",
+      "name": "Förordningen (1977:945) om trädgårdsväxters sundhet, sortäkthet och kvalitet",
+      "sfs": "1977-945",
+      "verifiedVersion": "2025:1186"
+    },
+    {
+      "id": "S1994-1709",
+      "name": "Lagen (1994:1709) om EU:s förordningar om den gemensamma fiskeripolitiken",
+      "sfs": "1994-1709",
+      "verifiedVersion": "2017:246"
+    },
+    {
+      "id": "S1994-1710",
+      "name": "Lagen (1994:1710) om EG:s förordningar om jordbruksprodukter",
+      "sfs": "1994-1710",
+      "verifiedVersion": "2017:247"
+    },
+    {
+      "id": "S1994-1830",
+      "name": "Förordningen (1994:1830) om införsel av levande djur m.m.",
+      "sfs": "1994-1830",
+      "verifiedVersion": "2026:604"
+    },
+    {
+      "id": "S1994-542",
+      "name": "Förordningen (1994:542) om utförsel av levande djur m.m.",
+      "sfs": "1994-542",
+      "verifiedVersion": "2021:254"
+    },
+    {
+      "id": "S2000-281",
+      "name": "Förordningen (2000:281) om regionalt transportbidrag",
+      "sfs": "2000-281",
+      "verifiedVersion": "2026:59"
+    },
+    {
+      "id": "S2021-600",
+      "name": "Lagen (2021:600) med kompletterande bestämmelser till EU:s förordningar om medicintekniska produkter",
+      "sfs": "2021-600",
+      "verifiedVersion": "2026:499"
+    },
+    {
+      "id": "S1995-1256",
+      "name": "Förordningen (1995:1256) om mästarbrev för hantverkare",
+      "sfs": "1995-1256",
+      "verifiedVersion": "2025:1194"
+    },
+    {
+      "id": "S1997-825",
+      "name": "Lagen (1997:825) om EG:s förordning om skydd mot extraterritoriell lagstiftning som antas av ett tredje land",
+      "sfs": "1997-825",
+      "verifiedVersion": "1997:825"
     }
   ],
   "dependentFields": [

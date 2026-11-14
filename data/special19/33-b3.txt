@@ -1,0 +1,556 @@
+LAW S2016-319 | Lagen (2016:319) om skydd för geografisk information | 2016:319 | Lagen om skydd för geografisk information
+X 2,10
+
+@ v21-geografisk-information | Brott mot lagen om skydd för geografisk information | 12 § | 12,3,6,7,9
+PEN 0 | 1 | Böter eller fängelse i högst ett år | B–F 1 år
+C Rikets säkerhet
+A sjömätning utan tillstånd;flygfotografering;drönare restriktionsområde;sprida sjökort;sprida flygbilder;ekolod kartläggning
+Q plain
+N Tillstånd behövs inte för ringa sjömätning eller för sjömätning som den hamnansvarige utför i en allmän hamn. Spridningsförbudet gäller inte sammanställningar som har framställts enbart med fjärranalys från satellit.
+G Gärningspersonen gör minst ett av:
+  | Utför sjömätning inom Sveriges sjöterritorium (utom insjöar, vattendrag och kanaler) utan tillstånd, det vill säga registrerar på ett beständigt sätt lägesbestämd information om ett vattenområde.
+  | Fotograferar eller gör liknande registrering från luftfartyg inom eller av ett militärt restriktionsområde utan tillstånd, när det råder höjd beredskap eller under annan tid som regeringen har beslutat.
+  | Fotograferar eller gör liknande registrering från luftfartyg utan tillstånd inom eller av ett annat område som regeringen har föreskrivit vid krig eller krigsfara.
+  | Sprider utan tillstånd en sammanställning av geografisk information om ett vattenområde inom Sveriges sjöterritorium (utom insjöar, vattendrag och kanaler).
+  | Sprider utan tillstånd en sammanställning av geografisk information över andra delar av svenskt territorium, när informationen har hämtats in från luftfartyg genom fotografering eller liknande registrering.
+S Uppsåt eller oaktsamhet.
+U Fallet är ringa.
+U Gärningen är belagd med samma eller strängare straff enligt brottsbalken.
+T Ett företag kartlägger havsbottnen i en skärgårdsfarled med flerstråligt ekolod och sparar mätdata utan att ha sjömätningstillstånd.
+T En person lägger ut detaljerade djupkartor över ett kustområde på en webbplats utan spridningstillstånd.
+
+LAW S2026-440 | Lagen (2026:440) om skyddsrum och skyddade utrymmen | 2026:440 | Lagen om skyddsrum och skyddade utrymmen
+X 1:2,1:3
+
+@ v21-skyddsrum-bereda-plats | Brott mot lagen om skyddsrum och skyddade utrymmen (bereda plats) | 8:1 första meningen | 8:1,4:5
+PEN 0 | 1 | Böter eller fängelse i högst ett år | B–F 1 år
+C Rikets säkerhet
+A skyddsrum;vägra släppa in i skyddsrum;skyddsrum låst;höjd beredskap skyddsrum;skyddat utrymme
+Q plain
+K Gärningspersonen är ägare eller nyttjanderättshavare till en byggnad eller annan anläggning där det finns ett skyddsrum eller ett skyddat utrymme.
+K Det råder höjd beredskap.
+G Gärningspersonen fullgör inte sin skyldighet att bereda plats i skyddsrummet eller det skyddade utrymmet.
+S Uppsåt eller oaktsamhet.
+U Skyddsrummets funktion har begränsats enligt föreskrifter eller beslut som har meddelats med stöd av lagen.
+T Under höjd beredskap vägrar en fastighetsägare att låsa upp husets skyddsrum för skyddssökande när flyglarmet går.
+
+@ v21-skyddsrum-bereda-plats-grovt | Brott mot lagen om skyddsrum och skyddade utrymmen, grovt brott (bereda plats) | 8:1 andra meningen | 8:1,4:5
+PEN 0.5 | 4 | Fängelse i lägst sex månader och högst fyra år | F 6 mån–4 år
+C Rikets säkerhet
+A skyddsrum grovt;vägra skyddsrum krig
+Q plain
+B v21-skyddsrum-bereda-plats
+R grovt
+- Gärningen har medfört avsevärt men för totalförsvaret.
+- Gärningen är av någon annan anledning att anse som grov.
+T Under höjd beredskap håller ägaren till ett stort bergrum med flera hundra skyddsplatser anläggningen stängd under upprepade flyganfall.
+
+@ v21-skyddsrum-foreskrifter | Brott mot lagen om skyddsrum och skyddade utrymmen (föreskrifter och beslut) | 8:2 | 8:2,2:5,2:6
+PEN 0 | 0 | Böter | Böter
+C Rikets säkerhet
+A skyddsrum utrustning;iordningställa skyddsrum;skyddsrum föreskrifter;skyddsrum förråd töms inte
+Q plain
+O En föreskrift eller ett beslut i ett enskilt fall om hur ett skyddsrum eller ett skyddat utrymme ska placeras, utformas och utrustas och inom vilken tid det ska kunna ställas i ordning.
+G Gärningspersonen bryter mot föreskriften eller beslutet.
+S Uppsåt eller oaktsamhet.
+T En fastighetsägare har fått ett beslut om att skyddsrummet ska kunna ställas i ordning inom en viss tid men låter det vara fullt med fast inredning som inte går att få bort i tid.
+
+LAW S1971-291 | Förvaltningsprocesslagen (1971:291) | 1971:291 | FPL
+X 16
+
+@ v21-fpl-bildupptagning | Brott mot förvaltningsprocesslagen (bildupptagning i rättssal) | 38 a § | 38a,16
+PEN 0 | 0.5 | Böter eller fängelse i högst sex månader | B–F 6 mån
+C Rättsväsende
+A fotografera i rättssal;filma förhandling;förvaltningsrätten fotoförbud;sprida bild från rättegång;filma i sidosal
+Q plain
+P En muntlig förhandling i allmän förvaltningsdomstol, till exempel i förvaltningsrätten. Det gäller också en sidosal dit förhandlingen överförs.
+G Gärningspersonen gör minst ett av:
+  | Tar med tekniskt hjälpmedel upp bild i eller in i rättssalen under förhandlingen.
+  | Sprider en bild som har tagits upp i strid med förbudet, om någon syns på bilden.
+S Uppsåt till samtliga rekvisit. Lagen anger ingen skuldform. Utgångspunkten är då att uppsåt krävs.
+U Fallet är ringa.
+T En åhörare filmar med mobilen under en muntlig förhandling i förvaltningsrätten om tvångsvård och lägger ut klippet i sociala medier.
+
+@ v21-fpl-yppandeforbud | Brott mot förvaltningsprocesslagen (yppandeförbud) | 39 § | 39
+PEN 0 | 0 | Böter | Böter
+C Rättsväsende
+A yppandeförbud;stängda dörrar förvaltningsrätten;röja uppgift från förhandling;tystnadsplikt förhandling
+Q plain
+O Rätten har förordnat att något inte får uppenbaras, till exempel en uppgift som har lagts fram vid en förhandling inom stängda dörrar.
+G Gärningspersonen röjer uppgiften.
+K Giltigt skäl saknas.
+S Uppsåt till samtliga rekvisit. Lagen anger ingen skuldform. Utgångspunkten är då att uppsåt krävs.
+T En anhörig som har närvarat vid en förhandling inom stängda dörrar i förvaltningsrätten berättar trots yppandeförbud för grannar vad som sades om den enskildes hälsa.
+
+LAW S1999-988 | Lagen (1999:988) om förhör m.m. hos kommissionen för granskning av de svenska säkerhetstjänsternas författningsskyddande verksamhet | 1999:988 | Lagen om förhör hos säkerhetstjänstkommissionen
+X 2,4
+
+@ v21-osann-utsaga-sakerhetstjanstkommissionen | Brott mot lagen om förhör m.m. hos kommissionen för granskning av de svenska säkerhetstjänsternas författningsskyddande verksamhet (osann utsaga) | 10 § | 10,11
+PEN 0 | 2 | Fängelse i högst två år | F 2 år
+C Rättsväsende
+A ljuga för kommission;osann utsaga kommission;säkerhetstjänstkommissionen;förtiga sanningen förhör;förhör under straffansvar
+Q plain
+N Är brottet ringa döms till böter eller fängelse i högst sex månader. Har gärningen begåtts av grov oaktsamhet är straffet också böter eller fängelse i högst sex månader.
+K Gärningspersonen hörs vid ett förhör under straffansvar inför kommissionen för granskning av de svenska säkerhetstjänsternas författningsskyddande verksamhet.
+G Gärningspersonen lämnar en osann uppgift eller förtiger sanningen.
+S Uppsåt eller grov oaktsamhet.
+U Utsagan är utan betydelse för det som förhöret avsåg.
+U Den hörde hade rätt att vägra yttra sig och omständigheterna innebär en skälig ursäkt.
+T En tidigare tjänsteman som hörs av kommissionen förnekar mot bättre vetande att han har fört register över politiska åsikter.
+
+LAW S1919-426 | Lagen (1919:426) om flottning i allmän flottled | 1919:426 | Flottningslagen
+X 5:66,5:68,5:69
+
+@ v21-flottning-ordningsforeskrifter | Brott mot lagen om flottning i allmän flottled (ordningsföreskrifter) | 7:77 | 7:77,7:80
+PEN 0 | 0 | Böter | Böter
+C Trafik
+A flottning;timmerflottning;flottled;obarkat virke;omärkt virke;avbarkning vid strand
+Q plain
+N Olovlig flottning och utläggning av obarkat virke där det inte är tillåtet straffas enligt samma paragraf med ett särskilt bestämt bötesbelopp per stycke flottgods.
+P En allmän flottled.
+G Gärningspersonen gör minst ett av:
+  | Följer vid flottning inte de föreskrifter som har meddelats till skydd för allmän farled, väg, bro eller färja.
+  | Är flottande och för inte fullständiga virkesjournaler och tumningslistor över det virke som tillförs flottleden eller lämnar inte dem till flottningsstyrelsen på begäran.
+  | Tar utan flottningsstyrelsens medgivande upp omärkt eller otydligt märkt flottgods ur flottleden.
+  | Barkar virke på isen eller på stranden så nära vattnet att barken kan sköljas ned, utan länsstyrelsens tillstånd eller i strid med villkoren i tillståndet.
+S Uppsåt till samtliga rekvisit. Lagen anger ingen skuldform. Utgångspunkten är då att uppsåt krävs.
+U För gärningen är strängare straff föreskrivet i brottsbalken.
+T En person drar upp omärkta timmerstockar ur en allmän flottled och kör hem dem utan att ha frågat flottningsstyrelsen.
+
+@ v21-flottning-oriktig-uppgift | Brott mot lagen om flottning i allmän flottled (oriktig uppgift och otillåten användning av medel) | 7:78 | 7:78,7:80
+PEN 0 | 0 | Böter | Böter
+C Ekonomisk brottslighet
+A flottningsförening;flottningsstyrelse;oriktig uppgift stämma;flottningschef;revisor flottningsförening
+Q plain
+K Gärningspersonen är ledamot av en flottningsstyrelse, flottningschef eller revisor i en flottningsförening.
+G Gärningspersonen gör minst ett av:
+  | Lämnar som styrelseledamot eller flottningschef mot bättre vetande en oriktig uppgift om flottledens eller flottningsföreningens angelägenheter i en handling som läggs fram på flottningsstämma eller ges in till länsstyrelsen.
+  | Använder som styrelseledamot eller flottningschef något som tillhör flottleden eller de flottande, till exempel fondmedel eller förlag, för ett annat ändamål än det får användas till.
+  | Lämnar som revisor mot bättre vetande en oriktig uppgift om flottledens eller föreningens angelägenheter i en berättelse eller annan handling som läggs fram på flottningsstämma.
+  | Låter som revisor bli att anmärka mot en sådan oriktig uppgift i en handling som han eller hon har granskat.
+S Uppsåt.
+U För gärningen är strängare straff föreskrivet i brottsbalken.
+T En flottningschef redovisar medvetet för låga underhållskostnader i förvaltningsberättelsen som läggs fram på flottningsstämman.
+
+@ v21-flottning-styrelsens-skyldigheter | Brott mot lagen om flottning i allmän flottled (styrelsens skyldigheter) | 7:79 | 7:79,7:80
+PEN 0 | 0 | Böter | Böter
+C Ekonomisk brottslighet
+A flottningsförening;flottningsstyrelse försummelse;räkenskapsutdrag;flottningsstämma protokoll;revisor nekas insyn
+Q villkor | Vissa av förseelserna får åtalas bara av målsäganden: att inte lämna räkenskapsutdrag till de flottande, att hindra revisorns granskning, att inte föra eller hålla stämmoprotokoll tillgängligt och att inte hålla ärendeförteckningen tillgänglig eller ta upp ett begärt ärende på den. Som målsägande räknas flottningsföreningen och varje flottande.
+K Gärningspersonen ansvarar för skyldigheten, i regel som ledamot av flottningsstyrelsen.
+G Gärningspersonen åsidosätter minst en av följande skyldigheter:
+  | Att trycka det fastställda reglementet och på begäran tillhandahålla det till skogsägare och flottande.
+  | Att anmäla vald styrelseledamot och ortsombud till länsstyrelsen.
+  | Att i tid lämna förvaltningsberättelsen till revisorerna och ett bestyrkt räkenskapsutdrag till varje flottande.
+  | Att låta revisorn inventera tillgångarna, granska böcker och räkenskaper och få begärda upplysningar.
+  | Att föra protokoll över stämmans beslut och hålla det tillgängligt för de flottande senast fyra veckor efter stämman.
+  | Att varje år skicka in förteckningen över de flottande, uppgift om mängden flottgods, räkenskapsutdrag och berättelser till länsstyrelsen och lämna de ytterligare upplysningar som länsstyrelsen begär.
+  | Att hålla förteckningen över stämmans ärenden tillgänglig och skicka den till flottande som begär det, eller att ta upp ett ärende som en flottande i tid har begärt.
+S Uppsåt till samtliga rekvisit. Lagen anger ingen skuldform. Utgångspunkten är då att uppsåt krävs.
+U För gärningen är strängare straff föreskrivet i brottsbalken.
+T Styrelsen i en flottningsförening vägrar att låta den valda revisorn se föreningens räkenskaper.
+
+LAW S1967-531 | Lagen (1967:531) om tryggande av pensionsutfästelse m.m. | 1967:531 | Tryggandelagen
+
+@ v21-tryggandelagen-minskad-pensionsavsattning | Brott mot lagen om tryggande av pensionsutfästelse (minskad pensionsavsättning) | 8 § | 8,7
+PEN 0 | 0 | Böter | Böter
+C Ekonomisk brottslighet
+A avsatt till pensioner;pensionsskuld balansräkning;pensionsreserv;pensionsstiftelse;tjänstepension redovisning
+Q plain
+K Gärningspersonen är arbetsgivare som redovisar pensionsskuld i balansräkningen under rubriken Avsatt till pensioner.
+G Gärningspersonen minskar posten Avsatt till pensioner under sin pensionsreserv i större utsträckning än reserven har täckning i en pensionsstiftelses förmögenhet.
+S Uppsåt eller grov oaktsamhet.
+T Ett bolag löser upp en stor del av posten Avsatt till pensioner för att förbättra årets resultat, trots att pensionsåtagandena är oförändrade och ingen pensionsstiftelse täcker dem.
+
+LAW S1970-988 | Fastighetsbildningslagen (1970:988) | 1970:988 | FBL
+
+@ v21-fbl-avverkningsforbud | Brott mot fastighetsbildningslagen (förbud mot avverkning och täkt) | 5:35 | 5:35,5:21
+PEN 0 | 0.5 | Böter eller fängelse i högst sex månader | B–F 6 mån
+C Allmän verksamhet
+A avverka skog under förrättning;fastighetsreglering avverkningsförbud;grustäkt lantmäteriet;lantmäteriförrättning förbud
+Q plain
+O Lantmäterimyndigheten har vid en fastighetsreglering förordnat att skogsavverkning eller jord-, grus- eller sandtäkt inte får bedrivas, eller att särskilda villkor ska gälla för en sådan åtgärd.
+G Gärningspersonen överträder förordnandet.
+S Uppsåt.
+T En markägare kalavverkar ett skogsskifte som ska byta ägare i en pågående fastighetsreglering, trots att lantmäterimyndigheten har förbjudit avverkning.
+
+LAW S1974-157 | Handelsregisterlagen (1974:157) | 1974:157 | HRL
+
+@ v21-handelsregister-oriktig-uppgift | Brott mot handelsregisterlagen (oriktig uppgift) | 22 § första stycket | 22
+PEN 0 | 0 | Böter | Böter
+C Ekonomisk brottslighet
+A handelsregistret;oriktig uppgift Bolagsverket;enskild firma registrering;handelsbolag anmälan;falska uppgifter registrering
+Q plain
+N Den som försummar en föreskriven ansökan eller anmälan till handelsregistret döms till penningböter.
+G Gärningspersonen lämnar en oriktig eller vilseledande uppgift i en ansökan eller anmälan till registreringsmyndigheten för handelsregistret eller i en handling som fogas till ansökan eller anmälan.
+S Uppsåt eller grov oaktsamhet.
+U Gärningen är belagd med straff i brottsbalken.
+T En person anmäler ett handelsbolag för registrering och uppger en bolagsman som aldrig har gått med i bolaget.
+
+LAW S1983-1046 | Lagen (1983:1046) om skyldighet för vissa bostadsföreningar och bostadsaktiebolag att föra lägenhetsförteckning m.m. | 1983:1046 | Lagen om lägenhetsförteckning i bostadsföreningar
+X 1
+
+@ v21-bostadsforening-lagenhetsforteckning | Brott mot lagen om skyldighet för vissa bostadsföreningar och bostadsaktiebolag att föra lägenhetsförteckning | 5 § | 5,3
+PEN 0 | 0 | Böter | Böter
+C Ekonomisk brottslighet
+A bostadsförening;bostadsaktiebolag;lägenhetsförteckning saknas;andelslägenhet;styrelse förteckning
+Q plain
+K Gärningspersonen är styrelseledamot eller likvidator i en bostadsförening eller ett bostadsaktiebolag, det vill säga en ekonomisk förening (inte bostadsrättsförening) eller ett aktiebolag där andelen eller aktien ger nyttjanderätt till en lägenhet i föreningens eller bolagets hus.
+G Gärningspersonen ser inte till att minst ett av följande sker:
+  | Att det förs en lägenhetsförteckning över de lägenheter som är upplåtna till andels- eller aktieägare.
+  | Att förteckningen för varje lägenhet anger lägenhetens beteckning, ägarens namn och insatsen eller inbetalningen på aktien samt dagen för anteckningen.
+  | Att en styrkt avskrift av överlåtelseavtalet fogas till förteckningen när en andel eller aktie överlåts.
+S Uppsåt till samtliga rekvisit. Lagen anger ingen skuldform. Utgångspunkten är då att uppsåt krävs.
+T Styrelsen i en äldre bostadsförening för ingen förteckning över vem som innehar vilken lägenhet, trots flera påpekanden från medlemmar.
+
+LAW S1983-293 | Lagen (1983:293) om inrättande, utvidgning och avlysning av allmän farled och allmän hamn | 1983:293 | Farledslagen
+
+@ v21-allman-farled-foreskrifter | Brott mot lagen om inrättande, utvidgning och avlysning av allmän farled och allmän hamn | 6 § | 6,3
+PEN 0 | 1 | Böter eller fängelse i högst ett år | B–F 1 år
+C Trafik
+A allmän farled;farledsföreskrifter;sjöfart farled;bryta mot farledsbestämmelser;Sjöfartsverket föreskrift
+Q plain
+O En särskild föreskrift om hur en allmän farled ska ordnas och begagnas. Sådana föreskrifter meddelas av hänsyn till bland annat farledens ändamål, säkerheten i farleden, hälsan, miljön och allmänna eller enskilda intressen.
+G Gärningspersonen bryter mot föreskriften.
+S Uppsåt eller oaktsamhet.
+T En befälhavare för ett fartyg genom en allmän farled på ett sätt som är förbjudet enligt de särskilda föreskrifter som gäller för farleden.
+
+LAW S1983-294 | Lagen (1983:294) om inrättande, utvidgning och avlysning av allmän flottled | 1983:294 | Lagen om allmän flottled
+
+@ v21-allman-flottled-foreskrifter | Brott mot lagen om inrättande, utvidgning och avlysning av allmän flottled | 5 § | 5,3
+PEN 0 | 1 | Böter eller fängelse i högst ett år | B–F 1 år
+C Trafik
+A allmän flottled;flottning föreskrifter;timmerflottning;flottled ordnande
+Q plain
+O En särskild föreskrift om hur en allmän flottled ska ordnas och begagnas. Sådana föreskrifter meddelas av hänsyn till flottningens intresse eller andra allmänna eller enskilda intressen.
+G Gärningspersonen bryter mot föreskriften.
+S Uppsåt eller oaktsamhet.
+T En flottande lägger ut timmer i en allmän flottled på en plats där det enligt de särskilda föreskrifterna för flottleden inte är tillåtet.
+
+LAW S1991-614 | Bostadsrättslagen (1991:614) | 1991:614 | BRL
+X 9:9,9:9a,9:10,9:11
+
+@ v21-brl-otillaten-upplatelse | Brott mot bostadsrättslagen | 10:3 | 10:3,1:8,3:1,3:4,4:2,5:8,9:6
+PEN 0 | 0 | Böter | Böter
+C Ekonomisk brottslighet
+A bostadsrättsförening;ekonomisk plan saknas;förskott bostadsrätt;andelsrätt lägenhet;lägenhetsförteckning;medlemsförteckning brf
+Q plain
+N För bostadsrättsföreningar gäller också straffbestämmelserna i lagen om ekonomiska föreningar om styrelsearbete och om målvakter i styrelsen.
+G Gärningspersonen gör minst ett av:
+  | Upplåter för en juridisk persons räkning andelsrätt som ger rätt att för begränsad tid besitta eller nyttja en bostadslägenhet.
+  | Upplåter lägenheter med bostadsrätt innan en ekonomisk plan har upprättats och registrerats av Bolagsverket, eller innan en ny plan har registrerats när något av väsentlig betydelse har inträffat.
+  | Upplåter en bostadslägenhet med bostadsrätt innan den slutliga kostnaden för föreningens hus har redovisats i en registrerad ekonomisk plan, utan tillstånd av Bolagsverket.
+  | Tar för en bostadsrättsförenings räkning emot förskott för en bostadsrätt av någon som inte har tecknat förhandsavtal eller utan att Bolagsverket har gett föreningen tillstånd.
+  | Använder ordet bostadsrätt eller en sammansättning med det ordet i ett företagsnamn eller annars som beteckning på en rörelse som inte är en bostadsrättsförening eller en sammanslutning av bostadsrättsföreningar.
+  | För inte medlemsförteckning eller håller inte medlemsförteckningen tillgänglig för den som vill ta del av den.
+  | För inte lägenhetsförteckning eller lämnar en oriktig eller vilseledande uppgift i ett utdrag ur lägenhetsförteckningen till en bostadsrättshavare.
+S Uppsåt eller oaktsamhet.
+T Styrelsen i en nybildad bostadsrättsförening tar emot förskott på 200 000 kronor från blivande köpare utan att föreningen har fått Bolagsverkets tillstånd.
+T En bostadsrättsförening upplåter lägenheter i ett nybygge innan någon ekonomisk plan har registrerats.
+
+LAW S1994-1220 | Stiftelselagen (1994:1220) | 1994:1220 | SL
+
+@ v21-stiftelse-malvakt | Brott mot stiftelselagen (målvakt i styrelsen) | 5:6 | 5:6,2:10
+PEN 0 | 2 | Böter eller fängelse i högst två år | B–F 2 år
+C Ekonomisk brottslighet
+A målvakt stiftelse;bulvan styrelse;skenstyrelse;målvakt styrelseledamot;dölja verklig ledning
+Q plain
+O Ett uppdrag som styrelseledamot eller styrelsesuppleant i en stiftelse för någon som inte avser att ta del i styrelsens verksamhet, utan att det finns godtagbara skäl.
+G Gärningspersonen gör minst ett av:
+  | Medverkar till beslutet att utse personen till styrelseledamot eller styrelsesuppleant.
+  | Tar själv på sig uppdraget.
+K Åtgärden är ägnad att dölja vem eller vilka som utövar eller har utövat den faktiska ledningen av stiftelsen.
+S Uppsåt till samtliga rekvisit. Lagen anger ingen skuldform. Utgångspunkten är då att uppsåt krävs.
+T En person låter sig mot betalning registreras som styrelseledamot i en stiftelse som i verkligheten styrs av någon annan som vill hålla sig dold.
+
+LAW S2001-883 | Revisorslagen (2001:883) | 2001:883 | Revisorslagen
+
+@ v21-obehorig-revisorstitel | Brott mot revisorslagen (obehörig revisorstitel) | 38 § | 38
+PEN 0 | 0 | Böter | Böter
+C Ekonomisk brottslighet
+A falsk revisor;utge sig för revisor;auktoriserad revisor titel;godkänd revisor;bluffrevisor
+Q plain
+G Gärningspersonen utger sig obehörigen för att vara auktoriserad eller godkänd revisor.
+S Uppsåt till samtliga rekvisit. Lagen anger ingen skuldform. Utgångspunkten är då att uppsåt krävs.
+T En redovisningskonsult utan auktorisation skriver under revisionsberättelser och kallar sig auktoriserad revisor på sin webbplats.
+
+LAW S2005-551 | Aktiebolagslagen (2005:551) | 2005:551 | ABL
+X 21:2
+
+@ v21-abl-spridningsforbud | Brott mot aktiebolagslagen (spridningsförbudet för privata aktiebolag) | 30:1 första stycket 1 | 30:1,1:7,1:8
+PEN 0 | 1 | Böter eller fängelse i högst ett år | B–F 1 år
+C Ekonomisk brottslighet
+A annonsera aktier privat bolag;spridningsförbud;sälja aktier till allmänheten;aktieerbjudande privat aktiebolag;onoterade aktier annons
+Q plain
+K Gärningen avser ett privat aktiebolag och begås av bolaget eller en aktieägare i bolaget.
+O Aktier eller teckningsrätter i bolaget eller skuldebrev eller teckningsoptioner som bolaget har gett ut.
+G Gärningspersonen gör minst ett av:
+  | Försöker sprida värdepapperen genom annonsering.
+  | Försöker sprida värdepapperen genom att erbjuda fler än 200 personer att teckna eller förvärva dem.
+  | Låter värdepapperen bli föremål för handel på en reglerad marknad eller någon annan organiserad marknadsplats.
+S Uppsåt.
+U Erbjudandet avser överlåtelse till högst tio förvärvare.
+U Erbjudandet riktar sig enbart till en krets som i förväg har anmält intresse av sådana erbjudanden och antalet utbjudna poster är högst 200.
+U Bolaget är ett aktiebolag med särskild vinstutdelningsbegränsning (gäller annonsering och erbjudanden).
+T Ägaren till ett privat aktiebolag annonserar i sociala medier om att allmänheten kan köpa aktier i bolaget.
+
+@ v21-abl-aktiebok | Brott mot aktiebolagslagen (aktiebok) | 30:1 första stycket 2 | 30:1
+PEN 0 | 1 | Böter eller fängelse i högst ett år | B–F 1 år
+C Ekonomisk brottslighet
+A aktiebok saknas;föra aktiebok;visa aktiebok;aktiebok tillgänglig;styrelse aktiebok
+Q plain
+N Ansvaret gäller inte en värdepapperscentral som enligt avtal med bolaget ansvarar för aktieboken.
+K Gärningspersonen ansvarar för bolagets aktiebok, i regel som styrelseledamot.
+G Gärningspersonen gör minst ett av:
+  | Låter bli att föra aktiebok så som aktiebolagslagen kräver.
+  | Låter bli att hålla aktieboken tillgänglig.
+S Uppsåt eller oaktsamhet.
+T Styrelsen i ett aktiebolag har aldrig upprättat någon aktiebok och kan inte visa vem som äger aktierna när en utomstående begär att få se den.
+
+@ v21-abl-styrelsesammantrade | Brott mot aktiebolagslagen (styrelsens arbete) | 30:1 första stycket 3 | 30:1,8:18,8:20,8:21
+PEN 0 | 1 | Böter eller fängelse i högst ett år | B–F 1 år
+C Ekonomisk brottslighet
+A styrelsemöte kallas inte;utestänga styrelseledamot;styrelsebeslut utan underlag;suppleant får inte delta
+Q plain
+G Gärningspersonen gör minst ett av:
+  | Sammankallar inte styrelsen trots att en styrelseledamot eller den verkställande direktören begär det.
+  | Ger inte en suppleant tillfälle att träda in när en styrelseledamot inte kan närvara vid ett sammanträde.
+  | Ger inte en suppleant för en arbetstagarledamot underlag och tillfälle att delta i behandlingen av styrelsens ärenden.
+  | Fattar eller medverkar till ett styrelsebeslut trots att inte samtliga styrelseledamöter, så långt det är möjligt, har fått tillfälle att delta i ärendets behandling och fått ett tillfredsställande underlag.
+S Uppsåt eller oaktsamhet.
+T En styrelseordförande vägrar att kalla till styrelsemöte trots att en ledamot uttryckligen begär det och fattar i stället besluten med de övriga utan att ledamoten får veta något.
+
+@ v21-abl-forbjudet-lan | Brott mot aktiebolagslagen (förbjudet lån) | 30:1 första stycket 4 | 30:1,21:1,21:3,21:5
+PEN 0 | 1 | Böter eller fängelse i högst ett år | B–F 1 år
+C Ekonomisk brottslighet
+A förbjudet lån;låna pengar ur bolaget;aktieägarlån;närståendelån;låneförbudet;lån till ägare
+Q plain
+N Brottet preskriberas inte förrän efter fem år: påföljd får dömas ut om den misstänkte har häktats, fått del av åtal eller godkänt ett strafföreläggande inom fem år från brottet.
+K Gärningen begås för ett aktiebolags räkning.
+G Gärningspersonen gör minst ett av:
+  | Lämnar penninglån till en aktieägare, styrelseledamot eller verkställande direktör i bolaget eller i ett annat bolag i samma koncern.
+  | Lämnar penninglån till en närstående till en sådan person, till exempel make, sambo, syskon, förälder eller barn.
+  | Lämnar penninglån till en juridisk person som en sådan person eller närstående har ett bestämmande inflytande över.
+  | Ställer säkerhet för ett penninglån till någon i den förbjudna kretsen.
+  | Ger förskott, lämnar lån eller ställer säkerhet för lån i syfte att låntagaren eller en närstående ska förvärva aktier i bolaget eller i ett överordnat bolag i samma koncern.
+S Uppsåt eller grov oaktsamhet.
+U Låntagaren är en kommun, en region, ett kommunalförbund eller ett företag i samma koncern som det långivande bolaget.
+U Lånet är avsett uteslutande för låntagarens rörelse och bolaget lämnar lånet av rent affärsmässiga skäl.
+U Låntagarens och de närståendes sammanlagda aktieinnehav i bolaget är mindre än en procent av aktiekapitalet.
+T Ägaren till ett aktiebolag för över 400 000 kronor från bolagets konto till sitt privata konto som ett lån för att betala en bostadsrenovering.
+T Ett aktiebolag går i borgen för ett privat banklån som den verkställande direktörens sambo tar.
+
+@ v21-abl-laneforteckning | Brott mot aktiebolagslagen (förteckning över lån och säkerheter) | 30:1 första stycket 4 och 32:10 | 30:1,21:10,32:10
+PEN 0 | 1 | Böter eller fängelse i högst ett år | B–F 1 år
+C Ekonomisk brottslighet
+A förteckning över lån;låneförteckning;kommersiella lån förteckning;dispens lån förteckning
+Q plain
+K Gärningspersonen är styrelseledamot eller verkställande direktör i ett aktiebolag.
+G Gärningspersonen gör minst ett av:
+  | Upprättar inte för räkenskapsåret den särskilda förteckningen över förskott, lån och säkerheter som har lämnats med stöd av medgivet undantag eller som lån för låntagarens rörelse av rent affärsmässiga skäl.
+  | Anger inte i förteckningen namnen på dem som har fått förskott eller lån eller för vilka säkerhet har ställts.
+  | Bevarar inte förteckningen i minst tio år efter utgången av räkenskapsåret.
+  | Upprättar inte, i ett aktiebolag med särskild vinstutdelningsbegränsning, den särskilda förteckningen över lån och säkerheter som har lämnats till företag i samma koncern.
+S Uppsåt eller grov oaktsamhet.
+T Ett aktiebolag lånar ut pengar till ett annat företag som ägs av en aktieägare, med hänvisning till affärsmässiga skäl, men styrelsen upprättar aldrig någon förteckning över lånet.
+
+@ v21-abl-malvakt | Brott mot aktiebolagslagen (målvakt i bolagsledningen) | 30:1 tredje stycket | 30:1,8:12,8:32
+PEN 0 | 2 | Böter eller fängelse i högst två år | B–F 2 år
+C Ekonomisk brottslighet
+A målvakt;målvakt i bolag;bulvan styrelse;skenstyrelse;målvaktsbolag;dölja verklig företrädare
+Q plain
+O Ett uppdrag som styrelseledamot, styrelsesuppleant, verkställande direktör eller vice verkställande direktör i ett aktiebolag för någon som inte avser att ta del i den verksamhet som uppdraget innebär. För styrelseuppdrag gäller förbudet om godtagbara skäl saknas.
+G Gärningspersonen gör minst ett av:
+  | Medverkar till beslutet att utse personen till uppdraget.
+  | Tar själv på sig uppdraget.
+K Åtgärden är ägnad att dölja vem eller vilka som utövar eller har utövat den faktiska ledningen av bolaget.
+S Uppsåt.
+T En person utan bostad låter sig mot några tusen kronor registreras som ensam styrelseledamot i ett aktiebolag som i verkligheten drivs av någon annan.
+T Den som i praktiken styr ett bolag ordnar en bolagsstämma där en utomstående, som aldrig ska delta i verksamheten, väljs till styrelseledamot för att dölja vem som leder bolaget.
+
+LAW S2011-914 | Lagen (2011:914) om konsumentskydd vid avtal om tidsdelat boende eller långfristig semesterprodukt | 2011:914 | Timesharelagen
+X 1:1
+
+@ v21-timeshare-forbjuden-betalning | Brott mot lagen om konsumentskydd vid avtal om tidsdelat boende eller långfristig semesterprodukt | 5:2 | 5:2,5:1
+PEN 0 | 0 | Böter | Böter
+C Ekonomisk brottslighet
+A timeshare;tidsdelat boende;andelslägenhet semester;betalning före ångerfrist;semesterklubb;förskott timeshare
+Q plain
+K Gärningspersonen är näringsidkare och har ingått eller ska ingå ett avtal om tidsdelat boende, långfristig semesterprodukt, bytessystem eller förmedling med en konsument.
+G Gärningspersonen kräver att konsumenten betalar eller ställer säkerhet till näringsidkaren eller någon annan i minst ett av följande lägen:
+  | Innan ångerfristen har löpt ut, vid avtal om tidsdelat boende, långfristig semesterprodukt eller bytessystem.
+  | Innan näringsidkaren har ställt säkerhet, när boendet inte är färdigt att utnyttja och näringsidkaren därför är skyldig att ställa säkerhet.
+  | Innan förmedlingsuppdraget har slutförts eller avtalet har upphört på annat sätt, vid förmedlingsavtal.
+S Uppsåt.
+T En säljare av andelar i en semesteranläggning kräver att konsumenten betalar en handpenning med kort direkt när avtalet skrivs under, innan ångerfristen har gått ut.
+
+LAW S2018-672 | Lagen (2018:672) om ekonomiska föreningar | 2018:672 | EFL
+X 5:1,5:5
+
+@ v21-efl-medlemsforteckning | Brott mot lagen om ekonomiska föreningar (medlemsförteckning) | 22:1 första stycket 1 | 22:1,5:1,5:5
+PEN 0 | 1 | Böter eller fängelse i högst ett år | B–F 1 år
+C Ekonomisk brottslighet
+A medlemsförteckning saknas;ekonomisk förening medlemmar;visa medlemsförteckning;föreningsstyrelse
+Q plain
+N Punkten gäller inte bostadsrättsföreningar. För dem straffas motsvarande försummelse med böter enligt bostadsrättslagen.
+K Gärningspersonen ansvarar för föreningens medlemsförteckning, i regel som styrelseledamot i en ekonomisk förening.
+G Gärningspersonen gör minst ett av:
+  | Låter bli att föra en medlemsförteckning så som lagen kräver.
+  | Håller inte medlemsförteckningen tillgänglig hos föreningen för var och en som vill ta del av den.
+S Uppsåt eller oaktsamhet.
+T Styrelsen i en ekonomisk förening vägrar att visa medlemsförteckningen för en medlem som vill kontrollera vilka som är röstberättigade på stämman.
+
+@ v21-efl-styrelsesammantrade | Brott mot lagen om ekonomiska föreningar (styrelsens arbete) | 22:1 första stycket 2 | 22:1,7:18,7:20,7:21
+PEN 0 | 1 | Böter eller fängelse i högst ett år | B–F 1 år
+C Ekonomisk brottslighet
+A styrelsemöte kallas inte;utestänga styrelseledamot;brf styrelse beslut;suppleant får inte delta;föreningsstyrelse
+Q plain
+N Bestämmelsen gäller också styrelsen i en bostadsrättsförening.
+G Gärningspersonen gör minst ett av:
+  | Sammankallar inte styrelsen trots att en styrelseledamot eller den verkställande direktören begär det.
+  | Ger inte en suppleant tillfälle att delta när en styrelseledamot inte kan närvara vid ett sammanträde.
+  | Ger inte en suppleant för en arbetstagarledamot underlag och tillfälle att delta i behandlingen av styrelsens ärenden.
+  | Fattar eller medverkar till ett styrelsebeslut trots att inte samtliga styrelseledamöter, när det är möjligt, har fått tillfälle att delta i ärendets behandling och fått ett tillfredsställande underlag.
+S Uppsåt eller oaktsamhet.
+T Ordföranden i en bostadsrättsförening fattar ett beslut om en stor upphandling med två ledamöter utan att kalla eller informera de övriga i styrelsen.
+
+@ v21-efl-malvakt | Brott mot lagen om ekonomiska föreningar (målvakt i föreningsledningen) | 22:1 andra stycket | 22:1,7:11,7:32
+PEN 0 | 2 | Böter eller fängelse i högst två år | B–F 2 år
+C Ekonomisk brottslighet
+A målvakt förening;målvakt bostadsrättsförening;bulvan styrelse;skenstyrelse förening;dölja verklig ledning
+Q plain
+N Bestämmelsen gäller också bostadsrättsföreningar.
+O Ett uppdrag som styrelseledamot, styrelsesuppleant, verkställande direktör eller vice verkställande direktör i en ekonomisk förening för någon som inte avser att ta del i den verksamhet som uppdraget innebär. För styrelseuppdrag gäller förbudet om godtagbara skäl saknas.
+G Gärningspersonen gör minst ett av:
+  | Medverkar till beslutet att utse personen till uppdraget.
+  | Tar själv på sig uppdraget.
+K Åtgärden är ägnad att dölja vem eller vilka som utövar eller har utövat den faktiska ledningen av föreningen.
+S Uppsåt.
+T En person låter sig mot ersättning väljas till styrelseledamot i en ekonomisk förening som används för fakturabedrägerier, utan att någonsin tänka delta i styrelsearbetet.
+
+LAW S1963-583 | Lagen (1963:583) om avveckling av fideikommiss | 1963:583 | Fideikommisslagen
+
+@ v21-fideikommiss-anmala-dodsfall | Brott mot lagen om avveckling av fideikommiss (anmälan av dödsfall) | 39 § | 39,21
+PEN 0 | 0 | Böter | Böter
+C Allmän verksamhet
+A fideikommiss;fideikommissnämnden;anmäla dödsfall fideikommiss;gods arv fideikommiss
+Q villkor | Allmänt åtal får väckas bara efter medgivande av Fideikommissnämnden.
+K En fideikommissinnehavare har avlidit och gärningspersonen har fideikommissegendomen i sin vård.
+G Gärningspersonen anmäler inte dödsfallet till Fideikommissnämnden inom en månad.
+S Uppsåt till samtliga rekvisit. Lagen anger ingen skuldform. Utgångspunkten är då att uppsåt krävs.
+T Förvaltaren av ett gods som är fideikommiss låter flera månader gå efter innehavarens död utan att anmäla dödsfallet till Fideikommissnämnden.
+
+LAW S1973-1173 | Kreditupplysningslagen (1973:1173) | 1973:1173 | KuL
+X 3,4,13,16
+
+@ v21-kreditupplysningsbrott | Brott mot kreditupplysningslagen | 19 § första stycket | 19,6,7,8,9
+PEN 0 | 1 | Böter eller fängelse i högst ett år | B–F 1 år
+C Ekonomisk brottslighet
+A kreditupplysning utan tillstånd;olaglig kreditupplysning;UC utdrag missbruk;betalningsanmärkning felaktig;sälja kreditupplysningar;gallring anmärkning
+Q plain
+G Gärningspersonen gör minst ett av:
+  | Bedriver kreditupplysningsverksamhet utan tillstånd av Integritetsskyddsmyndigheten eller annan rätt till det.
+  | Behandlar känsliga personuppgifter eller, utan medgivande, uppgifter om brott och domar i kreditupplysningsverksamhet.
+  | Tar i en kreditupplysning om en privatperson med uppgifter om betalningsförsummelser som inte har slagits fast av domstol eller annan myndighet, eller lagrar sådana uppgifter i registret.
+  | Gallrar inte uppgifter om en privatperson i tid, i regel senast tre år efter den händelse som uppgiften avser.
+  | Lämnar ut en kreditupplysning om en privatperson trots att det finns anledning att anta att den ska användas av någon som inte har behov av den på grund av ett kreditavtal eller liknande.
+  | Överlåter eller upplåter ett kreditupplysningsregister utan medgivande, eller anmäler inte att verksamheten upphör, flyttas utomlands eller att ett register ska kasseras.
+  | Bryter mot ett villkor som Integritetsskyddsmyndigheten har meddelat för verksamheten eller för hur ett register ska hanteras.
+  | Lämnar en osann uppgift i ett besked till en juridisk person om registrerade uppgifter, i upplysningar till tillsynsmyndigheten eller i meddelandet till den som en lämnad kreditupplysning avser.
+S Uppsåt eller oaktsamhet.
+T Ett företag säljer via en webbplats kreditupplysningar om privatpersoner till vem som helst, utan tillstånd och utan att kontrollera att köparen har något behov av upplysningen.
+
+@ v21-kreditupplysning-obehorig-atkomst | Brott mot kreditupplysningslagen (obehörig åtkomst till kreditupplysning) | 19 § andra stycket | 19,9
+PEN 0 | 0 | Böter | Böter
+C Ekonomisk brottslighet
+A ta kreditupplysning på ex;snoka kreditupplysning;UC på granne;kreditupplysning utan skäl;kolla ekonomi obehörigt
+Q plain
+O En kreditupplysning om en privatperson, som gärningspersonen inte har behov av på grund av ett ingånget eller ifrågasatt kreditavtal eller av någon liknande anledning.
+G Gärningspersonen gör minst ett av:
+  | Lämnar oriktiga uppgifter till någon som bedriver kreditupplysningsverksamhet och får därigenom ut kreditupplysningen.
+  | Utnyttjar uppgifter hos någon som bedriver kreditupplysningsverksamhet, till exempel ett företags inloggning, och bereder sig på så sätt tillgång till kreditupplysningen.
+S Uppsåt.
+U Fallet är ringa.
+U Kreditupplysningen lämnas genom ett grundlagsskyddat offentliggörande som är undantaget från behovskravet.
+T En anställd på en bilfirma använder företagets konto hos ett kreditupplysningsföretag för att ta en kreditupplysning på sin före detta sambo av ren nyfikenhet.
+
+LAW S1974-182 | Inkassolagen (1974:182) | 1974:182 | Inkassolagen
+X 1,2
+
+@ v21-inkassobrott | Brott mot inkassolagen | 17 § | 17,2,10a,14
+PEN 0 | 1 | Böter eller fängelse i högst ett år | B–F 1 år
+C Ekonomisk brottslighet
+A inkasso utan tillstånd;olaglig indrivning;oseriöst inkassobolag;driva in skuld åt annan;inkassoregister
+Q plain
+G Gärningspersonen gör minst ett av:
+  | Vidtar utan tillstånd av Finansinspektionen en inkassoåtgärd för att driva in någon annans fordran eller en fordran som har övertagits för indrivning, när tillstånd krävs.
+  | Anmäler inte en ändring av förhållanden som har haft betydelse för tillståndet, trots föreskrift om det i tillståndet eller i ett villkor från Finansinspektionen.
+  | Överlåter eller upplåter ett gäldenärsregister som används i tillståndspliktig inkassoverksamhet utan medgivande av Finansinspektionen.
+  | Anmäler inte till Finansinspektionen att verksamheten upphör eller flyttas utomlands eller att ett gäldenärsregister ska kasseras, eller följer inte inspektionens beslut om hur registret ska hanteras.
+  | Lämnar en osann uppgift när Finansinspektionen begär upplysningar om verksamheten för sin tillsyn.
+S Uppsåt eller oaktsamhet.
+T En person startar en firma som mot provision skickar inkassokrav och hotar med Kronofogden för andra företags fordringar, utan tillstånd av Finansinspektionen.
+
+LAW S1976-357 | Lagen (1976:357) om motortävlingsförsäkring | 1976:357 | Lagen om motortävlingsförsäkring
+
+@ v21-motortavlingsforsakring | Brott mot lagen om motortävlingsförsäkring | 11 § | 11,1
+PEN 0 | 0 | Böter | Böter
+C Trafik
+A motortävling utan försäkring;folkrace försäkring;motorbana oförsäkrad;tävlingsförsäkring saknas;träning motorbana
+Q plain
+K Gärningspersonen anordnar en tävling, träning, övningskörning, uppvisning eller liknande med motordrivet fordon inom ett inhägnat tävlingsområde. Finns ingen anordnare ligger skyldigheten på områdets ägare eller på den som området har upplåtits till för tävling.
+G Gärningspersonen låter bli att ta motortävlingsförsäkring.
+S Uppsåt till samtliga rekvisit. Lagen anger ingen skuldform. Utgångspunkten är då att uppsåt krävs.
+T En förening anordnar en folkracetävling på en inhägnad bana utan att ha tecknat någon motortävlingsförsäkring.
+
+LAW S1981-774 | Utsökningsbalken (1981:774) | 1981:774 | UB
+
+@ v21-ub-arbetsgivare-loneutmatning | Brott mot utsökningsbalken (arbetsgivares betalning vid löneutmätning) | 7:25 | 7:25,7:20
+PEN 0 | 0 | Böter | Böter
+C Ekonomisk brottslighet
+A löneutmätning;arbetsgivare betalar inte kronofogden;innehållet belopp;utmätning av lön;införsel
+Q plain
+K Gärningspersonen är arbetsgivare till någon vars lön är utmätt.
+G Gärningspersonen betalar inte inom föreskriven tid in till Kronofogdemyndigheten det belopp som skulle ha hållits inne enligt beslutet om utmätning.
+S Uppsåt eller oaktsamhet.
+T Ett företag drar varje månad av utmätningsbeloppet från en anställds lön men behåller pengarna i stället för att betala in dem till Kronofogdemyndigheten.
+
+LAW S1987-672 | Konkurslagen (1987:672) | 1987:672 | KonkL
+
+@ v21-konkurs-naringsverksamhet | Brott mot konkurslagen (näringsverksamhet under konkurs) | 17:4 | 17:4,6:1
+PEN 0 | 0 | Böter | Böter
+C Ekonomisk brottslighet
+A driva firma i konkurs;näringsförbud konkurs;konkursgäldenär driver företag;personlig konkurs enskild firma
+Q plain
+K Gärningspersonen är en fysisk person som är försatt i konkurs.
+G Gärningspersonen driver under konkursen näringsverksamhet som medför bokföringsskyldighet.
+S Uppsåt till samtliga rekvisit. Lagen anger ingen skuldform. Utgångspunkten är då att uppsåt krävs.
+U Verksamheten är jordbruksverksamhet.
+U Verksamheten innebär utövning av en grundlagsskyddad rättighet, till exempel yttrande- eller tryckfrihet.
+T En hantverkare som är försatt i personlig konkurs fortsätter att ta uppdrag och fakturera kunder i en ny enskild firma medan konkursen pågår.
+
+@ v21-konkurs-rostkop-ackord | Brott mot konkurslagen (förmån för röst vid ackord) | 17:5 | 17:5
+PEN 0 | 1 | Böter eller fängelse i högst ett år | B–F 1 år
+C Ekonomisk brottslighet
+A ackord konkurs;röstköp borgenär;sidoöverenskommelse ackord;särskild förmån borgenär
+Q plain
+K Gärningspersonen är borgenär i en konkurs där frågan om ackord behandlas vid ett sammanträde.
+G Gärningspersonen betingar sig en särskild förmån av gäldenären för sin röst vid sammanträdet.
+S Uppsåt till samtliga rekvisit. Lagen anger ingen skuldform. Utgångspunkten är då att uppsåt krävs.
+T En leverantör lovar att rösta för gäldenärens ackordsförslag mot att gäldenären vid sidan av ackordet betalar hela leverantörens fordran.
+
+LAW S2021-516 | Fastighetsmäklarlagen (2021:516) | 2021:516 | FML
+X 1:2,2:3
+
+@ v21-oregistrerad-fastighetsmaklare | Brott mot fastighetsmäklarlagen (oregistrerad förmedling) | 4:18 | 4:18,2:1,2:2
+PEN 0 | 0.5 | Böter eller fängelse i högst sex månader | B–F 6 mån
+C Ekonomisk brottslighet
+A oregistrerad mäklare;svartmäklare;falsk mäklare;förmedla bostad utan registrering;mäklare utan legitimation;hyresförmedling oregistrerad
+Q plain
+G Gärningspersonen förmedlar yrkesmässigt fastigheter, bostadsrätter, tomträtter, arrenderätter, hyresrätter eller liknande utan att vara registrerad hos Fastighetsmäklarinspektionen.
+S Uppsåt till samtliga rekvisit. Lagen anger ingen skuldform. Utgångspunkten är då att uppsåt krävs.
+U Gärningspersonen är advokat.
+U Förmedlingen avser enbart hyresrätter med en månadshyra under ett belopp som motsvarar 10 000 euro och är kommunal hyresförmedling, kostnadsfri förmedling till studerande eller förmedling av fritidsboende, lokaler eller rum för högst två veckor.
+U Förmedlingen bedrivs tillfälligt i Sverige av ett fastighetsmäklarföretag som är etablerat i en annan stat inom EES.
+T En person som har fått sin mäklarregistrering återkallad fortsätter att mot provision förmedla villor och bostadsrätter åt säljare.
+T En person förmedlar mot avgift förstahandskontrakt på bostadslägenheter i stor skala utan att vara registrerad för hyresförmedling.

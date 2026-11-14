@@ -1,0 +1,480 @@
+LAW S1974-13 | Lagen (1974:13) om vissa anställningsfrämjande åtgärder | 1974:13 | Främjandelagen
+X 1,6,7,12
+
+@ v21-framjandelagen-oriktig-uppgift | Brott mot lagen om vissa anställningsfrämjande åtgärder (oriktig uppgift i varsel) | 19 § | 19,1,6,7,22
+PEN 0 | 1 | Böter eller fängelse i högst ett år | B–F 1 år
+C Allmän verksamhet
+A varsel;oriktig uppgift till Arbetsförmedlingen;falskt varsel;driftsinskränkning;uppsägningar
+Q villkor | Allmänt åtal får väckas bara efter medgivande av Arbetsförmedlingen.
+G Gärningspersonen lämnar en oriktig uppgift i minst ett av:
+  | Ett varsel till Arbetsförmedlingen om en driftsinskränkning som kan leda till uppsägning eller permittering.
+  | En underrättelse till Arbetsförmedlingen om förhandling enligt medbestämmandelagen, som lämnas i stället för varsel.
+  | En uppgift om arbetsstyrkan eller om förestående förändringar i den som Arbetsförmedlingen har förelagt arbetsgivaren att lämna.
+K Uppgiften saknar inte betydelse.
+S Uppsåt eller grov oaktsamhet.
+T En arbetsgivare som ska säga upp 40 anställda anger i varslet till Arbetsförmedlingen att bara fyra personer berörs, för att slippa den längre varseltiden.
+
+@ v21-framjandelagen-anstallningsforbud | Brott mot lagen om vissa anställningsfrämjande åtgärder (anställning i strid med förordnande) | 20 § | 20,12,22
+PEN 0 | 1 | Böter eller fängelse i högst ett år | B–F 1 år
+C Allmän verksamhet
+A anställningsförbud;förordnande Arbetsförmedlingen;anställa utan godkännande;äldre arbetskraft
+Q villkor | Allmänt åtal får väckas bara efter medgivande av Arbetsförmedlingen.
+K Gärningspersonen är arbetsgivare.
+K Arbetsförmedlingen har förordnat att arbetsgivaren inte får anställa andra arbetstagare än dem som Arbetsförmedlingen har anvisat eller godtagit.
+G Gärningspersonen följer inte förordnandet.
+S Uppsåt till samtliga rekvisit. Lagen anger ingen skuldform. Utgångspunkten är då att uppsåt krävs.
+N Ett sådant förordnande kan meddelas när arbetsgivaren inte har följt Arbetsförmedlingens anvisningar om åtgärder för äldre arbetstagare eller arbetstagare med nedsatt arbetsförmåga.
+T Ett företag som har fått ett förordnande av Arbetsförmedlingen anställer ändå tio nya personer på egen hand utan att Arbetsförmedlingen har anvisat eller godtagit dem.
+
+LAW S1982-1004 | Lagen (1982:1004) om skyldighet för näringsidkare, arbetsmarknadsorganisationer m.fl. att delta i totalförsvarsplaneringen | 1982:1004 | Lagen om deltagande i totalförsvarsplaneringen
+X 1,2
+
+@ v21-totalforsvarsplanering-oriktiga-uppgifter | Brott mot lagen om skyldighet att delta i totalförsvarsplaneringen (oriktiga uppgifter) | 6 § | 6,2
+PEN 0 | 1 | Böter eller fängelse i högst ett år | B–F 1 år
+C Rikets säkerhet
+A totalförsvarsplanering;oriktiga uppgifter till totalförsvarsmyndighet;beredskapsplanering företag;falska uppgifter om lager
+Q plain
+K En totalförsvarsmyndighet har begärt upplysningar av en ägare eller innehavare av en industriell anläggning eller av en annan näringsidkare, till exempel om personal, lokaler, maskiner, produktion, energiförbrukning, lagerhållning, inköp eller leveranser.
+G Gärningspersonen lämnar oriktiga uppgifter.
+O Uppgifterna gäller förhållanden av vikt.
+S Uppsåt eller grov oaktsamhet.
+T En företagsledare uppger på begäran av en totalförsvarsmyndighet att företaget har stora lager av drivmedel, trots att lagren i själva verket är nästan tomma.
+
+LAW S1993-440 | Lagen (1993:440) om privat arbetsförmedling | 1993:440 | Lagen om privat arbetsförmedling
+X 1
+
+@ v21-privat-arbetsformedling-ersattning | Brott mot lagen om privat arbetsförmedling (otillåten ersättning) | 7 § | 7,3,6
+PEN 0 | 0.5 | Böter eller fängelse i högst sex månader | B–F 6 mån
+C Ekonomisk brottslighet
+A ta betalt för jobb;avgift av arbetssökande;privat arbetsförmedling;sälja anställning;sjömansförmedling
+Q plain
+K Gärningspersonen bedriver arbetsförmedling, det vill säga verksamhet som har till ändamål att skaffa arbete till arbetssökande eller arbetskraft åt arbetsgivare, utan att vara den offentliga arbetsförmedlingen.
+G Gärningspersonen gör minst ett av:
+  | Begär, avtalar om eller tar emot ersättning av arbetssökande för att erbjuda eller anvisa dem arbete.
+  | Bedriver arbetsförmedling för sjömän mot ersättning.
+S Uppsåt eller oaktsamhet.
+N Lagen gäller inte arbetsförmedling som sker genom skrifter eller sändningar som skyddas av tryckfrihetsförordningen eller yttrandefrihetsgrundlagen.
+T En person som förmedlar jobb på restauranger tar 15 000 kronor av varje arbetssökande för att ordna en anställning.
+
+LAW S1994-2077 | Lagen (1994:2077) om arbetsförmedlingstvång | 1994:2077 | Lagen om arbetsförmedlingstvång
+X 1,5
+
+@ v21-arbetsformedlingstvang | Brott mot lagen om arbetsförmedlingstvång | 6 § | 6,2,3
+PEN 0 | 0.5 | Böter eller fängelse i högst sex månader | B–F 6 mån
+C Rikets säkerhet
+A arbetsförmedlingstvång;höjd beredskap;anställa utan anvisning;förbud mot privat arbetsförmedling
+Q plain
+K Det råder höjd beredskap och regeringen har föreskrivit att lagens bestämmelser ska tillämpas.
+G Gärningspersonen gör minst ett av:
+  | Bedriver annan arbetsförmedling än den offentliga i strid med ett föreskrivet förbud eller en föreskriven inskränkning.
+  | Anställer som arbetsgivare en arbetstagare som inte har anvisats av en offentlig arbetsförmedling eller med dess medgivande, trots att arbetsförmedlingstvång gäller.
+S Uppsåt.
+U Förbudet att anställa gäller inte om anställningen endast är tillfällig, om arbetstagaren är under sexton eller över sjuttio år eller om parterna är makar, sambor eller nära släktingar på det sätt som lagen anger.
+T Under höjd beredskap anställer ett företag flera svetsare direkt från en konkurrent, trots att företaget enligt gällande föreskrifter bara får anställa personer som den offentliga arbetsförmedlingen har anvisat.
+
+LAW S1997-239 | Lagen (1997:239) om arbetslöshetskassor | 1997:239 | LAK
+X 1,7
+
+@ v21-oregistrerad-arbetsloshetskassa | Brott mot lagen om arbetslöshetskassor (oregistrerad verksamhet) | 116 § | 116
+PEN 0 | 0.5 | Böter eller fängelse i högst sex månader | B–F 6 mån
+C Allmän verksamhet
+A a-kassa utan registrering;falsk a-kassa;oregistrerad arbetslöshetskassa;arbetslöshetsersättning
+Q plain
+K En förening eller en annan organisation handhar frågor om arbetslöshetsersättning enligt lagen om arbetslöshetsförsäkring utan att vara registrerad som arbetslöshetskassa.
+G Gärningspersonen deltar på föreningens eller organisationens vägnar i en åtgärd eller ett beslut i den verksamheten.
+S Uppsåt till samtliga rekvisit. Lagen anger ingen skuldform. Utgångspunkten är då att uppsåt krävs.
+T Styrelsen i en förening som inte är registrerad hos Inspektionen för arbetslöshetsförsäkringen beslutar om och betalar ut arbetslöshetsersättning till medlemmarna.
+
+LAW S1970-943 | Lagen (1970:943) om arbetstid m.m. i husligt arbete | 1970:943 | Lagen om husligt arbete
+X 1
+
+@ v21-husligt-arbete-forelaggande-anteckning | Brott mot lagen om arbetstid m.m. i husligt arbete | 19 § | 19,6,17
+PEN 0 | 0 | Böter | Böter
+C Allmän verksamhet
+A hushållsarbete;barnflicka arbetstid;personlig assistent övertid;föreläggande Arbetsmiljöverket;övertidsanteckningar
+Q plain
+## Trots mot föreläggande eller förbud
+K Arbetsmiljöverket har meddelat arbetsgivaren ett föreläggande eller förbud som behövs för att lagen ska följas.
+G Gärningspersonen rättar sig inte efter föreläggandet eller förbudet.
+U Föreläggandet eller förbudet har förenats med vite.
+S Uppsåt till samtliga rekvisit. Lagen anger ingen skuldform. Utgångspunkten är då att uppsåt krävs.
+## Oriktig anteckning om övertid
+G Gärningspersonen lämnar en oriktig eller vilseledande uppgift i de anteckningar om övertid som arbetsgivaren ska föra.
+U Gärningen omfattas av ett föreläggande eller förbud från Arbetsmiljöverket.
+S Uppsåt.
+## *
+K Gärningspersonen är arbetsgivare till en arbetstagare som utför arbete i arbetsgivarens hushåll.
+T En familj som har en anställd barnskötare i hemmet fortsätter att låta henne arbeta nätter utan viloperiod, trots att Arbetsmiljöverket har förbjudit det utan vite.
+T En arbetsgivare antecknar medvetet färre övertidstimmar än hushållets anställde faktiskt har arbetat.
+
+LAW S1977-1160 | Arbetsmiljölagen (1977:1160) | 1977:1160 | AML
+
+@ v21-aml-forelaggande-forbud | Brott mot arbetsmiljölagen (föreläggande eller förbud) | 8:1 | 8:1,7:7,7:8
+PEN 0 | 1 | Böter eller fängelse i högst ett år | B–F 1 år
+C Allmän verksamhet
+A arbetsmiljöbrott;förbud Arbetsmiljöverket;skyddsstopp;föreläggande utan vite;farlig arbetsplats
+Q plain
+K Arbetsmiljöverket har beslutat ett föreläggande eller förbud mot den som har skyddsansvar, till exempel en arbetsgivare, eller mot den som upplåter en lokal, ett markområde eller ett utrymme under jord för arbete eller som personalutrymme.
+G Gärningspersonen bryter mot föreläggandet eller förbudet.
+S Uppsåt eller oaktsamhet.
+U Föreläggandet eller förbudet har förenats med vite.
+T Ett byggföretag fortsätter att använda en byggnadsställning som Arbetsmiljöverket har förbjudit utan vite på grund av rasrisk.
+
+@ v21-aml-minderariga-uppgifter-skydd | Brott mot arbetsmiljölagen (minderåriga, oriktiga uppgifter, skyddsanordning m.m.) | 8:2 | 8:2,5:2,5:3
+PEN 0 | 0 | Böter | Böter
+C Allmän verksamhet
+A barnarbete;minderårig på arbete;ta bort skydd på maskin;inte anmäla arbetsolycka;oriktiga uppgifter Arbetsmiljöverket
+Q plain
+G Gärningspersonen gör minst ett av:
+  | Anlitar en minderårig till arbete före det kalenderår då den minderårige fyller sexton år eller innan skolplikten är fullgjord, utan att det rör sig om tillåtet lätt arbete.
+  | Bryter mot föreskrifter om lätt arbete för minderåriga eller mot föreskrifter om minderårigas riskfyllda arbete, läkarundersökningar eller arbetstid.
+  | Lämnar oriktiga uppgifter om förhållanden av vikt när en tillsynsmyndighet har begärt upplysningar, handlingar, prov eller undersökningar.
+  | Tar utan giltigt skäl bort en skyddsanordning eller sätter den ur bruk.
+  | Underrättar som arbetsgivare inte utan dröjsmål tillsynsmyndigheten om ett dödsfall, en svårare personskada, skador som har drabbat flera arbetstagare samtidigt eller ett tillbud med allvarlig fara för liv och hälsa i samband med arbetet.
+S Uppsåt eller oaktsamhet.
+U Gärningen omfattas av ett föreläggande eller förbud från Arbetsmiljöverket.
+T En anställd monterar bort skyddskåpan på en klyvsåg för att kunna arbeta fortare.
+T En arbetsgivare anmäler inte till Arbetsmiljöverket att en anställd har fått handen krossad i en press.
+
+LAW S1982-673 | Arbetstidslagen (1982:673) | 1982:673 | ATL
+
+@ v21-atl-forelaggande-forbud | Brott mot arbetstidslagen (föreläggande eller förbud) | 23 § | 23,22
+PEN 0 | 1 | Böter eller fängelse i högst ett år | B–F 1 år
+C Allmän verksamhet
+A arbetstid;förbud Arbetsmiljöverket;för lång arbetstid;dygnsvila;övertid
+Q plain
+K Gärningspersonen är arbetsgivare.
+K Arbetsmiljöverket har meddelat ett föreläggande eller förbud som behövs för att arbetstidslagen eller föreskrifter enligt lagen ska följas.
+G Gärningspersonen bryter mot föreläggandet eller förbudet.
+S Uppsåt eller oaktsamhet.
+U Föreläggandet eller förbudet har förenats med vite.
+T Ett åkeri låter sina lageranställda fortsätta arbeta utan dygnsvila, trots att Arbetsmiljöverket har förelagt företaget utan vite att ändra schemat.
+
+@ v21-atl-arbetstid-anteckningar-uppgifter | Brott mot arbetstidslagen (arbetstid, anteckningar och oriktiga uppgifter) | 24 § | 24,10b,11,12,15,16
+PEN 0 | 0 | Böter | Böter
+C Allmän verksamhet
+A 48-timmarsregeln;inga raster;övertidsjournal;arbetstidsbrott;oriktiga uppgifter Arbetsmiljöverket
+Q plain
+K Gärningspersonen är arbetsgivare.
+G Gärningspersonen gör minst ett av:
+  | Anlitar en arbetstagare så att den sammanlagda arbetstiden överstiger 48 timmar i genomsnitt per sjudagarsperiod under beräkningsperioden.
+  | Anlitar en arbetstagare utan att i tid lämna besked om ändringar i den ordinarie arbetstidens och jourtidens förläggning.
+  | Anlitar en arbetstagare i strid med reglerna om raster eller om måltidsuppehåll, till exempel så att arbetstagaren arbetar mer än fem timmar i följd utan rast.
+  | För inte anteckningar om jourtid, övertid och mertid eller bryter mot föreskrifter om hur anteckningarna ska föras.
+  | Lämnar oriktiga uppgifter om förhållanden av vikt när Arbetsmiljöverket har begärt upplysningar eller handlingar för tillsynen.
+S Uppsåt eller oaktsamhet.
+U Undantag eller avvikelse har gjorts genom kollektivavtal eller har medgetts av Arbetsmiljöverket (gäller inte oriktiga uppgifter).
+U Gärningen omfattas av ett föreläggande från Arbetsmiljöverket.
+T En restaurangägare för inga anteckningar alls om personalens övertid och låter kockarna arbeta tio timmar i sträck utan rast.
+
+LAW S1999-678 | Lagen (1999:678) om utstationering av arbetstagare | 1999:678 | Utstationeringslagen
+X 5b,45b
+
+@ v21-utstationering-bestallaransvar | Brott mot lagen om utstationering av arbetstagare (beställning av transport utan utstationeringsdeklaration) | 45 h § | 45h,45b,5b
+PEN 0 | 1 | Böter eller fängelse i högst ett år | B–F 1 år
+C Allmän verksamhet
+A beställaransvar;utstationerad förare;cabotage;utstationeringsdeklaration;utländskt åkeri
+Q plain
+K Ett transportföretag som är etablerat i ett annat land än Sverige utför en transport med en utstationerad förare utan att arbetsgivaren har lämnat in en utstationeringsdeklaration till Arbetsmiljöverket senast när föraren påbörjade arbetet i Sverige.
+K Gärningspersonen har yrkesmässigt, för egen eller annans räkning, beställt transporten.
+## Kännedom vid beställningen
+G Gärningspersonen beställer transporten trots att han eller hon vid beställningen känner till eller har skälig anledning att anta att föraren är eller ska bli utstationerad och att en utstationeringsdeklaration inte har lämnats in eller inte kommer att lämnas in.
+S Uppsåt eller oaktsamhet. Det räcker att beställaren hade skälig anledning att anta de nämnda förhållandena.
+## Utebliven underrättelse
+K Transporten är en gods- eller persontransport där all lastning och lossning eller all på- och avstigning sker i Sverige, eller en persontransport med på- och avstigning i Sverige i samband med internationell linjetrafik, och den har beställts av transportföretaget.
+G Gärningspersonen underrättar inte Arbetsmiljöverket om utstationeringen senast en dag efter det att transporten har utförts.
+U Beställaren har gjort vad som skäligen kan begäras för att kontrollera att en utstationeringsdeklaration har lämnats in.
+S Uppsåt eller oaktsamhet.
+T En speditör beställer en inrikes godstransport mellan Malmö och Stockholm av ett utländskt åkeri, trots att speditören vet att åkeriet aldrig lämnar in utstationeringsdeklarationer för sina förare.
+
+LAW S2022-155 | Lagen (2022:155) om tobaksskatt | 2022:155 | LTS
+
+@ v21-tobaksskatt-cigaretter-utan-prismarkning | Brott mot lagen om tobaksskatt (cigaretter utan originalförpackning med prismärkning) | 2:21 | 2:21,2:19
+PEN 0 | 0.5 | Böter eller fängelse i högst sex månader | B–F 6 mån
+C Ekonomisk brottslighet
+A lösa cigaretter;styckförsäljning cigaretter;cigaretter utan prismärkning;omärkta cigarettpaket;smuggelcigaretter i butik
+Q plain
+G Gärningspersonen tillhandahåller cigaretter för försäljning.
+O Cigaretterna tillhandahålls på annat sätt än i originalförpackning försedd med särskild märkning med uppgift om detaljhandelspriset.
+S Uppsåt till samtliga rekvisit. Lagen anger ingen skuldform. Utgångspunkten är då att uppsåt krävs.
+U Fallet är ringa.
+U Cigaretterna tillhandahålls av en upplagshavare för försäljning i exportbutik.
+T En kioskägare säljer cigaretter styckvis ur ett öppnat paket och har under disken paket som saknar svensk märkning med detaljhandelspris.
+
+LAW S2022-900 | Lagen (2022:900) om registrering av idéburna organisationer | 2022:900 | Lagen om registrering av idéburna organisationer
+X 2
+
+@ v21-ideburen-organisation-vardeoverforing | Brott mot lagen om registrering av idéburna organisationer (otillåten värdeöverföring) | 14 § | 14,8
+PEN 0 | 0 | Böter | Böter
+C Ekonomisk brottslighet
+A värdeöverföring;idéburen organisation;vinstutdelning välfärd;ta ut pengar ur stiftelse;registrerad idéburen
+Q plain
+K Organisationen är en registrerad idéburen organisation, eller har varit det och fick sitt beslut om avregistrering för mindre än fem år sedan.
+G Gärningspersonen gör en värdeöverföring, det vill säga en affärshändelse som minskar organisationens förmögenhet och som inte är av rent affärsmässig karaktär för organisationen.
+K Värdeöverföringen görs till någon annan än en registrerad idéburen organisation eller forskning.
+S Uppsåt eller oaktsamhet.
+U Gärningen är belagd med straff enligt annan författning.
+U Gärningen omfattas av ett föreläggande om vite och ligger till grund för en ansökan om utdömande av vitet.
+T Styrelsen i en registrerad idéburen förening som driver äldreboenden låter föreningen betala ut en stor gåva till ordförandens privata bolag.
+
+LAW S2022-482 | Lagen (2022:482) om elektronisk kommunikation | 2022:482 | LEK
+
+@ v21-lek-radiosandare-utan-tillstand | Brott mot lagen om elektronisk kommunikation (radiosändare utan tillstånd) | 13:1 | 13:1,3:1,3:24,13:4
+PEN 0 | 0.5 | Böter eller fängelse i högst sex månader | B–F 6 mån
+C Allmän ordning
+A piratradio;radiosändare utan tillstånd;olovlig sändare;störa radiotrafik;komradio utan licens
+Q plain
+G Gärningspersonen gör minst ett av:
+  | Använder en radiosändare utan tillstånd från regleringsmyndigheten, när tillstånd krävs.
+  | Använder en radiosändare i strid med ett tillståndsvillkor.
+  | Bryter mot föreskrifter om förbud mot att inneha elektriska eller elektroniska anläggningar som, utan att vara radioanläggningar, är avsedda att sända radiovågor.
+P Radiosändaren används i Sverige eller på ett svenskt fartyg eller luftfartyg utomlands.
+S Uppsåt eller oaktsamhet.
+U Gärningen omfattas av ett föreläggande som har förenats med vite och en ansökan om utdömande av vitet har gjorts.
+N Tillstånd krävs inte för radiosändare som är undantagna från tillståndsplikten genom föreskrifter.
+T En person sänder musik över FM-bandet från en hemmabyggd sändare på vinden utan tillstånd.
+
+@ v21-lek-tystnadsplikt-radiomeddelande | Brott mot lagen om elektronisk kommunikation (tystnadsplikt för avlyssnat radiomeddelande) | 13:2 första stycket | 13:2,9:34
+PEN 0 | 0 | Böter | Böter
+C Frid
+A avlyssna polisradio;sprida avlyssnat radiomeddelande;radioscanner;föra vidare radiosamtal
+Q plain
+K Gärningspersonen har i en radiomottagare avlyssnat, eller på något annat sätt genom en sådan mottagare fått tillgång till, ett radiobefordrat meddelande i ett elektroniskt kommunikationsnät.
+O Meddelandet är inte avsett för gärningspersonen eller för allmänheten.
+G Gärningspersonen för obehörigen meddelandet vidare.
+S Uppsåt eller oaktsamhet.
+U Fallet är ringa.
+N I det allmännas verksamhet gäller offentlighets- och sekretesslagen i stället. Den som har tystnadsplikt i en verksamhet som tillhandahåller elektroniska kommunikationstjänster ansvarar enligt brottsbalken.
+T En person avlyssnar med en radioscanner ett privat radiosamtal och lägger ut innehållet i sociala medier.
+
+@ v21-lek-lagring-i-terminalutrustning | Brott mot lagen om elektronisk kommunikation (lagring eller hämtning av uppgifter utan samtycke) | 13:2 andra stycket | 13:2,9:28
+PEN 0 | 0 | Böter | Böter
+C Frid
+A kakor utan samtycke;cookies;spårning i mobil;hämta uppgifter från telefon;spionprogram
+Q plain
+G Gärningspersonen lagrar uppgifter i, eller hämtar uppgifter från, en abonnents eller användares terminalutrustning, till exempel en dator eller en mobiltelefon.
+K Abonnenten eller användaren har inte fått tillgång till information om ändamålet med behandlingen eller har inte samtyckt till den.
+S Uppsåt eller oaktsamhet.
+U Lagringen eller åtkomsten behövs för att överföra ett elektroniskt meddelande via ett elektroniskt kommunikationsnät eller är nödvändig för att tillhandahålla en tjänst som användaren eller abonnenten uttryckligen har begärt.
+U Gärningen är belagd med straff enligt brottsbalken.
+U Fallet är ringa.
+T Ett företag låter sin webbplats lägga spårningskakor på besökarnas datorer och läsa av dem, utan att besökarna informeras eller tillfrågas.
+
+LAW S1989-978 | Prisregleringslagen (1989:978) | 1989:978 | Prisregleringslagen
+X 6,7,8,9,44
+
+@ v21-prisreglering-overpris | Brott mot prisregleringslagen (överpris och andra överträdelser av prisreglering) | 39 och 42 §§ | 39,42,13,14,17,23,24,30,44,47
+PEN 0 | 0.5 | Böter eller fängelse i högst sex månader | B–F 6 mån
+C Ekonomisk brottslighet
+A prisstopp;högstpris;ocker;överpris i kris;svartabörshandel;prisreglering
+Q villkor | Allmänt åtal får väckas bara efter medgivande av den myndighet som regeringen bestämmer.
+K Prisregleringslagens bestämmelser tillämpas, vilket sker om Sverige är i krig eller om regeringen har föreskrivit det vid krigsfara eller vid risk för allvarlig prisstegring.
+G Gärningspersonen gör minst ett av:
+  | Begär eller tar emot ersättning efter ett högre pris än det högstpris, stoppris eller sänkta pris som gäller enligt en föreskrift, ett tillstånd eller ett beslut.
+  | Betalar eller erbjuder sig att betala ett sådant för högt pris för en vara eller en tjänst som han eller hon tänker överlåta mot ersättning eller utnyttja i yrkesmässig förvärvsverksamhet.
+  | Höjer priset utan föreskriven förhandsanmälan eller frångår en utfästelse om högsta pris utan tillstånd.
+  | Begär eller tar emot en ersättning som väsentligt överstiger det gängse priset eller annars är oskälig, i strid med föreskrifter mot prisocker.
+  | Bryter mot ett försäljningsförbud eller mot föreskrifter eller villkor om tvångskartellering, nyetableringsförbud, auktorisationstvång eller varustandardisering.
+  | Ställer utan tillstånd som villkor för att sälja en prisreglerad vara eller tjänst att köparen också köper något annat eller ingår ett annat avtal.
+S Uppsåt eller oaktsamhet.
+U Gärningen har begåtts av oaktsamhet och fallet är ringa.
+U Gärningen är belagd med straff i brottsbalken (gäller uppsåtliga gärningar).
+N En näringsidkare ansvarar för en gärning som har begåtts i hans eller hennes rörelse, om näringsidkaren har haft eller borde ha haft vetskap om gärningen.
+T Under ett prisstopp på drivmedel säljer en bensinstationsägare diesel för dubbla stoppriset.
+
+@ v21-prisreglering-hyresstopp | Brott mot prisregleringslagen (hyresstopp) | 40 och 42 §§ | 40,42,34,44,47
+PEN 0 | 0.5 | Böter eller fängelse i högst sex månader | B–F 6 mån
+C Ekonomisk brottslighet
+A hyresstopp;för hög hyra;ockerhyra;hyreshöjning i kris
+Q villkor | Allmänt åtal får väckas bara efter medgivande av den myndighet som regeringen bestämmer.
+K Regeringen har föreskrivit att den som hyr ut en bostadslägenhet eller en lokal inte utan tillstånd får ta ut en högre hyra än den som tillämpades en viss angiven dag (stopphyra).
+G Gärningspersonen tar ut en högre hyra än vad som är medgivet i föreskriften eller i ett tillstånd.
+S Uppsåt eller oaktsamhet.
+U Gärningen har begåtts av oaktsamhet och fallet är ringa.
+U Gärningen är belagd med straff i brottsbalken eller i 12 kap. 65 § jordabalken (gäller uppsåtliga gärningar).
+N En näringsidkare ansvarar för en gärning som har begåtts i hans eller hennes rörelse, om näringsidkaren har haft eller borde ha haft vetskap om gärningen.
+T En fastighetsägare höjer hyran för sina lokaler med 20 procent trots att regeringen har infört hyresstopp.
+
+@ v21-prisreglering-grovt-brott | Brott mot prisregleringslagen, grovt brott | 41 § | 41,39,40,47
+PEN 0 | 2 | Fängelse i högst två år | F 2 år
+C Ekonomisk brottslighet
+A grovt prisbrott;grovt ocker i kris;grovt brott mot prisstopp;krigsprofitör
+Q villkor | Allmänt åtal får väckas bara efter medgivande av den myndighet som regeringen bestämmer.
+O Ett uppsåtligt brott mot prisregleringslagen som avser överpris eller andra överträdelser av prisregleringen (39 §) eller för hög hyra vid hyresstopp (40 §).
+S Uppsåt.
+U Gärningen är belagd med straff i brottsbalken eller i 12 kap. 65 § jordabalken.
+R grovt
+- Gärningspersonen har avsett att bereda sig otillbörlig vinst av betydande storlek.
+- Gärningspersonen har använt vilseledande bokföring.
+- Gärningen är annars av särskilt farlig art.
+T En grossist säljer under ett prisstopp systematiskt livsmedel till kraftiga överpriser och döljer de verkliga priserna med falska fakturor i bokföringen.
+
+@ v21-prisreglering-prisuppgifter | Brott mot prisregleringslagen (prisanslag och försäljningsföreskrifter) | 43 § | 43,28,44
+PEN 0 | 0 | Böter | Böter
+C Ekonomisk brottslighet
+A prisanslag;prisuppgifter saknas;sälja efter vikt;märkning av förpackning;prisreglering
+Q plain
+K Regeringen eller en myndighet har för yrkesmässig försäljning av en viss vara eller yrkesmässigt utförande av en viss tjänst meddelat föreskrifter om anslag med prisuppgifter på försäljningsstället, om försäljning efter mått eller vikt eller i märkta förpackningar, eller andra liknande föreskrifter.
+G Gärningspersonen bryter mot en sådan föreskrift.
+S Uppsåt eller oaktsamhet.
+N En näringsidkare ansvarar för en gärning som har begåtts i hans eller hennes rörelse, om näringsidkaren har haft eller borde ha haft vetskap om gärningen.
+T En handlare struntar i en föreskrift om att ha ett anslag med priserna på ransonerade baslivsmedel väl synligt i butiken.
+
+@ v21-prisreglering-forledande | Brott mot prisregleringslagen (förledande till prisbrott) | 45 § | 45,39,40,47
+PEN 0 | 0.5 | Böter eller fängelse i högst sex månader | B–F 6 mån
+C Ekonomisk brottslighet
+A förleda säljare;erbjuda överpris;muta sig förbi prisstopp;hyresgäst betalar extra
+Q villkor | Allmänt åtal får väckas bara efter medgivande av den myndighet som regeringen bestämmer.
+G Gärningspersonen gör minst ett av:
+  | Förleder som köpare, eller som den åt vilken en tjänst har utförts, säljaren eller den som har tillhandahållit tjänsten att ta ut ett för högt pris eller att bryta mot andra bestämmelser om prisreglering.
+  | Förleder som hyresgäst hyresvärden att ta ut en högre hyra än vad som är medgivet vid hyresstopp.
+  | Förleder som säljare, eller som den som har tillhandahållit en tjänst, köparen eller den som har utnyttjat tjänsten att överträda en föreskrift eller ett villkor om tvångskartellering, nyetableringsförbud eller auktorisationstvång.
+U Gärningspersonen betalar eller erbjuder ett för högt pris för något som han eller hon tänker sälja vidare eller utnyttja yrkesmässigt. Då döms i stället för brott enligt 39 §.
+S Uppsåt.
+T En privatperson övertalar under ett prisstopp en handlare att sälja en begränsad vara till honom genom att erbjuda betydligt mer än stoppriset.
+
+LAW S2001-99 | Lagen (2001:99) om den officiella statistiken | 2001:99 | Statistiklagen
+
+@ v21-olovlig-identifiering-statistik | Olovlig identifiering (lagen om den officiella statistiken) | 26 § | 26,6
+PEN 0 | 1 | Böter eller fängelse i högst ett år | B–F 1 år
+C Allmän verksamhet
+A bakvägsidentifiering;röja identitet i statistik;avidentifierade uppgifter;samköra register;SCB-data
+Q plain
+O Uppgifter i den officiella statistiken.
+G Gärningspersonen sammanför uppgifterna med andra uppgifter.
+K Syftet är att utröna en enskilds identitet.
+S Uppsåt till samtliga rekvisit. Lagen anger ingen skuldform. Utgångspunkten är då att uppsåt krävs.
+U Gärningen är belagd med straff i brottsbalken.
+U Fallet är ringa.
+T En forskare som har fått ut avidentifierade statistikuppgifter samkör dem med ett adressregister för att ta reda på vilka personer uppgifterna gäller.
+
+LAW S2019-508 | Lagen (2019:508) om behandling av personuppgifter i det fördelningsanalytiska statistiksystemet för inkomster och transfereringar | 2019:508 | Fasit-lagen
+
+@ v21-olovlig-identifiering-fasit | Olovlig identifiering (Fasit-lagen) | 11 § | 11
+PEN 0 | 1 | Böter eller fängelse i högst ett år | B–F 1 år
+C Allmän verksamhet
+A Fasit;bakvägsidentifiering;röja identitet i statistik;samköra register;inkomststatistik
+Q plain
+O Uppgifter i det fördelningsanalytiska statistiksystemet för inkomster och transfereringar (Fasit), även uppgifter i ett urval som har lämnats ut ur systemet.
+G Gärningspersonen sammanför uppgifterna med andra uppgifter.
+K Syftet är att utröna en enskilds identitet.
+S Uppsåt till samtliga rekvisit. Lagen anger ingen skuldform. Utgångspunkten är då att uppsåt krävs.
+U Gärningen är belagd med straff i brottsbalken.
+U Fallet är ringa.
+T En utredare som har fått ut ett urval ur Fasit jämför inkomstuppgifterna med offentliga taxeringsuppgifter för att lista ut vilka personer som ingår i urvalet.
+
+LAW S1992-1602 | Lagen (1992:1602) om valuta- och kreditreglering | 1992:1602 | Valutaregleringslagen
+X 1:1,2:1,3:1
+
+@ v21-valutareglering-brott | Brott mot lagen om valuta- och kreditreglering (valutareglering) | 2:8 | 2:8,2:1,2:10,2:12
+PEN 0 | 1 | Böter eller fängelse i högst ett år | B–F 1 år
+C Ekonomisk brottslighet
+A valutareglering;valutabrott;föra ut pengar ur landet;växla valuta utan tillstånd;bulvan
+Q villkor | Allmänt åtal får väckas bara efter medgivande av Riksbanken.
+ST F | Lagen 2 kap. 10 § | Försök är straffbart bara vid uppsåtligt brott.
+K Regeringen har förordnat om valutareglering, vilket innebär att de valutatransaktioner som anges i förordnandet inte får genomföras utan tillstånd av Riksbanken.
+G Gärningspersonen gör minst ett av:
+  | Bryter mot förordnandet om valutareglering eller mot ett förbud, en föreskrift eller ett villkor som har meddelats med stöd av det, till exempel genom att genomföra en valutatransaktion utan tillstånd.
+  | Låter bli att lämna en uppgift eller lämnar en oriktig uppgift och föranleder därigenom att ett tillstånd till en valutatransaktion beviljas som annars inte skulle ha meddelats, eller att en tillståndspliktig valutatransaktion genomförs utan tillstånd, avgift eller deposition.
+  | Använder sig av bulvan för att kringgå ett förbud som har meddelats med stöd av förordnandet.
+S Uppsåt.
+U Fallet är ringa.
+N Den som begår gärningen av grov oaktsamhet döms till böter.
+T Under en valutareglering för en företagare över flera miljoner kronor till ett utländskt konto utan Riksbankens tillstånd.
+
+@ v21-valutareglering-brott-grovt | Brott mot lagen om valuta- och kreditreglering (valutareglering), grovt brott | 2:9 | 2:9,2:8,2:10,2:12
+PEN 0 | 2 | Fängelse i högst två år | F 2 år
+C Ekonomisk brottslighet
+A grovt valutabrott;valutareglering grovt;stora belopp ut ur landet
+Q villkor | Allmänt åtal får väckas bara efter medgivande av Riksbanken.
+ST F | Lagen 2 kap. 10 §
+B v21-valutareglering-brott
+S Gärningen har begåtts uppsåtligen.
+R grovt
+- Gärningen har avsett mycket betydande belopp.
+- Gärningen har på något annat sätt varit av synnerligen allvarlig art.
+T Under en valutareglering för en person systematiskt ut hundratals miljoner kronor ur landet genom bulvaner.
+
+@ v21-kreditreglering-uppgifter | Brott mot lagen om valuta- och kreditreglering (uppgifter vid kreditreglering) | 3:15 | 3:15,3:14,3:18
+PEN 0 | 1 | Böter eller fängelse i högst ett år | B–F 1 år
+C Ekonomisk brottslighet
+A kreditreglering;oriktig uppgift till Riksbanken;bank vägrar lämna uppgifter;utlåningsreglering
+Q villkor | Allmänt åtal får väckas bara efter medgivande av Riksbanken.
+K Riksbanken har förelagt ett finansiellt företag att lämna de uppgifter som Riksbanken anser nödvändiga för att bedöma om kreditreglering behövs eller för att tillämpa ett meddelat förordnande.
+G Gärningspersonen låter bli att lämna en uppgift eller lämnar en oriktig uppgift när skyldigheten ska fullgöras.
+S Uppsåt.
+U Fallet är ringa.
+N Den som begår gärningen av grov oaktsamhet döms till böter.
+T En bankdirektör redovisar medvetet en alldeles för låg utlåningsvolym när Riksbanken har förelagt banken att lämna uppgifter inför en utlåningsreglering.
+
+@ v21-kreditreglering-uppgifter-grovt | Brott mot lagen om valuta- och kreditreglering (uppgifter vid kreditreglering), grovt brott | 3:16 | 3:16,3:15,3:18
+PEN 0 | 2 | Fängelse i högst två år | F 2 år
+C Ekonomisk brottslighet
+A grovt brott kreditreglering;oriktig uppgift Riksbanken grovt
+Q villkor | Allmänt åtal får väckas bara efter medgivande av Riksbanken.
+B v21-kreditreglering-uppgifter
+S Gärningen har begåtts uppsåtligen.
+R grovt
+- Gärningen har rört mycket betydande belopp eller kreditvolym.
+- Gärningen har på annat sätt varit av synnerligen allvarlig art.
+T Ledningen i ett kreditinstitut döljer under en kreditreglering utlåning på tiotals miljarder kronor i sina uppgifter till Riksbanken.
+
+LAW S2004-297 | Lagen (2004:297) om bank- och finansieringsrörelse | 2004:297 | LBF
+
+@ v21-meddelandeforbud-bank | Brott mot lagen om bank- och finansieringsrörelse (meddelandeförbud) | 1:13 | 1:13,1:12
+PEN 0 | 0 | Böter | Böter
+C Ekonomisk brottslighet
+A meddelandeförbud;bank röjer förundersökning;tipsa kund om utredning;banktjänsteman varnar kund
+Q plain
+K En undersökningsledare eller åklagare som har begärt uppgifter från ett kreditinstitut har beslutat att kreditinstitutet, dess styrelseledamöter och anställda inte får röja att uppgifter har lämnats eller att det pågår en förundersökning, en utredning om självständigt förverkande, ett ärende om rättslig hjälp i brottmål eller ett ärende om en europeisk utredningsorder.
+G Gärningspersonen röjer detta för kunden eller för någon utomstående.
+S Uppsåt eller grov oaktsamhet.
+T En banktjänsteman ringer en kund och berättar att åklagaren har begärt ut kundens kontoutdrag, trots att åklagaren har meddelat meddelandeförbud.
+
+LAW S2006-531 | Lagen (2006:531) om särskild tillsyn över finansiella konglomerat | 2006:531 | Konglomeratlagen
+
+@ v21-meddelandeforbud-konglomerat | Brott mot lagen om särskild tillsyn över finansiella konglomerat (meddelandeförbud) | 10:2 | 10:2,6:9
+PEN 0 | 0 | Böter | Böter
+C Ekonomisk brottslighet
+A meddelandeförbud;röja förundersökning;tipsa kund om utredning;finansiellt konglomerat
+Q plain
+K En undersökningsledare eller åklagare som har begärt uppgifter från ett försäkringsföretag, ett tjänstepensionsföretag eller ett blandat finansiellt holdingföretag har beslutat att företaget, dess styrelseledamöter och anställda inte får röja att uppgifter har lämnats eller att det pågår en förundersökning, en utredning om självständigt förverkande, ett ärende om rättslig hjälp i brottmål eller ett ärende om en europeisk utredningsorder.
+G Gärningspersonen röjer detta för kunden eller för någon utomstående.
+S Uppsåt eller grov oaktsamhet.
+T En anställd i ett försäkringsföretag berättar för en kund att polisen har begärt ut uppgifter om kunden, trots att åklagaren har meddelat meddelandeförbud.
+
+LAW S2010-751 | Lagen (2010:751) om betaltjänster | 2010:751 | Betaltjänstlagen
+
+@ v21-meddelandeforbud-betaltjanster | Brott mot lagen om betaltjänster (meddelandeförbud) | 3:16 | 3:16,3:15
+PEN 0 | 0 | Böter | Böter
+C Ekonomisk brottslighet
+A meddelandeförbud;betalningsinstitut röjer utredning;tipsa kund om förundersökning;betaltjänst
+Q plain
+K En undersökningsledare eller åklagare som har begärt uppgifter från ett betalningsinstitut eller en registrerad betaltjänstleverantör har beslutat att institutet eller leverantören, dess styrelseledamöter och anställda inte får röja att uppgifter har lämnats eller att det pågår en förundersökning, en utredning om självständigt förverkande, ett ärende om rättslig hjälp i brottmål eller ett ärende om en europeisk utredningsorder.
+G Gärningspersonen röjer detta för kunden eller för någon utomstående.
+S Uppsåt eller grov oaktsamhet.
+T En anställd på ett betalningsinstitut skriver till en kund att åklagaren har begärt ut kundens transaktioner, trots att åklagaren har meddelat meddelandeförbud.
+
+LAW S2011-755 | Lagen (2011:755) om elektroniska pengar | 2011:755 | Lagen om elektroniska pengar
+
+@ v21-meddelandeforbud-elektroniska-pengar | Brott mot lagen om elektroniska pengar (meddelandeförbud) | 3:16 | 3:16,3:15
+PEN 0 | 0 | Böter | Böter
+C Ekonomisk brottslighet
+A meddelandeförbud;e-pengar;röja förundersökning;tipsa kund om utredning
+Q plain
+K En undersökningsledare eller åklagare som har begärt uppgifter från ett institut för elektroniska pengar har beslutat att institutet, dess styrelseledamöter och anställda inte får röja att uppgifter har lämnats eller att det pågår en förundersökning, en utredning om självständigt förverkande, ett ärende om rättslig hjälp i brottmål eller ett ärende om en europeisk utredningsorder.
+G Gärningspersonen röjer detta för kunden eller för någon utomstående.
+S Uppsåt eller grov oaktsamhet.
+T En kundtjänstmedarbetare hos en utgivare av elektroniska pengar berättar för en kontohavare att polisen har begärt ut hans uppgifter, trots att åklagaren har meddelat meddelandeförbud.
+
+LAW S2014-968 | Lagen (2014:968) om särskild tillsyn över kreditinstitut och värdepappersbolag | 2014:968 | Tillsynslagen
+
+@ v21-meddelandeforbud-tillsynslagen | Brott mot lagen om särskild tillsyn över kreditinstitut och värdepappersbolag (meddelandeförbud) | 8:9 | 8:9,6:12
+PEN 0 | 0 | Böter | Böter
+C Ekonomisk brottslighet
+A meddelandeförbud;holdingföretag;röja förundersökning;tipsa kund om utredning
+Q plain
+K En undersökningsledare eller åklagare som har begärt uppgifter från ett holdingföretag har beslutat att holdingföretaget, dess styrelseledamöter och anställda inte får röja att uppgifter har lämnats eller att det pågår en förundersökning, en utredning om självständigt förverkande, ett ärende om rättslig hjälp i brottmål eller ett ärende om en europeisk utredningsorder.
+G Gärningspersonen röjer detta för kunden eller för någon utomstående.
+S Uppsåt eller grov oaktsamhet.
+T En styrelseledamot i ett finansiellt holdingföretag berättar för en affärsbekant att åklagaren har begärt ut uppgifter om honom, trots att åklagaren har meddelat meddelandeförbud.

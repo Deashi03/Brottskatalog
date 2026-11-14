@@ -31,7 +31,7 @@ R grovt
 
 @ v03-sexuellt-utnyttjande-av-barn | Sexuellt utnyttjande av barn | BrB 6:5
 B v03-valdtakt-mot-barn
-R mindre
+R mindre*
 - Omständigheterna vid brottet, till exempel att det rört sig om en enstaka händelse utan tvång mellan jämnåriga.
 U Barnet är under 15 år och det är uppenbart att gärningen inte inneburit något övergrepp, med hänsyn till den ringa skillnaden i ålder och utveckling och omständigheterna i övrigt (BrB 6:14).
 
@@ -89,7 +89,7 @@ U Barnet är under 15 år och det är uppenbart att gärningen inte inneburit n�
 G Gärningspersonen olovligen tar och brukar ett motorfordon eller annat motordrivet fortskaffningsmedel.
 O Fordonet tillhör någon annan.
 S Uppsåt till samtliga rekvisit. Avsikt att behålla fordonet krävs inte.
-U Gärningen är stöld, ringa stöld, grov stöld, rån eller grovt rån. Då döms för det brottet.
+U Gärningen är stöld, ringa stöld, grov stöld, inbrottsstöld, rån eller grovt rån. Då döms för det brottet.
 
 @ v03-grovt-tillgrepp-av-fortskaffningsmedel | Grovt tillgrepp av fortskaffningsmedel | BrB 8:7 andra stycket
 B v03-tillgrepp-av-fortskaffningsmedel

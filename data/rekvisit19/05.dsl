@@ -1,5 +1,5 @@
 @ v03-utpressning | Utpressning | BrB 9:4 första stycket
-G Gärningspersonen använder olaga tvång, det vill säga våld eller hot om brottslig gärning eller hot att ange någon för brott eller lämna ett menligt meddelande.
+G Gärningspersonen använder olaga tvång, det vill säga våld eller hot om brottslig gärning, eller ett otillbörligt tvång genom hot att åtala eller ange någon annan för brott eller lämna ett menligt meddelande om någon annan.
 G Någon förmås därigenom till en handling eller underlåtenhet.
 F Handlingen eller underlåtenheten innebär vinning för gärningspersonen och skada för den tvingade eller någon i vars ställe denne är.
 S Uppsåt till samtliga rekvisit.
@@ -18,7 +18,7 @@ R grovt
 - Hotet har påtagligt förstärkts med vapen, sprängämne eller vapenattrapp eller genom anspelning på ett våldskapital, eller annars varit av allvarligt slag.
 - Gärningen har annars varit av särskilt hänsynslös eller farlig art.
 
-@ v03-ocker | Ocker | BrB 9:5 första stycket
+@ v03-ocker | Ocker | BrB 9:5 första och andra stycket
 ## Utnyttjande vid avtal
 G Gärningspersonen utnyttjar vid ett avtal eller annan rättshandling någons trångmål, oförstånd, lättsinne eller beroendeställning.
 F Gärningspersonen bereder sig en förmån som står i uppenbart missförhållande till motprestationen, eller som inte ska motsvaras av någon motprestation.
@@ -28,7 +28,7 @@ P Kreditgivning i näringsverksamhet, eller i annan verksamhet som bedrivs vanem
 F Gärningspersonen bereder sig ränta eller annan ekonomisk förmån som står i uppenbart missförhållande till motprestationen.
 S Uppsåt till samtliga rekvisit.
 
-@ v04-grovt-ocker | Grovt ocker | BrB 9:5 andra stycket
+@ v04-grovt-ocker | Grovt ocker | BrB 9:5 tredje stycket
 B v03-ocker
 R grovt
 - Gärningen har avsett betydande värde.
@@ -156,5 +156,5 @@ U Gärningen är tagande eller givande av muta.
 @ v04-vardslos-finansiering-av-mutbrott | Vårdslös finansiering av mutbrott | BrB 10:5 e
 K Gärningspersonen är en näringsidkare.
 G Näringsidkaren tillhandahåller pengar eller andra tillgångar åt någon som företräder näringsidkaren i en viss angelägenhet.
-F Därigenom främjas givande av muta, grovt givande av muta eller handel med inflytande i angelägenheten.
+F Därigenom främjas givande av muta, grovt givande av muta eller handel med inflytande genom att en otillbörlig förmån lämnas, utlovas eller erbjuds (BrB 10:5 d 2) i angelägenheten.
 S Grov oaktsamhet.
