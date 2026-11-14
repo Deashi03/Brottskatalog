@@ -519,7 +519,7 @@ LAW S2024-1159 | Lagen (2024:1159) med kompletterande bestämmelser till EU:s f�
 
 @ v21-meddelandeforbud-kryptotillgangar | Brott mot lagen med kompletterande bestämmelser till EU:s förordning om marknader för kryptotillgångar (meddelandeförbud) | 1:7 | 1:6,1:7
 PEN 0 | 0 | Böter | Böter
-C Rättsväsende
+C Ekonomisk brottslighet
 A meddelandeförbud;röja förundersökning för kund;kryptobörs;kryptotillgångar;tipsa kund om utredning
 Q plain
 K En undersökningsledare eller åklagare har begärt uppgifter från ett företag på marknaden för kryptotillgångar och beslutat om meddelandeförbud för företaget, dess styrelseledamöter och anställda.
@@ -531,7 +531,7 @@ LAW S2022-1746 | Lagen (2022:1746) med kompletterande bestämmelser till EU:s f�
 
 @ v21-meddelandeforbud-pepp | Brott mot lagen med kompletterande bestämmelser till EU:s förordning om en paneuropeisk privat pensionsprodukt (meddelandeförbud) | 1:8 | 1:7,1:8
 PEN 0 | 0 | Böter | Böter
-C Rättsväsende
+C Ekonomisk brottslighet
 A meddelandeförbud;röja förundersökning för kund;pensionssparande;PEPP;tipsa kund om utredning
 Q plain
 K En undersökningsledare eller åklagare har begärt uppgifter från ett PEPP-sparinstitut, en PEPP-distributör eller ett förvaringsinstitut och beslutat om meddelandeförbud för företaget, dess styrelseledamöter och anställda.
@@ -543,7 +543,7 @@ LAW S2021-899 | Lagen (2021:899) med kompletterande bestämmelser till EU:s för
 
 @ v21-meddelandeforbud-grasrotsfinansiering | Brott mot lagen med kompletterande bestämmelser till EU:s förordning om gräsrotsfinansiering (meddelandeförbud) | 1:9 | 1:8,1:9
 PEN 0 | 0 | Böter | Böter
-C Rättsväsende
+C Ekonomisk brottslighet
 A meddelandeförbud;röja förundersökning för kund;crowdfunding;gräsrotsfinansiering;tipsa kund om utredning
 Q plain
 K En undersökningsledare eller åklagare har begärt uppgifter från en leverantör av gräsrotsfinansieringstjänster och beslutat om meddelandeförbud för leverantören, dess styrelseledamöter och anställda.

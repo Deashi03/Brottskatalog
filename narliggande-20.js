@@ -178,6 +178,9 @@ const UPCOMING=[
  {date:'2027-01-01',ids:['v05-egenmaktighet-med-barn','v05-grov-egenmaktighet-med-barn'],text:'BrB 7:4 hänvisar från detta datum till lagen (2026:1600) om omhändertagande för vård av barn och unga i stället för LVU.'},
  {date:'2027-01-01',ids:['v19-otillaten-miljoverksamhet'],text:'Miljöbalken 29:4 får ny lydelse.'},
  {date:'2027-01-01',ids:['v20-lvu-utreseforbud','v20-lvu-flyttningsforbud'],text:'LVU ersätts av lagen (2026:1600) om omhändertagande för vård av barn och unga. Motsvarande straffbestämmelser finns i den nya lagen.'},
+ {date:'2027-01-01',ids:['v21-ellagen-natkoncession','v21-ellagen-ledning-ur-bruk-driftsakerhet'],text:'Ellagen upphör att gälla. Den ersätts av elmarknadslagen (2026:1281) och lagen (2026:1283) om elektriska ledningar, som har egna straffbestämmelser.'},
+ {date:'2027-07-01',ids:['v21-ideburen-organisation-vardeoverforing'],text:'14 § i lagen om registrering av idéburna organisationer får ny lydelse.'},
+ {date:'2027-07-01',ids:['v21-etikprovning-forskning-utan-godkannande','v21-etikprovning-forskning-grov-oaktsamhet'],text:'38 § i lagen om etikprövning av forskning som avser människor får ny lydelse.'},
  {date:'2027-03-01',ids:['v20-lsu-atervandande','v20-lsu-hjalp-inresa','v20-lsu-anmalningsskyldighet','v20-lsu-hindrande-verkstallighet'],text:'Straffen i lagen om särskild kontroll av vissa utlänningar skärps.'}
 ];
 const crimes=()=>(window.BK_APP17&&window.BK_APP17.crimes)||[];

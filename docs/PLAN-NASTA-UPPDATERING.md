@@ -2,27 +2,33 @@
 
 Framtagen 2026-11-13 mot version 1.9.1. Planen bygger på en genomgång av allt material i katalogen och av alla gällande författningar med straffbestämmelser hos Sveriges riksdag.
 
-## 0. Läget efter version 2.0 (2026-11-14)
+## 0. Läget efter version 2.1 (2026-11-14)
 
-Besluten är fattade och arbetet är uppdelat på två uppdateringar.
+Planen är genomförd i två uppdateringar, 2.0 och 2.1.
 
 **Gjort i 2.0**
 
-- Rättningarna från granskningen (avsnitt 2), utom de punkter som står under 2.1 nedan.
-- Menyerna Lydelse och gärningstidpunkt samt Straffskala och beslutsvillkor är borttagna.
-- Alla kort har förstadiekort. Straffbara förstadier ärver FU-ledningen från det fullbordade brottet.
-- 98 nya kort: det polisnära paketet (paket A) och de flesta luckorna i avsnitt 3.3.
-- Preskriptionsmeny med datumkontroll, menyn Närliggande brott och raden Kommande lagändringar.
-- Lagbevakningen omfattar alla lagar med kort.
+- Rättningarna från granskningen, borttagna menyer, förstadiekort för alla kort med ärvd FU-ledning, 98 nya kort, preskription, närliggande brott, kommande lagändringar och utökad lagbevakning.
 
-**Kvar till 2.1**
+**Gjort i 2.1**
 
-- Paket B–E i avsnitt 3.4, inklusive bötesbrotten i förordningar (trafikförordningen med flera).
-- Det som återstår av paket A: steriliseringslagen, transplantationslagen, skogsvårdslagen, begravningslagen, aktiebolagslagen 30 kap. och lagen om nationella järnvägssystem.
-- Luckor som återstår från avsnitt 3.3: BrB 18:2, 19:11 och 19:15, folkbokföringslagen 42 a § (gäller från 2026-12-01), tunnelbanelagen 31 § och bötesdelarna i lagen om brandfarliga och explosiva varor 28 § andra stycket.
-- Andra läsningen av rekvisiten på de äldre korten (AP2) och villkorade straffskalor (K3).
-- Kontroll av om ÅFS 2005:9 har ändrats efter ÅFS 2019:2 (K7). Åklagarmyndighetens webbplats gick inte att nå från arbetsmiljön.
-- Preskription saknas på 13 äldre kort som inte har en maskinläsbar straffskala.
+- 437 nya kort för alla återstående författningar i inventeringen (paket A–E, inklusive förordningarna) och de sista luckorna i lagar som redan fanns.
+- Andra läsningen av rekvisiten på de 393 äldre korten: 38 sakfel rättade.
+- Preskription för brott med villkorad straffskala.
+- ÅFS 2005:9 kontrollerad mot aklagare.se (oförändrad sedan ÅFS 2019:2).
+
+**Medvetet utelämnat**
+
+- Författningar som inte gäller i dag: lagen (2026:1600) om omhändertagande för vård av barn och unga, elmarknadslagen (2026:1281) och lagen (2026:1283) om elektriska ledningar (alla från 2027-01-01), konsumentkreditlagen (2026:1011, från 2026-11-20) och folkbokföringslagen 42 a § (från 2026-12-01).
+- Författningar som saknar tillämpning: lagen (1974:922) om kreditpolitiska medel, förordningen (1988:160) om betalningsvillkor vid kreditköp, lagen (1983:147) om djurstallar, lagen (1974:1080) om avveckling av hyresregleringen, valutaförordningen (1959:264) och förordningen (1989:263) om särskild hastighetsbegränsning.
+- Bestämmelser med bötesbelopp i kronor som i praktiken är penningböter: lagen (1918:399) om tjur eller hingst på samfälld betesmark och delar av ägofredslagen och flottningslagen.
+- Lagen (2026:786) om nordisk verkställighet var en felträff i inventeringen (ingen straffbestämmelse).
+
+**Kvar att göra senare**
+
+- Kort för de författningar som träder i kraft 2026-11-20, 2026-12-01 och 2027-01-01, när de har börjat gälla.
+- Häktning, tvångsmedel och FU-ledning för de 13 korten med villkorad straffskala bygger fortfarande på en samlad bedömning och inte på vald gren.
+- Granskningslistan i `docs/underlag/granskning-2-1.md`: kort där innehållet i en EU-förordning eller en myndighetsföreskrift inte står i den svenska lagtexten.
 
 ## 1. Sammanfattning
 

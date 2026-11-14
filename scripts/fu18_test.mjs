@@ -4,7 +4,7 @@ const root=path.resolve(import.meta.dirname,'..');
 const read=p=>fs.readFileSync(path.join(root,p),'utf8');
 const html=read('index.html'),sw=read('service-worker.js');
 const w={};vm.runInNewContext(read('fu-ledning-18.js'),{window:w});
-const F=w.BK_FU18;assert.ok(F&&F.release==='2.0');
+const F=w.BK_FU18;assert.ok(F&&F.release==='2.1');
 
 const card=(id,title,shortRef,min,max,extra={})=>({id,title,shortRef,penaltyRange:{min,max},...extra});
 const C={

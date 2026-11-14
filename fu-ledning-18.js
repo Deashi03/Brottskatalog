@@ -389,5 +389,5 @@ function render(c,ans){
   '<div class="fu18-end">'+back+'<button type="button" class="fu18-btn fu18-restart" data-fu18="restart">Börja om</button></div></div>';
 }
 
-window.BK_FU18={release:'2.0',classify,traits,assess,render,TAKEOVER,INFO,SVAR_ITEMS,SOURCES,ENKEL,VILLKOR,EJ};
+window.BK_FU18={release:'2.1',classify,traits,assess,render,TAKEOVER,INFO,SVAR_ITEMS,SOURCES,ENKEL,VILLKOR,EJ};
 })();

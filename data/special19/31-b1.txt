@@ -423,7 +423,7 @@ LAW S2004-297 | Lagen (2004:297) om bank- och finansieringsrörelse | 2004:297 |
 
 @ v21-meddelandeforbud-bank | Brott mot lagen om bank- och finansieringsrörelse (meddelandeförbud) | 1:13 | 1:13,1:12
 PEN 0 | 0 | Böter | Böter
-C Rättsväsende
+C Ekonomisk brottslighet
 A meddelandeförbud;bank röjer förundersökning;tipsa kund om utredning;banktjänsteman varnar kund
 Q plain
 K En undersökningsledare eller åklagare som har begärt uppgifter från ett kreditinstitut har beslutat att kreditinstitutet, dess styrelseledamöter och anställda inte får röja att uppgifter har lämnats eller att det pågår en förundersökning, en utredning om självständigt förverkande, ett ärende om rättslig hjälp i brottmål eller ett ärende om en europeisk utredningsorder.
@@ -435,7 +435,7 @@ LAW S2006-531 | Lagen (2006:531) om särskild tillsyn över finansiella konglome
 
 @ v21-meddelandeforbud-konglomerat | Brott mot lagen om särskild tillsyn över finansiella konglomerat (meddelandeförbud) | 10:2 | 10:2,6:9
 PEN 0 | 0 | Böter | Böter
-C Rättsväsende
+C Ekonomisk brottslighet
 A meddelandeförbud;röja förundersökning;tipsa kund om utredning;finansiellt konglomerat
 Q plain
 K En undersökningsledare eller åklagare som har begärt uppgifter från ett försäkringsföretag, ett tjänstepensionsföretag eller ett blandat finansiellt holdingföretag har beslutat att företaget, dess styrelseledamöter och anställda inte får röja att uppgifter har lämnats eller att det pågår en förundersökning, en utredning om självständigt förverkande, ett ärende om rättslig hjälp i brottmål eller ett ärende om en europeisk utredningsorder.
@@ -447,7 +447,7 @@ LAW S2010-751 | Lagen (2010:751) om betaltjänster | 2010:751 | Betaltjänstlage
 
 @ v21-meddelandeforbud-betaltjanster | Brott mot lagen om betaltjänster (meddelandeförbud) | 3:16 | 3:16,3:15
 PEN 0 | 0 | Böter | Böter
-C Rättsväsende
+C Ekonomisk brottslighet
 A meddelandeförbud;betalningsinstitut röjer utredning;tipsa kund om förundersökning;betaltjänst
 Q plain
 K En undersökningsledare eller åklagare som har begärt uppgifter från ett betalningsinstitut eller en registrerad betaltjänstleverantör har beslutat att institutet eller leverantören, dess styrelseledamöter och anställda inte får röja att uppgifter har lämnats eller att det pågår en förundersökning, en utredning om självständigt förverkande, ett ärende om rättslig hjälp i brottmål eller ett ärende om en europeisk utredningsorder.
@@ -459,7 +459,7 @@ LAW S2011-755 | Lagen (2011:755) om elektroniska pengar | 2011:755 | Lagen om el
 
 @ v21-meddelandeforbud-elektroniska-pengar | Brott mot lagen om elektroniska pengar (meddelandeförbud) | 3:16 | 3:16,3:15
 PEN 0 | 0 | Böter | Böter
-C Rättsväsende
+C Ekonomisk brottslighet
 A meddelandeförbud;e-pengar;röja förundersökning;tipsa kund om utredning
 Q plain
 K En undersökningsledare eller åklagare som har begärt uppgifter från ett institut för elektroniska pengar har beslutat att institutet, dess styrelseledamöter och anställda inte får röja att uppgifter har lämnats eller att det pågår en förundersökning, en utredning om självständigt förverkande, ett ärende om rättslig hjälp i brottmål eller ett ärende om en europeisk utredningsorder.
@@ -471,7 +471,7 @@ LAW S2014-968 | Lagen (2014:968) om särskild tillsyn över kreditinstitut och v
 
 @ v21-meddelandeforbud-tillsynslagen | Brott mot lagen om särskild tillsyn över kreditinstitut och värdepappersbolag (meddelandeförbud) | 8:9 | 8:9,6:12
 PEN 0 | 0 | Böter | Böter
-C Rättsväsende
+C Ekonomisk brottslighet
 A meddelandeförbud;holdingföretag;röja förundersökning;tipsa kund om utredning
 Q plain
 K En undersökningsledare eller åklagare som har begärt uppgifter från ett holdingföretag har beslutat att holdingföretaget, dess styrelseledamöter och anställda inte får röja att uppgifter har lämnats eller att det pågår en förundersökning, en utredning om självständigt förverkande, ett ärende om rättslig hjälp i brottmål eller ett ärende om en europeisk utredningsorder.
