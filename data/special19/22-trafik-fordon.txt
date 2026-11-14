@@ -1,0 +1,185 @@
+LAW JvSL | Järnvägssäkerhetslagen (2022:367) | 2022:367 | JvSL
+
+@ v20-jarnvag-onykter-forare | Brott mot järnvägssäkerhetslagen (onykter förare) | 7:2 | 7:2
+PEN 0 | 0.5 | Böter eller fängelse i högst sex månader | B–F 6 mån
+C Trafik
+A lokförare onykter;tågförare alkohol;rattfylleri tåg;onykterhet järnväg
+Q plain
+N Samma regler finns för museijärnvägar och andra nationella järnvägssystem i lagen (2022:368) om nationella järnvägssystem 8 kap.
+G Gärningspersonen för ett maskindrivet fordon på järnväg.
+F Minst ett av:
+  | Alkoholkoncentrationen uppgår under eller efter färden till minst 0,2 promille i blodet eller 0,10 milligram per liter i utandningsluften.
+  | Det finns något narkotiskt ämne kvar i blodet efter att föraren har intagit {{narkotika}}.
+  | Föraren är så påverkad av alkohol eller något annat medel att det kan antas att han eller hon inte kan framföra fordonet på ett betryggande sätt.
+S Uppsåt till samtliga rekvisit. Lagen anger ingen skuldform. Utgångspunkten är då att uppsåt krävs.
+U Narkotikan har intagits enligt läkares eller annan behörig receptutfärdares ordination.
+T En lokförare kör ett godståg och har 0,4 promille vid en kontroll efter färden.
+
+@ v20-jarnvag-onykter-forare-grovt | Brott mot järnvägssäkerhetslagen, grovt brott (onykter förare) | 7:3 | 7:2,7:3
+PEN 0 | 2 | Fängelse i högst två år | F 2 år
+C Trafik
+A grovt onykter lokförare
+Q plain
+B v20-jarnvag-onykter-forare
+R grovt
+- Föraren har haft minst 1,0 promille i blodet eller 0,50 milligram per liter i utandningsluften.
+- Föraren har annars varit avsevärt påverkad av alkohol eller något annat medel.
+- Framförandet av fordonet har inneburit en påtaglig fara för trafiksäkerheten.
+T En lokförare med 1,3 promille kör ett persontåg förbi en stoppsignal.
+
+@ v20-jarnvag-sakerhetstjanst | Brott mot järnvägssäkerhetslagen (onykterhet i säkerhetstjänst) | 7:4 | 7:4
+PEN 0 | 2 | Böter eller fängelse i högst två år | B–F 2 år
+C Trafik
+A tågklarerare onykter;banarbetare onykter;säkerhetstjänst järnväg
+Q plain
+G Gärningspersonen fullgör, utan att föra fordonet, en tjänst på järnväg där det ingår säkerhetskritiska arbetsuppgifter.
+F Gärningspersonen är så påverkad av alkohol eller något annat medel att det kan antas att han eller hon inte kan utföra uppgifterna på ett betryggande sätt.
+S Uppsåt till samtliga rekvisit. Lagen anger ingen skuldform. Utgångspunkten är då att uppsåt krävs.
+T En tågklarerare som styr tågtrafiken på en station arbetar kraftigt berusad.
+
+LAW KKL | Körkortslagen (1998:488) | 1998:488 | KKL
+
+@ v20-kkl-olovlig-utbildning | Brott mot körkortslagen (riskutbildning utan tillstånd) | 9:2 b | 9:2b
+PEN 0 | 2 | Fängelse i högst två år | F 2 år
+C Trafik
+A riskutbildning utan tillstånd;halkbana utan tillstånd;svart körskola
+Q plain
+N Är brottet ringa döms till böter eller fängelse i högst sex månader. Den som har tillstånd men bryter mot reglerna döms till böter.
+G Gärningspersonen bedriver riskutbildning för körkort.
+K Gärningspersonen saknar tillstånd.
+S Uppsåt till samtliga rekvisit. Lagen anger ingen skuldform. Utgångspunkten är då att uppsåt krävs.
+T En person håller riskutbildning mot betalning och utfärdar intyg utan att ha Transportstyrelsens tillstånd.
+
+LAW TrskL | Lagen (1998:493) om trafikskolor | 1998:493 | Trafikskolelagen
+
+@ v20-olovlig-trafikskola | Brott mot lagen om trafikskolor (trafikskola utan tillstånd) | 9 § | 9
+PEN 0 | 2 | Fängelse i högst två år | F 2 år
+C Trafik
+A svart körskola;illegal trafikskola;övningskörning mot betalning
+Q plain
+N Är brottet ringa döms till böter eller fängelse i högst sex månader. Den som har tillstånd men bryter mot reglerna döms till böter.
+G Gärningspersonen driver trafikskola, det vill säga yrkesmässig utbildning av förare.
+K Gärningspersonen saknar tillstånd.
+S Uppsåt till samtliga rekvisit. Lagen anger ingen skuldform. Utgångspunkten är då att uppsåt krävs.
+T En person ger körlektioner mot betalning till ett stort antal elever i egen bil utan tillstånd att driva trafikskola.
+
+LAW FskL | Lagen (2026:1274) om åtgärder mot manipulation och missbruk av färdskrivare | 2026:1274 | Färdskrivarlagen
+
+@ v20-fardskrivarmanipulation | Färdskrivarmanipulation | 11 § | 11
+PEN 0 | 1 | Böter eller fängelse i högst ett år | B–F 1 år
+C Trafik
+A manipulerad färdskrivare;magnet färdskrivare;förarkort fusk;kör- och vilotider fusk
+Q plain
+G Gärningspersonen gör minst ett av:
+  | Förfalskar eller raderar uppgifter på ett diagramblad eller en utskrift från en färdskrivare, eller gör dem oläsliga.
+  | Förfalskar, blockerar eller raderar uppgifter som lagras i eller överförs från en färdskrivare eller ett förarkort.
+  | Manipulerar färdskrivare, diagramblad eller förarkort så att uppgifter kan förfalskas, blockeras eller raderas.
+  | Använder ett fordon som har utrustning som kan förfalska, blockera eller radera uppgifterna.
+S Uppsåt till samtliga rekvisit. Lagen anger ingen skuldform. Utgångspunkten är då att uppsåt krävs.
+T En lastbilsförare har en dold strömbrytare som stänger av färdskrivarens givare under körning.
+
+@ v20-fardskrivare-produkter | Brott mot lagen om åtgärder mot manipulation och missbruk av färdskrivare (manipulationsutrustning) | 12 § | 12
+PEN 0 | 1 | Böter eller fängelse i högst ett år | B–F 1 år
+C Trafik
+A manipulationsutrustning färdskrivare;sälja fuskutrustning
+Q plain
+O Produkter som är konstruerade eller avsedda för att manipulera färdskrivare, diagramblad eller förarkort.
+G Gärningspersonen tillverkar, utvecklar, innehar, distribuerar, överlåter eller bjuder ut produkterna till försäljning.
+S Uppsåt till samtliga rekvisit. Lagen anger ingen skuldform. Utgångspunkten är då att uppsåt krävs.
+U Gärningen är färdskrivarmanipulation.
+T En verkstad säljer och monterar dolda brytare som stänger av färdskrivare.
+
+LAW VskL | Lagen (2021:626) om förarbevis för vattenskoter | 2021:626 | Vattenskoterlagen
+
+@ v20-olovligt-forande-av-vattenskoter | Olovligt förande av vattenskoter | 27 § | 27
+PEN 0 | 0 | Böter | Böter
+C Trafik
+A vattenskoter utan förarbevis;jetski
+Q plain
+G Gärningspersonen framför en vattenskoter.
+K Gärningspersonen saknar förarbevis och omfattas inte av något undantag. Förarbevis kan utfärdas tidigast vid 15 års ålder.
+S Uppsåt.
+T En 17-åring kör vattenskoter i skärgården utan förarbevis.
+V En förälder låter sin 13-åring köra vattenskotern. Föräldern döms för att ha tillåtit körningen (28 §).
+
+@ v20-vattenskoter-tillatande | Brott mot lagen om förarbevis för vattenskoter (tillåtande av olovligt förande) | 28 § | 28
+PEN 0 | 0 | Böter | Böter
+C Trafik
+A låna ut vattenskoter;tillåta barn köra vattenskoter
+Q plain
+G Gärningspersonen tillåter någon att framföra en vattenskoter utan att personen är berättigad till det.
+S Uppsåt eller oaktsamhet.
+T En uthyrare lämnar ut en vattenskoter utan att kontrollera att kunden har förarbevis.
+
+LAW BiluL | Lagen (1998:492) om biluthyrning | 1998:492 | Biluthyrningslagen
+X 16,17,18
+
+@ v20-biluthyrning-utan-tillstand | Brott mot lagen om biluthyrning (uthyrning utan tillstånd) | 20 § | 20
+PEN 0 | 1 | Böter eller fängelse i högst ett år | B–F 1 år
+C Trafik
+A biluthyrning utan tillstånd;svart biluthyrning;hyrbil kriminella
+Q plain
+G Gärningspersonen driver uthyrningsrörelse, det vill säga yrkesmässig uthyrning av bilar eller terrängmotorfordon utan förare för kortare tid än ett år.
+K Gärningspersonen saknar tillstånd.
+S Uppsåt.
+T En person hyr regelbundet ut ett tiotal bilar mot kontant betalning utan tillstånd från Transportstyrelsen.
+
+@ v20-biluthyrning-utlamnande | Brott mot lagen om biluthyrning (utlämnande till obehörig) | 21 § | 16,17,18,21
+PEN 0 | 0.5 | Böter eller fängelse i högst sex månader | B–F 6 mån
+C Trafik
+A hyra ut bil utan körkort;hyrbil utan körkort
+Q plain
+K Gärningen sker i en uthyrningsrörelse.
+G Gärningspersonen gör minst ett av:
+  | Lämnar ut ett fordon till en förare som inte kan visa att han eller hon har behörighet att föra det.
+  | Lämnar ut en större buss till någon som saknar yrkeskompetensbevis eller körvaneintyg.
+  | Hyr ut ett fordon som är besiktigat för taxitrafik till någon som saknar taxitrafiktillstånd.
+S Uppsåt eller oaktsamhet.
+T En uthyrare lämnar ut en bil till en kund utan att be att få se körkortet, och kunden saknar körkort.
+
+LAW RadarL | Lagen (1988:15) om förbud mot vissa radar- och laserinstrument | 1988:15 | Radarvarnarlagen
+
+@ v20-radarvarnare | Brott mot lagen om förbud mot vissa radar- och laserinstrument | 3 § | 2,3
+PEN 0 | 0.5 | Böter eller fängelse i högst sex månader | B–F 6 mån
+C Trafik
+A radarvarnare;laservarnare;laserstörare;laser jammer
+Q plain
+G Gärningspersonen gör minst ett av:
+  | Tillverkar, innehar, överlåter eller använder en radarvarnare, laservarnare eller laserstörare.
+  | Använder i ett fordon en annan anordning som kan ta emot signaler från eller störa polisens hastighetsmätare, för det ändamålet.
+S Uppsåt.
+T Vid en kontroll hittas en laserstörare monterad bakom bilens grill.
+
+LAW VtsL | Vägtrafikskattelagen (2006:227) | 2006:227 | VtsL
+X 6:1
+
+@ v20-vagtrafikskatt-anvandningsforbud | Brott mot vägtrafikskattelagen (användning efter omhändertagna skyltar) | 6:4 | 6:4
+PEN 0 | 0.5 | Böter eller fängelse i högst sex månader | B–F 6 mån
+C Trafik
+A körförbud skatt;obetald fordonsskatt;omhändertagna registreringsskyltar;användningsförbud
+Q plain
+K Gärningspersonen är fordonets ägare.
+O Fordonet har användningsförbud på grund av obetald fordonsskatt, och registreringsskyltarna har tagits om hand.
+G Ägaren använder fordonet eller låter det användas.
+S Uppsåt eller oaktsamhet.
+U Skyltarna har inte tagits om hand. Då är straffet penningböter.
+T En bilägare fortsätter att köra sin bil med hemgjorda skyltar efter att polisen har tagit registreringsskyltarna på grund av obetald skatt.
+
+LAW TerrkL | Terrängkörningslagen (1975:1313) | 1975:1313 | Terrängkörningslagen
+X 1
+
+@ v20-terrangkorning | Brott mot terrängkörningslagen | 4 § | 1,4
+PEN 0 | 0 | Böter | Böter
+C Trafik
+A terrängkörning;fyrhjuling i skogen;köra på barmark;snöskoter förbud;crossmotorcykel i naturen
+Q plain
+G Gärningspersonen kör i terräng med ett {{motordrivet-fordon|motordrivet fordon}} för annat ändamål än jordbruk eller skogsbruk, på minst ett av:
+  | Barmark.
+  | Snötäckt skogsmark med plant- eller ungskog.
+  | Snötäckt jordbruksmark.
+  | Mark där körning är förbjuden enligt föreskrifter, till exempel regleringsområden i fjällen.
+S Uppsåt eller oaktsamhet.
+U Det är uppenbart att körningen på snötäckt mark kan ske utan risk för skada på skogen eller marken.
+U Gärningen är ringa.
+U Gärningen kan ge strängare straff enligt brottsbalken.
+T En person kör fyrhjuling för nöjes skull över en hed och genom ett skogsområde på barmark.

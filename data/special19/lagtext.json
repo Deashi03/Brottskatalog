@@ -463,5 +463,351 @@
    "2": "2 § Den som bryter mot 1 § döms till fängelse i lägst två och högst sex år.\n\nÄr brottet med hänsyn till omständigheterna mindre grovt, döms till fängelse i högst fyra år.\n\nÄr brottet grovt, döms till fängelse i lägst fem och högst tio år. Vid bedömningen av om brottet är grovt ska det särskilt beaktas om könsstympningen är särskilt omfattande eller om gärningen har orsakat livsfara eller allvarlig sjukdom eller om gärningsmannen i annat fall har visat synnerlig hänsynslöshet.\n\nFör försök, förberedelse och stämpling samt för underlåtenhet att avslöja eller förhindra brott döms det till ansvar enligt 23 kap. brottsbalken. Lag (2017:333).",
    "3": "3 § Den som bryter mot 1 a § döms till fängelse i högst ett år. Lag (2025:1010)."
   }
+ },
+ "VistL": {
+  "name": "Lagen (2024:7) om preventiva vistelseförbud",
+  "sfs": "2024:7",
+  "short": "Vistelseförbudslagen",
+  "amended": null,
+  "url": "https://data.riksdagen.se/dokument/sfs-2024-7.html",
+  "sections": {
+   "1": "1 § Enligt denna lag får en person förbjudas att inom ett avgränsat område vistas på allmän plats, på skolgårdar och motsvarande områden utomhus vid förskolor och fritidshem samt i fordon på allmän plats (vistelseförbud).\n\nEtt vistelseförbud får inte avse den som är under 15 år.\n\nLagen påverkar inte rätten som den som förfogar över en plats inom området har att begränsa tillträdet till platsen.",
+   "29": "29 § Den som bryter mot ett vistelseförbud döms för överträdelse av vistelseförbud till fängelse i högst ett år. Om brottet är ringa, döms till böter.",
+   "30": "30 § Den som har meddelats ett vistelseförbud med villkor om elektronisk övervakning och som uppsåtligen eller av grov oaktsamhet hindrar att den elektroniska övervakningen kommer till stånd eller kan fortgå döms för hindrande av elektronisk övervakning av vistelseförbud till böter eller fängelse i högst ett år."
+  }
+ },
+ "EskL": {
+  "name": "Lagen (2015:642) om europeisk skyddsorder",
+  "sfs": "2015:642",
+  "short": "Lagen om europeisk skyddsorder",
+  "amended": null,
+  "url": "https://data.riksdagen.se/dokument/sfs-2015-642.html",
+  "sections": {
+   "3:14": "14 § Den som bryter mot ett förbud som har meddelats enligt 5 § döms för överträdelse av europeisk skyddsorder till fängelse i högst ett år.\n\nOm ett brott som avses i första stycket är ringa, döms till böter.\n\nÅtal för brott enligt första eller andra stycket får väckas endast om det står klart att överträdelsen inte kommer att leda till att det i den andra medlemsstaten inleds ett förfarande för att skärpa skyddsåtgärden eller för att upphäva skyddsåtgärden och i stället påföra en frihetsberövande åtgärd. Lag (2025:564)."
+  }
+ },
+ "TfbL": {
+  "name": "Lagen (2021:34) om tillträdesförbud till butiker, badanläggningar och bibliotek",
+  "sfs": "2021:34",
+  "short": "Lagen om tillträdesförbud till butiker",
+  "amended": "2022:406",
+  "url": "https://data.riksdagen.se/dokument/sfs-2021-34.html",
+  "sections": {
+   "22": "22 § Den som bryter mot ett tillträdesförbud döms för överträdelse av tillträdesförbud till böter eller fängelse i högst sex månader.\n\nI ringa fall ska det inte dömas till ansvar."
+  }
+ },
+ "HundL": {
+  "name": "Lagen (2007:1150) om tillsyn över hundar och katter",
+  "sfs": "2007:1150",
+  "short": "Hundlagen",
+  "amended": "2026:296",
+  "url": "https://data.riksdagen.se/dokument/sfs-2007-1150.html",
+  "sections": {
+   "15": "15 § Länsstyrelsen får besluta att den som allvarligt brister eller tidigare har brustit i tillsynen över en hund ska vara förbjuden att ha hand om hund (hundförbud). Förbudet får avse en viss tid eller gälla tills vidare.\n\nVid bedömningen av om ett hundförbud bör beslutas, ska det särskilt beaktas om den som förbudet avser\n\n1. har begått brott med en hund som vapen,\n\n2. vid upprepade tillfällen har varit föremål för förelägganden enligt 8 §, eller\n\n3. har haft hand om en hund som har omhändertagits enligt 11 eller 11 a §. Lag (2026:296).",
+   "22": "22 § Den som bryter mot ett hundförbud döms för överträdelse av hundförbud till böter eller fängelse i högst ett år.",
+   "23": "23 § Till böter döms den som uppsåtligen eller av oaktsamhet\n\n1. inte följer ett föreläggande som har beslutats med stöd av 8 § första stycket,\n\n2. inte gör anmälan enligt 14 § andra stycket, eller\n\n3. bryter mot 21 § andra meningen.\n\nDen som uppsåtligen inte lämnar underrättelse enligt 17 § första stycket döms till penningböter.\n\nDen som har överträtt ett vitesföreläggande får inte dömas till ansvar enligt denna lag för den gärning som omfattas av föreläggandet. Lag (2026:296).",
+   "24": "24 § Till böter döms den som uppsåtligen eller av grov oaktsamhet bryter mot 16 § första stycket eller en föreskrift som har meddelats med stöd av 16 § andra stycket.\n\nÖverklagande m.m."
+  }
+ },
+ "FängL": {
+  "name": "Fängelselagen (2010:610)",
+  "sfs": "2010:610",
+  "short": "FängL",
+  "amended": null,
+  "url": "https://data.riksdagen.se/dokument/sfs-2010-610.html",
+  "sections": {
+   "15:1": "1 § Den som olovligen överlämnar eller försöker överlämna ett vapen eller annat farligt föremål till en intagen döms till böter eller fängelse i högst ett år, om inte gärningen är belagd med strängare straff i brottsbalken.",
+   "15:2": "2 § Den som till en intagen lämnar alkohol eller annat berusningsmedel eller injektionsspruta eller kanyl som kan användas vid narkotikamissbruk döms till böter eller fängelse i högst sex månader, om inte gärningen är belagd med strängare straff i annan lag. Detsamma gäller den som på annat sätt hjälper en intagen att få tillgång till sådant berusningsmedel eller föremål."
+  }
+ },
+ "LSU": {
+  "name": "Lagen (2022:700) om särskild kontroll av vissa utlänningar",
+  "sfs": "2022:700",
+  "short": "LSU",
+  "amended": "2026:1432",
+  "url": "https://data.riksdagen.se/dokument/sfs-2022-700.html",
+  "sections": {
+   "8:1": "1 § Till fängelse i högst två år eller, om brottet är ringa, till böter döms en utlänning som uppehåller sig i Sverige trots att han eller hon enligt ett verkställt beslut om utvisning enligt denna lag inte har haft rätt att återvända hit. Detta gäller dock inte om utlänningen har flytt hit för att undgå sådan förföljelse som avses i artikel 3.5 i skyddsgrundsförordningen.\n\nÄr brottet ringa ska åtal för ett sådant brott inte väckas annat än om det är motiverat från allmän synpunkt. Lag (2026:1164).",
+   "8:2": "2 § Till fängelse i högst två år döms den som hjälper en utlänning, för vilken ett återreseförbud enligt 2 kap. 5 § gäller, att komma in i Sverige.\n\nFör försök eller förberedelse till ett sådant brott döms till ansvar enligt 23 kap. brottsbalken.",
+   "8:3": "3 § Till fängelse i högst två år eller, om brottet är ringa, till böter döms en utlänning som bryter mot en anmälningsskyldighet eller ett förbud att lämna vistelseområdet som har beslutats enligt 5 kap. 8, 9 eller 16 §.",
+   "8:4": "4 § Till fängelse i högst ett år döms den som hindrar eller försöker hindra verkställighet av ett beslut om utvisning enligt denna lag."
+  }
+ },
+ "LVU": {
+  "name": "Lagen (1990:52) med särskilda bestämmelser om vård av unga",
+  "sfs": "1990:52",
+  "short": "LVU",
+  "amended": "2026:1145",
+  "url": "https://data.riksdagen.se/dokument/sfs-1990-52.html",
+  "sections": {
+   "44": "44 § Den som överträder ett flyttningsförbud eller ett tillfälligt flyttningsförbud ska dömas till böter.\n\nAllmänt åtal får väckas endast efter medgivande av socialnämnden eller Socialstyrelsen. Lag (2009:598).",
+   "45": "45 § Den som för ut ett barn ur Sverige i strid med ett utreseförbud eller ett tillfälligt utreseförbud döms till fängelse i högst två år. För försök döms det till ansvar enligt 23 kap. brottsbalken. Lag (2020:352)."
+  }
+ },
+ "JvSL": {
+  "name": "Järnvägssäkerhetslagen (2022:367)",
+  "sfs": "2022:367",
+  "short": "JvSL",
+  "amended": "2024:933",
+  "url": "https://data.riksdagen.se/dokument/sfs-2022-367.html",
+  "sections": {
+   "7:2": "2 § Den som för ett maskindrivet fordon på järnväg inom den del av Europeiska unionens järnvägssystem som omfattas av denna lag efter att ha intagit alkohol i så stor mängd att alkoholkoncentrationen under eller efter färden uppgår till minst 0,2 promille i blodet eller 0,10 milligram per liter i utandningsluften döms till böter eller fängelse i högst sex månader.\n\nTill samma straff döms också den som för ett maskindrivet fordon på järnväg inom den del av Europeiska unionens järnvägssystem som omfattas av denna lag efter att ha intagit narkotika som avses i 8 § narkotikastrafflagen (1968:64) i så stor mängd att det under eller efter färden finns något narkotiskt ämne kvar i blodet. Detta gäller dock inte om narkotikan intagits i enlighet med läkares eller någon annan behörig receptutfärdares ordination.\n\nTill samma straff döms också den som för ett maskindrivet fordon på järnväg inom den del av Europeiska unionens järnvägssystem som omfattas av denna lag och då är så påverkad av alkohol att det kan antas att han eller hon inte kan framföra fordonet på ett betryggande sätt. Detsamma gäller om föraren är lika påverkad av något annat medel.",
+   "7:3": "3 § Om ett brott som avses i 2 § är att anse som grovt, ska föraren dömas till fängelse i högst två år. När det bedöms om brottet är grovt ska det särskilt beaktas om\n\n1. föraren har haft en alkoholkoncentration som uppgått till minst 1,0 promille i blodet eller 0,50 milligram per liter i utandningsluften,\n\n2. föraren annars har varit avsevärt påverkad av alkohol eller något annat medel, eller\n\n3. framförandet av fordonet har inneburit en påtaglig fara för trafiksäkerheten.",
+   "7:4": "4 § Den som utan att föra ett maskindrivet fordon på järnväg fullgör en tjänst där det ingår säkerhetskritiska arbetsuppgifter och då är så påverkad av alkohol eller något annat medel att det kan antas att han eller hon inte kan utföra dessa uppgifter på ett betryggande sätt döms till böter eller fängelse i högst två år."
+  }
+ },
+ "KKL": {
+  "name": "Körkortslagen (1998:488)",
+  "sfs": "1998:488",
+  "short": "KKL",
+  "amended": "2026:469",
+  "url": "https://data.riksdagen.se/dokument/sfs-1998-488.html",
+  "sections": {
+   "9:2b": "2 b § Den som utan tillstånd bedriver utbildning som avses i 4 kap. 9 § döms till fängelse i högst två år. Om brottet är ringa döms i stället till böter eller fängelse i högst sex månader.\n\nDen som bedriver sådan utbildning med tillstånd men utan att följa denna lag eller föreskrifter som har meddelats med stöd av lagen döms till böter.\n\nDet ska inte dömas till ansvar enligt andra stycket om gärningen är belagd med straff i brottsbalken eller bidragsbrottslagen (2007:612). Lag (2022:1206)."
+  }
+ },
+ "TrskL": {
+  "name": "Lagen (1998:493) om trafikskolor",
+  "sfs": "1998:493",
+  "short": "Trafikskolelagen",
+  "amended": "2022:1207",
+  "url": "https://data.riksdagen.se/dokument/sfs-1998-493.html",
+  "sections": {
+   "9": "9 § Den som driver trafikskola utan tillstånd döms till fängelse i högst två år. Om brottet är ringa döms till böter eller fängelse i högst sex månader.\n\nDen som driver trafikskola med tillstånd men utan att följa denna lag eller föreskrifter som har meddelats med stöd av lagen döms till böter.\n\nDet ska inte dömas till ansvar enligt andra stycket om gärningen är belagd med straff i brottsbalken eller bidragsbrottslagen (2007:612). Lag (2022:1207)."
+  }
+ },
+ "FskL": {
+  "name": "Lagen (2026:1274) om åtgärder mot manipulation och missbruk av färdskrivare",
+  "sfs": "2026:1274",
+  "short": "Färdskrivarlagen",
+  "amended": null,
+  "url": "https://data.riksdagen.se/dokument/sfs-2026-1274.html",
+  "sections": {
+   "11": "11 § För färdskrivarmanipulation döms till böter eller fängelse i högst ett år den som\n\n1. förfalskar eller raderar uppgifter på ett diagramblad till en färdskrivare eller på en utskrift från en färdskrivare, eller gör sådana uppgifter oläsliga,\n\n2. förfalskar, blockerar eller raderar uppgifter som lagras i eller överförs från en färdskrivare eller som lagras på eller överförs från ett förarkort,\n\n3. manipulerar färdskrivare, diagramblad eller förarkort så att uppgifter eller utskrifter kan förfalskas, blockeras eller raderas, eller\n\n4. använder ett fordon som är försett med utrustning eller anordning som kan utföra det som anges i 2 eller 3.",
+   "12": "12 § Den som tillverkar, utvecklar, innehar, distribuerar eller överlåter produkter som är konstruerade eller avsedda för att utföra det som anges i 11 § 1, 2 eller 3 eller bjuder ut sådana produkter till försäljning döms till böter eller fängelse i högst ett år.\n\nAnsvar enligt första stycket ska inte dömas ut om ansvar för gärningen kan dömas ut enligt 11 §."
+  }
+ },
+ "VskL": {
+  "name": "Lagen (2021:626) om förarbevis för vattenskoter",
+  "sfs": "2021:626",
+  "short": "Vattenskoterlagen",
+  "amended": "2022:288",
+  "url": "https://data.riksdagen.se/dokument/sfs-2021-626.html",
+  "sections": {
+   "27": "27 § Den som uppsåtligen framför en vattenskoter utan att vara berättigad till det ska dömas för olovligt förande av vattenskoter till böter.",
+   "28": "28 § Den som uppsåtligen eller av oaktsamhet tillåter någon att framföra en vattenskoter utan att denne är berättigad till det ska dömas till böter."
+  }
+ },
+ "BiluL": {
+  "name": "Lagen (1998:492) om biluthyrning",
+  "sfs": "1998:492",
+  "short": "Biluthyrningslagen",
+  "amended": "2013:317",
+  "url": "https://data.riksdagen.se/dokument/sfs-1998-492.html",
+  "sections": {
+   "16": "16 § I en uthyrningsrörelse får ett fordon inte lämnas ut till någon annan person som förare än den som kan visa att han har behörighet att föra fordonet.",
+   "17": "17 § En buss som är inrättad för fler än sjutton personer inklusive föraren får endast lämnas ut till den som innehar\n\n1. ett giltigt bevis på yrkeskompetens om persontransporter som avses i 6 kap. 1 eller 2 § lagen (2007:1157) om yrkesförarkompetens, eller\n\n2. ett intyg om minst ett års tjänstgöring som förare av buss i yrkesmässig trafik eller motsvarande erfarenhet under de senaste fem åren (körvaneintyg). Lag (2007:1158).",
+   "18": "18 § Ett fordon som med stöd av fordonslagen (2002:574) är registreringsbesiktigat för taxitrafik får inte hyras ut till någon annan än den som har tillstånd till sådan trafik. Lag (2002:581).",
+   "20": "20 § Den som uppsåtligen driver uthyrningsrörelse enligt denna lag utan tillstånd döms till böter eller fängelse i högst ett år.\n\nEn tillståndshavare som uppsåtligen eller av oaktsamhet bryter mot villkor som har meddelats i tillståndet döms till böter.",
+   "21": "21 § Den som uppsåtligen eller av oaktsamhet bryter mot bestämmelserna i 16, 17 eller 18 § döms till böter eller fängelse i högst sex månader."
+  }
+ },
+ "RadarL": {
+  "name": "Lagen (1988:15) om förbud mot vissa radar- och laserinstrument",
+  "sfs": "1988:15",
+  "short": "Radarvarnarlagen",
+  "amended": "2024:811",
+  "url": "https://data.riksdagen.se/dokument/sfs-1988-15.html",
+  "sections": {
+   "2": "2 § Radarvarnare, laservarnare eller laserstörare får inte tillverkas, innehas, överlåtas eller användas. Ej heller får en annan anordning som är så konstruerad att den kan ta emot elektromagnetiska vågor från en radarhastighetsmätare eller en laserhastighetsmätare eller sända elektromagnetiska vågor till en laserhastighetsmätare användas i ett fordon för detta ändamål. Lag (1998:1622).",
+   "3": "3 § Den som uppsåtligen bryter mot 2 § skall dömas till böter eller fängelse i högst sex månader. Lag (1998:1622)."
+  }
+ },
+ "VtsL": {
+  "name": "Vägtrafikskattelagen (2006:227)",
+  "sfs": "2006:227",
+  "short": "VtsL",
+  "amended": "2025:1369",
+  "url": "https://data.riksdagen.se/dokument/sfs-2006-227.html",
+  "sections": {
+   "6:1": "1 § Ett skattepliktigt fordon får inte användas, om fordonsskatten inte har betalats inom den tid som har bestämts enligt denna lag. Användningsförbudet gäller till dess skatten har betalats.\n\nFordonet får dock användas, om det är fråga om\n\n1. skatt som avser tid före det närmast föregående skatteåret,\n\n2. skatt som en tidigare ägare av fordonet är skyldig att betala och som har fastställts genom beslut om efterbeskattning enligt 4 kap. 6 § eller avser ytterligare skatt som har beslutats efter ägarbytet, eller\n\n3. skatt för vilken anstånd med betalningen gäller.\n\nOm det finns särskilda skäl, skall Skatteverket medge att ett visst fordon får användas trots bestämmelserna i första stycket.",
+   "6:4": "4 § En fordonsägare som uppsåtligen eller av oaktsamhet använder fordonet eller låter det användas i strid mot 1 § sedan fordonets registreringsskyltar har tagits om hand enligt 3 §, döms till böter eller fängelse i högst sex månader.\n\nFörsta stycket gäller även när ett avställt fordon används, om fordonets registreringsskyltar har tagits om hand enligt 3 §, och användningsförbud skulle ha gällt för fordonet enligt 1 §, om fordonet hade varit skattepliktigt.\n\nEn fordonsägare som uppsåtligen eller av oaktsamhet använder fordonet eller låter det användas på något annat sätt i strid mot 1 § döms till penningböter."
+  }
+ },
+ "TerrkL": {
+  "name": "Terrängkörningslagen (1975:1313)",
+  "sfs": "1975:1313",
+  "short": "Terrängkörningslagen",
+  "amended": "2018:436",
+  "url": "https://data.riksdagen.se/dokument/sfs-1975-1313.html",
+  "sections": {
+   "1": "1 § Körning i terräng med motordrivet fordon för annat ändamål än jordbruk eller skogsbruk är förbjuden i hela landet\n\n1. på barmark,\n\n2. på snötäckt skogsmark med plant- eller ungskog, om det inte är uppenbart att körningen kan ske utan risk för skada på skogen,\n\n3. på snötäckt jordbruksmark, om det inte är uppenbart att körningen kan ske utan risk för skada på marken.\n\nInom de delar av fjällområdet som regeringen bestämmer är körning i terräng med motordrivet fordon förbjuden även på annan mark än som anges i första stycket. Lag (1996:1551).",
+   "4": "4 § Den som med uppsåt eller av oaktsamhet bryter mot någon av bestämmelserna i 1 § första stycket 1-3 eller mot förbud eller föreskrift som har meddelats med stöd av lagen döms till böter. Om gärningen är ringa, ska det inte dömas till ansvar.\n\nTill ansvar enligt första stycket döms det inte om gärningen är belagd med strängare straff i brottsbalken. Lag (2017:444)."
+  }
+ },
+ "LustgL": {
+  "name": "Lagen (2025:621) om lustgas",
+  "sfs": "2025:621",
+  "short": "Lustgaslagen",
+  "amended": null,
+  "url": "https://data.riksdagen.se/dokument/sfs-2025-621.html",
+  "sections": {
+   "23": "23 § För olovlig hantering av lustgas döms till böter eller fängelse i högst sex månader den som uppsåtligen eller av oaktsamhet\n\n1. säljer eller lämnar ut lustgas i strid med 4 §,\n\n2. säljer eller lämnar ut lustgas i större mängd än vad som föreskrivs i 5 §,\n\n3. säljer eller lämnar ut lustgas till den som inte uppnått föreskriven ålder enligt 6 §,\n\n4. bedriver detaljhandel med lustgas utan att först ha anmält försäljningen enligt 9 §, eller\n\n5. säljer lustgas i strid med ett meddelat försäljningsförbud enligt 14 §.\n\nOm gärningen är ringa, ska den inte medföra ansvar.",
+   "4": "4 § Lustgas får inte säljas eller på annat sätt lämnas ut i näringsverksamhet om det finns särskild anledning att anta att lustgasen ska användas som berusningsmedel.\n\nVid bedömningen av om det finns särskild anledning att anta att lustgasen ska användas som berusningsmedel ska bland annat beaktas på vilket sätt och i vilket sammanhang som försäljningen eller utlämnandet sker.",
+   "5": "5 § Högst 18 gram lustgas får säljas eller på annat sätt lämnas ut i näringsverksamhet till en privatperson per tillfälle. Försäljningen eller utlämnandet får avse högst två behållare som rymmer högst 9 gram lustgas per behållare.\n\nDen som lämnar ut lustgas utöver mängdbegränsningen ska förvissa sig om att mottagaren är näringsidkare. Lustgas ska tillhandahållas på ett sådant sätt att det går att kontrollera om mottagaren är näringsidkare.",
+   "6": "6 § Lustgas får inte säljas eller på annat sätt lämnas ut i näringsverksamhet till den som inte har fyllt 18 år.\n\nDen som lämnar ut lustgas ska förvissa sig om att mottagaren har uppnått den ålder som anges i första stycket. Lustgas ska tillhandahållas på ett sådant sätt att det går att kontrollera mottagarens ålder."
+  }
+ },
+ "NikL": {
+  "name": "Lagen (2022:1257) om tobaksfria nikotinprodukter",
+  "sfs": "2022:1257",
+  "short": "Nikotinproduktlagen",
+  "amended": "2024:897",
+  "url": "https://data.riksdagen.se/dokument/sfs-2022-1257.html",
+  "sections": {
+   "17": "17 § En näringsidkare får inte bedriva detaljhandel med tobaksfria nikotinprodukter utan att först ha gjort en anmälan om försäljningen.\n\nEn näringsidkare som har säte eller fast driftställe för näringsverksamhet i Sverige ska göra en anmälan till den kommun där det fysiska försäljningsstället är beläget. Om ett fysiskt försäljningsställe saknas, ska anmälan göras till den kommun där företaget har sitt säte eller, om företaget saknar säte inom landet, till den kommun där företaget har ett fast driftställe.\n\nSaknar näringsidkaren säte eller fast driftställe för näringsverksamhet i Sverige ska anmälan göras till Folkhälsomyndigheten.",
+   "19": "19 § Tobaksfria nikotinprodukter får inte säljas eller på annat sätt lämnas ut i näringsverksamhet till den som inte har fyllt 18 år. Den som lämnar ut en sådan produkt ska förvissa sig om att mottagaren har uppnått den åldern.\n\nOm det finns särskild anledning att anta att produkten är avsedd att lämnas över till någon som inte har fyllt 18 år, får den inte lämnas ut.\n\nPå försäljningsställen ska det finnas ett tydligt och klart synbart meddelande med information om förbudet mot att sälja eller lämna ut tobaksfria nikotinprodukter till den som inte har fyllt 18 år.",
+   "43": "43 § Den som uppsåtligen i strid med 7 § tredje stycket tillhandahåller konsumenter tobaksfria nikotinprodukter som inte uppfyller kraven på innehållsdeklaration eller hälsovarning, ska dömas för olovlig hantering av tobaksfria nikotinprodukter till böter eller fängelse i högst sex månader.\n\nOm gärningen är ringa, ska den inte medföra ansvar.",
+   "44": "44 § Den som uppsåtligen säljer tobaksfria nikotinprodukter i strid med ett förbud som har meddelats med stöd av 29 §, ska dömas för olovlig försäljning av tobaksfria nikotinprodukter till böter eller fängelse i högst sex månader.\n\nOm gärningen är ringa, ska den inte medföra ansvar.",
+   "45": "45 § Den som uppsåtligen eller av oaktsamhet bedriver detaljhandel med tobaksfria nikotinprodukter i strid med 17 § eller säljer eller lämnar ut tobaksfria nikotinprodukter i strid med 19 § första eller andra stycket, ska dömas till böter eller fängelse i högst sex månader.\n\nOm gärningen är ringa, ska den inte medföra ansvar."
+  }
+ },
+ "LHL": {
+  "name": "Lagen (2009:366) om handel med läkemedel",
+  "sfs": "2009:366",
+  "short": "LHL",
+  "amended": "2026:1347",
+  "url": "https://data.riksdagen.se/dokument/sfs-2009-366.html",
+  "sections": {
+   "9:1": "1 § Den som uppsåtligen eller av oaktsamhet utan tillstånd\n\n1. bedriver sådan detaljhandel med läkemedel som anges i 2 kap. 1 §,\n\n2. bedriver sådan partihandel med läkemedel som anges i 3 kap. 1 §,\n\n3. enligt 2 kap. 1 § eller 3 kap. 1 § bedriver sådan detaljhandel med läkemedel som anges i 4 kap. 1 §, eller\n\n4. bedriver sådan maskinell dosdispensering som anges i 6 kap. 1 §\n\ndöms till böter eller fängelse i högst ett år, om gärningen inte är belagd med straff enligt brottsbalken.\n\nTill straff enligt första stycket döms också den som uppsåtligen innehar läkemedel i syfte att olovligen sälja dem.\n\nI ringa fall ska inte dömas till ansvar.\n\nOm en uppsåtlig gärning som avses i första stycket 1-3 eller i andra stycket har begåtts yrkesmässigt, avsett betydande mängd eller värde eller annars varit av särskilt farlig art, döms till fängelse i högst två år."
+  }
+ },
+ "SprekL": {
+  "name": "Lagen (2014:799) om sprängämnesprekursorer",
+  "sfs": "2014:799",
+  "short": "Prekursorlagen",
+  "amended": "2024:875",
+  "url": "https://data.riksdagen.se/dokument/sfs-2014-799.html",
+  "sections": {
+   "12": "12 § Den som uppsåtligen eller av oaktsamhet bryter mot förbudet i artikel 5.1 i EU:s förordning om sprängämnesprekursorer genom att tillhandahålla, förvärva, inneha eller använda sprängämnesprekursorer som omfattas av restriktioner, utan att tillstånd enligt 3 § denna lag meddelats, ska dömas till böter eller fängelse i högst ett år.\n\nOm ett brott enligt första stycket är att anse som grovt är straffet fängelse, lägst sex månader och högst fyra år. Vid bedömningen av om brottet är grovt ska det särskilt beaktas om gärningen avsett särskilt stor mängd, annars varit av särskilt farlig art eller inneburit en betydande risk för att sprängämnesprekursorerna hade kunnat komma till brottslig användning. Lag (2020:861)."
+  }
+ },
+ "BevL": {
+  "name": "Lagen (1974:191) om bevakningsföretag",
+  "sfs": "1974:191",
+  "short": "Bevakningsföretagslagen",
+  "amended": "2023:496",
+  "url": "https://data.riksdagen.se/dokument/sfs-1974-191.html",
+  "sections": {
+   "1": "1 § Med bevakningsföretag avses i denna lag den som yrkesmässigt åtar sig att för annans räkning\n\n1. bevaka fastighet, anläggning, viss verksamhet, offentlig tillställning eller något annat sådant,\n\n2. bevaka enskild person för dennes skydd, eller\n\n3. bevaka sedlar, mynt eller annan egendom i samband med transport.\n\nLagen gäller inte bevakning som utförs av statlig eller kommunal myndighet. Den gäller inte heller bevakning som utförs av enskild person, om denne endast fullgör uppdrag med stöd av ett förordnande som har meddelats honom av en myndighet enligt en bestämmelse i lag. Lag (2006:517).",
+   "14": "14 § Till böter eller fängelse i högst sex månader döms den som uppsåtligen eller av oaktsamhet bedriver verksamhet som avses i 1 § första stycket utan auktorisation eller lämnar osann uppgift i fall som avses i 9 §. Lag (1989:148)."
+  }
+ },
+ "OvL": {
+  "name": "Lagen (2023:421) om ordningsvakter",
+  "sfs": "2023:421",
+  "short": "Ordningsvaktslagen",
+  "amended": "2026:1357",
+  "url": "https://data.riksdagen.se/dokument/sfs-2023-421.html",
+  "sections": {
+   "18": "18 § Den som uppsåtligen eller av oaktsamhet bryter mot kravet på tillstånd i 3 § eller mot ett villkor som har meddelats enligt 6 § andra stycket döms till böter eller fängelse i högst sex månader.\n\nRinga fall utgör inte brott.",
+   "3": "3 § Ordningsvakter får, utöver vad som följer av 5 §, användas endast om det finns ett beslut om tillstånd att använda ordningsvakter eller om det följer av lag eller annan författning.",
+   "6": "6 § Ett beslut om tillstånd ska avse en viss plats, ett visst område eller en viss verksamhet.\n\nBeslutet får förenas med villkor. Villkor får meddelas endast om skälen för villkoret uppväger det intrång eller men i övrigt som villkoret innebär för den som har ansökt om tillstånd eller för något annat motstående intresse. Om förutsättningarna för ett tillstånd ändras, får nya villkor meddelas."
+  }
+ },
+ "LarmL": {
+  "name": "Lagen (1983:1097) med vissa bestämmelser om larmanläggningar m.m.",
+  "sfs": "1983:1097",
+  "short": "Larmlagen",
+  "amended": "2014:587",
+  "url": "https://data.riksdagen.se/dokument/sfs-1983-1097.html",
+  "sections": {
+   "11": "11 § Den som bryter mot 2 § eller mot förbud som avses i 4 § andra meningen döms till böter eller fängelse i högst sex månader.",
+   "2": "2 § Larminstallationsverksamhet får inte bedrivas utan tillstånd.\n\nFör tillstånd krävs\n\n1. att den som ansöker om tillstånd kan antas komma att bedriva verksamheten med noggrannhet och omsorg,\n\n2. att, om sökanden är en juridisk person, en föreståndare för verksamheten har utsetts,\n\n3. att sökanden eller, om denne är en juridisk person, föreståndaren och medlemmarna i dess styrelse har gjort sig kända för laglydnad och ordentlighet.\n\nStaten behöver inte tillstånd enligt första stycket. Detsamma gäller företag som avses i lagen (1974:191) om bevakningsföretag.",
+   "4": "4 § Polismyndigheten får återkalla tillståndet, om förutsättningarna för tillstånd inte längre föreligger. Bevakningsföretag får i motsvarande fall förbjudas att bedriva larminstallationsverksamhet. Ett sådant förbud skall upphävas på ansökan av företaget, om det inte längre finns skäl för förbudet."
+  }
+ },
+ "BegL": {
+  "name": "Lagen (1999:271) om handel med begagnade varor",
+  "sfs": "1999:271",
+  "short": "Begagnatlagen",
+  "amended": "2014:730",
+  "url": "https://data.riksdagen.se/dokument/sfs-1999-271.html",
+  "sections": {
+   "14": "14 § Till böter eller fängelse i högst sex månader döms den som uppsåtligen eller av oaktsamhet\n\n1. driver sådan yrkesmässig handel med begagnade varor som omfattas av denna lag utan att vara registrerad,\n\n2. underlåter att fullgöra skyldighet enligt 5 § eller lämnar oriktig uppgift vid fullgörandet.\n\nTill ansvar enligt denna paragraf skall inte dömas om gärningen är belagd med straff i brottsbalken eller om överträdelsen är ringa.",
+   "15": "15 § Till böter döms den som uppsåtligen eller av oaktsamhet bryter mot 7 och 8 §§. Till ansvar enligt denna paragraf skall inte dömas om gärningen är belagd med straff i brottsbalken eller om överträdelsen är ringa.",
+   "5": "5 § En handlare är skyldig att föra anteckningar om förvärvade eller annars mottagna varor och att på begäran tillhandahålla Polismyndigheten dessa anteckningar och övriga handlingar som avser mottagna varor. Lag (2014:730).",
+   "7": "7 § En handlare får inte ta emot begagnade varor av den som inte på ett tillförlitligt sätt styrker sin identitet eller är känd.\n\nEn handlare får inte heller ta emot begagnade varor av den som är under 18 år om inte denne visar att han har rätt att förfoga över varan eller av den som är märkbart påverkad av alkohol eller något annat berusningsmedel.",
+   "8": "8 § Begagnade varor som har tagits emot får inte lämnas ut eller bearbetas förrän tidigast en månad efter den dag då varorna togs emot.\n\nPolismyndigheten får medge en handlare undantag från denna bestämmelse om det finns särskilda skäl. Lag (2014:730)."
+  }
+ },
+ "DyrkL": {
+  "name": "Lagen (1979:357) om yrkesmässig försäljning av dyrkverktyg",
+  "sfs": "1979:357",
+  "short": "Dyrkverktygslagen",
+  "amended": "2014:585",
+  "url": "https://data.riksdagen.se/dokument/sfs-1979-357.html",
+  "sections": {
+   "7": "7 § Till böter eller fängelse i högst sex månader döms den som uppsåtligen eller av oaktsamhet\n\n1. bedriver yrkesmässig försäljning av dyrkverktyg utan tillstånd eller utan att godkänd föreståndare finns,\n\n2. bryter mot föreskrift som avses i 2 § tredje stycket eller mot villkor enligt 4 § första stycket,\n\n3. underlåter att fullgöra skyldigheten enligt 6 § eller lämnar oriktig uppgift vid fullgörandet.\n\nI ringa fall döms inte till straff."
+  }
+ },
+ "KampL": {
+  "name": "Lagen (2006:1006) om tillståndsplikt för vissa kampsportsmatcher",
+  "sfs": "2006:1006",
+  "short": "Kampsportslagen",
+  "amended": "2024:853",
+  "url": "https://data.riksdagen.se/dokument/sfs-2006-1006.html",
+  "sections": {
+   "1": "1 § Tävlings-, tränings- eller uppvisningsmatch i kampsport som tillåter deltagarna att med slag, sparkar eller annat våld avsiktligt träffa motståndarens huvud (kampsportsmatch) får inte anordnas utan tillstånd enligt denna lag.\n\nFör tävling och uppvisning i sport och idrott vid offentlig tillställning gäller även bestämmelserna i 2 kap. ordningslagen (1993:1617) om krav på tillstånd eller anmälan.",
+   "13": "13 § Den som uppsåtligen eller av oaktsamhet anordnar kampsportsmatch utan tillstånd enligt 1 § eller i strid mot ett villkor enligt 3 § döms till böter eller fängelse i högst sex månader, om gärningen inte är ringa. Lag (2015:455).",
+   "14": "14 § Till böter döms, om gärningen inte är ringa, den som uppsåtligen deltar i en kampsportsmatch som anordnas utan tillstånd enligt denna lag. Detsamma gäller den som\n\n1. ekonomiskt understödjer matchen eller upplåter lokal för den,\n\n2. i egenskap av manager ingår avtal om matchen eller främjar tillkomsten av sådant avtal, eller\n\n3. tjänstgör som domare eller sekond vid matchen."
+  }
+ },
+ "LSO": {
+  "name": "Lagen (2003:778) om skydd mot olyckor",
+  "sfs": "2003:778",
+  "short": "LSO",
+  "amended": "2025:1077",
+  "url": "https://data.riksdagen.se/dokument/sfs-2003-778.html",
+  "sections": {
+   "10:1": "1 § Regeringen får i de avseenden som behandlas i denna lag meddela ytterligare föreskrifter som rör skydd för liv och hälsa, miljö samt utbildning.\n\nRegeringen får vidare meddela föreskrifter om förbud mot eldning utomhus och liknande förebyggande åtgärder mot brand.\n\nRegeringen får överlåta åt en förvaltningsmyndighet eller en kommun att meddela föreskrifter enligt första och andra styckena.",
+   "10:3": "3 § Till böter skall den dömas som\n\n1. uppsåtligen eller av oaktsamhet bryter mot förbud mot eldning utomhus som har meddelats med stöd av 1 § andra stycket,\n\n2. uppsåtligen eller av oaktsamhet inte fullgör sin skyldighet att ge upplysningar eller lämna ut handlingar enligt 3 kap. 5 §, 5 kap. 2 § eller 6 kap. 8 §,\n\n3. uppsåtligen eller av oaktsamhet lämnar oriktig uppgift om förhållande av betydelse vid fullgörande av uppgiftsskyldighet som följer av 3 kap. 5 §, 5 kap. 2 § eller 6 kap. 8 §,\n\n4. uppsåtligen eller av oaktsamhet inte fullgör vad som åligger honom eller henne enligt 2 kap. 1 eller 5 §,\n\n5. uppsåtligen eller av oaktsamhet, utan att ha giltigt skäl, låter bli att fullgöra den tjänsteplikt som han eller hon är skyldig att fullgöra enligt 6 kap. 1 §,\n\n6. uppsåtligen hindrar eller försöker hindra en åtgärd som beslutats enligt 6 kap. 2 § eller annars utan giltig ursäkt åsidosätter en sådan åtgärd.\n\nI ringa fall skall inte dömas till ansvar. Till ansvar enligt denna lag skall inte heller dömas, om ansvar för gärningen kan dömas ut enligt brottsbalken.\n\nDen som har överträtt ett vitesföreläggande eller ett vitesförbud skall inte dömas till ansvar enligt denna lag för gärning som omfattas av föreläggandet eller förbudet."
+  }
+ },
+ "FiskeL": {
+  "name": "Fiskelagen (1993:787)",
+  "sfs": "1993:787",
+  "short": "Fiskelagen",
+  "amended": "2025:766",
+  "url": "https://data.riksdagen.se/dokument/sfs-1993-787.html",
+  "sections": {
+   "37": "37 § Den som med uppsåt eller av oaktsamhet\n\n1. utan lov fiskar i vatten där annan har enskild fiskerätt,\n\n2. utan någon myndighets tillstånd enligt denna lag fiskar där sådant tillstånd behövs, eller\n\n3. sätter ut eller placerar ett fiskeredskap eller en anordning i strid med vad som gäller om fiskådra eller placerar eller använder ett fiskeredskap eller en annan anordning i strid med vad som gäller i en sådan fredningszon som avses i 18 a §\n\ndöms till böter eller fängelse i högst ett år, om inte annat följer av 41 §.\n\nI ringa fall ska inte dömas till ansvar. Lag (2010:901).",
+   "40": "40 § Den som med uppsåt eller av oaktsamhet bryter mot föreskrifter som meddelats med stöd av 19, 20, 21, 22 eller 23 § döms till böter eller fängelse i högst ett år, om inte annat följer av 41 §.\n\nTill samma straff döms den som med uppsåt eller av grov oaktsamhet bryter mot EU:s förordningar om den gemensamma fiskeripolitiken genom otillåtet fiske eller genom att behålla fisk ombord, bearbeta fisk ombord, förvara fisk i sump eller omlasta, föra i land, föra in i landet eller saluhålla fångst i strid mot bestämmelserna eller genom att bryta mot bestämmelser om förvaring av fiskeredskap ombord eller om anmälnings- eller uppgiftsskyldighet. Vad nu sagts gäller bara om inte annat följer av 41 §.\n\nI ringa fall ska det inte dömas till ansvar enligt första eller andra stycket.\n\nDen som gör sig skyldig till försök eller förberedelse till brott som avses i första stycket döms till ansvar enligt 23 kap. brottsbalken. Lag (2025:43).",
+   "40a": "40 a § Om ett brott enligt 37 eller 40 § är att anse som grovt döms till fängelse i högst två år i andra fall än som avses i 41 § första stycket.\n\nVid bedömande av om brottet är grovt skall särskilt beaktas om det avsåg verksamhet av särskilt stor omfattning, fångst av betydande värde eller fångst ur särskilt skyddsvärda bestånd. Lag (2003:251).",
+   "41": "41 § Den som i Sveriges ekonomiska zon begår brott enligt 37 eller 40 § döms till böter.\n\nOm någon vid fiske i näringsverksamhet har begått brott enligt 37 eller 40 § genom att bedriva otillåtet fiske eller genom att brista i skyldigheten att lämna uppgift om fisket skall, om gärningen avser verksamhet som innefattar användning av fiskefartyg försett med motor och påföljden bestäms till böter, böterna bestämmas till ett krontal som motsvarar lägst tio och högst femhundra gånger antalet kilowatt i motorerna på fiskefartyget. Minsta bötesbelopp är ettusen kronor. Lag (2003:251)."
+  }
+ },
+ "KML": {
+  "name": "Kulturmiljölagen (1988:950)",
+  "sfs": "1988:950",
+  "short": "KML",
+  "amended": "2024:813",
+  "url": "https://data.riksdagen.se/dokument/sfs-1988-950.html",
+  "sections": {
+   "2:18": "18 § En apparat som kan användas för att på elektronisk väg spåra metallföremål under markytan (metallsökare) får inte användas utan tillstånd.\n\nEn metallsökare får inte heller medföras utan tillstånd på fornlämningar annat än vid färd på sådan väg som är upplåten för allmänheten.\n\nTillstånd krävs inte för\n\n1. Riksantikvarieämbetet,\n\n2. den som efter medgivande av länsstyrelsen enligt 8 § andra stycket, 11 § andra stycket eller 13 § fjärde stycket utför sådana undersökningar av fornlämningar eller platser där fornfynd har påträffats,\n\n3. medförande och användning i militär verksamhet för att söka efter annat än fornfynd, och\n\n4. användning i en myndighets verksamhet för att söka efter annat än fornfynd. Lag (2013:548).",
+   "2:21": "21 § Till böter eller fängelse i högst sex månader döms för fornminnesbrott den som uppsåtligen eller av oaktsamhet\n\n1. tillägnar sig, förvärvar, gömmer, skadar, ändrar eller avyttrar föremål som enligt 4 § ska tillfalla staten eller hembjudas till staten, eller\n\n2. olovligen rubbar, tar bort, gräver ut, täcker över eller genom bebyggelse, plantering eller på annat sätt ändrar eller skadar en fornlämning.\n\nOm brott som avses i första stycket har begåtts uppsåtligen och är att anse som grovt, döms för grovt fornminnesbrott till fängelse i högst fyra år. Vid bedömande av om brottet är grovt ska det särskilt beaktas om\n\n1. gärningsmannen har använt särskild utrustning eller på annat sätt visat särskild förslagenhet, eller\n\n2. gärningen utförts vanemässigt, avsett fornfynd av större värde eller omfattning eller medfört en omfattande förstörelse av ett fornminne.\n\nFör försök eller förberedelse till grovt fornminnesbrott döms det till ansvar enligt 23 kap. brottsbalken. Lag (2013:548).",
+   "2:21a": "21 a § Till böter eller fängelse i högst sex månader döms den som uppsåtligen eller av oaktsamhet\n\n1. inte anmäler fornfynd enligt 5 §,\n\n2. inte gör anmälan enligt 10 § andra stycket, eller\n\n3. bryter mot 18 §. Lag (2013:548)."
+  }
+ },
+ "EstL": {
+  "name": "Lagen (1995:732) om skydd för gravfriden vid vraket efter passagerarfartyget Estonia",
+  "sfs": "1995:732",
+  "short": "Estonialagen",
+  "amended": "2024:826",
+  "url": "https://data.riksdagen.se/dokument/sfs-1995-732.html",
+  "sections": {
+   "2": "2 § Dykning och annan undervattensverksamhet får inte bedrivas i vraket efter passagerarfartyget Estonia eller inom det område som anges i 1 § andra stycket. Förbudet gäller dock inte verksamhet som avser att utreda förlisningen, att täcka över eller skydda vraket eller att förhindra förorening av den marina miljön från vraket, om verksamheten bedrivs av en myndighet i Estland, Finland eller Sverige eller på uppdrag av en sådan myndighet. Lag (2021:557).",
+   "3": "3 § Den som uppsåtligen bryter mot 2 § döms till böter eller fängelse i högst två år. För försök döms till ansvar enligt 23 kap. brottsbalken."
+  }
  }
 }
