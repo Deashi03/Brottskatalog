@@ -1,0 +1,670 @@
+LAW S1992-160 | Lagen (1992:160) om utländska filialer m.m. | 1992:160 | Filiallagen
+
+@ v21-filiallagen-vd-forestandare | Brott mot lagen om utländska filialer (verkställande direktör eller föreståndare saknas) | 29 § | 29,2,8,9,24,25
+PEN 0 | 0 | Böter | Böter
+C Ekonomisk brottslighet
+A utländsk filial;filial utan vd;föreståndare saknas;utländskt företag i Sverige;filialregistret
+Q plain
+G Gärningspersonen gör minst ett av:
+  | Driver eller förestår näringsverksamhet i Sverige för ett utländskt företags räkning utan att det har utsetts en verkställande direktör för filialen som uppfyller lagens krav, bland annat att vara bosatt inom Europeiska ekonomiska samarbetsområdet och att inte vara underårig, i konkurs eller ha förvaltare.
+  | Driver eller förestår näringsverksamhet i Sverige, när lagen kräver en föreståndare som är bosatt i Sverige, utan att skriftlig anmälan om vem som är föreståndare har gjorts och fullmakt för föreståndaren har getts in till registreringsmyndigheten.
+S Uppsåt till samtliga rekvisit. Lagen anger ingen skuldform. Utgångspunkten är då att uppsåt krävs.
+N Föreståndare krävs när näringsverksamhet bedrivs i Sverige av svenska eller utländska medborgare som är bosatta utanför Europeiska ekonomiska samarbetsområdet. Regeringen eller en myndighet kan ha beslutat om undantag från kraven.
+T En person sköter försäljningen i Sverige åt ett utländskt bolag genom ett kontor här utan att bolaget har utsett någon verkställande direktör för filialen.
+
+LAW S2010-1052 | Lagen (2010:1052) om auktorisation av patentombud | 2010:1052 | Patentombudslagen
+
+@ v21-patentombud-obehorigen-utge-sig | Brott mot lagen om auktorisation av patentombud (obehörigt utgivande) | 11 § | 11,2
+PEN 0 | 0 | Böter | Böter
+C Ekonomisk brottslighet
+A falskt patentombud;auktoriserat patentombud;utge sig för patentombud;falsk titel
+Q plain
+G Gärningspersonen utger sig för att vara auktoriserat patentombud.
+K Gärningspersonen är inte auktoriserad som patentombud enligt lagen och agerar obehörigen.
+S Uppsåt till samtliga rekvisit. Lagen anger ingen skuldform. Utgångspunkten är då att uppsåt krävs.
+T En konsult skriver "auktoriserat patentombud" på sin webbplats och sina visitkort trots att han aldrig har fått någon auktorisation.
+
+LAW S1990-783 | Lagen (1990:783) om skydd för beteckningen svenskt arkiv | 1990:783 | Lagen om beteckningen svenskt arkiv
+
+@ v21-svenskt-arkiv-markning | Brott mot lagen om skydd för beteckningen svenskt arkiv | 2 § | 1,2
+PEN 0 | 0 | Böter | Böter
+C Ekonomisk brottslighet
+A svenskt arkiv;arkivpapper märkning;falsk märkning;arkivbeständigt
+Q plain
+O Skrivmateriel eller förvaringsmedel som inte är godkända för märkning med beteckningen svenskt arkiv.
+G Gärningspersonen gör minst ett av:
+  | Märker materielen eller förvaringsmedlen med orden svenskt arkiv, ensamma, i sammansättning eller i förkortning.
+  | Saluför materielen eller förvaringsmedlen med kännedom om att märkningen inte är riktig.
+S Uppsåt till samtliga rekvisit. Lagen anger ingen skuldform. Utgångspunkten är då att uppsåt krävs. Den som saluför måste känna till att märkningen inte är riktig.
+U Gärningen är belagd med straff i brottsbalken.
+T Ett företag trycker "Svenskt Arkiv" på förpackningar med kopieringspapper som aldrig har godkänts för den märkningen.
+
+LAW S2000-171 | Lagen (2000:171) om förbud beträffande viss avkodningsutrustning | 2000:171 | Avkodningslagen
+X 2,3,4
+
+@ v21-avkodningsutrustning-handel | Brott mot lagen om förbud beträffande viss avkodningsutrustning (tillverkning, försäljning och yrkesmässig befattning) | 6 § första stycket | 5,6,6a,7,10
+PEN 0 | 2 | Böter eller fängelse i högst två år | B–F 2 år
+C Ekonomisk brottslighet
+A piratkort;piratdekoder;olaglig iptv;avkodare betal-tv;knäcka betalkanaler;kortdelning
+Q villkor | Åtal får väckas bara om målsäganden anger brottet till åtal eller om åtal är motiverat från allmän synpunkt.
+ST F | Avkodningslagen 7 § | Försök är straffbart bara om brottet inte skulle ha varit ringa om det hade fullbordats.
+O Avkodningsutrustning, det vill säga utrustning eller programvara som har utformats eller anpassats för att göra en betaltjänst med villkorad tillgång tillgänglig i tolkningsbar form, till exempel en kodad tv-sändning eller en betald tjänst på nätet.
+G Gärningspersonen gör minst ett av:
+  | Tillverkar, distribuerar, säljer, hyr ut eller installerar utrustningen.
+  | Innehar, underhåller eller byter ut utrustningen yrkesmässigt eller i förvärvssyfte.
+K Syftet är att göra tjänsten tillgänglig i tolkningsbar form utan tjänsteleverantörens godkännande.
+S Uppsåt till samtliga rekvisit. Lagen anger ingen skuldform. Utgångspunkten är då att uppsåt krävs.
+U Fallet är ringa.
+U Gärningen är belagd med straff i brottsbalken.
+N Import av avkodningsutrustning från en plats utanför Europeiska unionen bestraffas inte enligt denna lag utan enligt lagen om straff för smuggling.
+T En person säljer programmerade piratkort och boxar som ger köparna tillgång till betal-tv-kanaler utan abonnemang.
+
+@ v21-avkodningsutrustning-privat-bruk | Brott mot lagen om förbud beträffande viss avkodningsutrustning (privat bruk) | 6 § andra stycket | 5,6,6a,10
+PEN 0 | 0 | Böter | Böter
+C Ekonomisk brottslighet
+A piratkort privat;titta gratis på betal-tv;olaglig iptv hemma;piratbox
+Q villkor | Åtal får väckas bara om målsäganden anger brottet till åtal eller om åtal är motiverat från allmän synpunkt.
+O Avkodningsutrustning, det vill säga utrustning eller programvara som har utformats eller anpassats för att göra en betaltjänst med villkorad tillgång tillgänglig i tolkningsbar form.
+G Gärningspersonen anskaffar eller använder utrustningen för privat bruk.
+K Syftet är att göra tjänsten tillgänglig i tolkningsbar form utan tjänsteleverantörens godkännande.
+S Uppsåt till samtliga rekvisit. Lagen anger ingen skuldform. Utgångspunkten är då att uppsåt krävs.
+U Fallet är ringa.
+U Gärningen är belagd med straff i brottsbalken.
+T En person köper ett piratkort och använder det hemma för att se kodade sportkanaler utan att betala för abonnemang.
+
+LAW S2010-1882 | Lagen (2010:1882) om åldersgränser för film som ska visas offentligt | 2010:1882 | Filmålderslagen
+X 3,4,7
+
+@ v21-film-aldersgranser | Brott mot lagen om åldersgränser för film som ska visas offentligt | 11 § | 11,3,6
+PEN 0 | 0.5 | Böter eller fängelse i högst sex månader | B–F 6 mån
+C Allmän ordning
+A åldersgräns bio;barn på bio;barnförbjuden film;ogranskad film;släppa in barn på film
+Q plain
+P En allmän sammankomst eller en offentlig tillställning där film visas.
+G Gärningspersonen gör minst ett av:
+  | Visar för ett barn under femton år en framställning i en film som inte har prövats av Mediemyndigheten.
+  | Ger tillträde till visningen åt någon som inte har uppnått den lägsta ålder som myndigheten har bestämt för filmen.
+S Uppsåt eller oaktsamhet.
+U Barnet är i sällskap med en person som har fyllt arton år och filmen är tillåten från närmast högre åldersgräns, det vill säga barn under sju år vid film från sju år, barn mellan sju och elva år vid film från elva år och barn mellan elva och femton år vid film från femton år.
+U Filmen får visas utan godkännande, till exempel för att den är reklam för en vara eller tjänst, visas som dokumentär i ett museums utställning eller bara återger en offentlig opera-, teater- eller musikföreställning eller ett sportevenemang.
+N Den som har fyllt femton år får ta med ett barn under ett år till en visning som är särskilt anpassad för föräldrar med spädbarn.
+T En biografanställd släpper in en ensam nioåring på en film som är tillåten från elva år.
+T En förening ordnar en offentlig filmvisning för barn och visar en film som aldrig har lämnats in för prövning av åldersgräns.
+
+LAW S2010-696 | Radio- och tv-lagen (2010:696) | 2010:696 | RTVL
+
+@ v21-rtvl-sandning-utan-tillstand | Brott mot radio- och tv-lagen (sändning utan tillstånd) | 17:1 | 17:1,4:2,10:1
+PEN 0 | 0.5 | Böter eller fängelse i högst sex månader | B–F 6 mån
+C Allmän ordning
+A piratradio;svartsändning;sända radio utan tillstånd;piratsändare;olaglig fm-sändning
+Q plain
+G Gärningspersonen sänder program.
+K Sändningen kräver tillstånd enligt radio- och tv-lagen och gärningspersonen har inget sådant tillstånd. Tillstånd krävs bland annat för att med radiovågor sända ljudradio, tv eller sökbar text-tv på frekvenserna 87,5–108 megahertz, 174–240 megahertz eller 470–790 megahertz.
+S Uppsåt eller oaktsamhet.
+T En person sätter upp en egen sändare på vinden och sänder musikradio på FM-bandet utan att ha något sändningstillstånd.
+
+@ v21-rtvl-sandning-fran-oppna-havet | Brott mot radio- och tv-lagen (sändning från öppna havet) | 17:2 | 17:2
+PEN 0 | 0.5 | Böter eller fängelse i högst sex månader | B–F 6 mån
+C Allmän ordning
+A piratradio fartyg;radiosändning internationellt vatten;sändare på öppna havet;radiofartyg
+Q plain
+P En radioanläggning på öppna havet eller i luftrummet över det.
+G Gärningspersonen sänder från anläggningen eller upprättar eller innehar anläggningen.
+F Minst ett av:
+  | Sändningen är avsedd att tas emot eller kan tas emot i ett land som är anslutet till den europeiska överenskommelsen till förhindrande av rundradiosändningar från stationer utanför nationella territorier.
+  | Sändningen orsakar att radioanvändning i något av dessa länder blir skadligt påverkad.
+S Uppsåt eller oaktsamhet.
+N Svensk domstol är behörig att döma över brottet även om det inte finns domsrätt enligt brottsbalkens allmänna regler.
+T En grupp utrustar ett fartyg med en kraftig sändare och sänder reklamradio mot Sverige från internationellt vatten i Östersjön.
+
+LAW S1932-55 | Lagen (1932:55) om viktmärkning i vissa fall av gods som skall inlastas å fartyg | 1932:55 | Viktmärkningslagen
+
+@ v21-viktmarkning-gods-fartyg | Brott mot lagen om viktmärkning av gods som ska lastas på fartyg | 3 § första stycket | 1,3
+PEN 0 | 0 | Böter | Böter
+C Allmän verksamhet
+A viktmärkning;tungt gods utan vikt;bruttovikt saknas;lastning fartyg;kolli utan viktuppgift
+Q plain
+O Gods, eller en bunt, ett paket eller en annan enhetslast, med en bruttovikt på minst ettusen kilogram som ska lastas på fartyg för befordran.
+K Gärningspersonen är den som ansvarar för viktmärkningen, det vill säga avlastaren eller, när lastningen ska ske i utländsk hamn, avsändaren.
+G Godset har inte försetts med uppgift om bruttovikten före inlastningen eller före avsändandet från Sverige, eller bruttovikten är för lågt angiven.
+S Uppsåt till samtliga rekvisit. Lagen anger ingen skuldform. Utgångspunkten är då att uppsåt krävs.
+U Godset var försett med uppgift om bruttovikten när den ansvarige tog emot det, och det fanns ingen anledning att anta att uppgiften var oriktig.
+U Gärningen kan ge straff enligt brottsbalken.
+N Om viktuppgiften finns men inte är tydligt och varaktigt anbringad på godsets utsida, eller inte avser bruttovikten i kilogram, är straffet penningböter.
+T Ett företag lämnar en maskin på tre ton för lastning på ett fartyg utan att märka den med någon vikt.
+
+LAW S1939-299 | Lagen (1939:299) om förbud i vissa fall mot överlåtelse eller upplåtelse av fartyg m.m. | 1939:299 | Lagen om förbud mot överlåtelse av fartyg
+X 1,4
+
+@ v21-fartyg-overlatelse-utlanning | Brott mot lagen om förbud mot överlåtelse eller upplåtelse av fartyg (otillåten överlåtelse eller upplåtelse) | 5 § | 2,5
+PEN 0 | 1 | Böter eller fängelse i högst ett år | B–F 1 år
+C Rikets säkerhet
+A sälja fartyg till utlandet i krig;fartyg utländsk ägare;krigstid fartyg;överlåta fartyg utan tillstånd
+Q plain
+K Sverige är i krig, eller regeringen har på grund av krigsfara eller andra utomordentliga förhållanden föreskrivit att lagens förbud ska tillämpas.
+K Tillstånd av regeringen eller den myndighet som regeringen bestämmer saknas.
+G Gärningspersonen gör minst ett av:
+  | Överlåter ett svenskt fartyg eller en andel i fartyget till en utlänning eller till ett svenskt aktiebolag vars aktiekapital till mer än en tredjedel är i utländsk ägo.
+  | Överlåter en aktie i ett svenskt aktiebolag som äger ett fartyg eller en andel i ett fartyg till en utlänning eller ett sådant aktiebolag.
+  | Upplåter ett svenskt fartyg till en utlänning genom tidsbefraktning eller till nyttjande.
+  | Överlåter rätt till tidsbefraktning av ett svenskt fartyg eller nyttjanderätt till det till en utlänning.
+S Uppsåt eller oaktsamhet.
+N Om en aktieöverlåtelse har förmedlats av någon som yrkesmässigt köper och säljer fondpapper i kommission gäller ansvaret kommissionären i stället för överlåtaren. Har båda parter anlitat kommissionär gäller det den som handlade för förvärvarens räkning.
+T Under krig säljer en redare ett svenskt lastfartyg till ett utländskt bolag utan att ha fått regeringens tillstånd.
+
+@ v21-fartyg-aktiebrev-utlanning | Brott mot lagen om förbud mot överlåtelse eller upplåtelse av fartyg (aktiebrev till utlänning) | 6 § andra stycket | 2,3,6
+PEN 0 | 1 | Böter eller fängelse i högst ett år | B–F 1 år
+C Rikets säkerhet
+A aktiebrev utlänning;rederiaktier krigstid;styrelseledamot rederi;aktieteckning utlänning
+Q plain
+K Sverige är i krig, eller regeringen har på grund av krigsfara eller andra utomordentliga förhållanden föreskrivit att lagens förbud ska tillämpas.
+K Gärningspersonen är styrelseledamot i ett svenskt aktiebolag som äger ett fartyg eller en andel i ett fartyg.
+G Gärningspersonen medger att ett aktiebrev ges ut till en utlänning, eller till ett svenskt aktiebolag vars aktiekapital till mer än en tredjedel är i utländsk ägo, på grund av en aktieteckning som har skett i strid med lagen.
+S Uppsåt eller oaktsamhet.
+T En styrelseledamot i ett rederiaktiebolag godkänner under krigstid att aktiebrev lämnas ut till en utländsk tecknare som inte har tillstånd att teckna aktierna.
+
+@ v21-fartyg-teckningslista-erinran | Brott mot lagen om förbud mot överlåtelse eller upplåtelse av fartyg (teckningslista utan erinran) | 6 § första stycket | 3,6
+PEN 0 | 0 | Böter | Böter
+C Rikets säkerhet
+A teckningslista;rederiaktier;aktieteckning krigstid;erinran saknas
+Q plain
+K Sverige är i krig, eller regeringen har på grund av krigsfara eller andra utomordentliga förhållanden föreskrivit att lagens förbud ska tillämpas.
+K Gärningspersonen är stiftare av aktiebolaget eller, när aktiekapitalet ökas genom nyteckning, ledamot i bolagets styrelse.
+G En teckningslista utfärdas för ett aktiebolag vars aktier inte får tecknas av eller överlåtas till utlänningar utan tillstånd, och listan innehåller ingen erinran om förbudet.
+S Uppsåt eller oaktsamhet.
+T En stiftare av ett nytt rederiaktiebolag skickar under krigstid ut teckningslistor som inte nämner att utlänningar inte får teckna aktierna utan tillstånd.
+
+LAW S1940-176 | Lagen (1940:176) med vissa bestämmelser om fraktfart med svenska fartyg | 1940:176 | Fraktfartslagen
+X 1
+
+@ v21-fraktfart-resa-utan-tillstand | Brott mot lagen med vissa bestämmelser om fraktfart med svenska fartyg | 4 § | 2,3,4
+PEN 0 | 1 | Böter eller fängelse i högst ett år | B–F 1 år
+C Rikets säkerhet
+A fartygsresa utan tillstånd;krigstid sjöfart;fraktfart krig;lägga upp fartyg utomlands
+Q plain
+## Befälhavare
+K Gärningspersonen är befälhavare på ett registreringspliktigt svenskt fartyg som regeringen har förordnat bara får företa resor med tillstånd.
+G Gärningspersonen gör minst ett av:
+  | Företar en resa med fartyget utan tillstånd.
+  | Iakttar inte de villkor som har ställts upp för tillståndet.
+S Uppsåt eller oaktsamhet.
+## Redare
+K Gärningspersonen är redare eller har i redarens ställe haft befattning med fartyget.
+G Gärningspersonen har känt till att befälhavaren företar en resa utan tillstånd eller bryter mot villkoren för tillståndet men förhindrar inte gärningen trots att han eller hon har haft möjlighet till det.
+S Uppsåt. Gärningspersonen ska ha känt till befälhavarens gärning.
+## Uppläggning utomlands
+K Gärningspersonen är fartygets ägare eller har annars rätt att förfoga över fartyget.
+G Fartyget läggs upp, avrustas eller avmönstras på utrikes ort för annat ändamål än nödvändig reparation, utan medgivande av regeringen eller den som regeringen har bemyndigat.
+S Uppsåt eller oaktsamhet.
+## *
+K Sverige är i krig, eller regeringen har på grund av krigsfara eller andra utomordentliga förhållanden föreskrivit att lagens bestämmelser ska tillämpas.
+N Kravet på tillstånd gäller inte fartyg som har ett gällande passagerarfartygscertifikat och en bruttodräktighet under 350. Den som döms kan förpliktas att betala ett belopp som motsvarar ersättningen för godsbefordran eller bogsering till staten.
+T Under krigstid avgår en befälhavare med ett svenskt lastfartyg till en utländsk hamn utan det tillstånd som regeringen har föreskrivit för resor.
+
+LAW S1973-282 | Sjömanslagen (1973:282) | 1973:282 | Sjömanslagen
+X 1,3,73,74
+
+@ v21-sjomanslagen-arbetsgivare-befalhavare | Brott mot sjömanslagen (arbetsgivarens och befälhavarens skyldigheter) | 62 § | 62,15,20,21,26,27,37,45
+PEN 0 | 0 | Böter | Böter
+C Trafik
+A tjänstgöringsbesked;fartygsnämnd;sjuk sjöman vård;minderårig på fartyg;befälhavare skyldigheter
+Q plain
+G Gärningspersonen gör minst ett av:
+  | Förser som arbetsgivare eller befälhavare inte en sjöman med tjänstgöringsbesked när sjömannen tillträder en befattning på fartyget, eller anger inte i beskedet när sjömannen lämnar befattningen.
+  | Ser som befälhavare inte till att en fartygsnämnd tillsätts på ett fartyg med en besättning om minst sex personer.
+  | Kallar som befälhavare inte samman fartygsnämnden när den ska undersöka en fråga om att skilja en sjöman från befattningen, en sjömans uteblivande vid avgången eller en anmälan om försummelse i tjänsten eller brott ombord.
+  | Ser som befälhavare inte till att misstanke om brott under allmänt åtal ombord anmäls till Åklagarmyndigheten, Polismyndigheten eller närmaste svenska utlandsmyndighet, eller översänder inte fartygsnämndens utredning till behörig myndighet.
+  | Ser som befälhavare inte till att avskrift av fartygsnämndens utlåtande och de utsagor som har lämnats inför nämnden utan dröjsmål skickas till arbetsgivaren och sjömannen.
+  | Sörjer inte för att en sjuk eller skadad sjöman får betryggande vård ombord eller i land, eller låter inte föra i land en sjöman som kan antas ha en sjukdom som medför fara för de ombordvarande.
+  | Sysselsätter som befälhavare en arbetstagare i fartygsarbete innan han eller hon har fyllt 16 år eller har fullgjort sin skolplikt, eller använder någon under 18 år som eldare utan Transportstyrelsens medgivande.
+S Uppsåt eller oaktsamhet.
+U Gärningen är belagd med strängare straff i annan lag.
+N Med befälhavare jämställs den som har trätt i befälhavarens ställe. Är sjömannen sjuk eller skadad under väntetid ligger skyldigheten att sörja för vård på arbetsgivaren.
+T En befälhavare låter en sjöman med svår infektion ligga kvar i hytten i flera dygn utan att ordna läkarvård, trots att fartyget ligger i hamn.
+T Ett rederi låter en nyanställd matros börja arbeta ombord utan att han får något tjänstgöringsbesked.
+
+@ v21-sjomanslagen-underlatenhet-forhindra | Brott mot sjömanslagen (underlåtenhet att förhindra befälhavarens förseelse) | 63 § | 63,15,37,45
+PEN 0 | 0 | Böter | Böter
+C Trafik
+A arbetsgivare sjöman;redare ansvar;barnarbete fartyg;vårdnadshavare minderårig sjöman
+Q plain
+## Arbetsgivare
+K Gärningspersonen är sjömannens arbetsgivare.
+K En befälhavare bryter mot skyldigheten att sörja för vård av en sjuk eller skadad sjöman eller att föra i land en sjöman med farlig sjukdom, eller mot förbudet att sysselsätta minderåriga i fartygsarbete.
+G Gärningspersonen underlåter att göra vad som skäligen kan krävas för att förhindra förseelsen.
+S Uppsåt eller oaktsamhet.
+## Redare
+K Gärningspersonen är redare, och arbetstagaren är anställd av någon annan än redaren.
+K Skyldigheten att lämna tjänstgöringsbesked, skyldigheten att sörja för vård av en sjuk eller skadad sjöman eller förbudet att sysselsätta minderåriga i fartygsarbete åsidosätts i fråga om arbetstagaren.
+G Gärningspersonen underlåter att göra vad som skäligen kan krävas för att förhindra förseelsen.
+S Uppsåt eller oaktsamhet.
+## Vårdnadshavare
+K Gärningspersonen är vårdnadshavare för en arbetstagare som används i fartygsarbete innan han eller hon har fyllt 16 år eller fullgjort sin skolplikt, eller som under 18 års ålder används som eldare utan medgivande.
+G Gärningspersonen har känt till förseelsen.
+S Uppsåt. Vårdnadshavaren ska ha känt till förseelsen.
+## *
+U Gärningen är belagd med strängare straff i annan lag.
+T Ett bemanningsföretag vet att befälhavaren låter en femtonåring arbeta som jungman ombord men gör ingenting för att stoppa det.
+
+@ v21-sjomanslagen-fartygsnamnd-partisk | Brott mot sjömanslagen (partisk eller försumlig ledamot av fartygsnämnd) | 64 § första stycket | 64,20
+PEN 0 | 0.5 | Böter eller fängelse i högst sex månader | B–F 6 mån
+C Trafik
+A fartygsnämnd;partisk ledamot;undersökning ombord;jäv fartyg
+Q plain
+K Gärningspersonen är ledamot av fartygsnämnden på ett fartyg.
+G Gärningspersonen är partisk eller brister i omsorg vid sin medverkan i nämnden.
+S Uppsåt till samtliga rekvisit. Lagen anger ingen skuldform. Utgångspunkten är då att uppsåt krävs.
+U Gärningen är belagd med strängare straff i annan lag.
+N En ledamot av fartygsnämnden får inte heller obehörigen yppa vad han eller hon har fått veta i den egenskapen.
+T En styrman som sitter i fartygsnämnden ser medvetet till att en väns misskötsamhet inte utreds och att vittnen inte hörs.
+
+@ v21-sjomanslagen-farligt-gods-ombord | Brott mot sjömanslagen (farligt eller störande gods ombord) | 65 § | 65,51
+PEN 0 | 0.5 | Böter eller fängelse i högst sex månader | B–F 6 mån
+C Trafik
+A sjöman tar med farligt gods;fyrverkerier ombord;sprit ombord besättning;otillåtet gods fartyg
+Q plain
+K Gärningspersonen är sjöman eller annan arbetstagare som utför fartygsarbete på ett svenskt fartyg.
+G Gärningspersonen tar med sig gods ombord.
+O Godset kan utsätta fartyget, de ombordvarande eller lasten för fara eller vålla oordning ombord.
+S Uppsåt eller oaktsamhet.
+U Gärningen är belagd med strängare straff i annan lag.
+N Befälhavaren får i vittnens närvaro låta undersöka sjömännens utrymmen och ta det som olovligen har tagits med i förvar, låta föra det i land eller, om det är nödvändigt, förstöra det.
+T En matros gömmer en dunk bensin och en låda fyrverkerier i sin hytt inför en resa.
+
+@ v21-sjomanslagen-missbruk-vald-forvar | Brott mot sjömanslagen (missbruk av rätten att bruka våld eller ta i förvar) | 66 § | 66,53,54
+PEN 0 | 0.5 | Böter eller fängelse i högst sex månader | B–F 6 mån
+C Trafik
+A befälhavare våld;låsa in sjöman;förvar ombord;övervåld fartyg
+Q plain
+G Gärningspersonen missbrukar minst en av följande rättigheter:
+  | Rätten för befälhavaren, och den som hjälper befälhavaren, att bruka försvarligt våld för att upprätthålla ordningen ombord.
+  | Befälhavarens rätt att hålla en sjöman i förvar ombord när sjömannen har begått ett brott som kan ge fängelse i minst ett år och brottet upptäcks när fartyget inte är i svensk hamn.
+S Uppsåt eller oaktsamhet.
+U Gärningen är belagd med strängare straff i annan lag.
+N Den som har brukat mer våld än som är tillåtet döms inte till ansvar om omständigheterna var sådana att han eller hon svårligen kunde besinna sig. Med befälhavare jämställs den som har trätt i befälhavarens ställe.
+T En befälhavare låser in en matros i ett förråd i en vecka efter ett gräl, trots att matrosen inte har begått något allvarligt brott.
+
+@ v21-sjomanslagen-vald-mot-forman | Brott mot sjömanslagen (våld eller hot mot förman) | 67 § | 67,69
+PEN 0 | 2 | Fängelse i högst två år | F 2 år
+C Trafik
+A våld mot befälhavare;hot mot kapten;slå styrman;sjöman angriper befäl
+Q plain
+ST FP | Sjömanslagen 69 § | Försök och förberedelse är straffbara bara om brottet inte skulle ha varit ringa om det hade fullbordats.
+K Gärningspersonen är sjöman eller annan arbetstagare som utför fartygsarbete på ett svenskt fartyg.
+O Befälhavaren eller en annan förman på fartyget.
+G Gärningspersonen förgriper sig med våld eller hot om våld på förmannen.
+K Angreppet sker i förmannens tjänsteutövning, för att tvinga förmannen till eller hindra honom eller henne från en tjänsteåtgärd eller för att hämnas för en sådan åtgärd.
+S Uppsåt till samtliga rekvisit. Lagen anger ingen skuldform. Utgångspunkten är då att uppsåt krävs.
+U Gärningen är belagd med strängare straff i annan lag.
+N Är brottet ringa döms till böter eller fängelse i högst sex månader. Med befälhavare jämställs den som har trätt i befälhavarens ställe.
+T En matros slår styrmannen i ansiktet när styrmannen beordrar honom att gå på sin vakt.
+
+@ v21-myteri | Myteri | 68 § första stycket | 68,69
+PEN 0 | 2 | Fängelse i högst två år | F 2 år
+C Trafik
+A myteri;uppror ombord;besättning sätter sig upp mot kapten;uppror mot befälhavare
+Q plain
+ST PS | Sjömanslagen 69 §
+K Gärningspersonen är sjöman eller annan arbetstagare som utför fartygsarbete på ett svenskt fartyg.
+G Gärningspersonen deltar i ett myteri, det vill säga visar tillsammans med andra uppsåt att med förenat våld sätta sig upp mot befälhavaren.
+S Uppsåt till samtliga rekvisit. Lagen anger ingen skuldform. Utgångspunkten är då att uppsåt krävs.
+U Gärningen är belagd med strängare straff i annan lag.
+N Fängelse i högst två år gäller anstiftare och anförare. Annan deltagare döms till böter eller fängelse i högst sex månader. Underlåtenhet att avslöja eller förhindra myteri är också straffbar. Med befälhavare jämställs den som har trätt i befälhavarens ställe.
+T Flera besättningsmän samlas på bryggan och förklarar under ledning av en av dem att de med våld kommer att ta över fartyget om befälhavaren inte vänder.
+
+@ v21-myteri-forenat-vald | Myteri (förenat våld på person eller egendom) | 68 § andra stycket | 68,69
+PEN 0 | 6 | Fängelse i högst sex år | F 6 år
+C Trafik
+A myteri med våld;besättning tar över fartyg;uppror ombord våld;kapa eget fartyg
+Q plain
+ST PS | Sjömanslagen 69 §
+K Gärningspersonen är sjöman eller annan arbetstagare som utför fartygsarbete på ett svenskt fartyg.
+G Gärningspersonen deltar i ett myteri, det vill säga visar tillsammans med andra uppsåt att med förenat våld sätta sig upp mot befälhavaren.
+F Deltagare i myteriet går till förenat våld på person eller egendom.
+S Uppsåt till samtliga rekvisit. Lagen anger ingen skuldform. Utgångspunkten är då att uppsåt krävs.
+U Gärningen är belagd med strängare straff i annan lag.
+N Fängelse i högst sex år gäller anstiftare och anförare. Annan deltagare döms till fängelse i högst två år. Underlåtenhet att avslöja eller förhindra myteri är också straffbar.
+T En grupp besättningsmän övermannar tillsammans befälhavaren, låser in honom i hytten och slår sönder radioutrustningen.
+
+@ v21-sjomanslagen-ordervagran | Brott mot sjömanslagen (ordervägran av betydelse för säkerheten) | 70 § | 70,47,72
+PEN 0 | 0.5 | Böter eller fängelse i högst sex månader | B–F 6 mån
+C Trafik
+A ordervägran;vägra order ombord;sjöman lyder inte;säkerhetsorder fartyg
+Q villkor | Åtal får väckas bara om redaren, befälhavaren eller målsäganden anger brottet till åtal eller om åtal är påkallat från allmän synpunkt.
+K Gärningspersonen är sjöman eller annan arbetstagare som utför fartygsarbete på ett svenskt fartyg.
+G Gärningspersonen åsidosätter sin skyldighet att efterkomma en förmans order angående tjänsten eller att följa givna föreskrifter.
+K Ordern eller föreskriften har betydelse för fartygets, de ombordvarandes eller lastens säkerhet.
+S Uppsåt.
+U Gärningen är belagd med strängare straff i annan lag.
+N Bestämmelsen gäller inte arbetstagare som omfattas av statstjänstemannalagen.
+T En matros vägrar trots upprepade order att surra lasten på däck inför en väntad storm.
+
+LAW S1975-88 | Lagen (1975:88) med bemyndigande att meddela föreskrifter om trafik, transporter och kommunikationer | 1975:88 | Bemyndigandelagen för trafikföreskrifter
+
+@ v21-sjotrafikforeskrifter-krig | Brott mot lagen med bemyndigande att meddela föreskrifter om trafik, transporter och kommunikationer (sjöfartsföreskrifter i krig) | 3 § | 1,3
+PEN 0 | 0.5 | Böter eller fängelse i högst sex månader | B–F 6 mån
+C Rikets säkerhet
+A sjötrafik krig;utländskt fartyg svenskt vatten krig;sjötrafikregler krigsfara;sjövägmärken
+Q plain
+O En föreskrift som regeringen har meddelat att gälla när Sverige är i krig eller krigsfara eller när det råder utomordentliga förhållanden som är föranledda av krig eller av krigsfara som Sverige har befunnit sig i.
+K Föreskriften gäller rätten att driva sjöfart inom Sveriges sjöterritorium med utländskt fartyg, eller trafikregler, sjövägmärken eller säkerhetsanordningar för sjötrafiken.
+G Gärningspersonen överträder föreskriften.
+S Uppsåt till samtliga rekvisit. Lagen anger ingen skuldform. Utgångspunkten är då att uppsåt krävs.
+T Under krigsfara går ett utländskt lastfartyg in i en svensk farled som regeringen genom en särskild föreskrift har stängt för utländska fartyg.
+
+LAW S1980-152 | Containerlagen (1980:152) | 1980:152 | Containerlagen
+X 6,7
+
+@ v21-containerlagen-forbud | Brott mot containerlagen (användningsförbud) | 10 § | 9,10
+PEN 0 | 1 | Böter eller fängelse i högst ett år | B–F 1 år
+C Trafik
+A container förbud;osäker container;säkerhetsskylt container;tullverket container;csc-skylt
+Q plain
+O Ett förbud som Tullverket eller en annan utsedd myndighet har meddelat för att trygga att en container bara används om den är godkänd, har giltig säkerhetsskylt och har genomgått egenkontroll, eller att en container som utgör en uppenbar säkerhetsrisk inte används förrän den är återställd i säkert skick.
+G Gärningspersonen bryter mot förbudet.
+S Uppsåt.
+N Lagen gäller containrar som används i internationell trafik och som inte är särskilt konstruerade för lufttransporter.
+T Ett åkeri kör vidare med en container med kraftiga rostskador i bärande delar trots att Tullverket har förbjudit att den används innan den har reparerats.
+
+LAW S1980-424 | Lagen (1980:424) om åtgärder mot förorening från fartyg | 1980:424 | LÅFF
+X 1:2,2:1,10:7,10:10,10:11
+
+@ v21-laff-utslapp | Brott mot lagen om åtgärder mot förorening från fartyg (förbjudet utsläpp) | 10:1 | 10:1,2:2,2:3,2:4,10:6
+PEN 0 | 2 | Böter eller fängelse i högst två år | B–F 2 år
+C Djur och natur
+A oljeutsläpp;oljeutsläpp fartyg;tankspolning till havs;länsvatten;förorening från fartyg;utsläpp östersjön
+Q villkor | Har brottet begåtts på ett utländskt fartyg i Sveriges ekonomiska zon eller utanför svenskt område får åtal väckas bara om brottet avser ett förbjudet utsläpp som har medfört betydande skador på den svenska kusten eller svenska intressen i sjöterritoriet eller den ekonomiska zonen, om flaggstaten inte inom sex månader från underrättelsen har inlett ett rättsligt förfarande eller om flaggstaten upprepade gånger har underlåtit att ingripa mot överträdelser på sina fartyg. I övriga fall gäller allmänt åtal.
+G Gärningspersonen gör minst ett av:
+  | Släpper ut olja från ett fartyg inom Sveriges sjöterritorium eller ekonomiska zon eller i Östersjöområdet utanför dessa vattenområden.
+  | Släpper ut olja från ett fartyg i andra vattenområden i strid med föreskrifter om förbud mot utsläpp.
+  | Släpper ut andra skadliga ämnen än olja från ett fartyg i strid med föreskrifter om förbud mot sådana utsläpp.
+  | Begränsar inte så långt det är möjligt ett utsläpp av skadliga ämnen som omfattas av utsläppsförbud och som sker från ett fartyg till följd av en olyckshändelse.
+K Utsläppet härrör från eller står i samband med fartygets drift.
+S Uppsåt eller oaktsamhet.
+U Gärningen är belagd med strängare straff i brottsbalken eller miljöbalken.
+N Fartygets redare eller ägare döms som om han eller hon själv hade begått gärningen, om redaren eller ägaren inte har gjort vad som skäligen kan fordras för att förhindra den. Vid förbjudna oljeutsläpp som inte är obetydliga tas dessutom en vattenföroreningsavgift ut.
+T En maskinist pumpar på natten ut oljehaltigt länsvatten direkt i Östersjön i stället för att lämna det i hamn.
+
+@ v21-laff-befalhavares-tillsyn | Brott mot lagen om åtgärder mot förorening från fartyg (bristande tillsyn) | 10:2 | 10:2
+PEN 0 | 2 | Böter eller fängelse i högst två år | B–F 2 år
+C Djur och natur
+A befälhavare oljeutsläpp;bristande tillsyn fartyg;ansvar utsläpp kapten;maskinchef utsläpp
+Q villkor | Har brottet begåtts på ett utländskt fartyg i Sveriges ekonomiska zon eller utanför svenskt område får åtal väckas bara om brottet avser ett förbjudet utsläpp som har medfört betydande skador på den svenska kusten eller svenska intressen i sjöterritoriet eller den ekonomiska zonen, om flaggstaten inte inom sex månader från underrättelsen har inlett ett rättsligt förfarande eller om flaggstaten upprepade gånger har underlåtit att ingripa mot överträdelser på sina fartyg. I övriga fall gäller allmänt åtal.
+K Gärningspersonen är befälhavare på fartyget, eller ett annat befäl som befälhavaren har delegerat ansvaret för tillsynen över hanteringen av skadliga ämnen ombord till eller som har det ansvaret till följd av tjänstens beskaffenhet.
+G Gärningspersonen brister i den tillsyn som behövs för att utsläpp inte ska ske i strid med lagen eller föreskrifter som har meddelats med stöd av lagen.
+S Uppsåt eller oaktsamhet.
+T En befälhavare kontrollerar aldrig hur maskinpersonalen hanterar oljerester ombord, och personalen kan därför tömma dem i havet.
+
+@ v21-laff-trafikforbud-forelaggande | Brott mot lagen om åtgärder mot förorening från fartyg (trafikbegränsning, förbud och föreläggande) | 10:3 | 10:3,7:1,7:2,7:4,7:5,7:6,7:6a,10:6,10:7
+PEN 0 | 1 | Böter eller fängelse i högst ett år | B–F 1 år
+C Djur och natur
+A fartyg avgångsförbud;nyttjandeförbud fartyg;läktring förbud;enkelskrov tanker;anlöpsförbud;kvarhållet fartyg
+Q villkor | Har brottet begåtts på ett utländskt fartyg i Sveriges ekonomiska zon får åtal väckas bara om brottet avser ett förbjudet utsläpp som har medfört betydande skador på den svenska kusten eller svenska intressen i sjöterritoriet eller den ekonomiska zonen, om flaggstaten inte inom sex månader från underrättelsen har inlett ett rättsligt förfarande eller om flaggstaten upprepade gånger har underlåtit att ingripa mot överträdelser på sina fartyg. I övriga fall gäller allmänt åtal.
+G Gärningspersonen bryter mot minst ett av:
+  | En föreskrift om begränsning av eller förbud mot trafik i farvatten inom Sveriges sjöterritorium eller ekonomiska zon som har meddelats för att förebygga förorening.
+  | En föreskrift om läktring av skadliga ämnen, till exempel ett förbud mot läktring inom ett visst område.
+  | Ett förbud eller föreläggande som Transportstyrelsen eller en annan myndighet har meddelat på grund av väsentliga brister hos fartyget eller på grund av ett utsläpp eller en befarad förorening, till exempel förbud mot avgång eller vidare resa, förbud mot lastning, lossning eller bunkring eller föreläggande att följa en viss färdväg eller anlöpa en viss hamn.
+  | Ett förbud mot att anlöpa eller avgå från svensk hamn eller mot vidare resa som har meddelats för att fartyget saknar ett certifikat som det ska ha ombord enligt sjölagen.
+  | En föreskrift om förbud för fartyg att anlöpa svensk hamn, eller ett beslut om förbud för ett oljetankfartyg med enkelskrov att anlöpa svensk hamn.
+S Uppsåt eller oaktsamhet.
+U Förbudet eller föreläggandet har förenats med vite.
+N Fartygets redare eller ägare döms som om han eller hon själv hade begått gärningen, om redaren eller ägaren inte har gjort vad som skäligen kan fordras för att förhindra den.
+T En befälhavare lämnar hamnen med ett tankfartyg trots att Transportstyrelsen har förbjudit fartyget att avgå innan ett läckande rörsystem har lagats.
+
+@ v21-laff-dagbocker-rapportering | Brott mot lagen om åtgärder mot förorening från fartyg (certifikat, hantering, dagböcker och rapportering) | 10:4 | 10:4,4:2,4:3,5:1,5:2,6:1,7:3,10:6
+PEN 0 | 0.5 | Böter eller fängelse i högst sex månader | B–F 6 mån
+C Djur och natur
+A oljedagbok;rapportera utsläpp;fartyg utan certifikat;iopp-certifikat;besiktning fartyg miljö
+Q villkor | Har brottet begåtts på ett utländskt fartyg i Sveriges ekonomiska zon får åtal väckas bara om brottet avser ett förbjudet utsläpp som har medfört betydande skador på den svenska kusten eller svenska intressen i sjöterritoriet eller den ekonomiska zonen, om flaggstaten inte inom sex månader från underrättelsen har inlett ett rättsligt förfarande eller om flaggstaten upprepade gånger har underlåtit att ingripa mot överträdelser på sina fartyg. I övriga fall gäller allmänt åtal.
+G Gärningspersonen gör minst ett av:
+  | Använder som befälhavare ett fartyg i strid med ett föreskrivet förbud mot att använda fartyg till sjöfart när det saknar certifikat eller inte underhålls eller drivs enligt föreskrifterna om konstruktion, utrustning och drift.
+  | Bryter mot en föreskrift om hur skadliga ämnen som transporteras i förpackad form, i fraktcontainrar eller på liknande sätt ska hanteras.
+  | Bryter mot en föreskrift om dagböcker och andra handlingar om hanteringen av skadliga ämnen ombord, till exempel oljedagbok.
+  | Bryter mot en föreskrift om skyldighet att rapportera utsläpp av skadliga ämnen och händelser som innebär risk för förorening eller att lämna uppgifter om fartyget och dess last.
+  | Håller inte på begäran dagböcker och andra handlingar tillgängliga för Polismyndigheten, Kustbevakningen eller tillsynsmyndigheten (bara uppsåt).
+  | Underlåter som redare eller ägare att se till att ett svenskt fartyg besiktas innan det sätts i trafik och därefter regelbundet.
+S Uppsåt eller oaktsamhet. För den som inte håller handlingar tillgängliga krävs uppsåt.
+N Om redaren eller ägaren inte gör vad som skäligen kan fordras för att förhindra att föreskrifter om användningsförbud eller om hantering av förpackade skadliga ämnen åsidosätts, döms redaren eller ägaren som om han eller hon själv hade begått gärningen.
+T En befälhavare låter bli att rapportera att fartyget har läckt bunkerolja efter en grundkänning i skärgården.
+T En maskinchef för inga anteckningar i oljedagboken om var fartygets oljerester har lämnats.
+
+@ v21-laff-mottagning-oriktig-uppgift | Brott mot lagen om åtgärder mot förorening från fartyg (lastningsförbud, oriktig uppgift och märkning av olja) | 10:5 | 10:5,3:6,7:11,10:6
+PEN 0 | 0 | Böter | Böter
+C Djur och natur
+A oriktig uppgift certifikat fartyg;märkning av olja;barlastvatten mottagning;tankspolvatten;lasta fartyg förbud
+Q plain
+G Gärningspersonen gör minst ett av:
+  | Lastar eller reparerar ett fartyg hos den som ansvarar för en mottagningsanordning men som underlåter att ta hand om oljehaltigt barlast- eller tankspolvatten från fartyget, eller bryter mot en föreskrift om mottagning av sådant vatten eller om uppgifter om dess innehåll.
+  | Lämnar en oriktig uppgift till en tillsynsmyndighet för att få ett certifikat enligt lagen eller för att få giltighetstiden för ett sådant certifikat förlängd (bara uppsåt).
+  | Bryter som befälhavare mot en föreskrift om sådan märkning av olja ombord som behövs för att det ska gå att fastställa varifrån förorenande olja har kommit.
+S Uppsåt eller oaktsamhet. För oriktig uppgift krävs uppsåt.
+N Om redaren eller ägaren inte gör vad som skäligen kan fordras för att förhindra att en föreskrift om märkning av olja åsidosätts, döms redaren eller ägaren som om han eller hon själv hade begått gärningen.
+T En redare uppger felaktigt för Transportstyrelsen att fartygets oljeavskiljare har bytts ut för att få fartygets certifikat förlängt.
+
+LAW S1983-929 | Mönstringslagen (1983:929) | 1983:929 | Mönstringslagen
+X 3,5,7,8
+
+@ v21-monstringslagen | Brott mot mönstringslagen | 29 § | 29,9,10,11,12,13,14,24
+PEN 0 | 0 | Böter | Böter
+C Trafik
+A sjömansrulla;sjöfartsbok;sjömansregistret;läkarintyg sjöman;bemanning handlingar
+Q plain
+K Gärningspersonen är redare eller befälhavare på ett svenskt handelsfartyg, eller på ett utländskt handelsfartyg som i huvudsak obemannat förhyrs av en svensk redare.
+G Gärningspersonen gör minst ett av:
+  | Förvissar sig som redare eller befälhavare inte om att en sjöman som tillträder en befattning ombord har giltig sjöfartsbok, läkarintyg, föreskriven behörighet och, om sjömannen är under 18 år, vårdnadshavarens tillstånd.
+  | Rapporterar som redare inte omedelbart till sjömansregistret när en sjöman tillträder eller frånträder en befattning ombord.
+  | Ser som befälhavare inte till att det ombord finns en sjömansrulla med kopior av alla sjömäns tjänstgöringsbesked, ordnad så att den aktuella bemanningen lätt kan utläsas.
+  | Ser som redare inte till att anteckningar om tjänstgöringen ombord förs in i sjömannens sjöfartsbok.
+  | Håller inte på begäran sjömansrullan och andra handlingar om bemanningen tillgängliga för Transportstyrelsen eller en annan tillsynsmyndighet.
+  | Lämnar inte på Transportstyrelsens begäran uppgifter om anställda sjömän till sjömansregistret.
+S Uppsåt eller oaktsamhet.
+N Lagen gäller inte fartyg med en bruttodräktighet under 20 och inte heller statsfartyg som används för annat än att transportera gods eller passagerare i allmän trafik.
+T En befälhavare låter en nyanställd matros börja arbeta ombord utan att kontrollera att han har sjöfartsbok och giltigt läkarintyg.
+
+LAW S1985-126 | Lagen (1985:126) om åtgärder till skydd för svensk sjöfart | 1985:126 | Lagen om skydd för svensk sjöfart
+
+@ v21-skydd-svensk-sjofart | Brott mot lagen om åtgärder till skydd för svensk sjöfart | 3 § | 1,2,3
+PEN 0 | 0.5 | Böter eller fängelse i högst sex månader | B–F 6 mån
+C Trafik
+A sjöfart motåtgärder;befraktning förbud;hamn förbud utländskt fartyg;diskriminering svensk sjöfart
+Q villkor | Åtal får väckas bara efter förordnande av regeringen.
+O En föreskrift som regeringen har meddelat för att tillvarata svenska intressen i internationell sjöfart, till exempel när svenska fartyg diskrimineras av en främmande stat.
+G Gärningspersonen bryter mot föreskriften, som kan avse minst ett av:
+  | Förbud eller inskränkning för näringsidkare att ingå avtal om befraktning av eller transport med fartyg som är registrerade i den främmande staten.
+  | Förbud eller inskränkning för innehavare av svensk hamn att låta fartyg som är registrerade i den främmande staten anlöpa hamnen.
+  | Förbud för näringsidkare att utan särskilt tillstånd låta svenska fartyg anlöpa hamnar i den främmande staten eller att ställa svenska fartyg till förfogande för den staten eller företag i den.
+S Uppsåt eller oaktsamhet.
+T Ett importföretag befraktar ett fartyg från en stat vars fartyg regeringen genom en föreskrift har förbjudit svenska näringsidkare att befrakta.
+
+LAW S1989-532 | Lagen (1989:532) om tillstånd för anställning på fartyg | 1989:532 | Lagen om anställningstillstånd på fartyg
+X 5
+
+@ v21-anstallningstillstand-fartyg | Brott mot lagen om tillstånd för anställning på fartyg | 4 § | 1,4
+PEN 0 | 1 | Böter eller fängelse i högst ett år | B–F 1 år
+C Utlänningsbrott
+A anställningstillstånd;utländsk sjöman utan tillstånd;svart arbetskraft fartyg;arbetstillstånd fartyg
+Q plain
+G Gärningspersonen har en utlänning i sin tjänst i en befattning på ett svenskt fartyg i utrikes trafik.
+K Utlänningen har inte det anställningstillstånd som krävs.
+S Uppsåt till samtliga rekvisit. Lagen anger ingen skuldform. Utgångspunkten är då att uppsåt krävs.
+N Fängelse kan dömas ut bara när omständigheterna är försvårande, annars är straffet böter. Anställningstillstånd krävs inte för den som har permanent uppehållstillstånd i Sverige eller är medborgare i en stat inom Europeiska ekonomiska samarbetsområdet, och inte heller på fartyg som huvudsakligen används i fjärrfart. Arbetsgivaren ska dessutom betala en särskild avgift.
+T Ett rederi anställer flera matroser från ett land utanför Europa på ett svenskt fartyg i Östersjötrafik utan att de har anställningstillstånd.
+
+LAW S1990-712 | Lagen (1990:712) om undersökning av olyckor | 1990:712 | LUO
+
+@ v21-olycksundersokning-rubba-egendom | Brott mot lagen om undersökning av olyckor (rubbande av egendom och utebliven anmälan) | 13 § | 11,12,13
+PEN 0 | 0 | Böter | Böter
+C Allmän verksamhet
+A haveriutredning;rubba vrak;flygolycka vrakdelar;ta delar från olycksplats;haverikommissionen
+Q plain
+K Det har inträffat en olycka eller ett tillbud som undersöks enligt lagen, till exempel en allvarlig luftfarts-, sjö- eller järnvägsolycka.
+G Gärningspersonen gör minst ett av:
+  | Rubbar egendom som kan antas vara av betydelse för undersökningen utan tillstånd av Polismyndigheten eller den myndighet som undersöker olyckan eller tillbudet.
+  | Har tagit till vara sådan egendom, eller egendom som har transporterats med eller hör till det luftfartyg, fartyg eller spårfordon eller den spåranläggning som berörs, och anmäler inte genast detta till Polismyndigheten eller den undersökande myndigheten.
+S Uppsåt eller oaktsamhet.
+U Egendomen rubbas för att rädda människoliv eller det finns i övrigt synnerliga skäl för det.
+U Fallet är ringa.
+U Gärningen är belagd med straff i brottsbalken.
+T En person hittar vrakdelar från ett havererat flygplan på sin mark och kör bort dem till sin lada utan att kontakta polisen eller haveriutredarna.
+
+LAW S1996-19 | Lagen (1996:19) om begränsning av rätten att bedriva linjesjöfart på Gotland | 1996:19 | Lagen om linjesjöfart på Gotland
+
+@ v21-linjesjofart-gotland | Brott mot lagen om begränsning av rätten att bedriva linjesjöfart på Gotland | 2 § | 1,2
+PEN 0 | 0 | Böter | Böter
+C Trafik
+A gotlandstrafik;färja gotland utan tillstånd;linjesjöfart gotland;gotlandsfärja
+Q plain
+O En föreskrift som regeringen har meddelat om begränsning av rätten att utföra regelbundna sjötransporter mellan Gotland och svensk hamn utanför Gotland.
+G Gärningspersonen bryter mot föreskriften.
+S Uppsåt till samtliga rekvisit. Lagen anger ingen skuldform. Utgångspunkten är då att uppsåt krävs.
+T Ett rederi startar en reguljär färjelinje mellan Visby och fastlandet trots att regeringens föreskrifter inte tillåter rederiet att bedriva sådan trafik.
+
+LAW S2002-574 | Fordonslagen (2002:574) | 2002:574 | FL
+
+@ v21-fordonslagen-hindra-kontroll | Brott mot fordonslagen (hindrande av inspektion eller kontroll) | 5:1 första stycket | 5:1,5:2,2:10,2:11,2:12,2:13,2:14
+PEN 0 | 0 | Böter | Böter
+C Trafik
+A hindra flygande inspektion;vägra fordonskontroll;bilinspektör;färdskrivare kontroll;taxameter kontroll;lastkontroll
+Q plain
+O En flygande inspektion, en polismans kontroll av fordonets beskaffenhet och utrustning, en kontroll av fordonets last, en vägkontroll av färdskrivaren eller en vägkontroll av taxametern.
+G Gärningspersonen hindrar eller försvårar inspektionen eller kontrollen.
+S Uppsåt.
+U Straff kan dömas ut enligt brottsbalken eller enligt lagen om straff för vissa trafikbrott.
+T En lastbilsförare låser hytten och vägrar ge bilinspektören tillgång till färdskrivaren vid en vägkontroll.
+
+LAW S2003-364 | Fartygssäkerhetslagen (2003:364) | 2003:364 | FSL
+X 8:5
+
+@ v21-fsl-forbud-forelaggande | Brott mot fartygssäkerhetslagen (förbud och föreläggande) | 8:1 | 8:1,6:1,6:2,6:3,6:11,6:12,7:7
+PEN 0 | 1 | Böter eller fängelse i högst ett år | B–F 1 år
+C Trafik
+A nyttjandeförbud fartyg;reseförbud fartyg;kvarhållet fartyg;avgå trots förbud;ej sjövärdigt fartyg;transportstyrelsen förbud
+Q plain
+G Gärningspersonen bryter mot minst ett av:
+  | Ett förbud mot ett fartygs resa, till exempel för att fartyget inte är sjövärdigt, inte är betryggande lastat eller bemannat, medför för många passagerare eller saknar ett certifikat som det ska ha.
+  | Ett förbud mot att använda en anordning för arbetet, ett arbetsredskap, en lokal, en arbetsprocess, en arbetsmetod eller ett ämne ombord.
+  | Ett förbud mot tillträde till hamn enligt föreskrifter om utvisning från svensk hamn och förbud för fartyg att anlöpa svensk hamn.
+  | Ett föreläggande för redaren eller ägaren att avhjälpa en brist inom en viss tid, eller ett föreläggande mot befälhavaren eller den som har skyddsansvar om att följa bestämmelserna om fartygsarbete.
+S Uppsåt eller oaktsamhet.
+U Förbudet eller föreläggandet är förenat med vite.
+U Gärningen är belagd med strängare straff i brottsbalken eller sjölagen.
+T En befälhavare avgår med en passagerarbåt trots att Transportstyrelsen har förbjudit resan på grund av rostskador i skrovet.
+
+@ v21-fsl-certifikat-handlingar | Brott mot fartygssäkerhetslagen (certifikat, handlingar och fribordsmärken) | 8:2 punkterna 1–4 | 8:2,3:1,3:2,3:3,3:9
+PEN 0 | 0.5 | Böter eller fängelse i högst sex månader | B–F 6 mån
+C Trafik
+A fartyg utan certifikat;passagerarfartygscertifikat;för många passagerare;fartcertifikat;fribordsmärke;oriktiga uppgifter certifikat
+Q plain
+G Gärningspersonen gör minst ett av:
+  | Lämnar oriktiga uppgifter för att få ett dokument om godkänd säkerhetsorganisation eller ett certifikat, eller för att få giltighetstiden för ett sådant dokument eller certifikat förlängd (bara uppsåt).
+  | Använder som redare eller befälhavare ett fartyg till sjöfart utan ett dokument om godkänd säkerhetsorganisation, ett certifikat eller en annan handling som ska ha utfärdats för rederiet, fartyget, dess utrustning, lastning eller säkerhetsorganisation, till exempel fartcertifikat eller passagerarfartygscertifikat.
+  | Använder som redare eller befälhavare ett fartyg eller dess utrustning i strid med en bestämmelse i ett sådant dokument eller certifikat, till exempel genom att ta ombord fler passagerare än certifikatet tillåter.
+  | Använder som redare eller befälhavare ett fartyg till sjöfart utan att det är försett med föreskrivna fribordsmärken.
+S Uppsåt eller oaktsamhet. För oriktiga uppgifter krävs uppsåt.
+U Gärningen är belagd med strängare straff i brottsbalken eller sjölagen.
+T En befälhavare tar ombord 150 passagerare på en skärgårdsbåt vars passagerarfartygscertifikat tillåter högst 100.
+T Ett rederi kör turer med betalande passagerare med en båt som inte har något passagerarfartygscertifikat.
+
+@ v21-fsl-sakerhetsbesattning | Brott mot fartygssäkerhetslagen (säkerhetsbesättning och bemanning) | 8:2 punkterna 5–7 | 8:2,3:10,3:11,3:14,3:16
+PEN 0 | 0.5 | Böter eller fängelse i högst sex månader | B–F 6 mån
+C Trafik
+A underbemannat fartyg;säkerhetsbesättning;bemanningsföreskrifter;för liten besättning;obehörig besättning
+Q plain
+G Gärningspersonen gör minst ett av:
+  | Framför som befälhavare ett fartyg i strid med vad som gäller i fråga om säkerhetsbesättning eller bemanningsföreskrifter, till exempel med färre eller mindre kvalificerade besättningsmedlemmar än beslutet om säkerhetsbesättning anger (uppsåt eller grov oaktsamhet).
+  | Underlåter som redare att göra vad som skäligen kan fordras för att förhindra att fartyget framförs i strid med vad som gäller i fråga om säkerhetsbesättning eller bemanningsföreskrifter (uppsåt eller grov oaktsamhet).
+  | Underlåter som redare eller befälhavare att göra vad som skäligen kan fordras för att förhindra att den som ingår i säkerhetsbesättningen och tillhör däcks- eller maskinpersonalen utan tillstånd anställs av någon annan än redaren eller ägaren (uppsåt eller oaktsamhet).
+S Uppsåt eller grov oaktsamhet vid framförande i strid med bemanningsreglerna. Uppsåt eller oaktsamhet i fråga om anställning av säkerhetsbesättningen.
+U Befälhavaren har beslutat att framföra fartyget trots brist i besättningen på grund av ett plötsligt sjukdomsfall eller en annan oförutsedd händelse, på de villkor som lagen anger.
+U Gärningen är belagd med strängare straff i brottsbalken eller sjölagen.
+N Den som av oaktsamhet som inte är grov framför ett fartyg i strid med bemanningsreglerna döms till böter enligt 8 kap. 3 §, om förseelsen inte är ringa.
+T En befälhavare avgår medvetet med ett lastfartyg med bara hälften av den besättning som Transportstyrelsens beslut om säkerhetsbesättning kräver.
+
+@ v21-fsl-tillsyn-lots-uppgifter | Brott mot fartygssäkerhetslagen (tillsyn, lotsplikt och uppgiftsskyldighet) | 8:2 punkterna 8–10 | 8:2,5:20,5:21
+PEN 0 | 0.5 | Böter eller fängelse i högst sex månader | B–F 6 mån
+C Trafik
+A lotsplikt;gå utan lots;fartyg ej besiktat;tillsyn fartyg;undvika besiktning fartyg
+Q plain
+G Gärningspersonen gör minst ett av:
+  | Underlåter som redare eller ägare att se till att fartyget genomgår tillsyn, eller som redare att se till att rederiverksamheten genomgår tillsyn.
+  | Underlåter att anlita lots när han eller hon är skyldig att göra det på grund av en särskild föreskrift.
+  | Bryter mot en föreskrift om skyldighet att lämna de uppgifter som tillsynsmyndigheten behöver för att kunna fullgöra tillsynen.
+S Uppsåt eller oaktsamhet.
+U Gärningen är belagd med strängare straff i brottsbalken eller sjölagen.
+T En befälhavare går in genom en lotspliktig farled med ett stort tankfartyg utan att beställa lots.
+
+@ v21-fsl-befalhavarens-skyldigheter | Brott mot fartygssäkerhetslagen (befälhavarens skyldigheter ombord) | 8:3 punkterna 1, 3, 4 och 8–10 | 8:3,2:6,2:7,4:6,4:7,4:12,4:13
+PEN 0 | 0 | Böter | Böter
+C Trafik
+A fartyg ej sjöklart;överlastat fartyg;lastningsföreskrift;minderårig fartygsarbete;skyddsombud stopp fartyg;kost och vatten ombord
+Q plain
+G Gärningspersonen gör minst ett av:
+  | Använder som befälhavare ett fartyg till sjöfart i strid med en lastningsföreskrift, om inte förseelsen är ringa.
+  | Underlåter som befälhavare att se till att fartyget görs sjöklart innan en resa påbörjas, eller underlåter som teknisk chef att före resan se till att maskineriet är i behörigt skick, att brandskyddsanordningarna är klara till omedelbart bruk och att det som behövs för maskineriets drift finns ombord.
+  | Underlåter som befälhavare att se till att nytillträdande ombordanställda får kännedom om fartyget, grundläggande säkerhetsbestämmelser eller åtgärder vid sjöolycka.
+  | Bryter som befälhavare mot skyldigheten att se till att minderåriga som anlitas till eller utför fartygsarbete i yrkesmässig verksamhet har fyllt sexton år och fullgjort sin skolplikt, eller mot föreskrifter om arbetsmiljön ombord.
+  | Försummar som befälhavare sina skyldigheter att se till att kost och vatten i tillräcklig mängd och av fullgod kvalitet medförs och att ha uppsikt över bostads- och hälsovårdsförhållandena ombord.
+  | Beordrar som befälhavare arbete i strid med ett skyddsombuds beslut att avbryta arbetet, utan godtagbart skäl och så att intresset av att skyddsarbetet ombord bedrivs i behörig ordning uppenbart åsidosätts (bara uppsåt).
+S Uppsåt eller oaktsamhet. För arbete i strid med ett skyddsombuds beslut krävs uppsåt.
+U Gärningen är belagd med strängare straff i brottsbalken eller sjölagen.
+T En befälhavare avgår med ett lastfartyg som är lastat djupare än lastningsföreskrifterna tillåter.
+T En befälhavare beordrar besättningen att fortsätta ett arbete i en lasttank som skyddsombudet just har stoppat på grund av gasrisk, utan att ha något skäl för det.
+
+@ v21-fsl-bemanning-behorighet | Brott mot fartygssäkerhetslagen (bemanning av oaktsamhet och tjänstgöring utan behörighet) | 8:3 punkterna 5–7 | 8:3,3:11,3:14
+PEN 0 | 0 | Böter | Böter
+C Trafik
+A obehörig befälhavare;styrman utan behörighet;underbemannat fartyg;saknar behörighet fartyg;vaktansvarig utan behörighet
+Q plain
+G Gärningspersonen gör minst ett av:
+  | Framför som befälhavare av oaktsamhet ett fartyg i strid med vad som gäller i fråga om säkerhetsbesättning eller bemanningsföreskrifter, om inte förseelsen är ringa.
+  | Underlåter som redare av oaktsamhet att göra vad som skäligen kan fordras för att förhindra att fartyget framförs i strid med vad som gäller i fråga om säkerhetsbesättning eller bemanningsföreskrifter, om inte förseelsen är ringa.
+  | Tjänstgör på ett fartyg som befälhavare, teknisk chef eller ansvarig för vakt utan den behörighet som är föreskriven i beslutet om säkerhetsbesättning eller i bemanningsföreskrifterna (uppsåt eller oaktsamhet).
+S Oaktsamhet vid framförande i strid med bemanningsreglerna. Uppsåt eller oaktsamhet vid tjänstgöring utan behörighet.
+U Den som tjänstgör utan behörighet har uppehållit befattningen på grund av ett plötsligt sjukdomsfall eller en annan liknande händelse.
+U Gärningen är belagd med strängare straff i brottsbalken eller sjölagen.
+N Den som uppsåtligen eller av grov oaktsamhet framför ett fartyg i strid med bemanningsreglerna döms till böter eller fängelse i högst sex månader enligt 8 kap. 2 §.
+T En person tjänstgör som befälhavare på en passagerarbåt i skärgårdstrafik utan att ha den fartygsbefälsbehörighet som beslutet om säkerhetsbesättning kräver.
+
+@ v21-fsl-handlingar-uppgifter | Brott mot fartygssäkerhetslagen (passagerarregistrering, handlingar och uppgifter) | 8:3 punkterna 2 och 11–13 | 8:3,5:20,5:21,5:24,5:26,5:30,7:2
+PEN 0 | 0 | Böter | Böter
+C Trafik
+A passagerarlista;registrering passagerare;oriktiga uppgifter transportstyrelsen;certifikat ombord;anmäla olycka fartyg;ritningar fartyg
+Q plain
+G Gärningspersonen gör minst ett av:
+  | Bryter som redare eller befälhavare mot en föreskrift om registrering av ombordvarande på passagerarfartyg.
+  | Försummar skyldigheten att ge in ritningar till Transportstyrelsen när ett fartyg byggs eller byggs om.
+  | Försummar som befälhavare att se till att en kopia av rederiets dokument om godkänd säkerhetsorganisation och fartygets certifikat finns ombord och hålls tillgängliga vid tillsyn.
+  | Lämnar oriktiga uppgifter till en tillsynsmyndighet vid tillsyn eller annars i fråga om en åtgärd som myndigheten har ålagt.
+  | Försummar en föreskriven skyldighet att anmäla olycksfall, olyckstillbud, sjukdomsfall eller skador av betydelse för fartygets sjövärdighet eller att lämna uppgifter inför ankomst till hamn eller vid farliga väder-, sjö- eller isförhållanden.
+S Uppsåt eller oaktsamhet.
+U Gärningen är belagd med strängare straff i brottsbalken eller sjölagen.
+N Den som uppsåtligen lämnar oriktiga uppgifter för att få ett certifikat eller ett dokument om godkänd säkerhetsorganisation döms i stället enligt 8 kap. 2 §.
+T Ett färjerederi avgår på en längre resa utan att registrera vilka passagerare som finns ombord, trots att föreskrifterna kräver det.
+
+LAW S2003-367 | Lagen (2003:367) om lastning och lossning av bulkfartyg | 2003:367 | Bulkfartygslagen
+X 1,2,3
+
+@ v21-bulkfartyg-skyldigheter | Brott mot lagen om lastning och lossning av bulkfartyg (skyldigheter vid lastning och lossning) | 19 § | 19,6,7,8
+PEN 0 | 0.5 | Böter eller fängelse i högst sex månader | B–F 6 mån
+C Trafik
+A bulkfartyg lastning;terminal bulklast;malmfartyg lastning;lastningsplan;terminalrepresentant
+Q plain
+G Gärningspersonen gör minst ett av:
+  | Fullgör som terminaloperatör inte sina skyldigheter, till exempel att kontrollera att bulkfartyget och terminalen uppfyller föreskrivna krav, att utse terminalrepresentant, att tillhandahålla informationsbroschyrer till befälhavaren och att upprätthålla ett kvalitetssäkringssystem.
+  | Fullgör som befälhavare inte sina skyldigheter, till exempel att ansvara för att lastning och lossning sker på ett säkert sätt, att i god tid informera terminalen före ankomsten och att före lastning kontrollera att nödvändig lastinformation har lämnats.
+  | Fullgör som terminalrepresentant inte sina skyldigheter, till exempel att utan dröjsmål anmäla uppenbara brister ombord som kan äventyra säkerheten vid lastning eller lossning till befälhavaren och tillsynsmyndigheten.
+S Uppsåt eller oaktsamhet.
+N Lagen gäller bulkfartyg som anlöper en terminal för att lasta eller lossa fasta bulklaster. Med befälhavare jämställs den som befälhavaren har utsett att ansvara för lastning eller lossning.
+T En terminalrepresentant ser tydliga sprickor i lastrumsluckorna på ett malmfartyg men låter lastningen fortsätta utan att anmäla bristen till befälhavaren eller tillsynsmyndigheten.
+
+@ v21-bulkfartyg-avgangsforbud | Brott mot lagen om lastning och lossning av bulkfartyg (avgångsförbud) | 20 § | 20,13,21,22
+PEN 0 | 1 | Böter eller fängelse i högst ett år | B–F 1 år
+C Trafik
+A avgångsförbud bulkfartyg;skadat fartyg avgår;kvarhållet fartyg;reparation före avgång
+Q plain
+O Ett förbud för ett bulkfartyg att avgå från terminalen, som tillsynsmyndigheten har meddelat därför att en skada på fartyget eller dess utrustning i samband med lastning eller lossning måste repareras omedelbart.
+G Gärningspersonen bryter mot förbudet.
+S Uppsåt eller oaktsamhet.
+U Förbudet har förenats med vite.
+N Fartygets redare eller ägare döms som om han eller hon själv hade begått gärningen, om redaren eller ägaren har underlåtit att göra vad som skäligen kunnat fordras för att förhindra det inträffade.
+T En befälhavare lämnar kajen med ett bulkfartyg vars skrov har skadats av en lastkran, trots att tillsynsmyndigheten har förbjudit avgång innan skadan har reparerats.

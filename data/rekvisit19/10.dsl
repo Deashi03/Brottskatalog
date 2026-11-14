@@ -62,7 +62,7 @@ R grovt
 K Gärningspersonen har tystnadsplikt enligt lag, annan författning eller förordnande eller förbehåll med stöd av sådan.
 G Gärningspersonen röjer uppgiften eller utnyttjar den olovligen.
 S Uppsåt. Vid oaktsamhet är straffet böter.
-U Gärningen är ringa.
+U Gärningen har begåtts av oaktsamhet och är ringa.
 U Gärningen är belagd med straff enligt en annan bestämmelse.
 
 @ v04-grovt-brott-mot-tystnadsplikt | Grovt brott mot tystnadsplikt | BrB 20:3 tredje stycket

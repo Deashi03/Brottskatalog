@@ -1,0 +1,470 @@
+LAW S2004-865 | Förordningen (2004:865) om kör- och vilotider samt färdskrivare, m.m. | 2004:865 | Kör- och vilotidsförordningen
+
+@ v21-kor-vilotider-hindra-kontroll | Brott mot förordningen om kör- och vilotider samt färdskrivare (hindrande av kontroll) | 9:1 | 9:1,9:12
+PEN 0 | 0 | Böter | Böter
+C Trafik
+A hindra kontroll färdskrivare;vägrar visa förarkort;försvåra kör- och vilotidskontroll;företagskontroll
+Q plain
+K En kontroll av kör- och vilotider eller färdskrivare pågår eller ska göras, på väg eller i ett företags lokaler.
+G Gärningspersonen hindrar eller försvårar kontrollen.
+S Uppsåt.
+U Straff kan dömas ut enligt brottsbalken eller lagen om straff för vissa trafikbrott.
+U Överträdelsen kan leda till sanktionsavgift enligt förordningen eller har medfört en sanktion i en annan stat inom EES eller i Schweiz.
+T En lastbilsförare som stoppas vid en vägkontroll låser färdskrivaren och vägrar låta polisen läsa av den.
+T Ett åkeri gömmer undan förarkortsdata när Transportstyrelsen kommer för en företagskontroll.
+
+@ v21-kor-vilotider-typgodkannande | Brott mot förordningen om kör- och vilotider samt färdskrivare (typgodkännande av färdskrivare) | 9:2 | 9:2,9:12
+PEN 0 | 0 | Böter | Böter
+C Trafik
+A typgodkännande färdskrivare;oriktig uppgift ansökan;förbud sälja färdskrivare;färdskrivarkort
+Q plain
+G Gärningspersonen gör minst ett av:
+  | Lämnar oriktig uppgift i en ansökan om typgodkännande av färdskrivarutrustning.
+  | Bryter mot ett förbud som har meddelats enligt artikel 16.4 i EU:s färdskrivarförordning (nr 165/2014), det vill säga ett förbud mot att släppa ut på marknaden eller ta i bruk utrustning som inte stämmer överens med den godkända typen.
+S Uppsåt eller oaktsamhet.
+U Den oriktiga uppgiften har saknat betydelse för frågan om typgodkännande eller har inte varit ägnad att vilseleda.
+U Straff kan dömas ut enligt brottsbalken eller lagen om straff för vissa trafikbrott.
+U Överträdelsen kan leda till sanktionsavgift enligt förordningen eller har medfört en sanktion i en annan stat inom EES eller i Schweiz.
+T En tillverkare anger felaktiga provresultat i sin ansökan om typgodkännande av en ny färdskrivare.
+
+LAW S2007-90 | Vägmärkesförordningen (2007:90) | 2007:90 | VMF
+
+@ v21-vagmarken-olovlig-anordning | Brott mot vägmärkesförordningen (olovlig åtgärd med vägmärke) | 9:1 andra stycket | 9:1,8:4
+PEN 0 | 0 | Böter | Böter
+C Trafik
+A egen vägskylt;sätta upp vägmärke;ta bort vägmärke;falsk parkeringsskylt;hemmagjord skylt
+Q plain
+N Den som hänger något ovidkommande på ett vägmärke så att det inte kan upptäckas eller förstås döms i stället till penningböter enligt första stycket.
+G Gärningspersonen gör minst ett av:
+  | Sätter upp, underhåller eller tar bort ett vägmärke eller en annan anordning för anvisningar för trafiken utan att vara den som ansvarar för åtgärden eller vara anlitad av den ansvarige.
+  | Utför en sådan åtgärd på något annat sätt än vad förordningen eller föreskrifterna anger.
+  | Sätter upp en anordning som kan förväxlas med eller har samma innebörd som ett vägmärke eller en annan anordning enligt förordningen.
+S Uppsåt eller oaktsamhet.
+U Det har uppstått fara eller hinder för trafiken, till exempel efter en trafikolycka eller en skada på vägen, åtgärden behövs för säkerheten och den ansvarige kan inte avvaktas.
+T En villaägare sätter upp ett eget märke som ser ut som ett förbud mot infart med motordrivet fordon på den allmänna gatan utanför huset.
+T En person skruvar ner ett vägmärke om hastighetsbegränsning och tar det med sig.
+
+LAW S2009-211 | Fordonsförordningen (2009:211) | 2009:211 | FF
+
+@ v21-fordonsforordningen-oriktig-uppgift | Brott mot fordonsförordningen (oriktig uppgift vid godkännande eller besiktning) | 8:5 | 8:5,8:12
+PEN 0 | 0 | Böter | Böter
+C Trafik
+A oriktig uppgift registreringsbesiktning;typgodkännande fordon;falskt intyg om överensstämmelse;CoC;enskilt godkännande
+Q plain
+G Gärningspersonen lämnar oriktig uppgift i minst ett av:
+  | En ansökan om typgodkännande.
+  | Ett intyg om överensstämmelse eller ett typintyg.
+  | Ett typgodkännandemärke eller en motsvarande märkning.
+  | Samband med provning för ett enskilt godkännande, en registreringsbesiktning, en mopedbesiktning eller en lämplighetsbesiktning.
+  | En ansökan om att bli utsedd till organ som ska anmälas som teknisk tjänst.
+S Uppsåt eller oaktsamhet.
+U Den oriktiga uppgiften har saknat betydelse för frågan om godkännande eller har inte varit ägnad att vilseleda.
+U Straff kan dömas ut enligt brottsbalken eller lagen om straff för vissa trafikbrott.
+T En person som har importerat en bil uppger vid registreringsbesiktningen en felaktig årsmodell och felaktiga avgasvärden för att få bilen godkänd.
+
+@ v21-fordonsforordningen-tillverkarens-skyldigheter | Brott mot fordonsförordningen (tillverkarens intyg, märkning och anmälan) | 8:6 | 8:6,3:24,3:26,3:28,8:12
+PEN 0 | 0 | Böter | Böter
+C Trafik
+A intyg om överensstämmelse;typgodkännandemärke saknas;tillverkare fordon;återkallelse fordon anmälan
+Q plain
+K Gärningspersonen är en tillverkare som har ett typgodkännande.
+G Gärningspersonen gör minst ett av:
+  | Utfärdar inte intyg om överensstämmelse för fordon som tillverkas enligt en nationellt typgodkänd fordonstyp, eller låter inte intyget följa med fordonet.
+  | Utfärdar intyg om överensstämmelse för ett fordon som redan har tagits upp i ett sådant intyg eller typintyg eller som har godkänts vid en registreringsbesiktning.
+  | Förser inte fordon, system, komponenter eller separata tekniska enheter av godkänd typ med typgodkännandemärke eller annan föreskriven märkning.
+  | Anmäler inte till godkännandemyndigheten att tillverkningen upphör, att sålda fordon återkallas, att uppgifterna i det tekniska underlaget ändras eller att ett nationellt typgodkännande upphör att gälla.
+  | Bryter mot föreskrifter som har meddelats för verkställigheten av dessa skyldigheter.
+S Uppsåt eller oaktsamhet.
+U Gärningen är att lämna oriktig uppgift i intyg, märkning eller ansökan. Då gäller i stället 8 kap. 5 §.
+U Straff kan dömas ut enligt brottsbalken eller lagen om straff för vissa trafikbrott.
+T En släpvagnstillverkare med nationellt typgodkännande säljer släpvagnar utan typgodkännandemärke och utan intyg om överensstämmelse.
+
+@ v21-fordonsforordningen-forsaljningsforbud | Brott mot fordonsförordningen (förbud att sälja eller ta i bruk) | 8:7 | 8:7,2:12,8:12
+PEN 0 | 0 | Böter | Böter
+C Trafik
+A försäljningsförbud fordon;farliga fordonsdelar;förbud ta i bruk;Transportstyrelsen förbud
+Q plain
+K Godkännandemyndigheten har i ett enskilt fall beslutat att vissa fordon, släpvagnar, system, komponenter eller separata tekniska enheter inte får säljas eller tas i bruk, eftersom de allvarligt äventyrar trafiksäkerheten eller allvarligt skadar miljön eller folkhälsan.
+G Gärningspersonen säljer eller tar i bruk fordon, system, komponenter eller separata tekniska enheter i strid med förbudet.
+S Uppsåt eller oaktsamhet.
+U Straff kan dömas ut enligt brottsbalken eller lagen om straff för vissa trafikbrott.
+T En återförsäljare fortsätter att sälja en typ av bromsskivor trots att Transportstyrelsen har förbjudit försäljningen på grund av allvarliga säkerhetsbrister.
+
+LAW S2010-770 | Luftfartsförordningen (2010:770) | 2010:770 | LFF
+
+@ v21-luftfartsforordningen-luftrum-trafikregler | Brott mot luftfartsförordningen (luftrum, trafikregler och drönare) | 13:1 första stycket 1, 2, 13–16 och 19 | 13:1,13:2,8:3,8:5,1:22,1:24,1:25
+PEN 0 | 0 | Böter | Böter
+C Trafik
+A drönare förbjudet område;restriktionsområde;flyga drönare utan drönarkort;UAS-zon;släppa föremål från flygplan;flyga för lågt
+Q plain
+G Gärningspersonen gör minst ett av:
+  | Flyger i strid med Transportstyrelsens föreskrifter eller beslut om restriktionsområden, geografiska UAS-zoner (drönarzoner) eller U-space-luftrum.
+  | Bryter mot Transportstyrelsens föreskrifter om trafikregler för luftfarten.
+  | Bryter mot Transportstyrelsens flygsäkerhetsföreskrifter för obemannade luftfartygssystem, modelluftfartyg, fasta ballonger och drakar, eller mot föreskrifter eller undantagsbeslut för segelflygplan, ultralätta flygplan, ballonger, hängglidare, flygskärmar och fallskärmar.
+  | Manövrerar ett obemannat luftfartyg utan att ha med sig kompetensbevis, i strid med Transportstyrelsens föreskrifter.
+  | Kastar eller släpper ut föremål från ett luftfartyg som kan medföra skador, sjukdomar eller olägenheter för människors hälsa, eller bryter mot Transportstyrelsens föreskrifter om detta.
+  | Bryter mot föreskrifter om hur buller och liknande störningar från luftfartyg ska undvikas eller begränsas.
+  | Bryter mot föreskrifter om var luftfartyg får passera Sveriges gräns och vilka flygvägar som ska följas inom landet.
+S Uppsåt eller oaktsamhet.
+U Gärningen är belagd med straff enligt brottsbalken, luftfartslagen eller annan lag.
+U Gärningen är en överträdelse av ett föreläggande som har förenats med vite.
+U Gärningen har begåtts av ringa oaktsamhet.
+T En person flyger sin drönare över ett område som Transportstyrelsen har beslutat är restriktionsområde, utan tillstånd.
+T En drönarpilot som stoppas av polis har inte med sig något kompetensbevis.
+
+@ v21-luftfartsforordningen-flygplatser-landning | Brott mot luftfartsförordningen (flygplatser och landning) | 13:1 första stycket 7–10 | 13:1,13:2,6:1,6:2,6:3,6:9,6:16
+PEN 0 | 0 | Böter | Böter
+C Trafik
+A landningsförbud;landa helikopter förbjudet;ordningsregler flygplats;obehörig på flygplats;flygplats drift
+Q plain
+G Gärningspersonen gör minst ett av:
+  | Bryter mot föreskrifter om landningsförbud, till exempel om vilka flygplatser som får användas, om start och landning på andra områden än flygplatser eller om förbud att landa inom ett visst område av hänsyn till bland annat natur, miljö och friluftsliv.
+  | Bryter mot föreskrifter om tillträde till en flygplats eller om ordningen där.
+  | Använder en flygplats i strid med Transportstyrelsens förbud eller villkor för en flygplats som inte uppfyller flygsäkerhetskraven.
+  | Bryter mot Transportstyrelsens föreskrifter eller villkor om inrättande, underhåll och drift av flygplatser.
+S Uppsåt eller oaktsamhet.
+U Gärningen är belagd med straff enligt brottsbalken, luftfartslagen eller annan lag.
+U Gärningen är en överträdelse av ett föreläggande som har förenats med vite.
+U Gärningen har begåtts av ringa oaktsamhet.
+T En helikopterpilot landar med turister i ett fjällområde där Transportstyrelsen har förbjudit landning.
+T En person går in på flygplatsens inhägnade område i strid med de föreskrifter om tillträde som gäller för flygplatsen.
+
+@ v21-luftfartsforordningen-besattning-tillstand | Brott mot luftfartsförordningen (besättning, tillstånd och rapportering) | 13:1 första stycket 3–6, 11, 12, 17, 18 och 20 | 13:1,13:2,5:1,8:14,10:9,4:4
+PEN 0 | 0 | Böter | Böter
+C Trafik
+A pilot utan certifikat med sig;befälhavare flygplan;vilotider pilot;drifttillstånd flyg;farligt gods flyg;rapportera flyghändelse
+Q plain
+G Gärningspersonen gör minst ett av:
+  | Fullgör uppgift som befälhavare på ett luftfartyg utan att uppfylla villkoren för det.
+  | Bryter, vid tjänstgöring ombord av betydelse för flygsäkerheten, mot Transportstyrelsens föreskrifter om påverkan av alkohol eller andra medel eller om arbets- och vilotider.
+  | Har som besättningsmedlem inte med sig flygcertifikat eller motsvarande handling.
+  | Bryter mot Transportstyrelsens föreskrifter om drifttillstånd, bruksflygtillstånd, utbildningstillstånd, tillstånd till luftfartsverksamhet med obemannat luftfartyg eller verksamhet enligt deklaration.
+  | Bryter mot Transportstyrelsens föreskrifter om tillstånd för att hyra in eller hyra ut luftfartyg.
+  | Bryter mot Transportstyrelsens föreskrifter eller villkor om lufttransport av visst gods.
+  | Bryter mot Transportstyrelsens föreskrifter om märkning av luftfartyg.
+  | Bryter mot föreskrifter om behörighetskrav för kontrollanter vid flygprov och instruktörer vid flygträning på marken.
+  | Fullgör inte sin skyldighet att rapportera händelser till Transportstyrelsen.
+S Uppsåt eller oaktsamhet.
+U Gärningen är belagd med straff enligt brottsbalken, luftfartslagen eller annan lag.
+U Gärningen är en överträdelse av ett föreläggande som har förenats med vite.
+U Gärningen har begåtts av ringa oaktsamhet.
+T En privatflygare kontrolleras efter landning och har inte med sig sitt flygcertifikat.
+T Ett flygföretag rapporterar inte en allvarlig händelse under flygning till Transportstyrelsen.
+
+@ v21-luftfartsforordningen-eu-bestammelser | Brott mot luftfartsförordningen (EU-bestämmelser om civil luftfart) | 13:1 a | 13:1a,13:2
+PEN 0 | 0 | Böter | Böter
+C Trafik
+A EU-regler flyg;drönare utan tillstånd;flygcertifikat saknas;trafikregler luftfart;farligt gods flyg;flygoperativa regler
+Q plain
+K Gärningen bryter mot en bestämmelse i en EU-förordning med gemensamma bestämmelser på det civila luftfartsområdet som luftfartsförordningen kompletterar.
+G Gärningspersonen bryter mot en sådan bestämmelse som avser minst ett av:
+  | Trafikregler för luftfarten.
+  | Tillstånd eller deklaration för luftfartsverksamhet med obemannat luftfartyg (drönare).
+  | Krav på att ha med sig flygcertifikat eller motsvarande handling, medicinskt intyg eller identitetskort ombord eller när ett obemannat luftfartyg manövreras.
+  | Arbets- och vilotider eller påverkan av alkohol eller andra medel vid tjänstgöring ombord av betydelse för flygsäkerheten.
+  | Drifttillstånd, bruksflygtillstånd, utbildningstillstånd, auktorisation eller deklaration för verksamhet med bemannat luftfartyg, eller tillstånd att hyra in eller hyra ut luftfartyg.
+  | Förbud att från luftfartyg kasta eller släppa ut föremål som kan medföra skador, sjukdomar eller olägenheter för människors hälsa.
+  | Förbud eller villkor för lufttransport av visst gods.
+  | Märkning av luftfartyg, inrättande, underhåll och drift av flygplatser eller rapportering av händelser.
+S Uppsåt eller oaktsamhet.
+U Gärningen är belagd med straff enligt brottsbalken, luftfartslagen eller annan lag.
+U Gärningen är en överträdelse av ett föreläggande som har förenats med vite.
+U Gärningen har begåtts av ringa oaktsamhet.
+T En person flyger en tung drönare över folksamlingar utan det tillstånd som EU:s drönarregler kräver för sådan flygning.
+T En pilot flyger lägre än den lägsta tillåtna flyghöjden enligt EU:s trafikregler för luftfarten.
+
+LAW S2017-309 | Förordningen (2017:309) om försöksverksamhet med automatiserade fordon | 2017:309 | Förordningen om försöksverksamhet med automatiserade fordon
+X 2
+
+@ v21-automatiserade-fordon-forsok-utan-tillstand | Brott mot förordningen om försöksverksamhet med automatiserade fordon | 9 § | 9,4,2
+PEN 0 | 0 | Böter | Böter
+C Trafik
+A självkörande bil test;autonomt fordon utan tillstånd;försök självkörande;förarlös buss
+Q plain
+O Försöksverksamhet med automatiserade fordon, det vill säga förande av fordon med ett automatiserat körsystem för att testa och utvärdera automatiska funktioner som inte ingår i fordonets godkännande.
+G Gärningspersonen gör minst ett av:
+  | Bedriver försöksverksamheten utan tillstånd.
+  | Bedriver försöksverksamheten i strid med ett meddelat tillstånd.
+S Uppsåt eller oaktsamhet.
+T Ett teknikföretag testkör en självkörande minibuss på allmän väg utan tillstånd från Transportstyrelsen.
+T Ett företag med tillstånd testar sina självkörande bilar på andra vägar än de som tillståndet omfattar.
+
+LAW S2019-383 | Förordningen (2019:383) om fordons registrering och användning | 2019:383 | FFRA
+
+@ v21-saluvagnsskylt-obehorig-anvandning | Brott mot förordningen om fordons registrering och användning (saluvagnsskylt) | 12:3 | 12:3,9:3
+PEN 0 | 0 | Böter | Böter
+C Trafik
+A saluvagnsskylt;gröna skyltar;låna ut handlarskylt;bilhandlare skylt
+Q plain
+K Gärningspersonen har en saluvagnslicens.
+G Gärningspersonen låter någon annan obehörigen använda en saluvagnsskylt.
+S Uppsåt eller oaktsamhet.
+T En bilhandlare lånar ut sin saluvagnsskylt till en bekant som använder den på sin egen avställda bil för privata resor.
+
+@ v21-fordonsregistrering-oriktig-uppgift | Brott mot förordningen om fordons registrering och användning (oriktig uppgift) | 12:4 | 12:4
+PEN 0 | 0 | Böter | Böter
+C Trafik
+A oriktig uppgift vägtrafikregistret;falsk ägaranmälan;ägarbyte falsk uppgift;registrering fordon;målvakt bil
+Q plain
+K Gärningspersonen gör en ansökan eller en anmälan enligt förordningen, till exempel om registrering av ett fordon, ägarbyte, avställning eller saluvagnslicens.
+G Gärningspersonen lämnar en oriktig uppgift i ansökan eller anmälan.
+S Uppsåt eller oaktsamhet.
+U Straff för gärningen kan dömas ut enligt brottsbalken.
+T En person anmäler till Transportstyrelsen att bilen har sålts till en annan person, trots att något ägarbyte inte har skett.
+
+LAW S1997-1121 | Förordningen (1997:1121) om farledsavgift | 1997:1121 | Farledsavgiftsförordningen
+
+@ v21-farledsavgift-deklaration | Brott mot förordningen om farledsavgift | 11 § | 11,6
+PEN 0 | 0 | Böter | Böter
+C Trafik
+A farledsavgift;deklaration fartyg;oriktig uppgift last;redare avgift;Sjöfartsverket
+Q plain
+K Fartygets redare eller ägare ska lämna en deklaration med uppgifter om fartyget, den avgiftspliktiga lasten och antalet passagerare som underlag för farledsavgiften.
+G Gärningspersonen gör minst ett av:
+  | Låter bli att lämna deklarationen.
+  | Lämnar oriktig uppgift i deklarationen.
+S Uppsåt eller oaktsamhet.
+U Fallet är ringa.
+U Gärningen är belagd med straff i brottsbalken.
+U Gärningen omfattas av ett vitesföreläggande som gärningspersonen har överträtt.
+T En redare uppger i deklarationen en betydligt mindre lastmängd än fartyget faktiskt har lossat för att få lägre farledsavgift.
+
+LAW S1956-413 | Förordningen (1956:413) om klassificering av kött | 1956:413 | Köttklassificeringsförordningen
+X 1,2,3,9
+
+@ v21-kottklassificering-utlamnande-stampel | Brott mot förordningen om klassificering av kött (oklassificerat kött och stämplar) | 12 § första stycket | 12,1,4,6,7,15
+PEN 0 | 0.5 | Böter eller fängelse i högst sex månader | B–F 6 mån
+C Djur och natur
+A köttklassificering;klasstämpel kött;oklassificerat kött;falsk kvalitetsstämpel;slakteri
+Q plain
+N Arbetsgivaren (i förordningen kallad husbonde) ansvarar för brott som begås av dennes husfolk eller anställda som om han eller hon själv hade begått det, om det inte är sannolikt att det skedde utan arbetsgivarens vetskap och vilja.
+O Kött av nötkreatur, häst, får, svin eller ren.
+G Gärningspersonen gör minst ett av:
+  | Lämnar ut besiktningsgodkänt kött utan att det har kvalitetsbedömts och försetts med stämpel om kvalitetsklass.
+  | Tar bort stämpeln om kvalitetsklass från kött som är avsett att säljas, eller gör den oläslig.
+  | Säljer eller saluhåller oklassificerat kött under en benämning som stämmer överens med eller lätt kan förväxlas med en fastställd klassbenämning eller som innehåller ordet "Klass", eller använder en sådan benämning i en handling vid försäljningen.
+  | Förser oklassificerat kött med en stämpel eller ett märke som lätt kan förväxlas med klassificeringsstämpeln eller som innehåller ordet "Klass".
+S Uppsåt till samtliga rekvisit. Lagen anger ingen skuldform. Utgångspunkten är då att uppsåt krävs.
+U Gärningen är belagd med straff i brottsbalken.
+T Ett slakteri levererar slaktkroppar av nöt till en grossist utan att köttet har klassificerats och stämplats.
+T En köttgrossist stämplar oklassificerat kött med ett eget märke som liknar den officiella klasstämpeln.
+
+@ v21-kottklassificering-klassificerare | Brott mot förordningen om klassificering av kött (klassificerares fel) | 12 § andra stycket | 12,1,2,3
+PEN 0 | 0.5 | Böter eller fängelse i högst sex månader | B–F 6 mån
+C Djur och natur
+A klassificerare kött;felaktig klassificering;fel kvalitetsklass;stämpling kött
+Q plain
+N Den klassificerare som av grov vårdslöshet gör orätt vid klassificering eller stämpling döms till böter enligt tredje stycket.
+K Gärningspersonen är en klassificerare som har godkänts av Jordbruksverket, eller någon som biträder vid en ny klassificering.
+G Gärningspersonen gör minst ett av:
+  | Gör orätt vid klassificering eller stämpling av kött (uppsåt krävs).
+  | Klassificerar om redan klassificerat kött i annat fall eller i annan ordning än vad som är bestämt.
+  | Klassificerar och stämplar kött som inte har godkänts vid köttbesiktning.
+  | Låter någon annan stämpla kött som han eller hon har klassificerat utan att själv närvara vid och kontrollera stämplingen.
+S Uppsåt till samtliga rekvisit. För den som gör orätt vid klassificering eller stämpling anger förordningen uttryckligen uppsåt, för övriga alternativ anges ingen skuldform och utgångspunkten är då att uppsåt krävs.
+T En klassificerare på ett slakteri placerar medvetet slaktkroppar i en högre kvalitetsklass än de ska ha, så att slakteriet får bättre betalt.
+
+@ v21-kottklassificering-journal-redogorelse | Brott mot förordningen om klassificering av kött (journal och redogörelser) | 13 § | 13,9,15
+PEN 0 | 0.5 | Böter eller fängelse i högst sex månader | B–F 6 mån
+C Djur och natur
+A klassificeringsjournal;redogörelse Jordbruksverket;oriktig journal kött;slakteri rapportering
+Q plain
+N Den som utan uppsåt men av grov oaktsamhet ger anteckningarna eller uppgifterna oriktigt eller ofullständigt innehåll döms till böter. Arbetsgivaren (husbonden) ansvarar för brott enligt första stycket som begås av dennes husfolk eller anställda, om det inte är sannolikt att det skedde utan arbetsgivarens vetskap och vilja. Vägran att lämna tillträde för kontroll bedöms enligt brottsbalken.
+K Jordbruksverket har föreskrivit att klassificerare ska föra journal över klassificeringen och på begäran visa upp den, och att kommunala nämnder, köttbesiktningsbyråer och kontrollslakterier ska lämna regelbundna redogörelser för klassificeringen.
+G Gärningspersonen gör minst ett av:
+  | Underlåter att föra journalen, visa upp den eller lämna redogörelserna.
+  | Ger anteckningarna eller uppgifterna oriktigt eller ofullständigt innehåll, om gärningen innebär fara i bevishänseende och inte är belagd med straff i brottsbalken (uppsåt krävs).
+S Uppsåt. För underlåtenhet anger förordningen ingen skuldform och utgångspunkten är då att uppsåt krävs. För oriktigt eller ofullständigt innehåll krävs uppsåt för att fängelse ska ingå i straffskalan.
+T En klassificerare för under flera månader ingen journal över de slaktkroppar som han har klassificerat.
+
+LAW S1974-661 | Kungörelsen (1974:661) om uppgifter för galt- och betäckningsstatistiken | 1974:661 | Galtstatistikkungörelsen
+X 1,2
+
+@ v21-galtstatistik-oriktig-uppgift | Brott mot kungörelsen om uppgifter för galt- och betäckningsstatistiken | 4 § | 4,1,2
+PEN 0 | 0 | Böter | Böter
+C Djur och natur
+A galtstatistik;betäckningsjournal;oriktig uppgift statistik;grisuppfödare;SCB uppgifter
+Q villkor | Allmänt åtal får väckas bara efter anmälan av Statistiska centralbyrån. Innan centralbyrån gör anmälan ska samråd ske med lantbruksstyrelsen.
+K Gärningspersonen har en galt som används för betäckning och ska därför lämna uppgifter till Statistiska centralbyråns galt- och betäckningsstatistik.
+G Gärningspersonen lämnar oriktig uppgift, till exempel om antalet betäckta suggor under månaden eller om förändringar i innehavet av galt.
+S Uppsåt eller grov oaktsamhet.
+U Gärningen är belagd med straff i brottsbalken.
+T En grisuppfödare rapporterar medvetet ett felaktigt antal betäckta suggor till Statistiska centralbyrån.
+
+LAW S1977-945 | Förordningen (1977:945) om trädgårdsväxters sundhet, sortäkthet och kvalitet | 1977:945 | Trädgårdsväxtförordningen
+
+@ v21-tradgardsvaxter-sundhet-kvalitet | Brott mot förordningen om trädgårdsväxters sundhet, sortäkthet och kvalitet | 9 § | 9,1,2
+PEN 0 | 0 | Böter | Böter
+C Djur och natur
+A plantskola;sälja sjuka plantor;fruktträd fel sort;sortmärkning växter;trädgårdsväxter kvalitet
+Q plain
+N Införsel av trädgårdsväxter i strid med förordningen bedöms enligt lagen om straff för smuggling.
+O Trädgårdsväxter, det vill säga plantskoleväxter och fruktplantor samt förökningsmaterial (utom utsäde) för grönsaker, snittblommor, krukväxter, prydnadsväxter och fruktplantor. Skogsplantor omfattas inte.
+G Gärningspersonen gör minst ett av:
+  | Saluhåller yrkesmässigt eller säljer trädgårdsväxter som inte uppfyller Jordbruksverkets krav på sundhet, sortäkthet och kvalitet.
+  | Handlar yrkesmässigt med trädgårdsväxter som inte är försedda med föreskriven uppgift om sort och kvalitet.
+S Uppsåt till samtliga rekvisit. Lagen anger ingen skuldform. Utgångspunkten är då att uppsåt krävs.
+T En plantskola säljer fruktträd som den vet är angripna av en växtsjukdom och som därför inte uppfyller sundhetskraven.
+T En handelsträdgård säljer äppelträd till återförsäljare utan någon uppgift om sort.
+
+LAW S1994-1709 | Lagen (1994:1709) om EU:s förordningar om den gemensamma fiskeripolitiken | 1994:1709 | Lagen om EU:s fiskeripolitik
+
+@ v21-eu-fiskeripolitik-handelsnormer | Brott mot lagen om EU:s förordningar om den gemensamma fiskeripolitiken | 11 § | 11,12
+PEN 0 | 1 | Böter eller fängelse i högst ett år | B–F 1 år
+C Djur och natur
+A fiskhandel;kvalitetsnormer fisk;sälja undermålig fisk;handelsnormer;fiskgrossist;spårbarhet fisk
+Q plain
+O Kvalitetsnormer och andra bestämmelser för handeln med fiskeri- och vattenbruksprodukter i EU:s förordningar om den gemensamma fiskeripolitiken eller i föreskrifter som har meddelats med stöd av lagen.
+G Gärningspersonen bryter mot en sådan bestämmelse, till exempel genom att sälja fisk som inte uppfyller de normer som gäller för handeln.
+S Uppsåt eller grov oaktsamhet.
+U Gärningen är ringa.
+U Gärningen kan leda till sanktionsavgift.
+U Gärningen är belagd med straff enligt brottsbalken, lagen om straff för smuggling eller fiskelagen.
+U Ett vite har dömts ut för samma gärning.
+T En fiskgrossist säljer medvetet vidare partier av fisk som är mindre än den minsta storlek som enligt EU:s handelsnormer får saluföras som livsmedel.
+
+LAW S1994-1710 | Lagen (1994:1710) om EG:s förordningar om jordbruksprodukter | 1994:1710 | Lagen om EG:s jordbruksförordningar
+
+@ v21-eg-jordbruksprodukter-foreskrifter | Brott mot lagen om EG:s förordningar om jordbruksprodukter (föreskrifter och handelsnormer) | 12 § | 12,14,2,8
+PEN 0 | 0.5 | Böter eller fängelse i högst sex månader | B–F 6 mån
+C Djur och natur
+A jordbruksprodukter handelsnormer;kvalitetsnormer frukt och grönt;äggmärkning;jordbruksstöd anteckningar;marknadsreglering
+Q plain
+G Gärningspersonen bryter mot minst ett av:
+  | Föreskrifter som kompletterar EG:s förordningar om jordbruksprodukter.
+  | Föreskrifter om att den som tar emot stöd eller betalar avgifter ska föra anteckningar om detta och bevara anteckningarna och andra handlingar av betydelse för kontrollen under viss tid.
+  | Kvalitetsnormer och andra bestämmelser för handeln med jordbruksprodukter i EG:s förordningar eller i föreskrifter som har meddelats med stöd av lagen.
+  | Villkor i beslut som har meddelats med stöd av förordningarna eller föreskrifterna.
+S Uppsåt eller grov oaktsamhet.
+U Fallet är ringa.
+U Gärningen är belagd med straff enligt brottsbalken eller lagen om straff för smuggling.
+U Gärningen omfattas av ett vitesföreläggande eller vitesförbud som gärningspersonen har överträtt.
+T En grossist säljer medvetet frukt märkt med en högre kvalitetsklass än den som frukten uppfyller enligt EU:s handelsnormer.
+T En lantbrukare som har fått stöd förstör sina anteckningar om stödet innan den föreskrivna bevarandetiden har gått ut.
+
+@ v21-eg-jordbruksprodukter-oriktig-uppgift | Brott mot lagen om EG:s förordningar om jordbruksprodukter (oriktig uppgift) | 13 § | 13,14,3
+PEN 0 | 0.5 | Böter eller fängelse i högst sex månader | B–F 6 mån
+C Djur och natur
+A jordbruksstöd oriktig uppgift;fusk EU-stöd;gårdsstöd felaktig ansökan;uppgiftsskyldighet jordbruk
+Q plain
+K En uppgift ska lämnas för att läggas till grund för ett beslut enligt EG:s förordningar om jordbruksprodukter, eller enligt föreskrifter om att näringsidkare ska lämna uppgifter om bland annat produktion, inköp, försäljning, import och export.
+G Gärningspersonen lämnar oriktiga eller ofullständiga uppgifter.
+S Uppsåt eller grov oaktsamhet.
+U Fallet är ringa.
+U Gärningen är belagd med straff enligt brottsbalken (till exempel bedrägeri) eller lagen om straff för smuggling.
+U Gärningen omfattas av ett vitesföreläggande eller vitesförbud som gärningspersonen har överträtt.
+T Ett mejeriföretag lämnar av grov oaktsamhet felaktiga uppgifter om sin produktion till Jordbruksverket i en föreskriven rapport.
+
+LAW S1994-1830 | Förordningen (1994:1830) om införsel av levande djur m.m. | 1994:1830 | Införselförordningen för djur
+
+@ v21-inforsel-levande-djur-foreskrifter | Brott mot förordningen om införsel av levande djur m.m. | 20 § andra stycket | 20,3,6,7
+PEN 0 | 0 | Böter | Böter
+C Djur och natur
+A införsel djur;ta in hund från utlandet;importera djur utan anmälan;djurimport registrering;smittskydd införsel
+Q plain
+N Olovlig införsel av djur eller produkter av djur, och försök till det, bedöms enligt lagen om straff för smuggling.
+G Gärningspersonen bryter mot en föreskrift som Jordbruksverket har meddelat med stöd av förordningen, till exempel om minst ett av:
+  | Tillstånd och andra villkor för införsel av djur, produkter av djur, sjukdomsalstrande organismer, hö, halm och annat material som används vid hantering av djur.
+  | Skyldighet att registrera sig för den som för in djur och djurprodukter i landet.
+  | På vilka platser införsel från land utanför Europeiska unionen får ske och hur kontrollen vid införsel ska genomföras.
+  | Desinfektion av varor, emballage, förvaringskärl och transportmedel.
+  | Begränsningar i rätten att hantera oförtullade varor.
+S Uppsåt eller oaktsamhet.
+U Gärningen är belagd med straff i lagen om straff för smuggling.
+T En djurhandlare som regelbundet tar in burfåglar från ett annat EU-land har inte registrerat sig hos Jordbruksverket som föreskrifterna kräver.
+
+LAW S1994-542 | Förordningen (1994:542) om utförsel av levande djur m.m. | 1994:542 | Utförselförordningen för djur
+
+@ v21-utforsel-levande-djur-foreskrifter | Brott mot förordningen om utförsel av levande djur m.m. | 8 § andra stycket | 8,2,3
+PEN 0 | 0 | Böter | Böter
+C Djur och natur
+A utförsel djur;exportera djur;djurexport intyg;smittskydd djurtransport;veterinärbesiktning export
+Q plain
+N Olovlig utförsel av djur eller produkter av djur, och försök till det, bedöms enligt lagen om straff för smuggling.
+G Gärningspersonen bryter mot en föreskrift som Jordbruksverket har meddelat med stöd av förordningen, till exempel om minst ett av:
+  | Villkor vid utförsel av djur och produkter av djur i fråga om frihet från djursjukdomar, besiktning av officiell veterinär, intyg och märkning av djur.
+  | Skyldighet att registrera sig för den som för ut djur och produkter av djur ur landet.
+  | Smittskyddsåtgärder som ska vidtas av den som besöker djurstall eller på annat sätt kommer i kontakt med djur för att köpa eller hämta djur.
+S Uppsåt eller oaktsamhet.
+U Gärningen är belagd med straff i lagen om straff för smuggling.
+T En uppköpare som hämtar grisar för export går in i flera djurstall utan att följa de föreskrivna smittskyddsåtgärderna, till exempel byte av skyddskläder.
+
+LAW S2000-281 | Förordningen (2000:281) om regionalt transportbidrag | 2000:281 | Transportbidragsförordningen
+
+@ v21-transportbidrag-oriktig-uppgift | Brott mot förordningen om regionalt transportbidrag | 14 § tredje stycket | 14
+PEN 0 | 0 | Böter | Böter
+C Ekonomisk brottslighet
+A transportbidrag;oriktig uppgift bidragsansökan;Tillväxtverket bidrag;fusk fraktbidrag;Norrlandsbidrag
+Q plain
+K Gärningspersonen ansöker om regionalt transportbidrag hos Tillväxtverket.
+G Gärningspersonen lämnar oriktig uppgift i ansökan.
+S Uppsåt eller grov oaktsamhet.
+U Gärningen är belagd med straff enligt brottsbalken, till exempel bedrägeri.
+T Ett sågverk i Norrbotten anger av grov oaktsamhet längre transportsträckor än de verkliga i sin ansökan om transportbidrag.
+
+LAW S2021-600 | Lagen (2021:600) med kompletterande bestämmelser till EU:s förordningar om medicintekniska produkter | 2021:600 | Lagen om medicintekniska produkter
+X 1:2
+
+@ v21-medicinteknik-produkt-pa-marknaden | Brott mot lagen med kompletterande bestämmelser till EU:s förordningar om medicintekniska produkter (produktkrav) | 5:1 | 5:1,5:3,7:8
+PEN 0 | 1 | Böter eller fängelse i högst ett år | B–F 1 år
+C Person
+A medicinteknisk produkt;CE-märkning saknas;sälja ej godkänd medicinteknik;självtest;bruksanvisning svenska;implantat
+Q plain
+O En medicinteknisk produkt, en medicinteknisk produkt för in vitro-diagnostik, ett tillbehör till en sådan produkt eller en produkt utan medicinskt ändamål som anges i bilaga XVI till EU-förordningen om medicintekniska produkter.
+G Gärningspersonen släpper ut produkten på marknaden eller tillhandahåller den i Sverige.
+K Minst ett av följande gäller:
+  | Produkten uppfyller inte de krav och villkor som gäller enligt artikel 5 i EU-förordningarna om medicintekniska produkter (2017/745 och 2017/746) för att få släppas ut på marknaden eller tas i bruk.
+  | Informationen om produkten till användare eller patienter i Sverige uppfyller inte de språkkrav som regeringen har föreskrivit.
+S Uppsåt eller oaktsamhet.
+U Fallet är ringa.
+U Gärningen omfattas av ett vitesföreläggande och en ansökan om att vitet ska dömas ut har gjorts.
+U Gärningen omfattas av ett beslut om sanktionsavgift.
+T Ett företag importerar och säljer blodsockermätare som inte uppfyller EU-förordningens krav för att få släppas ut på marknaden.
+T En nätbutik säljer medicintekniska produkter till svenska kunder med bruksanvisning enbart på ett språk som inte uppfyller de föreskrivna språkkraven.
+
+@ v21-medicinteknik-klinisk-provning | Brott mot lagen med kompletterande bestämmelser till EU:s förordningar om medicintekniska produkter (klinisk prövning) | 5:2 | 5:2,5:3,2:4
+PEN 0 | 2 | Böter eller fängelse i högst två år | B–F 2 år
+C Person
+A klinisk prövning utan tillstånd;prestandastudie;testa medicinteknik på patienter;etikgodkännande saknas;försökspersoner
+Q plain
+O En klinisk prövning av en medicinteknisk produkt eller en prestandastudie av en produkt för in vitro-diagnostik.
+G Gärningspersonen påbörjar eller genomför prövningen eller studien på minst ett av följande sätt:
+  | Utan tillstånd.
+  | Utan att ha lämnat in den ansökan eller anmälan som EU-förordningarna kräver.
+  | I strid med villkor i beslutet om tillstånd eller i beslutet om etisk granskning.
+  | I strid med villkor i ett yttrande om etisk granskning, när tillståndsmyndigheten inte har fattat beslut i frågan.
+  | I strid med ett negativt yttrande om etisk granskning, när tillståndsmyndigheten inte har fattat beslut i frågan.
+S Uppsåt eller oaktsamhet.
+U Fallet är ringa.
+U Gärningen omfattas av ett vitesföreläggande och en ansökan om att vitet ska dömas ut har gjorts.
+U Gärningen omfattas av ett beslut om sanktionsavgift.
+T Ett medicinteknikföretag börjar testa ett nytt implantat på patienter innan Läkemedelsverket har gett tillstånd till den kliniska prövningen.
+
+LAW S1995-1256 | Förordningen (1995:1256) om mästarbrev för hantverkare | 1995:1256 | Mästarbrevsförordningen
+
+@ v21-mastarbrev-obehorigt-utge-sig | Brott mot förordningen om mästarbrev för hantverkare | 9 § | 9,1
+PEN 0 | 0 | Böter | Böter
+C Ekonomisk brottslighet
+A mästarbrev;falsk mästare;hantverkare utan mästarbrev;utge sig för mästare;målarmästare
+Q plain
+G Gärningspersonen utger sig obehörigen för att ha mästarbrev, det vill säga det kompetensbevis för hantverkare som utfärdas av Sveriges Hantverksråd.
+S Uppsåt till samtliga rekvisit. Lagen anger ingen skuldform. Utgångspunkten är då att uppsåt krävs.
+U Gärningen är belagd med straff i brottsbalken.
+T En snickare skriver i sin reklam och på firmabilen att han har mästarbrev, trots att han aldrig har fått något.
+
+LAW S1997-825 | Lagen (1997:825) om EG:s förordning om skydd mot extraterritoriell lagstiftning som antas av ett tredje land | 1997:825 | Lagen om skydd mot extraterritoriell lagstiftning
+X 1
+
+@ v21-extraterritoriell-lagstiftning | Brott mot lagen om EG:s förordning om skydd mot extraterritoriell lagstiftning | 2 § | 2,1
+PEN 0 | 0.5 | Böter eller fängelse i högst sex månader | B–F 6 mån
+C Ekonomisk brottslighet
+A blockeringsförordningen;extraterritoriella sanktioner;följa utländska sanktioner;amerikanska sanktioner;EG 2271/96
+Q plain
+N EG-förordningen (nr 2271/96) skyddar mot verkningarna av vissa lagar i tredje land som gör anspråk på att gälla även utanför det landets gränser. Vilka lagar det gäller framgår av bilagan till EG-förordningen.
+G Gärningspersonen gör minst ett av:
+  | Underlåter att lämna information i överensstämmelse med artikel 2 första eller andra stycket i EG-förordningen, det vill säga att underrätta Europeiska kommissionen när ens ekonomiska eller finansiella intressen påverkas av den utländska lagstiftningen (uppsåt eller grov oaktsamhet).
+  | Lämnar oriktig uppgift i sådan information (uppsåt eller grov oaktsamhet).
+  | Bryter mot artikel 5 första stycket i EG-förordningen, det vill säga förbudet att rätta sig efter krav eller förbud som grundar sig på den utländska lagstiftningen (uppsåt).
+S Uppsåt eller grov oaktsamhet för informationsskyldigheten. Uppsåt för brott mot förbudet i artikel 5.
+U Fallet är ringa.
+T Ett svenskt exportföretag säger medvetet upp ett avtal med en kund enbart för att följa ett förbud i en sådan utländsk lag som EG-förordningen förbjuder företag att rätta sig efter.

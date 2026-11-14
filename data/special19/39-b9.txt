@@ -1,0 +1,635 @@
+LAW S1993-1392 | Lagen (1993:1392) om pliktexemplar av dokument | 1993:1392 | Pliktexemplarslagen
+
+@ v21-pliktexemplar-forteckning-material | Brott mot lagen om pliktexemplar av dokument | 35 § | 31,32,35
+PEN 0 | 0 | Böter | Böter
+C Allmän verksamhet
+A pliktexemplar;Kungliga biblioteket;videogram förteckning;pliktleverans
+Q plain
+G Gärningspersonen gör minst ett av:
+  | Är skyldig att lämna pliktexemplar av videogram till Kungl. biblioteket men för ingen förteckning över de videogram som omfattas av plikten, med de registernummer som de lämnade pliktexemplaren har fått.
+  | Beställer framställning av ett dokument som framställaren ska lämna pliktexemplar av, men tillhandahåller inte framställaren det material som ska följa med pliktexemplaret, till exempel tillbehör, omslag eller de datorprogram som behövs för att ta del av innehållet.
+S Uppsåt till samtliga rekvisit. Lagen anger ingen skuldform. Utgångspunkten är då att uppsåt krävs.
+T Ett filmbolag som ger ut filmer på dvd lämnar pliktexemplar men för ingen förteckning över filmerna och deras registernummer.
+
+LAW S2003-460 | Lagen (2003:460) om etikprövning av forskning som avser människor | 2003:460 | Etikprövningslagen
+X 3,4
+
+@ v21-etikprovning-forskning-utan-godkannande | Brott mot lagen om etikprövning av forskning som avser människor (uppsåtligt brott) | 38 § första och andra styckena | 6,38
+PEN 0 | 2 | Böter eller fängelse i högst två år | B–F 2 år
+C Person
+A forskning utan etikprövning;etiktillstånd saknas;forskningsfusk;forskning på människor;etikgodkännande
+Q plain
+N Lagen gäller forskning som ska utföras i Sverige. Överklagandenämnden för etikprövning ska göra åtalsanmälan vid skälig misstanke om brott.
+O Forskning som innefattar behandling av känsliga personuppgifter eller personuppgifter om lagöverträdelser, eller som innebär ett fysiskt ingrepp på en forskningsperson eller en avliden människa, syftar till att påverka forskningspersonen fysiskt eller psykiskt, innebär en uppenbar risk att skada forskningspersonen eller avser studier på biologiskt material som kan härledas till en viss människa.
+G Gärningspersonen gör minst ett av:
+  | Utför forskningen utan att den har godkänts vid en etikprövning.
+  | Utför forskningen i strid med ett villkor som godkännandet har förenats med.
+  | Är forskningshuvudman och låter bli att vidta de åtgärder som skäligen kunnat krävas för att förebygga att forskning i den egna verksamheten utförs utan godkännande eller i strid med ett villkor, och sådan forskning utförs i verksamheten.
+S Uppsåt.
+U Fallet är ringa.
+U Gärningen omfattas av ett vitesföreläggande som gärningspersonen har överträtt.
+T En forskare tar blodprover på patienter för en egen studie utan att ha ansökt om etikprövning.
+
+@ v21-etikprovning-forskning-grov-oaktsamhet | Brott mot lagen om etikprövning av forskning som avser människor (grov oaktsamhet) | 38 § tredje stycket | 6,38
+PEN 0 | 0.5 | Böter eller fängelse i högst sex månader | B–F 6 mån
+C Person
+A forskning utan etikprövning;etiktillstånd saknas;oaktsam forskning;etikgodkännande
+Q plain
+O Forskning som innefattar behandling av känsliga personuppgifter eller personuppgifter om lagöverträdelser, eller som innebär ett fysiskt ingrepp på en forskningsperson eller en avliden människa, syftar till att påverka forskningspersonen fysiskt eller psykiskt, innebär en uppenbar risk att skada forskningspersonen eller avser studier på biologiskt material som kan härledas till en viss människa.
+G Gärningspersonen gör minst ett av:
+  | Utför forskningen utan att den har godkänts vid en etikprövning.
+  | Utför forskningen i strid med ett villkor som godkännandet har förenats med.
+  | Är forskningshuvudman och låter bli att vidta de åtgärder som skäligen kunnat krävas för att förebygga att forskning i den egna verksamheten utförs utan godkännande eller i strid med ett villkor, och sådan forskning utförs i verksamheten.
+S Grov oaktsamhet.
+U Fallet är ringa.
+U Gärningen omfattas av ett vitesföreläggande som gärningspersonen har överträtt.
+T En forskargrupp utvidgar en godkänd studie till att omfatta känsliga journaluppgifter utan att kontrollera om godkännandet täcker det, trots att frågan har väckts internt.
+
+LAW S2006-449 | Lagen (2006:449) om skydd för störningskänslig forskning | 2006:449 | Lagen om skydd för störningskänslig forskning
+
+@ v21-storningskanslig-forskning-forbud | Brott mot lagen om skydd för störningskänslig forskning | 13 § | 3,13
+PEN 0 | 0 | Böter | Böter
+C Allmän ordning
+A forskningsområde;tillträdesförbud forskning;radiosändare forskningsområde;störa forskning;beträda forskningsområde
+Q plain
+P Ett område som länsstyrelsen har beslutat ska vara forskningsområde med tillträdesskydd eller forskningsområde med störningsskydd.
+K Gärningspersonen är utomstående och har inget tillstånd.
+G Gärningspersonen gör minst ett av:
+  | Beträder ett forskningsområde med tillträdesskydd.
+  | Använder radiosändare, framför motordrivet fordon eller använder annan teknisk utrustning på ett sätt som stör forskningen i ett forskningsområde med störningsskydd.
+S Uppsåt eller oaktsamhet.
+U Fallet är ringa.
+U Gärningen är belagd med straff i någon annan författning.
+T En person kör skoter in i ett skyltat forskningsområde med störningsskydd och stör mätningarna där.
+
+LAW S1962-120 | Lagen (1962:120) om straff i vissa fall för oriktigt ursprungsintyg m.m. | 1962:120 | Lagen om oriktigt ursprungsintyg
+
+@ v21-oriktigt-ursprungsintyg | Brott mot lagen om straff för oriktigt ursprungsintyg | 1 § första stycket | 1
+PEN 0 | 1 | Böter eller fängelse i högst ett år | B–F 1 år
+C Ekonomisk brottslighet
+A ursprungsintyg;falskt ursprungsintyg;tullförmån;ursprungsland;förmånstull;EUR.1
+Q plain
+O En oriktig uppgift som är ägnad att leda till förmånsbehandling enligt handelsöverenskommelser som EU har ingått eller enligt EU:s rättsakter.
+G Gärningspersonen gör minst ett av:
+  | Lämnar den oriktiga uppgiften i ett ursprungsintyg eller en annan handling som åberopas som bevis för att få förmånsbehandling.
+  | Lämnar den oriktiga uppgiften i samband med en ansökan om ursprungsintyg.
+  | Tillhandahåller en åberopad handling med vetskap om att den innehåller en sådan oriktig uppgift.
+S Uppsåt.
+U Brottet är ringa.
+T Ett exportföretag anger i ett ursprungsintyg att varorna är tillverkade i Sverige fast de kommer från ett land utanför EU, för att köparen ska få lägre tull.
+
+@ v21-oriktigt-ursprungsintyg-grovt | Brott mot lagen om straff för oriktigt ursprungsintyg, grovt brott | 1 § första stycket | 1
+PEN 0 | 2 | Fängelse i högst två år | F 2 år
+C Ekonomisk brottslighet
+A grovt oriktigt ursprungsintyg;falskt ursprungsintyg;tullförmån
+Q plain
+B v21-oriktigt-ursprungsintyg
+R grovt*
+- Gärningen har avsett betydande värden.
+- Gärningen har ingått i ett systematiskt eller omfattande förfarande.
+T Ett företag utfärdar under flera år hundratals oriktiga ursprungsintyg för varor till mycket stora värden.
+
+@ v21-oriktigt-ursprungsintyg-grov-oaktsamhet | Brott mot lagen om straff för oriktigt ursprungsintyg (grov oaktsamhet) | 1 § andra stycket | 1
+PEN 0 | 0 | Böter | Böter
+C Ekonomisk brottslighet
+A ursprungsintyg;oaktsamt ursprungsintyg;tullförmån;ursprungsland
+Q plain
+O En oriktig uppgift som är ägnad att leda till förmånsbehandling enligt handelsöverenskommelser som EU har ingått eller enligt EU:s rättsakter.
+G Gärningspersonen gör minst ett av:
+  | Lämnar den oriktiga uppgiften i ett ursprungsintyg eller en annan handling som åberopas som bevis för att få förmånsbehandling.
+  | Lämnar den oriktiga uppgiften i samband med en ansökan om ursprungsintyg.
+  | Tillhandahåller en åberopad handling som innehåller en sådan oriktig uppgift.
+S Grov oaktsamhet.
+U Brottet är ringa.
+T En exportör intygar varornas ursprung utan att alls kontrollera var de är tillverkade, trots tydliga tecken på att de kommer från ett land utanför EU.
+
+LAW S1964-19 | Krigshandelslagen (1964:19) | 1964:19 | Krigshandelslagen
+X 1,2,6,7,8
+
+@ v21-krigshandel-brott-mot-utfastelse | Brott mot krigshandelslagen (handlande i strid mot utfästelse) | 4 § | 1,2,4
+PEN 0 | 0.5 | Böter eller fängelse i högst sex månader | B–F 6 mån
+C Rikets säkerhet
+A krigshandel;utfästelse främmande makt;export i krig;handel i krig
+Q villkor | Åtal får väckas bara efter medgivande av regeringen eller den myndighet som regeringen bestämmer.
+N Den som har dömts för brott mot krigshandelslagen och begår ett nytt sådant brott sedan domen har vunnit laga kraft får dömas till fängelse i högst två år (6 §). Lagen gäller inte främmande staters beskickningar och vissa konsulära tjänstemän.
+K Sverige är i krig, eller regeringen har på grund av krigsfara eller andra utomordentliga förhållanden föreskrivit att lagens bestämmelser ska tillämpas.
+O En utfästelse som gäller för gärningspersonen och som inskränker friheten att föra in varor till Sverige, föra ut varor ur Sverige, förfoga över varor i Sverige eller transportera varor till, från eller inom Sverige, när inskränkningen tjänar eller kan antas tjäna en främmande makts intresse.
+G Gärningspersonen gör minst ett av:
+  | Handlar i strid mot utfästelsen.
+  | Har förbundit sig att inte föra ut en vara till utlandet eller till ett visst främmande land och försöker föra ut varan i strid mot utfästelsen.
+S Uppsåt till samtliga rekvisit. Lagen anger ingen skuldform. Utgångspunkten är då att uppsåt krävs.
+T Under krig har ett företag med tillstånd utfäst sig att inte sälja en importerad råvara vidare till ett visst land, men skeppar ändå ett parti dit.
+
+@ v21-krigshandel-medverkan-overvakning | Brott mot krigshandelslagen (medverkan till främmande makts handelsövervakning) | 5 § | 1,2,5
+PEN 0 | 1 | Böter eller fängelse i högst ett år | B–F 1 år
+C Rikets säkerhet
+A krigshandel;lämna uppgifter till främmande makt;handelsövervakning;export i krig
+Q villkor | Åtal får väckas bara efter medgivande av regeringen eller den myndighet som regeringen bestämmer.
+N Den som har dömts för brott mot krigshandelslagen och begår ett nytt sådant brott sedan domen har vunnit laga kraft får dömas till fängelse i högst två år (6 §). I det allmännas verksamhet gäller i stället offentlighets- och sekretesslagen.
+K Sverige är i krig, eller regeringen har på grund av krigsfara eller andra utomordentliga förhållanden föreskrivit att lagens bestämmelser ska tillämpas.
+G Gärningspersonen lämnar underrättelse om sin egen eller någon annans verksamhet, eller främjar att sådana underrättelser hämtas in, och medverkar därigenom till övervakning av införsel, utförsel, förfogande över eller transport av varor.
+K Övervakningen utövas av en främmande makt eller är annars sådan att den tjänar en främmande makts intresse.
+S Uppsåt till medverkan. I fråga om att övervakningen utövas av eller tjänar en främmande makt räcker det att gärningspersonen borde ha insett det.
+U Åtgärden har vidtagits med stöd av lag, handelsbruk eller annan sedvänja eller i överensstämmelse med anvisning från regeringen eller behörig myndighet.
+U Gärningspersonen har bara på brukligt sätt bevakat rätt eller utfört talan eller har av annan sådan anledning haft fog för gärningen.
+U Gärningen är belagd med strängare straff i 19 kap. brottsbalken.
+T Under krig lämnar en speditör löpande uppgifter om svenska företags exportsändningar till en främmande stats kontrollorgan.
+
+LAW S1992-1300 | Lagen (1992:1300) om krigsmateriel | 1992:1300 | Krigsmateriellagen
+X 1,3,4,5,6,7,8,9,10,12,28,30
+
+@ v21-krigsmateriel-utan-tillstand | Brott mot lagen om krigsmateriel (verksamhet utan tillstånd) | 25 § första stycket | 3,4,5,6,7,8,9,10,12,25,28,30
+PEN 0 | 2 | Böter eller fängelse i högst två år | B–F 2 år
+C Rikets säkerhet
+A krigsmateriel;vapenexport;tillverka krigsmateriel;vapenhandel utan tillstånd;militär utbildning utlänningar;tekniskt bistånd
+Q villkor | Allmänt åtal för brott mot kravet på tillstånd för tillverkning eller tillhandahållande av krigsmateriel (3 eller 4 §) får väckas bara efter medgivande av tillsynsmyndigheten.
+N Krigsmateriel är materiel som är utformad för militärt bruk och som enligt regeringens föreskrifter utgör krigsmateriel. Olovlig utförsel av själva materielen bestraffas enligt lagen om straff för smuggling.
+G Gärningspersonen gör utan tillstånd minst ett av:
+  | Tillverkar krigsmateriel i Sverige.
+  | Bedriver verksamhet som avser tillhandahållande av krigsmateriel, uppfinningar om krigsmateriel eller metoder för att framställa sådan materiel, eller tillhandahållande av tekniskt bistånd till någon i utlandet.
+  | Tillhandahåller någon i utlandet krigsmateriel som finns i utlandet, eller en uppfinning eller framställningsmetod som rör krigsmateriel.
+  | Lämnar tekniskt bistånd till någon utanför landet.
+  | Ingår avtal om att upplåta eller överlåta tillverkningsrätt till någon i utlandet, eller om att tillsammans med eller för någon utom landet utveckla eller tillverka krigsmateriel eller tillhandahålla tekniskt bistånd.
+  | Bedriver militärt inriktad utbildning av personer som inte är svenska medborgare.
+  | Lämnar anbud eller ingår avtal i strid med ett förbud som Inspektionen för strategiska produkter har meddelat i det enskilda fallet.
+  | Förmår genom vilseledande Inspektionen för strategiska produkter eller regeringen att lämna tillstånd, så att ett avtal fullföljs, tekniskt bistånd lämnas utanför landet eller ett tillhandahållande kommer till stånd.
+K Förbuden mot verksamhet utomlands gäller svenska myndigheter, svenska företag och den som är bosatt eller stadigvarande vistas i Sverige.
+S Uppsåt.
+U Fallet är ringa.
+U Gärningen är belagd med straff i brottsbalken.
+T Ett verkstadsföretag tillverkar delar till granatkastare och säljer dem till en utländsk köpare utan tillstånd att tillverka eller tillhandahålla krigsmateriel.
+T En person bosatt i Sverige förmedlar mot provision en affär där militära fordon som finns i ett annat land säljs till en köpare i ett tredje land, utan tillstånd.
+
+@ v21-krigsmateriel-utan-tillstand-grovt | Brott mot lagen om krigsmateriel, grovt brott | 26 § | 25,26,28,30
+PEN 0.5 | 6 | Fängelse i lägst sex månader och högst sex år | F 6 mån–6 år
+C Rikets säkerhet
+A grov vapenexport;krigsmateriel grovt;olaglig vapenaffär
+Q villkor | Allmänt åtal för brott mot kravet på tillstånd för tillverkning eller tillhandahållande av krigsmateriel (3 eller 4 §) får väckas bara efter medgivande av tillsynsmyndigheten.
+B v21-krigsmateriel-utan-tillstand
+S Gärningen har begåtts uppsåtligen.
+R grovt
+- Brottet har avsett betydande värde.
+- Brottet har varit av stor omfattning eller varaktighet.
+- Gärningen har annars varit av särskilt allvarlig art.
+T Ett företag förmedlar under flera år stora partier pansarvärnsvapen till köpare i utlandet utan tillstånd.
+
+@ v21-krigsmateriel-utan-tillstand-oaktsamhet | Brott mot lagen om krigsmateriel (verksamhet utan tillstånd, oaktsamhet) | 25 § andra stycket | 3,4,5,6,7,8,9,10,12,25,28,30
+PEN 0 | 0.5 | Böter eller fängelse i högst sex månader | B–F 6 mån
+C Rikets säkerhet
+A krigsmateriel;oaktsam vapenexport;tillstånd saknas krigsmateriel;tekniskt bistånd
+Q villkor | Allmänt åtal för brott mot kravet på tillstånd för tillverkning eller tillhandahållande av krigsmateriel (3 eller 4 §) får väckas bara efter medgivande av tillsynsmyndigheten.
+G Gärningspersonen gör utan tillstånd minst ett av:
+  | Tillverkar krigsmateriel i Sverige.
+  | Bedriver verksamhet som avser tillhandahållande av krigsmateriel, uppfinningar om krigsmateriel eller metoder för att framställa sådan materiel, eller tillhandahållande av tekniskt bistånd till någon i utlandet.
+  | Tillhandahåller någon i utlandet krigsmateriel som finns i utlandet, eller en uppfinning eller framställningsmetod som rör krigsmateriel.
+  | Lämnar tekniskt bistånd till någon utanför landet.
+  | Ingår avtal om att upplåta eller överlåta tillverkningsrätt till någon i utlandet, eller om att tillsammans med eller för någon utom landet utveckla eller tillverka krigsmateriel eller tillhandahålla tekniskt bistånd.
+  | Bedriver militärt inriktad utbildning av personer som inte är svenska medborgare.
+  | Lämnar anbud eller ingår avtal i strid med ett förbud som Inspektionen för strategiska produkter har meddelat i det enskilda fallet.
+  | Förmår genom vilseledande Inspektionen för strategiska produkter eller regeringen att lämna tillstånd, så att ett avtal fullföljs, tekniskt bistånd lämnas utanför landet eller ett tillhandahållande kommer till stånd.
+S Oaktsamhet.
+U Fallet är ringa.
+U Gärningen är belagd med straff i brottsbalken.
+T Ett teknikföretag skickar ritningar och monteringsanvisningar för ett militärt siktessystem till en utländsk kund utan att kontrollera att det krävs tillstånd för tekniskt bistånd.
+
+@ v21-krigsmateriel-anmalan-uppgifter-villkor | Brott mot lagen om krigsmateriel (anmälan, oriktiga uppgifter och villkor) | 27 § | 21,27,28
+PEN 0 | 0.5 | Böter eller fängelse i högst sex månader | B–F 6 mån
+C Rikets säkerhet
+A krigsmateriel;oriktig uppgift tillståndsansökan;bryta mot tillståndsvillkor;vapenexport villkor;ISP
+Q plain
+G Gärningspersonen gör minst ett av:
+  | Har tillstånd enligt lagen men anmäler inte till Inspektionen för strategiska produkter när förhållanden som har tagits upp i tillståndsansökan ändras, eller anmäler inte planerade ändringar i tillverkningen av kemiska produkter.
+  | Lämnar en oriktig uppgift i en ansökan om tillstånd eller i en annan handling som har betydelse för prövningen av ett ärende eller för kontrollen och som ges in till tillsynsmyndigheten.
+  | Åsidosätter ett villkor i ett tillstånd.
+  | Har tillstånd till utförsel av krigsmateriel eller lämnande av tekniskt bistånd till ett annat land inom EES men för inte detaljerade och fullständiga register över sina överföringar inom EES.
+  | Bryter mot ett skriftligt åtagande som har getts in till Inspektionen för strategiska produkter i ett ärende om certifiering.
+S Uppsåt eller oaktsamhet.
+U Fallet är ringa.
+U Gärningen är belagd med straff i brottsbalken.
+T Ett företag med exporttillstånd levererar materielen till en annan slutanvändare än den som anges i tillståndets villkor.
+
+@ v21-krigsmateriel-kontrollbestammelser | Brott mot lagen om krigsmateriel (kontroll- och ordningsbestämmelser) | 27 a § | 27a,28,31
+PEN 0 | 0 | Böter | Böter
+C Rikets säkerhet
+A krigsmateriel;ordningsbestämmelse krigsmateriel;kontrollföreskrift;ISP
+Q plain
+G Gärningspersonen bryter mot en kontroll- eller ordningsbestämmelse som har meddelats med stöd av lagen om krigsmateriel.
+S Uppsåt eller oaktsamhet.
+U Fallet är ringa.
+U Överträdelsen gäller en skyldighet att lämna underrättelse, uppgifter, redovisning eller deklaration som i stället leder till sanktionsavgift.
+U Gärningen är belagd med straff i brottsbalken.
+T Ett företag med tillverkningstillstånd följer inte de föreskrifter om kontroll av verksamheten som gäller för tillståndet.
+
+LAW S2000-1064 | Lagen (2000:1064) om kontroll av produkter med dubbla användningsområden och av tekniskt bistånd | 2000:1064 | PDA-lagen
+X 1,2,21
+
+@ v21-pda-utan-tillstand | Brott mot lagen om kontroll av produkter med dubbla användningsområden (export m.m. utan tillstånd) | 18 § första stycket | 18,21
+PEN 0 | 2 | Böter eller fängelse i högst två år | B–F 2 år
+C Rikets säkerhet
+A dual use;dubbla användningsområden;export utan tillstånd;exportkontroll;PDA;strategiska produkter
+Q plain
+ST F | PDA-lagen 21 §
+N Produkter med dubbla användningsområden är produkter, även programvara och teknik, som kan användas för både civila och militära ändamål. Vilka produkter som kräver tillstånd framgår av EU:s förordning 2021/821 och av svenska föreskrifter.
+O Produkter med dubbla användningsområden som det krävs tillstånd för, antingen för att de finns upptagna i EU:s kontrollförteckning eller i svenska föreskrifter eller för att tillståndskrav har inträtt i det enskilda fallet, till exempel på grund av risk för användning till massförstörelsevapen eller militär slutanvändning.
+G Gärningspersonen gör utan tillstånd minst ett av:
+  | Exporterar produkterna.
+  | Överför produkterna till ett annat EU-land när överföringen kräver tillstånd.
+  | Tillhandahåller förmedlingstjänster för produkterna.
+  | Tillhandahåller tekniskt bistånd för produkterna.
+S Uppsåt.
+T Ett företag exporterar en avancerad verktygsmaskin som finns på EU:s kontrollförteckning till en köpare utanför EU utan att ha exporttillstånd.
+
+@ v21-pda-utan-tillstand-grovt | Brott mot lagen om kontroll av produkter med dubbla användningsområden, grovt brott (export m.m. utan tillstånd) | 18 § andra stycket | 18,21
+PEN 0.5 | 6 | Fängelse i lägst sex månader och högst sex år | F 6 mån–6 år
+C Rikets säkerhet
+A grov olovlig export;dual use grovt;exportkontroll grovt
+Q plain
+ST FPS | PDA-lagen 21 §
+B v21-pda-utan-tillstand
+R grovt
+- Gärningen har ingått som ett led i en brottslighet som utövats systematiskt eller i större omfattning.
+- Gärningen har inneburit en allvarlig kränkning av ett betydande samhällsintresse.
+T Ett bolag bygger upp ett nätverk av skalbolag för att under flera år föra ut kontrollerad elektronik till ett militärt program i ett annat land utan tillstånd.
+
+@ v21-pda-transitering | Brott mot lagen om kontroll av produkter med dubbla användningsområden (transitering) | 18 a § första och andra styckena | 4d,18a,21
+PEN 0 | 2 | Böter eller fängelse i högst två år | B–F 2 år
+C Rikets säkerhet
+A transitering dual use;transit;dubbla användningsområden;exportkontroll;strategiska produkter
+Q plain
+ST F | PDA-lagen 21 §
+N Transitering innebär att produkter från ett land utanför EU transporteras genom EU:s tullområde till en destination utanför EU.
+O Produkter med dubbla användningsområden.
+G Gärningspersonen gör minst ett av:
+  | Bryter mot ett förbud mot transitering som har meddelats enligt EU:s förordning 2021/821 eller i svenska föreskrifter.
+  | Transiterar utan tillstånd produkter som tillståndskrav har inträtt för.
+S Uppsåt.
+T Ett transportföretag fraktar en sändning kontrollerade komponenter genom Sverige till ett land utanför EU trots att myndigheten har förbjudit transiteringen.
+
+@ v21-pda-transitering-grovt | Brott mot lagen om kontroll av produkter med dubbla användningsområden, grovt brott (transitering) | 18 a § tredje stycket | 18a,21
+PEN 0.5 | 6 | Fängelse i lägst sex månader och högst sex år | F 6 mån–6 år
+C Rikets säkerhet
+A grov olovlig transitering;dual use grovt;transit grovt
+Q plain
+ST FPS | PDA-lagen 21 §
+B v21-pda-transitering
+R grovt
+- Gärningen har ingått som ett led i en brottslighet som utövats systematiskt eller i större omfattning.
+- Gärningen har inneburit en allvarlig kränkning av ett betydande samhällsintresse.
+T En speditör låter återkommande förbjudna sändningar av kontrollerad utrustning passera genom svenska hamnar som ett led i en organiserad verksamhet.
+
+@ v21-pda-grov-oaktsamhet | Brott mot lagen om kontroll av produkter med dubbla användningsområden (grov oaktsamhet) | 19 § | 18,18a,19
+PEN 0 | 2 | Böter eller fängelse i högst två år | B–F 2 år
+C Rikets säkerhet
+A dual use;dubbla användningsområden;oaktsam export;exportkontroll;transitering
+Q plain
+O Produkter med dubbla användningsområden som det krävs tillstånd för eller som omfattas av ett förbud mot transitering.
+G Gärningspersonen gör minst ett av:
+  | Exporterar produkterna utan tillstånd.
+  | Överför produkterna utan tillstånd till ett annat EU-land när överföringen kräver tillstånd.
+  | Tillhandahåller förmedlingstjänster eller tekniskt bistånd för produkterna utan tillstånd.
+  | Transiterar produkterna i strid med ett förbud eller utan tillstånd.
+S Grov oaktsamhet.
+U Gärningen är ringa.
+T Ett företag exporterar kontrollerad mätutrustning utan tillstånd efter att helt ha struntat i att kontrollera produkten mot kontrollförteckningen, trots att tillverkaren har varnat för exportkontroll.
+
+@ v21-pda-uppgifter-villkor | Brott mot lagen om kontroll av produkter med dubbla användningsområden (oriktiga uppgifter, villkor och underrättelser) | 22 § | 17,22
+PEN 0 | 0.5 | Böter eller fängelse i högst sex månader | B–F 6 mån
+C Rikets säkerhet
+A dual use;oriktig uppgift exporttillstånd;tillståndsvillkor;underrättelseskyldighet;exportkontroll
+Q plain
+G Gärningspersonen gör minst ett av:
+  | Lämnar oriktiga uppgifter i en ansökan om tillstånd, i en annan handling som har betydelse för prövningen av ett ärende eller i en deklaration för tillsynsavgift.
+  | Åsidosätter krav eller villkor som har meddelats för ett tillstånd.
+  | Underrättar inte myndigheten trots vetskap om att produkter, förmedlingstjänster eller tekniskt bistånd är avsedda för en användning som utlöser underrättelseskyldighet, till exempel massförstörelsevapen.
+  | Åsidosätter sin skyldighet att lämna uppgifter vid överföring av produkter inom EU.
+  | Bevarar inte de handlingar och register som ska bevaras i minst fem år, eller visar inte upp dem när tillsynsmyndigheten begär det.
+S Uppsåt eller oaktsamhet.
+U Gärningen är ringa.
+T Ett företag uppger i sin ansökan om exporttillstånd en annan slutanvändare än den verkliga.
+
+@ v21-pda-kontrollforeskrifter | Brott mot lagen om kontroll av produkter med dubbla användningsområden (kontroll- och ordningsföreskrifter) | 22 a § | 22a,24
+PEN 0 | 0 | Böter | Böter
+C Rikets säkerhet
+A dual use;ordningsföreskrift exportkontroll;kontrollföreskrift;dubbla användningsområden
+Q plain
+G Gärningspersonen bryter mot en kontroll- eller ordningsföreskrift som har meddelats med stöd av lagen.
+S Uppsåt eller oaktsamhet.
+U Gärningen är ringa.
+U Gärningen består i att inte i rätt tid ge in en deklaration för tillsynsavgift, vilket i stället kan leda till vitesföreläggande.
+T Ett företag som exporterar kontrollerade produkter följer inte de föreskrifter om kontroll av verksamheten som myndigheten har meddelat.
+
+LAW S2006-1329 | Lagen (2006:1329) om handel med vissa varor som kan användas till dödsstraff eller tortyr, m.m. | 2006:1329 | Tortyrvarulagen
+X 1,2,5
+
+@ v21-tortyrvaror-tekniskt-bistand | Brott mot lagen om handel med vissa varor som kan användas till dödsstraff eller tortyr (tekniskt bistånd) | 3 § första stycket | 3,5
+PEN 0 | 2 | Böter eller fängelse i högst två år | B–F 2 år
+C Rikets säkerhet
+A tortyrredskap;dödsstraff utrustning;tekniskt bistånd tortyr;tortyrvaror;avrättningsutrustning
+Q plain
+ST F | Tortyrvarulagen 5 §
+N Olovlig import och export av själva varorna bestraffas enligt lagen om straff för smuggling.
+O Tekniskt bistånd som rör varor som inte har något annat praktiskt användningsområde än dödsstraff, tortyr eller annan grym, omänsklig eller förnedrande behandling eller bestraffning, och som omfattas av förbuden i artiklarna 3 och 4 i EU:s förordning om handel med sådana varor.
+G Gärningspersonen tillhandahåller eller tar emot det tekniska biståndet utan nödvändigt tillstånd.
+S Uppsåt till samtliga rekvisit. Lagen anger ingen skuldform. Utgångspunkten är då att uppsåt krävs.
+T En tekniker reser utan tillstånd till ett land utanför EU och utbildar personal i att använda och underhålla utrustning som bara kan användas vid avrättningar.
+
+@ v21-tortyrvaror-tekniskt-bistand-grovt | Brott mot lagen om handel med vissa varor som kan användas till dödsstraff eller tortyr, grovt brott | 3 § andra stycket | 3,5
+PEN 0.5 | 6 | Fängelse i lägst sex månader och högst sex år | F 6 mån–6 år
+C Rikets säkerhet
+A grovt tortyrvaror;tortyrredskap grovt;tekniskt bistånd tortyr
+Q plain
+ST FPS | Tortyrvarulagen 5 §
+B v21-tortyrvaror-tekniskt-bistand
+R grovt
+- Gärningen har ingått som ett led i en brottslighet som utövats systematiskt eller i större omfattning.
+T Ett företag säljer under flera år service och utbildning för tortyrredskap till säkerhetstjänster i flera länder utan tillstånd.
+
+@ v21-tortyrvaror-tekniskt-bistand-grov-oaktsamhet | Brott mot lagen om handel med vissa varor som kan användas till dödsstraff eller tortyr (grov oaktsamhet) | 4 § | 3,4
+PEN 0 | 2 | Böter eller fängelse i högst två år | B–F 2 år
+C Rikets säkerhet
+A tortyrredskap;oaktsamt tekniskt bistånd;tortyrvaror;dödsstraff utrustning
+Q plain
+O Tekniskt bistånd som rör varor som inte har något annat praktiskt användningsområde än dödsstraff, tortyr eller annan grym, omänsklig eller förnedrande behandling eller bestraffning, och som omfattas av förbuden i artiklarna 3 och 4 i EU:s förordning om handel med sådana varor.
+G Gärningspersonen tillhandahåller eller tar emot det tekniska biståndet utan nödvändigt tillstånd.
+S Grov oaktsamhet.
+U Gärningen är ringa.
+T Ett serviceföretag åtar sig underhåll av utrustning hos en utländsk kund utan att bry sig om tydliga uppgifter om att utrustningen bara används för att tortera fångar.
+
+LAW S2011-791 | Lagen (2011:791) om ackreditering och teknisk kontroll | 2011:791 | Lagen om ackreditering och teknisk kontroll
+X 14
+
+@ v21-ce-markning-otillaten | Brott mot lagen om ackreditering och teknisk kontroll (CE-märkning) | 17 § | 15,17
+PEN 0 | 0 | Böter | Böter
+C Ekonomisk brottslighet
+A CE-märkning;falsk CE-märkning;CE-märke;felaktigt CE-märkt;produktsäkerhet
+Q plain
+G Gärningspersonen CE-märker en produkt fast märkningen inte stämmer överens med EU:s regler om CE-märkning eller fast det saknas föreskrifter om sådan märkning för produkten.
+S Uppsåt eller oaktsamhet.
+U Gärningen är belagd med straff enligt en annan författning.
+U Gärningen omfattas av ett vitesföreläggande enligt en annan författning som gärningspersonen har åsidosatt.
+T En importör sätter CE-märke på elektriska leksaker som inte har genomgått den kontroll som krävs för märkningen.
+
+LAW S2012-179 | Lagen (2012:179) om straff för olovlig befattning med klusterammunition | 2012:179 | Klusterammunitionslagen
+X 2
+
+@ v21-olovlig-befattning-klusterammunition | Olovlig befattning med klusterammunition | 1 § första stycket | 1,2
+PEN 0 | 4 | Fängelse i högst fyra år | F 4 år
+C Rikets säkerhet
+A klusterbomber;klustervapen;klusterammunition;substridsdelar;multipelbomb
+Q plain
+N Svensk domstol är behörig även utan vanlig domsrätt om brottet har begåtts av en svensk medborgare eller en utlänning med hemvist i Sverige. För brott som har begåtts utomlands kan det krävas tillstånd att väcka åtal enligt 2 kap. 7 § brottsbalken.
+O Klusterammunition eller explosiva substridsdelar från spridningskapslar fästa vid luftfartyg, så som de avses i konventionen den 30 maj 2008 om klusterammunition.
+G Gärningspersonen använder, utvecklar, tillverkar, förvärvar, innehar, lagrar eller överlåter klusterammunitionen eller för in den till Sverige eller för ut den från Sverige.
+S Uppsåt till samtliga rekvisit. Lagen anger ingen skuldform. Utgångspunkten är då att uppsåt krävs.
+U Befattningen är tillåten enligt konventionen om klusterammunition.
+U Gärningen är att bedöma som krigsförbrytelse enligt lagen om straff för vissa internationella brott.
+T En person förvarar ett antal klusterbomber i ett lager för att sälja dem vidare till en köpare i utlandet.
+
+@ v21-olovlig-befattning-klusterammunition-grovt | Olovlig befattning med klusterammunition, grovt brott | 1 § fjärde stycket | 1,2
+PEN 0 | 18 | Fängelse i högst arton år eller på livstid | F 18 år / livstid
+C Rikets säkerhet
+A grovt klusterbomber;klusterammunition grovt;klustervapen
+Q plain
+B v21-olovlig-befattning-klusterammunition
+R grovt
+- Gärningen har väsentligt bidragit till att klusterammunition kommit att användas på ett sätt som inneburit fara för många människors liv eller hälsa.
+T En person levererar ett stort parti klusterbomber till en väpnad grupp som sedan fäller dem över ett bostadsområde.
+
+LAW S2023-677 | Lagen (2023:677) om frysning av tillgångar | 2023:677 | Frysningslagen
+X 3,4,5,6,20,21
+
+@ v21-brott-mot-frysningsbeslut | Brott mot lagen om frysning av tillgångar | 19 § första stycket | 3,4,5,6,19,20
+PEN 0 | 3 | Fängelse i högst tre år | F 3 år
+C Rikets säkerhet
+A frysning av tillgångar;frysta tillgångar;terrorfinansiering;frysningsbeslut;överföra pengar till terrormisstänkt
+Q plain
+ST F | Frysningslagen 20 §
+N Ett beslut om frysning kan meddelas för den som är misstänkt eller dömd för terroristbrottslighet, om det behövs för att förhindra fortsatt brottslighet av likartat slag.
+O Ett beslut om frysning, som innebär förbud för den som anges i beslutet att förfoga över sina tillgångar och förbud för var och en att tillhandahålla tillgångar till honom eller henne. Förbuden omfattar också juridiska personer som den utpekade äger eller kontrollerar och personer som agerar i hans eller hennes ställe eller på hans eller hennes uppdrag.
+G Gärningspersonen gör minst ett av:
+  | Förfogar över tillgångar som omfattas av frysningen.
+  | Tillhandahåller tillgångar till den som beslutet avser eller till någon annan som omfattas av förbudet.
+S Uppsåt eller grov oaktsamhet.
+U Gärningen avser humanitärt bistånd, verksamhet till stöd för grundläggande mänskliga behov eller annat sådant stöd.
+T En person vars tillgångar har frysts för över pengar från ett konto i ett bolag som han kontrollerar till en bekant utomlands.
+T En person swishar ett större belopp till en vän trots vetskap om att vännens tillgångar är frysta.
+
+@ v21-brott-mot-frysningsbeslut-grovt | Brott mot lagen om frysning av tillgångar, grovt brott | 19 § första stycket | 19,20
+PEN 2 | 6 | Fängelse i lägst två år och högst sex år | F 2–6 år
+C Rikets säkerhet
+A grovt brott mot frysning;frysta tillgångar grovt;terrorfinansiering
+Q plain
+ST F | Frysningslagen 20 §
+B v21-brott-mot-frysningsbeslut
+S Gärningen har begåtts uppsåtligen.
+R grovt*
+- Gärningen har avsett mycket betydande värden.
+- Gärningen har varit systematisk eller annars av särskilt farlig art.
+T En person för systematiskt över miljonbelopp till en person med frysta tillgångar genom en kedja av bulvaner.
+
+@ v21-brott-mot-frysningsbeslut-ringa | Brott mot lagen om frysning av tillgångar, ringa brott | 19 § andra stycket | 19,20,21
+PEN 0 | 0.5 | Böter eller fängelse i högst sex månader | B–F 6 mån
+C Rikets säkerhet
+A ringa brott mot frysning;frysta tillgångar litet belopp;frysningsbeslut
+Q villkor | Åtal för ringa brott eller försök till sådant brott får väckas bara om det är motiverat från allmän synpunkt.
+ST F | Frysningslagen 20 §
+B v21-brott-mot-frysningsbeslut
+R ringa*
+- Egendomens värde har varit lågt.
+- Övriga omständigheter vid brottet gör att det är att anse som ringa.
+T En person lånar ut några hundra kronor till en bekant vars tillgångar är frysta.
+
+LAW S2025-327 | Lagen (2025:327) om internationella sanktioner | 2025:327 | Sanktionslagen
+X 2,6,10,11,13
+
+@ v21-sanktionsbrott | Sanktionsbrott | 3–5 §§ | 2,3,4,5,6,10
+PEN 0 | 3 | Fängelse i högst tre år | F 3 år
+C Rikets säkerhet
+A sanktioner;bryta mot EU-sanktioner;Rysslandssanktioner;sanktionslistad;frysta tillgångar;kringgå sanktioner
+Q plain
+ST F | Sanktionslagen 10 §
+N Internationella sanktioner är restriktiva åtgärder som har beslutats av FN:s säkerhetsråd eller av EU. Angivna personer, enheter och organ är de som är föremål för sanktionerna (sanktionslistade). Tullverket får utreda brott som gäller förbud mot in- eller utförsel av varor.
+K Det finns ett förbud, en skyldighet eller en begränsning enligt en av EU:s förordningar om internationella sanktioner eller enligt föreskrifter eller beslut som har meddelats med stöd av lagen.
+G Gärningspersonen gör i strid med förbudet, skyldigheten eller begränsningen minst ett av:
+  | Gör direkt eller indirekt egendom tillgänglig för en sanktionslistad person, enhet eller organ, eller låter bli att frysa deras egendom.
+  | Gör det möjligt för en sanktionslistad person att resa in i eller transitera genom en medlemsstat.
+  | Inleder eller fortsätter transaktioner med en tredje stat, dess enheter eller organ eller enheter som de äger eller kontrollerar.
+  | Importerar, exporterar, säljer, köper, överför, transiterar eller transporterar varor eller tillhandahåller förmedlingstjänster, tekniskt bistånd eller andra tjänster som rör varorna.
+  | Tillhandahåller finansiella tjänster, bedriver finansiell verksamhet eller tillhandahåller andra tjänster.
+  | Bryter mot eller uppfyller inte villkoren i ett tillstånd att bedriva verksamhet som annars skulle vara förbjuden.
+  | Kringgår sanktionerna genom att förfoga över egendom som ska frysas i syfte att undanhålla den, genom att lämna falska eller vilseledande uppgifter för att dölja vem som äger eller slutligen tar emot egendomen, eller genom att inte rapportera egendom till behörig myndighet trots skyldighet.
+  | Bryter på annat sätt mot förbudet, skyldigheten eller begränsningen.
+S Uppsåt eller grov oaktsamhet.
+U Gärningen avser humanitärt bistånd, verksamhet till stöd för grundläggande mänskliga behov eller annat sådant stöd.
+U Advokater och andra oberoende jurister är inte skyldiga att lämna uppgifter om vad som har anförtrotts dem när de försvarar eller företräder en klient i ett rättsligt förfarande.
+T Ett företag exporterar via ett mellanled i ett tredje land elektronikkomponenter som omfattas av EU:s exportförbud mot ett sanktionerat land.
+T En bankanställd genomför en betalning till ett bolag som ägs av en sanktionslistad person trots tydliga varningssignaler.
+
+@ v21-sanktionsforseelse | Sanktionsförseelse | 7 § | 3,4,5,6,7,10,11
+PEN 0 | 0.5 | Böter eller fängelse i högst sex månader | B–F 6 mån
+C Rikets säkerhet
+A ringa sanktionsbrott;sanktioner litet värde;bryta mot EU-sanktioner;sanktionslistad
+Q villkor | Åtal för sanktionsförseelse och försök till sanktionsförseelse får väckas bara om det är motiverat från allmän synpunkt.
+ST F | Sanktionslagen 10 §
+B v21-sanktionsbrott
+R ringa*
+- Egendomens värde har varit lågt.
+- Övriga omständigheter vid brottet gör att det är att anse som ringa.
+T En person skickar en gåva av lågt värde som omfattas av ett exportförbud till en släkting i ett sanktionerat land.
+
+@ v21-sanktionsbrott-grovt | Grovt sanktionsbrott | 8 § | 3,4,5,6,8,10
+PEN 2 | 6 | Fängelse i lägst två år och högst sex år | F 2–6 år
+C Rikets säkerhet
+A grovt sanktionsbrott;kringgå sanktioner;krigsmateriel sanktioner;Rysslandssanktioner
+Q plain
+ST F | Sanktionslagen 10 §
+B v21-sanktionsbrott
+S Gärningen har begåtts uppsåtligen.
+R grovt
+- Gärningen har avsett egendom av mycket betydande värde.
+- Gärningen har avsett utrustning som utgör krigsmateriel eller produkter som kan användas för både civila och militära ändamål.
+- Gärningen har annars varit av särskilt farlig art.
+T Ett företag säljer avancerade sensorer som kan användas i vapensystem till ett sanktionerat lands försvarsindustri via bulvanbolag.
+
+@ v21-upprepat-sanktionsbrott | Upprepat sanktionsbrott | 9 § | 3,4,5,6,9
+PEN 2 | 6 | Fängelse i lägst två år och högst sex år | F 2–6 år
+C Rikets säkerhet
+A upprepat sanktionsbrott;flera sanktionsbrott;systematiska sanktionsbrott;kringgå sanktioner
+Q plain
+G Gärningspersonen begår två eller flera sanktionsbrott.
+K Det finns ett samband mellan brotten.
+K Brotten avser sammantaget ett mycket betydande värde.
+S Uppsåt.
+U Gärningarna avser humanitärt bistånd, verksamhet till stöd för grundläggande mänskliga behov eller annat sådant stöd.
+T Ett handelsbolag gör under ett år ett stort antal mindre leveranser av förbjudna varor till samma köpare i ett sanktionerat land, till ett sammanlagt värde av många miljoner kronor.
+
+LAW S1985-613 | Förordningen (1985:613) om auktorisation av tolkar och översättare | 1985:613 | Förordningen om auktorisation av tolkar och översättare
+X 1,2
+
+@ v21-obehorigen-auktoriserad-tolk | Brott mot förordningen om auktorisation av tolkar och översättare | 16 § | 16
+PEN 0 | 0 | Böter | Böter
+C Allmän verksamhet
+A falsk tolk;auktoriserad tolk;auktoriserad translator;utge sig för tolk;oauktoriserad översättare
+Q plain
+G Gärningspersonen utger sig obehörigen för att vara auktoriserad tolk eller auktoriserad översättare (translator).
+S Uppsåt till samtliga rekvisit. Lagen anger ingen skuldform. Utgångspunkten är då att uppsåt krävs.
+T En person marknadsför sina översättningstjänster med titeln auktoriserad translator utan att vara auktoriserad av Kammarkollegiet.
+
+LAW S2024-1159 | Lagen (2024:1159) med kompletterande bestämmelser till EU:s förordning om marknader för kryptotillgångar | 2024:1159 | Lagen om kryptotillgångar
+
+@ v21-meddelandeforbud-kryptotillgangar | Brott mot lagen med kompletterande bestämmelser till EU:s förordning om marknader för kryptotillgångar (meddelandeförbud) | 1:7 | 1:6,1:7
+PEN 0 | 0 | Böter | Böter
+C Rättsväsende
+A meddelandeförbud;röja förundersökning för kund;kryptobörs;kryptotillgångar;tipsa kund om utredning
+Q plain
+K En undersökningsledare eller åklagare har begärt uppgifter från ett företag på marknaden för kryptotillgångar och beslutat om meddelandeförbud för företaget, dess styrelseledamöter och anställda.
+G Gärningspersonen röjer för kunden eller för någon utomstående att uppgifter har lämnats eller att det pågår en förundersökning, en utredning om självständigt förverkande, ett ärende om rättslig hjälp i brottmål eller ett ärende om en europeisk utredningsorder.
+S Uppsåt eller grov oaktsamhet.
+T En anställd på en kryptobörs berättar för en kund att polisen har begärt ut kundens transaktionshistorik, trots meddelandeförbud.
+
+LAW S2022-1746 | Lagen (2022:1746) med kompletterande bestämmelser till EU:s förordning om en paneuropeisk privat pensionsprodukt (PEPP-produkt) | 2022:1746 | PEPP-lagen
+
+@ v21-meddelandeforbud-pepp | Brott mot lagen med kompletterande bestämmelser till EU:s förordning om en paneuropeisk privat pensionsprodukt (meddelandeförbud) | 1:8 | 1:7,1:8
+PEN 0 | 0 | Böter | Böter
+C Rättsväsende
+A meddelandeförbud;röja förundersökning för kund;pensionssparande;PEPP;tipsa kund om utredning
+Q plain
+K En undersökningsledare eller åklagare har begärt uppgifter från ett PEPP-sparinstitut, en PEPP-distributör eller ett förvaringsinstitut och beslutat om meddelandeförbud för företaget, dess styrelseledamöter och anställda.
+G Gärningspersonen röjer för kunden eller för någon utomstående att uppgifter har lämnats eller att det pågår en förundersökning, en utredning om självständigt förverkande, ett ärende om rättslig hjälp i brottmål eller ett ärende om en europeisk utredningsorder.
+S Uppsåt eller grov oaktsamhet.
+T En handläggare hos ett pensionssparinstitut ringer en kund och berättar att åklagaren har begärt ut uppgifter om kundens sparande, trots meddelandeförbud.
+
+LAW S2021-899 | Lagen (2021:899) med kompletterande bestämmelser till EU:s förordning om gräsrotsfinansiering | 2021:899 | Lagen om gräsrotsfinansiering
+
+@ v21-meddelandeforbud-grasrotsfinansiering | Brott mot lagen med kompletterande bestämmelser till EU:s förordning om gräsrotsfinansiering (meddelandeförbud) | 1:9 | 1:8,1:9
+PEN 0 | 0 | Böter | Böter
+C Rättsväsende
+A meddelandeförbud;röja förundersökning för kund;crowdfunding;gräsrotsfinansiering;tipsa kund om utredning
+Q plain
+K En undersökningsledare eller åklagare har begärt uppgifter från en leverantör av gräsrotsfinansieringstjänster och beslutat om meddelandeförbud för leverantören, dess styrelseledamöter och anställda.
+G Gärningspersonen röjer för kunden eller för någon utomstående att uppgifter har lämnats eller att det pågår en förundersökning, en utredning om självständigt förverkande, ett ärende om rättslig hjälp i brottmål eller ett ärende om en europeisk utredningsorder.
+S Uppsåt eller grov oaktsamhet.
+T En anställd på en plattform för gräsrotsfinansiering berättar för en projektägare att polisen har begärt ut uppgifter om insamlingen, trots meddelandeförbud.
+
+LAW S1975-927 | Fartygsregisterförordningen (1975:927) | 1975:927 | Fartygsregisterförordningen
+
+@ v21-skepp-utan-nationalitetshandling | Brott mot fartygsregisterförordningen (skepp utan nationalitetshandling) | 7:7 andra stycket | 6:12,7:7
+PEN 0 | 0 | Böter | Böter
+C Trafik
+A nationalitetscertifikat;skepp utan nationalitetshandling;fartygspapper saknas;skeppsregistret
+Q plain
+K Gärningspersonen är befälhavare eller redare.
+G Gärningspersonen håller ett skepp i drift utan gällande nationalitetshandling.
+S Uppsåt eller oaktsamhet.
+N Den som inte anmäler ändrade förhållanden eller sjösättning till registermyndigheten döms till penningböter enligt första stycket.
+T En redare låter ett nyförvärvat lastfartyg gå i trafik innan något nationalitetscertifikat har utfärdats för skeppet.
+
+LAW S1975-929 | Förordningen (1975:929) med vissa bestämmelser om fartygs identifiering | 1975:929 | Förordningen om fartygs identifiering
+X 4:3,4:4,4:6
+
+@ v21-fartygs-markning | Brott mot förordningen med vissa bestämmelser om fartygs identifiering (märkning) | 4:11 | 4:7,4:8,4:9,4:10,4:11
+PEN 0 | 0 | Böter | Böter
+C Trafik
+A fartygsmärkning;fartygsnamn dolt;registerbeteckning båt;distriktsbeteckning fiskefartyg;omärkt fartyg
+Q plain
+O Ett registrerat fartyg och dess föreskrivna märkning, det vill säga namn och hemort på skepp, registerbeteckning på vissa båtar samt distriktsbeteckning och hemmahamn på fiskefartyg.
+G Gärningspersonen gör minst ett av:
+  | Gör märkningen otydlig eller döljer den.
+  | Anbringar på fartyget en beteckning som kan förväxlas med den föreskrivna märkningen.
+  | Håller fartyget i drift utan att det är märkt.
+  | Är ägare till ett fartyg som har avregistrerats och avlägsnar inte märkningen med registerbeteckning och distriktsbeteckning fast det är möjligt.
+S Uppsåt eller oaktsamhet.
+T En fiskare målar över distriktsbeteckningen på sin registrerade fiskebåt och fortsätter att fiska med båten.
+
+LAW S1958-272 | Förordningen (1958:272) om tjänstekort | 1958:272 | Tjänstekortsförordningen
+X 1,6,8,9,10
+
+@ v21-tjanstekort-oriktig-uppgift | Brott mot förordningen om tjänstekort (oriktig uppgift) | 12 § första stycket | 12
+PEN 0 | 0.5 | Böter eller fängelse i högst sex månader | B–F 6 mån
+C Allmän verksamhet
+A tjänstekort;falskt tjänstekort;tjänstekort i annans namn;myndighetslegitimation
+Q plain
+G Gärningspersonen gör minst ett av:
+  | Skaffar sig ett tjänstekort i någon annans namn.
+  | Lämnar en annan oriktig eller vilseledande uppgift för att få ett tjänstekort.
+S Uppsåt till samtliga rekvisit. Lagen anger ingen skuldform. Utgångspunkten är då att uppsåt krävs.
+U Gärningen är belagd med straff i brottsbalken.
+T En person uppger i en beställning av tjänstekort en tjänsteställning som han inte har för att få ett kort som visar att han är tillsynsinspektör.
+
+@ v21-tjanstekort-aterlamning-anmalan | Brott mot förordningen om tjänstekort (återlämnande och anmälan) | 12 § andra stycket | 6,8,9,10,12
+PEN 0 | 0 | Böter | Böter
+C Allmän verksamhet
+A tjänstekort;inte lämna tillbaka tjänstekort;borttappat tjänstekort;återkallat tjänstekort
+Q plain
+N En polisman som påträffar ett tjänstekort hos någon som inte är behörig att inneha det ska omhänderta kortet och underrätta den myndighet som har utfärdat det.
+G Gärningspersonen gör minst ett av:
+  | Återlämnar inte genast kortet till den utfärdande myndigheten när en uppgift på kortet har ändrats.
+  | Återlämnar inte omedelbart kortet när han eller hon lämnar tjänsten, inte längre behöver kortet eller när giltighetstiden har löpt ut.
+  | Återlämnar inte omedelbart ett förkommet kort som har kommit till rätta efter att ett nytt har utfärdats.
+  | Har hand om en avliden kortinnehavares bo och återlämnar inte kortet.
+  | Lämnar inte utan dröjsmål tillbaka ett återkallat kort efter uppmaning.
+  | Anmäler inte genast till den utfärdande myndigheten att kortet har kommit bort.
+S Uppsåt till samtliga rekvisit. Lagen anger ingen skuldform. Utgångspunkten är då att uppsåt krävs.
+T En tidigare anställd vid en myndighet behåller sitt tjänstekort efter att anställningen har upphört, trots påminnelser om att lämna tillbaka det.
+
+LAW S2026-409 | Vapenförordningen (2026:409) | 2026:409 | Vapenförordningen
+X 19:2
+
+@ v21-vapenforordningen-handlare-kontroll | Brott mot vapenförordningen (krav på vapenhandlare m.fl. och kontroll av tillståndsbevis) | 19:1 | 8:7,8:8,8:9,8:10,8:12,8:15,9:6,9:8,14:1,19:1
+PEN 0 | 0 | Böter | Böter
+C Vapen och explosiva varor
+A vapenhandlare förteckning;vapenhandlare lokal;lämna ut vapen utan att kontrollera licens;vapenreparatör;låna ut vapen
+Q plain
+G Gärningspersonen gör minst ett av:
+  | Påbörjar verksamhet som vapentillverkare eller vapenhandlare innan Polismyndigheten har godkänt lokalerna för tillverkning eller förvaring av vapnen.
+  | Förvärvar som vapentillverkare eller vapenhandlare skjutvapen utan skriftlig rekvisition, eller kontrollerar inte att en överlåtare utan tillverknings- eller handlartillstånd har tillstånd att inneha vapnet, eller lämnar inte överlåtarens tillståndsbevis till Polismyndigheten inom en månad.
+  | För inte inköpsförteckning och försäljningsförteckning över mottagna, sålda och utlämnade skjutvapen.
+  | Bevarar inte förteckningarna i tio år, lämnar dem inte till Polismyndigheten när rörelsen läggs ner eller håller dem inte tillgängliga för Polismyndigheten.
+  | Lämnar inte som vapentillverkare eller vapenhandlare begärda upplysningar till Polismyndigheten om tillverkade, inköpta och sålda vapen och om vapenlagret.
+  | För inte reparationsförteckning över skjutvapen som har tagits emot för reparation, översyn, ändring eller ombyggnad, bevarar den inte eller håller den inte tillgänglig för Polismyndigheten.
+  | Lämnar som överlåtare ett skjutvapen till förvärvaren utan att först ha kontrollerat förvärvarens bevis om förvärvstillstånd.
+  | Lämnar som långivare ett skjutvapen till låntagaren utan att först ha kontrollerat låntagarens bevis om lånetillstånd eller om innehavstillstånd för samma typ av vapen.
+S Uppsåt till samtliga rekvisit. Lagen anger ingen skuldform. Utgångspunkten är då att uppsåt krävs.
+N Flera andra skyldigheter i vapenförordningen, till exempel att kunna visa upp tillståndsbevis, låneintyg eller transportintyg, är belagda med penningböter enligt 19 kap. 2 §.
+T En jägare säljer sin studsare och lämnar över vapnet till köparen utan att ha sett något bevis om förvärvstillstånd.
+T En vapenhandlare för ingen försäljningsförteckning över de vapen som säljs i butiken.

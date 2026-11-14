@@ -45,7 +45,7 @@ G Gärningspersonen föreslår en träff eller stämmer träff med barnet.
 O Barnet är under 15 år.
 S Syfte att vid träffen begå våldtäkt mot barn, sexuellt utnyttjande av barn, sexuellt övergrepp mot barn, utnyttjande av barn för sexuell posering eller sexuellt ofredande mot barn.
 S När det gäller barnets ålder räcker oaktsamhet (BrB 6:13).
-U Den planerade gärningen skulle uppenbart inte ha inneburit något övergrepp, med hänsyn till den ringa skillnaden i ålder och utveckling (BrB 6:14).
+U Kontakten syftade till sexuellt utnyttjande av barn, mindre grovt sexuellt övergrepp mot barn, utnyttjande av barn för sexuell posering eller sexuellt ofredande mot barn genom beröring eller förmående, och gärningen skulle uppenbart inte ha inneburit något övergrepp, med hänsyn till den ringa skillnaden i ålder och utveckling och omständigheterna i övrigt (BrB 6:14).
 
 @ v05-tvegifte | Tvegifte | BrB 7:1 första stycket
 G Gärningspersonen gör minst ett av:
@@ -74,9 +74,10 @@ G Gärningspersonen gör minst ett av:
   | Skiljer obehörigen barnet från den som har vårdnaden.
   | Skiljer som gemensam vårdnadshavare, utan beaktansvärt skäl, egenmäktigt barnet från den andra vårdnadshavaren.
   | Bemäktigar sig obehörigen barnet och tar sig själv rätt, när han eller hon ska ha vårdnaden.
-  | Skiljer obehörigen barnet från den som vårdar det med stöd av LVU, eller för bort eller undanhåller barnet för att hindra att vård enligt LVU påbörjas.
+  | Skiljer obehörigen barnet från den som vårdar det med stöd av LVU, eller för bort eller undanhåller barnet på ett sätt som är ägnat att hindra att vård enligt LVU påbörjas.
 S Uppsåt till samtliga rekvisit.
 U Gärningen är ett brott mot frihet, till exempel olaga frihetsberövande.
+U Gärningen är främjande av flykt (gäller när barnet skiljs från den som vårdar det med stöd av LVU).
 
 @ v05-grov-egenmaktighet-med-barn | Grov egenmäktighet med barn | BrB 7:4 tredje stycket
 B v05-egenmaktighet-med-barn

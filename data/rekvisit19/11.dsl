@@ -73,6 +73,7 @@ G Gärningspersonen obehörigen röjer en hemlig uppgift som förekommer i samar
 O Uppgiftens uppenbarande för en främmande makt är ägnat att störa Sveriges förhållande till en annan stat eller organisation.
 S Uppsåt. Vid grov oaktsamhet är straffet böter.
 U Gärningen är försvarlig med hänsyn till syftet och övriga omständigheter.
+U Gärningen är spioneri, utlandsspioneri, obehörig befattning med hemlig uppgift eller vårdslöshet med hemlig uppgift. Då döms för det brottet.
 
 @ v15-cover-olovlig-underrattelseverksamhet-mot-sverige | Olovlig underrättelseverksamhet mot Sverige | BrB 19:10
 G Gärningspersonen bedriver, hemligen eller med svikliga medel, verksamhet för att skaffa uppgifter om förhållanden vars uppenbarande för en främmande makt kan medföra men för Sveriges säkerhet, eller medverkar mer än tillfälligt till sådan verksamhet.

@@ -45,7 +45,7 @@ B v09-naringspenningtvatt
 R ringa*
 - Värdet av egendomen och övriga omständigheter.
 ## Medverkan utanför näringsverksamhet
-G Gärningspersonen medverkar, utanför näringsverksamhet, till en åtgärd som skäligen kan antas vara vidtagen i syfte att dölja att egendom härrör från brott, eller att främja möjligheterna att tillgodogöra sig den.
+G Gärningspersonen medverkar, i annat fall än i näringsverksamhet eller i verksamhet som bedrivs vanemässigt eller annars i större omfattning, till en åtgärd som skäligen kan antas vara vidtagen i syfte att dölja att egendom härrör från brott, eller att främja möjligheterna att tillgodogöra sig den.
 S Uppsåt till medverkan. När det gäller syftet räcker det att det skäligen kan antas.
 
 @ v09-bidragsbrott | Bidragsbrott | BidrBrL 2 §
@@ -54,6 +54,7 @@ G Gärningspersonen gör minst ett av:
   | Anmäler inte ändrade förhållanden som han eller hon är skyldig att anmäla enligt lag eller förordning.
 F Gärningen orsakar fara för att en {{ekonomisk-forman|ekonomisk förmån}} eller ett ekonomiskt stöd felaktigt betalas ut eller tillgodoräknas, eller betalas ut eller tillgodoräknas med för högt belopp.
 S Uppsåt till samtliga rekvisit.
+U Gärningspersonen har före utbetalningen eller tillgodoräknandet frivilligt vidtagit en åtgärd som leder till att ett korrekt beslut om förmånen eller stödet kan fattas (frivillig rättelse, bidragsbrottslagen 5 §).
 
 @ v09-ringa-bidragsbrott | Ringa bidragsbrott | BidrBrL 2 §
 B v09-bidragsbrott
@@ -72,6 +73,8 @@ R grovt
 G Gärningspersonen lämnar oriktiga uppgifter eller anmäler inte ändrade förhållanden som han eller hon är skyldig att anmäla.
 F Gärningen orsakar fara för att en {{ekonomisk-forman|ekonomisk förmån}} eller ett ekonomiskt stöd felaktigt betalas ut eller med för högt belopp.
 S Grov oaktsamhet.
+U Gärningen är med hänsyn till beloppet, risken för slutlig ekonomisk skada och övriga omständigheter mindre allvarlig.
+U Gärningspersonen har före utbetalningen eller tillgodoräknandet frivilligt vidtagit en åtgärd som leder till att ett korrekt beslut om förmånen eller stödet kan fattas (frivillig rättelse, bidragsbrottslagen 5 §).
 
 @ v09-skattebrott | Skattebrott | SkBrL 2 §
 G Gärningspersonen gör minst ett av:
@@ -120,7 +123,7 @@ U Fallet är ringa.
 U Gärningspersonen har på eget initiativ vidtagit en åtgärd som leder till att skatten kan påföras, tillgodoräknas eller återbetalas med rätt belopp (frivillig rättelse, SkBrL 12 §).
 
 @ v09-vardslos-skatteredovisning | Vårdslös skatteredovisning | SkBrL 8 §
-G Gärningspersonen lämnar en oriktig uppgift till den som ska innehålla skatt eller lämna kontrolluppgift, eller låter bli att lämna en föreskriven uppgift om sådana förhållanden.
+G Gärningspersonen lämnar en oriktig uppgift till den som ska innehålla skatt eller lämna kontrolluppgift, eller låter bli att lämna en föreskriven uppgift om förhållanden som har betydelse för skyldigheten att betala skatt, när uppgiften ska lämnas utan föreläggande eller uppmaning och inte gäller egen inkomstdeklaration.
 S Grov oaktsamhet.
 U Fallet är ringa.
 U Gärningspersonen har på eget initiativ vidtagit en åtgärd som leder till att skatten kan påföras, tillgodoräknas eller återbetalas med rätt belopp (frivillig rättelse, SkBrL 12 §).

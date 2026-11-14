@@ -30,7 +30,7 @@ U Gäldenären hade vid konkurs rätt att vägra yttra sig och omständigheterna
 ## Annan exekutiv förrättning
 K Gärningspersonen är gäldenär vid en exekutiv förrättning, till exempel utmätning.
 G Gärningspersonen åberopar en oriktig handling eller ett skenavtal.
-F Det hindrar att egendom tas i anspråk för att ge en borgenär betalning eller säkerhet.
+F Det hindrar att erforderlig egendom genom förrättningen tas i anspråk för att ge en borgenär betalning eller säkerhet.
 S Uppsåt.
 
 @ v15-additional-grovt-forsvarande-av-konkurs-eller-exekutiv-forrattning | Grovt försvårande av konkurs eller exekutiv förrättning | BrB 11:2 fjärde stycket
@@ -74,7 +74,7 @@ G Gärningspersonen åsidosätter bokföringsskyldigheten, minst ett av:
   | Åsidosätter skyldigheten på annat sätt.
 F Rörelsens förlopp, ekonomiska resultat eller ställning kan därför inte i huvudsak bedömas med ledning av bokföringen.
 S Uppsåt eller oaktsamhet.
-U Bokföringsskyldigheten gäller en ideell förening eller annan juridisk person som inte bedriver näringsverksamhet.
+U Bokföringsskyldigheten gäller en ideell förening eller annan juridisk person som anges i 2 kap. 2 § bokföringslagen (till exempel ett registrerat trossamfund eller en samfällighetsförening) och som inte bedriver näringsverksamhet.
 
 @ v04-ringa-bokforingsbrott | Ringa bokföringsbrott | BrB 11:5 första stycket
 B v03-bokforingsbrott
