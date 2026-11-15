@@ -73,6 +73,118 @@ const Q={
  nordicOffender:{text:'Är gärningspersonen svensk, dansk, finsk, isländsk eller norsk medborgare, eller utlänning med hemvist i Sverige?',src:'BrB 2:7 andra stycket 6'}
 };
 
+/* Förklaringar till frågorna, som i verktyget för FU-ledning. Texterna återger BrB 2 kap. i klartext. */
+const INFO={
+ "here": {
+  "t": [
+   "Ett brott anses begånget i Sverige om gärningspersonen handlade här. Vid underlåtenhet gäller det om personen borde ha handlat här eller befann sig här. Kräver brottet en viss effekt räcker det att effekten inträdde i Sverige, eller vid försök att den enligt brottsplanen sannolikt skulle ha inträtt här.",
+   "Exempel: ett bedrägeri där gärningspersonen sitter utomlands men den vilseledde för över pengarna från Sverige anses begånget i Sverige.",
+   "Medverkan anses begången i Sverige om den medverkande handlade här, eller om gärningspersonens brott anses begånget här.",
+   "Är det ovisst var brottet begicks räcker det att det finns skälig anledning att anta att det skedde i Sverige."
+  ],
+  "src": "BrB 2:1: ”Ett brott anses ha begåtts i Sverige om gärningsmannen handlade här. … Om det för straffansvar krävs att gärningen medfört en viss effekt anses brottet ha begåtts i Sverige även i de fall effekten inträdde i Sverige”"
+ },
+ "hereExc": {
+  "t": [
+   "Huvudregeln är att brott som har begåtts i Sverige åtalas utan särskilt tillstånd. I de fall som räknas upp här krävs ändå ett åtalsförordnande, eftersom brottet har svag anknytning till Sverige eller rör en annan stats tjänstemän eller militär personal.",
+   "Regeringen beslutar om åtalsförordnande i dessa fall. Vid brott mot Internationella brottmålsdomstolens rättskipning beslutar riksåklagaren.",
+   "Undantaget för utländska tjänstemän gäller inte om gärningspersonen har försökt dölja i vilken egenskap han eller hon handlade, till exempel genom förklädnad eller vilseledande uppgifter."
+  ],
+  "src": "BrB 2:2: ”Åtal för brott som avses i 1 § får i följande fall väckas endast om åtalsförordnande har meddelats”"
+ },
+ "special": {
+  "t": [
+   "I dessa fyra sammanhang är svensk domstol behörig, det krävs inte att gärningen är straffbar där den begicks och åtal får väckas utan åtalsförordnande.",
+   "Svenskt fartyg eller luftfartyg: brottet har begåtts ombord, eller i tjänsten av befälhavaren eller någon i besättningen, även i land.",
+   "Svensk allmän ställning: brottet har begåtts i utövningen av tjänst eller uppdrag för svenska staten, en kommun eller en region.",
+   "Försvarsmakten: brottet har begåtts av någon som tillhör Försvarsmakten på ett område där en avdelning av Försvarsmakten befann sig.",
+   "Internationell insats: brottet har begåtts i tjänsten av någon som är anställd av en svensk myndighet för att delta i en internationell militär insats eller i internationell civil krishantering."
+  ],
+  "src": "BrB 2:3 punkt 1 och 4 b, 2:5 andra stycket 1–2 och 2:7 andra stycket 1–4"
+ },
+ "state": {
+  "t": [
+   "Här avses brott som angriper svenska staten eller dess verksamhet, inte enskilda personer. Exempel är brott mot rikets säkerhet (till exempel spioneri), våld eller hot mot en svensk tjänsteman i tjänsten, mened inför svensk domstol och förfalskning av svenska pass eller andra svenska myndighetshandlingar.",
+   "Är svaret ja är svensk domstol behörig oavsett var brottet begicks och vem som begick det, och gärningen behöver inte vara straffbar på gärningsorten."
+  ],
+  "src": "BrB 2:3 punkt 4 a: ”riktat sig mot rikets säkerhet, allmän verksamhet eller annat av rättsordningen särskilt skyddat svenskt intresse”"
+ },
+ "universal": {
+  "t": [
+   "För vissa internationella brott har svensk domstol alltid behörighet, oavsett var brottet begicks, vem som begick det och mot vem. Gärningen behöver inte vara straffbar på gärningsorten.",
+   "Hit hör brott enligt lagen om straff för vissa internationella brott (folkmord, brott mot mänskligheten och krigsförbrytelser, men inte aggressionsbrott), terroristbrott och brott som begås med terroristuppsåt, kapning, sjö- eller luftfartssabotage, flygplatssabotage, tortyr enligt FN:s tortyrkonvention och brott mot Internationella brottmålsdomstolens rättskipning.",
+   "Åtal kräver ändå normalt åtalsförordnande."
+  ],
+  "src": "BrB 2:3 punkt 6"
+ },
+ "swede": {
+  "t": [
+   "Svensk domstol är behörig om gärningspersonen var svensk medborgare eller hade hemvist i Sverige när brottet begicks. Det räcker också att personen är svensk medborgare eller har hemvist här när åtal väcks.",
+   "Hemvist betyder att personen är bosatt i Sverige med avsikt att stanna. Medborgarskapet saknar då betydelse.",
+   "På den här grunden krävs normalt att gärningen också är straffbar där den begicks."
+  ],
+  "src": "BrB 2:3 punkt 2: ”av någon som vid gärningstillfället var svensk medborgare eller hade hemvist i Sverige” eller ”av någon som när åtal väcks för brottet är svensk medborgare eller har hemvist i Sverige”"
+ },
+ "present": {
+  "t": [
+   "Även en utlänning utan hemvist i Sverige kan lagföras här för brott utomlands, om han eller hon finns i Sverige och brottet enligt svensk lag kan ge fängelse i mer än sex månader.",
+   "Det avgörande är brottets straffskala, inte det straff som kan väntas i det enskilda fallet. Appen läser av straffskalan på brottskortet.",
+   "På den här grunden krävs normalt att gärningen också är straffbar där den begicks, och åtal kräver åtalsförordnande."
+  ],
+  "src": "BrB 2:3 punkt 2 c: ”av någon som finns i Sverige och det på brottet enligt svensk rätt kan följa fängelse i mer än sex månader”"
+ },
+ "victim": {
+  "t": [
+   "Svensk domstol är behörig om brottet har riktat sig mot en svensk medborgare, mot någon som har hemvist i Sverige eller mot en svensk juridisk person, till exempel ett svenskt aktiebolag.",
+   "Exempel: en svensk turist blir misshandlad eller rånad utomlands.",
+   "På den här grunden krävs normalt att gärningen också är straffbar där den begicks."
+  ],
+  "src": "BrB 2:3 punkt 3: ”en svensk medborgare eller någon som har hemvist i Sverige, eller … en svensk juridisk person”"
+ },
+ "derived": {
+  "t": [
+   "Sverige kan ta över lagföringen av ett brott som saknar annan anknytning hit, om gärningspersonen finns i Sverige. Det förutsätter att en annan stat har begärt att lagföringen ska överföras till Sverige, att en begäran om utlämning eller överlämnande för brottet har avslagits, eller att brottet omfattas av en internationell överenskommelse som kräver att Sverige prövar frågan om åtal om personen inte utlämnas.",
+   "Frågan avgörs i praktiken av åklagare."
+  ],
+  "src": "BrB 2:3 punkt 5"
+ },
+ "zone": {
+  "t": [
+   "Svensk domstol är behörig över brott som har begåtts på en inrättning som med stöd av lag har kommit till i Sveriges ekonomiska zon eller på Sveriges kontinentalsockel, till exempel en vindkraftpark eller en plattform till havs.",
+   "På den här grunden krävs inte att gärningen är straffbar enligt någon annan stats lag."
+  ],
+  "src": "BrB 2:3 punkt 1 d"
+ },
+ "child": {
+  "t": [
+   "För våldtäkt, sexuellt övergrepp, sexuellt utnyttjande av barn och flera andra sexualbrott krävs inte dubbel straffbarhet om brottet har begåtts mot någon som inte hade fyllt 18 år. Brottet kan alltså lagföras i Sverige även om gärningen är tillåten i det land där den begicks."
+  ],
+  "src": "BrB 2:5 andra stycket 4 b"
+ },
+ "double": {
+  "t": [
+   "Dubbel straffbarhet innebär att gärningen ska vara ett brott både enligt svensk lag och enligt lagen på den plats där den begicks. Brottet behöver inte ha samma namn eller samma straffskala i det andra landet.",
+   "Har brottet begåtts på flera staters område räcker det att gärningen är straffbar i någon av dem.",
+   "Straffet i Sverige får inte bli strängare än det svåraste straff som är föreskrivet på gärningsorten.",
+   "Har brottet begåtts på ett område som inte tillhör någon stat, till exempel på internationellt vatten, krävs i stället att brottet kan ge fängelse enligt svensk lag."
+  ],
+  "src": "BrB 2:5 första stycket: ”svensk domstol [är] behörig endast om gärningen är straffbar även enligt lagen på gärningsorten (dubbel straffbarhet)” och BrB 2:6"
+ },
+ "nordic": {
+  "t": [
+   "Åtalsförordnande krävs inte för brott som har begåtts i Danmark, Finland, Island eller Norge. Detsamma gäller brott på fartyg eller luftfartyg i reguljär trafik mellan orter i Sverige och något av dessa länder, till exempel en färja mellan Sverige och Finland."
+  ],
+  "src": "BrB 2:7 andra stycket 5: ”har begåtts i Danmark, Finland, Island eller Norge eller på fartyg eller luftfartyg i reguljär trafik mellan orter belägna i Sverige eller någon av dessa stater”"
+ },
+ "nordicOffender": {
+  "t": [
+   "Åtalsförordnande krävs inte när brottet har begåtts mot svenskt intresse av en svensk, dansk, finsk, isländsk eller norsk medborgare, eller av en utlänning som har hemvist i Sverige.",
+   "Med svenskt intresse avses både enskilda svenska intressen, till exempel en svensk målsägande, och svenska allmänna intressen."
+  ],
+  "src": "BrB 2:7 andra stycket 6: ”har begåtts mot svenskt intresse av en svensk, dansk, finsk, isländsk eller norsk medborgare eller av en utlänning med hemvist i Sverige”"
+ }
+};
+
 /* assess(c, ans) → {question:{id,…}, step} eller {result:{…}} */
 function assess(c,ans){
  const t=traits(c),a=ans||{};let step=0;
@@ -157,6 +269,18 @@ function assess(c,ans){
   icc:has('universal')||t.universal});
 }
 
+function help(id,label){
+ const i=INFO[id];if(!i)return '';
+ return '<details class="fu18-help ut22-help"><summary><span class="fu18-i" aria-hidden="true">i</span>'+esc(label||'Förklaring')+'</summary><div class="fu18-info">'+i.t.map(x=>'<p>'+esc(x)+'</p>').join('')+'<p class="fu18-info-src">Källa: '+esc(i.src)+'</p></div></details>';
+}
+/* Förklaringar till resultatet. */
+const RESULT_INFO={
+ court:{t:['Svensk domstol får döma över brott som har begåtts i Sverige och, när någon av grunderna i BrB 2:3 är uppfylld, över brott som har begåtts utomlands.','Att svensk domstol är behörig betyder inte att åtal alltid får väckas. Det kan också krävas dubbel straffbarhet och åtalsförordnande.','Vissa lagar har egna regler om domsrätt för brott utomlands, till exempel miljöbalken, fiskelagen och jaktlagen (BrB 2:4).'],src:'BrB 2:1, 2:3 och 2:4'},
+ double:{t:INFO.double.t,src:INFO.double.src},
+ order:{t:['Ett åtalsförordnande är ett särskilt beslut om att åtal får väckas. Utan det får åklagaren inte åtala, även om brottet i övrigt faller under allmänt åtal.','Riksåklagaren beslutar i de flesta fall. Gäller brottet en svensk medborgare eller någon med hemvist i Sverige får riksåklagaren överlämna prövningen till en annan åklagare. Regeringen beslutar i fall som har särskild betydelse för utrikes- eller säkerhetspolitiken och i de fall som anges i BrB 2:2.','Vid prövningen beaktas Sveriges folkrättsliga förpliktelser, anknytningen till Sverige, om lagföring pågår eller väntas i en annan stat och möjligheterna att utreda brottet här.','Polisen får inleda och bedriva förundersökning innan åtalsförordnande har meddelats. Kontakta åklagare tidigt.'],src:'BrB 2:7 och 2:8'},
+ pros:{t:['Åtalsregeln anger om brottet faller under allmänt åtal eller om det krävs till exempel att målsäganden anger brottet. Den gäller på samma sätt när brottet har begåtts utomlands.','Åtalsförordnandet är ett ytterligare krav och ersätter inte åtalsregeln. Båda måste vara uppfyllda för att åtal ska få väckas.'],src:'Rättegångsbalken 20 kap. och brottets egen åtalsregel'}
+};
+function resultHelp(k){const i=RESULT_INFO[k];return '<details class="fu18-help ut22-help"><summary><span class="fu18-i" aria-hidden="true">i</span>Förklaring</summary><div class="fu18-info">'+i.t.map(x=>'<p>'+esc(x)+'</p>').join('')+'<p class="fu18-info-src">Källa: '+esc(i.src)+'</p></div></details>';}
 function render(c,ans){
  const r=assess(c,ans);
  const back=Object.keys(ans||{}).length?'<button type="button" class="fu18-back" data-ut22="back">← Föregående fråga</button>':'';
@@ -164,17 +288,17 @@ function render(c,ans){
   const q=r.question;
   const items=q.items?'<ul class="fu18-plain">'+q.items.map(i=>'<li>'+esc(i)+'</li>').join('')+'</ul>':'';
   return '<div class="fu18 ut22" data-ut22-q="'+esc(q.id)+'"><p class="fu18-step">Fråga '+r.step+'</p><p class="fu18-q">'+esc(q.text)+'</p>'+
-   (q.hint?'<p class="fu18-hint">'+esc(q.hint)+'</p>':'')+items+'<p class="fu18-hint ut22-src">'+esc(q.src)+'</p>'+
+   (q.hint?'<p class="fu18-hint">'+esc(q.hint)+'</p>':'')+items+help(q.id)+
    '<div class="fu18-yn"><button type="button" class="fu18-btn" data-ut22="yes">Ja</button><button type="button" class="fu18-btn" data-ut22="no">Nej</button></div>'+back+'</div>';
  }
  const x=r.result;
- const row=(cls,label,head,text)=>'<div class="fu18-row '+cls+'"><small>'+label+'</small><strong>'+esc(head)+'</strong>'+(text?'<p>'+esc(text)+'</p>':'')+'</div>';
+ const row=(cls,label,head,text,info)=>'<div class="fu18-row '+cls+'"><small>'+label+'</small><strong>'+esc(head)+'</strong>'+(text?'<p>'+esc(text)+'</p>':'')+(info?resultHelp(info):'')+'</div>';
  let out='<div class="fu18 fu18-result ut22" data-ut22-court="'+(x.court?'ja':'nej')+'" data-ut22-order="'+(x.order===true?'ja':x.order===false?'nej':'-')+'">';
- out+=row(x.court?'pol':'ak','SVENSK DOMSRÄTT',x.courtText,x.grounds.length?'Grund: '+x.grounds.join('. ')+'.':(x.court?'':x.orderWhy));
+ out+=row(x.court?'pol':'ak','SVENSK DOMSRÄTT',x.courtText,x.grounds.length?'Grund: '+x.grounds.join('. ')+'.':(x.court?'':x.orderWhy),'court');
  if(x.court){
-  if(x.place==='abroad')out+=row('when','DUBBEL STRAFFBARHET',x.double?'Krävs':'Krävs inte',x.doubleWhy);
-  out+=row(x.order?'ak':'pol','ÅTALSFÖRORDNANDE',x.order?'Krävs':'Krävs inte',x.orderWhy+(x.orderBy?' '+x.orderBy:''));
-  out+=row('when','ÅTALSREGEL FÖR BROTTET',x.prosecution,x.order?'Brottets vanliga åtalsregel gäller utöver kravet på åtalsförordnande.':'Brottets vanliga åtalsregel gäller som om brottet hade begåtts i Sverige.');
+  if(x.place==='abroad')out+=row('when','DUBBEL STRAFFBARHET',x.double?'Krävs':'Krävs inte',x.doubleWhy,'double');
+  out+=row(x.order?'ak':'pol','ÅTALSFÖRORDNANDE',x.order?'Krävs':'Krävs inte',x.orderWhy+(x.orderBy?' '+x.orderBy:''),'order');
+  out+=row('when','ÅTALSREGEL FÖR BROTTET',x.prosecution,x.order?'Brottets vanliga åtalsregel gäller utöver kravet på åtalsförordnande.':'Brottets vanliga åtalsregel gäller som om brottet hade begåtts i Sverige.','pros');
  }
  const notes=[];
  if(x.court&&x.place==='abroad')notes.push('Polisen får inleda och bedriva förundersökning utan åtalsförordnande. Kontakta åklagare tidigt: en utredning som kräver internationellt rättsligt samarbete leds av åklagare.');
@@ -188,5 +312,5 @@ function render(c,ans){
  return out;
 }
 function available(c){return !!c&&(!c.stageStatus||c.stageStatus==='punishable');}
-window.BK_UTLAND22={assess,render,traits,available,Q,checked:CHECKED};
+window.BK_UTLAND22={assess,render,traits,available,Q,INFO,RESULT_INFO,checked:CHECKED};
 })();

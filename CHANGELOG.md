@@ -6,7 +6,9 @@
 - När lagtexten hänvisar till en annan paragraf i samma lag går hänvisningen nu att trycka på, på samma sätt som i brottsbalken. Exempel: **Främjande av olovligt spel** hänvisar till ”spel som avses i 1 §”, och ett tryck visar spellagen 19 kap. 1 §.
 - De hänvisade paragraferna följer med offline: 733 paragrafer till, sammanlagt 2 361 i speciallagarna.
 - Uppräkningar som ”37 eller 40 §” och ”19, 20, 21, 22 eller 23 §” länkas paragraf för paragraf.
-- En hänvisning till en annan lag (till exempel ”23 kap. 3 § rättegångsbalken”) länkas inte längre av misstag till den egna lagen. Hänvisningar till brottsbalken och rättegångsbalken öppnar rätt balk.
+- Hänvisningar till **andra lagar** går också att öppna, till exempel ”8 § narkotikastrafflagen (1968:64)” eller ”29 kap. 1 § miljöbalken”. Paragrafen hämtas då direkt från Sveriges riksdag när du trycker, vilket kräver internet. Sådana länkar är streckade.
+- Samma sak gäller paragrafer i den egna lagen som inte finns lagrade i appen, och hänvisningar inne i en paragraf som du redan har öppnat.
+- En hänvisning till en annan lag (till exempel ”23 kap. 3 § rättegångsbalken”) länkas inte längre av misstag till den egna lagen. I uppräkningar som ”3 kap. 14 §, 16 § och 18 §” gäller kapitlet hela uppräkningen.
 
 ### Ny meny: Brott begånget utomlands
 - Menyn ligger under FU-ledning och åklagarkontakt och ställer en fråga i taget, på samma sätt som verktyget för FU-ledning.
@@ -17,6 +19,7 @@
   - brottets vanliga åtalsregel.
 - Verktyget känner av brottet: det frågar inte om dubbel straffbarhet när minimistraffet är fängelse i fyra år eller mer eller när brottet är undantaget, och det frågar om målsägandens ålder vid de sexualbrott där det har betydelse.
 - Lagar med egna regler om domsrätt utomlands, till exempel fiskelagen och miljöbalken, får en upplysning om det.
+- Varje fråga och varje del av svaret har knappen **Förklaring**, som i verktyget för FU-ledning. Den förklarar vad frågan betyder, ger exempel och anger lagrummet.
 
 ## 2.1 – 2026-11-14
 

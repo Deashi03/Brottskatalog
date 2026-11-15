@@ -330,6 +330,8 @@ try{
   assert.ok(await page.locator('#sec-utland22').evaluate(el=>el.previousElementSibling?.id==='sec-fu18'),'Brott begånget utomlands ligger under FU-ledning');
   await page.locator('#sec-utland22 button').click();
   assert.ok((await page.locator('.ut22 .fu18-q').innerText()).includes('Handlade gärningspersonen i Sverige'),'Första frågan gäller var brottet begicks');
+  await page.locator('.ut22 .ut22-help summary').click();
+  assert.ok((await page.locator('.ut22 .fu18-info').innerText()).includes('Källa: BrB 2:1'),'Förklaringsknappen visar förklaring och källa');
   await page.locator('.ut22 [data-ut22="yes"]').click();await page.locator('.ut22 [data-ut22="no"]').click();
   assert.equal(await page.locator('.ut22.fu18-result').getAttribute('data-ut22-order'),'nej','Brott i Sverige kräver inget åtalsförordnande');
   assert.ok((await page.locator('.ut22.fu18-result').innerText()).includes('Brottet anses begånget i Sverige'));
