@@ -6,7 +6,7 @@ const html=read('index.html'),sw=read('service-worker.js');
 const scripts=[...html.matchAll(/<script\s+src="([^"]+)"/g)].map(m=>m[1]);
 const inline=[...html.matchAll(/<script(?:\s[^>]*)?>([\s\S]*?)<\/script>/g)].map(m=>m[1]);
 assert.ok(scripts.includes('./utland-22.js')&&sw.includes('./utland-22.js'));
-assert.ok(html.includes("window.BK_RELEASE = '2.2';")&&sw.includes("'brottskatalog-v220-20261114'"));
+assert.ok(html.includes("window.BK_RELEASE = '2.2.1';")&&sw.includes("'brottskatalog-v221-20261115'"));
 assert.ok(html.indexOf('id="sec-fu18"')<html.indexOf('id="sec-utland22"')&&html.indexOf('id="sec-utland22"')<html.indexOf("accordion('preskription'"),'ordning: FU-ledning, utomlands, preskription');
 const ctx=vm.createContext({window:{},console:{log:()=>{},warn:()=>{},error:()=>{}}});
 for(const i of [1,2,3])vm.runInContext(inline[i],ctx);
@@ -51,33 +51,109 @@ assert.equal(L.sfsSection22(sample,'1','1').text,'1 § Första paragrafen.');
 assert.equal(L.sfsSection22(sample,'2','9'),null);
 assert.ok(html.includes('data-online22')&&html.includes("https://data.riksdagen.se/dokument/sfs-'"),'hämtning från riksdagen vid tryck');
 
-// Brott begånget utomlands.
-const U=W.BK_UTLAND22;
-const run=(id,yes)=>{const a={},pathQ=[];for(let i=0;i<30;i++){const x=U.assess(byId[id],a);if(x.result)return {...x.result,path:pathQ};pathQ.push(x.question.id);a[x.question.id]=!!yes[x.question.id];}throw new Error('slinga');};
-let r=run('misshandel',{here:true});assert.ok(r.court&&r.order===false&&r.place==='sweden');
-r=run('misshandel',{here:true,hereExc:true});assert.equal(r.order,true);assert.ok(r.orderBy.includes('Regeringen'));
-r=run('misshandel',{swede:true,victim:true,double:true});assert.ok(r.court&&r.double===true&&r.order===false,'svensk mot svensk utomlands: inget åtalsförordnande');
-r=run('misshandel',{swede:true,double:true});assert.ok(r.court&&r.order===true&&r.orderBy.includes('överlämna'),'svensk gärningsperson mot utländskt intresse: åtalsförordnande');
-r=run('misshandel',{swede:true,double:true,nordic:true});assert.equal(r.order,false,'Norden');
-r=run('misshandel',{swede:true});assert.ok(!r.court&&r.double===true,'dubbel straffbarhet saknas');
-r=run('misshandel',{victim:true,double:true,nordicOffender:true});assert.equal(r.order,false);
-r=run('misshandel',{victim:true,double:true});assert.equal(r.order,true);
-r=run('misshandel',{present:true,double:true});assert.ok(r.court,'misshandel kan ge fängelse i mer än sex månader');
-r=run('ringa-stold',{present:true});assert.ok(!r.court,'ringa stöld: högst sex månader räcker inte');
-r=run('misshandel',{});assert.ok(!r.court&&r.grounds.length===0);
-r=run('misshandel',{special:true});assert.ok(r.court&&r.double===false&&r.order===false);
-r=run('v03-mord',{swede:true});assert.ok(r.court&&r.double===false&&!r.path.includes('double'),'minimistraff fyra år eller mer: ingen dubbel straffbarhet');assert.equal(r.order,true);
-r=run('v03-valdtakt',{swede:true,child:true});assert.ok(r.path.includes('child')&&r.double===false);
-r=run('v03-valdtakt',{swede:true,double:true});assert.equal(r.double,true);
-r=run('v03-spioneri',{state:true});assert.ok(r.court&&r.double===false&&r.order===true);
-r=run('v03-spioneri',{state:true,swede:true});assert.equal(r.order,false,'svenskt intresse och svensk gärningsperson');
+// Brott begånget utomlands (omgjort i 2.2.1): tabeller per brott, reglerna i outcome(), frågor bara när svaret kan ändra resultatet.
+const U=W.BK_UTLAND22,T=U.tables;
+// 1. Tabellerna pekar på kort som finns, och på rätt brott.
+for(const [name,t] of Object.entries(T)){if(name==='SPECIAL')continue;for(const id of (t instanceof Set?[...t]:Object.keys(t)))assert.ok(byId[id]&&!byId[id].stageType,name+': okänt kort '+id);}
+for(const id of T.CHILD_ALWAYS)assert.ok(/barn/i.test(byId[id].title),'barnbrott: '+id);
+for(const id of T.CHILD_ASK)assert.ok(!/barn/i.test(byId[id].title)&&byId[id].category==='Sexualbrott',id);
+const dialog=(c,facts)=>{const a={},asked=[];for(let i=0;i<20;i++){const x=U.assess(c,a);if(x.result)return {...x.result,asked};asked.push(x.question.id);a[x.question.id]=!!facts[x.question.id];}throw new Error('slinga');};
+const run=(id,facts)=>dialog(byId[id],facts||{});
+
+// 2. Det brottet självt avgör frågas aldrig (felen som rapporterades för våldtäkt mot barn).
+for(const id of T.CHILD_ALWAYS){
+ const r=run(id,{swede:true});
+ assert.ok(!r.asked.includes('exempt'),'frågar inte om målsägandens ålder: '+id);
+ assert.ok(!r.asked.includes('doubleCrim'),'frågar inte om dubbel straffbarhet: '+id);
+ assert.ok(r.court&&r.double===false&&/barn|fyra år/.test(r.doubleWhy),id);
+}
+for(const c of crimes){if(!U.available(c))continue;const q=U.assess(c,{here:false,special:false});
+ if(q.question)assert.ok(!/internationell[at] brott|vilket brott/i.test(q.question.text),'frågar inte vilket brott det är: '+c.id);}
+assert.ok(!Object.keys(U.Q).includes('universal'),'ingen fråga om brottstyp finns kvar');
+// BrB 2:5 andra stycket 3 och 4: undantagen följer av brottet.
+for(const id of ['v03-mord','v03-manniskohandel','v15-family-aktenskapstvang','v15-hedersfortryck','v05-penningforfalskning','v19-konsstympning','v21-sanktionsbrott','v21-brott-mot-frysningsbeslut','v15-war-olovlig-befattning-med-minor']){
+ const r=run(id,{swede:true});assert.ok(r.court&&r.double===false&&!r.asked.includes('doubleCrim')&&!r.asked.includes('exempt'),'BrB 2:5: '+id);
+}
+assert.equal(U.card(byId['v19-oskuldsingrepp']).fixed.exempt,false,'oskuldsingrepp (3 §) är inte undantaget');
+assert.equal(U.card(byId['v03-sexuellt-ofredande']).fixed.exempt,false,'6:10 står inte i BrB 2:5');
+assert.equal(U.card(byId.misshandel).fixed.exempt,false);
+// Åldern frågas där den inte följer av brottet, och bara där.
+let r=run('v03-valdtakt',{swede:true,exempt:true});assert.ok(r.asked.includes('exempt')&&r.double===false&&!r.asked.includes('doubleCrim'));
+r=run('v03-valdtakt',{swede:true,doubleCrim:true});assert.ok(r.asked.includes('exempt')&&r.asked.includes('doubleCrim')&&r.double===true);
+assert.equal(U.assess(byId['v03-valdtakt'],{here:false,special:false,swede:true,victim:false}).question.text,'Var den som utsattes under 18 år?');
+assert.ok(U.assess(byId['v03-barnpornografibrott'],{here:false,special:false,swede:true,victim:false}).question.text.includes('skildrat'));
+// Förstadier: undantaget gäller försök men inte förberedelse och stämpling där lagen bara nämner försök.
+const st=(pid,t)=>crimes.find(c=>c.stageParentId===pid&&c.stageType===t);
+assert.equal(U.card(st('v03-valdtakt-mot-barn','forsok')).fixed.exempt,true);
+assert.equal(U.card(st('v03-valdtakt-mot-barn','forberedelse')).fixed.exempt,false);
+assert.equal(U.card(st('v19-konsstympning','stampling')).fixed.exempt,true);
+assert.equal(U.card(st('v03-mord','forsok')).fixed.exempt,false,'försök till mord har inte minimistraff fyra år');
+// Brott mot staten frågas bara för brottstyper där det kan vara så.
+assert.ok(run('v03-spioneri',{}).asked.includes('state')&&!run('misshandel',{}).asked.includes('state')&&!run('v03-valdtakt-mot-barn',{}).asked.includes('state'));
+
+// 3. Reglerna i BrB 2 kap.
+const O=(f,i)=>U.keyOf(U.outcome(f,{over6m:true,prison:true,universal:false,intlCourt:false,...(i||{})}));
+assert.equal(O({here:true}),'10');assert.equal(O({here:true,exc22:true}),'11');
+assert.equal(O({}),'0-','ingen koppling till Sverige');
+assert.equal(O({special:true}),'10','svenskt fartyg m.m.: behörig utan åtalsförordnande');
+assert.equal(O({swede:true}),'0-','svensk gärningsperson men inte brott på gärningsorten');
+assert.equal(O({swede:true,doubleCrim:true}),'11');
+assert.equal(O({swede:true,exempt:true}),'11','undantag från dubbel straffbarhet');
+assert.equal(O({swede:true,doubleCrim:true,victim:true}),'10','svenskt intresse och svensk gärningsperson (2:7 andra stycket 6)');
+assert.equal(O({swede:true,doubleCrim:true,nordicPlace:true}),'10','Norden (2:7 andra stycket 5)');
+assert.equal(O({victim:true,doubleCrim:true}),'11');assert.equal(O({victim:true,doubleCrim:true,nordicCitizen:true}),'10');
+assert.equal(O({present:true,doubleCrim:true}),'11');assert.equal(O({present:true,doubleCrim:true},{over6m:false}),'0-','2:3 punkt 2 c kräver mer än sex månader');
+assert.equal(O({present:true,derived:true,doubleCrim:true},{over6m:false}),'11','härledd domsrätt');
+assert.equal(O({state:true}),'11','brott mot staten kräver inte dubbel straffbarhet');assert.equal(O({state:true,swede:true}),'10');
+assert.equal(O({zone:true}),'11');assert.equal(O({},{universal:true}),'11');assert.equal(O({},{universal:true,intlCourt:true}),'10');
+
+// 4. Maskinell kontroll för varje typ av brott: rätt resultat för alla tänkbara svar, och ingen onödig fråga.
+const sig=c=>{const k=U.card(c);return JSON.stringify([k.info.over6m,k.info.prison,k.info.universal,k.info.intlCourt,!!k.info.condText,k.fixed]);};
+const types=new Map();for(const c of crimes)if(U.available(c)&&!types.has(sig(c)))types.set(sig(c),c);
+assert.ok(types.size>=8,'brottstyper: '+types.size);
+let dialogs=0,longest=0;
+for(const c of types.values()){
+ const {info,fixed}=U.card(c),free=U.FACTS.filter(k=>fixed[k]===undefined),memo=new Map();
+ const nextQ=known=>{const key=JSON.stringify(known);if(!memo.has(key))memo.set(key,U.next(known,info));return memo.get(key);};
+ for(let m=0;m<(1<<free.length);m++){
+  const full={...fixed};free.forEach((k,i)=>full[k]=!!(m>>i&1));
+  const known={...fixed};let n=0,q;
+  while((q=nextQ(known))){
+   assert.ok(known[q]===undefined,'samma fråga två gånger');
+   // Frågan är nödvändig: det finns svar på resten där just den här frågan avgör resultatet.
+   const rest=free.filter(k=>known[k]===undefined&&k!==q);let matters=false;
+   for(let x=0;x<(1<<rest.length)&&!matters;x++){const f={...known};rest.forEach((k,i)=>f[k]=!!(x>>i&1));
+    f[q]=true;const a1=U.keyOf(U.outcome(f,info));f[q]=false;if(a1!==U.keyOf(U.outcome(f,info)))matters=true;}
+   assert.ok(matters,'onödig fråga: '+q+' för '+c.id);
+   known[q]=full[q];n++;
+  }
+  // När frågorna är slut är resultatet detsamma oavsett de obesvarade frågorna – och lika med facit.
+  const shown={};for(const k of U.FACTS)shown[k]=known[k]===true;
+  assert.equal(U.keyOf(U.outcome(shown,info)),U.keyOf(U.outcome(full,info)),'fel resultat för '+c.id+' '+JSON.stringify(full));
+  dialogs++;longest=Math.max(longest,n);
+ }
+}
+assert.ok(longest<=10,'högst tio frågor: '+longest);
+
+// 5. Vanliga fall och texter.
+r=run('misshandel',{here:true});assert.ok(r.court&&r.order===false&&r.place==='sweden'&&r.asked.join()==='here,exc22');
+r=run('misshandel',{swede:true,victim:true,doubleCrim:true});assert.ok(r.court&&r.double===true&&r.order===false&&r.asked.length===5);
+r=run('misshandel',{swede:true,doubleCrim:true});assert.ok(r.order===true&&r.orderBy.includes('lämna över'));
+r=run('misshandel',{special:true});assert.equal(r.asked.join(),'here,special');
+r=run('ringa-stold',{present:true});assert.ok(!r.court&&r.courtWhy.includes('sex månader'));
+r=run('v03-valdtakt-mot-barn',{swede:true,victim:true});assert.equal(r.asked.join(),'here,special,swede,victim','våldtäkt mot barn: fyra frågor');assert.ok(r.court&&r.order===false);
+r=run('v15-additional-kapning',{});assert.ok(r.court&&r.double===false&&r.order===true&&r.grounds[0].includes('2:3 punkt 6'));
 assert.ok(run('v20-olovligt-fiske',{}).special.includes('fiskelagen'));
-assert.ok(U.traits(byId['v05-penningforfalskning']).noDouble,'penningförfalskning är undantagen');
-assert.ok(U.traits(byId['v15-additional-kapning']).universal);
 const fs1=crimes.find(c=>c.stageParentId==='ringa-stold'&&c.stageType==='forsok');
 assert.ok(!U.available(fs1)&&U.available(byId.stold));
-assert.ok(U.render(byId.stold,{}).includes('data-ut22="yes"')&&U.render(byId.stold,{here:true,hereExc:false}).includes('ÅTALSFÖRORDNANDE'));
-for(const [id,q] of Object.entries(U.Q)){assert.ok(q.text.endsWith('?')&&/^BrB 2:/.test(q.src));assert.ok(U.INFO[id]&&U.INFO[id].t.length&&/^BrB 2:/.test(U.INFO[id].src),'förklaring saknas: '+id);}
-assert.ok(U.render(byId.stold,{}).includes('ut22-help'),'varje fråga har en förklaringsknapp');
-assert.equal((U.render(byId.misshandel,{here:false,special:false,state:false,swede:true,victim:true,universal:false,double:true,nordic:false}).match(/ut22-help/g)||[]).length,4,'varje del av resultatet har en förklaring');
+for(const [id,q] of Object.entries(U.Q)){
+ const text=typeof q.text==='function'?'Var den som utsattes under 18 år?':q.text;
+ assert.ok(text.endsWith('?')&&text.length<=80&&/^BrB 2:/.test(q.src),'kort fråga: '+id);
+ if(id!=='exempt')assert.ok(U.INFO[id]&&U.INFO[id].t[0].startsWith('Frågan ')&&/^BrB 2:/.test(U.INFO[id].src),'förklaring saknas: '+id);
+}
+assert.ok(U.INFO.child&&U.INFO.porn);
+assert.ok(U.render(byId.stold,{}).includes('ut22-help')&&U.render(byId.stold,{}).includes('Begicks brottet i Sverige?'));
+assert.ok(U.render(byId['v03-valdtakt'],{here:false,special:false,swede:true,victim:false}).includes('ut22-help'),'även åldersfrågan har förklaring');
+assert.equal((U.render(byId.misshandel,{here:false,special:false,swede:true,victim:true,doubleCrim:true}).match(/ut22-help/g)||[]).length,4,'varje del av resultatet har en förklaring');
+console.log('utland OK',types.size,'brottstyper',dialogs,'dialoger, längsta',longest,'frågor');
 console.log('v22_test OK',secs,'paragrafer offline');

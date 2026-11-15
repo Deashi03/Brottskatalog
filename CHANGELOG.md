@@ -1,5 +1,15 @@
 # Ändringslogg – Brottskatalog
 
+## 2.2.1 – 2026-11-15
+
+### Brott begånget utomlands är omgjort från grunden
+- **Verktyget utgår från brottet.** Det som brottet självt avgör frågas inte längre. Vid våldtäkt mot barn och andra sexualbrott mot barn frågar verktyget inte om målsägandens ålder, och det frågar aldrig vilket slags brott det är.
+- **Undantagen i BrB 2:5 följer av brottet.** Kravet på att gärningen ska vara ett brott också i det andra landet faller bort automatiskt för brott med minimistraff på fängelse i fyra år eller mer, människohandel, äktenskapstvång, barnäktenskapsbrott, hedersförtryck, penningförfalskning, könsstympning, sanktionsbrott, brott mot frysningsbeslut, olovlig befattning med kemiska vapen och minor samt sexualbrott mot barn. För våldtäkt, sexuellt övergrepp och koppleri frågar verktyget om den som utsattes var under 18 år.
+- **Inga onödiga frågor.** En fråga ställs bara om svaret kan ändra resultatet. Det räknas ut maskinellt för varje brott och varje svar. Vanliga fall tar fyra till sex frågor: vid våldtäkt mot barn med svensk gärningsperson och svensk målsägande räcker fyra.
+- **Tydligare frågor.** Frågorna är kortare och gäller en sak i taget, till exempel ”Begicks brottet i Sverige?” och ”Är gärningen ett brott även i landet där den begicks?”. Stödtexten under frågan säger hur du ska svara. Förklaringen börjar med varför frågan ställs.
+- Frågan om brottet riktade sig mot svenska staten ställs bara för brottstyper där det kan vara så, till exempel brott mot rikets säkerhet och brott mot tjänsteman.
+- Terroristbrott, kapning, sjö- och luftfartssabotage och flygplatssabotage känns igen på brottet och får prövas i Sverige utan frågor om anknytning.
+
 ## 2.2 – 2026-11-14
 
 ### Hänvisningar i lagtexten går att öppna

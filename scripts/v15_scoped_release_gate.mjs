@@ -29,8 +29,8 @@ assert.equal(counts.fullyLegallyApprovedBrbRequisites,0,'Do not forge complete l
 assert.equal(audit.releaseReady,false,'Full legal audit stays outstanding and must be disclosed');
 const html=fs.readFileSync(path.join(root,'index.html'),'utf8');
 const sw=fs.readFileSync(path.join(root,'service-worker.js'),'utf8');
-assert.ok(html.includes("window.BK_RELEASE = '2.2';")&&html.includes("window.BK_RELEASE_DATE = '2026-11-14';"));
-assert.ok(sw.includes("brottskatalog-v220-20261114"));
+assert.ok(html.includes("window.BK_RELEASE = '2.2.1';")&&html.includes("window.BK_RELEASE_DATE = '2026-11-15';"));
+assert.ok(sw.includes("brottskatalog-v221-20261115"));
 assert.match(html, /<strong>Brottskatalog<\/strong><span>\$\{window\.BK_RELEASE\}<\/span>/, 'Search header must match published release');
 const manifest=JSON.parse(fs.readFileSync(path.join(root,'manifest.webmanifest'),'utf8'));
 assert.ok(manifest.description.startsWith('Brottskatalog 2.2'), 'PWA manifest version must agree with search header');
