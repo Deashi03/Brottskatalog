@@ -23,7 +23,7 @@ try{
   // 1.9.1: listan får aldrig bli bredare än skärmen, även med långa lagrum på de nya korten.
   await page.waitForSelector('.crime-card');
   assert.equal(await page.evaluate(()=>{const l=document.querySelector('.crime-list');return l.scrollWidth<=l.clientWidth+1&&[...document.querySelectorAll('.crime-card')].every(c=>c.getBoundingClientRect().right<=innerWidth);}),true,'Hela kortlistan ryms i iPhone-bredd');
-  assert.equal((await page.locator('.bk03-brand span').innerText()).trim(),'2.2','Search header must display current release 2.2');
+  assert.equal((await page.locator('.bk03-brand span').innerText()).trim(),'2.2.1','Search header must display current release 2.2.1');
   assert.equal(await page.evaluate(()=>window.BK_DATA.crimes.length),1557,'The V1.5 full database must be loaded');
 
   const custodyAudit=await page.evaluate(()=>{
@@ -329,12 +329,12 @@ try{
   // 2.2: menyn Brott begånget utomlands ligger direkt under FU-ledning och ställer en fråga i taget.
   assert.ok(await page.locator('#sec-utland22').evaluate(el=>el.previousElementSibling?.id==='sec-fu18'),'Brott begånget utomlands ligger under FU-ledning');
   await page.locator('#sec-utland22 button').click();
-  assert.ok((await page.locator('.ut22 .fu18-q').innerText()).includes('Handlade gärningspersonen i Sverige'),'Första frågan gäller var brottet begicks');
+  assert.ok((await page.locator('.ut22 .fu18-q').innerText()).includes('Begicks brottet i Sverige?'),'Första frågan gäller var brottet begicks');
   await page.locator('.ut22 .ut22-help summary').click();
   assert.ok((await page.locator('.ut22 .fu18-info').innerText()).includes('Källa: BrB 2:1'),'Förklaringsknappen visar förklaring och källa');
   await page.locator('.ut22 [data-ut22="yes"]').click();await page.locator('.ut22 [data-ut22="no"]').click();
   assert.equal(await page.locator('.ut22.fu18-result').getAttribute('data-ut22-order'),'nej','Brott i Sverige kräver inget åtalsförordnande');
-  assert.ok((await page.locator('.ut22.fu18-result').innerText()).includes('Brottet anses begånget i Sverige'));
+  assert.ok((await page.locator('.ut22.fu18-result').innerText()).includes('Brottet räknas som begånget i Sverige'));
   await page.locator('.sheet-close').click();
   // 2.0: Preskription ligger under FU-ledning och Närliggande brott under Preskription.
   assert.ok(await page.locator('#sec-preskription').evaluate(el=>el.previousElementSibling?.id==='sec-utland22'&&el.nextElementSibling?.id==='sec-narliggande'),'Preskription och Närliggande brott ligger i rätt ordning');
@@ -559,7 +559,7 @@ try{
   assert.ok(fraudPanel.includes('grov oaktsamhet'),'Alternative fault form for the company alternative is shown');
   await page.goto(url+'#mer',{waitUntil:'networkidle'});
   const settings=await page.locator('body').innerText();
-  assert.ok(settings.includes('Version 2.2 · publicerad 2026-11-14'),'Published version must be visible in settings');
+  assert.ok(settings.includes('Version 2.2.1 · publicerad 2026-11-15'),'Published version must be visible in settings');
   assert.ok(settings.includes('Grunddata:'),'Source dataset age must be shown in settings');
   assert.ok(settings.includes('LAGKONTROLL'),'Source checker in settings');
   assert.deepEqual(errors,[],'No JS page errors');
